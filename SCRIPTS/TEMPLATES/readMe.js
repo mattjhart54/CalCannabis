@@ -1,0 +1,3 @@
+/*
+	please use templates as the base for your scripts
+*/
