@@ -44,18 +44,14 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 		SAScript = bzr.getOutput().getDescription();
 	}
 }
-try{
-	if (SA) {
-		eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA));
-		eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA));
-		eval(getScriptText(SAScript, SA));
-	} else {
-		eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
-		eval(getScriptText("INCLUDES_ACCELA_GLOBALS"));
-	}
-}catch (err){
-	aa.print("Oops: " + err);
+
+if (SA) {
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA));
+	eval(getScriptText(SAScript, SA));
+} else {
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 }
+
 eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
 
 
@@ -82,6 +78,8 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try {
+    var capModel = aa.env.getValue("CapModel");     
+    capId = capModel.getCapID();
 	reqDocs = getReqdDocs("Application");
 	for (x in reqDocs){
 		loadASITables4ACA();
