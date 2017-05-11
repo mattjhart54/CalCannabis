@@ -1,6 +1,6 @@
 function getReqdDocs(recdType){
 try{
-	if(!matches(recdType, "Application", "Owner"){
+	if(!matches(recdType, "Application", "Owner")){
 		logDebug("Function is currently only set up for Application and Owner documentation.");
 		return false;
 	}
