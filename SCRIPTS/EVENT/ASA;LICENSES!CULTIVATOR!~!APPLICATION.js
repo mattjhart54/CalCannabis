@@ -4,45 +4,41 @@ try{
 	if(!publicUser){
 		var docsList = [];
 		var allDocsLoaded = true;
-		docsList = getDocumentList();//Get all Documents on a Record
-		var arrReqdDocs = loadASITable("ATTACHMENTS");
-		var arrMissingDocs = [];
-		for (l in arrReqdDocs){
-			var reqDocument = ""+arrReqdDocs[l]["Document Type"];
-			docFound = false;
-			for (dl in docsList){
-				var thisDocument = docsList[dl];
-				var docCategory = thisDocument.getDocCategory();
-				if (reqDocument.equals(docCategory)){
-					docFound = true;
-					arrReqdDocs[l]["Uploaded"]=="CHECKED";
-					arrReqdDocs[l]["Status"]=="Under Review";
+		var docsList = aa.env.getValue("DocumentModelList"); //Get all Documents on a Record
+		reqDocs = getReqdDocs("Application");
+		var tblRow = [];
+		if(reqDocs.length>0){
+			for (x in reqDocs){
+				var docName = reqDocs[x];
+				var tblRow = [];
+				tblRow["Document Type"] = ""+docName; 
+				tblRow["Document Description"]= ""+lookup("LIC_CC_ATTACHMENTS", docName); 
+				var docFound=false; 
+				if(docsList.length>0){
+					for (dl in docsList){
+						var thisDocument = docsList[dl];
+						var docCategory = thisDocument.getDocCategory();
+						if (docName.equals(docCategory)){
+							docFound = true;
+							tblRow["Uploaded"] = "CHECKED";
+							tblRow["Status"] = "Under Review";
+						}else{
+							tblRow["Uploaded"] = "UNCHECKED";
+							tblRow["Status"] = "Not Submitted";
+						}
+					}
+				}else{
+					tblRow["Uploaded"] = "UNCHECKED";
+					tblRow["Status"] = "Not Submitted";
 				}
+				if(!docFound){
+					addStdCondition("License Required Documents", docName);
+				}
+				addToASITable("ATTACHMENTS",tblRow);
 			}
-			//if a document is not found, add a condition to the record
-			if(!docFound){
-				arrMissingDocs.push(reqDocument);
-				allDocsLoaded = false;
-				addStdCondition("License Required Documents", reqDocument);
-			}
-		}
-		//update attachments table with which documents have been uploaded
-		removeASITable("ATTACHMENTS");
-		addASITable("ATTACHMENTS", arrReqdDocs);
-		//if there are any missing documents, send an email
-		if(!allDocsLoaded){
-			var br = "<br>";
-			var emailBody ="";
-			for(x in arrMissingDocs){
-				emailBody += " - " + arrMissingDocs[x] + br;
-			}
-			logDebug("emailBody: " + emailBody);
-			//aa.sendMail("lwacht@cdfa.ca.gov",debugEmail , "", "vote for pedro", "yay");
-			emailContact("Application " + capIDString + " has been received", "Thank you for submitting your application.  Your application is missing required documents. These must be uploaded to your application before processing will begin." +br + emailBody + "Thank you");
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
 	logDebug(err.stack);
 }
-
