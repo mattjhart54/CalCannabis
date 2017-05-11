@@ -31,6 +31,7 @@ var startTime = startDate.getTime();
 var message = ""; // Message String
 var debug = ""; // Debug String
 var br = "<BR>"; // Break Tag
+var currentUserID = aa.env.getValue("CurrentUserID");
 
 var useSA = false;
 var SA = null;
