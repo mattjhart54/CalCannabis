@@ -79,8 +79,8 @@ var cap = aa.env.getValue("CapModel");
 
 try {
 	reqDocs = getReqdDocs("Application");
-	logDebug(reqDocs);
 	for (x in reqDocs){
+		loadASITables4ACA();
 		var docName = reqDocs[x];
 		ATTACHMENTS[x]["Document Type"].fieldValue=docName; 
 		ATTACHMENTS[x]["Document Description"].fieldValue=lookup("LIC_CC_ATTACHMENTS", docName); 
@@ -94,6 +94,7 @@ try {
 	logDebug("An error has occurred in ACA_ONLOAD_REQD_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
 }
+
 
 
 
