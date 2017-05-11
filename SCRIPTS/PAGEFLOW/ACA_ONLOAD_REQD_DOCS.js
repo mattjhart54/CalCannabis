@@ -87,7 +87,8 @@ try {
 		ATTACHMENTS[x]["Uploaded"].fieldValue="UNCHECKED"; 
 		ATTACHMENTS[x]["Status"].fieldValue = "Not Submitted"; 
 		removeASITable("ATTACHMENTS"); 
-		addASITable("ATTACHMENTS",ATTACHMENTS);
+		asit = cap.getAppSpecificTableGroupModel();
+		addASITable4ACAPageFlow(asit,"ATTACHMENTS",ATTACHMENTS);
 	}
 } catch (err) {
 	logDebug("An error has occurred in ACA_ONLOAD_REQD_DOCS: Main function: " + err.message);
