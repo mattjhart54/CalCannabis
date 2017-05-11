@@ -5,6 +5,7 @@ try{
 		var docsList = [];
 		var allDocsLoaded = true;
 		var docsList = aa.env.getValue("DocumentModelList"); //Get all Documents on a Record
+		logDebug("docsList: " + docsList);
 		reqDocs = getReqdDocs("Application");
 		var tblRow = [];
 		if(reqDocs.length>0){
