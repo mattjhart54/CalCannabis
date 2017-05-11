@@ -78,21 +78,22 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try {
-	var tblAttach = [];
-	reqDocs = getDocReqs();
+	reqDocs = getReqdDocs("Application");
+	logDebug(reqDocs);
 	for (x in reqDocs){
 		var docName = reqDocs[x];
-		tblAttach[x]["Document Type"].fieldValue=docName; 
-		tblAttach[x]["Document Description"].fieldValue=lookup("LIC_CC_ATTACHMENTS", docName); 
-		tblAttach[x]["Uploaded"].fieldValue="UNCHECKED"; 
-		tblAttach[x]["Status"].fieldValue = "Not Submitted"; 
+		ATTACHMENTS[x]["Document Type"].fieldValue=docName; 
+		ATTACHMENTS[x]["Document Description"].fieldValue=lookup("LIC_CC_ATTACHMENTS", docName); 
+		ATTACHMENTS[x]["Uploaded"].fieldValue="UNCHECKED"; 
+		ATTACHMENTS[x]["Status"].fieldValue = "Not Submitted"; 
 		removeASITable("ATTACHMENTS"); 
-		addASITable("ATTACHMENTS",tblAttach);
+		addASITable("ATTACHMENTS",ATTACHMENTS);
 	}
 } catch (err) {
 	logDebug("An error has occurred in ACA_ONLOAD_REQD_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
 }
+
 
 
 
