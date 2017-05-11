@@ -87,10 +87,11 @@ try {
 	if(reqDocs.length>0){
 		for (x in reqDocs){
 			var docName = reqDocs[x];
-			tblRow["Document Type"] = new asiTableValObj("Document Type",docName, "Y"); 
-			tblRow["Document Description"]= new asiTableValObj("Document Description",lookup("LIC_CC_tblAttach", docName), "Y"); 
-			tblRow["Uploaded"] = new asiTableValObj("Document Type","UNCHECKED", "Y"); 
-			tblRow["Status"] = new asiTableValObj("Document Type","Not Submitted", "Y"); ; 
+			var tblRow = [];
+			tblRow["Document Type"] = new asiTableValObj("Document Type",""+docName, "Y"); 
+			tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", docName), "Y"); 
+			tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
+			tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
 			tblNewAttach.push(tblRow);
 		}
 		removeASITable("ATTACHMENTS"); 
