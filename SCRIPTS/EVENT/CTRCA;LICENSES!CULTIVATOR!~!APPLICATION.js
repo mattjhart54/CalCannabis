@@ -36,7 +36,7 @@ try{
 			emailBody += " - " + arrMissingDocs[x] + br;
 		}
 		logDebug("emailBody: " + emailBody);
-		aa.sendMail("lwacht@cdfa.ca.gov","lwacht@trustvip.com", "", "vote for pedro", "yay");
+		//aa.sendMail("lwacht@cdfa.ca.gov",debugEmail , "", "vote for pedro", "yay");
 		emailContact("Application " + capIDString + " has been received", "Thank you for submitting your application.  Your application is missing required documents. These must be uploaded to your application before processing will begin." +br + emailBody + "Thank you");
 	}
 } catch(err){
