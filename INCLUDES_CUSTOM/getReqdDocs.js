@@ -1,5 +1,9 @@
 function getReqdDocs(recdType){
 try{
+	if(!matches(recdType, "Application", "Owner"){
+		logDebug("Function is currently only set up for Application and Owner documentation.");
+		return false;
+	}
 	//optional capId
 	var itemCap = capId;
 	if (arguments.length == 2)
