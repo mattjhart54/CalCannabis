@@ -4,7 +4,8 @@ try{
 	if(!publicUser){
 		var docsList = [];
 		var allDocsLoaded = true;
-		var docsList = aa.env.getValue("DocumentModelList"); //Get all Documents on a Record
+		//var docsList = aa.env.getValue("DocumentModelList"); //Get all Documents on a Record
+		var docsList = getDocumentList();
 		logDebug("docsList: " + docsList);
 		reqDocs = getReqdDocs("Application");
 		var tblRow = [];
