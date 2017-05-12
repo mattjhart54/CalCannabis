@@ -4,18 +4,19 @@ try{
 	var docsList = [];
 	var allDocsLoaded = true;
 	docsList = getDocumentList();//Get all Documents on a Record
-	var arrReqdDocs = loadASITable("ATTACHMENTS");
 	var arrMissingDocs = [];
-	for (l in arrReqdDocs){
-		var reqDocument = ""+arrReqdDocs[l]["Document Type"];
+	for (l in ATTACHMENTS){
+		var reqDocument = ""+ATTACHMENTS[l]["Document Type"];
+		logDebug("reqDocument: " + reqDocument);
 		docFound = false;
 		for (dl in docsList){
 			var thisDocument = docsList[dl];
 			var docCategory = thisDocument.getDocCategory();
+			logDebug("---docCategory: " + docCategory);
 			if (reqDocument.equals(docCategory)){
 				docFound = true;
-				arrReqdDocs[l]["Uploaded"]=="CHECKED";
-				arrReqdDocs[l]["Status"]=="Under Review";
+				ATTACHMENTS[l]["Uploaded"]=="CHECKED";
+				ATTACHMENTS[l]["Status"]=="Under Review";
 			}
 		}
 		//if a document is not found, add a condition to the record
@@ -27,7 +28,7 @@ try{
 	}
 	//update attachments table with which documents have been uploaded
 	removeASITable("ATTACHMENTS");
-	addASITable("ATTACHMENTS", arrReqdDocs);
+	addASITable("ATTACHMENTS", ATTACHMENTS);
 	//if there are any missing documents, send an email
 	if(!allDocsLoaded){
 		var br = "<br>";
