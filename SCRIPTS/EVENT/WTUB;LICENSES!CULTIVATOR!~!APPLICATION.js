@@ -1,3 +1,4 @@
+//lwacht
 //do not allow the application intake task to be closed until all
 //documents have been uploaded
 try{
@@ -5,7 +6,7 @@ try{
 		cancel=true;
 		showMessage=true;
 		showDebug = false;
-		comment("font color='blue'; size='12px'>All documents must be uploaded before continuing.</font");
+		comment("<font color='blue'; size='12px'>All documents must be uploaded before continuing.</font");
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
