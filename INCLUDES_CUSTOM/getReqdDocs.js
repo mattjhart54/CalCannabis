@@ -12,7 +12,7 @@ try{
 		arrReqdDocs_App = new Array();
 		//application documents
 		//these documents are always required
-		arrReqdDocs_App.push("Evidence of Surety Bond");
+		arrReqdDocs_App.push("Business Organization Structure");
 		//these are qualified documents
 		var bsnsFormationDoc = "Business Formation Document";
 		
