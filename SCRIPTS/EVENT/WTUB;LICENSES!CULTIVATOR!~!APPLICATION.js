@@ -4,7 +4,8 @@ try{
 	if("Application Intake".equals(wfTask) && matches(wfStatus, "Complete", "Ready to Pay", "Board Review Required" &&!isTaskStatus("Application Intake", "All Documents Received"))){
 		cancel=true;
 		showMessage=true;
-		comment("All documents must be uploaded before continuing.");
+		showDebug = false;
+		comment("<span style='font-size:12px'; 'color:purple'>All documents must be uploaded before continuing.</span>");
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
