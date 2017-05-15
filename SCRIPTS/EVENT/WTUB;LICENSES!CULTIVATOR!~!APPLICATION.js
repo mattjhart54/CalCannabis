@@ -7,6 +7,7 @@ try{
 		showMessage=true;
 		showDebug = false;
 		comment("<font color='blue'>All documents must be uploaded before continuing.</font");
+		comment("<font color='black'></font");
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
