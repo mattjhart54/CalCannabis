@@ -2,7 +2,7 @@
 //do not allow the application intake task to be closed until all
 //documents have been uploaded
 try{
-	if("Application Intake".equals(wfTask) && matches(wfStatus, "Complete", "Ready to Pay", "Board Review Required" &&!isTaskStatus("Application Intake", "All Documents Received"))){
+	if("Application Intake".equals(wfTask) && matches(wfStatus, "Complete", "Ready to Pay", "Board Review Required") && !isTaskStatus("Application Intake", "All Documents Received")){
 		cancel=true;
 		showMessage=true;
 		showDebug = false;
