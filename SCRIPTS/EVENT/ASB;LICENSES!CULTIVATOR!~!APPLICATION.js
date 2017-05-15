@@ -3,7 +3,7 @@ try {
 		fnd = "N";
 		if(typeof(CANNABISFINACIALINTEREST) == "object") {
 			for(x in "CANNABIS FINACIAL INTEREST") {
-				if(CANNABISFINACIALINTEREST[x]["Type of License"] == "Producing Dispensary") {
+				if(CANNABISFINACIALINTEREST[x]["Type of License"] == "Producing Dispensary") 
 					fnd ="Y";
 			}
 		}
