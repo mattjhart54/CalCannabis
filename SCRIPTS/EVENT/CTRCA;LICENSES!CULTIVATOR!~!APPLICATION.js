@@ -4,7 +4,7 @@ try{
 	var docsList = [];
 	var allDocsLoaded = true;
 	//docsList = getDocumentList();//Get all Documents on a Record
-   var capDocResult = aa.document.getDocumentListByEntity(capId,"CAP");
+   var capDocResult = aa.document.getDocumentListByEntity(capId,"TMP_CAP");
 	var arrMissingDocs = [];
 	for (l in ATTACHMENTS){
 		var reqDocument = ""+ATTACHMENTS[l]["Document Type"];
