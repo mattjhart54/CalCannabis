@@ -2,7 +2,7 @@ try {
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		fnd = "N";
 		if(typeof(CANNABISFINACIALINTEREST) == "object") {
-			for(x in "CANNABIS FINACIAL INTEREST") {
+			for(x in CANNABISFINACIALINTEREST) {
 				if(CANNABISFINACIALINTEREST[x]["Type of License"] == "Producing Dispensary") 
 					fnd ="Y";
 			}
