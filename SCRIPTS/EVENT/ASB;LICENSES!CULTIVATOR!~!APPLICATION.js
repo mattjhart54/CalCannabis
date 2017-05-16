@@ -1,6 +1,7 @@
 try {
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		fnd = "N";
+		loadASITables();
 		if(typeof(CANNABISFINACIALINTEREST) == "object") {
 			for(x in CANNABISFINACIALINTEREST) {
 				if(CANNABISFINACIALINTEREST[x]["Type of License"] == "Producing Dispensary") 
