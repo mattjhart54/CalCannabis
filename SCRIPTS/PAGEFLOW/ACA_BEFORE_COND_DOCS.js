@@ -141,13 +141,12 @@ logDebug("balanceDue = " + balanceDue);
 // page flow custom code begin
 
 try {
-	showDebug = false;
 	docsMissing = false;
-	showList = false;
+	showList = true;
 	addConditions = false;
 	addTableRows = false;
-	cancel = false;
-	showMessage = false;
+	var tblRow = [];
+	var conditionTable = [];
 	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
 	r = getReqdDocs("Application");
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
@@ -157,7 +156,7 @@ try {
 	}
 
 	if (r.length > 0 && showList) {
-		for (x in r) { 
+		for (x in r) {
 			if(uploadedDocs[r[x].document] == undefined) {	
 				showMessage = true; 
 				if (!docsMissing)  {
@@ -180,12 +179,18 @@ try {
 					addStdCondition(conditionType,dr);
 				}
 				if (dr && ccr.length > 0 && addTableRows) {
-					row = new Array();
-					row["Document Type"] = new asiTableValObj("Document Type",dr,"Y");
-					row["Description"] = new asiTableValObj("Description",publicDisplayCond.getPublicDisplayMessage(),"Y");
-					conditionTable.push(row);
+					tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
+					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
+					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
+					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
+					conditionTable.push(tblRow);
 				}	
 			}	
+		}
+		if (dr && ccr.length > 0 && addTableRows) {
+			removeASITable("ATTACHMENTS"); 
+			asit = cap.getAppSpecificTableGroupModel();
+			addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
 		}
 	}
 

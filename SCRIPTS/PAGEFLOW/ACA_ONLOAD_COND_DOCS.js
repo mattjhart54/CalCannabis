@@ -142,7 +142,6 @@ logDebug("balanceDue = " + balanceDue);
 // page flow custom code begin
 
 try{
-    //capId = capModel.getCapID();
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
