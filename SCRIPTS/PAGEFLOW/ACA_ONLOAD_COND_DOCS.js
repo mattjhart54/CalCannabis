@@ -80,6 +80,8 @@ try {
 	showList = false;
 	addConditions = true;
 	addTableRows = false;
+	var tblRow = [];
+	var tblNewAttach = [];
 	//capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
 	//r = getRequiredDocuments();
 	r = getReqdDocs("Application");
@@ -112,10 +114,11 @@ try {
 					addStdCondition(conditionType,dr);
 				}
 				if (dr && ccr.length > 0 && addTableRows) {
-					row = new Array();
-					row["Document Type"] = new asiTableValObj("Document Type",dr,"Y");
-					row["Description"] = new asiTableValObj("Description",publicDisplayCond.getPublicDisplayMessage(),"Y");
-					conditionTable.push(row);
+					tblRow["Document Type"] = new asiTableValObj("Document Type",""+docName, "Y"); 
+					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", docName), "Y"); 
+					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
+					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
+					conditionTable.push(tblRow);
 				}	
 			}	
 		}
