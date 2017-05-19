@@ -195,7 +195,7 @@ try {
 	}
 
 	if (r.length > 0 && showList && docsMissing) {
-		cancel = true;
+		//cancel = true;
 		comment("</ol></div>");
 	}
 } catch (err) {
