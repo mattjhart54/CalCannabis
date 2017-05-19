@@ -1,5 +1,7 @@
+// lwacht
 //compare the documents uploaded to the documents required in the "attachment" event
 // if any documents are required, send an email.
+/* lwacht : start : not using, but leaving for now
 try{
 	if(!publicUser){
 		var docsList = [];
@@ -40,7 +42,9 @@ try{
 			}
 		}
 	}
-} catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
+} catch(err){ 
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/ * /APPLICATION: Required Documents: " + err.message);
 	logDebug(err.stack);
 }
+lwacht : end
+*/

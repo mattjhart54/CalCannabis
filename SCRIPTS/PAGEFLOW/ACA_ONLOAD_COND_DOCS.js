@@ -150,7 +150,6 @@ try{
 	var tblRow = [];
 	var conditionTable = [];
 	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-	//r = getRequiredDocuments();
 	r = getReqdDocs("Application");
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 	uploadedDocs = new Array();
