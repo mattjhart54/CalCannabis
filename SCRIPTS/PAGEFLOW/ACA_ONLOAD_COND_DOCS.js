@@ -146,7 +146,7 @@ try{
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
-	addTableRows = true;
+	addTableRows = false;
 	var tblRow = [];
 	var conditionTable = [];
 	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
@@ -199,6 +199,7 @@ try{
 		comment("</ol></div>");
 	}
 } catch (err) {
+	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
 }
