@@ -8,20 +8,20 @@ try{
 	var itemCap = capId;
 	if (arguments.length == 2)
 		itemCap = arguments[1]; // use cap ID specified in args
+    var businessOrganizationStructure = {condition : "Business Organization Structure", document : "Business Organization Structure"};
+    var businessFormationDocument     = {condition : "Business Formation Document", document : "Business Formation Document"};
+
 	if(recdType == "Application"){
 		arrReqdDocs_App = new Array();
 		//application documents
 		//these documents are always required
-		arrReqdDocs_App.push("Business Organization Structure");
+		arrReqdDocs_App.push(businessOrganizationStructure);
 		//these are qualified documents
-		var bsnsFormationDoc = "Business Formation Document";
-		
-		//these drive the required documents
 		var bsnsEntity = getAppSpecific("Business Entity Structure", itemCap);
 
 		//matching the qualified docs with their qualifications
 		if (bsnsEntity != "Sole Proprietorship"){
-			arrReqdDocs_App.push(bsnsFormationDoc);
+			arrReqdDocs_App.push(businessFormationDocument);
 		}
 		return arrReqdDocs_App;
 	}
