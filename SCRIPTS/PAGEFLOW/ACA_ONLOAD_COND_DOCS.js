@@ -21,7 +21,7 @@ var showMessage = false; // Set to true to see results in popup window
 var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = false;
+var cancel = true;
 var SCRIPT_VERSION = 3;
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
@@ -74,15 +74,15 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 
-try {
-    capId = capModel.getCapID();
+try{
+    //capId = capModel.getCapID();
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
-	addTableRows = false;
+	addTableRows = true;
 	var tblRow = [];
-	var tblNewAttach = [];
-	//capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
+	var conditionTable = [];
+	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
 	//r = getRequiredDocuments();
 	r = getReqdDocs("Application");
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
@@ -114,13 +114,19 @@ try {
 					addStdCondition(conditionType,dr);
 				}
 				if (dr && ccr.length > 0 && addTableRows) {
-					tblRow["Document Type"] = new asiTableValObj("Document Type",""+docName, "Y"); 
-					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", docName), "Y"); 
+					tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
+					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
 					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
 					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
 					conditionTable.push(tblRow);
 				}	
 			}	
+		}
+		if (dr && ccr.length > 0 && addTableRows) {
+			removeASITable("ATTACHMENTS"); 
+			asit = cap.getAppSpecificTableGroupModel();
+			//addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
+			addASITable(asit,"ATTACHMENTS",conditionTable);
 		}
 	}
 	if (r.length > 0 && showList && docsMissing) {
