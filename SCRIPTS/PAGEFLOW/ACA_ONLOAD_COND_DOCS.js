@@ -77,7 +77,7 @@ var cap = aa.env.getValue("CapModel");
 try {
     capId = capModel.getCapID();
 	docsMissing = false;
-	showList = false;
+	showList = true;
 	addConditions = true;
 	addTableRows = false;
 	var tblRow = [];

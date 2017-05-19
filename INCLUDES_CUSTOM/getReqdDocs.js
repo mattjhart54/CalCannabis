@@ -8,8 +8,8 @@ try{
 	var itemCap = capId;
 	if (arguments.length == 2)
 		itemCap = arguments[1]; // use cap ID specified in args
-    var businessOrganizationStructure = {condition : "Business Organization Structure", document : "Business Organization Structure"};
-    var businessFormationDocument     = {condition : "Business Formation Document", document : "Business Formation Document"};
+    var businessOrganizationStructure = {condition : "CA Secretary of State Documents", document : "CA Secretary of State Documents"};
+    var businessFormationDocument     = {condition : "Business Formation Documents", document : "Business Formation Documents"};
 
 	if(recdType == "Application"){
 		arrReqdDocs_App = new Array();
