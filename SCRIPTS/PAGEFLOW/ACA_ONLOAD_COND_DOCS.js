@@ -192,8 +192,7 @@ try{
 		if (dr && ccr.length > 0 && addTableRows) {
 			removeASITable("ATTACHMENTS"); 
 			asit = cap.getAppSpecificTableGroupModel();
-			//addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
-			addASITable(asit,"ATTACHMENTS",conditionTable);
+			addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
 		}
 	}
 	if (r.length > 0 && showList && docsMissing) {
