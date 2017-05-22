@@ -98,19 +98,19 @@ try {
 		var r = newAfData[i];
 		var ctm = allRecordTypeMap.get(r.Alias);
 		if (!newAfData[i].recordId || newAfData[i].recordId == "") {
-			logDebug("attempting to create record : " + ctm);
+			logDebug("Attempting to create record : " + ctm);
 			var result = aa.cap.createSimplePartialRecord(ctm, null, "INCOMPLETE CAP");
 			if (result.getSuccess() && result.getOutput() != null) {
 				var newCapId = result.getOutput();
-				logDebug("created new associated form record " + newCapId.getCustomID() + " for type " + r.Alias);
+				logDebug("Created new associated form record " + newCapId.getCustomID() + " for type " + r.Alias);
 				aa.cap.createAssociatedFormsHierarchy(capId, newCapId);
 				r.recordId = String(newCapId.getCustomID());
 				// stuff can be copied in here, if needed.   I think it should be copied in after the CTRCA
 			} else {
-				logDebug("error creating new associated form record for type " + r.Alias + ", " + result.getErrorMessage());
+				logDebug("Error creating new associated form record for type: " + r.Alias + ": " + result.getErrorMessage());
 			}
 		} else {
-			logDebug("using existing associated form record " + r.recordId + " for type " + r.Alias);
+			logDebug("Using existing associated form record: " + r.recordId + " for type: " + r.Alias);
 		}
 	}
 
