@@ -72,7 +72,7 @@ try{
 					capCondition.getConditionDescription();
 					documentModel.setDocCategory(conditionName);
 					//documentModel.setDocDepartment(conditionGroup);
-					documentModel.setDocDepartment("CALCANNABIS APPLICANT");
+					documentModel.setDocGroup("CALCANNABIS APPLICANT");
 					logDebug("Condition Name - " + conditionName);
 					logDebug("Condition Group - " + conditionGroup);
 					var updateDocumentResult =
