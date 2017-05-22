@@ -75,8 +75,7 @@ try{
 					documentModel.setDocGroup("CALCANNABIS APPLICANT");
 					logDebug("Condition Name - " + conditionName);
 					logDebug("Condition Group - " + conditionGroup);
-					var updateDocumentResult =
-					aa.document.updateDocument(documentModel);
+					var updateDocumentResult = aa.document.updateDocument(documentModel);
 					if(updateDocumentResult.getSuccess()){
 						logDebug("Update document model successfully - " + 	documentModel.getDocName());
 					}else{
