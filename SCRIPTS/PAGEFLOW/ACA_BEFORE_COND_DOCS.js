@@ -151,12 +151,12 @@ try {
 	r = getReqdDocs("Application");
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 	uploadedDocs = new Array();
+	dr = "";
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 	}
 
 	if (r.length > 0 && showList) {
-		var dr = "";
 		for (x in r) {
 			if(uploadedDocs[r[x].document] == undefined) {
 				showMessage = true; 
