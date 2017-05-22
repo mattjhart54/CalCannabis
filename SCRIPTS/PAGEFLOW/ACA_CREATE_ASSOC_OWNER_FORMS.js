@@ -83,8 +83,8 @@ try {
 	var capId = cap.getCapID();
 	var recTypeAlias = "Owner Application";  // must be a valid record type alias
 	var recordNum = 0;
-	//loadASITables4ACA();
-	loadASITables();
+	loadASITables4ACA();
+	//loadASITables();
 	for(row in OWNERS){
 		recordNum++;
 	}
@@ -97,8 +97,7 @@ try {
 		af.recordId = "";		// define a place to store the record ID when the record is created
 		afArray.push(af); 		// add the record to our array
 	}
-
-	doAssocFormRecs1(null,afArray);
+	doAssocFormRecs(null,afArray);
 }catch (err) {
 	logDebug("A JavaScript Error occurred:ACA_CREATE_ASSOC_OWNER_FORMS: " + err.message);
 	logDebug(err.stack);
