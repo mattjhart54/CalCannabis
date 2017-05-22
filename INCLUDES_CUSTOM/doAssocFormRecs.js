@@ -122,9 +122,7 @@ try {
 		
 	return newAfData;
 		
-	} catch (err) {
-		logDebug("runtime error : " + err.message);
-		logDebug("runtime error : " + err.stack);
-	}
-
-}
+} catch (err) {
+	logDebug("A JavaScript Error occurred: doAssocFormRecs: " + err.message);
+	logDebug(err.stack);
+}}
