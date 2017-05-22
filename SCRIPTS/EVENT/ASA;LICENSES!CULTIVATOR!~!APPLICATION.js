@@ -48,3 +48,30 @@ try{
 }
 lwacht : end
 */
+//lwacht
+// adding associated forms for owner records
+try {
+	if(publicUser){
+		var capId = cap.getCapID();
+		var recTypeAlias = "Owner Application";  // must be a valid record type alias
+		var recordNum = 0;
+		//loadASITables4ACA();
+		loadASITables();
+		for(row in OWNERS){
+			recordNum++;
+		}
+		var afArray = [];  // array describing the associated form records
+
+		for (var i = 0; i < recordNum; i++) {
+			var af = {};  // empty object
+			af.ID = String(i + 1);  // give it an id number
+			af.Alias = recTypeAlias;  
+			af.recordId = "";		// define a place to store the record ID when the record is created
+			afArray.push(af); 		// add the record to our array
+		}
+		doAssocFormRecs1(null,afArray);
+	}
+}catch (err) {
+	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
+	logDebug(err.stack);
+}

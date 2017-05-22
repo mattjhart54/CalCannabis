@@ -81,7 +81,6 @@ var cap = aa.env.getValue("CapModel");
 
 try {
 	var capId = cap.getCapID();
-	var recTypeAlias = "Licenses/Cultivator/Medical/Owner Application";  // must be a valid record type alias
 	var recTypeAlias = "Owner Application";  // must be a valid record type alias
 	var recordNum = 0;
 	//loadASITables4ACA();
