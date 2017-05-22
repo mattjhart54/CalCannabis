@@ -148,6 +148,7 @@ try{
 	addTableRows = false;
 	var tblRow = [];
 	var conditionTable = [];
+	dr = "";
 	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
 	r = getReqdDocs("Application");
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
@@ -168,9 +169,9 @@ try{
 				publicDisplayCond = null;
 				if (dr) {
 					ccr = aa.capCondition.getStandardConditions(conditionType, dr).getOutput();
-					for(var i = 0;
-					i<ccr.length;
-					i++) if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) publicDisplayCond = ccr[i];
+					for(var i = 0; i<ccr.length; i++) 
+						if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) 
+							publicDisplayCond = ccr[i];
 				}
 				if (dr && ccr.length > 0 && showList && publicDisplayCond) {
 					message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
