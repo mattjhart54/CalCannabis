@@ -1,5 +1,7 @@
+//lwacht
 //compare the documents uploaded to the documents required in the "attachment" event
 // if any documents are required, send an email.
+/* not using for now
 try{
 	var docModel = documentModelArray.toArray();
 	cancel = true;
@@ -38,11 +40,44 @@ try{
 			//aa.sendMail("lwacht@cdfa.ca.gov",debugEmail , "", "vote for pedro", "yay");
 			emailContact("Application " + capIDString + " has been received", "Thank you for submitting your application.  Your application is missing required documents. These must be uploaded to your application before processing will begin." +br + emailBody + "Thank you");
 		}else{
-			updateTask("Application Intake", "All Documents Received", "Updated via script DUA:LICENSES/CULTIVATOR/*/APPLICATION", "");
-			updateAppStatus("All Documents Received", "Updated via script DUA:LICENSES/CULTIVATOR/*/APPLICATION");
+			updateTask("Application Intake", "All Documents Received", "Updated via script DUA:LICENSES/CULTIVATOR/* /APPLICATION", "");
+			updateAppStatus("All Documents Received", "Updated via script DUA:LICENSES/CULTIVATOR/* /APPLICATION");
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in DUA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
+	logDebug("An error has occurred in DUA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: " + err.message);
 	logDebug(err.stack);
+}
+end code not being used
+*/ 
+
+for(i = 0; i<documentModels.length;i++){
+	documentModel = documentModels[i];
+	conditionNumber = documentModel.getConditionNumber();
+	logDebug(" i = " + i);
+	logDebug("Condition Number = " + conditionNumber);
+	if(conditionNumber != null && conditionNumber != 0){
+		var capConditionResult =
+		aa.capCondition.getCapCondition(capId, conditionNumber);
+		if(capConditionResult.getSuccess()){
+			var capCondition = capConditionResult.getOutput();
+			var conditionGroup = capCondition.getConditionGroup();
+			var conditionName =
+			capCondition.getConditionDescription();
+			documentModel.setDocCategory(conditionName);
+			//documentModel.setDocDepartment(conditionGroup);
+			documentModel.setDocDepartment("CALCANNABIS APPLICANT");
+			logDebug("Condition Name - " + conditionName);
+			logDebug("Condition Group - " + conditionGroup);
+			var updateDocumentResult =
+			aa.document.updateDocument(documentModel);
+			if(updateDocumentResult.getSuccess()){
+				logDebug("Update document model successfully - " + 	documentModel.getDocName());
+			}else{
+				logDebug("Update document model failed - " + documentModel.getDocName());
+			}
+		}else{
+			logDebug("No condition number - " + documentModel.getDocName());
+		}
+	}
 }
