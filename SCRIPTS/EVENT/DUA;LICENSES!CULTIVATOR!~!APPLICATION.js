@@ -53,7 +53,7 @@ end code not being used
 //lwacht
 // condition document script to update the doc group/category
 try{
-	if(documentUploadedFrom != "ACA"){
+	if(documentUploadedFrom == "ACA"){
 		var documentModels = documentModelArray.toArray();
 		var documentModel = null;
 		var conditionNumber = 0;
