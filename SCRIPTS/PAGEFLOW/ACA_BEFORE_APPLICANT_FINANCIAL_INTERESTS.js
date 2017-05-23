@@ -76,8 +76,10 @@ try {
 		//loadASITables();
 		if(typeof(CANNABISFINANCIALINTEREST) == "object") {
 			for(x in CANNABISFINANCIALINTEREST) {
-				if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") 
+				logDebug("type of license : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
+				if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") {
 					fnd = true;
+				}
 			}
 		}
 		if (!fnd) {
