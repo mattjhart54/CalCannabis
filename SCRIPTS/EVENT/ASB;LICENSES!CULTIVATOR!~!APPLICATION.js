@@ -36,11 +36,13 @@ try{
 			logDebug("drpPubUser: " + drpPubUser);
 			logDebug("currUserEmail: " + currUserEmail);
 			if(drpPubUser!=currUserEmail){
-				showDebug = true;
+				//showDebug = true;
 				cancel=true;
 				showMessage=true;
 				var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
-				comment("<span style='font-size:16px'> Only the Designated Responsible Party (" + drpName + ") can complete the application.  An email has been sent to " + drpName + ".  You will be notified via email when the application has been submitted. </span><br/>");
+				comment("<span style='font-size:16px'> COMMENT Only the Designated Responsible Party can complete the application.  An email has been sent to " + drpPubUser + ".  You will be notified via email when the application has been submitted. </span><br/>");
+				logDebug("<span style='font-size:16px'> DEBUG Only the Designated Responsible Party can complete the application.  An email has been sent to " + drpPubUser + ".  You will be notified via email when the application has been submitted. </span><br/>");
+				logMessage("<span style='font-size:16px'> MESSAGE Only the Designated Responsible Party can complete the application.  An email has been sent to " + drpPubUser + ".  You will be notified via email when the application has been submitted. </span><br/>");
 			}
 		}
 	}
