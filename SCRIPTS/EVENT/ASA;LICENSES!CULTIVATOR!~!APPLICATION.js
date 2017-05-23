@@ -69,7 +69,7 @@ try {
 			af.recordId = "";		// define a place to store the record ID when the record is created
 			afArray.push(af); 		// add the record to our array
 		}
-		doAssocFormRecs1(null,afArray);
+		doAssocFormRecs(null,afArray);
 	}
 }catch (err) {
 	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
