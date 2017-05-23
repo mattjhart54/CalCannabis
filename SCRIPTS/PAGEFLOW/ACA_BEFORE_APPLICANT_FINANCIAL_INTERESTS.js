@@ -71,22 +71,19 @@ var cap = aa.env.getValue("CapModel");
 
 try {
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
-		var fnd = false;
+		var fnd = "N";
 		loadASITables4ACA();
 		//loadASITables();
 		if(typeof(CANNABISFINANCIALINTEREST) == "object") {
 			for(x in CANNABISFINANCIALINTEREST) {
-				cancel = true;
-				logDebug("type of license : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
-				if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") {
-					fnd = true;
-				}
+				if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") 
+					fnd ="Y";
 			}
 		}
-		if (!fnd) {
+		if (fnd == "N") {
 			showMessage = true;
 			cancel = true;
-			logMessage("When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
+			comment("When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 		}
 	}
 }
