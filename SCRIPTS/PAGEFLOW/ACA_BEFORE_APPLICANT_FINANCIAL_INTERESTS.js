@@ -72,8 +72,8 @@ var cap = aa.env.getValue("CapModel");
 try {
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		var fnd = false;
-		//loadASITables4ACA();
-		loadASITables();
+		loadASITables4ACA();
+		//loadASITables();
 		for(x in CANNABISFINANCIALINTEREST) {
 			logDebug("type of license : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
 			logDebug(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary" );
