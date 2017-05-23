@@ -29,17 +29,18 @@ try{
 	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
 	var drpUser = createPublicUserFromContact("Designated Responsible Party");
 	if(!matches(drpUser, "", null, "undefined", false)){
-		var drpPubUser = ""+drpUser.userID;
 		var drpPubUser = ""+drpUser.email;
 		var resCurUser = aa.person.getUser(publicUserID);
 		if(resCurUser.getSuccess()){
 			var currUser = resCurUser.getOutput();
 			var currUserEmail = ""+currUser.email;
+			logDebug("drpPubUser: " + drpPubUser);
+			logDebug("currUserEmail: " + currUserEmail);
 			if(drpPubUser!=currUserEmail){
 				cancel=true;
 				showMessage=true;
 				var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
-				comment("<span style='font-size:12px'> Only the Designated Responsible Party (" + drpName + ") can complete the application.  An email has been sent to " + drpName + ".  You will be notified via email when the application has been submitted. </span><br/>");
+				comment("<span style='font-size:16px'> Only the Designated Responsible Party (" + drpName + ") can complete the application.  An email has been sent to " + drpName + ".  You will be notified via email when the application has been submitted. </span><br/>");
 			}
 		}
 	}
