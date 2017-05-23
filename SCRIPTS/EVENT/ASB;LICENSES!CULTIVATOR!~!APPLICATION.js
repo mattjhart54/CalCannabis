@@ -25,7 +25,6 @@ catch (err) {
 // if not, stop the submission.  also, send an to the designated responsible party, letting them know the
 // record is ready for approval
 try{
-	showDebug = true;
 	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
 	var drpUser = createPublicUserFromContact("Designated Responsible Party");
 	if(!matches(drpUser, "", null, "undefined", false)){
@@ -37,6 +36,7 @@ try{
 			logDebug("drpPubUser: " + drpPubUser);
 			logDebug("currUserEmail: " + currUserEmail);
 			if(drpPubUser!=currUserEmail){
+				showDebug = true;
 				cancel=true;
 				showMessage=true;
 				var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
