@@ -76,6 +76,7 @@ try {
 		//loadASITables();
 		if(typeof(CANNABISFINANCIALINTEREST) == "object") {
 			for(x in CANNABISFINANCIALINTEREST) {
+				cancel = true;
 				logDebug("type of license : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
 				if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") {
 					fnd = true;
