@@ -16,6 +16,33 @@ try {
 	}
 }
 catch (err) {
-    logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/*/: " + err.message);
+    logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + err.message);
+	logDebug(err.stack);
 }
-		
+
+//lwacht
+// verify the person attempting to submit the record is the designated responsible party
+// if not, stop the submission.  also, send an to the designated responsible party, letting them know the
+// record is ready for approval
+try{
+	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
+	var drpUser = createPublicUserFromContact("Designated Responsible Party");
+	if(!matches(drpUser, "", null, "undefined", false)){
+		var drpPubUser = ""+drpUser.userID;
+		var drpPubUser = ""+drpUser.email;
+		var resCurUser = aa.person.getUser(publicUserID);
+		if(resCurUser.getSuccess()){
+			var currUser = resCurUser.getOutput();
+			var currUserEmail = ""+currUser.email;
+			if(drpPubUser!=currUserEmail){
+				cancel=true;
+				showMessage=true;
+				var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
+				comment("<span style='font-size:12px'> Only the Designated Responsible Party (" + drpName + ") can complete the application.  An email has been sent to " + drpName + ".  You will be notified via email when the application has been submitted. </span><br/>");
+			}
+		}
+	}
+}catch (err){
+	logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + err.message);
+	logDebug(err.stack);
+}
