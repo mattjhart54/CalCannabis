@@ -118,8 +118,8 @@ try{
 			arrReqdDocs_App.push(goodStanding);
 			arrReqdDocs_App.push(CEQA);	
 		}
-		for(d in arrReqdDocs_App)
-			logDebug("Documents " + arrReqdDocs_App[d]);
+		//for(d in arrReqdDocs_App)
+		//	logDebug("Documents " + arrReqdDocs_App[d]);
 		return arrReqdDocs_App;
 	}
 	if(recdType == "Owner"){
