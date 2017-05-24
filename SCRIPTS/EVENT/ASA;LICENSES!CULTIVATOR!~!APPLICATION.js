@@ -79,7 +79,16 @@ try {
 			var vMiddle = null;
 			//logDebug("vFirst: " + vFirst);
 			var currCapId = capId;
-			capId = tmpID = aa.cap.getCapID(childRecId).getOutput();
+			capId = aa.cap.getCapID(childRecId).getOutput();
+			var arrContacts = getContactArray(capId);
+			if(arrContacts.length>0){ //if there are contacts then remove them--easier than trying to figure who's been added/removed
+				var removeResult = aa.people.removeCapContact(capId, arrContacts[0]["contactSeqNumber"]); //should only be one
+				if (removeResult.getSuccess()){
+					logDebug("(contactObj) contact removed : " + this + " from record " + this.capId.getCustomID());
+				}else{
+					logDebug("(contactObj) error removing contact : " + this + " : from record " + this.capId.getCustomID() + " : " + removeResult.getErrorMessage());
+				}
+			}
 			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel(); 
 			//for(bb in qryPeople){
 			//	if(typeof(qryPeople[bb])=="function"){
@@ -108,6 +117,7 @@ try {
 					}
 				}
 			}
+			capId = currCapId;
 		}
 	}
 }catch (err) {
