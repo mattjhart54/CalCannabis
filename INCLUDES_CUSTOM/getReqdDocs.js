@@ -11,7 +11,7 @@ try{
 		
 	//application documents
     var businessFormation = {condition : "Business - Business Formation Documents", document : "Business - Business Formation Documents"};
-    var businessBond = {condition : "Business - Evidence of Surety Bond", document : "Business - Evidence of Surety Bond"};
+    var businessBond = {condition : "Business - Evidence Surety Bond", document : "Business - Evidence Surety Bond"};
 	var foriegnCorp = {condition : "Business - Foreign Corp. Certificate of Qualification", document : "Business - Foreign Corp. Certificate of Qualification"};
 	var stateDocuments = {condition : "Business - CA Secretary of State Documents", document : "Business - CA Secretary of State Documents"};
 	var soveriegnImmunity = {condition : "Business - Waiver of Sovereign Immunity", document : "Business - Waiver of Sovereign Immunity"};
