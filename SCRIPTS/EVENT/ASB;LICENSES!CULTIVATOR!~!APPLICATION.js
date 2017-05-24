@@ -42,7 +42,11 @@ try{
 				var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
 				logMessage("<span style='font-size:16px'> Only the Designated Responsible Party can complete the application.  An email has been sent to " + drpPubUser + ".  You will be notified via email when the application has been submitted. </span><br/>");
 			}
+		}else{
+			logDebug("Error getting current public user: " + resCurUser.getErrorMessage());
 		}
+	}else{
+		logDebug("Error creating public user for Designated Responsible Party.");
 	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + err.message);
