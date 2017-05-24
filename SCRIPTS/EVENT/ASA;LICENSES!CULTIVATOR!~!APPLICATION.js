@@ -55,7 +55,7 @@ try {
 		var capId = cap.getCapID();
 		var recTypeAlias = "Owner Application";  // must be a valid record type alias
 		var recordNum = 0;
-		loadASITables4ACA();
+		//loadASITables4ACA();
 		//loadASITables();
 		for(row in OWNERS){
 			recordNum++;
@@ -84,9 +84,9 @@ try {
 			if(arrContacts.length>0){ //if there are contacts then remove them--easier than trying to figure who's been added/removed
 				var removeResult = aa.people.removeCapContact(capId, arrContacts[0]["contactSeqNumber"]); //should only be one
 				if (removeResult.getSuccess()){
-					logDebug("(contactObj) contact removed : " + this + " from record " + this.capId.getCustomID());
+					logDebug("(contactObj) contact removed : " + vEmail + " from record " + capId.getCustomID());
 				}else{
-					logDebug("(contactObj) error removing contact : " + this + " : from record " + this.capId.getCustomID() + " : " + removeResult.getErrorMessage());
+					logDebug("(contactObj) error removing contact : " + vEmail + " : from record " + capId.getCustomID() + " : " + removeResult.getErrorMessage());
 				}
 			}
 			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel(); 
