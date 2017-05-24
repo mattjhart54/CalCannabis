@@ -51,7 +51,7 @@ lwacht : end
 //lwacht
 // adding associated forms for owner records then adding owners to those records
 try {
-	if(publicUser){
+//	if(publicUser){
 		var capId = cap.getCapID();
 		var recTypeAlias = "Owner Application";  // must be a valid record type alias
 		var recordNum = 0;
@@ -119,7 +119,7 @@ try {
 			}
 			capId = currCapId;
 		}
-	}
+	//}
 }catch (err) {
 	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
 	logDebug(err.stack);
