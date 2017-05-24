@@ -52,6 +52,7 @@ lwacht : end
 // adding associated forms for owner records then adding owners to those records
 try {
 	if(publicUser){
+		showDebug = true;
 		var capId = cap.getCapID();
 		var recTypeAlias = "Owner Application";  // must be a valid record type alias
 		var recordNum = 0;
