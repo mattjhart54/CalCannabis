@@ -49,7 +49,7 @@ try{
 lwacht : end
 */
 //lwacht
-// adding associated forms for owner records
+// adding associated forms for owner records then adding owners to those records
 try {
 	if(publicUser){
 		var capId = cap.getCapID();
@@ -69,7 +69,46 @@ try {
 			af.recordId = "";		// define a place to store the record ID when the record is created
 			afArray.push(af); 		// add the record to our array
 		}
-		doAssocFormRecs(null,afArray);
+		var arrForms = (doAssocFormRecs(null,afArray));
+		for (y in arrForms){
+			thisForm =  arrForms[y];
+			var childRecId =  thisForm["recordId"];
+			var vFirst = OWNERS[y]["First Name"];
+			var vLast = OWNERS[y]["Last Name"];
+			var vEmail = OWNERS[y]["Email Address"];
+			var vMiddle = null;
+			//logDebug("vFirst: " + vFirst);
+			var currCapId = capId;
+			capId = tmpID = aa.cap.getCapID(childRecId).getOutput();
+			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel(); 
+			//for(bb in qryPeople){
+			//	if(typeof(qryPeople[bb])=="function"){
+			//		logDebug(bb);
+			//	}
+			//}
+			qryPeople.setServiceProviderCode(aa.getServiceProviderCode()) ; 
+			qryPeople.setEmail(vEmail);
+			qryPeople.setContactTypeFlag("Individual");
+			qryPeople.setContactType("Owner");
+			var resQryPpl = aa.people.getPeopleByPeopleModel(qryPeople);
+			if(resQryPpl.getSuccess()){
+				logDebug("Found reference contact matching email, so adding to new owner record.");
+				var ownerSeqNum = addReferenceContactByName(vFirst, vMiddle, vLast);
+			}else{
+				qryPeople.setFirstName(vFirst);
+				qryPeople.setLastName(vLast);
+				var resPpl = aa.people.createPeople(pm);
+				if(!resPpl.getSuccess()){
+					logDebug("Error creating people: " + resPpl.getErrorMessage());
+				}else{
+					logDebug("Succesfully create ref contact, so adding to record");
+					var ownerSeqNumAgain = addReferenceContactByName(vFirst, vMiddle, vLast);
+					if(!ownerSeqNumAgain){
+						logDebug("Error adding ref contact: "+ ownerSeqNumAgain);
+					}
+				}
+			}
+		}
 	}
 }catch (err) {
 	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
