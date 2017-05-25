@@ -4,7 +4,8 @@ try {
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		fnd = "N";
 		loadASITables();
-		if(typeof(CANNABISFINANCIALINTEREST) == "object") {
+logDebug("table Length " + CANNABISFINANCIALINTEREST.length);
+		if(CANNABISFINANCIALINTEREST.length > 0) {
 			for(x in CANNABISFINANCIALINTEREST) {
 				if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") 
 					fnd ="Y";
