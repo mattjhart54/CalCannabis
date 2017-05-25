@@ -84,8 +84,11 @@ try{
 		var currUserName = currUser.firstName + " " + currUser.lastName;
 		logDebug("currUserName: " + currUserName);
 		logDebug("appName: " + appName);
+		aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currUserName: " + currUserName + "; " + ("appName: " + appName));
 		if(appName != currUserName){
+			showMessage = true;
 			comment("Warning: Only the owner (" + appName + ") can submit this application.");
+			logMessage("Warning: Only the owner (" + appName + ") can submit this application.");
 		}
 	}else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
