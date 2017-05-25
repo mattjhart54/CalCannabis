@@ -17,11 +17,11 @@
 |     will no longer be considered a "Master" script and will not be supported in future releases.  If
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = true; // Set to true to see results in popup window
-var showDebug = true; // Set to true to see debug messages in popup window
+var showMessage = false; // Set to true to see results in popup window
+var showDebug = false; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = true;
+var cancel = false;
 var SCRIPT_VERSION = 3;
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
@@ -87,7 +87,6 @@ try{
 		aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currUserName: " + currUserName + "; " + ("appName: " + appName));
 		if(appName != currUserName){
 			showMessage = true;
-			comment("Warning: Only the owner (" + appName + ") can submit this application.");
 			logMessage("Warning: Only the owner (" + appName + ") can submit this application.");
 		}
 	}else{
