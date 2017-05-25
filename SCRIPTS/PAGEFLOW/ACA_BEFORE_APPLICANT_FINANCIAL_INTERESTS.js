@@ -70,7 +70,7 @@ var cap = aa.env.getValue("CapModel");
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
-	logDbug("Start of Logic");
+	logDebug("Start of Logic");
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		logDebug("PD is checked")
 		var fnd = false;
