@@ -76,6 +76,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
+	aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "An error occurred retrieving the current user: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "vote for pedro");
 	appName = cap.getSpecialText();
 	var resCurUser = aa.person.getUser(publicUserID);
 	if(resCurUser.getSuccess()){
