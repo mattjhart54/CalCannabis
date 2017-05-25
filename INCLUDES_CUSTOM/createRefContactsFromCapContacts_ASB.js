@@ -28,7 +28,7 @@ function createRefContactsFromCapContacts_ASB(pCapId, contactTypeArray, ignoreAt
 
 	//var c = aa.people.getCapContactByCapID(pCapId).getOutput()
 	//var cCopy = aa.people.getCapContactByCapID(pCapId).getOutput()  // must have two working datasets
-	var capContactArray = aa.env.getValue("ContactList");
+	var envContactList = aa.env.getValue("ContactList");
 	var c = envContactList.toArray();
 	var cCopy = envContactList.toArray();
 
