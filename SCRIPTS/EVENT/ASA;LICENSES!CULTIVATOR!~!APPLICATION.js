@@ -102,6 +102,11 @@ try {
 		if(resQryPpl.getSuccess()){
 			logDebug("Found reference contact matching email, so adding to new owner record.");
 			var ownerSeqNum = addReferenceContactByName(vFirst, vMiddle, vLast);
+			emailParameters = aa.util.newHashtable();
+			addParameter(emailParameters, "$$AltID$$", capId);
+			addParameter(emailParameters, "$$ProjectName$$", capName);
+			addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
+			sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,rFiles,capId);
 		}else{
 			qryPeople.setFirstName(vFirst);
 			qryPeople.setLastName(vLast);
@@ -150,7 +155,7 @@ try{
 					//showMessage=true;
 					//var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
 					//logMessage("<span style='font-size:16px'> Only the Designated Responsible Party can complete the application.  An email has been sent to " + drpPubUser + ".  You will be notified via email when the application has been submitted. </span><br/>");
-					sendNotification(sysEmail,drpPubUser,"","LCA_OWNER_APP_NOTIF",emailParameters,rFiles,itemCap);
+					sendNotification(sysEmail,drpPubUser,"","LCA_OWNER_APP_NOTIF",emailParameters,rFiles,capId);
 				}
 			}else{
 				logDebug("Error getting current public user: " + resCurUser.getErrorMessage());
