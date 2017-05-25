@@ -82,17 +82,14 @@ try{
 	logDebug("ownerName: " + ownerName);
 	var appNameLen = 0
 	appNameLen = appName.length();
-	logDebug("appNameLen: " + appNameLen);
 	var ownerEmail = appName.substring(parseInt(parenLoc), appNameLen-1);
 	//var resCurUser = aa.person.getUser(publicUserID);
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
-		logDebug("currUserName: " + currUserName);
-		logDebug("appName: " + appName);
 		aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currEmail: " + currEmail + "; " + ("ownerEmail: " + ownerEmail));
-		if(ownerEmail != currUserName){
+		if(ownerEmail != currEmail){
 			showMessage = true;
 			logMessage("Warning: Only " + ownerName + " can submit this application.");
 		}
