@@ -9,7 +9,7 @@
 |
 | Notes   :
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; // Set to true to see results in popup window
+var showMessage = true; // Set to true to see results in popup window
 var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
@@ -70,15 +70,15 @@ var cap = aa.env.getValue("CapModel");
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
-	logDebug("Start of Logic");
+	cancel = true;
+	logMessage("Start of Logic");
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
-		logDebug("PD is checked")
+		logMessage("PD is checked")
 		var fnd = false;
 		loadASITables4ACA();
 		//loadASITables();
 		for(x in CANNABISFINANCIALINTEREST) {
-			logDebug("type of license : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
-			logDebug(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary" );
+			logMessage("type of license : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
 			if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") {
 				fnd = true;
 			}
@@ -86,7 +86,7 @@ try {
 		if (!fnd) {
 			showMessage = true;
 			cancel = true;
-			comment(" COMMENT When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
+//			comment(" COMMENT When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 			logMessage("MESSAGE When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 		}
 	}
