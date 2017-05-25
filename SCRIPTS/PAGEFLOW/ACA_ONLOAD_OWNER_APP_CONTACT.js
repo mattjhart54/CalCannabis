@@ -77,21 +77,18 @@ var cap = aa.env.getValue("CapModel");
 
 try{
 	var appName = cap.getSpecialText();
+	var parenLoc = appName.indexOf(")");
+	var ownerName = appName.substring(0,parseInt(parenLoc));
+	var ownerEmail = appName.substring(parseInt(parenLoc), appName.length-1);
 	var resCurUser = aa.person.getUser(publicUserID);
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
-		var emailText="";
-		for (x in currUser){
-			if(typeof(currUser[x])!="function"){
-				emailText+=x+": " + currUser[x] +br;
-			}
-		}
-		var currUserName = currUser.firstName + " " + currUser.lastName;
+		var currEmail = currUser.email;
 		logDebug("currUserName: " + currUserName);
 		logDebug("appName: " + appName);
-		aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currUserName: " + emailText + "; " + ("appName: " + appName));
-		if(appName != currUserName){
+		aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currEmail: " + currEmail + "; " + ("ownerEmail: " + ownerEmail));
+		if(ownerEmail != currUserName){
 			showMessage = true;
 			logMessage("Warning: Only the owner (" + appName + ") can submit this application.");
 		}
