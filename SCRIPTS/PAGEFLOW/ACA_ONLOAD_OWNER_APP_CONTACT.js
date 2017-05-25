@@ -81,10 +81,16 @@ try{
 	aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currUserName: " + resCurUser.getSuccess() + "; " + ("appName: " + appName));
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
+		var emailText="";
+		for (x in currUser){
+			if(typeof(currUser[x])!="function"){
+				emailText+=x+": " + currUser[x] +br;
+			}
+		}
 		var currUserName = currUser.firstName + " " + currUser.lastName;
 		logDebug("currUserName: " + currUserName);
 		logDebug("appName: " + appName);
-		aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currUserName: " + currUserName + "; " + ("appName: " + appName));
+		aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currUserName: " + emailText + "; " + ("appName: " + appName));
 		if(appName != currUserName){
 			showMessage = true;
 			logMessage("Warning: Only the owner (" + appName + ") can submit this application.");
