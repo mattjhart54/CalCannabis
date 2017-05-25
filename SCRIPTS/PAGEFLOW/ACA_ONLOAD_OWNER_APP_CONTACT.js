@@ -77,7 +77,8 @@ var cap = aa.env.getValue("CapModel");
 
 try{
 	var appName = cap.getSpecialText();
-	var parenLoc = appName.indexOf(")");
+	var parenLoc = appName.indexOf("(");
+	logDebug("parenLoc: " + parenLoc);
 	var ownerName = appName.substring(0,parseInt(parenLoc));
 	var ownerEmail = appName.substring(parseInt(parenLoc), appName.length-1);
 	var resCurUser = aa.person.getUser(publicUserID);
