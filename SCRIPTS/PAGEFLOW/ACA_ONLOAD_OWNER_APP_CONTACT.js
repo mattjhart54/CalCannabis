@@ -82,7 +82,7 @@ try{
 	logDebug("ownerName: " + ownerName);
 	var appNameLen = 0
 	appNameLen = appName.length();
-	var ownerEmail = appName.substring(parseInt(parenLoc), appNameLen-1);
+	var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
 	//var resCurUser = aa.person.getUser(publicUserID);
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
