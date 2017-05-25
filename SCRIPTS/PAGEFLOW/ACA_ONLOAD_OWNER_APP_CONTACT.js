@@ -78,7 +78,7 @@ var cap = aa.env.getValue("CapModel");
 try{
 	var appName = cap.getSpecialText();
 	var resCurUser = aa.person.getUser(publicUserID);
-	aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currUserName: " + resCurUser.getSuccess() + "; " + ("appName: " + appName));
+	var resCurUser = aa.person.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
 		var emailText="";
