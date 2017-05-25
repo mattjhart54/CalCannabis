@@ -5,7 +5,6 @@ try{
 	if("Application Intake".equals(wfTask) && matches(wfStatus, "Complete", "Ready to Pay", "Board Review Required") && !isTaskStatus("Application Intake", "All Documents Received")){
 		cancel=true;
 		showMessage=true;
-		showDebug = false;
 		comment("<font color='blue'>All documents must be uploaded before continuing.</font");
 		comment("<font color='black'></font");
 	}
