@@ -135,15 +135,13 @@ logDebug("balanceDue = " + balanceDue);
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
-	cancel = true;
-	logMessage("Start of Logic");
+
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
-		logMessage("PD is checked")
 		var fnd = false;
 		loadASITables4ACA();
 		//loadASITables();
 		for(x in CANNABISFINANCIALINTEREST) {
-			logMessage("type of license : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
+			logMessage("Type of License : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
 			if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") {
 				fnd = true;
 			}
