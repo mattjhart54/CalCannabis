@@ -26,7 +26,7 @@ catch (err) {
 // record is ready for approval
 try{
 	showDebug = true;
-	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
+	createRefContactsFromCapContacts_ASB(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
 	var drpUser = createPublicUserFromContact("Designated Responsible Party");
 	if(!matches(drpUser, "", null, "undefined", false)){
 		var drpPubUser = ""+drpUser.email;
@@ -50,6 +50,8 @@ try{
 		logDebug("Error creating public user for Designated Responsible Party.");
 	}
 }catch (err){
+	cancel=true;
 	logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + startDate, err);
 }
