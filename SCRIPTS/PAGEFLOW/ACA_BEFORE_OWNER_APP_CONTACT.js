@@ -91,6 +91,7 @@ try{
 			showMessage = true;
 			cancel = true;
 			logMessage("Error: Only " + ownerName + " can submit this application.");
+			comment("Error: Only " + ownerName + " can submit this application.");
 		}
 	}else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
