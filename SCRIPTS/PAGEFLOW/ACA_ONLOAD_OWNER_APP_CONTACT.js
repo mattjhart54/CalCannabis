@@ -78,7 +78,7 @@ var cap = aa.env.getValue("CapModel");
 try{
 	var appName = cap.getSpecialText();
 	var resCurUser = aa.person.getUser(publicUserID);
-	var resCurUser = aa.person.getPublicUserByUserName(publicUserID);
+	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
 		var emailText="";
