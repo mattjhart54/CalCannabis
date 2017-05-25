@@ -79,10 +79,10 @@ try{
 	var appName = cap.getSpecialText();
 	var parenLoc = appName.indexOf("(");
 	var ownerName = appName.substring(0,parseInt(parenLoc));
+	logDebug("ownerName: " + ownerName);
+	logDebug("appName.length: " + appName.length);
 	var ownerEmail = appName.substring(parseInt(parenLoc), (appName.length)-1);
 	//var resCurUser = aa.person.getUser(publicUserID);
-	logDebug("ownerName: " + ownerName);
-	logDebug("ownerEmail: " + ownerEmail);
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
