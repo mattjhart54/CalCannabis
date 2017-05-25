@@ -80,8 +80,11 @@ try{
 	var parenLoc = appName.indexOf("(");
 	var ownerName = appName.substring(0,parseInt(parenLoc));
 	logDebug("ownerName: " + ownerName);
-	logDebug("appName.length: " + appName.length);
-	var ownerEmail = appName.substring(parseInt(parenLoc), (appName.length)-1);
+	var appNameLen = 0
+	appNameLen = appName.length;
+	logDebug("appName.length: " + appName.length());
+	logDebug("appNameLen: " + appNameLen);
+	var ownerEmail = appName.substring(parseInt(parenLoc), appNameLen-1);
 	//var resCurUser = aa.person.getUser(publicUserID);
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
