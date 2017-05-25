@@ -51,9 +51,9 @@ lwacht : end
 //lwacht
 // adding associated forms for owner records then adding owners to those records
 try {
-	//capId = cap.getCapID();
 	var recTypeAlias = "Owner Application";  // must be a valid record type alias
 	var recordNum = 0;
+	var currCapId = capId;
 	//loadASITables4ACA();
 	loadASITables();
 	for(row in OWNERS){
@@ -77,8 +77,8 @@ try {
 		var vEmail = OWNERS[y]["Email Address"];
 		var vMiddle = null;
 		//logDebug("vFirst: " + vFirst);
-		var currCapId = capId;
 		capId = aa.cap.getCapID(childRecId).getOutput();
+		logDebug("capId: "+ capId);
 		var arrContacts = getContactArray(capId);
 		if(arrContacts.length>0){ //if there are contacts then remove them--easier than trying to figure who's been added/removed
 			var removeResult = aa.people.removeCapContact(capId, arrContacts[0]["contactSeqNumber"]); //should only be one
@@ -100,13 +100,16 @@ try {
 		qryPeople.setContactType("Owner");
 		var resQryPpl = aa.people.getPeopleByPeopleModel(qryPeople);
 		if(resQryPpl.getSuccess()){
-			logDebug("Found reference contact matching email, so adding to new owner record.");
+			logDebug("Found reference contact matching email, so adding to new owner record: " + vFirst + " " + vLast);
 			var ownerSeqNum = addReferenceContactByName(vFirst, vMiddle, vLast);
+			if(!ownerSeqNum){
+				logDebug("Error adding ref contact: "+ ownerSeqNum);
+			}
 			emailParameters = aa.util.newHashtable();
 			addParameter(emailParameters, "$$AltID$$", capId);
 			addParameter(emailParameters, "$$ProjectName$$", capName);
 			addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
-			sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,rFiles,capId);
+			sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
 		}else{
 			qryPeople.setFirstName(vFirst);
 			qryPeople.setLastName(vLast);
@@ -121,11 +124,12 @@ try {
 				}
 			}
 		}
-		capId = currCapId;
 	}
+	capId = currCapId;
 }catch (err) {
 	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Application: associated forms: " + startDate, err);
 }
 
 
@@ -155,7 +159,7 @@ try{
 					//showMessage=true;
 					//var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
 					//logMessage("<span style='font-size:16px'> Only the Designated Responsible Party can complete the application.  An email has been sent to " + drpPubUser + ".  You will be notified via email when the application has been submitted. </span><br/>");
-					sendNotification(sysEmail,drpPubUser,"","LCA_OWNER_APP_NOTIF",emailParameters,rFiles,capId);
+					sendNotification(sysEmail,drpPubUser,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
 				}
 			}else{
 				logDebug("Error getting current public user: " + resCurUser.getErrorMessage());
