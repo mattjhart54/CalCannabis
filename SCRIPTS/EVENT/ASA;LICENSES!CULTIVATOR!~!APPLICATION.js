@@ -78,6 +78,7 @@ try {
 		var vMiddle = null;
 		//logDebug("vFirst: " + vFirst);
 		capId = aa.cap.getCapID(childRecId).getOutput();
+		editAppName(vFirst + " " + vLast);
 		logDebug("capId: "+ capId);
 		var arrContacts = getContactArray(capId);
 		if(arrContacts.length>0){ //if there are contacts then remove them--easier than trying to figure who's been added/removed
@@ -129,7 +130,6 @@ try {
 }catch (err) {
 	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Application: associated forms: " + startDate, err);
 }
 
 
