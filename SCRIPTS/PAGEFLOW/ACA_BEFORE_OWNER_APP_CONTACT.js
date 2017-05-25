@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_ONLOAD_OWNER_APP_CONTACT.JS
+| Program : ACA_ONLOAD_COND_DOCS.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -89,17 +89,18 @@ try{
 		var currEmail = currUser.email;
 		if(ownerEmail != currEmail){
 			showMessage = true;
-			logMessage("Warning: Only " + ownerName + " can submit this application.");
+			cancel = true;
+			logMessage("Error: Only " + ownerName + " can submit this application.");
 		}
 	}else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, resCurUser.getErrorMessage());
+		aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, resCurUser.getErrorMessage());
 	}
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, err);
+	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, err);
 }
 // page flow custom code end
 
