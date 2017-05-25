@@ -30,9 +30,16 @@ function createRefContactsFromCapContacts_ASB(pCapId, contactTypeArray, ignoreAt
 	//var cCopy = aa.people.getCapContactByCapID(pCapId).getOutput()  // must have two working datasets
 	var c = aa.env.getValue("ContactList");
 	var cCopy = aa.env.getValue("ContactList");  // must have two working datasets
-
-	for (var i in c)
-	   {
+	for (var i in c){
+		tCont = c[i];
+		for(o in tCont){
+			if(typeof(tCont[o])=="function"){
+				logDebug(o+": "+tCont[o]);
+			}
+		}
+	}
+	
+	for (var i in c){
 	   var ruleForRefContactType = "U"; // default behavior is create the ref contact using transaction contact type
 	   var con = c[i];
 
