@@ -79,7 +79,6 @@ try{
 	var appName = cap.getSpecialText();
 	var parenLoc = appName.indexOf("(");
 	var ownerName = appName.substring(0,parseInt(parenLoc));
-	logDebug("ownerName: " + ownerName);
 	var appNameLen = 0
 	appNameLen = appName.length();
 	var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
@@ -88,7 +87,6 @@ try{
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
-		aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currEmail: " + currEmail + "; " + ("ownerEmail: " + ownerEmail));
 		if(ownerEmail != currEmail){
 			showMessage = true;
 			logMessage("Warning: Only " + ownerName + " can submit this application.");
