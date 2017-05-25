@@ -1,3 +1,4 @@
+/*
 try {
 	if(!cap.isCreatedByACA()) {
 		if(AInfo["Producing Dispensary"] == "CHECKED") {
@@ -22,4 +23,4 @@ catch (err) {
     logDebug("A JavaScript Error occurred: Licenses/Cultivation/* /Application: " + err.message);
 	logDebug(err.stack);
 }
-
+*/
