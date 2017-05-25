@@ -78,10 +78,11 @@ var cap = aa.env.getValue("CapModel");
 try{
 	var appName = cap.getSpecialText();
 	var parenLoc = appName.indexOf("(");
-	logDebug("parenLoc: " + parenLoc);
 	var ownerName = appName.substring(0,parseInt(parenLoc));
-	var ownerEmail = appName.substring(parseInt(parenLoc), appName.length-1);
-	var resCurUser = aa.person.getUser(publicUserID);
+	var ownerEmail = appName.substring(parseInt(parenLoc), (appName.length)-1);
+	//var resCurUser = aa.person.getUser(publicUserID);
+	logDebug("ownerName: " + ownerName);
+	logDebug("ownerEmail: " + ownerEmail);
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
@@ -91,7 +92,7 @@ try{
 		aa.sendMail("noreply_accela@cdfa.ca.gov", "lwacht@trustvip.com", "", "Info: LACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "currEmail: " + currEmail + "; " + ("ownerEmail: " + ownerEmail));
 		if(ownerEmail != currUserName){
 			showMessage = true;
-			logMessage("Warning: Only the owner (" + appName + ") can submit this application.");
+			logMessage("Warning: Only " + ownerName + " can submit this application.");
 		}
 	}else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
