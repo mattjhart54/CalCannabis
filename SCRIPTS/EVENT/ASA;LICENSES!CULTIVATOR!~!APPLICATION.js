@@ -78,7 +78,7 @@ try {
 		var vMiddle = null;
 		//logDebug("vFirst: " + vFirst);
 		capId = aa.cap.getCapID(childRecId).getOutput();
-		editAppName(vFirst + " " + vLast);
+		editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
 		logDebug("capId: "+ capId);
 		var arrContacts = getContactArray(capId);
 		if(arrContacts.length>0){ //if there are contacts then remove them--easier than trying to figure who's been added/removed
@@ -143,7 +143,7 @@ try{
 	if(publicUser){
 		if(!matches(drpUser, "", null, "undefined", false)){
 			var drpPubUser = ""+drpUser.email;
-			var resCurUser = aa.person.getUser(publicUserID);
+			var resCurUser = aa.person.getUser(publicUserID);	
 			if(resCurUser.getSuccess()){
 				var currUser = resCurUser.getOutput();
 				var currUserEmail = ""+currUser.email;
