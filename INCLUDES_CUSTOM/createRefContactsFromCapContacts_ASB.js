@@ -21,20 +21,23 @@ function createRefContactsFromCapContacts_ASB(pCapId, contactTypeArray, ignoreAt
 	var standardChoiceForBusinessRules = "REF_CONTACT_CREATION_RULES";
 
 
-	var ingoreArray = new Array();
+	var ignoreArray = new Array();
 	if (arguments.length > 1) ignoreArray = arguments[1];
 
 	var defaultContactFlag = lookup(standardChoiceForBusinessRules,"Default");
 
 	//var c = aa.people.getCapContactByCapID(pCapId).getOutput()
 	//var cCopy = aa.people.getCapContactByCapID(pCapId).getOutput()  // must have two working datasets
-	var c = aa.env.getValue("ContactList");
-	var cCopy = aa.env.getValue("ContactList");  // must have two working datasets
+	var capContactArray = aa.env.getValue("ContactList");
+	var c = envContactList.toArray();
+	var cCopy = envContactList.toArray();
+
+
 	for (var i in c){
 		tCont = c[i];
 		for(o in tCont){
 			if(typeof(tCont[o])=="function"){
-				logDebug(o+": "+tCont[o]);
+				logDebug(o);
 			}
 		}
 	}
