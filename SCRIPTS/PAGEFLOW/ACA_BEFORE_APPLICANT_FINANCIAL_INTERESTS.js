@@ -205,8 +205,8 @@ try {
 				}
 			}
 		}
-	showMessage=true;
-	logMessage("Acres " + totAcre + "Medium " + mediumLic);
+//	showMessage=true;
+//	logMessage("Acres " + totAcre + "Medium " + mediumLic);
 	if((totAcre + canopy.value*1) > 174240) {
 		cancel=true;
 		showMessage=true;
