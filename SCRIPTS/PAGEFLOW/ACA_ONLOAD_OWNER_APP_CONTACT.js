@@ -103,7 +103,7 @@ try{
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, err);
+	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + ": " + err);
 }
 // page flow custom code end
 
