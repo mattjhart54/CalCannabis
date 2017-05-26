@@ -134,8 +134,7 @@ try {
 
 
 //lwacht
-// verify the person attempting to submit the record is the designated responsible party
-// if not, stop the submission.  also, send an to the designated responsible party, letting them know the
+// send an to the designated responsible party, letting them know the
 // record is ready for approval
 try{
 	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
@@ -171,5 +170,5 @@ try{
 }catch (err){
 	logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + startDate, err);
+	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }

@@ -76,6 +76,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
+	var capId = cap.getCapID();
 	var appName = cap.getSpecialText();
 	var parenLoc = appName.indexOf("(");
 	var ownerName = appName.substring(0,parseInt(parenLoc));
@@ -95,13 +96,13 @@ try{
 		}
 	}else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, resCurUser.getErrorMessage());
+		aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
 	}
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, err);
+	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_COND_DOCS: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 // page flow custom code end
 
