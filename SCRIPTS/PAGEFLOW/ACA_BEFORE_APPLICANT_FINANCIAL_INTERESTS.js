@@ -135,7 +135,6 @@ logDebug("balanceDue = " + balanceDue);
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
-
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		var fnd = false;
 		loadASITables4ACA();
@@ -152,6 +151,71 @@ try {
 //			comment(" COMMENT When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 			logMessage("MESSAGE When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 		}
+	}
+	
+// Check for total acreage from all applicant records.  Total must be less than 4 acres 
+// Check no more than one Medium license allowed unless Producing Disensary is checked.
+	
+	var totAcre = 0;
+	var mediumLic = "N";
+
+	var c = aa.people.getCapContactByCapID(capId).getOutput();
+		for (var i in c){
+			var con = c[i];
+
+			var ct = con.getCapContactModel().getContactType();
+			if(ct =="Applicant") {
+				var crn = con.getCapContactModel().getRefContactNumber();
+				if (crn != null && crn != "") {
+					var p = con.getPeople();
+					var psm = aa.people.createPeopleModel().getOutput();
+					psm.setContactSeqNumber(con.getCapContactModel().getRefContactNumber());
+					psm.setServiceProviderCode(con.getServiceProviderCode());
+					var fn=con.getFirstName();
+					if(fn !=null && fn !="") {
+						var cfn = con.getCapContactModel().getFirstName();
+						var cln = con.getCapContactModel().getLastName();
+						psm.setFullName(cfn + " " + cln);
+					}
+					else {
+						var cbn = con.getCapContactModel().getBusinessName()
+						psm.setBusinessName (cbn);
+					}
+
+					var cResult = aa.people.getCapIDsByRefContact(psm);  // needs 7.1
+					if (cResult.getSuccess()) {
+						var cList = cResult.getOutput();
+						for (var j in cList) {
+							var thisCapId = cList[j];
+							var thatCapId = thisCapId.getCapID();
+							var cs = getAppSpecific("Canopy Size",thatCapId);
+							if(cs != "" && cs != null && cs != undefined) {
+								totAcre = totAcre + parseFloat(cs,2);
+							}
+
+							capLicType = getAppSpecific("License Type",thatCapId);
+							if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed Light")) {
+								mediumLic = "Y";
+							}
+						}
+					}
+					else{
+						logDebug("error finding cap ids: " + cResult.getErrorMessage());
+					}
+				}
+			}
+		}
+	showMessage=true;
+	logMessage("Acres " + totAcre + "Medium " + mediumLic;
+	if((totAcre + canopy.value*1) > 174240) {
+		cancel=true;
+		showMessage=true;
+		logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
+	}
+	if((licType.value == "Medium Outdoor" || licType.value == "Medium Indoor" || licType.value == "Medium Mixed-Light") && prodDisp.value != "CHECKED" && mediumLic == "Y") {
+		cancel=true;
+		showMessage=true;
+		logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 	}
 }
 catch (err) {
