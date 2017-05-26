@@ -160,6 +160,8 @@ try {
 	var mediumLic = "N";
 
 	var c = aa.people.getCapContactByCapID(capId).getOutput();
+	showMessage=true;
+	logMessage("AContacts " + c);
 		for (var i in c){
 			var con = c[i];
 
