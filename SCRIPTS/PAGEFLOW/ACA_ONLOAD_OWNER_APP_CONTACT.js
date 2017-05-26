@@ -77,23 +77,27 @@ var cap = aa.env.getValue("CapModel");
 
 try{
 	var appName = cap.getSpecialText();
-	var parenLoc = appName.indexOf("(");
-	var ownerName = appName.substring(0,parseInt(parenLoc));
-	var appNameLen = 0
-	appNameLen = appName.length();
-	var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
-	//var resCurUser = aa.person.getUser(publicUserID);
-	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-	if(resCurUser.getSuccess()){
-		var currUser = resCurUser.getOutput();
-		var currEmail = currUser.email;
-		if(ownerEmail != currEmail){
-			showMessage = true;
-			logMessage("Warning: Only " + ownerName + " can submit this application.");
+	if(!matches(ppName,null,"","undefined")){
+		var parenLoc = appName.indexOf("(");
+		var ownerName = appName.substring(0,parseInt(parenLoc));
+		var appNameLen = 0
+		appNameLen = appName.length();
+		var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
+		//var resCurUser = aa.person.getUser(publicUserID);
+		var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+		if(resCurUser.getSuccess()){
+			var currUser = resCurUser.getOutput();
+			var currEmail = currUser.email;
+			if(ownerEmail != currEmail){
+				showMessage = true;
+				logMessage("Warning: Only " + ownerName + " can submit this application.");
+			}
+		}else{
+			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+			aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, resCurUser.getErrorMessage());
 		}
 	}else{
-		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, resCurUser.getErrorMessage());
+		logDebug("No application name for this record: " + capId);
 	}
 } catch (err) {
 	showDebug =true;
