@@ -77,7 +77,7 @@ var cap = aa.env.getValue("CapModel");
 
 try{
 	var appName = cap.getSpecialText();
-	if(!matches(ppName,null,"","undefined")){
+	if(!matches(appName,null,"","undefined")){
 		var parenLoc = appName.indexOf("(");
 		var ownerName = appName.substring(0,parseInt(parenLoc));
 		var appNameLen = 0
