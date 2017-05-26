@@ -166,6 +166,8 @@ try {
 			var con = c[i];
 
 			var ct = con.getCapContactModel().getContactType();
+			showMessage=true;
+			logMessage("AContacts " + ct);
 			if(ct =="Applicant") {
 				var crn = con.getCapContactModel().getRefContactNumber();
 				if (crn != null && crn != "") {
