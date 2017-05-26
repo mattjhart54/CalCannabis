@@ -161,7 +161,7 @@ try {
 
 	var c = aa.people.getCapContactByCapID(capId).getOutput();
 	showMessage=true;
-	logMessage("AContacts " + c);
+	logMessage("AContacts " + c.length);
 		for (var i in c){
 			var con = c[i];
 
