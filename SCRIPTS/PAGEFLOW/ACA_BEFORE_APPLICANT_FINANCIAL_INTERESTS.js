@@ -159,7 +159,9 @@ try {
 	var totAcre = 0;
 	var mediumLic = "N";
 
-	var c = aa.people.getCapContactByCapID(capId).getOutput();
+	var c = newArray();
+	c = capContactArray = cap.getContactsGroup().toArray() ;
+//    c = aa.people.getCapContactByCapID(capId).getOutput();
 	showMessage=true;
 	logMessage("AContacts " + c.length);
 		for (var i in c){
