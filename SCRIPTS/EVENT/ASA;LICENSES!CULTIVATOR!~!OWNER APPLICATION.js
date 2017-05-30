@@ -1,14 +1,16 @@
 //lwacht
 // if this is the last owner record to be submitted, create a temp affidavit record and email the DRP
 try{
+	logDebug("parentCapId: " + parentCapId);
 	if(parentCapId){
 		var allKidsComplete = true;
-		var arrChild = getChildren("Licenses/Cultivation/*/Owner Application", parentCapId);
-		if(!matches(arrChild, null, "", "undefined")){
+		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application", parentCapId);
+		if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
 			for(ch in arrChild){
 				thisChild = arrChild[ch];
 				capChild = aa.cap.getCap(capId).getOutput();
-				if(capChild.getCapStatus!="Pending"){
+				logDebug("capChild.getCapStatus: " + capChild.getCapStatus());
+				if(capChild.getCapStatus()!="Pending"){
 					allKidsComplete=false;
 				}
 			}
@@ -19,7 +21,7 @@ try{
 			ctm.setType("Cultivator");
 			ctm.setSubType("Medical");
 			ctm.setCategory("Declaration");
-			var newCapID = aa.cap.createSimplePartialRecord(ctm,legId, "INCOMPLETE CAP").getOutput();
+			var newCapID = aa.cap.createSimplePartialRecord(ctm,null, "INCOMPLETE CAP").getOutput();
 			var result = aa.cap.createAppHierarchy(parentCapId, newCapID); 
 			if (result.getSuccess()){
 				logDebug("Child application successfully linked");
