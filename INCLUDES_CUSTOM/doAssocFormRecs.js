@@ -45,7 +45,8 @@ try {
 		if (!afData || afData == "") {
 			afData = [];
 		} else {
-			afData = JSON.parse(afData);
+			//afData = JSON.parse(afData);  doesn't work, getting rid of it
+			afData = afData;
 		}
 		// filter this list against the existing child records, remove any that aren't really child records.
 		afData = afData.filter(function (o) {
