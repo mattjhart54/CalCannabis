@@ -42,6 +42,18 @@ try{
 			}
 			var arrForms = (doAssocFormRecs("childRecs",afArray));
 			capId = currCap;
+			var drpContact = getContactByType("Designated Responsible Party",capId);
+			if(drpContact){
+				copyContactsByType(parentCapId, capId, "Designated Responsible Party");
+				var drpEmail = drpContact.getEmail();
+				if(!matches(drpEmail,null,"","undefined")){
+					emailParameters = aa.util.newHashtable();
+					addParameter(emailParameters, "$$AltID$$", capId);
+					addParameter(emailParameters, "$$ProjectName$$", capName);
+					addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
+					sendNotification(sysEmail,vEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,capId);
+				}
+			}
 		}
 	}
 }catch (err){

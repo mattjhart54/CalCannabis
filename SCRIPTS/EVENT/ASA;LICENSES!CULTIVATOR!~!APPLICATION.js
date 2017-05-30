@@ -71,7 +71,6 @@ try {
 	}
 	var arrForms = (doAssocFormRecs(null,afArray));
 	for (y in arrForms){
-		logDebug("+record+ " + y + "-------------------------------------");
 		thisForm =  arrForms[y];
 		var childRecId =  thisForm["recordId"];
 		var vFirst = OWNERS[y]["First Name"];
