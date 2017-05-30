@@ -80,37 +80,6 @@ try {
 		var vMiddle = null;
 		//logDebug("vFirst: " + vFirst);
 		capId = aa.cap.getCapID(childRecId).getOutput();
-		nbrToTry = y+1;
-		//because owners can be added and deleted, need a way to number the records
-		//but only if they haven't been numbered before
-		if(capId.getCustomID().substring(0,3)!="LCA"){
-			var ownerGotNewAltId = false;
-			var newIdErrMsg = "";
-			for (i = 0; i <= 100; i++) {
-				if(nbrToTry<10){
-					var nbrOwner = "00" + nbrToTry;
-				}else{
-					if(nbrToTry>100){
-						var nbrOwner = "0" + nbrToTry
-					}
-					var nbrOwner = ""+ nbrToTry;
-				}
-				var newAltId = currCapId.getCustomID() + "-" + nbrOwner + "O";
-				var updateResult = aa.cap.updateCapAltID(capId, newAltId);
-				if (updateResult.getSuccess()) {
-					logDebug("Updated owner record AltId to " + newAltId + ".");
-					ownerGotNewAltId = true;
-					break;
-				}else {
-					newIdErrMsg += updateResult.getErrorMessage() +"; ";
-					nbrToTry++;
-				}
-			}
-			if(!ownerGotNewAltId){
-				logDebug("Error renaming owner record " + capId + ":  " + newIdErrMsg);
-				aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
-			}
-		}
 		editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
 		logDebug("capId: "+ capId);
 		var arrContacts = getContactArray(capId);

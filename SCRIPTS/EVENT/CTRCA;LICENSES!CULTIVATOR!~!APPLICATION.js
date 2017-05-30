@@ -16,5 +16,5 @@ try{
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("CALTREES-noreply@resources.ca.gov", debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, err.message+ "; "+ err.stack);
+	aa.sendMail("CALTREES-noreply@resources.ca.gov", debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 }
