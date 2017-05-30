@@ -45,8 +45,10 @@ try {
 		if (!afData || afData == "") {
 			afData = [];
 		} else {
-			//afData = JSON.parse(afData);  doesn't work, getting rid of it
-			afData = afData;
+			afData = JSON.parse(afData);
+			//afData = JSON.stringify(afData);
+			//afData = JSON.parse(JSON.stringify(afData));
+			logDebug("afData: " + afData);
 		}
 		// filter this list against the existing child records, remove any that aren't really child records.
 		afData = afData.filter(function (o) {
@@ -89,6 +91,17 @@ try {
 			logDebug("no " + n.Alias + " record found in existing afData");
 		}
 	}
+	//don't remove any records where the alias doesn't match the one requested
+	for(i in newAfData){
+		for(j in afData){
+			if(newAfData[i].Alias!=afData[j].Alias){
+				logDebug("Wrong alias, not removing "+  afData[j].recordId);
+				delete afData[j];
+			}
+		}
+	}
+
+
 	// Delete everything thats left in AfData, we aren't using it.
 	for (var i in afData) {
 		logDebug("removing unused child record " + afData[i].recordId);

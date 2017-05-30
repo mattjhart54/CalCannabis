@@ -4,6 +4,7 @@ try{
 	updateAppStatus("Submitted","Updated via ASA:Licenses/Cultivator/*/Owner Application");
 	logDebug("parentCapId: " + parentCapId);
 	if(parentCapId){
+		var childMap = getExistingChildsMap(parentCapId,"AssoForm");
 		var childRecs = [];
 		var allKidsComplete = true;
 		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application", parentCapId);
@@ -13,35 +14,19 @@ try{
 				thisChild = arrChild[ch];
 				capChild = aa.cap.getCap(thisChild).getOutput();
 				logDebug("capChild.getCapStatus: " + capChild.getCapStatus());
-				if(capChild.getCapStatus()!="Submitted"){
+				if(!matches(capChild.getCapStatus(), "Pending", "Submitted")){
 					logDebug("Not complete");
 					allKidsComplete=false;
 				}
-				//var af = {};  // empty object
-				//af.ID = ch;  // give it an id number
-				//af.Alias = "Owner Application";  
-				//af.recordId = thisChild.getCustomID();		// define a place to store the record ID when the record is created
-				//chArray.push(af); 		// add the record to our array
+				logDebug("capChild.getCapModel().getAppTypeAlias(): " + capChild.getCapModel().getAppTypeAlias());
+				logDebug("capChild.getCapID().getCustomID(): " + capChild.getCapID().getCustomID());
 				chArray.push({
-					"ID" : i,
+					"ID" : ch,
 					"Alias" : String(capChild.getCapModel().getAppTypeAlias()),
 					"recordId" : String(capChild.getCapID().getCustomID())
 				});
 			}
-			var arrChild = getChildren("Licenses/Cultivator/*/Declaration", parentCapId);
-			if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
-				var chArray = [];
-				for(ch in arrChild){
-					thisChild = arrChild[ch];
-					capChild = aa.cap.getCap(thisChild).getOutput();
-					chArray.push({
-						"ID" : i,
-						"Alias" : String(capChild.getCapModel().getAppTypeAlias()),
-						"recordId" : String(capChild.getCapID().getCustomID())
-					})
-				}
-			}
-			editAppSpecific("childRecs", chArray);
+			editAppSpecific("childRecs", JSON.stringify(chArray));
 		}
 		if(allKidsComplete){
 			var currCap = capId;
@@ -56,7 +41,7 @@ try{
 				af.recordId = "";		// define a place to store the record ID when the record is created
 				afArray.push(af); 		// add the record to our array
 			}
-			var arrForms = (doAssocFormRecs("childRecs",afArray));
+			var arrForms = (doAssocFormRecs1("childRecs",afArray));
 			capId = currCap;
 		}
 	}
