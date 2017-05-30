@@ -40,7 +40,7 @@ try{
 				af.recordId = "";		// define a place to store the record ID when the record is created
 				afArray.push(af); 		// add the record to our array
 			}
-			var arrForms = (doAssocFormRecs1("childRecs",afArray));
+			var arrForms = (doAssocFormRecs("childRecs",afArray));
 			capId = currCap;
 		}
 	}
