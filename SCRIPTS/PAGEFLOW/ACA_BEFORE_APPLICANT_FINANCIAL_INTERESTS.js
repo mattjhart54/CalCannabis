@@ -160,7 +160,7 @@ try {
 	var mediumLic = "N";
 
 	var c = newArray();
-	c = capContactArray = cap.getContactsGroup().toArray() ;
+	c = cap.getContactsGroup().toArray() ;
 //    c = aa.people.getCapContactByCapID(capId).getOutput();
 	showMessage=true;
 	logMessage("AContacts " + c.length);
