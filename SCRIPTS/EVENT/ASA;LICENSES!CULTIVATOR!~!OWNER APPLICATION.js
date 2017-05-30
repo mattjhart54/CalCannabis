@@ -4,7 +4,6 @@ try{
 	updateAppStatus("Submitted","Updated via ASA:Licenses/Cultivator/*/Owner Application");
 	logDebug("parentCapId: " + parentCapId);
 	if(parentCapId){
-		var childMap = getExistingChildsMap(parentCapId,"AssoForm");
 		var childRecs = [];
 		var allKidsComplete = true;
 		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application", parentCapId);
