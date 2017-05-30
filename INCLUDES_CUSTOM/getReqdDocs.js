@@ -129,11 +129,11 @@ try{
 		arrReqdDocs_Own.push(fingerprintApp);
 	
 	//these are qualified documents
-		if(appTypeArray[2] == "AdultUse") {
+		if(appTypeArray[2] == "Adult Use") {
 			arrReqdDocs_Own.push(calResidency);
 		}
-		var discipAction = getAppSpecific("Disciplinary Action", itemCap);
-		if (discipAction == "Yes"){
+		var crime = getAppSpecific("Convicted of a Crime", itemCap);
+		if (crime == "Yes"){
 			for(c in CONVICTIONS) {
 				arrReqdDocs_Own.push(evidenceOfDismissal);
 				arrReqdDocs_Own.push(certificateOfRehabilitation);
