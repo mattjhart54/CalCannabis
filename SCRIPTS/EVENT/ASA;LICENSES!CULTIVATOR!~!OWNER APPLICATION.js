@@ -28,7 +28,7 @@ try{
 				af.recordId = "";		// define a place to store the record ID when the record is created
 				afArray.push(af); 		// add the record to our array
 			}
-			var arrForms = (doAssocFormRecs(null,afArray));
+			var arrForms = (doAssocFormRecs(AInfo["childRecs"],afArray));
 			capId = currCap;
 		}
 	}
