@@ -181,7 +181,7 @@ try {
 				}
 				if (dr && ccr.length > 0 && addTableRows) {
 					tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
-					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
+					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_DOCUMENTS", dr), "Y"); 
 					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
 					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
 					conditionTable.push(tblRow);
