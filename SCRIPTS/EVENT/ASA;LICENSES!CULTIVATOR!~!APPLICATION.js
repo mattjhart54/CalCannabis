@@ -1,4 +1,4 @@
-/ lwacht
+// lwacht
 //compare the documents uploaded to the documents required in the "attachment" event
 // if any documents are required, send an email.
 /* lwacht : start : not using, but leaving for now
