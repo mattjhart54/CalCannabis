@@ -70,7 +70,6 @@ try {
 		afArray.push(af); 		// add the record to our array
 	}
 	var arrForms = (doAssocFormRecs(null,afArray));
-	logDebug("arrForms: " + arrForms.length);
 	for (y in arrForms){
 		logDebug("+record+ " + y + "-------------------------------------");
 		thisForm =  arrForms[y];

@@ -16,21 +16,21 @@ try{
 			}
 		}
 		if(allKidsComplete){
-			ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
-			ctm.setGroup("Licenses");
-			ctm.setType("Cultivator");
-			ctm.setSubType("Medical");
-			ctm.setCategory("Declaration");
-			var newCapID = aa.cap.createSimplePartialRecord(ctm,null, "INCOMPLETE CAP").getOutput();
-			var result = aa.cap.createAppHierarchy(parentCapId, newCapID); 
-			if (result.getSuccess()){
-				logDebug("Child application successfully linked");
-			}else{
-				logDebug("Could not link application: " + result.getErrorMessage());
-				aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "Could not link application: Licenses/Cultivation/*/Owner Application: " + startDate, "capId: " + capId + ": " + result.getErrorMessage());
+			var currCap = capId;
+			capId = parentCapId;
+			var recTypeAlias = "Declarations and Final Affidavit";  // must be a valid record type alias
+			var recordNum = 1;
+			var afArray = [];  // array describing the associated form records
+			for (var i = 0; i < recordNum; i++) {
+				var af = {};  // empty object
+				af.ID = String(i + 1);  // give it an id number
+				af.Alias = recTypeAlias;  
+				af.recordId = "";		// define a place to store the record ID when the record is created
+				afArray.push(af); 		// add the record to our array
 			}
+			var arrForms = (doAssocFormRecs(null,afArray));
+			capId = currCap;
 		}
-
 	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Owner Application: " + err.message);
