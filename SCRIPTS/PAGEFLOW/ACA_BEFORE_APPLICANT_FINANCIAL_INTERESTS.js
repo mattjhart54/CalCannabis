@@ -181,12 +181,13 @@ try {
 	logMessage("AContacts " + c.length);
 		for (var i in c){
 			var con = c[i];
-
-			var ct = con.getCapContactModel().getContactType();
+			var ct = capContactArray[yy].getPeople().contactType;
+//			var ct = con.getCapContactModel().getContactType();
 			showMessage=true;
 			logMessage("AContacts " + ct);
 			if(ct =="Applicant") {
-				var crn = con.getCapContactModel().getRefContactNumber();
+				var crn = capContactArray[yy].getPeople().contactSeqNumber;
+//				var crn = con.getCapContactModel().getRefContactNumber();
 				if (crn != null && crn != "") {
 					var p = con.getPeople();
 					var psm = aa.people.createPeopleModel().getOutput();
