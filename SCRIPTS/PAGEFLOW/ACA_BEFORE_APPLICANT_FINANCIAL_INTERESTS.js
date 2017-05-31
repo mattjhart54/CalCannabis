@@ -151,12 +151,10 @@ try {
 		logMessage("PD Checked");
 		var fnd = false;
 		logMessage("found " + fnd);
-//		loadASITables4ACA();
 		loadASITable("CANNABIS FINANCIAL INTEREST")
 		logMessage("tables loaded");
-		//loadASITables();
 		for(x in CANNABISFINANCIALINTEREST) {
-			logMessage("Type of License : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
+			logMessage("Type of License : " + x);
 			if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") {
 				fnd = true;
 			}
