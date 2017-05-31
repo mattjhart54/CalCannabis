@@ -134,11 +134,11 @@ try{
 		}
 		var crime = getAppSpecific("Convicted of a Crime", itemCap);
 		if (crime == "Yes"){
-			for(c in CONVICTIONS) {
+		//	for(c in CONVICTIONS) {
 				arrReqdDocs_Own.push(evidenceOfDismissal);
 				arrReqdDocs_Own.push(certificateOfRehabilitation);
 				arrReqdDocs_Own.push(referenceLetters);
-			}
+		//	}
 		}
 		return arrReqdDocs_Own;
 	}
