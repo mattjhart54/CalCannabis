@@ -228,12 +228,14 @@ try {
 		}
 //	showMessage=true;
 //	logMessage("Acres " + totAcre + "Medium " + mediumLic);
-	if((totAcre + canopy.value*1) > 174240) {
+	licType = capLicType = getAppSpecific("License Type");
+	prdDisp = getAppSpecific("Producing Dispensary");
+	if((totAcre > 174240) {
 		cancel=true;
 		showMessage=true;
 		logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
 	}
-	if((licType.value == "Medium Outdoor" || licType.value == "Medium Indoor" || licType.value == "Medium Mixed-Light") && prodDisp.value != "CHECKED" && mediumLic == "Y") {
+	if((licType == "Medium Outdoor" || licType == "Medium Indoor" || licType == "Medium Mixed-Light") && prodDisp != "CHECKED" && mediumLic == "Y") {
 		cancel=true;
 		showMessage=true;
 		logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
