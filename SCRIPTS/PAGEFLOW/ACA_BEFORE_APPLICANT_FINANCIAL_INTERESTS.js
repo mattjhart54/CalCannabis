@@ -36,12 +36,10 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALTREES",true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALTREES",true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
 }
 
 eval(getScriptText("INCLUDES_CUSTOM"));
