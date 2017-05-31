@@ -135,6 +135,9 @@ logDebug("balanceDue = " + balanceDue);
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
+	showMessage = true;
+	logMessage("Start Script");
+	cancel = true;
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		var fnd = false;
 		loadASITables4ACA();
