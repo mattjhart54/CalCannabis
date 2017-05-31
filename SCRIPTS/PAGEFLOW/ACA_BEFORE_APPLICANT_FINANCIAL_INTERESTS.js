@@ -141,6 +141,7 @@ try {
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		logMessage("PD Checked");
 		var fnd = false;
+		logMessage("found " + fnd);
 		loadASITables4ACA();
 		//loadASITables();
 		for(x in CANNABISFINANCIALINTEREST) {
@@ -149,6 +150,7 @@ try {
 				fnd = true;
 			}
 		}
+		logMessage("found after " + fnd);
 		if (!fnd) {
 			showMessage = true;
 			cancel = true;
