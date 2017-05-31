@@ -75,7 +75,6 @@ try {
 		var childRecId =  thisForm["recordId"];
 		//logDebug("vFirst: " + vFirst);
 		capId = aa.cap.getCapID(childRecId).getOutput();
-		editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
 		logDebug("capId: "+ capId);
 		var arrContacts = getContactArray(capId);
 		//if there are contacts, compare them to the current owners table.
@@ -131,6 +130,7 @@ try {
 					var vFirst = tblOwners[o]["First Name"];
 					var vLast = tblOwners[o]["Last Name"];
 					var vEmail = tblOwners[o]["Email Address"];
+					editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
 					tblOwners[o]["Status"]="Submitted";
 					var vMiddle = null;
 					qryPeople.setServiceProviderCode(aa.getServiceProviderCode()) ; 
