@@ -143,6 +143,7 @@ try {
 		var fnd = false;
 		logMessage("found " + fnd);
 		loadASITables4ACA();
+		logMessage("tables loaded");
 		//loadASITables();
 		for(x in CANNABISFINANCIALINTEREST) {
 			logMessage("Type of License : " + CANNABISFINANCIALINTEREST[x]["Type of License"] );
