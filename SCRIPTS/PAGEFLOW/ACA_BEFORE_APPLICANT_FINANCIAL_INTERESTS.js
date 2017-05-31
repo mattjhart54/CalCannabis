@@ -1,27 +1,37 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_Before_Applicant.js
-| Event   : ACA_BeforeButton Event
+| Program : ACA_APPLICATION_DOC_BEFORE.js
+| Event   : ACA Page Flow attachments before event
 |
-| Usage   : 
+| Usage   : Master Script by Accela.  See accompanying documentation and release notes.
 |
 | Client  : N/A
 | Action# : N/A
 |
 | Notes   :
+|
+/------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------/
+| START User Configurable Parameters
+|
+|     Only variables in the following section may be changed.  If any other section is modified, this
+|     will no longer be considered a "Master" script and will not be supported in future releases.  If
+|     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
 var showMessage = false; // Set to true to see results in popup window
 var showDebug = false; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
-var SCRIPT_VERSION = 3;
+var useCustomScriptFile = true;  			// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
 var startDate = new Date();
 var startTime = startDate.getTime();
+var message = ""; // Message String
 var debug = ""; // Debug String
 var br = "<BR>"; // Break Tag
+
 var useSA = false;
 var SA = null;
 var SAScript = null;
@@ -44,6 +54,7 @@ if (SA) {
 
 eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
 
+
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
 	vScriptName = vScriptName.toUpperCase();
@@ -59,6 +70,7 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 		return "";
 	}
 }
+
 
 var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
@@ -104,7 +116,7 @@ var AInfo = new Array();						// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 //loadTaskSpecific(AInfo);						// Add task specific info
 //loadParcelAttributes(AInfo);						// Add parcel attributes
-//loadASITables();
+loadASITables();
 
 logDebug("<B>EMSE Script Results for " + capIDString + "</B>");
 logDebug("capId = " + capId.getClass());
@@ -126,7 +138,6 @@ logDebug("houseCount = " + houseCount);
 logDebug("feesInvoicedTotal = " + feesInvoicedTotal);
 logDebug("balanceDue = " + balanceDue);
 
-//var parentId = cap.getParentCapID();
 
 // page flow custom code begin
 
