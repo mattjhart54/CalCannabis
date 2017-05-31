@@ -6,9 +6,9 @@ try{
 	if(parentCapId){
 		var childRecs = [];
 		var allKidsComplete = true;
+		var chArray = [];
 		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application", parentCapId);
 		if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
-			var chArray = [];
 			for(ch in arrChild){
 				thisChild = arrChild[ch];
 				capChild = aa.cap.getCap(thisChild).getOutput();
@@ -25,6 +25,21 @@ try{
 					"recordId" : String(capChild.getCapID().getCustomID())
 				});
 			}
+		}
+		var arrChild = getChildren("Licenses/Cultivator/*/Declaration", parentCapId);
+		if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
+			var chArray = [];
+			for(ch in arrChild){
+				thisChild = arrChild[ch];
+				capChild = aa.cap.getCap(thisChild).getOutput();
+				chArray.push({
+					"ID" : ch,
+					"Alias" : String(capChild.getCapModel().getAppTypeAlias()),
+					"recordId" : String(capChild.getCapID().getCustomID())
+				});
+			}
+		}
+		if(chArray.length>0){
 			editAppSpecific("childRecs", JSON.stringify(chArray));
 		}
 		if(allKidsComplete){
@@ -51,15 +66,15 @@ try{
 					addParameter(emailParameters, "$$AltID$$", capId);
 					addParameter(emailParameters, "$$ProjectName$$", capName);
 					addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
-					sendNotification(sysEmail,vEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,capId);
+					sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,capId);
 				}
 			}
 		}
 	}
 }catch (err){
-	logDebug("A JavaScript Error occurred: ASA:Licenses/Cultivator/*/Owner Application: " + err.message);
+	logDebug("A JavaScript Error occurred: ASA:Licenses/Cultivator/*/Owner Application: Declaration logic: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Owner Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 
 // lwacht
@@ -67,7 +82,7 @@ try{
 try{
 	if(!publicUser){
 		if(parentCapId){
-			nbrToTry = y+1;
+			nbrToTry = 1;
 			//because owners can be added and deleted, need a way to number the records
 			//but only if they haven't been numbered before
 			if(capId.getCustomID().substring(0,3)!="LCA"){
@@ -95,12 +110,15 @@ try{
 				}
 				if(!ownerGotNewAltId){
 					logDebug("Error renaming owner record " + capId + ":  " + newIdErrMsg);
-					aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
+					aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
 				}
+			}else{
+				logDebug("Owner record AltId already updated: "+ capId.getCustomID());
 			}
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Required Documents: " + err.message);
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: AltID Logic: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }

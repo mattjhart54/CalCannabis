@@ -96,13 +96,13 @@ try{
 		}
 	}else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
+		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
 	}
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_COND_DOCS: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_COND_DOCS: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 // page flow custom code end
 
