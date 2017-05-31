@@ -181,12 +181,12 @@ try {
 	logMessage("AContacts " + c.length);
 		for (var i in c){
 			var con = c[i];
-			var ct = capContactArray[yy].getPeople().contactType;
+			var ct = con.getPeople().contactType;
 //			var ct = con.getCapContactModel().getContactType();
 			showMessage=true;
 			logMessage("AContacts " + ct);
 			if(ct =="Applicant") {
-				var crn = capContactArray[yy].getPeople().contactSeqNumber;
+				var crn = con.getPeople().contactSeqNumber;
 //				var crn = con.getCapContactModel().getRefContactNumber();
 				if (crn != null && crn != "") {
 					var p = con.getPeople();
