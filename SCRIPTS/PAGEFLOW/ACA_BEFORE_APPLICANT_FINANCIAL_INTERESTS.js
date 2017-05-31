@@ -145,14 +145,11 @@ logDebug("balanceDue = " + balanceDue);
 
 try {
 
-	showMessage = true;
-	logMessage("Start Script" + publicUserID);
+
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
-		logMessage("PD Checked");
+
 		var fnd = false;
-		logMessage("found " + fnd);
 		cfi =loadASITable("CANNABIS FINANCIAL INTEREST")
-		logMessage("tables loaded");
 		for(x in cfi) {
 			logMessage("Type of License : " + cfi[x]["Type of License"]);
 			if(cfi[x]["Type of License"] == "Producing Dispensary") {
@@ -170,7 +167,7 @@ try {
 
 // Check for total acreage from all applicant records.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
-	
+if(publicUserID == "PUBLICUSER130303") {
 	var totAcre = 0;
 	var mediumLic = "N";
 
@@ -243,7 +240,7 @@ try {
 		logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 	}
   //  aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
-
+}
 }
 catch (err) {
     logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application/: " + err.message);
