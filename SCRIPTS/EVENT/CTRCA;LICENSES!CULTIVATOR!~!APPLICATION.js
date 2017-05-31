@@ -2,6 +2,7 @@
 // compare the documents uploaded to the documents required by the added conditions
 // remove the condition for all uploaded documents
 try{
+	aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + "; " );
 	var docsList = [];
 	var allDocsLoaded = true;
 	//docsList = getDocumentList();//Get all Documents on a Record

@@ -73,64 +73,110 @@ try {
 	for (y in arrForms){
 		thisForm =  arrForms[y];
 		var childRecId =  thisForm["recordId"];
-		var vFirst = OWNERS[y]["First Name"];
-		var vLast = OWNERS[y]["Last Name"];
-		var vEmail = OWNERS[y]["Email Address"];
-		var vMiddle = null;
 		//logDebug("vFirst: " + vFirst);
 		capId = aa.cap.getCapID(childRecId).getOutput();
 		editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
 		logDebug("capId: "+ capId);
 		var arrContacts = getContactArray(capId);
-		if(arrContacts.length>0){ //if there are contacts then remove them--easier than trying to figure who's been added/removed
+		//if there are contacts, compare them to the current owners table.
+		//if they're there, leave it.  if they're not remove them and add an owner
+		var hasOwnerContact = false;
+		if(arrContacts.length>0 && arrContacts!=null){ 
 			var contSeq = arrContacts[0]["contactSeqNumber"]; //should only be one
-			var removeResult = aa.people.removeCapContact(capId, contSeq); 
-			if (removeResult.getSuccess()){
-				logDebug("(contactObj) contact removed : " + this + " from record " + this.capId.getCustomID());
-			}else{
-				logDebug("(contactObj) error removing contact : " + arrContacts[0]["lastName"] + " : from record " + this.capId.getCustomID() + " : " + removeResult.getErrorMessage());
+			var contFName = arrContacts[0]["firstName"]; //should only be one
+			var contLName = arrContacts[0]["lastName"]; //should only be one
+			var contEmail = arrContacts[0]["email"]; //should only be one
+			//logDebug("contFName: " + contFName);
+			//logDebug("contLName: " + contLName);
+			//logDebug("contEmail: " + contEmail);
+			var ownerRecdExists = false;
+			var tblOwners = OWNERS;
+			for(ow in tblOwners){
+				var vFirst = tblOwners[ow]["First Name"];
+				var vLast = tblOwners[ow]["Last Name"];
+				var vEmail = tblOwners[ow]["Email Address"];
+				//logDebug("---first match: " + (""+vFirst==""+contFName));
+				//logDebug("---last match: " + (""+vLast==""+contLName));
+				//logDebug("---email match: " + (""+vEmail==""+contEmail));
+				//logDebug("---vFirst: " + vFirst);
+				//logDebug("---vLast: " + vLast);
+				//logDebug("---vEmail: " + vEmail);
+				if(""+contFName==""+vFirst && ""+contLName==""+vLast && ""+contEmail==""+vEmail){
+					tblOwners[ow]["Status"]="Submitted";
+					//removeASITable("OWNERS");
+					//addASITable("OWNERS",tblOwners);
+					ownerRecdExists = true;
+					hasOwnerContact = true;
+					logDebug("Found matching owner row: " + vFirst + " " + vLast);
+				}
+			}
+			if(!ownerRecdExists){
+				var removeResult = aa.people.removeCapContact(capId, contSeq); 
+				if (removeResult.getSuccess()){
+					logDebug("Contact removed : " + this + " from record " + this.capId.getCustomID());
+				}else{
+					logDebug("Error removing contact : " + arrContacts[0]["lastName"] + " : from record " + this.capId.getCustomID() + " : " + removeResult.getErrorMessage());
+				}
 			}
 		}
-		var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel(); 
-		//for(bb in qryPeople){
-		//	if(typeof(qryPeople[bb])=="function"){
-		//		logDebug(bb);
-		//	}
-		//}
-		qryPeople.setServiceProviderCode(aa.getServiceProviderCode()) ; 
-		qryPeople.setEmail(vEmail);
-		qryPeople.setContactTypeFlag("Individual");
-		qryPeople.setContactType("Owner");
-		var resQryPpl = aa.people.getPeopleByPeopleModel(qryPeople);
-		if(resQryPpl.getSuccess()){
-			logDebug("Found reference contact matching email, so adding to new owner record: " + vFirst + " " + vLast);
-			var ownerSeqNum = addReferenceContactByName(vFirst, vMiddle, vLast);
-			if(!ownerSeqNum){
-				logDebug("Error adding ref contact: "+ ownerSeqNum);
-			}
-			emailParameters = aa.util.newHashtable();
-			addParameter(emailParameters, "$$AltID$$", capId);
-			addParameter(emailParameters, "$$ProjectName$$", capName);
-			addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
-			var resCurUser = aa.person.getUser(publicUserID);	
-			if(resCurUser.getSuccess()){
-				var currUser = resCurUser.getOutput();
-				var currUserEmail = ""+currUser.email;
-			}
-			if(currUserEmail!=vEmail){
-				sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
-			}
-		}else{
-			qryPeople.setFirstName(vFirst);
-			qryPeople.setLastName(vLast);
-			var resPpl = aa.people.createPeople(pm);
-			if(!resPpl.getSuccess()){
-				logDebug("Error creating people: " + resPpl.getErrorMessage());
-			}else{
-				logDebug("Succesfully create ref contact, so adding to record");
-				var ownerSeqNumAgain = addReferenceContactByName(vFirst, vMiddle, vLast);
-				if(!ownerSeqNumAgain){
-					logDebug("Error adding ref contact: "+ ownerSeqNumAgain);
+		if(!hasOwnerContact){
+			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel(); 
+			//for(bb in qryPeople){
+			//	if(typeof(qryPeople[bb])=="function"){
+			//		logDebug(bb);
+			//	}
+			//}
+			for(o in tblOwners){
+				if(tblOwners[o]["Status"]!="Submitted"){
+					var vFirst = tblOwners[o]["First Name"];
+					var vLast = tblOwners[o]["Last Name"];
+					var vEmail = tblOwners[o]["Email Address"];
+					tblOwners[o]["Status"]="Submitted";
+					var vMiddle = null;
+					qryPeople.setServiceProviderCode(aa.getServiceProviderCode()) ; 
+					qryPeople.setEmail(vEmail);
+					qryPeople.setContactTypeFlag("Individual");
+					qryPeople.setContactType("Owner");
+					var resQryPpl = aa.people.getPeopleByPeopleModel(qryPeople);
+					if(resQryPpl.getSuccess()){
+						refQryPpl = resQryPpl.getOutput();
+						for (ref in refQryPpl){
+							if(typeof(refQryPpl[ref])!="function"){
+								logDebug(ref+": " + refQryPpl[ref]);
+							}
+						}
+						logDebug("Found reference contact matching email, so adding to new owner record: " + vFirst + " " + vLast);
+						var ownerSeqNum = addReferenceContactByName(vFirst, vMiddle, vLast);
+						if(!ownerSeqNum){
+							logDebug("Error adding ref contact: "+ ownerSeqNum);
+						}
+						emailParameters = aa.util.newHashtable();
+						addParameter(emailParameters, "$$AltID$$", capId);
+						addParameter(emailParameters, "$$ProjectName$$", capName);
+						addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
+						var resCurUser = aa.person.getUser(publicUserID);	
+						if(resCurUser.getSuccess()){
+							var currUser = resCurUser.getOutput();
+							var currUserEmail = ""+currUser.email;
+						}
+						if(currUserEmail!=vEmail){
+							sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
+						}
+					}else{
+						qryPeople.setFirstName(vFirst);
+						qryPeople.setLastName(vLast);
+						var resPpl = aa.people.createPeople(pm);
+						if(!resPpl.getSuccess()){
+							logDebug("Error creating people: " + resPpl.getErrorMessage());
+						}else{
+							logDebug("Succesfully create ref contact, so adding to record");
+							var ownerSeqNumAgain = addReferenceContactByName(vFirst, vMiddle, vLast);
+							if(!ownerSeqNumAgain){
+								logDebug("Error adding ref contact: "+ ownerSeqNumAgain);
+							}
+						}
+					}
+					break;
 				}
 			}
 		}
@@ -140,7 +186,6 @@ try {
 	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
 	logDebug(err.stack);
 }
-
 
 //lwacht
 // send an to the designated responsible party, letting them know the
@@ -179,5 +224,5 @@ try{
 }catch (err){
 	logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply_accela@cdfa.ca.gov", debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
