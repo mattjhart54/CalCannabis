@@ -144,9 +144,9 @@ logDebug("balanceDue = " + balanceDue);
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
-/*
+
 	showMessage = true;
-	logMessage("Start Script");
+	logMessage("Start Script" + publicUser);
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		logMessage("PD Checked");
 		var fnd = false;
@@ -243,7 +243,7 @@ try {
 		logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 	}
   //  aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
-*/
+
 }
 catch (err) {
     logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application/: " + err.message);
