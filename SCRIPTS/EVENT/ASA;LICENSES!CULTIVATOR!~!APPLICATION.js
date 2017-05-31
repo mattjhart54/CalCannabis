@@ -185,7 +185,7 @@ try {
 }catch (err) {
 	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
 	logDebug(err.stack);
-
+}
 
 //lwacht
 // send an to the designated responsible party, letting them know the
