@@ -144,7 +144,7 @@ logDebug("balanceDue = " + balanceDue);
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
-
+/*
 	showMessage = true;
 	logMessage("Start Script");
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
@@ -167,7 +167,7 @@ try {
 			logMessage("When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 		}
 	}
-/*
+*/
 // Check for total acreage from all applicant records.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
 	
@@ -239,7 +239,7 @@ try {
 		logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 	}
     aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
-  */
+
 }
 catch (err) {
     logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application/: " + err.message);
