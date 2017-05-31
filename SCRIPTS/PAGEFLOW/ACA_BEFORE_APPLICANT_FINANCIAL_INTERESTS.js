@@ -151,7 +151,8 @@ try {
 		logMessage("PD Checked");
 		var fnd = false;
 		logMessage("found " + fnd);
-		loadASITables4ACA();
+//		loadASITables4ACA();
+		loadASITable("CANNABIS FINANCIAL INTEREST")
 		logMessage("tables loaded");
 		//loadASITables();
 		for(x in CANNABISFINANCIALINTEREST) {
