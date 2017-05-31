@@ -187,6 +187,7 @@ try {
 			logMessage("AContacts " + ct);
 			if(ct =="Applicant") {
 			var crn = con.getCapContactModel().getRefContactNumber();
+			logMessage("ref nbr " + crn);
 				if (crn != null && crn != "") {
 					var p = con.getPeople();
 					var psm = aa.people.createPeopleModel().getOutput();
@@ -205,6 +206,7 @@ try {
 
 					var cResult = aa.people.getCapIDsByRefContact(psm);  // needs 7.1
 					if (cResult.getSuccess()) {
+						logMessage("got recs by contact");
 						var cList = cResult.getOutput();
 						for (var j in cList) {
 							var thisCapId = cList[j];
