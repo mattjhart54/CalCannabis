@@ -151,12 +151,11 @@ try {
 		var fnd = false;
 		cfi =loadASITable("CANNABIS FINANCIAL INTEREST")
 		for(x in cfi) {
-			logMessage("Type of License : " + cfi[x]["Type of License"]);
+//			logMessage("Type of License : " + cfi[x]["Type of License"]);
 			if(cfi[x]["Type of License"] == "Producing Dispensary") {
 				fnd = true;
 			}
 		}
-		logMessage("found after " + fnd);
 		if (!fnd) {
 			showMessage = true;
 			cancel = true;
@@ -209,6 +208,7 @@ if(publicUserID == "PUBLICUSER130303") {
 							var thatCapId = thisCapId.getCapID();
 							logMessage("capId " + thatCapId);
 							var cs = getAppSpecific("Canopy Size",thatCapId);
+							logMessage("cs " + cs);
 							if(cs != "" && cs != null && cs != undefined) {
 								totAcre = totAcre + parseFloat(cs,2);
 							}
@@ -228,7 +228,9 @@ if(publicUserID == "PUBLICUSER130303") {
 //	showMessage=true;
 	logMessage("Acres " + totAcre + "Medium " + mediumLic);
 	licType = getAppSpecific("License Type");
+	logMessage("lictype " + licType);
 	prodDisp = getAppSpecific("Producing Dispensary");
+	logMessage("prodDisp" + prodDisp);
 	if(totAcre > 174240) {
 		cancel=true;
 		showMessage=true;
