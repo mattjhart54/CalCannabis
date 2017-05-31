@@ -144,9 +144,9 @@ logDebug("balanceDue = " + balanceDue);
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
+
 	showMessage = true;
 	logMessage("Start Script");
-	cancel = true;
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		logMessage("PD Checked");
 		var fnd = false;
@@ -164,10 +164,10 @@ try {
 			showMessage = true;
 			cancel = true;
 //			comment(" COMMENT When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
-			logMessage("MESSAGE When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
+			logMessage("When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 		}
 	}
-/*	
+/*
 // Check for total acreage from all applicant records.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
 	
