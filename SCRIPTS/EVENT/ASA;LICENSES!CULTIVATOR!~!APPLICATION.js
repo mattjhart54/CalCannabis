@@ -146,7 +146,7 @@ try {
 							}
 						}
 						logDebug("Found reference contact matching email, so adding to new owner record: " + vFirst + " " + vLast);
-						var ownerSeqNum = addReferenceContactByName(vFirst, vMiddle, vLast);
+						var ownerSeqNum = addRefContactByNameEmail(vFirst, vMiddle, vLast,vEmail);
 						if(!ownerSeqNum){
 							logDebug("Error adding ref contact: "+ ownerSeqNum);
 						}
@@ -170,7 +170,7 @@ try {
 							logDebug("Error creating people: " + resPpl.getErrorMessage());
 						}else{
 							logDebug("Succesfully create ref contact, so adding to record");
-							var ownerSeqNumAgain = addReferenceContactByName(vFirst, vMiddle, vLast);
+							var ownerSeqNumAgain = addRefContactByNameEmail(vFirst, vMiddle, vLast,vEmail);
 							if(!ownerSeqNumAgain){
 								logDebug("Error adding ref contact: "+ ownerSeqNumAgain);
 							}
@@ -185,7 +185,7 @@ try {
 }catch (err) {
 	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
 	logDebug(err.stack);
-}
+
 
 //lwacht
 // send an to the designated responsible party, letting them know the
