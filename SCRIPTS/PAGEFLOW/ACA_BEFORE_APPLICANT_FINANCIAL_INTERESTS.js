@@ -175,23 +175,22 @@ try {
 	var mediumLic = "N";
 
 	var c = new Array();
-	c = cap.getContactsGroup().toArray() ;
-//    c = aa.people.getCapContactByCapID(capId).getOutput();
+//	c = cap.getContactsGroup().toArray() ;
+    c = aa.people.getCapContactByCapID(capId).getOutput();
 	showMessage=true;
 	logMessage("AContacts " + c.length);
 		for (var i in c){
 			var con = c[i];
-			var ct = con.getPeople().contactType;
-//			var ct = con.getCapContactModel().getContactType();
+//			var ct = con.getPeople().contactType;
+			var ct = con.getCapContactModel().getContactType();
 			showMessage=true;
 			logMessage("AContacts " + ct);
 			if(ct =="Applicant") {
-				var crn = con.getPeople().contactSeqNumber;
-//				var crn = con.getCapContactModel().getRefContactNumber();
+			var crn = con.getCapContactModel().getRefContactNumber();
 				if (crn != null && crn != "") {
 					var p = con.getPeople();
 					var psm = aa.people.createPeopleModel().getOutput();
-					psm.setContactSeqNumber(con.getCapContactModel().getRefContactNumber());
+					psm.setContactSeqNumber(crn);
 					psm.setServiceProviderCode(con.getServiceProviderCode());
 					var fn=con.getFirstName();
 					if(fn !=null && fn !="") {
