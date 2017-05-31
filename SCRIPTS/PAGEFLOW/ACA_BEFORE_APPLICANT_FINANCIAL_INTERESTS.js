@@ -146,7 +146,7 @@ logDebug("balanceDue = " + balanceDue);
 try {
 
 	showMessage = true;
-	logMessage("Start Script" + publicUser);
+	logMessage("Start Script" + publicUserID);
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		logMessage("PD Checked");
 		var fnd = false;
