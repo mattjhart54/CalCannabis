@@ -228,7 +228,7 @@ try {
 		}
 //	showMessage=true;
 //	logMessage("Acres " + totAcre + "Medium " + mediumLic);
-	licType = capLicType = getAppSpecific("License Type");
+	licType = getAppSpecific("License Type");
 	prdDisp = getAppSpecific("Producing Dispensary");
 	if((totAcre > 174240) {
 		cancel=true;
