@@ -230,7 +230,7 @@ try {
 //	logMessage("Acres " + totAcre + "Medium " + mediumLic);
 	licType = getAppSpecific("License Type");
 	prodDisp = getAppSpecific("Producing Dispensary");
-	if((totAcre > 174240) {
+	if(totAcre > 174240) {
 		cancel=true;
 		showMessage=true;
 		logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
