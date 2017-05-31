@@ -167,7 +167,7 @@ try {
 			logMessage("When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 		}
 	}
-*/
+
 // Check for total acreage from all applicant records.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
 	
@@ -175,13 +175,12 @@ try {
 	var mediumLic = "N";
 
 	var c = new Array();
-//	c = cap.getContactsGroup().toArray() ;
+
     c = aa.people.getCapContactByCapID(capId).getOutput();
 	showMessage=true;
 	logMessage("AContacts " + c.length);
 		for (var i in c){
 			var con = c[i];
-//			var ct = con.getPeople().contactType;
 			var ct = con.getCapContactModel().getContactType();
 			showMessage=true;
 			logMessage("AContacts " + ct);
@@ -211,6 +210,7 @@ try {
 						for (var j in cList) {
 							var thisCapId = cList[j];
 							var thatCapId = thisCapId.getCapID();
+							logMessage("capId " + thatCapId);
 							var cs = getAppSpecific("Canopy Size",thatCapId);
 							if(cs != "" && cs != null && cs != undefined) {
 								totAcre = totAcre + parseFloat(cs,2);
@@ -243,7 +243,7 @@ try {
 		logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 	}
   //  aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
-
+*/
 }
 catch (err) {
     logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application/: " + err.message);
