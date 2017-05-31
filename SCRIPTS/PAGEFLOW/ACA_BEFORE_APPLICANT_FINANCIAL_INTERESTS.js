@@ -139,6 +139,7 @@ try {
 	logMessage("Start Script");
 	cancel = true;
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
+		logMessage("PD Checked");
 		var fnd = false;
 		loadASITables4ACA();
 		//loadASITables();
