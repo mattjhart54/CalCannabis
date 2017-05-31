@@ -154,7 +154,7 @@ try {
 		cfi =loadASITable("CANNABIS FINANCIAL INTEREST")
 		logMessage("tables loaded");
 		for(x in cfi) {
-			logMessage("Type of License : " + cfi[x]);
+			logMessage("Type of License : " + cfi[x]["Type of License"]);
 			if(cfi[x]["Type of License"] == "Producing Dispensary") {
 				fnd = true;
 			}
