@@ -61,7 +61,7 @@ try{
 			var arrForms = (doAssocFormRecs("childRecs",afArray));
 			capId = currCap;
 			for (i in arrForms){
-				thisForm =  arrForms[y];
+				thisForm =  arrForms[i];
 				var desigRecId =  thisForm["recordId"];
 				var drpContact = getContactByType("Designated Responsible Party",parentCapId);
 				if(drpContact){
@@ -127,5 +127,5 @@ try{
 } catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: AltID Logic: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
