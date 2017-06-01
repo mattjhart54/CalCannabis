@@ -53,6 +53,7 @@ try{
 			}
 	}else{
 		logDebug("Add Ref Contact error: No match on email: " + vEmail);
+		return false;
 	}
 } catch (err) {
 	logDebug("A JavaScript Error occurred: addRefContactByNameEmail: " + err.message);
