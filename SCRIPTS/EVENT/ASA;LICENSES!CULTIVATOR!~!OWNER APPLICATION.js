@@ -1,3 +1,6 @@
+//lwacht: add the owner applications
+processOwnerApplications();
+
 //lwacht
 // if this is the last owner record to be submitted, create a temp affidavit record and email the DRP
 try{
@@ -13,7 +16,7 @@ try{
 				thisChild = arrChild[ch];
 				capChild = aa.cap.getCap(thisChild).getOutput();
 				logDebug("capChild.getCapStatus: " + capChild.getCapStatus());
-				if(!matches(capChild.getCapStatus(), "Pending", "Submitted")){
+				if(!matches(capChild.getCapStatus(), "Submitted")){
 					logDebug("Not complete");
 					allKidsComplete=false;
 				}
