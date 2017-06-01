@@ -73,13 +73,13 @@ try {
 	for (y in arrForms){
 		thisForm =  arrForms[y];
 		var childRecId =  thisForm["recordId"];
-		//logDebug("vFirst: " + vFirst);
 		capId = aa.cap.getCapID(childRecId).getOutput();
 		logDebug("capId: "+ capId);
 		var arrContacts = getContactArray(capId);
 		//if there are contacts, compare them to the current owners table.
 		//if they're there, leave it.  if they're not remove them and add an owner
 		var hasOwnerContact = false;
+		var tblOwners = OWNERS;
 		if(arrContacts.length>0 && arrContacts!=null){ 
 			var contSeq = arrContacts[0]["contactSeqNumber"]; //should only be one
 			var contFName = arrContacts[0]["firstName"]; //should only be one
@@ -89,7 +89,6 @@ try {
 			//logDebug("contLName: " + contLName);
 			//logDebug("contEmail: " + contEmail);
 			var ownerRecdExists = false;
-			var tblOwners = OWNERS;
 			for(ow in tblOwners){
 				var vFirst = tblOwners[ow]["First Name"];
 				var vLast = tblOwners[ow]["Last Name"];
@@ -104,7 +103,6 @@ try {
 					tblOwners[ow]["Status"]="Submitted";
 					//removeASITable("OWNERS");
 					//addASITable("OWNERS",tblOwners);
-					editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
 					ownerRecdExists = true;
 					hasOwnerContact = true;
 					logDebug("Found matching owner row: " + vFirst + " " + vLast);
@@ -120,6 +118,7 @@ try {
 			}
 		}
 		if(!hasOwnerContact){
+			logDebug("Owner not found.  Attempting to add owner contact. ");
 			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel(); 
 			//for(bb in qryPeople){
 			//	if(typeof(qryPeople[bb])=="function"){
@@ -127,11 +126,13 @@ try {
 			//	}
 			//}
 			for(o in tblOwners){
+				//logDebug("owner status: " + tblOwners[o]["Status"]);
 				if(tblOwners[o]["Status"]!="Submitted"){
 					var vFirst = tblOwners[o]["First Name"];
 					var vLast = tblOwners[o]["Last Name"];
 					var vEmail = tblOwners[o]["Email Address"];
 					editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
+					//logDebug("appName: " + vFirst + " " + vLast + " (" + vEmail + ")");
 					tblOwners[o]["Status"]="Submitted";
 					var vMiddle = null;
 					qryPeople.setServiceProviderCode(aa.getServiceProviderCode()) ; 
@@ -141,11 +142,11 @@ try {
 					var resQryPpl = aa.people.getPeopleByPeopleModel(qryPeople);
 					if(resQryPpl.getSuccess()){
 						refQryPpl = resQryPpl.getOutput();
-						for (ref in refQryPpl){
-							if(typeof(refQryPpl[ref])!="function"){
-								logDebug(ref+": " + refQryPpl[ref]);
-							}
-						}
+						//for (ref in refQryPpl){
+						//	if(typeof(refQryPpl[ref])!="function"){
+						//		logDebug(ref+": " + refQryPpl[ref]);
+						//	}
+						//}
 						logDebug("Found reference contact matching email, so adding to new owner record: " + vFirst + " " + vLast);
 						var ownerSeqNum = addRefContactByNameEmail(vFirst, vMiddle, vLast,vEmail);
 						if(!ownerSeqNum){
@@ -187,6 +188,7 @@ try {
 	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: associated forms: " + err.message);
 	logDebug(err.stack);
 }
+
 
 //lwacht
 // send an to the designated responsible party, letting them know the
