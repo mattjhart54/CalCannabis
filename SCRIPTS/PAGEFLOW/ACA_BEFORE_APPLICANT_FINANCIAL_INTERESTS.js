@@ -172,10 +172,11 @@ if(publicUserID == "PUBLICUSER130303") {
 	var totAcre = 0;
 	var mediumLic = "N";
 	var c = new Array();
-c=getContactObjs(cap)
+c=getContactObjs(cap);
 //    c = aa.people.getCapContactByCapID(capId).getOutput();
 	showMessage=true;
-	logMessage("AContacts " + c.length);
+	logMessage("AContacts " + c);
+	/*
 		for (var i in c){
 			var con = c[i];
 			var ct = con.getCapContactModel().getContactType();
@@ -240,7 +241,7 @@ c=getContactObjs(cap)
 		logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 	}
   //  aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
-}
+} */
 }
 catch (err) {
     logDebug("A JavaScript Error occurred: Licenses/Cultivation/*/Application/: " + err.message);
