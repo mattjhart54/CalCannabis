@@ -39,4 +39,5 @@ try{
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: AltID Logic: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Required Documents: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 }
