@@ -171,7 +171,6 @@ try {
 if(publicUserID == "PUBLICUSER130303") {
 	var totAcre = 0;
 	var mediumLic = "N";
-
 	var c = new Array();
 
     c = aa.people.getCapContactByCapID(capId).getOutput();
@@ -230,9 +229,9 @@ if(publicUserID == "PUBLICUSER130303") {
 //	showMessage=true;
 	logMessage("Acres " + totAcre + "Medium " + mediumLic);
 	licType = getAppSpecific("License Type");
-	logMessage("lictype " + licType);
+	logMessage("lictype " + AInfo["License Type"]);
 	prodDisp = getAppSpecific("Producing Dispensary");
-	logMessage("prodDisp" + prodDisp);
+	logMessage("prodDisp" + AInfo["Producing Dispensary"]);
 	if(totAcre > 174240) {
 		cancel=true;
 		showMessage=true;
