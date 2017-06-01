@@ -173,11 +173,12 @@ if(publicUserID == "PUBLICUSER130303") {
 	var mediumLic = "N";
 	var c = new Array();
 c=getContactObjs(cap);
+for(x in c) {
+	cont = c[x];
+	logMessage("Contact " + cont.seqNumber " " + cont)
+}
 //    c = aa.people.getCapContactByCapID(capId).getOutput();
-	showMessage=true;
-	logMessage("AContacts " + c);
-	/*
-		for (var i in c){
+/*		for (var i in c){
 			var con = c[i];
 			var ct = con.getCapContactModel().getContactType();
 			showMessage=true;
