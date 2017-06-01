@@ -144,9 +144,9 @@ logDebug("balanceDue = " + balanceDue);
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
-	cAppl = getContactObj(capId,"Applicant");
-	showMessage=true;
-	logMessage("Contact Array" + cAppl);
+//	cAppl = getContactObj(capId,"Applicant");
+//	showMessage=true;
+//	logMessage("Contact Array" + cAppl);
 
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 
