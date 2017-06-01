@@ -176,7 +176,7 @@ if(publicUserID == "PUBLICUSER130303") {
 		for (var i in c){
 			var con = c[i];
 			var ct = con.getCapContactModel().getContactType();
-			showMessage=true;
+	//		showMessage=true;
 			logMessage("AContacts " + ct);
 			if(ct =="Applicant") {
 			var crn = con.getCapContactModel().getRefContactNumber();
@@ -222,7 +222,7 @@ if(publicUserID == "PUBLICUSER130303") {
 				}
 			}
 		}
-	showMessage=true;
+//	showMessage=true;
 	logMessage("Acres " + totAcre + "Medium " + mediumLic);
 	logMessage("lictype " + AInfo["License Type"]);
 	logMessage("prodDisp" + AInfo["Producing Dispensary"]);
