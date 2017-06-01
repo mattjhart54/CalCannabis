@@ -23,11 +23,14 @@ try{
 		logDebug("vEmail: " + vEmail);
 		if(""+peopleObj[pp].getEmail()==""+vEmail){
 			cntCnt = pp;
+			logDebug("Found a contact: " + peopleObj[pp]);
+			logDebug("Found a contact: " + pp);
 		}
 	}
+	logDebug("cntCnt: " + cntCnt);
 	if(cntCnt>-1){
 		//Add the reference contact record to the current CAP
-		var contactAddResult = aa.people.createCapContactWithRefPeopleModel(capId, peopleObj[0]);
+		var contactAddResult = aa.people.createCapContactWithRefPeopleModel(capId, peopleObj[cntCnt]);
 		if (contactAddResult.getSuccess())
 			{
 			logDebug("Contact successfully added to CAP.");
