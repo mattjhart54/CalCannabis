@@ -175,7 +175,7 @@ if(publicUserID == "PUBLICUSER130303") {
 c=getContactObjs(cap);
 for(x in c) {
 	cont = c[x];
-	logMessage("Contact " + cont.seqNumber " " + cont)
+	logMessage("Contact " + cont.seqNumber + " " + cont)
 }
 //    c = aa.people.getCapContactByCapID(capId).getOutput();
 /*		for (var i in c){
