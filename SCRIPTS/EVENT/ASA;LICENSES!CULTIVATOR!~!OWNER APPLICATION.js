@@ -60,16 +60,20 @@ try{
 			}
 			var arrForms = (doAssocFormRecs("childRecs",afArray));
 			capId = currCap;
-			var drpContact = getContactByType("Designated Responsible Party",capId);
-			if(drpContact){
-				copyContactsByType(parentCapId, capId, "Designated Responsible Party");
-				var drpEmail = drpContact.getEmail();
-				if(!matches(drpEmail,null,"","undefined")){
-					emailParameters = aa.util.newHashtable();
-					addParameter(emailParameters, "$$AltID$$", capId);
-					addParameter(emailParameters, "$$ProjectName$$", capName);
-					addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
-					sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,capId);
+			for (i in arrForms){
+				thisForm =  arrForms[y];
+				var desigRecId =  thisForm["recordId"];
+				var drpContact = getContactByType("Designated Responsible Party",parentCapId);
+				if(drpContact){
+					copyContactsByType(parentCapId, desigRecId, "Designated Responsible Party");
+					var drpEmail = drpContact.getEmail();
+					if(!matches(drpEmail,null,"","undefined")){
+						emailParameters = aa.util.newHashtable();
+						addParameter(emailParameters, "$$AltID$$", desigRecId);
+						addParameter(emailParameters, "$$ProjectName$$", capName);
+						addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
+						sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,desigRecId);
+					}
 				}
 			}
 		}
