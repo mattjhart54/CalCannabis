@@ -172,14 +172,8 @@ if(publicUserID == "PUBLICUSER130303") {
 	var totAcre = 0;
 	var mediumLic = "N";
 	var c = new Array();
-c=getContactObjs(cap);
-for(x in c) {
-	cont = c[x];
-	showMessage=true;
-	logMessage("Contact " + cont.seqNumber + " " + cont)
-}
-//    c = aa.people.getCapContactByCapID(capId).getOutput();
-/*		for (var i in c){
+    c = aa.people.getCapContactByCapID(capId).getOutput();
+		for (var i in c){
 			var con = c[i];
 			var ct = con.getCapContactModel().getContactType();
 			showMessage=true;
@@ -228,7 +222,7 @@ for(x in c) {
 				}
 			}
 		}
-//	showMessage=true;
+	showMessage=true;
 	logMessage("Acres " + totAcre + "Medium " + mediumLic);
 	logMessage("lictype " + AInfo["License Type"]);
 	logMessage("prodDisp" + AInfo["Producing Dispensary"]);
@@ -244,7 +238,7 @@ for(x in c) {
 	}
   //  aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
  
- */
+ 
 }
 }
 catch (err) {
