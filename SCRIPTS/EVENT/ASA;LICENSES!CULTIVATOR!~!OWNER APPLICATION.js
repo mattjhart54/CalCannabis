@@ -62,7 +62,8 @@ try{
 			capId = currCap;
 			for (i in arrForms){
 				thisForm =  arrForms[i];
-				var desigRecId =  thisForm["recordId"];
+				var desigRec =  thisForm["recordId"];
+				var desigRecId = aa.cap.getCapID(desigRec).getOutput();
 				var drpContact = getContactByType("Designated Responsible Party",parentCapId);
 				if(drpContact){
 					copyContactsByType(parentCapId, desigRecId, "Designated Responsible Party");
@@ -84,8 +85,9 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 
+
 // lwacht
-// if not ACAC, set altId based on application parent
+// if not ACA, set altId based on application parent
 try{
 	if(!publicUser){
 		if(parentCapId){
