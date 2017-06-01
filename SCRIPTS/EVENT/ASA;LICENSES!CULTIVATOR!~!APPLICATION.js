@@ -104,6 +104,7 @@ try {
 					tblOwners[ow]["Status"]="Submitted";
 					//removeASITable("OWNERS");
 					//addASITable("OWNERS",tblOwners);
+					editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
 					ownerRecdExists = true;
 					hasOwnerContact = true;
 					logDebug("Found matching owner row: " + vFirst + " " + vLast);
