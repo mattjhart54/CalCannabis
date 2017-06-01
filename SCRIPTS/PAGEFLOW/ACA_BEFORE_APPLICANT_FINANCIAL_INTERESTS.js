@@ -172,8 +172,8 @@ if(publicUserID == "PUBLICUSER130303") {
 	var totAcre = 0;
 	var mediumLic = "N";
 	var c = new Array();
-
-    c = aa.people.getCapContactByCapID(capId).getOutput();
+c=getContactObjs(cap)
+//    c = aa.people.getCapContactByCapID(capId).getOutput();
 	showMessage=true;
 	logMessage("AContacts " + c.length);
 		for (var i in c){
@@ -213,9 +213,8 @@ if(publicUserID == "PUBLICUSER130303") {
 							if(cs != "" && cs != null && cs != undefined) {
 								totAcre = totAcre + parseFloat(cs,2);
 							}
-
 							capLicType = getAppSpecific("License Type",thatCapId);
-							if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed Light")) {
+							if (matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed Light")) {
 								mediumLic = "Y";
 							}
 						}
@@ -228,16 +227,14 @@ if(publicUserID == "PUBLICUSER130303") {
 		}
 //	showMessage=true;
 	logMessage("Acres " + totAcre + "Medium " + mediumLic);
-	licType = getAppSpecific("License Type");
 	logMessage("lictype " + AInfo["License Type"]);
-	prodDisp = getAppSpecific("Producing Dispensary");
 	logMessage("prodDisp" + AInfo["Producing Dispensary"]);
 	if(totAcre > 174240) {
 		cancel=true;
 		showMessage=true;
 		logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
 	}
-	if((licType == "Medium Outdoor" || licType == "Medium Indoor" || licType == "Medium Mixed-Light") && prodDisp != "CHECKED" && mediumLic == "Y") {
+	if((AInfo["License Type"] == "Medium Outdoor" || AInfo["License Type"] == "Medium Indoor" || AInfo["License Type"] == "Medium Mixed-Light") && AInfo["Producing Dispensary"] != "CHECKED" && mediumLic == "Y") {
 		cancel=true;
 		showMessage=true;
 		logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
