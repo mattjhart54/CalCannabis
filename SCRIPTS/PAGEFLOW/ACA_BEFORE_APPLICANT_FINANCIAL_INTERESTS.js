@@ -101,6 +101,7 @@ try {
 			logDebug("When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 		}
 	}
+	}
 
 // Check for total acreage from all applicant rec ords.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
