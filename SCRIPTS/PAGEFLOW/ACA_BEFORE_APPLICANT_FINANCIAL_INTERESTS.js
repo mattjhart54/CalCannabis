@@ -99,7 +99,7 @@ try {
 
 // Check for total acreage from all applicant rec ords.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
-	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
+/*	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
 		showMessage=true;
 		logMessage("Start script");
 //		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " );
@@ -176,7 +176,7 @@ try {
 			}
 		  //  aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
 		}
-	}
+	}*/
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
 	logDebug(err.stack);
