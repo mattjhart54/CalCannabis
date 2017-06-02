@@ -111,8 +111,9 @@ try {
 		var mediumLic = "N";
 		var c = new Array();
 		//c = aa.people.getCapContactByCapID(capId).getOutput();
-		var contactList = capModel.getContactsGroup();
 		if(contactList != null && contactList.size() > 0){
+		//var contactList = capModel.getContactsGroup();
+		var contactList = cap.getContactsGroup();
 			for(var i=contactList.size(); i > 0; i--){
 				var contactModel = contactList.get(i-1);
 				var contType = contactModel.getCapContactModel().getContactType();
