@@ -80,17 +80,11 @@ try {
 	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-
-	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
-		showmessage = true
-		logMessage("Start Script");
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
-		logMessage("PD checked");
 		var fnd = false;
 		cfi =loadASITable("CANNABIS FINANCIAL INTEREST");
-		logMessage("table loaded");
 		for(x in cfi) {
-			logMessage("Type of License : " + cfi[x]["Type of License"]);
+	//		logMessage("Type of License : " + cfi[x]["Type of License"]);
 			if(cfi[x]["Type of License"] == "Producing Dispensary") {
 				fnd = true;
 			}
@@ -102,20 +96,23 @@ try {
 			logMessage("When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 		}
 	}
-	}
 
 // Check for total acreage from all applicant rec ords.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
-/*	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " );
+/	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
+		showMessage=true;
+		logMessage("Start script");
+//		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " );
 		cancel = true;
 		var totAcre = 0;
 		var mediumLic = "N";
 		var c = new Array();
 		//c = aa.people.getCapContactByCapID(capId).getOutput();
-		if(contactList != null && contactList.size() > 0){
+//		
 		//var contactList = capModel.getContactsGroup();
 		var contactList = cap.getContactsGroup();
+		logMessage("got contactlistt");
+		if(contactList != null && contactList.size() > 0){
 			for(var i=contactList.size(); i > 0; i--){
 				var contactModel = contactList.get(i-1);
 				var contType = contactModel.getCapContactModel().getContactType();
@@ -180,7 +177,7 @@ try {
 			}
 		  //  aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
 		}
-	}*/
+	}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
 	logDebug(err.stack);
