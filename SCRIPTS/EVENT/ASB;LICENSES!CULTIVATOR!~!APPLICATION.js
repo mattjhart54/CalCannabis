@@ -1,6 +1,6 @@
 
 try {
-	if(!publlicUser) {
+	if(!publicUser) {
 		if(AInfo["Producing Dispensary"] == "CHECKED") {
 			fnd = "N";
 			loadASITables();
