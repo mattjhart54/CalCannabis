@@ -87,9 +87,10 @@ try {
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		logMessage("PD checked");
 		var fnd = false;
-		cfi =loadASITable("CANNABIS FINANCIAL INTEREST")
+		cfi =loadASITable("CANNABIS FINANCIAL INTEREST");
+		logMessage("table loaded");
 		for(x in cfi) {
-//			logDebug("Type of License : " + cfi[x]["Type of License"]);
+			logMessage("Type of License : " + cfi[x]["Type of License"]);
 			if(cfi[x]["Type of License"] == "Producing Dispensary") {
 				fnd = true;
 			}
