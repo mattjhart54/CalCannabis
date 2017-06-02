@@ -117,10 +117,10 @@ try {
 				var contactModel = contactList.get(i-1);
 				var contType = contactModel.getCapContactModel().getContactType();
 				showMessage=true;
-				logDebug("AContacts " + contType);
+				logMessage("AContacts " + contType);
 				if(contType =="Applicant") {
 					var crn = contactModel.getCapContactModel().getRefContactNumber();
-					logDebug("ref nbr " + crn);
+					logMessage("ref nbr " + crn);
 					if (crn != null && crn != "") {
 						var p = contactModel.getPeople();
 						var psm = aa.people.createPeopleModel().getOutput();
@@ -138,14 +138,14 @@ try {
 						}
 						var cResult = aa.people.getCapIDsByRefContact(psm);  // needs 7.1
 						if (cResult.getSuccess()) {
-							logDebug("got recs by contact");
+							Message("got recs by contact");
 							var cList = cResult.getOutput();
 							for (var j in cList) {
 								var thisCapId = cList[j];
 								var thatCapId = thisCapId.getCapID();
 								logDebug("capId " + thatCapId);
 								var cs = getAppSpecific("Canopy Size",thatCapId);
-								logDebug("cs " + cs);
+								logMessage("cs " + cs);
 								if(cs != "" && cs != null && cs != undefined) {
 									totAcre = totAcre + parseFloat(cs,2);
 								}
@@ -161,19 +161,18 @@ try {
 					}
 				}
 			}
-			showMessage=true;
-			logDebug("Acres " + totAcre + "Medium " + mediumLic);
-			logDebug("lictype " + AInfo["License Type"]);
-			logDebug("prodDisp" + AInfo["Producing Dispensary"]);
+			shoMessage("Acres " + totAcre + "Medium " + mediumLic);
+			logMessage("lictype " + AInfo["License Type"]);
+			logMessage("prodDisp" + AInfo["Producing Dispensary"]);
 			if(totAcre > 174240) {
 				cancel=true;
 				showMessage=true;
-				logDebug("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
+				logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
 			}
 			if((AInfo["License Type"] == "Medium Outdoor" || AInfo["License Type"] == "Medium Indoor" || AInfo["License Type"] == "Medium Mixed-Light") && AInfo["Producing Dispensary"] != "CHECKED" && mediumLic == "Y") {
 				cancel=true;
 				showMessage=true;
-				logDebug("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
+				logDMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 			}
 		  //  aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
 		}
