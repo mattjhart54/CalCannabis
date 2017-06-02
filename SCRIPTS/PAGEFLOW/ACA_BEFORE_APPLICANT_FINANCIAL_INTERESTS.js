@@ -114,7 +114,7 @@ try {
 		logMessage("got contactlist " + contactList.size());
 		if(contactList != null && contactList.size() > 0){
 			for(var i in contactList) {
-				var contactModel = contactList[i]);
+				var contactModel = contactList[i];
 				var contType = contactModel.getCapContactModel().getContactType();
 				showMessage=true;
 				logMessage("AContacts " + contType);
