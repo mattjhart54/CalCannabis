@@ -118,7 +118,7 @@ try {
 			for(var i=contactList.size(); i > 0; i--){
 				var contactModel = contactList.get(i-1);
 				var contType = contactModel.getCapContactModel().getContactType();
-		//		showMessage=true;
+				showMessage=true;
 				logDebug("AContacts " + contType);
 				if(contType =="Applicant") {
 					var crn = contactModel.getCapContactModel().getRefContactNumber();
@@ -163,7 +163,7 @@ try {
 					}
 				}
 			}
-		//	showMessage=true;
+			showMessage=true;
 			logDebug("Acres " + totAcre + "Medium " + mediumLic);
 			logDebug("lictype " + AInfo["License Type"]);
 			logDebug("prodDisp" + AInfo["Producing Dispensary"]);
