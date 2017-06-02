@@ -116,7 +116,7 @@ var AInfo = new Array();						// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 //loadTaskSpecific(AInfo);						// Add task specific info
 //loadParcelAttributes(AInfo);						// Add parcel attributes
-//loadASITables();
+loadASITables4ACA();
 
 logDebug("<B>EMSE Script Results for " + capIDString + "</B>");
 logDebug("capId = " + capId.getClass());
@@ -146,14 +146,14 @@ logDebug("balanceDue = " + balanceDue);
 try {
 //	cAppl = getContactObj(capId,"Applicant");
 //	showMessage=true;
-//	logMessage("Contact Array" + cAppl);
+//	logDebug("Contact Array" + cAppl);
 
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 
 		var fnd = false;
 		cfi =loadASITable("CANNABIS FINANCIAL INTEREST")
 		for(x in cfi) {
-//			logMessage("Type of License : " + cfi[x]["Type of License"]);
+//			logDebug("Type of License : " + cfi[x]["Type of License"]);
 			if(cfi[x]["Type of License"] == "Producing Dispensary") {
 				fnd = true;
 			}
@@ -162,51 +162,54 @@ try {
 			showMessage = true;
 			cancel = true;
 //			comment(" COMMENT When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
-			logMessage("When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
+			logDebug("When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 		}
 	}
 
 // Check for total acreage from all applicant records.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
-if(publicUserID == "PUBLICUSER130303") {
+if(publicUserID == "PUBLICUSER130840") {
+	cancel = true;
 	var totAcre = 0;
 	var mediumLic = "N";
 	var c = new Array();
-    c = aa.people.getCapContactByCapID(capId).getOutput();
-		for (var i in c){
-			var con = c[i];
-			var ct = con.getCapContactModel().getContactType();
+    //c = aa.people.getCapContactByCapID(capId).getOutput();
+	var contactList = capModel.getContactsGroup();
+	if(contactList != null && contactList.size() > 0){
+		for(var i=contactList.size(); i > 0; i--){
+		var contactModel = contactList.get(i-1);
+			var contType = contactModel.getCapContactModel().getContactType();
 	//		showMessage=true;
-			logMessage("AContacts " + ct);
-			if(ct =="Applicant") {
-			var crn = con.getCapContactModel().getRefContactNumber();
-			logMessage("ref nbr " + crn);
+			logDebug("AContacts " + contType);
+			if(contType =="Applicant") {
+			var crn = contactModel.getCapContactModel().getRefContactNumber();
+			logDebug("ref nbr " + crn);
 				if (crn != null && crn != "") {
-					var p = con.getPeople();
+					var p = contactModel.getPeople();
 					var psm = aa.people.createPeopleModel().getOutput();
 					psm.setContactSeqNumber(crn);
-					psm.setServiceProviderCode(con.getServiceProviderCode());
-					var fn=con.getFirstName();
+					psm.setServiceProviderCode(contactModel.getServiceProviderCode());
+					var fn=contactModel.getFirstName();
 					if(fn !=null && fn !="") {
-						var cfn = con.getCapContactModel().getFirstName();
-						var cln = con.getCapContactModel().getLastName();
+						var cfn = contactModel.getCapContactModel().getFirstName();
+						var cln = contactModel.getCapContactModel().getLastName();
 						psm.setFullName(cfn + " " + cln);
 					}
 					else {
-						var cbn = con.getCapContactModel().getBusinessName()
+						var cbn = contactModel.getCapContactModel().getBusinessName()
 						psm.setBusinessName (cbn);
 					}
 
 					var cResult = aa.people.getCapIDsByRefContact(psm);  // needs 7.1
 					if (cResult.getSuccess()) {
-						logMessage("got recs by contact");
+						logDebug("got recs by contact");
 						var cList = cResult.getOutput();
 						for (var j in cList) {
 							var thisCapId = cList[j];
 							var thatCapId = thisCapId.getCapID();
-							logMessage("capId " + thatCapId);
+							logDebug("capId " + thatCapId);
 							var cs = getAppSpecific("Canopy Size",thatCapId);
-							logMessage("cs " + cs);
+							logDebug("cs " + cs);
 							if(cs != "" && cs != null && cs != undefined) {
 								totAcre = totAcre + parseFloat(cs,2);
 							}
@@ -223,18 +226,18 @@ if(publicUserID == "PUBLICUSER130303") {
 			}
 		}
 //	showMessage=true;
-	logMessage("Acres " + totAcre + "Medium " + mediumLic);
-	logMessage("lictype " + AInfo["License Type"]);
-	logMessage("prodDisp" + AInfo["Producing Dispensary"]);
+	logDebug("Acres " + totAcre + "Medium " + mediumLic);
+	logDebug("lictype " + AInfo["License Type"]);
+	logDebug("prodDisp" + AInfo["Producing Dispensary"]);
 	if(totAcre > 174240) {
 		cancel=true;
 		showMessage=true;
-		logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
+		logDebug("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
 	}
 	if((AInfo["License Type"] == "Medium Outdoor" || AInfo["License Type"] == "Medium Indoor" || AInfo["License Type"] == "Medium Mixed-Light") && AInfo["Producing Dispensary"] != "CHECKED" && mediumLic == "Y") {
 		cancel=true;
 		showMessage=true;
-		logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
+		logDebug("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 	}
   //  aa.sendMail(sysFromEmail, "mhart@trustvip.com", "", "Info: ACA_Applicant: " + "contacts: " + c + " " + "Type: " + ct);
  
