@@ -84,8 +84,8 @@ try {
 	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
 		showmessage = true
 		logMessage("Start Script");
-	}
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
+		logMessage("PD checked");
 		var fnd = false;
 		cfi =loadASITable("CANNABIS FINANCIAL INTEREST")
 		for(x in cfi) {
