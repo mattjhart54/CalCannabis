@@ -106,7 +106,7 @@ try {
 // Check for total acreage from all applicant rec ords.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
 	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
-//		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " );
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " );
 		cancel = true;
 		var totAcre = 0;
 		var mediumLic = "N";
