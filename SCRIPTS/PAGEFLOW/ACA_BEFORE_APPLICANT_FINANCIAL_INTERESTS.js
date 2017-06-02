@@ -17,8 +17,8 @@
 |     will no longer be considered a "Master" script and will not be supported in future releases.  If
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showMessage = true; // Set to true to see results in popup window
+var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
@@ -48,8 +48,8 @@ if (SA) {
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALTREES",true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALTREES",true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",true));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
 }
 
 eval(getScriptText("INCLUDES_CUSTOM"));
@@ -80,7 +80,7 @@ var cap = aa.env.getValue("CapModel");
 try {
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-	loadASITables4ACA();
+	//loadASITables4ACA();
 //	cAppl = getContactObj(capId,"Applicant");
 //	showMessage=true;
 //	logDebug("Contact Array" + cAppl);
