@@ -3,11 +3,11 @@ try {
 	if(!publicUser) {
 		if(AInfo["Producing Dispensary"] == "CHECKED") {
 			fnd = "N";
-			loadASITables();
-			logDebug("table Length " + CANNABISFINANCIALINTEREST.length);
-			if(CANNABISFINANCIALINTEREST.length > 0) {
-				for(x in CANNABISFINANCIALINTEREST) {
-					if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") 
+			cfi =loadASITable("CANNABIS FINANCIAL INTEREST");
+//			logDebug("table Length " + CANNABISFINANCIALINTEREST.length);
+//			if(CANNABISFINANCIALINTEREST.length > 0) {
+				for(x in cfi) {
+					if(cfi[x]["Type of License"] == "Producing Dispensary") 
 						fnd ="Y";
 				}
 			}
