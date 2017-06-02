@@ -71,7 +71,12 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 
 var cap = aa.env.getValue("CapModel");
-
+var cap = aa.env.getValue("CapModel");
+var capId = cap.getCapID();
+var servProvCode = capId.getServiceProviderCode()       		// Service Provider Code
+var publicUser = false ;
+var currentUserID = aa.env.getValue("CurrentUserID");
+var publicUserID = aa.env.getValue("CurrentUserID");
 
 // page flow custom code begin
 
