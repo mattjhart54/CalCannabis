@@ -1,6 +1,6 @@
 
 try {
-	if(!cap.isCreatedByACA()) {
+	if(!publlicUser) {
 		if(AInfo["Producing Dispensary"] == "CHECKED") {
 			fnd = "N";
 			loadASITables();
