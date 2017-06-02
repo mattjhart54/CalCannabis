@@ -113,8 +113,8 @@ try {
 		var contactList = cap.getContactsGroup();
 		logMessage("got contactlist " + contactList.size());
 		if(contactList != null && contactList.size() > 0){
-			for(var i=contactList.size(); i > 0; i--){
-				var contactModel = contactList.get(i-1);
+			for(var i in contactList) {
+				var contactModel = contactList[i]);
 				var contType = contactModel.getCapContactModel().getContactType();
 				showMessage=true;
 				logMessage("AContacts " + contType);
