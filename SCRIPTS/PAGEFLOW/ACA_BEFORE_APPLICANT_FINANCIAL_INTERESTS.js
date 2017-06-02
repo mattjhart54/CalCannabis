@@ -71,27 +71,21 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 
 var cap = aa.env.getValue("CapModel");
-var cap = aa.env.getValue("CapModel");
-var capId = cap.getCapID();
-var servProvCode = capId.getServiceProviderCode()       		// Service Provider Code
-var publicUser = false ;
-var currentUserID = aa.env.getValue("CurrentUserID");
-var publicUserID = aa.env.getValue("CurrentUserID");
 
 // page flow custom code begin
 
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
+	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-	//loadASITables4ACA();
-//	cAppl = getContactObj(capId,"Applicant");
-//	showMessage=true;
-//	logDebug("Contact Array" + cAppl);
 
+	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
+		showmessage = true
+		logMessage("Start Script");
+	}
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
-
 		var fnd = false;
 		cfi =loadASITable("CANNABIS FINANCIAL INTEREST")
 		for(x in cfi) {
