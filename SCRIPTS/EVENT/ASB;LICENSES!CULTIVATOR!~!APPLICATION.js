@@ -10,7 +10,7 @@ try {
 					if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") 
 						fnd ="Y";
 				}
-	//		}
+			}
 			if (fnd == "N") {
 				showMessage = true;
 				cancel = true;
