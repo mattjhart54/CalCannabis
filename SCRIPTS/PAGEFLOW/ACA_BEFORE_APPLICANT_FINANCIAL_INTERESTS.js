@@ -113,11 +113,12 @@ try {
 		logMessage("got contactlist " + contactList.size());
 		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Contact List: "+ startDate, capId + "; " + contactList==null);
 		if(contactList != null && contactList.size() > 0){
-			for(var i in contactList) {
-				var contactModel = contactList[i];
-				for(x in contactModel){
-					if(typeof(contactModel[x])!="function"){
-						logMessage(x+ ": " + contactModel[x]);
+			var arrContacts = contactList.toArray();
+			for(var i in arrContacts) {
+				var contactModel = arrContacts[i];
+				for(x in arrContacts){
+					if(typeof(arrContacts[x])!="function"){
+						logMessage(x+ ": " + arrContacts[x]);
 					}
 				}
 				/*
@@ -167,7 +168,7 @@ try {
 					}
 				}*/
 			}
-			shoMessage("Acres " + totAcre + "Medium " + mediumLic);
+			logMessage("Acres " + totAcre + "Medium " + mediumLic);
 			logMessage("lictype " + AInfo["License Type"]);
 			logMessage("prodDisp" + AInfo["Producing Dispensary"]);
 			if(totAcre > 174240) {
