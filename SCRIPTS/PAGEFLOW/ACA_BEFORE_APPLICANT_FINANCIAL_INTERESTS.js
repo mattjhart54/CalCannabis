@@ -119,10 +119,8 @@ try {
 				}
 				var contType = thisCont.contactType;
 				showMessage=true;
-				logMessage("AContacts " + contType);
 				if(contType =="Applicant") {
 					var refContNrb = thisCont.refContactNumber;
-					logMessage("ref nbr " + refContNrb);
 					if (!matches(refContNrb,null, "", "undefined")) {
 						var pplMdl = aa.people.createPeopleModel().getOutput();
 						pplMdl.setContactSeqNumber(refContNrb);
@@ -134,11 +132,13 @@ try {
 						}
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 						if (capResult.getSuccess()) {
+							logMessage()
 							var totAcre=0;
-							Message("got recs by contact");
+							logMessage("got recs by contact");
 							var capList = capResult.getOutput();
 							for (var j in capList) {
 								var thisCapId = capList[j];
+								logMessage("thisCapId: " + thisCapId);
 								var thatCapId = thisCapId.getCapID();
 								logDebug("capId " + thatCapId);
 								var canopySize = getAppSpecific("Canopy Size",thatCapId);
