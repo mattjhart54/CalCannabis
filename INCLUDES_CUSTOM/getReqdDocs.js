@@ -127,12 +127,14 @@ try{
 	//these documents are always required
 		arrReqdDocs_Own.push(governmentIssuedID);
 		arrReqdDocs_Own.push(fingerprintApp);
-	
+if(publicUserID == "PUBLICUSER130303") {
 	//these are qualified documents
 		if(appTypeArray[2] == "Adult Use") {
 			arrReqdDocs_Own.push(calResidency);
 		}
 		var crime = getAppSpecific("Convicted of a Crime", itemCap);
+		showMessage = true;
+		logMessage("APP TYPE" + appTypeArray[2] + " crime " + crime);
 		if (crime == "Yes"){
 		//	for(c in CONVICTIONS) {
 				arrReqdDocs_Own.push(evidenceOfDismissal);
