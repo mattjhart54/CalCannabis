@@ -135,7 +135,7 @@ if(publicUserID == "PUBLICUSER130303") {
 		var crime = getAppSpecific("Convicted of a Crime", itemCap);
 		showMessage = true;
 		logMessage("APP TYPE" + appTypeArray[2] + " crime " + crime);
-		if (crime == "Yes"){
+		if (AInfo["Convicted of a Crime"] == "Yes"){
 		//	for(c in CONVICTIONS) {
 				arrReqdDocs_Own.push(evidenceOfDismissal);
 				arrReqdDocs_Own.push(certificateOfRehabilitation);
