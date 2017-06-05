@@ -133,14 +133,10 @@ if(publicUserID == "PUBLICUSER130303") {
 			arrReqdDocs_Own.push(calResidency);
 		}
 		var crime = getAppSpecific("Convicted of a Crime", itemCap);
-		showMessage = true;
-		logMessage("APP TYPE" + appTypeArray[2] + " crime " + crime);
 		if (AInfo["Convicted of a Crime"] == "Yes"){
-		//	for(c in CONVICTIONS) {
 				arrReqdDocs_Own.push(evidenceOfDismissal);
 				arrReqdDocs_Own.push(certificateOfRehabilitation);
 				arrReqdDocs_Own.push(referenceLetters);
-		//	}
 		}
 		return arrReqdDocs_Own;
 }
