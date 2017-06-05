@@ -138,7 +138,7 @@ try{
 		if(!tssmResult.getSuccess()){
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: RemoveASIT: "+ startDate, capId + "; " + tssmResult.getErrorMessage() + "; ");
 		}
-		asit = aa.appSpecificTableScript.getAppSpecificTableGroupModel(capId).getOutput();
+		asit = cap.getAppSpecificTableGroupModel();
 		addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
 	}
 }catch (err) {
