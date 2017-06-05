@@ -74,7 +74,7 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-	loadASITables4ACA_corrected();
+	loadASITables4ACA();
 	var tblOwner = [];
 	var tblCorrection = false;
 	var correctLastName = false;
@@ -136,6 +136,7 @@ try{
 			logDebug(x + ": " + tblOwner[x]);
 		}
 		removeASITable("OWNERS");
+		var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN");
 		asit = cap.getAppSpecificTableGroupModel();
 		addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
 	}
