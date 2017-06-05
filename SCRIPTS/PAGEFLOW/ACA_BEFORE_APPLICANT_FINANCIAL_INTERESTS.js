@@ -116,45 +116,40 @@ try {
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
-				for(x in thisCont){
-					if(typeof(thisCont[x])!="function"){
-						logMessage(x+ ": " + thisCont[x]);
-					}
-				}
-				/*
-				var contType = contactModel.getCapContactModel().getContactType();
+				//for(x in thisCont){
+				//	if(typeof(thisCont[x])!="function"){
+				//		logMessage(x+ ": " + thisCont[x]);
+				//	}
+				//}
+				var contType = thisCont.contactType;
 				showMessage=true;
 				logMessage("AContacts " + contType);
 				if(contType =="Applicant") {
-					var crn = contactModel.getCapContactModel().getRefContactNumber();
-					logMessage("ref nbr " + crn);
-					if (crn != null && crn != "") {
+					var refContNrb = thisCont.refContactNumber;
+					logMessage("ref nbr " + refContNrb);
+					if (!matches(refContNrb,null, "", "undefined")) {
 						var p = contactModel.getPeople();
-						var psm = aa.people.createPeopleModel().getOutput();
-						psm.setContactSeqNumber(crn);
-						psm.setServiceProviderCode(contactModel.getServiceProviderCode());
-						var fn=contactModel.getFirstName();
-						if(fn !=null && fn !="") {
-							var cfn = contactModel.getCapContactModel().getFirstName();
-							var cln = contactModel.getCapContactModel().getLastName();
-							psm.setFullName(cfn + " " + cln);
+						var pplMdl = aa.people.createPeopleModel().getOutput();
+						pplMdl.setContactSeqNumber(crn);
+						pplMdl.setServiceProviderCode(contactModel.getServiceProviderCode());
+						if(!matches(thisCont.fullName,null, "", "undefined")) {
+							pplMdl.setFullName(thisCont.fullName);
+						}else {
+							pplMdl.setBusinessName (thisCont.businessName);
 						}
-						else {
-							var cbn = contactModel.getCapContactModel().getBusinessName()
-							psm.setBusinessName (cbn);
-						}
-						var cResult = aa.people.getCapIDsByRefContact(psm);  // needs 7.1
-						if (cResult.getSuccess()) {
+						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
+						if (capResult.getSuccess()) {
+							var totAcre=0;
 							Message("got recs by contact");
-							var cList = cResult.getOutput();
-							for (var j in cList) {
-								var thisCapId = cList[j];
+							var capList = capResult.getOutput();
+							for (var j in capList) {
+								var thisCapId = capList[j];
 								var thatCapId = thisCapId.getCapID();
 								logDebug("capId " + thatCapId);
-								var cs = getAppSpecific("Canopy Size",thatCapId);
-								logMessage("cs " + cs);
-								if(cs != "" && cs != null && cs != undefined) {
-									totAcre = totAcre + parseFloat(cs,2);
+								var canopySize = getAppSpecific("Canopy Size",thatCapId);
+								logMessage("canopySize " + canopySize);
+								if(!matches(canopySize, "", null, undefined) {
+									totAcre += parseFloat(canopySize,2);
 								}
 								capLicType = getAppSpecific("License Type",thatCapId);
 								if (matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed Light")) {
@@ -166,7 +161,7 @@ try {
 							logDebug("error finding cap ids: " + cResult.getErrorMessage());
 						}
 					}
-				}*/
+				}
 			}
 			logMessage("Acres " + totAcre + "Medium " + mediumLic);
 			logMessage("lictype " + AInfo["License Type"]);
@@ -176,7 +171,7 @@ try {
 				showMessage=true;
 				logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
 			}
-			if((AInfo["License Type"] == "Medium Outdoor" || AInfo["License Type"] == "Medium Indoor" || AInfo["License Type"] == "Medium Mixed-Light") && AInfo["Producing Dispensary"] != "CHECKED" && mediumLic == "Y") {
+			if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light") && AInfo["Producing Dispensary"] != "CHECKED" && mediumLic == "Y") {
 				cancel=true;
 				showMessage=true;
 				logDMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
