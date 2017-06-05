@@ -112,11 +112,11 @@ try {
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
-				for(x in thisCont){
-					if(typeof(thisCont[x])!="function"){
-						logMessage(x+ ": " + thisCont[x]);
-					}
-				}
+				//for(x in thisCont){
+				//	if(typeof(thisCont[x])!="function"){
+				//		logMessage(x+ ": " + thisCont[x]);
+				//	}
+				//}
 				var contType = thisCont.contactType;
 				showMessage=true;
 				if(contType =="Applicant") {
@@ -151,8 +151,7 @@ try {
 									mediumLic = true;
 								}
 							}
-						}
-						else{
+						}else{
 							logDebug("error finding cap ids: " + cResult.getErrorMessage());
 						}
 					}
@@ -162,7 +161,7 @@ try {
 			logMessage("Medium " + mediumLic);
 			logMessage("lictype " + AInfo["License Type"]);
 			logMessage("prodDisp " + AInfo["Producing Dispensary"]);
-			if(totAcre > 174240) {
+			//if(totAcre > 174240) {
 			if(totAcre < 174240) {
 				cancel=true;
 				showMessage=true;
