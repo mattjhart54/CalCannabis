@@ -130,14 +130,15 @@ try{
 		}
 	}
 	if(tblCorrection){
-		cancel = true;
-		showMessage = true;
 		for(x in tblOwner){
 			logDebug(x + ": " + tblOwner[x]);
 		}
 		removeASITable("OWNERS");
 		var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN");
-		asit = cap.getAppSpecificTableGroupModel();
+		if(!tssmResult.getSuccess()){
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: RemoveASIT: "+ startDate, capId + "; " + tssmResult.getErrorMessage() + "; ");
+		}
+		asit = aa.appSpecificTableScript.getAppSpecificTableGroupModel(capId).getOutput();
 		addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
 	}
 }catch (err) {
