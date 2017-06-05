@@ -99,10 +99,10 @@ try {
 
 // Check for total acreage from all applicant rec ords.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
-	if(publicUserID == "PUBLICUSER130840") {
-		showMessage=true;
-		logMessage("Start script");
-		cancel = true;
+	//if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
+		//showMessage=true;
+		/logMessage("Start script");
+		//cancel = true;
 		var totAcre = 0;
 		var mediumLic = "N";
 		var c = new Array();
@@ -111,7 +111,6 @@ try {
 		//var contactList = capModel.getContactsGroup();
 		var contactList = cap.getContactsGroup();
 		logMessage("got contactlist " + contactList.size());
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Contact List: "+ startDate, capId + "; " + contactList==null);
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
@@ -177,7 +176,7 @@ try {
 				logDMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 			}
 		}
-	}
+	//}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
 	logDebug(err.stack);
