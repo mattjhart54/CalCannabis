@@ -143,6 +143,7 @@ if(publicUserID == "PUBLICUSER130303") {
 		//	}
 		}
 		return arrReqdDocs_Own;
+}
 	}
 }catch (err){
 	logDebug("A JavaScript Error occurred:getReqdDocs: " + err.message);
