@@ -7,7 +7,7 @@
 | Client  : N/A
 | Action# : N/A
 |
-| Notes   :
+| Notes   :  Checks the values of first/last name against reference contacts with corresponding email
 |
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
@@ -79,12 +79,14 @@ try{
 	var correctLastName = false;
 	var correctFirstName = false;
 	for(row in OWNERS){
+		//get contact by email
 		tblOwner.push(OWNERS[row]);
 		var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
 		var ownEmail = OWNERS[row]["Email Address"];
 		qryPeople.setEmail(ownEmail);
 		var ownFName = ""+OWNERS[row]["First Name"];
 		var ownLName = ""+OWNERS[row]["Last Name"];
+		//get reference contact(s)
 		var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 		if (!qryResult.getSuccess()){ 
 			logDebug("WARNING: error searching for people : " + qryResult.getErrorMessage());
@@ -112,11 +114,13 @@ try{
 					}
 				}
 			}
+			//if the last name is wrong, don't allow applicant to progress
 			if(!correctLastName){
 				cancel = true;
 				showMessage = true;
 				comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
 			}else{
+				//if last name is correct but first name is wrong, just correct the first name and go on.
 				if(!correctFirstName){
 					tblOwner[row]["First Name"]=thisFName;
 					tblCorrection = true;
