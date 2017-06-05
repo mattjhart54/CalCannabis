@@ -130,6 +130,8 @@ try{
 		}
 	}
 	if(tblCorrection){
+		cancel = true;
+		showMessage = true;
 		for(x in tblOwner){
 			logDebug(x + ": " + tblOwner[x]);
 		}
