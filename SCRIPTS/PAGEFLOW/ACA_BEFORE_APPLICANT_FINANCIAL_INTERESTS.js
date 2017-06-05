@@ -120,6 +120,7 @@ try {
 						logMessage(x+ ": " + contactModel[x]);
 					}
 				}
+				/*
 				var contType = contactModel.getCapContactModel().getContactType();
 				showMessage=true;
 				logMessage("AContacts " + contType);
@@ -164,7 +165,7 @@ try {
 							logDebug("error finding cap ids: " + cResult.getErrorMessage());
 						}
 					}
-				}
+				}*/
 			}
 			shoMessage("Acres " + totAcre + "Medium " + mediumLic);
 			logMessage("lictype " + AInfo["License Type"]);
