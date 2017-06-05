@@ -115,6 +115,11 @@ try {
 		if(contactList != null && contactList.size() > 0){
 			for(var i in contactList) {
 				var contactModel = contactList[i];
+				for(x in contactModel){
+					if(typeof(contactModel[x])!="function"){
+						logMessage(x+ ": " + contactModel[x]);
+					}
+				}
 				var contType = contactModel.getCapContactModel().getContactType();
 				showMessage=true;
 				logMessage("AContacts " + contType);
