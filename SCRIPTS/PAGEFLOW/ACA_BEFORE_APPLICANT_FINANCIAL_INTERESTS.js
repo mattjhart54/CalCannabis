@@ -138,11 +138,11 @@ try {
 							var capList = capResult.getOutput();
 							for (var j in capList) {
 								var thisCapId = capList[j];
-								logMessage("thisCapId: " + thisCapId);
+								//logMessage("thisCapId: " + thisCapId);
 								var thatCapId = thisCapId.getCapID();
 								logDebug("capId " + thatCapId);
 								var canopySize = getAppSpecific("Canopy Size",thatCapId);
-								logMessage("canopySize " + canopySize);
+								//logMessage("canopySize " + canopySize);
 								if(!matches(canopySize, "", null, undefined)) {
 									totAcre += parseFloat(canopySize,2);
 								}
@@ -158,10 +158,12 @@ try {
 					}
 				}
 			}
-			logMessage("Acres " + totAcre + "Medium " + mediumLic);
+			logMessage("Acres " + totAcre );
+			logMessage("Medium " + mediumLic);
 			logMessage("lictype " + AInfo["License Type"]);
-			logMessage("prodDisp" + AInfo["Producing Dispensary"]);
+			logMessage("prodDisp " + AInfo["Producing Dispensary"]);
 			if(totAcre > 174240) {
+			if(totAcre < 174240) {
 				cancel=true;
 				showMessage=true;
 				logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
