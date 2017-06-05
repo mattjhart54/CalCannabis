@@ -74,6 +74,7 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
+	loadASITables4ACA();
 	var tblOwner = [];
 	var tblCorrection = false;
 	var correctLastName = false;
