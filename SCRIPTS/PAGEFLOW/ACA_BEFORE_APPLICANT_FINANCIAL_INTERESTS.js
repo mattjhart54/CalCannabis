@@ -115,10 +115,10 @@ try {
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
-				var contactModel = arrContacts[i];
-				for(x in arrContacts){
-					if(typeof(arrContacts[x])!="function"){
-						logMessage(x+ ": " + arrContacts[x]);
+				var thisCont = arrContacts[i];
+				for(x in thisCont){
+					if(typeof(thisCont[x])!="function"){
+						logMessage(x+ ": " + thisCont[x]);
 					}
 				}
 				/*
