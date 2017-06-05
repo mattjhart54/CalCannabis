@@ -139,7 +139,7 @@ try{
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: RemoveASIT: "+ startDate, capId + "; " + tssmResult.getErrorMessage() + "; ");
 		}
 		asit = cap.getAppSpecificTableGroupModel();
-		addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
+		addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
 	}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_OWNER_TABLE: " + err.message);

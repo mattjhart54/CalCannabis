@@ -174,8 +174,7 @@ try{
 							publicDisplayCond = ccr[i];
 				}
 				if (dr && ccr.length > 0 && showList && publicDisplayCond) {
-					//message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
-					message += "<li>" + publicDisplayCond.getPublicDisplayMessage() + "</li>";
+					message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
 				}
 				if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
 					addStdCondition(conditionType,dr);
