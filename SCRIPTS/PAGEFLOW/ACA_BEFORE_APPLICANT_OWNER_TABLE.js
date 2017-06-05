@@ -48,8 +48,8 @@ if (SA) {
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
 eval(getScriptText("INCLUDES_CUSTOM"));
