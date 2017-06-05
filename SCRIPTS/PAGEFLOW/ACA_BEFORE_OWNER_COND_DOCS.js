@@ -148,7 +148,7 @@ try {
 	var tblRow = [];
 	var conditionTable = [];
 	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-	r = getReqdDocs("OWNER");
+	r = getReqdDocs("Owner");
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 	uploadedDocs = new Array();
 	dr = "";
