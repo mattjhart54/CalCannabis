@@ -148,7 +148,7 @@ try {
 								logDebug("capId " + thatCapId);
 								var canopySize = getAppSpecific("Canopy Size",thatCapId);
 								logMessage("canopySize " + canopySize);
-								if(!matches(canopySize, "", null, undefined) {
+								if(!matches(canopySize, "", null, undefined)) {
 									totAcre += parseFloat(canopySize,2);
 								}
 								capLicType = getAppSpecific("License Type",thatCapId);
