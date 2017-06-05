@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_APPLICATION_DOC_BEFORE.js
+| Program : ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST.js
 | Event   : ACA Page Flow attachments before event
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -102,7 +102,6 @@ try {
 	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
 		showMessage=true;
 		logMessage("Start script");
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " );
 		cancel = true;
 		var totAcre = 0;
 		var mediumLic = "N";
@@ -112,6 +111,7 @@ try {
 		//var contactList = capModel.getContactsGroup();
 		var contactList = cap.getContactsGroup();
 		logMessage("got contactlist " + contactList.size());
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Contact List: "+ contactList, capId + "; " );
 		if(contactList != null && contactList.size() > 0){
 			for(var i in contactList) {
 				var contactModel = contactList[i];
