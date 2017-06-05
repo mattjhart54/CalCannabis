@@ -111,7 +111,7 @@ try {
 		//var contactList = capModel.getContactsGroup();
 		var contactList = cap.getContactsGroup();
 		logMessage("got contactlist " + contactList.size());
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Contact List: "+ contactList, capId + "; " );
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:   ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Contact List: "+ startDate, capId + "; " + contactList==null);
 		if(contactList != null && contactList.size() > 0){
 			for(var i in contactList) {
 				var contactModel = contactList[i];
