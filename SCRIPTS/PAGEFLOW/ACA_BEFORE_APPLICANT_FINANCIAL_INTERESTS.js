@@ -124,10 +124,9 @@ try {
 					var refContNrb = thisCont.refContactNumber;
 					logMessage("ref nbr " + refContNrb);
 					if (!matches(refContNrb,null, "", "undefined")) {
-						var p = contactModel.getPeople();
 						var pplMdl = aa.people.createPeopleModel().getOutput();
 						pplMdl.setContactSeqNumber(refContNrb);
-						pplMdl.setServiceProviderCode(thisCont.serviceProviderCode);
+						pplMdl.setServiceProviderCode("CALCANNABIS");
 						if(!matches(thisCont.fullName,null, "", "undefined")) {
 							pplMdl.setFullName(thisCont.fullName);
 						}else {
