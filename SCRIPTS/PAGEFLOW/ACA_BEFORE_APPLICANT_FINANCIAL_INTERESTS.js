@@ -99,15 +99,12 @@ try {
 
 // Check for total acreage from all applicant rec ords.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
-	//if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
-		//showMessage=true;
+	if(publicUserID == "PUBLICUSER130840"){ // || publicUserID == "PUBLICUSER130303") {
+		showMessage=true;
 		//logMessage("Start script");
 		//cancel = true;
 		var totAcre = 0;
-		var mediumLic = "N";
-		var c = new Array();
-		//c = aa.people.getCapContactByCapID(capId).getOutput();
-//		
+		var mediumLic = false;
 		//var contactList = capModel.getContactsGroup();
 		var contactList = cap.getContactsGroup();
 		logMessage("got contactlist " + contactList.size());
@@ -115,11 +112,11 @@ try {
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
-				//for(x in thisCont){
-				//	if(typeof(thisCont[x])!="function"){
-				//		logMessage(x+ ": " + thisCont[x]);
-				//	}
-				//}
+				for(x in thisCont){
+					if(typeof(thisCont[x])!="function"){
+						logMessage(x+ ": " + thisCont[x]);
+					}
+				}
 				var contType = thisCont.contactType;
 				showMessage=true;
 				logMessage("AContacts " + contType);
@@ -129,8 +126,8 @@ try {
 					if (!matches(refContNrb,null, "", "undefined")) {
 						var p = contactModel.getPeople();
 						var pplMdl = aa.people.createPeopleModel().getOutput();
-						pplMdl.setContactSeqNumber(crn);
-						pplMdl.setServiceProviderCode(contactModel.getServiceProviderCode());
+						pplMdl.setContactSeqNumber(refContNrb);
+						pplMdl.setServiceProviderCode(thisCont.serviceProviderCode);
 						if(!matches(thisCont.fullName,null, "", "undefined")) {
 							pplMdl.setFullName(thisCont.fullName);
 						}else {
@@ -151,8 +148,8 @@ try {
 									totAcre += parseFloat(canopySize,2);
 								}
 								capLicType = getAppSpecific("License Type",thatCapId);
-								if (matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed Light")) {
-									mediumLic = "Y";
+								if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed Light")) {
+									mediumLic = true;
 								}
 							}
 						}
@@ -170,7 +167,7 @@ try {
 				showMessage=true;
 				logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
 			}
-			if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light") && AInfo["Producing Dispensary"] != "CHECKED" && mediumLic == "Y") {
+			if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light") && AInfo["Producing Dispensary"] != "CHECKED" && mediumLic ) {
 				cancel=true;
 				showMessage=true;
 				logDMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
