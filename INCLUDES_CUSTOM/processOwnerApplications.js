@@ -83,6 +83,7 @@ try {
 					var vLast = tblOwners[o]["Last Name"];
 					var vEmail = tblOwners[o]["Email Address"];
 					editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
+					updateShortNotes(vFirst + " " + vLast + " (" + vEmail + ")");
 					//logDebug("appName: " + vFirst + " " + vLast + " (" + vEmail + ")");
 					//adding this logic to addRefContactByEmailLastName function
 					/*
