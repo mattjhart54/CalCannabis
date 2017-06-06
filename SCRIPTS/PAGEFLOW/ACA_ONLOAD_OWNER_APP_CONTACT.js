@@ -109,17 +109,17 @@ try{
 
 try{
 if(publicUserID=="PUBLICUSER130840"){
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + br + br + message + ": " +br);
+	var emailText = "";
 	showMessage = true;
 	var contactList = cap.getContactsGroup();
-	logDebug("got contactlist " + contactList.size());
+	logMessage("got contactlist " + contactList.size());
 	if(contactList != null && contactList.size() > 0){
 		var arrContacts = contactList.toArray();
 		for(var i in arrContacts) {
 			var thisCont = arrContacts[i];
 			for(x in thisCont){
 				if(typeof(thisCont[x])!="function"){
-					logDebug(x+ ": " + thisCont[x]);
+					emailText+= (x+ ": " + thisCont[x]);
 				}
 			}
 			var contType = thisCont.contactType;
@@ -132,6 +132,7 @@ if(publicUserID=="PUBLICUSER130840"){
 			}
 		}
 	}
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_APP_CONTACT: Complete Contact" + contactList.size(), "capId: " + capId + br + br + emailText );
 }} catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_APP_CONTACT: Complete Contact: " + err.message);
