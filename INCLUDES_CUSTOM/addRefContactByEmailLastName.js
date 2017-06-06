@@ -2,11 +2,12 @@ function addRefContactByEmailLastName(vFirst, vLast, vEmail){
 try{
 	var userFirst = vFirst;
 	var userLast = vLast;
-	var userEmail = vEmail;
+	var userEmail = ""+vEmail;
+	logDebug("userEmail: " + userEmail);
 	//Find PeopleModel object for user
 	//var peopleResult = aa.people.getPeopleByFMLName(userFirst, userMiddle, userLast);
 	var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
-	qryPeople.setEmail(vEmail);
+	qryPeople.setEmail(userEmail);
 	var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 	if (!qryResult.getSuccess()){ 
 		logDebug("WARNING: error searching for people : " + qryResult.getErrorMessage());
