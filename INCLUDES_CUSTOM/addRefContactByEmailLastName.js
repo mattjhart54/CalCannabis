@@ -11,6 +11,7 @@ try{
 	var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 	if (!qryResult.getSuccess()){ 
 		logDebug("WARNING: error searching for people : " + qryResult.getErrorMessage());
+		return false;
 	}else{
 		var peopResult = qryResult.getOutput();
 		if (peopResult.length > 0){
@@ -19,10 +20,18 @@ try{
 				var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
 				if(pplRes.getSuccess()){
 					var thisPpl = pplRes.getOutput();
-					var thisLName = ""+thisPpl.getLastName();
+					//for(x in thisPpl){
+					//	if(typeof(thisPpl[x])!="function"){
+					//		logDebug(x+ ": " + thisPpl[x]);
+					//	}
+					//}
+					var thisLName = ""+ thisPpl.getLastName();
+					var thisLName = ""+ thisPpl.lastName;
 					if(matches(thisLName, null,"","undefined")){
 						var thisLName = ""+thisPpl.getResLastName();
 					}
+					logDebug("thisLName:" + thisLName);
+					logDebug("userLast:" + userLast);
 					if(thisLName==userLast){
 						var contactAddResult = aa.people.createCapContactWithRefPeopleModel(capId, thisPpl);
 						if (contactAddResult.getSuccess()){
@@ -36,15 +45,15 @@ try{
 								return contactNbr;
 							}else{
 								logDebug("Add Ref Contact error: Failed to get Contact Nbr: "+capContactResult.getErrorMessage());
-								return false;
+								//return false;
 							}
 						}else{
 							logDebug("Add Ref Contact error: Cannot add contact: " + contactAddResult.getErrorMessage());
-							return false;
+							//return false;
 						}
 					}else{
-						logDebug("Add Ref Contact error: No match on last name: " + userLast);
-						return false;
+						logDebug("Add Ref Contact error: No match on last name : " + thisLName);
+						//return false;
 					}
 				}else{
 					logDebug("Error retrieving contact: " + pplRes.getErrorMessage());
