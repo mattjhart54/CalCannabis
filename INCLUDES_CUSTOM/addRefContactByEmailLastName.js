@@ -20,7 +20,7 @@ try{
 				if(pplRes.getSuccess()){
 					var thisPpl = pplRes.getOutput();
 					var thisLName = ""+thisPpl.getLastName();
-					if(matches(thisLName, null,"","undefined"){
+					if(matches(thisLName, null,"","undefined")){
 						var thisLName = ""+thisPpl.getResLastName();
 					}
 					if(thisLName==userLast){
