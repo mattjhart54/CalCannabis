@@ -122,7 +122,7 @@ try {
 						qryPeople.setFirstName(vFirst);
 						qryPeople.setLastName(vLast);
 						qryPeople.setEmail(vEmail);
-						var resPpl = aa.people.createPeople(pm);
+						var resPpl = aa.people.createPeople(qryPeople);
 						if(!resPpl.getSuccess()){
 							logDebug("Error creating people: " + resPpl.getErrorMessage());
 						}else{
