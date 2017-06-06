@@ -109,6 +109,7 @@ try{
 
 try{
 if(publicUserID=="PUBLICUSER130840"){
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + br + br + message + ": " +br);
 	showMessage = true;
 	var contactList = cap.getContactsGroup();
 	logDebug("got contactlist " + contactList.size());
