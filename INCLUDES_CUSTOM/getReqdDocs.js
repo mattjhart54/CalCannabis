@@ -49,8 +49,8 @@ try{
 
 	if(recdType == "Application"){
 		arrReqdDocs_App = new Array();
+		
 	//these documents are always required
-		arrReqdDocs_App.push(businessFormation);
 		arrReqdDocs_App.push(businessBond);
 		arrReqdDocs_App.push(ownership);
 		arrReqdDocs_App.push(operationDate);
@@ -70,6 +70,7 @@ try{
 		var localAuthority = getAppSpecific("Local Authority Type", itemCap);
 		
 		if (bsnsEntity != "Sole Proprietorship"){
+			arrReqdDocs_App.push(businessFormation);
 			arrReqdDocs_App.push(stateDocuments);
 		}
 		if (bsnsEntity == "Soveriegn Entity"){
