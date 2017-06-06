@@ -129,6 +129,9 @@ try{
 			}
 		}
 	}
+	//table isn't getting removed, so working around for now by putting code to get the first name in the 
+	//script that adds the owner records.
+	/*
 	if(tblCorrection){
 		for(x in tblOwner){
 			logDebug(x + ": " + tblOwner[x]);
@@ -141,6 +144,7 @@ try{
 		asit = cap.getAppSpecificTableGroupModel();
 		addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
 	}
+	*/
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_OWNER_TABLE: " + err.message);
 	logDebug(err.stack);

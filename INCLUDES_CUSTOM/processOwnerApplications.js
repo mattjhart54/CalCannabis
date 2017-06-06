@@ -84,6 +84,8 @@ try {
 					var vEmail = tblOwners[o]["Email Address"];
 					editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
 					//logDebug("appName: " + vFirst + " " + vLast + " (" + vEmail + ")");
+					//adding this logic to addRefContactByEmailLastName function
+					/*
 					tblOwners[o]["Status"]="Submitted";
 					var vMiddle = null;
 					qryPeople.setServiceProviderCode(aa.getServiceProviderCode()) ; 
@@ -99,8 +101,6 @@ try {
 						//	}
 						//}
 						logDebug("Found reference contact matching email, so adding to new owner record: " + vFirst + " " + vLast);
-						var ownerSeqNum = addRefContactByNameEmail(vFirst, vMiddle, vLast,vEmail);
-						if(!ownerSeqNum){
 							logDebug("Error adding ref contact: "+ ownerSeqNum);
 						}
 						emailParameters = aa.util.newHashtable();
@@ -116,6 +116,9 @@ try {
 							sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
 						}
 					}else{
+					*/
+					var ownerSeqNum = addRefContactByNameEmail(vFirst, vLast,vEmail);
+					if(!ownerSeqNum){
 						qryPeople.setFirstName(vFirst);
 						qryPeople.setLastName(vLast);
 						qryPeople.setEmail(vEmail);
@@ -129,6 +132,18 @@ try {
 								logDebug("Error adding ref contact: "+ ownerSeqNumAgain);
 							}
 						}
+					}
+					emailParameters = aa.util.newHashtable();
+					addParameter(emailParameters, "$$AltID$$", capId);
+					addParameter(emailParameters, "$$ProjectName$$", capName);
+					addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
+					var resCurUser = aa.person.getUser(publicUserID);	
+					if(resCurUser.getSuccess()){
+						var currUser = resCurUser.getOutput();
+						var currUserEmail = ""+currUser.email;
+					}
+					if(currUserEmail!=vEmail){
+						sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
 					}
 					break;
 				}
