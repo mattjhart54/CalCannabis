@@ -152,7 +152,7 @@ try {
 								}
 							}
 						}else{
-							logDebug("error finding cap ids: " + cResult.getErrorMessage());
+							logDebug("error finding cap ids: " + capResult.getErrorMessage());
 						}
 					}
 				}

@@ -19,7 +19,7 @@ try{
 				var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
 				if(pplRes.getSuccess()){
 					var thisPpl = pplRes.getOutput();
-					var thisLName = ""+thisPpl.getResLastName();
+					var thisLName = ""+thisPpl.getLastName();
 					if(thisLName==userLast){
 						var contactAddResult = aa.people.createCapContactWithRefPeopleModel(capId, thisPpl);
 						if (contactAddResult.getSuccess()){
@@ -40,7 +40,7 @@ try{
 							return false;
 						}
 					}else{
-						logDebug("Add Ref Contact error: No match on email: " + vEmail);
+						logDebug("Add Ref Contact error: No match on last name: " + userLast);
 						return false;
 					}
 				}else{
