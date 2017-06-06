@@ -74,7 +74,7 @@ try{
 		var operDate = getAppSpecific("Date of Intitial Operation", itemCap);
 		var priorityDate = "01/01/2016";
 		
-		if(dateDiff(operDate,priorityDate) >= 0) {
+		if((operDate != null || operDate != "") && dateDiff(operDate,priorityDate) >= 0) {
 			arrReqdDocs_App.push(operationDate);
 		}
 		if (bsnsEntity != "Sole Proprietorship"){
