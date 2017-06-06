@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_ONLOAD_OWNER_APP_CONTACT.JS
+| Program : ACA_ONLOAD_APP_CONTACT.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -101,9 +101,41 @@ try{
 	}
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ACA_ONLOAD_COND_DOCS: Main function: " + err.message);
+	logDebug("An error has occurred in ACA_ONLOAD_APP_CONTACT: Correct Contact: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + ": " + err);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_APP_CONTACT: Correct Contact: " + startDate, "capId: " + capId + ": " + err);
+}
+
+
+try{
+if(publicUserID=="PUBLICUSER130840"){
+	showMessage = true;
+	var contactList = cap.getContactsGroup();
+	logDebug("got contactlist " + contactList.size());
+	if(contactList != null && contactList.size() > 0){
+		var arrContacts = contactList.toArray();
+		for(var i in arrContacts) {
+			var thisCont = arrContacts[i];
+			for(x in thisCont){
+				if(typeof(thisCont[x])!="function"){
+					logDebug(x+ ": " + thisCont[x]);
+				}
+			}
+			var contType = thisCont.contactType;
+			showMessage=true;
+			if(contType =="Owner") {
+				var refContNrb = thisCont.refContactNumber;
+				if (!matches(refContNrb,null, "", "undefined")) {
+					logMessage("here");
+				}
+			}
+		}
+	}
+}} catch (err) {
+	showDebug =true;
+	logDebug("An error has occurred in ACA_ONLOAD_APP_CONTACT: Complete Contact: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 // page flow custom code end
 
