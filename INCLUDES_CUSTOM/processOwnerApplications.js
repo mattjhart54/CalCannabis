@@ -44,13 +44,14 @@ try {
 				var vFirst = tblOwners[ow]["First Name"];
 				var vLast = tblOwners[ow]["Last Name"];
 				var vEmail = tblOwners[ow]["Email Address"];
+				var vStatus = tblOwners[ow]["Status"];
 				//logDebug("---first match: " + (""+vFirst==""+contFName));
 				//logDebug("---last match: " + (""+vLast==""+contLName));
 				//logDebug("---email match: " + (""+vEmail==""+contEmail));
 				//logDebug("---vFirst: " + vFirst);
 				//logDebug("---vLast: " + vLast);
 				//logDebug("---vEmail: " + vEmail);
-				if(""+contFName==""+vFirst && ""+contLName==""+vLast && ""+contEmail==""+vEmail){
+				if(""+contFName==""+vFirst && ""+contLName==""+vLast && ""+contEmail==""+vEmail && vStatus!="Submitted"){
 					tblOwners[ow]["Status"]="Submitted";
 					//removeASITable("OWNERS");
 					//addASITable("OWNERS",tblOwners);
@@ -153,6 +154,7 @@ try {
 	}
 	capId = currCapId;
 }catch (err) {
-	logDebug("A JavaScript Error occurred:ASA:LICENSES/CULTIVATOR/*/APPLICATION: processOwnerApplications: " + err.message);
+	logDebug("A JavaScript Error occurred: processOwnerApplications: " + err.message);
 	logDebug(err.stack);
-}}
+}
+}
