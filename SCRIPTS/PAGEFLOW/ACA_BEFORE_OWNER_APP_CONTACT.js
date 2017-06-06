@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_ONLOAD_COND_DOCS.JS
+| Program : ACA_BEFORE_OWNER_APP_CONTACT.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -100,9 +100,9 @@ try{
 	}
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ACA_ONLOAD_COND_DOCS: Main function: " + err.message);
+	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT: Correct contact : " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_COND_DOCS: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT: Correct contact  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 // page flow custom code end
 
