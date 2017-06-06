@@ -47,16 +47,18 @@ try{
 	var convictions = {condition : "History of Convictions", document : "History of Convictions"};
 	var calResidency = {condition : "Evidence of California Residency", document : "Evidence of California Residency"};
 
+
 	if(recdType == "Application"){
 		arrReqdDocs_App = new Array();
 		
 	//these documents are always required
 		arrReqdDocs_App.push(businessBond);
-		arrReqdDocs_App.push(ownership);
 		arrReqdDocs_App.push(operationDate);
 		arrReqdDocs_App.push(waterQuality);
 		arrReqdDocs_App.push(enviroStor);
-		arrReqdDocs_App.push(enviroStor);		
+		arrReqdDocs_App.push(streambedAlter);	
+		arrReqdDocs_App.push(localComply);
+		arrReqdDocs_App.push(CEQA);
 		
 	//these are qualified documents
 		var bsnsEntity = getAppSpecific("Business Entity Structure", itemCap);
@@ -68,7 +70,13 @@ try{
 		var diversionExcept = getAppSpecific("Diversion Exception", itemCap);
 		var licType = getAppSpecific("License Type", itemCap);
 		var localAuthority = getAppSpecific("Local Authority Type", itemCap);
+		var legalPossesion = getAppSpecific("Legal Possesion", itemCap);
+		var operDate = getAppSpecific("Date of Intitial Operation", itemCap);
+		var priorityDate = "01/01/2016";
 		
+		if(dateDiff(operDate,priorityDate) >= 0) {
+			arrReqdDocs_App.push(operationDate);
+		}
 		if (bsnsEntity != "Sole Proprietorship"){
 			arrReqdDocs_App.push(businessFormation);
 			arrReqdDocs_App.push(stateDocuments);
@@ -84,6 +92,12 @@ try{
 			arrReqdDocs_App.push(cannabisActivity);
 			arrReqdDocs_App.push(fullCompliance);
 			arrReqdDocs_App.push(BOE);
+		}
+		if(legalPossesion == "Own" || legalPossesion == "Other") {
+			arrReqdDocs_App.push(ownership);
+		}
+		if(legalPossesion == "Rent/Lease") {
+			arrReqdDocs_App.push(occupyUse);
 		}
 		if (SR2 == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
@@ -112,12 +126,10 @@ try{
 			arrReqdDocs_App.push(premiseDiagram);
 			arrReqdDocs_App.push(wastePlan);
 		}
-		if(appTypeArray[2] == "Medical") {
+		if(localAuthority != "" && localAuthority != null) {
 			arrReqdDocs_App.push(localAuth);
 			arrReqdDocs_App.push(planningPermit);
-			arrReqdDocs_App.push(localComply);	
 			arrReqdDocs_App.push(goodStanding);
-			arrReqdDocs_App.push(CEQA);	
 		}
 		//for(d in arrReqdDocs_App)
 		//	logDebug("Documents " + arrReqdDocs_App[d]);
@@ -143,4 +155,5 @@ try{
 }catch (err){
 	logDebug("A JavaScript Error occurred:getReqdDocs: " + err.message);
 	logDebug(err.stack);
-}}
+}
+}
