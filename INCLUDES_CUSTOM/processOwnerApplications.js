@@ -25,7 +25,7 @@ try {
 		thisForm =  arrForms[y];
 		var childRecId =  thisForm["recordId"];
 		capId = aa.cap.getCapID(childRecId).getOutput();
-		logDebug("capId: "+ capId);
+		logDebug("capId: "+ capId.getCustomID());
 		var arrContacts = getContactArray(capId);
 		//if there are contacts, compare them to the current owners table.
 		//if they're there, leave it.  if they're not remove them and add an owner
@@ -117,7 +117,7 @@ try {
 						}
 					}else{
 					*/
-					var ownerSeqNum = addRefContactByNameEmail(vFirst, vLast,vEmail);
+					var ownerSeqNum = addRefContactByEmailLastName(vFirst, vLast,vEmail);
 					if(!ownerSeqNum){
 						qryPeople.setFirstName(vFirst);
 						qryPeople.setLastName(vLast);
@@ -127,7 +127,7 @@ try {
 							logDebug("Error creating people: " + resPpl.getErrorMessage());
 						}else{
 							logDebug("Succesfully create ref contact, so adding to record");
-							var ownerSeqNumAgain = addRefContactByNameEmail(vFirst, vMiddle, vLast,vEmail);
+							var ownerSeqNumAgain = addRefContactByEmailLastName(vFirst, vLast,vEmail);
 							if(!ownerSeqNumAgain){
 								logDebug("Error adding ref contact: "+ ownerSeqNumAgain);
 							}
