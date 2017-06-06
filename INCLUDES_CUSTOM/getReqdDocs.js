@@ -70,12 +70,12 @@ try{
 		var diversionExcept = getAppSpecific("Diversion Exception", itemCap);
 		var licType = getAppSpecific("License Type", itemCap);
 		var localAuthority = getAppSpecific("Local Authority Type", itemCap);
-		var legalPossesion = getAppSpecific("Legal Possesion", itemCap);
+		var legalPossesion = getAppSpecific("Legal Possession", itemCap);
 		var operDate = getAppSpecific("Date of Intitial Operation", itemCap);
 		var priorityDate = "01/01/2016";
 		
 		if(operDate != null || operDate != "") {
-			if((dateDiff(operDate,priorityDate) >= 0) {
+			if(dateDiff(operDate,priorityDate) >= 0) {
 				arrReqdDocs_App.push(operationDate);
 			}
 		}
@@ -95,10 +95,10 @@ try{
 			arrReqdDocs_App.push(fullCompliance);
 			arrReqdDocs_App.push(BOE);
 		}
-		if(legalPossesion == "Own" || legalPossesion == "Other") {
+		if(legalPossesion == "Own") {
 			arrReqdDocs_App.push(ownership);
 		}
-		if(legalPossesion == "Rent/Lease") {
+		if(legalPossesion == "Rent/Lease" && || legalPossesion == "Other") {
 			arrReqdDocs_App.push(occupyUse);
 		}
 		if (SR2 == "CHECKED"){
