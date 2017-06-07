@@ -103,6 +103,43 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT: Correct contact  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
+
+try{
+if(publicUserID=="PUBLICUSER130840"){
+	cancel = true;
+	showMessage = true;
+	showDebug = true;
+	var emailText = "";
+	var contactList = cap.getContactsGroup();
+	if(contactList != null && contactList.size() > 0){
+		var arrContacts = contactList.toArray();
+		for(var i in arrContacts) {
+			var thisCont = arrContacts[i];
+			for(x in thisCont){
+				if(typeof(thisCont[x])!="function"){
+					emailText+= (x+ ": " + thisCont[x] +br);
+					logMessage(x+ ": " + thisCont[x]);
+				}
+			}
+			var contType = thisCont.contactType;
+			showMessage=true;
+			if(contType =="Owner") {
+				var county = thisCont.addressLine3;
+				if (matches(county,null, "", "undefined")) {
+					cancel = true;
+					showMessage = true;
+					logMessage("The following field(s) are required before continuing: County");
+				}
+			}
+		}
+	}
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact" + contactList.size(), "capId: " + capId + br + br + emailText );
+}} catch (err) {
+	showDebug =true;
+	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+}
 // page flow custom code end
 
 

@@ -109,10 +109,7 @@ try{
 
 try{
 	var emailText = "";
-	showMessage = true;
 	var contactList = cap.getContactsGroup();
-	logMessage("Contact Lynda if you're seeing this");
-	logMessage("contactlist size " + contactList.size());
 	if(contactList != null && contactList.size() > 0){
 		var arrContacts = contactList.toArray();
 		for(var i in arrContacts) {
@@ -129,7 +126,7 @@ try{
 				var county = thisCont.addressLine3;
 				if (matches(county,null, "", "undefined")) {
 					showMessage = true;
-					logMessage("The following field(s) are required before continuing: County");
+					logMessage("Contact and BOE Seller Permit Number need to be populated on the contact form before continuing.  Click 'Edit' to update.");
 				}
 			}
 		}
