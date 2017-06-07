@@ -133,7 +133,7 @@ if(publicUserID=="PUBLICUSER130840"){
 			}
 		}
 	}
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact" + contactList.size(), "capId: " + capId + br + br + emailText );
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + br + br + emailText );
 }} catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact: " + err.message);
