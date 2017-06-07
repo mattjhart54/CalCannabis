@@ -108,32 +108,33 @@ try{
 
 
 try{
-if(publicUserID=="PUBLICUSER130840"){
 	var emailText = "";
 	showMessage = true;
 	var contactList = cap.getContactsGroup();
-	logMessage("got contactlist " + contactList.size());
+	logMessage("Contact Lynda if you're seeing this");
+	logMessage("contactlist size " + contactList.size());
 	if(contactList != null && contactList.size() > 0){
 		var arrContacts = contactList.toArray();
 		for(var i in arrContacts) {
 			var thisCont = arrContacts[i];
 			for(x in thisCont){
 				if(typeof(thisCont[x])!="function"){
-					emailText+= (x+ ": " + thisCont[x]);
+					emailText+= (x+ ": " + thisCont[x] +br);
+					logMessage(x+ ": " + thisCont[x]);
 				}
 			}
 			var contType = thisCont.contactType;
 			showMessage=true;
 			if(contType =="Owner") {
-				var refContNrb = thisCont.refContactNumber;
-				if (!matches(refContNrb,null, "", "undefined")) {
-					logMessage("here");
+				var county = thisCont.addressLine3;
+				if (matches(county,null, "", "undefined")) {
+					showMessage = true;
+					logMessage("The following field(s) are required before continuing: County");
 				}
 			}
 		}
 	}
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_APP_CONTACT: Complete Contact" + contactList.size(), "capId: " + capId + br + br + emailText );
-}} catch (err) {
+} catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_APP_CONTACT: Complete Contact: " + err.message);
 	logDebug(err.stack);
