@@ -85,7 +85,7 @@ try{
 		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
 			arrReqdDocs_App.push(soveriegnImmunity);
 		}
-		if (foriegn == "Yes"){
+		if (AInfo["Foreign Corporation"] == "Yes"){
 			arrReqdDocs_App.push(foriegnCorp);
 		}
 		if (AInfo["Vertical Integration"] == "CHECKED"){
