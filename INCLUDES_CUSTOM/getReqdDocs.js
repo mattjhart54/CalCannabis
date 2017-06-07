@@ -69,7 +69,7 @@ try{
 		var diversionExcept = getAppSpecific("Diversion Exception", itemCap);
 		var licType = getAppSpecific("License Type", itemCap);
 		var localAuthority = getAppSpecific("Local Authority Type", itemCap);
-		var legalPossesion = getAppSpecific("Legal Possession", itemCap);
+		var legalPossession = getAppSpecific("Legal Possession", itemCap);
 		var operDate = getAppSpecific("Date of Intitial Operation", itemCap);
 		var priorityDate = "01/01/2016";
 		
