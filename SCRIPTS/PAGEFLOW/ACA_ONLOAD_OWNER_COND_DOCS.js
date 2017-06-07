@@ -142,6 +142,14 @@ logDebug("balanceDue = " + balanceDue);
 // page flow custom code begin
 
 try{
+	var parentId = cap.getParentCapID();
+	pCap = aa.cap.getCap(parentId).getOutput();
+	pAppTypeResult = pCap.getCapType();
+	pAppTypeString = appTypeResult.toString();
+	pAppTypeArray = appTypeString.split("/");
+	var pType = pAppTypeArray[2];
+	showMessage = true
+	logMessage = ("pID " + parentId + "Type " + pType);
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
@@ -150,7 +158,7 @@ try{
 	var conditionTable = [];
 	dr = "";
 	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-	r = getReqdDocs("Owner");
+	r = getReqdDocs("Owner",pType);
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 	uploadedDocs = new Array();
 	for (var i in submittedDocList ){
