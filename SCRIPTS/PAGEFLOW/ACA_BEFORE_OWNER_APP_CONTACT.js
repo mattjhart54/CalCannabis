@@ -128,7 +128,17 @@ if(publicUserID=="PUBLICUSER130840"){
 				if (matches(county,null, "", "undefined")) {
 					cancel = true;
 					showMessage = true;
-					logMessage("The following field(s) are required before continuing: County");
+					logMessage("'County' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
+				}
+				var pplRes = aa.people.getPeople(thisCont.refContactNumber);
+				if(pplRes.getSuccess()){
+					var thisPpl = pplRes.getOutput();
+					var boeSeller = thisPpl.businessName2;
+					if (matches(boeSeller,null, "", "undefined")) {
+						cancel = true;
+						showMessage = true;
+						logMessage("'BOE Seller Permit Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
+					}
 				}
 			}
 		}

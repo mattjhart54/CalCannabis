@@ -123,7 +123,7 @@ try{
 			var contType = thisCont.contactType;
 			showMessage=true;
 			if(contType =="Owner") {
-				var county = thisCont.addressLine3;
+				var county = ""+thisCont.addressLine3;
 				if (matches(county,null, "", "undefined")) {
 					showMessage = true;
 					logMessage("Contact and BOE Seller Permit Number need to be populated on the contact form before continuing.  Click 'Edit' to update.");
