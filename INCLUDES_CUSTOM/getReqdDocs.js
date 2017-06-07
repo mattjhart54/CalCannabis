@@ -78,11 +78,11 @@ try{
 				arrReqdDocs_App.push(operationDate);
 			}
 		}
-		if (bsnsEntity != "Sole Proprietorship"){
+		if (AInfo["Business Entity Structure"] != "Sole Proprietorship"){
 			arrReqdDocs_App.push(businessFormation);
 			arrReqdDocs_App.push(stateDocuments);
 		}
-		if (bsnsEntity == "Soveriegn Entity"){
+		if (AInfo["Business Entity Structure"] == "Soveriegn Entity"){
 			arrReqdDocs_App.push(soveriegnImmunity);
 		}
 		if (foriegn == "Yes"){
