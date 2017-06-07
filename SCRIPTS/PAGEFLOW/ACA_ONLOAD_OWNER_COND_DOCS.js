@@ -142,6 +142,15 @@ logDebug("balanceDue = " + balanceDue);
 // page flow custom code begin
 
 try{
+	parentCapId = null;
+	parentCapIdString = "" + cap.getParentCapID();
+	showMessage = true;
+	logMessage("Parent " + parentCapIdString);
+	if (parentCapIdString) {
+		pca = parentCapIdString .split("-");
+		parentCapId = aa.cap.getCapID(pca[0],pca[1],pca[2]).getOutput();
+	}
+	logMessage("Parent ID" + parentCapId);
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
