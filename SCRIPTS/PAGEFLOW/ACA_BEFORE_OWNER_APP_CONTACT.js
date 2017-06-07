@@ -106,9 +106,6 @@ try{
 
 try{
 if(publicUserID=="PUBLICUSER130840"){
-	cancel = true;
-	showMessage = true;
-	showDebug = true;
 	var emailText = "";
 	var contactList = cap.getContactsGroup();
 	if(contactList != null && contactList.size() > 0){
