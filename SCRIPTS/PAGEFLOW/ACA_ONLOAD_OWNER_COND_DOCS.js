@@ -173,6 +173,9 @@ try{
 						if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) 
 							publicDisplayCond = ccr[i];
 				}
+				for(var i = 0; i<ccr.length; i++) 
+					removeCapCondition(conditionType,ccr[i].getConditionDesc());
+			}
 				if (dr && ccr.length > 0 && showList && publicDisplayCond) {
 					message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
 				}
