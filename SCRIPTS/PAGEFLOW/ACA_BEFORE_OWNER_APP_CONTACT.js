@@ -115,7 +115,7 @@ if(publicUserID=="PUBLICUSER130840"){
 			for(x in thisCont){
 				if(typeof(thisCont[x])!="function"){
 					emailText+= (x+ ": " + thisCont[x] +br);
-					logMessage(x+ ": " + thisCont[x]);
+					//logMessage(x+ ": " + thisCont[x]);
 				}
 			}
 			var contType = thisCont.contactType;
