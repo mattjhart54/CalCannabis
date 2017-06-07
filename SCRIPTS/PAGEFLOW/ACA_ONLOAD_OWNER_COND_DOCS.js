@@ -142,6 +142,9 @@ logDebug("balanceDue = " + balanceDue);
 // page flow custom code begin
 
 try{
+	parentId = getParent();
+	showMessage = true;
+	logMessage=("ParentId " + parentId);
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
