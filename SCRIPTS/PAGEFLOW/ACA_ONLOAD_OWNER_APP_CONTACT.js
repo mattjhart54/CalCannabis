@@ -71,11 +71,16 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 
 var cap = aa.env.getValue("CapModel");
-//var parentId = cap.getParentCapID();
 
 // page flow custom code begin
 
 try{
+	if(publicUserID=="PUBLICUSER130840"){
+		logMessage("cap.getParentCapID(): " + cap.getParentCapID());
+		logMessage("parentCapString: " + parentCapString)
+		logMessage("parentCapId: " + parentCapId);
+		logMessage("getParents(pAppType): " + getParents("Licenses/Cultivator/*/Application");
+	}
 	var appName = cap.getSpecialText();
 	if(!matches(appName,null,"","undefined")){
 		var parenLoc = appName.indexOf("(");
