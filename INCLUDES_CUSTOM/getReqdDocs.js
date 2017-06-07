@@ -82,7 +82,7 @@ try{
 			arrReqdDocs_App.push(businessFormation);
 			arrReqdDocs_App.push(stateDocuments);
 		}
-		if (AInfo["Business Entity Structure"] == "Soveriegn Entity"){
+		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
 			arrReqdDocs_App.push(soveriegnImmunity);
 		}
 		if (foriegn == "Yes"){
