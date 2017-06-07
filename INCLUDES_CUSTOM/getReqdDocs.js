@@ -53,7 +53,6 @@ try{
 		
 	//these documents are always required
 		arrReqdDocs_App.push(businessBond);
-		arrReqdDocs_App.push(operationDate);
 		arrReqdDocs_App.push(waterQuality);
 		arrReqdDocs_App.push(enviroStor);
 		arrReqdDocs_App.push(streambedAlter);	
@@ -95,10 +94,10 @@ try{
 			arrReqdDocs_App.push(fullCompliance);
 			arrReqdDocs_App.push(BOE);
 		}
-		if(legalPossesion == "Own") {
+		if(legalPossession == "Own") {
 			arrReqdDocs_App.push(ownership);
 		}
-		if(legalPossesion == "Rent/Lease" && || legalPossesion == "Other") {
+		if(legalPossession == "Rent/Lease" && || legalPossession == "Other") {
 			arrReqdDocs_App.push(occupyUse);
 		}
 		if (SR2 == "CHECKED"){
