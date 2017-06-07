@@ -94,12 +94,14 @@ try{
 			arrReqdDocs_App.push(fullCompliance);
 			arrReqdDocs_App.push(BOE);
 		}
+		
 		if(legalPossession == "Own") {
 			arrReqdDocs_App.push(ownership);
 		}
 		if(legalPossession == "Rent/Lease" && || legalPossession == "Other") {
 			arrReqdDocs_App.push(occupyUse);
 		}
+		
 		if (SR2 == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
 		}
