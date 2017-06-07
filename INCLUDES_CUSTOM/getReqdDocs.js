@@ -73,7 +73,7 @@ try{
 		var operDate = getAppSpecific("Date of Intitial Operation", itemCap);
 		var priorityDate = "01/01/2016";
 		
-		if(operDate != null || operDate != "") {
+		if(operDate != null && operDate != "") {
 			if(dateDiff(operDate,priorityDate) >= 0) {
 				arrReqdDocs_App.push(operationDate);
 			}
