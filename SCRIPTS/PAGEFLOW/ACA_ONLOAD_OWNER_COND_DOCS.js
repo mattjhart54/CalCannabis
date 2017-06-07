@@ -159,7 +159,7 @@ try{
 	var conditionTable = [];
 	dr = "";
 	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-	r = getReqdDocs("Owner",pType);
+	r = getReqdDocs("Owner");
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 	uploadedDocs = new Array();
 	for (var i in submittedDocList ){
