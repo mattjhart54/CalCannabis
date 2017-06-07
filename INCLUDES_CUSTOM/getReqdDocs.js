@@ -59,18 +59,6 @@ try{
 		arrReqdDocs_App.push(localComply);
 		arrReqdDocs_App.push(CEQA);
 		
-	//these are qualified documents
-		var bsnsEntity = getAppSpecific("Business Entity Structure", itemCap);
-		var foriegn = getAppSpecific("Foriegn Corporation", itemCap);
-		var VI = getAppSpecific("Vertical Integration", itemCap);
-		var SR2 = getAppSpecific("Small Retail Supplier 2", itemCap);
-		var GWW = getAppSpecific("Small Retail Supplier 2", itemCap);
-		var diversion = getAppSpecific("Diversion", itemCap);
-		var diversionExcept = getAppSpecific("Diversion Exception", itemCap);
-		var licType = getAppSpecific("License Type", itemCap);
-		var localAuthority = getAppSpecific("Local Authority Type", itemCap);
-		var legalPossession = getAppSpecific("Legal Possession", itemCap);
-		var operDate = getAppSpecific("Date of Intitial Operation", itemCap);
 		var priorityDate = "01/01/2016";
 		
 		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "") {
@@ -134,20 +122,18 @@ try{
 			arrReqdDocs_App.push(planningPermit);
 			arrReqdDocs_App.push(goodStanding);
 		}
-		//for(d in arrReqdDocs_App)
-		//	logDebug("Documents " + arrReqdDocs_App[d]);
 		return arrReqdDocs_App;
 	}
 	if(recdType == "Owner"){
 		arrReqdDocs_Own = new Array();
+		
 	//these documents are always required
 		arrReqdDocs_Own.push(governmentIssuedID);
 		arrReqdDocs_Own.push(fingerprintApp);
+		
 	//these are qualified documents
 		
 		parentId = getParent(itemCap);
-		showMessage = true;
-		logMessage("ParentId " + parentId);
 		pCap = aa.cap.getCap(parentId).getOutput();
 		pTypeResult = pCap.getCapType();
 		pTypeString = pTypeResult.toString();
