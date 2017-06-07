@@ -147,7 +147,6 @@ try{
 		if(appTypeArray[2] == "Adult Use") {
 			arrReqdDocs_Own.push(calResidency);
 		}
-		var crime = getAppSpecific("Convicted of a Crime", itemCap);
 		if (AInfo["Convicted of a Crime"] == "Yes"){
 				arrReqdDocs_Own.push(evidenceOfDismissal);
 				arrReqdDocs_Own.push(certificateOfRehabilitation);
