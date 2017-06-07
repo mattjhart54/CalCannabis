@@ -95,14 +95,14 @@ try{
 			arrReqdDocs_App.push(BOE);
 		}
 		
-		if(legalPossession == "Own") {
+		if(AInfo["Legal Possession"] == "Own") {
 			arrReqdDocs_App.push(ownership);
 		}
-		if(legalPossession == "Rent/Lease" || legalPossession == "Other") {
+		if(AInfo["Legal Possession"] == "Rent/Lease" || AInfo["Legal Possession"] == "Other") {
 			arrReqdDocs_App.push(occupyUse);
 		}
 		
-		if (SAInfo["Small Retail Supplier 2"] == "CHECKED"){
+		if (AInfo["Small Retail Supplier 2"] == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
 		}
 		if (AInfo["Groundwater Well"] == "CHECKED"){
