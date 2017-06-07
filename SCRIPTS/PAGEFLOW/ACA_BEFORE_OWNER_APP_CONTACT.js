@@ -124,12 +124,12 @@ if(publicUserID=="PUBLICUSER130840"){
 			var contType = thisCont.contactType;
 			showMessage=true;
 			if(contType =="Individual") {
-				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + br + br + emailText );
-				var county = thisCont.addressLine3;
+				var county = ""+thisCont.addressLine3;
 				if (matches(county,null, "", "undefined")) {
 					cancel = true;
 					showMessage = true;
 					logMessage("'County' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
+					aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + br + br + emailText );
 				}
 				var pplRes = aa.people.getPeople(thisCont.refContactNumber);
 				if(pplRes.getSuccess()){
