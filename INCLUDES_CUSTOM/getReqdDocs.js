@@ -74,7 +74,7 @@ try{
 		var priorityDate = "01/01/2016";
 		
 		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "") {
-			if(dateDiff(operDate,priorityDate) >= 0) {
+			if(dateDiff(AInfo["Date of Intitial Operation"],priorityDate) >= 0) {
 				arrReqdDocs_App.push(operationDate);
 			}
 		}
