@@ -73,7 +73,7 @@ try{
 		var operDate = getAppSpecific("Date of Intitial Operation", itemCap);
 		var priorityDate = "01/01/2016";
 		
-		if(operDate != null && operDate != "") {
+		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "") {
 			if(dateDiff(operDate,priorityDate) >= 0) {
 				arrReqdDocs_App.push(operationDate);
 			}
@@ -88,7 +88,7 @@ try{
 		if (foriegn == "Yes"){
 			arrReqdDocs_App.push(foriegnCorp);
 		}
-		if (VI == "CHECKED"){
+		if (AInfo["Vertical Integration"] == "CHECKED"){
 			arrReqdDocs_App.push(localOrdinance);
 			arrReqdDocs_App.push(cannabisActivity);
 			arrReqdDocs_App.push(fullCompliance);
@@ -102,34 +102,34 @@ try{
 			arrReqdDocs_App.push(occupyUse);
 		}
 		
-		if (SR2 == "CHECKED"){
+		if (SAInfo["Small Retail Supplier 2"] == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
 		}
-		if (GWW == "CHECKED"){
+		if (AInfo["Groundwater Well"] == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
 		}
-		if (diversion == "CHECKED"){
+		if (AInfo["Diversion"] == "CHECKED"){
 			arrReqdDocs_App.push(SWRCBAhuth);
 		}				
-		if (diversionExcept == "CHECKED"){
+		if (AInfo["Diversion Exception"] == "CHECKED"){
 			arrReqdDocs_App.push(SWRCBExcept);
 		}
-		if(matches(licType,"Specialty Cottage Indoor","Specialty Cottage Mixed-Light","Specialty Indoor","Specialty Mixed-Light","Small Indoor","Small Mixed-Light","Medium Indoor","Medium Mixed-Light")) {
+		if(matches(AInfo["License Type"],"Specialty Cottage Indoor","Specialty Cottage Mixed-Light","Specialty Indoor","Specialty Mixed-Light","Small Indoor","Small Mixed-Light","Medium Indoor","Medium Mixed-Light")) {
 			arrReqdDocs_App.push(premiseDiagram);
 			arrReqdDocs_App.push(wastePlan);
 			arrReqdDocs_App.push(pestPlan);
 			arrReqdDocs_App.push(lightDiagram);
 		}
-		if(matches(licType,"Specialty Cottage Outdoor","Specialty Outdoor","Small Outdoor","Medium Outdoor","Nursery")) {
+		if(matches(AInfo["License Type"],"Specialty Cottage Outdoor","Specialty Outdoor","Small Outdoor","Medium Outdoor","Nursery")) {
 			arrReqdDocs_App.push(premiseDiagram);
 			arrReqdDocs_App.push(wastePlan);
 			arrReqdDocs_App.push(pestPlan);
 		}
-		if(licType =="Processor") {
+		if(AInfo["License Type"] =="Processor") {
 			arrReqdDocs_App.push(premiseDiagram);
 			arrReqdDocs_App.push(wastePlan);
 		}
-		if(localAuthority != "" && localAuthority != null) {
+		if(AInfo["Local Authority Type"] != "" && AInfo["Local Authority Type"] != null) {
 			arrReqdDocs_App.push(localAuth);
 			arrReqdDocs_App.push(planningPermit);
 			arrReqdDocs_App.push(goodStanding);
