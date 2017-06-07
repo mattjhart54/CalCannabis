@@ -144,7 +144,16 @@ try{
 		arrReqdDocs_Own.push(governmentIssuedID);
 		arrReqdDocs_Own.push(fingerprintApp);
 	//these are qualified documents
-		if(appTypeArray[2] == "Adult Use") {
+		
+		parentId = getParent(itemCap);
+		showMessage = true;
+		logMessage("ParentId " + parentId);
+		pCap = aa.cap.getCap(parentId).getOutput();
+		pTypeResult = pCap.getCapType();
+		pTypeString = pTypeResult.toString();
+		pTypeArray = pTypeString.split("/");
+		
+		if(pTypeArray[2] == "Adult Use") {
 			arrReqdDocs_Own.push(calResidency);
 		}
 		if (AInfo["Convicted of a Crime"] == "Yes"){
