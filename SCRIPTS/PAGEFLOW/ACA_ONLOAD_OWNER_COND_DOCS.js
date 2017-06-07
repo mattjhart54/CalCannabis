@@ -142,14 +142,6 @@ logDebug("balanceDue = " + balanceDue);
 // page flow custom code begin
 
 try{
-	var parentId = cap.getParentCapID();
-	pCap = aa.cap.getCap(parentId).getOutput();
-	pAppTypeResult = pCap.getCapType();
-	pAppTypeString = appTypeResult.toString();
-	pAppTypeArray = appTypeString.split("/");
-	var pType = pAppTypeArray[2];
-	showMessage = true
-	logMessage = ("pID " + parentId + "Type " + pType);
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
