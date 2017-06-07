@@ -123,7 +123,8 @@ if(publicUserID=="PUBLICUSER130840"){
 			}
 			var contType = thisCont.contactType;
 			showMessage=true;
-			if(contType =="Owner") {
+			if(contType =="Individual") {
+				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + br + br + emailText );
 				var county = thisCont.addressLine3;
 				if (matches(county,null, "", "undefined")) {
 					cancel = true;
@@ -143,7 +144,6 @@ if(publicUserID=="PUBLICUSER130840"){
 			}
 		}
 	}
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + br + br + emailText );
 }} catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact: " + err.message);
