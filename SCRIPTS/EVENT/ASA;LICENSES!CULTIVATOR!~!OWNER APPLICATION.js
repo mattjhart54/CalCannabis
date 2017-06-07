@@ -69,8 +69,8 @@ try{
 					var drpFirst = drpContact.getFirstName();
 					var drpLast =  drpContact.getLastName();
 					var drpEmail = drpContact.getEmail();
-					editAppName(drpFirst + " " + drpLast + " (" + drpEmail + ")");
-					updateShortNotes(drpFirst + " " + drpLast + " (" + drpEmail + ")");
+					editAppName(drpFirst + " " + drpLast + " (" + drpEmail + ")", desigRecId);
+					updateShortNotes(drpFirst + " " + drpLast + " (" + drpEmail + ")",desigRecId);
 					copyContactsByType(parentCapId, desigRecId, "Designated Responsible Party");
 					if(!matches(drpEmail,null,"","undefined")){
 						emailParameters = aa.util.newHashtable();
