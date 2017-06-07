@@ -144,7 +144,7 @@ logDebug("balanceDue = " + balanceDue);
 try{
 	parentId = getParent();
 	showMessage = true;
-	logMessage=("ParentId " + parentId);
+	logMessage("ParentId " + parentId);
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
