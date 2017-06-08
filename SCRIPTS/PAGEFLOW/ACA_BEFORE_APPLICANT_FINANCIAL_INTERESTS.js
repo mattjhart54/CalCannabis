@@ -82,7 +82,7 @@ try {
 	loadAppSpecific4ACA(AInfo);
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		var fnd = false;
-		cfi =loadASITable("CANNABIS FINANCIAL INTEREST");
+		cfi =loadASITable_corrected("CANNABIS FINANCIAL INTEREST");
 		for(x in cfi) {
 	//		logDebug("Type of License : " + cfi[x]["Type of License"]);
 			if(cfi[x]["Type of License"] == "Producing Dispensary") {
