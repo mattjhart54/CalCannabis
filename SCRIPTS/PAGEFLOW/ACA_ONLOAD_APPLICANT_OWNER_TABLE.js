@@ -89,21 +89,26 @@ try{
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
 				var emailText = "";
-				for(x in thisCont){
-					if(typeof(thisCont[x])!="function"){
-						logDebug(x+ ": " + thisCont[x]);
-						emailText +=(x+ ": " + thisCont[x]) + br;
-					}
-				}
-				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + br + br + emailText);
+				//for(x in thisCont){
+				//	if(typeof(thisCont[x])!="function"){
+				//		logDebug(x+ ": " + thisCont[x]);
+				//		emailText +=(x+ ": " + thisCont[x]) + br;
+				//	}
+				//}
+				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + br + br + "here");
 				var contType = thisCont.contactType;
 				showMessage=true;
 				if(contType =="Designated Responsible Party") {
 					//var refContNrb = thisCont.refContactNumber;
-					var drpFullName = thisCont.fullName;
-					if (!matches(drpFullName,null, "", "undefined")) {
-						logDebug("drpFullName: " + drpFullName);
-					}
+					var drpContact = [];
+					var drpFName = thisCont.firstName;
+					var drpLName = thisCont.lastName;
+					var drpEmail = thisCont.email;
+					drpContact["First Name"]=drpFName;
+					drpContact["Last Name"]=drpLName;
+					drpContact["Email Address"]=drpEmail;
+					tblOwner.push(drpContact);
+					addToASITable("OWNERS",tblOwner);
 				}
 			}
 		}
