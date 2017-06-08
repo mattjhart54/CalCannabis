@@ -52,8 +52,7 @@ if (SA) {
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM"));
-var useProductScripts = true;
+eval(getScriptText("INCLUDES_CUSTOM"),null,true);
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
