@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_ONLOAD_COND_DOCS.JS
+| Program : ACA_ONLOAD_OWNER_COND_DOCS.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -156,7 +156,7 @@ try{
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 	}
-	if (r.length > 0 && showList) {
+	if (r != null && showList) {
 		for (x in r) { 
 			if(uploadedDocs[r[x].document] == undefined) {	
 				showMessage = true; 
@@ -199,8 +199,9 @@ try{
 	}
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ACA_ONLOAD_COND_DOCS: Main function: " + err.message);
+	logDebug("An error has occurred in ACA_ONLOAD_OWNER_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_COND_DOCS: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 
 // page flow custom code end
