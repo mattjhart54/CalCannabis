@@ -53,6 +53,7 @@ if (SA) {
 }
 
 eval(getScriptText("INCLUDES_CUSTOM"));
+var useProductScripts = true;
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
