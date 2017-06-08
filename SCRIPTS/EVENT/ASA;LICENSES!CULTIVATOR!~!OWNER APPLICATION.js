@@ -15,13 +15,12 @@ try{
 			for(ch in arrChild){
 				thisChild = arrChild[ch];
 				capChild = aa.cap.getCap(thisChild).getOutput();
-				logDebug("capChild.getCapStatus: " + capChild.getCapStatus());
+				//logDebug("capChild.getCapStatus: " + capChild.getCapStatus());
 				if(!matches(capChild.getCapStatus(), "Submitted")){
-					logDebug("Not complete");
 					allKidsComplete=false;
 				}
-				logDebug("capChild.getCapModel().getAppTypeAlias(): " + capChild.getCapModel().getAppTypeAlias());
-				logDebug("capChild.getCapID().getCustomID(): " + capChild.getCapID().getCustomID());
+				//logDebug("capChild.getCapModel().getAppTypeAlias(): " + capChild.getCapModel().getAppTypeAlias());
+				//logDebug("capChild.getCapID().getCustomID(): " + capChild.getCapID().getCustomID());
 				chArray.push({
 					"ID" : ch,
 					"Alias" : String(capChild.getCapModel().getAppTypeAlias()),
@@ -31,7 +30,6 @@ try{
 		}
 		var arrChild = getChildren("Licenses/Cultivator/*/Declaration", parentCapId);
 		if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
-			var chArray = [];
 			for(ch in arrChild){
 				thisChild = arrChild[ch];
 				capChild = aa.cap.getCap(thisChild).getOutput();
