@@ -81,13 +81,12 @@ try {
 	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-	logMessage("Crime " + AInfo["Convicted of a Crime"]);
 	if(AInfo["Convicted of a Crime"] == "Yes") {
 		var fnd = false;
 		conv =loadASITable("CONVICTIONS");
 		for(x in conv) {
 	//		logDebug("Type of License : " + cfi[x]["Type of License"]);
-			if(conv[x]["Offense"] != "" || conv[x]["Offense"] != null) {
+			if(conv[x]["Offense"] != "" && conv[x]["Offense"] != null) {
 				fnd = true;
 			}
 		}
