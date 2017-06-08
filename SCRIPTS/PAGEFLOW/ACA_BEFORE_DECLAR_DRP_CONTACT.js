@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_BEFORE_OWNER_APP_CONTACT.JS
+| Program : ACA_BEFORE_DECLAR_DRP_CONTACT.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -95,17 +95,17 @@ try{
 		}
 	}else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
+		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_DECLAR_DRP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
 	}
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT: Correct contact : " + err.message);
+	logDebug("An error has occurred in ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact : " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT: Correct contact  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 
 try{
-//	var emailText = "";
+	//var emailText = "";
 	var contactList = cap.getContactsGroup();
 	if(contactList != null && contactList.size() > 0){
 		var arrContacts = contactList.toArray();
@@ -141,9 +141,9 @@ try{
 	}
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact: " + err.message);
+	logDebug("An error has occurred in ACA_BEFORE_DECLAR_DRP_CONTACT: Complete Contact: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 // page flow custom code end
 

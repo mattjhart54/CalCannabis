@@ -125,7 +125,16 @@ try{
 				var county = ""+thisCont.addressLine3;
 				if (matches(county,null, "", "undefined")) {
 					showMessage = true;
-					logMessage("Contact and BOE Seller Permit Number need to be populated on the contact form before continuing.  Click 'Edit' to update.");
+					logMessage("'County' need to be populated on the contact form before continuing.  Click 'Edit' to update.");
+				}
+				var pplRes = aa.people.getPeople(thisCont.refContactNumber);
+				if(pplRes.getSuccess()){
+					var thisPpl = pplRes.getOutput();
+					var boeSeller = thisPpl.businessName2;
+					if (matches(boeSeller,null, "", "undefined")) {
+						showMessage = true;
+						logMessage("'BOE Seller Permit Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
+					}
 				}
 			}
 		}
