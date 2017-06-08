@@ -77,9 +77,12 @@ var cap = aa.env.getValue("CapModel");
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
+	showMessage=true
+	logMessage("Start script" + "Crime ");
 	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
+	logMessage("Crime " + AInfo["Convicted of a Crime"]);
 	if(AInfo["Convicted of a Crime"] == "CHECKED") {
 		var fnd = false;
 		conv =loadASITable("CONVICTIONS");
@@ -97,7 +100,7 @@ try {
 		}
 	}
 }catch (err) {
-    logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
+    logDebug("A JavaScript Error occurred: ACA_BEFORE_OWNER_DISCLOSURE: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 	aa.env.setValue("ErrorCode", "-2");
