@@ -6,137 +6,86 @@ function doAssocFormRecs(formDataField, newAfData) {
 // newAfData is a JSON object that describes the records to create.  Structured like:
 // [{"ID":"1","Alias":"Food License","recordId":"14TMP-11111"}];
 //
-
-try {
-	// get all record types
-	var allRecordTypeMap = aa.util.newHashMap();
-	var allRecordTypes = aa.cap.getCapTypeList(null).getOutput();
-	if (allRecordTypes != null && allRecordTypes.length > 0) {
-		for (var i = 0; i < allRecordTypes.length; i++) {
-			var recordType = allRecordTypes[i].getCapType();
-			var alias = recordType.getAlias();
-			allRecordTypeMap.put(alias, recordType);
+try{
+	updateAppStatus("Submitted","Updated via ASA:Licenses/Cultivator/*/Owner Application");
+	logDebug("parentCapId: " + parentCapId);
+	if(parentCapId){
+		var childRecs = [];
+		var allKidsComplete = true;
+		var chArray = [];
+		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application", parentCapId);
+		if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
+			for(ch in arrChild){
+				thisChild = arrChild[ch];
+				capChild = aa.cap.getCap(thisChild).getOutput();
+				//logDebug("capChild.getCapStatus: " + capChild.getCapStatus());
+				if(!matches(capChild.getCapStatus(), "Submitted")){
+					allKidsComplete=false;
+				}
+				//logDebug("capChild.getCapModel().getAppTypeAlias(): " + capChild.getCapModel().getAppTypeAlias());
+				//logDebug("capChild.getCapID().getCustomID(): " + capChild.getCapID().getCustomID());
+				chArray.push({
+					"ID" : ch,
+					"Alias" : String(capChild.getCapModel().getAppTypeAlias()),
+					"recordId" : String(capChild.getCapID().getCustomID())
+				});
+			}
 		}
-	}
-	// get an object representing all the existing child records in the database
-	var childRecs = [];
-	var capScriptModels = aa.cap.getChildByMasterID(capId).getOutput();
-	if (capScriptModels) {
-		for (var i = 0; i < capScriptModels.length; i++) {
-			var capScriptModel = capScriptModels[i];
-			if (capScriptModel) {
-				var project = capScriptModel.getProjectModel();
-				if (capScriptModel.getCapID() != null && project != null && project.getProject() != null && "AssoForm".equals(project.getProject().getRelationShip())) {
-					var ct = capScriptModel.getCapModel().getCapType();
-					childRecs.push({
-						"ID" : i,
-						"Alias" : String(capScriptModel.getCapModel().getAppTypeAlias()),
-						"recordId" : String(capScriptModel.getCapID().getCustomID())
-					});
-					logDebug("adding : " + String(capScriptModel.getCapID().getCustomID()) + " to list of viable child records");
+		var arrChild = getChildren("Licenses/Cultivator/*/Declaration", parentCapId);
+		if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
+			for(ch in arrChild){
+				thisChild = arrChild[ch];
+				capChild = aa.cap.getCap(thisChild).getOutput();
+				chArray.push({
+					"ID" : ch,
+					"Alias" : String(capChild.getCapModel().getAppTypeAlias()),
+					"recordId" : String(capChild.getCapID().getCustomID())
+				});
+			}
+		}
+		if(chArray.length>0){
+			editAppSpecific("childRecs", JSON.stringify(chArray));
+		}
+		if(allKidsComplete){
+			var currCap = capId;
+			capId = parentCapId;
+			var recTypeAlias = "Declarations and Final Affidavit";  // must be a valid record type alias
+			var recordNum = 1;
+			var afArray = [];  // array describing the associated form records
+			for (var i = 0; i < recordNum; i++) {
+				var af = {};  // empty object
+				af.ID = String(i + 1);  // give it an id number
+				af.Alias = recTypeAlias;  
+				af.recordId = "";		// define a place to store the record ID when the record is created
+				afArray.push(af); 		// add the record to our array
+			}
+			var arrForms = (doAssocFormRecs("childRecs",afArray));
+			capId = currCap;
+			for (i in arrForms){
+				thisForm =  arrForms[i];
+				var desigRec =  thisForm["recordId"];
+				var desigRecId = aa.cap.getCapID(desigRec).getOutput();
+				var drpContact = getContactByType("Designated Responsible Party",parentCapId);
+				if(drpContact){
+					var drpFirst = drpContact.getFirstName();
+					var drpLast =  drpContact.getLastName();
+					var drpEmail = drpContact.getEmail();
+					editAppName(drpFirst + " " + drpLast + " (" + drpEmail + ")", desigRecId);
+					updateShortNotes(drpFirst + " " + drpLast + " (" + drpEmail + ")",desigRecId);
+					copyContactsByType(parentCapId, desigRecId, "Designated Responsible Party");
+					if(!matches(drpEmail,null,"","undefined")){
+						emailParameters = aa.util.newHashtable();
+						addParameter(emailParameters, "$$AltID$$", desigRecId);
+						addParameter(emailParameters, "$$ProjectName$$", capName);
+						addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
+						sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,desigRecId);
+					}
 				}
 			}
 		}
 	}
-	if (!formDataField) { // use child records in database
-		var afData = childRecs;
-	} else { // use form field on record as the list of existing child records
-		var afData = AInfo[formDataField];
-		if (!afData || afData == "") {
-			afData = [];
-		} else {
-			afData = JSON.parse(afData);
-			//afData = JSON.stringify(afData);
-			//afData = JSON.parse(JSON.stringify(afData));
-			logDebug("afData: " + afData);
-		}
-		// filter this list against the existing child records, remove any that aren't really child records.
-		afData = afData.filter(function (o) {
-			bool = childRecs.map(function (e) {
-				return e.recordId
-			}).indexOf(o.recordId) >= 0;
-			if (!bool)
-				logDebug("Removing " + o.recordId + " from the list as it is not a viable child record");
-			return bool;
-		});
-
-		// remove any child recs that aren't in the form data field.
-		for (var i in childRecs) {
-			if (afData.map(function (e) {
-					return e.recordId
-				}).indexOf(childRecs[i].recordId) == -1) {
-				logDebug("removing " + childRecs[i].recordId + " from record association, not found in " + formDataField);
-				aa.cap.removeAppHierarchy(capId, aa.cap.getCapID(childRecs[i].recordId).getOutput());
-			}
-		}
-	}
-
-	logDebug("Existing Record Form Data (after filtering out bad data) : " + JSON.stringify(afData));
-
-	// Check the existing child records and re-use any of the same type.
-	// This code only looks at the record type to be created, not an ID field.  
-	//It's assumed that if we are using this code we probably aren't using an ASI table, 
-	//so we're ignoring the ID field.
-
-	for (var i in newAfData) {
-		var n = newAfData[i];
-		var z = afData.map(function (e) {
-			return e.Alias;
-		}).indexOf(n.Alias); // found a match
-		if (z >= 0) {
-			n.recordId = afData[z].recordId; // use this record
-			logDebug(n.Alias + " will use existing viable child record id " + n.recordId);
-			afData.splice(z, 1);
-		} else {
-			logDebug("no " + n.Alias + " record found in existing afData");
-		}
-	}
-	//don't remove any records where the alias doesn't match the one requested
-	for(i in newAfData){
-		for(j in afData){
-			if(newAfData[i].Alias!=afData[j].Alias){
-				logDebug("Wrong alias, not removing "+  afData[j].recordId);
-				delete afData[j];
-			}
-		}
-	}
-
-
-	// Delete everything thats left in AfData, we aren't using it.
-	for (var i in afData) {
-		logDebug("removing unused child record " + afData[i].recordId);
-		aa.cap.removeAppHierarchy(capId, aa.cap.getCapID(afData[i].recordId).getOutput());
-	}
-	// create any records that don't already exist.
-	for (var i in newAfData) {
-		var r = newAfData[i];
-		var ctm = allRecordTypeMap.get(r.Alias);
-		if (!newAfData[i].recordId || newAfData[i].recordId == "") {
-			logDebug("Attempting to create record : " + ctm);
-			var result = aa.cap.createSimplePartialRecord(ctm, null, "INCOMPLETE CAP");
-			if (result.getSuccess() && result.getOutput() != null) {
-				var newCapId = result.getOutput();
-				logDebug("Created new associated form record " + newCapId.getCustomID() + " for type " + r.Alias);
-				aa.cap.createAssociatedFormsHierarchy(capId, newCapId);
-				r.recordId = String(newCapId.getCustomID());
-				// stuff can be copied in here, if needed.   I think it should be copied in after the CTRCA
-			} else {
-				logDebug("Error creating new associated form record for type: " + r.Alias + ": " + result.getErrorMessage());
-			}
-		} else {
-			logDebug("Using existing associated form record: " + r.recordId + " for type: " + r.Alias);
-		}
-	}
-
-		// save JSON data to field on parent page.
-
-		if (formDataField) {
-			editAppSpecific(formDataField, JSON.stringify(newAfData));
-		}
-		
-	return newAfData;
-		
-} catch (err) {
+}catch (err){
 	logDebug("A JavaScript Error occurred: doAssocFormRecs: " + err.message);
 	logDebug(err.stack);
-}}
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: doAssocFormRecs: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+}
