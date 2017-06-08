@@ -89,11 +89,14 @@ if(publicUserID=="PUBLICUSER130840"){
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
+				var emailText = "";
 				for(x in thisCont){
 					if(typeof(thisCont[x])!="function"){
 						logDebug(x+ ": " + thisCont[x]);
+						emailText +=(x+ ": " + thisCont[x]) + br;
 					}
 				}
+				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + br + br + emailText);
 				var contType = thisCont.contactType;
 				showMessage=true;
 				if(contType =="Designated Responsible Party") {
