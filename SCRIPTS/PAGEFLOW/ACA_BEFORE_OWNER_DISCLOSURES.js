@@ -77,13 +77,12 @@ var cap = aa.env.getValue("CapModel");
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
-	showMessage=true
-	logMessage("Start script" + "Crime ");
+
 	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	logMessage("Crime " + AInfo["Convicted of a Crime"]);
-	if(AInfo["Convicted of a Crime"] == "CHECKED") {
+	if(AInfo["Convicted of a Crime"] == "Yes") {
 		var fnd = false;
 		conv =loadASITable("CONVICTIONS");
 		for(x in conv) {
