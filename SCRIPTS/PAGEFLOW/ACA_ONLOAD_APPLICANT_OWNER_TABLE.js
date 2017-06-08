@@ -77,7 +77,6 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-if(publicUserID=="PUBLICUSER130840"){
 	loadASITables4ACA_corrected();
 	var tblOwner = [];
 	var tblCorrection = false;
@@ -109,7 +108,6 @@ if(publicUserID=="PUBLICUSER130840"){
 			}
 		}
 	}
-}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: " + err.message);
 	logDebug(err.stack);
