@@ -20,7 +20,7 @@ try{
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/DECLARATION: AltID Logic: " + err.message);
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/DECLARATION: AltID Logic: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/DECLARATION: Required Documents: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ASA:LICENSES/CULTIVATOR/*/DECLARATION: Required Documents: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 }
