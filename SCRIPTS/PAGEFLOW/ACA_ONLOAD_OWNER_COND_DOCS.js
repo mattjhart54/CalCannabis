@@ -156,7 +156,7 @@ try{
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 	}
-	if (r != null && showList) {
+	if (r.length > 0 && showList) {
 		for (x in r) { 
 			if(uploadedDocs[r[x].document] == undefined) {	
 				showMessage = true; 
