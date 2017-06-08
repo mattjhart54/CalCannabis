@@ -88,4 +88,4 @@ try{
 	logDebug("A JavaScript Error occurred: doAssocFormRecs: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: doAssocFormRecs: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
-}
+}}
