@@ -108,6 +108,8 @@ try{
 					drpContact["Last Name"]=drpLName;
 					drpContact["Email Address"]=drpEmail;
 					tblOwner.push(drpContact);
+					var asit = cap.getAppSpecificTableGroupModel();
+					addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
 					addToASITable("OWNERS",tblOwner);
 				}
 			}
