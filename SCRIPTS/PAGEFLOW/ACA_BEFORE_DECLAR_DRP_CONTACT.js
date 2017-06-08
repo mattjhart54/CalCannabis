@@ -78,30 +78,34 @@ var cap = aa.env.getValue("CapModel");
 try{
 	var capId = cap.getCapID();
 	var appName = cap.getSpecialText();
-	var parenLoc = appName.indexOf("(");
-	var ownerName = appName.substring(0,parseInt(parenLoc));
-	var appNameLen = 0
-	appNameLen = appName.length();
-	var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
-	//var resCurUser = aa.person.getUser(publicUserID);
-	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-	if(resCurUser.getSuccess()){
-		var currUser = resCurUser.getOutput();
-		var currEmail = currUser.email;
-		if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
-			showMessage = true;
-			cancel = true;
-			comment("Error: Only " + ownerName + " can submit this application.");
+	if(!matches(appName,"",null,"undefined")){
+		var parenLoc = appName.indexOf("(");
+		var ownerName = appName.substring(0,parseInt(parenLoc));
+		var appNameLen = 0
+		appNameLen = appName.length();
+		var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
+		//var resCurUser = aa.person.getUser(publicUserID);
+		var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+		if(resCurUser.getSuccess()){
+			var currUser = resCurUser.getOutput();
+			var currEmail = currUser.email;
+			if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
+				showMessage = true;
+				cancel = true;
+				comment("Error: Only " + ownerName + " can submit this application.");
+			}
+		}else{
+			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_DECLAR_DRP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
 		}
 	}else{
-		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_DECLAR_DRP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
+		logDebug("Error retrieving application name.  Application name is null.");
+		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact  " + startDate, "capId: " + capId + br + br + "Error retrieving application name.  Application name is null.");
 	}
 } catch (err) {
-	showDebug =true;
 	logDebug("An error has occurred in ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact : " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact  " + startDate, "capId: " + capId + br + br + err.message + br + br + err.stack);
 }
 
 try{
