@@ -95,7 +95,6 @@ try{
 				//		emailText +=(x+ ": " + thisCont[x]) + br;
 				//	}
 				//}
-				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + br + br + "here");
 				var contType = thisCont.contactType;
 				showMessage=true;
 				if(contType =="Designated Responsible Party") {
