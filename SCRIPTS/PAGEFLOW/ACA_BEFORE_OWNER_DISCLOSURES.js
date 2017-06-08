@@ -81,19 +81,20 @@ try {
 	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
+	loadASITables4ACA();
 	if(AInfo["Convicted of a Crime"] == "Yes") {
 		var fnd = false;
-		conv =loadASITable("CONVICTIONS");
-		for(x in conv) {
-	//		logDebug("Type of License : " + cfi[x]["Type of License"]);
-			if(conv[x]["Offense"] != "" && conv[x]["Offense"] != null) {
-				fnd = true;
+	//	conv =loadASITable("CONVICTIONS");
+		if (CONVICTIONS == "object") {
+			for(x in CONVICTIONS) {
+				if(CONVICTIONS[x]["Offense"] != "" && CONVICTIONS[x]["Offense"] != null) {
+					fnd = true;
+				}
 			}
 		}
 		if (!fnd) {
 			showMessage = true;
 			cancel = true;
-//			comment(" COMMENT When Producing Dispensary is checked then you must list your Producing Dispensary License Number in the Cannabis Financial Interest table.");
 			logMessage("When disclosure of a conviction of a crime is set to yes you must enter the conviction information in the Conviction table");
 		}
 	}
