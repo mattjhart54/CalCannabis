@@ -135,6 +135,7 @@ try {
 							}
 						}
 					}
+					tblOwners[o]["Status"]="Submitted";
 					emailParameters = aa.util.newHashtable();
 					addParameter(emailParameters, "$$AltID$$", capId);
 					addParameter(emailParameters, "$$ProjectName$$", capName);
