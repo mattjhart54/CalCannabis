@@ -83,10 +83,11 @@ try {
 	loadAppSpecific4ACA(AInfo);
 	if(AInfo["Producing Dispensary"] == "CHECKED") {
 		var fnd = false;
-		cfi =loadASITables4ACA_corrected("CANNABIS FINANCIAL INTEREST");
-		for(x in cfi) {
-	//		logDebug("Type of License : " + cfi[x]["Type of License"]);
-			if(cfi[x]["Type of License"] == "Producing Dispensary") {
+		loadASITables4ACA_corrected();
+		var tblCanFinInt = CANNABISFINANCIALINTEREST;
+		for(x in tblCanFinInt) {
+	//		logDebug("Type of License : " + tblCanFinInt[x]["Type of License"]);
+			if(tblCanFinInt[x]["Type of License"] == "Producing Dispensary") {
 				fnd = true;
 			}
 		}
