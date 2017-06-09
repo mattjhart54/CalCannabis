@@ -67,7 +67,6 @@ try{
 			}
 		}
 		if (AInfo["Business Entity Structure"] != "Sole Proprietorship"){
-			arrReqdDocs_App.push(businessFormation);
 			arrReqdDocs_App.push(stateDocuments);
 		}
 		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
