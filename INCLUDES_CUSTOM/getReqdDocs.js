@@ -59,10 +59,16 @@ try{
 		arrReqdDocs_App.push(localComply);
 		arrReqdDocs_App.push(CEQA);
 		
-		var priorityDate = "01/01/2016";
+		var medicalPriorityDate = "01/01/2016";
+		var adultPriorityDate = "09/01/2016";
 		
-		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "") {
-			if(dateDiff(AInfo["Date of Intitial Operation"],priorityDate) >= 0) {
+		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Medical") {
+			if(dateDiff(AInfo["Date of Intitial Operation"],medicalPriorityDate) >= 0) {
+				arrReqdDocs_App.push(operationDate);
+			}
+		}
+		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Medical") {
+			if(dateDiff(AInfo["Date of Intitial Operation"],adultPriorityDate) >= 0) {
 				arrReqdDocs_App.push(operationDate);
 			}
 		}
