@@ -67,7 +67,7 @@ try{
 				arrReqdDocs_App.push(operationDate);
 			}
 		}
-		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Medical") {
+		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Adult Use") {
 			if(dateDiff(AInfo["Date of Intitial Operation"],adultPriorityDate) >= 0) {
 				arrReqdDocs_App.push(operationDate);
 			}
