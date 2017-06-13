@@ -117,6 +117,10 @@ try{
 						logDebug("WARNING: error retrieving reference contact : " + pplRes.getErrorMessage());
 					}
 				}
+			}else{
+				//email doesn't exist, continue without error
+				correctLastName = true;
+				correctFirstName = true;
 			}
 			//if the last name is wrong, don't allow applicant to progress
 			if(!correctLastName){
