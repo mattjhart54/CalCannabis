@@ -80,78 +80,84 @@ try{
 	loadASITables4ACA_corrected();
 	var tblOwner = [];
 	var tblCorrection = false;
-	for(row in OWNERS){
-		//get contact by email
-		var correctLastName = false;
-		var correctFirstName = false;
-		tblOwner.push(OWNERS[row]);
-		var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
-		var ownEmail = OWNERS[row]["Email Address"];
-		qryPeople.setEmail(ownEmail);
-		var ownFName = ""+OWNERS[row]["First Name"];
-		var ownLName = ""+OWNERS[row]["Last Name"];
-		//get reference contact(s)
-		var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
-		if (!qryResult.getSuccess()){ 
-			logDebug("WARNING: error searching for people : " + qryResult.getErrorMessage());
-		}else{
-			var peopResult = qryResult.getOutput();
-			if (peopResult.length > 0){
-				for(p in peopResult){
-					var thisPerson = peopResult[p];
-					var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
-					if(pplRes.getSuccess()){
-						var thisPpl = pplRes.getOutput();
-						logDebug("first name: " + thisPpl.getResFirstName());
-						var thisFName = ""+thisPpl.getResFirstName();
-						var thisLName = ""+thisPpl.getResLastName();
-						logDebug("Owner table: " + ownFName + " " + ownLName );
-						logDebug("People table: " + thisFName + " " + thisLName );
-						if(ownLName==thisLName){
-							correctLastName = true;
+	if(!typeof(OWNERS)=="object"){
+		cancel = true;
+		showMessage = true;
+		comment("The Designated Responsible Party contact needs to be added to the Owners table.");
+	}else{
+		for(row in OWNERS){
+			//get contact by email
+			var correctLastName = false;
+			var correctFirstName = false;
+			tblOwner.push(OWNERS[row]);
+			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
+			var ownEmail = OWNERS[row]["Email Address"];
+			qryPeople.setEmail(ownEmail);
+			var ownFName = ""+OWNERS[row]["First Name"];
+			var ownLName = ""+OWNERS[row]["Last Name"];
+			//get reference contact(s)
+			var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
+			if (!qryResult.getSuccess()){ 
+				logDebug("WARNING: error searching for people : " + qryResult.getErrorMessage());
+			}else{
+				var peopResult = qryResult.getOutput();
+				if (peopResult.length > 0){
+					for(p in peopResult){
+						var thisPerson = peopResult[p];
+						var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
+						if(pplRes.getSuccess()){
+							var thisPpl = pplRes.getOutput();
+							logDebug("first name: " + thisPpl.getResFirstName());
+							var thisFName = ""+thisPpl.getResFirstName();
+							var thisLName = ""+thisPpl.getResLastName();
+							logDebug("Owner table: " + ownFName + " " + ownLName );
+							logDebug("People table: " + thisFName + " " + thisLName );
+							if(ownLName==thisLName){
+								correctLastName = true;
+							}
+							if(ownFName==thisFName){
+								correctFirstName = true;
+							}
+						}else{
+							logDebug("WARNING: error retrieving reference contact : " + pplRes.getErrorMessage());
 						}
-						if(ownFName==thisFName){
-							correctFirstName = true;
-						}
-					}else{
-						logDebug("WARNING: error retrieving reference contact : " + pplRes.getErrorMessage());
+					}
+				}else{
+					//email doesn't exist, continue without error
+					correctLastName = true;
+					correctFirstName = true;
+				}
+				//if the last name is wrong, don't allow applicant to progress
+				if(!correctLastName){
+					cancel = true;
+					showMessage = true;
+					comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
+				}else{
+					//if last name is correct but first name is wrong, just correct the first name and go on.
+					if(!correctFirstName){
+						tblOwner[row]["First Name"]=thisFName;
+						tblCorrection = true;
 					}
 				}
-			}else{
-				//email doesn't exist, continue without error
-				correctLastName = true;
-				correctFirstName = true;
-			}
-			//if the last name is wrong, don't allow applicant to progress
-			if(!correctLastName){
-				cancel = true;
-				showMessage = true;
-				comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
-			}else{
-				//if last name is correct but first name is wrong, just correct the first name and go on.
-				if(!correctFirstName){
-					tblOwner[row]["First Name"]=thisFName;
-					tblCorrection = true;
-				}
 			}
 		}
-	}
-	//table isn't getting removed, so working around for now by putting code to get the first name in the 
-	//script that adds the owner records.
-	/*
-	if(tblCorrection){
-		for(x in tblOwner){
-			logDebug(x + ": " + tblOwner[x]);
+		//table isn't getting removed, so working around for now by putting code to get the first name in the 
+		//script that adds the owner records.
+		/*
+		if(tblCorrection){
+			for(x in tblOwner){
+				logDebug(x + ": " + tblOwner[x]);
+			}
+			removeASITable("OWNERS");
+			var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN");
+			if(!tssmResult.getSuccess()){
+				aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: RemoveASIT: "+ startDate, capId + "; " + tssmResult.getErrorMessage() + "; ");
+			}
+			asit = cap.getAppSpecificTableGroupModel();
+			addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
 		}
-		removeASITable("OWNERS");
-		var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN");
-		if(!tssmResult.getSuccess()){
-			aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: RemoveASIT: "+ startDate, capId + "; " + tssmResult.getErrorMessage() + "; ");
-		}
-		asit = cap.getAppSpecificTableGroupModel();
-		addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
+		*/
 	}
-	*/
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_OWNER_TABLE: " + err.message);
 	logDebug(err.stack);
