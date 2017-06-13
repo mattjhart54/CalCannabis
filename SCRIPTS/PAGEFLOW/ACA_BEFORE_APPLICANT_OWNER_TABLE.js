@@ -80,10 +80,10 @@ try{
 	loadASITables4ACA_corrected();
 	var tblOwner = [];
 	var tblCorrection = false;
-	var correctLastName = false;
-	var correctFirstName = false;
 	for(row in OWNERS){
 		//get contact by email
+		var correctLastName = false;
+		var correctFirstName = false;
 		tblOwner.push(OWNERS[row]);
 		var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
 		var ownEmail = OWNERS[row]["Email Address"];
