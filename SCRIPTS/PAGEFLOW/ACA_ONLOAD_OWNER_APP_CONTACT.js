@@ -73,7 +73,6 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
-
 try{
 	var appName = cap.getSpecialText();
 	if(!matches(appName,null,"","undefined")){
