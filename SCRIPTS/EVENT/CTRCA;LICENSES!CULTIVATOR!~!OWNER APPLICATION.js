@@ -1,5 +1,5 @@
 // lwacht
-// if not ACAC, set altId based on application parent
+// set altId based on application parent
 try{
 	if(parentCapId){
 		nbrToTry = 1;
