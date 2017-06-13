@@ -52,6 +52,7 @@ try{
 		arrReqdDocs_App = new Array();
 		
 	//these documents are always required
+		arrReqdDocs_App.push(businessFormation);
 		arrReqdDocs_App.push(businessBond);
 		arrReqdDocs_App.push(waterQuality);
 		arrReqdDocs_App.push(enviroStor);

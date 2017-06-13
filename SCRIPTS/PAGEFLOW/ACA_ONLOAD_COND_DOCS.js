@@ -142,6 +142,13 @@ logDebug("balanceDue = " + balanceDue);
 // page flow custom code begin
 
 try{
+	//remove any existing conditions first and just start fresh
+	var arrConditions = getCAPConditions("License Required Documents", null, null, null);
+	if(!matches(arrConditions, null, false, "", "undefined")){
+		for(con in arrConditions){
+			removeCapCondition("License Required Documents", arrConditions[con].description);
+		}
+	}
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
@@ -150,7 +157,6 @@ try{
 	var conditionTable = [];
 	dr = "";
 	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-//	var arrConditions = getCAPConditions(pType, pStatus, pDesc, pImpact)
 	r = getReqdDocs("Application");
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 	uploadedDocs = new Array();
