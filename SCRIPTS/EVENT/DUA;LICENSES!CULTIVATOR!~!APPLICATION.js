@@ -9,7 +9,7 @@ try{
 			documentModel = documentModels[i];
 			conditionNumber = documentModel.getConditionNumber();
 			//if(conditionNumber != null && conditionNumber != 0){
-			if(!matches(conditionNumber, null, 0){
+			if(!matches(conditionNumber, null, 0)){
 				var capConditionResult = aa.capCondition.getCapCondition(capId, conditionNumber);
 				if(capConditionResult.getSuccess()){
 					var capCondition = capConditionResult.getOutput();
