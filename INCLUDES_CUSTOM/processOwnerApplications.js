@@ -121,6 +121,9 @@ try {
 					*/
 					var ownerSeqNum = addRefContactByEmailLastName(vFirst, vLast,vEmail);
 					if(!ownerSeqNum){
+						qryPeople.setServiceProviderCode(aa.getServiceProviderCode());
+						qryPeople.setContactTypeFlag("Individual");
+						qryPeople.setContactType("Owner");
 						qryPeople.setFirstName(vFirst);
 						qryPeople.setLastName(vLast);
 						qryPeople.setEmail(vEmail);
