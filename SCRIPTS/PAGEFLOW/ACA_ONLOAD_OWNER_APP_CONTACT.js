@@ -92,7 +92,7 @@ try{
 			}
 		}else{
 			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, resCurUser.getErrorMessage());
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage());
 		}
 	}else{
 		logDebug("No application name for this record: " + capId);
@@ -101,7 +101,7 @@ try{
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_APP_CONTACT: Correct Contact: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_APP_CONTACT: Correct Contact: " + startDate, "capId: " + capId + ": " + err);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_APP_CONTACT: Correct Contact: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
 }
 
 
@@ -142,7 +142,7 @@ try{
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_APP_CONTACT: Complete Contact: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
 }
 // page flow custom code end
 
