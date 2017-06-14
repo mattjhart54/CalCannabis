@@ -180,7 +180,7 @@ try {
 					if(contacts[x]["legalBusName"] == check["legalBusName"])
 							ownerFnd = true;
 				}
-				if ownerFnd = false) {
+				if(ownerFnd = false) {
 					var tblRow = [];
 					tblRow["firstName"] = contacts[x]["firstName"];
 					tblRow["lastName"] = contacts[x]["lastName"];
