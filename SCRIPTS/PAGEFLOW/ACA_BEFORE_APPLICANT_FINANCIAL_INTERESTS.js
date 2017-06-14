@@ -101,7 +101,7 @@ try {
 
 // Check for total acreage from all applicant rec ords.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
-	if(publicUserID == "PUBLICUSER130840"){ // || publicUserID == "PUBLICUSER130303") {
+	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
 		showMessage=true;
 		logDebug("Start script");
 		cancel = true;
