@@ -189,15 +189,17 @@ try {
 		msg = msg + "Owner: " + owner["firstName"] + " " + owner["lastName"] + "  Business Name: " + owner["legalBusName"] + "  Ownership " + owner["pctOwn"] +"%" + br;
 		for(o in ownPctTbl) {
 			check = ownPctTbl[o];
-			logMessage("check - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
+
 			if(ownerFnd == true) 
 				continue;
 			if(matches(owner["legalBusName"],null,"",undefined) && owner["firstName"] == check["firstName"] && owner["lastName"] == check["lastName"] ) {
+				logMessage("check owner - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
 				ownerFnd = true;
 				totOwn += parseFloat(owner["pctOwn"],2);
 			}
 			else {
 				if(owner["legalBusName"] == check["legalBusName"]) {
+					logMessage("check corp - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
 					ownerFnd = true;
 					totOwn += parseFloat(owner["pctOwn"],2);
 				}
