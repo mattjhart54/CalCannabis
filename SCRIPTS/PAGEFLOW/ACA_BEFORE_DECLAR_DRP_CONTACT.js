@@ -182,7 +182,7 @@ try {
 							ownerFnd = true;
 				}
 				logMessage("Ownerfnd  + ownerFnd");
-				if(ownerFnd = false) {
+				if(ownerFnd == false) {
 					logMessage("Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"] );
 					var tblRow = [];
 					tblRow["firstName"] = contacts[x]["firstName"];
