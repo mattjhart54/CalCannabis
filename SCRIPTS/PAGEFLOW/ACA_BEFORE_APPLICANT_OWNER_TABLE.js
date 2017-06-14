@@ -84,6 +84,36 @@ try{
 		cancel = true;
 		showMessage = true;
 		comment("The Designated Responsible Party contact needs to be added to the Owners table.");
+		var contactList = cap.getContactsGroup();
+		if(contactList != null && contactList.size() > 0){
+			var arrContacts = contactList.toArray();
+			for(var i in arrContacts) {
+				var thisCont = arrContacts[i];
+				var emailText = "";
+				//for(x in thisCont){
+				//	if(typeof(thisCont[x])!="function"){
+				//		logDebug(x+ ": " + thisCont[x]);
+				//		emailText +=(x+ ": " + thisCont[x]) + br;
+				//	}
+				//}
+				var contType = thisCont.contactType;
+				showMessage=true;
+				if(contType =="Designated Responsible Party") {
+					//var refContNrb = thisCont.refContactNumber;
+					var drpContact = [];
+					var drpFName = thisCont.firstName;
+					var drpLName = thisCont.lastName;
+					var drpEmail = thisCont.email;
+					drpContact["First Name"]=drpFName;
+					drpContact["Last Name"]=drpLName;
+					drpContact["Email Address"]=drpEmail;
+					tblOwner.push(drpContact);
+					var asit = cap.getAppSpecificTableGroupModel();
+					addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
+					//addToASITable("OWNERS",tblOwner);
+				}
+			}
+		}
 	}else{
 		for(row in OWNERS){
 			//get contact by email
