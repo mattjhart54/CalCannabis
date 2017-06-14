@@ -103,7 +103,7 @@ try {
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
 	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
 		showMessage=true;
-		logDebug("Start script");
+		logMessage("Start script");
 		cancel = true;
 		var totAcre = 0;
 		var totPlants = 0;
@@ -155,11 +155,11 @@ try {
 					}
 				}
 			}
-			logDebug("Acres " + totAcre );
-			logDebug("Medium " + mediumLic);
-			logDebug("Number of Plants " + nbrPlants);			
-			logDebug("lictype " + AInfo["License Type"]);
-			logDebug("prodDisp " + AInfo["Producing Dispensary"]);
+			logMessage("Acres " + totAcre );
+			logMessage("Medium " + mediumLic);
+			logMessage("Number of Plants " + nbrPlants);			
+			logMessage("lictype " + AInfo["License Type"]);
+			logMessage("prodDisp " + AInfo["Producing Dispensary"]);
 			if(totAcre > 174240) {
 				cancel=true;
 				showMessage=true;
