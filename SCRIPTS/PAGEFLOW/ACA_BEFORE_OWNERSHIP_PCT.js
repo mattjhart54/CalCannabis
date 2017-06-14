@@ -99,7 +99,7 @@ try {
 		var pctOwn = getAppSpecific("Percent Ownership", childId);
 		contacts = getContactArray(childId);
 		for (x in contacts) {
-		logDMessage("Contact " + contacts[x]["contactType"] );
+		logMessage("Contact " + contacts[x]["contactType"] );
 			if(contacts[x]["contactType"] == "Owner") {
 				var tblRow = [];
 				tblRow["firstName"] = contacts[x]["firstName"];
