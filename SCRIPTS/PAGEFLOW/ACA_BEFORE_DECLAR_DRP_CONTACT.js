@@ -150,10 +150,10 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 try {
-	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
-		showMessage=true;
-		logMessage("Start script");
-		cancel = true;
+//	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
+//		showMessage=true;
+//		logMessage("Start script");
+//		cancel = true;
 	var capId = cap.getCapID();
 	var tblRow = [];
 	var ownPctTbl = [];	
@@ -171,8 +171,8 @@ try {
 		var pctOwn = getAppSpecific("Percent Ownership", childId);
 		contacts = getContactArray(childId);
 		for (x in contacts) {
-			logMessage("Contact " + contacts[x]["contactType"] + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"]);
-			msg = msg + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"]  +"%" + br;
+//			logMessage("Contact " + contacts[x]["contactType"] + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"]);
+			msg = msg + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn  + "%"  / Business Name: " + contacts[x]["middleName"] + br;
 			if(contacts[x]["contactType"] == "Owner" || contacts[x]["contactType"] == "Individual") {
 				ownerFnd = false;
 				for(o in ownPctTbl) {
@@ -181,12 +181,12 @@ try {
 					if(!matches(contacts[x]["middleName"],null,"",undefined) && contacts[x]["middleName"] == check["legalBusName"])
 							ownerFnd = true;
 				}
-				logMessage("Ownerfnd " + ownerFnd);
+
 				if(ownerFnd == false) {
-					logMessage("Add Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"] );
+//					logMessage("Add Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"] );
 					var tblRow = [];
 					tblRow["firstName"] = contacts[x]["firstName"];
-					tblRow["lastName"] = contacts[x]["lastName"];
+					tblRow["lastName"] = contacts[x]["lastName"];/
 					tblRow["legalBusName"] = contacts[x]["middleName"];
 					tblRow["pctOwn"] = pctOwn; 
 					totOwn += parseFloat(pctOwn,2);
@@ -195,34 +195,11 @@ try {
 			}
 		}
 	}
-/*	for(p in ownPctTbl) {
-		owner = ownPctTbl[p]
-		logMessage("owner - " + owner["firstName"] + " " + owner["lastName"] + " " + owner["legalBusName"] + " " + owner["pctOwn"])
-		ownerFnd = false;
-		msg = msg + "Owner: " + owner["firstName"] + " " + owner["lastName"] + "  Business Name: " + owner["legalBusName"] + "  Ownership " + owner["pctOwn"] +"%" + br;
-		for(o in ownPctTbl) {
-			check = ownPctTbl[o];
-
-			if(ownerFnd == true) 
-				continue;
-			if(matches(owner["legalBusName"],null,"",undefined) && owner["firstName"] == check["firstName"] && owner["lastName"] == check["lastName"] ) {
-				logMessage("check owner - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
-				ownerFnd = true;
-				totOwn += parseFloat(owner["pctOwn"],2);
-			}
-			else {
-				if(owner["legalBusName"] == check["legalBusName"]) {
-					logMessage("check corp - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
-					ownerFnd = true;
-					totOwn += parseFloat(owner["pctOwn"],2);
-				}
-			}
-		}
-	}
-*/
 	if(totOwn > 100) 
-	logMessage("Total Ownership entered on Owner Applications is " + totOwn +"%,  "+ msg);
-}	
+		showMessage = true;
+		cancel = true;
+		logMessage("Total Ownership entered on Owner Applications is " + totOwn +"%,  "+ msg);
+//}	
 }catch (err) {
 	showDebug = true;
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
