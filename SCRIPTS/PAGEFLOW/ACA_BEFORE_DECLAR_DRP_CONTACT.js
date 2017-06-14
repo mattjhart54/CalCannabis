@@ -181,9 +181,9 @@ try {
 					if(!matches(contacts[x]["middleName"],null,"",undefined) && contacts[x]["middleName"] == check["middleName"])
 							ownerFnd = true;
 				}
-				logMessage("Ownerfnd  + ownerFnd");
+				logMessage("Ownerfnd " + ownerFnd);
 				if(ownerFnd == false) {
-					logMessage("Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"] );
+					logMessage("Add Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"] );
 					var tblRow = [];
 					tblRow["firstName"] = contacts[x]["firstName"];
 					tblRow["lastName"] = contacts[x]["lastName"];
