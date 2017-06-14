@@ -119,6 +119,7 @@ try{
 			qryPeople.setEmail(ownEmail);
 			var ownFName = ""+OWNERS[row]["First Name"];
 			var ownLName = ""+OWNERS[row]["Last Name"];
+			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  ACA_BEFORE_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + br + "owner " + ownFName + " " + ownLName+ br +"drp: " +drpFName + " " + drpLName );
 			if(ownEmail==drpEmail && ownLName==drpLName){
 				drpInTable = true;
 			}
