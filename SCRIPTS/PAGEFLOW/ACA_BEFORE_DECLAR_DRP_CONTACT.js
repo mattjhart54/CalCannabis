@@ -149,6 +149,73 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
+try {
+	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
+		showMessage=true;
+		logMessage("Start script");
+		cancel = true;
+	var capId = cap.getCapID();
+	var tblRow = [];
+	var ownPctTbl = [];	
+	var totOwn = 0;
+	var pctOwn =0;
+	var br = "<BR>";
+	var msg = "The Ownership Pct must not be > 100%.  You will need to correct before continueing " + br;
+	var parentId = getParent();
+	logMessage("parentId " + parentId);
+	children = getChildren("Licenses/Cultivator/Medical/Owner Application", parentId)
+	var totOwn = 0
+	for (c in children) {
+		childId = children[c];
+		logMessage("childId " + childId);
+		var pctOwn = getAppSpecific("Percent Ownership", childId);
+		contacts = getContactArray(childId);
+		for (x in contacts) {
+		logMessage("Contact " + contacts[x]["contactType"] );
+			if(contacts[x]["contactType"] == "Owner") {
+				var tblRow = [];
+				tblRow["firstName"] = contacts[x]["firstName"];
+				tblRow["lastName"] = contacts[x]["lastName"];
+				tblRow["legalBusName"] = contacts[x]["middleName"];
+				tblRow["pctOwn"] = pctOwn; 
+				ownPctTbl.push(tblRow);
+			}
+		}
+	}
+	for(p in ownPctTbl) {
+		owner = ownPctTbl[p]
+		logMessage("owner - " + owner["firstName"] + " " + owner["lastName"] + " " + owner["legalBusName"] + " " + owner["pctOwn"])
+		ownerFnd = false;
+		for(o in ownPctTbl) {
+			check = ownPctTbl[0];
+			logMessage("check - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
+			if(ownerFnd == true) 
+				continue;
+			if(matches(owner["legalBusName"],null,"",undefined)) {
+				ownerFnd = true;
+				totOwn += parseFloat(owner["pctOwn"],2);
+					msg = msg + "Owner: " + owner["firstName"] + " " + owner["lastName"] + "  Business Name: " + owner["legalBusName"] + "  Ownership " + owner["pctOwn"] +"%" + br;
+			}
+			else {
+				if(owner["legalBusName"] == check["legalBusName"]) {
+					ownerFnd = true;
+					totOwn += parseFloat(owner["pctOwn"],2);
+					msg = msg + "Owner: " + owner["firstName"] + " " + owner["lastName"] + "Business: " + owner["legalBusName"] + "Ownership " + owner["pctOwn"] +"%" + br;
+				}
+			}
+		}
+	}
+	}
+if(totOwn > 100) 
+	logMessage("Total Ownership entered on Owner Applications is " + totOwn +"%,  "+ msg);
+	
+}catch (err) {
+	showDebug = true;
+    logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+
+}
 // page flow custom code end
 
 
