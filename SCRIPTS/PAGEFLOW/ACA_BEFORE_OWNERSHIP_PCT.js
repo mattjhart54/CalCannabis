@@ -95,6 +95,7 @@ try {
 	var totOwn = 0
 	for (c in children) {
 		childId = children[c];
+		logMessage("childId " + childId);
 		var pctOwn = getAppSpecific("Percent Ownership", childId);
 		contacts = getContactArray(childId);
 		for (x in contacts) {
