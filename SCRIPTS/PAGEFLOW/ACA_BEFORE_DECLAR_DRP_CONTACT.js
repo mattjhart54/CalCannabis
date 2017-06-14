@@ -178,7 +178,7 @@ try {
 				for(o in ownPctTbl) {
 					check = ownPctTbl[o];
 					logMessage("check owner - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
-					if(!matches(contacts[x]["middleName"],null,"",undefined) && contacts[x]["middleName"] == check["middleName"])
+					if(!matches(contacts[x]["middleName"],null,"",undefined) && contacts[x]["middleName"] == check["legalBusName"])
 							ownerFnd = true;
 				}
 				logMessage("Ownerfnd " + ownerFnd);
