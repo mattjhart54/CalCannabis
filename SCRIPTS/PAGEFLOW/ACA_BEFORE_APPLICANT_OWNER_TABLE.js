@@ -77,44 +77,38 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
+	var contactList = cap.getContactsGroup();
+	if(contactList != null && contactList.size() > 0){
+		var arrContacts = contactList.toArray();
+		for(var i in arrContacts) {
+			var thisCont = arrContacts[i];
+			var emailText = "";
+			//for(x in thisCont){
+			//	if(typeof(thisCont[x])!="function"){
+			//		logDebug(x+ ": " + thisCont[x]);
+			//		emailText +=(x+ ": " + thisCont[x]) + br;
+			//	}
+			//}
+			var contType = thisCont.contactType;
+			showMessage=true;
+			if(contType =="Designated Responsible Party") {
+				//var refContNrb = thisCont.refContactNumber;
+				var drpContact = [];
+				var drpFName = thisCont.firstName;
+				var drpLName = thisCont.lastName;
+				var drpEmail = thisCont.email;
+			}
+		}
+	}
 	loadASITables4ACA_corrected();
 	var tblOwner = [];
 	var tblCorrection = false;
 	if(!typeof(OWNERS)=="object"){
 		cancel = true;
 		showMessage = true;
-		comment("The Designated Responsible Party contact needs to be added to the Owners table.");
-		var contactList = cap.getContactsGroup();
-		if(contactList != null && contactList.size() > 0){
-			var arrContacts = contactList.toArray();
-			for(var i in arrContacts) {
-				var thisCont = arrContacts[i];
-				var emailText = "";
-				//for(x in thisCont){
-				//	if(typeof(thisCont[x])!="function"){
-				//		logDebug(x+ ": " + thisCont[x]);
-				//		emailText +=(x+ ": " + thisCont[x]) + br;
-				//	}
-				//}
-				var contType = thisCont.contactType;
-				showMessage=true;
-				if(contType =="Designated Responsible Party") {
-					//var refContNrb = thisCont.refContactNumber;
-					var drpContact = [];
-					var drpFName = thisCont.firstName;
-					var drpLName = thisCont.lastName;
-					var drpEmail = thisCont.email;
-					drpContact["First Name"]=drpFName;
-					drpContact["Last Name"]=drpLName;
-					drpContact["Email Address"]=drpEmail;
-					tblOwner.push(drpContact);
-					var asit = cap.getAppSpecificTableGroupModel();
-					addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
-					//addToASITable("OWNERS",tblOwner);
-				}
-			}
-		}
+		comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
 	}else{
+		var drpInTable = false;
 		for(row in OWNERS){
 			//get contact by email
 			var correctLastName = false;
@@ -125,6 +119,9 @@ try{
 			qryPeople.setEmail(ownEmail);
 			var ownFName = ""+OWNERS[row]["First Name"];
 			var ownLName = ""+OWNERS[row]["Last Name"];
+			if(ownEmail==drpEmail && ownLName==drpLName){
+				drpInTable = true;
+			}
 			//get reference contact(s)
 			var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 			if (!qryResult.getSuccess()){ 
@@ -170,6 +167,11 @@ try{
 					}
 				}
 			}
+		}
+		if(!drpInTable){
+			cancel = true;
+			showMessage = true;
+			comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
 		}
 		//table isn't getting removed, so working around for now by putting code to get the first name in the 
 		//script that adds the owner records.
