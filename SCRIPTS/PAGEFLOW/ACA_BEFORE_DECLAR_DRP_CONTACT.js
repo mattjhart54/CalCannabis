@@ -172,7 +172,7 @@ try {
 		contacts = getContactArray(childId);
 		for (x in contacts) {
 		logMessage("Contact " + contacts[x]["contactType"] );
-			if(contacts[x]["contactType"] == "Owner") || contacts[x]["contactType"] == "Owner") {
+			if(contacts[x]["contactType"] == "Owner" || contacts[x]["contactType"] == "Individual") {
 				var tblRow = [];
 				tblRow["firstName"] = contacts[x]["firstName"];
 				tblRow["lastName"] = contacts[x]["lastName"];
