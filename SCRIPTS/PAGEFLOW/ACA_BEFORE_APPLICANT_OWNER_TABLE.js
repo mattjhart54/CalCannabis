@@ -103,7 +103,7 @@ try{
 	loadASITables4ACA_corrected();
 	var tblOwner = [];
 	var tblCorrection = false;
-	if(!typeof(OWNERS)=="object"){
+	if(OWNERS.length<1){
 		cancel = true;
 		showMessage = true;
 		comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
