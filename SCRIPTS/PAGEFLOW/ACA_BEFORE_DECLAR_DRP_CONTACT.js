@@ -172,7 +172,7 @@ try {
 		contacts = getContactArray(childId);
 		for (x in contacts) {
 		logMessage("Contact " + contacts[x]["contactType"] );
-			if(contacts[x]["contactType"] == "Owner") {
+			if(contacts[x]["contactType"] == "Owner") || contacts[x]["contactType"] == "Owner") {
 				var tblRow = [];
 				tblRow["firstName"] = contacts[x]["firstName"];
 				tblRow["lastName"] = contacts[x]["lastName"];
@@ -186,6 +186,7 @@ try {
 		owner = ownPctTbl[p]
 		logMessage("owner - " + owner["firstName"] + " " + owner["lastName"] + " " + owner["legalBusName"] + " " + owner["pctOwn"])
 		ownerFnd = false;
+		msg = msg + "Owner: " + owner["firstName"] + " " + owner["lastName"] + "  Business Name: " + owner["legalBusName"] + "  Ownership " + owner["pctOwn"] +"%" + br;
 		for(o in ownPctTbl) {
 			check = ownPctTbl[0];
 			logMessage("check - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
@@ -194,14 +195,11 @@ try {
 			if(matches(owner["legalBusName"],null,"",undefined)) {
 				ownerFnd = true;
 				totOwn += parseFloat(owner["pctOwn"],2);
-					msg = msg + "Owner: " + owner["firstName"] + " " + owner["lastName"] + "  Business Name: " + owner["legalBusName"] + "  Ownership " + owner["pctOwn"] +"%" + br;
 			}
 			else {
 				if(owner["legalBusName"] == check["legalBusName"]) {
 					ownerFnd = true;
 					totOwn += parseFloat(owner["pctOwn"],2);
-					msg = msg + "Owner: " + owner["firstName"] + " " + owner["lastName"] + "Business: " + owner["legalBusName"] + "Ownership " + owner["pctOwn"] +"%" + br;
-				}
 			}
 		}
 	}
