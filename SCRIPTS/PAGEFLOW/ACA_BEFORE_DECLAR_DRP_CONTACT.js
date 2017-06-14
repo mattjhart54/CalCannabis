@@ -162,12 +162,10 @@ try {
 	var br = "<BR>";
 	var msg = "The Ownership Pct must not be > 100%.  You will need to correct before continueing " + br;
 	var parentId = getParent();
-	logMessage("parentId " + parentId);
 	children = getChildren("Licenses/Cultivator/Medical/Owner Application", parentId)
 	var totOwn = 0
 	for (c in children) {
 		childId = children[c];
-		logMessage("childId " + childId);
 		var pctOwn = getAppSpecific("Percent Ownership", childId);
 		contacts = getContactArray(childId);
 		for (x in contacts) {
@@ -177,7 +175,7 @@ try {
 				ownerFnd = false;
 				for(o in ownPctTbl) {
 					check = ownPctTbl[o];
-					logMessage("check owner - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
+//					logMessage("check owner - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
 					if(!matches(contacts[x]["middleName"],null,"",undefined) && contacts[x]["middleName"] == check["legalBusName"])
 							ownerFnd = true;
 				}
