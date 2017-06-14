@@ -186,7 +186,7 @@ try {
 //					logMessage("Add Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"] );
 					var tblRow = [];
 					tblRow["firstName"] = contacts[x]["firstName"];
-					tblRow["lastName"] = contacts[x]["lastName"];/
+					tblRow["lastName"] = contacts[x]["lastName"];
 					tblRow["legalBusName"] = contacts[x]["middleName"];
 					tblRow["pctOwn"] = pctOwn; 
 					totOwn += parseFloat(pctOwn,2);
