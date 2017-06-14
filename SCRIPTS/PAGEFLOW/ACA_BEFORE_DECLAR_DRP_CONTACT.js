@@ -200,13 +200,13 @@ try {
 				if(owner["legalBusName"] == check["legalBusName"]) {
 					ownerFnd = true;
 					totOwn += parseFloat(owner["pctOwn"],2);
+				}
 			}
 		}
 	}
-	}
-if(totOwn > 100) 
+	if(totOwn > 100) 
 	logMessage("Total Ownership entered on Owner Applications is " + totOwn +"%,  "+ msg);
-	
+}	
 }catch (err) {
 	showDebug = true;
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
