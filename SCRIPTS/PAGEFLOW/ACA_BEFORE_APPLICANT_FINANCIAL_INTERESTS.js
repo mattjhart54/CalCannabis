@@ -164,7 +164,7 @@ try {
 				showMessage=true;
 				logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
 			}
-			if(nbrPlants > 25000) {
+			if(totPlants > 25000) {
 				cancel=true;
 				showMessage=true;
 				logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 25000 number of mature plants limit");
