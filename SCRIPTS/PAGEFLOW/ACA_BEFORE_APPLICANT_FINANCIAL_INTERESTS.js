@@ -105,8 +105,8 @@ try {
 		showMessage=true;
 		logMessage("Start script");
 		cancel = true;
-		var totAcre = 0;
-		var totPlants = 0;
+		var totAcre = AInfo["Canopy Size"];
+		var totPlants = AInfo["Number of Plants"];
 		var mediumLic = false;
 
 		var contactList = cap.getContactsGroup();
@@ -129,7 +129,6 @@ try {
 						}
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 						if (capResult.getSuccess()) {
-							var totAcre=0;
 							logDebug("got recs by contact");
 							var capList = capResult.getOutput();
 							for (var j in capList) {
