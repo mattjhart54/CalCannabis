@@ -177,9 +177,11 @@ try {
 				ownerFnd = false;
 				for(o in ownPctTbl) {
 					check = ownPctTbl[o];
+					logMessage("check owner - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
 					if(!matches(contacts[x]["middleName"],null,"",undefined) && contacts[x]["middleName"] == check["middleName"])
 							ownerFnd = true;
 				}
+				logMessage("Ownerfnd  + ownerFnd");
 				if(ownerFnd = false) {
 					logMessage("Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"] );
 					var tblRow = [];
