@@ -94,9 +94,9 @@ try{
 			if(contType =="Designated Responsible Party") {
 				//var refContNrb = thisCont.refContactNumber;
 				var drpContact = [];
-				var drpFName = thisCont.firstName;
-				var drpLName = thisCont.lastName;
-				var drpEmail = thisCont.email;
+				var drpFName = ""+thisCont.firstName;
+				var drpLName = ""+thisCont.lastName;
+				var drpEmail = ""+thisCont.email;
 			}
 		}
 	}
@@ -137,8 +137,8 @@ try{
 							logDebug("first name: " + thisPpl.getResFirstName());
 							var thisFName = ""+thisPpl.getResFirstName();
 							var thisLName = ""+thisPpl.getResLastName();
-							logDebug("Owner table: " + ownFName + " " + ownLName );
-							logDebug("People table: " + thisFName + " " + thisLName );
+							//logDebug("Owner table: " + ownFName + " " + ownLName );
+							//logDebug("People table: " + thisFName + " " + thisLName );
 							if(ownLName==thisLName){
 								correctLastName = true;
 							}
