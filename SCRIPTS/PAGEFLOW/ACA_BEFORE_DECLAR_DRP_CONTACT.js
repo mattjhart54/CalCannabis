@@ -171,16 +171,17 @@ try {
 		var pctOwn = getAppSpecific("Percent Ownership", childId);
 		contacts = getContactArray(childId);
 		for (x in contacts) {
-			logMessage("Contact " + contacts[x]["contactType"] );
+			logMessage("Contact " + contacts[x]["contactType"] + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + contacts[x]["pctOwn"]+ " / Business Name: " + contacts[x]["legalBusName"]);
 			msg = msg + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + contacts[x]["pctOwn"]+ " / Business Name: " + contacts[x]["legalBusName"]  +"%" + br;
 			if(contacts[x]["contactType"] == "Owner" || contacts[x]["contactType"] == "Individual") {
 				ownerFnd = false;
 				for(o in ownPctTbl) {
 					check = ownPctTbl[o];
-					if(contacts[x]["legalBusName"] == check["legalBusName"])
+					if(!matches(contacts[x]["legalBusName"],null,"",undefined) && contacts[x]["legalBusName"] == check["legalBusName"])
 							ownerFnd = true;
 				}
 				if(ownerFnd = false) {
+					logMessage("Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + contacts[x]["pctOwn"]+ " / Business Name: " + contacts[x]["legalBusName"] );
 					var tblRow = [];
 					tblRow["firstName"] = contacts[x]["firstName"];
 					tblRow["lastName"] = contacts[x]["lastName"];
