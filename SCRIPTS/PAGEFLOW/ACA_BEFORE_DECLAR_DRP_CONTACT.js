@@ -172,7 +172,7 @@ try {
 		contacts = getContactArray(childId);
 		for (x in contacts) {
 //			logMessage("Contact " + contacts[x]["contactType"] + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"]);
-			msg = msg + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn  + "%"  / Business Name: " + contacts[x]["middleName"] + br;
+			msg = msg + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn  + "%  / Business Name: " + contacts[x]["middleName"] + br;
 			if(contacts[x]["contactType"] == "Owner" || contacts[x]["contactType"] == "Individual") {
 				ownerFnd = false;
 				for(o in ownPctTbl) {
