@@ -132,6 +132,7 @@ try {
 			}
 		}
 	}
+	}
 //if(totOwn > 100) 
 	logMessage("total Ownership " + totOwn + msg);
 }catch (err) {
