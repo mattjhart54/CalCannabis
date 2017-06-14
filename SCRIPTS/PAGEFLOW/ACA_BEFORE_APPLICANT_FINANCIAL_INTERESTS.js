@@ -106,7 +106,7 @@ try {
 		logMessage("Start script");
 		cancel = true;
 		var nbrPlants = AInfo["Number of Plants"];
-		var canopySize = AInfo["Canopy Size"
+		var canopySize = AInfo["Canopy Size"];
 		var totAcre = parseFloat(canopySize,2);
 		var totPlants = parseInt(nbrPlants);
 		var mediumLic = false;
