@@ -105,8 +105,10 @@ try {
 		showMessage=true;
 		logMessage("Start script");
 		cancel = true;
-		var totAcre = parseFloat(AInfo["Canopy Size"],2);
-		var totPlants = parseInt(AInfo["Number of Plants"]);
+		var nbrPlants = AInfo["Number of Plants"];
+		var canopySize = AInfo["Canopy Size"
+		var totAcre = parseFloat(canopySize,2);
+		var totPlants = parseInt(nbrPlants);
 		var mediumLic = false;
 
 		var contactList = cap.getContactsGroup();
