@@ -101,26 +101,21 @@ try {
 
 // Check for total acreage from all applicant rec ords.  Total must be less than 4 acres 
 // Check no more than one Medium license allowed unless Producing Disensary is checked.
-	//if(publicUserID == "PUBLICUSER130840"){ // || publicUserID == "PUBLICUSER130303") {
+	if(publicUserID == "PUBLICUSER130840"){ // || publicUserID == "PUBLICUSER130303") {
 		showMessage=true;
-		//logDebug("Start script");
-		//cancel = true;
+		logDebug("Start script");
+		cancel = true;
 		var totAcre = 0;
+		var totPlants = 0;
 		var mediumLic = false;
-		//var contactList = capModel.getContactsGroup();
+
 		var contactList = cap.getContactsGroup();
 		logDebug("got contactlist " + contactList.size());
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
-				//for(x in thisCont){
-				//	if(typeof(thisCont[x])!="function"){
-				//		logDebug(x+ ": " + thisCont[x]);
-				//	}
-				//}
 				var contType = thisCont.contactType;
-				showMessage=true;
 				if(contType =="Applicant") {
 					var refContNrb = thisCont.refContactNumber;
 					if (!matches(refContNrb,null, "", "undefined")) {
@@ -134,20 +129,21 @@ try {
 						}
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 						if (capResult.getSuccess()) {
-							logDebug()
 							var totAcre=0;
 							logDebug("got recs by contact");
 							var capList = capResult.getOutput();
 							for (var j in capList) {
 								var thisCapId = capList[j];
-								//logDebug("thisCapId: " + thisCapId);
 								var thatCapId = thisCapId.getCapID();
 								logDebug("capId " + thatCapId);
-								var canopySize = getAppSpecific("Canopy Size",thatCapId);
-								//logDebug("canopySize " + canopySize);
+								var canopySize = getAppSpecific("Canopy Size",thatCapId);								
+								var nbrPlants = getAppSpecific("Number of Plants",thatCapId);
 								if(!matches(canopySize, "", null, undefined)) {
 									totAcre += parseFloat(canopySize,2);
 								}
+								if(!matches(nbrPlants, "", null, undefined)) {
+									totPlants += parseInt(nbrPlants);
+								}								
 								capLicType = getAppSpecific("License Type",thatCapId);
 								if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed Light")) {
 									mediumLic = true;
@@ -161,6 +157,7 @@ try {
 			}
 			logDebug("Acres " + totAcre );
 			logDebug("Medium " + mediumLic);
+			logDebug("Number of Plants " + nbrPlants);			
 			logDebug("lictype " + AInfo["License Type"]);
 			logDebug("prodDisp " + AInfo["Producing Dispensary"]);
 			if(totAcre > 174240) {
@@ -168,13 +165,18 @@ try {
 				showMessage=true;
 				logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
 			}
+			if(nbrPlants > 25000) {
+				cancel=true;
+				showMessage=true;
+				logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 25000 number of mature plants limit");
+			}
 			if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light") && AInfo["Producing Dispensary"] != "CHECKED" && mediumLic ) {
 				cancel=true;
 				showMessage=true;
 				logMessage("You cannot apply for a Medium type license as you already have a Medium type license and you do not have a Producing Dispensary License");
 			}
 		}
-	//}
+	}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
 	logDebug(err.stack);
