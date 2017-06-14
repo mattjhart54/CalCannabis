@@ -105,10 +105,8 @@ try {
 		showMessage=true;
 		logMessage("Start script");
 		cancel = true;
-		var nbrPlants = AInfo["Number of Plants"];
-		var canopySize = AInfo["Canopy Size"];
-		var totAcre = parseFloat(canopySize,2);
-		var totPlants = parseInt(nbrPlants);
+		var totAcre = 0
+		var totPlants = 0
 		var mediumLic = false;
 
 		var contactList = cap.getContactsGroup();
@@ -135,9 +133,6 @@ try {
 							var capList = capResult.getOutput();
 							for (var j in capList) {
 								var thisCapId = capList[j];
-								if(thisCapid == capId) {
-									continue;
-								}
 								var thatCapId = thisCapId.getCapID();
 								logDebug("capId " + thatCapId);
 								var canopySize = getAppSpecific("Canopy Size",thatCapId);								
