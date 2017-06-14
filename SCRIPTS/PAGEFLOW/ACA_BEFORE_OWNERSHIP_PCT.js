@@ -78,6 +78,10 @@ var cap = aa.env.getValue("CapModel");
 //doStandardChoiceActions(controlString, true, 0);
 
 try {
+	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
+		showMessage=true;
+		logMessage("Start script");
+		cancel = true;
 	var capId = cap.getCapID();
 	var tblRow = [];
 	var ownPctTbl = [];	
@@ -86,7 +90,7 @@ try {
 	var br = "<BR>";
 	var msg = "The Ownership Pct must not be > 100%.  You will need to correct before continueing " + br;
 	var parentId = getParent();
-	logDebug("parentId " + parentId);
+	logMessage("parentId " + parentId);
 	children = getChildren("Licenses/Cultivator/Medical/Owner Application", parentId)
 	var totOwn = 0
 	for (c in children) {
@@ -94,7 +98,7 @@ try {
 		var pctOwn = getAppSpecific("Percent Ownership", childId);
 		contacts = getContactArray(childId);
 		for (x in contacts) {
-		logDebug("Contact " + contacts[x]["contactType"] );
+		logDMessage("Contact " + contacts[x]["contactType"] );
 			if(contacts[x]["contactType"] == "Owner") {
 				var tblRow = [];
 				tblRow["firstName"] = contacts[x]["firstName"];
@@ -107,11 +111,11 @@ try {
 	}
 	for(p in ownPctTbl) {
 		owner = ownPctTbl[p]
-	//	logDebug("owner - " + owner["firstName"] + " " + owner["lastName"] + " " + owner["legalBusName"] + " " + owner["pctOwn"])
+		logMessage("owner - " + owner["firstName"] + " " + owner["lastName"] + " " + owner["legalBusName"] + " " + owner["pctOwn"])
 		ownerFnd = false;
 		for(o in ownPctTbl) {
 			check = ownPctTbl[0];
-	//		logDebug("check - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
+			logMessage("check - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
 			if(ownerFnd == true) 
 				continue;
 			if(matches(owner["legalBusName"],null,"",undefined)) {
@@ -129,7 +133,7 @@ try {
 		}
 	}
 //if(totOwn > 100) 
-	logDebug("total Ownership " + totOwn + msg);
+	logMessage("total Ownership " + totOwn + msg);
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
 	logDebug(err.stack);
