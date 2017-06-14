@@ -171,18 +171,28 @@ try {
 		var pctOwn = getAppSpecific("Percent Ownership", childId);
 		contacts = getContactArray(childId);
 		for (x in contacts) {
-		logMessage("Contact " + contacts[x]["contactType"] );
+			logMessage("Contact " + contacts[x]["contactType"] );
+			msg = msg + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + contacts[x]["pctOwn"]+ " / Business Name: " + contacts[x]["legalBusName"]  +"%" + br;
 			if(contacts[x]["contactType"] == "Owner" || contacts[x]["contactType"] == "Individual") {
-				var tblRow = [];
-				tblRow["firstName"] = contacts[x]["firstName"];
-				tblRow["lastName"] = contacts[x]["lastName"];
-				tblRow["legalBusName"] = contacts[x]["middleName"];
-				tblRow["pctOwn"] = pctOwn; 
-				ownPctTbl.push(tblRow);
+				ownerFnd = false;
+				for(o in ownPctTbl) {
+					check = ownPctTbl[o];
+					if(contacts[x]["legalBusName"] == check["legalBusName"])
+							ownerFnd = true;
+				}
+				if ownerFnd = false) {
+					var tblRow = [];
+					tblRow["firstName"] = contacts[x]["firstName"];
+					tblRow["lastName"] = contacts[x]["lastName"];
+					tblRow["legalBusName"] = contacts[x]["middleName"];
+					tblRow["pctOwn"] = pctOwn; 
+					totOwn += parseFloat(pctOwn,2);
+					ownPctTbl.push(tblRow);
+				}
 			}
 		}
 	}
-	for(p in ownPctTbl) {
+/*	for(p in ownPctTbl) {
 		owner = ownPctTbl[p]
 		logMessage("owner - " + owner["firstName"] + " " + owner["lastName"] + " " + owner["legalBusName"] + " " + owner["pctOwn"])
 		ownerFnd = false;
@@ -206,6 +216,7 @@ try {
 			}
 		}
 	}
+*/
 	if(totOwn > 100) 
 	logMessage("Total Ownership entered on Owner Applications is " + totOwn +"%,  "+ msg);
 }	
