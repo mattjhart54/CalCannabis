@@ -47,12 +47,11 @@ try{
 	var convictions = {condition : "History of Convictions", document : "History of Convictions"};
 	var calResidency = {condition : "Evidence of California Residency", document : "Evidence of California Residency"};
 
-
+// Required Documents for Cultivator Applications
 	if(recdType == "Application"){
 		arrReqdDocs_App = new Array();
 		
 	//these documents are always required
-		arrReqdDocs_App.push(businessFormation);
 		arrReqdDocs_App.push(businessBond);
 		arrReqdDocs_App.push(waterQuality);
 		arrReqdDocs_App.push(enviroStor);
@@ -130,6 +129,8 @@ try{
 		}
 		return arrReqdDocs_App;
 	}
+	
+// Required Documents for Owner Applications
 	if(recdType == "Owner"){
 		arrReqdDocs_Own = new Array();
 		
