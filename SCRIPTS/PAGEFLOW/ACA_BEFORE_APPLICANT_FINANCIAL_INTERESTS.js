@@ -104,7 +104,7 @@ try {
 //	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
 //		showMessage=true;
 //		logMessage("Start script");
-		cancel = true;
+//		cancel = true;
 		var totAcre = 0
 		var totPlants = 0
 		var mediumLic = false;
