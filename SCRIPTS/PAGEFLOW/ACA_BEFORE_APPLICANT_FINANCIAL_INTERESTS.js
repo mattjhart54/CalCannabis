@@ -157,7 +157,7 @@ try {
 			}
 			logMessage("Acres " + totAcre );
 			logMessage("Medium " + mediumLic);
-			logMessage("Number of Plants " + nbrPlants);			
+			logMessage("Number of Plants " + totPlants);			
 			logMessage("lictype " + AInfo["License Type"]);
 			logMessage("prodDisp " + AInfo["Producing Dispensary"]);
 			if(totAcre > 174240) {
