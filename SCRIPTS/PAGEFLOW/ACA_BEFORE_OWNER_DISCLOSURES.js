@@ -101,7 +101,7 @@ try {
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_OWNER_DISCLOSURE: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ACA_BEFORE_DECLAR_DRP_CONTACT: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 	aa.env.setValue("ErrorCode", "-2");
 	if (showMessage) aa.env.setValue("ErrorMessage", message);
 	if (showDebug) aa.env.setValue("ErrorMessage", debug);
