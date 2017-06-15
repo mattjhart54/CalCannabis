@@ -200,9 +200,9 @@ try {
 //}	
 }catch (err) {
 	showDebug = true;
-    logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
+    logDebug("A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_DECLAR_DRP_CONTACT: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 
 }
 // page flow custom code end
