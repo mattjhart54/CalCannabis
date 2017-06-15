@@ -77,12 +77,10 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-showMessage = true;
-logMessage("Start Script");
+
 	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-logMessage("Application Name " + AInfo["License Type"]);
 	editAppName(AInfo["License Type"]);
 	
 }catch (err) {
