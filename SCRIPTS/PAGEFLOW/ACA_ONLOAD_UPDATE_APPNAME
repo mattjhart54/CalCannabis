@@ -81,7 +81,7 @@ showMessage = true
 	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-	logMessage("Application Name " + AInfo["License Type"];
+	logMessage("Application Name " + AInfo["License Type"]);
 	editAppName(AInfo["License Type"]);
 	
 }catch (err) {
