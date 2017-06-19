@@ -152,7 +152,7 @@ try{
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
-	addTableRows = true;
+	addTableRows = false;
 	var tblRow = [];
 	var conditionTable = [];
 	dr = "";
@@ -166,7 +166,7 @@ try{
 	if (r.length > 0 && showList) {
 		for (x in r) { 
 			//going to add the condition, even if the document has been added, in case they want to change it
-			//if(uploadedDocs[r[x].document] == undefined) {	
+			if(uploadedDocs[r[x].document] == undefined) {	
 				showMessage = true; 
 				if (!docsMissing)  {
 					comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
@@ -194,7 +194,7 @@ try{
 					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
 					conditionTable.push(tblRow);
 				}	
-			//}	
+			}	
 		}
 		if (dr && ccr.length > 0 && addTableRows) {
 			removeASITable("ATTACHMENTS"); 
