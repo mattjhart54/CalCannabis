@@ -145,7 +145,7 @@ try{
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
-	addTableRows = false;
+	addTableRows = true;
 	var tblRow = [];
 	var conditionTable = [];
 	dr = "";
