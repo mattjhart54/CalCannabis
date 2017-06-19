@@ -146,7 +146,7 @@ try{
 	var arrConditions = getCAPConditions("License Required Documents", null, null, null);
 	if(!matches(arrConditions, null, false, "", "undefined")){
 		for(con in arrConditions){
-			removeCapCondition("License Required Documents", arrConditions[con].description);
+			//removeCapCondition("License Required Documents", arrConditions[con].description);
 		}
 	}
 	docsMissing = false;
