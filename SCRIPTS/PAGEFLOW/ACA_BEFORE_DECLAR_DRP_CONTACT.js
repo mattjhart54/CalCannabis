@@ -193,10 +193,11 @@ try {
 			}
 		}
 	}
-	if(totOwn > 100) 
+	if(totOwn > 100) {
 		showMessage = true;
 		cancel = true;
 		logMessage("Total Ownership entered on Owner Applications is " + totOwn +"%,  "+ msg);
+	}
 //}	
 }catch (err) {
 	showDebug = true;
