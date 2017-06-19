@@ -142,13 +142,6 @@ logDebug("balanceDue = " + balanceDue);
 // page flow custom code begin
 
 try{
-	//remove any existing conditions first and just start fresh
-	var arrConditions = getCAPConditions("License Required Documents", null, null, null);
-	if(!matches(arrConditions, null, false, "", "undefined")){
-		for(con in arrConditions){
-			//removeCapCondition("License Required Documents", arrConditions[con].description);
-		}
-	}
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
@@ -166,7 +159,7 @@ try{
 	if (r.length > 0 && showList) {
 		for (x in r) { 
 			//going to add the condition, even if the document has been added, in case they want to change it
-			if(uploadedDocs[r[x].document] == undefined) {	
+			//if(uploadedDocs[r[x].document] == undefined) {	
 				showMessage = true; 
 				if (!docsMissing)  {
 					comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
@@ -194,7 +187,7 @@ try{
 					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
 					conditionTable.push(tblRow);
 				}	
-			}	
+			//}	
 		}
 		if (dr && ccr.length > 0 && addTableRows) {
 			removeASITable("ATTACHMENTS"); 

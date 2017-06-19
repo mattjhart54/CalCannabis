@@ -10,6 +10,7 @@ try{
 		itemCap = arguments[1]; // use cap ID specified in args
 		
 	//application documents
+	var conditionType = "License Required Documents";
     var businessFormation = {condition : "Business - Business Formation Documents", document : "Business - Business Formation Documents"};
     var businessBond = {condition : "Business - Evidence Surety Bond", document : "Business - Evidence Surety Bond"};
 	var foriegnCorp = {condition : "Business - Foreign Corp. Certificate of Qualification", document : "Business - Foreign Corp. Certificate of Qualification"};
@@ -65,67 +66,164 @@ try{
 		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Medical") {
 			if(dateDiff(AInfo["Date of Intitial Operation"],medicalPriorityDate) >= 0) {
 				arrReqdDocs_App.push(operationDate);
+			}else{
+				if(appHasCondition(conditionType, null, operationDate.condition, null)){
+					removeCapCondition(conditionType, operationDate.condition);
+				}
 			}
 		}
 		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Adult Use") {
 			if(dateDiff(AInfo["Date of Intitial Operation"],adultPriorityDate) >= 0) {
 				arrReqdDocs_App.push(operationDate);
+			}else{
+				if(appHasCondition(conditionType, null, operationDate.condition, null)){
+					removeCapCondition(conditionType, operationDate.condition);
+				}
 			}
 		}
 		if (AInfo["Business Entity Structure"] != "Sole Proprietorship"){
 			arrReqdDocs_App.push(stateDocuments);
+		}else{
+			if(appHasCondition(conditionType, null, stateDocuments.condition, null)){
+				removeCapCondition(conditionType, stateDocuments.condition);
+			}
 		}
 		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
 			arrReqdDocs_App.push(soveriegnImmunity);
+		}else{
+			if(appHasCondition(conditionType, null, soveriegnImmunity.condition, null)){
+				removeCapCondition(conditionType, soveriegnImmunity.condition);
+			}
 		}
 		if (AInfo["Foreign Corporation"] == "Yes"){
 			arrReqdDocs_App.push(foriegnCorp);
+		}else{
+			if(appHasCondition(conditionType, null, foriegnCorp.condition, null)){
+				removeCapCondition(conditionType, foriegnCorp.condition);
+			}
 		}
 		if (AInfo["Vertical Integration"] == "CHECKED"){
 			arrReqdDocs_App.push(localOrdinance);
 			arrReqdDocs_App.push(cannabisActivity);
 			arrReqdDocs_App.push(fullCompliance);
 			arrReqdDocs_App.push(BOE);
+		}else{
+			if(appHasCondition(conditionType, null, localOrdinance.condition, null)){
+				removeCapCondition(conditionType, localOrdinance.condition);
+			}
+			if(appHasCondition(conditionType, null, cannabisActivity.condition, null)){
+				removeCapCondition(conditionType, cannabisActivity.condition);
+			}
+			if(appHasCondition(conditionType, null, fullCompliance.condition, null)){
+				removeCapCondition(conditionType, fullCompliance.condition);
+			}
+			if(appHasCondition(conditionType, null, BOE.condition, null)){
+				removeCapCondition(conditionType, BOE.condition);
+			}
 		}
 		
 		if(AInfo["Legal Possession"] == "Own") {
 			arrReqdDocs_App.push(ownership);
+		}else{
+			if(appHasCondition(conditionType, null, ownership.condition, null)){
+				removeCapCondition(conditionType, ownership.condition);
+			}
 		}
 		if(AInfo["Legal Possession"] == "Rent/Lease" || AInfo["Legal Possession"] == "Other") {
 			arrReqdDocs_App.push(occupyUse);
+		}else{
+			if(appHasCondition(conditionType, null, occupyUse.condition, null)){
+				removeCapCondition(conditionType, occupyUse.condition);
+			}
 		}
 		
 		if (AInfo["Small Retail Supplier 2"] == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
+		}else{
+			if(appHasCondition(conditionType, null, wellLog.condition, null)){
+				removeCapCondition(conditionType, wellLog.condition);
+			}
 		}
 		if (AInfo["Groundwater Well"] == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
+		}else{
+			if(appHasCondition(conditionType, null, wellLog.condition, null)){
+				removeCapCondition(conditionType, wellLog.condition);
+			}
 		}
 		if (AInfo["Diversion"] == "CHECKED"){
 			arrReqdDocs_App.push(SWRCBAhuth);
-		}				
+		}else{
+			if(appHasCondition(conditionType, null, SWRCBAhuth.condition, null)){
+				removeCapCondition(conditionType, SWRCBAhuth.condition);
+			}
+		}		
 		if (AInfo["Diversion Exception"] == "CHECKED"){
 			arrReqdDocs_App.push(SWRCBExcept);
+		}else{
+			if(appHasCondition(conditionType, null, SWRCBExcept.condition, null)){
+				removeCapCondition(conditionType, SWRCBExcept.condition);
+			}
 		}
 		if(matches(AInfo["License Type"],"Specialty Cottage Indoor","Specialty Cottage Mixed-Light","Specialty Indoor","Specialty Mixed-Light","Small Indoor","Small Mixed-Light","Medium Indoor","Medium Mixed-Light")) {
 			arrReqdDocs_App.push(premiseDiagram);
 			arrReqdDocs_App.push(wastePlan);
 			arrReqdDocs_App.push(pestPlan);
 			arrReqdDocs_App.push(lightDiagram);
+		}else{
+			if(appHasCondition(conditionType, null, premiseDiagram.condition, null)){
+				removeCapCondition(conditionType, premiseDiagram.condition);
+			}
+			if(appHasCondition(conditionType, null, wastePlan.condition, null)){
+				removeCapCondition(conditionType, wastePlan.condition);
+			}
+			if(appHasCondition(conditionType, null, pestPlan.condition, null)){
+				removeCapCondition(conditionType, pestPlan.condition);
+			}
+			if(appHasCondition(conditionType, null, lightDiagram.condition, null)){
+				removeCapCondition(conditionType, lightDiagram.condition);
+			}
 		}
 		if(matches(AInfo["License Type"],"Specialty Cottage Outdoor","Specialty Outdoor","Small Outdoor","Medium Outdoor","Nursery")) {
 			arrReqdDocs_App.push(premiseDiagram);
 			arrReqdDocs_App.push(wastePlan);
 			arrReqdDocs_App.push(pestPlan);
+		}else{
+			if(appHasCondition(conditionType, null, premiseDiagram.condition, null)){
+				removeCapCondition(conditionType, premiseDiagram.condition);
+			}
+			if(appHasCondition(conditionType, null, wastePlan.condition, null)){
+				removeCapCondition(conditionType, wastePlan.condition);
+			}
+			if(appHasCondition(conditionType, null, pestPlan.condition, null)){
+				removeCapCondition(conditionType, pestPlan.condition);
+			}
 		}
 		if(AInfo["License Type"] =="Processor") {
 			arrReqdDocs_App.push(premiseDiagram);
 			arrReqdDocs_App.push(wastePlan);
+		}else{
+			if(appHasCondition(conditionType, null, premiseDiagram.condition, null)){
+				removeCapCondition(conditionType, premiseDiagram.condition);
+			}
+			if(appHasCondition(conditionType, null, wastePlan.condition, null)){
+				removeCapCondition(conditionType, wastePlan.condition);
+			}
 		}
 		if(AInfo["Local Authority Type"] != "" && AInfo["Local Authority Type"] != null) {
 			arrReqdDocs_App.push(localAuth);
 			arrReqdDocs_App.push(planningPermit);
 			arrReqdDocs_App.push(goodStanding);
+		}else{
+			if(appHasCondition(conditionType, null, localAuth.condition, null)){
+				removeCapCondition(conditionType, localAuth.condition);
+			}
+			if(appHasCondition(conditionType, null, planningPermit.condition, null)){
+				removeCapCondition(conditionType, planningPermit.condition);
+			}
+			if(appHasCondition(conditionType, null, goodStanding.condition, null)){
+				removeCapCondition(conditionType, goodStanding.condition);
+			}
 		}
 		return arrReqdDocs_App;
 	}
