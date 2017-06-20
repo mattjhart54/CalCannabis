@@ -159,7 +159,7 @@ try{
 	if (r.length > 0 && (showList || addTableRows)) {
 		for (x in r) { 
 			//going to add the condition, even if the document has been added, in case they want to change it
-			//if(uploadedDocs[r[x].document] == undefined) {	
+			if(uploadedDocs[r[x].document] == undefined) {	
 				showMessage = true; 
 				if (!docsMissing)  {
 					comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
@@ -195,7 +195,7 @@ try{
 					//logDebug("tblRow: " + tblRow["Uploaded"]);
 					//logDebug("tblRow: " + tblRow["Status"]);
 				}	
-			//}	
+			}	
 		}
 		//if (dr && ccr.length > 0 && addTableRows) {
 		if (conditionTable.length > 0 && addTableRows) {
