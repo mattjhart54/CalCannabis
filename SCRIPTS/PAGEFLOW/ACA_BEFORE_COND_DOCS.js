@@ -154,10 +154,12 @@ try {
 	dr = "";
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
+		comment("uploaded doc: " + submittedDocList[i].getDocCategory());
 	}
 
 	if (r.length > 0 && showList) {
 		for (x in r) {
+			comment(" required doc: " + r[x].document);
 			if(uploadedDocs[r[x].document] == undefined) {
 				showMessage = true; 
 				if (!docsMissing)  {
@@ -178,6 +180,7 @@ try {
 				}
 				if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
 					addStdCondition(conditionType,dr);
+					comment("Added condition: " + dr);
 				}
 				if (dr && ccr.length > 0 && addTableRows) {
 					tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
