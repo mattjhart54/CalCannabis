@@ -8,7 +8,13 @@ try{
 	var itemCap = capId;
 	if (arguments.length == 2)
 		itemCap = arguments[1]; // use cap ID specified in args
-		
+
+	//because there are different options for these, need a different way to track so don't remove
+	//the condition unnecessarily
+	var need_premiseDiagram = false;
+	var need_wastePlan = false;
+	var need_pestPlan = false;
+	var need_lightDiagram = false;	
 	//application documents
 	var conditionType = "License Required Documents";
     var businessFormation = {condition : "Business - Business Formation Documents", document : "Business - Business Formation Documents"};
@@ -137,14 +143,7 @@ try{
 			}
 		}
 		
-		if (AInfo["Small Retail Supplier 2"] == "CHECKED"){
-			arrReqdDocs_App.push(wellLog);
-		}else{
-			if(appHasCondition(conditionType, null, wellLog.condition, null)){
-				removeCapCondition(conditionType, wellLog.condition);
-			}
-		}
-		if (AInfo["Groundwater Well"] == "CHECKED"){
+		if (AInfo["Small Retail Supplier 2"] == "CHECKED"|| AInfo["Groundwater Well"] == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
 		}else{
 			if(appHasCondition(conditionType, null, wellLog.condition, null)){
@@ -166,50 +165,49 @@ try{
 			}
 		}
 		if(matches(AInfo["License Type"],"Specialty Cottage Indoor","Specialty Cottage Mixed-Light","Specialty Indoor","Specialty Mixed-Light","Small Indoor","Small Mixed-Light","Medium Indoor","Medium Mixed-Light")) {
+			need_premiseDiagram = true;
+			need_wastePlan = true;
+			need_pestPlan = true;
+			need_lightDiagram = true;		}
+		if(matches(AInfo["License Type"],"Specialty Cottage Outdoor","Specialty Outdoor","Small Outdoor","Medium Outdoor","Nursery")) {
+			need_premiseDiagram = true;
+			need_wastePlan = true;
+			need_pestPlan = true;
+		}
+		if(AInfo["License Type"] =="Processor") {
+			need_premiseDiagram = true;
+			need_wastePlan = true;
+		}
+
+		if(need_premiseDiagram){
 			arrReqdDocs_App.push(premiseDiagram);
-			arrReqdDocs_App.push(wastePlan);
-			arrReqdDocs_App.push(pestPlan);
-			arrReqdDocs_App.push(lightDiagram);
 		}else{
 			if(appHasCondition(conditionType, null, premiseDiagram.condition, null)){
 				removeCapCondition(conditionType, premiseDiagram.condition);
 			}
+		}
+		if(need_wastePlan){
+			arrReqdDocs_App.push(wastePlan);
+		}else{
 			if(appHasCondition(conditionType, null, wastePlan.condition, null)){
 				removeCapCondition(conditionType, wastePlan.condition);
 			}
+		}
+		if(need_pestPlan){
+			arrReqdDocs_App.push(pestPlan);
+		}else{
 			if(appHasCondition(conditionType, null, pestPlan.condition, null)){
 				removeCapCondition(conditionType, pestPlan.condition);
 			}
+		}
+		if(need_lightDiagram){
+			arrReqdDocs_App.push(lightDiagram);
+		}else{
 			if(appHasCondition(conditionType, null, lightDiagram.condition, null)){
 				removeCapCondition(conditionType, lightDiagram.condition);
 			}
 		}
-		if(matches(AInfo["License Type"],"Specialty Cottage Outdoor","Specialty Outdoor","Small Outdoor","Medium Outdoor","Nursery")) {
-			arrReqdDocs_App.push(premiseDiagram);
-			arrReqdDocs_App.push(wastePlan);
-			arrReqdDocs_App.push(pestPlan);
-		}else{
-			if(appHasCondition(conditionType, null, premiseDiagram.condition, null)){
-				removeCapCondition(conditionType, premiseDiagram.condition);
-			}
-			if(appHasCondition(conditionType, null, wastePlan.condition, null)){
-				removeCapCondition(conditionType, wastePlan.condition);
-			}
-			if(appHasCondition(conditionType, null, pestPlan.condition, null)){
-				removeCapCondition(conditionType, pestPlan.condition);
-			}
-		}
-		if(AInfo["License Type"] =="Processor") {
-			arrReqdDocs_App.push(premiseDiagram);
-			arrReqdDocs_App.push(wastePlan);
-		}else{
-			if(appHasCondition(conditionType, null, premiseDiagram.condition, null)){
-				removeCapCondition(conditionType, premiseDiagram.condition);
-			}
-			if(appHasCondition(conditionType, null, wastePlan.condition, null)){
-				removeCapCondition(conditionType, wastePlan.condition);
-			}
-		}
+
 		if(AInfo["Local Authority Type"] != "" && AInfo["Local Authority Type"] != null) {
 			arrReqdDocs_App.push(localAuth);
 			arrReqdDocs_App.push(planningPermit);
