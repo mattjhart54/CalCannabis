@@ -75,6 +75,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try {
+	var eText = "";'
 	docsMissing = false;
 	showList = true;
 	addConditions = false;
@@ -86,16 +87,16 @@ try {
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 	uploadedDocs = new Array();
 	dr = "";
-	comment("uploadedDocs: " + uploadedDocs.length);
+	eText+=("uploadedDocs: " + uploadedDocs.length) + br;
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 		comment("uploaded doc: " + submittedDocList[i].getDocCategory());
 	}
-	comment("r.length: " + r.length);
+	eText+=("r.length: " + r.length) + br;
 
 	if (r.length > 0 && showList) {
 		for (x in r) {
-			comment(" required doc: " + r[x].document);
+			eText+=(" required doc: " + r[x].document) + br;
 			if(uploadedDocs[r[x].document] == undefined) {
 				showMessage = true; 
 				if (!docsMissing)  {
@@ -132,7 +133,7 @@ try {
 			addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
 		}
 	}
-	aa.sendMail("noreply@cdfa.ca.gov","lwacht@trustvip.com", "", "INFO ONLY: ACA_BEFORE_COND_DOCS: " + startDate, "capId: " + capId + ": " + message);
+	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ACA_BEFORE_COND_DOCS: " + startDate, "capId: " + capId + ": " + eText);
 
 	if (r.length > 0 && showList && docsMissing) {
 		//cancel = true;
