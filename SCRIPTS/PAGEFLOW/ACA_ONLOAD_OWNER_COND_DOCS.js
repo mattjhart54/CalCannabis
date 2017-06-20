@@ -186,10 +186,15 @@ try{
 					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
 					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
 					conditionTable.push(tblRow);
+					//logDebug("tblRow: " + tblRow["Document Type"]);
+					//logDebug("tblRow: " + tblRow["Document Description"]);
+					//logDebug("tblRow: " + tblRow["Uploaded"]);
+					//logDebug("tblRow: " + tblRow["Status"]);
 				}	
 			//}	
 		}
-		if (dr && ccr.length > 0 && addTableRows) {
+		//if (dr && ccr.length > 0 && addTableRows) {
+		if (conditionTable.length > 0 && addTableRows) {
 			removeASITable("ATTACHMENTS"); 
 			asit = cap.getAppSpecificTableGroupModel();
 			addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
