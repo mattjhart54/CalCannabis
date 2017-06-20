@@ -75,7 +75,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try {
-	var eText = "";'
+	var eText = "";
 	docsMissing = false;
 	showList = true;
 	addConditions = false;
