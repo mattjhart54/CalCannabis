@@ -20,8 +20,8 @@ try{
 					documentModel.setDocCategory(conditionName);
 					//documentModel.setDocDepartment(conditionGroup);
 					documentModel.setDocGroup("CALCANNABIS OWNER");
-					logDebug("Condition Name - " + conditionName);
-					logDebug("Condition Group - " + conditionGroup);
+					//logDebug("Condition Name - " + conditionName);
+					//logDebug("Condition Group - " + conditionGroup);
 					var updateDocumentResult = aa.document.updateDocument(documentModel);
 					if(updateDocumentResult.getSuccess()){
 						logDebug("Update document model successfully - " + 	documentModel.getDocName());

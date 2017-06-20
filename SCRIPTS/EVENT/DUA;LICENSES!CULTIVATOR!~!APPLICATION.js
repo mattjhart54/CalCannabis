@@ -1,7 +1,7 @@
 //lwacht
 // condition document script to update the doc group/category
 try{
-	if(documentUploadedFrom == "ACA"){
+	//if(documentUploadedFrom == "ACA"){
 		var documentModels = documentModelArray.toArray();
 		var documentModel = null;
 		var conditionNumber = 0;
@@ -32,7 +32,9 @@ try{
 				}
 			}
 		}
-	}
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  DUA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br +": DOCUMENT ARRAY: " + documentModel+ br + message);
+
+	//}
 } catch(err){
 	logDebug("An error has occurred in DUA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
 	logDebug(err.stack);
