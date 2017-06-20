@@ -18,7 +18,7 @@
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
 var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
@@ -28,10 +28,8 @@ var useCustomScriptFile = true;  			// if true, use Events->Custom Script, else 
 /------------------------------------------------------------------------------------------------------*/
 var startDate = new Date();
 var startTime = startDate.getTime();
-var message = ""; // Message String
 var debug = ""; // Debug String
 var br = "<BR>"; // Break Tag
-
 var useSA = false;
 var SA = null;
 var SAScript = null;
@@ -46,14 +44,15 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
-
+eval(getScriptText("INCLUDES_CUSTOM"));
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
@@ -71,8 +70,8 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	}
 }
 
-
 var cap = aa.env.getValue("CapModel");
+/*
 var capId = cap.getCapID();
 var servProvCode = capId.getServiceProviderCode()       		// Service Provider Code
 var publicUser = false ;
@@ -137,7 +136,7 @@ logDebug("feeFactor = " + feeFactor);
 logDebug("houseCount = " + houseCount);
 logDebug("feesInvoicedTotal = " + feesInvoicedTotal);
 logDebug("balanceDue = " + balanceDue);
-
+*/
 // page flow custom code begin
 
 try {
