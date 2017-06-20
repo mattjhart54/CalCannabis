@@ -199,7 +199,7 @@ try {
 			addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
 		}
 	}
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_COND_DOCS: " + startDate, "capId: " + capId + ": " + message);
+	aa.sendMail("noreply@cdfa.ca.gov","lwacht@trustvip.com", "", "INFO ONLY: ACA_BEFORE_COND_DOCS: " + startDate, "capId: " + capId + ": " + message);
 
 	if (r.length > 0 && showList && docsMissing) {
 		//cancel = true;
