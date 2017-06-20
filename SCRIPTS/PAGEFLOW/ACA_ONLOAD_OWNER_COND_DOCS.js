@@ -181,10 +181,14 @@ try{
 					addStdCondition(conditionType,dr);
 				}
 				if (dr && ccr.length > 0 && addTableRows) {
-					tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
-					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
-					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
-					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
+					//tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
+					//tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
+					//tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
+					//tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
+					tblRow["Document Type"] = ""+dr; 
+					tblRow["Document Description"]= ""+lookup("LIC_CC_ATTACHMENTS", dr); 
+					tblRow["Uploaded"] = "UNCHECKED"; 
+					tblRow["Status"] = "Not Submitted"; 
 					conditionTable.push(tblRow);
 					//logDebug("tblRow: " + tblRow["Document Type"]);
 					//logDebug("tblRow: " + tblRow["Document Description"]);
