@@ -90,14 +90,13 @@ try {
 	eText+=("uploadedDocs: " + uploadedDocs.length) + br;
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
-		comment("uploaded doc: " + submittedDocList[i].getDocCategory());
+		eText+=("uploaded doc: " + submittedDocList[i].getDocCategory()) + br;
 	}
 	eText+=("r.length: " + r.length) + br;
-	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ACA_BEFORE_COND_DOCS: " + startDate, "capId: " + capId + ": " + eText);
-
 	if (r.length > 0 && showList) {
 		for (x in r) {
 			eText+=(" required doc: " + r[x].document) + br;
+			eText+=(" uploaded doc: " +uploadedDocs[r[x].document]) + br;
 			if(uploadedDocs[r[x].document] == undefined) {
 				showMessage = true; 
 				if (!docsMissing)  {
