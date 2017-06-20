@@ -93,6 +93,7 @@ try {
 		comment("uploaded doc: " + submittedDocList[i].getDocCategory());
 	}
 	eText+=("r.length: " + r.length) + br;
+	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ACA_BEFORE_COND_DOCS: " + startDate, "capId: " + capId + ": " + eText);
 
 	if (r.length > 0 && showList) {
 		for (x in r) {
@@ -143,7 +144,7 @@ try {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_BEFORE_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_COND_DOCS: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_COND_DOCS: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
 }
 // page flow custom code end
 
