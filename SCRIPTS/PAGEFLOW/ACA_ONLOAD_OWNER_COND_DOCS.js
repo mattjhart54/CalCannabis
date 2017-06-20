@@ -156,7 +156,7 @@ try{
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 	}
-	if (r.length > 0 && (showList || addTableRows) {
+	if (r.length > 0 && (showList || addTableRows)) {
 		for (x in r) { 
 			//going to add the condition, even if the document has been added, in case they want to change it
 			//if(uploadedDocs[r[x].document] == undefined) {	
