@@ -83,7 +83,6 @@ try{
 	showList = true;
 	addConditions = false;
 	addTableRows = true;
-	var tblRow = [];
 	var conditionTable = [];
 	dr = "";
 	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
@@ -118,6 +117,7 @@ try{
 					addStdCondition(conditionType,dr);
 				}
 				if (dr && ccr.length > 0 && addTableRows) {
+					var tblRow = [];
 					tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
 					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
 					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
