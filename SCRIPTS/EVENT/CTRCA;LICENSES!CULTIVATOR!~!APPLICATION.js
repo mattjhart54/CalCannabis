@@ -12,11 +12,11 @@ try{
 		var conditionNumber = 0;
 		conditionNumber = thisDocument.getConditionNumber();
 		//if(conditionNumber != null && conditionNumber != 0){
-/*		if(!matches(conditionNumber, null, 0)){
+		if(!matches(conditionNumber, null, 0)){
 			var capConditionResult = aa.capCondition.getCapCondition(capId, conditionNumber);
 			if(capConditionResult.getSuccess()){
 				var capCondition = capConditionResult.getOutput();
-				try{
+/*				try{
 					var conditionName = capCondition.getConditionType();
 					var conditionGroup = capCondition.getConditionGroup();
 					capCondition.getConditionDescription();
@@ -34,11 +34,11 @@ try{
 				}catch(err){
 					logDebug("Error retrieving Cap Condition detail: " + err.message);
 				}
-			}else{
+*/			}else{
 				logDebug("No condition number - " + thisDocument.getDocName());
 			}
 		}
-*/		//var thisDocument = docsList[dl];
+		//var thisDocument = docsList[dl];
 		var docCategory = thisDocument.getDocCategory();
 		removeCapCondition("License Required Documents", docCategory);
 		aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br + "docCategory: " + docCategory);
@@ -46,5 +46,5 @@ try{
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br + err.message+ br+ err.stack);
 }

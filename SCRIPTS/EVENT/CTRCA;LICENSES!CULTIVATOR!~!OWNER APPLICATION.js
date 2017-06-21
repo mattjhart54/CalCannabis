@@ -1,6 +1,7 @@
 // lwacht
 // set altId based on application parent
 try{
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION:  AltID Logic: "+ startDate, "capId: " +capId + br + "capIdString: " +capId.getCustomID() + br +"parentCapId: " + parentCapId);
 	if(parentCapId){
 		nbrToTry = 1;
 		//because owners can be added and deleted, need a way to number the records
@@ -39,5 +40,5 @@ try{
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: AltID Logic: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Required Documents: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION:  AltID Logic: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 }

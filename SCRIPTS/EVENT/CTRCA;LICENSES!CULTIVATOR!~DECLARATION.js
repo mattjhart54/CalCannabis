@@ -1,6 +1,7 @@
 // lwacht
 // set altId based on application parent
 try{
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  CTRCA:LICENSES/CULTIVATOR/*/DECLARATION: AltID Logic: "+ startDate, "capId: " +capId + br + "capIdString: " +capId.getCustomID() + br +"parentCapId: " + parentCapId);
 	if(parentCapId){
 		nbrToTry = 1;
 		//because owners can be added and deleted, need a way to number the records
