@@ -1,5 +1,6 @@
 //lwacht
 // condition document script to update the doc group/category
+/*  not working and throwing an error, so going to comment out and put in CTRCA
 try{
 	//if(documentUploadedFrom == "ACA"){
 		var documentModels = documentModelArray.toArray();
@@ -32,14 +33,15 @@ try{
 				}
 			}
 		}
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  DUA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br +": DOCUMENT ARRAY: " + documentModel+ br + message);
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  DUA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: "+ startDate, capId + br +": DOCUMENT ARRAY: " + documentModel+ br + message);
 
 	//}
 } catch(err){
-	logDebug("An error has occurred in DUA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
+	logDebug("An error has occurred in DUA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in DUA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + "; " + err.message+ br + "; STACK: "+ err.stack + br +": DOCUMENT ARRAY: " + documentModel+ br + message);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in DUA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: "+ startDate, capId + "; " + err.message+ br + "; STACK: "+ err.stack + br +": DOCUMENT ARRAY: " + documentModel+ br + message);
 }
+*/
 //lwacht
 //compare the documents uploaded to the documents required in the "attachment" event
 // if any documents are required, send an email.
