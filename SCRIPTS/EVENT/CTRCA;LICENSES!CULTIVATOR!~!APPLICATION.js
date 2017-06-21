@@ -6,9 +6,34 @@ try{
 	var allDocsLoaded = true;
 	//docsList = getDocumentList();//Get all Documents on a Record
 	var capDocResult = aa.document.getDocumentListByEntity(capId,"CAP");
-	var arrMissingDocs = [];
 	for(docInx = 0; docInx < capDocResult.getOutput().size(); docInx++) {
 		var thisDocument = capDocResult.getOutput().get(docInx);
+		var documentModel = null;
+		var conditionNumber = 0;
+		conditionNumber = thisDocument.getConditionNumber();
+		//if(conditionNumber != null && conditionNumber != 0){
+		if(!matches(conditionNumber, null, 0)){
+			var capConditionResult = aa.capCondition.getCapCondition(capId, conditionNumber);
+			if(capConditionResult.getSuccess()){
+				var capCondition = capConditionResult.getOutput();
+				var conditionGroup = capCondition.getConditionGroup();
+				var conditionName =
+				capCondition.getConditionDescription();
+				thisDocument.setDocCategory(conditionName);
+				//documentModel.setDocDepartment(conditionGroup);
+				thisDocument.setDocGroup("CALCANNABIS APPLICANT");
+				logDebug("Condition Name - " + conditionName);
+				logDebug("Condition Group - " + conditionGroup);
+				var updateDocumentResult = aa.document.updateDocument(thisDocument);
+				if(updateDocumentResult.getSuccess()){
+					logDebug("Update document model successfully - " + 	thisDocument.getDocName());
+				}else{
+					logDebug("Update document model failed - " + thisDocument.getDocName());
+				}
+			}else{
+				logDebug("No condition number - " + thisDocument.getDocName());
+			}
+		}
 		//var thisDocument = docsList[dl];
 		var docCategory = thisDocument.getDocCategory();
 		removeCapCondition("License Required Documents", docCategory);
