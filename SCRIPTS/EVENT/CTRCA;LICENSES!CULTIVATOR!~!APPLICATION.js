@@ -16,19 +16,23 @@ try{
 			var capConditionResult = aa.capCondition.getCapCondition(capId, conditionNumber);
 			if(capConditionResult.getSuccess()){
 				var capCondition = capConditionResult.getOutput();
-				var conditionGroup = capCondition.getConditionGroup();
-				var conditionName =
-				capCondition.getConditionDescription();
-				thisDocument.setDocCategory(conditionName);
-				//documentModel.setDocDepartment(conditionGroup);
-				thisDocument.setDocGroup("CALCANNABIS APPLICANT");
-				logDebug("Condition Name - " + conditionName);
-				logDebug("Condition Group - " + conditionGroup);
-				var updateDocumentResult = aa.document.updateDocument(thisDocument);
-				if(updateDocumentResult.getSuccess()){
-					logDebug("Update document model successfully - " + 	thisDocument.getDocName());
-				}else{
-					logDebug("Update document model failed - " + thisDocument.getDocName());
+				try{
+					var conditionName = capCondition.getConditionType();
+					var conditionGroup = capCondition.getConditionGroup();
+					capCondition.getConditionDescription();
+					thisDocument.setDocCategory(conditionName);
+					//documentModel.setDocDepartment(conditionGroup);
+					thisDocument.setDocGroup("CALCANNABIS APPLICANT");
+					logDebug("Condition Name - " + conditionName);
+					logDebug("Condition Group - " + conditionGroup);
+					var updateDocumentResult = aa.document.updateDocument(thisDocument);
+					if(updateDocumentResult.getSuccess()){
+						logDebug("Update document model successfully - " + 	thisDocument.getDocName());
+					}else{
+						logDebug("Update document model failed - " + thisDocument.getDocName());
+					}
+				}catch(err){
+					logDebug("Error retrieving Cap Condition detail: " + err.message);
 				}
 			}else{
 				logDebug("No condition number - " + thisDocument.getDocName());
@@ -37,6 +41,7 @@ try{
 		//var thisDocument = docsList[dl];
 		var docCategory = thisDocument.getDocCategory();
 		removeCapCondition("License Required Documents", docCategory);
+		aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br + "docCategory: " + docCategory);
 	}
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
