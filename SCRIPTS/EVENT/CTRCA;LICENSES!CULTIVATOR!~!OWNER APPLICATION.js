@@ -1,6 +1,7 @@
 // lwacht
 // set altId based on application parent
 try{
+	parentCapId = getParent();
 	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION:  AltID Logic: "+ startDate, "capId: " +capId + br + "capIdString: " +capId.getCustomID() + br +"parentCapId: " + parentCapId);
 	if(parentCapId){
 		nbrToTry = 1;

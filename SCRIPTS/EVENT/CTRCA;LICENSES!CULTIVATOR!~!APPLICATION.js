@@ -17,9 +17,9 @@ try{
 			var capConditionResult = aa.capCondition.getCapCondition(capId, conditionNumber);
 			if(capConditionResult.getSuccess()){
 				var capCondition = capConditionResult.getOutput();
-/*				try{
+				try{
 					var conditionName = capCondition.getConditionType();
-					var conditionGroup = capCondition.getConditionGroup();
+/*					var conditionGroup = capCondition.getConditionGroup();
 					capCondition.getConditionDescription();
 					thisDocument.setDocCategory(conditionName);
 					//documentModel.setDocDepartment(conditionGroup);
@@ -32,10 +32,10 @@ try{
 					}else{
 						logDebug("Update document model failed - " + thisDocument.getDocName());
 					}
-				}catch(err){
+*/				}catch(err){
 					logDebug("Error retrieving Cap Condition detail: " + err.message);
 				}
-*/			}else{
+			}else{
 				logDebug("No condition number - " + thisDocument.getDocName());
 			}
 		}
