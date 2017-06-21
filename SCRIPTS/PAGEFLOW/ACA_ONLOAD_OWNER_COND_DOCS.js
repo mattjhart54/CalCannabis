@@ -143,8 +143,8 @@ logDebug("balanceDue = " + balanceDue);
 
 try{
 	docsMissing = false;
-	showList = true;
-	addConditions = true;
+	showList = false;
+	addConditions = false;
 	addTableRows = true;
 	var tblRow = [];
 	var conditionTable = [];
