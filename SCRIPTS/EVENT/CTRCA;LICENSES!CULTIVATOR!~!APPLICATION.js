@@ -12,7 +12,7 @@ try{
 		var conditionNumber = 0;
 		conditionNumber = thisDocument.getConditionNumber();
 		//if(conditionNumber != null && conditionNumber != 0){
-		if(!matches(conditionNumber, null, 0)){
+/*		if(!matches(conditionNumber, null, 0)){
 			var capConditionResult = aa.capCondition.getCapCondition(capId, conditionNumber);
 			if(capConditionResult.getSuccess()){
 				var capCondition = capConditionResult.getOutput();
@@ -38,7 +38,7 @@ try{
 				logDebug("No condition number - " + thisDocument.getDocName());
 			}
 		}
-		//var thisDocument = docsList[dl];
+*/		//var thisDocument = docsList[dl];
 		var docCategory = thisDocument.getDocCategory();
 		removeCapCondition("License Required Documents", docCategory);
 		aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br + "docCategory: " + docCategory);

@@ -87,7 +87,6 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 
-
 // lwacht
 // if not ACA, set altId based on application parent
 try{
