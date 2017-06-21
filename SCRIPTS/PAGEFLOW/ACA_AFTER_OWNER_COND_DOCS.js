@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_ONLOAD_OWNER_COND_DOCS.JS
+| Program : ACA_AFTER_OWNER_COND_DOCS.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -82,7 +82,7 @@ try{
 	docsMissing = false;
 	showList = true;
 	addConditions = false;
-	addTableRows = false;
+	addTableRows = true;
 	var tblRow = [];
 	var conditionTable = [];
 	dr = "";
@@ -97,11 +97,11 @@ try{
 		for (x in r) { 
 			//going to add the condition, even if the document has been added, in case they want to change it
 			if(uploadedDocs[r[x].document] == undefined) {	
-				showMessage = true; 
-				if (!docsMissing)  {
-					comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
-					docsMissing = true; 
-				}
+				//showMessage = true; 
+				//if (!docsMissing)  {
+				//	comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
+				//	docsMissing = true; 
+				//}
 				conditionType = "License Required Documents";
 				dr = r[x].condition;
 				publicDisplayCond = null;
@@ -111,9 +111,9 @@ try{
 						if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) 
 							publicDisplayCond = ccr[i];
 				}
-				if (dr && ccr.length > 0 && showList && publicDisplayCond) {
-					message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
-				}
+				//if (dr && ccr.length > 0 && showList && publicDisplayCond) {
+				//	message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
+				//}
 				if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
 					addStdCondition(conditionType,dr);
 				}
@@ -146,9 +146,9 @@ try{
 	}
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ACA_ONLOAD_OWNER_COND_DOCS: Main function: " + err.message);
+	logDebug("An error has occurred in ACA_AFTER_OWNER_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_COND_DOCS: Complete Contact" + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_OWNER_COND_DOCS: Complete Contact" + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 
 // page flow custom code end
