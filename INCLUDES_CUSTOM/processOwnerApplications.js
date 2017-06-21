@@ -123,7 +123,7 @@ try {
 					if(!ownerSeqNum){
 						qryPeople.setServiceProviderCode(aa.getServiceProviderCode());
 						qryPeople.setContactTypeFlag("Individual");
-						qryPeople.setContactType("Owner");
+						qryPeople.setContactType("Individual");
 						qryPeople.setFirstName(vFirst);
 						qryPeople.setLastName(vLast);
 						qryPeople.setEmail(vEmail);
