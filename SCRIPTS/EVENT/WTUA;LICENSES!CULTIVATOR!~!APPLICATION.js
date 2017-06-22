@@ -23,6 +23,7 @@ try{
 			for(ch in arrChild){
 				copyContactsByType(arrChild[ch], licCapId, "Individual");
 			}
+			editContactType("Individual", "Owner",licCapId);
 		}else{
 			logDebug("Error creating License record: " + licCapId);
 		}
