@@ -24,6 +24,11 @@ try{
 				copyContactsByType(arrChild[ch], licCapId, "Individual");
 			}
 			editContactType("Individual", "Owner",licCapId);
+			var priContact = getContactObj(licCapId,"Primary Contact");
+			var currCapId = capId;
+			capId = licCapId;
+			contactSetPrimary(priContact.seqNumber);
+			capId = currCapId;
 		}else{
 			logDebug("Error creating License record: " + licCapId);
 		}
