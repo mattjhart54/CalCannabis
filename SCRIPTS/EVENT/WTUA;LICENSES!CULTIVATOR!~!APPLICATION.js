@@ -1,13 +1,25 @@
 //lwacht
-//create the license record and copy DRP and Owner contacts to it
+//create the license record, update altid,  and copy DRP and Owner contacts to it
 try{
 	if("License Issuance".equals(wfTask) && "Issued".equals(wfStatus)){
 		var licCapId = createLicense("Active",false);
 		if(licCapId){
-			copyContactsByType(capId, licCapId, "Designated Responsible Party");
-			var arrChild = getChildren("LICENSES/CULTIVATOR/*/OWNER APPLICATION");
+			if(appTypeArray[2]=="Adult Use"){
+				var newAltFirst = "CAL" + sysDateMMDDYYYY.substr(8,2);
+			}else{
+				var newAltFirst = "CML";
+			}
+			var newAltLast = capIDString.substr(3,capIDString.length());
+			var newAltId = newAltFirst + newAltLast;
+			var updAltId = aa.cap.updateCapAltID(licCapId,newAltId);
+			if(!updAltId.getSuccess()){
+				logDebug("Error updating Alt Id: " +updAltId.getErrorMessage());
+			}else{
+				logDebug("License record ID updated to : " + newAltId);
+			}
+			var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
 			for(ch in arrChild){
-				copyContactsByType(arrChild[ch], licCapId, "Owner");
+				copyContactsByType(arrChild[ch], licCapId, "Individual");
 			}
 		}else{
 			logDebug("Error creating License record: " + licCapId);
