@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_ONLOAD_APP_COND_DOCS.js
+| Program : ACA_AFTER_APP_COND_DOCS.js
 | Event   : ACA Page Flow attachments before event
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -75,6 +75,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try {
+	var eText = "";
 	var condResult = aa.capCondition.getCapConditions(capId,"License Required Documents");
 	if(condResult.getSuccess()){
 		var arrCond = condResult.getOutput();
@@ -92,7 +93,9 @@ try {
 				var condMatch = false;
 				for(y in arrCond){
 					logDebug("conditionNumber: " + conditionNumber);
+					eText+=("conditionNumber: " + conditionNumber);
 					logDebug("arrCond[y].getConditionNumber(): " + arrCond[y].getConditionNumber());
+					eText+=("arrCond[y].getConditionNumber(): " + arrCond[y].getConditionNumber());
 					if(conditionNumber==arrCond[y].getConditionNumber()){
 						condMatch = true;
 						var capCondition = capConditionResult.getOutput();
@@ -105,31 +108,38 @@ try {
 							thisDocument.setDocGroup("CALCANNABIS APPLICANT");
 							logDebug("Condition Name - " + conditionName);
 							logDebug("Condition Group - " + conditionGroup);
+							eText+=("Condition Name - " + conditionName);
+							eText+=("Condition Group - " + conditionGroup);
 							var updateDocumentResult = aa.document.updateDocument(thisDocument);
 							if(updateDocumentResult.getSuccess()){
 								logDebug("Update document model successfully - " + 	thisDocument.getDocName());
+								eText+=("Update document model successfully - " + 	thisDocument.getDocName());
 							}else{
 								logDebug("Update document model failed - " + thisDocument.getDocName());
+								eText+=("Update document model failed - " + thisDocument.getDocName());
 							}
 						}catch(err){
 							logDebug("Error retrieving Cap Condition detail: " + err.message);
+							eText+=("Error retrieving Cap Condition detail: " + err.message);
 						}
 					}
 				}
 				if(!condMatch){
 					logDebug("Condition not found for document " + thisDocument);
+					eText+=("Condition not found for document " + thisDocument);
 				}
 			}else{
 				logDebug("No condition number - " + thisDocument.getDocName());
+				eText+=("No condition number - " + thisDocument.getDocName());
 			}
 		}
 	}
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_APP_COND_DOCS: " + startDate, "capId: " + capId + ": " + br + message);
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_AFTER_APP_COND_DOCS: " + startDate, "capId: " + capId + ": " + br + "eText: " + eText);
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ACA_ONLOAD_APP_COND_DOCS: Main function: " + err.message);
+	logDebug("An error has occurred in ACA_AFTER_APP_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_APP_COND_DOCS: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_APP_COND_DOCS: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
 }
 // page flow custom code end
 

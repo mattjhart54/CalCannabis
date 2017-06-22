@@ -21,7 +21,7 @@ try{
 					var conditionName = capCondition.getConditionType();
 /*					var conditionGroup = capCondition.getConditionGroup();
 					capCondition.getConditionDescription();
-					thisDocument.setDocCategory(conditionName);
+/*					thisDocument.setDocCategory(conditionName);
 					//documentModel.setDocDepartment(conditionGroup);
 					thisDocument.setDocGroup("CALCANNABIS APPLICANT");
 					logDebug("Condition Name - " + conditionName);
@@ -44,6 +44,7 @@ try{
 		removeCapCondition("License Required Documents", docCategory);
 		eText+= "docCategory: " + docCategory;
 	}
+	logDebug("eText: " + eText);
 	aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br + "eText: " + eText);
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
