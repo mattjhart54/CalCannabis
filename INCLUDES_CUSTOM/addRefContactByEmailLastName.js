@@ -50,7 +50,8 @@ try{
 										var transactionAddress = false;
 										contactAddressModel = addressList[add].getContactAddressModel();
 										logDebug("addressList: " + contactAddressModel.getEntityType());
-										if (contactAddressModel.getEntityType() == "CAP_CONTACT"){
+										//if (contactAddressModel.getEntityType() == "CAP_CONTACT"){
+										if (contactAddressModel.getEntityType() == "CONTACT"){
 											transactionAddress = true;
 											contactAddressModel.setEntityID(parseInt(newerPeople.getContactSeqNumber()));
 										}
