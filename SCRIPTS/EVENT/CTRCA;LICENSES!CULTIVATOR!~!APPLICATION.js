@@ -5,8 +5,8 @@ try{
 	var docsList = [];
 	var allDocsLoaded = true;
 	//docsList = getDocumentList();//Get all Documents on a Record
-	var capDocResult = aa.document.getDocumentListByEntity(capId,"TMP_CAP");
-	var arrMissingDocs = [];
+	//var capDocResult = aa.document.getDocumentListByEntity(capId,"CAP");
+	var capDocResult = aa.document.getCapDocumentList(capId, "ADMIN");
 	for(docInx = 0; docInx < capDocResult.getOutput().size(); docInx++) {
 		var thisDocument = capDocResult.getOutput().get(docInx);
 		//var thisDocument = docsList[dl];
