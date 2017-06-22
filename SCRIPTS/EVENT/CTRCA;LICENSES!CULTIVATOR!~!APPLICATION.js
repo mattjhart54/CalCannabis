@@ -1,6 +1,7 @@
 // lwacht
 // compare the documents uploaded to the documents required by the added conditions
 // remove the condition for all uploaded documents
+/* moving to ASA to see if it works better there
 try{
 	var eText = "";
 	var docsList = [];
@@ -19,9 +20,9 @@ try{
 				var capCondition = capConditionResult.getOutput();
 				try{
 					var conditionName = capCondition.getConditionType();
-/*					var conditionGroup = capCondition.getConditionGroup();
+					var conditionGroup = capCondition.getConditionGroup();
 					capCondition.getConditionDescription();
-/*					thisDocument.setDocCategory(conditionName);
+					thisDocument.setDocCategory(conditionName);
 					//documentModel.setDocDepartment(conditionGroup);
 					thisDocument.setDocGroup("CALCANNABIS APPLICANT");
 					logDebug("Condition Name - " + conditionName);
@@ -32,7 +33,7 @@ try{
 					}else{
 						logDebug("Update document model failed - " + thisDocument.getDocName());
 					}
-*/				}catch(err){
+				}catch(err){
 					logDebug("Error retrieving Cap Condition detail: " + err.message);
 				}
 			}else{
@@ -45,9 +46,10 @@ try{
 		eText+= "docCategory: " + docCategory;
 	}
 	logDebug("eText: " + eText);
-	aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br + "eText: " + eText);
+	aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: "+ startDate, capId + br + "eText: " + eText);
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br + err.message+ br+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: "+ startDate, capId + br + err.message+ br+ err.stack);
 }
+*/
