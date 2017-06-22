@@ -43,6 +43,7 @@ try{
 
 //lwacht
 //remove conditions after documents are uploaded
+/* not working here so trying in CTRCA
 try{
 	var docsList = [];
 	var allDocsLoaded = true;
@@ -55,9 +56,10 @@ try{
 		var docCategory = thisDocument.getDocCategory();
 		removeCapCondition("License Required Documents", docCategory);
 	}
-		//aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: ASA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br + "docCategory: " + docCategory);
+		//aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: ASA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: "+ startDate, capId + br + "docCategory: " + docCategory);
 } catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ASA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 }
+*/
