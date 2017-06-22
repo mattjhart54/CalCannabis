@@ -82,7 +82,7 @@ try {
 		var docsList = [];
 		var allDocsLoaded = true;
 		//docsList = getDocumentList();//Get all Documents on a Record
-		var capDocResult = aa.document.getDocumentListByEntity(capId,"CAP");
+		var capDocResult = aa.document.getDocumentListByEntity(capId,"TMP_CAP");
 		for(docInx = 0; docInx < capDocResult.getOutput().size(); docInx++) {
 			var thisDocument = capDocResult.getOutput().get(docInx);
 			var documentModel = null;
@@ -93,44 +93,46 @@ try {
 				var condMatch = false;
 				for(y in arrCond){
 					logDebug("conditionNumber: " + conditionNumber);
-					eText+=("conditionNumber: " + conditionNumber);
+					eText+= br + ("conditionNumber: " + conditionNumber);
 					logDebug("arrCond[y].getConditionNumber(): " + arrCond[y].getConditionNumber());
-					eText+=("arrCond[y].getConditionNumber(): " + arrCond[y].getConditionNumber());
+					eText+= br + ("arrCond[y].getConditionNumber(): " + arrCond[y].getConditionNumber());
 					if(conditionNumber==arrCond[y].getConditionNumber()){
 						condMatch = true;
-						var capCondition = capConditionResult.getOutput();
+						var capCondition =arrCond[y];
 						try{
 							var conditionName = capCondition.getConditionType();
 							var conditionGroup = capCondition.getConditionGroup();
-							capCondition.getConditionDescription();
-							thisDocument.setDocCategory(conditionName);
+							var conditionDesc = capCondition.getConditionDescription();
+							thisDocument.setDocCategory(conditionDesc);
 							//documentModel.setDocDepartment(conditionGroup);
 							thisDocument.setDocGroup("CALCANNABIS APPLICANT");
 							logDebug("Condition Name - " + conditionName);
 							logDebug("Condition Group - " + conditionGroup);
-							eText+=("Condition Name - " + conditionName);
-							eText+=("Condition Group - " + conditionGroup);
+							logDebug("Condition Description - " + conditionDesc);
+							eText+= br + ("Condition Name - " + conditionName);
+							eText+= br + ("Condition Group - " + conditionGroup);
+							eText+= br + ("Condition Description - " + conditionDesc);
 							var updateDocumentResult = aa.document.updateDocument(thisDocument);
 							if(updateDocumentResult.getSuccess()){
 								logDebug("Update document model successfully - " + 	thisDocument.getDocName());
-								eText+=("Update document model successfully - " + 	thisDocument.getDocName());
+								eText+= br + ("Update document model successfully - " + 	thisDocument.getDocName());
 							}else{
 								logDebug("Update document model failed - " + thisDocument.getDocName());
-								eText+=("Update document model failed - " + thisDocument.getDocName());
+								eText+= br + ("Update document model failed - " + thisDocument.getDocName());
 							}
 						}catch(err){
 							logDebug("Error retrieving Cap Condition detail: " + err.message);
-							eText+=("Error retrieving Cap Condition detail: " + err.message);
+							eText+= br + ("Error retrieving Cap Condition detail: " + err.message);
 						}
 					}
 				}
 				if(!condMatch){
 					logDebug("Condition not found for document " + thisDocument);
-					eText+=("Condition not found for document " + thisDocument);
+					eText+= br + ("Condition not found for document " + thisDocument);
 				}
 			}else{
 				logDebug("No condition number - " + thisDocument.getDocName());
-				eText+=("No condition number - " + thisDocument.getDocName());
+				eText+= br + ("No condition number - " + thisDocument.getDocName());
 			}
 		}
 	}
