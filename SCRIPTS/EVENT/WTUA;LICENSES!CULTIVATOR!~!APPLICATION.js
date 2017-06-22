@@ -4,6 +4,8 @@ try{
 	if("License Issuance".equals(wfTask) && "Issued".equals(wfStatus)){
 		var licCapId = createLicense("Active",false);
 		if(licCapId){
+			var expDate = dateAddMonths(null,12);
+			setLicExpirationDate(licCapId,null,expDate,"Active");
 			if(appTypeArray[2]=="Adult Use"){
 				var newAltFirst = "CAL" + sysDateMMDDYYYY.substr(8,2);
 			}else{
@@ -13,7 +15,7 @@ try{
 			var newAltId = newAltFirst + newAltLast;
 			var updAltId = aa.cap.updateCapAltID(licCapId,newAltId);
 			if(!updAltId.getSuccess()){
-				logDebug("Error updating Alt Id: " +updAltId.getErrorMessage());
+				logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
 			}else{
 				logDebug("License record ID updated to : " + newAltId);
 			}
