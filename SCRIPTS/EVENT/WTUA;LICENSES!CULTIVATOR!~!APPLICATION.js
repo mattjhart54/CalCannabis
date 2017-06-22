@@ -1,7 +1,7 @@
 //lwacht
 //create the license record and copy DRP and Owner contacts to it
 try{
-	if("License Issuance".equals(wfTask) && "Issued".equals(wfStatus){
+	if("License Issuance".equals(wfTask) && "Issued".equals(wfStatus)){
 		var licCapId = createLicense("Active",false);
 		if(licCapId){
 			copyContactsByType(capId, licCapId, "Designated Responsible Party");
