@@ -82,21 +82,20 @@ try {
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	loadASITables4ACA_corrected();
-	if(AInfo["Convicted of a Crime"] == "Yes") {
-		var fnd = false;
-	//	conv =loadASITable("CONVICTIONS");
-		if (CONVICTIONS == "object") {
-			for(x in CONVICTIONS) {
-				if(CONVICTIONS[x]["Offense"] != "" && CONVICTIONS[x]["Offense"] != null) {
-					fnd = true;
-				}
-			}
-		}
-		if (!fnd) {
+	if(AInfo["Convicted of a Crime"] == "Yes" && CONVICTIONS.length<1) {
+	//	var fnd = false;
+	//	if (CONVICTIONS == "object") {
+	//		for(x in CONVICTIONS) {
+	//			if(CONVICTIONS[x]["Offense"] != "" && CONVICTIONS[x]["Offense"] != null) {
+	//				fnd = true;
+	//			}
+	//		}
+	//	}
+	//	if (!fnd) {
 			showMessage = true;
 			cancel = true;
 			logMessage("When disclosure of a conviction of a crime is set to yes you must enter the conviction information in the Conviction table");
-		}
+	//	}
 	}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_OWNER_DISCLOSURE: " + err.message);
