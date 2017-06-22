@@ -136,7 +136,7 @@ try {
 			}
 		}
 	}
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_AFTER_APP_COND_DOCS: " + startDate, "capId: " + capId + ": " + br + "eText: " + eText);
+	//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_AFTER_APP_COND_DOCS: " + startDate, "capId: " + capId + ": " + br + "eText: " + eText);
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_AFTER_APP_COND_DOCS: Main function: " + err.message);
