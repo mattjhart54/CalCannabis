@@ -44,36 +44,6 @@ try{
 								logDebug ("Contact Nbr = "+contactNbr);
 								var newContact = Contacts[idx-1].getCapContactModel();
 								var newerPeople = newContact.getPeople();
-								var addressList = aa.address.getContactAddressListByCapContact(newContact).getOutput();
-								if (addressList){
-									for (add in addressList){
-										var transactionAddress = false;
-										contactAddressModel = addressList[add].getContactAddressModel();
-										logDebug("addressList: " + contactAddressModel.getEntityType());
-										//if (contactAddressModel.getEntityType() == "CAP_CONTACT"){
-										if (contactAddressModel.getEntityType() == "CONTACT"){
-											transactionAddress = true;
-											contactAddressModel.setEntityID(parseInt(newerPeople.getContactSeqNumber()));
-										}
-										// Commit if transaction contact address
-										if(transactionAddress){
-											var newPK = new com.accela.orm.model.address.ContactAddressPKModel();
-											contactAddressModel.setContactAddressPK(newPK);
-											aa.address.createCapContactAddress(capId, contactAddressModel);
-										// Commit if reference contact address
-										}else{
-											// build model
-											var Xref = aa.address.createXRefContactAddressModel().getOutput();
-											Xref.setContactAddressModel(contactAddressModel);
-											Xref.setAddressID(addressList[add].getAddressID());
-											Xref.setEntityID(parseInt(newerPeople.getContactSeqNumber()));
-											Xref.setEntityType(contactAddressModel.getEntityType());
-											Xref.setCapID(capId);
-											// commit address
-											aa.address.createXRefContactAddress(Xref.getXRefContactAddressModel());
-										}
-									}
-								}
 								return contactNbr;
 							}else{
 								logDebug("Add Ref Contact error: Failed to get Contact Nbr: "+capContactResult.getErrorMessage());
