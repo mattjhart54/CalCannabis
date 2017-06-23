@@ -138,7 +138,8 @@ try {
 							}
 						}
 					}
-					var ownUser = createPublicUserFromContact("Individual");
+					editContactType("Individual", "Owner");
+					var ownUser = createPublicUserFromContact("Owner");
 					tblOwners[o]["Status"]="Submitted";
 					emailParameters = aa.util.newHashtable();
 					addParameter(emailParameters, "$$AltID$$", capId);
