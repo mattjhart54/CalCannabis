@@ -1,6 +1,6 @@
 //lwacht: send a deficiency email when the status is "Additional Information Needed"
 try{
-	if("Administrative Review".equals(wfTask) && "Additional Information Needed".equals(wfStatus)){
+	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		if(DEFICIENCIES.length>0){
 			var eText = "Your application " + capIDString + " needs more information.  Please log into ACA, create an amendment record, and supply the following information: " + br;
 			for(row in DEFICIENCIES){
