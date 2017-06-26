@@ -1,20 +1,19 @@
 //lwacht
 //remove conditions after documents are uploaded
 try{
-	var eText = "";
-	var docsList = [];
-	var allDocsLoaded = true;
-	//docsList = getDocumentList();//Get all Documents on a Record
-	//var capDocResult = aa.document.getDocumentListByEntity(capId,"CAP");
-	var capDocResult = aa.document.getCapDocumentList(capId, "ADMIN");
-	for(docInx = 0; docInx < capDocResult.getOutput().size(); docInx++) {
-		var thisDocument = capDocResult.getOutput().get(docInx);
-		//var thisDocument = docsList[dl];
-		var docCategory = thisDocument.getDocCategory();
-		eText+=br+ "docCategory: " + docCategory;
-		removeCapCondition("License Required Documents", docCategory);
+	var capCondResult = aa.capCondition.getCapConditions(itemCap,"License Required Documents");
+	if (!capCondResult.getSuccess()){
+		logDebug("**WARNING: error getting cap conditions : " + capCondResult.getErrorMessage()) ; 
+	}else{
+		var ccs = capCondResult.getOutput();
+		for (pc1 in ccs){
+			var rmCapCondResult = aa.capCondition.deleteCapCondition(itemCap,ccs[pc1].getConditionNumber()); 
+			if (rmCapCondResult.getSuccess())
+				logDebug("Successfully removed condition to CAP : " + itemCap + "  (" + cType + ") " + cDesc);
+			else
+				logDebug( "**ERROR: removing condition to Parcel " + parcelNum + "  (" + cType + "): " + addParcelCondResult.getErrorMessage());
+		}
 	}
-	aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: "+ startDate, capId + br + eText);
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Remove Conditions: " + err.message);
 	logDebug(err.stack);
