@@ -1,5 +1,6 @@
 //lwacht
 //create the license record, update altid,  and copy DRP and Owner contacts to it
+/* lwacht: moved to PRA, commenting out for now in case minds are changed.
 try{
 	if("License Issuance".equals(wfTask) && "Issued".equals(wfStatus)){
 		var licCapId = createLicense("Active",false);
@@ -19,12 +20,12 @@ try{
 			}else{
 				logDebug("License record ID updated to : " + newAltId);
 			}
-			var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
+			var arrChild = getChildren("Licenses/Cultivator/* /Owner Application");
 			for(ch in arrChild){
 				copyContactsByType(arrChild[ch], licCapId, "Individual");
 			}
 			editContactType("Individual", "Owner",licCapId);
-			var newAppName = AInfo["Premise County"] + " - " AInfo["License Type"];
+			var newAppName = AInfo["Premise County"] + " - " + AInfo["License Type"];
 			var contApp = getContactObj(capId, "Applicant");
 			editAppName();
 			var contPri = getContactObj(licCapId,"Primary Contact");
@@ -37,6 +38,7 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/* /APPLICATION: License Issuance: " + err.message);
 	logDebug(err.stack);
 }
+lwacht end */
