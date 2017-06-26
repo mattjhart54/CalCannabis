@@ -24,10 +24,13 @@ try{
 				copyContactsByType(arrChild[ch], licCapId, "Individual");
 			}
 			editContactType("Individual", "Owner",licCapId);
-			var priContact = getContactObj(licCapId,"Primary Contact");
+			var newAppName = AInfo["Premise County"] + " - " AInfo["License Type"];
+			var contApp = getContactObj(capId, "Applicant");
+			editAppName();
+			var contPri = getContactObj(licCapId,"Primary Contact");
 			var currCapId = capId;
 			capId = licCapId;
-			contactSetPrimary(priContact.seqNumber);
+			contactSetPrimary(contPri.seqNumber);
 			capId = currCapId;
 		}else{
 			logDebug("Error creating License record: " + licCapId);
