@@ -160,7 +160,7 @@ try {
 	var totOwn = 0;
 	var pctOwn =0;
 	var br = "<BR>";
-	var msg = "The Ownership Pct must not be > 100%.  You will need to correct before continueing " + br;
+	var msg = "The Ownership percentage must not be greater than 100%.  Please correct before continuing " + br;
 	var parentId = getParent();
 	children = getChildren("Licenses/Cultivator/Medical/Owner Application", parentId)
 	var totOwn = 0
@@ -196,7 +196,7 @@ try {
 	if(totOwn > 100) {
 		showMessage = true;
 		cancel = true;
-		logMessage("Total Ownership entered on Owner Applications is " + totOwn +"%,  "+ msg);
+		logMessage("Total Ownership entered on Owner Applications is " + totOwn +"%.  "+ msg);
 	}
 //}	
 }catch (err) {
