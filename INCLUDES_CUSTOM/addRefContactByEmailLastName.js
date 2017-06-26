@@ -17,9 +17,15 @@ try{
 		if (peopResult.length > 0){
 			for(p in peopResult){
 				var thisPerson = peopResult[p];
-				var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
+				cSeqNbr = thisPerson.getContactSeqNumber();
+				caBiz = aa.proxyInvoker.newInstance("com.accela.aa.aamain.address.ContactAddressBusiness").getOutput();
+				conAddrList = caBiz.getContactAddressListBySingle(aa.getServiceProviderCode(), thisPerson.getContactSeqNumber(), thisPerson.getContactType(), "CONTACT", "A");
+				logDebug("Found " + conAddrList.size() + " addresses");		// List of ContactAddressModel
+				
+				var pplRes = aa.people.getPeople(cSeqNbr);
 				if(pplRes.getSuccess()){
 					var thisPpl = pplRes.getOutput();
+					thisPpl.setContactAddressList(conAddrList);
 					//for(x in thisPpl){
 					//	if(typeof(thisPpl[x])!="function"){
 					//		logDebug(x+ ": " + thisPpl[x]);
@@ -43,7 +49,7 @@ try{
 								var contactNbr = Contacts[idx-1].getCapContactModel().getPeople().getContactSeqNumber();
 								logDebug ("Contact Nbr = "+contactNbr);
 								var newContact = Contacts[idx-1].getCapContactModel();
-								var newerPeople = newContact.getPeople();
+								var newerPeople = newContact.getPeople();	
 								return contactNbr;
 							}else{
 								logDebug("Add Ref Contact error: Failed to get Contact Nbr: "+capContactResult.getErrorMessage());
