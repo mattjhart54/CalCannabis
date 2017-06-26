@@ -1,3 +1,27 @@
+//lwacht: send a deficiency email when the status is "Additional Information Needed"
+try{
+	if("Administrative Review".equals(wfTask) && "Additional Information Needed".equals(wfStatus)){
+		if(DEFICIENCIES.length>0){
+			var eText = "Your application " + capIDString + " needs more information.  Please log into ACA, create an amendment record, and supply the following information: " + br;
+			for(row in DEFICIENCIES){
+				if(DEFICIENCIES[row]["Status"]=="Deficient"){
+					eText += br + "     - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"];
+				}
+			}
+			eText += br + br + "Thank you. " + br + "Your friendly Cannabis processor";
+			var appContact = getContactObj(capId,"Applicant");
+			email(appContact.capContact.getEmail(), sysFromEmail, "Deficiency Notice for " +capIDString, eText);
+		}else{
+			showMessage = true; 
+			comment("The Deficiency table is empty.  No email will be sent.");
+		}
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/* /APPLICATION: License Issuance: " + err.message);
+	logDebug(err.stack);
+}
+
+
 //lwacht
 //create the license record, update altid,  and copy DRP and Owner contacts to it
 /* lwacht: moved to PRA, commenting out for now in case minds are changed.
