@@ -32,7 +32,7 @@ try{
 			capId = licCapId;
 			contactSetPrimary(contPri.seqNumber);
 			capId = currCapId;
-			updateTask("License Issuance","Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
+			closeTask("License Issuance","Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
 		}else{
 			logDebug("Error creating License record: " + licCapId);
 		}
