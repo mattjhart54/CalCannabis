@@ -20,7 +20,7 @@ try{
 				cSeqNbr = thisPerson.getContactSeqNumber();
 				caBiz = aa.proxyInvoker.newInstance("com.accela.aa.aamain.address.ContactAddressBusiness").getOutput();
 				conAddrList = caBiz.getContactAddressListBySingle(aa.getServiceProviderCode(), thisPerson.getContactSeqNumber(), thisPerson.getContactType(), "CONTACT", "A");
-				logDebug("Found " + conAddrList.size() + " addresses");		// List of ContactAddressModel
+				//logDebug("Found " + conAddrList.size() + " addresses");		// List of ContactAddressModel
 				
 				var pplRes = aa.people.getPeople(cSeqNbr);
 				if(pplRes.getSuccess()){
