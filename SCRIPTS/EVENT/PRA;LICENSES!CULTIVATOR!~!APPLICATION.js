@@ -26,7 +26,7 @@ try{
 			editContactType("Individual", "Owner",licCapId);
 			var contApp = getContactObj(capId, "Applicant");
 			var newAppName = AInfo["Premise County"] + " - " + AInfo["License Type"];
-			editAppName();
+			editAppName(newAppName);
 			var contPri = getContactObj(licCapId,"Primary Contact");
 			var currCapId = capId;
 			capId = licCapId;
