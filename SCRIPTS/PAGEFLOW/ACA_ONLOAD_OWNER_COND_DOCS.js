@@ -79,6 +79,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
+	asit = cap.getAppSpecificTableGroupModel();
 	var eText = "Information: " + br;
 	loadAppSpecific4ACA(AInfo);
 	loadASITables();
@@ -141,7 +142,6 @@ try{
 		//if (dr && ccr.length > 0 && addTableRows) {
 		if (conditionTable.length > 0 && addTableRows) {
 			removeASITable("ATTACHMENTS"); 
-			asit = cap.getAppSpecificTableGroupModel();
 			var newASIT = addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
 			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_OWNER_COND_DOCS: Required Documents: " + startDate, "capId: " + capId + br +  eText);
 		}
