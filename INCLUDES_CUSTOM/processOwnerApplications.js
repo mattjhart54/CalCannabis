@@ -127,6 +127,7 @@ try {
 						qryPeople.setFirstName(vFirst);
 						qryPeople.setLastName(vLast);
 						qryPeople.setEmail(vEmail);
+						qryPeople.setAuditStatus("A");
 						var resPpl = aa.people.createPeople(qryPeople);
 						if(!resPpl.getSuccess()){
 							logDebug("Error creating people: " + resPpl.getErrorMessage());
