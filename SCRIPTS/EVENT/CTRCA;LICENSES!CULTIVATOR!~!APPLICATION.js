@@ -1,7 +1,8 @@
 //lwacht
 //remove conditions after documents are uploaded
 try{
-	var capCondResult = aa.capCondition.getCapConditions(capId,"License Required Documents");
+	var cType = "License Required Documents";
+	var capCondResult = aa.capCondition.getCapConditions(capId,cType);
 	if (!capCondResult.getSuccess()){
 		logDebug("**WARNING: error getting cap conditions : " + capCondResult.getErrorMessage()) ; 
 	}else{
