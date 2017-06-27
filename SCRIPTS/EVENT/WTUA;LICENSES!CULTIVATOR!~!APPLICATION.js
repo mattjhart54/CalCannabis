@@ -9,7 +9,7 @@ try{
 				}
 			}
 			eText += br + br + "Thank you. " + br + "Your friendly Cannabis processor";
-			var appContact = getContactObj(capId,"Applicant");
+			var appContact = getContactObj(capId,"Primary Contact");
 			email(appContact.capContact.getEmail(), sysFromEmail, "Deficiency Notice for " +capIDString, eText);
 		}else{
 			showMessage = true; 
