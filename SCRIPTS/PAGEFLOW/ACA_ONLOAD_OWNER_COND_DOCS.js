@@ -84,7 +84,7 @@ try{
 	docsMissing = false;
 	showList = true;
 	addConditions = false;
-	addTableRows = true;
+	addTableRows = false;
 	var tblRow = [];
 	var conditionTable = [];
 	dr = "";
