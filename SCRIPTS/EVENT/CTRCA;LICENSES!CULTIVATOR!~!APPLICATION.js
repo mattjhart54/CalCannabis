@@ -10,7 +10,7 @@ try{
 		for (pc1 in ccs){
 			var rmCapCondResult = aa.capCondition.deleteCapCondition(capId,ccs[pc1].getConditionNumber()); 
 			if (rmCapCondResult.getSuccess())
-				logDebug("Successfully removed condition to CAP : " + capId + "  (" + cType + ") " + cDesc);
+				logDebug("Successfully removed condition to CAP : " + capId + "  (" + cType + ") ");
 			else
 				logDebug( "**ERROR: removing condition to Parcel " + parcelNum + "  (" + cType + "): " + addParcelCondResult.getErrorMessage());
 		}
