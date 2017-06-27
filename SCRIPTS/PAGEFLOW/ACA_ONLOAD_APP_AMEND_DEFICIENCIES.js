@@ -83,10 +83,10 @@ try{
 		loadASITables();
 		capId = currCap;
 		if(DEFICIENCIES.length>0){
-			var eText = "Your application " + capIDString + " needs the following information: ";
+			var eText = "Your application " + capIDString + " needs the following information: " + "/p";
 			for(row in DEFICIENCIES){
 				if(DEFICIENCIES[row]["Status"]=="Deficient"){
-					eText += "<li> - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"] + "</li>";
+					eText += "/p + " - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"] ";
 				}
 			}
 			var appContact = getContactObj(capId,"Applicant");
