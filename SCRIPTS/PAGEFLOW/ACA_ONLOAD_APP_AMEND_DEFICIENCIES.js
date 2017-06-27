@@ -86,7 +86,7 @@ try{
 			var eText = "Your application " + capIDString + " needs the following information: ";
 			for(row in DEFICIENCIES){
 				if(DEFICIENCIES[row]["Status"]=="Deficient"){
-					eText += "\r\n" + " - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"];
+					eText += "<li> - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"] + "</li>";
 				}
 			}
 			var appContact = getContactObj(capId,"Applicant");
