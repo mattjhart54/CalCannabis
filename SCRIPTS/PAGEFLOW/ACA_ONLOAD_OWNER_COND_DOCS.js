@@ -79,6 +79,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
+	loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 	docsMissing = false;
 	showList = true;
 	addConditions = false;
