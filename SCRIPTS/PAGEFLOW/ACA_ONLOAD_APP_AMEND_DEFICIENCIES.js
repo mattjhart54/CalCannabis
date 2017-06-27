@@ -86,10 +86,9 @@ try{
 			var eText = "Your application " + capIDString + " needs the following information: " + br;
 			for(row in DEFICIENCIES){
 				if(DEFICIENCIES[row]["Status"]=="Deficient"){
-					eText += br + "     - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"];
+					eText += "<br>     - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"];
 				}
 			}
-			eText += br + br + "Thank you. " + br + "Your friendly Cannabis processor";
 			var appContact = getContactObj(capId,"Applicant");
 			editAppSpecific4ACA("Application Deficiencies", eText);
 		}else{
