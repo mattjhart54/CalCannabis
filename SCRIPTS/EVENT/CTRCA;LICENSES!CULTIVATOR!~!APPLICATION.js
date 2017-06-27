@@ -1,15 +1,15 @@
 //lwacht
 //remove conditions after documents are uploaded
 try{
-	var capCondResult = aa.capCondition.getCapConditions(itemCap,"License Required Documents");
+	var capCondResult = aa.capCondition.getCapConditions(capId,"License Required Documents");
 	if (!capCondResult.getSuccess()){
 		logDebug("**WARNING: error getting cap conditions : " + capCondResult.getErrorMessage()) ; 
 	}else{
 		var ccs = capCondResult.getOutput();
 		for (pc1 in ccs){
-			var rmCapCondResult = aa.capCondition.deleteCapCondition(itemCap,ccs[pc1].getConditionNumber()); 
+			var rmCapCondResult = aa.capCondition.deleteCapCondition(capId,ccs[pc1].getConditionNumber()); 
 			if (rmCapCondResult.getSuccess())
-				logDebug("Successfully removed condition to CAP : " + itemCap + "  (" + cType + ") " + cDesc);
+				logDebug("Successfully removed condition to CAP : " + capId + "  (" + cType + ") " + cDesc);
 			else
 				logDebug( "**ERROR: removing condition to Parcel " + parcelNum + "  (" + cType + "): " + addParcelCondResult.getErrorMessage());
 		}
