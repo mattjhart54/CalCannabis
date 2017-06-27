@@ -104,7 +104,7 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_APP_CONTACT: Correct Contact: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
 }
 
-/*
+
 try{
 	var emailText = "";
 	var contactList = cap.getContactsGroup();
@@ -121,18 +121,18 @@ try{
 			var contType = thisCont.contactType;
 			showMessage=true;
 			if(contType =="Owner") {
-				var county = ""+thisCont.addressLine3;
-				if (matches(county,null, "", "undefined")) {
-					showMessage = true;
-					logMessage("'County' need to be populated on the contact form before continuing.  Click 'Edit' to update.");
-				}
 				var pplRes = aa.people.getPeople(thisCont.refContactNumber);
 				if(pplRes.getSuccess()){
 					var thisPpl = pplRes.getOutput();
-					var boeSeller = thisPpl.businessName2;
-					if (matches(boeSeller,null, "", "undefined")) {
+					var ssn = thisPpl.MaskedSsn;
+					if (matches(ssn,null, "", "undefined")) {
 						showMessage = true;
-						logMessage("'BOE Seller Permit Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
+						logMessage("'Social Security Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
+					}
+					var bDate = thisPpl.birthDate;
+					if (matches(bDate,null, "", "undefined")) {
+						showMessage = true;
+						logMessage("'Birth Date' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
 					}
 				}
 			}
@@ -144,7 +144,7 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_APP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
 }
-*/
+
 // page flow custom code end
 
 
