@@ -143,7 +143,7 @@ try{
 		if (conditionTable.length > 0 && addTableRows) {
 			removeASITable("ATTACHMENTS"); 
 			var newASIT = addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
-			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_OWNER_COND_DOCS: Required Documents: " + startDate, "capId: " + capId + br +  eText);
+			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_OWNER_COND_DOCS: Required Documents: " + startDate, "capId: " + capId + br +  eText);
 		}
 	}
 	if (r.length > 0 && showList && docsMissing) {
