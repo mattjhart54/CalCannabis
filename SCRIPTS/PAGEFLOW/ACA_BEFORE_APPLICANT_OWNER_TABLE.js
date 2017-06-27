@@ -96,7 +96,7 @@ try{
 				var drpContact = [];
 				var drpFName = ""+thisCont.firstName;
 				var drpLName = ""+thisCont.lastName;
-				var drpEmail = ""+thisCont.email;
+				var drpEmail = ""+thisCont.email.toLowerCase();
 			}
 		}
 	}
@@ -115,7 +115,7 @@ try{
 			var correctFirstName = false;
 			tblOwner.push(OWNERS[row]);
 			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
-			var ownEmail = OWNERS[row]["Email Address"];
+			var ownEmail = OWNERS[row]["Email Address"].toLowerCase();
 			qryPeople.setEmail(ownEmail);
 			var ownFName = ""+OWNERS[row]["First Name"];
 			var ownLName = ""+OWNERS[row]["Last Name"];
