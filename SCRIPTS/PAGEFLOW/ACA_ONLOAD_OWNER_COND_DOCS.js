@@ -79,11 +79,12 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
+	loadAppSpecific4ACA(AInfo);
+	loadASITables();
 	docsMissing = false;
 	showList = true;
 	addConditions = false;
-	addTableRows = false;
+	addTableRows = true;
 	var tblRow = [];
 	var conditionTable = [];
 	dr = "";
