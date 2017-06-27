@@ -79,7 +79,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	var eText = "";
+	var eText = "Information: " + br;
 	loadAppSpecific4ACA(AInfo);
 	loadASITables();
 	docsMissing = false;
@@ -99,7 +99,7 @@ try{
 	if (r.length > 0 && (showList || addTableRows)) {
 		for (x in r) { 
 			//going to add the condition, even if the document has been added, in case they want to change it
-			if(uploadedDocs[r[x].document] == undefined) {	
+			if(uploadedDocs[r[x].document] == undefined) {
 				showMessage = true; 
 				if (!docsMissing)  {
 					comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
@@ -130,7 +130,7 @@ try{
 					//tblRow["Uploaded"] = "UNCHECKED"; 
 					//tblRow["Status"] = "Not Submitted"; 
 					conditionTable.push(tblRow);
-					eText +=tblRow + br;
+					eText +=tblRow["Document Type"] + br;
 					//logDebug("tblRow: " + tblRow["Document Type"]);
 					//logDebug("tblRow: " + tblRow["Document Description"]);
 					//logDebug("tblRow: " + tblRow["Uploaded"]);
