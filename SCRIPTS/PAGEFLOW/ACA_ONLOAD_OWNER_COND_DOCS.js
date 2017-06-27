@@ -130,7 +130,7 @@ try{
 					//tblRow["Uploaded"] = "UNCHECKED"; 
 					//tblRow["Status"] = "Not Submitted"; 
 					conditionTable.push(tblRow);
-					eText +=tblRow["Document Type"] + br;
+					eText +=tblRow["Document Type"] + ": " + tblRow["Document Description"] + br;
 					//logDebug("tblRow: " + tblRow["Document Type"]);
 					//logDebug("tblRow: " + tblRow["Document Description"]);
 					//logDebug("tblRow: " + tblRow["Uploaded"]);
