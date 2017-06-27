@@ -141,6 +141,7 @@ try{
 			removeASITable("ATTACHMENTS"); 
 			asit = cap.getAppSpecificTableGroupModel();
 			var newASIT = addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_OWNER_COND_DOCS: Required Documents: " + startDate, "capId: " + capId + br + "newASIT: " + newASIT);
 		}
 	}
 	if (r.length > 0 && showList && docsMissing) {
@@ -150,7 +151,7 @@ try{
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_OWNER_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_COND_DOCS: Complete Contact" + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_COND_DOCS: Required Documents: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 
 // page flow custom code end
