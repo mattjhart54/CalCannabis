@@ -77,7 +77,10 @@ var cap = aa.env.getValue("CapModel");
 try{
 	var parCapId = getParent();
 	if(parCapId){
-		loadASITables4ACA_corrected(parCapId);
+		var currCap = capId; 
+		capId = parCapId;
+		loadASITables4ACA_corrected();
+		capId = currCapId;
 		if(DEFICIENCIES.length>0){
 			var eText = "Your application " + capIDString + " needs the following information: " + br;
 			for(row in DEFICIENCIES){
