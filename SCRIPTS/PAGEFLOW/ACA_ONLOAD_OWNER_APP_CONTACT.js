@@ -112,14 +112,8 @@ try{
 		var arrContacts = contactList.toArray();
 		for(var i in arrContacts) {
 			var thisCont = arrContacts[i];
-			//for(x in thisCont){
-			//	if(typeof(thisCont[x])!="function"){
-			//		emailText+= (x+ ": " + thisCont[x] +br);
-			//		logMessage(x+ ": " + thisCont[x]);
-			//	}
-			//}
 			var contType = thisCont.contactType;
-			showMessage=true;
+/*			showMessage=true;
 			if(contType =="Owner") {
 				var pplRes = aa.people.getPeople(thisCont.refContactNumber);
 				if(pplRes.getSuccess()){
@@ -136,6 +130,7 @@ try{
 					}
 				}
 			}
+*/
 		}
 	}
 } catch (err) {
