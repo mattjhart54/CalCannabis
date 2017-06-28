@@ -1,23 +1,127 @@
 //lwacht: send a deficiency email when the status is "Additional Information Needed"
 try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
-		if(DEFICIENCIES.length>0){
-			var eText = "Your application " + capIDString + " needs more information.  Please log into ACA, create an amendment record, and supply the following information: " + br;
-			for(row in DEFICIENCIES){
-				if(DEFICIENCIES[row]["Status"]=="Deficient"){
-					eText += br + "     - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"];
+		var deficFound = false;
+		var childOwner = getChildren("Licenses/Cultivator/*/Owner Application");
+		for (row in childOwner){
+			var ownCap = aa.cap.getCap(childOwner[row]).getOutput();
+			var ownAppStatus = ownCap.getCapStatus();
+			if(ownAppStatus=="Additional Information Needed"){
+				deficFound = true;
+			}
+		}
+		if(DEFICIENCIES.length>0 || deficFound){
+			var newAppName = "Deficiency: " + capName;
+			//create child amendment record
+			ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
+			ctm.setGroup("Licenses");
+			ctm.setType("Cultivator");
+			ctm.setSubType("Medical");
+			ctm.setCategory("Amendment");
+			var newDefId = aa.cap.createSimplePartialRecord(ctm,newAppName, "INCOMPLETE CAP").getOutput();
+			if(newDefId){
+				//relate amendment to application
+				var resCreateRelat = aa.cap.createAppHierarchy(capId, newDefId); 
+				if (resCreateRelat.getSuccess()){
+					logDebug("Child application successfully linked");
+				}else{
+					logDebug("Could not link applications: " + resCreateRelat.getErrorMessage());
+				}
+				copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
+				//find out how many amendment records there have been so we can create an AltId
+				var childAmend = getChildren("Licenses/Cultivator/"+appTypeArray[2]+"/Amendment");
+				var cntChild = childAmend.length;
+				cntChild ++;
+				logDebug("cntChild: " + cntChild);
+				if(cntChild<10){
+					cntChild = "0" +cntChild;
+				}
+				var newAltId = capIDString +"-" + cntChild + "DEF";
+				logDebug("newAltId: " + newAltId);
+				var updAltId = aa.cap.updateCapAltID(newDefId,newAltId);
+				if(!updAltId.getSuccess()){
+					logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
+				}else{
+					logDebug("Deficiency record ID updated to : " + newAltId);
+				}
+				//create the email text that will go to the primary contact
+				var eText = "Your application " + capIDString + " needs more information.  Please log into ACA, find the following records, and supply the required information: " + br;
+				eText += br + "Deficiencies for Application Record " + capName + " (" + newAltId + ") : ";
+				for(row in DEFICIENCIES){
+					if(DEFICIENCIES[row]["Status"]=="Deficient"){
+						eText += br + "     - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"];
+					}
+				}
+				for(rec in childOwner){
+					logDebug('here')
+					//now process the child owner applications for any deficiencies
+					var thisOwnCapId = childOwner[rec];
+					var ownCap = aa.cap.getCap(thisOwnCapId).getOutput();
+					var ownAppStatus = ownCap.getCapStatus();
+					var ownAppName = ownCap.getSpecialText();
+					if(ownAppStatus=="Additional Information Needed"){
+						var newOwnAppName = "Deficiency: " + ownAppName;
+						//create child deficiency record for the owner
+						ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
+						ctm.setGroup("Licenses");
+						ctm.setType("Cultivator");
+						ctm.setSubType("Medical");
+						ctm.setCategory("Amendment");
+						var newODefId = aa.cap.createSimplePartialRecord(ctm,newOwnAppName, "INCOMPLETE CAP").getOutput();
+						if(newODefId){
+							var resOCreateRelat = aa.cap.createAppHierarchy(thisOwnCapId, newODefId); 
+							if (resOCreateRelat.getSuccess()){
+								logDebug("Child application successfully linked");
+							}else{
+								logDebug("Could not link applications: " + resOCreateRelat.getErrorMessage());
+							}
+							copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
+							//get the current number of deficiency children to set the AltId
+							var childOAmend = getChildren("Licenses/Cultivator/"+appTypeArray[2]+"/Amendment");
+							var cntOChild = childOAmend.length;
+							cntOChild ++;
+							logDebug("cntOChild: " + cntOChild);
+							if(cntOChild<10){
+								cntOChild = "0" +cntOChild;
+							}
+							var newOAltId = thisOwnCapId.getCustomID() +"-" + cntOChild + "DEF";
+							logDebug("newOAltId: " + newOAltId);
+							var updOAltId = aa.cap.updateCapAltID(newODefId,newOAltId);
+							if(!updOAltId.getSuccess()){
+								logDebug("Error updating Owner Alt Id: " + newOAltId + ":: " +updOAltId.getErrorMessage());
+							}else{
+								logDebug("Deficiency owner record ID updated to : " + newOAltId);
+							}
+						}
+						//populate the email
+						var tblDefic = loadASITable("DEFICIENCIES");
+						if(tblDefic.length>0){
+							eText += br + "Deficiencies for Owner Record " + ownAppName + " (" + newOAltId + ") : ";
+							for(row in tblDefic){
+								if(tblDefic[row]["Status"]=="Deficient"){
+									eText += br + "     - " + tblDefic[row]["Field or Document Name"] + ": " + tblDefic[row]["Deficiency Details"];
+								}
+							}
+						}
+					}
+				}
+				eText += br + br + "Thank you. " + br + "Your Friendly Cannabis Processor";
+				var priContact = getContactObj(capId,"Primary Contact");
+				var appContact = getContactObj(capId,"Applicant");
+				logDebug("email content: " + eText);
+				if(priContact.capContact.getEmail()==appContact.capContact.getEmail()){
+					email(appContact.capContact.getEmail(), sysFromEmail, "Deficiency Notice for " +capIDString, eText);
+				}else{
+					email(appContact.capContact.getEmail() +"; " + priContact.capContact.getEmail(), sysFromEmail, "Deficiency Notice for " +capIDString, eText);
 				}
 			}
-			eText += br + br + "Thank you. " + br + "Your friendly Cannabis processor";
-			var appContact = getContactObj(capId,"Primary Contact");
-			email(appContact.capContact.getEmail(), sysFromEmail, "Deficiency Notice for " +capIDString, eText);
 		}else{
 			showMessage = true; 
-			comment("The Deficiency table is empty.  No email will be sent.");
+			comment("The Deficiency tables on this table and the child owner applications are empty.  No email will be sent.");
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/* /APPLICATION: License Issuance: " + err.message);
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
 	logDebug(err.stack);
 }
 
