@@ -5,7 +5,7 @@ try {
 			fnd = "N";
 			loadASITablesBefore();
 //			logDebug("table Length " + CANNABISFINANCIALINTEREST.length);
-			if(CANNABISFINANCIALINTEREST.length > 0) {
+			if(CANNABISFINANCIALINTEREST.length == "object") {
 				for(x in CANNABISFINANCIALINTEREST) {
 					if(CANNABISFINANCIALINTEREST[x]["Type of License"] == "Producing Dispensary") 
 						fnd ="Y";
