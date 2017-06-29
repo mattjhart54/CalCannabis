@@ -211,16 +211,12 @@ try{
 		if(AInfo["Local Authority Type"] != "" && AInfo["Local Authority Type"] != null) {
 			arrReqdDocs_App.push(localAuth);
 			arrReqdDocs_App.push(planningPermit);
-			arrReqdDocs_App.push(goodStanding);
 		}else{
 			if(appHasCondition(conditionType, null, localAuth.condition, null)){
 				removeCapCondition(conditionType, localAuth.condition);
 			}
 			if(appHasCondition(conditionType, null, planningPermit.condition, null)){
 				removeCapCondition(conditionType, planningPermit.condition);
-			}
-			if(appHasCondition(conditionType, null, goodStanding.condition, null)){
-				removeCapCondition(conditionType, goodStanding.condition);
 			}
 		}
 		return arrReqdDocs_App;
