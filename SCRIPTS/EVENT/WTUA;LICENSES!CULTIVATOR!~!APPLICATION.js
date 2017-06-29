@@ -100,15 +100,7 @@ try{
 							}
 						}
 						//populate the email
-						var tblDefic = loadASITable("DEFICIENCIES",thisOwnCapId);
-						if(tblDefic.length>0){
-							eText += br + "Deficiencies for Owner Record " + ownAppName + " (" + newOAltId + ") : ";
-							for(row in tblDefic){
-								if(tblDefic[row]["Status"]=="Deficient"){
-									eText += br + "     - " + tblDefic[row]["Field or Document Name"] + ": " + tblDefic[row]["Deficiency Details"];
-								}
-							}
-						}
+						eText += br + br + "Deficiencies on Owner Record: " + ownAppName + " (Deficiency record is " + newOAltId + ")";
 					}
 				}
 				eText += br + br + "Thank you. " + br + "Your Friendly Cannabis Processor";
