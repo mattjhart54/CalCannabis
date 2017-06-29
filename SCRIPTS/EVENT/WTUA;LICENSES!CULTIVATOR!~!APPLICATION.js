@@ -10,6 +10,8 @@ try{
 				deficFound = true;
 			}
 		}
+		logDebug("DEFICIENCIES.length"+DEFICIENCIES.length);
+		logDebug("deficFound"+deficFound);
 		if(DEFICIENCIES.length>0 || deficFound){
 			var newAppName = "Deficiency: " + capName;
 			//create child amendment record
@@ -28,15 +30,17 @@ try{
 					logDebug("Could not link applications: " + resCreateRelat.getErrorMessage());
 				}
 				copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
+				copyContactsByType(capId, newDefId,"Applicant");
+				copyContactsByType(capId, newDefId,"Primary Contact");
 				//find out how many amendment records there have been so we can create an AltId
-				var childAmend = getChildren("Licenses/Cultivator/"+appTypeArray[2]+"/Amendment");
+				var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
 				var cntChild = childAmend.length;
 				cntChild ++;
 				logDebug("cntChild: " + cntChild);
 				if(cntChild<10){
 					cntChild = "0" +cntChild;
 				}
-				var newAltId = capIDString +"-" + cntChild + "DEF";
+				var newAltId = capIDString +"-DEF"+ cntChild;
 				logDebug("newAltId: " + newAltId);
 				var updAltId = aa.cap.updateCapAltID(newDefId,newAltId);
 				if(!updAltId.getSuccess()){
@@ -53,7 +57,6 @@ try{
 					}
 				}
 				for(rec in childOwner){
-					logDebug('here')
 					//now process the child owner applications for any deficiencies
 					var thisOwnCapId = childOwner[rec];
 					var ownCap = aa.cap.getCap(thisOwnCapId).getOutput();
@@ -75,16 +78,19 @@ try{
 							}else{
 								logDebug("Could not link applications: " + resOCreateRelat.getErrorMessage());
 							}
-							copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
+							copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "CONVICTIONS", "ATTACHMENTS"]);
+							copyContacts(capId, newDefId);
+							editContactType("Owner","Primary Contact",newODefId);
 							//get the current number of deficiency children to set the AltId
-							var childOAmend = getChildren("Licenses/Cultivator/"+appTypeArray[2]+"/Amendment");
+							var childOAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
 							var cntOChild = childOAmend.length;
 							cntOChild ++;
+							logDebug("childOAmend.length: " + childOAmend.length);
 							logDebug("cntOChild: " + cntOChild);
 							if(cntOChild<10){
 								cntOChild = "0" +cntOChild;
 							}
-							var newOAltId = thisOwnCapId.getCustomID() +"-" + cntOChild + "DEF";
+							var newOAltId = thisOwnCapId.getCustomID() +"-DEF"  + cntOChild;
 							logDebug("newOAltId: " + newOAltId);
 							var updOAltId = aa.cap.updateCapAltID(newODefId,newOAltId);
 							if(!updOAltId.getSuccess()){
@@ -94,7 +100,7 @@ try{
 							}
 						}
 						//populate the email
-						var tblDefic = loadASITable("DEFICIENCIES");
+						var tblDefic = loadASITable("DEFICIENCIES",thisOwnCapId);
 						if(tblDefic.length>0){
 							eText += br + "Deficiencies for Owner Record " + ownAppName + " (" + newOAltId + ") : ";
 							for(row in tblDefic){
