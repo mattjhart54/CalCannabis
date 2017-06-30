@@ -98,6 +98,12 @@ try{
 					showMessage = true; 
 					logMessage("Your social security number needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
 				} 
+				var birthDate = thisCont.birthDate; 
+				if (matches(birthDate,null, "", "undefined")) { 
+					cancel = true; 
+					showMessage = true; 
+					logMessage("Your birth date needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
+				} 
 /*				var pplRes = aa.people.getPeople(thisCont.refContactNumber); 
 				if(pplRes.getSuccess()){ 
 					var thisPpl = pplRes.getOutput(); 
