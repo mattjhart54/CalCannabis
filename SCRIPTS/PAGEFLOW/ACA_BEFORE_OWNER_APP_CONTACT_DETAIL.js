@@ -83,17 +83,16 @@ try{
 		var arrContacts = contactList.toArray(); 
 		for(var i in arrContacts) { 
 			var thisCont = arrContacts[i]; 
-			for(x in thisCont){ 
-				if(typeof(thisCont[x])!="function"){ 
-					emailText+= (x+ ": " + thisCont[x] +br); 
-					logMessage(x+ ": " + thisCont[x]); 
-				} 
-			} 
+			//showMessage=true; 
+			//for(x in thisCont){ 
+			//	if(typeof(thisCont[x])!="function"){ 
+			//		emailText+= (x+ ": " + thisCont[x] +br); 
+			//		logMessage(x+ ": " + thisCont[x]); 
+			//	} 
+			//} 
 			var contactTypeFlag = thisCont.contactTypeFlag.toUpperCase(); 
-			showMessage=true; 
 			if(contactTypeFlag =="INDIVIDUAL") { 
 				var ssNbr = thisCont.socialSecurityNumber; 
-				logMessage("socialSecurityNumber: " + ssNbr);
 				if (matches(ssNbr,null, "", "undefined")) { 
 					cancel = true; 
 					showMessage = true; 
@@ -112,13 +111,13 @@ try{
 */
 			} 
 		}
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Correct contact  " + startDate, "capId: " + capId + br +emailText);
+		//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Complete contact  " + startDate, "capId: " + capId + br +emailText);
 
 	} 
 } catch (err) {
 	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Correct contact : " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Correct contact  " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Complete contact  " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 
 
