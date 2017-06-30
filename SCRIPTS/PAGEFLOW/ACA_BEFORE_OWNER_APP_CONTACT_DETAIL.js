@@ -83,20 +83,20 @@ try{
 		var arrContacts = contactList.toArray(); 
 		for(var i in arrContacts) { 
 			var thisCont = arrContacts[i]; 
-			for(x in thisCont){ 
-				if(typeof(thisCont[x])!="function"){ 
-					emailText+= (x+ ": " + thisCont[x] +br); 
-					logMessage(x+ ": " + thisCont[x]); 
-				} 
-			} 
+			//for(x in thisCont){ 
+			//	if(typeof(thisCont[x])!="function"){ 
+			//		emailText+= (x+ ": " + thisCont[x] +br); 
+			//		logMessage(x+ ": " + thisCont[x]); 
+			//	} 
+			//} 
 			var contType = thisCont.contactType; 
 			showMessage=true; 
 			if(contType =="Individual") { 
-				var county = ""+thisCont.addressLine3; 
-				if (matches(county,null, "", "undefined")) { 
+				var ssNbr = ""+thisCont.socialSecurityNumber; 
+				if (matches(ssNbr,null, "", "undefined")) { 
 					cancel = true; 
 					showMessage = true; 
-					logMessage("'County' needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
+					logMessage("Your social security number needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
 				} 
 /*				var pplRes = aa.people.getPeople(thisCont.refContactNumber); 
 				if(pplRes.getSuccess()){ 
@@ -115,7 +115,6 @@ try{
 
 	} 
 } catch (err) {
-	showDebug =true;
 	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Correct contact : " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Correct contact  " + startDate, "capId: " + capId + br + err.message + br + err.stack);
