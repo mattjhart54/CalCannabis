@@ -75,11 +75,14 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 try {
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+	showMessage = true;
+	logMessage("start Script");
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
+		logMessage("User Email " + currEmail);
 		var contactList = cap.getContactsGroup();
-		logDebug("got contactlist " + contactList.size());
+		logMessage("got contactlist " + contactList.size());
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
