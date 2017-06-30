@@ -150,6 +150,7 @@ try {
 					if(resCurUser.getSuccess()){
 						var currUser = resCurUser.getOutput();
 						var currUserEmail = ""+currUser.email;
+						setContactsSyncFlag("Y");
 					}
 					if(currUserEmail!=vEmail){
 						sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
@@ -163,5 +164,5 @@ try {
 }catch (err) {
 	logDebug("A JavaScript Error occurred: processOwnerApplications: " + err.message);
 	logDebug(err.stack);
-}
+}	
 }
