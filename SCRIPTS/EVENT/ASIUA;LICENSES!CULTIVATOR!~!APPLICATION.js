@@ -2,7 +2,8 @@ try {
 	removeASITable("DEFICIENCIES"); 
 	for(x in DEFICIENCIES) {
 		if(matches(DEFICIENCIES[x]["Deficiency Details"], null, "", undefined)) {
-			DEFICIENCIES[x]["Deficiency Details"] == lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[x]["Deficiency Type"]);
+			defDesc = lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[x]["Deficiency Type"]);
+			DEFICIENCIES[x]["Deficiency Details"] = defDesc;
 			addASITable("DEFICIENCIES", DEFICIENCIES)
 		}
 	}
