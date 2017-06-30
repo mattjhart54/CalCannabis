@@ -30,7 +30,7 @@ try{
 					logDebug("Could not link applications: " + resCreateRelat.getErrorMessage());
 				}
 				copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
-				copyContactsByType(capId, newDefId,"Applicant");
+				copyContactsByType(capId, newDefId,"Designated Responsible Party");
 				copyContactsByType(capId, newDefId,"Primary Contact");
 				//find out how many amendment records there have been so we can create an AltId
 				var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
@@ -47,14 +47,6 @@ try{
 					logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
 				}else{
 					logDebug("Deficiency record ID updated to : " + newAltId);
-				}
-				//create the email text that will go to the primary contact
-				var eText = "Your application " + capIDString + " needs more information.  Please log into ACA, find the following records, and supply the required information: " + br;
-				eText += br + "Deficiencies for Application Record " + capName + " (" + newAltId + ") : ";
-				for(row in DEFICIENCIES){
-					if(DEFICIENCIES[row]["Status"]=="Deficient"){
-						eText += br + "     - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"];
-					}
 				}
 				for(rec in childOwner){
 					//now process the child owner applications for any deficiencies
@@ -99,18 +91,38 @@ try{
 								logDebug("Deficiency owner record ID updated to : " + newOAltId);
 							}
 						}
-						//populate the email
-						eText += br + br + "Deficiencies on Owner Record: " + ownAppName + " (Deficiency record is " + newOAltId + ")";
 					}
 				}
-				eText += br + br + "Thank you. " + br + "Your Friendly Cannabis Processor";
+				//populate the email notification that will go to the primary contact
+				var eParams = aa.util.newHashtable(); 
+				currCapId = capId;
+				capId = newDefId;
+				getACARecordParam4Notification(eParams,acaUrl);
+				capId = currCapId;
+				var staffUser = new userObj("ADMIN");
+				staffUser.getEmailTemplateParams(eParams,"scientist")
+				getWorkflowParams4Notification(eParams);
+				getContactParams4Notification(eParams,"Primary Contact");
+				logDebug("eParams: " + eParams);
 				var priContact = getContactObj(capId,"Primary Contact");
-				var appContact = getContactObj(capId,"Applicant");
-				logDebug("email content: " + eText);
-				if(priContact.capContact.getEmail()==appContact.capContact.getEmail()){
-					email(appContact.capContact.getEmail(), sysFromEmail, "Deficiency Notice for " +capIDString, eText);
-				}else{
-					email(appContact.capContact.getEmail() +"; " + priContact.capContact.getEmail(), sysFromEmail, "Deficiency Notice for " +capIDString, eText);
+				var appContact = getContactObj(capId,"Designated Responsible Party");
+				var appEmail = ""+appContact.capContact.getEmail();
+				var priEmail = ""+priContact.capContact.getEmail();
+				var rParams = aa.util.newHashMap(); 
+				rParams.put("agencyid", "CALCANNABIS");
+				rParams.put("capid", capId.getCustomID());
+				var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
+				var rFile;
+				rFile = generateReport(capId,"ACA Permit","Licenses",rParams);
+				if (rFile) {
+					var rFiles = [];
+					rFiles.push(rFile);
+					if(priContact.capContact.getEmail()==appContact.capContact.getEmail()){
+						sendNotification(sysFromEmail,appEmail,"","LCA_DEFICIENCY",eParams, rFile,capId);
+					}else{
+						//sendNotification(sysFromEmail,"lwacht@trustvip.com","","LCA_DEFICIENCY",eParams, null,capId);
+						aa.document.sendEmailAndSaveAsDocument(sysFromEmail, "lwacht@trustvip.com", "", "LCA_DEFICIENCY", eParams, capId4Email, rFiles);
+					}
 				}
 			}
 		}else{
