@@ -89,11 +89,11 @@ try{
 					logMessage(x+ ": " + thisCont[x]); 
 				} 
 			} 
-			var contType = thisCont.contactType; 
+			var contactTypeFlag = thisCont.contactTypeFlag; 
 			showMessage=true; 
-			if(contType =="Individual") { 
+			if(contactTypeFlag =="Individual") { 
 				var ssNbr = thisCont.socialSecurityNumber; 
-				logMessage("socialSecurityNumber: " + ssNbr);
+				logMessage("socialSecurityNumber: " + ssNbr);s
 				if (matches(ssNbr,null, "", "undefined")) { 
 					cancel = true; 
 					showMessage = true; 
