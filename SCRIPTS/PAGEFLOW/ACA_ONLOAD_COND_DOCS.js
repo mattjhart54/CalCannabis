@@ -142,6 +142,34 @@ logDebug("balanceDue = " + balanceDue);
 // page flow custom code begin
 
 try{
+	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+	if(resCurUser.getSuccess()){
+		contactFnd = false
+		var currUser = resCurUser.getOutput();
+		var currEmail = currUser.email;
+		var contactList = cap.getContactsGroup();
+		logDebug("got contactlist " + contactList.size());
+		if(contactList != null && contactList.size() > 0){
+			var arrContacts = contactList.toArray();
+			for(var i in arrContacts) {
+				var thisCont = arrContacts[i];
+				var contEmail = thisCont.email;
+				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
+					contactFnd = true
+				}
+			}
+		}
+		if(contactFnd == false) {
+			showMessage = true;
+			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
+		}	
+	}
+	else{
+		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage());
+	}
+	
+	
 	docsMissing = false;
 	showList = true;
 	addConditions = true;
