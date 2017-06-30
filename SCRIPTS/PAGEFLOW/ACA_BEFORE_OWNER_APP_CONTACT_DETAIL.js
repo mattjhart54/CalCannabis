@@ -77,6 +77,7 @@ var cap = aa.env.getValue("CapModel");
 
 try{
 	var capId = cap.getCapID();
+	var emailText="Information: " + br;
 	var contactList = cap.getContactsGroup(); 
 	if(contactList != null && contactList.size() > 0){ 
 		var arrContacts = contactList.toArray(); 
