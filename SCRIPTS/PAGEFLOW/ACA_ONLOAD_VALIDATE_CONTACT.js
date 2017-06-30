@@ -78,6 +78,7 @@ try {
 	showMessage = true;
 	logMessage("start Script");
 	if(resCurUser.getSuccess()){
+		contactFnd = false
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
 		logMessage("User Email " + currEmail);
@@ -88,11 +89,15 @@ try {
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
 				var contEmail = thisCont.email;
-				if(contEmail.toUpperCase() != currEmail.toUpperCase()){
-					showMessage = true;
-					logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
+				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
+					contactFnd = true
 				}
 			}
+		}
+		if(contactFnd == false) {
+			showMessage = true;
+			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
+			
 		}	
 	}
 	else{
