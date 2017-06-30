@@ -79,7 +79,9 @@ try {
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 
 	if(resCurUser.getSuccess()){
-		contactFnd = false
+		var contactFnd = false
+		var drpFnd = false;
+		var pcFnd = false;
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
 		var contactList = cap.getContactsGroup();
