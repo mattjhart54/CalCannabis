@@ -95,6 +95,7 @@ try{
 				}
 				//populate the email notification that will go to the primary contact
 				var eParams = aa.util.newHashtable(); 
+				addParameter(eParams, "$$wfDateMMDDYYYY$$", wfDateMMDDYYYY);
 				currCapId = capId;
 				capId = newDefId;
 				getACARecordParam4Notification(eParams,acaUrl);
@@ -102,12 +103,20 @@ try{
 				var staffUser = new userObj("ADMIN");
 				staffUser.getEmailTemplateParams(eParams,"scientist")
 				getWorkflowParams4Notification(eParams);
-				getContactParams4Notification(eParams,"Primary Contact");
-				logDebug("eParams: " + eParams);
+				var drpContact = getContactObj(capId,"Designated Responsible Party");
 				var priContact = getContactObj(capId,"Primary Contact");
-				var appContact = getContactObj(capId,"Designated Responsible Party");
-				var appEmail = ""+appContact.capContact.getEmail();
+				getContactParams4Notification(eParams,"Primary Contact");
+				priAddresses = priContact.addresses;
+				for (x in priAddresses){
+					thisAddr = priAddresses[x];
+					if(thisAddr.getAddressType()=="Mailing"){
+						addParameter(eParams, "$$priFullAddress$$", thisAddr.getFullAddress());
+					}
+				}
+				//logDebug("eParams: " + eParams);
+				var drpEmail = ""+drpContact.capContact.getEmail();
 				var priEmail = ""+priContact.capContact.getEmail();
+				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 				var rParams = aa.util.newHashMap(); 
 				rParams.put("agencyid", "CALCANNABIS");
 				rParams.put("capid", capId.getCustomID());
@@ -117,11 +126,13 @@ try{
 				if (rFile) {
 					var rFiles = [];
 					rFiles.push(rFile);
-					if(priContact.capContact.getEmail()==appContact.capContact.getEmail()){
-						sendNotification(sysFromEmail,appEmail,"","LCA_DEFICIENCY",eParams, rFile,capId);
-					}else{
-						//sendNotification(sysFromEmail,"lwacht@trustvip.com","","LCA_DEFICIENCY",eParams, null,capId);
-						aa.document.sendEmailAndSaveAsDocument(sysFromEmail, "lwacht@trustvip.com", "", "LCA_DEFICIENCY", eParams, capId4Email, rFiles);
+					if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
+						if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
+							sendNotification(sysFromEmail,drpEmail,"","LCA_DEFICIENCY",eParams, rFile,capId);
+						}else{
+							//sendNotification(sysFromEmail,"lwacht@trustvip.com","","LCA_DEFICIENCY",eParams, null,capId);
+							aa.document.sendEmailAndSaveAsDocument(sysFromEmail, drpEmail + ";" + priEmail, "", "LCA_DEFICIENCY", eParams, capId4Email, rFiles);
+						}
 					}
 				}
 			}
