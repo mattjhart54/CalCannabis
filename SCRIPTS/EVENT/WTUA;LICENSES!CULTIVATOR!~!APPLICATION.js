@@ -100,7 +100,7 @@ try{
 				capId = newDefId;
 				getACARecordParam4Notification(eParams,acaUrl);
 				capId = currCapId;
-				var staffUser = new userObj("ADMIN");
+				var staffUser = new userObj(wfStaffUserID);
 				staffUser.getEmailTemplateParams(eParams,"scientist")
 				getWorkflowParams4Notification(eParams);
 				var drpContact = getContactObj(capId,"Designated Responsible Party");
@@ -111,6 +111,7 @@ try{
 					thisAddr = priAddresses[x];
 					if(thisAddr.getAddressType()=="Mailing"){
 						addParameter(eParams, "$$priFullAddress$$", thisAddr.getFullAddress());
+						addParameter(eParams, "$$priAddress1$$", thisAddr.getAddress1());
 					}
 				}
 				//logDebug("eParams: " + eParams);
@@ -145,6 +146,7 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
 	logDebug(err.stack);
 }
+
 
 
 //lwacht
