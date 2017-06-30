@@ -92,7 +92,8 @@ try{
 			var contType = thisCont.contactType; 
 			showMessage=true; 
 			if(contType =="Individual") { 
-				var ssNbr = ""+thisCont.socialSecurityNumber; 
+				var ssNbr = thisCont.socialSecurityNumber; 
+				logMessage("socialSecurityNumber: " + ssNbr);
 				if (matches(ssNbr,null, "", "undefined")) { 
 					cancel = true; 
 					showMessage = true; 
