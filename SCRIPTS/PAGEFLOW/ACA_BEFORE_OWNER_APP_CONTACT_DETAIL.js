@@ -89,9 +89,9 @@ try{
 					logMessage(x+ ": " + thisCont[x]); 
 				} 
 			} 
-			var contactTypeFlag = thisCont.contactTypeFlag; 
+			var contactTypeFlag = thisCont.contactTypeFlag.toUpperCase(); 
 			showMessage=true; 
-			if(contactTypeFlag =="Individual") { 
+			if(contactTypeFlag =="INDIVIDUAL") { 
 				var ssNbr = thisCont.socialSecurityNumber; 
 				logMessage("socialSecurityNumber: " + ssNbr);s
 				if (matches(ssNbr,null, "", "undefined")) { 
