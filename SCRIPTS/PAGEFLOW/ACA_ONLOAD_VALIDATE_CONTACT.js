@@ -92,7 +92,7 @@ try {
 				var contType = thisCont.contactType;
 				if(contType == "Designated Responsible Party")
 					drpFnd = true;
-				if(contType == "Primary Contact")
+				if(contType == "Applicant")
 					pcFnd = true;
 				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
 					contactFnd = true
