@@ -102,8 +102,8 @@ try {
 			}
 		}
 		if(contactFnd == false && drpFnd == true && pcFnd == true) {
-			showMessage = true;
 			cancel = true;
+			showMessage = true;
 			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
 		}	
 	}
