@@ -99,12 +99,11 @@ try {
 				}
 			}
 		}
-		if(contactFnd == false && drpFnd = true && pcFnd = true) {
+		if(contactFnd == false && drpFnd == true && pcFnd == true) {
 			showMessage = true;
 			cancel = true;
 			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
 		}	
-	}
 	}
 	else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
