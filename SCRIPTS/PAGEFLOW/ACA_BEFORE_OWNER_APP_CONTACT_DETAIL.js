@@ -93,7 +93,7 @@ try{
 			showMessage=true; 
 			if(contactTypeFlag =="INDIVIDUAL") { 
 				var ssNbr = thisCont.socialSecurityNumber; 
-				logMessage("socialSecurityNumber: " + ssNbr);s
+				logMessage("socialSecurityNumber: " + ssNbr);
 				if (matches(ssNbr,null, "", "undefined")) { 
 					cancel = true; 
 					showMessage = true; 
