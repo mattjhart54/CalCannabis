@@ -80,7 +80,6 @@ try {
 		contactFnd = false
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
-		logMessage("User Email " + currEmail);
 		var contactList = cap.getContactsGroup();
 		logDebug("got contactlist " + contactList.size());
 		if(contactList != null && contactList.size() > 0){
