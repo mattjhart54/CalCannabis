@@ -4,8 +4,8 @@ try {
 		if(matches(DEFICIENCIES[x]["Deficiency Details"], null, "", undefined)) {
 			defDesc = lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[x]["Deficiency Type"]);
 			DEFICIENCIES[x]["Deficiency Details"] = defDesc;
-			addASITable("DEFICIENCIES", DEFICIENCIES)
 		}
+		addASITable("DEFICIENCIES", DEFICIENCIES)
 	}
 
 }catch (err){
