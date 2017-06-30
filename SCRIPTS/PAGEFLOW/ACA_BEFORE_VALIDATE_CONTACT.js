@@ -89,16 +89,22 @@ try {
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
 				var contEmail = thisCont.email;
+				var contType = thisCont.contactType;
+				if(contType == "Designated Responsible Party")
+					drpFnd = true;
+				if(contType == "Primary Contact")
+					pcFnd = true;
 				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
 					contactFnd = true
 				}
 			}
 		}
-		if(contactFnd == false) {
+		if(contactFnd == false && drpFnd = true && pcFnd = true) {
 			showMessage = true;
-			cancel=true;
+			cancel = true;
 			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
 		}	
+	}
 	}
 	else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
