@@ -110,8 +110,10 @@ try{
 				for (x in priAddresses){
 					thisAddr = priAddresses[x];
 					if(thisAddr.getAddressType()=="Mailing"){
-						addParameter(eParams, "$$priFullAddress$$", thisAddr.getFullAddress());
-						addParameter(eParams, "$$priAddress1$$", thisAddr.getAddress1());
+						addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
+						addParameter(eParams, "$$priCity$$", thisAddr.city);
+						addParameter(eParams, "$$priState$$", thisAddr.state);
+						addParameter(eParams, "$$priZip$$", thisAddr.zip);
 					}
 				}
 				//logDebug("eParams: " + eParams);
