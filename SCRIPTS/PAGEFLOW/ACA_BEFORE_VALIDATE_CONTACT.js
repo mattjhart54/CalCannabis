@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_ONLOAD_APP_CONTACT.JS
+| Program : ACA_BEFORE_OWNER_APP_CONTACT.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -48,8 +48,8 @@ if (SA) {
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",true));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
 }
 
 eval(getScriptText("INCLUDES_CUSTOM"));
@@ -71,8 +71,10 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 
 var cap = aa.env.getValue("CapModel");
+//var parentId = cap.getParentCapID();
 
 // page flow custom code begin
+
 try {
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 
@@ -130,3 +132,7 @@ if (debug.indexOf("**ERROR") > 0) {
 			aa.env.setValue("ErrorMessage", debug);
 	}
 }
+
+
+
+
