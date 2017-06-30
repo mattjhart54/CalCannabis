@@ -2,12 +2,11 @@ try {
 	removeASITable("DEFICIENCIES"); 
 	for(x in DEFICIENCIES) {
 		if(matches(DEFICIENCIES[x]["Deficiency Details"], null, "", undefined)) {
-			
 			DEFICIENCIES[x]["Deficiency Details"] == lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[x]["Deficiency Type"]);
-		//	logDebug(DEFICIENCIES[x]["Deficiency Details"]);
+			addASITable("DEFICIENCIES", DEFICIENCIES)
 		}
 	}
-	addASITable("DEFICIENCIES", DEFICIENCIES)
+
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASIUA: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
