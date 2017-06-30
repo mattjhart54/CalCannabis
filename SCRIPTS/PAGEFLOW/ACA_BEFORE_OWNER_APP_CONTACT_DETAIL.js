@@ -83,12 +83,12 @@ try{
 		var arrContacts = contactList.toArray(); 
 		for(var i in arrContacts) { 
 			var thisCont = arrContacts[i]; 
-			//for(x in thisCont){ 
-			//	if(typeof(thisCont[x])!="function"){ 
-			//		emailText+= (x+ ": " + thisCont[x] +br); 
-			//		logMessage(x+ ": " + thisCont[x]); 
-			//	} 
-			//} 
+			for(x in thisCont){ 
+				if(typeof(thisCont[x])!="function"){ 
+					emailText+= (x+ ": " + thisCont[x] +br); 
+					logMessage(x+ ": " + thisCont[x]); 
+				} 
+			} 
 			var contType = thisCont.contactType; 
 			showMessage=true; 
 			if(contType =="Individual") { 
