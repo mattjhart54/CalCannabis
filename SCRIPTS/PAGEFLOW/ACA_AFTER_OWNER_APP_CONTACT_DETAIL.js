@@ -77,7 +77,7 @@ var cap = aa.env.getValue("CapModel");
 //sync the transactional contact to the reference contact
 try{
 	var capId = cap.getCapID();
-	var ownerContact = getContactObj(capId, "Owner");
+	var ownerContact = getContactObj(capId, "Owner"); 
 	if(ownerContact){
 		ownerContact.syncCapContactToReference();
 	}
