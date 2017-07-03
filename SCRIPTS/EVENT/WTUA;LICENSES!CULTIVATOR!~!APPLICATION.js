@@ -1,6 +1,17 @@
-//lwacht: send a deficiency email when the status is "Additional Information Needed"
+//lwacht: send a deficiency email when the status is "Additional Information Needed" and set the expiration date
+//and task due date to ninety days in the future
 try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		//set due date and expiration date
+		editAppSpecific("App Expiry Date", dateAddMonths(null,3));
+		if(isTaskStatus("Administrative Review", "Additional Information Needed") || isTaskStatus("Administrative Review","Incomplete Response")){
+			editTaskDueDate("Administrative Review", dateAddMonths(null,3));
+			activateTask("Administrative Review");
+		}
+		if(isTaskStatus("Owner Application Reviews", "Additional Information Needed") || isTaskStatus("Owner Application Reviews","Incomplete Response")){
+			editTaskDueDate("Owner Application Reviews", dateAddMonths(null,3));
+			activateTask("Owner Application Reviews");
+		}
 		var emailPriReport = false;
 		var emailDRPReport = false;
 		var priContact = getContactObj(capId,"Primary Contact");
