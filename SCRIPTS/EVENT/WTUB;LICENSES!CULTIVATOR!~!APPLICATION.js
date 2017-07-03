@@ -1,14 +1,17 @@
-//lwacht
-//do not allow the application intake task to be closed until all
-//documents have been uploaded
+//lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
+//display the deficiency report for printing
 try{
-	if("Application Intake".equals(wfTask) && matches(wfStatus, "Complete", "Ready to Pay", "Board Review Required") && !isTaskStatus("Application Intake", "All Documents Received")){
-		cancel=true;
-		showMessage=true;
-		comment("<font color='blue'>All documents must be uploaded before continuing.</font");
-		comment("<font color='black'></font");
+	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		showDebug=false;
+		var priContact = getContactObj(capId,"Primary Contact");
+		if(priContact){
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+			if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+				displayReport("ACA Permit", "agencyid", servProvCode,"capid", capId.getCustomID());
+			}
+		}
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Required Documents: " + err.message);
+	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
 	logDebug(err.stack);
 }
