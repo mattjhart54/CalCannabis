@@ -8,13 +8,10 @@ try{
 			tblRow["Resolution"] = "";
 			tblRow["Additional Notes"] = "";
 			tblRow["Status"] = "Deficienct";	
-			addToASITable("Deficiencies",tblRow,parentCapId);
+			addToASITable("DEFICIENCIES",tblRow,parentCapId);
 		}
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Owner Deficiency: " + err.message);
 	logDebug(err.stack);
 }
-
-
-
