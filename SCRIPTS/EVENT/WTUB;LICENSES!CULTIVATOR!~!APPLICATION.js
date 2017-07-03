@@ -26,3 +26,49 @@ try{
 	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
 	logDebug(err.stack);
 }
+
+//lwacht: all owner records need to be updated before this task can be updated
+try{
+	if("Owner Application Reviews".equals(wfTask)){
+		var ownerUpdated=false;
+		var notUpdated = false;
+		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
+		if(arrChild){
+			for(ch in arrChild){
+				var currCap = capId;
+				capId = arrChild[ch];
+				if(!isTaskActive("Owner Application Review")){
+					ownerUpdated=true;
+				}else{
+					if(!notUpdated){
+						notUpdated= arrChild[ch].getCustomID();
+					}else {
+						notUpdated= "; " + arrChild[ch].getCustomID();
+					}
+				}
+			}
+			capId = currCap;
+			if(!ownerUpdated){
+				cancel=true;
+				showMessage=true;
+				comment("The following owner record(s) need to be updated before continuing: " + notUpdated);
+			}
+		}
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Check owner update: " + err.message);
+	logDebug(err.stack);
+}
+
+
+//lwacht: license can only be issued from PRA
+try{
+	if("License Issuance".equals(wfTask) && "Issued".equals(wfStatus)){
+		cancel=true;
+		showMessage=true;
+		comment("The license can only be issued upon payment of fees.");
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Stop license issuance: " + err.message);
+	logDebug(err.stack);
+}
