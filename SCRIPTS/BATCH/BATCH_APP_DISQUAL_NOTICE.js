@@ -1,28 +1,10 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program: Application Expiration
-| Client:  Pima County
+| Program: BATCH_APP_DISQUAL_NOTICE
+| Client:  CDFA_CalCannabis
 |
 | Version 1.0 - Base Version. 
 |
-| Script to run nightly to find Building records with the an ASI field applicantExpiration in a
-| date range. 
-|
-| Update the application status to Expired - Application
-| Add a notice condition to the record
-| Also add this notice to the revision children (specBldgRecd)
-| Also send a notice to the customer of the expiration
-| Also expire Site/Flood Plain Use Permit/NA/NA application (specBldgRecd and Site Construction Building) child records
-|
-| Building (specBldgRecd) i.e. 	Building!Buildings!NA!NA 
-|	Building!Manufactured!NA!NA 
-|	Building!Other Structures!NA!NA 
-|	Building!Site Work!NA!NA 
-|	Building!ElecMech!NA!NA 
-| Building!Model!NA!NA
-| Site!Site Construction Building!NA!NA
-| Site!Tentative Plat!NA!NA
-| Site!Site Construction!NA!NA!
-| Site!Final Plat!NA!NA
+| Script to run nightly to send thirty day notification on applications requiring more information
 | 
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
