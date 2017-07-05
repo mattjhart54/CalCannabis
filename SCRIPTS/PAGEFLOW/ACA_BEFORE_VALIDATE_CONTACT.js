@@ -102,7 +102,7 @@ try {
 			}
 		}
 		//lwacht: changed logic to check for DRP *or* applicant
-		if(contactFnd == false && (drpFnd == true || appFnd == true) {
+		if(contactFnd == false && (drpFnd == true || appFnd == true)) {
 			cancel = true;
 			showMessage = true;
 			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
