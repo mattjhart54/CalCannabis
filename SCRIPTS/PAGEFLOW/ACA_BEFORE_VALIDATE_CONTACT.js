@@ -81,7 +81,7 @@ try {
 	if(resCurUser.getSuccess()){
 		var contactFnd = false
 		var drpFnd = false;
-		var pcFnd = false;
+		var appFnd = false;
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
 		var contactList = cap.getContactsGroup();
@@ -95,13 +95,14 @@ try {
 				if(contType == "Designated Responsible Party")
 					drpFnd = true;
 				if(contType == "Applicant")
-					pcFnd = true;
+					appFnd = true;
 				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
-					contactFnd = true
+					contactFnd = true;
 				}
 			}
 		}
-		if(contactFnd == false && drpFnd == true && pcFnd == true) {
+		//lwacht: changed logic to check for DRP *or* applicant
+		if(contactFnd == false && (drpFnd == true || appFnd == true) {
 			cancel = true;
 			showMessage = true;
 			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
