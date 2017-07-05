@@ -115,7 +115,8 @@ try{
 			var correctFirstName = false;
 			tblOwner.push(OWNERS[row]);
 			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
-			var ownEmail = OWNERS[row]["Email Address"].toLowerCase();
+			var ownerEmail = ""+OWNERS[row]["Email Address"];
+			ownEmail = ownerEmail.toLowerCase();
 			qryPeople.setEmail(ownEmail);
 			var ownFName = ""+OWNERS[row]["First Name"];
 			var ownLName = ""+OWNERS[row]["Last Name"];
@@ -193,7 +194,7 @@ try{
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_OWNER_TABLE: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + br + err.message+ br + err.stack);
 }
 
 
