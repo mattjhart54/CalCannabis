@@ -1,17 +1,6 @@
-//lwacht: send a deficiency email when the status is "Additional Information Needed" and set the expiration date
-//and task due date to ninety days in the future
+//lwacht: send a deficiency email when the status is "Additional Information Needed" 
 try{
-	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
-		//set due date and expiration date
-		editAppSpecific("App Expiry Date", dateAddMonths(null,3));
-		if(isTaskStatus("Administrative Review", "Additional Information Needed") || isTaskStatus("Administrative Review","Incomplete Response")){
-			editTaskDueDate("Administrative Review", dateAddMonths(null,3));
-			activateTask("Administrative Review");
-		}
-		if(isTaskStatus("Owner Application Reviews", "Additional Information Needed") || isTaskStatus("Owner Application Reviews","Incomplete Response")){
-			editTaskDueDate("Owner Application Reviews", dateAddMonths(null,3));
-			activateTask("Owner Application Reviews");
-		}
+	if("Deficiency Letter Sent".equals(wfStatus)){
 		var emailPriReport = false;
 		var emailDRPReport = false;
 		var priContact = getContactObj(capId,"Primary Contact");
@@ -188,6 +177,41 @@ try{
 	logDebug(err.stack);
 }
 
+// lwacht: set the expiration date and task due date to ninety days in the future
+try{
+	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		//set due date and expiration date
+		editAppSpecific("App Expiry Date", dateAddMonths(null,3));
+		if(isTaskStatus("Administrative Review", "Additional Information Needed") || isTaskStatus("Administrative Review","Incomplete Response")){
+			editTaskDueDate("Administrative Review", dateAddMonths(null,3));
+			activateTask("Administrative Review");
+		}
+		if(isTaskStatus("Owner Application Reviews", "Additional Information Needed") || isTaskStatus("Owner Application Reviews","Incomplete Response")){
+			editTaskDueDate("Owner Application Reviews", dateAddMonths(null,3));
+			activateTask("Owner Application Reviews");
+		}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Expiry Date: " + err.message);
+	logDebug(err.stack);
+}
+
+// lwacht: set the expiration date and task due date to ninety days in the future
+try{
+	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		//set due date and expiration date
+		editAppSpecific("App Expiry Date", dateAddMonths(null,3));
+		if(isTaskStatus("Scientific Review", "Additional Information Needed") || isTaskStatus("Scientific Review","Incomplete Response")){
+			editTaskDueDate("Scientific Review", dateAddMonths(null,3));
+			activateTask("Scientific Review");
+		}
+		if(isTaskStatus("CEQA Review", "Additional Information Needed") || isTaskStatus("CEQA Review","Incomplete Response")){
+			editTaskDueDate("CEQA Review", dateAddMonths(null,3));
+			activateTask("CEQA Review");
+		}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Science Expiry Date: " + err.message);
+	logDebug(err.stack);
+}
 
 
 //lwacht

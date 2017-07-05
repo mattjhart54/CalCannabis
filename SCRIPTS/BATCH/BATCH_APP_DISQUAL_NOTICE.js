@@ -5,7 +5,7 @@
 | Version 1.0 - Base Version. 
 |
 | Script to run nightly to send thirty day notification on applications requiring more information
-| 
+| Batch job name: LCA_App_Disqual_Notif
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
 |
