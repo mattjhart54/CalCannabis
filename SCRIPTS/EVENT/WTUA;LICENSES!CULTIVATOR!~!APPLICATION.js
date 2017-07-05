@@ -182,11 +182,11 @@ try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
 		editAppSpecific("App Expiry Date", dateAddMonths(null,3));
-		if(taskStatus("Administrative Review")"Additional Information Needed" || taskStatus("Administrative Review")=="Incomplete Response"){
+		if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
 			editTaskDueDate("Administrative Review", dateAddMonths(null,3));
 			activateTask("Administrative Review");
 		}
-		if(taskStatus("Owner Application Reviews")=="Additional Information Needed" || taskStatus("Owner Application Reviews")=="Incomplete Response"){
+		if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
 			editTaskDueDate("Owner Application Reviews", dateAddMonths(null,3));
 			activateTask("Owner Application Reviews");
 		}
@@ -201,11 +201,11 @@ try{
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
 		editAppSpecific("App Expiry Date", dateAddMonths(null,3));
-		if(taskStatus("Scientific Review")=="Additional Information Needed" || taskStatus("Scientific Review")=="Incomplete Response"){
+		if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
 			editTaskDueDate("Scientific Review", dateAddMonths(null,3));
 			activateTask("Scientific Review");
 		}
-		if(taskStatus("CEQA Review")=="Additional Information Needed" || taskStatus("CEQA Review")=="Incomplete Response"){
+		if(matches(taskStatus("CEQA Review"),"Additional Information Needed","Incomplete Response")){
 			editTaskDueDate("CEQA Review", dateAddMonths(null,3));
 			activateTask("CEQA Review");
 		}
