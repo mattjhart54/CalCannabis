@@ -1,3 +1,18 @@
+//lwacht: update altid based on altId assigned when the record was created
+try{
+	newAltId = AInfo["AltId"];
+	var updAltId = aa.cap.updateCapAltID(capId,newAltId);
+	if(!updAltId.getSuccess()){
+		logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
+	}else{
+		logDebug("Deficiency record ID updated to : " + newAltId);
+	}
+} catch(err){
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/AMENDMENT: AltId Update: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/AMENDMENT: AltId Update: "+ startDate, capId + br + err.message+ br+ err.stack);
+}
+
 //lwacht
 //notify processor(s) that the amendment record has been submitted
 try{
@@ -59,7 +74,7 @@ try{
 					var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 					var taskUpdater = taskUpdaterModel.getOutput(); 
 					staffEmail = taskUpdater.email;
-					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentCapId, "The deficiency report " + capIDString + " has been submitted.") ;
+					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 				}
 			}else{
 				logDebug("Error occurred getting taskItemScriptModel: CEQA Review: " + taskItemScriptModel.getErrorMessage());
@@ -76,17 +91,3 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/AMENDMENT: Notify Processor: "+ startDate, capId + br + err.message+ br+ err.stack);
 }
 
-//lwacht: update altid based on altId assigned when the record was created
-try{
-	var newAltId = AInfo["AltId"];
-	var updAltId = aa.cap.updateCapAltID(capId,newAltId);
-	if(!updAltId.getSuccess()){
-		logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
-	}else{
-		logDebug("Deficiency record ID updated to : " + newAltId);
-	}
-} catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/AMENDMENT: AltId Update: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/AMENDMENT: AltId Update: "+ startDate, capId + br + err.message+ br+ err.stack);
-}
