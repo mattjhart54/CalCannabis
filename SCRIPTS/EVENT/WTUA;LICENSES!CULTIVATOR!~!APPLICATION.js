@@ -49,6 +49,7 @@ try{
 					}else{
 						logDebug("Could not link applications: " + resCreateRelat.getErrorMessage());
 					}
+					editAppSpecific("ParentCapId", capIDString,newDefId);
 					copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
 					copyContactsByType(capId, newDefId,"Designated Responsible Party");
 					copyContactsByType(capId, newDefId,"Primary Contact");
@@ -66,6 +67,7 @@ try{
 					if(!updAltId.getSuccess()){
 						logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
 					}else{
+						editAppSpecific("AltId", newAltId,newDefId);
 						logDebug("Deficiency record ID updated to : " + newAltId);
 					}
 					for(rec in childOwner){
@@ -90,8 +92,9 @@ try{
 								}else{
 									logDebug("Could not link applications: " + resOCreateRelat.getErrorMessage());
 								}
+								editAppSpecific("ParentCapId", capIDString,newODefId);
 								copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "CONVICTIONS", "ATTACHMENTS"]);
-								copyContacts(capId, newDefId);
+								copyContacts(capId, newODefId);
 								editContactType("Owner","Primary Contact",newODefId);
 								//get the current number of deficiency children to set the AltId
 								var childOAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
@@ -108,6 +111,7 @@ try{
 								if(!updOAltId.getSuccess()){
 									logDebug("Error updating Owner Alt Id: " + newOAltId + ":: " +updOAltId.getErrorMessage());
 								}else{
+									editAppSpecific("AltId", newAltId,newOAltId);
 									logDebug("Deficiency owner record ID updated to : " + newOAltId);
 								}
 							}
@@ -177,7 +181,7 @@ try{
 	logDebug(err.stack);
 }
 
-// lwacht: set the expiration date and task due date to ninety days in the future
+// lwacht: set the Admin expiration date and task due date to ninety days in the future
 try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
@@ -196,7 +200,7 @@ try{
 	logDebug(err.stack);
 }
 
-// lwacht: set the expiration date and task due date to ninety days in the future
+// lwacht: set the science expiration date and task due date to ninety days in the future
 try{
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
