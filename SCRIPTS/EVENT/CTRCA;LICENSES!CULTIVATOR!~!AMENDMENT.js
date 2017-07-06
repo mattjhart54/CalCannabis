@@ -1,6 +1,6 @@
 //lwacht: update altid based on altId assigned when the record was created
 try{
-	var newAltId = AInfo["AltId"];
+	newAltId = AInfo["AltId"];
 	var updAltId = aa.cap.updateCapAltID(capId,newAltId);
 	if(!updAltId.getSuccess()){
 		logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
@@ -35,7 +35,7 @@ try{
 					var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 					var taskUpdater = taskUpdaterModel.getOutput(); 
 					staffEmail = taskUpdater.email;
-					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentCapId, "The deficiency report " + capIDString + " has been submitted.") ;
+					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 				}
 			}else{
 				logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
@@ -48,7 +48,7 @@ try{
 					var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 					var taskUpdater = taskUpdaterModel.getOutput(); 
 					staffEmail = taskUpdater.email;
-					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentCapId, "The deficiency report " + capIDString + " has been submitted.") ;
+					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 				}
 			}else{
 				logDebug("Error occurred getting taskItemScriptModel: Owner Application Reviews: " + taskItemScriptModel.getErrorMessage());
@@ -61,7 +61,7 @@ try{
 					var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 					var taskUpdater = taskUpdaterModel.getOutput(); 
 					staffEmail = taskUpdater.email;
-					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + capIDString + " has been submitted.") ;
+					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 				}
 			}else{
 				logDebug("Error occurred getting taskItemScriptModel: Scientific Review: " + taskItemScriptModel.getErrorMessage());
@@ -74,7 +74,7 @@ try{
 					var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 					var taskUpdater = taskUpdaterModel.getOutput(); 
 					staffEmail = taskUpdater.email;
-					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + capIDString + " has been submitted.") ;
+					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 				}
 			}else{
 				logDebug("Error occurred getting taskItemScriptModel: CEQA Review: " + taskItemScriptModel.getErrorMessage());
