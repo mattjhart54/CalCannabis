@@ -4,7 +4,12 @@ try{
 	parentAltId = AInfo["ParentCapId"];
 	if(parentAltId){
 		parentCapId = aa.cap.getCapID(parentAltId);
-		addParent(parentCapId);
+		var linkResult = aa.cap.createAppHierarchy(parentCapId, capId);
+		if (linkResult.getSuccess())
+			logDebug("Successfully linked to Parent Application : " + parentAppNum);
+		else
+			logDebug( "**ERROR: linking to parent application parent cap id (" + parentAppNum + "): " + linkResult.getErrorMessage());
+		}
 		var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
 		if(taskItemScriptModel.getSuccess()){
 			var taskItemScript = taskItemScriptModel.getOutput();
