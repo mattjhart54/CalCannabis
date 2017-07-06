@@ -55,13 +55,13 @@ try{
 					//find out how many amendment records there have been so we can create an AltId
 					var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
 					var cntChild = childAmend.length;
-					cntChild ++;
-					logDebug("cntChild: " + cntChild);
+					//cntChild ++;
+					//logDebug("cntChild: " + cntChild);
 					if(cntChild<10){
 						cntChild = "0" +cntChild;
 					}
 					var newAltId = capIDString +"-DEF"+ cntChild;
-					logDebug("newAltId: " + newAltId);
+					//logDebug("newAltId: " + newAltId);
 					var updAltId = aa.cap.updateCapAltID(newDefId,newAltId);
 					if(!updAltId.getSuccess()){
 						logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
@@ -96,14 +96,14 @@ try{
 								//get the current number of deficiency children to set the AltId
 								var childOAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
 								var cntOChild = childOAmend.length;
-								cntOChild ++;
-								logDebug("childOAmend.length: " + childOAmend.length);
-								logDebug("cntOChild: " + cntOChild);
+								//cntOChild ++;
+								//logDebug("childOAmend.length: " + childOAmend.length);
+								//logDebug("cntOChild: " + cntOChild);
 								if(cntOChild<10){
 									cntOChild = "0" +cntOChild;
 								}
 								var newOAltId = thisOwnCapId.getCustomID() +"-DEF"  + cntOChild;
-								logDebug("newOAltId: " + newOAltId);
+								//logDebug("newOAltId: " + newOAltId);
 								var updOAltId = aa.cap.updateCapAltID(newODefId,newOAltId);
 								if(!updOAltId.getSuccess()){
 									logDebug("Error updating Owner Alt Id: " + newOAltId + ":: " +updOAltId.getErrorMessage());
