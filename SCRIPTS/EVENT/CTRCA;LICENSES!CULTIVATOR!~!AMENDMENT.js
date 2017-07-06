@@ -1,9 +1,10 @@
 //lwacht
 //notify processor(s) that the amendment record has been submitted
 try{
-	parentCapId = AInfo["ParentCapId"];
-	if(parentCapId){
-		addParent(parentCapId.getCustomID());
+	parentAltId = AInfo["ParentCapId"];
+	if(parentAltId){
+		addParent(parentAltId);
+		parentCapId = aa.cap.getCapID(parentAltId);
 		var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
 		if(taskItemScriptModel.getSuccess()){
 			var taskItemScript = taskItemScriptModel.getOutput();
