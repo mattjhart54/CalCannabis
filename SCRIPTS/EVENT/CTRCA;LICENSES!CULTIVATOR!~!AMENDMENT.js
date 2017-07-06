@@ -3,6 +3,7 @@
 try{
 	parentCapId = AInfo["ParentCapId"];
 	if(parentCapId){
+		addParent(parentCapId.getCustomID());
 		var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
 		if(taskItemScriptModel.getSuccess()){
 			var taskItemScript = taskItemScriptModel.getOutput();
