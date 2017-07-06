@@ -5,9 +5,9 @@ try{
 	if(parentAltId){
 		parentCapId = aa.cap.getCapID(parentAltId);
 		var linkResult = aa.cap.createAppHierarchy(parentCapId, capId);
-		if (linkResult.getSuccess())
+		if (linkResult.getSuccess()){
 			logDebug("Successfully linked to Parent Application : " + parentAppNum);
-		else
+		}else{
 			logDebug( "**ERROR: linking to parent application parent cap id (" + parentAppNum + "): " + linkResult.getErrorMessage());
 		}
 		var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
