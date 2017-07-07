@@ -1,7 +1,7 @@
 //lwacht
 //send other notifications
 try{
-	if(matches(appStatus, "Disqualified", "Withdrawn", "Denied"){
+	if(matches(appStatus, "Disqualified", "Withdrawn", "Denied")){
 		var emailPriReport = false;
 		var emailDRPReport = false;
 		var priContact = getContactObj(capId,"Primary Contact");
