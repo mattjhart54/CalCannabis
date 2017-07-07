@@ -63,7 +63,7 @@ try{
 
 //lwacht: license can only be issued from PRA
 try{
-	if("License Issuance".equals(wfTask) && "Issued".equals(wfStatus)){
+	if("Application Disposition".equals(wfTask) && "License Issued".equals(wfStatus)){
 		cancel=true;
 		showMessage=true;
 		comment("The license can only be issued upon payment of fees.");

@@ -1,7 +1,7 @@
 //lwacht
 //create the license record, update altid,  and copy DRP and Owner contacts to it
 try{
-	if(balanceDue<=0 && isTaskActive("License Issuance")){
+	if(balanceDue<=0 && isTaskActive("Application Disposition")){
 		var licCapId = createLicense("Active",false);
 		if(licCapId){
 			var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
