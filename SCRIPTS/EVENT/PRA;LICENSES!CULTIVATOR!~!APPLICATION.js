@@ -4,7 +4,19 @@ try{
 	if(balanceDue<=0 && isTaskActive("License Issuance")){
 		var licCapId = createLicense("Active",false);
 		if(licCapId){
-			var expDate = dateAddMonths(null,12);
+			var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
+			var childSupport = false;
+			for(ch in arrChild){
+				if(appHasCondition("Owner History","Applied","Non-compliant Child Support",null)){
+					childSupport = true;
+				}
+				copyContactsByType(arrChild[ch], licCapId, "Individual");
+			}
+			if(childSupport){
+				var expDate = dateAdd(null,120);
+			}else{
+				var expDate = dateAddMonths(null,12);
+			}
 			setLicExpirationDate(licCapId,null,expDate,"Active");
 			if(appTypeArray[2]=="Adult Use"){
 				var newAltFirst = "CAL" + sysDateMMDDYYYY.substr(8,2);
@@ -19,13 +31,13 @@ try{
 			}else{
 				logDebug("License record ID updated to : " + newAltId);
 			}
-			var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
-			for(ch in arrChild){
-				copyContactsByType(arrChild[ch], licCapId, "Individual");
-			}
 			editContactType("Individual", "Owner",licCapId);
 			var contApp = getContactObj(capId, "Applicant");
-			var newAppName = AInfo["Premise County"] + " - " + AInfo["License Type"];
+			if(childSupport){
+				var newAppName = "TEMPORARY LICENSE - " + AInfo["Premise County"] + " - " + AInfo["License Type"];
+			}else{
+				var newAppName = AInfo["Premise County"] + " - " + AInfo["License Type"];
+			}
 			editAppName(newAppName);
 			var contPri = getContactObj(licCapId,"Primary Contact");
 			var currCapId = capId;
