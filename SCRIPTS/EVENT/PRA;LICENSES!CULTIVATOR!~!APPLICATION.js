@@ -36,7 +36,7 @@ try{
 				logDebug("License record ID updated to : " + newAltId);
 			}
 			editContactType("Individual", "Owner",licCapId);
-			//var contApp = getContactObj(capId, "Applicant");
+			var contApp = getContactObj(capId, "Applicant");
 			if(childSupport){
 				var newAppName = "TEMPORARY LICENSE - " + AInfo["Premise County"] + " - " + AInfo["License Type"];
 			}else{
@@ -44,9 +44,9 @@ try{
 			}
 			editAppName(newAppName);
 			var contPri = getContactObj(licCapId,"Primary Contact");
-			capId = licCapId;
-			contactSetPrimary(contPri.seqNumber);
-			capId = currCapId;
+			//capId = licCapId;
+			//contactSetPrimary(contPri.seqNumber);
+			//capId = currCapId;
 			closeTask("License Issuance","Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
 		}else{
 			logDebug("Error creating License record: " + licCapId);
