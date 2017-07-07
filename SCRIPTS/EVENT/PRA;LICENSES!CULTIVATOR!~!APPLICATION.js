@@ -4,14 +4,18 @@ try{
 	if(balanceDue<=0 && isTaskActive("Application Disposition")){
 		var licCapId = createLicense("Active",false);
 		if(licCapId){
+			var currCapId = capId;
 			var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
 			var childSupport = false;
 			for(ch in arrChild){
+				var capId = arrChild[ch];
 				if(appHasCondition("Owner History","Applied","Non-compliant Child Support",null)){
 					childSupport = true;
 				}
+				logDebug("arrChild[ch]: " + arrChild[ch].getCustomID());
 				copyContactsByType(arrChild[ch], licCapId, "Individual");
 			}
+			capId = currCapId;
 			if(childSupport){
 				var expDate = dateAdd(null,120);
 			}else{
@@ -40,7 +44,6 @@ try{
 			}
 			editAppName(newAppName);
 			var contPri = getContactObj(licCapId,"Primary Contact");
-			var currCapId = capId;
 			capId = licCapId;
 			contactSetPrimary(contPri.seqNumber);
 			capId = currCapId;
