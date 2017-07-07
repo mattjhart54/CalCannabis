@@ -15,3 +15,13 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Owner Deficiency: " + err.message);
 	logDebug(err.stack);
 }
+
+//lwacht: if the owner record is noncompliant for child support, add a condition.   
+try{
+	if(matches(wfStatus, "Non-compliant Child Support") && !appHasCondition("Owner History","Applied","Non-compliant Child Support",null)){
+		addStdCondition("Owner History","Non-compliant Child Support");
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Owner Deficiency: " + err.message);
+	logDebug(err.stack);
+}
