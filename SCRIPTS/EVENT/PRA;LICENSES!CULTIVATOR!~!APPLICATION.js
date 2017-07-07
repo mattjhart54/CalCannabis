@@ -36,7 +36,7 @@ try{
 				logDebug("License record ID updated to : " + newAltId);
 			}
 			editContactType("Individual", "Owner",licCapId);
-			var contApp = getContactObj(capId, "Applicant");
+			//var contApp = getContactObj(capId, "Applicant");
 			if(childSupport){
 				var newAppName = "TEMPORARY LICENSE - " + AInfo["Premise County"] + " - " + AInfo["License Type"];
 			}else{
