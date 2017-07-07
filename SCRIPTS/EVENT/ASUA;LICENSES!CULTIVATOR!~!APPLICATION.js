@@ -24,10 +24,7 @@ try{
 			//populate the email notification that will go to the primary contact
 			var eParams = aa.util.newHashtable(); 
 			//addParameter(eParams, "$$wfDateMMDDYYYY$$", wfDateMMDDYYYY);
-			currCapId = capId;
-			capId = newDefId;
 			getACARecordParam4Notification(eParams,acaUrl);
-			capId = currCapId;
 			//var staffUser = new userObj(wfStaffUserID);
 			//staffUser.getEmailTemplateParams(eParams,"scientist")
 			//getWorkflowParams4Notification(eParams);
