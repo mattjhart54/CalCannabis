@@ -66,7 +66,7 @@ try{
 			for(ch in arrChild){
 				var currCap = capId;
 				capId = arrChild[ch];
-				if(!isTaskActive("Owner Application Review")){
+				if(!isTaskActive("Owner Application Review") || matches(taskStatus("Owner Application Review"), "Additional Information Needed", "Incomplete Response")){
 					ownerUpdated=true;
 				}else{
 					if(!notUpdated){
