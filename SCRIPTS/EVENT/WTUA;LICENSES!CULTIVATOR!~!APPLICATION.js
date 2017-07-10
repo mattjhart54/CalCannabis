@@ -220,7 +220,7 @@ try{
 }
 //send other notifications
 try{
-	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Complete")){
+	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed")){
 		var emailPriReport = false;
 		var emailDRPReport = false;
 		var priContact = getContactObj(capId,"Primary Contact");
