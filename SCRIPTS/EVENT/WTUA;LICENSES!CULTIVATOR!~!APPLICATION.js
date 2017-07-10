@@ -164,7 +164,7 @@ try{
 //mhart
 //set appeal expiration date
 try{
-	if(matches("Denied)) {
+	if(matches(wfStatus,"Denied")) {
 			editAppSpecific("Appeal Expiry Date",dateAdd(wfDateMMDDYYYY,30));
 	}
 }catch(err){
