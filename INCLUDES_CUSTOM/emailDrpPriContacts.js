@@ -26,6 +26,7 @@ try{
 	for (var i = 4; i < arguments.length; i = i + 2) {
 		rptParams.put(arguments[i], arguments[i + 1]);
 	}
+	logDebug("rptParams: " + rptParams);
 	var emailPriReport = false;
 	var emailDRPReport = false;
 	var priContact = getContactObj(capId,"Primary Contact");
