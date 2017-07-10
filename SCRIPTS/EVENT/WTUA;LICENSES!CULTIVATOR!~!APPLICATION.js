@@ -156,6 +156,7 @@ try{
 try{
 	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed")){
 		emailDrpPriContacts("LCA_GENERAL_NOTIFICATION", "ACA Permit", wfStatus, capId, "agencyid", servProvCode, "capid", capId.getCustomID());
+	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
 	logDebug(err.stack);
