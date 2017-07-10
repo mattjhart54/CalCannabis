@@ -166,6 +166,7 @@ try{
 try{
 	if(matches(wfStatus,"Denied")) {
 			editAppSpecific("Appeal Expiry Date",dateAdd(wfDateMMDDYYYY,30));
+			editAppSpecific("Denial Letter Sent",wfDateMMDDYYYY);
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Appeal Date: " + err.message);
