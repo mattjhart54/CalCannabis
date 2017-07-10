@@ -218,6 +218,7 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Science Expiry Date: " + err.message);
 	logDebug(err.stack);
 }
+//lwacht
 //send other notifications
 try{
 	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed")){
