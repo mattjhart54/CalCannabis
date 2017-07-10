@@ -161,7 +161,16 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
 	logDebug(err.stack);
 }
-
+//mhart
+//set appeal expiration date
+try{
+	if(matches("Denied)) {
+			editAppSpecific("Appeal Expiry Date",dateAdd(wfDateMMDDYYYY,30));
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Appeal Date: " + err.message);
+	logDebug(err.stack);
+}
 //lwacht
 //create the license record, update altid,  and copy DRP and Owner contacts to it
 /* lwacht: moved to PRA, commenting out for now in case minds are changed.
