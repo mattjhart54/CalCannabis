@@ -8,7 +8,7 @@ try {
 	}
 	addASITable("DEFICIENCIES", DEFICIENCIES)
 	editAppName(AInfo["License Type"]);
-	if(!matches(AInfo["Denial Letter Receipt Date",null,"",object])) {
+	if(!matches(AInfo["Denial Letter Receipt Date",null,""])) {
 		editAppSpecific("Appeal Expiry Date",dateAdd(AInfo["Denial Letter Receipt Date"],30));
 	}
 
