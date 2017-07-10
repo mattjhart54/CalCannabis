@@ -23,7 +23,7 @@ function emailDrpPriContacts(notName, rptName, curStatus, acaCapId) {
 try{
 	// create a hashmap for report parameters
 	var rptParams = aa.util.newHashMap();
-	for (var i = 4; i < arguments.length; i = i + 2) {
+	for (var i = 3; i < arguments.length; i = i + 2) {
 		rptParams.put(arguments[i], arguments[i + 1]);
 	}
 	logDebug("rptParams: " + rptParams);
