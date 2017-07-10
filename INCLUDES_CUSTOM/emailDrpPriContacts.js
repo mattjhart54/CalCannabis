@@ -56,7 +56,11 @@ try{
 		staffUser.getEmailTemplateParams(eParams,"scientist")
 		getWorkflowParams4Notification(eParams);
 		var contPhone = priContact.capContact.phone1;
-		var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
+		if(contPhone){
+			var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
+		}else{
+			var fmtPhone = "";
+		}
 		addParameter(eParams, "$$contactPhone1$$", fmtPhone);
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
