@@ -16,13 +16,14 @@ Parameters:
 	notName: Text: Name of the email template notification
 	rptName: Text: Name of the report
 	curStatus: Text: Status to use for general notification template
+	acaCapId: capId: The capId to use for the ACA URL
 	rptParams: Optional report parameter(s): "agencyid",servProvCode,"capid",myCapId
 ============================================== */
-function emailDrpPriContacts(notName, rptName, curStatus) {
+function emailDrpPriContacts(notName, rptName, curStatus, acaCapId) {
 try{
 	// create a hashmap for report parameters
 	var rptParams = aa.util.newHashMap();
-	for (var i = 2; i < arguments.length; i = i + 2) {
+	for (var i = 4; i < arguments.length; i = i + 2) {
 		rptParams.put(arguments[i], arguments[i + 1]);
 	}
 	var emailPriReport = false;
@@ -48,7 +49,7 @@ try{
 		var eParams = aa.util.newHashtable(); 
 		addParameter(eParams, "$$wfDateMMDDYYYY$$", wfDateMMDDYYYY);
 		currCapId = capId;
-		capId = newDefId;
+		capId = acaCapId;
 		getACARecordParam4Notification(eParams,acaUrl);
 		capId = currCapId;
 		var staffUser = new userObj(wfStaffUserID);
