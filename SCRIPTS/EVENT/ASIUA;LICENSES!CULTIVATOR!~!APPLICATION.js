@@ -8,9 +8,7 @@ try {
 	}
 	addASITable("DEFICIENCIES", DEFICIENCIES)
 	editAppName(AInfo["License Type"]);
-	if(!matches(AInfo["Denial Letter Receipt Date"],null,"", undefined)) {
-		editAppSpecific("Appeal Expiry Date",dateAdd(AInfo["Denial Letter Receipt Date"],30));
-	}
+
 
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASIUA: Licenses/Cultivation/*/Application: " + err.message);
