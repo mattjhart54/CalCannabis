@@ -43,11 +43,14 @@ try{
 				var newAppName = AInfo["Premise County"] + " - " + AInfo["License Type"];
 			}
 			editAppName(newAppName);
+			updateShortNotes(getShortNotes(),licCapId);
+			updateWorkDesc(workDescGet(capId),licCapId);
 			var contPri = getContactObj(licCapId,"Primary Contact");
 			//capId = licCapId;
 			//contactSetPrimary(contPri.seqNumber);
 			//capId = currCapId;
 			closeTask("License Issuance","Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
+			emailDrpPriContacts("LCA_DEFICIENCY", "ACA Permit", "License Issued", capId, "agencyid", servProvCode, "capid", capId.getCustomID());
 		}else{
 			logDebug("Error creating License record: " + licCapId);
 		}
