@@ -8,8 +8,8 @@ try {
 	}
 	addASITable("DEFICIENCIES", DEFICIENCIES)
 	editAppName(AInfo["License Type"]);
-	if(!matches(AInfo["Denial Letter Receipt Date",null,""])) {
-		editAppSpecific("Appeal Expiry Date",dateAdd(AInfo["Denial Letter Receipt Date"],30))
+	if(!matches(AInfo["Denial Letter Receipt Date",null,"",object])) {
+		editAppSpecific("Appeal Expiry Date",dateAdd(AInfo["Denial Letter Receipt Date"],30));
 	}
 
 }catch (err){
