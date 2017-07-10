@@ -1,7 +1,7 @@
 //lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
 //display the deficiency report for printing
 try{
-	if(balanceDue<=0) && isTaskActive("Application Disposition"){
+	if(balanceDue<=0 && isTaskActive("Application Disposition")){
 		showDebug=false;
 		var priContact = getContactObj(capId,"Primary Contact");
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
