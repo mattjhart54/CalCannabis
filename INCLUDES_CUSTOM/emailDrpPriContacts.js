@@ -24,7 +24,7 @@ function emailDrpPriContacts(callingPgm, notName, rptName, curStatus, acaCapId) 
 try{
 	// create a hashmap for report parameters
 	var rptParams = aa.util.newHashMap();
-	for (var i = 4; i < arguments.length; i = i + 2) {
+	for (var i = 5; i < arguments.length; i = i + 2) {
 		rptParams.put(arguments[i], arguments[i + 1]);
 	}
 	//logDebug("rptParams: " + rptParams);
@@ -49,7 +49,7 @@ try{
 	if(emailPriReport || emailDRPReport){
 		//populate the email notification that will go to the primary contact
 		var eParams = aa.util.newHashtable(); 
-		logDebug("callingPgm: " + callingPgm);
+		//logDebug("callingPgm: " + callingPgm);
 		if(callingPgm=="WTUA"){
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			var currCapId = capId;
