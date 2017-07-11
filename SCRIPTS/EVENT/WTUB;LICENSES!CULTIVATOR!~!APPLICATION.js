@@ -60,7 +60,7 @@ try{
 try{
 	if("Owner Application Reviews".equals(wfTask) && "Owner Application Reviews Completed".equals(wfStatus)){
 		var ownerUpdated=true;
-		var notUpdated = false;
+		var notUpdated = "Yes";
 		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
 		if(arrChild){
 			for(ch in arrChild){
@@ -68,11 +68,10 @@ try{
 				capId = arrChild[ch];
 				if(isTaskActive("Owner Application Review")){
 					ownerUpdated=false;
-				}else{
-					if(!notUpdated){
+					if(notUpdated=="Yes"){
 						notUpdated= arrChild[ch].getCustomID();
 					}else {
-						notUpdated= "; " + arrChild[ch].getCustomID();
+						notUpdated += "; " + arrChild[ch].getCustomID();
 					}
 				}
 			}
