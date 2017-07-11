@@ -59,50 +59,53 @@ try{
 				editAppSpecific("AltId", newAltId,newDefId);
 				logDebug("Deficiency record ID updated to : " + newAltId);
 			}
-			var childOwner = getChildren("Licenses/Cultivator/*/Owner Application");
-			for(rec in childOwner){
-				//now process the child owner applications for any deficiencies
-				var thisOwnCapId = childOwner[rec];
-				var ownCap = aa.cap.getCap(thisOwnCapId).getOutput();
-				var ownAppStatus = ownCap.getCapStatus();
-				var ownAppName = ownCap.getSpecialText();
-				if(ownAppStatus=="Additional Information Needed"){
-					var newOwnAppName = "Deficiency: " + ownAppName;
-					//create child deficiency record for the owner
-					ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
-					ctm.setGroup("Licenses");
-					ctm.setType("Cultivator");
-					ctm.setSubType("Medical");
-					ctm.setCategory("Amendment");
-					var newODefId = aa.cap.createSimplePartialRecord(ctm,newOwnAppName, "INCOMPLETE CAP").getOutput();
-					if(newODefId){
-						var resOCreateRelat = aa.cap.createAppHierarchy(thisOwnCapId, newODefId); 
-						if (resOCreateRelat.getSuccess()){
-							logDebug("Child application successfully linked");
-						}else{
-							logDebug("Could not link applications: " + resOCreateRelat.getErrorMessage());
-						}
-						editAppSpecific("ParentCapId", capIDString,newODefId);
-						copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "CONVICTIONS", "ATTACHMENTS"]);
-						copyContacts(capId, newODefId);
-						editContactType("Owner","Primary Contact",newODefId);
-						//get the current number of deficiency children to set the AltId
-						var childOAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
-						var cntOChild = childOAmend.length;
-						//cntOChild ++;
-						//logDebug("childOAmend.length: " + childOAmend.length);
-						//logDebug("cntOChild: " + cntOChild);
-						if(cntOChild<10){
-							cntOChild = "0" +cntOChild;
-						}
-						var newOAltId = thisOwnCapId.getCustomID() +"-DEF"  + cntOChild;
-						//logDebug("newOAltId: " + newOAltId);
-						var updOAltId = aa.cap.updateCapAltID(newODefId,newOAltId);
-						if(!updOAltId.getSuccess()){
-							logDebug("Error updating Owner Alt Id: " + newOAltId + ":: " +updOAltId.getErrorMessage());
-						}else{
-							editAppSpecific("AltId", newAltId,newOAltId);
-							logDebug("Deficiency owner record ID updated to : " + newOAltId);
+			//only create a record if the owner app task on the parent says you should
+			if(taskStatus("Additional Information Needed", null,"Owner Application Reviews") || taskStatus("Additional Information Needed", null,"Incomplete Response")){
+				var childOwner = getChildren("Licenses/Cultivator/*/Owner Application");
+				for(rec in childOwner){
+					//now process the child owner applications for any deficiencies
+					var thisOwnCapId = childOwner[rec];
+					var ownCap = aa.cap.getCap(thisOwnCapId).getOutput();
+					var ownAppStatus = ownCap.getCapStatus();
+					var ownAppName = ownCap.getSpecialText();
+					if(ownAppStatus=="Additional Information Needed"){
+						var newOwnAppName = "Deficiency: " + ownAppName;
+						//create child deficiency record for the owner
+						ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
+						ctm.setGroup("Licenses");
+						ctm.setType("Cultivator");
+						ctm.setSubType("Medical");
+						ctm.setCategory("Amendment");
+						var newODefId = aa.cap.createSimplePartialRecord(ctm,newOwnAppName, "INCOMPLETE CAP").getOutput();
+						if(newODefId){
+							var resOCreateRelat = aa.cap.createAppHierarchy(thisOwnCapId, newODefId); 
+							if (resOCreateRelat.getSuccess()){
+								logDebug("Child application successfully linked");
+							}else{
+								logDebug("Could not link applications: " + resOCreateRelat.getErrorMessage());
+							}
+							editAppSpecific("ParentCapId", thisOwnCapId.getCustomID(),newODefId);
+							copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "CONVICTIONS", "ATTACHMENTS"]);
+							copyContacts(capId, newODefId);
+							editContactType("Owner","Primary Contact",newODefId);
+							//get the current number of deficiency children to set the AltId
+							var childOAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
+							var cntOChild = childOAmend.length;
+							//cntOChild ++;
+							//logDebug("childOAmend.length: " + childOAmend.length);
+							//logDebug("cntOChild: " + cntOChild);
+							if(cntOChild<10){
+								cntOChild = "0" +cntOChild;
+							}
+							var newOAltId = thisOwnCapId.getCustomID() +"-DEF"  + cntOChild;
+							//logDebug("newOAltId: " + newOAltId);
+							var updOAltId = aa.cap.updateCapAltID(newODefId,newOAltId);
+							if(!updOAltId.getSuccess()){
+								logDebug("Error updating Owner Alt Id: " + newOAltId + ":: " +updOAltId.getErrorMessage());
+							}else{
+								editAppSpecific("AltId", newOAltId,newODefId);
+								logDebug("Deficiency owner record ID updated to : " + newOAltId);
+							}
 						}
 					}
 				}

@@ -27,57 +27,66 @@ try{
 			}else{
 				logDebug( "**ERROR: linking to parent application parent cap id (" + parentAppNum + "): " + linkResult.getErrorMessage());
 			}
-			var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
-			if(taskItemScriptModel.getSuccess()){
-				var taskItemScript = taskItemScriptModel.getOutput();
-				if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
-					var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
-					var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-					var taskUpdater = taskUpdaterModel.getOutput(); 
-					staffEmail = taskUpdater.email;
-					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+			var parCap = aa.cap.getCap(parentCapId).getOutput();
+			parAppType = parCap.getCapType();
+			parAppTypeString = appTypeResult.toString();
+			parAppTypeArray = appTypeString.split("/");
+			if(parAppTypeArray[3]=="Application"){
+				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
+				if(taskItemScriptModel.getSuccess()){
+					var taskItemScript = taskItemScriptModel.getOutput();
+					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
+						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
+						var taskUpdater = taskUpdaterModel.getOutput(); 
+						staffEmail = taskUpdater.email;
+						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+					}
+				}else{
+					logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
 				}
 			}else{
-				logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
+				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Owner Application Review");
+				if(taskItemScriptModel.getSuccess()){
+					var taskItemScript = taskItemScriptModel.getOutput();
+					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
+						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
+						var taskUpdater = taskUpdaterModel.getOutput(); 
+						staffEmail = taskUpdater.email;
+						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+					}
+				}else{
+					logDebug("Error occurred getting taskItemScriptModel: Owner Application Review: " + taskItemScriptModel.getErrorMessage());
+				}
 			}
-			var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Owner Application Reviews");
-			if(taskItemScriptModel.getSuccess()){
-				var taskItemScript = taskItemScriptModel.getOutput();
-				if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
-					var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
-					var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-					var taskUpdater = taskUpdaterModel.getOutput(); 
-					staffEmail = taskUpdater.email;
-					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+			if(parAppTypeArray[3]=="Application"){
+				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Scientific Review");
+				if(taskItemScriptModel.getSuccess()){
+					var taskItemScript = taskItemScriptModel.getOutput();
+					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
+						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
+						var taskUpdater = taskUpdaterModel.getOutput(); 
+						staffEmail = taskUpdater.email;
+						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+					}
+				}else{
+					logDebug("Error occurred getting taskItemScriptModel: Scientific Review: " + taskItemScriptModel.getErrorMessage());
 				}
-			}else{
-				logDebug("Error occurred getting taskItemScriptModel: Owner Application Reviews: " + taskItemScriptModel.getErrorMessage());
-			}
-			var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Scientific Review");
-			if(taskItemScriptModel.getSuccess()){
-				var taskItemScript = taskItemScriptModel.getOutput();
-				if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
-					var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
-					var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-					var taskUpdater = taskUpdaterModel.getOutput(); 
-					staffEmail = taskUpdater.email;
-					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "CEQA Review");
+				if(taskItemScriptModel.getSuccess()){
+					var taskItemScript = taskItemScriptModel.getOutput();
+					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
+						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
+						var taskUpdater = taskUpdaterModel.getOutput(); 
+						staffEmail = taskUpdater.email;
+						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+					}
+				}else{
+					logDebug("Error occurred getting taskItemScriptModel: CEQA Review: " + taskItemScriptModel.getErrorMessage());
 				}
-			}else{
-				logDebug("Error occurred getting taskItemScriptModel: Scientific Review: " + taskItemScriptModel.getErrorMessage());
-			}
-			var taskItemScriptModel=aa.workflow.getTask(parentCapId, "CEQA Review");
-			if(taskItemScriptModel.getSuccess()){
-				var taskItemScript = taskItemScriptModel.getOutput();
-				if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
-					var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
-					var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-					var taskUpdater = taskUpdaterModel.getOutput(); 
-					staffEmail = taskUpdater.email;
-					email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
-				}
-			}else{
-				logDebug("Error occurred getting taskItemScriptModel: CEQA Review: " + taskItemScriptModel.getErrorMessage());
 			}
 		}else{
 			logDebug("Error occurred getting resParCapId: " + resParCapId.getErrorMessage());
