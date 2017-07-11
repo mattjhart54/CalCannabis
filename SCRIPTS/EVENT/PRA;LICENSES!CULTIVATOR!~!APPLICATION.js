@@ -38,14 +38,14 @@ try{
 			//editContactType("Individual", "Owner",licCapId);
 			//var contApp = getContactObj(capId, "Applicant");
 			if(childSupport){
-				var newAppName = "TEMPORARY LICENSE - " + AInfo["Premise County"] + " - " + AInfo["License Type"];
+				var newAppName = "TEMPORARY - " + AInfo["Premise County"] + " - " + AInfo["License Type"];
 			}else{
 				var newAppName = AInfo["Premise County"] + " - " + AInfo["License Type"];
 			}
 			logDebug("workDescGet(capId): " + workDescGet(capId));
 			logDebug("getShortNotes(): " + getShortNotes());
 			logDebug("newAppName: " + newAppName);
-			editAppName(newAppName);
+			editAppName(newAppName,licCapId);
 			updateShortNotes(getShortNotes(),licCapId);
 			updateWorkDesc(workDescGet(capId),licCapId);
 			var contPri = getContactObj(licCapId,"Primary Contact");
