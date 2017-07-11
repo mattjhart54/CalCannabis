@@ -85,7 +85,7 @@ try{
 		var drpEmail = ""+drpContact.capContact.getEmail();
 		var priEmail = ""+priContact.capContact.getEmail();
 		var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
-		if(matches(rptName, null, false, "", "undefined"){
+		if(matches(rptName, null, false, "", "undefined")){
 			var rFiles = null;
 		}else{
 			var rFile;
@@ -93,6 +93,7 @@ try{
 			if (rFile) {
 				var rFiles = [];
 				rFiles.push(rFile);
+			}
 		}
 		if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
 			sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
