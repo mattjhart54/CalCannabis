@@ -58,16 +58,16 @@ try{
 
 //lwacht: all owner records need to be updated before this task can be updated
 try{
-	if("Owner Application Reviews".equals(wfTask)){
-		var ownerUpdated=false;
+	if("Owner Application Reviews".equals(wfTask) && "Owner Application Reviews Completed".equals(wfStatus)){
+		var ownerUpdated=true;
 		var notUpdated = false;
 		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
 		if(arrChild){
 			for(ch in arrChild){
 				var currCap = capId;
 				capId = arrChild[ch];
-				if(!isTaskActive("Owner Application Review") || matches(taskStatus("Owner Application Review"), "Additional Information Needed", "Incomplete Response")){
-					ownerUpdated=true;
+				if(isTaskActive("Owner Application Review")){
+					ownerUpdated=false;
 				}else{
 					if(!notUpdated){
 						notUpdated= arrChild[ch].getCustomID();
