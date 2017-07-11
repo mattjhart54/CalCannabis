@@ -13,13 +13,14 @@ Script Type : (EMSE, EB, Pageflow, Batch): EMSE
 General Purpose/Client Specific : General
 Client developed for : CDFA_CalCannabis
 Parameters:
+	callingPgm: Text: Master script calling this function
 	notName: Text: Name of the email template notification
 	rptName: Text: Name of the report
 	curStatus: Text: Status to use for general notification template
 	acaCapId: capId: The capId to use for the ACA URL
 	rptParams: Optional report parameter(s): "agencyid",servProvCode,"capid",myCapId
 ============================================== */
-function emailDrpPriContacts(notName, rptName, curStatus, acaCapId) {
+function emailDrpPriContacts(callingPgm, notName, rptName, curStatus, acaCapId) {
 try{
 	// create a hashmap for report parameters
 	var rptParams = aa.util.newHashMap();
@@ -48,14 +49,16 @@ try{
 	if(emailPriReport || emailDRPReport){
 		//populate the email notification that will go to the primary contact
 		var eParams = aa.util.newHashtable(); 
-		addParameter(eParams, "$$sysDateMMDDYYYY$$", sysDateMMDDYYYY);
-		var currCapId = capId;
-		capId = acaCapId;
-		getACARecordParam4Notification(eParams,acaUrl);
-		capId = currCapId;
-		var staffUser = new userObj(wfStaffUserID);
-		staffUser.getEmailTemplateParams(eParams,"scientist")
-		getWorkflowParams4Notification(eParams);
+		if(callingPgm=="WTUA"){
+			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
+			var currCapId = capId;
+			capId = acaCapId;
+			getACARecordParam4Notification(eParams,acaUrl);
+			capId = currCapId;
+			var staffUser = new userObj(wfStaffUserID);
+			staffUser.getEmailTemplateParams(eParams,"scientist")
+			getWorkflowParams4Notification(eParams);
+		}
 		var contPhone = priContact.capContact.phone1;
 		if(contPhone){
 			var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
@@ -81,21 +84,24 @@ try{
 		var drpEmail = ""+drpContact.capContact.getEmail();
 		var priEmail = ""+priContact.capContact.getEmail();
 		var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
-		var rFile;
-		rFile = generateReport(capId,rptName,"Licenses",rptParams);
-		if (rFile) {
-			var rFiles = [];
-			rFiles.push(rFile);
-			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
-				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
-			}else{
-				if(emailPriReport){
-					aa.document.sendEmailAndSaveAsDocument(sysFromEmail, priEmail + ";" + priEmail, "", notName, eParams, capId4Email, rFiles,capId);
-				}
-				if(emailDRPReport){
-					aa.document.sendEmailAndSaveAsDocument(sysFromEmail, drpEmail + ";" + priEmail, "", notName, eParams, capId4Email, rFiles,capId);
+		if(matches(rptName, null, false, "", "undefined"){
+			var rFiles = null;
+		}else{
+			var rFile;
+			rFile = generateReport(capId,rptName,"Licenses",rptParams);
+			if (rFile) {
+				var rFiles = [];
+				rFiles.push(rFile);
+		}
+		if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
+			sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
+		}else{
+			if(emailPriReport){
+				aa.document.sendEmailAndSaveAsDocument(sysFromEmail, priEmail + ";" + priEmail, "", notName, eParams, capId4Email, rFiles,capId);
+			}
+			if(emailDRPReport){
+				aa.document.sendEmailAndSaveAsDocument(sysFromEmail, drpEmail + ";" + priEmail, "", notName, eParams, capId4Email, rFiles,capId);
 
-				}
 			}
 		}
 	}
