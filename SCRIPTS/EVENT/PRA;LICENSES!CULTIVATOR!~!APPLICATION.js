@@ -42,6 +42,9 @@ try{
 			}else{
 				var newAppName = AInfo["Premise County"] + " - " + AInfo["License Type"];
 			}
+			logDebug("workDescGet(capId): " + workDescGet(capId));
+			logDebug("getShortNotes(): " + getShortNotes());
+			logDebug("newAppName: " + newAppName);
 			editAppName(newAppName);
 			updateShortNotes(getShortNotes(),licCapId);
 			updateWorkDesc(workDescGet(capId),licCapId);
