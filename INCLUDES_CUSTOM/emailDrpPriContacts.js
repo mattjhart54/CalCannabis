@@ -27,7 +27,7 @@ try{
 	for (var i = 4; i < arguments.length; i = i + 2) {
 		rptParams.put(arguments[i], arguments[i + 1]);
 	}
-	logDebug("rptParams: " + rptParams);
+	//logDebug("rptParams: " + rptParams);
 	var emailPriReport = false;
 	var emailDRPReport = false;
 	var priContact = getContactObj(capId,"Primary Contact");
@@ -49,6 +49,7 @@ try{
 	if(emailPriReport || emailDRPReport){
 		//populate the email notification that will go to the primary contact
 		var eParams = aa.util.newHashtable(); 
+		logDebug("callingPgm: " + callingPgm);
 		if(callingPgm=="WTUA"){
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			var currCapId = capId;
