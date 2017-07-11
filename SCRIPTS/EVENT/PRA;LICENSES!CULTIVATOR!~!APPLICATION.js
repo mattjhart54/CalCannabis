@@ -8,7 +8,7 @@ try{
 			var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
 			var childSupport = false;
 			for(ch in arrChild){
-				var capId = arrChild[ch];
+				capId = arrChild[ch];
 				if(appHasCondition("Owner History","Applied","Non-compliant Child Support",null)){
 					childSupport = true;
 				}
