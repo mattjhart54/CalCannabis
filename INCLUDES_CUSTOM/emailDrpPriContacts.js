@@ -48,7 +48,7 @@ try{
 	if(emailPriReport || emailDRPReport){
 		//populate the email notification that will go to the primary contact
 		var eParams = aa.util.newHashtable(); 
-		addParameter(eParams, "$$wfDateMMDDYYYY$$", wfDateMMDDYYYY);
+		addParameter(eParams, "$$sysDateMMDDYYYY$$", sysDateMMDDYYYY);
 		var currCapId = capId;
 		capId = acaCapId;
 		getACARecordParam4Notification(eParams,acaUrl);
