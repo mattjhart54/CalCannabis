@@ -1,10 +1,10 @@
-//lwacht: send a deficiency email when the status is "Additional Information Needed" 
+//lwacht: send a deficiency email when the status is "Deficiency Letter Sent" 
 try{
 	if("Deficiency Letter Sent".equals(wfStatus)){
 		var emailReport = false;
 		var priContact = getContactObj(capId,"Primary Contact");
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-		if(!matches(priChannel,null,"","undefined"){
+		if(!matches(priChannel,null,"","undefined")){
 			if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
 				emailReport = true;
 			}else{
@@ -62,7 +62,7 @@ try{
 				logDebug("Deficiency record ID updated to : " + newAltId);
 			}
 			//only create a record if the owner app task on the parent says you should
-			if(taskStatus("Additional Information Needed", null,"Owner Application Reviews") || taskStatus("Additional Information Needed", null,"Incomplete Response")){
+			if(taskStatus("Owner Application Reviews") == "Additional Information Needed" || taskStatus("Owner Application Reviews") == "Incomplete Response"){
 				var childOwner = getChildren("Licenses/Cultivator/*/Owner Application");
 				for(rec in childOwner){
 					//now process the child owner applications for any deficiencies
