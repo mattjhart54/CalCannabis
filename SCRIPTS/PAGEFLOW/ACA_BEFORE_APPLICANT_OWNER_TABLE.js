@@ -112,6 +112,8 @@ try{
 		for(row in OWNERS){
 			//get contact by email
 			var correctLastName = false;
+			var capitalLastName = true;
+			var matchLastName =  = "";
 			var correctFirstName = false;
 			tblOwner.push(OWNERS[row]);
 			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
@@ -120,7 +122,7 @@ try{
 			qryPeople.setEmail(ownEmail);
 			var ownFName = ""+OWNERS[row]["First Name"];
 			var ownLName = ""+OWNERS[row]["Last Name"];
-			if(ownEmail.toUpperCase()==drpEmail.toUpperCase() && ownLName.toUpperCase()==drpLName.toUpperCase()){
+			if(ownEmail==drpEmail && ownLName==drpLName){
 				drpInTable = true;
 			}
 			//get reference contact(s)
@@ -140,8 +142,13 @@ try{
 							var thisLName = ""+thisPpl.getResLastName();
 							//logDebug("Owner table: " + ownFName + " " + ownLName );
 							//logDebug("People table: " + thisFName + " " + thisLName );
-							if(ownLName.toUpperCase()==thisLName.toUpperCase()){
+							if(ownLName==thisLName){
 								correctLastName = true;
+							}else{
+								if(ownLName.toUpperCase()==thisLName.toUpperCase()){
+									capitalLastName = false;
+									matchLastName = thisLName;
+								}
 							}
 							if(ownFName==thisFName){
 								correctFirstName = true;
@@ -155,16 +162,23 @@ try{
 					correctLastName = true;
 					correctFirstName = true;
 				}
+				//if the capitalization is incorrect, have the user correct
 				//if the last name is wrong, don't allow applicant to progress
-				if(!correctLastName){
+				if(!capitalLastName){
 					cancel = true;
 					showMessage = true;
-					comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
+					comment("The capitalization of the last name '" + ownLName + "' does not match the name on file  '" + matchLastName + "'.  Please correct before continuing.");
 				}else{
-					//if last name is correct but first name is wrong, just correct the first name and go on.
-					if(!correctFirstName){
-						tblOwner[row]["First Name"]=thisFName;
-						tblCorrection = true;
+					if(!correctLastName){
+						cancel = true;
+						showMessage = true;
+						comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
+					}else{
+						//if last name is correct but first name is wrong, just correct the first name and go on.
+						if(!correctFirstName){
+							tblOwner[row]["First Name"]=thisFName;
+							tblCorrection = true;
+						}
 					}
 				}
 			}
