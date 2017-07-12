@@ -113,7 +113,7 @@ try{
 			//get contact by email
 			var correctLastName = false;
 			var capitalLastName = true;
-			var matchLastName =  = "";
+			var matchLastName = "";
 			var correctFirstName = false;
 			tblOwner.push(OWNERS[row]);
 			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
