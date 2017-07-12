@@ -48,7 +48,7 @@ try{
 	//	comment("The Designated Responsible Party, " + drpContact.capContact.firstName + " " + drpContact.capContact.lastName + ", has requested all correspondence be mailed.  Please mail the displayed report.");
 	//}
 	//if(emailPriReport || emailDRPReport){
-	if(emailPriReport ){
+	if(emailPriReport){
 		//populate the email notification that will go to the primary contact
 		var eParams = aa.util.newHashtable(); 
 		//logDebug("callingPgm: " + callingPgm);
@@ -99,14 +99,8 @@ try{
 		}
 		if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
 			sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
-		}else{
-			if(emailPriReport){
-				aa.document.sendEmailAndSaveAsDocument(sysFromEmail, priEmail + ";" + priEmail, "", notName, eParams, capId4Email, rFiles,capId);
-			}
-			if(emailDRPReport){
-				aa.document.sendEmailAndSaveAsDocument(sysFromEmail, drpEmail, priEmail, notName, eParams, capId4Email, rFiles,capId);
-
-			}
+		}else{ 
+			sendNotification(sysFromEmail,drpEmail,priEmail,notName,eParams, rFiles,capId);
 		}
 	}
 }catch(err){
