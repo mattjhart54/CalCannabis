@@ -29,24 +29,26 @@ try{
 	}
 	//logDebug("rptParams: " + rptParams);
 	var emailPriReport = false;
-	var emailDRPReport = false;
+	//var emailDRPReport = false;
+	var drpContact = getContactObj(capId,"Designated Responsible Party");
 	var priContact = getContactObj(capId,"Primary Contact");
 	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 	if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
 		emailPriReport = true;
 	}else{
 		showMessage=true;
-		comment("The Primary Contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report.");
+		comment("The Primary Contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report to that contact and to the DRP " + drpContact.capContact.firstName + " " + drpContact.capContact.lastName + ".");
 	}
-	var drpContact = getContactObj(capId,"Designated Responsible Party");
-	var drptChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-	if(drptChannel.indexOf("Email") >= 0 || drptChannel.indexOf("E-mail") >= 0){
-		emailDRPReport = true;
-	}else{
-		showMessage=true;
-		comment("The Designated Responsible Party, " + drpContact.capContact.firstName + " " + drpContact.capContact.lastName + ", has requested all correspondence be mailed.  Please mail the displayed report.");
-	}
-	if(emailPriReport || emailDRPReport){
+	//only the primary contact sets their preferred channel, so only use that
+	//var drptChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
+	//if(drptChannel.indexOf("Email") >= 0 || drptChannel.indexOf("E-mail") >= 0){
+	//	emailDRPReport = true;
+	//}else{
+	//	showMessage=true;
+	//	comment("The Designated Responsible Party, " + drpContact.capContact.firstName + " " + drpContact.capContact.lastName + ", has requested all correspondence be mailed.  Please mail the displayed report.");
+	//}
+	//if(emailPriReport || emailDRPReport){
+	if(emailPriReport ){
 		//populate the email notification that will go to the primary contact
 		var eParams = aa.util.newHashtable(); 
 		//logDebug("callingPgm: " + callingPgm);
@@ -60,18 +62,18 @@ try{
 			staffUser.getEmailTemplateParams(eParams,"scientist")
 			getWorkflowParams4Notification(eParams);
 		}
-		var contPhone = priContact.capContact.phone1;
+		var contPhone = drpContact.capContact.phone1;
 		if(contPhone){
 			var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
 		}else{
 			var fmtPhone = "";
 		}
 		addParameter(eParams, "$$contactPhone1$$", fmtPhone);
-		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
-		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-		addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
+		addParameter(eParams, "$$contactFirstName$$", drpContact.capContact.firstName);
+		addParameter(eParams, "$$contactLastName$$", drpContact.capContact.lastName);
+		addParameter(eParams, "$$contactEmail$$", drpContact.capContact.email);
 		addParameter(eParams, "$$status$$", curStatus);
-		priAddresses = priContact.addresses;
+		priAddresses = drpContact.addresses;
 		for (x in priAddresses){
 			thisAddr = priAddresses[x];
 			if(thisAddr.getAddressType()=="Mailing"){
@@ -102,7 +104,7 @@ try{
 				aa.document.sendEmailAndSaveAsDocument(sysFromEmail, priEmail + ";" + priEmail, "", notName, eParams, capId4Email, rFiles,capId);
 			}
 			if(emailDRPReport){
-				aa.document.sendEmailAndSaveAsDocument(sysFromEmail, drpEmail + ";" + priEmail, "", notName, eParams, capId4Email, rFiles,capId);
+				aa.document.sendEmailAndSaveAsDocument(sysFromEmail, drpEmail, priEmail, notName, eParams, capId4Email, rFiles,capId);
 
 			}
 		}

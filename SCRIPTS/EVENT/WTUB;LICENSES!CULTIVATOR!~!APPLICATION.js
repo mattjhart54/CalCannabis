@@ -1,10 +1,10 @@
 //lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
-//display the deficiency report for printing
+//display the deficiency report for printing. Note: only use the primary contact's preferred channel
 try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		showDebug=false;
 		var priContact = getContactObj(capId,"Primary Contact");
-		var drpContact = getContactObj(capId,"Designated Responsible Party");
+		//var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var showReport = false;
 		if(priContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
@@ -12,12 +12,12 @@ try{
 				showReport = true;
 			}
 		}
-		if(drpContact){
-			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-			if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
-				showReport = true;
-			}
-		}
+		//if(drpContact){
+		//	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
+		//	if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+		//		showReport = true;
+		//	}
+		//}
 		if(showReport){
 			displayReport("ACA Permit", "agencyid", servProvCode,"capid", capId.getCustomID());
 		}
@@ -33,7 +33,7 @@ try{
 	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed")){
 		showDebug=false;
 		var priContact = getContactObj(capId,"Primary Contact");
-		var drpContact = getContactObj(capId,"Designated Responsible Party");
+		//var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var showReport = false;
 		if(priContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
@@ -41,12 +41,12 @@ try{
 				showReport = true;
 			}
 		}
-		if(drpContact){
-			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-			if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
-				showReport = true;
-			}
-		}
+		//if(drpContact){
+		//	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
+		//	if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+		//		showReport = true;
+		//	}
+		//}
 		if(showReport){
 			displayReport("Free-Form RTF", "altid", capIDString, "userid", currentUserID, "today", fileDate);
 		}
