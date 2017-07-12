@@ -140,7 +140,7 @@ try{
 							var thisLName = ""+thisPpl.getResLastName();
 							//logDebug("Owner table: " + ownFName + " " + ownLName );
 							//logDebug("People table: " + thisFName + " " + thisLName );
-							if(ownLName==thisLName){
+							if(ownLName.toUpperCase()==thisLName.toUpperCase()){
 								correctLastName = true;
 							}
 							if(ownFName==thisFName){
