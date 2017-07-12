@@ -120,7 +120,7 @@ try{
 			qryPeople.setEmail(ownEmail);
 			var ownFName = ""+OWNERS[row]["First Name"];
 			var ownLName = ""+OWNERS[row]["Last Name"];
-			if(ownEmail==drpEmail && ownLName==drpLName){
+			if(ownEmail.toUpperCase()==drpEmail.toUpperCase() && ownLName.toUpperCase()==drpLName.toUpperCase()){
 				drpInTable = true;
 			}
 			//get reference contact(s)
