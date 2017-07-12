@@ -8,7 +8,7 @@ try{
 		var showReport = false;
 		if(priContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-			if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+			if(priChannel.indexOf("Postal") > -1){
 				showReport = true;
 			}
 		}
@@ -37,7 +37,7 @@ try{
 		var showReport = false;
 		if(priContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-			if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+			if(priChannel.indexOf("Postal") >-1){
 				showReport = true;
 			}
 		}

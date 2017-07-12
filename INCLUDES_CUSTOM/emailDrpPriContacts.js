@@ -35,7 +35,8 @@ try{
 	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 	if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
 		emailPriReport = true;
-	}else{
+	}
+	if(priChannel.indexOf("Postal") > -1){
 		showMessage=true;
 		comment("The Primary Contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report to that contact and to the DRP " + drpContact.capContact.firstName + " " + drpContact.capContact.lastName + ".");
 	}
