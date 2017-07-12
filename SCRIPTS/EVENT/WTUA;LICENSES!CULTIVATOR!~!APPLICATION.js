@@ -4,20 +4,22 @@ try{
 		var emailReport = false;
 		var priContact = getContactObj(capId,"Primary Contact");
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-		if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
-			emailReport = true;
-		}else{
-			showMessage=true;
-			comment("The Primary Contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report.");
+		if(!matches(priChannel,null,"","undefined"){
+			if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
+				emailReport = true;
+			}else{
+				showMessage=true;
+				comment("The Primary Contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report.");
+			}
 		}
-		var drpContact = getContactObj(capId,"Designated Responsible Party");
-		var drptChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-		if(drptChannel.indexOf("Email") >= 0 || drptChannel.indexOf("E-mail") >= 0){
-			emailReport = true;
-		}else{
-			showMessage=true;
-			comment("The Designated Responsible Party, " + drpContact.capContact.firstName + " " + drpContact.capContact.lastName + ", has requested all correspondence be mailed.  Please mail the displayed report.");
-		}
+		//var drpContact = getContactObj(capId,"Designated Responsible Party");
+		//var drptChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
+		//if(drptChannel.indexOf("Email") >= 0 || drptChannel.indexOf("E-mail") >= 0){
+		//	emailReport = true;
+		//}else{
+		//	showMessage=true;
+		//	comment("The Designated Responsible Party, " + drpContact.capContact.firstName + " " + drpContact.capContact.lastName + ", has requested all correspondence be mailed.  Please mail the displayed report.");
+		//}
 		var newAppName = "Deficiency: " + capName;
 		//create child amendment record
 		ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
