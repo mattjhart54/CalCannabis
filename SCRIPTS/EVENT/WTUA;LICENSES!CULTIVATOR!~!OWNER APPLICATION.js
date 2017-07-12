@@ -7,7 +7,7 @@ try{
 			tblRow["Deficiency Details"] = capName;
 			tblRow["Resolution"] = "";
 			tblRow["Additional Notes"] = "";
-			tblRow["Status"] = "Deficienct";	
+			tblRow["Status"] = "Deficient";	
 			addToASITable("DEFICIENCIES",tblRow,parentCapId);
 		}
 	}
