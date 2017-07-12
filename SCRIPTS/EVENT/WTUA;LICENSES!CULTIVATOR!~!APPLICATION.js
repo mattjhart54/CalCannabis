@@ -86,12 +86,16 @@ try{
 							}else{
 								logDebug("Could not link applications: " + resOCreateRelat.getErrorMessage());
 							}
+							logDebug("thisOwnCapId.getCustomID(): " + thisOwnCapId.getCustomID());
 							editAppSpecific("ParentCapId", thisOwnCapId.getCustomID(),newODefId);
 							copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "CONVICTIONS", "ATTACHMENTS"]);
 							copyContacts(capId, newODefId);
 							editContactType("Owner","Primary Contact",newODefId);
 							//get the current number of deficiency children to set the AltId
+							var currCapId = capId;
+							capId = thisOwnCapId;
 							var childOAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
+							capId = currCapId;
 							var cntOChild = childOAmend.length;
 							//cntOChild ++;
 							//logDebug("childOAmend.length: " + childOAmend.length);
@@ -105,6 +109,7 @@ try{
 							if(!updOAltId.getSuccess()){
 								logDebug("Error updating Owner Alt Id: " + newOAltId + ":: " +updOAltId.getErrorMessage());
 							}else{
+								logDebug("newOAltId: " + newOAltId);
 								editAppSpecific("AltId", newOAltId,newODefId);
 								logDebug("Deficiency owner record ID updated to : " + newOAltId);
 							}
