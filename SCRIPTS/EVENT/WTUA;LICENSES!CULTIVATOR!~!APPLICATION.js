@@ -42,11 +42,14 @@ try{
 			}
 			editAppSpecific("ParentCapId", capIDString,newDefId);
 			//copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
+			var tblODefic = [];
+			var arrDef = [];
 			for (row in DEFICIENCIES){
 				if(DEFICIENCIES[row]["Status"]=="Deficient"){
-					addToASITable("DEFICIENCIES",DEFICIENCIES[row]);
+					arrDef.push(DEFICIENCIES[row]);
 				}
 			}
+			addASITable("DEFICIENCIES", arrDef, newDefId);
 			copyContactsByType(capId, newDefId,"Designated Responsible Party");
 			copyContactsByType(capId, newDefId,"Primary Contact");
 			//find out how many amendment records there have been so we can create an AltId
@@ -94,11 +97,14 @@ try{
 							logDebug("thisOwnCapId.getCustomID(): " + thisOwnCapId.getCustomID());
 							editAppSpecific("ParentCapId", thisOwnCapId.getCustomID(),newODefId);
 							//copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "CONVICTIONS", "ATTACHMENTS"]);
-							for (row in DEFICIENCIES){
-								if(DEFICIENCIES[row]["Status"]=="Deficient"){
-									addToASITable("DEFICIENCIES",DEFICIENCIES[row]);
+							loadASITable(tblODefic,thisOwnCapId);
+							var arrDef = [];
+							for (row in tblODefic){
+								if(tblODefic[row]["Status"]=="Deficient"){
+									arrDef.push(tblODefic[row]);
 								}
 							}
+							addASITable("DEFICIENCIES", arrDef, newODefId);
 							copyContacts(capId, newODefId);
 							editContactType("Owner","Primary Contact",newODefId);
 							//get the current number of deficiency children to set the AltId
@@ -133,6 +139,7 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
 	logDebug(err.stack);
 }
+
 
 // lwacht: set the Admin expiration date and task due date to ninety days in the future
 try{
