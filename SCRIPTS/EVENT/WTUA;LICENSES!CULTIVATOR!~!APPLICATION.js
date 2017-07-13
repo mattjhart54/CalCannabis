@@ -41,7 +41,12 @@ try{
 				logDebug("Could not link applications: " + resCreateRelat.getErrorMessage());
 			}
 			editAppSpecific("ParentCapId", capIDString,newDefId);
-			copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
+			//copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
+			for (row in DEFICIENCIES){
+				if(DEFICIENCIES[row]["Status"]=="Deficient"){
+					addToASITable("DEFICIENCIES",DEFICIENCIES[row]);
+				}
+			}
 			copyContactsByType(capId, newDefId,"Designated Responsible Party");
 			copyContactsByType(capId, newDefId,"Primary Contact");
 			//find out how many amendment records there have been so we can create an AltId
@@ -88,7 +93,12 @@ try{
 							}
 							logDebug("thisOwnCapId.getCustomID(): " + thisOwnCapId.getCustomID());
 							editAppSpecific("ParentCapId", thisOwnCapId.getCustomID(),newODefId);
-							copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "CONVICTIONS", "ATTACHMENTS"]);
+							//copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "CONVICTIONS", "ATTACHMENTS"]);
+							for (row in DEFICIENCIES){
+								if(DEFICIENCIES[row]["Status"]=="Deficient"){
+									addToASITable("DEFICIENCIES",DEFICIENCIES[row]);
+								}
+							}
 							copyContacts(capId, newODefId);
 							editContactType("Owner","Primary Contact",newODefId);
 							//get the current number of deficiency children to set the AltId
