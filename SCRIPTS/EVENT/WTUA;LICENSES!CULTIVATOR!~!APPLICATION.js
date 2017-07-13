@@ -49,6 +49,7 @@ try{
 					arrDef.push(DEFICIENCIES[row]);
 				}
 			}
+			logDebug("newDefId: " + newDefId.getCustomID());
 			addASITable("DEFICIENCIES", arrDef, newDefId);
 			copyContactsByType(capId, newDefId,"Designated Responsible Party");
 			copyContactsByType(capId, newDefId,"Primary Contact");
@@ -97,7 +98,7 @@ try{
 							logDebug("thisOwnCapId.getCustomID(): " + thisOwnCapId.getCustomID());
 							editAppSpecific("ParentCapId", thisOwnCapId.getCustomID(),newODefId);
 							//copyASITables(thisOwnCapId,newODefId,["CANNABIS FINANCIAL INTEREST", "CONVICTIONS", "ATTACHMENTS"]);
-							loadASITable(tblODefic,thisOwnCapId);
+							var tblODefic = loadASITable("DEFICIENCIES",thisOwnCapId);
 							var arrDef = [];
 							for (row in tblODefic){
 								if(tblODefic[row]["Status"]=="Deficient"){
