@@ -106,10 +106,11 @@ try{
 				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, rFiles,capId);
 			}
 		}else{
+			rFiles = [];
 			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
-				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, [],capId);
+				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
 			}else{ 
-				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, [],capId);
+				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, rFiles,capId);
 			}
 
 		}
