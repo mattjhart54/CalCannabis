@@ -137,6 +137,7 @@ try{
 			editTaskDueDate("Owner Application Reviews", dateAddMonths(null,3));
 			activateTask("Owner Application Reviews");
 		}
+		setTask("Administrative Manager Review", "N", "Y");
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Expiry Date: " + err.message);
@@ -156,6 +157,7 @@ try{
 			editTaskDueDate("CEQA Review", dateAddMonths(null,3));
 			activateTask("CEQA Review");
 		}
+		setTask("Science Manager Review", "N", "Y");
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Science Expiry Date: " + err.message);
