@@ -2,7 +2,6 @@
 //display the deficiency report for printing. Note: only use the primary contact's preferred channel
 try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
-		showDebug=false;
 		var priContact = getContactObj(capId,"Primary Contact");
 		//var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var showReport = false;
@@ -19,6 +18,7 @@ try{
 		//	}
 		//}
 		if(showReport){
+			showDebug=false;
 			displayReport("ACA Permit", "agencyid", servProvCode,"capid", capId.getCustomID());
 		}
 	}

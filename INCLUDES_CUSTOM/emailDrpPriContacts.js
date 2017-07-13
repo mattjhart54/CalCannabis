@@ -16,11 +16,12 @@ Parameters:
 	callingPgm: Text: Master script calling this function
 	notName: Text: Name of the email template notification
 	rptName: Text: Name of the report
+	emailRpt: true/false: whether or not the report should be attached to the email
 	curStatus: Text: Status to use for general notification template
 	acaCapId: capId: The capId to use for the ACA URL
 	rptParams: Optional report parameter(s): "agencyid",servProvCode,"capid",myCapId
 ============================================== */
-function emailDrpPriContacts(callingPgm, notName, rptName, curStatus, acaCapId) {
+function emailDrpPriContacts(callingPgm, notName, rptName, emailRpt, curStatus, acaCapId) {
 try{
 	// create a hashmap for report parameters
 	var rptParams = aa.util.newHashMap();
@@ -98,10 +99,19 @@ try{
 				rFiles.push(rFile);
 			}
 		}
-		if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
-			sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
-		}else{ 
-			sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, rFiles,capId);
+		if(emailRpt){
+			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
+				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
+			}else{ 
+				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, rFiles,capId);
+			}
+		}else{
+			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
+				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, null,capId);
+			}else{ 
+				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, null,capId);
+			}
+
 		}
 	}
 }catch(err){
