@@ -166,7 +166,7 @@ try{
 try{
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
-		editAppSpecific("App Expiry Date", dateAddMonths(null,3));
+		editAppSpecific("App Expiry Date", dateAdd(null,90));
 		if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
 			editTaskDueDate("Scientific Review", dateAddMonths(null,3));
 			activateTask("Scientific Review");
