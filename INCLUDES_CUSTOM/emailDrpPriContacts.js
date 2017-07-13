@@ -74,10 +74,10 @@ try{
 		addParameter(eParams, "$$contactLastName$$", drpContact.capContact.lastName);
 		addParameter(eParams, "$$contactEmail$$", drpContact.capContact.email);
 		addParameter(eParams, "$$status$$", curStatus);
-		priAddresses = drpContact.addresses;
-		for (x in priAddresses){
-			thisAddr = priAddresses[x];
-			if(thisAddr.getAddressType()=="Mailing"){
+		drpAddresses = drpContact.addresses;
+		for (x in drpAddresses){
+			thisAddr = drpAddresses[x];
+			if(thisAddr.getAddressType()=="Home"){
 				addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
 				addParameter(eParams, "$$priCity$$", thisAddr.city);
 				addParameter(eParams, "$$priState$$", thisAddr.state);
