@@ -107,9 +107,9 @@ try{
 			}
 		}else{
 			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
-				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, null,capId);
+				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, false,capId);
 			}else{ 
-				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, null,capId);
+				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, false,capId);
 			}
 
 		}
