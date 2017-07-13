@@ -146,13 +146,13 @@ try{
 try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
-		editAppSpecific("App Expiry Date", dateAddMonths(null,3));
+		editAppSpecific("App Expiry Date", dateAdd(null,90));
 		if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
-			editTaskDueDate("Administrative Review", dateAddMonths(null,3));
+			editTaskDueDate("Administrative Review", dateAdd(null,90));
 			activateTask("Administrative Review");
 		}
 		if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
-			editTaskDueDate("Owner Application Reviews", dateAddMonths(null,3));
+			editTaskDueDate("Owner Application Reviews", dateAdd(null,90));
 			activateTask("Owner Application Reviews");
 		}
 		setTask("Administrative Manager Review", "N", "Y");
@@ -168,11 +168,11 @@ try{
 		//set due date and expiration date
 		editAppSpecific("App Expiry Date", dateAdd(null,90));
 		if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
-			editTaskDueDate("Scientific Review", dateAddMonths(null,3));
+			editTaskDueDate("Scientific Review", dateAdd(null,90));
 			activateTask("Scientific Review");
 		}
 		if(matches(taskStatus("CEQA Review"),"Additional Information Needed","Incomplete Response")){
-			editTaskDueDate("CEQA Review", dateAddMonths(null,3));
+			editTaskDueDate("CEQA Review", dateAdd(null,90));
 			activateTask("CEQA Review");
 		}
 		setTask("Science Manager Review", "N", "Y");
