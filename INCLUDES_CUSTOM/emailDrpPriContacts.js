@@ -25,7 +25,7 @@ function emailDrpPriContacts(callingPgm, notName, rptName, emailRpt, curStatus, 
 try{
 	// create a hashmap for report parameters
 	var rptParams = aa.util.newHashMap();
-	for (var i = 5; i < arguments.length; i = i + 2) {
+	for (var i = 6; i < arguments.length; i = i + 2) {
 		rptParams.put(arguments[i], arguments[i + 1]);
 	}
 	//logDebug("rptParams: " + rptParams);
@@ -99,13 +99,13 @@ try{
 				rFiles.push(rFile);
 			}
 		}
-		//if(emailRpt){
+		if(emailRpt){
 			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
 				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
 			}else{ 
 				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, rFiles,capId);
 			}
-		/*}else{
+		}else{
 			rFiles = [];
 			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
 				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
@@ -113,7 +113,7 @@ try{
 				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, rFiles,capId);
 			}
 
-		}*/
+		}
 	}
 }catch(err){
 	logDebug("An error occurred in emailDrpPriContacts: " + err.message);
