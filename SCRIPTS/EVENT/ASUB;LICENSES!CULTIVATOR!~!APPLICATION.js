@@ -2,7 +2,6 @@
 //send other notifications
 try{
 	if(matches(appStatus, "Disqualified", "Withdrawn", "Denied")){
-		showDebug=false;
 		var priContact = getContactObj(capId,"Primary Contact");
 		//var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var showReport = false;
@@ -19,6 +18,7 @@ try{
 		//	}
 		//}
 		if(showReport){
+			showDebug=false;
 			displayReport("ACA Permit", "agencyid", servProvCode,"capid", capId.getCustomID());
 		}
 	}
