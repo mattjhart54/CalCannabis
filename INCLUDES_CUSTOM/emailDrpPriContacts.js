@@ -99,13 +99,13 @@ try{
 				rFiles.push(rFile);
 			}
 		}
-		if(emailRpt){
+		//if(emailRpt){
 			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
 				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
 			}else{ 
 				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, rFiles,capId);
 			}
-		}else{
+		/*}else{
 			rFiles = [];
 			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
 				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
@@ -113,7 +113,7 @@ try{
 				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, rFiles,capId);
 			}
 
-		}
+		}*/
 	}
 }catch(err){
 	logDebug("An error occurred in emailDrpPriContacts: " + err.message);
