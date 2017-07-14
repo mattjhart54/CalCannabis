@@ -111,7 +111,8 @@ try{
 			if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
 				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
 			}else{ 
-				sendNotification(sysFromEmail,drpEmail+";"+priEmail,"",notName,eParams, rFiles,capId);
+				sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
+				sendNotification(sysFromEmail,priEmail,"",notName,eParams, rFiles,capId);
 			}
 
 		}
