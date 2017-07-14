@@ -52,7 +52,7 @@ try{
 			logDebug("newDefId: " + newDefId.getCustomID());
 			addASITable("DEFICIENCIES", arrDef, newDefId);
 			copyContactsByType(capId, newDefId,"Designated Responsible Party");
-			copyContactsByType(capId, newDefId,"Primary Contact");
+			//copyContactsByType(capId, newDefId,"Primary Contact");
 			//find out how many amendment records there have been so we can create an AltId
 			var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
 			var cntChild = childAmend.length;
