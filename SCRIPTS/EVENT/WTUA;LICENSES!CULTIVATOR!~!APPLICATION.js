@@ -85,7 +85,7 @@ try{
 						ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
 						ctm.setGroup("Licenses");
 						ctm.setType("Cultivator");
-						ctm.setSubType("Medical");
+						ctm.setSubType("Owner");
 						ctm.setCategory("Amendment");
 						var newODefId = aa.cap.createSimplePartialRecord(ctm,newOwnAppName, "INCOMPLETE CAP").getOutput();
 						if(newODefId){
@@ -111,7 +111,7 @@ try{
 							//get the current number of deficiency children to set the AltId
 							var currCapId = capId;
 							capId = thisOwnCapId;
-							var childOAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
+							var childOAmend = getChildren("Licenses/Cultivator/Owner/Amendment");
 							capId = currCapId;
 							var cntOChild = childOAmend.length;
 							//cntOChild ++;
