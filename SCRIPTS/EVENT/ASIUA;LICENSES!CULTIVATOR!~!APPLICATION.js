@@ -8,6 +8,7 @@ try {
 	}
 	addASITable("DEFICIENCIES", DEFICIENCIES)
 	editAppName(AInfo["License Type"]);
+	updateShortNotes(AInfo["Premise County"]);
 
 
 }catch (err){

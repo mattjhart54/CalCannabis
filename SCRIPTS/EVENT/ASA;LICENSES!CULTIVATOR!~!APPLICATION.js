@@ -44,6 +44,8 @@ try{
 //update work description with Legal Business Name
 try {
 	updateLegalBusinessName();
+	editAppName(AInfo["License Type"]);
+	updateShortNotes(AInfo["Premise County"]);
 
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: " + err.message);
