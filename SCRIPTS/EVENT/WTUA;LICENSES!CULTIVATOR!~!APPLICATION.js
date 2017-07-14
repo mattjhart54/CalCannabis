@@ -106,7 +106,7 @@ try{
 								}
 							}
 							addASITable("DEFICIENCIES", arrDef, newODefId);
-							copyContacts(capId, newODefId);
+							copyContacts(thisOwnCapId, newODefId);
 							editContactType("Owner","Primary Contact",newODefId);
 							//get the current number of deficiency children to set the AltId
 							var currCapId = capId;
