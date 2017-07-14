@@ -112,7 +112,7 @@ try{
 		for(row in OWNERS){
 			//get contact by email
 			var correctLastName = false;
-			var capitalLastName = true;
+			var capitalLastName = false;
 			var matchLastName = "";
 			var correctFirstName = false;
 			tblOwner.push(OWNERS[row]);
@@ -146,7 +146,8 @@ try{
 								correctLastName = true;
 							}else{
 								if(ownLName.toUpperCase()==thisLName.toUpperCase()){
-									capitalLastName = false;
+									capitalLastName = true;
+								}else{
 									matchLastName = thisLName;
 								}
 							}
