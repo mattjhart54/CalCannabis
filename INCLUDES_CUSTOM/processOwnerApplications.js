@@ -132,6 +132,6 @@ try {
 }catch (err) {
 	logDebug("ERROR: A JavaScript Error occurred: processOwnerApplications: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "**ERROR: A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "**ERROR: A JavaScript Error occurred: processOwnerApplications: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }	
 }
