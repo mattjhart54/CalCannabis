@@ -38,7 +38,7 @@ try{
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 //mhart
 //update work description with Legal Business Name
@@ -50,7 +50,7 @@ try {
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 //lwacht
 //remove conditions after documents are uploaded

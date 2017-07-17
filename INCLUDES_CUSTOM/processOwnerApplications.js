@@ -86,39 +86,6 @@ try {
 					editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
 					updateShortNotes(vFirst + " " + vLast + " (" + vEmail + ")");
 					//logDebug("appName: " + vFirst + " " + vLast + " (" + vEmail + ")");
-					//adding this logic to addRefContactByEmailLastName function
-					/*
-					tblOwners[o]["Status"]="Submitted";
-					var vMiddle = null;
-					qryPeople.setServiceProviderCode(aa.getServiceProviderCode()) ; 
-					qryPeople.setEmail(vEmail);
-					qryPeople.setContactTypeFlag("Individual");
-					qryPeople.setContactType("Owner");
-					var resQryPpl = aa.people.getPeopleByPeopleModel(qryPeople);
-					if(resQryPpl.getSuccess()){
-						refQryPpl = resQryPpl.getOutput();
-						//for (ref in refQryPpl){
-						//	if(typeof(refQryPpl[ref])!="function"){
-						//		logDebug(ref+": " + refQryPpl[ref]);
-						//	}
-						//}
-						logDebug("Found reference contact matching email, so adding to new owner record: " + vFirst + " " + vLast);
-							logDebug("Error adding ref contact: "+ ownerSeqNum);
-						}
-						emailParameters = aa.util.newHashtable();
-						addParameter(emailParameters, "$$AltID$$", capId);
-						addParameter(emailParameters, "$$ProjectName$$", capName);
-						addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
-						var resCurUser = aa.person.getUser(publicUserID);	
-						if(resCurUser.getSuccess()){
-							var currUser = resCurUser.getOutput();
-							var currUserEmail = ""+currUser.email;
-						}
-						if(currUserEmail!=vEmail){
-							sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
-						}
-					}else{
-					*/
 					var ownerSeqNum = addRefContactByEmailLastName(vFirst, vLast,vEmail);
 					if(!ownerSeqNum){
 						qryPeople.setServiceProviderCode(aa.getServiceProviderCode());
@@ -162,7 +129,8 @@ try {
 	}
 	capId = currCapId;
 }catch (err) {
-	logDebug("A JavaScript Error occurred: processOwnerApplications: " + err.message);
+	logDebug("**ERROR: A JavaScript Error occurred: processOwnerApplications: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "**ERROR: A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }	
 }
