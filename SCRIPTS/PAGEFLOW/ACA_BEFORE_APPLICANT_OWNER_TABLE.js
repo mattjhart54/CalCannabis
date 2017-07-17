@@ -144,6 +144,7 @@ try{
 							//logDebug("People table: " + thisFName + " " + thisLName );
 							if(ownLName==thisLName){
 								correctLastName = true;
+								capitalLastName = true;
 							}else{
 								if(ownLName.toUpperCase()==thisLName.toUpperCase()){
 									capitalLastName = true;
