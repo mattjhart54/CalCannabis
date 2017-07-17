@@ -5,8 +5,8 @@ try {
 	var recTypeAlias = "Owner Application";  // must be a valid record type alias
 	var recordNum = 0;
 	var currCapId = capId;
-	loadASITables4ACA();
-	//loadASITables();
+	//loadASITables4ACA();
+	loadASITables();
 	for(row in OWNERS){
 		recordNum++;
 	}
@@ -129,7 +129,7 @@ try {
 	}
 	capId = currCapId;
 }catch (err) {
-	logDebug("**ERROR: A JavaScript Error occurred: processOwnerApplications: " + err.message);
+	logDebug("ERROR: A JavaScript Error occurred: processOwnerApplications: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "**ERROR: A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }	
