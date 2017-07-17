@@ -5,8 +5,8 @@ try {
 	var recTypeAlias = "Owner Application";  // must be a valid record type alias
 	var recordNum = 0;
 	var currCapId = capId;
-	//loadASITables4ACA();
-	loadASITables();
+	loadASITables4ACA();
+	//loadASITables();
 	for(row in OWNERS){
 		recordNum++;
 	}
