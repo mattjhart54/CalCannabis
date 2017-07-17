@@ -165,21 +165,21 @@ try{
 				}
 				//if the capitalization is incorrect, have the user correct
 				//if the last name is wrong, don't allow applicant to progress
-				if(!capitalLastName){
+				if(!correctLastName){
 					cancel = true;
 					showMessage = true;
-					comment("The capitalization of the last name '" + ownLName + "' does not match the name on file  '" + matchLastName + "'.  Please correct before continuing.");
+					comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
 				}else{
-					if(!correctLastName){
+					//if last name is correct, check for capitalization
+					if(!capitalLastName){
 						cancel = true;
 						showMessage = true;
-						comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
-					}else{
-						//if last name is correct but first name is wrong, just correct the first name and go on.
-						if(!correctFirstName){
-							tblOwner[row]["First Name"]=thisFName;
-							tblCorrection = true;
-						}
+						comment("The capitalization of the last name '" + ownLName + "' does not match the name on file  '" + matchLastName + "'.  Please correct before continuing.");
+					}
+					//if last name is correct but first name is wrong, just correct the first name and go on.
+					if(!correctFirstName){
+						tblOwner[row]["First Name"]=thisFName;
+						tblCorrection = true;
 					}
 				}
 			}
