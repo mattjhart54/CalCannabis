@@ -78,8 +78,8 @@ var cap = aa.env.getValue("CapModel");
 try{
 	var capId = cap.getCapID();
 	var appName = cap.getSpecialText();
-	var parenLoc = appName.indexOf("(");
-	if(parenLoc>-1){
+	if(appName.indexOf("(")>-1){
+		var parenLoc = appName.indexOf("(");
 		var ownerName = appName.substring(0,parseInt(parenLoc));
 		var appNameLen = 0
 		appNameLen = appName.length();
@@ -99,7 +99,7 @@ try{
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
 		}
 	}else{
-		logDebug("Error with parenLoc: " + parenLoc);
+		logDebug("Error with appName: " + appName);
 	}
 } catch (err) {
 	showDebug =true;
