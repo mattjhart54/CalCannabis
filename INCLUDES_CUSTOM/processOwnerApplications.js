@@ -7,8 +7,8 @@ try {
 	var currCapId = capId;
 	//shouldn't need to load tables
 	//loadASITables4ACA();
-	//loadASITables();
-	for(row in OWNERS){
+	var tblOwners = loadASITable("OWNERS");
+	for(row in tblOwners){
 		recordNum++;
 	}
 	logDebug("recordNum: " + recordNum);
@@ -31,7 +31,7 @@ try {
 		//if there are contacts, compare them to the current owners table.
 		//if they're there, leave it.  if they're not remove them and add an owner
 		var hasOwnerContact = false;
-		var tblOwners = OWNERS;
+		//var tblOwners = OWNERS;
 		if(arrContacts.length>0 && arrContacts!=null){ 
 			var contSeq = arrContacts[0]["contactSeqNumber"]; //should only be one
 			var contFName = arrContacts[0]["firstName"]; //should only be one
