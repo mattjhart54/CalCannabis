@@ -105,7 +105,7 @@ try{
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_APP_CONTACT: Correct Contact: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_APP_CONTACT: Correct Contact: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + "appName: " + appName);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_APP_CONTACT: Correct Contact: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
 }
 
 

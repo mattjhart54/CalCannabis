@@ -163,6 +163,7 @@ try{
 					//email doesn't exist, continue without error
 					correctLastName = true;
 					correctFirstName = true;
+					capitalLastName = true;
 				}
 				//if the capitalization is incorrect, have the user correct
 				//if the last name is wrong, don't allow applicant to progress
