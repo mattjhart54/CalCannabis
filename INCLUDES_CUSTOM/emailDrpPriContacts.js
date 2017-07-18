@@ -58,7 +58,9 @@ try{
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			var currCapId = capId;
 			capId = acaCapId;
-			getACARecordParam4Notification(eParams,acaUrl);
+			//getACARecordParam4Notification(eParams,acaUrl);
+			var acaUrlForAmend = "https://aca.supp.accela.com/CALCANNABIS/urlrouting.ashx?type=1008&Module=Licenses&capID1="+capId.ID1+"&capID2="+capId.ID2+"&capID3="+capId.ID3+"&agencyCode=CALCANNABIS&HideHeader=true";
+			addParameter(params, "$$acaRecordUrl$$", acaUrlForAmend);
 			capId = currCapId;
 			var staffUser = new userObj(wfStaffUserID);
 			staffUser.getEmailTemplateParams(eParams,"scientist")
