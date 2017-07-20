@@ -91,12 +91,10 @@ try{
 		var drpEmail = ""+drpContact.capContact.getEmail();
 		var priEmail = ""+priContact.capContact.getEmail();
 		var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
-		if(matches(rptName, null, "", "undefined")){
-			var rFiles = null;
-		}else{
+		var rFiles = [];
+		if(!matches(rptName, null, "", "undefined")){
 			var rFile;
 			rFile = generateReport(capId,rptName,"Licenses",rptParams);
-			var rFiles = [];
 			if (rFile) {
 				rFiles.push(rFile);
 			}
