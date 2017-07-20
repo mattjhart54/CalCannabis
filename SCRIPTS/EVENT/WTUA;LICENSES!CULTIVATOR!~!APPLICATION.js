@@ -31,7 +31,7 @@ try{
 		if(resDefId.getSuccess()){
 			var newDefId = resDefId.getOutput();
 			if(emailReport){
-				emailDrpPriContacts("WTUA", "LCA_DEFICIENCY", "Deficiency Letter", false, wfStatus, newDefId, "agencyid", servProvCode, "capid", capId.getCustomID());
+				emailDrpPriContacts("WTUA", "LCA_DEFICIENCY", "Deficiency Report", false, wfStatus, newDefId, "agencyid", servProvCode, "capid", capId.getCustomID());
 			}
 			//relate amendment to application
 			var resCreateRelat = aa.cap.createAppHierarchy(capId, newDefId); 
@@ -141,7 +141,6 @@ try{
 	logDebug(err.stack);
 }
 
-
 // lwacht: set the Admin expiration date and task due date to ninety days in the future
 try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
@@ -181,11 +180,12 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Science Expiry Date: " + err.message);
 	logDebug(err.stack);
 }
+
 //lwacht
 //send other notifications
 try{
 	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed")){
-		emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "ACA Permit", false, wfStatus, capId, "agencyid", servProvCode, "capid", capId.getCustomID());
+		emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "Deficiency Report", false, wfStatus, capId, "agencyid", servProvCode, "capid", capId.getCustomID());
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);

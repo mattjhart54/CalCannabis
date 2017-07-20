@@ -96,8 +96,8 @@ try{
 		}else{
 			var rFile;
 			rFile = generateReport(capId,rptName,"Licenses",rptParams);
+			var rFiles = [];
 			if (rFile) {
-				var rFiles = [];
 				rFiles.push(rFile);
 			}
 		}
