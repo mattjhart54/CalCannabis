@@ -31,7 +31,7 @@ try{
 		if(resDefId.getSuccess()){
 			var newDefId = resDefId.getOutput();
 			if(emailReport){
-				emailDrpPriContacts("WTUA", "LCA_DEFICIENCY", "ACA Permit", false, wfStatus, newDefId, "agencyid", servProvCode, "capid", capId.getCustomID());
+				emailDrpPriContacts("WTUA", "LCA_DEFICIENCY", "Deficiency Letter", false, wfStatus, newDefId, "agencyid", servProvCode, "capid", capId.getCustomID());
 			}
 			//relate amendment to application
 			var resCreateRelat = aa.cap.createAppHierarchy(capId, newDefId); 
