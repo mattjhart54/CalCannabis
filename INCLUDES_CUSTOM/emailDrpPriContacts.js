@@ -72,6 +72,7 @@ try{
 		}else{
 			var fmtPhone = "";
 		}
+		addParameter(eParams, "$$altID$$", capId.getCustomID());
 		addParameter(eParams, "$$contactPhone1$$", fmtPhone);
 		addParameter(eParams, "$$contactFirstName$$", drpContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", drpContact.capContact.lastName);
