@@ -32,7 +32,7 @@ try{
 			var newDefId = resDefId.getOutput();
 			if(emailReport){
 				runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
-				emailDrpPriContacts("WTUA", "LCA_DEFICIENCY", "", false, wfStatus, newDefId);
+				emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, wfStatus, newDefId);
 			}
 			//relate amendment to application
 			var resCreateRelat = aa.cap.createAppHierarchy(capId, newDefId); 
