@@ -44,6 +44,7 @@ try{
 	var goodStanding = {condition : "Local - Evidence of Good Standing", document : "Local - Evidence of Good Standing"};
 	var CEQA = {condition : "Local - Evidence of CEQA Compliance", document : "Local - Evidence of CEQA Compliance"};
 	var localComply = {condition : "Local - Certification of Local Compliance", document : "Local - Certification of Local Compliance"};
+	var coopMembers = {condition : "COOP - List of Members", document : "COOP - List of Members"};
 	
 	//owner documents
     var governmentIssuedID = {condition : "Government Issued ID", document : "Government Issued ID"};
@@ -106,6 +107,13 @@ try{
 		}else{
 			if(appHasCondition(conditionType, null, foriegnCorp.condition, null)){
 				removeCapCondition(conditionType, foriegnCorp.condition);
+			}
+		}
+		if (AInfo["Cooperative Association"] != "Yes"){
+			arrReqdDocs_App.push(coopMembers);
+		}else{
+			if(appHasCondition(conditionType, null, coopMembers.condition, null)){
+				removeCapCondition(conditionType, coopMembers.condition);
 			}
 		}
 		if (AInfo["Vertical Integration"] == "CHECKED"){
