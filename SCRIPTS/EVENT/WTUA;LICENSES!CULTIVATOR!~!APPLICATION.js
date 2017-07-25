@@ -159,7 +159,7 @@ try{
 		}
 		if(emailReport){
 			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
-			emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "Deficiency Report", false, wfStatus, capId, "agencyid", servProvCode, "capid", capId.getCustomID());
+			emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, wfStatus, capId);
 		}
 	}
 }catch(err){
