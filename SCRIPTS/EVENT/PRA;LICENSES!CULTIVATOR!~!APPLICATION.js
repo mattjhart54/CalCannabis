@@ -62,3 +62,17 @@ try{
 	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
 	logDebug(err.stack);
 }
+
+//lwacht
+//send the application fee notification letter
+try{
+	if(balanceDue<=0 && isTaskActive("Administrative Review")){
+		runReportAttach(capId,"Paid Application Fee", "p1value", capId.getCustomID());
+		emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "", false, "Application Fee Paid", capId, "RECORD_ID", capId.getCustomID());
+	}
+}catch(err){
+	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: App Fee Paid: " + err.message);
+	logDebug(err.stack);
+}
+
+
