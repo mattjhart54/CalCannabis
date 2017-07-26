@@ -17,7 +17,7 @@ try{
 				logDebug("drpPubUser: " + drpPubUser);
 				logDebug("currUserEmail: " + currUserEmail);
 				emailParameters = aa.util.newHashtable();
-				addParameter(emailParameters, "$$AltID$$", capId);
+				addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
 				addParameter(emailParameters, "$$ProjectName$$", capName);
 				addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
 				//no email gets sent to the DRP if they are the applicant

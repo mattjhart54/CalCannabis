@@ -111,7 +111,7 @@ try {
 					var ownUser = createPublicUserFromContact("Owner");
 					tblOwners[o]["Status"]="Submitted";
 					emailParameters = aa.util.newHashtable();
-					addParameter(emailParameters, "$$AltID$$", capId);
+					addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
 					addParameter(emailParameters, "$$ProjectName$$", capName);
 					addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
 					var resCurUser = aa.person.getUser(publicUserID);	
