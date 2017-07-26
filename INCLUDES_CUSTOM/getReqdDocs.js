@@ -22,28 +22,29 @@ try{
 	var foriegnCorp = {condition : "Business - Foreign Corp. Certificate of Qualification", document : "Business - Foreign Corp. Certificate of Qualification"};
 	var stateDocuments = {condition : "Business - CA Secretary of State Documents", document : "Business - CA Secretary of State Documents"};
 	var soveriegnImmunity = {condition : "Business - Waiver of Sovereign Immunity", document : "Business - Waiver of Sovereign Immunity"};
-	var localOrdinance = {condition : "VI - Copy of the Local Ordinance", document : "VI - Copy of the Local Ordinance"};
-	var cannabisActivity = {condition : "VI - Evidence of Conducting Cannabis Activity", document : "VI - Evidence of Conducting Cannabis Activity"};
-	var BOE = {condition : "VI - Registration with CA BOE", document : "VI - Registration with CA BOE"};
-	var fullCompliance = {condition : "VI - Evidence of Full Local Compliance", document : "VI - Evidence of Full Local Compliance"};
+//	var localOrdinance = {condition : "VI - Copy of the Local Ordinance", document : "VI - Copy of the Local Ordinance"};
+//	var cannabisActivity = {condition : "VI - Evidence of Conducting Cannabis Activity", document : "VI - Evidence of Conducting Cannabis Activity"};
+//	var BOE = {condition : "VI - Registration with CA BOE", document : "VI - Registration with CA BOE"};
+//	var fullCompliance = {condition : "VI - Evidence of Full Local Compliance", document : "VI - Evidence of Full Local Compliance"};
 	var occupyUse = {condition : "Premises - Legal Right to Occupy and Use", document : "Premises - Legal Right to Occupy and Use"};
 	var ownership = {condition : "Premises - Property Ownership Documentation", document : "Premises - Property Ownership Documentation"};
-	var operationDate = {condition : "Premises - Evidence of the Date Operations Began", document : "Premises - Evidence of the Date Operations Began"};
+//	var operationDate = {condition : "Premises - Evidence of the Date Operations Began", document : "Premises - Evidence of the Date Operations Began"};
 	var enviroStor = {condition : "Premises - EnviroStor Hazardous Materials Search", document : "Premises - EnviroStor Hazardous Materials Search"};
 	var premiseDiagram = {condition : "Cultivation Plan - Premises Diagram", document : "Cultivation Plan - Premises Diagram"};
 	var wastePlan = {condition : "Cultivation Plan - Waste Management Plan", document : "Cultivation Plan - Waste Management Plan"};
 	var pestPlan = {condition : "Cultivation Plan - Pest Management Plan", document : "Cultivation Plan - Pest Management Plan"};
 	var lightDiagram = {condition : "Cultivation Plan - Lighting Diagram", document : "Cultivation Plan - Lighting Diagram"};
 	var streambedAlter = {condition : "Water - Streambed Alteration Document", document : "Water - Streambed Alteration Document"};
-	var wellLog = {condition : "Water - Well Log", document : "Water - Well Log"};
+	var wellLog = {condition : "Water - Goundwater Well", document : "Water - Groundwaer Well"};
+	var srs2WellLog = {condition : "Water - Small Retail Supplier Delivery", document : "Water - Small Retail Supplier Delivery"};
 	var SWRCBAhuth = {condition : "Water - SWRCB Diversion Authorization", document : "Water - SWRCB Diversion Authorization"};
 	var SWRCBExcept = {condition : "Water - SWRCB Exception Document", document : "Water - SWRCB Exception Document"};
 	var waterQuality = {condition : "Water - Water Quality Protection Permit", document : "Water - Water Quality Protection Permit"};
-	var localAuth = {condition : "Local - Local Authorization", document : "Local - Local Authorization"};
+//	var localAuth = {condition : "Local - Local Authorization", document : "Local - Local Authorization"};
 	var planningPermit = {condition : "Local - Certified Planning Permit", document : "Local - Certified Planning Permit"};
 	var goodStanding = {condition : "Local - Evidence of Good Standing", document : "Local - Evidence of Good Standing"};
 	var CEQA = {condition : "Local - Evidence of CEQA Compliance", document : "Local - Evidence of CEQA Compliance"};
-	var localComply = {condition : "Local - Certification of Local Compliance", document : "Local - Certification of Local Compliance"};
+//	var localComply = {condition : "Local - Certification of Local Compliance", document : "Local - Certification of Local Compliance"};
 	var coopMembers = {condition : "COOP - List of Members", document : "COOP - List of Members"};
 	
 	//owner documents
@@ -53,7 +54,7 @@ try{
     var certificateOfRehabilitation = {condition : "Certificate of Rehabilitation", document : "Certificate of Rehabilitation"};
     var referenceLetters = {condition : "Reference Letters", document : "Reference Letters"};
 	var convictions = {condition : "History of Convictions", document : "History of Convictions"};
-	var calResidency = {condition : "Evidence of California Residency", document : "Evidence of California Residency"};
+//	var calResidency = {condition : "Evidence of California Residency", document : "Evidence of California Residency"};
 
 // Required Documents for Cultivator Applications
 	if(recdType == "Application"){
@@ -64,9 +65,9 @@ try{
 		arrReqdDocs_App.push(waterQuality);
 		arrReqdDocs_App.push(enviroStor);
 		arrReqdDocs_App.push(streambedAlter);	
-		arrReqdDocs_App.push(localComply);
 		arrReqdDocs_App.push(CEQA);
-		
+		arrReqdDocs_App.push(planningPermit);
+/*		
 		var medicalPriorityDate = "01/01/2016";
 		var adultPriorityDate = "09/01/2016";
 		
@@ -88,6 +89,7 @@ try{
 				}
 			}
 		}
+*/
 		if (AInfo["Business Entity Structure"] != "Sole Proprietorship"){
 			arrReqdDocs_App.push(stateDocuments);
 		}else{
@@ -116,7 +118,7 @@ try{
 				removeCapCondition(conditionType, coopMembers.condition);
 			}
 		}
-		if (AInfo["Vertical Integration"] == "CHECKED"){
+/*		if (AInfo["Vertical Integration"] == "CHECKED"){
 			arrReqdDocs_App.push(localOrdinance);
 			arrReqdDocs_App.push(cannabisActivity);
 			arrReqdDocs_App.push(fullCompliance);
@@ -135,7 +137,7 @@ try{
 				removeCapCondition(conditionType, BOE.condition);
 			}
 		}
-		
+*/		
 		if(AInfo["Legal Possession"] == "Own") {
 			arrReqdDocs_App.push(ownership);
 		}else{
@@ -151,11 +153,18 @@ try{
 			}
 		}
 		
-		if (AInfo["Small Retail Supplier 2"] == "CHECKED"|| AInfo["Groundwater Well"] == "CHECKED"){
+		if (AInfo["Groundwater Well"] == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
 		}else{
 			if(appHasCondition(conditionType, null, wellLog.condition, null)){
 				removeCapCondition(conditionType, wellLog.condition);
+			}
+		}
+		if (AInfo["Small Retail Supplier 2"] == "CHECKED"){
+			arrReqdDocs_App.push(srs2WellLog);
+		}else{
+			if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
+				removeCapCondition(conditionType, srs2WellLog.condition);
 			}
 		}
 		if (AInfo["Diversion"] == "CHECKED"){
@@ -215,7 +224,7 @@ try{
 				removeCapCondition(conditionType, lightDiagram.condition);
 			}
 		}
-
+/*
 		if(AInfo["Local Authority Type"] != "" && AInfo["Local Authority Type"] != null) {
 			arrReqdDocs_App.push(localAuth);
 			arrReqdDocs_App.push(planningPermit);
@@ -229,7 +238,7 @@ try{
 		}
 		return arrReqdDocs_App;
 	}
-	
+*/	
 // Required Documents for Owner Applications
 	if(recdType == "Owner"){
 		arrReqdDocs_Own = new Array();
@@ -245,9 +254,6 @@ try{
 			pTypeResult = pCap.getCapType();
 			pTypeString = pTypeResult.toString();
 			pTypeArray = pTypeString.split("/");
-			if(pTypeArray[2] == "Adult Use") {
-				arrReqdDocs_Own.push(calResidency);
-			}
 		}
 		if (AInfo["Convicted of a Crime"] == "Yes"){
 				arrReqdDocs_Own.push(evidenceOfDismissal);
