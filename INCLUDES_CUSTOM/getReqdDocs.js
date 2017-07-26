@@ -249,18 +249,13 @@ try{
 		arrReqdDocs_Own.push(fingerprintApp);
 		
 	//these are qualified documents
-		parentId = getParent(itemCap);
-		if(parentId){
-			pCap = aa.cap.getCap(parentId).getOutput();
-			pTypeResult = pCap.getCapType();
-			pTypeString = pTypeResult.toString();
-			pTypeArray = pTypeString.split("/");
-		}
+/*
 		if (AInfo["Convicted of a Crime"] == "Yes"){
 				arrReqdDocs_Own.push(evidenceOfDismissal);
 				arrReqdDocs_Own.push(certificateOfRehabilitation);
 				arrReqdDocs_Own.push(referenceLetters);
 		}
+*/
 		return arrReqdDocs_Own;
 	}
 }catch (err){
