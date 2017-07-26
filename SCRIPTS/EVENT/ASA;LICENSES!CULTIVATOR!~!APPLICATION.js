@@ -52,6 +52,17 @@ try {
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
+
+//lwacht
+//send the application notification letter
+try{
+	runReportAttach(capId,"Submitted Application", "p1value", capId.getCustomID());
+	emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "", false, "Application Received", capId, "RECORD_ID", capId.getCustomID());
+}catch(err){
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: " + err.message);
+	logDebug(err.stack);
+}
+
 //lwacht
 //remove conditions after documents are uploaded
 /* not working here so trying in CTRCA
