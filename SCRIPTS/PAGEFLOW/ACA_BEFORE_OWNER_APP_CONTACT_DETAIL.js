@@ -90,32 +90,34 @@ try{
 			//		logMessage(x+ ": " + thisCont[x]); 
 			//	} 
 			//} 
-			var contactTypeFlag = thisCont.contactTypeFlag.toUpperCase(); 
-			if(contactTypeFlag =="INDIVIDUAL") { 
-				var ssNbr = thisCont.socialSecurityNumber; 
-				if (matches(ssNbr,null, "", "undefined")) { 
-					cancel = true; 
-					showMessage = true; 
-					logMessage("Your social security number needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
-				} 
-				var birthDate = thisCont.birthDate; 
-				if (matches(birthDate,null, "", "undefined")) { 
-					cancel = true; 
-					showMessage = true; 
-					logMessage("Your birth date needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
-				} 
-/*				var pplRes = aa.people.getPeople(thisCont.refContactNumber); 
-				if(pplRes.getSuccess()){ 
-					var thisPpl = pplRes.getOutput(); 
-					var boeSeller = thisPpl.businessName2; 
-					if (matches(boeSeller,null, "", "undefined")) { 
+			var contactTypeFlag = thisCont.contactTypeFlag
+			if(contactTypeFlag!=null) {
+				if(contactTypeFlag.toUpperCase() =="INDIVIDUAL") { 
+					var ssNbr = thisCont.socialSecurityNumber; 
+					if (matches(ssNbr,null, "", "undefined")) { 
 						cancel = true; 
 						showMessage = true; 
-						logMessage("'BOE Seller Permit Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
+						logMessage("Your social security number needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
 					} 
-				}  
-*/
-			} 
+					var birthDate = thisCont.birthDate; 
+					if (matches(birthDate,null, "", "undefined")) { 
+						cancel = true; 
+						showMessage = true; 
+						logMessage("Your birth date needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
+					} 
+	/*				var pplRes = aa.people.getPeople(thisCont.refContactNumber); 
+					if(pplRes.getSuccess()){ 
+						var thisPpl = pplRes.getOutput(); 
+						var boeSeller = thisPpl.businessName2; 
+						if (matches(boeSeller,null, "", "undefined")) { 
+							cancel = true; 
+							showMessage = true; 
+							logMessage("'BOE Seller Permit Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
+						} 
+					}  
+	*/
+				} 
+			}
 		}
 		//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Complete contact  " + startDate, "capId: " + capId + br +emailText);
 

@@ -2,6 +2,7 @@
 // adding associated forms for owner records then adding owners to those records
 function processOwnerApplications(){
 try {
+	var errMsg = "";
 	var recTypeAlias = "Owner Application";  // must be a valid record type alias
 	var recordNum = 0;
 	var currCapId = capId;
@@ -108,6 +109,7 @@ try {
 						}
 					}
 					editContactType("Individual", "Owner");
+					errMsg += vEmail + br;
 					var ownUser = createPublicUserFromContact("Owner");
 					tblOwners[o]["Status"]="Submitted";
 					emailParameters = aa.util.newHashtable();
@@ -132,6 +134,6 @@ try {
 }catch (err) {
 	logDebug("ERROR: A JavaScript Error occurred: processOwnerApplications: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "**ERROR: A JavaScript Error occurred: processOwnerApplications: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "**ERROR: A JavaScript Error occurred: processOwnerApplications: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + errMsg);
 }	
 }
