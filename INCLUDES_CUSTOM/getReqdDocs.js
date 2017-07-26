@@ -236,9 +236,10 @@ try{
 				removeCapCondition(conditionType, planningPermit.condition);
 			}
 		}
+*/
 		return arrReqdDocs_App;
 	}
-*/	
+	
 // Required Documents for Owner Applications
 	if(recdType == "Owner"){
 		arrReqdDocs_Own = new Array();
