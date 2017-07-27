@@ -45,7 +45,7 @@ try{
 	var goodStanding = {condition : "Local - Evidence of Good Standing", document : "Local - Evidence of Good Standing"};
 	var CEQA = {condition : "Local - Evidence of CEQA Compliance", document : "Local - Evidence of CEQA Compliance"};
 //	var localComply = {condition : "Local - Certification of Local Compliance", document : "Local - Certification of Local Compliance"};
-	var coopMembers = {condition : "COOP - List of Members", document : "COOP - List of Members"};
+	var coopMembers = {condition : "Co-Op - List of Members", document : "Co-Op - List of Members"};
 	
 	//owner documents
     var governmentIssuedID = {condition : "Government Issued ID", document : "Government Issued ID"};
