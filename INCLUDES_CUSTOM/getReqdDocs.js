@@ -61,8 +61,6 @@ try{
 		arrReqdDocs_App = new Array();
 		
 	//Business documents
-		arrReqdDocs_App.push(businessBond);
-		
 		if (AInfo["Business Entity Structure"] != "Sole Proprietorship"){
 			arrReqdDocs_App.push(stateDocuments);
 		}else{
@@ -70,13 +68,9 @@ try{
 				removeCapCondition(conditionType, stateDocuments.condition);
 			}
 		}
-		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
-			arrReqdDocs_App.push(soveriegnImmunity);
-		}else{
-			if(appHasCondition(conditionType, null, soveriegnImmunity.condition, null)){
-				removeCapCondition(conditionType, soveriegnImmunity.condition);
-			}
-		}
+		
+		arrReqdDocs_App.push(businessBond);
+		
 		if (AInfo["Foreign Corporation"] == "Yes"){
 			arrReqdDocs_App.push(foriegnCorp);
 		}else{
@@ -84,7 +78,15 @@ try{
 				removeCapCondition(conditionType, foriegnCorp.condition);
 			}
 		}
-		//Co-Op documents
+		
+		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
+			arrReqdDocs_App.push(soveriegnImmunity);
+		}else{
+			if(appHasCondition(conditionType, null, soveriegnImmunity.condition, null)){
+				removeCapCondition(conditionType, soveriegnImmunity.condition);
+			}
+		}
+	//Co-Op documents
 		if (AInfo["Cooperative Association"] == "Yes"){
 			arrReqdDocs_App.push(coopMembers);
 		}else{
@@ -109,18 +111,18 @@ try{
 			need_wastePlan = true;
 		}
 
+		if(need_lightDiagram){
+			arrReqdDocs_App.push(lightDiagram);
+		}else{
+			if(appHasCondition(conditionType, null, lightDiagram.condition, null)){
+				removeCapCondition(conditionType, lightDiagram.condition);
+			}
+		}
 		if(need_premiseDiagram){
 			arrReqdDocs_App.push(premiseDiagram);
 		}else{
 			if(appHasCondition(conditionType, null, premiseDiagram.condition, null)){
 				removeCapCondition(conditionType, premiseDiagram.condition);
-			}
-		}
-		if(need_wastePlan){
-			arrReqdDocs_App.push(wastePlan);
-		}else{
-			if(appHasCondition(conditionType, null, wastePlan.condition, null)){
-				removeCapCondition(conditionType, wastePlan.condition);
 			}
 		}
 		if(need_pestPlan){
@@ -130,18 +132,18 @@ try{
 				removeCapCondition(conditionType, pestPlan.condition);
 			}
 		}
-		if(need_lightDiagram){
-			arrReqdDocs_App.push(lightDiagram);
+		if(need_wastePlan){
+			arrReqdDocs_App.push(wastePlan);
 		}else{
-			if(appHasCondition(conditionType, null, lightDiagram.condition, null)){
-				removeCapCondition(conditionType, lightDiagram.condition);
+			if(appHasCondition(conditionType, null, wastePlan.condition, null)){
+				removeCapCondition(conditionType, wastePlan.condition);
 			}
 		}
 		
 	// Local Permit Documents
-		arrReqdDocs_App.push(CEQA);
 		arrReqdDocs_App.push(planningPermit);
-		
+		arrReqdDocs_App.push(CEQA);
+	
 	// Premise Documents
 		arrReqdDocs_App.push(enviroStor);	
 		
@@ -161,9 +163,6 @@ try{
 		}
 
 	// Water Documents
-		arrReqdDocs_App.push(streambedAlter);	
-		arrReqdDocs_App.push(waterQuality);
-
 		if (AInfo["Groundwater Well"] == "CHECKED"){
 			arrReqdDocs_App.push(wellLog);
 		}else{
@@ -177,7 +176,9 @@ try{
 			if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
 				removeCapCondition(conditionType, srs2WellLog.condition);
 			}
-		}
+		
+		arrReqdDocs_App.push(streambedAlter);
+				
 		if (AInfo["Diversion"] == "CHECKED"){
 			arrReqdDocs_App.push(SWRCBAhuth);
 		}else{
@@ -192,6 +193,8 @@ try{
 				removeCapCondition(conditionType, SWRCBExcept.condition);
 			}
 		}
+	
+		arrReqdDocs_App.push(waterQuality);
 		
 /*	Documents no longer required	
 		var medicalPriorityDate = "01/01/2016";
