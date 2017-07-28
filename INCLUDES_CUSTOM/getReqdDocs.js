@@ -111,7 +111,7 @@ try{
 				removeCapCondition(conditionType, foriegnCorp.condition);
 			}
 		}
-		if (AInfo["Cooperative Association"] != "Yes"){
+		if (AInfo["Cooperative Association"] == "Yes"){
 			arrReqdDocs_App.push(coopMembers);
 		}else{
 			if(appHasCondition(conditionType, null, coopMembers.condition, null)){
