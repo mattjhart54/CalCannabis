@@ -176,6 +176,7 @@ try{
 			if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
 				removeCapCondition(conditionType, srs2WellLog.condition);
 			}
+		}
 		
 		arrReqdDocs_App.push(streambedAlter);
 				
