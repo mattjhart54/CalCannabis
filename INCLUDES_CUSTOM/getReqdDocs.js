@@ -60,36 +60,9 @@ try{
 	if(recdType == "Application"){
 		arrReqdDocs_App = new Array();
 		
-	//these documents are always required
+	//Business documents
 		arrReqdDocs_App.push(businessBond);
-		arrReqdDocs_App.push(waterQuality);
-		arrReqdDocs_App.push(enviroStor);
-		arrReqdDocs_App.push(streambedAlter);	
-		arrReqdDocs_App.push(CEQA);
-		arrReqdDocs_App.push(planningPermit);
-/*		
-		var medicalPriorityDate = "01/01/2016";
-		var adultPriorityDate = "09/01/2016";
 		
-		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Medical") {
-			if(dateDiff(AInfo["Date of Intitial Operation"],medicalPriorityDate) >= 0) {
-				arrReqdDocs_App.push(operationDate);
-			}else{
-				if(appHasCondition(conditionType, null, operationDate.condition, null)){
-					removeCapCondition(conditionType, operationDate.condition);
-				}
-			}
-		}
-		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Adult Use") {
-			if(dateDiff(AInfo["Date of Intitial Operation"],adultPriorityDate) >= 0) {
-				arrReqdDocs_App.push(operationDate);
-			}else{
-				if(appHasCondition(conditionType, null, operationDate.condition, null)){
-					removeCapCondition(conditionType, operationDate.condition);
-				}
-			}
-		}
-*/
 		if (AInfo["Business Entity Structure"] != "Sole Proprietorship"){
 			arrReqdDocs_App.push(stateDocuments);
 		}else{
@@ -111,6 +84,7 @@ try{
 				removeCapCondition(conditionType, foriegnCorp.condition);
 			}
 		}
+		//Co-Op documents
 		if (AInfo["Cooperative Association"] == "Yes"){
 			arrReqdDocs_App.push(coopMembers);
 		}else{
@@ -118,69 +92,8 @@ try{
 				removeCapCondition(conditionType, coopMembers.condition);
 			}
 		}
-/*		if (AInfo["Vertical Integration"] == "CHECKED"){
-			arrReqdDocs_App.push(localOrdinance);
-			arrReqdDocs_App.push(cannabisActivity);
-			arrReqdDocs_App.push(fullCompliance);
-			arrReqdDocs_App.push(BOE);
-		}else{
-			if(appHasCondition(conditionType, null, localOrdinance.condition, null)){
-				removeCapCondition(conditionType, localOrdinance.condition);
-			}
-			if(appHasCondition(conditionType, null, cannabisActivity.condition, null)){
-				removeCapCondition(conditionType, cannabisActivity.condition);
-			}
-			if(appHasCondition(conditionType, null, fullCompliance.condition, null)){
-				removeCapCondition(conditionType, fullCompliance.condition);
-			}
-			if(appHasCondition(conditionType, null, BOE.condition, null)){
-				removeCapCondition(conditionType, BOE.condition);
-			}
-		}
-*/		
-		if(AInfo["Legal Possession"] == "Own") {
-			arrReqdDocs_App.push(ownership);
-		}else{
-			if(appHasCondition(conditionType, null, ownership.condition, null)){
-				removeCapCondition(conditionType, ownership.condition);
-			}
-		}
-		if(AInfo["Legal Possession"] == "Rent/Lease" || AInfo["Legal Possession"] == "Other") {
-			arrReqdDocs_App.push(occupyUse);
-		}else{
-			if(appHasCondition(conditionType, null, occupyUse.condition, null)){
-				removeCapCondition(conditionType, occupyUse.condition);
-			}
-		}
 		
-		if (AInfo["Groundwater Well"] == "CHECKED"){
-			arrReqdDocs_App.push(wellLog);
-		}else{
-			if(appHasCondition(conditionType, null, wellLog.condition, null)){
-				removeCapCondition(conditionType, wellLog.condition);
-			}
-		}
-		if (AInfo["Small Retail Supplier 2"] == "CHECKED"){
-			arrReqdDocs_App.push(srs2WellLog);
-		}else{
-			if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
-				removeCapCondition(conditionType, srs2WellLog.condition);
-			}
-		}
-		if (AInfo["Diversion"] == "CHECKED"){
-			arrReqdDocs_App.push(SWRCBAhuth);
-		}else{
-			if(appHasCondition(conditionType, null, SWRCBAhuth.condition, null)){
-				removeCapCondition(conditionType, SWRCBAhuth.condition);
-			}
-		}		
-		if (AInfo["Diversion Exception"] == "CHECKED"){
-			arrReqdDocs_App.push(SWRCBExcept);
-		}else{
-			if(appHasCondition(conditionType, null, SWRCBExcept.condition, null)){
-				removeCapCondition(conditionType, SWRCBExcept.condition);
-			}
-		}
+	//Cultivation Plan documents
 		if(matches(AInfo["License Type"],"Specialty Cottage Indoor","Specialty Cottage Mixed-Light","Specialty Indoor","Specialty Mixed-Light","Small Indoor","Small Mixed-Light","Medium Indoor","Medium Mixed-Light")) {
 			need_premiseDiagram = true;
 			need_wastePlan = true;
@@ -224,7 +137,104 @@ try{
 				removeCapCondition(conditionType, lightDiagram.condition);
 			}
 		}
-/*
+		
+	// Local Permit Documents
+		arrReqdDocs_App.push(CEQA);
+		arrReqdDocs_App.push(planningPermit);
+		
+	// Premise Documents
+		arrReqdDocs_App.push(enviroStor);	
+		
+		if(AInfo["Legal Possession"] == "Own") {
+			arrReqdDocs_App.push(ownership);
+		}else{
+			if(appHasCondition(conditionType, null, ownership.condition, null)){
+				removeCapCondition(conditionType, ownership.condition);
+			}
+		}
+		if(AInfo["Legal Possession"] == "Rent/Lease" || AInfo["Legal Possession"] == "Other") {
+			arrReqdDocs_App.push(occupyUse);
+		}else{
+			if(appHasCondition(conditionType, null, occupyUse.condition, null)){
+				removeCapCondition(conditionType, occupyUse.condition);
+			}
+		}
+
+	// Water Documents
+		arrReqdDocs_App.push(streambedAlter);	
+		arrReqdDocs_App.push(waterQuality);
+
+		if (AInfo["Groundwater Well"] == "CHECKED"){
+			arrReqdDocs_App.push(wellLog);
+		}else{
+			if(appHasCondition(conditionType, null, wellLog.condition, null)){
+				removeCapCondition(conditionType, wellLog.condition);
+			}
+		}
+		if (AInfo["Small Retail Supplier 2"] == "CHECKED"){
+			arrReqdDocs_App.push(srs2WellLog);
+		}else{
+			if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
+				removeCapCondition(conditionType, srs2WellLog.condition);
+			}
+		}
+		if (AInfo["Diversion"] == "CHECKED"){
+			arrReqdDocs_App.push(SWRCBAhuth);
+		}else{
+			if(appHasCondition(conditionType, null, SWRCBAhuth.condition, null)){
+				removeCapCondition(conditionType, SWRCBAhuth.condition);
+			}
+		}		
+		if (AInfo["Diversion Exception"] == "CHECKED"){
+			arrReqdDocs_App.push(SWRCBExcept);
+		}else{
+			if(appHasCondition(conditionType, null, SWRCBExcept.condition, null)){
+				removeCapCondition(conditionType, SWRCBExcept.condition);
+			}
+		}
+		
+/*	Documents no longer required	
+		var medicalPriorityDate = "01/01/2016";
+		var adultPriorityDate = "09/01/2016";
+		
+		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Medical") {
+			if(dateDiff(AInfo["Date of Intitial Operation"],medicalPriorityDate) >= 0) {
+				arrReqdDocs_App.push(operationDate);
+			}else{
+				if(appHasCondition(conditionType, null, operationDate.condition, null)){
+					removeCapCondition(conditionType, operationDate.condition);
+				}
+			}
+		}
+		if(AInfo["Date of Intitial Operation"] != null && AInfo["Date of Intitial Operation"] != "" && appTypeArray[2] == "Adult Use") {
+			if(dateDiff(AInfo["Date of Intitial Operation"],adultPriorityDate) >= 0) {
+				arrReqdDocs_App.push(operationDate);
+			}else{
+				if(appHasCondition(conditionType, null, operationDate.condition, null)){
+					removeCapCondition(conditionType, operationDate.condition);
+				}
+			}
+		}
+		if (AInfo["Vertical Integration"] == "CHECKED"){
+			arrReqdDocs_App.push(localOrdinance);
+			arrReqdDocs_App.push(cannabisActivity);
+			arrReqdDocs_App.push(fullCompliance);
+			arrReqdDocs_App.push(BOE);
+		}else{
+			if(appHasCondition(conditionType, null, localOrdinance.condition, null)){
+				removeCapCondition(conditionType, localOrdinance.condition);
+			}
+			if(appHasCondition(conditionType, null, cannabisActivity.condition, null)){
+				removeCapCondition(conditionType, cannabisActivity.condition);
+			}
+			if(appHasCondition(conditionType, null, fullCompliance.condition, null)){
+				removeCapCondition(conditionType, fullCompliance.condition);
+			}
+			if(appHasCondition(conditionType, null, BOE.condition, null)){
+				removeCapCondition(conditionType, BOE.condition);
+			}
+		}	
+		
 		if(AInfo["Local Authority Type"] != "" && AInfo["Local Authority Type"] != null) {
 			arrReqdDocs_App.push(localAuth);
 			arrReqdDocs_App.push(planningPermit);
@@ -237,6 +247,7 @@ try{
 			}
 		}
 */
+
 		return arrReqdDocs_App;
 	}
 	
@@ -248,7 +259,7 @@ try{
 		arrReqdDocs_Own.push(governmentIssuedID);
 		arrReqdDocs_Own.push(fingerprintApp);
 		
-	//these are qualified documents
+	//these are now optional documents
 /*
 		if (AInfo["Convicted of a Crime"] == "Yes"){
 				arrReqdDocs_Own.push(evidenceOfDismissal);
