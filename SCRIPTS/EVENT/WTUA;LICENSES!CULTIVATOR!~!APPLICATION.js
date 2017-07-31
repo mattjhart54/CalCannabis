@@ -123,7 +123,8 @@ try{
 							}
 							var newOAltId = thisOwnCapId.getCustomID() +"-DEF"  + cntOChild;
 							//logDebug("newOAltId: " + newOAltId);
-							var updOAltId = aa.cap.updateCapAltID(newODefId,newOAltId);
+							//lwacht adding a 't' because something quit working 
+							var updOAltId = aa.cap.updateCapAltID(newODefId,newOAltId+"T");
 							if(!updOAltId.getSuccess()){
 								logDebug("Error updating Owner Alt Id: " + newOAltId + ":: " +updOAltId.getErrorMessage());
 							}else{
