@@ -14,7 +14,7 @@ try{
 }
 
 //lwacht
-//notify processor(s) that the amendment record has been submitted
+//notify processor(s) that the amendment record has been submitted and activate the appropriate task
 try{
 	parentAltId = AInfo["ParentCapId"];
 	if(parentAltId){
@@ -90,6 +90,20 @@ try{
 			}
 		}else{
 			logDebug("Error occurred getting resParCapId: " + resParCapId.getErrorMessage());
+		}
+		if(isTaskActive("Administrative Manager Review")){
+			if(appTypeArray[2]=="Owner"){
+				if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed", "Incomplete Response")){
+					activateTask("Owner Application Reviews");
+				}
+			}else{
+				if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
+					activateTask("Administrative Review");
+				}
+			}
+			if(!isTaskActive("Owner Application Reviews") && !isTaskActive("Administrative Review")){
+				setTask("Administrative Manager Review", "N", "Y");
+			}
 		}
 	}else{
 		logDebug("No parent found. No emails sent.");

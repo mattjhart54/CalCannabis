@@ -175,11 +175,11 @@ try{
 		editAppSpecific("App Expiry Date", dateAdd(null,90));
 		if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
 			editTaskDueDate("Administrative Review", dateAdd(null,90));
-			activateTask("Administrative Review");
+			//activateTask("Administrative Review");
 		}
 		if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
 			editTaskDueDate("Owner Application Reviews", dateAdd(null,90));
-			activateTask("Owner Application Reviews");
+			//activateTask("Owner Application Reviews");
 		}
 		setTask("Administrative Manager Review", "N", "Y");
 	}
@@ -188,11 +188,11 @@ try{
 		editAppSpecific("App Expiry Date", dateAdd(null,90));
 		if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
 			editTaskDueDate("Scientific Review", dateAdd(null,90));
-			activateTask("Scientific Review");
+			//activateTask("Scientific Review");
 		}
 		if(matches(taskStatus("CEQA Review"),"Additional Information Needed","Incomplete Response")){
 			editTaskDueDate("CEQA Review", dateAdd(null,90));
-			activateTask("CEQA Review");
+			//activateTask("CEQA Review");
 		}
 		setTask("Science Manager Review", "N", "Y");
 	}
