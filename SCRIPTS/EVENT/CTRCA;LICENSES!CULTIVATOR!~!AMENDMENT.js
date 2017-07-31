@@ -19,6 +19,7 @@ try{
 try{
 	parentAltId = AInfo["ParentCapId"];
 	if(parentAltId){
+		var currCap = capId;
 		resParCapId = aa.cap.getCapID(parentAltId);
 		if(resParCapId.getSuccess()){
 			parentCapId = resParCapId.getOutput();
@@ -43,10 +44,12 @@ try{
 						staffEmail = taskUpdater.email;
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
 						logDebug("Admin Amendment record processed");
+						capId = parentCapId;
 						activateTask("Administrative Review");
 						if(!isTaskActive("Owner Application Reviews") && !isTaskActive("Administrative Review")){
 							setTask("Administrative Manager Review", "N", "Y");
 						}
+						capId = currCap;
 					}
 				}else{
 					logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
@@ -62,10 +65,12 @@ try{
 						staffEmail = taskUpdater.email;
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 						logDebug("Owner Amendment record processed");
+						capId = parentCapId;
 						activateTask("Owner Application Reviews");
 						if(!isTaskActive("Owner Application Reviews") && !isTaskActive("Administrative Review")){
 							setTask("Administrative Manager Review", "N", "Y");
 						}
+						capId = currCap;
 					}
 				}else{
 					logDebug("Error occurred getting taskItemScriptModel: Owner Application Reviews: " + taskItemScriptModel.getErrorMessage());
@@ -82,10 +87,12 @@ try{
 						staffEmail = taskUpdater.email;
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 						logDebug("Scientific Amendment record processed");
+						capId = parentCapId;
 						activateTask("Scientific Review");
 						if(!isTaskActive("Scientific Review") && !isTaskActive("CEQA Review")){
 							setTask("Administrative Manager Review", "N", "Y");
 						}
+						capId = currCap;
 					}
 				}else{
 					logDebug("Error occurred getting taskItemScriptModel: Scientific Review: " + taskItemScriptModel.getErrorMessage());
@@ -100,10 +107,12 @@ try{
 						staffEmail = taskUpdater.email;
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 						logDebug("CEQA Amendment record processed");
+						capId = parentCapId;
 						activateTask("CEQA Review");
 						if(!isTaskActive("Scientific Review") && !isTaskActive("CEQA Review")){
 							setTask("Administrative Manager Review", "N", "Y");
 						}
+						capId = currCap;
 					}
 				}else{
 					logDebug("Error occurred getting taskItemScriptModel: CEQA Review: " + taskItemScriptModel.getErrorMessage());
