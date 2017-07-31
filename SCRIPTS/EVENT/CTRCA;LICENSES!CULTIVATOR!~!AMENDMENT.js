@@ -1,6 +1,5 @@
 //lwacht: update altid based on altId assigned when the record was created
 try{
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY in CTRCA:LICENSES/CULTIVATOR/*/AMENDMENT: AltId Update: "+ startDate, capId + br + currEnv);
 	newAltId = AInfo["AltId"];
 	var updAltId = aa.cap.updateCapAltID(capId,newAltId);
 	if(!updAltId.getSuccess()){
@@ -46,9 +45,6 @@ try{
 						logDebug("Admin Amendment record processed");
 						capId = parentCapId;
 						activateTask("Administrative Review");
-						if(!isTaskActive("Owner Application Reviews") && !isTaskActive("Administrative Review")){
-							setTask("Administrative Manager Review", "N", "Y");
-						}
 						capId = currCap;
 					}
 				}else{
@@ -67,9 +63,6 @@ try{
 						logDebug("Owner Amendment record processed");
 						capId = parentCapId;
 						activateTask("Owner Application Reviews");
-						if(!isTaskActive("Owner Application Reviews") && !isTaskActive("Administrative Review")){
-							setTask("Administrative Manager Review", "N", "Y");
-						}
 						capId = currCap;
 					}
 				}else{
@@ -89,9 +82,6 @@ try{
 						logDebug("Scientific Amendment record processed");
 						capId = parentCapId;
 						activateTask("Scientific Review");
-						if(!isTaskActive("Scientific Review") && !isTaskActive("CEQA Review")){
-							setTask("Administrative Manager Review", "N", "Y");
-						}
 						capId = currCap;
 					}
 				}else{
@@ -109,9 +99,6 @@ try{
 						logDebug("CEQA Amendment record processed");
 						capId = parentCapId;
 						activateTask("CEQA Review");
-						if(!isTaskActive("Scientific Review") && !isTaskActive("CEQA Review")){
-							setTask("Administrative Manager Review", "N", "Y");
-						}
 						capId = currCap;
 					}
 				}else{
