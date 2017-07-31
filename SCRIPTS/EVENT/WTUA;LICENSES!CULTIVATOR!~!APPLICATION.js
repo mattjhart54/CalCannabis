@@ -64,7 +64,7 @@ try{
 			}
 			var newAltId = capIDString +"-DEF"+ cntChild;
 			//logDebug("newAltId: " + newAltId);
-			var updAltId = aa.cap.updateCapAltID(newDefId,newAltId);
+			var updAltId = aa.cap.updateCapAltID(newDefId,newAltId+"T");
 			if(!updAltId.getSuccess()){
 				logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
 			}else{
