@@ -29,18 +29,23 @@ try{
 			}
 			var parCap = aa.cap.getCap(parentCapId).getOutput();
 			parAppType = parCap.getCapType();
-			parAppTypeString = appTypeResult.toString();
-			parAppTypeArray = appTypeString.split("/");
+			parAppTypeString = parAppType.toString();
+			parAppTypeArray = parAppTypeString.split("/");
 			if(parAppTypeArray[3]=="Application"){
 				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
-					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
+					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
 						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
 						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 						var taskUpdater = taskUpdaterModel.getOutput(); 
 						staffEmail = taskUpdater.email;
-						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
+						logDebug("Admin Amendment record processed");
+						activateTask("Administrative Review");
+						if(!isTaskActive("Owner Application Reviews") && !isTaskActive("Administrative Review")){
+							setTask("Administrative Manager Review", "N", "Y");
+						}
 					}
 				}else{
 					logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
@@ -49,12 +54,17 @@ try{
 				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Owner Application Reviews");
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
-					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
+					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") ){
 						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
 						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 						var taskUpdater = taskUpdaterModel.getOutput(); 
 						staffEmail = taskUpdater.email;
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+						logDebug("Owner Amendment record processed");
+						activateTask("Owner Application Reviews");
+						if(!isTaskActive("Owner Application Reviews") && !isTaskActive("Administrative Review")){
+							setTask("Administrative Manager Review", "N", "Y");
+						}
 					}
 				}else{
 					logDebug("Error occurred getting taskItemScriptModel: Owner Application Reviews: " + taskItemScriptModel.getErrorMessage());
@@ -64,12 +74,17 @@ try{
 				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Scientific Review");
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
-					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
+					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
 						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
 						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 						var taskUpdater = taskUpdaterModel.getOutput(); 
 						staffEmail = taskUpdater.email;
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+						logDebug("Scientific Amendment record processed");
+						activateTask("Scientific Review");
+						if(!isTaskActive("Scientific Review") && !isTaskActive("CEQA Review")){
+							setTask("Administrative Manager Review", "N", "Y");
+						}
 					}
 				}else{
 					logDebug("Error occurred getting taskItemScriptModel: Scientific Review: " + taskItemScriptModel.getErrorMessage());
@@ -77,12 +92,17 @@ try{
 				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "CEQA Review");
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
-					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
+					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
 						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
 						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 						var taskUpdater = taskUpdaterModel.getOutput(); 
 						staffEmail = taskUpdater.email;
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+						logDebug("CEQA Amendment record processed");
+						activateTask("CEQA Review");
+						if(!isTaskActive("Scientific Review") && !isTaskActive("CEQA Review")){
+							setTask("Administrative Manager Review", "N", "Y");
+						}
 					}
 				}else{
 					logDebug("Error occurred getting taskItemScriptModel: CEQA Review: " + taskItemScriptModel.getErrorMessage());
@@ -90,20 +110,6 @@ try{
 			}
 		}else{
 			logDebug("Error occurred getting resParCapId: " + resParCapId.getErrorMessage());
-		}
-		if(isTaskActive("Administrative Manager Review")){
-			if(appTypeArray[2]=="Owner"){
-				if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed", "Incomplete Response")){
-					activateTask("Owner Application Reviews");
-				}
-			}else{
-				if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
-					activateTask("Administrative Review");
-				}
-			}
-			if(!isTaskActive("Owner Application Reviews") && !isTaskActive("Administrative Review")){
-				setTask("Administrative Manager Review", "N", "Y");
-			}
 		}
 	}else{
 		logDebug("No parent found. No emails sent.");
