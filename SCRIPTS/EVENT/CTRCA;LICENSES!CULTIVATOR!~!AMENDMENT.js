@@ -46,7 +46,7 @@ try{
 					logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
 				}
 			}else{
-				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Owner Application Review");
+				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Owner Application Reviews");
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
 					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") && taskItemScript.activeFlag=="Y"){
@@ -57,7 +57,7 @@ try{
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 					}
 				}else{
-					logDebug("Error occurred getting taskItemScriptModel: Owner Application Review: " + taskItemScriptModel.getErrorMessage());
+					logDebug("Error occurred getting taskItemScriptModel: Owner Application Reviews: " + taskItemScriptModel.getErrorMessage());
 				}
 			}
 			if(parAppTypeArray[3]=="Application"){
