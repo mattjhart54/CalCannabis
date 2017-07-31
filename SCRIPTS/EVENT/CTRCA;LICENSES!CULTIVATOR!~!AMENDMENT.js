@@ -1,6 +1,6 @@
 //lwacht: update altid based on altId assigned when the record was created
 try{
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY in CTRCA:LICENSES/CULTIVATOR/*/AMENDMENT: AltId Update: "+ startDate, capId br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY in CTRCA:LICENSES/CULTIVATOR/*/AMENDMENT: AltId Update: "+ startDate, capId + br + currEnv);
 	newAltId = AInfo["AltId"];
 	var updAltId = aa.cap.updateCapAltID(capId,newAltId);
 	if(!updAltId.getSuccess()){
