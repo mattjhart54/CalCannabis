@@ -18,17 +18,19 @@ try{
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Remove Conditions: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Remove Conditions: "+ startDate, capId + br + err.message+ br+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Remove Conditions: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
 //mhart
 //update work description with Legal Business Name
+//lwacht: don't run for temporary app
 try {
-	updateLegalBusinessName();
-	editAppName(AInfo["License Type"]);
-	updateShortNotes(AInfo["Premise County"]);
-
+	if(appTypeArray[2]!="Temporary"){
+		updateLegalBusinessName();
+		editAppName(AInfo["License Type"]);
+		updateShortNotes(AInfo["Premise County"]);
+	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: CRTCA: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
