@@ -1,7 +1,7 @@
 //lwacht
 //add parent if app number provided
 try{
-	if(!matches(AInfo["App Number"],null,"", "undefined"){
+	if(!matches(AInfo["App Number"],null,"", "undefined")){
 		addParent(AInfo["App Number"]);
 	}
 } catch(err){
