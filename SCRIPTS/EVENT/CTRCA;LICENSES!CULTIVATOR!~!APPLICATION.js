@@ -22,7 +22,7 @@ try{
 }
 //mhart
 //update work description with Legal Business Name
-//lwacht: don't run for temporary app
+//lwacht: don't run for temporary app 
 try {
 	if(appTypeArray[2]!="Temporary"){
 		updateLegalBusinessName();
