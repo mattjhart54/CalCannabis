@@ -2,7 +2,7 @@
 processOwnerApplications();
 
 //lwacht
-// send an to the designated responsible party, letting them know the
+// send an email to the designated responsible party, letting them know the
 // record is ready for approval
 try{
 	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
@@ -36,21 +36,23 @@ try{
 		}
 	}
 }catch (err){
-	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: " + err.message);
+	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: DRP Notification: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application:  DRP Notification: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 //mhart
 //update work description with Legal Business Name
+//lwacht: don't run for temporary app 
 try {
-	updateLegalBusinessName();
-	editAppName(AInfo["License Type"]);
-	updateShortNotes(AInfo["Premise County"]);
-
+	if(appTypeArray[2]!="Temporary"){
+		updateLegalBusinessName();
+		editAppName(AInfo["License Type"]);
+		updateShortNotes(AInfo["Premise County"]);
+	}
 }catch (err){
-	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: " + err.message);
+	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: Edit App Name: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Edit App Name: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 //lwacht
@@ -59,8 +61,9 @@ try{
 	runReportAttach(capId,"Submitted Application", "p1value", capId.getCustomID());
 	emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "", false, "Application Received", capId, "RECORD_ID", capId.getCustomID());
 }catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: " + err.message);
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Send Notif Letter: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Sned Notif Letter: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 //lwacht
