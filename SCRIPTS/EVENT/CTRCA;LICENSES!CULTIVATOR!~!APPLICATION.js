@@ -52,7 +52,8 @@ try{
 				var linkResult = aa.cap.createAppHierarchy(capId, childCapId);
 				if (!linkResult.getSuccess()){
 					logDebug( "Error linking to temp application(" + childCapId + "): " + linkResult.getErrorMessage());
-			}
+				}
+			}				
 		}
 	}
 } catch(err){
