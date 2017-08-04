@@ -112,6 +112,7 @@ try {
 					errMsg += vEmail + br;
 					var ownUser = createPublicUserFromContact("Owner");
 					tblOwners[o]["Status"]="Submitted";
+					emailParameters = aa.util.newHashtable();
 					addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
 					addParameter(emailParameters, "$$firstName$$",vFirst);
 					addParameter(emailParameters, "$$lasttName$$",vLast);
