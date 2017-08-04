@@ -16,17 +16,25 @@ try{
 				var currUserEmail = ""+currUser.email;
 				logDebug("drpPubUser: " + drpPubUser);
 				logDebug("currUserEmail: " + currUserEmail);
-				emailParameters = aa.util.newHashtable();
-				addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
-				addParameter(emailParameters, "$$ProjectName$$", capName);
-				addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
-				//no email gets sent to the DRP if they are the applicant
-				if(drpPubUser!=currUserEmail){
-					//cancel=true;
-					//showMessage=true;
-					//var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
-					//logMessage("<span style='font-size:16px'> Only the Designated Responsible Party can complete the application.  An email has been sent to " + drpPubUser + ".  You will be notified via email when the application has been submitted. </span><br/>");
-					sendNotification(sysEmail,drpPubUser,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
+				var cArray = getContactArray();
+				for (con in cArray) {
+					if(cArray[con].contactType == "Designated Responsible Party"){
+						var vFirst = cArray[con].firstName;
+						var vLast = cArray[con].lastName; 
+						emailParameters = aa.util.newHashtable();
+						addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
+						addParameter(emailParameters, "$$firstName$", vFirst);
+						addParameter(emailParameters, "$$lastName$", vLast);						
+						addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
+					//no email gets sent to the DRP if they are the applicant
+						if(drpPubUser!=currUserEmail){
+							//cancel=true;
+							//showMessage=true;
+							//var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
+							//logMessage("<span style='font-size:16px'> Only the Designated Responsible Party can complete the application.  An email has been sent to " + drpPubUser + ".  You will be notified via email when the application has been submitted. </span><br/>");
+							sendNotification(sysEmail,drpPubUser,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
+						}
+					}
 				}
 			}else{
 				logDebug("Error getting current public user: " + resCurUser.getErrorMessage());
