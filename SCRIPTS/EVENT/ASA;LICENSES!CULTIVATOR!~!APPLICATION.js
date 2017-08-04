@@ -7,6 +7,7 @@ processOwnerApplications();
 try{
 	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
 	var drpUser = createPublicUserFromContact("Designated Responsible Party");
+/*  DRP is now in the owner table so do not send email separately to the DRP
 	if(publicUser){
 		if(!matches(drpUser, "", null, "undefined", false)){
 			var drpPubUser = ""+drpUser.email;
@@ -43,6 +44,7 @@ try{
 			logDebug("Error creating public user for Designated Responsible Party.");
 		}
 	}
+*/
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: DRP Notification: " + err.message);
 	logDebug(err.stack);
