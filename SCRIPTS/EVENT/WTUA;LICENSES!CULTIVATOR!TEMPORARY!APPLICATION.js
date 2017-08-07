@@ -30,7 +30,7 @@ try{
 			//capId = currCapId;
 			editContactType("Applicant", "Primary Contact",licCapId);
 			var priContact = getContactObj(capId,"Primary Contact");
-			var editChannel =  priContact.capContact.setPreferredChannel("Email"));
+			var editChannel =  priContact.capContact.setPreferredChannel("Email");
 			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
 			emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, wfStatus, capId);
 			editContactType("Primary Contact","Applicant", licCapId);
