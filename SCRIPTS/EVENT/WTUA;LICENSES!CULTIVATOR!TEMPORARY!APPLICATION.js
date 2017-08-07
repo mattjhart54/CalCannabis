@@ -4,7 +4,7 @@ try{
 	if(wfStatus=="Approved"){
 		var licCapId = createLicense("Active", true);
 		if(licCapId){
-			var expDate = ateAdd(null,120);
+			var expDate = dateAdd(null,120);
 			setLicExpirationDate(licCapId,null,expDate,"Active");
 			/* will configure once there's an altId 
 			var newAltFirst = "LCT" + sysDateMMDDYYYY.substr(8,2);
