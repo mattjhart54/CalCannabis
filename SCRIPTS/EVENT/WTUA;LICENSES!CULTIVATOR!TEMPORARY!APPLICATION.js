@@ -52,3 +52,29 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create License Record: " + err.message);
 	logDebug(err.stack);
 }
+
+
+//lwacht
+//assign the application disposition task to the person who completed the admin review task
+try{
+	if(isTaskActive("Application Disposition") && wfTask!="Application Disposition"){
+		var taskItemScriptModel=aa.workflow.getTask(capId, "Administrative Review");
+		if(taskItemScriptModel.getSuccess()){
+			var taskItemScript = taskItemScriptModel.getOutput();
+			if(taskItemScript.disposition =="Administrative Review Completed"){
+				var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+				var assgnUserId = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName()).getOutput();
+				assignTask("Application Disposition", assgnUserId.userID);
+			}
+		}else{
+			logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
+		}
+	}
+} catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Assign Disposition: " + err.message);
+	logDebug(err.stack);
+}
+
+
+
+
