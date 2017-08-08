@@ -208,6 +208,36 @@ try{
 }
 
 //lwacht
+//if the perm application is set to denied, then close out any related temp licenses
+try{
+	if(wfStatus== "Denied" && appTypeArray[2]!="Temporary"){
+		var currCap = capId;
+		var arrTemp = getChildren("Licenses/Cultivator/Temporary/Application");
+		for(rec in arrTemp){
+			capId = arrTemp[rec];
+			var parId = getParents("Licenses/Cultivator/Temporary/License");
+			if(parId){
+				taskCloseAllExcept("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
+				updateAppStatus("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
+			}
+			capId = currCap;
+		}
+		var arrTemp = getChildren("Licenses/Cultivator/Temporary/License");
+		for(rec in arrTemp){
+			capId = arrTemp[rec];
+			taskCloseAllExcept("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
+			updateAppStatus("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
+			capId = currCap;
+		}
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License: " + err.message);
+	logDebug(err.stack);
+}
+
+
+
+//lwacht
 //create the license record, update altid,  and copy DRP and Owner contacts to it
 /* lwacht: moved to PRA, commenting out for now in case minds are changed.
 try{
