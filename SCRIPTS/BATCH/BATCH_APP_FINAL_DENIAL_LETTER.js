@@ -199,7 +199,7 @@ try{
 									vNonEmailSet = new createExpirationSet(setNonEmailPrefix);
 									setCreated = true;
 								}
-								setAddResult=aa.set.add(vNonEmailSet, "" ,capId, "");
+								setAddResult=aa.set.add(vNonEmailSet,capId);
 								if (!setAddResult.getSuccess())
 									logDebug("Problem occurred when adding CAP # " + altId + " to Set ID " + vNonEmailSet+"<br>");
 							}
