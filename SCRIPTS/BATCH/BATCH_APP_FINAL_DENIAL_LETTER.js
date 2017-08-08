@@ -193,7 +193,7 @@ try{
 						if(thisContact["contactType"] == conTypeArray[a]) {
 							pContact = getContactObj(capId,conTypeArray[a]);
 							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
-							if(priChannel.indexOf("Postal") >-1 && setNonEmailPrefix != ""){
+							if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Postal") >-1 && setNonEmailPrefix != ""){
 								if(setCreated == false) {
 								   //Create NonEmail Set
 									vNonEmailSet = new createExpirationSet(setNonEmailPrefix);
@@ -206,7 +206,7 @@ try{
 						}	
 					}
 		// Email notification letter if preference is email
-					if(priChannel.indexOf("Email") >= 0) {
+					if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Email") >= 0) {
 						conEmail = thisContact["email"];
 						if (conEmail) {
 							eParams = aa.util.newHashtable();
