@@ -113,10 +113,12 @@ try {
 					var ownUser = createPublicUserFromContact("Owner");
 					tblOwners[o]["Status"]="Submitted";
 					emailParameters = aa.util.newHashtable();
+					var sysDate = aa.date.getCurrentDate();
+					var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
 					addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
 					addParameter(emailParameters, "$$fName$$",""+vFirst);
 					addParameter(emailParameters, "$$lName$$",""+vLast);
-					addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
+					addParameter(emailParameters, "$$mmddyy$$", sysDateMMDDYYYY);
 					var resCurUser = aa.person.getUser(publicUserID);	
 					if(resCurUser.getSuccess()){
 						var currUser = resCurUser.getOutput();
