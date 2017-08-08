@@ -215,10 +215,13 @@ try{
 		var arrTemp = getChildren("Licenses/Cultivator/Temporary/Application");
 		for(rec in arrTemp){
 			capId = arrTemp[rec];
-			var parId = getParents("Licenses/Cultivator/Temporary/License");
-			if(parId){
-				taskCloseAllExcept("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
-				updateAppStatus("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
+			var arrParId= getParents("Licenses/Cultivator/Temporary/License");
+			if(arrParId){
+				for(row in arrParId){
+					capId = arrParId[row];
+					taskCloseAllExcept("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
+					updateAppStatus("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
+				}
 			}
 			capId = currCap;
 		}
