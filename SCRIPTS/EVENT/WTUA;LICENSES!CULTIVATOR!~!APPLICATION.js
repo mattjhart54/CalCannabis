@@ -159,7 +159,12 @@ try{
 			}
 		}
 		if(emailReport){
-			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
+			var rptName = "";
+			switch(""+wfStatus){
+				case "Science Manager Review Completed": rptName = "Approval Letter and Invoice"; break;
+				default: rptName = "Deficiency Report";
+			}
+			runReportAttach(capId,rptName, "p1value", capId.getCustomID());
 			emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, wfStatus, capId);
 		}
 	}
