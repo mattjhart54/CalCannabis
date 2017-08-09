@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_ONLOAD_OWNER_COND_DOCS.JS
+| Program : ACA_AFTER_OWNER_COND_DOCS.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -79,10 +79,6 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	asit = cap.getAppSpecificTableGroupModel();
-	var eText = "Information: " + br;
-	loadAppSpecific4ACA(AInfo);
-	loadASITables();
 	docsMissing = false;
 	showList = true;
 	addConditions = false;
@@ -99,12 +95,12 @@ try{
 	if (r.length > 0 && (showList || addTableRows)) {
 		for (x in r) { 
 			//going to add the condition, even if the document has been added, in case they want to change it
-			if(uploadedDocs[r[x].document] == undefined) {
-				showMessage = true; 
-				if (!docsMissing)  {
-					comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
-					docsMissing = true; 
-				}
+			if(uploadedDocs[r[x].document] == undefined) {	
+				//showMessage = true; 
+				//if (!docsMissing)  {
+				//	comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
+				//	docsMissing = true; 
+				//}
 				conditionType = "License Required Documents";
 				dr = r[x].condition;
 				publicDisplayCond = null;
@@ -114,9 +110,9 @@ try{
 						if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) 
 							publicDisplayCond = ccr[i];
 				}
-				if (dr && ccr.length > 0 && showList && publicDisplayCond) {
-					message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
-				}
+				//if (dr && ccr.length > 0 && showList && publicDisplayCond) {
+				//	message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
+				//}
 				if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
 					addStdCondition(conditionType,dr);
 				}
@@ -131,7 +127,6 @@ try{
 					//tblRow["Uploaded"] = "UNCHECKED"; 
 					//tblRow["Status"] = "Not Submitted"; 
 					conditionTable.push(tblRow);
-					eText +=tblRow["Document Type"] + ": " + tblRow["Document Description"] + br;
 					//logDebug("tblRow: " + tblRow["Document Type"]);
 					//logDebug("tblRow: " + tblRow["Document Description"]);
 					//logDebug("tblRow: " + tblRow["Uploaded"]);
@@ -142,9 +137,8 @@ try{
 		//if (dr && ccr.length > 0 && addTableRows) {
 		if (conditionTable.length > 0 && addTableRows) {
 			removeASITable("ATTACHMENTS"); 
-			//var newASIT = addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
-			var newASIT = copyASITable4PageFlow(asit,"ATTACHMENTS",conditionTable);
-			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_ONLOAD_OWNER_COND_DOCS: Required Documents: " + startDate, "capId: " + capId + br +  eText);
+			asit = cap.getAppSpecificTableGroupModel();
+			var newASIT = copyASITable4PageFlowLocal(asit,"ATTACHMENTS",conditionTable);
 		}
 	}
 	if (r.length > 0 && showList && docsMissing) {
@@ -152,12 +146,91 @@ try{
 	}
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ACA_ONLOAD_OWNER_COND_DOCS: Main function: " + err.message);
+	logDebug("An error has occurred in ACA_AFTER_OWNER_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_COND_DOCS: Required Documents: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_OWNER_COND_DOCS: Complete Contact" + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 // page flow custom code end
+function copyASITable4PageFlowLocal(destinationTableGroupModel,tableName,tableValueArray) // optional capId
+    	{
+  	//  tableName is the name of the ASI table
+  	//  tableValueArray is an array of associative array values.  All elements MUST be either a string or asiTableVal object
+  	// 
+  	
+    	var itemCap = capId
+  	if (arguments.length > 3)
+  		itemCap = arguments[3]; // use cap ID specified in args
+  
+  	var ta = destinationTableGroupModel.getTablesMap().values();
+  	var tai = ta.iterator();
+  	
+  	var found = false;
+  	
+  	while (tai.hasNext())
+  		  {
+  		  var tsm = tai.next();  // com.accela.aa.aamain.appspectable.AppSpecificTableModel
+  		  if (tsm.getTableName().equals(tableName)) { found = true; break; }
+  	        }
+
+
+  	if (!found) { logDebug("cannot update asit for ACA, no matching table name"); return false; }
+  	
+	var fld = aa.util.newArrayList();  // had to do this since it was coming up null.
+        var fld_readonly = aa.util.newArrayList(); // had to do this since it was coming up null.
+  	var i = -1; // row index counter
+  
+         	for (thisrow in tableValueArray)
+  		{
+  
+ 
+  		var col = tsm.getColumns()
+  		var coli = col.iterator();
+  
+  		while (coli.hasNext())
+  			{
+  			var colname = coli.next();
+  			
+			if (typeof(tableValueArray[thisrow][colname.getColumnName()]) == "object")  // we are passed an asiTablVal Obj
+				{
+				var args = new Array(tableValueArray[thisrow][colname.getColumnName()].fieldValue,colname);
+				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args).getOutput();
+				fldToAdd.setRowIndex(i);
+				fldToAdd.setFieldLabel(colname.getColumnName());
+				fldToAdd.setFieldGroup(tableName.replace(/ /g,"\+"));
+				fldToAdd.setReadOnly(tableValueArray[thisrow][colname.getColumnName()].readOnly.equals("Y"));
+				fld.add(fldToAdd);
+				fld_readonly.add(tableValueArray[thisrow][colname.getColumnName()].readOnly);
+				
+				}
+			else // we are passed a string
+				{
+				var args = new Array(tableValueArray[thisrow][colname.getColumnName()],colname);
+				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args).getOutput();
+				fldToAdd.setRowIndex(i);
+				fldToAdd.setFieldLabel(colname.getColumnName());
+				fldToAdd.setFieldGroup(tableName.replace(/ /g,"\+"));
+				fldToAdd.setReadOnly(false);
+				fld.add(fldToAdd);
+				fld_readonly.add("N");
+
+				}
+  			}
+  
+  		i--;
+  		
+  		tsm.setTableFields(fld);
+  		tsm.setReadonlyField(fld_readonly); // set readonly field
+  		}
+  
+  
+                tssm = tsm;
+                
+                return destinationTableGroupModel;
+                
+      }
+
+
 
 
 if (debug.indexOf("**ERROR") > 0) {
@@ -178,6 +251,3 @@ if (debug.indexOf("**ERROR") > 0) {
 			aa.env.setValue("ErrorMessage", debug);
 	}
 }
-
-
-
