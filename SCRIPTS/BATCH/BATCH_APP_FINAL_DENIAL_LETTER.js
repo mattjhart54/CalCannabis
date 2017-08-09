@@ -200,13 +200,10 @@ try{
 								   //Create NonEmail Set
 									//vNonEmailSet = new createExpirationSet(setNonEmailPrefix);
 									var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
-									var thisSet = new capSet(vNonEmailSet);
+									var sNonEmailSet = vNonEmailSet.toUpperCase();
 									setCreated = true;
 								}
-								thisSet.add(capId);
-								logDebug("capId: " + capId);
-								logDebug("capId: " + capId.getCustomID());
-								//setAddResult=aa.set.add(vNonEmailSet,capId);
+								setAddResult=aa.set.add(sNonEmailSet,capId);
 								//if (!setAddResult.getSuccess())
 								//	logDebug("Problem occurred when adding CAP # " + altId + " to Set ID " + vNonEmailSet+"<br>");
 							}
