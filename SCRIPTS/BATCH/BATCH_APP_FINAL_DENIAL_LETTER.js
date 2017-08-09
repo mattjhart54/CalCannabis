@@ -66,9 +66,9 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters
+/* test parameters */
 
-aa.env.setValue("lookAheadDays", "-5");
+aa.env.setValue("lookAheadDays", "0");
 aa.env.setValue("daySpan", "0");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("asiField", "Appeal Expiry Date");
@@ -79,7 +79,7 @@ aa.env.setValue("emailTemplate","LCA_APP_DISQUALIFIED_EXPIRATION");
 aa.env.setValue("sendEmailToContactTypes", "Primary Contact,Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "noreply_accela@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "Denials");
-*/
+
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
@@ -137,7 +137,7 @@ if (showDebug) {
 
 function mainProcess() {
 try{
-	var capFilterType = 0;
+	var capsToInclude = [];
 	var capFilterStatus = 0;
 	var capCount = 0;
 	setCreated = false
@@ -150,7 +150,7 @@ try{
 	}
 	logDebug("Found " + myCaps.length + " records to process");
 	
-		for (myCapsXX in myCaps) {
+	for (myCapsXX in myCaps) {
 		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
 			logDebug("WARNING","A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
 			timeExpired = true ;
@@ -170,6 +170,8 @@ try{
 		var capStatus = cap.getCapStatus();
 		
 		if (appStatus != capStatus) {
+			logDebug(capId.getCustomID() + " ignored due to status: " + capStatus);
+			capFilterStatus++;
 			continue;
 		}
 		capCount++;
@@ -181,14 +183,14 @@ try{
 				var conEmail = false;
 				thisContact = conArray[thisCon];
 				if (exists(thisContact["contactType"],conTypeArray)) {
-		// Run report letter and attach to record for each contact type
+				// Run report letter and attach to record for each contact type
 					if(thisContact["contactType"] == "Primary Contact") 
 						var addrType = "Mailing";
 					if(thisContact["contactType"] == "Designated Responsible Party") 
 						var addrType = "Home";	
 					runReportAttach(capId,"Final Denial Letter", "p1value",capId.getCustomID(),"p2value",thisContact["contactType"],"p3value",addrType);
 					
-		// Check contact preference and add to set if Postal
+					// Check contact preference and add to set if Postal
 					for(a in conTypeArray) {
 						if(thisContact["contactType"] == conTypeArray[a]) {
 							pContact = getContactObj(capId,conTypeArray[a]);
@@ -196,16 +198,21 @@ try{
 							if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Postal") >-1 && setNonEmailPrefix != ""){
 								if(setCreated == false) {
 								   //Create NonEmail Set
-									vNonEmailSet = new createExpirationSet(setNonEmailPrefix);
+									//vNonEmailSet = new createExpirationSet(setNonEmailPrefix);
+									var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
+									var thisSet = new capSet(vNonEmailSet);
 									setCreated = true;
 								}
-								setAddResult=aa.set.add(vNonEmailSet,capId);
-								if (!setAddResult.getSuccess())
-									logDebug("Problem occurred when adding CAP # " + altId + " to Set ID " + vNonEmailSet+"<br>");
+								thisSet.add(capId);
+								logDebug("capId: " + capId);
+								logDebug("capId: " + capId.getCustomID());
+								//setAddResult=aa.set.add(vNonEmailSet,capId);
+								//if (!setAddResult.getSuccess())
+								//	logDebug("Problem occurred when adding CAP # " + altId + " to Set ID " + vNonEmailSet+"<br>");
 							}
 						}	
 					}
-		// Email notification letter if preference is email
+					// Email notification letter if preference is email
 					if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Email") >= 0) {
 						conEmail = thisContact["email"];
 						if (conEmail) {
@@ -222,7 +229,6 @@ try{
 		}
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
- 	logDebug("Ignored due to application type: " + capFilterType);
  	logDebug("Ignored due to CAP Status: " + capFilterStatus);
  	logDebug("Total CAPS processed: " + capCount);
 
@@ -262,7 +268,8 @@ function createExpirationSet( prefix )
 		if (mi.length<2)
 			mi = "0"+mi;
 
-		var setName = prefix.substr(0,5) + yy + mm + dd;
+		//var setName = prefix.substr(0,5) + yy + mm + dd;
+		var setName = prefix + "_" + yy + mm + dd;
 
 		setDescription = prefix + " : " + mm + dd + yy;
 		
