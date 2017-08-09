@@ -66,7 +66,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters */
+/* test parameters
 
 aa.env.setValue("lookAheadDays", "0");
 aa.env.setValue("daySpan", "0");
@@ -75,11 +75,11 @@ aa.env.setValue("asiField", "Appeal Expiry Date");
 aa.env.setValue("asiGroup", "INTERNAL");
 aa.env.setValue("appStatus", "Denied");
 aa.env.setValue("sendEmailNotifications","Y");
-aa.env.setValue("emailTemplate","LCA_APP_DISQUALIFIED_EXPIRATION");
+aa.env.setValue("emailTemplate","LCA_APP_FINAL_DENIAL_LETTER");
 aa.env.setValue("sendEmailToContactTypes", "Primary Contact,Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "noreply_accela@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "Denials");
-
+*/
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
@@ -198,14 +198,11 @@ try{
 							if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Postal") >-1 && setNonEmailPrefix != ""){
 								if(setCreated == false) {
 								   //Create NonEmail Set
-									//vNonEmailSet = new createExpirationSet(setNonEmailPrefix);
 									var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
 									var sNonEmailSet = vNonEmailSet.toUpperCase();
 									setCreated = true;
 								}
 								setAddResult=aa.set.add(sNonEmailSet,capId);
-								//if (!setAddResult.getSuccess())
-								//	logDebug("Problem occurred when adding CAP # " + altId + " to Set ID " + vNonEmailSet+"<br>");
 							}
 						}	
 					}
@@ -214,8 +211,9 @@ try{
 						conEmail = thisContact["email"];
 						if (conEmail) {
 							eParams = aa.util.newHashtable();
-							addParameter(eParams,"$$recordId$$",altId);
-							addParameter(eParams,"$$recordAlias$$",cap.getCapType().getAlias());
+							addParameter(eParams,"$$AltId",altId);
+							addParameter(eParams,"$$firstName$$",thisContact["firstName"]);
+							addParameter(eParams,"$$lastName$$",thisContact["lastName"]);
 							var rFiles = [];
 							sendNotification(sysFromEmail,conEmail,"",emailTemplate,eParams, rFiles,capId);
 							logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
