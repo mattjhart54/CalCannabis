@@ -3,14 +3,14 @@ function updateLegalBusinessName() {
 	for(c in cList) {
 		if(cList[c]["contactType"] == "Applicant") {
 			if(!matches*(cList[c]["businessName"], null, "", undefined)) {
-				updateWorkDescT(cList[c]["businessName"]);
+				updateWorkDesc(cList[c]["businessName"]);
 			}
 			else {
 				if(!matches*(cList[c]["middleName"], null, "", undefined)) {
-					updateWorkDescT(cList[c]["middleName"]);
+					updateWorkDesc(cList[c]["middleName"]);
 				}
 				else {
-					updateWorkDescT("No legal business name provided");
+					updateWorkDesc("No legal business name provided");
 				}
 			}
 		}
