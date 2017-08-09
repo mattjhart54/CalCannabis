@@ -18,7 +18,7 @@ try{
 					var addrType = "Mailing";
 				if(thisContact["contactType"] == "Designated Responsible Party") 
 					var addrType = "Home";	
-				runReportAttach(capId,"Withwran Application Letter", "p1value",capId.getCustomID(),"p2value",thisContact["contactType"],"p3value",addrType);
+				runReportAttach(capId,"Withdrawn Application Letter", "p1value",capId.getCustomID(),"p2value",thisContact["contactType"],"p3value",addrType);
 				pContact = getContactObj(capId,thisContact["contactType"]);
 				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
 				if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Email") >=0) {
