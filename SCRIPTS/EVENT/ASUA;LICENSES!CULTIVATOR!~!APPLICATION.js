@@ -18,7 +18,7 @@ try{
 					var addrType = "Mailing";
 				if(thisContact["contactType"] == "Designated Responsible Party") 
 					var addrType = "Home";	
-				runReportAttach(capId,"Final Denial Letter", "p1value",capId.getCustomID(),"p2value",thisContact["contactType"],"p3value",addrType);
+				runReportAttach(capId,"Withwran Application Letter", "p1value",capId.getCustomID(),"p2value",thisContact["contactType"],"p3value",addrType);
 				pContact = getContactObj(capId,thisContact["contactType"]);
 				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
 				if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Email") >=0) {
@@ -36,7 +36,7 @@ try{
 				}
 				if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Postal") >-1) {
 					postal = true;
-					pMsg = pMsg + thisContact["contactType"] + " has requested postal service.  Please print the Wtihdrawal letter and mail.  ";
+					pMsg = pMsg + thisContact["contactType"] + " has requested postal service.  Please run and print the Wtihdrawn Application Letter and mail to " + thisContact["contactType"];
 				}
 			}
 		}
