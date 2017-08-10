@@ -79,9 +79,18 @@ try {
 	if(resCurUser.getSuccess()){
 		contactFnd = false;
 		drpFnd = false;
+		prepFnd = false;
 		pcFnd = false;
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
+		//lwacht: 170810: need person logged in to be able to access the application in the future
+		if(matches(AInfo["publicUserEmail"],"",null)){
+			editAppSpecific4ACA("publicUserEmail",currEmail);
+		}else{
+			if(AInfo["publicUserEmail"]==currEmail){
+				prepFnd = true;
+			}
+		}
 		var contactList = cap.getContactsGroup();
 		logDebug("got contactlist " + contactList.size());
 		if(contactList != null && contactList.size() > 0){
@@ -99,10 +108,12 @@ try {
 				}
 			}
 		}
-		if(contactFnd == false && drpFnd == true && pcFnd == true) {
-			showMessage = true;
-			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
-		}	
+		if(!prepFnd){
+			if(contactFnd == false && drpFnd == true && pcFnd == true) {
+				showMessage = true;
+				logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
+			}	
+		}
 	}
 	else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
