@@ -86,6 +86,7 @@ try {
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
 		//lwacht: 170810: need person logged in to be able to access the application in the future
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br +  "currEmail: " + currEmail + br + "ASI: " + AInfo["publicUserEmail"] + br + currEnv);
 		if(matches(AInfo["publicUserEmail"],"",null)){
 			editAppSpecific4ACA("publicUserEmail",currEmail);
 			prepFnd = true;
@@ -95,7 +96,6 @@ try {
 			}
 		}
 		var contactList = cap.getContactsGroup();
-		logDebug("got contactlist " + contactList.size());
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
@@ -126,7 +126,7 @@ try {
 	}
 }
 catch (err){
-	logDebug("A JavaScript Error occurred: ASIUA: Licenses/Cultivation/*/Application: " + err.message);
+	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLAR_DRP_CONTACT: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
