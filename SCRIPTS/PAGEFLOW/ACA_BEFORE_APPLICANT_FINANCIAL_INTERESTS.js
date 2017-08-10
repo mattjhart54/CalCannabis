@@ -125,7 +125,7 @@ try {
 					}
 					var refContNrb = thisCont.refContactNumber;
 					showMessage = true;
-					logMessage =("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.businessName);
+					logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.businessName);
 					if (!matches(refContNrb,null, "", "undefined")) {
 						var pplMdl = aa.people.createPeopleModel().getOutput();
 						pplMdl.setContactSeqNumber(refContNrb);
