@@ -121,7 +121,7 @@ try {
 					if(AInfo["Business Entity Structure"] != "Sole Proprietor" && matches(thisCont.middleName,"",null,undefined)) {
 						showMessage = true;
 						cancel = true;
-						logMessage("Warning: Legal Business Name must be entered if the Business Entity Structure is not Sole Proprietor");
+						logMessage("Warning: Legal Business Name must be entered if the Business Entity Structure is not Sole Proprietor.  Click the edit button to enter your Legal Business Name");
 					}
 					var refContNrb = thisCont.refContactNumber;
 					if (!matches(refContNrb,null, "", "undefined")) {
