@@ -88,6 +88,7 @@ try {
 		//lwacht: 170810: need person logged in to be able to access the application in the future
 		if(matches(AInfo["publicUesrEmail"],"",null)){
 			editAppSpecific4ACA("publicUesrEmail",currEmail);
+			prepFnd = true;
 		}else{
 			if(AInfo["publicUesrEmail"]==currEmail){
 				prepFnd = true;
@@ -115,7 +116,7 @@ try {
 			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
 				cancel = true;
 				showMessage = true;
-				logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
+				logMessage(AInfo["publicUesrEmail"] +  "  Warning: Only the Applicant and the Designated Responsible party can update this application.");
 			}	
 		}
 	}
