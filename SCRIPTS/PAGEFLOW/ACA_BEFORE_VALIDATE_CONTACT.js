@@ -84,6 +84,13 @@ try {
 		var appFnd = false;
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
+		if(matches(AInfo["publicUesrEmail"],"",null,)){
+			editAppSpecific4ACA("publicUesrEmail",currEmail);
+		}else{
+			if(AInfo["publicUesrEmail"]==currEmail){
+				prepFnd = true;
+			}
+		}
 		var contactList = cap.getContactsGroup();
 		logDebug("got contactlist " + contactList.size());
 		if(contactList != null && contactList.size() > 0){
