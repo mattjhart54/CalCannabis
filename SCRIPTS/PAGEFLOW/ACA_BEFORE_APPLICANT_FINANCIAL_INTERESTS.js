@@ -118,7 +118,7 @@ try {
 				var contType = thisCont.contactType;
 				if(contType =="Applicant") {
 					//check for legal business name if not a Sole Proprietor
-					if(AInfo["Business Entity Structure"] != "Sole Proprietor" && thisCont.middleName(matches("",null,undefined)) {
+					if(AInfo["Business Entity Structure"] != "Sole Proprietor" && matches(thisCont.middleName,"",null,undefined)) {
 						showMessage = true;
 						cancel = true;
 						logMessage("Warning: Legal Business Name must be entered if the Business Entity Structure is not Sole Proprietor");
