@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_BEFORE_OWNER_APP_CONTACT.JS
+| Program : ACA_BEFORE_VALIDATE_CONTACT.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -86,11 +86,11 @@ try {
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
 		//lwacht: 170810: need person logged in to be able to access the application in the future
-		if(matches(AInfo["publicUesrEmail"],"",null)){
-			editAppSpecific4ACA("publicUesrEmail",currEmail);
+		if(matches(AInfo["publicUserEmail"],"",null)){
+			editAppSpecific4ACA("publicUserEmail",currEmail);
 			prepFnd = true;
 		}else{
-			if(AInfo["publicUesrEmail"]==currEmail){
+			if(AInfo["publicUserEmail"]==currEmail){
 				prepFnd = true;
 			}
 		}
@@ -116,19 +116,19 @@ try {
 			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
 				cancel = true;
 				showMessage = true;
-				logMessage(AInfo["publicUesrEmail"] +  "  Warning: Only the Applicant and the Designated Responsible party can update this application.");
+				logMessage(AInfo["publicUserEmail"] +  "  Warning: Only the Applicant and the Designated Responsible party can update this application.");
 			}	
 		}
 	}
 	else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage());
+		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 	}
 }
 catch (err){
 	logDebug("A JavaScript Error occurred: ASIUA: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 // page flow custom code end
