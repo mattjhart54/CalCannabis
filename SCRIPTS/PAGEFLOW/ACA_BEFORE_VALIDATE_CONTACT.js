@@ -81,10 +81,12 @@ try {
 	if(resCurUser.getSuccess()){
 		var contactFnd = false
 		var drpFnd = false;
+		var prepFnd = false;
 		var appFnd = false;
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
-		if(matches(AInfo["publicUesrEmail"],"",null,)){
+		//lwacht: 170810: need person logged in to be able to access the application in the future
+		if(matches(AInfo["publicUesrEmail"],"",null)){
 			editAppSpecific4ACA("publicUesrEmail",currEmail);
 		}else{
 			if(AInfo["publicUesrEmail"]==currEmail){
@@ -109,11 +111,13 @@ try {
 			}
 		}
 		//lwacht: changed logic to check for DRP *or* applicant
-		if(contactFnd == false && (drpFnd == true || appFnd == true)) {
-			cancel = true;
-			showMessage = true;
-			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
-		}	
+		if(!prepFnd){
+			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
+				cancel = true;
+				showMessage = true;
+				logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
+			}	
+		}
 	}
 	else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
