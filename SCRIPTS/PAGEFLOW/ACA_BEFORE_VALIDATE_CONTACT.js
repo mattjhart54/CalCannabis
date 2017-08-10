@@ -110,13 +110,12 @@ try {
 				}
 			}
 		}
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br +  "currEmail: " + currEmail + br + "ASI: " + br + AInfo["publicUserEmail"] + "contactFnd: " + contactFnd + br + currEnv);
 		//lwacht: changed logic to check for DRP *or* applicant
 		if(!prepFnd){
 			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
 				cancel = true;
 				showMessage = true;
-				logMessage(AInfo["publicUserEmail"] +  "  Warning: Only the Applicant and the Designated Responsible party can update this application.");
+				logMessage("  Warning: Only the Applicant and the Designated Responsible party can update this application.");
 			}	
 		}
 	}

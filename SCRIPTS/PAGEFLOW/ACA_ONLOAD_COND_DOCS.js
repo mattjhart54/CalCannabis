@@ -144,7 +144,10 @@ logDebug("balanceDue = " + balanceDue);
 try{
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
-		contactFnd = false;
+		var contactFnd = false
+		var drpFnd = false;
+		var prepFnd = false;
+		var appFnd = false;
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
 		//lwacht: 170810: need person logged in to be able to access the application in the future
@@ -156,21 +159,27 @@ try{
 				contactFnd = true;
 			}
 		}
-		var contactList = cap.getContactsGroup();
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
 				var contEmail = thisCont.email;
-				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
-					contactFnd = true
+				var contType = thisCont.contactType;
+				if(contType == "Designated Responsible Party")
+					drpFnd = true;
+				if(contType == "Applicant")
+					appFnd = true;
+				if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
+					contactFnd = true;
 				}
 			}
 		}
-		if(!contactFnd) {
-			showMessage = true;
-			logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
-		}	
+		if(!prepFnd){
+			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
+				showMessage = true;
+				logMessage("  Warning: Only the Applicant and the Designated Responsible party can update this application.");
+			}	
+		}
 	}
 	else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());

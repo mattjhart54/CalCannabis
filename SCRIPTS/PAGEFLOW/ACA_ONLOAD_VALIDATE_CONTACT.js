@@ -104,7 +104,7 @@ try {
 					drpFnd = true;
 				if(contType == "Applicant")
 					pcFnd = true;
-				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
+				if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
 					contactFnd = true
 				}
 			}
@@ -124,7 +124,7 @@ try {
 catch (err){
 	logDebug("A JavaScript Error occurred: ASIUA: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 // page flow custom code end
