@@ -86,7 +86,6 @@ try {
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
 		//lwacht: 170810: need person logged in to be able to access the application in the future
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br +  "currEmail: " + currEmail + br + "ASI: " + AInfo["publicUserEmail"] + br + currEnv);
 		if(matches(AInfo["publicUserEmail"],"",null)){
 			editAppSpecific4ACA("publicUserEmail",currEmail);
 			prepFnd = true;
@@ -95,6 +94,7 @@ try {
 				prepFnd = true;
 			}
 		}
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br +  "currEmail: " + currEmail + br + "ASI: " + AInfo["publicUserEmail"] + "prepFnd: " + prepFnd + br + currEnv);
 		var contactList = cap.getContactsGroup();
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
