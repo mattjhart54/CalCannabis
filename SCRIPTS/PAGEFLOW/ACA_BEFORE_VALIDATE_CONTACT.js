@@ -94,7 +94,6 @@ try {
 				prepFnd = true;
 			}
 		}
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br +  "currEmail: " + currEmail + br + "ASI: " + AInfo["publicUserEmail"] + "prepFnd: " + prepFnd + br + currEnv);
 		var contactList = cap.getContactsGroup();
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
@@ -106,11 +105,12 @@ try {
 					drpFnd = true;
 				if(contType == "Applicant")
 					appFnd = true;
-				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
+				if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
 					contactFnd = true;
 				}
 			}
 		}
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br +  "currEmail: " + currEmail + br + "ASI: " + br + AInfo["publicUserEmail"] + "contactFnd: " + contactFnd + br + currEnv);
 		//lwacht: changed logic to check for DRP *or* applicant
 		if(!prepFnd){
 			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
