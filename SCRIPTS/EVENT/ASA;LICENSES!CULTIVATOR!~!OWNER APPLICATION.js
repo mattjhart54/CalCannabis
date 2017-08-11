@@ -75,8 +75,8 @@ try{
 						var sysDate = aa.date.getCurrentDate();
 						var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
 						addParameter(emailParameters, "$$AltID$$", desigRecId);
-						addParameter(emailParameters, "$$firstName", ""+drpFirst);
-						addParameter(emailParameters, "$$lastName", ""+drpLast);
+						addParameter(emailParameters, "$$firstName$$", ""+drpFirst);
+						addParameter(emailParameters, "$$lastName$$", ""+drpLast);
 						addParameter(emailParameters, "$$today$$", sysDateMMDDYYYY);
 						addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
 						sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,desigRecId);
