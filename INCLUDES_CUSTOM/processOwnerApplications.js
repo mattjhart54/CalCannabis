@@ -1,5 +1,17 @@
-//lwacht
-// adding associated forms for owner records then adding owners to those records
+/*===========================================
+Title: copyASITable4PageFlow
+Purpose: adding associated forms for owner records then adding owners to those records
+Author: Lynda Wacht		
+Functional Area : Associated Forms
+Description : 
+Reviewed By: 
+Script Type : (EMSE, EB, Pageflow, Batch): EMSE
+General Purpose/Client Specific : General
+Client developed for : CDFA_CalCannabis
+Parameters:
+	None
+============================================== */
+
 function processOwnerApplications(){
 try {
 	var errMsg = "";
