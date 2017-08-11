@@ -39,7 +39,7 @@ try {
 //add child if app number provided
 try{
 	if(!matches(AInfo["Temp App Number"],null,"", "undefined")){
-		var tmpID = aa.cap.getCapID(myCapId)
+		var tmpID = aa.cap.getCapID(AInfo["Temp App Number"]);
 		if(tmpID.getSuccess()){
 			var childCapId = tmpID.getOutput();
 			var parId = getParentByCapId(childCapId);
@@ -59,5 +59,5 @@ try{
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
