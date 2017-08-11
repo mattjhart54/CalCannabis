@@ -104,6 +104,7 @@ try{
 		}
 	}else{
 			logDebug("Error with null appName: " + appName);
+	}
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT: Correct contact : " + err.message);
