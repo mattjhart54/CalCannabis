@@ -95,12 +95,12 @@ try{
 			var contactTypeFlag = thisCont.contactTypeFlag
 			if(contactTypeFlag!=null) {
 				if(contactTypeFlag.toUpperCase() =="INDIVIDUAL") { 
-					var ssNbr = thisCont.socialSecurityNumber; 
-					if (matches(ssNbr,null, "", "undefined")) { 
-						cancel = true; 
-						showMessage = true; 
-						logMessage("Your social security number needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
-					} 
+//					var ssNbr = thisCont.socialSecurityNumber; 
+//					if (matches(ssNbr,null, "", "undefined")) { 
+//						cancel = true; 
+//						showMessage = true; 
+//						logMessage("Your social security number needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
+//					} 
 					var birthDate = thisCont.birthDate; 
 					if (matches(birthDate,null, "", "undefined")) { 
 						cancel = true; 
