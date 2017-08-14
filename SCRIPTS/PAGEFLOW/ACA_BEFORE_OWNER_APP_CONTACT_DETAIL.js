@@ -79,10 +79,12 @@ try{
 	var capId = cap.getCapID();
 	var emailText="Information: " + br;
 	var contactList = cap.getContactsGroup(); 
-	showMessage = true; 
-	describeObject(contactList);
+
 	if(contactList != null && contactList.size() > 0){ 
 		var arrContacts = contactList.toArray(); 
+		showMessage = true; 
+		cancel=true;
+		describeObject(contactList[0]);
 		for(var i in arrContacts) { 
 			var thisCont = arrContacts[i]; 
 			//showMessage=true; 
