@@ -37,13 +37,9 @@ try{
 					}
 				}
 			}
-			runReportAttach(capId,"Temp License Approval Letter", "p1value", capId.getCustomID());
-			var eParams = aa.util.newHashtable(); 
-			addParameter(eParams, "$$altID$$", capId.getCustomID());
-			addParameter(eParams, "$$status$$", capStatus);
-			var priContact = getContactObj(capId,"Applicant");
-			var appEmail = ""+priContact.capContact.getEmail();
-			sendNotification(sysFromEmail,appEmail,"","LCA_GENERAL_NOTIFICATION",eParams, [],capId);
+			runReportAttach(capId,"Temporay License", "p1value", capId.getCustomID());
+			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Applicant", "RECORD_ID", capId.getCustomID());
+			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
 		}else{
 			logDebug("Error creating License record: " + licCapId);
 		}
