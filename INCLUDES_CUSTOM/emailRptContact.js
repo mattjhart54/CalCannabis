@@ -82,7 +82,7 @@ try{
 				staffUser.getEmailTemplateParams(eParams,"scientist")
 				getWorkflowParams4Notification(eParams);
 			}
-			var contPhone = drpContact.capContact.phone1;
+			var contPhone = priContact.capContact.phone1;
 			if(contPhone){
 				var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
 			}else{
@@ -90,11 +90,11 @@ try{
 			}
 			addParameter(eParams, "$$altID$$", capId.getCustomID());
 			addParameter(eParams, "$$contactPhone1$$", fmtPhone);
-			addParameter(eParams, "$$contactFirstName$$", drpContact.capContact.firstName);
-			addParameter(eParams, "$$contactLastName$$", drpContact.capContact.lastName);
-			addParameter(eParams, "$$contactEmail$$", drpContact.capContact.email);
+			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
 			addParameter(eParams, "$$status$$", curStatus);
-			drpAddresses = drpContact.addresses;
+			drpAddresses = priContact.addresses;
 			for (x in drpAddresses){
 				thisAddr = drpAddresses[x];
 				if(thisAddr.getAddressType()=="Home"){
@@ -105,7 +105,7 @@ try{
 				}
 			}
 			//logDebug("eParams: " + eParams);
-			var drpEmail = ""+drpContact.capContact.getEmail();
+			var drpEmail = ""+priContact.capContact.getEmail();
 			var priEmail = ""+priContact.capContact.getEmail();
 			var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
 			var rFiles = [];
@@ -117,7 +117,7 @@ try{
 				}
 			}
 			if(emailRpt){
-				if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
+				if(priContact.capContact.getEmail()==priContact.capContact.getEmail()){
 					sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
 				}else{ 
 					sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
@@ -125,7 +125,7 @@ try{
 				}
 			}else{
 				rFiles = [];
-				if(priContact.capContact.getEmail()==drpContact.capContact.getEmail()){
+				if(priContact.capContact.getEmail()==priContact.capContact.getEmail()){
 					sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
 				}else{ 
 				//emails have to be sent separately in order to appear in ACA
