@@ -82,18 +82,15 @@ try{
 
 	if(contactList != null && contactList.size() > 0){ 
 		var arrContacts = contactList.toArray(); 
-		showMessage = true; 
-		cancel=true;
-		describeObject(contactList);
 		for(var i in arrContacts) { 
 			var thisCont = arrContacts[i]; 
-			//showMessage=true; 
-			//for(x in thisCont){ 
-			//	if(typeof(thisCont[x])!="function"){ 
-			//		emailText+= (x+ ": " + thisCont[x] +br); 
-			//		logMessage(x+ ": " + thisCont[x]); 
-			//	} 
-			//} 
+			showMessage=true; 
+			for(x in thisCont){ 
+				if(typeof(thisCont[x])!="function"){ 
+					emailText+= (x+ ": " + thisCont[x] +br); 
+					logMessage(x+ ": " + thisCont[x]); 
+				} 
+			} 
 			var contactTypeFlag = thisCont.contactTypeFlag
 			if(contactTypeFlag!=null) {
 				if(contactTypeFlag.toUpperCase() =="INDIVIDUAL") { 
