@@ -84,7 +84,7 @@ try{
 		var arrContacts = contactList.toArray(); 
 		showMessage = true; 
 		cancel=true;
-		describeObject(contactList[0]);
+		describeObject(contactList);
 		for(var i in arrContacts) { 
 			var thisCont = arrContacts[i]; 
 			//showMessage=true; 
