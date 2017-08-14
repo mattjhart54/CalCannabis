@@ -37,7 +37,7 @@ try{
 					}
 				}
 			}
-			runReportAttach(capId,"Temporary License", "p1value", licCapId.getCustomID());
+			runReportAttach(licCapId,"Temporary License", "p1value", licCapId.getCustomID());
 			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Applicant", "RECORD_ID", capId.getCustomID());
 			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
 		}else{
