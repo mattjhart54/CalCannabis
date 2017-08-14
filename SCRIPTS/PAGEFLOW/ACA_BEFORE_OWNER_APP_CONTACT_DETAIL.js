@@ -95,7 +95,7 @@ try{
 			if(contactTypeFlag!=null) {
 				if(contactTypeFlag.toUpperCase() =="INDIVIDUAL") { 
 					var ssNbr = thisCont.socialSecurityNumber;
-					var poBox = thisContact.postOfficeBox;
+					var poBox = thisCont.postOfficeBox;
 					if (matches(ssNbr,null, "", "undefined") && matches(poBox,null, "", "undefined")) { 
 						cancel = true; 
 						showMessage = true; 
