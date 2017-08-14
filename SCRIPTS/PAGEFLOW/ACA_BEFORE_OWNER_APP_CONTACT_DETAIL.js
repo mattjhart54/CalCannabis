@@ -90,7 +90,7 @@ try{
 //					emailText+= (x+ ": " + thisCont[x] +br); 
 //					logMessage(x+ ": " + thisCont[x]); 
 //				} 
-			} 
+//			} 
 			var contactTypeFlag = thisCont.contactTypeFlag
 			if(contactTypeFlag!=null) {
 				if(contactTypeFlag.toUpperCase() =="INDIVIDUAL") { 
