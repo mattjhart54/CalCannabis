@@ -95,9 +95,19 @@ try{
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
 			addParameter(eParams, "$$status$$", curStatus);
 			drpAddresses = priContact.addresses;
+			var addrType = false;
 			for (x in drpAddresses){
 				thisAddr = drpAddresses[x];
-				if(thisAddr.getAddressType()=="Home"){
+				if(thisAddr.getAddressType()=="Mailing"){
+					addrType = "Mailing";
+				}
+			}
+			if(!addrType){
+				addrType = "Home";
+			}
+			for (x in drpAddresses){
+				thisAddr = drpAddresses[x];
+				if(thisAddr.getAddressType()==addrType){
 					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
 					addParameter(eParams, "$$priCity$$", thisAddr.city);
 					addParameter(eParams, "$$priState$$", thisAddr.state);
