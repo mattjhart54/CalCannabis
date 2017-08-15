@@ -165,7 +165,7 @@ try{
 				default: rptName = "Deficiency Report";
 			}
 			runReportAttach(capId,rptName, "p1value", capId.getCustomID());
-			emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, wfStatus, capId);
+			emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId);
 		}
 	}
 }catch(err){
