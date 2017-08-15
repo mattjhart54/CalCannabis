@@ -45,7 +45,7 @@ try{
 				}
 			}
 */
-		var parCapId = getParents("LICENSES/CULTIVATOR/TEMPORARY/LICENSE");
+		var parCapId = getParents("Licenses/Cultivator/Temporary/License");
 		if(parCapId){
 			for(cap in parCapId){
 				//var rParams = aa.util.newHashMap(); 
