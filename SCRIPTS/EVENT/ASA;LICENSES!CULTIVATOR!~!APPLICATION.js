@@ -73,28 +73,22 @@ try{
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Send Notif Letter: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Sned Notif Letter: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Send Notif Letter: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 //lwacht
-//remove conditions after documents are uploaded
-/* not working here so trying in CTRCA
+//add fees
 try{
-	var docsList = [];
-	var allDocsLoaded = true;
-	//docsList = getDocumentList();//Get all Documents on a Record
-	var capDocResult = aa.document.getDocumentListByEntity(capId,"CAP");
-	var arrMissingDocs = [];
-	for(docInx = 0; docInx < capDocResult.getOutput().size(); docInx++) {
-		var thisDocument = capDocResult.getOutput().get(docInx);
-		//var thisDocument = docsList[dl];
-		var docCategory = thisDocument.getDocCategory();
-		removeCapCondition("License Required Documents", docCategory);
+	var feeDesc = AInfo("License Type") + " - Application Fee";
+	var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
+	if(thisFee){
+		updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
+	}else{
+		logDebug("An error occurred retrieving fee item: " + feeDesc);
+		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 	}
-		//aa.sendMail(sysFromEmail, debugEmail, "", "Info Only: ASA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: "+ startDate, capId + br + "docCategory: " + docCategory);
-} catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: " + err.message);
+}catch(err){
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ASA:LICENSES/CULTIVATOR/* /APPLICATION: Required Documents: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
-*/
