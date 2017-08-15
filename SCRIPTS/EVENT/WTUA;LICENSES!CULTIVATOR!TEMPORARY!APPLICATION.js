@@ -37,11 +37,11 @@ try{
 					}
 				}
 			}
-			var rParams = aa.util.newHashMap(); 
-			rParams.put("p1value", licCapId.getCustomID());
-			var module = appTypeArray[0];
-			//runReportAttach(licCapId,"Temporary License", "p1value", licCapId);
-			generateReport(licCapId,"Temporary License",module,rParams)
+			//var rParams = aa.util.newHashMap(); 
+			//rParams.put("p1value", licCapId.getCustomID());
+			//var module = appTypeArray[0];
+			runReportAttach(licCapId,"Temporary License", "p1value", licCapId.getCustomID());
+			//generateReport(licCapId,"Temporary License",module,rParams)
 			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Applicant", "RECORD_ID", capId.getCustomID());
 			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
 		}else{
