@@ -3,7 +3,6 @@
 try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		var priContact = getContactObj(capId,"Primary Contact");
-		//var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var showReport = false;
 		if(priContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
@@ -11,15 +10,18 @@ try{
 				showReport = true;
 			}
 		}
-		//if(drpContact){
-		//	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-		//	if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
-		//		showReport = true;
-		//	}
-		//}
+		//lwacht: 170815: uncommenting in preparation for Primary Contact going away
+		var drpContact = getContactObj(capId,"Designated Responsible Party");
+		if(drpContact){
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
+			if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+				showReport = true;
+			}
+		}
 		if(showReport){
 			showDebug=false;
-			displayReport("ACA Permit", "agencyid", servProvCode,"capid", capId.getCustomID());
+			//lwacht: 170815: updated report name
+			displayReport("Deficiency Report", "agencyid", servProvCode,"capid", capId.getCustomID());
 		}
 	}
 }catch(err){
@@ -28,12 +30,11 @@ try{
 }
 
 //lwacht: when the status is set to a status that requires notification and the preferred channel is *not* email,
-//display the deficiency report for printing
+//display the appropriate report for printing
 try{
 	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed")){
 		showDebug=false;
 		var priContact = getContactObj(capId,"Primary Contact");
-		//var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var showReport = false;
 		if(priContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
@@ -41,14 +42,21 @@ try{
 				showReport = true;
 			}
 		}
-		//if(drpContact){
-		//	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-		//	if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
-		//		showReport = true;
-		//	}
-		//}
+		//lwacht: 170815: uncommenting in preparation for Primary Contact going away
+		var drpContact = getContactObj(capId,"Designated Responsible Party");
+		if(drpContact){
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
+			if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+				showReport = true;
+			}
+		}
 		if(showReport){
-			displayReport("Free-Form RTF", "altid", capIDString, "userid", currentUserID, "today", fileDate);
+			var rptName = "";
+			switch(""+wfStatus){
+				case "Science Manager Review Completed": rptName = "Approval Letter and Invoice"; break;
+				default: rptName = "Deficiency Report";
+			}
+			displayReport(rptName, "altid", capIDString, "userid", currentUserID, "today", fileDate);
 		}
 	}
 }catch(err){
