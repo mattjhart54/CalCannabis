@@ -23,7 +23,7 @@ try{
 } catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Send Approval Email: " + err.message);
 	logDebug(err.stack);
-
+}
 
 //lwacht
 //assign the application disposition task to the person who completed the admin review task
@@ -43,7 +43,3 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Assign Disposition: " + err.message);
 	logDebug(err.stack);
 }
-
-
-
-
