@@ -19,7 +19,7 @@ try {
 		} // for xx
 	}else { 
 		logDebug("Error getting fee schedule " + arrFeesResult.getErrorMessage());
-		return null;
+		return false;
 	}
 }catch(err){
 	logDebug("An error has occurred in getFeeDefByDesc: " + err.message);
