@@ -79,7 +79,7 @@ try{
 //lwacht
 //add fees
 try{
-	var feeDesc = AInfo("License Type") + " - Application Fee";
+	var feeDesc = AInfo["License Type"] + " - Application Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 	if(thisFee){
 		updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
