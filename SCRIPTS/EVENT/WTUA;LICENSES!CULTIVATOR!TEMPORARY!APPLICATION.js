@@ -1,15 +1,17 @@
 //lwacht
-//create the license record, update altid,  and copy DRP and Owner contacts to it
+//send notification
 //note license record creation has to be in WTUB so the license record exists when the license report is created
 try{
 	if(wfStatus=="Temporary License Issued"){
-		var parCapId = getParents("Licenses/Cultivator/Temporary/License");
-		if(parCapId){
-			for(cap in parCapId){
+		var arrCaps = getParentsRev("Licenses/Cultivator/Temporary/License");
+		if(arrCaps){
+			for(cap in arrCaps){
+				var parCapId = arrCaps[cap];
+				logDebug("parCapId: " + parCapId);
 				//var rParams = aa.util.newHashMap(); 
 				//rParams.put("p1value", parCapId.getCustomID());
 				//var module = appTypeArray[0];
-				runReportAttach(parCapId[cap],"Temporary License", "p1value",parCapId[cap].getCustomID() );
+				runReportAttach(parCapId,"Temporary License", "p1value",parCapId.getCustomID() );
 				//generateReport(parCapId,"Temporary License",module,rParams)
 				emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Applicant", "RECORD_ID", capId.getCustomID());
 				emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
@@ -21,7 +23,6 @@ try{
 } catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Send Approval Email: " + err.message);
 	logDebug(err.stack);
-}
 
 
 //lwacht
