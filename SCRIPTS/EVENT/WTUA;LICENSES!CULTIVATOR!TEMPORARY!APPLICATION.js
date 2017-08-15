@@ -28,6 +28,7 @@ try{
 				logDebug("Updated license record AltId to " + newAltId + ".");
 			}else {
 				logDebug("Error updating alt ID: " + updateResult.getErrorMessage() );
+			}
 			//updateShortNotes(getShortNotes(),licCapId);
 			//updateWorkDesc(workDescGet(capId),licCapId);
 			capContactResult = aa.people.getCapContactByCapID(capId);
