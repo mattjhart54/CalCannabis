@@ -22,6 +22,12 @@ try{
 			//logDebug("getShortNotes(): " + getShortNotes());
 			logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
+			var newAltId = licCapId.getCustomID();
+			var updateResult = aa.cap.updateCapAltID(licCapId, newAltId);
+			if (updateResult.getSuccess()) {
+				logDebug("Updated license record AltId to " + newAltId + ".");
+			}else {
+				logDebug("Error updating alt ID: " + updateResult.getErrorMessage() );
 			//updateShortNotes(getShortNotes(),licCapId);
 			//updateWorkDesc(workDescGet(capId),licCapId);
 			capContactResult = aa.people.getCapContactByCapID(capId);
@@ -40,7 +46,7 @@ try{
 			//var rParams = aa.util.newHashMap(); 
 			//rParams.put("p1value", licCapId.getCustomID());
 			//var module = appTypeArray[0];
-			runReportAttach(licCapId,"Temporary License", "p1value", licCapId.getCustomID());
+			runReportAttach(licCapId,"Temporary License", "p1value",newAltId );
 			//generateReport(licCapId,"Temporary License",module,rParams)
 			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Applicant", "RECORD_ID", capId.getCustomID());
 			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
