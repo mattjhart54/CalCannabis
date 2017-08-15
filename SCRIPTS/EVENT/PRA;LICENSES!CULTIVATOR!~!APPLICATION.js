@@ -53,7 +53,8 @@ try{
 			//contactSetPrimary(contPri.seqNumber);
 			//capId = currCapId;
 			closeTask("Application Disposition","License Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
-			emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "ACA Permit", false, "License Issued", capId, "agencyid", servProvCode, "capid", capId.getCustomID());
+			runReportAttach(capId,"Approval Letter", "p1value",capId.getCustomID());
+			emailRptContact("PRA","LCA_APP_APPROVAL_PAID","Approval Letter",false,"Paid",capId,"Designated Responsible Party");
 		}else{
 			logDebug("Error creating License record: " + licCapId);
 		}
