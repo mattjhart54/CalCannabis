@@ -50,7 +50,7 @@ try{
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create License Record: " + err.message);
+	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create License Record: " + err.message);
 	logDebug(err.stack);
 }
 
