@@ -21,7 +21,7 @@ try{
 		if(showReport){
 			showDebug=false;
 			//lwacht: 170815: updated report name
-			displayReport("Deficiency Report", "agencyid", servProvCode,"capid", capId.getCustomID());
+			displayReport("Deficiency Report", "p1value", capIDString);
 		}
 	}
 }catch(err){
@@ -56,7 +56,7 @@ try{
 				case "Science Manager Review Completed": rptName = "Approval Letter and Invoice"; break;
 				default: rptName = "Deficiency Report";
 			}
-			displayReport(rptName, "altid", capIDString, "userid", currentUserID, "today", fileDate);
+			displayReport(rptName, "p1value", capIDString);
 		}
 	}
 }catch(err){
