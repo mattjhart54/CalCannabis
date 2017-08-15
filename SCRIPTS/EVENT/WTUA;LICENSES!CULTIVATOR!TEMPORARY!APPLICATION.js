@@ -1,22 +1,22 @@
 //lwacht
 //create the license record, update altid,  and copy DRP and Owner contacts to it
+//note license record creation has to be in WTUB so the license record exists when the license report is created
 try{
 	if(wfStatus=="Temporary License Issued"){
-		var licCapId = createLicense("Active", true);
+/*		var licCapId = createLicense("Active", true);
 		if(licCapId){
 			var expDate = dateAdd(null,120);
 			setLicExpirationDate(licCapId,null,expDate,"Active");
-			/* will configure once there's an altId 
-			var newAltFirst = "LCT" + sysDateMMDDYYYY.substr(8,2);
-			var newAltLast = capIDString.substr(3,capIDString.length());
-			var newAltId = newAltFirst + newAltLast;
-			var updAltId = aa.cap.updateCapAltID(licCapId,newAltId);
-			if(!updAltId.getSuccess()){
-				logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
-			}else{
-				logDebug("License record ID updated to : " + newAltId);
-			}
-			*/
+			//will configure once there's an altId 
+			//var newAltFirst = "LCT" + sysDateMMDDYYYY.substr(8,2);
+			//var newAltLast = capIDString.substr(3,capIDString.length());
+			//var newAltId = newAltFirst + newAltLast;
+			//var updAltId = aa.cap.updateCapAltID(licCapId,newAltId);
+			//if(!updAltId.getSuccess()){
+			//	logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
+			//}else{
+			//	logDebug("License record ID updated to : " + newAltId);
+			//}
 			var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
 			//logDebug("workDescGet(capId): " + workDescGet(capId));
 			//logDebug("getShortNotes(): " + getShortNotes());
@@ -44,15 +44,18 @@ try{
 					}
 				}
 			}
+*/
+		var parCapId = getParents("LICENSES/CULTIVATOR/TEMPORARY/LICENSE");
+		if(parCapId){
 			//var rParams = aa.util.newHashMap(); 
-			//rParams.put("p1value", licCapId.getCustomID());
+			//rParams.put("p1value", parCapId.getCustomID());
 			//var module = appTypeArray[0];
-			runReportAttach(licCapId,"Temporary License", "p1value",newAltId );
-			//generateReport(licCapId,"Temporary License",module,rParams)
+			runReportAttach(parCapId,"Temporary License", "p1value",parCapId.getCustomID() );
+			//generateReport(parCapId,"Temporary License",module,rParams)
 			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Applicant", "RECORD_ID", capId.getCustomID());
 			emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
 		}else{
-			logDebug("Error creating License record: " + licCapId);
+			logDebug("Error retrieving parent License record. ");
 		}
 	}
 } catch(err){
