@@ -19,8 +19,8 @@ try{
 	if(matches(appStatus, "Withdrawn")){
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var showReport = false;
-		if(priContact){
-			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+		if(drpContact){
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
 			if(priChannel.indexOf("Postal") > -1){
 				showReport = true;
 			}
