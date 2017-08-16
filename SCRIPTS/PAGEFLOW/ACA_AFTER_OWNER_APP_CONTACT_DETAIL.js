@@ -77,15 +77,49 @@ var cap = aa.env.getValue("CapModel");
 //sync the transactional contact to the reference contact
 try{
 	var capId = cap.getCapID();
-	var ownerContact = getContactObj(capId, "Owner"); 
+	var ownerContact = getContactObjRev(capId, "Owner"); 
 	if(ownerContact){
 		ownerContact.syncCapContactToReference();
 	}
 } catch (err) {
 	logDebug("An error has occurred in ACA_AFTER_OWNER_APP_CONTACT_DETAIL: Correct contact : " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_OWNER_APP_CONTACT_DETAIL: Complete contact  " + startDate, "capId: " + capId + br + err.message + br + err.stack+ br + currEnv + br + "user: " + publicUserID);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_OWNER_APP_CONTACT_DETAIL: Complete contact:  " + startDate, "capId: " + capId + br + err.message + br + err.stack+ br + currEnv + br + "user: " + publicUserID);
 }
+
+//lwacht: revised to call revised contactObj(Rev)
+function getContactObjRev(itemCap,typeToLoad){
+try{
+    // returning the first match on contact type
+    var capContactArray = null;
+    var cArray = new Array();
+
+    if (itemCap.getClass() == "com.accela.aa.aamain.cap.CapModel")   { // page flow script 
+        var capContactArray = cap.getContactsGroup().toArray() ;
+        }
+    else {
+        var capContactResult = aa.people.getCapContactByCapID(itemCap);
+        if (capContactResult.getSuccess()) {
+            var capContactArray = capContactResult.getOutput();
+            }
+        }
+    
+    if (capContactArray) {
+        for (var yy in capContactArray) {
+            if (capContactArray[yy].getPeople().contactType.toUpperCase().equals(typeToLoad.toUpperCase())) {
+                logDebug("getContactObjRev returned the first contact of type " + typeToLoad + " on record " + itemCap.getCustomID());
+                return new contactObjRev(capContactArray[yy]);
+            }
+        }
+    }
+    
+    logDebug("getContactObjRev could not find a contact of type " + typeToLoad + " on record " + itemCap.getCustomID());
+    return false;
+} catch (err) {
+	logDebug("An error has occurred in ACA_AFTER_OWNER_APP_CONTACT_DETAIL: getContactObjRev : " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_OWNER_APP_CONTACT_DETAIL: getContactObjRev:  " + startDate, "capId: " + capId + br + err.message + br + err.stack+ br + currEnv + br + "user: " + publicUserID);
+}} 
 
 
 // page flow custom code end
