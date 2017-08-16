@@ -67,9 +67,12 @@ try {
 
 //lwacht
 //send the application notification letter
+//lwacht: don't run for temporary app 
 try{
-	runReportAttach(capId,"Submitted Application", "p1value", capId.getCustomID());
-	emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "", false, "Application Received", capId, "RECORD_ID", capId.getCustomID());
+	if(appTypeArray[2]!="Temporary"){
+		runReportAttach(capId,"Submitted Application", "p1value", capId.getCustomID());
+		emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "", false, "Application Received", capId, "RECORD_ID", capId.getCustomID());
+	}
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Send Notif Letter: " + err.message);
 	logDebug(err.stack);
@@ -78,14 +81,17 @@ try{
 
 //lwacht
 //add fees
+//lwacht: don't run for temporary app 
 try{
-	var feeDesc = AInfo["License Type"] + " - Application Fee";
-	var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
-	if(thisFee){
-		updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
-	}else{
-		logDebug("An error occurred retrieving fee item: " + feeDesc);
-		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+	if(appTypeArray[2]!="Temporary"){
+		var feeDesc = AInfo["License Type"] + " - Application Fee";
+		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
+		if(thisFee){
+			updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
+		}else{
+			logDebug("An error occurred retrieving fee item: " + feeDesc);
+			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+		}
 	}
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
