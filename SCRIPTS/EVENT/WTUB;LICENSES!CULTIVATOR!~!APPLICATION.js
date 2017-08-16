@@ -25,8 +25,8 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
-	logDebug(err.stack);
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
+	aa.print(err.stack);
 }
 
 //lwacht: when the status is set to a status that requires notification and the preferred channel is *not* email,
@@ -60,8 +60,8 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
-	logDebug(err.stack);
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
+	aa.print(err.stack);
 }
 
 //lwacht: all owner records need to be updated before this task can be updated
@@ -92,8 +92,8 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Check owner update: " + err.message);
-	logDebug(err.stack);
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Check owner update: " + err.message);
+	aa.print(err.stack);
 }
 
 
@@ -105,8 +105,8 @@ try{
 		comment("The license can only be issued upon payment of fees.");
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Stop license issuance: " + err.message);
-	logDebug(err.stack);
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Stop license issuance: " + err.message);
+	aa.print(err.stack);
 }
 //lwacht
 //add fees
@@ -116,14 +116,14 @@ try{
 		var feeDesc = AInfo["License Type"] + " - License Fee";
 		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 		if(thisFee){
-			updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
+			updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
 		}else{
-			logDebug("An error occurred retrieving fee item: " + feeDesc);
+			aa.print("An error occurred retrieving fee item: " + feeDesc);
 			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
-	logDebug(err.stack);
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
+	aa.print(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
