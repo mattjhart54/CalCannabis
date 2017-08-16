@@ -1,4 +1,4 @@
-function contactObj(ccsm)  {
+function contactObjRev(ccsm)  {
 
     this.people = null;         // for access to the underlying data
     this.capContact = null;     // for access to the underlying data
