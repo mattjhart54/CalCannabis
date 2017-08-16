@@ -108,3 +108,22 @@ try{
 	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Stop license issuance: " + err.message);
 	logDebug(err.stack);
 }
+//lwacht
+//add fees
+//lwacht: don't run for temporary app 
+try{
+	if(appTypeArray[2]!="Temporary" && wfStatus=="Science Manager Review Completed"){
+		var feeDesc = AInfo["License Type"] + " - License Fee";
+		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
+		if(thisFee){
+			updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
+		}else{
+			logDebug("An error occurred retrieving fee item: " + feeDesc);
+			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+		}
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
