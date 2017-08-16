@@ -17,8 +17,8 @@
 |     will no longer be considered a "Master" script and will not be supported in future releases.  If
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showMessage = true; // Set to true to see results in popup window
+var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
@@ -53,6 +53,7 @@ if (SA) {
 }
 
 //eval(getScriptText("INCLUDES_CUSTOM", "CALCANNABIS",true));
+var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
 emseBiz.getMasterScript(aa.getServiceProviderCode(), "INCLUDES_CUSTOM");
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
