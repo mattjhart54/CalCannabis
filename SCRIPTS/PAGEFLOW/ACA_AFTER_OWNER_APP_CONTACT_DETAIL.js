@@ -52,7 +52,7 @@ if (SA) {
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM"));
+eval(getScriptText("INCLUDES_CUSTOM", "CALCANNABIS",false));
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
