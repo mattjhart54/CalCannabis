@@ -23,7 +23,7 @@ try{
 			//logDebug("getShortNotes(): " + getShortNotes());
 			logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
-			var newAltId = licCapId.getCustomID();
+			var newAltId = capIDString.replace("A", "L"); 
 			var updateResult = aa.cap.updateCapAltID(licCapId, newAltId);
 			if (updateResult.getSuccess()) {
 				logDebug("Updated license record AltId to " + newAltId + ".");
