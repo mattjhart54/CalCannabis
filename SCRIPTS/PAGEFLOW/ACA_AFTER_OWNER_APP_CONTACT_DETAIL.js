@@ -84,7 +84,7 @@ try{
 } catch (err) {
 	logDebug("An error has occurred in ACA_AFTER_OWNER_APP_CONTACT_DETAIL: Correct contact : " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_OWNER_APP_CONTACT_DETAIL: Complete contact  " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_OWNER_APP_CONTACT_DETAIL: Complete contact  " + startDate, "capId: " + capId + br + err.message + br + err.stack+ br + currEnv + br + "user: " + publicUserID);
 }
 
 
