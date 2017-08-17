@@ -86,12 +86,12 @@ try{
 	if(appTypeArray[2]!="Temporary"){
 		var feeDesc = AInfo["License Type"] + " - Application Fee";
 		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
-		if(thisFee){
-			updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
-		}else{
-			logDebug("An error occurred retrieving fee item: " + feeDesc);
-			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-		}
+//		if(thisFee){
+//			updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
+//		}else{
+//			logDebug("An error occurred retrieving fee item: " + feeDesc);
+//			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+//		}
 	}
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
