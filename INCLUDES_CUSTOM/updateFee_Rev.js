@@ -33,12 +33,12 @@ try{
 		for (feeNum in feeList) {
 			if (feeList[feeNum].getFeeitemStatus().equals("INVOICED")) {
 				if (pDuplicate == "Y") {
-					aa.print("Invoiced fee " + fcode + " found, subtracting invoiced amount from update qty.");
+					//aa.print("Invoiced fee " + fcode + " found, subtracting invoiced amount from update qty.");
 					adjustedQty = adjustedQty - feeList[feeNum].getFeeUnit();
 					invFeeFound = true;
 				} else {
 					invFeeFound = true;
-					aa.print("Invoiced fee " + fcode + " found.  Not updating this fee. Not assessing new fee " + fcode);
+					//aa.print("Invoiced fee " + fcode + " found.  Not updating this fee. Not assessing new fee " + fcode);
 				}
 			}
 
@@ -54,18 +54,18 @@ try{
 				var editResult = aa.finance.editFeeItemUnit(capId, adjustedQty + feeList[feeNum].getFeeUnit(), feeSeq);
 				feeUpdated = true;
 				if (editResult.getSuccess()) {
-					aa.print("Updated Qty on Existing Fee Item: " + fcode + " to Qty: " + fqty);
+					//aa.print("Updated Qty on Existing Fee Item: " + fcode + " to Qty: " + fqty);
 					if (finvoice == "Y") {
 						feeSeqList.push(feeSeq);
 						paymentPeriodList.push(fperiod);
 					}
 				} else {
-					aa.print("**ERROR: updating qty on fee item (" + fcode + "): " + editResult.getErrorMessage());
+					//aa.print("**ERROR: updating qty on fee item (" + fcode + "): " + editResult.getErrorMessage());
 					break
 				}
 			}
 	} else {
-		aa.print("**ERROR: getting fee items (" + fcode + "): " + getFeeResult.getErrorMessage())
+		//aa.print("**ERROR: getting fee items (" + fcode + "): " + getFeeResult.getErrorMessage())
 	}
 
 	// Add fee if no fee has been updated OR invoiced fee already exists and duplicates are allowed
@@ -76,6 +76,6 @@ try{
 	updateFeeItemInvoiceFlag(feeSeq, finvoice);
 	return feeSeq;
 }catch(err){
-	aa.print("An error has occurred in updateFee_Rev: " + err.message);
-	aa.print(err.stack);
+	//aa.print("An error has occurred in updateFee_Rev: " + err.message);
+	//aa.print(err.stack);
 }}
