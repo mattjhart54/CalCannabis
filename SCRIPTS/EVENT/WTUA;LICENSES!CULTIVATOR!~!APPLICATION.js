@@ -189,7 +189,7 @@ try{
 			editTaskDueDate("Owner Application Reviews", dateAdd(null,90));
 			//activateTask("Owner Application Reviews");
 		}
-		setTask("Administrative Manager Review", "N", "Y");
+		//setTask("Administrative Manager Review", "N", "Y");
 	}
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
@@ -202,7 +202,7 @@ try{
 			editTaskDueDate("CEQA Review", dateAdd(null,90));
 			//activateTask("CEQA Review");
 		}
-		setTask("Science Manager Review", "N", "Y");
+		//setTask("Science Manager Review", "N", "Y");
 	}
 	//lwacht: moved this from separate function to here to keep expiry logic together
 	if(matches(wfStatus,"Denied")) {
