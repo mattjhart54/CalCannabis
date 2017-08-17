@@ -17,6 +17,7 @@ try{
 //create official license record
 try{
 	if(balanceDue<=0 && isTaskActive("Application Disposition")){
+		runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
 		runReportAttach(capId,"Official License", "p1value", capId.getCustomID());
 		emailRptContact("PRA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "RECORD_ID", capId.getCustomID());
 		emailRptContact("PRA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Primary Contact", "RECORD_ID", capId.getCustomID());
