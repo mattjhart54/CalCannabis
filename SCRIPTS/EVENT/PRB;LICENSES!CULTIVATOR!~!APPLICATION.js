@@ -1,7 +1,7 @@
 //lwacht
 //create the license record, update altid,  and copy DRP and Owner contacts to it
 try{
-	if(balanceDue<=0 && isTaskActive("Application Disposition")){
+	if(balanceDue<=PaymentTotalPaidAmount  && isTaskActive("Application Disposition")){
 		var licCapId = createLicense("Active",false);
 		if(licCapId){
 			var currCapId = capId;
