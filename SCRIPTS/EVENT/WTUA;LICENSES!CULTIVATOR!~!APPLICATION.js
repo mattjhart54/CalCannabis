@@ -150,7 +150,8 @@ try{
 //lwacht
 //send other notifications
 try{
-	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed") && appTypeArray[2]!="Temporary"){
+	//if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed") && appTypeArray[2]!="Temporary"){
+	if(matches(wfStatus, "Science Manager Review Completed") && appTypeArray[2]!="Temporary"){
 		var emailReport = false;
 		var priContact = getContactObj(capId,"Primary Contact");
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
