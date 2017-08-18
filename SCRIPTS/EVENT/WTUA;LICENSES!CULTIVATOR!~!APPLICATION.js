@@ -158,7 +158,6 @@ try{
 			case "Science Manager Review Completed": 
 				rptName = "Approval Letter and Invoice"; 
 				notName = "LCA_GENERAL_NOTIFICATION"; 
-				notName = "LCA_DEFICIENCY"; 
 				break;
 			default: 
 				rptName = "Deficiency Report";
