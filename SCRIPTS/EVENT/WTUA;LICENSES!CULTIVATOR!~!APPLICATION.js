@@ -152,35 +152,22 @@ try{
 try{
 	//if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed") && appTypeArray[2]!="Temporary"){
 	if(matches(wfStatus, "Science Manager Review Completed") && appTypeArray[2]!="Temporary"){
-		var emailReport = false;
-		var priContact = getContactObj(capId,"Primary Contact");
-		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-		if(!matches(priChannel,null,"","undefined")){
-			if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
-				emailReport = true;
-			}else{
-				showMessage=true;
-				comment("The Primary Contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report.");
-			}
+		var rptName = "";
+		var notName = "";
+		switch(""+wfStatus){
+			case "Science Manager Review Completed": 
+				rptName = "Approval Letter and Invoice"; 
+				notName = "LCA_GENERAL_NOTIFICATION"; 
+				notName = "LCA_DEFICIENCY"; 
+				break;
+			default: 
+				rptName = "Deficiency Report";
+				notName = "LCA_GENERAL_NOTIFICATION";
 		}
-		if(emailReport){
-			var rptName = "";
-			var notName = "";
-			switch(""+wfStatus){
-				case "Science Manager Review Completed": 
-					rptName = "Approval Letter and Invoice"; 
-					notName = "LCA_GENERAL_NOTIFICATION"; 
-					notName = "LCA_DEFICIENCY"; 
-					break;
-				default: 
-					rptName = "Deficiency Report";
-					notName = "LCA_GENERAL_NOTIFICATION";
-			}
-			runReportAttach(capId,rptName, "p1value", capId.getCustomID());
-			//emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId);
-			emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
-			emailRptContact("WTUA", notName, "", false, capStatus, capId, "Primary Contact", "p1value", capId.getCustomID());
-		}
+		runReportAttach(capId,rptName, "p1value", capId.getCustomID());
+		//emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId);
+		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Primary Contact", "p1value", capId.getCustomID());
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
