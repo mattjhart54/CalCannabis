@@ -16,7 +16,7 @@ try{
 //lwacht
 //create official license record
 try{
-	if(balanceDue<=0 && isTaskActive("Application Disposition")){
+	if(balanceDue<=0 && capStatus == "License Issued"){
 		runReportAttach(capId,"Official License", "p1value", capId.getCustomID());
 		runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
 		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "", false, capStatus, capId, "Designated Responsible Party", "RECORD_ID", capId.getCustomID());
