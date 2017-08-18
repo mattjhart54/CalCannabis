@@ -1,6 +1,6 @@
 //lwacht: send a deficiency email when the status is "Deficiency Letter Sent" 
 try{
-	if("Deficiency Letter Sent".equals(wfStatus)){
+	if("Deficiency Letter Sent".equals(wfStatus)){ 
 		//lwacht: 170817: commenting in anticipation of primary contact going away
 		//var emailReport = false;
 		//var priContact = getContactObj(capId,"Primary Contact");

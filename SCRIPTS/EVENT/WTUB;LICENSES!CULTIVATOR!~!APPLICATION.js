@@ -1,6 +1,6 @@
 //lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
 //display the deficiency report for printing. Note: only use the primary contact's preferred channel
-try{
+try{ 
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		var priContact = getContactObj(capId,"Primary Contact");
 		var showReport = false;
@@ -32,7 +32,7 @@ try{
 //lwacht: when the status is set to a status that requires notification and the preferred channel is *not* email,
 //display the appropriate report for printing
 try{
-	if(matches(wfStatus, "Science Manager Review Completed")){
+	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed")){
 		showDebug=false;
 		var priContact = getContactObj(capId,"Primary Contact");
 		var showReport = false;
