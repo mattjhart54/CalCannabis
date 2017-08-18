@@ -1,17 +1,18 @@
 //lwacht: send a deficiency email when the status is "Deficiency Letter Sent" 
 try{
 	if("Deficiency Letter Sent".equals(wfStatus)){
-		var emailReport = false;
-		var priContact = getContactObj(capId,"Primary Contact");
-		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-		if(!matches(priChannel,null,"","undefined")){
-			if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
-				emailReport = true;
-			}else{
-				showMessage=true;
-				comment("The Primary Contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report.");
-			}
-		}
+		//lwacht: 170817: commenting in anticipation of primary contact going away
+		//var emailReport = false;
+		//var priContact = getContactObj(capId,"Primary Contact");
+		//var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+		//if(!matches(priChannel,null,"","undefined")){
+		//	if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
+		//		emailReport = true;
+		//	}else{
+		//		showMessage=true;
+		//		comment("The Primary Contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report.");
+		//	}
+		//}
 		//var drpContact = getContactObj(capId,"Designated Responsible Party");
 		//var drptChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
 		//if(drptChannel.indexOf("Email") >= 0 || drptChannel.indexOf("E-mail") >= 0){
@@ -30,10 +31,13 @@ try{
 		var resDefId = aa.cap.createSimplePartialRecord(ctm,newAppName, "INCOMPLETE CAP");
 		if(resDefId.getSuccess()){
 			var newDefId = resDefId.getOutput();
-			if(emailReport){
-				runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
-				emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, wfStatus, newDefId);
-			}
+			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
+			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Primary Contact", "p1value", capId.getCustomID());
+			//if(emailReport){
+			//	runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
+			//	emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, wfStatus, newDefId);
+			//}
 			//relate amendment to application
 			var resCreateRelat = aa.cap.createAppHierarchy(capId, newDefId); 
 			if (resCreateRelat.getSuccess()){
@@ -146,22 +150,35 @@ try{
 //lwacht
 //send other notifications
 try{
-	if(matches(wfStatus, "Science Manager Review Completed") && appTypeArray[2]!="Temporary"){
+	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed") && appTypeArray[2]!="Temporary"){
 		var emailReport = false;
-		var priContact = getContactObj(capId,"Designated Responsible Party");
+		var priContact = getContactObj(capId,"Primary Contact");
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 		if(!matches(priChannel,null,"","undefined")){
 			if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
 				emailReport = true;
 			}else{
 				showMessage=true;
-				comment("The Designated Responsible Party, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report.");
+				comment("The Primary Contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report.");
 			}
 		}
 		if(emailReport){
-			rptName = "Approval Letter and Invoice";
+			var rptName = "";
+			var notName = "";
+			switch(""+wfStatus){
+				case "Science Manager Review Completed": 
+					rptName = "Approval Letter and Invoice"; 
+					notName = "LCA_GENERAL_NOTIFICATION"; 
+					notName = "LCA_DEFICIENCY"; 
+					break;
+				default: 
+					rptName = "Deficiency Report";
+					notName = "LCA_GENERAL_NOTIFICATION";
+			}
 			runReportAttach(capId,rptName, "p1value", capId.getCustomID());
-			emailRptContact("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "RECORD_ID", capId.getCustomID());
+			//emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId);
+			emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+			emailRptContact("WTUA", notName, "", false, capStatus, capId, "Primary Contact", "p1value", capId.getCustomID());
 		}
 	}
 }catch(err){
@@ -183,7 +200,7 @@ try{
 			editTaskDueDate("Owner Application Reviews", dateAdd(null,90));
 			//activateTask("Owner Application Reviews");
 		}
-		//setTask("Administrative Manager Review", "N", "Y");
+		setTask("Administrative Manager Review", "N", "Y");
 	}
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
@@ -196,7 +213,7 @@ try{
 			editTaskDueDate("CEQA Review", dateAdd(null,90));
 			//activateTask("CEQA Review");
 		}
-		//setTask("Science Manager Review", "N", "Y");
+		setTask("Science Manager Review", "N", "Y");
 	}
 	//lwacht: moved this from separate function to here to keep expiry logic together
 	if(matches(wfStatus,"Denied")) {
