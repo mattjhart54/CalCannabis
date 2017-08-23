@@ -7,10 +7,11 @@ try{
 		if(licCapId){
 			var expDate = dateAdd(null,120);
 			setLicExpirationDate(licCapId,null,expDate,"Active");
-			/* will configure once there's an altId 
-			var newAltFirst = "LCT" + sysDateMMDDYYYY.substr(8,2);
-			var newAltLast = capIDString.substr(3,capIDString.length());
-			var newAltId = newAltFirst + newAltLast;
+			if(AInfo["Application Type"]=="Temporary Adult-Use Cannabis Cultivation"){
+				var newAltId = capIDString.replace("TCA", "TAL");
+			}else{
+				var newAltId = capIDString.replace("TCA", "TML");
+			}
 			var updAltId = aa.cap.updateCapAltID(licCapId,newAltId);
 			if(!updAltId.getSuccess()){
 				logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
@@ -21,15 +22,8 @@ try{
 			var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
 			//logDebug("workDescGet(capId): " + workDescGet(capId));
 			//logDebug("getShortNotes(): " + getShortNotes());
-			logDebug("newAppName: " + newAppName);
+			//logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
-			var newAltId = capIDString.replace("A", "L"); 
-			var updateResult = aa.cap.updateCapAltID(licCapId, newAltId);
-			if (updateResult.getSuccess()) {
-				logDebug("Updated license record AltId to " + newAltId + ".");
-			}else {
-				logDebug("Error updating alt ID: " + updateResult.getErrorMessage() );
-			}
 			//updateShortNotes(getShortNotes(),licCapId);
 			//updateWorkDesc(workDescGet(capId),licCapId);
 			capContactResult = aa.people.getCapContactByCapID(capId);
