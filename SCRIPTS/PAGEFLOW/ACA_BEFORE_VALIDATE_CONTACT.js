@@ -105,8 +105,10 @@ try {
 					drpFnd = true;
 				if(contType == "Applicant")
 					appFnd = true;
-				if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
-					contactFnd = true;
+				if(!matches(contEmail,"",null,"undefined")){
+					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
+						contactFnd = true;
+					}
 				}
 			}
 		}
