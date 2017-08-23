@@ -18,7 +18,6 @@ try{
 			}else{
 				logDebug("License record ID updated to : " + newAltId);
 			}
-			*/
 			var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
 			//logDebug("workDescGet(capId): " + workDescGet(capId));
 			//logDebug("getShortNotes(): " + getShortNotes());
