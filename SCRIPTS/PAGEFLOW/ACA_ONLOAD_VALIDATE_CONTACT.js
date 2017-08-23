@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_ONLOAD_APP_CONTACT.JS
+| Program : ACA_ONLOAD_VALIDATE_CONTACT.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -104,8 +104,10 @@ try {
 					drpFnd = true;
 				if(contType == "Applicant")
 					pcFnd = true;
-				if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
-					contactFnd = true
+				if(!matches(ownerEmail,"",null,"undefined")){
+					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
+						contactFnd = true
+					}
 				}
 			}
 		}
@@ -122,9 +124,9 @@ try {
 	}
 }
 catch (err){
-	logDebug("A JavaScript Error occurred: ASIUA: Licenses/Cultivation/*/Application: " + err.message);
+	logDebug("A JavaScript Error occurred: ACA_ONLOAD_VALIDATE_CONTACT: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 // page flow custom code end
