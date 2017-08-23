@@ -87,9 +87,11 @@ try{
 			if(resCurUser.getSuccess()){
 				var currUser = resCurUser.getOutput();
 				var currEmail = currUser.email;
-				if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
-					showMessage = true;
-					logMessage("Warning: Only " + ownerName + " can submit this application.");
+				if(!matches(ownerEmail,"",null,"undefined")){
+					if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
+						showMessage = true;
+						logMessage("Warning: Only " + ownerName + " can submit this application.");
+					}
 				}
 			}else{
 				logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
