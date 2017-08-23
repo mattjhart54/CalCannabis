@@ -104,7 +104,7 @@ try {
 					drpFnd = true;
 				if(contType == "Applicant")
 					pcFnd = true;
-				if(!matches(ownerEmail,"",null,"undefined")){
+				if(!matches(contEmail,"",null,"undefined")){
 					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
 						contactFnd = true
 					}
