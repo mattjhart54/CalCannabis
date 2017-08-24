@@ -2,14 +2,15 @@
 //display the deficiency report for printing. Note: only use the primary contact's preferred channel
 try{ 
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
-		var priContact = getContactObj(capId,"Primary Contact");
-		var showReport = false;
-		if(priContact){
-			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-			if(priChannel.indexOf("Postal") > -1){
-				showReport = true;
-			}
-		}
+		//lwacht : 170823 : removing primary contact
+		//var priContact = getContactObj(capId,"Primary Contact");
+		//var showReport = false;
+		//if(priContact){
+		//	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+		//	if(priChannel.indexOf("Postal") > -1){
+		//		showReport = true;
+		//	}
+		//}
 		//lwacht: 170815: uncommenting in preparation for Primary Contact going away
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		if(drpContact){
@@ -34,14 +35,15 @@ try{
 try{
 	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed")){
 		showDebug=false;
-		var priContact = getContactObj(capId,"Primary Contact");
-		var showReport = false;
-		if(priContact){
-			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-			if(priChannel.indexOf("Postal") >-1){
-				showReport = true;
-			}
-		}
+		//lwacht : 170823 : removing primary contact
+		//var priContact = getContactObj(capId,"Primary Contact");
+		//var showReport = false;
+		//if(priContact){
+		//	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+		//	if(priChannel.indexOf("Postal") >-1){
+		//		showReport = true;
+		//	}
+		//}
 		//lwacht: 170815: uncommenting in preparation for Primary Contact going away
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		if(drpContact){

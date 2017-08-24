@@ -30,7 +30,7 @@ try{
 				Contacts = capContactResult.getOutput();
 				for (yy in Contacts){
 					var theContact = Contacts[yy].getCapContactModel();
-					if(theContact.getContactType() == "Applicant"){
+					if(theContact.getContactType() == "Business"){
 						var peopleModel = theContact.getPeople();
 						var editChannel =  peopleModel.setPreferredChannel(1);
 						var editChannel =  peopleModel.setPreferredChannelString("Email");

@@ -49,7 +49,8 @@ try{
 			updateShortNotes(getShortNotes(),licCapId);
 			updateWorkDesc(workDescGet(capId),licCapId);
 			copyAppSpecific(licCapId);
-			var contPri = getContactObj(licCapId,"Primary Contact");
+			//lwacht: 170823: removing primary contact
+			//var contPri = getContactObj(licCapId,"Primary Contact");
 			//capId = licCapId;
 			//contactSetPrimary(contPri.seqNumber);
 			//capId = currCapId;
@@ -59,7 +60,7 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
+	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
 	logDebug(err.stack);
 }
 

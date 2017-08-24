@@ -2,11 +2,12 @@
 //send other notifications
 try{
 	if(matches(appStatus, "Disqualified", "Denied")){
-		var priContact = getContactObj(capId,"Primary Contact");
-		//var drpContact = getContactObj(capId,"Designated Responsible Party");
+		//lwacht: 170823: removing primary contact
+		//var priContact = getContactObj(capId,"Primary Contact");
+		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var showReport = false;
-		if(priContact){
-			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+		if(drpContact){
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
 			if(priChannel.indexOf("Postal") > -1){
 				showReport = true;
 			}
