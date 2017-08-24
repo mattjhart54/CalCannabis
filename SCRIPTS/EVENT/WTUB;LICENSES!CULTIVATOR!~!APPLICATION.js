@@ -2,9 +2,9 @@
 //display the deficiency report for printing. Note: only use the primary contact's preferred channel
 try{ 
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		var showReport = false;
 		//lwacht : 170823 : removing primary contact
 		//var priContact = getContactObj(capId,"Primary Contact");
-		//var showReport = false;
 		//if(priContact){
 		//	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 		//	if(priChannel.indexOf("Postal") > -1){
