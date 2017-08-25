@@ -57,17 +57,7 @@ try{
 			showMessage=true;
 			comment("<font color='blue'>The " + contactType + " contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report to : " + br + addrString + "</font>");
 		}
-		//only the primary contact sets their preferred channel, so only use that
-		//var drptChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-		//if(drptChannel.indexOf("Email") >= 0 || drptChannel.indexOf("E-mail") >= 0){
-		//	emailDRPReport = true;
-		//}else{
-		//	showMessage=true;
-		//	comment("The Designated Responsible Party, " + drpContact.capContact.firstName + " " + drpContact.capContact.lastName + ", has requested all correspondence be mailed.  Please mail the displayed report.");
-		//}
-		//if(emailPriReport || emailDRPReport){
 		if(emailPriReport){
-			//populate the email notification that will go to the primary contact
 			var eParams = aa.util.newHashtable(); 
 			//logDebug("callingPgm: " + callingPgm);
 			if(callingPgm=="WTUA"){
@@ -100,6 +90,9 @@ try{
 				thisAddr = drpAddresses[x];
 				if(thisAddr.getAddressType()=="Mailing"){
 					addrType = "Mailing";
+				}
+				if(thisAddr.getAddressType()=="Business"){
+					addrType = "Business";
 				}
 			}
 			if(!addrType){
@@ -149,6 +142,6 @@ try{
 		logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
 	}
 }catch(err){
-	logDebug("An error occurred in emailDrpPriContacts: " + err.message);
+	logDebug("An error occurred in emailRptContact: " + err.message);
 	logDebug(err.stack);
 }}

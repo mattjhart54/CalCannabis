@@ -11,7 +11,7 @@ try{
 
 	//because there are different options for these, need a different way to track so don't remove
 	//the condition unnecessarily
-	loadAppSpecific4ACA(AInfo);
+	loadASITables4ACA_corrected(AInfo);
 	var need_premiseDiagram = false;
 	var need_wastePlan = false;
 	var need_pestPlan = false;
