@@ -145,6 +145,7 @@ try{
 		comment("</ol></div>");
 	}
 } catch (err) {
+	showDebug =true;
 	logDebug("An error has occurred in ACA_AFTER_OWNER_COND_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_OWNER_COND_DOCS: Complete Contact" + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
