@@ -84,11 +84,67 @@ try{
 		comment("The SOURCE OF WATER SUPPLY table requires at least one row.");
 	}
 }catch (err) {
-    logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: " + err.message);
+    logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Main Loop: "+ startDate, publicUserID + br + capId + br + err.message+ br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: "+ startDate, publicUserID + br + capId + br + err.message+ br + err.stack);
 }
+//validate contacts
+try {
+	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 
+	if(resCurUser.getSuccess()){
+		var contactFnd = false
+		var drpFnd = false;
+		var prepFnd = false;
+		var appFnd = false;
+		var currUser = resCurUser.getOutput();
+		var currEmail = currUser.email;
+		//lwacht: 170810: need person logged in to be able to access the application in the future
+		if(matches(AInfo["publicUserEmail"],"",null)){
+			editAppSpecific4ACA("publicUserEmail",currEmail);
+			prepFnd = true;
+		}else{
+			if(AInfo["publicUserEmail"]==currEmail){
+				prepFnd = true;
+			}
+		}
+		var contactList = cap.getContactsGroup();
+		if(contactList != null && contactList.size() > 0){
+			var arrContacts = contactList.toArray();
+			for(var i in arrContacts) {
+				var thisCont = arrContacts[i];
+				var contEmail = thisCont.email;
+				var contType = thisCont.contactType;
+				if(contType == "Designated Responsible Party")
+					drpFnd = true;
+				if(contType == "Applicant")
+					appFnd = true;
+				if(!matches(contEmail,"",null,"undefined")){
+					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
+						contactFnd = true;
+					}
+				}
+			}
+		}
+		//lwacht: changed logic to check for DRP *or* applicant
+		if(!prepFnd){
+			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
+				cancel = true;
+				showMessage = true;
+				logMessage("  Error: Only the Applicant and the Designated Responsible party can update this application.");
+			}	
+		}
+	}
+	else{
+		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: Validate Contact: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
+	}
+}
+catch (err){
+	logDebug("A JavaScript Error occurred:ACA_ONLOAD_OWNER_APP_UPDATE: Validate Contact: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========END=Main=Loop================>
