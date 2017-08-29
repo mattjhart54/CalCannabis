@@ -7,7 +7,7 @@ try{
 		if(licCapId){
 			var expDate = dateAdd(null,120);
 			setLicExpirationDate(licCapId,null,expDate,"Active");
-			if(AInfo["Application Type"]=="Temporary Adult-Use Cannabis Cultivation"){
+			if(""+AInfo["App Type"]=="Temporary Adult-Use Cannabis Cultivation"){
 				var newAltId = capIDString.replace("TCA", "TAL");
 			}else{
 				var newAltId = capIDString.replace("TCA", "TML");
