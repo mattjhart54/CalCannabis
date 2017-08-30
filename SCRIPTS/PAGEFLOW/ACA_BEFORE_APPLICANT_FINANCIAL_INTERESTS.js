@@ -116,7 +116,7 @@ try {
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
 				var contType = thisCont.contactType;
-				if(contType =="Applicant") {
+				if(contType =="Business") {
 					//check for legal business name if not a Sole Proprietor
 					if(AInfo["Business Entity Structure"] != "Sole Proprietorship" && matches(thisCont.middleName,"",null,undefined)) {
 						showMessage = true;
