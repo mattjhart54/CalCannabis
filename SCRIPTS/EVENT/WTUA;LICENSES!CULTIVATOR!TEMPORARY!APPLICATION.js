@@ -53,6 +53,6 @@ try{
 		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Disqualification notification: " + err.message);
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Disqualification notification: " + err.message);
 	logDebug(err.stack);
 }
