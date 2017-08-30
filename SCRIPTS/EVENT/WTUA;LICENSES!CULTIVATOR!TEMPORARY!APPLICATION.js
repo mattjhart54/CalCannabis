@@ -43,3 +43,16 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Assign Disposition: " + err.message);
 	logDebug(err.stack);
 }
+
+//lwacht
+//disqualification notice
+try{
+	if(matches(wfStatus, "Disqualification Letter Sent")){
+		var rptName = "";
+		var notName = "LCA_TEMP_APP_DISQUALIFIED";
+		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Disqualification notification: " + err.message);
+	logDebug(err.stack);
+}
