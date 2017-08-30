@@ -1,7 +1,7 @@
 function updateLegalBusinessName() {
 	cList = getContactArray();
 	for(c in cList) {
-		if(cList[c]["contactType"] == "Applicant") {
+		if(cList[c]["contactType"] == "Business") {
 			if(!matches(cList[c]["businessName"], null, "", undefined)) {
 				updateWorkDesc(cList[c]["businessName"]);
 			}
