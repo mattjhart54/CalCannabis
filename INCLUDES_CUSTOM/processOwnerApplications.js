@@ -122,7 +122,7 @@ try {
 					}
 					editContactType("Individual", "Owner");
 					errMsg += vEmail + br;
-					var ownUser = createPublicUserFromContact("Owner");
+					var ownUser = createPublicUserFromContact_Rev("Owner");
 					tblOwners[o]["Status"]="Submitted";
 					emailParameters = aa.util.newHashtable();
 					var sysDate = aa.date.getCurrentDate();
