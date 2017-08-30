@@ -102,10 +102,10 @@ try {
 				var contType = thisCont.contactType;
 				if(contType == "Designated Responsible Party")
 					drpFnd = true;
-				if(contType == "Applicant")
+				if(contType == "Business")
 					pcFnd = true;
 				if(!matches(contEmail,"",null,"undefined")){
-					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
+					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business")){
 						contactFnd = true
 					}
 				}
@@ -114,7 +114,7 @@ try {
 		if(!prepFnd){
 			if(contactFnd == false && drpFnd == true && pcFnd == true) {
 				showMessage = true;
-				logMessage("Warning: Only the Applicant and the Designated Responsible party can update this application.");
+				logMessage("Warning: Only the Business Contact and the Designated Responsible party can update this application.");
 			}	
 		}
 	}
