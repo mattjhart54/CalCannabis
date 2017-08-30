@@ -89,7 +89,7 @@ try{
 					eText += " - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"] + "; " + "\r\n"  + "\r\n";
 				}
 			}
-			var appContact = getContactObj(capId,"Applicant");
+			var appContact = getContactObj(capId,"Bussiness");
 			editAppSpecific4ACA("Application Deficiencies", eText);
 		}else{
 			editAppSpecific4ACA("Application Deficiencies", "There are currently no deficiencies on your application.");
