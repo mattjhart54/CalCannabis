@@ -11,6 +11,7 @@ try{
 			var jsJanOne = janOne.getTime();
 			if(jsToDay < janOne){
 				var expDate = new Date("01/01/2019");
+				editFirstIssuedDate(janOne) 
 			}else{
 				var expDate = dateAdd(null,120);
 			}
