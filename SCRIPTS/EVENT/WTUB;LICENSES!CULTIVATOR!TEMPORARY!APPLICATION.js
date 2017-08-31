@@ -5,7 +5,15 @@ try{
 	if(wfStatus=="Temporary License Issued"){
 		var licCapId = createLicense("Active", true);
 		if(licCapId){
-			var expDate = dateAdd(null,120);
+			var toDay = new Date();
+			var jsToDay = toDay.getTime();
+			var janOne = new Date("01/01/2018");
+			var jsJanOne = janOne.getTime();
+			if(jsToDay < janOne){
+				var expDate = new Date("01/01/2019");
+			}else{
+				var expDate = dateAdd(null,120);
+			}
 			setLicExpirationDate(licCapId,null,expDate,"Active");
 			if(""+AInfo["App Type"]=="Temporary Adult-Use Cannabis Cultivation"){
 				var newAltId = capIDString.replace("TCA", "TAL");
@@ -46,8 +54,3 @@ try{
 	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create License Record: " + err.message);
 	logDebug(err.stack);
 }
-
-
-
-
-
