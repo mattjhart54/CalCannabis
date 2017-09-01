@@ -220,7 +220,7 @@ try{
 		var arrTemp = getChildren("Licenses/Cultivator/Temporary/Application");
 		for(rec in arrTemp){
 			capId = arrTemp[rec];
-			var arrParId= getParents("Licenses/Cultivator/Temporary/License");
+			var arrParId= getParentsRev("Licenses/Cultivator/Temporary/License");
 			if(arrParId){
 				for(row in arrParId){
 					capId = arrParId[row];
