@@ -98,3 +98,32 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
+
+//lwacht
+//add child if app number provided
+try{
+	if(!publicUser){
+		if(!matches(AInfo["Temp App Number"],null,"", "undefined")){
+			var tmpID = aa.cap.getCapID(AInfo["Temp App Number"]);
+			if(tmpID.getSuccess()){
+				var childCapId = tmpID.getOutput();
+				var parId = getParentByCapId(childCapId);
+				if(parId){
+					var linkResult = aa.cap.createAppHierarchy(parId, childCapId);
+					if (!linkResult.getSuccess()){
+						logDebug( "Error linking to parent application parent cap id (" + capId + "): " + linkResult.getErrorMessage());
+					}
+				}else{
+					var linkResult = aa.cap.createAppHierarchy(capId, childCapId);
+					if (!linkResult.getSuccess()){
+						logDebug( "Error linking to temp application(" + childCapId + "): " + linkResult.getErrorMessage());
+					}
+				}				
+			}
+		}
+	}
+} catch(err){
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: " + err.message);
+	logDebug(err.stack);
+}
+
