@@ -44,7 +44,7 @@ try{
 			var childCapId = tmpID.getOutput();
 			var parId = getParentByCapId(childCapId);
 			if(parId){
-				var linkResult = aa.cap.createAppHierarchy(parId, childCapId);
+				var linkResult = aa.cap.createAppHierarchy(capId, parId);
 				if (!linkResult.getSuccess()){
 					logDebug( "Error linking to parent application parent cap id (" + capId + "): " + linkResult.getErrorMessage());
 				}

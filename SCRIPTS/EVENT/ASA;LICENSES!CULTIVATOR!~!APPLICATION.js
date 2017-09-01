@@ -104,6 +104,7 @@ try{
 //lwacht
 //add child if app number provided
 try{
+	logDebug("publicUser " + AInfo["Temp App Number"])
 	if(!publicUser){
 		if(!matches(AInfo["Temp App Number"],null,"", "undefined")){
 			var tmpID = aa.cap.getCapID(AInfo["Temp App Number"]);
@@ -111,7 +112,7 @@ try{
 				var childCapId = tmpID.getOutput();
 				var parId = getParentByCapId(childCapId);
 				if(parId){
-					var linkResult = aa.cap.createAppHierarchy(parId, childCapId);
+					var linkResult = aa.cap.createAppHierarchy(capId, parId);
 					if (!linkResult.getSuccess()){
 						logDebug( "Error linking to parent application parent cap id (" + capId + "): " + linkResult.getErrorMessage());
 					}
@@ -128,4 +129,3 @@ try{
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: " + err.message);
 	logDebug(err.stack);
 }
-
