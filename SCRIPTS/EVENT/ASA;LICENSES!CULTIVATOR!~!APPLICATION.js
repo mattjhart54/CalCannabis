@@ -71,7 +71,9 @@ try {
 try{
 	if(appTypeArray[2]!="Temporary"){
 		runReportAttach(capId,"Submitted Application", "p1value", capId.getCustomID());
-		emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "", false, "Application Received", capId, "RECORD_ID", capId.getCustomID());
+		//lwacht: don't use this one any more
+		//emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "", false, "Application Received", capId, "RECORD_ID", capId.getCustomID());
+		emailRptContact("PRA","LCA_GENERAL_NOTIFICATION","",false,"Application Received",capId,"Designated Responsible Party")
 	}
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Send Notif Letter: " + err.message);
