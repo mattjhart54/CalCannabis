@@ -11,9 +11,11 @@ try{
 			var jsJanOne = janOne.getTime();
 			if(jsToDay < janOne){
 				var expDate = new Date("01/01/2019");
-				editFirstIssuedDate(janOne) 
+				editFirstIssuedDate(janOne);
+				editAppSpecific("Valid From Date", "01/01/2018", licCapId);
 			}else{
 				var expDate = dateAdd(null,120);
+				editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
 			}
 			setLicExpirationDate(licCapId,null,expDate,"Active");
 			if(""+AInfo["App Type"]=="Temporary Adult-Use Cannabis Cultivation"){
