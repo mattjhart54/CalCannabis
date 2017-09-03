@@ -17,6 +17,7 @@ try{
 } catch(err){
 	logDebug("An error has occurred in DUA:LICENSES/CULTIVATOR/*/APPLICATION: Notify of Uploaded Document: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in DUA:LICENSES/CULTIVATOR/*/Application: Notify of Uploaded Document: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
 
 
