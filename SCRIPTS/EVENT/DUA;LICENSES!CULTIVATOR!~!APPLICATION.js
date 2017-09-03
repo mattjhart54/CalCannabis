@@ -12,7 +12,7 @@ try{
 			var staffEmail = assignedUserID.getEmail();
 	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY DUA:LICENSES/CULTIVATOR/*/Application: Notify of Uploaded Document: "+ startDate, capId + br +  caseMgr + br + staffEmail);
 			if(staffEmail){
-				email(staffEmail, sysFromEmail, "A new document has been uploaded.", "TA new document has been uploaded for license application " + capIdString + ". Please review this new document before taking any action on the application.");
+				email(staffEmail, sysFromEmail, "A new document has been uploaded.", "TA new document has been uploaded for license application " + capIDString + ". Please review this new document before taking any action on the application.");
 			}
 		}
 	}
