@@ -1,6 +1,7 @@
 //lwacht
 //notify assigned user of active tasks that a document has been uploaded
 try{
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY DUA:LICENSES/CULTIVATOR/*/Application: Notify of Uploaded Document: "+ startDate, capId + br +  currEnv);
 	wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
 	for(x in wf) {
 		fTask = wf[x]; 
@@ -9,6 +10,7 @@ try{
 			var caseMgr = wf[x].getAssignedStaff().getFirstName()+ " " +wf[x].getAssignedStaff().getLastName();
 			var assignedUserID = aa.person.getUser(wf[x].getAssignedStaff().getFirstName(),wf[x].getAssignedStaff().getMiddleName(),wf[x].getAssignedStaff().getLastName()).getOutput();
 			var staffEmail = assignedUserID.getEmail();
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY DUA:LICENSES/CULTIVATOR/*/Application: Notify of Uploaded Document: "+ startDate, capId + br +  caseMgr + br + staffEmail);
 			if(staffEmail){
 				email(staffEmail, sysFromEmail, "A new document has been uploaded.", "TA new document has been uploaded for license application " + capIdString + ". Please review this new document before taking any action on the application.");
 			}
