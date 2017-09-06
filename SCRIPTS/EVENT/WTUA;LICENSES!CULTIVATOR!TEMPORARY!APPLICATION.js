@@ -13,7 +13,7 @@ try{
 				//var module = appTypeArray[0];
 				runReportAttach(parCapId,"Temporary License", "p1value",parCapId.getCustomID() );
 				//generateReport(parCapId,"Temporary License",module,rParams)
-				emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", false, wfStatus, capId, "Business", "altID", capId.getCustomID());
+				emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", false, wfStatus, capId, "Business", "altId", capId.getCustomID());
 				//emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
 			}
 		}else{
