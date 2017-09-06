@@ -38,7 +38,7 @@ try{
 	var lightDiagram = {condition : "Cultivation Plan - Lighting Diagram", document : "Cultivation Plan - Lighting Diagram"};
 	var streambedAlter = {condition : "Water - Streambed Alteration Document", document : "Water - Streambed Alteration Document"};
 	var wellLog = {condition : "Water - Goundwater Well Log", document : "Water - Groundwaer Well Log"};
-	var srs2WellLog = {condition : "Water - Small Retail Supplier Welll Log", document : "Water - Small Retail Supplier Welll Log"};
+	var srs2WellLog = {condition : "Water - Small Retail Supplier Well Log", document : "Water - Small Retail Supplier Well Log"};
 	var SWRCBAhuth = {condition : "Water - SWRCB Diversion Authorization", document : "Water - SWRCB Diversion Authorization"};
 	var SWRCBExcept = {condition : "Water - SWRCB Exception Document", document : "Water - SWRCB Exception Document"};
 	var waterQuality = {condition : "Water - Water Quality Protection Permit", document : "Water - Water Quality Protection Permit"};
@@ -165,40 +165,57 @@ try{
 		}
 
 	// Water Documents
-		if (AInfo["Groundwater Well"] == "CHECKED"){
-			arrReqdDocs_App.push(wellLog);
-		}else{
-			if(appHasCondition(conditionType, null, wellLog.condition, null)){
-				removeCapCondition(conditionType, wellLog.condition);
-			}
-		}
-		if (AInfo["Small Retail Supplier 2"] == "CHECKED"){
-			arrReqdDocs_App.push(srs2WellLog);
-		}else{
-			if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
-				removeCapCondition(conditionType, srs2WellLog.condition);
-			}
-		}
-		
 		arrReqdDocs_App.push(streambedAlter);
-				
-		if (AInfo["Diversion"] == "CHECKED"){
-			arrReqdDocs_App.push(SWRCBAhuth);
-		}else{
-			if(appHasCondition(conditionType, null, SWRCBAhuth.condition, null)){
-				removeCapCondition(conditionType, SWRCBAhuth.condition);
-			}
-		}		
-		if (AInfo["Diversion Exception"] == "CHECKED"){
-			arrReqdDocs_App.push(SWRCBExcept);
-		}else{
-			if(appHasCondition(conditionType, null, SWRCBExcept.condition, null)){
-				removeCapCondition(conditionType, SWRCBExcept.condition);
-			}
-		}
-	
 		arrReqdDocs_App.push(waterQuality);
 		
+		var tblWater = SOURCEOFWATERSUPPLY;
+		var gw=false;
+		var sr=false;
+		var di=false;
+		var de=false;
+		for(x in tblWater) {
+			if (tblWater[x]["Type of Water Supply"] == "Groundwater Well"{
+				gw=true;
+			}
+			if (tblWater[x]["Type of Water Supply"] == "Small Retail Supplier - Delivery or pickup of water from a groundwater well"){
+				sr=true;
+			}
+			if (tblWater[x]["Type of Water Supply"] == "Diversion from Waterbody"){
+				di=ture;
+			}
+			if (tblWater[x]["Type of Water Supply"] == "Diversion with Exception from Requirement to File a Statement of Diversion and Use"){
+				de=true;
+			}
+		}
+	if(gw==true) {
+		arrReqdDocs_App.push(wellLog);
+	}else{
+		if(appHasCondition(conditionType, null, wellLog.condition, null)){
+			removeCapCondition(conditionType, wellLog.condition);
+		}
+	}
+	if(sr==true) {
+		arrReqdDocs_App.push(srs2WellLog);
+	}else{
+		if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
+			removeCapCondition(conditionType, srs2WellLog.condition);
+		}
+	}
+	if(di==true) {
+		arrReqdDocs_App.push(SWRCBAhuth);
+	}else{
+		if(appHasCondition(conditionType, null, SWRCBAhuth.condition, null)){
+			removeCapCondition(conditionType, SWRCBAhuth.condition);
+		}
+	}
+	if(de== true) {
+		arrReqdDocs_App.push(SWRCBExcept);
+	}else{
+		if(appHasCondition(conditionType, null, SWRCBExcept.condition, null)){
+			removeCapCondition(conditionType, SWRCBExcept.condition);
+		}
+	}
+	
 /*	Documents no longer required	
 		var medicalPriorityDate = "01/01/2016";
 		var adultPriorityDate = "09/01/2016";
