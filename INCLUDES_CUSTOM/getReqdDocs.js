@@ -181,7 +181,7 @@ try{
 				sr=true;
 			}
 			if (tblWater[x]["Type of Water Supply"] == "Diversion from Waterbody"){
-				di=ture;
+				di=true;
 			}
 			if (tblWater[x]["Type of Water Supply"] == "Diversion with Exception from Requirement to File a Statement of Diversion and Use"){
 				de=true;
