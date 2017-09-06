@@ -32,22 +32,22 @@ try{
 	var ownership = {condition : "Premises - Property Ownership Documentation", document : "Premises - Property Ownership Documentation"};
 //	var operationDate = {condition : "Premises - Evidence of the Date Operations Began", document : "Premises - Evidence of the Date Operations Began"};
 	var enviroStor = {condition : "Premises - EnviroStor Hazardous Materials Search", document : "Premises - EnviroStor Hazardous Materials Search"};
-	var premiseDiagram = {condition : "Cultivation Plan - Premises Diagram", document : "Cultivation Plan - Premises Diagram"};
+	var premiseDiagram = {condition : "Cultivation Plan - Premises Diagram and Operating Procedures", document : "Cultivation Plan - Premises Diagram and Operating Procedures"};
 	var wastePlan = {condition : "Cultivation Plan - Waste Management Plan", document : "Cultivation Plan - Waste Management Plan"};
 	var pestPlan = {condition : "Cultivation Plan - Pest Management Plan", document : "Cultivation Plan - Pest Management Plan"};
 	var lightDiagram = {condition : "Cultivation Plan - Lighting Diagram", document : "Cultivation Plan - Lighting Diagram"};
 	var streambedAlter = {condition : "Water - Streambed Alteration Document", document : "Water - Streambed Alteration Document"};
-	var wellLog = {condition : "Water - Goundwater Well", document : "Water - Groundwaer Well"};
-	var srs2WellLog = {condition : "Water - Small Retail Supplier Delivery", document : "Water - Small Retail Supplier Delivery"};
+	var wellLog = {condition : "Water - Goundwater Well Log", document : "Water - Groundwaer Well Log"};
+	var srs2WellLog = {condition : "Water - Small Retail Supplier Welll Log", document : "Water - Small Retail Supplier Welll Log"};
 	var SWRCBAhuth = {condition : "Water - SWRCB Diversion Authorization", document : "Water - SWRCB Diversion Authorization"};
 	var SWRCBExcept = {condition : "Water - SWRCB Exception Document", document : "Water - SWRCB Exception Document"};
 	var waterQuality = {condition : "Water - Water Quality Protection Permit", document : "Water - Water Quality Protection Permit"};
 //	var localAuth = {condition : "Local - Local Authorization", document : "Local - Local Authorization"};
-	var planningPermit = {condition : "Local - Certified Planning Permit", document : "Local - Certified Planning Permit"};
+//	var planningPermit = {condition : "Local - Certified Planning Permit", document : "Local - Certified Planning Permit"};
 	var goodStanding = {condition : "Local - Evidence of Good Standing", document : "Local - Evidence of Good Standing"};
 	var CEQA = {condition : "Local - Evidence of CEQA Compliance", document : "Local - Evidence of CEQA Compliance"};
 //	var localComply = {condition : "Local - Certification of Local Compliance", document : "Local - Certification of Local Compliance"};
-	var coopMembers = {condition : "Co-Op - List of Members", document : "Co-Op - List of Members"};
+	var coopMembers = {condition : "Cannabis Cooperative Association Member List", document : "Cannabis Cooperative Association Member List"};
 	
 	//owner documents
     var governmentIssuedID = {condition : "Government Issued ID", document : "Government Issued ID"};
@@ -55,7 +55,7 @@ try{
     var evidenceOfDismissal = {condition : "Evidence of Dismissal", document : "Evidence of Dismissal"};
     var certificateOfRehabilitation = {condition : "Certificate of Rehabilitation", document : "Certificate of Rehabilitation"};
     var referenceLetters = {condition : "Reference Letters", document : "Reference Letters"};
-	var convictions = {condition : "History of Convictions", document : "History of Convictions"};
+//	var convictions = {condition : "History of Convictions", document : "History of Convictions"};
 //	var calResidency = {condition : "Evidence of California Residency", document : "Evidence of California Residency"};
 
 // Required Documents for Cultivator Applications
@@ -143,7 +143,7 @@ try{
 		}
 		
 	// Local Permit Documents
-		arrReqdDocs_App.push(planningPermit);
+	//	arrReqdDocs_App.push(planningPermit);
 		arrReqdDocs_App.push(CEQA);
 	
 	// Premise Documents
