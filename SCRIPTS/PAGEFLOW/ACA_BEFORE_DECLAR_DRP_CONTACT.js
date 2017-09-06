@@ -102,6 +102,19 @@ try{
 		logDebug("Error retrieving application name.  Application name is null.");
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact  " + startDate, "capId: " + capId + br + br + "Error retrieving application name.  Application name is null.");
 	}
+	var contactList = cap.getContactsGroup(); 
+	if(contactList != null && contactList.size() > 0){ 
+		var arrContacts = contactList.toArray(); 
+		for(var i in arrContacts) { 
+			var thisCont = arrContacts[i]; 
+			var pChannel = thisCont.preferredChannel;
+			if (matches(pChannel,null, "", "undefined")) { 
+				cancel = true; 
+				showMessage = true; 
+				logMessage("You must select your Preferred Method of Contact before continuing.  Click 'Edit' to update."); 
+			}
+		}
+	}
 } catch (err) {
 	logDebug("An error has occurred in ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact : " + err.message);
 	logDebug(err.stack);
