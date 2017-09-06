@@ -11,7 +11,7 @@ try{
 				//var rParams = aa.util.newHashMap(); 
 				//rParams.put("p1value", parCapId.getCustomID());
 				//var module = appTypeArray[0];
-				runReportAttach(parCapId,"Official Temporary License", "altid",parCapId.getCustomID() );
+				runReportAttach(parCapId,"Official Temporary License", "altId",parCapId.getCustomID() );
 				//generateReport(parCapId,"Temporary License",module,rParams)
 				emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", false, wfStatus, capId, "Business", "altId", capId.getCustomID());
 				//emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
