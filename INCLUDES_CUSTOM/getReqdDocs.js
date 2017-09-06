@@ -174,7 +174,7 @@ try{
 		var di=false;
 		var de=false;
 		for(x in tblWater) {
-			if (tblWater[x]["Type of Water Supply"] == "Groundwater Well"{
+			if (tblWater[x]["Type of Water Supply"] == "Groundwater Well"){
 				gw=true;
 			}
 			if (tblWater[x]["Type of Water Supply"] == "Small Retail Supplier - Delivery or pickup of water from a groundwater well"){
@@ -187,28 +187,28 @@ try{
 				de=true;
 			}
 		}
-	if(gw==true) {
+	if(gw == true) {
 		arrReqdDocs_App.push(wellLog);
 	}else{
 		if(appHasCondition(conditionType, null, wellLog.condition, null)){
 			removeCapCondition(conditionType, wellLog.condition);
 		}
 	}
-	if(sr==true) {
+	if(sr == true) {
 		arrReqdDocs_App.push(srs2WellLog);
 	}else{
 		if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
 			removeCapCondition(conditionType, srs2WellLog.condition);
 		}
 	}
-	if(di==true) {
+	if(di == true) {
 		arrReqdDocs_App.push(SWRCBAhuth);
 	}else{
 		if(appHasCondition(conditionType, null, SWRCBAhuth.condition, null)){
 			removeCapCondition(conditionType, SWRCBAhuth.condition);
 		}
 	}
-	if(de== true) {
+	if(de == true) {
 		arrReqdDocs_App.push(SWRCBExcept);
 	}else{
 		if(appHasCondition(conditionType, null, SWRCBExcept.condition, null)){
