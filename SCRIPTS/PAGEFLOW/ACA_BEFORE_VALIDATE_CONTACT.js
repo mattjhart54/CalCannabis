@@ -103,7 +103,7 @@ try {
 				var contType = thisCont.contactType;
 				if(contType == "Designated Responsible Party")
 					drpFnd = true;
-				if(contType == "Applicant")
+				if(contType == "Business")
 					appFnd = true;
 				if(!matches(contEmail,"",null,"undefined")){
 					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
@@ -124,22 +124,6 @@ try {
 	else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
 		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
-	}
-	var contactList = cap.getContactsGroup(); 
-	if(contactList != null && contactList.size() > 0){ 
-		var arrContacts = contactList.toArray(); 
-		for(var i in arrContacts) { 
-			var thisCont = arrContacts[i]; 
-			var contType = thisCont.contactType;
-			if(contType == "Designated Responsible Party") {
-				var pChannel = thisCont.preferredChannel;
-				if (matches(pChannel,null, "", "undefined",0)) { 
-					cancel = true; 
-					showMessage = true; 
-					logMessage("You must select your Preferred Method of Contact before continuing.  Click 'Edit' to update."); 
-				}
-			}
-		}
 	}
 }
 catch (err){
