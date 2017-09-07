@@ -102,16 +102,13 @@ try{
 		logDebug("Error retrieving application name.  Application name is null.");
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact  " + startDate, "capId: " + capId + br + br + "Error retrieving application name.  Application name is null.");
 	}
-	showMessage = true;
-	cancel = true; 
+
 	var contactList = cap.getContactsGroup(); 
 	if(contactList != null && contactList.size() > 0){ 
-		logMessage("got here");
 		var arrContacts = contactList.toArray(); 
 		for(var i in arrContacts) { 
 			var thisCont = arrContacts[i]; 
 			var pChannel = thisCont.preferredChannel;
-			logMessage("pChannel " + pChannel)
 			if (matches(pChannel,null, "", "undefined",0)) { 
 				cancel = true; 
 				showMessage = true; 
