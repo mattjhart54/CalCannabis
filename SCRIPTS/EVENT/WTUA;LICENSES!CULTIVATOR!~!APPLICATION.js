@@ -214,6 +214,8 @@ try{
 
 //lwacht
 //if the perm application is set to denied, then close out any related temp licenses
+//MJH User Story 3556 remove this functionality
+/*
 try{
 	if(wfStatus== "Denied" && appTypeArray[2]!="Temporary"){
 		var currCap = capId;
@@ -224,8 +226,8 @@ try{
 			if(arrParId){
 				for(row in arrParId){
 					capId = arrParId[row];
-					taskCloseAllExcept("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
-					updateAppStatus("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
+					taskCloseAllExcept("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/* /APPLICATION: Close Temp License");
+					updateAppStatus("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/* /APPLICATION: Close Temp License");
 				}
 			}
 			capId = currCap;
@@ -233,16 +235,16 @@ try{
 		var arrTemp = getChildren("Licenses/Cultivator/Temporary/License");
 		for(rec in arrTemp){
 			capId = arrTemp[rec];
-			taskCloseAllExcept("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
-			updateAppStatus("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License");
+			taskCloseAllExcept("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/* /APPLICATION: Close Temp License");
+			updateAppStatus("Revoked","Updated via script WTUA:LICENSES/CULTIVATOR/* /APPLICATION: Close Temp License");
 			capId = currCap;
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Close Temp License: " + err.message);
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/* /APPLICATION: Close Temp License: " + err.message);
 	logDebug(err.stack);
 }
-
+*/
 
 
 //lwacht
