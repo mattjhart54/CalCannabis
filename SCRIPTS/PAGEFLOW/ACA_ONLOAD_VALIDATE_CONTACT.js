@@ -122,6 +122,22 @@ try {
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
 		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 	}
+	var contactList = cap.getContactsGroup(); 
+	if(contactList != null && contactList.size() > 0){ 
+		var arrContacts = contactList.toArray(); 
+		for(var i in arrContacts) { 
+			var thisCont = arrContacts[i]; 
+			var contType = thisCont.contactType;
+			if(contType == "Designated Responsible Party") {
+				var pChannel = thisCont.preferredChannel;
+				if (matches(pChannel,null, "", "undefined",0)) { 
+					cancel = true; 
+					showMessage = true; 
+					logMessage("You must select your Preferred Method of Contact before continuing.  Click 'Edit' to update."); 
+				}
+			}
+		}
+	}
 }
 catch (err){
 	logDebug("A JavaScript Error occurred: ACA_ONLOAD_VALIDATE_CONTACT: " + err.message);
