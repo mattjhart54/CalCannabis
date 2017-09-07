@@ -112,7 +112,7 @@ try{
 			var thisCont = arrContacts[i]; 
 			var pChannel = thisCont.preferredChannel;
 			logMessage("pChannel " + pChannel)
-			if (matches(pChannel,null, "", "undefined")) { 
+			if (matches(pChannel,null, "", "undefined",0)) { 
 				cancel = true; 
 				showMessage = true; 
 				logMessage("You must select your Preferred Method of Contact before continuing.  Click 'Edit' to update."); 
