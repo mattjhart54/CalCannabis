@@ -1,6 +1,7 @@
 //lwacht: add the owner applications
-processOwnerApplications();
-
+if(publicUser){
+	processOwnerApplications();
+}
 //lwacht
 // send an email to the designated responsible party, letting them know the
 // record is ready for approval
