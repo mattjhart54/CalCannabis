@@ -14,7 +14,7 @@ Parameters:
 
 function createPublicUserFromContact_Rev(){  // optional: Contact Type, default Applicant
 try{
-    var contactType = "Applicant";
+    var contactType = "Business";
     var contact;
     var refContactNum;
     var userModel;
