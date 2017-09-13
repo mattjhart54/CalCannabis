@@ -32,35 +32,13 @@ try {
 try{
 	if(!publicUser) {
 		if(appTypeArray[2]!="Temporary"){
-			editAppSpecific("Local Authority Notification Sent", jsDateToASIDate(new Date()));
-			if(AInfo["Local Authority Type"] == "County")
-				var locAuth = AInfo["Local Authority County"];
-			if(AInfo["Local Authority Type"] == "City")
-				var locAuth = AInfo["Local Authority City"];
-			if(AInfo["Local Authority Type"] == "City and County")
-				var locAuth = AInfo["Local Authority City"] + "-" + AInfo["Local Authority County"];
-			var locEmail = lookup("LIC_CC_LOCAL_AUTH_CONTACTS", locAuth);
-			if(!matches(locAuth, null, "", undefined)) {
-				var eParams = aa.util.newHashtable();
-				rFiles = []				
-				addParameter(eParams, "$$altID$$", capId.getCustomID());
-				var priContact = getContactObj(capId,"Business");
-				if(priContact)
-					addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
-				sendNotification(sysFromEmail,locEmail,"","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
-			}
-			else {
-				showmessage = true;
-				comment("Local Authority Notification not sent.  No email address found for the local authority " + locAuth)
-			}
-	//		runReportAttach(capId,"Submitted Application", "p1value", capId.getCustomID());			
-	//		emailRptContact("PRA","LCA_GENERAL_NOTIFICATION","",false,"Application Received",capId,"Designated Responsible Party")
+			sendLocalAuthNotification();
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Send Notif Letter: " + err.message);
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Send Notif email: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Send Notif Letter: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Send Notif email: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 //lwacht
