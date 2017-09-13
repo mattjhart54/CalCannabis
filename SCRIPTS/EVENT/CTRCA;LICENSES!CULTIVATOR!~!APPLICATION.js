@@ -62,14 +62,3 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
-//mhart
-//send local auth notification
-try{
-	if(appTypeArray[2]!="Temporary"){
-		sendLocalAuthNotification();
-	}
-} catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: send local auth notification: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
-}
