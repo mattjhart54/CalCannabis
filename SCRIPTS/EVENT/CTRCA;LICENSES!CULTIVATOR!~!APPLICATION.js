@@ -21,10 +21,11 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Remove Conditions: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
 //mhart
-//update work description with Legal Business Name
+//send local auth notification and update work description with Legal Business Name
 //lwacht: don't run for temporary app 
 try {
 	if(appTypeArray[2]!="Temporary"){
+		sendLocalAuthNotification();
 		updateLegalBusinessName();
 		editAppName(AInfo["License Type"]);
 		updateShortNotes(AInfo["Premise County"]);
@@ -58,6 +59,17 @@ try{
 	}
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+}
+//mhart
+//send local auth notification
+try{
+	if(appTypeArray[2]!="Temporary"){
+		sendLocalAuthNotification();
+	}
+} catch(err){
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: send local auth notification: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
