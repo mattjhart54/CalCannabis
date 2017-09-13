@@ -10,7 +10,24 @@ try {
 	editAppName(AInfo["License Type"]);
 	updateShortNotes(AInfo["Premise County"]);
 
-
+	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && capStatus == "Pending - Local Authorization") {
+		activateTask("Administrative Review");
+		activateTask("Owner Application Reviews");
+		updateAppStatus("Ready for Review", "In Compliance notification recieved from Local Authority");
+	}
+	if(AInfo["Local Authority Response"] == "Non Compliance"  && capStatus == "Pending - Local Authorization") {
+		activateTask("Administrative Review");
+		updateAppStatus("Ready for Review", "Non Compliance notification recieved from Local Authority");
+		childRecs = getChildren("Licenses/Cultivator/Medical/*");
+		var holdId = capId;
+		if(childRecs) {
+			for(c in childRecs) {
+				capId = childRecs[c];
+					updateAppStatus("Closed", "Non Compliance notification recieved from Local Authority");
+			}
+		}
+		capId = holdId;
+	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASIUA: Licenses/Cultivation/*/Application: " + err.message);
 	logDebug(err.stack);
