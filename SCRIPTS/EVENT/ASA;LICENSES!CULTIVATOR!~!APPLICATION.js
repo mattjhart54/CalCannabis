@@ -1,51 +1,11 @@
-//lwacht: add the owner applications
-if(publicUser){
-	processOwnerApplications();
-}
-//lwacht
-// send an email to the designated responsible party, letting them know the
-// record is ready for approval
 try{
-	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
-	var drpUser = createPublicUserFromContact("Designated Responsible Party");
-/*  DRP is now in the owner table so do not send email separately to the DRP
+//lwacht: add the owner applications
 	if(publicUser){
-		if(!matches(drpUser, "", null, "undefined", false)){
-			var drpPubUser = ""+drpUser.email;
-			var resCurUser = aa.person.getUser(publicUserID);	
-			if(resCurUser.getSuccess()){
-				var currUser = resCurUser.getOutput();
-				var currUserEmail = ""+currUser.email;
-				logDebug("drpPubUser: " + drpPubUser);
-				logDebug("currUserEmail: " + currUserEmail);
-				var cArray = getContactArray();
-				for (con in cArray) {
-					if(cArray[con].contactType == "Designated Responsible Party"){
-						var vFirst = cArray[con].firstName;
-						var vLast = cArray[con].lastName; 
-						emailParameters = aa.util.newHashtable();
-						addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
-						addParameter(emailParameters, "$$firstName$", vFirst);
-						addParameter(emailParameters, "$$lastName$", vLast);						
-						addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
-					//no email gets sent to the DRP if they are the applicant
-						if(drpPubUser!=currUserEmail){
-							//cancel=true;
-							//showMessage=true;
-							//var drpName = drpPubUser.firstName + " " + drpPubUser.lastName;
-							//logMessage("<span style='font-size:16px'> Only the Designated Responsible Party can complete the application.  An email has been sent to " + drpPubUser + ".  You will be notified via email when the application has been submitted. </span><br/>");
-							sendNotification(sysEmail,drpPubUser,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
-						}
-					}
-				}
-			}else{
-				logDebug("Error getting current public user: " + resCurUser.getErrorMessage());
-			}
-		}else{
-			logDebug("Error creating public user for Designated Responsible Party.");
-		}
+		processOwnerApplications();
+//lwacht: create reference contact and public user account for the DRP		
+		createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
+		var drpUser = createPublicUserFromContact("Designated Responsible Party");
 	}
-*/
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: DRP Notification: " + err.message);
 	logDebug(err.stack);
@@ -66,15 +26,36 @@ try {
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Edit App Name: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-//lwacht
-//send the application notification letter
+//mhart
+//send the local authorization noticifation
 //lwacht: don't run for temporary app 
 try{
-	if(appTypeArray[2]!="Temporary"){
-		runReportAttach(capId,"Submitted Application", "p1value", capId.getCustomID());
-		//lwacht: don't use this one any more
-		//emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "", false, "Application Received", capId, "RECORD_ID", capId.getCustomID());
-		emailRptContact("PRA","LCA_GENERAL_NOTIFICATION","",false,"Application Received",capId,"Designated Responsible Party")
+	if(!publicUser) {
+		if(appTypeArray[2]!="Temporary"){
+			editAppSpecific("Local Authority Notification Sent", jsDateToASIDate(new Date()));
+			if(AInfo["Local Authority Type"] == "County")
+				var locAuth = AInfo["Local Authority County"];
+			if(AInfo["Local Authority Type"] == "City")
+				var locAuth = AInfo["Local Authority City"];
+			if(AInfo["Local Authority Type"] == "City and County")
+				var locAuth = AInfo["Local Authority City"] + "-" + AInfo["Local Authority County"];
+			var locEmail = lookup("LIC_CC_LOCAL_AUTH_CONTACTS", locAuth);
+			if(!matches(locAuth, null, "", undefined)) {
+				var eParams = aa.util.newHashtable();
+				rFiles = []				
+				addParameter(eParams, "$$altID$$", capId.getCustomID());
+				var priContact = getContactObj(capId,"Business");
+				if(priContact)
+					addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
+				sendNotification(sysFromEmail,locEmail,"","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
+			}
+			else {
+				showmessage = true;
+				comment("Local Authority Notification not sent.  No email address found for the local authority " + locAuth)
+			}
+	//		runReportAttach(capId,"Submitted Application", "p1value", capId.getCustomID());			
+	//		emailRptContact("PRA","LCA_GENERAL_NOTIFICATION","",false,"Application Received",capId,"Designated Responsible Party")
+		}
 	}
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Send Notif Letter: " + err.message);
