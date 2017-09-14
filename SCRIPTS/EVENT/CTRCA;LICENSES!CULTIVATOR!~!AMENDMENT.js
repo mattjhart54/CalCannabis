@@ -50,7 +50,6 @@ try{
 				}else{
 					logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
 				}
-			}else{
 				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Owner Application Reviews");
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
