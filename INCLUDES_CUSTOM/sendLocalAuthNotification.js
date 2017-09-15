@@ -12,7 +12,7 @@ function sendLocalAuthNotification() {
 		if(AInfo["Local Authority Type"] == "City and County")
 			var locAuth = AInfo["Local Authority City"] + "-" + AInfo["Local Authority County"];
 		var locEmail = lookup("LIC_CC_LOCAL_AUTH_CONTACTS", locAuth);
-		if(!matches(locAuth, null, "", undefined)) {
+		if(!matches(locEmail, null, "", undefined)) {
 			var eParams = aa.util.newHashtable();
 			rFiles = []				
 			addParameter(eParams, "$$altID$$", capId.getCustomID());
