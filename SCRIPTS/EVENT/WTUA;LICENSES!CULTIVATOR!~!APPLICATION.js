@@ -215,7 +215,7 @@ try{
 //mhart
 //If License Manager requires revisions to the denial reasons reeactivete the task the denial request came from.
 try {
-	if(wfTask == "License Manager" && wfStatus == "Revisions Required") { 
+	if(wfTask == "License Manager" && wfStatus == "Revision Required") { 
 		altId = capId.getCustomID();
 		var taskItemScriptModel=aa.workflow.getTask(capId, "Administrative Manager Review");
 		if(taskItemScriptModel.getSuccess()){
