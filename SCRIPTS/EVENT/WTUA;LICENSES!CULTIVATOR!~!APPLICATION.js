@@ -212,6 +212,33 @@ try{
 	logDebug(err.stack);
 }
 
+//mhart
+//If License Manager requires revisions to the denial reasons reeactivete the task the denial request came from.
+try {
+	if(wfTask == "License Manager" && wfStatus == "Revisions Required") { 
+		altId = capId.getCustomID();
+		var taskItemScriptModel=aa.workflow.getTask(capId, "Administrative Manager Review");
+		if(taskItemScriptModel.getSuccess()){
+			var taskItemScript = taskItemScriptModel.getOutput();
+			if(matches(taskItemScript.disposition, "Recommend for Denial")){
+				activateTask("Administrative Manager Review");
+				deactivateTask("License Manager");
+			}
+		}
+		var taskItemScriptModel=aa.workflow.getTask(capId, "Science Manager Review");
+		if(taskItemScriptModel.getSuccess()){
+			var taskItemScript = taskItemScriptModel.getOutput();
+			if(matches(taskItemScript.disposition, "Recommend for Denial")){
+				activateTask("Administrative Manager Review");
+				deactivateTask("License Manager");
+			}
+		}	
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Denial Revisions Required: " + err.message);
+	logDebug(err.stack);
+}
+
 //lwacht
 //if the perm application is set to denied, then close out any related temp licenses
 //MJH User Story 3556 remove this functionality
