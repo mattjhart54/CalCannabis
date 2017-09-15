@@ -229,7 +229,7 @@ try {
 		if(taskItemScriptModel.getSuccess()){
 			var taskItemScript = taskItemScriptModel.getOutput();
 			if(matches(taskItemScript.disposition, "Recommended for Denial")){
-				activateTask("Administrative Manager Review");
+				activateTask("Science Manager Review");
 				deactivateTask("License Manager");
 			}
 		}	
