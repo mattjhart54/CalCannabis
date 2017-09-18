@@ -67,10 +67,10 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters
+/* test parameters */
 aa.env.setValue("newAppStatus", "");
-aa.env.setValue("lookAheadDays", "30");
-aa.env.setValue("daySpan", "0");
+aa.env.setValue("lookAheadDays", "27");
+aa.env.setValue("daySpan", "5");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("conditionType", "");
 aa.env.setValue("conditionName", "");
@@ -81,7 +81,8 @@ aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("emailTemplate","LCA_APP_DISQUALIFIED_EXPIRATION");
 aa.env.setValue("sendEmailToContactTypes", "Primary Contact, Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "noreply_accela@cdfa.ca.gov");
- */
+aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
+
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
@@ -95,6 +96,7 @@ var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var emailTemplate = getParam("emailTemplate");
 var sendEmailNotifications = getParam("sendEmailNotifications");
 var sysFromEmail = getParam("sysFromEmail");
+var setNonEmailPrefix = getParam("setNonEmailPrefix");
 /*----------------------------------------------------------------------------------------------------/
 |
 | End: BATCH PARAMETERS
@@ -144,6 +146,7 @@ try{
 	var capFilterType = 0;
 	var capFilterStatus = 0;
 	var capCount = 0;
+	var setCreated = false;
  	var capResult = aa.cap.getCapIDsByAppSpecificInfoDateRange(asiGroup, asiField, dFromDate, dToDate);
 	if (capResult.getSuccess()) {
 		myCaps = capResult.getOutput();
@@ -189,19 +192,36 @@ try{
 			for (thisCon in conArray) {
 				var conEmail = false;
 				thisContact = conArray[thisCon];
-				if (exists(thisContact["contactType"],conTypeArray))
+				if (exists(thisContact["contactType"],conTypeArray)){
+					pContact = getContactObj(capId,thisContact["contactType"]);
+					var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
+					if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Postal") >-1 && setNonEmailPrefix != ""){
+						if(setCreated == false) {
+						   //Create NonEmail Set
+							var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
+							var sNonEmailSet = vNonEmailSet.toUpperCase();
+							setCreated = true;
+						}
+						setAddResult=aa.set.add(sNonEmailSet,capId);
+					}
 					conEmail = thisContact["email"];
-				if (conEmail) {
-					emailParameters = aa.util.newHashtable();
-					addParameter(emailParameters,"$$recordId$$",altId);
-					addParameter(emailParameters,"$$recordAlias$$",cap.getCapType().getAlias());
-					var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(),capId.getID2(),capId.getID3());
-					var fileNames = [];
-					aa.document.sendEmailAndSaveAsDocument(sysFromEmail,conEmail,"" , emailTemplate, emailParameters, capId4Email, fileNames);
-					logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+					if (conEmail) {
+						emailParameters = aa.util.newHashtable();
+						addParameter(emailParameters,"$$recordId$$",altId);
+						addParameter(emailParameters,"$$recordAlias$$",cap.getCapType().getAlias());
+						var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(),capId.getID2(),capId.getID3());
+						var fileNames = [];
+						//aa.document.sendEmailAndSaveAsDocument(sysFromEmail,conEmail,"" , emailTemplate, emailParameters, capId4Email, fileNames);
+						emailRptContact("BATCH", emailTemplate, "30 Day Deficiency Notification Letter", false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
+						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+					}
 				}
 			}
 		}
+	}
+	if(setCreated){
+		aa.sendMail(sysFromEmail, emailAddress, "", sNonEmailSet + " Set Created ", "Records in this set will need to be sent the '30 Day Deficiency Notification Letter'.");
+
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
  	logDebug("Ignored due to application type: " + capFilterType);
@@ -222,4 +242,48 @@ function getCapIdByIDs(s_id1, s_id2, s_id3)  {
 		return s_capResult.getOutput();
     else
        return null;
+}function createExpirationSet( prefix )
+{
+	// Create Set
+	if (prefix != "")
+	{
+		var yy = startDate.getFullYear().toString().substr(2,2);
+		var mm = (startDate.getMonth() +1 ).toString(); //getMonth() returns (0 - 11)
+		if (mm.length<2)
+			mm = "0"+mm;
+		var dd = startDate.getDate().toString();
+		if (dd.length<2)
+			dd = "0"+dd;
+		var hh = startDate.getHours().toString();
+		if (hh.length<2)
+			hh = "0"+hh;
+		var mi = startDate.getMinutes().toString();
+		if (mi.length<2)
+			mi = "0"+mi;
+
+		//var setName = prefix.substr(0,5) + yy + mm + dd;
+		var setName = prefix + "_" + yy + mm + dd;
+
+		setDescription = prefix + " : " + mm + dd + yy;
+		
+		setResult = aa.set.getSetByPK(setName);
+		setExist = false;
+		setExist = setResult.getSuccess();
+		if (!setExist) 
+		{
+			var setCreateResult= aa.set.createSet(setName,setDescription);
+			if( setCreateResult.getSuccess() )
+			{
+				logDebug("New Set ID "+setName+" created for CAPs processed by this batch job.<br>");
+				return setName;
+			}
+			else
+				logDebug("ERROR: Unable to create new Set ID "+setName+" for CAPs processed by this batch job.");
+		}
+		else
+		{
+			logDebug("Set " + setName + " already exists and will be used for this batch run<br>");
+			return setName;
+		}
+	}
 }
