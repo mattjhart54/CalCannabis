@@ -67,7 +67,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters */
+/* test parameters
 aa.env.setValue("newAppStatus", "");
 aa.env.setValue("lookAheadDays", "27");
 aa.env.setValue("daySpan", "5");
@@ -82,7 +82,7 @@ aa.env.setValue("emailTemplate","LCA_APP_DISQUALIFIED_EXPIRATION");
 aa.env.setValue("sendEmailToContactTypes", "Primary Contact, Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "noreply_accela@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
-
+ */
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
