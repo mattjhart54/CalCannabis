@@ -49,6 +49,7 @@ try{
 			updateShortNotes(getShortNotes(),licCapId);
 			updateWorkDesc(workDescGet(capId),licCapId);
 			copyAppSpecific(licCapId);
+			editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
 			//lwacht: 170823: removing primary contact
 			//var contPri = getContactObj(licCapId,"Primary Contact");
 			//capId = licCapId;
