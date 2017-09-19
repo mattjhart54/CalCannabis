@@ -20,6 +20,7 @@ try{
 	//application documents
 	var conditionType = "License Required Documents";
     var businessFormation = {condition : "Business - Business Formation Documents", document : "Business - Business Formation Documents"};
+    var businessFI = {condition : "Business - List of Financial Interest Holders", document : "Business - List of Financial Interest Holders"};
     var businessBond = {condition : "Business - Evidence Surety Bond", document : "Business - Evidence Surety Bond"};
 	var foriegnCorp = {condition : "Business - Foreign Corp. Certificate of Qualification", document : "Business - Foreign Corp. Certificate of Qualification"};
 	var stateDocuments = {condition : "Business - CA Secretary of State Documents", document : "Business - CA Secretary of State Documents"};
@@ -80,6 +81,8 @@ try{
 				removeCapCondition(conditionType, foriegnCorp.condition);
 			}
 		}
+		
+		arrReqdDocs_App.push(businessFI);
 		
 		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
 			arrReqdDocs_App.push(soveriegnImmunity);
