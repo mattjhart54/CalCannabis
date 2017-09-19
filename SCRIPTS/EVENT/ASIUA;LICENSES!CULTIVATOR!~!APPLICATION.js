@@ -24,6 +24,7 @@ try {
 			for(c in childRecs) {
 				capId = childRecs[c];
 					updateAppStatus("Closed", "Non Compliance notification recieved from Local Authority");
+					deactivateTask("Owner Application Review");
 			}
 		}
 		capId = holdId;
