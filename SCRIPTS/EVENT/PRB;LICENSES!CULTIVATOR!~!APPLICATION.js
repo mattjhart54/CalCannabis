@@ -23,7 +23,7 @@ try{
 			}
 			setLicExpirationDate(licCapId,null,expDate,"Active");
 			if(appTypeArray[2]=="Adult Use"){
-				var newAltFirst = "CAL" + sysDateMMDDYYYY.substr(8,2);
+				var newAltFirst = "CAL" ;
 			}else{
 				var newAltFirst = "CML";
 			}
