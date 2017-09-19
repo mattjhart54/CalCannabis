@@ -15,8 +15,10 @@ try{
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		if(drpContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-			if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
-				showReport = true;
+			if(!matches(priChannel,"",null,"undefined"){
+				if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+					showReport = true;
+				}
 			}
 		}
 		if(showReport){
@@ -48,8 +50,10 @@ try{
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		if(drpContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-			if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
-				showReport = true;
+			if(!matches(priChannel,"",null,"undefined"){
+				if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+					showReport = true;
+				}
 			}
 		}
 		if(showReport){
