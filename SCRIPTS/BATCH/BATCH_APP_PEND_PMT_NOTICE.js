@@ -70,7 +70,7 @@ else
 /* test parameters
 aa.env.setValue("lookAheadDays", "-3");
 aa.env.setValue("daySpan", "5");
-aa.env.setValue("", "Licenses");
+aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
 aa.env.setValue("recordCategory", "Application");
@@ -78,7 +78,7 @@ aa.env.setValue("AppStatusArray", "Pending Payment");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
-aa.env.setValue("sysFromEmail", "noreply_accela@cdfa.ca.gov");
+aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("reportName", "60 Day Payment Notification Letter");
  */
@@ -224,6 +224,7 @@ try{
 				statusArr = statusResult.getOutput();
 				if (statusArr && statusArr.length > 0) {
 					statusArr.sort(compareStatusDate);
+					var ignoreRecd = false;
 					for (xx in statusArr) {
 						var thisStatus = statusArr[xx];
 						var thisStatusStatus = "" + thisStatus.getStatus();
@@ -231,11 +232,14 @@ try{
 							statusDate = thisStatus.getStatusDate();
 							var cStatusDate = convertDate(statusDate);
 							if(cStatusDate.getTime()<fromJSDate.getTime() || cStatusDate.getTime()>toJSDate.getTime()){
-								logDebug("Skipping record " + altId + " due to date range: " + cStatusDate);
-								capFilterDateRange++;
-								continue;
+								ignoreRecd = true;
 							}
 						}
+					}
+					if(ignoreRecd){
+						logDebug("Skipping record " + altId + " due to date range: " + cStatusDate);
+						capFilterDateRange++;
+						continue;
 					}
 				}
 			}
