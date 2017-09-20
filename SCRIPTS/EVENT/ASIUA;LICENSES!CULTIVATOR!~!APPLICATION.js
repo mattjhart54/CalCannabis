@@ -12,7 +12,7 @@ try {
 	if (typeof(DENIALREASONS) == "object") {
 		removeASITable("DENIAL REASONS"); 
 		for(x in DENIALREASONS) {
-			if(matches(DENIALREASONS[x]["Deficiency Details"], null, "", undefined)) {
+			if(matches(DENIALREASONS[x]["Denial Reason"], null, "", undefined)) {
 				denialDesc = lookup("LIC_CC_DENIAL_REASONS",DENIALREASONS[x]["Denial Type"]);
 				DENIALREASONS[x]["Denial Reason"] = denialDesc;
 			}
