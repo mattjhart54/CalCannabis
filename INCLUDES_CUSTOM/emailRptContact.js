@@ -35,27 +35,29 @@ try{
 	var priContact = getContactObj(capId,contactType);
 	if(priContact){
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-		if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
-			emailPriReport = true;
-		}
-		if(priChannel.indexOf("Postal") > -1){
-			var addrString = "";
-			var contAddr = priContact.addresses;
-			for(ad in contAddr){
-				var thisAddr = contAddr[ad];
-				for (a in thisAddr){
-					if(!matches(thisAddr[a], "undefined", "", null)){
-						if(!matches(thisAddr[a].addressType, "undefined", "", null)){
-							addrString += "Address Type: " + thisAddr[a].addressType + br + thisAddr[a].addressLine1 + br + thisAddr[a].city + ", " + thisAddr[a].state +  " " + thisAddr[a].zip + br;
+		if(!matches(priChannel, "",null,"undefined", false)){
+			if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
+				emailPriReport = true;
+			}
+			if(priChannel.indexOf("Postal") > -1){
+				var addrString = "";
+				var contAddr = priContact.addresses;
+				for(ad in contAddr){
+					var thisAddr = contAddr[ad];
+					for (a in thisAddr){
+						if(!matches(thisAddr[a], "undefined", "", null)){
+							if(!matches(thisAddr[a].addressType, "undefined", "", null)){
+								addrString += "Address Type: " + thisAddr[a].addressType + br + thisAddr[a].addressLine1 + br + thisAddr[a].city + ", " + thisAddr[a].state +  " " + thisAddr[a].zip + br;
+							}
 						}
 					}
 				}
+				if(addrString==""){
+					addrString = "No addresses found.";
+				}
+				showMessage=true;
+				comment("<font color='blue'>The " + contactType + " contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report to : " + br + addrString + "</font>");
 			}
-			if(addrString==""){
-				addrString = "No addresses found.";
-			}
-			showMessage=true;
-			comment("<font color='blue'>The " + contactType + " contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report to : " + br + addrString + "</font>");
 		}
 		if(emailPriReport){
 			var eParams = aa.util.newHashtable(); 
