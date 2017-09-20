@@ -77,7 +77,7 @@ aa.env.setValue("appStatus", "Denied");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("emailTemplate","LCA_APP_FINAL_DENIAL_LETTER");
 aa.env.setValue("sendEmailToContactTypes", "Primary Contact,Designated Responsible Party");
-aa.env.setValue("sysFromEmail", "noreply_accela@cdfa.ca.gov");
+aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "Denials");
 */
 var emailAddress = getParam("emailAddress");			// email to send report
@@ -152,7 +152,7 @@ try{
 	
 	for (myCapsXX in myCaps) {
 		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
-			logDebug("WARNING","A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
+			logDebug("WARNING: A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
 			timeExpired = true ;
 			break; 
 		}

@@ -17,7 +17,7 @@ var debugText = "";
 var showDebug = false;	
 var showMessage = false;
 var message = "";
-var maxSeconds = 4.5 * 60;
+var maxSeconds = 7 * 60;
 var br = "<br>";
 
 /*------------------------------------------------------------------------------------------------------/
@@ -188,7 +188,7 @@ try{
 		
 	for (myCapsXX in myCaps) {
 		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
-			logDebug("WARNING","A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
+			logDebug("WARNING: A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
 			timeExpired = true ;
 			break; 
 		}
@@ -268,12 +268,6 @@ try{
 						}else{
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								//emailParameters = aa.util.newHashtable();
-								//addParameter(emailParameters,"$$recordId$$",altId);
-								//addParameter(emailParameters,"$$recordAlias$$",cap.getCapType().getAlias());
-								//var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(),capId.getID2(),capId.getID3());
-								//var fileNames = [];
-								//aa.document.sendEmailAndSaveAsDocument(sysFromEmail,conEmail,"" , emailTemplate, emailParameters, capId4Email, fileNames);
 								runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
 								emailRptContact("BATCH", emailTemplate, rptName, false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
 								logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
