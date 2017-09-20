@@ -78,9 +78,9 @@ aa.env.setValue("asiField", "App Expiry Date");
 aa.env.setValue("asiGroup", "INTERNAL");
 aa.env.setValue("skipAppStatus", "Denied,Withdrawn,Disqualified");
 aa.env.setValue("sendEmailNotifications","Y");
-aa.env.setValue("emailTemplate","LCA_APP_DISQUALIFIED_EXPIRATION");
+aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
-aa.env.setValue("sysFromEmail", "noreply_accela@cdfa.ca.gov");
+aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
 aa.env.setValue("reportName", "30 Day Deficiency Notification Letter");
 aa.env.setValue("updateWorkflowStatus", "Disqualified");
@@ -161,7 +161,6 @@ try{
 		logDebug("altId: " + xx + ": " + altId);
 	}
 	for (myCapsXX in myCaps) {
-		logDebug("BEFORE: " + myCapsXX);
 		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
 			logDebug("WARNING","A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
 			timeExpired = true ;
@@ -232,7 +231,6 @@ try{
 				logDebug("No contact found for notification: " + altId);
 			}
 		}
-	logDebug("AFTER: " + myCapsXX);
 	}
 	if(setCreated){
 		aa.sendMail(sysFromEmail, emailAddress, "", sNonEmailSet + " Set Created ", "Records in this set will need to be sent the '" + rptName + "'.");
