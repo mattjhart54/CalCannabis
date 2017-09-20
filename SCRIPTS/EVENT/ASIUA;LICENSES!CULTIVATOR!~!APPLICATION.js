@@ -1,9 +1,20 @@
 try {
-	removeASITable("DEFICIENCIES"); 
-	for(x in DEFICIENCIES) {
-		if(matches(DEFICIENCIES[x]["Deficiency Details"], null, "", undefined)) {
-			defDesc = lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[x]["Deficiency Type"]);
-			DEFICIENCIES[x]["Deficiency Details"] = defDesc;
+	if (typeof(DEFICIENCIES) == "object") {
+		removeASITable("DEFICIENCIES"); 
+		for(x in DEFICIENCIES) {
+			if(matches(DEFICIENCIES[x]["Deficiency Details"], null, "", undefined)) {
+				defDesc = lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[x]["Deficiency Type"]);
+				DEFICIENCIES[x]["Deficiency Details"] = defDesc;
+			}
+		}
+	}
+	if (typeof(DENIALREASONS) == "object") {
+		removeASITable("DENIAL REASONS"); 
+		for(x in DENIALREASONS) {
+			if(matches(DENIALREASONS[x]["Deficiency Details"], null, "", undefined)) {
+				denialDesc = lookup("LIC_CC_DENIAL_REASONS",DENIALREASONS[x]["Denial Type"]);
+				DENIALREASONS[x]["Denial Reason"] = denialDesc;
+			}
 		}
 	}
 	addASITable("DEFICIENCIES", DEFICIENCIES)
