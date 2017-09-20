@@ -7,6 +7,7 @@ try {
 				DEFICIENCIES[x]["Deficiency Details"] = defDesc;
 			}
 		}
+		addASITable("DEFICIENCIES", DEFICIENCIES)
 	}
 	if (typeof(DENIALREASONS) == "object") {
 		removeASITable("DENIAL REASONS"); 
@@ -16,8 +17,9 @@ try {
 				DENIALREASONS[x]["Denial Reason"] = denialDesc;
 			}
 		}
+		addASITable("DENIAL REASONS", DENIALREASONS)
 	}
-	addASITable("DEFICIENCIES", DEFICIENCIES)
+
 	editAppName(AInfo["License Type"]);
 	updateShortNotes(AInfo["Premise County"]);
 
