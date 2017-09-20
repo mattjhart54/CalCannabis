@@ -55,8 +55,10 @@ try{
 				if(addrString==""){
 					addrString = "No addresses found.";
 				}
-				showMessage=true;
-				comment("<font color='blue'>The " + contactType + " contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report to : " + br + addrString + "</font>");
+				if(callingPgm!="BATCH"){
+					showMessage=true;
+					comment("<font color='blue'>The " + contactType + " contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report to : " + br + addrString + "</font>");
+				}
 			}
 		}
 		if(emailPriReport){
@@ -110,7 +112,7 @@ try{
 				}
 			}
 			//logDebug("eParams: " + eParams);
-			var drpEmail = ""+priContact.capContact.getEmail();
+			//var drpEmail = ""+priContact.capContact.getEmail();
 			var priEmail = ""+priContact.capContact.getEmail();
 			var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
 			var rFiles = [];
@@ -122,22 +124,10 @@ try{
 				}
 			}
 			if(emailRpt){
-				if(priContact.capContact.getEmail()==priContact.capContact.getEmail()){
-					sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
-				}else{ 
-					sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
-					sendNotification(sysFromEmail,priEmail,"",notName,eParams, rFiles,capId);
-				}
+				sendNotification(sysFromEmail,priEmail,"",notName,eParams, rFiles,capId);
 			}else{
 				rFiles = [];
-				if(priContact.capContact.getEmail()==priContact.capContact.getEmail()){
-					sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
-				}else{ 
-				//emails have to be sent separately in order to appear in ACA
-					sendNotification(sysFromEmail,drpEmail,"",notName,eParams, rFiles,capId);
-					sendNotification(sysFromEmail,priEmail,"",notName,eParams, rFiles,capId);
-				}
-
+				sendNotification(sysFromEmail,priEmail,"",notName,eParams, rFiles,capId);
 			}
 		}
 	}else{
