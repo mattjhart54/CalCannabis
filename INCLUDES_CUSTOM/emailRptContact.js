@@ -36,28 +36,29 @@ try{
 	if(priContact){
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 		if(!matches(priChannel, "",null,"undefined", false)){
-			if(priChannel.indexOf("Email") >= 0 || priChannel.indexOf("E-mail") >= 0){
+			if(priChannel.indexOf("Email") > -1 || priChannel.indexOf("E-mail") > -1){
 				emailPriReport = true;
-			}
-			if(priChannel.indexOf("Postal") > -1){
-				var addrString = "";
-				var contAddr = priContact.addresses;
-				for(ad in contAddr){
-					var thisAddr = contAddr[ad];
-					for (a in thisAddr){
-						if(!matches(thisAddr[a], "undefined", "", null)){
-							if(!matches(thisAddr[a].addressType, "undefined", "", null)){
-								addrString += "Address Type: " + thisAddr[a].addressType + br + thisAddr[a].addressLine1 + br + thisAddr[a].city + ", " + thisAddr[a].state +  " " + thisAddr[a].zip + br;
+			}else{
+				if(priChannel.indexOf("Postal") > -1){
+					var addrString = "";
+					var contAddr = priContact.addresses;
+					for(ad in contAddr){
+						var thisAddr = contAddr[ad];
+						for (a in thisAddr){
+							if(!matches(thisAddr[a], "undefined", "", null)){
+								if(!matches(thisAddr[a].addressType, "undefined", "", null)){
+									addrString += "Address Type: " + thisAddr[a].addressType + br + thisAddr[a].addressLine1 + br + thisAddr[a].city + ", " + thisAddr[a].state +  " " + thisAddr[a].zip + br;
+								}
 							}
 						}
 					}
-				}
-				if(addrString==""){
-					addrString = "No addresses found.";
-				}
-				if(callingPgm!="BATCH"){
-					showMessage=true;
-					comment("<font color='blue'>The " + contactType + " contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report to : " + br + addrString + "</font>");
+					if(addrString==""){
+						addrString = "No addresses found.";
+					}
+					if(callingPgm!="BATCH"){
+						showMessage=true;
+						comment("<font color='blue'>The " + contactType + " contact, " + priContact.capContact.getFirstName() + " " + priContact.capContact.getLastName() + ", has requested all correspondence be mailed.  Please mail the displayed report to : " + br + addrString + "</font>");
+					}
 				}
 			}
 		}
@@ -92,29 +93,37 @@ try{
 			var addrType = false;
 			for (x in drpAddresses){
 				thisAddr = drpAddresses[x];
-				if(thisAddr.getAddressType()=="Mailing"){
-					addrType = "Mailing";
+				if(thisAddr.getAddressType()=="Home"){
+					addrType = "Home";
+					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
+					addParameter(eParams, "$$priCity$$", thisAddr.city);
+					addParameter(eParams, "$$priState$$", thisAddr.state);
+					addParameter(eParams, "$$priZip$$", thisAddr.zip);
 				}
 				if(thisAddr.getAddressType()=="Business"){
 					addrType = "Business";
-				}
-			}
-			if(!addrType){
-				addrType = "Home";
-			}
-			for (x in drpAddresses){
-				thisAddr = drpAddresses[x];
-				if(thisAddr.getAddressType()==addrType){
 					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
 					addParameter(eParams, "$$priCity$$", thisAddr.city);
 					addParameter(eParams, "$$priState$$", thisAddr.state);
 					addParameter(eParams, "$$priZip$$", thisAddr.zip);
 				}
 			}
+			if(!addrType){
+				addrType = "Mailing";
+				for (x in drpAddresses){
+					thisAddr = drpAddresses[x];
+					if(thisAddr.getAddressType()==addrType){
+						addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
+						addParameter(eParams, "$$priCity$$", thisAddr.city);
+						addParameter(eParams, "$$priState$$", thisAddr.state);
+						addParameter(eParams, "$$priZip$$", thisAddr.zip);
+					}
+				}
+			}
 			//logDebug("eParams: " + eParams);
 			//var drpEmail = ""+priContact.capContact.getEmail();
 			var priEmail = ""+priContact.capContact.getEmail();
-			var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
+			//var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
 			var rFiles = [];
 			if(!matches(rptName, null, "", "undefined")){
 				var rFile;
