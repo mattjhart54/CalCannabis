@@ -176,36 +176,39 @@ try {
 	var br = "<BR>";
 	var msg = "The Ownership percentage must not be greater than 100%.  Please correct before continuing " + br;
 	var parentId = getParent();
-	children = getChildren("Licenses/Cultivator/Medical/Owner Application", parentId)
-	var totOwn = 0
-	for (c in children) {
-		childId = children[c];
-		var pctOwn = getAppSpecific("Percent Ownership", childId);
-		contacts = getContactArray(childId);
-		for (x in contacts) {
-//			logMessage("Contact " + contacts[x]["contactType"] + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"]);
-			msg = msg + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn  + "%  / Business Name: " + contacts[x]["middleName"] + br;
-			if(contacts[x]["contactType"] == "Owner" || contacts[x]["contactType"] == "Individual") {
-				ownerFnd = false;
-				for(o in ownPctTbl) {
-					check = ownPctTbl[o];
-//					logMessage("check owner - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
-					if(!matches(contacts[x]["middleName"],null,"",undefined) && contacts[x]["middleName"] == check["legalBusName"])
-							ownerFnd = true;
-				}
+	if(parentId){
+		children = getChildren("Licenses/Cultivator/Medical/Owner Application", parentId)
+		var totOwn = 0
+		for (c in children) {
+			childId = children[c];
+			var pctOwn = getAppSpecific("Percent Ownership", childId);
+			contacts = getContactArray(childId);
+			for (x in contacts) {
+				//logMessage("Contact " + contacts[x]["contactType"] + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"]);
+				msg = msg + "Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn  + "%  / Business Name: " + contacts[x]["middleName"] + br;
+				if(contacts[x]["contactType"] == "Owner" || contacts[x]["contactType"] == "Individual") {
+					ownerFnd = false;
+					for(o in ownPctTbl) {
+						check = ownPctTbl[o];
+						//logMessage("check owner - " + check["firstName"] + " " + check["lastName"] + " " + check["legalBusName"] + " " + check["pctOwn"])
+						if(!matches(contacts[x]["middleName"],null,"",undefined) && contacts[x]["middleName"] == check["legalBusName"])
+								ownerFnd = true;
+					}
 
-				if(ownerFnd == false) {
-//					logMessage("Add Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"] );
-					var tblRow = [];
-					tblRow["firstName"] = contacts[x]["firstName"];
-					tblRow["lastName"] = contacts[x]["lastName"];
-					tblRow["legalBusName"] = contacts[x]["middleName"];
-					tblRow["pctOwn"] = pctOwn; 
-					totOwn += parseFloat(pctOwn,2);
-					ownPctTbl.push(tblRow);
+					if(ownerFnd == false) {
+						//logMessage("Add Owner: " + contacts[x]["firstName"] + " " + contacts[x]["lastName"] + " / Ownership " + pctOwn + " / Business Name: " + contacts[x]["middleName"] );
+						var tblRow = [];
+						tblRow["firstName"] = contacts[x]["firstName"];
+						tblRow["lastName"] = contacts[x]["lastName"];
+						tblRow["legalBusName"] = contacts[x]["middleName"];
+						tblRow["pctOwn"] = pctOwn; 
+						totOwn += parseFloat(pctOwn,2);
+						ownPctTbl.push(tblRow);
+					}
 				}
 			}
 		}
+		
 	}
 	if(totOwn > 100) {
 		showMessage = true;
