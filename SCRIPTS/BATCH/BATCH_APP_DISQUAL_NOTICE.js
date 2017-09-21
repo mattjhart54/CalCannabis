@@ -17,7 +17,7 @@ var debugText = "";
 var showDebug = false;	
 var showMessage = false;
 var message = "";
-var maxSeconds = 4.5 * 60;
+var maxSeconds = 10 * 60;
 var br = "<br>";
 
 /*------------------------------------------------------------------------------------------------------/
@@ -69,8 +69,8 @@ logDebug("Batch job ID not found " + batchJobResult.getErrorMessage());
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
 aa.env.setValue("newAppStatus", "");
-aa.env.setValue("lookAheadDays", "27");
-aa.env.setValue("daySpan", "20");
+aa.env.setValue("lookAheadDays", "25");
+aa.env.setValue("daySpan", "50");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("conditionType", "");
 aa.env.setValue("conditionName", "");
@@ -82,7 +82,7 @@ aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
-aa.env.setValue("reportName", "30 Day Deficiency Notification Letter");
+aa.env.setValue("reportName", "Final Deficiency Disqualification Letter");
 aa.env.setValue("updateWorkflowStatus", "Disqualified");
  */
 var emailAddress = getParam("emailAddress");			// email to send report
@@ -155,14 +155,9 @@ try{
 		return false;
 	}
 	logDebug("Found " + myCaps.length + " records to process");
-	for (xx in myCaps){
-		capId = myCaps[xx].getCapID();
-		altId = capId.getCustomID();
-		logDebug("altId: " + xx + ": " + altId);
-	}
 	for (myCapsXX in myCaps) {
 		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
-			logDebug("WARNING","A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
+			logDebug("WARNING: A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
 			timeExpired = true ;
 			break; 
 		}
@@ -221,8 +216,14 @@ try{
 					}
 					conEmail = thisContact["email"];
 					if (conEmail) {
+						//logDebug("=====SENDEMAILNOTIFICATION: BEGIN : " + thisCon + ": " + elapsed() + " Seconds");
 						runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
-						emailRptContact("BATCH", emailTemplate, rptName, false, "Deficiency Letter Sent", capId, thisContact["contactType"], "p1value", capId.getCustomID());
+						//runReportAttach(capId,"Official Temporary License", "altId", capId.getCustomID()); 
+						//var rptPars = aa.util.newHashMap();              
+						//rptPars.put("p1value",altId);
+						//generateReport(capId, rptName, "Licenses", rptPars);
+						//logDebug("=====SENDEMAILNOTIFICATION: END : " + thisCon + ": " + elapsed() + " Seconds");
+						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"], "p1value", capId.getCustomID());
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
 				}
@@ -249,53 +250,54 @@ try{
 | <===========Internal Functions and Classes (Used by this script)
 /------------------------------------------------------------------------------------------------------*/
 function getCapIdByIDs(s_id1, s_id2, s_id3)  {
-var s_capResult = aa.cap.getCapID(s_id1, s_id2, s_id3);
-if(s_capResult.getSuccess())
-	return s_capResult.getOutput();
+	var s_capResult = aa.cap.getCapID(s_id1, s_id2, s_id3);
+	if(s_capResult.getSuccess())
+		return s_capResult.getOutput();
 else
    return null;
-}function createExpirationSet( prefix )
-{
+}
+
+function createExpirationSet( prefix ){
 // Create Set
-if (prefix != "")
-{
-	var yy = startDate.getFullYear().toString().substr(2,2);
-	var mm = (startDate.getMonth() +1 ).toString(); //getMonth() returns (0 - 11)
-	if (mm.length<2)
-		mm = "0"+mm;
-	var dd = startDate.getDate().toString();
-	if (dd.length<2)
-		dd = "0"+dd;
-	var hh = startDate.getHours().toString();
-	if (hh.length<2)
-		hh = "0"+hh;
-	var mi = startDate.getMinutes().toString();
-	if (mi.length<2)
-		mi = "0"+mi;
+	if (prefix != ""){
+		var yy = startDate.getFullYear().toString().substr(2,2);
+		var mm = (startDate.getMonth() +1 ).toString(); //getMonth() returns (0 - 11)
+		if (mm.length<2)
+			mm = "0"+mm;
+		var dd = startDate.getDate().toString();
+		if (dd.length<2)
+			dd = "0"+dd;
+		var hh = startDate.getHours().toString();
+		if (hh.length<2)
+			hh = "0"+hh;
+		var mi = startDate.getMinutes().toString();
+		if (mi.length<2)
+			mi = "0"+mi;
 
-	//var setName = prefix.substr(0,5) + yy + mm + dd;
-	var setName = prefix + "_" + yy + mm + dd;
+		//var setName = prefix.substr(0,5) + yy + mm + dd;
+		var setName = prefix + "_" + yy + mm + dd;
 
-	setDescription = prefix + " : " + mm + dd + yy;
-	
-	setResult = aa.set.getSetByPK(setName);
-	setExist = false;
-	setExist = setResult.getSuccess();
-	if (!setExist) 
-	{
-		var setCreateResult= aa.set.createSet(setName,setDescription);
-		if( setCreateResult.getSuccess() )
+		setDescription = prefix + " : " + mm + dd + yy;
+		
+		setResult = aa.set.getSetByPK(setName);
+		setExist = false;
+		setExist = setResult.getSuccess();
+		if (!setExist) 
 		{
-			logDebug("New Set ID "+setName+" created for CAPs processed by this batch job.<br>");
-			return setName;
+			var setCreateResult= aa.set.createSet(setName,setDescription);
+			if( setCreateResult.getSuccess() )
+			{
+				logDebug("New Set ID "+setName+" created for CAPs processed by this batch job.<br>");
+				return setName;
+			}
+			else
+				logDebug("ERROR: Unable to create new Set ID "+setName+" for CAPs processed by this batch job.");
 		}
 		else
-			logDebug("ERROR: Unable to create new Set ID "+setName+" for CAPs processed by this batch job.");
-	}
-	else
-	{
-		logDebug("Set " + setName + " already exists and will be used for this batch run<br>");
-		return setName;
+		{
+			logDebug("Set " + setName + " already exists and will be used for this batch run<br>");
+			return setName;
+		}
 	}
 }
-}
+
