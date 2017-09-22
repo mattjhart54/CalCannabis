@@ -10,7 +10,7 @@ try{
 			var janOne = new Date("01/01/2018");
 			var jsJanOne = janOne.getTime();
 			if(jsToDay < janOne){
-				var expDate = new Date("01/01/2019");
+				var expDate = new Date("05/01/2018");
 				editFirstIssuedDate(janOne);
 				editAppSpecific("Valid From Date", "01/01/2018", licCapId);
 			}else{
