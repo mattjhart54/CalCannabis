@@ -137,7 +137,7 @@ try {
 								pplMdl.setMiddlesName (thisCont.middleName);
 							}
 							var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
-							logMessage("got here ");
+
 							if (capResult.getSuccess()) {
 								var capList = capResult.getOutput();
 								for (var j in capList) {
@@ -150,7 +150,7 @@ try {
 										logMessage("got here ");
 										licTbl = licLookup.split("|");
 										maxAcres = licTbl[0];
-										totAcres += parseInt(maxAcres);
+										totAcre += parseInt(maxAcres);
 									}
 									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
 										mediumLic = true;
