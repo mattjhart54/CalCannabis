@@ -143,18 +143,22 @@ try {
 								for (var j in capList) {
 									var thisCapId = capList[j];
 									var thatCapId = thisCapId.getCapID();
-									logDebug("capId " + thatCapId);
-									var capLicType = getAppSpecific("License Type",thatCapId);
-									var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
-									if(!matches(licLookup, "", null, undefined)) {
-										logMessage("got here ");
-										licTbl = licLookup.split("|");
-										maxAcres = licTbl[0];
-										totAcre += parseInt(maxAcres);
-									}
-									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
-										mediumLic = true;
-									}
+									thatCap = aa.cap.getCap(thatCapId ).getOutput();
+									thatAppTypeResult = thatCap .getCapType();
+									thatAppTypeString = thatAppTypeResult.toString();
+									thatAppTypeArray = thatAppTypeString.split("/");
+									if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
+										var capLicType = getAppSpecific("License Type",thatCapId);
+										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
+										if(!matches(licLookup, "", null, undefined)) {
+											logMessage("got here ");
+											licTbl = licLookup.split("|");
+											maxAcres = licTbl[0];
+											totAcre += parseInt(maxAcres);
+										}
+										if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
+											mediumLic = true;
+										}
 		/*							
 									var canopySize = getAppSpecific("Canopy Size",thatCapId);								
 									var nbrPlants = getAppSpecific("Number of Plants",thatCapId);
@@ -169,6 +173,7 @@ try {
 										mediumLic = true;
 									}
 		*/
+									}
 								}
 							}else{
 								logMessage("error finding cap ids: " + capResult.getErrorMessage());
@@ -185,7 +190,7 @@ try {
 				if(totAcre > 43560) {
 					cancel=true;
 					showMessage=true;
-					logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 4 acre canopy size limit");
+					logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit");
 				}
 				if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic ) {
 					cancel=true;
