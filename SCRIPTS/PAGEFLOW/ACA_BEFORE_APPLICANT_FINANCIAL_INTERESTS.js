@@ -104,7 +104,7 @@ try {
 		if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
 			showMessage=true;
 			logMessage("Start script");
-			cancel = true;
+	//		cancel = true;
 			var totAcre = 0
 			var totPlants = 0
 			var maxAcres = 0;
@@ -125,8 +125,8 @@ try {
 							logMessage("Warning: Legal Business Name must be entered if the Business Entity Structure is not Sole Proprietor.  Click the edit button to enter your Legal Business Name");
 						}
 						var refContNrb = thisCont.refContactNumber;
-					//	showMessage = true;
-					//	logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.businessName);
+						showMessage = true;
+						logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.businessName);
 						if (!matches(refContNrb,null, "", "undefined")) {
 							var pplMdl = aa.people.createPeopleModel().getOutput();
 							pplMdl.setContactSeqNumber(refContNrb);
