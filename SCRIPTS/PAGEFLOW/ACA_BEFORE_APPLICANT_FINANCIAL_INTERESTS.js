@@ -137,7 +137,7 @@ try {
 								pplMdl.setMiddlesName (thisCont.middleName);
 							}
 							var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
-							logMessage()"got here ");
+							logMessage("got here ");
 							if (capResult.getSuccess()) {
 								logDebug("got recs by contact");
 								var capList = capResult.getOutput();
