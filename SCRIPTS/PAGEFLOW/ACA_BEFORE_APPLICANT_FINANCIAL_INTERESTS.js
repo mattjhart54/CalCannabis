@@ -125,7 +125,7 @@ try {
 	if(!matches(licLookup, "", null, undefined)) {
 		var licTbl = licLookup.split(";");
 		maxAcres = licTbl[0];
-		totAcre += parseInt(maxAcres
+		totAcre += parseInt(maxAcres);
 	}
 	var c = aa.people.getCapContactByCapID(capId).getOutput();
 
