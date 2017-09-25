@@ -139,14 +139,13 @@ try {
 							var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 							logMessage("got here ");
 							if (capResult.getSuccess()) {
-								logDebug("got recs by contact");
 								var capList = capResult.getOutput();
 								for (var j in capList) {
 									var thisCapId = capList[j];
 									var thatCapId = thisCapId.getCapID();
 									logDebug("capId " + thatCapId);
 									var capLicType = getAppSpecific("License Type",thatCapId);
-									var licLookup = lookup("LIC_CC_MAX_ACRES", capLicType);
+									var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
 									if(!matches(licLookup, "", null, undefined)) {
 										licTbl = licLookup.split("|");
 										maxAcres = licTbl[0];
