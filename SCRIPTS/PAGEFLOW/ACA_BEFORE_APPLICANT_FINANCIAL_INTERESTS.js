@@ -101,9 +101,9 @@ try {
 
 	// Check for total acreage from all applicant rec ords.  Total must be less than 4 acres 
 	// Check no more than one Medium license allowed unless Producing Disensary is checked.
-		if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
-			showMessage=true;
-			logMessage("Start script");
+	//	if(publicUserID == "PUBLICUSER130840" || publicUserID == "PUBLICUSER130303") {
+	//		showMessage=true;
+	//		logMessage("Start script");
 	//		cancel = true;
 			var totAcre = 0
 			var totPlants = 0
@@ -125,8 +125,7 @@ try {
 							logMessage("Warning: Legal Business Name must be entered if the Business Entity Structure is not Sole Proprietor.  Click the edit button to enter your Legal Business Name");
 						}
 						var refContNrb = thisCont.refContactNumber;
-						showMessage = true;
-						logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
+	//					logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
 						if (!matches(refContNrb,null, "", "undefined")) {
 							var pplMdl = aa.people.createPeopleModel().getOutput();
 							pplMdl.setContactSeqNumber(refContNrb);
@@ -151,7 +150,6 @@ try {
 										var capLicType = getAppSpecific("License Type",thatCapId);
 										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
 										if(!matches(licLookup, "", null, undefined)) {
-											logMessage("got here ");
 											licTbl = licLookup.split("|");
 											maxAcres = licTbl[0];
 											totAcre += parseInt(maxAcres);
@@ -181,11 +179,10 @@ try {
 						}
 					}
 				}
-				showMessage = true;
-				logMessage("Acres " + totAcre );
-				logMessage("Medium " + mediumLic);
-				logMessage("Number of Plants " + totPlants);			
-				logMessage("lictype " + AInfo["License Type"]);
+//				logMessage("Acres " + totAcre );
+//				logMessage("Medium " + mediumLic);
+//				logMessage("Number of Plants " + totPlants);			
+//				logMessage("lictype " + AInfo["License Type"]);
 //				logMessage("prodDisp " + AInfo["Producing Dispensary"]);
 				if(totAcre > 43560) {
 					cancel=true;
