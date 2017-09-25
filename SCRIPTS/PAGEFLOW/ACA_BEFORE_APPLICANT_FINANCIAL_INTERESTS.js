@@ -147,11 +147,12 @@ try {
 									var capLicType = getAppSpecific("License Type",thatCapId);
 									var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
 									if(!matches(licLookup, "", null, undefined)) {
+										logMessage("got here ");
 										licTbl = licLookup.split("|");
 										maxAcres = licTbl[0];
 										totAcres += parseInt(maxAcres);
 									}
-									if (matches(capLicType.substring(0,6), "Medium")) {
+									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
 										mediumLic = true;
 									}
 		/*							
