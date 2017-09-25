@@ -126,7 +126,7 @@ try {
 						}
 						var refContNrb = thisCont.refContactNumber;
 						showMessage = true;
-						logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.businessName);
+						logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
 						if (!matches(refContNrb,null, "", "undefined")) {
 							var pplMdl = aa.people.createPeopleModel().getOutput();
 							pplMdl.setContactSeqNumber(refContNrb);
@@ -134,7 +134,7 @@ try {
 							if(!matches(thisCont.fullName,null, "", "undefined")) {
 								pplMdl.setFullName(thisCont.fullName);
 							}else {
-								pplMdl.setBusinessName (thisCont.businessName);
+								pplMdl.setMiddlesName (thisCont.middleName);
 							}
 							var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 							if (capResult.getSuccess()) {
@@ -170,11 +170,12 @@ try {
 		*/
 								}
 							}else{
-								logDebug("error finding cap ids: " + capResult.getErrorMessage());
+								logMessage("error finding cap ids: " + capResult.getErrorMessage());
 							}
 						}
 					}
 				}
+				showMessage = true;
 				logMessage("Acres " + totAcre );
 				logMessage("Medium " + mediumLic);
 				logMessage("Number of Plants " + totPlants);			
