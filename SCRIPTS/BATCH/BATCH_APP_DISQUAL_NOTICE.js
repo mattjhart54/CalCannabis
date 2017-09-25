@@ -70,7 +70,7 @@ logDebug("Batch job ID not found " + batchJobResult.getErrorMessage());
 /* test parameters
 aa.env.setValue("newAppStatus", "");
 aa.env.setValue("lookAheadDays", "25");
-aa.env.setValue("daySpan", "50");
+aa.env.setValue("daySpan", "12");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("conditionType", "");
 aa.env.setValue("conditionName", "");
@@ -82,7 +82,7 @@ aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
-aa.env.setValue("reportName", "Final Deficiency Disqualification Letter");
+aa.env.setValue("reportName", "30 Day Deficiency Notification Letter");
 aa.env.setValue("updateWorkflowStatus", "Disqualified");
  */
 var emailAddress = getParam("emailAddress");			// email to send report
@@ -209,8 +209,13 @@ try{
 						if(setCreated == false) {
 						   //Create NonEmail Set
 							var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
-							var sNonEmailSet = vNonEmailSet.toUpperCase();
-							setCreated = true;
+							if(vNonEmailSet){
+								var sNonEmailSet = vNonEmailSet.toUpperCase();
+								setCreated = true;
+							}else{
+								logDebug("Could not create set.  Stopping processing.");
+								break;
+							}
 						}
 						setAddResult=aa.set.add(sNonEmailSet,capId);
 					}
@@ -284,7 +289,10 @@ function createExpirationSet( prefix ){
 		setExist = setResult.getSuccess();
 		if (!setExist) 
 		{
-			var setCreateResult= aa.set.createSet(setName,setDescription);
+			//var setCreateResult= aa.set.createSet(setName,setDescription);
+			//var s = new capSet(setName,prefix,"License Notifications", "Notification records processed by Batch Job " + batchJobName + " Job ID " + batchJobID);
+			
+			var setCreateResult= aa.set.createSet(setName,prefix,"License Notifications","Created via batch script " + batchJobName);
 			if( setCreateResult.getSuccess() )
 			{
 				logDebug("New Set ID "+setName+" created for CAPs processed by this batch job.<br>");
@@ -292,6 +300,7 @@ function createExpirationSet( prefix ){
 			}
 			else
 				logDebug("ERROR: Unable to create new Set ID "+setName+" for CAPs processed by this batch job.");
+			return false;
 		}
 		else
 		{

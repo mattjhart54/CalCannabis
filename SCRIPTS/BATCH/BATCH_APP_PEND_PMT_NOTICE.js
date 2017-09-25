@@ -68,8 +68,8 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
-aa.env.setValue("lookAheadDays", "-3");
-aa.env.setValue("daySpan", "5");
+aa.env.setValue("lookAheadDays", "-125");
+aa.env.setValue("daySpan", "259");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
@@ -233,11 +233,12 @@ try{
 							var cStatusDate = convertDate(statusDate);
 							if(cStatusDate.getTime()<fromJSDate.getTime() || cStatusDate.getTime()>toJSDate.getTime()){
 								ignoreRecd = true;
+								var reportDate = cStatusDate;
 							}
 						}
 					}
 					if(ignoreRecd){
-						logDebug("Skipping record " + altId + " due to date range: " + cStatusDate);
+						logDebug("Skipping record " + altId + " due to date range: " + reportDate);
 						capFilterDateRange++;
 						continue;
 					}
@@ -305,3 +306,51 @@ function getCapIdByIDs(s_id1, s_id2, s_id3)  {
 function compareStatusDate(a,b) {
 	return (a.getStatusDate().getEpochMilliseconds() > b.getStatusDate().getEpochMilliseconds()); 
 }
+function createExpirationSet( prefix ){
+// Create Set
+	if (prefix != ""){
+		var yy = startDate.getFullYear().toString().substr(2,2);
+		var mm = (startDate.getMonth() +1 ).toString(); //getMonth() returns (0 - 11)
+		if (mm.length<2)
+			mm = "0"+mm;
+		var dd = startDate.getDate().toString();
+		if (dd.length<2)
+			dd = "0"+dd;
+		var hh = startDate.getHours().toString();
+		if (hh.length<2)
+			hh = "0"+hh;
+		var mi = startDate.getMinutes().toString();
+		if (mi.length<2)
+			mi = "0"+mi;
+
+		//var setName = prefix.substr(0,5) + yy + mm + dd;
+		var setName = prefix + "_" + yy + mm + dd;
+
+		setDescription = prefix + " : " + mm + dd + yy;
+		
+		setResult = aa.set.getSetByPK(setName);
+		setExist = false;
+		setExist = setResult.getSuccess();
+		if (!setExist) 
+		{
+			//var setCreateResult= aa.set.createSet(setName,setDescription);
+			//var s = new capSet(setName,prefix,"License Notifications", "Notification records processed by Batch Job " + batchJobName + " Job ID " + batchJobID);
+			
+			var setCreateResult= aa.set.createSet(setName,prefix,"License Notifications","Created via batch script " + batchJobName);
+			if( setCreateResult.getSuccess() )
+			{
+				logDebug("New Set ID "+setName+" created for CAPs processed by this batch job.<br>");
+				return setName;
+			}
+			else
+				logDebug("ERROR: Unable to create new Set ID "+setName+" for CAPs processed by this batch job.");
+			return false;
+		}
+		else
+		{
+			logDebug("Set " + setName + " already exists and will be used for this batch run<br>");
+			return setName;
+		}
+	}
+}
+

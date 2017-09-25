@@ -273,7 +273,9 @@ function createExpirationSet( prefix )
 		setExist = setResult.getSuccess();
 		if (!setExist) 
 		{
-			var setCreateResult= aa.set.createSet(setName,setDescription);
+			//var setCreateResult= aa.set.createSet(setName,setDescription);
+			//lwacht: 170925: need the set to have a type for the reports
+			var setCreateResult= aa.set.createSet(setName,prefix,"License Notifications","Created via batch script " + batchJobName);
 			if( setCreateResult.getSuccess() )
 			{
 				logDebug("New Set ID "+setName+" created for CAPs processed by this batch job.<br>");
