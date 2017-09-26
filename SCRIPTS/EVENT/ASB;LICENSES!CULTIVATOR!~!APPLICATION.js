@@ -67,20 +67,20 @@ try {
 			}
 		}
 
-	logDebug( "Acres " + totAcre + "Medium " + mediumLic);
+		logDebug( "Acres " + totAcre + "Medium " + mediumLic);
 
-	if((totAcre) > 43560) {
-		showMessage = true;
-		cancel = true;
-		comment("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit");
+		if((totAcre) > 43560) {
+			showMessage = true;
+			cancel = true;
+			comment("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit");
+		}
+		if(matches(AInfo["Licnese Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic == true) {
+			showMessage = true;
+			cancel = true;
+			comment("You cannot apply for a medium license as you already have a medium license");
+		}
 	}
-	if(matches(AInfo["Licnese Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic == true) {
-		showMessage = true;
-		cancel = true;
-		comment("You cannot apply for a medium license as you already have a medium license");
-	}
-}
-catch (err) {
+}catch (err) {
     logDebug("A JavaScript Error occurred: Licenses/Cultivation/* /Application: " + err.message);
 	logDebug(err.stack);
 }
