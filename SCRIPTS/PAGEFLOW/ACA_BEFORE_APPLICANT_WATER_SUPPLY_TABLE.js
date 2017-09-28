@@ -85,7 +85,7 @@ try{
 	}
 	else {
 		for(x in SOURCEOFWATERSUPPLY)
-			if(matches(SOURCEOFWATERSUPPLY[0]["Type of Water Supply"], null, "", "undefined") {
+			if(matches(SOURCEOFWATERSUPPLY[0]["Type of Water Supply"], null, "", "undefined")) {
 				noRows = true;
 			}
 	}
