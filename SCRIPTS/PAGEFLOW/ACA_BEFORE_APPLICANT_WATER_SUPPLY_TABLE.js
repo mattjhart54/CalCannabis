@@ -78,7 +78,6 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 try{
 	var noRows = false;
-}
 	loadASITables4ACA_corrected();
 	if(SOURCEOFWATERSUPPLY.length<1){
 		noRows = true;
