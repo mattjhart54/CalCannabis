@@ -19,6 +19,12 @@ try {
 		updateLegalBusinessName();
 		editAppName(AInfo["License Type"]);
 		updateShortNotes(AInfo["Premise County"]);
+		var priContact = getContactObj(capId,"Business");
+		if(priContact){
+			editAppSpecific("Legal Business Name", priContact.capContact.middleName);
+		}else{
+			editAppSpecific("Legal Business Name", "No Legal Business Name provided");
+		}
 	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: Edit App Name: " + err.message);
