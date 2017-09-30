@@ -112,7 +112,7 @@ try {
 				}
 			}
 		}
-		//lwacht: changed logic to check for DRP *or* applicant
+		//lwacht: changed logic to check for DRP *or* Business
 		if(!prepFnd){
 			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
 				cancel = true;
