@@ -22,13 +22,6 @@ try {
 
 	editAppName(AInfo["License Type"]);
 	updateShortNotes(AInfo["Premise County"]);
-	//lwacht: 170929 adding legal business name logic 
-	var priContact = getContactObj(capId,"Business");
-	if(priContact){
-		editAppSpecific("Legal Business Name", priContact.capContact.middleName);
-	}else{
-		editAppSpecific("Legal Business Name", "No Legal Business Name provided");
-	}
 
 	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && capStatus == "Pending - Local Authorization") {
 		activateTask("Administrative Review");
