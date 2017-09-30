@@ -133,7 +133,7 @@ try {
 							if(!matches(thisCont.fullName,null, "", "undefined")) {
 								pplMdl.setFullName(thisCont.fullName);
 							}else {
-								pplMdl.setMiddlesName (thisCont.middleName);
+								pplMdl.setMiddleName (thisCont.middleName);
 							}
 							var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 
