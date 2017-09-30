@@ -106,7 +106,7 @@ try {
 				if(contType == "Business")
 					appFnd = true;
 				if(!matches(contEmail,"",null,"undefined")){
-					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Applicant")){
+					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business")){
 						contactFnd = true;
 					}
 				}
@@ -117,7 +117,7 @@ try {
 			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
 				cancel = true;
 				showMessage = true;
-				logMessage("  Warning: Only the Applicant and the Designated Responsible party can update this application.");
+				logMessage("  Warning: Only the Business or the Designated Responsible party can update this application.");
 			}	
 		}
 	}
