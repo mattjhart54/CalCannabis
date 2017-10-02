@@ -66,8 +66,8 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters
-
+// test parameters
+/*
 var lookAheadDays = "0";
 var daySpan = "0";
 var emailAddress = "mhart@trustvip.com";
@@ -76,7 +76,10 @@ var asiGroup = "INTERNAL";
 var appStatus = "Pending - Local Authorization";
 var newAppStatus = "Ready for Review";
 var sysFromEmail = "noreply_accela@cdfa.ca.gov";
-var setNonEmailPrefix = "Denials";
+var setNonEmailPrefix = "AppSubmitted";
+var emailTemplate = "LCA_APPLICATION_SUBMITTED";
+var sendEmailNotifications = "Y";
+var sendEmailToContactTypes = "Designated Responsible Party";
 */
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
@@ -85,7 +88,10 @@ var appStatus = getParam("appStatus");
 var newAppStatus = getParam("newAppStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
-var emailAddress = getParam("mhart@trustvip.com");
+var emailTemplate = getParam("emailTemplate");
+var sendEmailNotifications = getParam("sendEmailNotifications");
+var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
+var emailAddress = getParam("emailAddress");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var sysFromEmail = getParam("sysFromEmail");
 
@@ -138,6 +144,7 @@ try{
 	var capFilterType = 0;
 	var capFilterStatus = 0;
 	var capCount = 0;
+	var setCreated = false;
  	var capResult = aa.cap.getCapIDsByAppSpecificInfoDateRange(asiGroup, asiField, dFromDate, dToDate);
 	if (capResult.getSuccess()) {
 		myCaps = capResult.getOutput();
@@ -182,7 +189,53 @@ try{
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		editAppSpecific("Local Authority Response", "No Response");
-
+		
+		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
+			var conTypeArray = sendEmailToContactTypes.split(",");
+			var	conArray = getContactArray(capId);
+			for (thisCon in conArray) {
+				var conEmail = false;
+				thisContact = conArray[thisCon];
+				if (exists(thisContact["contactType"],conTypeArray)) {
+				// Run report letter and attach to record for each contact type
+					if(thisContact["contactType"] == "Primary Contact") 
+						var addrType = "Mailing";
+					if(thisContact["contactType"] == "Designated Responsible Party") 
+						var addrType = "Home";	
+					runReportAttach(capId,"Submitted Application", "p1value",capId.getCustomID(),"p2value",thisContact["contactType"],"p3value",addrType);
+					
+					// Check contact preference and add to set if Postal
+					for(a in conTypeArray) {
+						if(thisContact["contactType"] == conTypeArray[a]) {
+							pContact = getContactObj(capId,conTypeArray[a]);
+							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
+							if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Postal") >-1 && setNonEmailPrefix != ""){
+								if(setCreated == false) {
+								   //Create NonEmail Set
+									var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
+									var sNonEmailSet = vNonEmailSet.toUpperCase();
+									setCreated = true;
+								}
+								setAddResult=aa.set.add(sNonEmailSet,capId);
+							}
+						}	
+					}
+					// Email notification letter if preference is email
+					if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Email") >= 0) {
+						conEmail = thisContact["email"];
+						if (conEmail) {
+							eParams = aa.util.newHashtable();
+							addParameter(eParams,"$$AltID",altId);
+							addParameter(eParams,"$$ContactFirstName$$",thisContact["firstName"]);
+							addParameter(eParams,"$$ContactLastName$$",thisContact["lastName"]);
+							var rFiles = [];
+							sendNotification(sysFromEmail,conEmail,"",emailTemplate,eParams, rFiles,capId);
+							logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+						}
+					}
+				}
+			}
+		}
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
  	logDebug("Ignored due to application type: " + capFilterType);
@@ -192,7 +245,8 @@ try{
 }catch (err){
 	logDebug("ERROR: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
-}}
+}
+}
 	
 /*------------------------------------------------------------------------------------------------------/
 | <===========Internal Functions and Classes (Used by this script)
@@ -203,4 +257,43 @@ function getCapIdByIDs(s_id1, s_id2, s_id3)  {
 		return s_capResult.getOutput();
     else
        return null;
+}
+function createExpirationSet( prefix ) {
+	// Create Set
+	if (prefix != "") {
+		var yy = startDate.getFullYear().toString().substr(2,2);
+		var mm = (startDate.getMonth() +1 ).toString(); //getMonth() returns (0 - 11)
+		if (mm.length<2)
+			mm = "0"+mm;
+		var dd = startDate.getDate().toString();
+		if (dd.length<2)
+			dd = "0"+dd;
+		var hh = startDate.getHours().toString();
+		if (hh.length<2)
+			hh = "0"+hh;
+		var mi = startDate.getMinutes().toString();
+		if (mi.length<2)
+			mi = "0"+mi;
+	//var setName = prefix.substr(0,5) + yy + mm + dd;
+		var setName = prefix + "_" + yy + mm + dd;
+		setDescription = prefix + " : " + mm + dd + yy;
+		setResult = aa.set.getSetByPK(setName);
+		setExist = false;
+		setExist = setResult.getSuccess();
+		if (!setExist) {
+			//var setCreateResult= aa.set.createSet(setName,setDescription);
+			//lwacht: 170925: need the set to have a type for the reports
+			var setCreateResult= aa.set.createSet(setName,prefix,"License Notifications","Created via batch script " + batchJobName);
+			if( setCreateResult.getSuccess()) {
+				logDebug("New Set ID "+setName+" created for CAPs processed by this batch job.<br>");
+				return setName;
+			}
+			else
+				logDebug("ERROR: Unable to create new Set ID "+setName+" for CAPs processed by this batch job.");
+		}
+		else {
+			logDebug("Set " + setName + " already exists and will be used for this batch run<br>");
+			return setName;
+		}
+	}
 }
