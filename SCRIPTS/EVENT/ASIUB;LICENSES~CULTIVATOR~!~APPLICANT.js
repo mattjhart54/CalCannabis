@@ -5,7 +5,7 @@ try{
 		if(drpContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
 			if(!matches(priChannel,"",null,"undefined")){
-				if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+				if(priChannel.indexOf("Postal") > -1){
 					showReport = true;
 				}
 			}
@@ -16,6 +16,6 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in ASUB:LICENSES/CULTIVATOR/*/APPLICATION: " + err.message);
+	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: " + err.message);
 	logDebug(err.stack);
 }
