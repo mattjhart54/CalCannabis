@@ -133,7 +133,9 @@ try {
 							if(!matches(thisCont.fullName,null, "", "undefined")) {
 								pplMdl.setFullName(thisCont.fullName);
 							}else {
-								pplMdl.setMiddleName (thisCont.middleName);
+								//lwacht: 181002: changing to business name
+								//pplMdl.setMiddleName (thisCont.middleName);
+								pplMdl.setBusinessName (thisCont.middleName);
 							}
 							var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 
