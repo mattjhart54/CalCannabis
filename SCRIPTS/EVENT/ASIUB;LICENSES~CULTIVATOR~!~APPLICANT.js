@@ -5,7 +5,7 @@ try{
 		if(drpContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
 			if(!matches(priChannel,"",null,"undefined")){
-				if(priChannel.indexOf("Postal") > -1){
+				if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
 					showReport = true;
 				}
 			}
