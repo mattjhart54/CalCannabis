@@ -141,7 +141,7 @@ try {
 							//pplMdl.setBusinessName (thisCont.middleName);
 						//}
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
-						aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " + capResult.getSuccess());
+						aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " + capResult.getErrorMessage());
 
 						if (capResult.getSuccess()) {
 							var capList = capResult.getOutput();
