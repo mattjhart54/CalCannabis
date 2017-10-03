@@ -131,7 +131,7 @@ try {
 						var fndContact = false;
 						if (!matches(refContNrb,null, "", "undefined")) {
 							pplMdl.setContactSeqNumber(refContNrb);
-							plMdl.setFullName(thisCont.fullName)
+							pplMdl.setFullName(thisCont.fullName)
 							fndContact = true;
 						}else{
 							var qryPeople = pplMdl..getPeopleModel();
