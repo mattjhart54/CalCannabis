@@ -126,58 +126,60 @@ try {
 						}
 						var refContNrb = thisCont.refContactNumber;
 	//					logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
+						var pplMdl = aa.people.createPeopleModel().getOutput();
 						if (!matches(refContNrb,null, "", "undefined")) {
-							var pplMdl = aa.people.createPeopleModel().getOutput();
 							pplMdl.setContactSeqNumber(refContNrb);
-							pplMdl.setServiceProviderCode("CALCANNABIS");
-							if(!matches(thisCont.fullName,null, "", "undefined")) {
-								pplMdl.setFullName(thisCont.fullName);
-							}else {
-								//lwacht: 181002: changing to business name
-								//pplMdl.setMiddleName (thisCont.middleName);
-								pplMdl.setBusinessName (thisCont.middleName);
-							}
-							var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
+						}else{
+							pplMdl.setEmail(thisCont.email.toLowerCase());
+						}
+						pplMdl.setServiceProviderCode("CALCANNABIS");
+						//if(!matches(thisCont.fullName,null, "", "undefined")) {
+						//	pplMdl.setFullName(thisCont.fullName);
+						//}else {
+							//lwacht: 181002: changing to business name
+							//pplMdl.setMiddleName (thisCont.middleName);
+							//pplMdl.setBusinessName (thisCont.middleName);
+						//}
+						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 
-							if (capResult.getSuccess()) {
-								var capList = capResult.getOutput();
-								for (var j in capList) {
-									var thisCapId = capList[j];
-									var thatCapId = thisCapId.getCapID();
-									thatCap = aa.cap.getCap(thatCapId ).getOutput();
-									thatAppTypeResult = thatCap .getCapType();
-									thatAppTypeString = thatAppTypeResult.toString();
-									thatAppTypeArray = thatAppTypeString.split("/");
-									if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
-										var capLicType = getAppSpecific("License Type",thatCapId);
-										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
-										if(!matches(licLookup, "", null, undefined)) {
-											licTbl = licLookup.split("|");
-											maxAcres = licTbl[0];
-											totAcre += parseInt(maxAcres);
-										}
-										if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
-											mediumLic = true;
-										}
-		/*							
-									var canopySize = getAppSpecific("Canopy Size",thatCapId);								
-									var nbrPlants = getAppSpecific("Number of Plants",thatCapId);
-									if(!matches(canopySize, "", null, undefined)) {
-										totAcre += parseFloat(canopySize,2);
+						if (capResult.getSuccess()) {
+							var capList = capResult.getOutput();
+							for (var j in capList) {
+								var thisCapId = capList[j];
+								var thatCapId = thisCapId.getCapID();
+								thatCap = aa.cap.getCap(thatCapId ).getOutput();
+								thatAppTypeResult = thatCap .getCapType();
+								thatAppTypeString = thatAppTypeResult.toString();
+								thatAppTypeArray = thatAppTypeString.split("/");
+								if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
+									var capLicType = getAppSpecific("License Type",thatCapId);
+									var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
+									if(!matches(licLookup, "", null, undefined)) {
+										licTbl = licLookup.split("|");
+										maxAcres = licTbl[0];
+										totAcre += parseInt(maxAcres);
 									}
-									if(!matches(nbrPlants, "", null, undefined)) {
-										totPlants += parseInt(nbrPlants);
-									}								
-									capLicType = getAppSpecific("License Type",thatCapId);
-									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light")) {
+									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
 										mediumLic = true;
 									}
-		*/
-									}
+	/*							
+								var canopySize = getAppSpecific("Canopy Size",thatCapId);								
+								var nbrPlants = getAppSpecific("Number of Plants",thatCapId);
+								if(!matches(canopySize, "", null, undefined)) {
+									totAcre += parseFloat(canopySize,2);
 								}
-							}else{
-								logMessage("error finding cap ids: " + capResult.getErrorMessage());
+								if(!matches(nbrPlants, "", null, undefined)) {
+									totPlants += parseInt(nbrPlants);
+								}								
+								capLicType = getAppSpecific("License Type",thatCapId);
+								if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light")) {
+									mediumLic = true;
+								}
+	*/
+								}
 							}
+						}else{
+							logMessage("error finding cap ids: " + capResult.getErrorMessage());
 						}
 					}
 				}
