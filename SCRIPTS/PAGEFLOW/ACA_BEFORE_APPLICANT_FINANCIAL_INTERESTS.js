@@ -17,8 +17,8 @@
 |     will no longer be considered a "Master" script and will not be supported in future releases.  If
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showMessage = true; // Set to true to see results in popup window
+var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
@@ -128,8 +128,10 @@ try {
 	//					logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
 						var pplMdl = aa.people.createPeopleModel().getOutput();
 						pplMdl.setServiceProviderCode("CALCANNABIS");
+						var fndContact = false;
 						if (!matches(refContNrb,null, "", "undefined")) {
 							pplMdl.setContactSeqNumber(refContNrb);
+							fndContact = true;
 						}else{
 							var qryPeople = pplMdl..getPeopleModel();
 							qryPeople.setEmail(thisCont.email.toLowerCase());
@@ -149,6 +151,7 @@ try {
 											//logDebug("People table: " + thisFName + " " + thisLName );
 											if(ownLName==thisLName ||ownLName.toUpperCase()==thisLName.toUpperCase()){
 												pplMdl.setContactSeqNumber(thisPerson.getContactSeqNumber());
+												fndContact = true;
 											}
 										}
 									}
@@ -163,7 +166,7 @@ try {
 							//pplMdl.setBusinessName (thisCont.middleName);
 						//}
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
-						aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " + capResult.getErrorMessage());
+						aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ fndContact, capId + br + capResult.getErrorMessage());
 						if (capResult.getSuccess()) {
 							var capList = capResult.getOutput();
 							for (var j in capList) {
@@ -230,7 +233,7 @@ try {
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + err.message+ br + err.stack);
 	aa.env.setValue("ErrorCode", "-2");
 	if (showMessage) aa.env.setValue("ErrorMessage", message);
 	if (showDebug) aa.env.setValue("ErrorMessage", debug);
