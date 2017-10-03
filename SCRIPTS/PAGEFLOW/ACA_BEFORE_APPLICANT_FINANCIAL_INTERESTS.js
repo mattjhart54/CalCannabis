@@ -145,12 +145,9 @@ try {
 										var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
 										if(pplRes.getSuccess()){
 											var thisPpl = pplRes.getOutput();
-											logDebug("first name: " + thisPpl.getResFirstName());
-											var thisFName = ""+thisPpl.getResFirstName();
 											var thisLName = ""+thisPpl.getResLastName();
-											//logDebug("Owner table: " + ownFName + " " + ownLName );
-											//logDebug("People table: " + thisFName + " " + thisLName );
-											if(ownLName==thisLName ||ownLName.toUpperCase()==thisLName.toUpperCase()){
+											if(thisCont.lastName.toUpperCase()==thisLName.toUpperCase()){
+												pplMdl.setFullName(thisCont.fullName)
 												pplMdl.setContactSeqNumber(thisPerson.getContactSeqNumber());
 												fndContact = true;
 											}
