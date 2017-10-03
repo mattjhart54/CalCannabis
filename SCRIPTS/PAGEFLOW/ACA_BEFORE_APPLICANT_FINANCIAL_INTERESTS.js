@@ -145,12 +145,12 @@ try {
 										var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
 										if(pplRes.getSuccess()){
 											var thisPpl = pplRes.getOutput();
-											var thisLName = ""+thisPpl.getResLastName();
-											if(thisCont.lastName.toUpperCase()==thisLName.toUpperCase()){
+											//var thisLName = ""+thisPpl.getResLastName();
+											//if(thisCont.lastName.toUpperCase()==thisLName.toUpperCase()){
 												pplMdl.setFullName(thisCont.fullName)
 												pplMdl.setContactSeqNumber(thisPerson.getContactSeqNumber());
 												fndContact = true;
-											}
+											//}
 										}
 									}
 								}
@@ -164,7 +164,7 @@ try {
 							//pplMdl.setBusinessName (thisCont.middleName);
 						//}
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
-						aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ fndContact, capId + br + capResult.getErrorMessage());
+						//aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ fndContact, capId + br + capResult.getErrorMessage());
 						if (capResult.getSuccess()) {
 							var capList = capResult.getOutput();
 							for (var j in capList) {
@@ -214,12 +214,12 @@ try {
 				if(totAcre > 43560) {
 					cancel=true;
 					showMessage=true;
-					logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit");
+					logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit.");
 				}
 				if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic ) {
 					cancel=true;
 					showMessage=true;
-					logMessage("You cannot apply for a Medium type license as you already have a Medium type");
+					logMessage("You cannot apply for a Medium type license as you already have a Medium type.");
 				}
 //				if(totPlants > 25000) {
 //					cancel=true;
