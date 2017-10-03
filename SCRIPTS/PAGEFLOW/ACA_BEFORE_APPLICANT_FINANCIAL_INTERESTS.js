@@ -127,12 +127,34 @@ try {
 						var refContNrb = thisCont.refContactNumber;
 	//					logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
 						var pplMdl = aa.people.createPeopleModel().getOutput();
+						pplMdl.setServiceProviderCode("CALCANNABIS");
 						if (!matches(refContNrb,null, "", "undefined")) {
 							pplMdl.setContactSeqNumber(refContNrb);
 						}else{
-							pplMdl.setEmail(thisCont.email.toLowerCase());
+							var qryPeople = pplMdl..getPeopleModel();
+							qryPeople.setEmail(thisCont.email.toLowerCase());
+							var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
+							if (qryResult.getSuccess()){ 
+								var peopResult = qryResult.getOutput();
+								if (peopResult.length > 0){
+									for(p in peopResult){
+										var thisPerson = peopResult[p];
+										var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
+										if(pplRes.getSuccess()){
+											var thisPpl = pplRes.getOutput();
+											logDebug("first name: " + thisPpl.getResFirstName());
+											var thisFName = ""+thisPpl.getResFirstName();
+											var thisLName = ""+thisPpl.getResLastName();
+											//logDebug("Owner table: " + ownFName + " " + ownLName );
+											//logDebug("People table: " + thisFName + " " + thisLName );
+											if(ownLName==thisLName ||ownLName.toUpperCase()==thisLName.toUpperCase()){
+												pplMdl.setContactSeqNumber(thisPerson.getContactSeqNumber());
+											}
+										}
+									}
+								}
+							}
 						}
-						pplMdl.setServiceProviderCode("CALCANNABIS");
 						//if(!matches(thisCont.fullName,null, "", "undefined")) {
 						//	pplMdl.setFullName(thisCont.fullName);
 						//}else {
@@ -142,7 +164,6 @@ try {
 						//}
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 						aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + "; " + capResult.getErrorMessage());
-
 						if (capResult.getSuccess()) {
 							var capList = capResult.getOutput();
 							for (var j in capList) {
