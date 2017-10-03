@@ -81,6 +81,7 @@ aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("reportName", "60 Day Payment Notification Letter");
+aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
  */
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
@@ -95,6 +96,7 @@ var sendEmailNotifications = getParam("sendEmailNotifications");
 var sysFromEmail = getParam("sysFromEmail");
 var emailAddress = getParam("emailAddress");			// email to send report
 var rptName = getParam("reportName");
+var setNonEmailPrefix = getParam("setNonEmailPrefix");
 
 if(appTypeType=="*") appTypeType="";
 if(appSubtype=="*")  appSubtype="";
