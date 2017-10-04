@@ -30,8 +30,8 @@ function taskCloseAllActive(pStatus,pComment) {
 		stepnumber = fTask.getStepNumber();
 		processID = fTask.getProcessID();
 		if (closeAll) {
-			if(isTaskActive(wfTask,processID)) {
-				deactivateTask(wfTask,processID)
+			if(isTaskActive(wftask,processID)) {
+				deactivateTask(wftask,processID)
 				logMessage("Deactivating Workflow Task " + wftask + " with status " + pStatus);
 				logDebug("Deactivating Workflow Task " + wftask + " with status " + pStatus);
 			}
