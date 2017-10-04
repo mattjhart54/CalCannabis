@@ -202,7 +202,7 @@ try{
 						var addrType = "Mailing";
 					if(thisContact["contactType"] == "Designated Responsible Party") 
 						var addrType = "Home";	
-					runReportAttach(capId,"Submitted Application", "p1value",capId.getCustomID(),"p2value",thisContact["contactType"],"p3value",addrType);
+					runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", "Designated Responsible Party", "Address Type", addrType, "servProvCode", "CALCANNABIS");
 					
 					// Check contact preference and add to set if Postal
 					for(a in conTypeArray) {
