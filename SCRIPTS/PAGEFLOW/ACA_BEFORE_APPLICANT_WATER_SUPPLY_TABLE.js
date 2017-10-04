@@ -74,6 +74,7 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 
 var cap = aa.env.getValue("CapModel");
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: "+ startDate, publicUserID + br + capId + br + aa.env.getValue("AppSpecificTableGroupModel"));
 
 // page flow custom code begin
 try{
