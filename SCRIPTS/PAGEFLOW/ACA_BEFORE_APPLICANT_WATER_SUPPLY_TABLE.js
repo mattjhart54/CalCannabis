@@ -78,19 +78,27 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 try{
 	var noRows = false;
-	loadASITables4ACA_corrected();
+	loadASITables4ACA_corrected(capId);
 //	showMessage=true
 //	comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
 	if(SOURCEOFWATERSUPPLY.length<1){
 		noRows = true;
 	}
 	else {
-		for(x in SOURCEOFWATERSUPPLY)
+		var rowFound = false;
+		for(x in SOURCEOFWATERSUPPLY){
+			rowFound = true;
 			if(matches(SOURCEOFWATERSUPPLY[0]["Type of Water Supply"], null, "", undefined)) {
 				noRows = true;
 			}
+		}
 	}
 	if(noRows) {
+		cancel = true;
+		showMessage = true;
+		comment("The SOURCE OF WATER SUPPLY table requires at least one row.");
+	}
+	if(!rowFound) {
 		cancel = true;
 		showMessage = true;
 		comment("The SOURCE OF WATER SUPPLY table requires at least one row.");
