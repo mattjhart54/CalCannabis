@@ -170,7 +170,8 @@ try {
 											}
 											if(bsnsFName==thisFName){
 												correctFirstName = true;
-												matchFirstName = thisFName;
+											}else{
+												var matchFirstName = thisFName;
 											}
 										}
 									}
