@@ -234,6 +234,9 @@ try {
 			}
 		}	
 	}
+	if(wfTask == "License Manager" && wfStatus == "Denied") { 
+		updateTask("Application Disposition", "Denied - Pending Appeal","Updated by script","");
+	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Denial Revisions Required: " + err.message);
 	logDebug(err.stack);
