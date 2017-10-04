@@ -45,3 +45,5 @@ function taskCloseAllActive(pStatus,pComment) {
 				}
 			}
 		}
+	}
+}
