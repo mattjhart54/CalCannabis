@@ -142,7 +142,7 @@ try {
 							var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 							if (qryResult.getSuccess()){ 
 								var peopResult = qryResult.getOutput();
-								aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ refContNrb, capId + br + thisCont.email);
+								//aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ refContNrb, capId + br + thisCont.email);
 								if (peopResult.length > 0){
 									for(p in peopResult){
 										var thisPerson = peopResult[p];
