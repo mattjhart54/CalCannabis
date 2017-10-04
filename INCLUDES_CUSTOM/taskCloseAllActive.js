@@ -28,19 +28,21 @@ function taskCloseAllActive(pStatus,pComment) {
 		fTask = wfObj[i];
 		wftask = fTask.getTaskDescription();
 		stepnumber = fTask.getStepNumber();
-		//processID = fTask.getProcessID();
+		processID = fTask.getProcessID();
 		if (closeAll) {
-			if(fTask.getActiveFlag().equals("Y")) {
-				aa.workflow.handleDisposition(capId,stepnumber,pStatus,dispositionDate,wfnote,pComment,systemUserObj,"Y");
-				logMessage("Closing Workflow Task " + wftask + " with status " + pStatus);
-				logDebug("Closing Workflow Task " + wftask + " with status " + pStatus);
+			if(isTaskActive(wfTask,processID)) {
+				deactivateTask(wfTask,processID)
+				logMessage("Deactivating Workflow Task " + wftask + " with status " + pStatus);
+				logDebug("Deactivating Workflow Task " + wftask + " with status " + pStatus);
 			}
 		}
 		else {
 			if (!exists(wftask,taskArray)) {
-				aa.workflow.handleDisposition(capId,stepnumber,pStatus,dispositionDate,wfnote,pComment,systemUserObj,"Y");
-				logMessage("Closing Workflow Task " + wftask + " with status " + pStatus);
-				logDebug("Closing Workflow Task " + wftask + " with status " + pStatus);
+				if(isTaskActive(wfTask,processID)) {
+					deactivateTask(wfTask,processID)
+					logMessage("Deactivating Workflow Task " + wftask + " with status " + pStatus);
+					logDebug("Deactivating Workflow Task " + wftask + " with status " + pStatus);
+				}
 			}
 		}
 	}
