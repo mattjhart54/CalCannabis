@@ -79,7 +79,6 @@ var cap = aa.env.getValue("CapModel");
 try{
 	var noRows = false;
 	loadASITables4ACA_corrected();
-	loadASITablesBefore();
 //	showMessage=true
 //	comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
 	if(SOURCEOFWATERSUPPLY.length<1){
