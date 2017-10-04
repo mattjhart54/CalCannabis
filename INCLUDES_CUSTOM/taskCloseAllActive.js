@@ -28,22 +28,20 @@ function taskCloseAllActive(pStatus,pComment) {
 		fTask = wfObj[i];
 		wftask = fTask.getTaskDescription();
 		stepnumber = fTask.getStepNumber();
-		processID = fTask.getProcessID();
+//		processID = fTask.getProcessID();
 		if (closeAll) {
-			if(isTaskActive(wftask,processID)) {
-				deactivateTask(wftask,processID)
+			if(fTask.getActiveFlag() == "Y") {
+				deactivateTask(wftask)
 				logMessage("Deactivating Workflow Task " + wftask + " with status " + pStatus);
 				logDebug("Deactivating Workflow Task " + wftask + " with status " + pStatus);
 			}
 		}
 		else {
 			if (!exists(wftask,taskArray)) {
-				if(isTaskActive(wfTask,processID)) {
-					deactivateTask(wfTask,processID)
+				if(fTask.getActiveFlag() == "Y") {
+					deactivateTask(wftask)
 					logMessage("Deactivating Workflow Task " + wftask + " with status " + pStatus);
 					logDebug("Deactivating Workflow Task " + wftask + " with status " + pStatus);
 				}
 			}
 		}
-	}
-}
