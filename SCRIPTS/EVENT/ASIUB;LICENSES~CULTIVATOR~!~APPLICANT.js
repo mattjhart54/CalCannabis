@@ -12,7 +12,7 @@ try{
 		}
 		if(showReport){
 			showDebug=false;
-			displayReport("Submitted Application", "p1value", capIDString);
+			displayReport("Submitted Application", "Record ID", capIDString, "Contact Type", "Designated Responsible Party", "Address Type", "Home", "Agency", "CALCANNABIS");
 		}
 	}
 }catch(err){

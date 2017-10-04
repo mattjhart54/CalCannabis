@@ -27,7 +27,7 @@ try {
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		updateAppStatus("Ready for Review", "In Compliance notification recieved from Local Authority");
-		runReportAttach(capId,"Submitted Application", "p1value", capId.getCustomID());
+		runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", "Designated Responsible Party", "Address Type", "Home", "Agency", "CALCANNABIS");
 		emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, "Designated Responsible Party");
 	}
 	if(AInfo["Local Authority Response"] == "Non Compliance"  && capStatus == "Pending - Local Authorization") {
