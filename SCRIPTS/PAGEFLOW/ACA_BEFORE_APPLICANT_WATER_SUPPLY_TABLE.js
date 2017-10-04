@@ -74,12 +74,12 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 
 var cap = aa.env.getValue("CapModel");
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY:  ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: "+ startDate, publicUserID + br + capId + br + aa.env.getValue("AppSpecificTableGroupModel"));
 
 // page flow custom code begin
 try{
 	var noRows = false;
 	loadASITables4ACA_corrected();
+	loadASITablesBefore();
 //	showMessage=true
 //	comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
 	if(SOURCEOFWATERSUPPLY.length<1){
