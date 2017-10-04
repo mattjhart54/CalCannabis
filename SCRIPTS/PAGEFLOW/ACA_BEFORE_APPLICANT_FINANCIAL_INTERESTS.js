@@ -138,7 +138,7 @@ try {
 							var correctFirstName = false;
 							var capitalLastName = false;
 							var qryPeople = pplMdl.getPeopleModel();
-							qryPeople.setEmail(thisCont.email.toLowerCase());
+							qryPeople.setEmail(thisCont.email);
 							var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 							if (qryResult.getSuccess()){ 
 								var peopResult = qryResult.getOutput();
