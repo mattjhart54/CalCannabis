@@ -129,6 +129,7 @@ try {
 						var pplMdl = aa.people.createPeopleModel().getOutput();
 						pplMdl.setServiceProviderCode("CALCANNABIS");
 						var fndContact = false;
+						aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ refContNrb, capId + br );
 						if (!matches(refContNrb,null, "", "undefined")) {
 							pplMdl.setContactSeqNumber(refContNrb);
 							pplMdl.setFullName(thisCont.fullName)
