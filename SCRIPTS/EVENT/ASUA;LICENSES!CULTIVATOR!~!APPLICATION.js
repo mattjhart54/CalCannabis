@@ -14,7 +14,7 @@ try{
 				emailRptContact("ASUA","LCA_APP_WITHDRAWAL","Withdrawn Application Letter",false,"Withdrawn",capId,"Designated Responsible Party")
 			}
 		}
-		taskCloseAllActive("Withdrawn","Task Closed by script. Record status was updated to Withdrawn")
+		taskCloseAllExcept("Withdrawn","Task Closed by script. Record status was updated to Withdrawn")
 	}
 }catch(err){
 	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
