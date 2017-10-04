@@ -24,7 +24,7 @@ try{
 		if(showReport){
 			showDebug=false;
 			//lwacht: 170815: updated report name
-			displayReport("Deficiency Report", "p1value", capIDString);
+			displayReport("Deficiency Report", "Record ID", capIDString);
 		}
 	}
 }catch(err){
@@ -35,7 +35,7 @@ try{
 //lwacht: when the status is set to a status that requires notification and the preferred channel is *not* email,
 //display the appropriate report for printing
 try{
-	if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed")){
+	if(matches(wfStatus, "Deficiency Letter Sent", "Science Manager Review Completed")){
 		showDebug=false;
 		//lwacht : 170823 : removing primary contact
 		//var priContact = getContactObj(capId,"Primary Contact");
@@ -62,7 +62,7 @@ try{
 				case "Science Manager Review Completed": rptName = "Approval Letter and Invoice"; break;
 				default: rptName = "Deficiency Report";
 			}
-			displayReport(rptName, "p1value", capIDString);
+			displayReport(rptName, "Record Id", capIDString);
 		}
 	}
 }catch(err){
