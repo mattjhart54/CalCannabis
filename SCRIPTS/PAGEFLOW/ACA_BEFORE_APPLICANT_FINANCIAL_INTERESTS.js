@@ -156,7 +156,7 @@ try {
 											var thisLName = ""+thisPpl.getResLastName();
 											var bsnsFName = thisCont.firstName;
 											var bsnsLName = thisCont.lastName;
-											//logDebug("Owner table: " + bsnsFNmae + " " + bsnsLName );
+											//logDebug("Owner table: " + bsnsFName + " " + bsnsLName );
 											//logDebug("People table: " + thisFName + " " + thisLName );
 											if(bsnsLName==thisLName){
 												correctLastName = true;
@@ -168,7 +168,7 @@ try {
 													matchLastName = thisLName;
 												}
 											}
-											if(bsnsFNmae==thisFName){
+											if(bsnsFName==thisFName){
 												correctFirstName = true;
 												matchFirstName = thisFName;
 											}
