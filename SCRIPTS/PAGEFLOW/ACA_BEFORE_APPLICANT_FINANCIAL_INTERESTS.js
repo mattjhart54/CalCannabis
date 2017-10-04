@@ -140,10 +140,10 @@ try {
 							var qryPeople = pplMdl.getPeopleModel();
 							qryPeople.setEmail(thisCont.email.toLowerCase());
 							var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
-							aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ refContNrb, capId + br + qryResult.getSuccess());
 							if (qryResult.getSuccess()){ 
 								var peopResult = qryResult.getOutput();
 								if (peopResult.length > 0){
+									aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ refContNrb, capId + br + peopResult.length);
 									for(p in peopResult){
 										var thisPerson = peopResult[p];
 										var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
