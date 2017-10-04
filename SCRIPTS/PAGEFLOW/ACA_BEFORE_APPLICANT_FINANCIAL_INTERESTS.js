@@ -134,7 +134,10 @@ try {
 							pplMdl.setFullName(thisCont.fullName)
 							fndContact = true;
 						}else{
-							var qryPeople = pplMdl..getPeopleModel();
+							var correctLastName = false;
+							var correctFirstName = false;
+							var capitalLastName = false;
+							var qryPeople = pplMdl.getPeopleModel();
 							qryPeople.setEmail(thisCont.email.toLowerCase());
 							var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 							if (qryResult.getSuccess()){ 
@@ -145,12 +148,49 @@ try {
 										var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
 										if(pplRes.getSuccess()){
 											var thisPpl = pplRes.getOutput();
-											//var thisLName = ""+thisPpl.getResLastName();
-											//if(thisCont.lastName.toUpperCase()==thisLName.toUpperCase()){
-												pplMdl.setFullName(thisCont.fullName)
-												pplMdl.setContactSeqNumber(thisPerson.getContactSeqNumber());
-												fndContact = true;
-											//}
+											pplMdl.setFullName(thisCont.fullName)
+											pplMdl.setContactSeqNumber(thisPerson.getContactSeqNumber());
+											fndContact = true;
+											var thisFName = ""+thisPpl.getResFirstName();
+											var thisLName = ""+thisPpl.getResLastName();
+											var bsnsFName = thisCont.firstName;
+											var bsnsLName = thisCont.lastName;
+											//logDebug("Owner table: " + bsnsFNmae + " " + bsnsLName );
+											//logDebug("People table: " + thisFName + " " + thisLName );
+											if(bsnsLName==thisLName){
+												correctLastName = true;
+												capitalLastName = true;
+											}else{
+												if(bsnsLName.toUpperCase()==thisLName.toUpperCase()){
+													capitalLastName = true;
+												}else{
+													matchLastName = thisLName;
+												}
+											}
+											if(bsnsFNmae==thisFName){
+												correctFirstName = true;
+												matchFirstName = thisFName;
+											}
+										}
+									}
+									//if the capitalization is incorrect, have the user correct
+									//if the last name is wrong, don't allow applicant to progress
+									if(!correctLastName){
+										cancel = true;
+										showMessage = true;
+										comment("The name '" + bsnsFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
+									}else{
+										//if last name is correct, check for capitalization
+										if(!capitalLastName){
+											cancel = true;
+											showMessage = true;
+											comment("The capitalization of the last name '" + ownLName + "' does not match the name on file  '" + matchLastName + "'.  Please correct before continuing.");
+										}
+										//if last name is correct but first name is wrong, cancel and have applicant correct.
+										if(!correctFirstName){
+											cancel = true;
+											showMessage = true;
+											comment("The first name '" + bsnsFName + "' does not match the name on file  '" + matchFirstName + "'.  Please correct before continuing.");
 										}
 									}
 								}
