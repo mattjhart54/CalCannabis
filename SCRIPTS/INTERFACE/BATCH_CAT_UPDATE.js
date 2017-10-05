@@ -104,19 +104,14 @@ function mainProcess() {
                     licenseNoArray.push(licenseNo.toString());
                     capIdArray.push(members[i]);
                 }
-                initiateCATPut(licenseNoArray, String(baseUrl), String(apiKey));
-                for (var i = 0, len = capIdArray.length; i < len; i++) {
-                    var removeResult = aa.set.removeSetHeadersListByCap(SET_ID,capIdArray[i]);
-                    if (!removeResult.getSuccess()) {
-                        logDebug("**WARNING** error removing record from set " + SET_ID + " : " + removeResult.getErrorMessage() );
-                    } else {
-                        logDebug("capSet: removed record " + capIdArray[i] + " from set " + SET_ID);
-                    }
+                var putResult = initiateCATPut(licenseNoArray, String(baseUrl), String(apiKey));
+                if(putResult.getSuccess()) {
+                    removeFromSet(capIdArray);
                 }
             }
         }
         logDebug("CAT update finished: ");
-
+        return putResult;
     } catch (err) {
         logDebug("ERROR: " + err.message + " In " + batchJobName);
         logDebug("Stack: " + err.stack);
@@ -139,4 +134,15 @@ function getMasterScriptText(vScriptName) {
     var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
     var emseScript = emseBiz.getMasterScript(aa.getServiceProviderCode(), vScriptName);
     return emseScript.getScriptText() + "";
+}
+
+function removeFromSet(capIds) {
+    for (var i = 0, len = capIds.length; i < len; i++) {
+        var removeResult = aa.set.removeSetHeadersListByCap(SET_ID, capIds[i]);
+        if (!removeResult.getSuccess()) {
+            logDebug("**WARNING** error removing record from set " + SET_ID + " : " + removeResult.getErrorMessage() );
+        } else {
+            logDebug("capSet: removed record " + capIdArray[i] + " from set " + SET_ID);
+        }
+    }
 }
