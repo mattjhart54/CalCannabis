@@ -200,6 +200,10 @@ try{
 								   //Create NonEmail Set
 									var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
 									var sNonEmailSet = vNonEmailSet.toUpperCase();
+									var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
+									setHeaderSetType.setRecordSetType("License Notifications");
+									setHeaderSetType.setSetStatus("New");
+									updResult = aa.set.updateSetHeader(setHeaderSetType);          
 									setCreated = true;
 								}
 								setAddResult=aa.set.add(sNonEmailSet,capId);
@@ -211,7 +215,7 @@ try{
 						conEmail = thisContact["email"];
 						if (conEmail) {
 							eParams = aa.util.newHashtable();
-							addParameter(eParams,"$$AltId",altId);
+							addParameter(eParams,"$$AltId$$",altId);
 							addParameter(eParams,"$$firstName$$",thisContact["firstName"]);
 							addParameter(eParams,"$$lastName$$",thisContact["lastName"]);
 							var rFiles = [];

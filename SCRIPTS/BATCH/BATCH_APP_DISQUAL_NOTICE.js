@@ -211,6 +211,10 @@ try{
 							var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
 							if(vNonEmailSet){
 								var sNonEmailSet = vNonEmailSet.toUpperCase();
+								var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
+								setHeaderSetType.setRecordSetType("License Notifications");
+								setHeaderSetType.setSetStatus("New");
+								updResult = aa.set.updateSetHeader(setHeaderSetType);          
 								setCreated = true;
 							}else{
 								logDebug("Could not create set.  Stopping processing.");
@@ -218,18 +222,19 @@ try{
 							}
 						}
 						setAddResult=aa.set.add(sNonEmailSet,capId);
-					}
-					conEmail = thisContact["email"];
-					if (conEmail) {
-						//logDebug("=====SENDEMAILNOTIFICATION: BEGIN : " + thisCon + ": " + elapsed() + " Seconds");
-						runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
-						//runReportAttach(capId,"Official Temporary License", "altId", capId.getCustomID()); 
-						//var rptPars = aa.util.newHashMap();              
-						//rptPars.put("p1value",altId);
-						//generateReport(capId, rptName, "Licenses", rptPars);
-						//logDebug("=====SENDEMAILNOTIFICATION: END : " + thisCon + ": " + elapsed() + " Seconds");
-						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"], "p1value", capId.getCustomID());
-						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+					}else{
+						conEmail = thisContact["email"];
+						if (conEmail) {
+							//logDebug("=====SENDEMAILNOTIFICATION: BEGIN : " + thisCon + ": " + elapsed() + " Seconds");
+							runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
+							//runReportAttach(capId,"Official Temporary License", "altId", capId.getCustomID()); 
+							//var rptPars = aa.util.newHashMap();              
+							//rptPars.put("p1value",altId);
+							//generateReport(capId, rptName, "Licenses", rptPars);
+							//logDebug("=====SENDEMAILNOTIFICATION: END : " + thisCon + ": " + elapsed() + " Seconds");
+							emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"], "p1value", capId.getCustomID());
+							logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+						}
 					}
 				}
 			}

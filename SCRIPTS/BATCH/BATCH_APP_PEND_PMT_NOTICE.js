@@ -265,6 +265,10 @@ try{
 							   //Create NonEmail Set
 								var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
 								var sNonEmailSet = vNonEmailSet.toUpperCase();
+								var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
+								setHeaderSetType.setRecordSetType("License Notifications");
+								setHeaderSetType.setSetStatus("New");
+								updResult = aa.set.updateSetHeader(setHeaderSetType);          
 								setCreated = true;
 							}
 							setAddResult=aa.set.add(sNonEmailSet,capId);
