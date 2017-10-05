@@ -208,6 +208,7 @@ try {
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 						//aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ fndContact, capId + br + capResult.getErrorMessage());
 						if (capResult.getSuccess()) {
+							var emMesg = "";
 							var capList = capResult.getOutput();
 							for (var j in capList) {
 								var thisCapId = capList[j];
@@ -224,6 +225,7 @@ try {
 										maxAcres = licTbl[0];
 										totAcre += parseInt(maxAcres);
 									}
+									emMesg+= "capId: " + capId.getCustomID() + "; licType: " + capLicType);
 									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
 										mediumLic = true;
 									}
@@ -243,6 +245,7 @@ try {
 	*/
 								}
 							}
+							aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + emMesg);
 						}else{
 							logMessage("error finding cap ids: " + capResult.getErrorMessage());
 						}
