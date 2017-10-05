@@ -214,38 +214,40 @@ try {
 								var thisCapId = capList[j];
 								var thatCapId = thisCapId.getCapID();
 								thatCap = aa.cap.getCap(thatCapId ).getOutput();
-								thatAppTypeResult = thatCap .getCapType();
-								thatAppTypeString = thatAppTypeResult.toString();
-								thatAppTypeArray = thatAppTypeString.split("/");
-								if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
-									var capLicType = getAppSpecific("License Type",thatCapId);
-									var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
-									if(!matches(licLookup, "", null, undefined)) {
-										licTbl = licLookup.split("|");
-										maxAcres = licTbl[0];
-										totAcre += parseInt(maxAcres);
+								if(!matches(thatCap, null, "undefined", "")){
+									thatAppTypeResult = thatCap.getCapType();
+									thatAppTypeString = thatAppTypeResult.toString();
+									thatAppTypeArray = thatAppTypeString.split("/");
+									if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
+										var capLicType = getAppSpecific("License Type",thatCapId);
+										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
+										if(!matches(licLookup, "", null, undefined)) {
+											licTbl = licLookup.split("|");
+											maxAcres = licTbl[0];
+											totAcre += parseInt(maxAcres);
+										}
+										emMesg += "capId: " + thatCapId + "; capId: " + thatCapId.getCustomID() + "; licType: " + capLicType + br;
+										if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
+											mediumLic = true;
+										}
+		/*							
+									var canopySize = getAppSpecific("Canopy Size",thatCapId);								
+									var nbrPlants = getAppSpecific("Number of Plants",thatCapId);
+									if(!matches(canopySize, "", null, undefined)) {
+										totAcre += parseFloat(canopySize,2);
 									}
-									emMesg += "capId: " + thatCapId + "; capId: " + thatCapId.getCustomID() + "; licType: " + capLicType + br;
-									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
+									if(!matches(nbrPlants, "", null, undefined)) {
+										totPlants += parseInt(nbrPlants);
+									}								
+									capLicType = getAppSpecific("License Type",thatCapId);
+									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light")) {
 										mediumLic = true;
 									}
-	/*							
-								var canopySize = getAppSpecific("Canopy Size",thatCapId);								
-								var nbrPlants = getAppSpecific("Number of Plants",thatCapId);
-								if(!matches(canopySize, "", null, undefined)) {
-									totAcre += parseFloat(canopySize,2);
+		*/
+									}
 								}
-								if(!matches(nbrPlants, "", null, undefined)) {
-									totPlants += parseInt(nbrPlants);
-								}								
-								capLicType = getAppSpecific("License Type",thatCapId);
-								if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light")) {
-									mediumLic = true;
-								}
-	*/
-								}
+								aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + emMesg + 'medium? ' + mediumLic);
 							}
-							aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + emMesg + 'medium? ' + mediumLic);
 						}else{
 							logMessage("error finding cap ids: " + capResult.getErrorMessage());
 						}
