@@ -65,7 +65,7 @@ function initiateCATPut(capIdStrings, url, key) {
     //@ts-ignore
     aa.print("//------------ end JSON results -------------//");
 
-    //todo return response codes
+    return postResp;
 }
 
 /*
