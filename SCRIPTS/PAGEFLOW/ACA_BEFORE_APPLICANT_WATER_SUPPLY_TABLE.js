@@ -98,16 +98,44 @@ try{
 	while (tai.hasNext())
 	  {
 	  var tsm = tai.next();
+
 	  if (tsm.rowIndex.isEmpty()) continue;  // empty table
+
 	  var tempObject = new Array();
 	  var tempArray = new Array();
 	  var tn = tsm.getTableName();
-	  emMesg +="; " + tn;
+
+	  tn = String(tn).replace(/[^a-zA-Z0-9]+/g,'');
+
+	  if (!isNaN(tn.substring(0,1))) tn = "TBL" + tn  // prepend with TBL if it starts with a number
+
+  	  var tsmfldi = tsm.getTableField().iterator();
+	  var tsmcoli = tsm.getColumns().iterator();
+	  var numrows = 1;
+
+	  while (tsmfldi.hasNext())  // cycle through fields
+		{
+		if (!tsmcoli.hasNext())  // cycle through columns
+			{
+
+			var tsmcoli = tsm.getColumns().iterator();
+			tempArray.push(tempObject);  // end of record
+			var tempObject = new Array();  // clear the temp obj
+			numrows++;
+			}
+		var tcol = tsmcoli.next();
+		var tval = tsmfldi.next().getInputValue();
+		tempObject[tcol.getColumnName()] = tval;
+		}
+	  tempArray.push(tempObject);  // end of record
+	  var copyStr = "" + tn + " = tempArray";
+	  logDebug("ASI Table Array : " + tn + " (" + numrows + " Rows)");
+	  eval(copyStr);  // move to table name
 	  }
+
 	
-	
-	loadASITables4ACA_corrected();
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"] + br + "length: " + SOURCEOFWATERSUPPLY.length+ br + "tbl names: " + emMesg);
+	//loadASITables4ACA_corrected();
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"] + br + "length: " + SOURCEOFWATERSUPPLY.length+ br );
 //	showMessage=true
 //	comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
 	if(SOURCEOFWATERSUPPLY.length<1){
