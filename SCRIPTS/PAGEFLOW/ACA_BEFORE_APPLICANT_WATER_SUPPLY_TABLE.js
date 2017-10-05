@@ -91,7 +91,7 @@ try{
 	row["Type of Water Supply"] = new asiTableValObj("Type of Water Supply", "", "Y");
 	tblWater.push(row);
 	asit = cap.getAppSpecificTableGroupModel();
-	new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", licenseTable);
+	new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", tblWater);
 	a.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + new_asit);
 
 	loadASITables4ACA_corrected();
