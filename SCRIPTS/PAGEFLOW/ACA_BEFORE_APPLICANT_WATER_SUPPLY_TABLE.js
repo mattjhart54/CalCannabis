@@ -92,7 +92,7 @@ try{
 	tblWater.push(row);
 	asit = cap.getAppSpecificTableGroupModel();
 	new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", tblWater);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + new_asit.length);
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + new_asit);
 
 	loadASITables4ACA_corrected();
 //	showMessage=true
