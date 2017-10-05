@@ -225,7 +225,7 @@ try {
 										maxAcres = licTbl[0];
 										totAcre += parseInt(maxAcres);
 									}
-									emMesg+= "capId: " + capId.getCustomID() + "; licType: " + capLicType);
+									emMesg+= "capId: " + capId.getCustomID() + "; licType: " + capLicType;
 									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
 										mediumLic = true;
 									}
@@ -245,7 +245,8 @@ try {
 	*/
 								}
 							}
-							aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + emMesg);
+							aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY228
+							ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + emMesg);
 						}else{
 							logMessage("error finding cap ids: " + capResult.getErrorMessage());
 						}
