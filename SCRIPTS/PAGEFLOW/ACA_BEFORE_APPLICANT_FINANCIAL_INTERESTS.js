@@ -214,7 +214,7 @@ try {
 								var thisCapId = capList[j];
 								var thatCapId = thisCapId.getCapID();
 								thatCap = aa.cap.getCap(thatCapId ).getOutput();
-								thatAppTypeResult = thatCap .getCapType();
+								thatAppTypeResult = thatCap.getCapType();
 								thatAppTypeString = thatAppTypeResult.toString();
 								thatAppTypeArray = thatAppTypeString.split("/");
 								if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
@@ -225,7 +225,7 @@ try {
 										maxAcres = licTbl[0];
 										totAcre += parseInt(maxAcres);
 									}
-									emMesg += "capId: " + thisCapId.getCustomID() + "; licType: " + capLicType + br;
+									emMesg += "capId: " + thisCapId + "; capId: " + thisCapId.getCustomID() + "; licType: " + capLicType + br;
 									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
 										mediumLic = true;
 									}
