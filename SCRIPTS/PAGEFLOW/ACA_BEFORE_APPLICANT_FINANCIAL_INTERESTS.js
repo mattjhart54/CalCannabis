@@ -214,7 +214,7 @@ try {
 								var thisCapId = capList[j];
 								var thatCapId = thisCapId.getCapID();
 								thatCap = aa.cap.getCap(thatCapId ).getOutput();
-								thatAppTypeResult = thatCap.getCapType();
+								thatAppTypeResult = thatCap .getCapType();
 								thatAppTypeString = thatAppTypeResult.toString();
 								thatAppTypeArray = thatAppTypeString.split("/");
 								if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
