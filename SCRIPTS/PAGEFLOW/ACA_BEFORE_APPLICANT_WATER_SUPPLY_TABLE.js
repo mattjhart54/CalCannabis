@@ -92,9 +92,22 @@ try{
 	tblWater.push(row);
 	asit = cap.getAppSpecificTableGroupModel();
 	new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", tblWater);
-
+	var ta = new_asit.getTablesMap();
+	var tai = ta.values().iterator();
+	var emMesg = "";
+	while (tai.hasNext())
+	  {
+	  var tsm = tai.next();
+	  if (tsm.rowIndex.isEmpty()) continue;  // empty table
+	  var tempObject = new Array();
+	  var tempArray = new Array();
+	  var tn = tsm.getTableName();
+	  emMesg +="; " + tn;
+	  }
+	
+	
 	loadASITables4ACA_corrected();
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"]);
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"] + br + "length: " + SOURCEOFWATERSUPPLY.length+ br + "tbl names: " + emMesg);
 //	showMessage=true
 //	comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
 	if(SOURCEOFWATERSUPPLY.length<1){
