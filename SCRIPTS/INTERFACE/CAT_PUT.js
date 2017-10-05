@@ -13,7 +13,7 @@
 showMessage = true
 showDebug = true
 
-var SCRIPT_VERSION = '1.0'
+var SCRIPT_VERSION = '3.0'
 
 //////////////////////////////////////////////////////////////////////////////
 /**^ IMPORTANT NOTE: Any Data pulled from EMSE API in Accela
@@ -26,6 +26,7 @@ var SCRIPT_VERSION = '1.0'
 ///////////REQUIRED ENTRIES, NO NULLS ACCEPTED////////////////////////////////////
 
 function initiateCATPut(capIdStrings, url, key) {
+    aa.print("cap id strings: " +capIdStrings);
     var dataJsonArray = [];
     for (var i = 0, len = capIdStrings.length; i < len; i++) {
         dataJsonArray.push(capIdToJSON(capIdStrings[i]));
