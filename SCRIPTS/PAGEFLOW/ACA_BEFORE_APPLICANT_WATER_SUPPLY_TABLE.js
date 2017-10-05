@@ -78,6 +78,22 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 try{
 	var noRows = false;
+	var row = new Array();
+	var tblWater = new Array();
+	row["Authorized Place of Use"] = new asiTableValObj("Authorized Place of Use", "" + "", "Y");
+	row["Description"] = new asiTableValObj("Description", "" + "", "Y");
+	row["Diversion Number"] = new asiTableValObj("Diversion Number", "" , "Y");
+	row["Geographical Location Coordinates"] = new asiTableValObj("Geographical Location Coordinates", "", "Y");
+	row["Maximum Amount of Water Delivered"] = new asiTableValObj("Maximum Amount of Water Delivered", "", "Y");
+	row["Name of Supplier"] = new asiTableValObj("Name of Supplier", "", "Y");
+	row["Total Square Footage"] = new asiTableValObj("Total Square Footage", "", "Y");
+	row["Total Storage Capacity"] = new asiTableValObj("Total Storage Capacity", "", "Y");
+	row["Type of Water Supply"] = new asiTableValObj("Type of Water Supply", "", "Y");
+	tblWater.push(row);
+	asit = cap.getAppSpecificTableGroupModel();
+	new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", licenseTable);
+	a.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + new_asit);
+
 	loadASITables4ACA_corrected();
 //	showMessage=true
 //	comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
