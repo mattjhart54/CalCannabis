@@ -124,7 +124,7 @@ try{
 			numrows++;
 			}
 		var tcol = tsmcoli.next();
-		var tval = tsmfldi.next().getInputValue();
+		var tval = tsmfldi.next();
 		tempObject[tcol.getColumnName()] = tval;
 		}
 	  tempArray.push(tempObject);  // end of record
