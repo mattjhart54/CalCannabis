@@ -94,7 +94,6 @@ try{
 	new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", tblWater);
 	var ta = new_asit.getTablesMap();
 	var tai = ta.values().iterator();
-	var emMesg = "";
 	while (tai.hasNext())
 	  {
 	  var tsm = tai.next();
@@ -135,21 +134,24 @@ try{
 
 	
 	//loadASITables4ACA_corrected();
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"] + br + "length: " + SOURCEOFWATERSUPPLY.length+ br );
 //	showMessage=true
 //	comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
+	var emMesg = "";
 	if(SOURCEOFWATERSUPPLY.length<1){
 		noRows = true;
 	}
 	else {
 		var rowFound = false;
 		for(x in SOURCEOFWATERSUPPLY){
+			emMesg += x + ":: " + SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] + br;
 			rowFound = true;
 			if(matches(SOURCEOFWATERSUPPLY[0]["Type of Water Supply"], null, "", undefined)) {
 				noRows = true;
 			}
 		}
 	}
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"] + br + "length: " + SOURCEOFWATERSUPPLY.length+ br + emMesg + br);
+
 	if(noRows) {
 		cancel = true;
 		showMessage = true;
