@@ -246,8 +246,8 @@ try {
 		*/
 									}
 								}
-								aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + emMesg + 'medium? ' + mediumLic);
 							}
+							aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + emMesg + 'medium? ' + mediumLic);
 						}else{
 							logMessage("error finding cap ids: " + capResult.getErrorMessage());
 						}
