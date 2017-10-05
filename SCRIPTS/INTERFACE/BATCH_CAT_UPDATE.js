@@ -87,8 +87,6 @@ function mainProcess() {
         var status = theSet.getSetStatus();
         var setId = theSet.getSetID();
         var memberResult = aa.set.getCAPSetMembersByPK(SET_ID);
-        var licenseNoArray = [];
-        var capIdArray = [];
         if (!memberResult.getSuccess()) {
             logDebug("**WARNING** error retrieving set members " + memberResult.getErrorMessage());
         } else {
@@ -96,17 +94,9 @@ function mainProcess() {
             var size = members.length;
             if (members.length > 0) {
                 logDebug("capSet: loaded set " + setId +" of status " + status + " with " + size + " records");
-                for (var i = 0, len = members.length; i < len; i++) {
-                    var capScriptObj = aa.cap.getCap(members[i]);
-                    var capIDModel = (capScriptObj.getOutput()).getCapID();
-                    var licenseNo = capIDModel.getCustomID();
-                    logDebug("Processing " + licenseNo);
-                    licenseNoArray.push(licenseNo.toString());
-                    capIdArray.push(members[i]);
-                }
-                var putResult = initiateCATPut(licenseNoArray, String(baseUrl), String(apiKey));
+                var putResult = initiateCATPut(capIdsToLicenseNos(members), String(baseUrl), String(apiKey));
                 if(putResult.getSuccess()) {
-                    removeFromSet(capIdArray);
+                    removeFromSet(members);
                 }
             }
         }
@@ -136,13 +126,25 @@ function getMasterScriptText(vScriptName) {
     return emseScript.getScriptText() + "";
 }
 
+function capIdsToLicenseNos(capIdArray) {
+    var licenseNoArray = [];
+    for (var i = 0, len = capIdArray.length; i < len; i++) {
+        var capScriptObj = aa.cap.getCap(capIdArray[i]);
+        var capIDModel = (capScriptObj.getOutput()).getCapID();
+        var licenseNo = capIDModel.getCustomID();
+        logDebug("Processing " + licenseNo);
+        licenseNoArray.push(licenseNo.toString());
+    }
+    return licenseNoArray;
+}
+
 function removeFromSet(capIds) {
     for (var i = 0, len = capIds.length; i < len; i++) {
         var removeResult = aa.set.removeSetHeadersListByCap(SET_ID, capIds[i]);
         if (!removeResult.getSuccess()) {
             logDebug("**WARNING** error removing record from set " + SET_ID + " : " + removeResult.getErrorMessage() );
         } else {
-            logDebug("capSet: removed record " + capIdArray[i] + " from set " + SET_ID);
+            logDebug("capSet: removed record " + capIds[i] + " from set " + SET_ID);
         }
     }
 }
