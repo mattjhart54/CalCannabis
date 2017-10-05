@@ -78,7 +78,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 try{
 	var noRows = false;
-	var row = new Array();
+/*	var row = new Array();
 	var tblWater = new Array();
 	row["Authorized Place of Use"] = new asiTableValObj("Authorized Place of Use", "" + "", "Y");
 	row["Description"] = new asiTableValObj("Description", "" + "", "Y");
@@ -131,26 +131,23 @@ try{
 	  logDebug("ASI Table Array : " + tn + " (" + numrows + " Rows)");
 	  eval(copyStr);  // move to table name
 	  }
-
+*/
 	
-	//loadASITables4ACA_corrected();
+	loadASITables4ACA_corrected();
 //	showMessage=true
 //	comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
-	var emMesg = "";
 	if(SOURCEOFWATERSUPPLY.length<1){
 		noRows = true;
 	}
 	else {
 		var rowFound = false;
 		for(x in SOURCEOFWATERSUPPLY){
-			emMesg += x + ":: " + SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] + br;
 			rowFound = true;
 			if(matches(SOURCEOFWATERSUPPLY[0]["Type of Water Supply"], null, "", undefined)) {
 				noRows = true;
 			}
 		}
 	}
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + "new_asit: " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"] + br + "length: " + SOURCEOFWATERSUPPLY.length+ br + emMesg + br);
 
 	if(noRows) {
 		cancel = true;
