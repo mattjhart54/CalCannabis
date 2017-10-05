@@ -154,11 +154,6 @@ try{
 		showMessage = true;
 		comment("The SOURCE OF WATER SUPPLY table requires at least one row.");
 	}
-	if(!rowFound) {
-		cancel = true;
-		showMessage = true;
-		comment("The SOURCE OF WATER SUPPLY table requires at least one row.");
-	}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: " + err.message);
 	logDebug(err.stack);
