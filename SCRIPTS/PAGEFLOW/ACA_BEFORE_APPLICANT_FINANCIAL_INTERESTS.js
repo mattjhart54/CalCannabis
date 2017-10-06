@@ -247,7 +247,7 @@ try {
 									}
 								}
 							}
-							aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + emMesg + 'medium? ' + mediumLic);
+							aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate + ": " + currEnv, capId + br + emMesg + 'medium? ' + mediumLic);
 						}else{
 							logMessage("error finding cap ids: " + capResult.getErrorMessage());
 						}
@@ -278,7 +278,7 @@ try {
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + err.message+ br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + err.message+ br + err.stack + br + currEnv);
 	aa.env.setValue("ErrorCode", "-2");
 	if (showMessage) aa.env.setValue("ErrorMessage", message);
 	if (showDebug) aa.env.setValue("ErrorMessage", debug);
