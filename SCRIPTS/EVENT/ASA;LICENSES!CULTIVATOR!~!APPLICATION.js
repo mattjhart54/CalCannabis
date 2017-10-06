@@ -2,13 +2,13 @@ try{
 //lwacht: add the owner applications
 	if(publicUser){
 		processOwnerApplications();
-		//lwacht: create reference contact and public user account for the DRP		
-		createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
-		var drpUser = createPublicUserFromContact("Designated Responsible Party");
-		//lwacht: create reference contact and public user account for the business contact		
-		createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleStandard);
-		var drpUser = createPublicUserFromContact("Business");
 	}
+	//lwacht: create reference contact and public user account for the DRP		
+	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
+	var drpUser = createPublicUserFromContact("Designated Responsible Party");
+	//lwacht: create reference contact and public user account for the business contact		
+	createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleStandard);
+	var drpUser = createPublicUserFromContact("Business");
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: DRP Notification: " + err.message);
 	logDebug(err.stack);
