@@ -129,20 +129,19 @@ try {
 						var pplMdl = aa.people.createPeopleModel().getOutput();
 						pplMdl.setServiceProviderCode("CALCANNABIS");
 						var emMesg = "";
-						emMesg += "refContNrb: " + refContNrb;
+						emMesg += "refContNrb: " + refContNrb + br;
 						var fndContact = false;
 						if (!matches(refContNrb,null, "", "undefined")) {
 							pplMdl.setContactSeqNumber(refContNrb);
-							pplMdl.setFullName(thisCont.fullName)
+							pplMdl.setFullName(thisCont.fullName);
 							fndContact = true;
-							emMesg += "fndContact: " + fndContact;
+							emMesg += "thisCont.fullName: " + thisCont.fullName + br;
 						}else{
 							var correctLastName = false;
 							var correctFirstName = false;
 							var capitalLastName = false;
 							var qryPeople = pplMdl.getPeopleModel();
 							qryPeople.setEmail(thisCont.email);
-							emMesg += "thisCont.email: " + thisCont.email;
 							var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 							if (qryResult.getSuccess()){ 
 								var peopResult = qryResult.getOutput();
