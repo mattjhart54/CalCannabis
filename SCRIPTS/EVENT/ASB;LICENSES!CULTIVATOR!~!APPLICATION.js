@@ -1,4 +1,5 @@
-
+//lwacht: 171006: removing as this is done in an expression
+/*
 try {
 	if(!publicUser) {
 	var totAcre = 0;
@@ -85,3 +86,4 @@ try {
 	logDebug(err.stack);
 }
 
+*/
