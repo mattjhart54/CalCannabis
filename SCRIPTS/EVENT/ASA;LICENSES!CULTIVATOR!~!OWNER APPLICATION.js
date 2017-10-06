@@ -1,12 +1,19 @@
+try{
 //lwacht: add the owner applications
-processOwnerApplications();
-
+	if(publicUser){
+		processOwnerApplications();
+	}
+}catch (err){
+	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Owner Application: Process Owner App: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Process Owner App: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
 //lwacht
 // if this is the last owner record to be submitted, create a temp affidavit record and email the DRP
 try{
 	updateAppStatus("Submitted","Updated via ASA:Licenses/Cultivator/*/Owner Application");
 	logDebug("parentCapId: " + parentCapId);
-	if(parentCapId){
+	if(parentCapId && publicUser){
 		var childRecs = [];
 		var allKidsComplete = true;
 		var chArray = [];
