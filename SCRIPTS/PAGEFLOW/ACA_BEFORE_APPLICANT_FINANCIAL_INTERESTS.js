@@ -128,17 +128,21 @@ try {
 	//					logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
 						var pplMdl = aa.people.createPeopleModel().getOutput();
 						pplMdl.setServiceProviderCode("CALCANNABIS");
+						var emMesg = "";
+						emMesg += "refContNrb: " + refContNrb;
 						var fndContact = false;
 						if (!matches(refContNrb,null, "", "undefined")) {
 							pplMdl.setContactSeqNumber(refContNrb);
 							pplMdl.setFullName(thisCont.fullName)
 							fndContact = true;
+							emMesg += "fndContact: " + fndContact;
 						}else{
 							var correctLastName = false;
 							var correctFirstName = false;
 							var capitalLastName = false;
 							var qryPeople = pplMdl.getPeopleModel();
 							qryPeople.setEmail(thisCont.email);
+							emMesg += "thisCont.email: " + thisCont.email;
 							var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 							if (qryResult.getSuccess()){ 
 								var peopResult = qryResult.getOutput();
@@ -208,7 +212,6 @@ try {
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
 						//aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ fndContact, capId + br + capResult.getErrorMessage());
 						if (capResult.getSuccess()) {
-							var emMesg = "";
 							var capList = capResult.getOutput();
 							for (var j in capList) {
 								var thisCapId = capList[j];
