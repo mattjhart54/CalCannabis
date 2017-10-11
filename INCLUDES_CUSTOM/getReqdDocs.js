@@ -101,7 +101,9 @@ try{
 		}
 		
 	//Cultivation Plan documents
-		if(matches(AInfo["License Type"],"Specialty Cottage Indoor","Specialty Cottage Mixed-Light","Specialty Indoor","Specialty Mixed-Light","Small Indoor","Small Mixed-Light","Medium Indoor","Medium Mixed-Light")) {
+		if(matches(AInfo["License Type"],"Specialty Cottage Indoor","Specialty Cottage Mixed-Light Tier 1","Specialty Cottage Mixed-Light Tier 2",
+				"Specialty Indoor","Specialty Mixed-Light Tier 1","Specialty Mixed-Light Tier 2","Small Indoor","Small Mixed-Light Tier 1","Small Mixed-Light Tier 2",
+				"Medium Indoor","Medium Mixed-Light Tier 1","Medium Mixed-Light Tier 2")) {
 			need_premiseDiagram = true;
 			need_wastePlan = true;
 			need_pestPlan = true;
