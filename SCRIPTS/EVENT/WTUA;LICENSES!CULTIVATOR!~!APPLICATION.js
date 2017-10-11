@@ -167,7 +167,7 @@ try{
 		//emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId);
 		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 		//emailRptContact("WTUA", notName, "", false, capStatus, capId, "Primary Contact", "p1value", capId.getCustomID());
-		updateTask("Application Disposition", "Pending Payment");
+		updateTask("Application Disposition", "Pending Payment","Updated by Script","");
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
