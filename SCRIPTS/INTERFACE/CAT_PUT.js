@@ -10,23 +10,26 @@
 | PUT as per CAT Idempotence Requirement.  This interface is one directional with Accela
 | as the system of record.
 /------------------------------------------------------------------------------------------------------*/
-showMessage = true
-showDebug = true
+var showMessage = true;
+var showDebug = true;
 
-var SCRIPT_VERSION = '3.0'
+var SCRIPT_VERSION = '3.0';
 
-//////////////////////////////////////////////////////////////////////////////
-/**^ IMPORTANT NOTE: Any Data pulled from EMSE API in Accela
-* with class Java.Lang.String MUST be converted to Javascript String
-* prior to JSON conversion. To do this add '' to the Java.String, this
-* this will force it into a formal javascript string for
-* JSON conversion and variable compatibility
-*/
+eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
+eval(getScriptText("INCLUDES_ACCELA_GLOBALS"));
+eval(getScriptText("INCLUDES_CUSTOM"));
+eval(getScriptText("INCLUDES_CUSTOM_GLOBALS"));
 
-///////////REQUIRED ENTRIES, NO NULLS ACCEPTED////////////////////////////////////
+
+function getScriptText(vScriptName) {
+    vScriptName = vScriptName.toUpperCase();
+    var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
+    var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(), vScriptName, "ADMIN");
+    return emseScript.getScriptText() + "";
+}
 
 function initiateCATPut(capIdStrings, url, key) {
-    aa.print("cap id strings: " +capIdStrings);
+    aa.print("cap id strings: " + capIdStrings);
     var dataJsonArray = [];
     for (var i = 0, len = capIdStrings.length; i < len; i++) {
         dataJsonArray.push(capIdToJSON(capIdStrings[i]));
@@ -34,15 +37,11 @@ function initiateCATPut(capIdStrings, url, key) {
 
     ////////////FORMAT DATA TO JSON////////////////////////////////////////////////////
     var nData = {
-        "Key" : key,
-        "Data" : dataJsonArray
+        "Key": key,
+        "Data": dataJsonArray
     };
-
+    aa.print(JSON.stringify(nData, null, 4));
     var nDataJson = JSON.stringify(nData);
-
-
-    ///Validation of Data Formatting, disable after validation///
-    aa.print(nDataJson);
 
     var postResp = httpClientPut(url, nDataJson, 'application/json', 'utf-8');
 
@@ -71,66 +70,76 @@ function initiateCATPut(capIdStrings, url, key) {
 /*
 * Converts the given capId to a CAT JSON representation
 */
-function capIdToJSON(capId) {
-        var licenseNo = capId.toString();
-        var capID = aa.cap.getCapID(licenseNo).getOutput();
-        var capScriptObj = aa.cap.getCap(capID);
-        var capModel = (capScriptObj.getOutput()).getCapModel();
-        var capName = '' + capModel.getSpecialText();
-        var capType = '' + capModel.getCapType().getType();
-        var capSubType = '' + capModel.getCapType().getSubType();
-        var appStatus = '' + capModel.getCapStatus();
-        var licenseNumber = '' + licenseNo;
+function capIdToJSON(licenseNumber) {
+    useAppSpecificGroupName = false;
+    licenseNumber = '' + licenseNumber;
+    capId = aa.cap.getCapID(licenseNumber).getOutput();
+    var capScriptObj = aa.cap.getCap(capId);
+    cap = capScriptObj.getOutput();
+    var capModel = (capScriptObj.getOutput()).getCapModel();
 
-        ///////////FUTURE EXPANSION SOCKETS (MORE CAN BE ADDED)////////////////////////////
-        /** var expModel = capModel.getB1ExpirationModel();
-        * var expDateJava = expModel.getExpDate();
-        * var expDateStr = expModel.getExpDateString();
-        */
+    var legalBusinessName = '' + getAppSpecific('Legal Business Name');
+    var licenseType = getLicenseType(licenseNumber, '' + getAppSpecific('License Type'));
+    var licenseStatus = getLicenseStatus('' + capModel.getCapStatus());
+    var licenseValidityStart = '' + getAppSpecific('Valid From Date');
+    var vLicenseObj = new licenseObject(licenseNumber);
+    var licenseExpiration = '' + vLicenseObj.b1ExpDate;
+    var drpPhoneNumber = '' + getDRPInfo('phone3');
+    var facilityPhone = '' + getAppSpecific('Premise Phone');
+    var drpEmail = '' + getDRPInfo('email');
+    var premiseAddress = '' + getAppSpecific('Premise Address');
+    var premiseCity = '' + getAppSpecific('Premise City');
+    var premiseCounty = '' + getAppSpecific('Premise County');
+    var premiseState = '' + getAppSpecific('Premise State');
+    var premiseZip = '' + getAppSpecific('Premise Zip');
+    var drpFirstName = '' + getDRPInfo('firstName');
+    var drpLastName = '' + getDRPInfo('lastName');
+    var apn = '' + getAppSpecific('APN');
+    var sellersPermitNumber = '' + getAppSpecific('BOE Seller\'s Permit Number');
 
-        ///////////PHYSICAL ADDRESS ENTRIES//////////////////////////////////////////////
-        var capViewModel = aa.cap.getCapViewBySingle(capID)
-        var pAddressModel = capViewModel.getAddressModel();
-        var pAddressLine1 = '' + pAddressModel.getAddressLine1();
-        var pCity = '' + pAddressModel.getCity();
-        var pCounty = '' + pAddressModel.getCounty();
-        var pState = '' + pAddressModel.getState();
-        var pZip = '' + pAddressModel.getZip();
+    ////////////FORMAT DATA TO JSON////////////////////////////////////////////////////
+    var jsonResult = {
+        "LicenseNumber": licenseNumber,
+        "LicenseName": legalBusinessName,
+        "LicenseType": licenseType,
+        "LicenseSubtype": "N/A",
+        "LicenseStatus": licenseStatus,
+        "LicenseValidityStart": licenseValidityStart,
+        "LicenseExpiration": licenseExpiration,
+        "MobilePhoneNumber": drpPhoneNumber,
+        "MainPhoneNumber": facilityPhone,
+        "MainEmail": drpEmail,
+        "PhysicalAddress": {
+            "Street1": premiseAddress,
+            "Street2": null,
+            "Street3": null,
+            "Street4": null,
+            "City": premiseCity,
+            "County": premiseCounty,
+            "State": premiseState,
+            "PostalCode": premiseZip
+        },
+        "ManagerFirstName": drpFirstName,
+        "ManagerMiddleName": null,
+        "ManagerLastName": drpLastName,
+        "AssessorParcelNumber" : apn,
+        "SellersPermitNumber" : sellersPermitNumber
+    };
 
-
-        ////////////FORMAT DATA TO JSON////////////////////////////////////////////////////
-        var jsonResult = {
-                "LicenseNumber" : licenseNumber,
-                "LicenseName" : capName,
-                "LicenseType" : capType,
-                "LicenseSubtype" : capSubType,
-                "LicenseStatus" : appStatus,
-                "PhysicalAddress" : {
-                    "Street1" : pAddressLine1,
-                    "Street2" : null,
-                    "Street3" : null,
-                    "Street4" : null,
-                    "City" : pCity,
-                    "County" : pCounty,
-                    "State" : pState,
-                    "PostalCode" : pZip
-                }
-            };
-
-        return jsonResult;
+    return jsonResult;
 }
 
 
 ////////////////////////////3.1 APACHE CLIENT//////////////////////////////////
 /**
-* Builds an Apache 3.1 Http client and submits the contents to the external service.
-*
-* @param {any} url  - The endpoint URL
-* @param {any} jsonString - The content string to be posted
-* @param {any} contentType - Optional. If undefined or empty, default to application/json
-* @param {any} encoding - Optional. If undefined or empty, default to utf-8
-* @returns ScriptResult object with status flag, error type, error message, and output
-*/
+ * Builds an Apache 3.1 Http client and submits the contents to the external service.
+ *
+ * @param {any} url  - The endpoint URL
+ * @param {any} jsonString - The content string to be posted
+ * @param {any} contentType - Optional. If undefined or empty, default to application/json
+ * @param {any} encoding - Optional. If undefined or empty, default to utf-8
+ * @returns ScriptResult object with status flag, error type, error message, and output
+ */
 
 function httpClientPut(url, jsonString, contentType, encoding) {
     //content type and encoding are optional; if not sent default values
@@ -181,10 +190,10 @@ function httpClientPut(url, jsonString, contentType, encoding) {
 }
 
 /**
-* returns the object methods and properties
-*
-* @param {any} objExplore
-*/
+ * returns the object methods and properties
+ *
+ * @param {any} objExplore
+ */
 function exploreObject(objExplore) {
     //@ts-ignore
     aa.print("Methods:");
@@ -207,11 +216,11 @@ function exploreObject(objExplore) {
 }
 
 /**
-* Takes a status code and returns the standard HTTP status code string
-*
-* @param {any} statusCode
-* @returns string of HTTP status code
-*/
+ * Takes a status code and returns the standard HTTP status code string
+ *
+ * @param {any} statusCode
+ * @returns string of HTTP status code
+ */
 function httpStatusCodeMessage(statusCode) {
     switch (statusCode) {
         case 100:
@@ -284,7 +293,7 @@ function httpStatusCodeMessage(statusCode) {
             return "416 - Requested Range Not Satisfiable";
         case 417:
             return "417 - Expectation Failed";
-       case 500:
+        case 500:
             return "500 - Internal Server Error";
         case 501:
             return "501 - Not Implemented";
@@ -300,5 +309,108 @@ function httpStatusCodeMessage(statusCode) {
     return statusCode + " - Unknown Status Code";
 }
 
+/**
+ * Returns the CAT license status based on this license status
+ */
+function getLicenseStatus(licenseStatus) {
+    if(licenseStatus === 'Active') {
+        return 'Active';
+    } else  {
+        return 'Inactive';
+    }
+}
+
+/**
+ * Returns the CAT license type based on license number and license Type
+ */
+function getLicenseType(licenseNumber, licenseType) {
+    var firstThree = licenseNumber.substring(0, 3);
+    if(firstThree === 'CAL' || firstThree === "TAL") {
+        return "A-"+licenseType;
+    } else {
+        return "M-"+licenseType;
+    }
+}
+
+/**
+ * Returns information from the DRP contact array
+ */
+function getDRPInfo(name) {
+    var contactArray = getContactArrayLocal();
+    for (var i = 0, len = contactArray.length; i < len; i++) {
+        if (contactArray[i]['contactType'] = 'Designated Responsible Party') {
+            return '' + contactArray[i][name];
+        }
+    }
+}
+
+// ['firstName']);
+// aa.print('last name = ' + contactArray[i]['lastName']);
+// aa.print('email = ' + contactArray[i]['email']);
+
+function getContactArrayLocal() {
+    // Returns an array of associative arrays with contact attributes.  Attributes are UPPER CASE
+    // optional capid
+    // added check for ApplicationSubmitAfter event since the contactsgroup array is only on pageflow,
+    // on ASA it should still be pulled normal way even though still partial cap
+    var thisCap = capId;
+    if (arguments.length == 1) thisCap = arguments[0];
+
+    var cArray = new Array();
+
+    if (arguments.length == 0 && !cap.isCompleteCap() && controlString != "ApplicationSubmitAfter") // we are in a page flow script so use the capModel to get contacts
+    {
+        capContactArray = cap.getContactsGroup().toArray();
+    }
+    else {
+        var capContactResult = aa.people.getCapContactByCapID(thisCap);
+        if (capContactResult.getSuccess()) {
+            var capContactArray = capContactResult.getOutput();
+        }
+    }
+
+    if (capContactArray) {
+        for (yy in capContactArray) {
+            var aArray = new Array();
+            aArray["lastName"] = capContactArray[yy].getPeople().lastName;
+            aArray["refSeqNumber"] = capContactArray[yy].getCapContactModel().getRefContactNumber();
+            aArray["firstName"] = capContactArray[yy].getPeople().firstName;
+            aArray["middleName"] = capContactArray[yy].getPeople().middleName;
+            aArray["businessName"] = capContactArray[yy].getPeople().businessName;
+            aArray["contactSeqNumber"] = capContactArray[yy].getPeople().contactSeqNumber;
+            aArray["contactType"] = capContactArray[yy].getPeople().contactType;
+            aArray["relation"] = capContactArray[yy].getPeople().relation;
+            aArray["phone1"] = capContactArray[yy].getPeople().phone1;
+            aArray["phone3"] = capContactArray[yy].getPeople().phone3;
+            aArray["email"] = capContactArray[yy].getPeople().email;
+            aArray["addressLine1"] = capContactArray[yy].getPeople().getCompactAddress().getAddressLine1();
+            aArray["addressLine2"] = capContactArray[yy].getPeople().getCompactAddress().getAddressLine2();
+            aArray["city"] = capContactArray[yy].getPeople().getCompactAddress().getCity();
+            aArray["state"] = capContactArray[yy].getPeople().getCompactAddress().getState();
+            aArray["zip"] = capContactArray[yy].getPeople().getCompactAddress().getZip();
+            aArray["fax"] = capContactArray[yy].getPeople().fax;
+            aArray["notes"] = capContactArray[yy].getPeople().notes;
+            aArray["country"] = capContactArray[yy].getPeople().getCompactAddress().getCountry();
+            aArray["fullName"] = capContactArray[yy].getPeople().fullName;
+            aArray["peopleModel"] = capContactArray[yy].getPeople();
+
+            var pa = new Array();
+
+            if (arguments.length == 0 && !cap.isCompleteCap()) {
+                var paR = capContactArray[yy].getPeople().getAttributes();
+                if (paR) pa = paR.toArray();
+            }
+            else
+                var pa = capContactArray[yy].getCapContactModel().getPeople().getAttributes().toArray();
+            for (xx1 in pa)
+                aArray[pa[xx1].attributeName] = pa[xx1].attributeValue;
+
+            cArray.push(aArray);
+        }
+    }
+    return cArray;
+}
+
+
 //for testing
-//initiateCATPut(['CAL17-0000053', 'TAL17-0000039'],'http://www.google.com', 'ABC123');
+initiateCATPut(['CAL17-0000053', 'TAL17-0000039', 'CML-0000229', 'TAL17-0000040'], 'http://www.google.com', 'ABC123');
