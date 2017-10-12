@@ -203,11 +203,6 @@ try{
 		}
 		//setTask("Science Manager Review", "N", "Y");
 	}
-	//lwacht: moved this from separate function to here to keep expiry logic together
-	if(matches(wfStatus,"Denied")) {
-		editAppSpecific("Appeal Expiry Date",dateAdd(wfDateMMDDYYYY,30));
-		editAppSpecific("Denial Letter Sent",wfDateMMDDYYYY);
-	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Expiration Dates: " + err.message);
 	logDebug(err.stack);
@@ -237,6 +232,9 @@ try {
 	}
 	if(wfTask == "License Manager" && wfStatus == "Denied") { 
 		updateTask("Application Disposition", "Denied - Pending Appeal","Updated by script","");
+		editAppSpecific("Appeal Expiry Date",dateAdd(wfDateMMDDYYYY,30));
+		editAppSpecific("Denial Letter Sent",wfDateMMDDYYYY);
+		emailRptContact("WTUA", "LCA_APP_DENIAL_LETTER", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Denial Revisions Required: " + err.message);
