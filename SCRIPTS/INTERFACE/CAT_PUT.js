@@ -10,8 +10,7 @@
 | PUT as per CAT Idempotence Requirement.  This interface is one directional with Accela
 | as the system of record.
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = true;
-var showDebug = true;
+var _debug = false;
 
 var SCRIPT_VERSION = '3.0';
 
@@ -28,11 +27,34 @@ function getScriptText(vScriptName) {
     return emseScript.getScriptText() + "";
 }
 
-function initiateCATPut(capIdStrings, url, key) {
-    aa.print("cap id strings: " + capIdStrings);
+function initiateCATPut(licenseNumStrings, url, key) {
+    _logDebug("license number strings: " + licenseNumStrings);
+    var result = {
+        totalCount : licenseNumStrings.length,
+        activeCount : 0,
+        inactiveCount: 0,
+        errorRecord: 0,
+        errors: [],
+        resultCode: null,
+        resultBody: null
+    };
     var dataJsonArray = [];
-    for (var i = 0, len = capIdStrings.length; i < len; i++) {
-        dataJsonArray.push(capIdToJSON(capIdStrings[i]));
+
+    for (var i = 0, len = licenseNumStrings.length; i < len; i++) {
+        try {
+            var jsonData = capIdToJSON(licenseNumStrings[i]);
+            if (jsonData["LicenseStatus"] === 'Active') {
+                result.activeCount++;
+            } else {
+                result.inactiveCount++;
+            }
+            dataJsonArray.push(jsonData);
+        } catch (err) {
+            result.errorRecord++;
+            var errorMessage = 'Error processing licenseNum ' + licenseNumStrings[i] + ' ' + err;
+            result.errors.push(errorMessage);
+            _logDebug(errorMessage);
+        }
     }
 
     ////////////FORMAT DATA TO JSON////////////////////////////////////////////////////
@@ -40,36 +62,34 @@ function initiateCATPut(capIdStrings, url, key) {
         "Key": key,
         "Data": dataJsonArray
     };
-    aa.print(JSON.stringify(nData, null, 4));
+    _logDebug(JSON.stringify(nData, null, 4));
     var nDataJson = JSON.stringify(nData);
 
     var postResp = httpClientPut(url, nDataJson, 'application/json', 'utf-8');
 
     //if success, write out the response code and message. Otherwise, get the error message
-    //@ts-ignore
-    aa.print("//------------ begin JSON results -------------//");
+    _logDebug("//------------ begin JSON results -------------//");
 
     var response = postResp.getOutput();
-    // @ts-ignore
-    aa.print("Response code: " + response.resultCode);
+    _logDebug("Response code: " + response.resultCode);
 
     if (postResp.getSuccess()) {
-        // @ts-ignore
-        aa.print("Response message: " + response.result);
+        _logDebug("Response message: " + response.result);
         exploreObject(response);
+        result.resultCode = response.resultCode;
+        result.resultBody = String(response.result);
+        return new com.accela.aa.emse.dom.ScriptResult(true, null, null, result);
     } else {
-        // @ts-ignore
-        aa.print("Error message: " + postResp.getErrorMessage());
+        _logDebug("Error message: " + postResp.getErrorMessage());
+        return postResp;
     }
-    //@ts-ignore
-    aa.print("//------------ end JSON results -------------//");
+    _logDebug("//------------ end JSON results -------------//");
 
-    return postResp;
 }
 
-/*
-* Converts the given capId to a CAT JSON representation
-*/
+/**
+ * Converts the given capId to a CAT JSON representation
+ */
 function capIdToJSON(licenseNumber) {
     useAppSpecificGroupName = false;
     licenseNumber = '' + licenseNumber;
@@ -147,7 +167,6 @@ function httpClientPut(url, jsonString, contentType, encoding) {
     encoding = (typeof encoding != 'undefined') ? encoding : "utf-8";
 
     //build the http client, request content, and post method from the apache classes
-    //@ts-ignore
     var httpClientClass = org.apache.commons.httpclient;
     var httpMethodParamsClass = org.apache.commons.params.HttpMethodParams;
     var httpClient = new httpClientClass.HttpClient();
@@ -183,7 +202,6 @@ function httpClientPut(url, jsonString, contentType, encoding) {
     }
 
     //create script result object with status flag, error type, error message, and output and return
-    //@ts-ignore
     var scriptResult = new com.accela.aa.emse.dom.ScriptResult(resp_success, resp_errorType, resultObj.result, resultObj);
 
     return scriptResult;
@@ -195,23 +213,27 @@ function httpClientPut(url, jsonString, contentType, encoding) {
  * @param {any} objExplore
  */
 function exploreObject(objExplore) {
-    //@ts-ignore
-    aa.print("Methods:");
+    _logDebug("Methods:");
     for (var x in objExplore) {
         if (typeof (objExplore[x]) == "function") {
-            //@ts-ignore
-            aa.print("   " + objExplore[x]);
+            _logDebug("   " + objExplore[x]);
         }
     }
-    //@ts-ignore
-    aa.print("");
-    //@ts-ignore
-    aa.print("Properties:");
+    _logDebug("");
+    _logDebug("Properties:");
     for (x in objExplore) {
         if (typeof (objExplore[x]) != "function") {
-            //@ts-ignore
-            aa.print("  <b> " + x + ": </b> " + objExplore[x]);
+            _logDebug("  <b> " + x + ": </b> " + objExplore[x]);
         }
+    }
+}
+
+/**
+ * Override the logDebug function to work for this script
+ */
+function _logDebug(dstr){
+    if(_debug) {
+        aa.print(dstr);
     }
 }
 
@@ -413,4 +435,5 @@ function getContactArrayLocal() {
 
 
 //for testing
-//initiateCATPut(['CAL17-0000053', 'TAL17-0000039', 'CML-0000229', 'TAL17-0000040'], 'http://www.google.com', 'ABC123');
+//var catPutResult = initiateCATPut(['CAL17-0000053', 'TAL17-0000039', 'CML-0000229', 'TAL17-0000040','LCA17-0000060'], 'https://mojfcfpmt1.execute-api.us-east-1.amazonaws.com/test/cat-update', 'ABC123');
+//aa.print(JSON.stringify(catPutResult.getOutput(), null, 4));
