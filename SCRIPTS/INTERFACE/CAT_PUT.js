@@ -33,7 +33,8 @@ function initiateCATPut(licenseNumStrings, url, key) {
         totalCount : licenseNumStrings.length,
         activeCount : 0,
         inactiveCount: 0,
-        errorRecord: 0,
+        errorRecordCount: 0,
+        errorRecords: [],
         errors: [],
         resultCode: null,
         resultBody: null
@@ -50,9 +51,10 @@ function initiateCATPut(licenseNumStrings, url, key) {
             }
             dataJsonArray.push(jsonData);
         } catch (err) {
-            result.errorRecord++;
+            result.errorRecordCount++;
             var errorMessage = 'Error processing licenseNum ' + licenseNumStrings[i] + ' ' + err;
             result.errors.push(errorMessage);
+            result.errorRecords.push(licenseNumStrings[i]);
             _logDebug(errorMessage);
         }
     }
