@@ -117,6 +117,9 @@ function mainProcess() {
                     aa.env.setValue("returnCode", "-1"); // error
                     aa.env.setValue("returnValue", resultMessage);
                 }
+            } else {
+                aa.env.setValue("returnCode", "0"); // success
+                aa.env.setValue("returnValue", "Completed successfully: No records to process");
             }
         }
         _logDebug("CAT update finished: ");
