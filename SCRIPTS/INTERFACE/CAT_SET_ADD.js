@@ -10,8 +10,8 @@ showDebug = true
 
 var SCRIPT_VERSION = '1.0'
 
-function addToCATSet(capIdString) {
-    var capId = aa.cap.getCapID(capIdString).getOutput();
+function addToCATSet(licenseNumberString) {
+    var capId = aa.cap.getCapID(licenseNumberString).getOutput();
     var addResult = aa.set.add('CAT_UPDATES', capId);
 
     return addResult;
