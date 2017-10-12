@@ -57,7 +57,7 @@ _logDebug("Batch job ID not found " + batchJobResult.getErrorMessage());
 //aa.env.setValue("baseUrl", "http://www.google.com/");
 //aa.env.setValue("apiKey", "ABC123");
 
-var emailAddress = aa.env.getValue("emailAddress"); // email address to send failure
+//var emailAddress = aa.env.getValue("emailAddress"); // email address to send failure
 var baseUrl = aa.env.getValue("baseUrl"); // base url for CAT API
 var apiKey = aa.env.getValue("apiKey"); // key for CAT API
 
@@ -85,6 +85,7 @@ _logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
 /-----------------------------------------------------------------------------------------------------*/
 
 function mainProcess() {
+    var resultMessage = "";
     try {
         var theSet = aa.set.getSetByPK(SET_ID).getOutput();
         var status = theSet.getSetStatus();
@@ -99,17 +100,35 @@ function mainProcess() {
                 _logDebug("capSet: loaded set " + setId +" of status " + status + " with " + size + " records");
                 var putResult = initiateCATPut(capIdsToLicenseNos(members), String(baseUrl), String(apiKey));
                 if(putResult.getSuccess()) {
-                    _logDebug(JSON.stringify(putResult.getOutput(), null, 4));
-                    removeFromSet(members);
+                    var resultObject = putResult.getOutput();
+                    removeFromSet(members, resultObject.errorRecords);
+                    resultMessage = 'Completed successfully \n' +
+                        'Active Records = ' + resultObject.activeCount + '\n' +
+                        'Inactive Records = ' + resultObject.inactiveCount + '\n';
+                    if(resultObject.errorRecords.length > 0) {
+                        resultMessage += 'WARNING \n' +
+                            'Error Record Count = ' + resultObject.errorRecordCount + '\n' +
+                            'Error Record Messages = ' + resultObject.errors;
+                    }
+                    aa.env.setValue("returnCode", "0"); // success
+                    aa.env.setValue("returnValue", resultMessage);
+                } else {
+                    resultMessage = "ERROR: " + putResult.getErrorType() + " " +putResult.getErrorMessage();
+                    aa.env.setValue("returnCode", "-1"); // error
+                    aa.env.setValue("returnValue", resultMessage);
                 }
             }
         }
         _logDebug("CAT update finished: ");
-        return putResult;
     } catch (err) {
         _logDebug("ERROR: " + err.message + " In " + batchJobName);
         _logDebug("Stack: " + err.stack);
+        resultMessage = "ERROR: " + err.message + " " + err.stack;
+        aa.env.setValue("returnCode", "-1"); // error
+        aa.env.setValue("returnValue", resultMessage);
     }
+
+    _logDebug(resultMessage);
 }
 
 /*------------------------------------------------------------------------------------------------------/
@@ -142,22 +161,42 @@ function getMasterScriptText(vScriptName) {
 function capIdsToLicenseNos(capIdArray) {
     var licenseNoArray = [];
     for (var i = 0, len = capIdArray.length; i < len; i++) {
-        var capScriptObj = aa.cap.getCap(capIdArray[i]);
-        var capIDModel = (capScriptObj.getOutput()).getCapID();
-        var licenseNo = capIDModel.getCustomID();
+        var licenseNo = toLicenseNumber(capIdArray[i]);
         _logDebug("Processing " + licenseNo);
         licenseNoArray.push(licenseNo.toString());
     }
     return licenseNoArray;
 }
 
-function removeFromSet(capIds) {
+function toLicenseNumber(capId) {
+    return String(aa.cap.getCap(capId).getOutput().getCapID().getCustomID());
+}
+
+function toCapId(licenseNumber) {
+    return String(aa.cap.getCapID(String(licenseNumber)).getOutput());
+}
+
+function removeFromSet(capIds, errorLicenseNumbers) {
     for (var i = 0, len = capIds.length; i < len; i++) {
-        var removeResult = aa.set.removeSetHeadersListByCap(SET_ID, capIds[i]);
-        if (!removeResult.getSuccess()) {
-            _logDebug("**WARNING** error removing record from set " + SET_ID + " : " + removeResult.getErrorMessage() );
+        var licenseNumber = toLicenseNumber(capIds[i]);
+        if(contains(errorLicenseNumbers, licenseNumber)) {
+            _logDebug("error number " + licenseNumber + "/" + capIds[i] + " not removing from set");
         } else {
-            _logDebug("capSet: removed record " + capIds[i] + " from set " + SET_ID);
+            var removeResult = aa.set.removeSetHeadersListByCap(SET_ID, capIds[i]);
+            if (!removeResult.getSuccess()) {
+                _logDebug("**WARNING** error removing record from set " + SET_ID + " : " + removeResult.getErrorMessage());
+            } else {
+                _logDebug("capSet: removed record " + capIds[i] + " from set " + SET_ID);
+            }
         }
     }
+}
+
+function contains(stringArray, string) {
+    for (var i = 0, len = stringArray.length; i < len; i++) {
+        if(String(stringArray[i]) === String(string)) {
+            return true;
+        }
+    }
+    return false;
 }
