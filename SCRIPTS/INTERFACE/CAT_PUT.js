@@ -413,4 +413,4 @@ function getContactArrayLocal() {
 
 
 //for testing
-initiateCATPut(['CAL17-0000053', 'TAL17-0000039', 'CML-0000229', 'TAL17-0000040'], 'http://www.google.com', 'ABC123');
+//initiateCATPut(['CAL17-0000053', 'TAL17-0000039', 'CML-0000229', 'TAL17-0000040'], 'http://www.google.com', 'ABC123');
