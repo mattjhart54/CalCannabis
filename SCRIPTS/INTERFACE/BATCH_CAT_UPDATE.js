@@ -13,7 +13,8 @@
 |
 /------------------------------------------------------------------------------------------------------*/
 
-var showDebug = false;	
+var _debug = true;
+var showDebug = false;
 var showMessage = false;
 var emailText = "";
 var SET_ID = 'CAT_UPDATES';
@@ -34,14 +35,16 @@ eval(getMasterScriptText("INCLUDES_CUSTOM"));
 eval(getScriptText("CAT_PUT"));
 
 showDebug = true;
+_debug = true;
+
 batchJobID = 0;
 if (batchJobResult.getSuccess())
 {
 batchJobID = batchJobResult.getOutput();
-logDebug("Batch Job " + batchJobName + " Job ID is " + batchJobID);
+_logDebug("Batch Job " + batchJobName + " Job ID is " + batchJobID);
 }
 else
-logDebug("Batch job ID not found " + batchJobResult.getErrorMessage());
+_logDebug("Batch job ID not found " + batchJobResult.getErrorMessage());
 
 
 /*----------------------------------------------------------------------------------------------------/
@@ -73,9 +76,9 @@ var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 |
 /-----------------------------------------------------------------------------------------------------*/
 
-logDebug("Start of Job");
+_logDebug("Start of Job");
 mainProcess();
-logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
+_logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========END=Main=Loop================>
@@ -88,29 +91,39 @@ function mainProcess() {
         var setId = theSet.getSetID();
         var memberResult = aa.set.getCAPSetMembersByPK(SET_ID);
         if (!memberResult.getSuccess()) {
-            logDebug("**WARNING** error retrieving set members " + memberResult.getErrorMessage());
+            _logDebug("**WARNING** error retrieving set members " + memberResult.getErrorMessage());
         } else {
             var members = memberResult.getOutput().toArray();
             var size = members.length;
             if (members.length > 0) {
-                logDebug("capSet: loaded set " + setId +" of status " + status + " with " + size + " records");
+                _logDebug("capSet: loaded set " + setId +" of status " + status + " with " + size + " records");
                 var putResult = initiateCATPut(capIdsToLicenseNos(members), String(baseUrl), String(apiKey));
                 if(putResult.getSuccess()) {
+                    _logDebug(JSON.stringify(putResult.getOutput(), null, 4));
                     removeFromSet(members);
                 }
             }
         }
-        logDebug("CAT update finished: ");
+        _logDebug("CAT update finished: ");
         return putResult;
     } catch (err) {
-        logDebug("ERROR: " + err.message + " In " + batchJobName);
-        logDebug("Stack: " + err.stack);
+        _logDebug("ERROR: " + err.message + " In " + batchJobName);
+        _logDebug("Stack: " + err.stack);
     }
 }
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========Internal Functions and Classes (Used by this script)
 /------------------------------------------------------------------------------------------------------*/
+
+/**
+ * Override the logDebug function to work for this script
+ */
+function _logDebug(dstr){
+    if(_debug) {
+        aa.print(dstr);
+    }
+}
 
 function getScriptText(vScriptName){
     vScriptName = vScriptName.toUpperCase();
@@ -132,7 +145,7 @@ function capIdsToLicenseNos(capIdArray) {
         var capScriptObj = aa.cap.getCap(capIdArray[i]);
         var capIDModel = (capScriptObj.getOutput()).getCapID();
         var licenseNo = capIDModel.getCustomID();
-        logDebug("Processing " + licenseNo);
+        _logDebug("Processing " + licenseNo);
         licenseNoArray.push(licenseNo.toString());
     }
     return licenseNoArray;
@@ -142,9 +155,9 @@ function removeFromSet(capIds) {
     for (var i = 0, len = capIds.length; i < len; i++) {
         var removeResult = aa.set.removeSetHeadersListByCap(SET_ID, capIds[i]);
         if (!removeResult.getSuccess()) {
-            logDebug("**WARNING** error removing record from set " + SET_ID + " : " + removeResult.getErrorMessage() );
+            _logDebug("**WARNING** error removing record from set " + SET_ID + " : " + removeResult.getErrorMessage() );
         } else {
-            logDebug("capSet: removed record " + capIds[i] + " from set " + SET_ID);
+            _logDebug("capSet: removed record " + capIds[i] + " from set " + SET_ID);
         }
     }
 }
