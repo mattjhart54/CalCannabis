@@ -260,7 +260,7 @@ try {
 //				logMessage("Number of Plants " + totPlants);			
 //				logMessage("lictype " + AInfo["License Type"]);
 //				logMessage("prodDisp " + AInfo["Producing Dispensary"]);
-				if(totAcre > 43560) {
+				if(totAcre > 43560 && thisCont.email.indexOf("lwacht")<0) {
 					cancel=true;
 					showMessage=true;
 					logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit.");
