@@ -67,7 +67,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters
+/* test parameters */
 aa.env.setValue("lookAheadDays", "150");
 aa.env.setValue("daySpan", "60");
 aa.env.setValue("gracePeriodDays", "0");
@@ -75,11 +75,13 @@ aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "Temporary");
 aa.env.setValue("recordCategory", "License");
-aa.env.setValue("expirationStatus", "Active");
-aa.env.setValue("newExpirationStatus", "About to Expire");
-aa.env.setValue("newApplicationStatus", "About to Expire");
+aa.env.setValue("expirationStatus", "About to Expire");
+aa.env.setValue("newExpirationStatus", "Expired");
+aa.env.setValue("newApplicationStatus", "Expired");
 aa.env.setValue("createNotifySets", "Y");
-aa.env.setValue("setNonEmailPrefix", "TEMP_ABOUT_TO_EXPIRE");
+aa.env.setValue("setType", "License Notifications");
+aa.env.setValue("setStatus", "New");
+aa.env.setValue("setNonEmailPrefix", "TEMP_EXPIRED");
 aa.env.setValue("skipAppStatusArray", "Denied,Withdrawn,Disqualified");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("sendEmailToContactTypes", "Business");
@@ -87,10 +89,10 @@ aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("reportName", "Temp License About to Expire");
-aa.env.setValue("taskToAssign", "License");
-aa.env.setValue("assignTaskTo", "Administration");
+aa.env.setValue("taskToAssign", "");
+aa.env.setValue("assignTaskTo", "");
 aa.env.setValue("respectNotifyPrefs", "Y");
- */
+
 var paramStdChoice = getJobParam("paramStdChoice")  // use this standard choice for parameters instead of batch jobs
 var fromDate = getJobParam("fromDate"); // Hardcoded dates.   Use for testing only
 var toDate = getJobParam("toDate"); // ""
@@ -110,6 +112,8 @@ var skipAppStatusArray = getJobParam("skipAppStatus").split(","); //   Skip reco
 var emailAddress = getJobParam("emailAddress"); // email to send report
 var sendEmailToContactTypes = getJobParam("sendEmailToContactTypes"); // ALL,PRIMARY, or comma separated values
 var emailTemplate = getJobParam("emailTemplate"); // email Template
+var taskToAssign = getJobParam("taskToAssign"); 
+var assignTaskTo = getJobParam("assignTaskTo"); 
 var deactivateLicense = getJobParam("deactivateLicense").substring(0, 1).toUpperCase().equals("Y"); // deactivate the LP
 var lockParentLicense = getJobParam("lockParentLicense").substring(0, 1).toUpperCase().equals("Y"); // add this lock on the parent license
 var createRenewalRecord = getJobParam("createTempRenewalRecord").substring(0, 1).toUpperCase().equals("Y"); // create a temporary record
@@ -199,7 +203,7 @@ try{
 	var setDescription;
 	var setCreated = false;
 	// prep the set prefix for all sets
-	if (setPrefix != "") {
+	/*if (setPrefix != "") {
 		var yy = startDate.getFullYear().toString().substr(2, 2);
 		var mm = (startDate.getMonth() + 1).toString();
 		if (mm.length < 2)
@@ -214,7 +218,7 @@ try{
 		if (mi.length < 2)
 			mi = "0" + mi;
 		setPrefix+= ":" + yy + mm + dd + hh + mi;
-	}
+	}*/
 	//  create Set of Sets if we are using notify sets
 	var masterSet = false;
 	//if (setPrefix != "" && createNotifySets) {
@@ -341,7 +345,6 @@ try{
 					}
 				}
 			}
-				
 			// process each qualified contact
 			for (var i in sendArray) {
 				//  create set  
@@ -353,8 +356,8 @@ try{
 						var vNonEmailSet =  createExpirationSet(setPrefix);
 						var sNonEmailSet = vNonEmailSet.toUpperCase();
 						var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
-						setHeaderSetType.setRecordSetType("License Notifications");
-						setHeaderSetType.setSetStatus("New");
+						setHeaderSetType.setRecordSetType(setType);
+						setHeaderSetType.setSetStatus(setStatus);
 						updResult = aa.set.updateSetHeader(setHeaderSetType);
 						setCreated = true;
 					}
@@ -382,10 +385,14 @@ try{
 				}
 			}
 		}
+		// assign task
+		if (taskToAssign.length > 0) {
+			updateTaskDepartment(taskToAssign, assignTaskTo);
+			logDebug( taskToAssign + " assigned to " + assignTaskTo);
+		}
 		// update CAP status
 		if (newAppStatus.length > 0) {
 			updateAppStatus(newAppStatus, "");
-			logDebug("Updated Application Status to " + newAppStatus);
 		}
 		// schedule Inspection
 		if (inspSched.length > 0) {
