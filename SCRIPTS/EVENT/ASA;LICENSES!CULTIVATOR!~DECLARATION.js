@@ -1,5 +1,5 @@
 // lwacht
-// if not ACA, set altId based on application parent
+// if not ACA, set the altId based on application parent
 try{
 	if(!publicUser){
 		if(parentCapId){
