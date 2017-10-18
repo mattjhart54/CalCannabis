@@ -67,7 +67,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters */
+/* test parameters
 aa.env.setValue("lookAheadDays", "150");
 aa.env.setValue("daySpan", "60");
 aa.env.setValue("gracePeriodDays", "0");
@@ -89,10 +89,11 @@ aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("reportName", "Temp License About to Expire");
-aa.env.setValue("taskToAssign", "");
-aa.env.setValue("assignTaskTo", "");
+aa.env.setValue("taskToAssign", "License");
+aa.env.setValue("assignTaskTo", "LICENSE/NA/NA/NA/NA/ADMIN");
+aa.env.setValue("setParentWorkflowTaskAndStatus", "License,About to Expire");
 aa.env.setValue("respectNotifyPrefs", "Y");
-
+ */
 var paramStdChoice = getJobParam("paramStdChoice")  // use this standard choice for parameters instead of batch jobs
 var fromDate = getJobParam("fromDate"); // Hardcoded dates.   Use for testing only
 var toDate = getJobParam("toDate"); // ""
@@ -375,7 +376,7 @@ try{
 						continue;
 					}else {
 						currentUserID = "ADMIN";
-						runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
+						runReportAttach(capId,rptName, "altId", capId.getCustomID()); 
 						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, conTypeArray[thisType]);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + conTypeArray[thisType] + " : " + email);
 					}
