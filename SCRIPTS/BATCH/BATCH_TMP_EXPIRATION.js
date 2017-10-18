@@ -82,7 +82,7 @@ aa.env.setValue("createNotifySets", "Y");
 aa.env.setValue("setType", "License Notifications");
 aa.env.setValue("setStatus", "New");
 aa.env.setValue("setNonEmailPrefix", "TEMP_EXPIRED");
-aa.env.setValue("skipAppStatusArray", "Denied,Withdrawn,Disqualified");
+aa.env.setValue("skipAppStatusArray", "Denied,Withdrawn,Disqualified,Inactive,Revoked,Suspended");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("sendEmailToContactTypes", "Business");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
@@ -93,6 +93,7 @@ aa.env.setValue("taskToAssign", "License");
 aa.env.setValue("assignTaskTo", "LICENSE/NA/NA/NA/NA/ADMIN");
 aa.env.setValue("setParentWorkflowTaskAndStatus", "License,About to Expire");
 aa.env.setValue("respectNotifyPrefs", "Y");
+aa.env.setValue("checkForPermApplication", "Y");
  */
 var paramStdChoice = getJobParam("paramStdChoice")  // use this standard choice for parameters instead of batch jobs
 var fromDate = getJobParam("fromDate"); // Hardcoded dates.   Use for testing only
@@ -134,6 +135,7 @@ var actionExpression = getJobParam("actionExpression"); // JavaScript used to pe
 var sendEmailNotifications = getJobParam("sendEmailNotifications");
 var sysFromEmail = getJobParam("sysFromEmail");
 var rptName = getJobParam("reportName");
+var chkPermApp = getJobParam("checkForPermApplication");
 
 if(appTypeType=="*") appTypeType="";
 if(appSubtype=="*")  appSubtype="";
@@ -192,6 +194,7 @@ try {
 
 function mainProcess() {
 try{
+	var capPermApp = 0;
 	var capFilterType = 0;
 	var capFilterInactive = 0;
 	var capFilterError = 0;
@@ -276,6 +279,17 @@ try{
 			capFilterStatus++;
 			logDebug("     " +"skipping, due to application status of " + capStatus)
 			continue;
+		}
+		// Filter by Related Permanent Application
+		if (chkPermApp) {
+			useAppSpecificGroupName = false;
+			var AInfo = [];
+			loadAppSpecific(AInfo);
+			if(!matches(AInfo["App Number"],"",null,"undefined")){
+				capPermApp++;
+				logDebug("     " +"skipping, due to related permanent application " + AInfo["App Number"])
+				continue;
+			}
 		}
 		// custom filter  
 		if (filterExpression.length > 0) {
@@ -482,6 +496,7 @@ try{
 	logDebug("========================================");
 	logDebug("Total CAPS qualified date range: " + myExp.length);
 	logDebug("Ignored due to application type: " + capFilterType);
+	logDebug("Ignored due to related permanent application: " + capPermApp);
 	logDebug("Ignored due to CAP Status: " + capFilterStatus);
 	logDebug("Ignored due to Deactivated CAP: " + capDeactivated);
 	logDebug("Ignored due to Custom Filter Expression: " + capFilterExpression);
