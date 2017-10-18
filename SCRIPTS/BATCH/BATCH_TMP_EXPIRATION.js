@@ -67,7 +67,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters
+/* test parameters 
 aa.env.setValue("lookAheadDays", "150");
 aa.env.setValue("daySpan", "60");
 aa.env.setValue("gracePeriodDays", "0");
@@ -75,9 +75,9 @@ aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "Temporary");
 aa.env.setValue("recordCategory", "License");
-aa.env.setValue("expirationStatus", "About to Expire");
-aa.env.setValue("newExpirationStatus", "Expired");
-aa.env.setValue("newApplicationStatus", "Expired");
+aa.env.setValue("expirationStatus", "Active");
+aa.env.setValue("newExpirationStatus", "About to Expire");
+aa.env.setValue("newApplicationStatus", "About to Expire");
 aa.env.setValue("createNotifySets", "Y");
 aa.env.setValue("setType", "License Notifications");
 aa.env.setValue("setStatus", "New");
@@ -93,8 +93,8 @@ aa.env.setValue("taskToAssign", "License");
 aa.env.setValue("assignTaskTo", "LICENSE/NA/NA/NA/NA/ADMIN");
 aa.env.setValue("setParentWorkflowTaskAndStatus", "License,About to Expire");
 aa.env.setValue("respectNotifyPrefs", "Y");
-aa.env.setValue("checkForPermApplication", "Y");
- */
+aa.env.setValue("checkForPermApplication", "N");
+*/
 var paramStdChoice = getJobParam("paramStdChoice")  // use this standard choice for parameters instead of batch jobs
 var fromDate = getJobParam("fromDate"); // Hardcoded dates.   Use for testing only
 var toDate = getJobParam("toDate"); // ""
@@ -135,7 +135,8 @@ var actionExpression = getJobParam("actionExpression"); // JavaScript used to pe
 var sendEmailNotifications = getJobParam("sendEmailNotifications");
 var sysFromEmail = getJobParam("sysFromEmail");
 var rptName = getJobParam("reportName");
-var chkPermApp = getJobParam("checkForPermApplication");
+logDebug("getJobParam(checkForPermApplication): " + getJobParam("checkForPermApplication"))
+var chkPermApp = getJobParam("checkForPermApplication").substring(0, 1).toUpperCase().equals("Y");
 
 if(appTypeType=="*") appTypeType="";
 if(appSubtype=="*")  appSubtype="";
@@ -281,6 +282,7 @@ try{
 			continue;
 		}
 		// Filter by Related Permanent Application
+		logDebug("chkPermApp " + chkPermApp)
 		if (chkPermApp) {
 			useAppSpecificGroupName = false;
 			var AInfo = [];
