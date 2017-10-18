@@ -113,7 +113,7 @@ try {
 					i++) if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) publicDisplayCond = ccr[i];
 				}
 				if (dr && ccr.length > 0 && showList && publicDisplayCond) {
-					message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li><br>";
+					message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li><br><br>";
 				}
 				if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
 					addStdCondition(conditionType,dr);
