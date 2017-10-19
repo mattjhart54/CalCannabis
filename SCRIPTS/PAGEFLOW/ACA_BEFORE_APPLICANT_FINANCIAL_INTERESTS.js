@@ -133,7 +133,8 @@ try {
 						var fndContact = false;
 						if (!matches(refContNrb,null, "", "undefined")) {
 							pplMdl.setContactSeqNumber(refContNrb);
-							pplMdl.setFullName(thisCont.fullName);
+							pplMdl.setAuditStatus("A");
+							//pplMdl.setFullName(thisCont.fullName);
 							fndContact = true;
 							emMesg += "thisCont.fullName: " + thisCont.fullName + br;
 						}else{
@@ -142,6 +143,7 @@ try {
 							var capitalLastName = false;
 							var qryPeople = pplMdl.getPeopleModel();
 							qryPeople.setEmail(thisCont.email);
+							pplMdl.setAuditStatus("A");
 							var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 							if (qryResult.getSuccess()){ 
 								var peopResult = qryResult.getOutput();
@@ -152,8 +154,9 @@ try {
 										var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
 										if(pplRes.getSuccess()){
 											var thisPpl = pplRes.getOutput();
-											pplMdl.setFullName(thisCont.fullName)
+											//pplMdl.setFullName(thisCont.fullName)
 											pplMdl.setContactSeqNumber(thisPerson.getContactSeqNumber());
+											pplMdl.setAuditStatus("A")
 											fndContact = true;
 											var thisFName = ""+thisPpl.getResFirstName();
 											var thisLName = ""+thisPpl.getResLastName();
