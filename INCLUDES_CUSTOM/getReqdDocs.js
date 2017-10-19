@@ -289,11 +289,11 @@ try{
 		
 	//these are now optional documents
 
-		if (AInfo["Convicted of a Crime"] == "Yes"){
-				arrReqdDocs_Own.push(evidenceOfDismissal);
-				arrReqdDocs_Own.push(certificateOfRehabilitation);
-				arrReqdDocs_Own.push(referenceLetters);
-		}
+		//if (AInfo["Convicted of a Crime"] == "Yes"){
+		//		arrReqdDocs_Own.push(evidenceOfDismissal);
+		//		arrReqdDocs_Own.push(certificateOfRehabilitation);
+		//		arrReqdDocs_Own.push(referenceLetters);
+		//}
 
 		return arrReqdDocs_Own;
 	}
