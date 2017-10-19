@@ -65,7 +65,7 @@ try{
 	logDebug(err.stack);
 }
 
-
+//John Towell Put code here
 
 //lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
 //display the deficiency report for printing
