@@ -1,4 +1,3 @@
-//John Towell
 
 /*------------------------------------------------------------------------------------------------------/
 | Program: BATCH_TMP_EXPIRATION
@@ -309,6 +308,7 @@ try{
 		// Actions start here:
 		var refLic = getRefLicenseProf(altId); // Load the reference License Professional
 		if (refLic && deactivateLicense) {
+            addToCat(capId);//send inactive to CAT
 			refLic.setAuditStatus("I");
 			aa.licenseScript.editRefLicenseProf(refLic);
 			logDebug( "deactivated linked License");
