@@ -1,4 +1,3 @@
-//John Towell
 
 /*------------------------------------------------------------------------------------------------------/
 | Program: BATCH_TMP_EXPIRATION
@@ -411,7 +410,10 @@ try{
 		}
 		// update CAP status
 		if (newAppStatus.length > 0) {
-			updateAppStatus(newAppStatus, "");
+            updateAppStatus(newAppStatus, "");
+            if (newAppStatus == 'Inactive') {
+                addToCat(capId);//send inactive to CAT
+            }
 		}
 		// schedule Inspection
 		if (inspSched.length > 0) {
