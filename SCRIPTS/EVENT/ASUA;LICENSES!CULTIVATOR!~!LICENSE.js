@@ -5,7 +5,7 @@ Author: John Towell
 ============================================== */
 
 try{
-    if(matches(appStatus, "Revoked", "Suspended")){
+    if(matches(appStatus, "Revoked", "Suspended", "Inactive")){
         addToCat(capId);
     }
 }catch(err){
