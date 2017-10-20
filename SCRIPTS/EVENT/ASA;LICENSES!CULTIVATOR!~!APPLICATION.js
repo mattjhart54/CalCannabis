@@ -56,6 +56,7 @@ try{
 //lwacht: don't run for temporary app 
 try{
 	if(appTypeArray[2]!="Temporary"){
+		voidRemoveAllFees();
 		var feeDesc = AInfo["License Type"] + " - Application Fee";
 		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 		if(thisFee){
