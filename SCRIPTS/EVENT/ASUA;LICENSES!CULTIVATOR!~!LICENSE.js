@@ -9,6 +9,6 @@ try{
         addToCat(capId);
     }
 }catch(err){
-    logDebug("An error has occurred in ASUA;LICENSES!CULTIVATOR!~!LICENSE: Generic notifications: " + err.message);
+    logDebug("An error has occurred in ASUA;LICENSES!CULTIVATOR!~!LICENSE: Adding to CAT Set: " + err.message);
     logDebug(err.stack);
 }
