@@ -55,6 +55,7 @@ try{
 			//capId = licCapId;
 			//contactSetPrimary(contPri.seqNumber);
 			//capId = currCapId;
+			addToCat(licCapId); //send active license to CAT
 			closeTask("Application Disposition","License Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
 		}else{
 			logDebug("Error creating License record: " + licCapId);
@@ -65,7 +66,6 @@ try{
 	logDebug(err.stack);
 }
 
-//John Towell Put code here
 
 //lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
 //display the deficiency report for printing
