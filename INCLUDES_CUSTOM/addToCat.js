@@ -1,4 +1,3 @@
-
 function addToCat(capId) {
     try {
         var SET_ID = 'CAT_UPDATES';
