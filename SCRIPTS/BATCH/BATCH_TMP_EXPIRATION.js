@@ -308,7 +308,6 @@ try{
 		// Actions start here:
 		var refLic = getRefLicenseProf(altId); // Load the reference License Professional
 		if (refLic && deactivateLicense) {
-            addToCat(capId);//send inactive to CAT
 			refLic.setAuditStatus("I");
 			aa.licenseScript.editRefLicenseProf(refLic);
 			logDebug( "deactivated linked License");
@@ -411,7 +410,10 @@ try{
 		}
 		// update CAP status
 		if (newAppStatus.length > 0) {
-			updateAppStatus(newAppStatus, "");
+            updateAppStatus(newAppStatus, "");
+            if (newAppStatus == 'Inactive') {
+                addToCat(capId);//send inactive to CAT
+            }
 		}
 		// schedule Inspection
 		if (inspSched.length > 0) {
