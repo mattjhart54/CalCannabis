@@ -1,15 +1,14 @@
-
 function addToCat(capId) {
     try {
         var SET_ID = 'CAT_UPDATES';
-        var createResult = createSetIfNeeded();
+        var createResult = createSetIfNeeded(SET_ID);
         if (!createResult.getSuccess()) {
-            logDebug("**ERROR: Failed to create CAT_UPDATES set: " + createResult.getErrorMessage());
+            logDebug("**ERROR: Failed to create " + SET_ID + " set: " + createResult.getErrorMessage());
             return false;
         }
         var addResult = aa.set.add(SET_ID, capId);
         if (!addResult.getSuccess()) {
-            logDebug("**ERROR: Failed to add [" + capId + "] to CAT_UPDATES set: " + addResult.getErrorMessage());
+            logDebug("**ERROR: Failed to add [" + capId + "] to " + SET_ID + " set: " + addResult.getErrorMessage());
             return false;
         }
     } catch (err) {
@@ -18,10 +17,10 @@ function addToCat(capId) {
     }
 }
 
-function createSetIfNeeded() {
-    var theSetResult = aa.set.getSetByPK(SET_ID);
+function createSetIfNeeded(setId) {
+    var theSetResult = aa.set.getSetByPK(setId);
     if (!theSetResult.getSuccess()) {
-        theSetResult = aa.set.createSet(SET_ID, SET_ID, null, null);
+        theSetResult = aa.set.createSet(setId, setId, null, null);
     }
 
     return theSetResult;
