@@ -134,7 +134,7 @@ try {
 						if (!matches(refContNrb,null, "", "undefined")) {
 							pplMdl.setContactSeqNumber(refContNrb);
 							pplMdl.setAuditStatus("A");
-							qryPeople.setEmail(thisCont.email);
+							pplMdl.setEmail(thisCont.email);
 							//pplMdl.setFullName(thisCont.fullName);
 							fndContact = true;
 							emMesg += "thisCont.fullName: " + thisCont.fullName + br;
