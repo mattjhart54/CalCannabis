@@ -213,7 +213,7 @@ try {
 							//pplMdl.setBusinessName (thisCont.middleName);
 						//}
 						var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
-						aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ fndContact, capId + br + capResult.getErrorMessage());
+						//aa.sendMail(sysFromEmail, debugEmail, "", "INFO INFO:  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ fndContact, capId + br + capResult.getErrorMessage());
 						if (capResult.getSuccess()) {
 							var capList = capResult.getOutput();
 							for (var j in capList) {
@@ -253,7 +253,7 @@ try {
 									}
 								}
 							}
-							//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate + ": " + currEnv, capId + br + emMesg + 'medium? ' + mediumLic);
+							aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate + ": " + currEnv, capId + br + emMesg + 'medium? ' + mediumLic);
 						}else{
 							logMessage("error finding cap ids: " + capResult.getErrorMessage());
 						}
