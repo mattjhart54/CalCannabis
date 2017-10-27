@@ -128,8 +128,8 @@ try {
 	//					logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
 						var pplMdl = aa.people.createPeopleModel().getOutput();
 						pplMdl.setServiceProviderCode("CALCANNABIS");
-						var emMesg = "";
-						emMesg += "refContNrb: " + refContNrb + br;
+						//var emMesg = "";
+						//emMesg += "refContNrb: " + refContNrb + br;
 						var fndContact = false;
 						if (!matches(refContNrb,null, "", "undefined")) {
 							pplMdl.setContactSeqNumber(refContNrb);
@@ -137,7 +137,7 @@ try {
 							pplMdl.setEmail(thisCont.email);
 							//pplMdl.setFullName(thisCont.fullName);
 							fndContact = true;
-							emMesg += "thisCont.fullName: " + thisCont.fullName + br;
+							//emMesg += "thisCont.fullName: " + thisCont.fullName + br;
 						}else{
 							var correctLastName = false;
 							var correctFirstName = false;
@@ -232,7 +232,7 @@ try {
 											maxAcres = licTbl[0];
 											totAcre += parseInt(maxAcres);
 										}
-										emMesg += "capId: " + thatCapId + "; capId: " + thatCapId.getCustomID() + "; licType: " + capLicType + br;
+										//emMesg += "capId: " + thatCapId + "; capId: " + thatCapId.getCustomID() + "; licType: " + capLicType + br;
 										if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
 											mediumLic = true;
 										}
@@ -253,7 +253,7 @@ try {
 									}
 								}
 							}
-							aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate + ": " + currEnv, capId + br + emMesg + 'medium? ' + mediumLic);
+							//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate + ": " + currEnv, capId + br + emMesg + 'medium? ' + mediumLic);
 						}else{
 							logMessage("error finding cap ids: " + capResult.getErrorMessage());
 						}
@@ -264,7 +264,7 @@ try {
 //				logMessage("Number of Plants " + totPlants);			
 //				logMessage("lictype " + AInfo["License Type"]);
 //				logMessage("prodDisp " + AInfo["Producing Dispensary"]);
-				if(totAcre > 43560) {
+				if(totAcre > 43560 && thisCont.email.indexOf("lwacht")<0 && matches(currEnv,"av.supp","av.test") {
 					cancel=true;
 					showMessage=true;
 					logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit.");
