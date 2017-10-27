@@ -100,3 +100,11 @@ try{
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: " + err.message);
 	logDebug(err.stack);
 }
+
+//lwacht: create submission report
+try{
+	runReportAttach(capId,"Submitted Application", "altId", capId.getCustomID());
+} catch(err){
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
+	logDebug(err.stack);
+}
