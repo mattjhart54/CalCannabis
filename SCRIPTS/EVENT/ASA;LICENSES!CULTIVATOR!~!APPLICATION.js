@@ -103,7 +103,7 @@ try{
 
 //lwacht: create submission report
 try{
-	runReportAttach(capId,"Submitted Application", "altId", capId.getCustomID());
+	runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
 } catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
 	logDebug(err.stack);
