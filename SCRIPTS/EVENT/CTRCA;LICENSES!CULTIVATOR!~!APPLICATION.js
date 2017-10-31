@@ -63,14 +63,25 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-//lwacht: if defer payment is used, then turn the associated forms into real records
+//lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 try{
-	var chIds = getChildren("Licenses/Cultivator/*/*",capId);
-	for(rec in chIds){
-		var chCapId = chIds[rec]
-		if(getCapIdStatusClass(chCapId) == "INCOMPLETE EST"){
-			var chCapModel = aa.cap.getCapViewBySingle4ACA(chCapId);
-			convert2RealCAP(chCapModel);
+	var newFeeFound = false;
+	var targetFees = loadFees(capId);
+	for (tFeeNum in targetFees) {
+		targetFee = targetFees[tFeeNum];
+			if (targetFee.status == "NEW") {
+				newFeeFound = true;
+			}
+	}
+	if(newFeeFound){
+		invoiceAllFees();
+		var chIds = getChildren("Licenses/Cultivator/*/*",capId);
+		for(rec in chIds){
+			var chCapId = chIds[rec]
+			if(getCapIdStatusClass(chCapId) == "INCOMPLETE EST"){
+				var chCapModel = aa.cap.getCapViewBySingle4ACA(chCapId);
+				convert2RealCAP(chCapModel);
+			}
 		}
 	}
 } catch(err){
