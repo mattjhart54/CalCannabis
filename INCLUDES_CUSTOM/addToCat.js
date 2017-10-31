@@ -1,3 +1,11 @@
+/*===========================================
+Title: addToCat
+Purpose: Add the given capId to the CAT_UPDATES set. These records will be sent to the CAT API
+Author: John Towell
+
+Parameters:
+	capId: table model
+============================================== */
 function addToCat(capId) {
     try {
         var SET_ID = 'CAT_UPDATES';
@@ -15,13 +23,23 @@ function addToCat(capId) {
         logDebug("A JavaScript Error occurred: addToCat: " + err.message);
         logDebug(err.stack);
     }
-}
 
-function createSetIfNeeded(setId) {
-    var theSetResult = aa.set.getSetByPK(setId);
-    if (!theSetResult.getSuccess()) {
-        theSetResult = aa.set.createSet(setId, setId, null, null);
+    return true;
+
+    /**
+     * PRIVATE FUNCTIONS
+     */
+
+    /**
+     * Creates the set if needed.
+     */
+    function createSetIfNeeded(setId) {
+        var theSetResult = aa.set.getSetByPK(setId);
+        if (!theSetResult.getSuccess()) {
+            theSetResult = aa.set.createSet(setId, setId, null, null);
+        }
+
+        return theSetResult;
     }
-
-    return theSetResult;
 }
+
