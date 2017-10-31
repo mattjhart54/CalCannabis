@@ -48,7 +48,7 @@ try{
 	// Triger event after convert to real CAP.
 	aa.cap.runEMSEScriptAfterCreateRealCap(capModel, null);
 	return capModel;
-}catch{
+}catch(err){
 	logDebug("An error occurred in convert2RealCAP: " + err.message);
 	logDebug(err.stack);
 }}
