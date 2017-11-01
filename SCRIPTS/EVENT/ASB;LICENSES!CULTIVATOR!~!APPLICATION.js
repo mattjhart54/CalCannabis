@@ -1,89 +1,72 @@
-//lwacht: 171006: removing as this is done in an expression
-/*
+//lwacht: double checking required docs
 try {
-	if(!publicUser) {
-	var totAcre = 0;
-	var mediumLic = "N";
-	var maxAcres = 0;
-
-	var licLookup = lookup("LIC_CC_LICENSE_TYPE", AInfo["License Type"]);
-	if(!matches(licLookup, "", null, undefined)) {
-		var licTbl = licLookup.split(";");
-		maxAcres = licTbl[0];
-		totAcre += parseInt(maxAcres);
+	var eText = "";
+	docsMissing = false;
+	showList = true;
+	addConditions = false;
+	addTableRows = false;
+	var tblRow = [];
+	var conditionTable = [];
+	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
+	r = getReqdDocs("Application");
+	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
+	uploadedDocs = new Array();
+	dr = "";
+	eText+=("uploadedDocs: " + uploadedDocs.length) + br;
+	for (var i in submittedDocList ){
+		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
+		eText+=("uploaded doc: " + submittedDocList[i].getDocCategory()) + br;
 	}
-		var contactList = cap.getContactsGroup();
-		logDebug("got contactlist " + contactList.size());
-		if(contactList != null && contactList.size() > 0){
-				var arrContacts = contactList.toArray();
-				for(var i in arrContacts) {
-					var thisCont = arrContacts[i];
-					var contType = thisCont.contactType;
-					if(contType =="Business") {
-						//check for legal business name if not a Sole Proprietor
-						if(AInfo["Business Entity Structure"] != "Sole Proprietorship" && matches(thisCont.middleName,"",null,undefined)) {
-							showMessage = true;
-							cancel = true;
-							logMessage("Warning: Legal Business Name must be entered if the Business Entity Structure is not Sole Proprietor.  Click the edit button to enter your Legal Business Name");
-						}
-						var refContNrb = thisCont.refContactNumber;
-	//					logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
-						if (!matches(refContNrb,null, "", "undefined")) {
-							var pplMdl = aa.people.createPeopleModel().getOutput();
-							pplMdl.setContactSeqNumber(refContNrb);
-							pplMdl.setServiceProviderCode("CALCANNABIS");
-							if(!matches(thisCont.fullName,null, "", "undefined")) {
-								pplMdl.setFullName(thisCont.fullName);
-							}else {
-								pplMdl.setMiddlesName (thisCont.middleName);
-							}
-							var capResult = aa.people.getCapIDsByRefContact(pplMdl);  // needs 7.1
-
-							if (capResult.getSuccess()) {
-								var capList = capResult.getOutput();
-								for (var j in capList) {
-									var thisCapId = capList[j];
-									var thatCapId = thisCapId.getCapID();
-									thatCap = aa.cap.getCap(thatCapId ).getOutput();
-									thatAppTypeResult = thatCap .getCapType();
-									thatAppTypeString = thatAppTypeResult.toString();
-									thatAppTypeArray = thatAppTypeString.split("/");
-									if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
-										var capLicType = getAppSpecific("License Type",thatCapId);
-										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
-										if(!matches(licLookup, "", null, undefined)) {
-											licTbl = licLookup.split("|");
-											maxAcres = licTbl[0];
-											totAcre += parseInt(maxAcres);
-										}
-										if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
-											mediumLic = true;
-										}
-									}
-								}
-							}else{
-								logMessage("error finding cap ids: " + capResult.getErrorMessage());
-							}
-						}
-					}
+	eText+=("r.length: " + r.length) + br;
+	if (r.length > 0 && showList) {
+		for (x in r) {
+			eText+=(" required doc: " + r[x].document) + br;
+			eText+=(" uploaded doc: " +uploadedDocs[r[x].document]) + br;
+			if(uploadedDocs[r[x].document] == undefined) {
+				showMessage = true; 
+				if (!docsMissing)  {
+					comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
+					docsMissing = true; 
+					showList = true;
 				}
-			logDebug( "Acres " + totAcre + "Medium " + mediumLic);
-
-			if((totAcre) > 43560) {
-				showMessage = true;
-				cancel = true;
-				comment("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit");
-			}
-			if(matches(AInfo["Licnese Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic == true) {
-				showMessage = true;
-				cancel = true;
-				comment("You cannot apply for a medium license as you already have a medium license");
-			}
+				conditionType = "License Required Documents";
+				dr = r[x].condition;
+				publicDisplayCond = null;
+				if (dr) {
+					ccr = aa.capCondition.getStandardConditions(conditionType, dr).getOutput();
+					for(var i = 0;i<ccr.length;
+					i++) if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) publicDisplayCond = ccr[i];
+				}
+				if (dr && ccr.length > 0 && showList && publicDisplayCond) {
+					message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
+				}
+				if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
+					addStdCondition(conditionType,dr);
+				}
+				if (dr && ccr.length > 0 && addTableRows) {
+					tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
+					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_DOCUMENTS", dr), "Y"); 
+					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
+					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
+					conditionTable.push(tblRow);
+				}	
+			}	
+		}
+		if (dr && ccr.length > 0 && addTableRows) {
+			removeASITable("ATTACHMENTS"); 
+			asit = cap.getAppSpecificTableGroupModel();
+			addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
 		}
 	}
-}catch (err) {
-    logDebug("A JavaScript Error occurred: Licenses/Cultivation/* /Application: " + err.message);
-	logDebug(err.stack);
-}
 
-*/
+	if (r.length > 0 && showList && docsMissing) {
+		cancel = true;
+		showMessage = true;
+		comment("</ol></div>");
+	}
+} catch (err) {
+	showDebug =true;
+	logDebug("An error has occurred in ASB:Licenses/Cultivation/*/Application: Doc check: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
+}
