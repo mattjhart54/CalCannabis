@@ -183,23 +183,25 @@ try{
 		arrReqdDocs_App.push(streambedAlter);
 		arrReqdDocs_App.push(waterQuality);
 		
-		var tblWater = SOURCEOFWATERSUPPLY;
 		var gw=false;
 		var sr=false;
 		var di=false;
 		var de=false;
-		for(x in tblWater) {
-			if (tblWater[x]["Type of Water Supply"] == "Groundwater Well"){
-				gw=true;
-			}
-			if (tblWater[x]["Type of Water Supply"] == "Small Retail Supplier - Delivery or pickup of water from a groundwater well"){
-				sr=true;
-			}
-			if (tblWater[x]["Type of Water Supply"] == "Diversion from Waterbody"){
-				di=true;
-			}
-			if (tblWater[x]["Type of Water Supply"] == "Diversion with Exception from Requirement to File a Statement of Diversion and Use"){
-				de=true;
+		if(typeof(SOURCEOFWATERSUPPLY)=="object"){
+			var tblWater = SOURCEOFWATERSUPPLY;
+			for(x in tblWater) {
+				if (tblWater[x]["Type of Water Supply"] == "Groundwater Well"){
+					gw=true;
+				}
+				if (tblWater[x]["Type of Water Supply"] == "Small Retail Supplier - Delivery or pickup of water from a groundwater well"){
+					sr=true;
+				}
+				if (tblWater[x]["Type of Water Supply"] == "Diversion from Waterbody"){
+					di=true;
+				}
+				if (tblWater[x]["Type of Water Supply"] == "Diversion with Exception from Requirement to File a Statement of Diversion and Use"){
+					de=true;
+				}
 			}
 		}
 	if(gw == true) {
