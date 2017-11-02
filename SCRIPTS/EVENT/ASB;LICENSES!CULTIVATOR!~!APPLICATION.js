@@ -1,6 +1,5 @@
 //lwacht: double checking required docs
 try {
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + br + currEnv);
 	var eText = "";
 	docsMissing = false;
 	showList = true;
