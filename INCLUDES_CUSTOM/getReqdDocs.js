@@ -3,7 +3,7 @@ try{
 	if (arguments.length == 2){
 		var callPgm = arguments[1];
 	}else{
-		callPgm = false;
+		callPgm = "";
 	}
 	if(!matches(recdType, "Application", "Owner")){
 		logDebug("Function is currently only set up for Application and Owner documentation.");
@@ -16,7 +16,9 @@ try{
 
 	//because there are different options for these, need a different way to track so don't remove
 	//the condition unnecessarily
-	if(callPgm!="AV"){
+	if(callPgm=="AV"){
+		logDebug("here");
+	}else{
 		loadAppSpecific4ACA(AInfo); 
 		loadASITables4ACA_corrected();
 	}
