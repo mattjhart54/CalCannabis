@@ -17,7 +17,7 @@ try{
 	//because there are different options for these, need a different way to track so don't remove
 	//the condition unnecessarily
 	if(callPgm=="AV"){
-		logDebug("here");
+		loadASITablesBefore;
 	}else{
 		loadAppSpecific4ACA(AInfo); 
 		loadASITables4ACA_corrected();
