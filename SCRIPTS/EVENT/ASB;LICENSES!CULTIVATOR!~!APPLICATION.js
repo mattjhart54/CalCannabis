@@ -14,12 +14,14 @@ try {
 	uploadedDocs = new Array();
 	dr = "";
 	eText+=("uploadedDocs: " + uploadedDocs.length) + br;
-	logDebug("submittedDocList: " + submittedDocList.length());
+	//logDebug("submittedDocList: " + submittedDocList.length());
+	//getValue isn't working but do not need this the first time around, so hack.
+	var docsSubmitted = false;
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 		eText+=("uploaded doc: " + submittedDocList[i].getDocCategory()) + br;
+		docsSubmitted =true;
 	}
-	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY 1: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 	eText+=("r.length: " + r.length) + br;
 	if (r.length > 0 && showList) {
 		for (x in r) {
@@ -63,8 +65,7 @@ try {
 	}
 	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 
-	if (r.length > 0 && showList && docsMissing) {
-		showDebug =true;
+	if (r.length > 0 && showList && docsMissing && docsSubmitted)  {
 		cancel = true;
 		showMessage = true;
 		comment("</ol></div>");
