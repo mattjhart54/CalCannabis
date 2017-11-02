@@ -70,9 +70,9 @@ try {
 	}
 	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 
-	cancel = true;
-	showMessage = true;
-	showDebug = true;
+	//cancel = true;
+	//showMessage = true;
+	//showDebug = true;
 
 	if (r.length > 0 && showList && docsMissing && docsSubmitted)  {
 		cancel = true;
