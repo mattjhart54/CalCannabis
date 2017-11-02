@@ -10,13 +10,15 @@ try {
 	r = getReqdDocs("Application", "AV");
 	if("undefined".equals(capIDString)){
 		submittedDocList = aa.env.getValue("DocumentModelList");
+		eText+=" using aa.env.getValue";
 	}else{
 		//capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
 		submittedDocList = aa.document.getDocumentListByEntity(capIDString,"TMP_CAP").getOutput().toArray();
+		eText+=" using getDocumentListByEntity";
 	}
 	uploadedDocs = new Array();
 	dr = "";
-	eText+=("uploadedDocs: " + uploadedDocs.length) + br;
+	eText+=("submittedDocList: " + submittedDocList.length()) + br;
 	//logDebug("submittedDocList: " + submittedDocList.length());
 	//getValue isn't working but do not need this the first time around, so hack.
 	var docsSubmitted = false;
@@ -67,6 +69,10 @@ try {
 		}
 	}
 	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
+
+	cancel = true;
+	showMessage = true;
+	showDebug = true;
 
 	if (r.length > 0 && showList && docsMissing && docsSubmitted)  {
 		cancel = true;
