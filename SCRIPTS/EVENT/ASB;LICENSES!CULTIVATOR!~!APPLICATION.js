@@ -11,7 +11,12 @@ try {
 	logDebug("capIDString: " + typeof(capIDString));
 	//if("undefined".equals(typeof(capIDString))){
 	if("".equals(capIDString)){
-		submittedDocList = aa.env.getValue("DocumentModelList");
+		vSubmittedDocList = aa.env.getValue("DocumentModelList");
+		for (x in vSubmittedDocList){
+			if(typeofvSubmittedDocList[x]=="function"){
+				logDebug(x);
+			}
+		}
 		eText+=" using aa.env.getValue" + br;
 		logDebug(" using aa.env.getValue");
 	}else{
