@@ -14,10 +14,10 @@ try {
 	uploadedDocs = new Array();
 	dr = "";
 	eText+=("uploadedDocs: " + uploadedDocs.length) + br;
+	logDebug("submittedDocList: " + submittedDocList.length);
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 		eText+=("uploaded doc: " + submittedDocList[i].getDocCategory()) + br;
-		logDebug("uploaded doc: " + submittedDocList[i].getDocCategory());
 	}
 	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY 1: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 	eText+=("r.length: " + r.length) + br;
