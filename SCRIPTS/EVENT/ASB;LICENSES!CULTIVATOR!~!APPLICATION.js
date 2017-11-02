@@ -17,6 +17,7 @@ try {
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 		eText+=("uploaded doc: " + submittedDocList[i].getDocCategory()) + br;
+		logDebug("uploaded doc: " + submittedDocList[i].getDocCategory());
 	}
 	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY 1: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 	eText+=("r.length: " + r.length) + br;
@@ -63,6 +64,7 @@ try {
 	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 
 	if (r.length > 0 && showList && docsMissing) {
+		showDebug =true;
 		cancel = true;
 		showMessage = true;
 		comment("</ol></div>");
