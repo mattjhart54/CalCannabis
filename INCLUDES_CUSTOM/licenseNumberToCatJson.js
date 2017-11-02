@@ -15,31 +15,31 @@ function licenseNumberToCatJson(licenseNumber) {
     cap = capScriptObj.getOutput();
     var capModel = (capScriptObj.getOutput()).getCapModel();
 
-    var legalBusinessName = '' + getAppSpecific('Legal Business Name');
+    var legalBusinessName = stringValue(getAppSpecific('Legal Business Name'));
     var licenseType = getLicenseType(licenseNumber, '' + getAppSpecific('License Type'));
     var licenseStatus = getLicenseStatus('' + capModel.getCapStatus());
-    var licenseValidityStart = '' + getAppSpecific('Valid From Date');
+    var licenseValidityStart = stringValue(getAppSpecific('Valid From Date'));
     var vLicenseObj = new licenseObject(licenseNumber);
-    var licenseExpiration = '' + vLicenseObj.b1ExpDate;
-    var drpPhoneNumber = '' + getDRPInfo('phone3');
-    var facilityPhone = '' + getAppSpecific('Premise Phone');
-    var drpEmail = '' + getDRPInfo('email');
-    var premiseAddress = '' + getAppSpecific('Premise Address');
-    var premiseCity = '' + getAppSpecific('Premise City');
-    var premiseCounty = '' + getAppSpecific('Premise County');
-    var premiseState = '' + getAppSpecific('Premise State');
-    var premiseZip = '' + getAppSpecific('Premise Zip');
-    var drpFirstName = '' + getDRPInfo('firstName');
-    var drpLastName = '' + getDRPInfo('lastName');
-    var apn = '' + getAppSpecific('APN');
-    var sellersPermitNumber = '' + getAppSpecific('BOE Seller\'s Permit Number');
+    var licenseExpiration = stringValue(vLicenseObj.b1ExpDate);
+    var drpPhoneNumber = stringValue(getDRPInfo('phone3'));
+    var facilityPhone = stringValue(getAppSpecific('Premise Phone'));
+    var drpEmail = stringValue(getDRPInfo('email'));
+    var premiseAddress = stringValue(getAppSpecific('Premise Address'));
+    var premiseCity = stringValue(getAppSpecific('Premise City'));
+    var premiseCounty = stringValue(getAppSpecific('Premise County'));
+    var premiseState = stringValue(getAppSpecific('Premise State'));
+    var premiseZip = stringValue(getAppSpecific('Premise Zip'));
+    var drpFirstName = stringValue(getDRPInfo('firstName'));
+    var drpLastName = stringValue(getDRPInfo('lastName'));
+    var apn = stringValue(getAppSpecific('APN'));
+    var sellersPermitNumber = stringValue(getAppSpecific('BOE Seller\'s Permit Number'));
 
     ////////////FORMAT DATA TO JSON////////////////////////////////////////////////////
     var jsonResult = {
         "LicenseNumber": licenseNumber,
         "LicenseName": legalBusinessName,
         "LicenseType": licenseType,
-        "LicenseSubtype": "N/A",
+        "LicenseSubtype": "",
         "LicenseStatus": licenseStatus,
         "LicenseValidityStart": licenseValidityStart,
         "LicenseExpiration": licenseExpiration,
@@ -48,16 +48,16 @@ function licenseNumberToCatJson(licenseNumber) {
         "MainEmail": drpEmail,
         "PhysicalAddress": {
             "Street1": premiseAddress,
-            "Street2": null,
-            "Street3": null,
-            "Street4": null,
+            "Street2": "",
+            "Street3": "",
+            "Street4": "",
             "City": premiseCity,
             "County": premiseCounty,
             "State": premiseState,
             "PostalCode": premiseZip
         },
         "ManagerFirstName": drpFirstName,
-        "ManagerMiddleName": null,
+        "ManagerMiddleName": "",
         "ManagerLastName": drpLastName,
         "AssessorParcelNumber" : apn,
         "SellersPermitNumber" : sellersPermitNumber
@@ -70,6 +70,19 @@ function licenseNumberToCatJson(licenseNumber) {
      *
      * Nested functions to reduce global namespace pollution
      */
+
+
+    /**
+     * Returns the string value or empty string ("") for nulls
+     */
+    function stringValue(value) {
+        var result = '' + value;
+        if("null" == result) {
+            return "";
+        } else {
+            return result;
+        }
+    }
 
     /**
      * Returns the CAT license status based on this license status
