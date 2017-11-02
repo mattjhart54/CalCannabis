@@ -8,8 +8,9 @@ try {
 	var tblRow = [];
 	var conditionTable = [];
 	r = getReqdDocs("Application", "AV");
-	logDebug("capIDString: " + capIDString);
-	if("undefined".equals(typeof(capIDString))){
+	logDebug("capIDString: " + typeof(capIDString));
+	//if("undefined".equals(typeof(capIDString))){
+	if("".equals(capIDString)){
 		submittedDocList = aa.env.getValue("DocumentModelList");
 		eText+=" using aa.env.getValue" + br;
 	}else{
