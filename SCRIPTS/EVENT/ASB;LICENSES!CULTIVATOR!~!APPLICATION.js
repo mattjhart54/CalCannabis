@@ -7,9 +7,10 @@ try {
 	addTableRows = false;
 	var tblRow = [];
 	var conditionTable = [];
-	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
+	//capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
 	r = getReqdDocs("Application", "AV");
-	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
+	//submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
+	submittedDocList = aa.env.getValue("DocumentModelList").toArray();
 	uploadedDocs = new Array();
 	dr = "";
 	//eText+=("uploadedDocs: " + uploadedDocs.length) + br;
