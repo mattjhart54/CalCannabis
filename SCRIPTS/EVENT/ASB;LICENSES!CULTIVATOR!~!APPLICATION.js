@@ -10,7 +10,7 @@ try {
 	//capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
 	r = getReqdDocs("Application", "AV");
 	//submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
-	submittedDocList = aa.env.getValue("DocumentModelList").toArray();
+	submittedDocList = aa.env.getValue("DocumentModelList");
 	uploadedDocs = new Array();
 	dr = "";
 	//eText+=("uploadedDocs: " + uploadedDocs.length) + br;
