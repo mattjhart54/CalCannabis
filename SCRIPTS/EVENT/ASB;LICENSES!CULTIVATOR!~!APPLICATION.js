@@ -8,11 +8,11 @@ try {
 	var tblRow = [];
 	var conditionTable = [];
 	r = getReqdDocs("Application", "AV");
-	if(!("undefined".equals(capIdString))){
-		//capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-		submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
-	}else{
+	if("undefined".equals(capIDString)){
 		submittedDocList = aa.env.getValue("DocumentModelList");
+	}else{
+		//capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
+		submittedDocList = aa.document.getDocumentListByEntity(capIDString,"TMP_CAP").getOutput().toArray();
 	}
 	uploadedDocs = new Array();
 	dr = "";
