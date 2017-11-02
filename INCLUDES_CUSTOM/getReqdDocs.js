@@ -1,5 +1,6 @@
-function getReqdDocs(recdType){
+function getReqdDocs(recdType){ //optional callingPgm variable since now having to call this from ASB
 try{
+	if (arguments.length == 2) callPgm = arguments[1];
 	if(!matches(recdType, "Application", "Owner")){
 		logDebug("Function is currently only set up for Application and Owner documentation.");
 		return false;
@@ -11,8 +12,10 @@ try{
 
 	//because there are different options for these, need a different way to track so don't remove
 	//the condition unnecessarily
-	loadAppSpecific4ACA(AInfo); 
-	loadASITables4ACA_corrected();
+	if(callPgm!="AV"){
+		loadAppSpecific4ACA(AInfo); 
+		loadASITables4ACA_corrected();
+	}
 	var need_premiseDiagram = false;
 	var need_wastePlan = false;
 	var need_pestPlan = false;
