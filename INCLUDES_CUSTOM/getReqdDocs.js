@@ -16,7 +16,9 @@ try{
 
 	//because there are different options for these, need a different way to track so don't remove
 	//the condition unnecessarily
+	AInfo = [];
 	if(callPgm=="AV"){
+		loadAppSpecificBefore(AInfo); 
 		loadASITablesBefore();
 		logDebug("loadASITablesBefore");
 	}else{
