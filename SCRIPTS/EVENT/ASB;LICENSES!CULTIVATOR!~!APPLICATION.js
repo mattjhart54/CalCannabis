@@ -18,6 +18,7 @@ try {
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 		eText+=("uploaded doc: " + submittedDocList[i].getDocCategory()) + br;
 	}
+	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY 1: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 	eText+=("r.length: " + r.length) + br;
 	if (r.length > 0 && showList) {
 		for (x in r) {
