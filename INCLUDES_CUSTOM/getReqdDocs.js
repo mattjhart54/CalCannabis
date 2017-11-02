@@ -2,9 +2,9 @@ function getReqdDocs(recdType){ //optional callingPgm variable since now having 
 try{
 	if (arguments.length == 2){
 		var callPgm = arguments[1];
-	}else
+	}else{
 		callPgm = false;
-}
+	}
 	if(!matches(recdType, "Application", "Owner")){
 		logDebug("Function is currently only set up for Application and Owner documentation.");
 		return false;
