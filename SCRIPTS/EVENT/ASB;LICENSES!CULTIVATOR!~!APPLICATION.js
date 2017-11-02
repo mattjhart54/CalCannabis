@@ -12,16 +12,16 @@ try {
 	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 	uploadedDocs = new Array();
 	dr = "";
-	eText+=("uploadedDocs: " + uploadedDocs.length) + br;
+	//eText+=("uploadedDocs: " + uploadedDocs.length) + br;
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 		eText+=("uploaded doc: " + submittedDocList[i].getDocCategory()) + br;
 	}
-	eText+=("r.length: " + r.length) + br;
+	//eText+=("r.length: " + r.length) + br;
 	if (r.length > 0 && showList) {
 		for (x in r) {
-			eText+=(" required doc: " + r[x].document) + br;
-			eText+=(" uploaded doc: " +uploadedDocs[r[x].document]) + br;
+			//eText+=(" required doc: " + r[x].document) + br;
+			//eText+=(" uploaded doc: " +uploadedDocs[r[x].document]) + br;
 			if(uploadedDocs[r[x].document] == undefined) {
 				showMessage = true; 
 				if (!docsMissing)  {
