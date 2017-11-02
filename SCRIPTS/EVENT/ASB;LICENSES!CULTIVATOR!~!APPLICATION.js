@@ -14,7 +14,7 @@ try {
 	uploadedDocs = new Array();
 	dr = "";
 	eText+=("uploadedDocs: " + uploadedDocs.length) + br;
-	logDebug("submittedDocList: " + submittedDocList.length);
+	logDebug("submittedDocList: " + submittedDocList.length());
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 		eText+=("uploaded doc: " + submittedDocList[i].getDocCategory()) + br;
