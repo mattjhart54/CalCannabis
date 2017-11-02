@@ -13,7 +13,7 @@ try {
 	if("".equals(capIDString)){
 		vSubmittedDocList = aa.env.getValue("DocumentModelList");
 		for (x in vSubmittedDocList){
-			if(typeofvSubmittedDocList[x]=="function"){
+			if(typeof(vSubmittedDocList[x])=="function"){
 				logDebug(x);
 			}
 		}
