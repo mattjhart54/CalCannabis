@@ -8,7 +8,7 @@ try {
 	var tblRow = [];
 	var conditionTable = [];
 	r = getReqdDocs("Application", "AV");
-	if(!matches(capIdString,"","undefined",null){
+	if(!matches(capIdString,"","undefined",null)){
 		//capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
 		submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 	}else{
