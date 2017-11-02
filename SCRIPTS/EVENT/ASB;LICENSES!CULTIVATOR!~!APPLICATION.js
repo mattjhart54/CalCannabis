@@ -13,16 +13,16 @@ try {
 	submittedDocList = aa.env.getValue("DocumentModelList");
 	uploadedDocs = new Array();
 	dr = "";
-	//eText+=("uploadedDocs: " + uploadedDocs.length) + br;
+	eText+=("uploadedDocs: " + uploadedDocs.length) + br;
 	for (var i in submittedDocList ){
 		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
 		eText+=("uploaded doc: " + submittedDocList[i].getDocCategory()) + br;
 	}
-	//eText+=("r.length: " + r.length) + br;
+	eText+=("r.length: " + r.length) + br;
 	if (r.length > 0 && showList) {
 		for (x in r) {
-			//eText+=(" required doc: " + r[x].document) + br;
-			//eText+=(" uploaded doc: " +uploadedDocs[r[x].document]) + br;
+			eText+=(" required doc: " + r[x].document) + br;
+			eText+=(" uploaded doc: " +uploadedDocs[r[x].document]) + br;
 			if(uploadedDocs[r[x].document] == undefined) {
 				showMessage = true; 
 				if (!docsMissing)  {
@@ -59,6 +59,7 @@ try {
 			addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
 		}
 	}
+	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 
 	if (r.length > 0 && showList && docsMissing) {
 		cancel = true;
