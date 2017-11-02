@@ -12,7 +12,7 @@ try {
 	//if("undefined".equals(typeof(capIDString))){
 	if("".equals(capIDString)){
 		vSubmittedDocList = aa.env.getValue("DocumentModelList");
-		submittedDocList = vsubmittedDocList.toArray();
+		submittedDocList = vSubmittedDocList.toArray();
 		eText+=" using aa.env.getValue" + br;
 		logDebug(" using aa.env.getValue");
 	}else{
