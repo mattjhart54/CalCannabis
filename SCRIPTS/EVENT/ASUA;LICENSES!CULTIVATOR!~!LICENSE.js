@@ -6,7 +6,9 @@ Author: John Towell
 
 try{
     if(matches(appStatus, "Revoked", "Suspended", "Inactive")){
-        addToCat(capId);
+        if (appTypeArray[2] != "Temporary") {
+            addToCat(capId);
+        }
     }
 }catch(err){
     logDebug("An error has occurred in ASUA;LICENSES!CULTIVATOR!~!LICENSE: Adding to CAT Set: " + err.message);
