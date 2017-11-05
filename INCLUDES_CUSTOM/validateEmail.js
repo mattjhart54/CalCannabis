@@ -11,8 +11,8 @@ Client developed for :
 Parameters: 
 	email: text: email address to verify
 ============================================== */
-function validateEmail(email)
-{
+function validateEmail(email){
+try{
  var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
  if (reg.test(email)){
  return true; }
