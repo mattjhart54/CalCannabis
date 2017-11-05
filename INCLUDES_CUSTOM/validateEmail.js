@@ -13,12 +13,12 @@ Parameters:
 ============================================== */
 function validateEmail(email){
 try{
- var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
- if (reg.test(email)){
- return true; }
- else{
- return false;
- }
+	var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+	if (reg.test(email)){
+		return true; 
+	}else{
+		return false;
+	}
 } catch(err){
 	logDebug("An error occurred in validateEmail: " + err.message);
 	logDebug(err.stack);
