@@ -189,7 +189,9 @@ try{
 		if(!drpInTable){
 			cancel = true;
 			showMessage = true;
-			comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
+			//comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
+			//lwacht 171105: required text per defect 4615
+			comment("Must have at least one owner in the owner table below. At least one owner must be the DRP.");
 		}
 		//table isn't getting removed, so working around for now by putting code to get the first name in the 
 		//script that adds the owner records.
