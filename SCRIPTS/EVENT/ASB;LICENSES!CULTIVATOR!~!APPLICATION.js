@@ -75,7 +75,7 @@ try {
 	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 	logDebug("eText: " + eText);
 
-	if (r.length > 0 && showList && docsMissing && docsSubmitted)  {
+	if (r.length > 0 && showList && docsMissing && docsSubmitted && publicUser)  {
 		cancel = true;
 		showMessage = true;
 		comment("</ol></div>");
