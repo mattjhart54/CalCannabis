@@ -134,8 +134,9 @@ try{
 */
 	
 	loadASITables4ACA_corrected();
-//	showMessage=true
-//	comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
+	var asiTables = getASITablesArray();
+	//showMessage=true
+	//comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
 	if(SOURCEOFWATERSUPPLY.length<1){
 		noRows = true;
 	}
@@ -144,6 +145,20 @@ try{
 		for(x in SOURCEOFWATERSUPPLY){
 			rowFound = true;
 			if(matches(SOURCEOFWATERSUPPLY[0]["Type of Water Supply"], null, "", undefined)) {
+				noRows = true;
+			}
+		}
+	}
+
+	var asiTables = getASITablesArray();
+	if(asiTables["SOURCEOFWATERSUPPLY"].length<1){
+		noRows = true;
+	}
+	else {
+		var rowFound = false;
+		for(x in asiTables["SOURCEOFWATERSUPPLY"]){
+			rowFound = true;
+			if(matches(asiTables["SOURCEOFWATERSUPPLY"][x]["Type of Water Supply"], null, "", undefined)) {
 				noRows = true;
 			}
 		}
