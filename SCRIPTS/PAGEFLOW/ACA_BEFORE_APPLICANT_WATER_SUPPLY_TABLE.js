@@ -133,7 +133,7 @@ try{
 	  }
 */
 	
-	loadASITables4ACA_corrected();
+/*	loadASITables4ACA_corrected();
 	var asiTables = getASITablesArray();
 	//showMessage=true
 	//comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
@@ -149,26 +149,28 @@ try{
 			noRows = true;
 		}
 	}
-
+*/
 	var asiTables = loadASITables4ACAasArray();
 	var tblNotes = "";
 	for (y in asiTables){
 		tblNotes+=y+br;
 	}
 	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: "+ startDate, publicUserID + br + capId + br + "asiTables: " + tblNotes);
-	if(asiTables["SOURCEOFWATERSUPPLY"]){
-		if(asiTables["SOURCEOFWATERSUPPLY"].length<1){
+	if(asiTables["SOURCE OF WATER SUPPLY"]){
+		if(asiTables["SOURCE OF WATER SUPPLY"].length<1){
 			noRows = true;
 		}
 		else {
 			var rowFound = false;
-			for(x in asiTables["SOURCEOFWATERSUPPLY"]){
+			for(x in asiTables["SOURCE OF WATER SUPPLY"]){
 				rowFound = true;
 			}
 		}
-		if(matches(asiTables["SOURCEOFWATERSUPPLY"][0]["Type of Water Supply"], null, "", undefined)) {
+		if(matches(asiTables["SOURCE OF WATER SUPPLY"][0]["Type of Water Supply"], null, "", undefined)) {
 			noRows = true;
 		}
+	}else{
+		noRows = true;
 	}
 
 	if(noRows) {
