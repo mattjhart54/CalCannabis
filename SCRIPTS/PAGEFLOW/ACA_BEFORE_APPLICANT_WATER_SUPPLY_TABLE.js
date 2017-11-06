@@ -151,15 +151,17 @@ try{
 	}
 
 	var asiTables = getASITablesArray();
-	if(asiTables["SOURCEOFWATERSUPPLY"].length<1){
-		noRows = true;
-	}
-	else {
-		var rowFound = false;
-		for(x in asiTables["SOURCEOFWATERSUPPLY"]){
-			rowFound = true;
-			if(matches(asiTables["SOURCEOFWATERSUPPLY"][x]["Type of Water Supply"], null, "", undefined)) {
-				noRows = true;
+	if(asiTables["SOURCEOFWATERSUPPLY"]){
+		if(asiTables["SOURCEOFWATERSUPPLY"].length<1){
+			noRows = true;
+		}
+		else {
+			var rowFound = false;
+			for(x in asiTables["SOURCEOFWATERSUPPLY"]){
+				rowFound = true;
+				if(matches(asiTables["SOURCEOFWATERSUPPLY"][0]["Type of Water Supply"], null, "", undefined)) {
+					noRows = true;
+				}
 			}
 		}
 	}
