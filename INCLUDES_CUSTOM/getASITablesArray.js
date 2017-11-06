@@ -12,6 +12,7 @@ Parameters:
 		record that isn't the current one
 ============================================== */
 function getASITablesArray() {
+try{
     //
     // Loads App Specific tables into their own array of arrays.  Creates global array objects
     //
