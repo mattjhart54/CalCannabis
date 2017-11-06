@@ -150,8 +150,8 @@ try{
 		}
 	}
 
-	var asiTables = getASITablesArray();
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: "+ startDate, publicUserID + br + capId + br + "asiTables" + asiTables);
+	var asiTables = loadASITables4ACAasArray();
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: "+ startDate, publicUserID + br + capId + br + "asiTables" + asiTables["SOURCEOFWATERSUPPLY"]);
 	if(asiTables["SOURCEOFWATERSUPPLY"]){
 		if(asiTables["SOURCEOFWATERSUPPLY"].length<1){
 			noRows = true;
