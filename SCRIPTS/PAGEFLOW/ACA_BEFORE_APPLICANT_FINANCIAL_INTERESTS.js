@@ -125,7 +125,8 @@ try {
 							logMessage("Warning: Legal Business Name must be entered if the Business Entity Structure is not Sole Proprietor.  Click the edit button to enter your Legal Business Name");
 						}
 						var refContNrb = thisCont.refContactNumber;
-	//					logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
+			showMessage = true;
+			logMessage("contact nbr " + refContNrb + " Name " + thisCont.fullName + " Business " + thisCont.middleName);
 						var pplMdl = aa.people.createPeopleModel().getOutput();
 						pplMdl.setServiceProviderCode("CALCANNABIS");
 						//var emMesg = "";
@@ -232,8 +233,10 @@ try {
 											maxAcres = licTbl[0];
 											totAcre += parseInt(maxAcres);
 										}
+					showMessage = true;
+					logMessage("Type " + capLicType + " SQ FT " + licTbl[0]);
 										//emMesg += "capId: " + thatCapId + "; capId: " + thatCapId.getCustomID() + "; licType: " + capLicType + br;
-										if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
+										if (matches(capLicType, "Medium Outdoor")) {
 											mediumLic = true;
 										}
 		/*							
