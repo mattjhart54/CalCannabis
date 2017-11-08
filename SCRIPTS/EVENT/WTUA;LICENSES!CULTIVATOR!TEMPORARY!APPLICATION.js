@@ -59,3 +59,14 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Disqualification notification: " + err.message);
 	logDebug(err.stack);
 }
+
+//mhart
+//Local Authorization Notice
+try{
+	if(matches(wfStatus, "Local Auth Sent - 10")){
+		sendLocalAuthNotification();
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Disqualification notification: " + err.message);
+	logDebug(err.stack);
+}
