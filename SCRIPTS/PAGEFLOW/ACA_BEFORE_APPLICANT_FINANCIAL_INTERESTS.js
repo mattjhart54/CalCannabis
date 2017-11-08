@@ -222,42 +222,24 @@ try {
 								var thatCapId = thisCapId.getCapID();
 								var altId =thatCapId.getCustomID();
 								thatCap = aa.cap.getCap(thatCapId).getOutput();
-					showMessage = true;
-					logMessage("Cap " + altId);
 								if(!matches(thatCap, null, "undefined", "")){
 									thatAppTypeResult = thatCap.getCapType();
 									thatAppTypeString = thatAppTypeResult.toString();
 									thatAppTypeArray = thatAppTypeString.split("/");
-					logMessage("Cap" + thatAppTypeArray[3]);
+	//				logMessage("Cap" + thatAppTypeArray[3]);
 									if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
 										var capLicType = getAppSpecific("License Type",thatCapId);
 										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
 										if(!matches(licLookup, "", null, undefined)) {
 											licTbl = licLookup.split(";");
-						logMessage("Cap" + thatCapId + "Type " + capLicType + " SQ FT " + licTbl[0]);
+	//					logMessage("Cap" + thatCapId + "Type " + capLicType + " SQ FT " + licTbl[0]);
 											maxAcres = licTbl[0];
 											totAcre += parseInt(maxAcres);
 										}
-	//				showMessage = true;
-	//				logMessage("Cap" + thisCap + "Type " + capLicType + " SQ FT " + licTbl[0]);
 										//emMesg += "capId: " + thatCapId + "; capId: " + thatCapId.getCustomID() + "; licType: " + capLicType + br;
 										if (matches(capLicType, "Medium Outdoor")) {
 											mediumLic = true;
 										}
-		/*							
-									var canopySize = getAppSpecific("Canopy Size",thatCapId);								
-									var nbrPlants = getAppSpecific("Number of Plants",thatCapId);
-									if(!matches(canopySize, "", null, undefined)) {
-										totAcre += parseFloat(canopySize,2);
-									}
-									if(!matches(nbrPlants, "", null, undefined)) {
-										totPlants += parseInt(nbrPlants);
-									}								
-									capLicType = getAppSpecific("License Type",thatCapId);
-									if (matches(capLicType, "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light")) {
-										mediumLic = true;
-									}
-		*/
 									}
 								}
 							}
@@ -269,9 +251,6 @@ try {
 				}
 //				logMessage("Acres " + totAcre );
 //				logMessage("Medium " + mediumLic);
-//				logMessage("Number of Plants " + totPlants);			
-//				logMessage("lictype " + AInfo["License Type"]);
-//				logMessage("prodDisp " + AInfo["Producing Dispensary"]);
 				if(totAcre > 43560 && thisCont.email.indexOf("lwacht")<0 && matches(currEnv,"av.supp","av.test")) {
 					cancel=true;
 					showMessage=true;
@@ -282,13 +261,7 @@ try {
 					showMessage=true;
 					logMessage("You cannot apply for a Medium type license as you already have a Medium type.");
 				}
-//				if(totPlants > 25000) {
-//					cancel=true;
-//					showMessage=true;
-//					logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 25000 number of mature plants limit");
-//				}
 			}
-//		}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
 	logDebug(err.stack);
