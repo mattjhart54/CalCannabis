@@ -221,8 +221,8 @@ try {
 								var thisCapId = capList[j];
 								var thatCapId = thisCapId.getCapID();
 								thatCap = aa.cap.getCap(thatCapId ).getOutput();
-								showMessage = true;
-								logMessage("Cap" + thisCap);
+					showMessage = true;
+					logMessage("Cap" + thisCapId);
 								if(!matches(thatCap, null, "undefined", "")){
 									thatAppTypeResult = thatCap.getCapType();
 									thatAppTypeString = thatAppTypeResult.toString();
@@ -235,8 +235,8 @@ try {
 											maxAcres = licTbl[0];
 											totAcre += parseInt(maxAcres);
 										}
-					showMessage = true;
-					logMessage("Cap" + thisCap + "Type " + capLicType + " SQ FT " + licTbl[0]);
+	//				showMessage = true;
+	//				logMessage("Cap" + thisCap + "Type " + capLicType + " SQ FT " + licTbl[0]);
 										//emMesg += "capId: " + thatCapId + "; capId: " + thatCapId.getCustomID() + "; licType: " + capLicType + br;
 										if (matches(capLicType, "Medium Outdoor")) {
 											mediumLic = true;
