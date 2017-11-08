@@ -222,7 +222,7 @@ try {
 								var thatCapId = thisCapId.getCapID();
 								thatCap = aa.cap.getCap(thatCapId ).getOutput();
 					showMessage = true;
-					logMessage("Cap" + thisCapId);
+					logMessage("Cap" + thatCapId.getCustomID());
 								if(!matches(thatCap, null, "undefined", "")){
 									thatAppTypeResult = thatCap.getCapType();
 									thatAppTypeString = thatAppTypeResult.toString();
