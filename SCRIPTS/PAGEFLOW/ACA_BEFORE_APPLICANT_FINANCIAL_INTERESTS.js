@@ -220,9 +220,10 @@ try {
 							for (var j in capList) {
 								var thisCapId = capList[j];
 								var thatCapId = thisCapId.getCapID();
+								var altId =thatCapId.getCustomID())
 								thatCap = aa.cap.getCap(thatCapId).getOutput();
 					showMessage = true;
-					logMessage("Cap" + thisCapId.getCustomID());
+					logMessage("Cap " + altId);
 								if(!matches(thatCap, null, "undefined", "")){
 									thatAppTypeResult = thatCap.getCapType();
 									thatAppTypeString = thatAppTypeResult.toString();
