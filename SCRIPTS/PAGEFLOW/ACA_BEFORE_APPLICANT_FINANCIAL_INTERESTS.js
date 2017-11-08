@@ -227,11 +227,13 @@ try {
 									thatAppTypeResult = thatCap.getCapType();
 									thatAppTypeString = thatAppTypeResult.toString();
 									thatAppTypeArray = thatAppTypeString.split("/");
+					logMessage("Cap" + thatAppTypeArray[3]);
 									if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
 										var capLicType = getAppSpecific("License Type",thatCapId);
 										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
 										if(!matches(licLookup, "", null, undefined)) {
 											licTbl = licLookup.split(";");
+						logMessage("Cap" + thisCap + "Type " + capLicType + " SQ FT " + licTbl[0]);
 											maxAcres = licTbl[0];
 											totAcre += parseInt(maxAcres);
 										}
