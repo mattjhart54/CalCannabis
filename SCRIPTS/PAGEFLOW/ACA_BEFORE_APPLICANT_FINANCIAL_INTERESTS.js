@@ -234,7 +234,7 @@ try {
 										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
 										if(!matches(licLookup, "", null, undefined)) {
 											licTbl = licLookup.split(";");
-						logMessage("Cap" + thisCap + "Type " + capLicType + " SQ FT " + licTbl[0]);
+						logMessage("Cap" + thatCapId + "Type " + capLicType + " SQ FT " + licTbl[0]);
 											maxAcres = licTbl[0];
 											totAcre += parseInt(maxAcres);
 										}
