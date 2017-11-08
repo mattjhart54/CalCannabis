@@ -147,7 +147,7 @@ try{
 			if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
 				showMessage = true;
 				cancel = true;
-				comment("Error: Only " + ownerName + " can submit this application.");
+				comment("Error: Only " + ownerName + " can edit and submit this application.");
 			}
 		}else{
 			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());

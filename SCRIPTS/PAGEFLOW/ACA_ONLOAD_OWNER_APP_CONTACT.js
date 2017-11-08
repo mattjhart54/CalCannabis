@@ -90,7 +90,7 @@ try{
 				if(!matches(ownerEmail,"",null,"undefined")){
 					if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
 						showMessage = true;
-						logMessage("Warning: Only " + ownerName + " can submit this application.");
+						logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
 					}
 				}
 			}else{
