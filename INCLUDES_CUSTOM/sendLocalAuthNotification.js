@@ -16,6 +16,12 @@ function sendLocalAuthNotification() {
 			var eParams = aa.util.newHashtable();
 			rFiles = []				
 			addParameter(eParams, "$$altID$$", capId.getCustomID());
+			if(wfStatus == "Local Auth Sent - 10") {
+				addParameter(eParams, "$$days$$", 10);
+			}
+			else {
+				addParameter(eParams, "$$days$$", 60);
+			}
 			var priContact = getContactObj(capId,"Business");
 			if(priContact)
 				addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
