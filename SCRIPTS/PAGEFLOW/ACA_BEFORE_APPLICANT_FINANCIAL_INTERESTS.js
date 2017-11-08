@@ -220,7 +220,7 @@ try {
 							for (var j in capList) {
 								var thisCapId = capList[j];
 								var thatCapId = thisCapId.getCapID();
-								var altId =thatCapId.getCustomID())
+								var altId =thatCapId.getCustomID();
 								thatCap = aa.cap.getCap(thatCapId).getOutput();
 					showMessage = true;
 					logMessage("Cap " + altId);
