@@ -226,8 +226,9 @@ try {
 									thatAppTypeResult = thatCap.getCapType();
 									thatAppTypeString = thatAppTypeResult.toString();
 									thatAppTypeArray = thatAppTypeString.split("/");
+									var capStatus = thatCap.getCapStatus();
 	//				logMessage("Cap" + thatAppTypeArray[3]);
-									if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application") {
+									if(thatAppTypeArray[2] != "Temporary" && thatAppTypeArray[3] == "Application" && !matches(capStatus,"Withdrawn", "Disqualified")) {
 										var capLicType = getAppSpecific("License Type",thatCapId);
 										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
 										if(!matches(licLookup, "", null, undefined)) {
