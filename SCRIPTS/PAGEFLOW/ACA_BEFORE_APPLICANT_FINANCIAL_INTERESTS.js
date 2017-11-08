@@ -229,12 +229,12 @@ try {
 										var capLicType = getAppSpecific("License Type",thatCapId);
 										var licLookup = lookup("LIC_CC_LICENSE_TYPE", capLicType);
 										if(!matches(licLookup, "", null, undefined)) {
-											licTbl = licLookup.split("|");
+											licTbl = licLookup.split(";");
 											maxAcres = licTbl[0];
 											totAcre += parseInt(maxAcres);
 										}
 					showMessage = true;
-					logMessage("Type " + capLicType + " SQ FT " + licTbl[0]);
+					logMessage("Cap" + thisCapId + "Type " + capLicType + " SQ FT " + licTbl[0]);
 										//emMesg += "capId: " + thatCapId + "; capId: " + thatCapId.getCustomID() + "; licType: " + capLicType + br;
 										if (matches(capLicType, "Medium Outdoor")) {
 											mediumLic = true;
