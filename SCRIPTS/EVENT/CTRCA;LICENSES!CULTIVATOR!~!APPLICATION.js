@@ -64,6 +64,7 @@ try{
 }
 
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
+//lwacht: 171108: and send email
 try{
 	var newFeeFound = false;
 	var targetFees = loadFees(capId);
@@ -83,6 +84,10 @@ try{
 				convert2RealCAP(chCapModel);
 			}
 		}
+		runReportAttach(capId,"CDFA Invoice", "altId", capId.getCustomID());
+		runReportAttach(capId,"CDFA_AppFeesDue", "altId", capId.getCustomID());
+		emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+		deactivateTask("Administrative Review");
 	}
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);

@@ -31,3 +31,13 @@ try{
 	logDebug(err.stack);
 }
 
+//lwacht
+//activate admin  review task when app fees are paid
+try{
+	if(balanceDue<=0 && !isTaskComplete("Administrative Review")){
+		activateTask("Administrative Review")
+	}
+}catch(err){
+	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Fees Paid: " + err.message);
+	logDebug(err.stack);
+}

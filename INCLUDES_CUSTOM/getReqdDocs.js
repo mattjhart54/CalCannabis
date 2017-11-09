@@ -61,6 +61,8 @@ try{
 	var CEQA = {condition : "Local - Evidence of CEQA Compliance", document : "Local - Evidence of CEQA Compliance"};
 //	var localComply = {condition : "Local - Certification of Local Compliance", document : "Local - Certification of Local Compliance"};
 	var coopMembers = {condition : "Cannabis Cooperative Association Member List", document : "Cannabis Cooperative Association Member List"};
+	var useCompassionate = {condition : "Priority Review - Compassionate Use Act of 1996", document : "Priority Review - Compassionate Use Act"};
+	var pwrGenerator = {condition : "Power Source - Generator", document : "Power Source – Generator 50 HP and greater"};
 	
 	//owner documents
     var governmentIssuedID = {condition : "Government Issued ID", document : "Government Issued ID"};
@@ -232,6 +234,26 @@ try{
 	}else{
 		if(appHasCondition(conditionType, null, SWRCBExcept.condition, null)){
 			removeCapCondition(conditionType, SWRCBExcept.condition);
+		}
+	}
+	//lwacht 171109 power source
+	if(AInfo["Generator"] == "CHECKED" ) {
+		arrReqdDocs_App.push(pwrGenerator);
+	}else{
+		if(appHasCondition(conditionType, null, pwrGenerator.condition, null)){
+			removeCapCondition(conditionType, pwrGenerator.condition);
+		}
+	}
+	//lwacht 171109 compassionate user
+	if(!matches(AInfo["Date of Intitial Operation"], "",null,"undefined")){
+		dateInitOp = convertDate(AInfo["Date of Intitial Operation"]);
+		dateCompare = convertDate("09/01/2016");
+		if(dateInitOp < dateCompare) {
+			arrReqdDocs_App.push(useCompassionate);
+		}else{
+			if(appHasCondition(conditionType, null, useCompassionate.condition, null)){
+				removeCapCondition(conditionType, useCompassionate.condition);
+			}
 		}
 	}
 	
