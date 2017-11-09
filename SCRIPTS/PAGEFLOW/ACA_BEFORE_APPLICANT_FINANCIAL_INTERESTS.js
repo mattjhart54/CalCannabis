@@ -252,16 +252,19 @@ try {
 				}
 //				logMessage("Acres " + totAcre );
 //				logMessage("Medium " + mediumLic);
-				aa.sendMail(sysFromEmail, "lwacht@trustvip.com", "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate + ": " + currEnv, capId + br + thisCont.email.indexOf("lwacht") + 'medium? ' + thisCont.email);
-				if(totAcre > 43560 || (currEnv=="av.supp" && thisCont.email.indexOf("lwacht")>-1)) {
-					cancel=true;
-					showMessage=true;
-					logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit.");
-				}
-				if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic ) {
-					cancel=true;
-					showMessage=true;
-					logMessage("You cannot apply for a Medium type license as you already have a Medium type.");
+				if(currEnv=="av.supp" && thisCont.email.indexOf("lwacht")>-1){
+					continue;
+				}else{
+					if(totAcre > 43560) {
+						cancel=true;
+						showMessage=true;
+						logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit.");
+					}
+					if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic ) {
+						cancel=true;
+						showMessage=true;
+						logMessage("You cannot apply for a Medium type license as you already have a Medium type.");
+					}
 				}
 			}
 }catch (err) {
