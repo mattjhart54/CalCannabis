@@ -252,7 +252,7 @@ try {
 				}
 //				logMessage("Acres " + totAcre );
 //				logMessage("Medium " + mediumLic);
-				if(totAcre > 43560) {
+				if(totAcre > 43560 || (currEnv=="av.supp" && thisCont.email.indexOf("lwacht")>-1)) {
 					cancel=true;
 					showMessage=true;
 					logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit.");
