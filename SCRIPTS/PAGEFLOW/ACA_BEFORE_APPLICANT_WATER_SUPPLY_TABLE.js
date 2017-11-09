@@ -151,11 +151,6 @@ try{
 	}
 */
 	var asiTables = loadASITables4ACAasArray();
-	var tblNotes = "";
-	for (y in asiTables){
-		tblNotes+=y+br;
-	}
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: "+ startDate, publicUserID + br + capId + br + "asiTables: " + tblNotes);
 	if(asiTables["SOURCE OF WATER SUPPLY"]){
 		if(asiTables["SOURCE OF WATER SUPPLY"].length<1){
 			noRows = true;
