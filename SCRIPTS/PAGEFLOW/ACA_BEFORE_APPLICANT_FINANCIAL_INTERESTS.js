@@ -252,6 +252,7 @@ try {
 				}
 //				logMessage("Acres " + totAcre );
 //				logMessage("Medium " + mediumLic);
+				aa.sendMail(sysFromEmail, "lwacht@trustvip.com", "", "INFO ONLY: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate + ": " + currEnv, capId + br + thisCont.email.indexOf("lwacht") + 'medium? ' + thisCont.email);
 				if(totAcre > 43560 || (currEnv=="av.supp" && thisCont.email.indexOf("lwacht")>-1)) {
 					cancel=true;
 					showMessage=true;
