@@ -174,7 +174,7 @@ try{
 		appTypeArray = appTypeString.split("/");
 		var capStatus = cap.getCapStatus();
 		logDebug("app " + appStatus + " cap " + capStatus);
-		if (!matches(capStatus, "Pending - Local Authorization 10","Pending - Local Authorization 60")) {
+		if (!matches(capStatus, "Pending Local Authorization 10","Pending Local Authorization 60")) {
 			continue;
 		}
 		capCount++;
