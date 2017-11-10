@@ -244,7 +244,7 @@ try {
 //mhart
 //Local Authorization Notice
 try{
-	if(matches(wfStatus, "Local Auth Sent - 10", "Local Auth Sent - 10")){
+	if(matches(wfStatus, "Local Auth Sent - 10", "Local Auth Sent - 60")){
 		sendLocalAuthNotification();
 	}
 }catch(err){
