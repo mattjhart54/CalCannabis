@@ -14,7 +14,21 @@ try{
 				emailRptContact("ASUA","LCA_APP_WITHDRAWAL","Withdrawn Application Letter",false,"Withdrawn",capId,"Designated Responsible Party")
 			}
 		}
-		taskCloseAllActive("Withdrawn","Task Closed by script. Record status was updated to Withdrawn")
+		taskCloseAllActive("Withdrawn","Task Closed by script. Record status was updated to Withdrawn");
+		//defect 4767: close all child records as well
+		var arrChild = getRelatedRecdsDown(capId);
+		if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
+			for(ch in arrChild){
+				thisChild = arrChild[ch];
+				capChild = aa.cap.getCap(thisChild).getOutput();
+				currCap = thisChild;
+				capId = thisChild;
+				taskCloseAllActive("Withdrawn","Task Closed by script. Record status was updated to Withdrawn");
+				updateAppStatus("Withdrawn","Task Closed by script. Parent status was updated to Withdrawn");
+				capId = currCap;
+			}
+		}
+
 	}
 }catch(err){
 	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
