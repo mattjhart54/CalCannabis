@@ -253,7 +253,7 @@ try {
 //				logMessage("Acres " + totAcre );
 //				logMessage("Medium " + mediumLic);
 				if(currEnv=="av.supp" && thisCont.email.indexOf("lwacht")>-1){
-					logDebug("");
+					logDebug(""); 
 				}else{
 					if(totAcre > 43560) {
 						cancel=true;

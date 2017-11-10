@@ -1,4 +1,5 @@
 //lwacht: double checking required docs
+/* lwacht: not working - removing
 try {
 	var eText = "";
 	docsMissing = false;
@@ -72,7 +73,7 @@ try {
 			addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
 		}
 	}
-	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
+	aa.sendMail(sysFromEmail,debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/ * /Application: Doc check: " + startDate, "capId: " + capId + ": " + eText);
 	logDebug("eText: " + eText);
 
 	if (r.length > 0 && showList && docsMissing && docsSubmitted && publicUser)  {
@@ -82,7 +83,8 @@ try {
 	}
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ASB:Licenses/Cultivation/*/Application: Doc check: " + err.message);
+	logDebug("An error has occurred in ASB:Licenses/Cultivation/ * /Application: Doc check: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/Application: Doc check: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/ * /Application: Doc check: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
 }
+*/
