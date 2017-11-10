@@ -36,21 +36,6 @@ try {
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Edit App Name: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-//mhart
-//send the local authorization noticifation
-//lwacht: don't run for temporary app 
-try{
-	if(!publicUser) {
-		if(appTypeArray[2]!="Temporary"){
-			sendLocalAuthNotification();
-		}
-	}
-}catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Send Notif email: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Send Notif email: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
-
 //lwacht
 //add fees
 //lwacht: don't run for temporary app 
