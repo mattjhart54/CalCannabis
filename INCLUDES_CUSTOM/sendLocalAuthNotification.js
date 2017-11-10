@@ -2,7 +2,7 @@ function sendLocalAuthNotification() {
 	try{
 		editAppSpecific("Local Authority Notification Sent", jsDateToASIDate(new Date()));
 		editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),60,"Y"));
-		updateAppStatus("Pending - Local Authorization");
+
 		deactivateTask("Administrative Review");
 		deactivateTask("Owner Application Reviews");
 		if(AInfo["Local Authority Type"] == "County")
@@ -18,9 +18,11 @@ function sendLocalAuthNotification() {
 			addParameter(eParams, "$$altID$$", capId.getCustomID());
 			if(wfStatus == "Local Auth Sent - 10") {
 				addParameter(eParams, "$$days$$", 10);
+				updateAppStatus("Pending Local Authorization 10");
 			}
 			else {
 				addParameter(eParams, "$$days$$", 60);
+				updateAppStatus("Pending Local Authorization 60");
 			}
 			var priContact = getContactObj(capId,"Business");
 			if(priContact)
