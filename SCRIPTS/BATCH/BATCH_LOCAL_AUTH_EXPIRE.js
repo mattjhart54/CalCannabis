@@ -73,8 +73,7 @@ var daySpan = "0";
 var emailAddress = "mhart@trustvip.com";
 var asiField = "Local Authority Notification Expires";
 var asiGroup = "INTERNAL";
-var appStatus = "Pending - Local Authorization";
-var newAppStatus = "Ready for Review";
+var newAppStatus = "Under Administrative Review";
 var sysFromEmail = "noreply_accela@cdfa.ca.gov";
 var setNonEmailPrefix = "AppSubmitted";
 var emailTemplate = "LCA_APPLICATION_SUBMITTED";
@@ -84,7 +83,6 @@ var sendEmailToContactTypes = "Designated Responsible Party";
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
-var appStatus = getParam("appStatus");
 var newAppStatus = getParam("newAppStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
@@ -176,19 +174,17 @@ try{
 		appTypeArray = appTypeString.split("/");
 		var capStatus = cap.getCapStatus();
 		logDebug("app " + appStatus + " cap " + capStatus);
-		if (appStatus != capStatus) {
+		if (!matches(capStatus, "Pending - Local Authorization 10","Pending - Local Authorization 60")) {
 			continue;
 		}
 		capCount++;
 		logDebug("----Processing record " + altId + br);
 		
-		if (newAppStatus && newAppStatus != ""){
-			updateAppStatus(newAppStatus, "set by " + batchJobName +  " batch");
-		} 
-		
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		editAppSpecific("Local Authority Response", "No Response");
+		updateTask("Administrative Review","Under Review","No notification recieved from Local Authority","");
+		updateAppStatus("Under Administrative Review", "No notification recieved from Local Authority");
 		
 		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
 			var conTypeArray = sendEmailToContactTypes.split(",");
