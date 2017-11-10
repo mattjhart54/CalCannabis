@@ -29,6 +29,8 @@ try {
 						logDebug("Admin Amendment record processed");
 						capId = parentCapId;
 						activateTask("Administrative Review");
+						//defect 4763: deactivate manager review when processor reviews are active
+						deactivateTask("Administrative Manager Review");
 						capId = currCap;
 					}
 				}else{
@@ -46,6 +48,7 @@ try {
 						logDebug("Owner Amendment record processed");
 						capId = parentCapId;
 						activateTask("Owner Application Reviews");
+						deactivateTask("Administrative Manager Review");
 						capId = currCap;
 					}
 				}else{
@@ -65,6 +68,7 @@ try {
 						logDebug("Scientific Amendment record processed");
 						capId = parentCapId;
 						activateTask("Scientific Review");
+						deactivateTask("Science Manager Review");
 						capId = currCap;
 					}
 				}else{
@@ -82,6 +86,7 @@ try {
 						logDebug("CEQA Amendment record processed");
 						capId = parentCapId;
 						activateTask("CEQA Review");
+						deactivateTask("Science Manager Review");
 						capId = currCap;
 					}
 				}else{
