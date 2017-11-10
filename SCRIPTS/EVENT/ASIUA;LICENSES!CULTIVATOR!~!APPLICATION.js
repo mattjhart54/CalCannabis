@@ -23,15 +23,17 @@ try {
 	editAppName(AInfo["License Type"]);
 	updateShortNotes(AInfo["Premise County"]);
 
-	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && capStatus == "Pending - Local Authorization") {
+	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending - Local Authorization 10","Pending - Local Authorization 60")) {
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
-		updateAppStatus("Ready for Review", "In Compliance notification recieved from Local Authority");
+		updateTask("Administrative Review","Under Review","In Compliance notification recieved from Local Authority","");
+		updateAppStatus("Under Administrative Review", "In Compliance notification recieved from Local Authority");
 		runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", "Designated Responsible Party", "Address Type", "Home", "servProvCode", "CALCANNABIS");
 		emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, "Designated Responsible Party");
 	}
-	if(AInfo["Local Authority Response"] == "Non Compliance"  && capStatus == "Pending - Local Authorization") {
-		activateTask("Administrative Review");
+	if(AInfo["Local Authority Response"] == "Non Compliance"  && matches(capStatus,"Pending - Local Authorization 10","Pending - Local Authorization 60"))  {
+		closeTask("Administrative Review","Incomplete Response","Non-Compliance notification recieved from Local Authority","");
+		activateTask("Administrative Manager Review");
 		updateAppStatus("Ready for Review", "Non Compliance notification recieved from Local Authority");
 		childRecs = getChildren("Licenses/Cultivator/Medical/*");
 		var holdId = capId;
