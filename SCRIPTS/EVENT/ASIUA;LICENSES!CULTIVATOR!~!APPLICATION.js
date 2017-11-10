@@ -23,7 +23,7 @@ try {
 	editAppName(AInfo["License Type"]);
 	updateShortNotes(AInfo["Premise County"]);
 
-	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending - Local Authorization 10","Pending - Local Authorization 60")) {
+	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")) {
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		updateTask("Administrative Review","Under Review","In Compliance notification recieved from Local Authority","");
@@ -31,7 +31,7 @@ try {
 		runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", "Designated Responsible Party", "Address Type", "Home", "servProvCode", "CALCANNABIS");
 		emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, "Designated Responsible Party");
 	}
-	if(AInfo["Local Authority Response"] == "Non Compliance"  && matches(capStatus,"Pending - Local Authorization 10","Pending - Local Authorization 60"))  {
+	if(AInfo["Local Authority Response"] == "Non Compliance"  && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60"))  {
 		closeTask("Administrative Review","Incomplete Response","Non-Compliance notification recieved from Local Authority","");
 		activateTask("Administrative Manager Review");
 		updateAppStatus("Ready for Review", "Non Compliance notification recieved from Local Authority");
