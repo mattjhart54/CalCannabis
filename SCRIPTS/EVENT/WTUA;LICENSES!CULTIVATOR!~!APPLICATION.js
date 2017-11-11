@@ -243,7 +243,7 @@ try {
 
 //lwacht: once the cash letter has been sent, close the workflow until the payment has been received
 try{
-	if(wfStatus=="Cash Payment Due Letter Sent")){
+	if(wfStatus=="Cash Payment Due Letter Sent"){
 		deactivateTask("Administrative Review");
 		deactivateTask("Owner Application Review");
 	}

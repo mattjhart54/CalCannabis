@@ -136,7 +136,7 @@ try{
 
 //lwacht: if cash has been selected as a payment type, the letter must be sent before anything else can be done on the record
 try{
-	if("Application Fee Due".equals(capStatus) && wfStatus!="Cash Payment Due Letter Sent")){
+	if("Application Fee Due".equals(capStatus) && wfStatus!="Cash Payment Due Letter Sent"){
 		cancel=true;
 		showMessage=true;
 		comment("The 'Cash Payment Due Letter' must be sent before this record can be processed.");
