@@ -173,7 +173,7 @@ try{
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
 		var capStatus = cap.getCapStatus();
-		logDebug("app " + appStatus + " cap " + capStatus);
+		logDebug(" cap " + capStatus);
 		if (!matches(capStatus, "Pending Local Authorization 10","Pending Local Authorization 60")) {
 			continue;
 		}
