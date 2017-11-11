@@ -83,7 +83,7 @@ try{
 		runReportAttach(capId,"CDFA_AppFeesDue", "altId", capId.getCustomID());
 		emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 		updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/*/APPLICATION.");
-		deactivateTask("Owner Application Review");
+		deactivateTask("Owner Application Reviews");
 	}
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
