@@ -25,7 +25,7 @@ try{
 //lwacht: don't run for temporary app 
 try {
 	if(appTypeArray[2]!="Temporary"){
-		sendLocalAuthNotification();
+//		sendLocalAuthNotification();
 		updateLegalBusinessName();
 		editAppName(AInfo["License Type"]);
 		updateShortNotes(AInfo["Premise County"]);
