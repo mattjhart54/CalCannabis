@@ -133,3 +133,15 @@ try{
 	aa.print(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
+
+//lwacht: if cash has been selected as a payment type, the letter must be sent before anything else can be done on the record
+try{
+	if("Application Fee Due".equals(capStatus) && wfStatus!="Cash Payment Due Letter Sent")){
+		cancel=true;
+		showMessage=true;
+		comment("The 'Cash Payment Due Letter' must be sent before this record can be processed.");
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Cash Payment Required: " + err.message);
+	aa.print(err.stack);
+}

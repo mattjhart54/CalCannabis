@@ -241,15 +241,15 @@ try {
 	logDebug(err.stack);
 }
 
-//mhart
-//Local Authorization Notice
+//lwacht: once the cash letter has been sent, close the workflow until the payment has been received
 try{
-	if(matches(wfStatus, "Local Auth Sent - 10", "Local Auth Sent - 60")){
-		sendLocalAuthNotification();
+	if(wfStatus=="Cash Payment Due Letter Sent")){
+		deactivateTask("Administrative Review");
+		deactivateTask("Owner Application Review");
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Disqualification notification: " + err.message);
-	logDebug(err.stack);
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Cash Payment Required: " + err.message);
+	aa.print(err.stack);
 }
 
 //lwacht
