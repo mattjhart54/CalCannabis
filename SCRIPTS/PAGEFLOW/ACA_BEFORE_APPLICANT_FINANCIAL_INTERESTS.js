@@ -252,19 +252,16 @@ try {
 				}
 //				logMessage("Acres " + totAcre );
 //				logMessage("Medium " + mediumLic);
-				if(currEnv=="av.supp" && thisCont.email.indexOf("lwacht")>-1){
-					logDebug(""); 
-				}else{
-					if(totAcre > 43560) {
-						cancel=true;
-						showMessage=true;
-						logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit.");
-					}
-					if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic ) {
-						cancel=true;
-						showMessage=true;
-						logMessage("You cannot apply for a Medium type license as you already have a Medium type.");
-					}
+				//lwacht 171111: removed acreage logic
+				//if(totAcre > 43560) {
+				//	cancel=true;
+				//	showMessage=true;
+				//	logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit.");
+				//}
+				if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic ) {
+					cancel=true;
+					showMessage=true;
+					logMessage("You cannot apply for a Medium type license as you already have a Medium type.");
 				}
 			}
 }catch (err) {
