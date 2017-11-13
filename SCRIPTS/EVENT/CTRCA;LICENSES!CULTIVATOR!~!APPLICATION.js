@@ -87,7 +87,7 @@ try{
 		}
 		//do not put this in CTRCB
 		runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", invNbr, "agencyid","CALCANNABIS");
-		runReportAttach(capId,"CDFA_AppFeesDue", "altId", capId.getCustomID());
+		runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID());
 		emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 		updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
 		deactivateTask("Owner Application Reviews");
