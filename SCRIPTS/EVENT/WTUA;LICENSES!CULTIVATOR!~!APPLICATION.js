@@ -240,6 +240,15 @@ try {
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Denial Revisions Required: " + err.message);
 	logDebug(err.stack);
 }
+//mhart: send local auth notice
+try{
+	if(matches(wfStatus,"Local Auth Sent - 10","Local Auth Sent - 60")){
+		sendLocalAuthNotification();
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Cash Payment Required: " + err.message);
+	aa.print(err.stack);
+}
 
 //lwacht: once the cash letter has been sent, close the workflow until the payment has been received
 try{
