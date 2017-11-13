@@ -1,8 +1,10 @@
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 //lwacht: 171108: and send email
 try{
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCB:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + "CTRCB running" + br + currEnv);
 	var newFeeFound = false;
 	var targetFees = loadFees(capId);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCB:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + targetFees+ br + currEnv);
 	for (tFeeNum in targetFees) {
 		targetFee = targetFees[tFeeNum];
 			if (targetFee.status == "NEW") {
@@ -21,7 +23,7 @@ try{
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
+	logDebug("An error has occurred in CTRCB:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCB:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
