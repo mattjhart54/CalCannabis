@@ -258,11 +258,12 @@ try {
 				//	showMessage=true;
 				//	logMessage("You cannot apply for anymore cultivator licenses as you will or have exceeded the 1 acre size limit.");
 				//}
-				if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic ) {
-					cancel=true;
-					showMessage=true;
-					logMessage("You cannot apply for a Medium type license as you already have a Medium type.");
-				}
+				//lwacht 171112: removed medium logic
+				//if(matches(AInfo["License Type"], "Medium Outdoor", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2") && mediumLic ) {
+				//	cancel=true;
+				//	showMessage=true;
+				//	logMessage("You cannot apply for a Medium type license as you already have a Medium type.");
+				//}
 			}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
