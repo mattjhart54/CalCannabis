@@ -85,6 +85,13 @@ try{
 				convert2RealCAP(chCapModel);
 			}
 		}
+		//do not put this in CTRCB
+		runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", invNbr, "agencyid","CALCANNABIS");
+		runReportAttach(capId,"CDFA_AppFeesDue", "altId", capId.getCustomID());
+		emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+		updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
+		deactivateTask("Owner Application Reviews");
+		//end do not put this in CTRCB
 	}
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
@@ -95,6 +102,7 @@ try{
 
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 //lwacht: 171108: and send email
+/* lwacht: 171113: commenting out until CTRCB is figured out
 try{
 	if(feeBalance>0){
 		var targetFees = loadFees(capId);
@@ -112,11 +120,11 @@ try{
 		runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", invoiceNbr, "agencyid","CALCANNABIS");
 		runReportAttach(capId,"CDFA_AppFeesDue", "altId", capId.getCustomID());
 		emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
-		updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/*/APPLICATION.");
+		updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
 		deactivateTask("Owner Application Reviews");
 	}
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Convert Assoc Forms: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
