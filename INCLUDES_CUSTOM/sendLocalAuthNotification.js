@@ -1,7 +1,12 @@
 function sendLocalAuthNotification() {
 	try{
 		editAppSpecific("Local Authority Notification Sent", jsDateToASIDate(new Date()));
-		editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),60,"Y"));
+		if(wfStatus == "Local Auth Sent - 10") {
+			editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),10,"Y"));
+		}
+		else {
+			editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),60,"Y"));
+		}
 
 		deactivateTask("Administrative Review");
 		deactivateTask("Owner Application Reviews");
