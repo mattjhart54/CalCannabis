@@ -1,7 +1,6 @@
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 //lwacht: 171108: and send email
 try{
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: CTRCB:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + "CTRCB running" + br + currEnv);
 	var newFeeFound = false;
 	var targetFees = loadFees(capId);
 	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: CTRCB:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + targetFees+ br + currEnv);
