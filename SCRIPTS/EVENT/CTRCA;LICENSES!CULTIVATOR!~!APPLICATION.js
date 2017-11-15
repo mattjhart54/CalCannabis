@@ -63,42 +63,6 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-//lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
-//lwacht: 171108: and send email
-//lwacht: 171112: moving from CTRCB for time being
-try{
-	var newFeeFound = false;
-	var targetFees = loadFees(capId);
-	for (tFeeNum in targetFees) {
-		targetFee = targetFees[tFeeNum];
-			if (targetFee.status == "NEW") {
-				newFeeFound = true;
-			}
-	}
-	if(newFeeFound){
-		var invNbr = invoiceAllFees();
-		var chIds = getChildren("Licenses/Cultivator/*/*",capId);
-		for(rec in chIds){
-			var chCapId = chIds[rec]
-			if(getCapIdStatusClass(chCapId) == "INCOMPLETE EST"){
-				var chCapModel = aa.cap.getCapViewBySingle4ACA(chCapId);
-				convert2RealCAP(chCapModel);
-			}
-		}
-		//do not put this in CTRCB
-		runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", invNbr, "agencyid","CALCANNABIS");
-		runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID(), "contactType", "Designated Responsible Party");
-		emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
-		updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
-		deactivateTask("Owner Application Reviews");
-		//end do not put this in CTRCB
-	}
-} catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
-}
-
 //lwacht: create submission report
 try{
 	runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
@@ -109,26 +73,70 @@ try{
 
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 //lwacht: 171108: and send email
-/* lwacht: 171113: commenting out until CTRCB is figured out
+//lwacht: 171112: moving from CTRCB for time being
+//lwacht: 171115: CTRCB runs in av.preprod so modifying the code based on evironment
 try{
-	if(feeBalance>0){
+	if(matches(currEnv, "av.test", "av.supp")){
+		var newFeeFound = false;
 		var targetFees = loadFees(capId);
 		for (tFeeNum in targetFees) {
 			targetFee = targetFees[tFeeNum];
-			if (targetFee.status == "INVOICED") {
-				var feeSeq = targetFee.sequence;
-			}
+				if (targetFee.status == "NEW") {
+					newFeeFound = true;
+				}
 		}
-		var invResObj = aa.finance.getFeeItemInvoiceByFeeNbr(capId, parseFloat(feeSeq), null);
-		var X4invoices = invResObj.getOutput();
-		var X4invoice = X4invoices[0]; 
-		invoiceNbr=X4invoice.getInvoiceNbr(); 
-		logDebug(invoiceNbr);
-		runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", invoiceNbr, "agencyid","CALCANNABIS");
-		runReportAttach(capId,"CDFA_AppFeesDue", "altId", capId.getCustomID());
-		emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
-		updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
-		deactivateTask("Owner Application Reviews");
+		if(newFeeFound){
+			var invNbr = invoiceAllFees();
+			var chIds = getChildren("Licenses/Cultivator/*/*",capId);
+			for(rec in chIds){
+				var chCapId = chIds[rec]
+				if(getCapIdStatusClass(chCapId) == "INCOMPLETE EST"){
+					var chCapModel = aa.cap.getCapViewBySingle4ACA(chCapId);
+					convert2RealCAP(chCapModel);
+				}
+			}
+			//do not put this in CTRCB
+			runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", invNbr, "agencyid","CALCANNABIS");
+			runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID(), "contactType", "Designated Responsible Party");
+			emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+			updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
+			deactivateTask("Owner Application Reviews");
+			//end do not put this in CTRCB
+		}
+	}
+} catch(err){
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+}
+
+
+
+//lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
+//lwacht: 171108: and send email
+//lwacht: 171113: commenting out until CTRCB is figured out
+//lwacht: 171115: CTRCB runs in preprod, so going to have this set up to not run in av.supp and av.test.
+try{
+	if(!matches(currEnv, "av.test", "av.supp")){
+		if(feeBalance>0){
+			var targetFees = loadFees(capId);
+			for (tFeeNum in targetFees) {
+				targetFee = targetFees[tFeeNum];
+				if (targetFee.status == "INVOICED") {
+					var feeSeq = targetFee.sequence;
+				}
+			}
+			var invResObj = aa.finance.getFeeItemInvoiceByFeeNbr(capId, parseFloat(feeSeq), null);
+			var X4invoices = invResObj.getOutput();
+			var X4invoice = X4invoices[0]; 
+			invoiceNbr=X4invoice.getInvoiceNbr(); 
+			logDebug(invoiceNbr);
+			runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", invoiceNbr, "agencyid","CALCANNABIS");
+			runReportAttach(capId,"CDFA_AppFeesDue", "altId", capId.getCustomID());
+			emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+			updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
+			deactivateTask("Owner Application Reviews");
+		}
 	}
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Convert Assoc Forms: " + err.message);
