@@ -18,9 +18,9 @@ function licenseNumberToCatJson(licenseNumber) {
     var legalBusinessName = stringValue(getAppSpecific('Legal Business Name'), 100);
     var licenseType = getLicenseType(licenseNumber, '' + getAppSpecific('License Type'));
     var licenseStatus = getLicenseStatus('' + capModel.getCapStatus());
-    var licenseValidityStart = stringValue(getAppSpecific('Valid From Date'));
+    var licenseValidityStart = dateFormat(stringValue(getAppSpecific('Valid From Date')));
     var vLicenseObj = new licenseObject(licenseNumber);
-    var licenseExpiration = stringValue(vLicenseObj.b1ExpDate);
+    var licenseExpiration = dateFormat(stringValue(vLicenseObj.b1ExpDate));
     var drpPhoneNumber = stringValue(getDRPInfo('phone3'), 20);
     var facilityPhone = stringValue(getAppSpecific('Premise Phone'), 20);
     var drpEmail = stringValue(getDRPInfo('email'), 255);
@@ -96,6 +96,29 @@ function licenseNumberToCatJson(licenseNumber) {
     function truncate(value, length) {
         if(value.length > length) {
             return value.substring(0, length);
+        } else {
+            return value;
+        }
+    }
+
+    /**
+     * Formats the date to CAT format YYYY-MM-DD
+     */
+    function dateFormat(value) {
+        if(value == "") {
+            return value;
+        } else {
+            var dateSplit = value.split("/");
+            return dateSplit[2] + "-" + dateZeroPad(dateSplit[0]) + "-" + dateZeroPad(dateSplit[1]);
+        }
+    }
+
+    /**
+     * Left pads the string digit with zero for single digits.
+     */
+    function dateZeroPad(value) {
+        if(value.length === 1) {
+            return "0"+value;
         } else {
             return value;
         }
