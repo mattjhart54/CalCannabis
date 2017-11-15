@@ -20,7 +20,12 @@ Parameters:
 	curStatus: Text: Status to use for general notification template
 	acaCapId: capId: The capId to use for the ACA URL
 	contactType: text: The type of contact to whom the email/report should be sent
-	rptParams: Optional report parameter(s): "agencyid",servProvCode,"capid",myCapId
+	rptParams: Optional report parameter(s): 
+		var rParams = aa.util.newHashMap(); 
+		rParams.put("capID", capId);
+		rParams.put("invoiceNbr", "450");
+		rParams.put("agencyid", "CALCANNABIS");
+
 ============================================== */
 function emailRptContact(callingPgm, notName, rptName, emailRpt, curStatus, acaCapId, contactType) {
 try{

@@ -68,6 +68,11 @@ try{
 	logDebug(err.stack);
 }
 
+//lwacht 171112
+//user cannot over or under pay
+try{
+	if(balanceDue<=PaymentTotalPaidAmount  && isTaskActive("Application Disposition")){
+
 
 //lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
 //display the deficiency report for printing
