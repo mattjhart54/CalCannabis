@@ -136,10 +136,18 @@ try{
 
 //lwacht: if cash has been selected as a payment type, the letter must be sent before anything else can be done on the record
 try{
-	if("Application Fee Due".equals(capStatus) && wfStatus!="Cash Payment Due Letter Sent"){
-		cancel=true;
-		showMessage=true;
-		comment("The 'Cash Payment Due Letter' must be sent before this record can be processed.");
+	var priContact = getContactObj(capId,"Designated Responsible Party");
+	if(priContact){
+		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+		if(!matches(priChannel, "",null,"undefined", false)){
+			if(priChannel.indexOf("Postal") > -1){
+				if("Application Fee Due".equals(capStatus) && wfStatus!="Cash Payment Due Letter Sent"){
+					cancel=true;
+					showMessage=true;
+					comment("The 'Cash Payment Due Letter' must be sent before this record can be processed.");
+				}
+			}
+		}
 	}
 }catch(err){
 	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Cash Payment Required: " + err.message);

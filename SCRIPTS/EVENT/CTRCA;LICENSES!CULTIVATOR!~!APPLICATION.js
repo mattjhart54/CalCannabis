@@ -101,6 +101,15 @@ try{
 			emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", invNbr, "agencyid","CALCANNABIS");
 			updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
 			deactivateTask("Owner Application Reviews");
+			var priContact = getContactObj(capId,"Designated Responsible Party");
+			if(priContact){
+				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+				if(!matches(priChannel, "",null,"undefined", false)){
+					if(priChannel.indexOf("Email") > -1 || priChannel.indexOf("E-mail") > -1){
+						deactivateTask("Administrative Review");
+					}
+				}
+			}
 			//end do not put this in CTRCB
 		}
 	}
@@ -136,6 +145,15 @@ try{
 			emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", invNbr, "agencyid","CALCANNABIS");
 			updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
 			deactivateTask("Owner Application Reviews");
+			var priContact = getContactObj(capId,"Designated Responsible Party");
+			if(priContact){
+				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+				if(!matches(priChannel, "",null,"undefined", false)){
+					if(priChannel.indexOf("Email") > -1 || priChannel.indexOf("E-mail") > -1){
+						deactivateTask("Administrative Review");
+					}
+				}
+			}
 		}
 	}
 } catch(err){
