@@ -71,8 +71,13 @@ try{
 //lwacht 171112
 //user cannot over or under pay
 try{
-	if(balanceDue<=PaymentTotalPaidAmount  && isTaskActive("Application Disposition")){
-
+	if(balanceDue!=PaymentTotalPaidAmount  && isTaskActive("Application Disposition")){
+		logDebug("Put code here");
+	}
+}catch(err){
+	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
+	logDebug(err.stack);
+}
 
 //lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
 //display the deficiency report for printing
