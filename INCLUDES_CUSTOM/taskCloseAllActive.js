@@ -31,6 +31,7 @@ function taskCloseAllActive(pStatus,pComment) {
 //		processID = fTask.getProcessID();
 		if (closeAll) {
 			if(fTask.getActiveFlag() == "Y") {
+				updateTask(wfTask,pStatus,pComment,"");
 				deactivateTask(wftask)
 				logMessage("Deactivating Workflow Task " + wftask + " with status " + pStatus);
 				logDebug("Deactivating Workflow Task " + wftask + " with status " + pStatus);
@@ -39,6 +40,7 @@ function taskCloseAllActive(pStatus,pComment) {
 		else {
 			if (!exists(wftask,taskArray)) {
 				if(fTask.getActiveFlag() == "Y") {
+					updateTask(wfTask,pStatus,pComment,"");
 					deactivateTask(wftask)
 					logMessage("Deactivating Workflow Task " + wftask + " with status " + pStatus);
 					logDebug("Deactivating Workflow Task " + wftask + " with status " + pStatus);
