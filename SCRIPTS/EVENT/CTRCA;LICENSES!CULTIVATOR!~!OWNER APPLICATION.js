@@ -31,7 +31,7 @@ try{
 			}
 			if(!ownerGotNewAltId){
 				logDebug("Error renaming owner record " + capId + ":  " + newIdErrMsg);
-				aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
+				//aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
 			}
 		}else{
 			logDebug("Owner record AltId already updated: "+ capId.getCustomID());

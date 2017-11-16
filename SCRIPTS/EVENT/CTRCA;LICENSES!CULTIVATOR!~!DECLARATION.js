@@ -13,7 +13,7 @@ try{
 				logDebug("Updated Declaration record AltId to " + newAltId + ".");
 			}else {
 				logDebug("Error renaming declar record " + capId + ":  " + newIdErrMsg);
-				aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming declar record : " + startDate, capId + ": "+ newIdErrMsg);
+				//aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming declar record : " + startDate, capId + ": "+ newIdErrMsg);
 			}
 		}
 	}

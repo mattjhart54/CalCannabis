@@ -111,6 +111,7 @@ try{
 					}
 				}
 			}
+			//lwacht: the order of CTRCA for parent and associated forms seems to be random, so updating alt ID here as well.
 			//declarations
 			var arrDecChild = getChildren("Licenses/Cultivator/*/Declaration", capId);
 			if(arrDecChild){
@@ -123,7 +124,7 @@ try{
 						logDebug("Updated Declaration record AltId to " + newAltId + ".");
 					}else {
 						logDebug("Error renaming declar record " + capId + ":  " + newIdErrMsg);
-						aa.sendMail(sysFromEmail, debugEmail, "", " CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Error renaming declar record : " + startDate, capId + ": "+ newIdErrMsg);
+						//aa.sendMail(sysFromEmail, debugEmail, "", " CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Error renaming declar record : " + startDate, capId + ": "+ newIdErrMsg);
 					}
 				}
 			}
@@ -160,7 +161,7 @@ try{
 						}
 						if(!ownerGotNewAltId){
 							logDebug("Error renaming owner record " + capId + ":  " + newIdErrMsg);
-							aa.sendMail(sysFromEmail, debugEmail, "", "CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
+							//aa.sendMail(sysFromEmail, debugEmail, "", "CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
 						}
 					}else{
 						logDebug("Owner record AltId already updated: "+ capId.getCustomID());
