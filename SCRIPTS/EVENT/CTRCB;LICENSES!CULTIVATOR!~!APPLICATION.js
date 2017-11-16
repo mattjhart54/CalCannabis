@@ -12,6 +12,7 @@ try{
 	}
 	if(newFeeFound){
 		var invNbr = invoiceAllFees();
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: CTRCB:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + invNbr + br + currEnv);
 		var chIds = getChildren("Licenses/Cultivator/*/*",capId);
 		for(rec in chIds){
 			var chCapId = chIds[rec]

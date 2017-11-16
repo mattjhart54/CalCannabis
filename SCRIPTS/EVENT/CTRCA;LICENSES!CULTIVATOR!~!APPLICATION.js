@@ -154,11 +154,67 @@ try{
 					}
 				}
 			}
+			//declarations
+			var arrDecChild = getChildren("Licenses/Cultivator/*/Declaration", capId);
+			if(arrDecChild){
+				for(ch in arrDecChild){
+					var chCapId =arrDecChild[ch];
+					var newAltId = capId.getCustomID() + "-DEC";
+					var updateResult = aa.cap.updateCapAltID(chCapId, newAltId);
+					var newIdErrMsg = updateResult.getErrorMessage() +"; ";
+					if (updateResult.getSuccess()) {
+						logDebug("Updated Declaration record AltId to " + newAltId + ".");
+					}else {
+						logDebug("Error renaming declar record " + capId + ":  " + newIdErrMsg);
+						aa.sendMail(sysFromEmail, debugEmail, "", " CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Error renaming declar record : " + startDate, capId + ": "+ newIdErrMsg);
+					}
+				}
+			}
+			//declarations
+			var arrOwnChild = getChildren("Licenses/Cultivator/*/Owner Application", capId);
+			if(arrOwnChild){
+				for(ch in arrOwnChild){
+					var chCapId =arrOwnChild[ch];
+					nbrToTry = 1;
+					//because owners can be added and deleted, need a way to number the records
+					//but only if they haven't been numbered before
+					if(chCapId.getCustomID().substring(0,3)!="LCA"){
+						var ownerGotNewAltId = false;
+						var newIdErrMsg = "";
+						for (i = 0; i <= 100; i++) {
+							if(nbrToTry<10){
+								var nbrOwner = "00" + nbrToTry;
+							}else{
+								if(nbrToTry<100){
+									var nbrOwner = "0" + nbrToTry
+								}
+								var nbrOwner = ""+ nbrToTry;
+							}
+							var newAltId = capId.getCustomID() + "-" + nbrOwner + "O";
+							var updateResult = aa.cap.updateCapAltID(chCapId, newAltId);
+							if (updateResult.getSuccess()) {
+								logDebug("Updated owner record AltId to " + newAltId + ".");
+								ownerGotNewAltId = true;
+								break;
+							}else {
+								newIdErrMsg += updateResult.getErrorMessage() +"; ";
+								nbrToTry++;
+							}
+						}
+						if(!ownerGotNewAltId){
+							logDebug("Error renaming owner record " + capId + ":  " + newIdErrMsg);
+							aa.sendMail(sysFromEmail, debugEmail, "", "CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
+						}
+					}else{
+						logDebug("Owner record AltId already updated: "+ capId.getCustomID());
+					}
+				}
+			}
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Convert Assoc Forms: " + err.message);
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
 
