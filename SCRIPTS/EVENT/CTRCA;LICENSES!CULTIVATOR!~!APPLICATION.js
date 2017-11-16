@@ -139,7 +139,14 @@ try{
 			var X4invoices = invResObj.getOutput();
 			var X4invoice = X4invoices[0]; 
 			var invNbr=X4invoice.getInvoiceNbr(); 
-			logDebug(invNbr);
+			var chIds = getChildren("Licenses/Cultivator/*/*",capId);
+			for(rec in chIds){
+				var chCapId = chIds[rec]
+				if(getCapIdStatusClass(chCapId) == "INCOMPLETE EST"){
+					var chCapModel = aa.cap.getCapViewBySingle4ACA(chCapId);
+					convert2RealCAP(chCapModel);
+				}
+			}
 			runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 			runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID());
 			emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
