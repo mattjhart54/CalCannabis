@@ -75,8 +75,9 @@ try{
 //lwacht: 171108: and send email
 //lwacht: 171112: moving from CTRCB for time being
 //lwacht: 171115: CTRCB runs in av.preprod so modifying the code based on evironment
+//lwacht: 171116: CTRCB doesn't invoice fees. 
 try{
-	if(matches(currEnv, "av.test", "av.supp")){
+//	if(matches(currEnv, "av.test", "av.supp")){
 		var newFeeFound = false;
 		var targetFees = loadFees(capId);
 		for (tFeeNum in targetFees) {
@@ -112,7 +113,7 @@ try{
 			}
 			//end do not put this in CTRCB
 		}
-	}
+	//}
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
 	logDebug(err.stack);
@@ -125,8 +126,9 @@ try{
 //lwacht: 171108: and send email
 //lwacht: 171113: commenting out until CTRCB is figured out
 //lwacht: 171115: CTRCB runs in preprod, so going to have this set up to not run in av.supp and av.test.
+//lwacht: 171116: CTRCB doesn't invoice fees. 
 try{
-	if(!matches(currEnv, "av.test", "av.supp")){
+//	if(!matches(currEnv, "av.test", "av.supp")){
 		if(balanceDue>0){
 			var targetFees = loadFees(capId);
 			for (tFeeNum in targetFees) {
@@ -211,7 +213,7 @@ try{
 				}
 			}
 		}
-	}
+//	}
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: " + err.message);
 	logDebug(err.stack);
