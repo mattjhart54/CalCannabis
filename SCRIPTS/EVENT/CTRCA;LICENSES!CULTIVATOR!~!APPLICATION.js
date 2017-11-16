@@ -96,9 +96,9 @@ try{
 				}
 			}
 			//do not put this in CTRCB
-			runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", invNbr, "agencyid","CALCANNABIS");
+			runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 			runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID(), "contactType", "Designated Responsible Party");
-			emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", invNbr, "agencyid","CALCANNABIS");
+			emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 			updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
 			deactivateTask("Owner Application Reviews");
 			var priContact = getContactObj(capId,"Designated Responsible Party");
@@ -127,7 +127,7 @@ try{
 //lwacht: 171115: CTRCB runs in preprod, so going to have this set up to not run in av.supp and av.test.
 try{
 	if(!matches(currEnv, "av.test", "av.supp")){
-		if(feeBalance>0){
+		if(balanceDue>0){
 			var targetFees = loadFees(capId);
 			for (tFeeNum in targetFees) {
 				targetFee = targetFees[tFeeNum];
@@ -138,11 +138,11 @@ try{
 			var invResObj = aa.finance.getFeeItemInvoiceByFeeNbr(capId, parseFloat(feeSeq), null);
 			var X4invoices = invResObj.getOutput();
 			var X4invoice = X4invoices[0]; 
-			invoiceNbr=X4invoice.getInvoiceNbr(); 
-			logDebug(invoiceNbr);
-			runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", invoiceNbr, "agencyid","CALCANNABIS");
-			runReportAttach(capId,"CDFA_AppFeesDue", "altId", capId.getCustomID());
-			emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", invNbr, "agencyid","CALCANNABIS");
+			var invNbr=X4invoice.getInvoiceNbr(); 
+			logDebug(invNbr);
+			runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
+			runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID());
+			emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 			updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
 			deactivateTask("Owner Application Reviews");
 			var priContact = getContactObj(capId,"Designated Responsible Party");
