@@ -1,7 +1,7 @@
 // lwacht
 // if not ACA, set the altId based on application parent
 try{
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/*/DECLARATION : " + startDate, capId + ": "+ parentCapId.getCustomID());
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/*/DECLARATION : " + startDate, capId + ": "+ parentCapId);
 	if(!publicUser){
 		if(parentCapId){
 			nbrToTry = 1;
