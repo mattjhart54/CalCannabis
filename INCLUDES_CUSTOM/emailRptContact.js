@@ -35,7 +35,10 @@ try{
 		rptParams.put(arguments[i], arguments[i + 1]);
 	}
 	//logDebug("rptParams: " + rptParams);
-	var emailPriReport = false;
+	//lwacht: defect 4810: everyone gets an email.
+	//var emailPriReport = false;
+	var emailPriReport = true;
+	//lwacht: defect4810 end
 	//var emailDRPReport = false;
 	var priContact = getContactObj(capId,contactType);
 	if(priContact){
