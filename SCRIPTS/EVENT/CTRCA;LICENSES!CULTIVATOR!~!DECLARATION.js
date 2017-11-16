@@ -2,6 +2,7 @@
 // set altId based on application parent
 try{
 	parentCapId = getParent();
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/DECLARATION : " + startDate, capId + ": "+ newIdErrMsg);
 	if(parentCapId){
 		nbrToTry = 1;
 		//because owners can be added and deleted, need a way to number the records
