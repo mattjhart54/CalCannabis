@@ -5,7 +5,7 @@ try{
 	if(wfStatus=="Temporary License Issued"){
 		var licCapId = createLicense("Active", true);
 		if(licCapId){
-			var toDay = new Date("02/14/2018");
+			var toDay = new Date();
 			var jsToDay = toDay.getTime();
 			var janOne = new Date("01/01/2018");
 			var jsJanOne = janOne.getTime();
@@ -14,10 +14,8 @@ try{
 				editFirstIssuedDate(janOne);
 				editAppSpecific("Valid From Date", "01/01/2018", licCapId);
 			}else{
-				var expDate = dateAdd(jsDateToASIDate(toDay,120));
-	//			var expDate = dateAdd(null,120);
-				editAppSpecific("Valid From Date", jsDateToASIDate(toDay), licCapId);
-		//		editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
+				var expDate = dateAdd(null,120);
+				editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
 			}
 			setLicExpirationDate(licCapId,null,expDate,"Active");
 			if(""+AInfo["App Type"]=="Temporary Adult-Use Cannabis Cultivation"){
