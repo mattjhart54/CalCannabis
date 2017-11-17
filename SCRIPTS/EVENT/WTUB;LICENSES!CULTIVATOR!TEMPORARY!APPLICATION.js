@@ -16,7 +16,7 @@ try{
 			}else{
 				var expDate = dateAdd(null,120);
 				editAppSpecific("Valid From Date", jsDateToASIDate(toDay), licCapId);
-				editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
+		//		editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
 			}
 			setLicExpirationDate(licCapId,null,expDate,"Active");
 			if(""+AInfo["App Type"]=="Temporary Adult-Use Cannabis Cultivation"){
