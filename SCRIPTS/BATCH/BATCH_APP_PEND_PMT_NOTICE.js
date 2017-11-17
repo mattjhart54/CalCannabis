@@ -68,20 +68,21 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
-aa.env.setValue("lookAheadDays", "-125");
-aa.env.setValue("daySpan", "259");
+aa.env.setValue("lookAheadDays", "-1");
+aa.env.setValue("daySpan", "0");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
 aa.env.setValue("recordCategory", "Application");
 aa.env.setValue("AppStatusArray", "Pending Payment");
+aa.env.setValue("task", "Application Disposition");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
-aa.env.setValue("emailAddress", "lwacht@trustvip.com");
+aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("reportName", "60 Day Payment Notification Letter");
-aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
+aa.env.setValue("setNonEmailPrefix", "60_DAY_PMT_NOTICE");
  */
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
@@ -90,6 +91,7 @@ var appTypeType = getParam("recordType");
 var appSubtype = getParam("recordSubType");
 var appCategory = getParam("recordCategory");
 var arrAppStatus = getParam("AppStatusArray").split(",");
+var task = getParam("task");
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var emailTemplate = getParam("emailTemplate");
 var sendEmailNotifications = getParam("sendEmailNotifications");
@@ -155,7 +157,7 @@ try{
 	var taskItemScriptModel = aa.workflow.getTaskItemScriptModel().getOutput();
 	// taskItemScriptModel.setActiveFlag("N");
 	// taskItemScriptModel.setCompleteFlag("N");
-	taskItemScriptModel.setTaskDescription("Appeal");
+	taskItemScriptModel.setTaskDescription(task);
 	// taskItemScriptModel.setDisposition("noStatus");
 	// taskItemScriptModel.setDisposition("noStatus");
 	 //Setup the cap type criteria
@@ -275,8 +277,9 @@ try{
 						}else{
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
-								emailRptContact("BATCH", emailTemplate, rptName, false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
+								recordId = capId.getCustomID()
+								runReportAttach(capId,rptName, "altId", recordId); 
+								emailRptContact("BATCH", emailTemplate, rptName, false, "Pending Payment", capId, thisContact["contactType"],"altId", recordId);
 								logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 							}
 						}
