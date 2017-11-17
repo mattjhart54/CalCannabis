@@ -14,7 +14,8 @@ try{
 				editFirstIssuedDate(janOne);
 				editAppSpecific("Valid From Date", "01/01/2018", licCapId);
 			}else{
-				var expDate = dateAdd(null,120);
+				var expDate = dateAdd(jsDateToASIDate(toDay,120));
+	//			var expDate = dateAdd(null,120);
 				editAppSpecific("Valid From Date", jsDateToASIDate(toDay), licCapId);
 		//		editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
 			}
