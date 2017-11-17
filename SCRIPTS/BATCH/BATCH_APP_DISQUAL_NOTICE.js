@@ -222,7 +222,10 @@ try{
 							}
 						}
 						setAddResult=aa.set.add(sNonEmailSet,capId);
-					}else{
+					//lwacht: 171117: emailing all contacts, regardless of preferred channel
+					//}else{
+					}
+					//lwacht: 171117: end
 						conEmail = thisContact["email"];
 						if (conEmail) {
 							//logDebug("=====SENDEMAILNOTIFICATION: BEGIN : " + thisCon + ": " + elapsed() + " Seconds");
@@ -235,7 +238,9 @@ try{
 							emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"], "p1value", capId.getCustomID());
 							logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 						}
-					}
+					//lwacht: 171117: start
+					//}
+					//lwacht: 171117: end
 				}
 			}
 			if(!contactFound){
