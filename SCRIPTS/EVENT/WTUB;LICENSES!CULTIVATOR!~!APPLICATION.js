@@ -155,7 +155,7 @@ try{
 }
 //mhart - check for local auth email
 try {
-	if(matches(wfStatus,"Local Auth Sent - 10","Local Auth Sent - 60")){
+	if(matches(wfStatus,"Local Auth Sent - 10","Local Auth Sent - 60") && AInfo["Manually Send Local Authority Notification"] != "CHECKED"){
 		var locEmail = lookup("LIC_CC_LOCAL_AUTH_CONTACTS", locAuth);
 		if(matches(locEmail, null, "", undefined)) {
 			cancel = true;
