@@ -37,6 +37,7 @@ try{
 	if(balanceDue<=0 && !isTaskComplete("Administrative Review")){
 		activateTask("Administrative Review")
 		activateTask("Owner Application Reviews")
+		updateAppStatus("Submitted", "Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION.");
 	}
 }catch(err){
 	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Fees Paid: " + err.message);

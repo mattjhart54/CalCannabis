@@ -254,10 +254,9 @@ try{
 try{
 	if(wfStatus=="Cash Payment Due Letter Sent"){
 		deactivateTask("Administrative Review");
-		deactivateTask("Owner Application Review");
 	}
 }catch(err){
-	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Cash Payment Required: " + err.message);
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Cash Payment Required: " + err.message);
 	aa.print(err.stack);
 }
 
