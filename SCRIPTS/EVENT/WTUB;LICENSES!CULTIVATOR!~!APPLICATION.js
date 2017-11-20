@@ -153,3 +153,17 @@ try{
 	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Cash Payment Required: " + err.message);
 	aa.print(err.stack);
 }
+//mhart - check for local auth email
+try {
+	if(matches(wfStatus,"Local Auth Sent - 10","Local Auth Sent - 60")){
+		var locEmail = lookup("LIC_CC_LOCAL_AUTH_CONTACTS", locAuth);
+		if(matches(locEmail, null, "", undefined)) {
+			cancel = true;
+			showmessage = true;
+			comment("Local Authority Notification not sent.  No email address found for the local authority " + locAuth)
+		}
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Local Auth Notice: " + err.message);
+	aa.print(err.stack);
+}
