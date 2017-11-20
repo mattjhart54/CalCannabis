@@ -156,6 +156,12 @@ try{
 //mhart - check for local auth email
 try {
 	if(matches(wfStatus,"Local Auth Sent - 10","Local Auth Sent - 60") && AInfo["Manually Send Local Authority Notification"] != "CHECKED"){
+		if(AInfo["Local Authority Type"] == "County")
+			var locAuth = AInfo["Local Authority County"];
+		if(AInfo["Local Authority Type"] == "City")
+			var locAuth = AInfo["Local Authority City"];
+		if(AInfo["Local Authority Type"] == "City and County")
+			var locAuth = AInfo["Local Authority City"] + "-" + AInfo["Local Authority County"];
 		var locEmail = lookup("LIC_CC_LOCAL_AUTH_CONTACTS", locAuth);
 		if(matches(locEmail, null, "", undefined)) {
 			cancel = true;
