@@ -71,8 +71,10 @@ try{
 //lwacht 171112
 //user cannot over or under pay
 try{
-	if(balanceDue!=PaymentTotalPaidAmount  && isTaskActive("Application Disposition")){
-		logDebug("Put code here");
+	if(balanceDue!=PaymentTotalPaidAmount ){
+		showMessage = true;
+		cancel = true;
+		comment("Amount applied (" + PaymentTotalPaidAmount.toFixed(2) +") is not equal to the balance due of $" + balanceDue.toFixed(2) + ".");
 	}
 }catch(err){
 	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
