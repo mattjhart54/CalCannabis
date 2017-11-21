@@ -164,8 +164,8 @@ try {
 			var locAuth = AInfo["Local Authority City"] + "-" + AInfo["Local Authority County"];
 		var locEmail = lookup("LIC_CC_LOCAL_AUTH_CONTACTS", locAuth);
 		if(matches(locEmail, null, "", undefined)) {
+			showmessage = true;		
 			cancel = true;
-			showmessage = true;
 			comment("Local Authority Notification not sent.  No email address found for the local authority " + locAuth)
 		}
 	}
