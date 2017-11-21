@@ -93,8 +93,12 @@ try{
 				var currEmail = currUser.email;
 				if(!matches(ownerEmail,"",null,"undefined")){
 					if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
-						showMessage = true;
-						logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
+						//lwacht 171121: hiding the page if it's not the right person
+						//showMessage = true;
+						//logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
+						aa.acaPageFlow.hideCapPage4ACA(capId, 3, 1);
+						aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+						//lwacht 171121: end
 					}
 				}
 			}else{
