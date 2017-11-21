@@ -99,9 +99,9 @@ try{
 		ttlFee = amtFee - amtPaid;
 		//logDebug("ttlFee: " + ttlFee) 
 		if(parseFloat(ttlFee)!= parseFloat(PaymentTotalPaidAmount)){
-			showMessage = true;
-			cancel = true;
-			comment("Amount applied ($" + parseFloat(PaymentTotalPaidAmount).toFixed(2) +") is not equal to the balance due of $" + ttlFee.toFixed(2) + ".");
+			//showMessage = true;
+			//cancel = true;
+			//comment("Amount applied ($" + parseFloat(PaymentTotalPaidAmount).toFixed(2) +") is not equal to the balance due of $" + ttlFee.toFixed(2) + ".");
 		}
 	}
 }catch(err){
