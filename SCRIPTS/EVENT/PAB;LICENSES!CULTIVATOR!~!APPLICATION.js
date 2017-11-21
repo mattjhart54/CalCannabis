@@ -27,11 +27,11 @@ try{
 			}
 		}
 		ttlFee = amtFee - amtPaid;
-		logDebug("ttlFee: " + ttlFee) 
-		if(ttlFee!= TotalAppliedAmount){
+		//logDebug("ttlFee: " + ttlFee) 
+		if(parseFloat(ttlFee)!= parseFloat(TotalAppliedAmount)){
 			showMessage = true;
 			cancel = true;
-			comment("Amount applied (" + TotalAppliedAmount.toFixed(2) +") is not equal to the balance due of $" + ttlFee.toFixed(2) + ".");
+			comment("Amount applied ($" + parseFloat(TotalAppliedAmount).toFixed(2) +") is not equal to the balance due of $" + ttlFee.toFixed(2) + ".");
 		}
 	}
 }catch(err){
