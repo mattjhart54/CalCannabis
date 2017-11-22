@@ -47,17 +47,20 @@ try{
 	logDebug(err.stack);
 }
 
-//lwacht
-//disqualification notice
+//mhart
+//denial notice
 try{
-	if(matches(wfStatus, "Disqualification Letter Sent")){
-		var rptName = "";
-		var notName = "LCA_TEMP_APP_DISQUALIFIED";
+	if(matches(wfStatus, "Denied - No Appeal")){
+		closeTask("Application Disposition", "Denial Letter Sent","Updated by script Application Denied","");
+		var rptName = "Temporary Denial Letter";
+		var notName = "LCA_GENERAL NOTIFICATION";
+		runReportAttach(parCapId,rptName, "p1value",parCapId.getCustomID());
 		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Disqualification notification: " + err.message);
 	logDebug(err.stack);
 }
+
 
 
