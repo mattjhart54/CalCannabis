@@ -64,7 +64,7 @@ try{
 	if(matches(wfStatus, "Denied - No Appeal")){
 		closeTask("Application Disposition", "Denial Letter Sent","Updated by script Application Denied","");
 		var rptName = "Temporary Denial Letter";
-		var notName = "LCA_GENERAL NOTIFICATION";
+		var notName = "LCA_GENERAL_NOTIFICATION";
 		runReportAttach(parCapId,rptName, "p1value",parCapId.getCustomID());
 		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
 	}
@@ -72,6 +72,3 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Denial notification: " + err.message);
 	logDebug(err.stack);
 }
-
-
-
