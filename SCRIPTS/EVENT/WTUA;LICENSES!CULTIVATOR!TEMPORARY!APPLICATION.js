@@ -68,7 +68,7 @@ try{
 		closeTask("Application Disposition", "Denial Letter Sent","Updated by script Application Denied","");
 		var rptName = "Temporary Denial Letter";
 		var notName = "LCA_GENERAL_NOTIFICATION";
-		runReportAttach(parCapId,rptName, "p1value",capId.getCustomID());
+		runReportAttach(capId,rptName, "p1value",capId.getCustomID());
 		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
 	}
 }catch(err){
