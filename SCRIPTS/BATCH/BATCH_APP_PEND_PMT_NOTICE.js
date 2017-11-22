@@ -277,6 +277,7 @@ try{
 							}
 							setAddResult=aa.set.add(sNonEmailSet,capId);
 						//lwacht: 171122: emailing all contacts, regardless of preferred channel
+						}
 						//}else{
 						//lwacht: 171122: end
 							conEmail = thisContact["email"];
