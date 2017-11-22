@@ -221,7 +221,9 @@ try{
 						}	
 					}
 					// Email notification letter if preference is email
-					if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Email") >= 0) {
+					//lwacht: 171122: emailing all contacts, regardless of preferred channel
+					//if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Email") >= 0) {
+					//lwacht: 171122: end
 						conEmail = thisContact["email"];
 						if (conEmail) {
 							eParams = aa.util.newHashtable();
@@ -232,7 +234,9 @@ try{
 							sendNotification(sysFromEmail,conEmail,"",emailTemplate,eParams, rFiles,capId);
 							logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 						}
-					}
+					//lwacht: 171122: emailing all contacts, regardless of preferred channel
+					//}
+					//lwacht: 171122: end
 				}
 			}
 		}

@@ -276,7 +276,9 @@ try{
 								setCreated = true;
 							}
 							setAddResult=aa.set.add(sNonEmailSet,capId);
-						}else{
+						//lwacht: 171122: emailing all contacts, regardless of preferred channel
+						//}else{
+						//lwacht: 171122: end
 							conEmail = thisContact["email"];
 							if (conEmail) {
 								recordId = capId.getCustomID()
@@ -284,7 +286,9 @@ try{
 								emailRptContact("BATCH", emailTemplate, rptName, false, "Pending Payment", capId, thisContact["contactType"],"altId", recordId);
 								logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 							}
-						}
+						//lwacht: 171122: emailing all contacts, regardless of preferred channel
+						//}
+						//lwacht: 171122: end
 					}
 				}
 			}

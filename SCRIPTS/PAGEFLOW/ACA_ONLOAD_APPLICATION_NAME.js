@@ -77,12 +77,13 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-
 	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	editAppName(AInfo["License Type"]);
-	
+	//lwacht: 171121: force user to go through the entire process again in case something changed
+	resetCapIdStatusClass()
+	//lwacht: 171121 end
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: " + err.message);
 	logDebug(err.stack);

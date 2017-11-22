@@ -90,17 +90,19 @@ try{
 				if(!matches(ownerEmail,"",null,"undefined")){
 					if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
 						//lwacht 171121: hiding the page if it's not the right person
-						//showMessage = true;
-						//logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
-						aa.acaPageFlow.hideCapPage4ACA(capId, 1, 1);
-						aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-						aa.acaPageFlow.hideCapPage4ACA(capId, 1, 2);
-						aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-						aa.acaPageFlow.hideCapPage4ACA(capId, 2, 1);
-						aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-						aa.acaPageFlow.hideCapPage4ACA(capId, 3, 1);
-						aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+						//lwacht 171122: that didn't work out so great. 
+						showMessage = true;
+						logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
+						//aa.acaPageFlow.hideCapPage4ACA(capId, 1, 1);
+						//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+						//aa.acaPageFlow.hideCapPage4ACA(capId, 1, 2);
+						//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+						//aa.acaPageFlow.hideCapPage4ACA(capId, 2, 1);
+						//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+						//aa.acaPageFlow.hideCapPage4ACA(capId, 3, 1);
+						//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
 						//lwacht 171121: end
+						//lwacht 171122: end
 					}
 				}
 			}else{
