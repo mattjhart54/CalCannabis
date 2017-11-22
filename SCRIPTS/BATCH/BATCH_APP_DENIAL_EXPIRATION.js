@@ -85,7 +85,9 @@ var appStatus = getParam("appStatus");
 var newAppStatus = getParam("newAppStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
-var emailAddress = getParam("mhart@trustvip.com");
+//lwacht: 171122: duplicate
+//var emailAddress = getParam("mhart@trustvip.com");
+//lwacht: 171122: end
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var sysFromEmail = getParam("sysFromEmail");
 
