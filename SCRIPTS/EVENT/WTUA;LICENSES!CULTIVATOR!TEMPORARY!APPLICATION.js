@@ -53,12 +53,13 @@ try{
 	if(matches(wfStatus, "Disqualification Letter Sent")){
 		var rptName = "";
 		var notName = "LCA_TEMP_APP_DISQUALIFIED";
-​		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
+		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Disqualification notification: " + err.message);
-	logDebug(err.stack);
+logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Disqualification notification: " + err.message);
+logDebug(err.stack);
 }
+
 
 //mhart
 //denial notice
