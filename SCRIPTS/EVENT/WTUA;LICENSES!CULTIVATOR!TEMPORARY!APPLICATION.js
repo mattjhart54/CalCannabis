@@ -46,6 +46,7 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Assign Disposition: " + err.message);
 	logDebug(err.stack);
 }
+
 //lwacht
 //disqualification notice
 try{
@@ -58,6 +59,7 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Disqualification notification: " + err.message);
 	logDebug(err.stack);
 }
+
 //mhart
 //denial notice
 try{
