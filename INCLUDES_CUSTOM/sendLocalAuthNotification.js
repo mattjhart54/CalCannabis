@@ -2,7 +2,7 @@ function sendLocalAuthNotification() {
 	try{
 		editAppSpecific("Local Authority Notification Sent", jsDateToASIDate(new Date()));
 		if(wfStatus == "Local Auth Sent - 10") {
-			editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),10,"Y"));
+			editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),10));
 		}
 		else {
 			editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),60,"Y"));
@@ -21,17 +21,31 @@ function sendLocalAuthNotification() {
 			var eParams = aa.util.newHashtable();
 			rFiles = []				
 			addParameter(eParams, "$$altID$$", capId.getCustomID());
+			if(appTypeArray[2] == "temporary") 
+				licType = "Temporary";
+			else
+				licType = "annual";
+			addParameter(eParams, "$$licType$$", licType);
+			addParameter(eparams,"$$premiseAddress$$", AInfo["Premise Address"]);
 			if(wfStatus == "Local Auth Sent - 10") {
-				addParameter(eParams, "$$days$$", 10);
+				addParameter(eParams, "$$days$$", "10 calendar");
 				updateAppStatus("Pending Local Authorization 10");
 			}
 			else {
-				addParameter(eParams, "$$days$$", 60);
+				addParameter(eParams, "$$days$$", "60 busines");
 				updateAppStatus("Pending Local Authorization 60");
 			}
 			var priContact = getContactObj(capId,"Business");
-			if(priContact)
-				addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
+			if(priContact) {
+				if(!matches(priContact.capContact.firstName,null,"",undefined) && !matches(priContact.capContact.middleName,null,"",undefined))
+					addParameter(eParams, "$$businessName$$", priContact.capContact.firstName + " " + priContact.capContact.lastName + ", " + priContact.capContact.middleName);
+				else 
+					if(!matches(priContact.capContact.firstName,null,"",undefined))
+						addParameter(eParams, "$$businessName$$", priContact.capContact.firstName + " " + priContact.capContact.lastName);
+					else	
+						if(!matches(priContact.capContact.firstName,null,"",undefined))
+							addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
+			}			
 			sendNotification(sysFromEmail,locEmail,"","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
 		}
 		else {
