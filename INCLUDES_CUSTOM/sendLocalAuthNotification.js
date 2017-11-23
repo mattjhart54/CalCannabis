@@ -32,7 +32,7 @@ function sendLocalAuthNotification() {
 				updateAppStatus("Pending Local Authorization 10");
 			}
 			else {
-				addParameter(eParams, "$$days$$", "60 busines");
+				addParameter(eParams, "$$days$$", "60 business");
 				updateAppStatus("Pending Local Authorization 60");
 			}
 			var priContact = getContactObj(capId,"Business");
