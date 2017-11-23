@@ -43,7 +43,7 @@ function sendLocalAuthNotification() {
 					if(!matches(priContact.capContact.firstName,null,"",undefined))
 						addParameter(eParams, "$$businessName$$", priContact.capContact.firstName + " " + priContact.capContact.lastName);
 					else	
-						if(!matches(priContact.capContact.firstName,null,"",undefined))
+						if(!matches(priContact.capContact.middleName,null,"",undefined))
 							addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
 			}			
 			sendNotification(sysFromEmail,locEmail,"","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
