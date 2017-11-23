@@ -26,7 +26,7 @@ function sendLocalAuthNotification() {
 			else
 				licType = "annual";
 			addParameter(eParams, "$$licType$$", licType);
-			addParameter(eparams,"$$premiseAddress$$", AInfo["Premise Address"]);
+			addParameter(eParams,"$$premiseAddress$$", AInfo["Premise Address"]);
 			if(wfStatus == "Local Auth Sent - 10") {
 				addParameter(eParams, "$$days$$", "10 calendar");
 				updateAppStatus("Pending Local Authorization 10");
