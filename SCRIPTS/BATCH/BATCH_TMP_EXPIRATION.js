@@ -391,20 +391,21 @@ try{
 						logDebug("Email channel detected but contact has no email address--adding to notification set");
 						setAddResult=aa.set.add(sNonEmailSet,capId);
 						continue;
-					//lwacht: 171122: emailing all contacts, regardless of preferred channel
-					}
-					//}else {
-					//lwacht: 171122: end
+					}else {
 						currentUserID = "ADMIN";
 						runReportAttach(capId,rptName, "altId", capId.getCustomID()); 
 						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, conTypeArray[thisType]);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + conTypeArray[thisType] + " : " + email);
-					//lwacht: 171122: emailing all contacts, regardless of preferred channel
-					//}
-					//lwacht: 171122: end
+					}
 				}else{
 					setAddResult=aa.set.add(sNonEmailSet,capId);
 					logDebug("Preferred channel is not Email (" +channel+ "), adding to notification set.");
+					//lwacht: 171122: emailing all contacts, regardless of preferred channel
+					currentUserID = "ADMIN";
+					runReportAttach(capId,rptName, "altId", capId.getCustomID()); 
+					emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, conTypeArray[thisType]);
+					logDebug(altId + ": Sent Email template " + emailTemplate + " to " + conTypeArray[thisType] + " : " + email);
+					//lwacht: 171122: end
 				}
 			}
 		}
