@@ -123,6 +123,10 @@ try {
 					editContactType("Individual", "Owner");
 					errMsg += vEmail + br;
 					var ownUser = createPublicUserFromContact_Rev("Owner");
+					var ownPubUser = ownUser.auditID;
+					//lwacht: 171124: make the owner the person who created the record so the applicant
+					// cannot see their info;
+					editCreatedBy(ownPubUser);
 					tblOwners[o]["Status"]="Submitted";
 					emailParameters = aa.util.newHashtable();
 					var sysDate = aa.date.getCurrentDate();
