@@ -27,10 +27,10 @@ function sendLocalAuthNotification() {
 				licType = "annual";
 			addParameter(eParams, "$$licType$$", licType);
 			if(!matches(AInfo["Premise Address"], null,"",undefined)) {
-				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " " + AInfo["APN"]);
+				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " APN: " + AInfo["APN"]);
 			}
 			else {
-				addParameter(eParams,"$$premisesAddress$$", AInfo["APN"]);
+				addParameter(eParams,"$$premisesAddress$$", "APN: " + AInfo["APN"]);
 			}
 			if(wfStatus == "Local Auth Sent - 10") {
 				addParameter(eParams, "$$days$$", "10 calendar");
