@@ -26,7 +26,7 @@ function sendLocalAuthNotification() {
 			else
 				licType = "annual";
 			addParameter(eParams, "$$licType$$", licType);
-			if(!matches(AInfo["Premise Address" ], null,"",undefined) {
+			if(!matches(AInfo["Premise Address"], null,"",undefined) {
 				addParameter(eParams,"$$premiseAddress$$", AInfo["Premise Address"] + " " + AInfo["APN"]);
 			}
 			else {
