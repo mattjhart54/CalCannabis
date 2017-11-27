@@ -200,7 +200,7 @@ try{
 				if (tblWater[x]["Type of Water Supply"] == "Small Retail Supplier - Delivery or pickup of water from a groundwater well"){
 					sr=true;
 				}
-				if (tblWater[x]["Type of Water Supply"] == "Diversion from Waterbody"){
+				if(matches(tblWater[x]["Type of Water Supply"], "Diversion from Waterbody", "Small Retail Supplier Diversion" )){
 					di=true;
 				}
 				if (tblWater[x]["Type of Water Supply"] == "Diversion with Exception from Requirement to File a Statement of Diversion and Use"){
