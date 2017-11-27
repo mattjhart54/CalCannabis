@@ -45,7 +45,7 @@ try{
 	var ownership = {condition : "Premises - Property Ownership Documentation", document : "Premises - Property Ownership Documentation"};
 //	var operationDate = {condition : "Premises - Evidence of the Date Operations Began", document : "Premises - Evidence of the Date Operations Began"};
 	var enviroStor = {condition : "Premises - EnviroStor Hazardous Materials Search", document : "Premises - EnviroStor Hazardous Materials Search"};
-	var premiseDiagram = {condition : "Cultivation Plan - Premises Diagram and Operating Procedures", document : "Cultivation Plan - Premises Diagram and Operating Procedures"};
+	var premiseDiagram = {condition : "Cultivation Plan - Property Diagram and Detailed Premises Diagram", document : "Cultivation Plan - Property Diagram and Detailed Premises Diagram"};
 	var wastePlan = {condition : "Cultivation Plan - Waste Management Plan", document : "Cultivation Plan - Waste Management Plan"};
 	var pestPlan = {condition : "Cultivation Plan - Pest Management Plan", document : "Cultivation Plan - Pest Management Plan"};
 	var lightDiagram = {condition : "Cultivation Plan - Lighting Diagram", document : "Cultivation Plan - Lighting Diagram"};
@@ -62,7 +62,7 @@ try{
 //	var localComply = {condition : "Local - Certification of Local Compliance", document : "Local - Certification of Local Compliance"};
 	var coopMembers = {condition : "Cannabis Cooperative Association Member List", document : "Cannabis Cooperative Association Member List"};
 	var useCompassionate = {condition : "Priority Review - Compassionate Use Act of 1996", document : "Priority Review - Compassionate Use Act"};
-	var pwrGenerator = {condition : "Power Source - Generator", document : "Power Source – Generator 50 HP and greater"};
+	var pwrGenerator = {condition : "Power Source - Generator 50HP or Greater", document : "Power Source – Generator 50 HP or greater"};
 	
 	//owner documents
     var governmentIssuedID = {condition : "Government Issued ID", document : "Government Issued ID"};
