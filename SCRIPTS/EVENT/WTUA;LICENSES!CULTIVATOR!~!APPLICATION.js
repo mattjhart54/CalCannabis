@@ -57,12 +57,12 @@ try{
 			*/
 			var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
 			var cntChild = childAmend.length;
-			cntChild --;
 			logDebug("cntChild: " + cntChild);
 			if(cntChild<10){
 				cntChild = "0" +cntChild;
 			}
-			var newAltId = capIDString +"-DEF"+ cntChild+"T"
+			var newAltId = capIDString +"-DEF"+ cntChild+"T";
+			logDebug("newAltId: " + newAltId);
 			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
 			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 		//}
