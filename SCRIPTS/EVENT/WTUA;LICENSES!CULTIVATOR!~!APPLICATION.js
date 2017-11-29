@@ -31,8 +31,6 @@ try{
 		var resDefId = aa.cap.createSimplePartialRecord(ctm,newAppName, "INCOMPLETE CAP");
 		if(resDefId.getSuccess()){
 			var newDefId = resDefId.getOutput();
-			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
-			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 			//emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Primary Contact", "p1value", capId.getCustomID());
 			//if(emailReport){
 			//	runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
@@ -45,6 +43,8 @@ try{
 			}else{
 				logDebug("Could not link applications: " + resCreateRelat.getErrorMessage());
 			}
+			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
+			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 			editAppSpecific("ParentCapId", capIDString,newDefId);
 			//copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
 			var tblODefic = [];
