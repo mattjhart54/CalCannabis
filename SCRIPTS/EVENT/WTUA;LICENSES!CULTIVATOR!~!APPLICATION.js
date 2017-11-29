@@ -1,8 +1,7 @@
 //lwacht: send a deficiency email when the status is "Deficiency Letter Sent" 
 try{
-	if("Deficiency Letter Sent".equals(wfStatus)){ 
-		//lwacht 171129: moving to WTUB to try to get report to work
-		/*
+	if("Deficiency Letter Sent".equals(wfStatus)){
+		/* lwacht 171129: moving to WTUB to try to get report to work
 		var newAppName = "Deficiency: " + capName;
 		//create child amendment record
 		ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
@@ -66,7 +65,7 @@ try{
 			var newAltId = capIDString +"-DEF"+ cntChild+"T"
 			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
 			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
-		}
+		//}
 		//only create a record if the owner app task on the parent says you should
 		if(taskStatus("Owner Application Reviews") == "Additional Information Needed" || taskStatus("Owner Application Reviews") == "Incomplete Response"){
 			var childOwner = getChildren("Licenses/Cultivator/*/Owner Application");
