@@ -24,7 +24,15 @@ try{
 		if(showReport){
 			showDebug=false;
 			//lwacht: 170815: updated report name
-			displayReport("Deficiency Report", "Record ID", capIDString);
+			var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
+			var cntChild = childAmend.length;
+			//cntChild ++;
+			//logDebug("cntChild: " + cntChild);
+			if(cntChild<10){
+				cntChild = "0" +cntChild;
+			}
+			var newAltId = capIDString +"-DEF"+ cntChild +"T";
+			displayReport("Deficiency Report", "Record ID", capIDString,"CHILD_RECORD_ID",newAltId );
 		}
 	}
 }catch(err){

@@ -43,8 +43,6 @@ try{
 			}else{
 				logDebug("Could not link applications: " + resCreateRelat.getErrorMessage());
 			}
-			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value", newDefId.getCustomID());
-			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 			editAppSpecific("ParentCapId", capIDString,newDefId);
 			//copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
 			var tblODefic = [];
@@ -75,6 +73,8 @@ try{
 				editAppSpecific("AltId", newAltId,newDefId);
 				logDebug("Deficiency record ID updated to : " + newAltId);
 			}
+			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
+			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 			//only create a record if the owner app task on the parent says you should
 			if(taskStatus("Owner Application Reviews") == "Additional Information Needed" || taskStatus("Owner Application Reviews") == "Incomplete Response"){
 				var childOwner = getChildren("Licenses/Cultivator/*/Owner Application");
