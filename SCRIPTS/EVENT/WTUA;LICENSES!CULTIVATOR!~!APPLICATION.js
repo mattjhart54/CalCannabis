@@ -62,7 +62,7 @@ try{
 				cntChild = "0" +cntChild;
 			}
 			var newAltId = capIDString +"-DEF"+ cntChild+"T";
-			logDebug("newAltId: " + newAltId);
+			comment("<font color='purple'>Use this value for the Deficiency Record ID: " + newAltId + "</font>");
 			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
 			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 		//}
