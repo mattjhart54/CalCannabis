@@ -2,16 +2,64 @@
 //display the deficiency report for printing. Note: only use the primary contact's preferred channel
 try{ 
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		//lwacht 171129 start
+		var newAppName = "Deficiency: " + capName;
+		//create child amendment record
+		ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
+		ctm.setGroup("Licenses");
+		ctm.setType("Cultivator");
+		ctm.setSubType("Medical");
+		ctm.setCategory("Amendment");
+		var resDefId = aa.cap.createSimplePartialRecord(ctm,newAppName, "INCOMPLETE CAP");
+		if(resDefId.getSuccess()){
+			var newDefId = resDefId.getOutput();
+			//emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Primary Contact", "p1value", capId.getCustomID());
+			//if(emailReport){
+			//	runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID());
+			//	emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, wfStatus, newDefId);
+			//}
+			//relate amendment to application
+			var resCreateRelat = aa.cap.createAppHierarchy(capId, newDefId); 
+			if (resCreateRelat.getSuccess()){
+				logDebug("Child application successfully linked");
+			}else{
+				logDebug("Could not link applications: " + resCreateRelat.getErrorMessage());
+			}
+			editAppSpecific("ParentCapId", capIDString,newDefId);
+			//copyASITables(capId,newDefId,["CANNABIS FINANCIAL INTEREST", "OWNERS", "ATTACHMENTS"]);
+			var tblODefic = [];
+			var arrDef = [];
+			for (row in DEFICIENCIES){
+				if(DEFICIENCIES[row]["Status"]=="Deficient"){
+					arrDef.push(DEFICIENCIES[row]);
+				}
+			}
+			logDebug("newDefId: " + newDefId.getCustomID());
+			addASITable("DEFICIENCIES", arrDef, newDefId);
+			copyContactsByType(capId, newDefId,"Designated Responsible Party");
+			//copyContactsByType(capId, newDefId,"Primary Contact");
+			//find out how many amendment records there have been so we can create an AltId
+			var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
+			var cntChild = childAmend.length;
+			//cntChild ++;
+			//logDebug("cntChild: " + cntChild);
+			if(cntChild<10){
+				cntChild = "0" +cntChild;
+			}
+			var newAltId = capIDString +"-DEF"+ cntChild;
+			//logDebug("newAltId: " + newAltId);
+			var updAltId = aa.cap.updateCapAltID(newDefId,newAltId+"T");
+			if(!updAltId.getSuccess()){
+				logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
+			}else{
+				editAppSpecific("AltId", newAltId,newDefId);
+				logDebug("Deficiency record ID updated to : " + newAltId);
+			}
+			//runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
+			//emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+		}
+		//lwacht 171129 end
 		var showReport = false;
-		//lwacht : 170823 : removing primary contact
-		//var priContact = getContactObj(capId,"Primary Contact");
-		//if(priContact){
-		//	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-		//	if(priChannel.indexOf("Postal") > -1){
-		//		showReport = true;
-		//	}
-		//}
-		//lwacht: 170815: uncommenting in preparation for Primary Contact going away
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		if(drpContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
@@ -23,15 +71,6 @@ try{
 		}
 		if(showReport){
 			showDebug=false;
-			//lwacht: 170815: updated report name
-			var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
-			var cntChild = childAmend.length;
-			//cntChild ++;
-			//logDebug("cntChild: " + cntChild);
-			if(cntChild<10){
-				cntChild = "0" +cntChild;
-			}
-			var newAltId = capIDString +"-DEF"+ cntChild +"T";
 			displayReport("Deficiency Report", "Record ID", capIDString,"CHILD_RECORD_ID",newAltId );
 		}
 	}
