@@ -132,6 +132,7 @@ try {
 					var sysDate = aa.date.getCurrentDate();
 					var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
 					addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
+					addParameter(emailParameters, "$$ParentAltID$$", currCapId.getCustomID());
 					addParameter(emailParameters, "$$fName$$",""+vFirst);
 					addParameter(emailParameters, "$$lName$$",""+vLast);
 					addParameter(emailParameters, "$$mmddyy$$", sysDateMMDDYYYY);
