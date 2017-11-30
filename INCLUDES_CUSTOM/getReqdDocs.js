@@ -53,6 +53,9 @@ try{
 	var wellLog = {condition : "Water - Groundwater Well Log", document : "Water - Groundwater Well Log"};
 	var srs2WellLog = {condition : "Water - Small Retail Supplier Well Log", document : "Water - Small Retail Supplier Well Log"};
 	var SWRCBAhuth = {condition : "Water - SWRCB Diversion Authorization", document : "Water - SWRCB Diversion Authorization"};
+	//lwacht 171130 new doc type
+	var wtrSmRetSupDiv = {condition : "Water - Small Retail Supplier Diversion", document : "Water - Small Retail Supplier Diversion"};
+	//lwacht 171130 end
 	/*lwacht 171127: no longer needed
 	var SWRCBExcept = {condition : "Water - SWRCB Exception Document", document : "Water - SWRCB Exception Document"};
 	*/
@@ -194,6 +197,7 @@ try{
 		var sr=false;
 		var di=false;
 		var de=false;
+		var wtrSmRetSupDiv=false;
 		if(typeof(SOURCEOFWATERSUPPLY)=="object"){
 			var tblWater = SOURCEOFWATERSUPPLY;
 			for(x in tblWater) {
@@ -204,9 +208,15 @@ try{
 					sr=true;
 				}
 				//lwacht 171127: new water supply type "Small Retail Supplier Diversion" 
-				if(matches(tblWater[x]["Type of Water Supply"], "Diversion from Waterbody", "Small Retail Supplier Diversion" )){
+				//lwacht 171130 new doc type
+				if(matches(tblWater[x]["Type of Water Supply"], "Diversion from Waterbody")){
 					di=true;
 				}
+				//lwacht 171127 end
+				if(matches(tblWater[x]["Type of Water Supply"], "Small Retail Supplier Diversion")){
+					wtrSmRetSupDiv=true;
+				}
+				//lwacht 171130 end
 				if (tblWater[x]["Type of Water Supply"] == "Diversion with Exception from Requirement to File a Statement of Diversion and Use"){
 					de=true;
 				}
@@ -233,6 +243,15 @@ try{
 			removeCapCondition(conditionType, SWRCBAhuth.condition);
 		}
 	}
+	//lwacht 171130: new doc type
+	if(wtrSmRetSupDiv == true) {
+		arrReqdDocs_App.push(wtrSmRetSupDiv);
+	}else{
+		if(appHasCondition(conditionType, null, wtrSmRetSupDiv.condition, null)){
+			removeCapCondition(conditionType, wtrSmRetSupDiv.condition);
+		}
+	}
+	//lwacht 171130 end
 	/*lwacht 171127: no longer needed
 	if(de == true) {
 		arrReqdDocs_App.push(SWRCBExcept);
