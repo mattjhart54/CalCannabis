@@ -54,7 +54,7 @@ try{
 	var srs2WellLog = {condition : "Water - Small Retail Supplier Well Log", document : "Water - Small Retail Supplier Well Log"};
 	var SWRCBAhuth = {condition : "Water - SWRCB Diversion Authorization", document : "Water - SWRCB Diversion Authorization"};
 	//lwacht 171130 new doc type
-	var wtrSmRetSupDiv = {condition : "Water - Small Retail Supplier Diversion", document : "Water - Small Retail Supplier Diversion"};
+	var docWtrSmRetSupDiv = {condition : "Water - Small Retail Supplier Diversion", document : "Water - Small Retail Supplier Diversion"};
 	//lwacht 171130 end
 	/*lwacht 171127: no longer needed
 	var SWRCBExcept = {condition : "Water - SWRCB Exception Document", document : "Water - SWRCB Exception Document"};
@@ -245,10 +245,10 @@ try{
 	}
 	//lwacht 171130: new doc type
 	if(wtrSmRetSupDiv == true) {
-		arrReqdDocs_App.push(wtrSmRetSupDiv);
+		arrReqdDocs_App.push(docWtrSmRetSupDiv);
 	}else{
-		if(appHasCondition(conditionType, null, wtrSmRetSupDiv.condition, null)){
-			removeCapCondition(conditionType, wtrSmRetSupDiv.condition);
+		if(appHasCondition(conditionType, null, docWtrSmRetSupDiv.condition, null)){
+			removeCapCondition(conditionType, docWtrSmRetSupDiv.condition);
 		}
 	}
 	//lwacht 171130 end
