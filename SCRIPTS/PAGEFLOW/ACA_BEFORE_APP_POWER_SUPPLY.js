@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_BEFORE_VALIDATE_CONTACT.JS
+| Program : ACA_BEFORE_APP_POWER_SUPPLY.JS
 | Event   : ACA Page Flow onload attachments component
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -76,6 +76,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try {
+	showDebug = 3;
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 
 	if(resCurUser.getSuccess()){
@@ -125,17 +126,17 @@ try {
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
 		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 	}
-	if(AInfo["License Type"]!=null && AInfo["License Type"]!="" && matches(AInfo["License Type"], "Specialty Cottage Indoor", "Specialty Cottage Mixed-Light Tier 1", "Specialty Cottage Mixed-Light Tier 2", "Specialty Indoor", "Specialty Mixed-Light Tier 1", "Specialty Mixed-Light Tier 2", "Small Indoor", "Small Mixed-Light Tier 1", "Small Mixed-Light Tier 2", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
+	if( matches(AInfo["License Type"], "Specialty Cottage Indoor", "Specialty Cottage Mixed-Light Tier 1", "Specialty Cottage Mixed-Light Tier 2", "Specialty Indoor", "Specialty Mixed-Light Tier 1", "Specialty Mixed-Light Tier 2", "Small Indoor", "Small Mixed-Light Tier 1", "Small Mixed-Light Tier 2", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
 		if(AInfo["Grid"] !="CHECKED" && AInfo["Solar"]  !="CHECKED" && AInfo["Generator"] !="CHECKED" && AInfo["Generator Under 50 HP"] !="CHECKED" && AInfo["Other"] !="CHECKED") {
 			cancel = true;
 			showMessage = true;
-			logMessage("At least one of the power source types must be selected");
+			comment("At least one of the power source types must be selected");
 		}
 	}
 }catch (err){
-	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLAR_DRP_CONTACT: " + err.message);
+	logDebug("A JavaScript Error occurred:ACA_BEFORE_APP_POWER_SUPPLY: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_APP_POWER_SUPPLY: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 // page flow custom code end
