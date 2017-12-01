@@ -78,7 +78,6 @@ var cap = aa.env.getValue("CapModel");
 try {
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-	showDebug = 3;
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 
 	if(resCurUser.getSuccess()){
