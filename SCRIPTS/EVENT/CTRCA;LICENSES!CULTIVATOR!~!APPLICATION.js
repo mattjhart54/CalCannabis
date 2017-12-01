@@ -99,6 +99,7 @@ try{
 						if(!docObj.getSuccess()){
 							aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Migrate Documents: "+ startDate, capId + br + "docObj: " + docObj.getErrorMessage() + br + currEnv);
 						}
+					}
 				}
 			}
 			//do not put this in CTRCB
