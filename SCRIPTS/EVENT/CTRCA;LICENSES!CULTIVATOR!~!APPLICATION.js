@@ -86,7 +86,6 @@ try{
 					newFeeFound = true;
 				}
 		}
-		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + "newFeeFound: " + newFeeFound + br + currEnv);
 		if(newFeeFound){
 			var invNbr = invoiceAllFees();
 			var chIds = getChildren("Licenses/Cultivator/*/*",capId);
@@ -95,10 +94,13 @@ try{
 				if(getCapIdStatusClass(chCapId) == "INCOMPLETE EST"){
 					var chCapModel = aa.cap.getCapViewBySingle4ACA(chCapId);
 					var newRec = convert2RealCAP(chCapModel);
-					aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + "newRec: " + newRec + br + currEnv);
+					if(newRec){
+						var docObj = aa.cap.transferRenewCapDocument(chCapId,newRec.getCapID(), true); 
+						if(!docObj.getSuccess()){
+							aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Migrate Documents: "+ startDate, capId + br + "docObj: " + docObj.getErrorMessage() + br + currEnv);
+						}
 				}
 			}
-			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + "newFeeFound: " + newFeeFound + br + "getCapIdStatusClass(chCapId): " + getCapIdStatusClass(chCapId) + br + currEnv);
 			//do not put this in CTRCB
 			runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 			runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID(), "contactType", "Designated Responsible Party");
