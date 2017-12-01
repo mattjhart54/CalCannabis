@@ -86,6 +86,7 @@ try{
 					newFeeFound = true;
 				}
 		}
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + "newFeeFound: " + newFeeFound + br + currEnv);
 		if(newFeeFound){
 			var invNbr = invoiceAllFees();
 			var chIds = getChildren("Licenses/Cultivator/*/*",capId);
