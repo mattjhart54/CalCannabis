@@ -76,6 +76,8 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try {
+	var AInfo = [];
+	loadAppSpecific4ACA(AInfo);
 	showDebug = 3;
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 
@@ -126,8 +128,8 @@ try {
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
 		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 	}
-	if( matches(AInfo["License Type"], "Specialty Cottage Indoor", "Specialty Cottage Mixed-Light Tier 1", "Specialty Cottage Mixed-Light Tier 2", "Specialty Indoor", "Specialty Mixed-Light Tier 1", "Specialty Mixed-Light Tier 2", "Small Indoor", "Small Mixed-Light Tier 1", "Small Mixed-Light Tier 2", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
-		if(AInfo["Grid"] !="CHECKED" && AInfo["Solar"]  !="CHECKED" && AInfo["Generator"] !="CHECKED" && AInfo["Generator Under 50 HP"] !="CHECKED" && AInfo["Other"] !="CHECKED") {
+	if(matches(AInfo["License Type"], "Specialty Cottage Indoor", "Specialty Cottage Mixed-Light Tier 1", "Specialty Cottage Mixed-Light Tier 2", "Specialty Indoor", "Specialty Mixed-Light Tier 1", "Specialty Mixed-Light Tier 2", "Small Indoor", "Small Mixed-Light Tier 1", "Small Mixed-Light Tier 2", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
+		if(AInfo["Grid"] !="CHECKED" && AInfo["Solar"] !="CHECKED" && AInfo["Generator"] !="CHECKED" && AInfo["Generator Under 50 HP"] !="CHECKED" && AInfo["Other"] !="CHECKED") {
 			cancel = true;
 			showMessage = true;
 			comment("At least one of the power source types must be selected");
