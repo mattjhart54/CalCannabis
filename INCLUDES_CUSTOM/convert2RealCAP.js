@@ -51,4 +51,5 @@ try{
 }catch(err){
 	logDebug("An error occurred in convert2RealCAP: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in convert2RealCAP: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }}

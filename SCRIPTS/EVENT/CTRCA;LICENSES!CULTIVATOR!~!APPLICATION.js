@@ -92,10 +92,10 @@ try{
 			var chIds = getChildren("Licenses/Cultivator/*/*",capId);
 			for(rec in chIds){
 				var chCapId = chIds[rec];
-				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + "getCapIdStatusClass(chCapId): " + getCapIdStatusClass(chCapId) + br + currEnv);
 				if(getCapIdStatusClass(chCapId) == "INCOMPLETE EST"){
 					var chCapModel = aa.cap.getCapViewBySingle4ACA(chCapId);
-					convert2RealCAP(chCapModel);
+					var newRec = convert2RealCAP(chCapModel);
+					aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + "newRec: " + newRec + br + currEnv);
 				}
 			}
 			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + "newFeeFound: " + newFeeFound + br + "getCapIdStatusClass(chCapId): " + getCapIdStatusClass(chCapId) + br + currEnv);
