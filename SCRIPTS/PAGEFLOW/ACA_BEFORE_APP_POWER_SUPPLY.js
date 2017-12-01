@@ -130,9 +130,9 @@ try {
 			cancel = true;
 			showMessage = true;
 			logMessage("At least one of the power source types must be selected");
-	}	
-}
-catch (err){
+		}
+	}
+}catch (err){
 	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLAR_DRP_CONTACT: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
