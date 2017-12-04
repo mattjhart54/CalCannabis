@@ -47,9 +47,9 @@ try{
 					"recordId" : String(capFaChild.getCapID().getCustomID())
 				});
 				//lwacht: 171204: reset the DRP record if it exists
-				var faCapStatus = getCapIdStatusClass(capFaChild);
+				var faCapStatus = getCapIdStatusClass(thisFaChild);
 				if(faCapStatus == "INCOMPLETE EST"){
-					resetCapIdStatusClass(capFaChild);
+					resetCapIdStatusClass(thisFaChild);
 				}
 				//lwacht: 171204: end
 			}
