@@ -52,6 +52,7 @@ try{
 					var resReset = resetCapIdStatusClass(thisFaChild);
 					if(!resReset.getSuccess()){
 						aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Reset Cap Status:  " + startDate, "capId: " + capId + ": " + "resReset: " + resReset.getErrorMessage());
+					}
 				}
 				//lwacht: 171204: end
 			}
