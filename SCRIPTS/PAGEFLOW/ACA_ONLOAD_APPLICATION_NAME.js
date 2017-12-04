@@ -82,7 +82,7 @@ try{
 	loadAppSpecific4ACA(AInfo);
 	editAppName(AInfo["License Type"]);
 	//lwacht: 171121: force user to go through the entire process again in case something changed
-	resetCapIdStatusClass()
+	resetCapIdStatusClass();
 	//lwacht: 171121 end
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: " + err.message);
