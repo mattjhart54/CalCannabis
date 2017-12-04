@@ -46,6 +46,11 @@ try{
 					"Alias" : String(capFaChild.getCapModel().getAppTypeAlias()),
 					"recordId" : String(capFaChild.getCapID().getCustomID())
 				});
+				var drpContact = getContactByType("Designated Responsible Party",parentCapId);
+				//lwacht: 171204: make the DRP the person who created the record so no one else
+				// cannot see their info;
+				editCreatedBy(drpContact.auditID,thisFaChild);
+				//lwacht: 171204: end
 				//lwacht: 171204: reset the DRP record if it exists
 				var faCapStatus = getCapIdStatusClass(thisFaChild);
 				if(faCapStatus == "INCOMPLETE EST"){
@@ -84,17 +89,6 @@ try{
 					var drpFirst = drpContact.getFirstName();
 					var drpLast =  drpContact.getLastName();
 					var drpEmail = drpContact.getEmail();
-					//lwacht: 171204: make the DRP the person who created the record so no one else
-					// cannot see their info;
-					var eMsg = "";
-					for (z in drpContact){
-						if(typeof(drpContact[z]=="function")){
-							eMsg+=z+br;
-						}
-					}
-					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " +"drpContact.auditID: " + drpContact.auditID + br + eMsg);
-					editCreatedBy(drpContact.auditID);
-					//lwacht: 171204: end
 					editAppName(drpFirst + " " + drpLast + " (" + drpEmail + ")", desigRecId);
 					updateShortNotes(drpFirst + " " + drpLast + " (" + drpEmail + ")",desigRecId);
 					copyContactsByType(parentCapId, desigRecId, "Designated Responsible Party");
