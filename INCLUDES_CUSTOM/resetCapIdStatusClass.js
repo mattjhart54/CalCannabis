@@ -24,10 +24,11 @@ try{
 		itemCap = arguments[0];
 	var capIdStatus = getCapIdStatusClass(itemCap);
 	if(matches(capIdStatus,"INCOMPLETE EST","INCOMPLETE CAP")){
+		var inCapScriptModel = aa.cap.getCap(itemCap).getOutput();
 	    var tempCapModel = inCapScriptModel.getCapModel();
 		tempCapModel.setCapClass("INCOMPLETE TMP");
 		var results = aa.cap.editCapByPK(tempCapModel);
-		return results.getSuccess();
+		return results;
 	}
 }catch(err){
 	logDebug("An error occurred in resetCapIdStatusClass: " + err.message);
