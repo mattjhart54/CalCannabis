@@ -46,6 +46,12 @@ try{
 					"Alias" : String(capFaChild.getCapModel().getAppTypeAlias()),
 					"recordId" : String(capFaChild.getCapID().getCustomID())
 				});
+				//lwacht: 171204: reset the DRP record if it exists
+				var faCapStatus = getCapIdStatusClass(capFaChild);
+				if(faCapStatus == "INCOMPLETE EST"){
+					resetCapIdStatusClass(capFaChild);
+				}
+				//lwacht: 171204: end
 			}
 		}
 		if(chArray.length>0){
@@ -66,7 +72,7 @@ try{
 			}
 			var arrForms = (doAssocFormRecs("childRecs",afArray));
 			capId = currCap;
-			for (i in arrForms){
+			for (i in arrForms){0
 				thisForm =  arrForms[i];
 				var desigRec =  thisForm["recordId"];
 				var desigRecId = aa.cap.getCapID(desigRec).getOutput();
@@ -95,16 +101,7 @@ try{
 					}
 				}
 			}
-		//lwacht: 171204: reset the DRP record if it exists
-		}else{
-			if(capFaChild){
-				var faCapStatus = getCapIdStatusClass(inCapId);
-				if(faCapStatus == "INCOMPLETE EST"){
-					resetCapIdStatusClass();
-				}
-			}
 		}
-		//lwacht: 171204: end
 	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA:Licenses/Cultivator/*/Owner Application: Declaration logic: " + err.message);
