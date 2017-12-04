@@ -83,7 +83,7 @@ try{
 					var drpEmail = drpContact.getEmail();
 					//lwacht: 171204: make the DRP the person who created the record so no one else
 					// cannot see their info;
-					editCreatedBy(ownPubUser);
+					editCreatedBy(drpContact.auditID);
 					//lwacht: 171204: end
 					editAppName(drpFirst + " " + drpLast + " (" + drpEmail + ")", desigRecId);
 					updateShortNotes(drpFirst + " " + drpLast + " (" + drpEmail + ")",desigRecId);
