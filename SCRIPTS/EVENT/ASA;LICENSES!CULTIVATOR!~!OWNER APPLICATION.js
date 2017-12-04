@@ -35,15 +35,16 @@ try{
 				});
 			}
 		}
-		var arrChild = getChildren("Licenses/Cultivator/*/Declaration", parentCapId);
-		if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
-			for(ch in arrChild){
-				thisChild = arrChild[ch];
-				capChild = aa.cap.getCap(thisChild).getOutput();
+		var capFaChild = false;
+		var arrFaChild = getChildren("Licenses/Cultivator/*/Declaration", parentCapId);
+		if(!matches(arrFaChild, null, "", "undefined")&& arrFaChild.length>0){
+			for(ch in arrFaChild){
+				thisFaChild = arrFaChild[ch];
+				capFaChild = aa.cap.getCap(thisFaChild).getOutput();
 				chArray.push({
 					"ID" : ch,
-					"Alias" : String(capChild.getCapModel().getAppTypeAlias()),
-					"recordId" : String(capChild.getCapID().getCustomID())
+					"Alias" : String(capFaChild.getCapModel().getAppTypeAlias()),
+					"recordId" : String(capFaChild.getCapID().getCustomID())
 				});
 			}
 		}
@@ -74,6 +75,10 @@ try{
 					var drpFirst = drpContact.getFirstName();
 					var drpLast =  drpContact.getLastName();
 					var drpEmail = drpContact.getEmail();
+					//lwacht: 171204: make the DRP the person who created the record so no one else
+					// cannot see their info;
+					editCreatedBy(ownPubUser);
+					//lwacht: 171204: end
 					editAppName(drpFirst + " " + drpLast + " (" + drpEmail + ")", desigRecId);
 					updateShortNotes(drpFirst + " " + drpLast + " (" + drpEmail + ")",desigRecId);
 					copyContactsByType(parentCapId, desigRecId, "Designated Responsible Party");
@@ -90,7 +95,16 @@ try{
 					}
 				}
 			}
+		//lwacht: 171204: reset the DRP record if it exists
+		}else{
+			if(capFaChild){
+				var faCapStatus = getCapIdStatusClass(inCapId);
+				if(faCapStatus == "INCOMPLETE EST"){
+					resetCapIdStatusClass();
+				}
+			}
 		}
+		//lwacht: 171204: end
 	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA:Licenses/Cultivator/*/Owner Application: Declaration logic: " + err.message);
