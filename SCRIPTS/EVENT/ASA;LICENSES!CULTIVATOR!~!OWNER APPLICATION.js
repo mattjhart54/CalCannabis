@@ -86,6 +86,13 @@ try{
 					var drpEmail = drpContact.getEmail();
 					//lwacht: 171204: make the DRP the person who created the record so no one else
 					// cannot see their info;
+					var eMsg = "";
+					for (z in drpContact){
+						if(typeof(drpContact[z]=="function")){
+							eMsg+=z+br;
+						}
+					}
+					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " +"drpContact.auditID: " + drpContact.auditID + br + eMsg);
 					editCreatedBy(drpContact.auditID);
 					//lwacht: 171204: end
 					editAppName(drpFirst + " " + drpLast + " (" + drpEmail + ")", desigRecId);
