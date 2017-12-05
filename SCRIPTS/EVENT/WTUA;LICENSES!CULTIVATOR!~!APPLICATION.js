@@ -62,7 +62,15 @@ try{
 				cntChild = "0" +cntChild;
 			}
 			var newAltId = capIDString +"-DEF"+ cntChild+"T";
-			comment("<font color='purple'>Use this value for the Deficiency Record ID: " + newAltId + "</font>");
+			var drpContact = getContactObj(capId,"Designated Responsible Party");
+			if(drpContact){
+				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
+				if(!matches(priChannel,"",null,"undefined")){
+					if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+						comment("<font color='purple'>Use this value for the Deficiency Record ID on the report: " + newAltId + "</font>");
+					}
+				}
+			}
 			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
 			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 		//}
