@@ -1,7 +1,10 @@
 //lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
 //display the deficiency report for printing. Note: only use the primary contact's preferred channel
 try{ 
-	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+	//lwacht: 171205: deficiency record needs to be created for both science and admin tasks
+	//if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+	if("Deficiency Letter Sent".equals(wfStatus)){
+	//lwacht: 171205: end
 		//lwacht 171129 start
 		var newAppName = "Deficiency: " + capName;
 		//create child amendment record
@@ -34,7 +37,7 @@ try{
 					arrDef.push(DEFICIENCIES[row]);
 				}
 			}
-			logDebug("newDefId: " + newDefId.getCustomID());
+			//logDebug("newDefId: " + newDefId.getCustomID());
 			addASITable("DEFICIENCIES", arrDef, newDefId);
 			copyContactsByType(capId, newDefId,"Designated Responsible Party");
 			//copyContactsByType(capId, newDefId,"Primary Contact");
