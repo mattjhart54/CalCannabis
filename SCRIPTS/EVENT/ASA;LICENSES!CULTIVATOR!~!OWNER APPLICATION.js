@@ -55,8 +55,10 @@ try{
 				var faCapStatus = getCapIdStatusClass(thisFaChild);
 				if(faCapStatus == "INCOMPLETE EST"){
 					var resReset = resetCapIdStatusClass("INCOMPLETE CAP",thisFaChild);
-					if(!resReset.getSuccess()){
-						aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Reset Cap Status:  " + startDate, "capId: " + capId + ": " + "resReset: " + resReset.getErrorMessage());
+					if(typeof(resReset)!="undefined"){
+						if(!resReset.getSuccess()){
+							aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Reset Cap Status:  " + startDate, "capId: " + capId + ": " + "resReset: " + resReset.getErrorMessage() + br + currEnv);
+						}
 					}
 				}
 				//lwacht: 171204: end
@@ -110,7 +112,7 @@ try{
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA:Licenses/Cultivator/*/Owner Application: Declaration logic: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack + br + currEnv);
 }
 
 // lwacht
