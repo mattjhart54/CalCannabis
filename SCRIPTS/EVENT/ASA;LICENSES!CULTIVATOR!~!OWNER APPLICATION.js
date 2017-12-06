@@ -54,7 +54,7 @@ try{
 				//lwacht: 171204: reset the DRP record if it exists
 				var faCapStatus = getCapIdStatusClass(thisFaChild);
 				if(faCapStatus == "INCOMPLETE EST"){
-					var resReset = resetCapIdStatusClass(thisFaChild);
+					var resReset = resetCapIdStatusClass("INCOMPLETE CAP",thisFaChild);
 					if(!resReset.getSuccess()){
 						aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Reset Cap Status:  " + startDate, "capId: " + capId + ": " + "resReset: " + resReset.getErrorMessage());
 					}

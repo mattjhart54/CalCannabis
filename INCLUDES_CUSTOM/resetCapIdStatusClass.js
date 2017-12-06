@@ -13,23 +13,26 @@ Script Type : (EMSE, EB, Pageflow, Batch): EMSE
 General Purpose/Client Specific : General
 Client developed for : CDFA_CalCannabis
 Parameters:
+	newStatus: pne of:
+	 * COMPLETE = real record
+	 * INCOMPLETE TMP = Initial state of partial cap
+	 * INCOMPLETE CAP = In process cap/estimate that save and resumed
+	 * INCOMPLETE EST = Completed estimate/partial cap
+	 * EDITABLE = Complete cap re-opened for ACA edit
 	capId: capId: optional capId
-	contactType: text: The type of contact to whom the email/report should be sent
 
 ============================================== */ 
-function resetCapIdStatusClass(){
+function resetCapIdStatusClass(newStatus){
 try{
 	var itemCap = capId;
-	if (arguments.length > 0)
-		itemCap = arguments[0];
+	if (arguments.length > 1)
+		itemCap = arguments[1];
 	var capIdStatus = getCapIdStatusClass(itemCap);
-	if(matches(capIdStatus,"INCOMPLETE EST","INCOMPLETE CAP")){
-		var inCapScriptModel = aa.cap.getCap(itemCap).getOutput();
-	    var tempCapModel = inCapScriptModel.getCapModel();
-		tempCapModel.setCapClass("INCOMPLETE TMP");
-		var results = aa.cap.editCapByPK(tempCapModel);
-		return results;
-	}
+	var inCapScriptModel = aa.cap.getCap(itemCap).getOutput();
+	var tempCapModel = inCapScriptModel.getCapModel();
+	tempCapModel.setCapClass(newStatus);
+	var results = aa.cap.editCapByPK(tempCapModel);
+	return results;
 }catch(err){
 	logDebug("An error occurred in resetCapIdStatusClass: " + err.message);
 	logDebug(err.stack);
