@@ -91,14 +91,22 @@ try{
 			var chIds = getChildren("Licenses/Cultivator/*/*",capId);
 			for(rec in chIds){
 				var chCapId = chIds[rec];
+				logDebug("chCapId: " + chCapId.getCustomID());
 				if(getCapIdStatusClass(chCapId) == "INCOMPLETE EST"){
 					var chCapModel = aa.cap.getCapViewBySingle4ACA(chCapId);
-					var newRec = convert2RealCAP(chCapModel);
-					if(newRec){
-						var docObj = aa.cap.transferRenewCapDocument(chCapId,newRec.getCapID(), true); 
-						if(!docObj.getSuccess()){
-							aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Migrate Documents: "+ startDate, capId + br + "docObj: " + docObj.getErrorMessage() + br + currEnv);
+					if(chCapModel==null){
+						var chCapModel = aa.cap.getCapViewBySingle(chCapId);
+					}
+					if(chCapModel!=null){
+						var newRec = convert2RealCAP(chCapModel);
+						if(newRec){
+							var docObj = aa.cap.transferRenewCapDocument(chCapId,newRec.getCapID(), true); 
+							if(!docObj.getSuccess()){
+								aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Migrate Documents: "+ startDate, capId + br + "docObj: " + docObj.getErrorMessage() + br + currEnv);
+							}
 						}
+					}else{
+						aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert to real records: "+ startDate, capId + br + "docObj: " + "chCapId: " + chCapId.getCustomID() + br + currEnv);
 					}
 				}
 			}
