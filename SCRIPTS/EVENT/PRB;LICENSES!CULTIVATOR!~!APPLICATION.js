@@ -70,6 +70,7 @@ try{
 
 //lwacht 171112
 //user cannot over or under pay
+/* lwacht 171207 not doing
 try{
 	var amtFee = 0;
 	var amtPaid = 0;
@@ -105,10 +106,10 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
+	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/* /APPLICATION: License Issuance: " + err.message);
 	logDebug(err.stack);
 }
-
+*/
 //lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
 //display the deficiency report for printing
 //lwacht: 170817: this isn't going to work because this is PRP, so just going to display a message in PRA that they will have 

@@ -1,5 +1,6 @@
 //lwacht 171120
 //user cannot over or under pay
+/*lwacht 171207 not doing
 try{
 	var amtFee = 0;
 	var amtPaid = 0;
@@ -35,6 +36,7 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in PAB:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
+	logDebug("An error has occurred in PAB:LICENSES/CULTIVATOR/* /APPLICATION: License Issuance: " + err.message);
 	logDebug(err.stack);
 }
+*/
