@@ -282,8 +282,8 @@ try{
 						//lwacht: 171122: end
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								recordId = capId.getCustomID()
-								runReportAttach(capId,rptName, "altId", recordId); 
+								recordId = capId.getCustomID();
+								runReportAttach(capId,rptName, "p1value", recordId); 
 								emailRptContact("BATCH", emailTemplate, rptName, false, "Pending Payment", capId, thisContact["contactType"],"altId", recordId);
 								logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 							}
