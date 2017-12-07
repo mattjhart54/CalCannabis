@@ -50,6 +50,7 @@ try{
 				//lwacht: 171204: make the DRP the person who created the record so no one else
 				// cannot see their info;
 				editCreatedBy(drpContact.auditID,thisFaChild);
+				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: Reset Cap Status:  " + startDate, "capId: " + capId + ": " + "thisFaChild: " + thisFaChild + br + "drpContact.auditID" + drpContact.auditID + br + currEnv);
 				//lwacht: 171204: end
 				//lwacht: 171204: reset the DRP record if it exists
 				var faCapStatus = getCapIdStatusClass(thisFaChild);
