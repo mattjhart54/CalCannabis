@@ -232,7 +232,7 @@ try{
 					statusArr.sort(compareStatusDate);
 					var ignoreRecd = true;
 					for (xx in statusArr) {
-						if(ignoreRecd = true) {
+						if(ignoreRecd == true) {
 							var thisStatus = statusArr[xx];
 							var thisStatusStatus = "" + thisStatus.getStatus();
 							if (thisStatusStatus == arrAppStatus){
