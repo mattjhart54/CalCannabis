@@ -239,7 +239,7 @@ try{
 								statusDate = thisStatus.getStatusDate();
 								var cStatusDate = convertDate(statusDate);
 			//					if(cStatusDate.getTime()<fromJSDate.getTime() || cStatusDate.getTime()>toJSDate.getTime()){
-								if(cStatusDate.getTime()==fromJSDate.getTime() {
+								if(cStatusDate.getTime()==fromJSDate.getTime()) {
 									ignoreRecd = false;
 									var reportDate = cStatusDate;
 								}
