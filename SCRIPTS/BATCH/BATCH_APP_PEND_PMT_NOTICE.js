@@ -230,16 +230,19 @@ try{
 				statusArr = statusResult.getOutput();
 				if (statusArr && statusArr.length > 0) {
 					statusArr.sort(compareStatusDate);
-					var ignoreRecd = false;
+					var ignoreRecd = true;
 					for (xx in statusArr) {
-						var thisStatus = statusArr[xx];
-						var thisStatusStatus = "" + thisStatus.getStatus();
-						if (thisStatusStatus == arrAppStatus){
-							statusDate = thisStatus.getStatusDate();
-							var cStatusDate = convertDate(statusDate);
-							if(cStatusDate.getTime()<fromJSDate.getTime() || cStatusDate.getTime()>toJSDate.getTime()){
-								ignoreRecd = true;
-								var reportDate = cStatusDate;
+						if(ignoreRecd = true) {
+							var thisStatus = statusArr[xx];
+							var thisStatusStatus = "" + thisStatus.getStatus();
+							if (thisStatusStatus == arrAppStatus){
+								statusDate = thisStatus.getStatusDate();
+								var cStatusDate = convertDate(statusDate);
+			//					if(cStatusDate.getTime()<fromJSDate.getTime() || cStatusDate.getTime()>toJSDate.getTime()){
+								if(cStatusDate.getTime()==fromJSDate.getTime() {
+									ignoreRecd = false;
+									var reportDate = cStatusDate;
+								}
 							}
 						}
 					}
