@@ -67,7 +67,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-// test parameters
+/* test parameters
 aa.env.setValue("lookAheadDays", "-3");
 aa.env.setValue("daySpan", "0");
 aa.env.setValue("recordGroup", "Licenses");
@@ -84,7 +84,7 @@ aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("reportName", "Payment Due Notification");
 aa.env.setValue("setNonEmailPrefix", "30_DAY_PMT_NOTICE");
-
+*/
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
 var appGroup = getParam("recordGroup");
