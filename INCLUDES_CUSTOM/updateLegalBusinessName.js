@@ -2,16 +2,11 @@ function updateLegalBusinessName() {
 	cList = getContactArray();
 	for(c in cList) {
 		if(cList[c]["contactType"] == "Business") {
-			if(!matches(cList[c]["businessName"], null, "", undefined)) {
-				updateWorkDesc(cList[c]["businessName"]);
+			if(!matches(cList[c]["middleName"], null, "", undefined)) {
+				updateWorkDesc(cList[c]["middleName"]);
 			}
 			else {
-				if(!matches(cList[c]["middleName"], null, "", undefined)) {
-					updateWorkDesc(cList[c]["middleName"]);
-				}
-				else {
-					updateWorkDesc("No legal business name provided");
-				}
+				updateWorkDesc("No legal business name provided");
 			}
 		}
 	}
