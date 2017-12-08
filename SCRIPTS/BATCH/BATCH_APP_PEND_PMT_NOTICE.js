@@ -238,11 +238,11 @@ try{
 							if (thisStatusStatus == arrAppStatus){
 								statusDate = thisStatus.getStatusDate();
 								var cStatusDate = convertDate(statusDate);
-								stime=cStatusDate.getTime();
+								stime = cStatusDate.getTime();
 								ptime = fromJSDate.getTime();
 logDebug("Flag " + ignoreRecd + " Status Date " + stime + " Param Date " + ptime);
 			//					if(cStatusDate.getTime()<fromJSDate.getTime() || cStatusDate.getTime()>toJSDate.getTime()){
-								if(stime()==ptime()) {
+								if(stime==ptime) {
 									ignoreRecd = false;
 									var reportDate = cStatusDate;
 								}
