@@ -67,8 +67,8 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters
-aa.env.setValue("lookAheadDays", "-1");
+// test parameters
+aa.env.setValue("lookAheadDays", "-3");
 aa.env.setValue("daySpan", "0");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
@@ -82,9 +82,9 @@ aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
-aa.env.setValue("reportName", "60 Day Payment Notification Letter");
-aa.env.setValue("setNonEmailPrefix", "60_DAY_PMT_NOTICE");
- */
+aa.env.setValue("reportName", "Payment Due Notification");
+aa.env.setValue("setNonEmailPrefix", "30_DAY_PMT_NOTICE");
+
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
 var appGroup = getParam("recordGroup");
@@ -238,8 +238,11 @@ try{
 							if (thisStatusStatus == arrAppStatus){
 								statusDate = thisStatus.getStatusDate();
 								var cStatusDate = convertDate(statusDate);
+								stime=cStatusDate.getTime();
+								ptime = fromJSDate.getTime();
+logDebug("Flag " + ignoreRecd + " Status Date " + cstime + " Param Date " + ptime);
 			//					if(cStatusDate.getTime()<fromJSDate.getTime() || cStatusDate.getTime()>toJSDate.getTime()){
-								if(cStatusDate.getTime()==fromJSDate.getTime()) {
+								if(stime()==ptime()) {
 									ignoreRecd = false;
 									var reportDate = cStatusDate;
 								}
