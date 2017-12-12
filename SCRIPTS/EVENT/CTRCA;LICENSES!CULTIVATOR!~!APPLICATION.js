@@ -31,9 +31,9 @@ try {
 		updateShortNotes(AInfo["Premise County"]);
 	}
 }catch (err){
-	logDebug("A JavaScript Error occurred: CRTCA: Licenses/Cultivation/*/Application: " + err.message);
+	logDebug("A JavaScript Error occurred: CTRCA: Licenses/Cultivation/*/Application: Local Auth: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/*/Application: Local Auth: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 //lwacht
