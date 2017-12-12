@@ -131,6 +131,31 @@ catch (err){
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
+try {
+	var contactList = cap.getContactsGroup();
+	if(contactList != null && contactList.size() > 0){
+		var arrContacts = contactList.toArray();
+		for(var i in arrContacts) {
+			var thisCont = arrContacts[i];
+			var contFirst = thisCont.firstName;
+			var contLast = thisCont.lastName;
+			var contLBN = thisCont.middleName;
+			var contType = thisCont.contactType;
+			if(contType == "Agent for Service of Process") {
+				if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined)) {
+					cancel = true;
+					showMessage = true;
+					logMessage("The Agency for Process of Service must have a First and Last name or Legal Business Name")	
+				}
+			}
+		}
+	}
+}
+catch (err){
+	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLAR_DRP_CONTACT: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
 
 // page flow custom code end
 
