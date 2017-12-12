@@ -145,7 +145,7 @@ try {
 				if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined)) {
 					cancel = true;
 					showMessage = true;
-					logMessage("The Agency for Process of Service must have a First and Last name or Legal Business Name")	
+					logMessage("The Agency for Process of Service must have a First and Last Name or Legal Business Name.  Please edit the Agencey for Service of Process contact");	
 				}
 			}
 		}
