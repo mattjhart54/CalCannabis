@@ -142,10 +142,12 @@ try {
 			var contLBN = thisCont.middleName;
 			var contType = thisCont.contactType;
 			if(contType == "Agent for Service of Process") {
-				if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined)) {
-					cancel = true;
-					showMessage = true;
-					logMessage("The Agent for Process of Service must have a First and Last Name or Legal Business Name.  Please edit the Agent for Service of Process contact");	
+				if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined) ||
+					(matches(contFirst,null,"",undefined) && !matches(contLast,null,"",undefined)) ||
+					(!matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined))){
+						cancel = true;
+						showMessage = true;
+						logMessage("The Agent for Process of Service must have a First and Last Name or Legal Business Name.  Please edit the Agent for Service of Process contact");	
 				}
 			}
 		}
