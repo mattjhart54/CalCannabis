@@ -35,13 +35,19 @@ try{
 			//logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
 			//updateShortNotes(getShortNotes(),licCapId);
+			//lwacht 171214: uncommenting this line as the legal business name is required again
 			//updateWorkDesc(workDescGet(capId),licCapId);
-			capContactResult = aa.people.getCapContactByCapID(capId);
+			updateWorkDesc(workDescGet(capId),licCapId);
+			//lwacht 171214: end
+			capContactResult = aa.people.getCapContactByCapID(licCapId);
 			if (capContactResult.getSuccess()){
 				Contacts = capContactResult.getOutput();
 				for (yy in Contacts){
 					var theContact = Contacts[yy].getCapContactModel();
-					if(theContact.getContactType() == "Business"){
+					//lwacht 171214: using the drp 
+					//if(theContact.getContactType() == "Business"){
+					if(theContact.getContactType() == "DRP - Temporary License"){
+					//lwacht 171214: end
 						var peopleModel = theContact.getPeople();
 						var editChannel =  peopleModel.setPreferredChannel(1);
 						var editChannel =  peopleModel.setPreferredChannelString("Email");

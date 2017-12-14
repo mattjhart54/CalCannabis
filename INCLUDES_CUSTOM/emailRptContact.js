@@ -101,13 +101,21 @@ try{
 			var addrType = false;
 			for (x in drpAddresses){
 				thisAddr = drpAddresses[x];
+				//lwacht 171214: should use mailing address if it exists
+				if(thisAddr.getAddressType()=="Mailing"){
+					addrType = "Home";
+					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
+					addParameter(eParams, "$$priCity$$", thisAddr.city);
+					addParameter(eParams, "$$priState$$", thisAddr.state);
+					addParameter(eParams, "$$priZip$$", thisAddr.zip);
+				}else{
 				if(thisAddr.getAddressType()=="Home"){
 					addrType = "Home";
 					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
 					addParameter(eParams, "$$priCity$$", thisAddr.city);
 					addParameter(eParams, "$$priState$$", thisAddr.state);
 					addParameter(eParams, "$$priZip$$", thisAddr.zip);
-				}
+				}else{
 				if(thisAddr.getAddressType()=="Business"){
 					addrType = "Business";
 					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
@@ -115,19 +123,23 @@ try{
 					addParameter(eParams, "$$priState$$", thisAddr.state);
 					addParameter(eParams, "$$priZip$$", thisAddr.zip);
 				}
+				}
+				}
 			}
+			//if the primary ones cannot be found, use whatever is there
 			if(!addrType){
-				addrType = "Mailing";
+				//addrType = "Mailing";
 				for (x in drpAddresses){
 					thisAddr = drpAddresses[x];
-					if(thisAddr.getAddressType()==addrType){
+					//if(thisAddr.getAddressType()==addrType){
 						addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
 						addParameter(eParams, "$$priCity$$", thisAddr.city);
 						addParameter(eParams, "$$priState$$", thisAddr.state);
 						addParameter(eParams, "$$priZip$$", thisAddr.zip);
-					}
+					//}
 				}
 			}
+			//lwacht: 171214: end
 			//logDebug("eParams: " + eParams);
 			//var drpEmail = ""+priContact.capContact.getEmail();
 			var priEmail = ""+priContact.capContact.getEmail();

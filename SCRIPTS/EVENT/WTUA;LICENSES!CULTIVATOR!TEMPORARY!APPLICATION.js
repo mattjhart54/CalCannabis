@@ -15,7 +15,10 @@ try{
 				//generateReport(parCapId,"Temporary License",module,rParams);
 				var currCap = capId;
 				capId = parCapId;
-				emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", false, wfStatus, parCapId, "Business", "altId", capId.getCustomID());
+				//lwacht 171214: changing who gets emailed
+				emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", false, wfStatus, parCapId, "DRP - Temporary License", "altId", capId.getCustomID());
+				//emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", false, wfStatus, parCapId, "Business", "altId", capId.getCustomID());
+				//lwacht: 171214: end
 				//emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
 				capId = currCap;
 			}
@@ -53,7 +56,10 @@ try{
 	if(matches(wfStatus, "Disqualification Letter Sent")){
 		var rptName = "";
 		var notName = "LCA_TEMP_APP_DISQUALIFIED";
-		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
+		//lwacht 171214: emailing new drp contact
+		//emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
+		emailRptContact("WTUA", notName, "", false, capStatus, capId, "DRP - Temporary License");
+		//lwacht 171214 end
 	}
 }catch(err){
 logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Disqualification notification: " + err.message);
@@ -69,7 +75,10 @@ try{
 		var rptName = "Temporary Denial Letter";
 		var notName = "LCA_GENERAL_NOTIFICATION";
 		runReportAttach(capId,rptName, "p1value",capId.getCustomID());
-		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
+		//lwacht 171214: emailing new drp contact
+		//emailRptContact("WTUA", notName, "", false, capStatus, capId, "Business");
+		emailRptContact("WTUA", notName, "", false, capStatus, capId, "DRP - Temporary License");
+		//lwacht 171214 end
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Denial notification: " + err.message);
