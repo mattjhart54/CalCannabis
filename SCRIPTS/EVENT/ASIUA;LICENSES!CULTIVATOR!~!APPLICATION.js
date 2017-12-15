@@ -22,14 +22,22 @@ try {
 
 	editAppName(AInfo["License Type"]);
 	updateShortNotes(AInfo["Premise County"]);
+	if(appTypeArray[2] == "Temporary") {
+		contType = "DRP - Temporary License";
+		addrtype = "Mailing";
+	}
+	else {
+		contType = "Designated Responsible Part";
+		addrtype = "Home";
+	}
 
 	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")) {
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		updateTask("Administrative Review","Under Review","In Compliance notification recieved from Local Authority","");
 		updateAppStatus("Under Administrative Review", "In Compliance notification recieved from Local Authority");
-		runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", "Designated Responsible Party", "Address Type", "Home", "servProvCode", "CALCANNABIS");
-		emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, "Designated Responsible Party");
+		runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+		emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);
 	}
 	if(AInfo["Local Authority Response"] == "Non Compliance"  && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60"))  {
 		closeTask("Administrative Review","Incomplete Response","Non-Compliance notification recieved from Local Authority","");
