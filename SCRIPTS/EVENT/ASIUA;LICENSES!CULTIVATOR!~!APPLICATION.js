@@ -24,11 +24,11 @@ try {
 	updateShortNotes(AInfo["Premise County"]);
 	if(appTypeArray[2] == "Temporary") {
 		contType = "DRP - Temporary License";
-		addrtype = "Mailing";
+		addrType = "Mailing";
 	}
 	else {
 		contType = "Designated Responsible Part";
-		addrtype = "Home";
+		addrType = "Home";
 	}
 
 	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")) {
