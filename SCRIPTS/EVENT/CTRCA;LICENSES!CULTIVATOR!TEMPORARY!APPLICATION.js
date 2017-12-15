@@ -61,10 +61,12 @@ try{
 				var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
 				qryPeople.setEmail(drpEmail);
 				var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
+				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: "+ startDate, capId + br + "qryResult.getSuccess(): " + qryResult.getSuccess() + br + currEnv);
 				if (!qryResult.getSuccess()){ 
 					createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
 				}else{
 					var peopResult = qryResult.getOutput();
+					aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: "+ startDate, capId + br + "peopResult.length: " + peopResult.length + br + currEnv);
 					if (peopResult.length < 1){
 						createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
 					}
