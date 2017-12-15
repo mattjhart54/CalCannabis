@@ -10,29 +10,7 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Add Permanent Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-//lwacht: 170824: set the preferred channel to be email
-try{
-	var capContactResult = aa.people.getCapContactByCapID(capId);
-	if (capContactResult.getSuccess()){
-		Contacts = capContactResult.getOutput();
-		for (yy in Contacts){
-			var theContact = Contacts[yy].getCapContactModel();
-			//lwacht 171214 set this on new tmp drp
-			//if(theContact.getContactType() == "Business"){
-			if(theContact.getContactType() == "DRP - Temporary License"){
-			//lwacht 171214: end
-				var peopleModel = theContact.getPeople();
-				var editChannel =  peopleModel.setPreferredChannel(1);
-				var editChannel =  peopleModel.setPreferredChannelString("Email");
-				aa.people.editCapContactWithAttribute(theContact);
-			}
-		}
-	}
-} catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Set Preferred Channel: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Set Preferred Channel: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
-}
+
 //lwacht 171214: update app name with legal business name
 try{
 	updateLegalBusinessName()
@@ -61,12 +39,11 @@ try{
 				var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
 				qryPeople.setEmail(drpEmail);
 				var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
-				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: "+ startDate, capId + br + "qryResult.getSuccess(): " + qryResult.getSuccess() + br + currEnv);
 				if (!qryResult.getSuccess()){ 
 					createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
 				}else{
 					var peopResult = qryResult.getOutput();
-					aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: "+ startDate, capId + br + "peopResult.length: " + peopResult.length + br + currEnv);
+					aa.sendMail(sysFromEmail, debugEmail, "", "3: INFO ONLY CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: "+ startDate, capId + br + "peopResult.length: " + peopResult.length + br + currEnv);
 					if (peopResult.length < 1){
 						createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
 					}
@@ -80,4 +57,28 @@ try{
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+}
+
+//lwacht: 170824: set the preferred channel to be email
+try{
+	var capContactResult = aa.people.getCapContactByCapID(capId);
+	if (capContactResult.getSuccess()){
+		Contacts = capContactResult.getOutput();
+		for (yy in Contacts){
+			var theContact = Contacts[yy].getCapContactModel();
+			//lwacht 171214 set this on new tmp drp
+			//if(theContact.getContactType() == "Business"){
+			if(theContact.getContactType() == "DRP - Temporary License"){
+			//lwacht 171214: end
+				var peopleModel = theContact.getPeople();
+				var editChannel =  peopleModel.setPreferredChannel(1);
+				var editChannel =  peopleModel.setPreferredChannelString("Email");
+				aa.people.editCapContactWithAttribute(theContact);
+			}
+		}
+	}
+} catch(err){
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Set Preferred Channel: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Set Preferred Channel: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
