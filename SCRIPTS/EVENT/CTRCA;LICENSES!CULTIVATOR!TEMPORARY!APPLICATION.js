@@ -33,7 +33,7 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Set Preferred Channel: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
-//lwaht 171214: update app name with legal business name
+//lwacht 171214: update app name with legal business name
 try{
 	updateLegalBusinessName()
 }catch (err){
