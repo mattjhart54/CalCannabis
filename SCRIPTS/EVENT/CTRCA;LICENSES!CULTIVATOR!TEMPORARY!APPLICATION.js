@@ -46,8 +46,8 @@ try{
 //lwacht: 171214: create a reference contact for the temp drp, so they can be emailed
 try{
 	//lwacht: create reference contact and public user account for the DRP		
-	createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
-	var drpUser = createPublicUserFromContact("Designated Responsible Party");
+	createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
+	var drpUser = createPublicUserFromContact_Rev("DRP - Temporary License");
 	//lwacht: create reference contact and public user account for the business contact		
 }catch (err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: " + err.message);
