@@ -72,7 +72,7 @@ logDebug(err.stack);
 try{
 	//lwacht 171214: status changed
 	//if(matches(wfStatus, "Denied - No Appeal")){
-	if(matches(wfStatus, "Denied Letter Sent")){
+	if(matches(wfStatus, "Denial Letter Sent")){
 	//lwacht 171214: end
 		closeTask("Application Disposition", "Denial Letter Sent","Updated by script Application Denied","");
 		var rptName = "Temporary Denial Letter";
