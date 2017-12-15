@@ -46,7 +46,34 @@ try{
 //lwacht: 171214: create a reference contact for the temp drp, so they can be emailed
 try{
 	//lwacht: create reference contact and public user account for the DRP		
-	createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
+	var contactList = getContactArray();
+	if(contactList != null && contactList.size() > 0){
+		var arrContacts = contactList.toArray();
+		for(var i in arrContacts) {
+			var thisCont = arrContacts[i];
+			var emailText = "";
+			var contType = thisCont.contactType;
+			showMessage=true;
+			if(contType =="Designated Responsible Party") {
+				//var refContNrb = thisCont.refContactNumber;
+				var drpContact = [];
+				var drpFName = thisCont.firstName;
+				var drpLName = thisCont.lastName;
+				var drpEmail = thisCont.email.toLowerCase();
+				var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
+				qryPeople.setEmail(drpEmail);
+				var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
+				if (!qryResult.getSuccess()){ 
+					createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
+				}else{
+					var peopResult = qryResult.getOutput();
+					if (peopResult.length < 1){
+						createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
+					}
+				}
+			}
+		}
+	}
 	var drpUser = createPublicUserFromContact_Rev("DRP - Temporary License");
 	//lwacht: create reference contact and public user account for the business contact		
 }catch (err){
