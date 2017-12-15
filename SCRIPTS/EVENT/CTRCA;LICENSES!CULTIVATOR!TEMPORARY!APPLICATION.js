@@ -10,9 +10,9 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Add Permanent Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-//lwacht: 180824: set the preferred channel to be email
+//lwacht: 170824: set the preferred channel to be email
 try{
-	capContactResult = aa.people.getCapContactByCapID(capId);
+	var capContactResult = aa.people.getCapContactByCapID(capId);
 	if (capContactResult.getSuccess()){
 		Contacts = capContactResult.getOutput();
 		for (yy in Contacts){
@@ -46,17 +46,15 @@ try{
 //lwacht: 171214: create a reference contact for the temp drp, so they can be emailed
 try{
 	//lwacht: create reference contact and public user account for the DRP		
-	var contactList = getContactArray();
-	if(contactList != null && contactList.size() > 0){
-		var arrContacts = contactList.toArray();
-		for(var i in arrContacts) {
-			var thisCont = arrContacts[i];
-			var emailText = "";
+	var capContactResult = aa.people.getCapContactByCapID(capId);
+	if (capContactResult.getSuccess()){
+		Contacts = capContactResult.getOutput();
+		for (yy in Contacts){
+			var thisCont = Contacts[yy].getCapContactModel();
 			var contType = thisCont.contactType;
 			showMessage=true;
-			if(contType =="Designated Responsible Party") {
+			if(contType =="DRP - Temporary License") {
 				//var refContNrb = thisCont.refContactNumber;
-				var drpContact = [];
 				var drpFName = thisCont.firstName;
 				var drpLName = thisCont.lastName;
 				var drpEmail = thisCont.email.toLowerCase();
