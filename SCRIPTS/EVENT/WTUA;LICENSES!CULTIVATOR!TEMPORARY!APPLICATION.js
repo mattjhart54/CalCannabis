@@ -70,7 +70,10 @@ logDebug(err.stack);
 //mhart
 //denial notice
 try{
-	if(matches(wfStatus, "Denied - No Appeal")){
+	//lwacht 171214: status changed
+	//if(matches(wfStatus, "Denied - No Appeal")){
+	if(matches(wfStatus, "Denied Letter Sent")){
+	//lwacht 171214: end
 		closeTask("Application Disposition", "Denial Letter Sent","Updated by script Application Denied","");
 		var rptName = "Temporary Denial Letter";
 		var notName = "LCA_GENERAL_NOTIFICATION";
