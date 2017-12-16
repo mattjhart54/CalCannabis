@@ -43,7 +43,6 @@ try{
 					createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
 				}else{
 					var peopResult = qryResult.getOutput();
-					aa.sendMail(sysFromEmail, debugEmail, "", "3: INFO ONLY CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: "+ startDate, capId + br + "peopResult.length: " + peopResult.length + br + currEnv);
 					if (peopResult.length < 1){
 						createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
 					}

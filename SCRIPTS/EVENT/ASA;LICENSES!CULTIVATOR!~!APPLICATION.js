@@ -1,38 +1,3 @@
-//lwacht: 171214: create a reference contact for the temp drp, so they can be emailed
-try{
-	//lwacht: create reference contact and public user account for the DRP		
-	var capContactResult = aa.people.getCapContactByCapID(capId);
-	if (capContactResult.getSuccess()){
-		Contacts = capContactResult.getOutput();
-		for (yy in Contacts){
-			var thisCont = Contacts[yy].getCapContactModel();
-			var contType = thisCont.contactType;
-			showMessage=true;
-			if(contType =="DRP - Temporary License") {
-				//var refContNrb = thisCont.refContactNumber;
-				var drpFName = thisCont.firstName;
-				var drpLName = thisCont.lastName;
-				var drpEmail = thisCont.email.toLowerCase();
-				var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
-				qryPeople.setEmail(drpEmail);
-				var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
-				if (!qryResult.getSuccess()){ 
-					createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
-				}else{
-					var peopResult = qryResult.getOutput();
-					aa.sendMail(sysFromEmail, debugEmail, "", "1: INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Create DRP: "+ startDate, capId + br + "peopResult.length: " + peopResult.length + br + currEnv);
-				}
-			}
-		}
-	}
-}catch (err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Create DRP: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
-}
-
-
-
 try{
 //lwacht: add the owner applications
 	//lwacht 171215: don't run for temp apps
@@ -134,39 +99,3 @@ try{
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
 	logDebug(err.stack);
 }
-
-
-//lwacht: 171214: create a reference contact for the temp drp, so they can be emailed
-try{
-	//lwacht: create reference contact and public user account for the DRP		
-	var capContactResult = aa.people.getCapContactByCapID(capId);
-	if (capContactResult.getSuccess()){
-		Contacts = capContactResult.getOutput();
-		for (yy in Contacts){
-			var thisCont = Contacts[yy].getCapContactModel();
-			var contType = thisCont.contactType;
-			showMessage=true;
-			if(contType =="DRP - Temporary License") {
-				//var refContNrb = thisCont.refContactNumber;
-				var drpFName = thisCont.firstName;
-				var drpLName = thisCont.lastName;
-				var drpEmail = thisCont.email.toLowerCase();
-				var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
-				qryPeople.setEmail(drpEmail);
-				var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
-				if (!qryResult.getSuccess()){ 
-					createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
-				}else{
-					var peopResult = qryResult.getOutput();
-					aa.sendMail(sysFromEmail, debugEmail, "", "2: INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Create DRP: "+ startDate, capId + br + "peopResult.length: " + peopResult.length + br + currEnv);
-				}
-			}
-		}
-	}
-}catch (err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Create DRP: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Create DRP: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
-}
-
-
