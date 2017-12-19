@@ -24,13 +24,17 @@ function sendLocalAuthNotification() {
 
 			if(appTypeArray[2] == "Temporary") {
 				licType = "";
+				licType1 = "temporary";
 				addParameter(eParams, "$$appType$$", AInfo["App Type"] + " " + AInfo["License Type"]);
 				addParameter(eParams, "$$licType$$", licType + AInfo);
+				addParameter(eParams, "$$licType1$$", licType1 + AInfo);
 			}
 			else {
 				licType = "annual";
+				licType1 = "annual";
 				addParameter(eParams, "$$appType$$", appTypeArray[2] + " " + AInfo["License Type"]);
 				addParameter(eParams, "$$licType$$", licType);
+				addParameter(eParams, "$$licType1$$", licType1);
 			}
 			
 			if(!matches(AInfo["Premise Address"], null,"",undefined)) {
