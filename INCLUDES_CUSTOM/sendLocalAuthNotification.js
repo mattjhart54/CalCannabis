@@ -24,7 +24,7 @@ function sendLocalAuthNotification() {
 
 			if(appTypeArray[2] == "Temporary") {
 				licType = "temporary";
-				addParameter(eParams, "$$appType$$", AInfo["Application Typre"] + " " + AInfo["License Type"]);
+				addParameter(eParams, "$$appType$$", AInfo["App Type"] + " " + AInfo["License Type"]);
 				addParameter(eParams, "$$licType$$", licType + AInfo);
 			}
 			else {
