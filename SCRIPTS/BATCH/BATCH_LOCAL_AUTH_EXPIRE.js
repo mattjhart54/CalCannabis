@@ -68,18 +68,19 @@ else
 /------------------------------------------------------------------------------------------------------*/
 // test parameters
 /*
-var lookAheadDays = "0";
-var daySpan = "0";
-var emailAddress = "mhart@trustvip.com";
-var asiField = "Local Authority Notification Expires";
-var asiGroup = "INTERNAL";
-var newAppStatus = "Under Administrative Review";
-var sysFromEmail = "noreply_accela@cdfa.ca.gov";
-var setNonEmailPrefix = "AppSubmitted";
-var emailTemplate = "LCA_APPLICATION_SUBMITTED";
-var sendEmailNotifications = "Y";
-var sendEmailToContactTypes = "Designated Responsible Party";
-*/
+aa.env.setValue( "lookAheadDays" , "0");
+aa.env.setValue( "daySpan" , "0");
+aa.env.setValue( "emailAddress" , "mhart@trustvip.com");
+aa.env.setValue( "asiField" , "Local Authority Notification Expires");
+aa.env.setValue( "asiGroup" , "INTERNAL");
+aa.env.setValue( "newAppStatus" , "Under Administrative Review");
+aa.env.setValue( "sysFromEmail" , "noreply_accela@cdfa.ca.gov");
+aa.env.setValue( "setNonEmailPrefix" , "AppSubmitted");
+aa.env.setValue( "emailTemplate" , "LCA_APPLICATION_SUBMITTED");
+aa.env.setValue( "sendEmailNotifications" , "Y");
+aa.env.setValue("sendEmailToContactTypes" , "Designated Responsible Party");
+aa.env.setValue("sendEmailAddressType", "Mailing");
+ */
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
@@ -89,6 +90,7 @@ var asiGroup = getParam("asiGroup");
 var emailTemplate = getParam("emailTemplate");
 var sendEmailNotifications = getParam("sendEmailNotifications");
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
+var addrType = getParam("sendEmailAddressType");
 var emailAddress = getParam("emailAddress");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var sysFromEmail = getParam("sysFromEmail");
@@ -193,13 +195,18 @@ try{
 				var conEmail = false;
 				thisContact = conArray[thisCon];
 				if (exists(thisContact["contactType"],conTypeArray)) {
-				// Run report letter and attach to record for each contact type
-					if(thisContact["contactType"] == "Primary Contact") 
-						var addrType = "Mailing";
-					if(thisContact["contactType"] == "Designated Responsible Party") 
-						var addrType = "Home";	
-					runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", "Designated Responsible Party", "Address Type", addrType, "servProvCode", "CALCANNABIS");
-					
+					// Run report letter and attach to record for each contact type
+					//lwacht 171218 report has three parameters and no primary contact and a different report for temp and annual
+					//if(thisContact["contactType"] == "Primary Contact") 
+					//	var addrType = "Mailing";
+					//if(thisContact["contactType"] == "Designated Responsible Party") 
+					//	var addrType = "Home";	
+					if(appTypeArray[2] == "Temporary") {
+						runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", thisContact["contactType"], "Address Type", addrType, "servProvCode", "CALCANNABIS");
+					}else{
+						runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", thisContact["contactType"], "Address Type", addrType, "servProvCode", "CALCANNABIS");
+					}
+					//lwacht 171218: end
 					// Check contact preference and add to set if Postal
 					for(a in conTypeArray) {
 						if(thisContact["contactType"] == conTypeArray[a]) {

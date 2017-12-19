@@ -12,10 +12,17 @@ try{
 		}
 		if(showReport){
 			showDebug=false;
-			displayReport("Submitted Application", "Record ID", capIDString, "Contact Type", "Designated Responsible Party", "Address Type", "Home", "servProvCode", "CALCANNABIS");
+			//lwacht 171218 drp now uses mailing address, different report for temp and annual
+			//displayReport("Submitted Application", "Record ID", capIDString, "Contact Type", "Designated Responsible Party", "Address Type", "Home", "servProvCode", "CALCANNABIS");
+			if(appTypeArray[2] == "Temporary") {
+				displayReport("Submitted Application", "Record ID", capIDString, "Contact Type", "Designated Responsible Party", "Address Type", "Mailing", "servProvCode", "CALCANNABIS");
+			}else{
+				displayReport("Submitted Annual Application", "Record ID", capIDString, "Contact Type", "Designated Responsible Party", "Address Type", "Mailing", "servProvCode", "CALCANNABIS");
+			}
+			//lwacht 171218 end
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: " + err.message);
+	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Local Auth Check: " + err.message);
 	logDebug(err.stack);
 }

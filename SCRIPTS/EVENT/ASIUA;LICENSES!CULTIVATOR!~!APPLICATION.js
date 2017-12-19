@@ -27,8 +27,10 @@ try {
 		addrType = "Mailing";
 	}
 	else {
-		contType = "Designated Responsible Part";
-		addrType = "Home";
+		//lwacht 171218 address type now Mailing
+		contType = "Designated Responsible Party";
+		addrType = "Mailing";
+		//lwacht 171218 end
 	}
 
 	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")) {
@@ -36,7 +38,13 @@ try {
 		activateTask("Owner Application Reviews");
 		updateTask("Administrative Review","Under Review","In Compliance notification recieved from Local Authority","");
 		updateAppStatus("Under Administrative Review", "In Compliance notification recieved from Local Authority");
-		runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+		//lwacht 171218: two reports now: temp and annual
+		if(appTypeArray[2] == "Temporary") {
+			runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+		}else{
+			runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+		}
+		//lwacht 171218 end
 		emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);
 	}
 	if(AInfo["Local Authority Response"] == "Non Compliance"  && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60"))  {
@@ -55,7 +63,7 @@ try {
 		capId = holdId;
 	}
 }catch (err){
-	logDebug("A JavaScript Error occurred: ASIUA: Licenses/Cultivation/*/Application: " + err.message);
+	logDebug("A JavaScript Error occurred: ASIUA: Licenses/Cultivation/*/Application: Send Local Auth: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: Send Local Auth: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }

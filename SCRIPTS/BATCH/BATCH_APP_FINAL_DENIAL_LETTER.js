@@ -77,6 +77,7 @@ aa.env.setValue("appStatus", "Denied");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("emailTemplate","LCA_APP_FINAL_DENIAL_LETTER");
 aa.env.setValue("sendEmailToContactTypes", "Primary Contact,Designated Responsible Party");
+aa.env.setValue("sendEmailAddressType", "Mailing");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "Denials");
 */
@@ -87,6 +88,7 @@ var appStatus = getParam("appStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
+var addrType = getParam("sendEmailAddressType");
 var emailTemplate = getParam("emailTemplate");
 var sendEmailNotifications = getParam("sendEmailNotifications");
 var sysFromEmail = getParam("sysFromEmail");
@@ -184,12 +186,13 @@ try{
 				thisContact = conArray[thisCon];
 				if (exists(thisContact["contactType"],conTypeArray)) {
 				// Run report letter and attach to record for each contact type
-					if(thisContact["contactType"] == "Primary Contact") 
-						var addrType = "Mailing";
-					if(thisContact["contactType"] == "Designated Responsible Party") 
-						var addrType = "Home";	
+					//lwacht 171218 report has three parameters and no primary contact
+					//if(thisContact["contactType"] == "Primary Contact") 
+					//	var addrType = "Mailing";
+					//if(thisContact["contactType"] == "Designated Responsible Party") 
+					//	var addrType = "Home";	
 					runReportAttach(capId,"Final Denial Letter", "p1value",capId.getCustomID(),"p2value",thisContact["contactType"],"p3value",addrType);
-					
+					//lwacht 171218: end
 					// Check contact preference and add to set if Postal
 					for(a in conTypeArray) {
 						if(thisContact["contactType"] == conTypeArray[a]) {

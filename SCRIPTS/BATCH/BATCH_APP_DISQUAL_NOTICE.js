@@ -83,6 +83,7 @@ aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
 aa.env.setValue("reportName", "30 Day Deficiency Notification Letter");
+aa.env.setValue("sendEmailAddressType", "Mailing");
 aa.env.setValue("updateWorkflowStatus", "Disqualified");
  */
 var emailAddress = getParam("emailAddress");			// email to send report
@@ -100,6 +101,7 @@ var sendEmailNotifications = getParam("sendEmailNotifications");
 var sysFromEmail = getParam("sysFromEmail");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var rptName = getParam("reportName");
+var addrType = getParam("sendEmailAddressType");
 var wkflStatus = getParam("updateWorkflowStatus");
 /*----------------------------------------------------------------------------------------------------/
 |
@@ -229,7 +231,10 @@ try{
 						conEmail = thisContact["email"];
 						if (conEmail) {
 							//logDebug("=====SENDEMAILNOTIFICATION: BEGIN : " + thisCon + ": " + elapsed() + " Seconds");
-							runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
+							//lwacht 171218 report has three parameters
+							//runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
+							runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
+							//lwacht 171218: end
 							//runReportAttach(capId,"Official Temporary License", "altId", capId.getCustomID()); 
 							//var rptPars = aa.util.newHashMap();              
 							//rptPars.put("p1value",altId);

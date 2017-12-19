@@ -103,14 +103,7 @@ try{
 				thisAddr = drpAddresses[x];
 				//lwacht 171214: should use mailing address if it exists
 				if(thisAddr.getAddressType()=="Mailing"){
-					addrType = "Home";
-					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
-					addParameter(eParams, "$$priCity$$", thisAddr.city);
-					addParameter(eParams, "$$priState$$", thisAddr.state);
-					addParameter(eParams, "$$priZip$$", thisAddr.zip);
-				}else{
-				if(thisAddr.getAddressType()=="Home"){
-					addrType = "Home";
+					addrType = "Mailing";
 					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
 					addParameter(eParams, "$$priCity$$", thisAddr.city);
 					addParameter(eParams, "$$priState$$", thisAddr.state);
@@ -118,6 +111,13 @@ try{
 				}else{
 				if(thisAddr.getAddressType()=="Business"){
 					addrType = "Business";
+					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
+					addParameter(eParams, "$$priCity$$", thisAddr.city);
+					addParameter(eParams, "$$priState$$", thisAddr.state);
+					addParameter(eParams, "$$priZip$$", thisAddr.zip);
+				}else{
+				if(thisAddr.getAddressType()=="Home"){
+					addrType = "Home";
 					addParameter(eParams, "$$priAddress1$$", thisAddr.addressLine1);
 					addParameter(eParams, "$$priCity$$", thisAddr.city);
 					addParameter(eParams, "$$priState$$", thisAddr.state);
