@@ -13,6 +13,16 @@ try{
 				var expDate = new Date("05/01/2018");
 				editFirstIssuedDate(janOne);
 				editAppSpecific("Valid From Date", "01/01/2018", licCapId);
+				//lwacht 171219: updating file date for aca display
+				var capMdl = aa.cap.getCap(capId).getOutput(); //returns CapScriptModel object
+				var newJanOne = aa.date.parseDate("01/01/2018")
+				var updFileDt = capMdl.setFileDate(newJanOne);
+				var capModel = capMdl.getCapModel();
+				setDateResult = aa.cap.editCapByPK(capModel);
+				if (!setDateResult.getSuccess()) {
+					logDebug("**WARNING: error setting file date : " + setDatesetDateResult.getErrorMessage());
+				}
+				//lwacht 171219: end
 			}else{
 				var expDate = dateAdd(null,120);
 				editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
