@@ -21,12 +21,18 @@ function sendLocalAuthNotification() {
 			var eParams = aa.util.newHashtable();
 			rFiles = []				
 			addParameter(eParams, "$$altID$$", capId.getCustomID());
-			addParameter(eParams, "$$appType$$", appTypeArray[1] + " " + AInfo["License Type"]);
-			if(appTypeArray[2] == "Temporary") 
+
+			if(appTypeArray[2] == "Temporary") {
 				licType = "temporary";
-			else
+				addParameter(eParams, "$$appType$$", AInfo["Application Typre"] + " " + AInfo["License Type"]);
+				addParameter(eParams, "$$licType$$", licType + AInfo);
+			}
+			else {
 				licType = "annual";
-			addParameter(eParams, "$$licType$$", licType);
+				addParameter(eParams, "$$appType$$", appTypeArray[2] + " " + AInfo["License Type"]);
+				addParameter(eParams, "$$licType$$", licType);
+			}
+			
 			if(!matches(AInfo["Premise Address"], null,"",undefined)) {
 				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " APN: " + AInfo["APN"]);
 			}
