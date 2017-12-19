@@ -21,6 +21,7 @@ function sendLocalAuthNotification() {
 			var eParams = aa.util.newHashtable();
 			rFiles = []				
 			addParameter(eParams, "$$altID$$", capId.getCustomID());
+			addParameter(eParams, "$$appType$$", appTypeArray[1] + " " + AInfo["License Type"]);
 			if(appTypeArray[2] == "Temporary") 
 				licType = "temporary";
 			else
