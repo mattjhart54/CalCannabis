@@ -44,7 +44,10 @@ try{
 			//logDebug("getShortNotes(): " + getShortNotes());
 			//logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
+			//lwacht 171220: uncommenting short notes update
 			//updateShortNotes(getShortNotes(),licCapId);
+			updateShortNotes(getShortNotes(),licCapId);
+			//lwacht 171220: end
 			//lwacht 171214: uncommenting this line as the legal business name is required again
 			//updateWorkDesc(workDescGet(capId),licCapId);
 			updateWorkDesc(workDescGet(capId),licCapId);
