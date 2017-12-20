@@ -44,7 +44,7 @@ try{
 			var newAppName = AInfo["Premise County"] + " - " + "Temporary Cultivator License - " + AInfo["License Type"];
 			//logDebug("workDescGet(capId): " + workDescGet(capId));
 			//logDebug("getShortNotes(): " + getShortNotes());
-			//logDebug("newAppName: " + newAppName);
+			logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
 			//lwacht 171220: uncommenting short notes update
 			//updateShortNotes(getShortNotes(),licCapId);
