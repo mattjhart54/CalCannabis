@@ -39,7 +39,9 @@ try{
 			}else{
 				logDebug("License record ID updated to : " + newAltId);
 			}
-			var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
+			//wacht 171220 adding county to app name
+			//var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
+			var newAppName = AInfo["Premise County"] + " - " + "Temporary Cultivator License - " + AInfo["License Type"];
 			//logDebug("workDescGet(capId): " + workDescGet(capId));
 			//logDebug("getShortNotes(): " + getShortNotes());
 			//logDebug("newAppName: " + newAppName);
