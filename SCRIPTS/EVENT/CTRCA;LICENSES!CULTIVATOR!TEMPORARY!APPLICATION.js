@@ -14,6 +14,9 @@ try{
 //lwacht 171214: update app name with legal business name
 try{
 	updateLegalBusinessName()
+	//lwacht 171220: and county field as well
+	updateShortNotes(AInfo["Premise County"]);
+	//lwacht 171220:  end
 }catch (err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Set Legal Bsns Name: " + err.message);
 	logDebug(err.stack);
