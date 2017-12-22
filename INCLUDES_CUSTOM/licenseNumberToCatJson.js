@@ -60,7 +60,7 @@ function licenseNumberToCatJson(licenseNumber) {
         "ManagerMiddleName": "",
         "ManagerLastName": drpLastName,
         "AssessorParcelNumber" : apn,
-        "SellersPermitNumber" : sellersPermitNumber
+        "SellerPermitNumber" : sellersPermitNumber
     };
 
     return jsonResult;
