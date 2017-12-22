@@ -62,7 +62,7 @@ function sendLocalAuthNotification() {
 						if(!matches(priContact.capContact.middleName,null,"",undefined))
 							addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
 			}			
-			sendNotification(sysFromEmail,locEmail,"calcannabislicensing@cdfa.ca.gov; calcannabislocalverification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
+			sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
 		}
 		else {
 			showmessage = true;
