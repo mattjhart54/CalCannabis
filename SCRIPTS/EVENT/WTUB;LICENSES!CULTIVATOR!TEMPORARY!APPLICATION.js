@@ -40,15 +40,17 @@ try{
 				logDebug("License record ID updated to : " + newAltId);
 			}
 			//wacht 171220 adding county to app name
+			//mhart reoved county from app name
 			//var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
-			var newAppName = AInfo["Premise County"] + " - " + "Temporary Cultivator License - " + AInfo["License Type"];
+			var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
 			//logDebug("workDescGet(capId): " + workDescGet(capId));
 			//logDebug("getShortNotes(): " + getShortNotes());
 			logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
 			//lwacht 171220: uncommenting short notes update
+			//mhart update shortnotes with premise county
 			//updateShortNotes(getShortNotes(),licCapId);
-			updateShortNotes(getShortNotes(),licCapId);
+			updateShortNotes(AInfo["Premise County"]);
 			//lwacht 171220: end
 			//lwacht 171214: uncommenting this line as the legal business name is required again
 			//updateWorkDesc(workDescGet(capId),licCapId);
