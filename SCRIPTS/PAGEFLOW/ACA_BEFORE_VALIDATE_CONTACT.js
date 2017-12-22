@@ -147,7 +147,7 @@ try {
 					(!matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined))){
 						cancel = true;
 						showMessage = true;
-						logMessage("The Agent for Process of Service must have a First and Last Name or Legal Business Name.  Please edit the Agent for Service of Process contact");	
+						logMessage("The Agent for Process of Service must have a First and Last Name or Legal Business Name.  Please edit the Agent for Service of Process contact.");	
 				}
 			}
 			//mhart - added check to validate required fields completed as expressions not always firing
@@ -155,14 +155,14 @@ try {
 				if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined)) {
 						cancel = true;
 						showMessage = true;
-						logMessage("The Business must have a First and Last Name and Legal Business Name and the Individual/Organization field must be set to Individual.  Please edit the Business contact to add these fields");	
+						logMessage("The Business must have a First and Last Name and Legal Business Name and the Individual/Organization field must be set to Individual.  Please edit the Business contact to add these fields.");	
 				}
 			}
 			if(contType == "Designated Responsible Party" || contType == "DRP - Temporary License") {
 				if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined)) {
 						cancel = true;
 						showMessage = true;
-						logMessage("The Designated Responsible Party must have a First and Last Nameand the Individual/Organization field must be set to Individual.  Please edit the DRP contact to add these fields");	
+						logMessage("The Designated Responsible Party must have a First and Last Name and the Individual/Organization field must be set to Individual.  Please edit the DRP contact to add these fields.");	
 				}
 			}
 		}
