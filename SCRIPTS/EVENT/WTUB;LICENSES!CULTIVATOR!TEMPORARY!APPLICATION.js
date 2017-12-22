@@ -50,7 +50,8 @@ try{
 			//lwacht 171220: uncommenting short notes update
 			//mhart update shortnotes with premise county
 			//updateShortNotes(getShortNotes(),licCapId);
-			updateShortNotes(AInfo["Premises County"]);
+			pCounty = getAppSpecific("Premise County");
+			updateShortNotes(pCounty,licCapId);
 			//lwacht 171220: end
 			//lwacht 171214: uncommenting this line as the legal business name is required again
 			//updateWorkDesc(workDescGet(capId),licCapId);
