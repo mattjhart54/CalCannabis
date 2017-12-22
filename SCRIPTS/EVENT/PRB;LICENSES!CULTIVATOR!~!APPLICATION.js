@@ -37,16 +37,17 @@ try{
 			}
 			//editContactType("Individual", "Owner",licCapId);
 			//var contApp = getContactObj(capId, "Applicant");
+			//mhart removed county from the app name
 			if(childSupport){
-				var newAppName = "TEMPORARY - " + AInfo["Premise County"] + " - " + AInfo["License Type"];
+				var newAppName = "TEMPORARY - " + AInfo["License Type"];
 			}else{
-				var newAppName = AInfo["Premise County"] + " - " + AInfo["License Type"];
+				var newAppName = AInfo["License Type"];
 			}
 			//logDebug("workDescGet(capId): " + workDescGet(capId));
 			//logDebug("getShortNotes(): " + getShortNotes());
 			//logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
-			updateShortNotes(getShortNotes(),licCapId);
+			updateShortNotes(AInfo["Premise County"],licCapId);
 			updateWorkDesc(workDescGet(capId),licCapId);
 			copyAppSpecific(licCapId);
 			editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
