@@ -145,7 +145,7 @@ function capIdToJSON(licenseNumber) {
         "ManagerMiddleName": null,
         "ManagerLastName": drpLastName,
         "AssessorParcelNumber" : apn,
-        "SellersPermitNumber" : sellersPermitNumber
+        "SellerPermitNumber" : sellersPermitNumber
     };
 
     return jsonResult;
