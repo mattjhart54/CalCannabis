@@ -106,7 +106,7 @@ try {
 				if(contType == "Business")
 					appFnd = true;
 				if(!matches(contEmail,"",null,"undefined")){
-					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business")){
+					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business","DRP - Temporary License")){
 						contactFnd = true;
 					}
 				}
