@@ -1,7 +1,7 @@
 //lwacht
 //send other notifications
 try{
-	if(cap.getCapStatus()=="Withdrawn" && currentUserGroup!="LicensesAdminMgr"){
+	if(appStatus =="Voided" && currentUserGroup!="LicensesAdminMgr"){
 		cancel = true;
 		showMessage = true;
 		comment("Only an Admin Manager can void an application.");
