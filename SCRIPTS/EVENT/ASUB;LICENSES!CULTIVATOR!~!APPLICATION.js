@@ -1,6 +1,7 @@
 //lwacht
 //send other notifications
 try{
+	/*lwacht 171226: not being used--this is a manual process
 	if(matches(appStatus, "Disqualified", "Denied")){
 		//lwacht: 170823: removing primary contact
 		//var priContact = getContactObj(capId,"Primary Contact");
@@ -17,6 +18,7 @@ try{
 			displayReport("ACA Permit", "agencyid", servProvCode,"capid", capId.getCustomID());
 		}
 	}
+	lwacht 171226:end */
 	if(matches(appStatus, "Withdrawn")){
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var showReport = false;
