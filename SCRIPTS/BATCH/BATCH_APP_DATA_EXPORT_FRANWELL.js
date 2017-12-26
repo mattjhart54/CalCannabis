@@ -66,19 +66,19 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters
+/* test parameters 
 
-aa.env.setValue("lookAheadDays", "-1");
-aa.env.setValue("daySpan", "0");
+aa.env.setValue("lookAheadDays", "-4");
+//aa.env.setValue("daySpan", "0");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
-aa.env.setValue("sendToEmail", "lwacht@trustvip.com");
+aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA_Franwell_Export");
  */
 
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
-var daySpan = getParam("daySpan");
+//var daySpan = getParam("daySpan");
 var sysFromEmail = getParam("sysFromEmail");
 var sendToEmail = getParam("sendToEmail");
 var rptName = getParam("reportName");
@@ -98,12 +98,12 @@ var startTime = startDate.getTime();			// Start timer
 var currentUserID = "ADMIN";
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 var fromDate = dateAdd(null,parseInt(lookAheadDays));
-var toDate = dateAdd(null,parseInt(lookAheadDays)+parseInt(daySpan));
+//var toDate = dateAdd(null,parseInt(lookAheadDays)+parseInt(daySpan));
 fromJSDate = new Date(fromDate);
-toJSDate = new Date(toDate);
+//toJSDate = new Date(toDate);
 var dFromDate = aa.date.parseDate(fromDate);
-var dToDate = aa.date.parseDate(toDate);
-logDebug("fromDate: " + fromDate + "  toDate: " + toDate);
+//var dToDate = aa.date.parseDate(toDate);
+logDebug("fromDate: " + fromDate); // + "  toDate: " + toDate);
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
@@ -135,6 +135,11 @@ try{
 	var pDay = rptDate.getDate();
 	var pHour = rptDate.getHours();
 	var pMinute = rptDate.getMinutes();
+	if(pMonth<12){
+		pMonth++;
+	}else{
+		pMonth=1;
+	}
 	if (pMonth > 9)
 		var mth = pMonth.toString();
 	else
@@ -155,11 +160,18 @@ try{
 	var rptDateFormatted = "" + pYear.toString() + mth + day + hour + minute;
 	var newRptName = "CDFA" + rptDateFormatted;
 	logDebug("newRptName: " + newRptName);
-	var rptFile = renameReport(rptName, newRptName, "fromDate", fromDate, "toDate", toDate);
+	var rptFile = renameReport(rptName, newRptName, "p1value", fromDate);
 	if (rptFile) {
 		var rFiles = new Array();
-		rFiles.push(rFile);
-		sendNotification(sysFromEmail,sendToEmail,"","","", rFiles,capId);
+		rFiles.push(rptFile);
+		//sendNotification(sysFromEmail,sendToEmail,"","","", rFiles,null);
+		var result = aa.sendEmail(sysFromEmail, sendToEmail, "", newRptName, ".", rFiles);
+		if(result.getSuccess()){
+			logDebug("Sent email successfully!");
+		}else{
+			logDebug("Failed to send mail. - " + result.getErrorType());
+		}
+
 	}
 }catch (err){
 	logDebug("An error occurred in BATCH_APP_DATA_EXPORT_FRANWELL: " + err.message);
@@ -192,13 +204,13 @@ try{
 	}
 	var report = rptResult.getOutput();
 	// set the report module
-	var itemCap = aa.cap.getCap(capId).getOutput();
-	appTypeResult = itemCap.getCapType();
-	appTypeString = appTypeResult.toString();
-	appTypeArray = appTypeString.split("/");
-	report.setModule(appTypeArray[0]);
-	report.setCapId(capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3());
-	report.getEDMSEntityIdModel().setAltId(capId.getCustomID());
+	//var itemCap = aa.cap.getCap(capId).getOutput();
+	//appTypeResult = itemCap.getCapType();
+	//appTypeString = appTypeResult.toString();
+	//appTypeArray = appTypeString.split("/");
+	report.setModule("Licenses");
+	//report.setCapId(capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3());
+	//report.getEDMSEntityIdModel().setAltId(capId.getCustomID());
 	logDebug("Report ID: " + report.getReportId());	// create a hashmap for report parameters
 	var parameters = aa.util.newHashMap();
 	for (var i = 2; i < arguments.length; i = i + 2) {
@@ -222,11 +234,12 @@ try{
 				//logDebug("reportFile created " + reportFile);
 				// use Java.IO to save the file to a specific folder
 				var file = new java.io.File(reportFile); 
-				var newFilePath = file.parentFile+ "\\" + thisRptName;
+				logDebug("file.parentFile: " + file.parentFile);
+				var newFilePath = file.parentFile+ "\\" + thisRptName +".csv";
 				var renmSuccess = file.renameTo(new java.io.File(newFilePath));
 				if(renmSuccess){
-					logDebug("File has been successfully renamed to " + thisRptName);
-					return reportFile;
+					logDebug("File has been successfully renamed to " + newFilePath);
+					return newFilePath;
 				}else{
 					logDebug("Error renaming file to Report Manager file name " + thisRptName);
 				}
