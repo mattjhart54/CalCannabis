@@ -1,9 +1,10 @@
 //lwacht
 //send other notifications
 try{
-	if(matches(appStatus, "Disqualified", "Denied")){
-		emailDrpPriContacts("ASUA", "LCA_GENERAL_NOTIFICATION", "ACA Permit", false, appStatus, capId, "agencyid", servProvCode, "capid", capId.getCustomID());
-	}
+	//lwacht 171226: not using (not automation around disqualification/denial)
+	//if(matches(appStatus, "Disqualified", "Denied")){
+	//	emailDrpPriContacts("ASUA", "LCA_GENERAL_NOTIFICATION", "ACA Permit", false, appStatus, capId, "agencyid", servProvCode, "capid", capId.getCustomID());
+	//}
 	// Run withdrawal report for each contact and either email notice or send message to mail notice.
 	if(appStatus == "Withdrawn") {
 		var	conArray = getContactArray(capId);
