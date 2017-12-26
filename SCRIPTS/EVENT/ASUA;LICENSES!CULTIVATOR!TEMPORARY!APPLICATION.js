@@ -5,7 +5,7 @@ try{
 		taskCloseAllActive("Voided","Task Closed by script. Record status was updated to Voided");
 	}
 }catch(err){
-	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/*/APPLICATION: Voided Notifications: " + err.message);
+	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Voided Notifications: " + err.message);
 	logDebug(err.stack);
 }
 //lwacht 171226: end
