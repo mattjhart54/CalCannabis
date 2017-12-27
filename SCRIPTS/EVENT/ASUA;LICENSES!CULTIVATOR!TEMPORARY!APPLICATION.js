@@ -1,4 +1,5 @@
-//lwacht: 171226: adding logic for a voided temp application
+//lwacht 171226: adding logic for a voided temp application
+/*lwacht 171227: removing because of bug in ASUB
 try{
 	// Run withdrawal report for each contact and either email notice or send message to mail notice.
 	if(matches(appStatus, "Voided")){
@@ -9,3 +10,4 @@ try{
 	logDebug(err.stack);
 }
 //lwacht 171226: end
+lwacht 171227: end */
