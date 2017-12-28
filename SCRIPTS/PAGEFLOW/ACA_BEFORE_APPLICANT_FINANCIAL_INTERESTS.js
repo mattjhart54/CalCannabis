@@ -116,13 +116,17 @@ try {
 				var arrContacts = contactList.toArray();
 				for(var i in arrContacts) {
 					var thisCont = arrContacts[i];
+			//MJH added code to check for Last, First and Business names.  Removed sole proprietorship check
 					var contType = thisCont.contactType;
+					var contFirst = thisCont.firstName;
+					var contLast = thisCont.lastName;
+					var contLBN = thisCont.middleName;
 					if(contType =="Business") {
 						//check for legal business name if not a Sole Proprietor
-						if(AInfo["Business Entity Structure"] != "Sole Proprietorship" && matches(thisCont.middleName,"",null,undefined)) {
-							showMessage = true;
+						if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined)) {
 							cancel = true;
-							logMessage("Warning: Legal Business Name must be entered if the Business Entity Structure is not Sole Proprietor.  Click the edit button to enter your Legal Business Name");
+							showMessage = true;
+							logMessage("The Business must have a First and Last Name and Legal Business Name and the Individual/Organization field must be set to Individual.  Please edit the Business contact to add these fields.");	
 						}
 						var refContNrb = thisCont.refContactNumber;
 	//		showMessage = true;
