@@ -122,8 +122,7 @@ try {
 					var contLast = thisCont.lastName;
 					var contLBN = thisCont.middleName;
 					if(contType =="Business") {
-						//check for legal business name if not a Sole Proprietor
-						if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined)) {
+						if(matches(contFirst,null,"",undefined) || matches(contLast,null,"",undefined) || matches(contLBN,null,"",undefined)) {
 							cancel = true;
 							showMessage = true;
 							logMessage("The Business must have a First and Last Name and Legal Business Name and the Individual/Organization field must be set to Individual.  Please edit the Business contact to add these fields.");	
