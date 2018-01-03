@@ -1,3 +1,18 @@
+try{
+	if(appTypeArray[2]!="Temporary"){
+		cancel = true;
+		showMessage = true;
+		comment("The application cannot be submitted at this time; to complete the annual license application you will need to submit Live Scan fingerprints for each person who meets the definition of “owner,” as described in the emergency regulations. We are finalizing the information needed for this process and will post the required “Request for Live Scan” form on the CDFA website (calcannabis.cdfa.ca.gov) soon.");
+	
+}catch (err) {
+	showDebug =true;
+	logDebug("An error has occurred in ASB:Licenses/Cultivation/ * /Application: Doc check: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/Application: No Submittal: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
+}
+
+
+
 //lwacht: double checking required docs
 /* lwacht: not working - removing
 try {
