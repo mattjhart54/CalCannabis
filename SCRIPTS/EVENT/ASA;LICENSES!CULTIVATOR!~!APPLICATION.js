@@ -23,10 +23,10 @@ try{
 //lwacht: don't run for temporary app
 //lwacht: 170929 adding legal business name logic 
 try {
+	updateLegalBusinessName();
+	editAppName(AInfo["License Type"]);
+	updateShortNotes(AInfo["Premise County"]);
 	if(appTypeArray[2]!="Temporary"){
-		updateLegalBusinessName();
-		editAppName(AInfo["License Type"]);
-		updateShortNotes(AInfo["Premise County"]);
 		var priContact = getContactObj(capId,"Business");
 		if(priContact){
 			editAppSpecific("Legal Business Name", priContact.capContact.middleName);
