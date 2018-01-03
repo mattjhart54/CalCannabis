@@ -19,13 +19,8 @@ function sendLocalAuthNotification() {
 		var locEmail = lookup("LIC_CC_LOCAL_AUTH_CONTACTS", locAuth);
 		if(!matches(locEmail, null, "", undefined)) {
 			var eParams = aa.util.newHashtable();
-			rFiles = [];
-			//lwacht 180103
-			//addParameter(eParams, "$$altID$$", capId.getCustomID());
-			addParameter(eParams, "$$AltID$$", capId.getCustomID());
-			addParameter(eParams,"$$ContactFirstName$$","VOTE" );
-			addParameter(eParams,"$$ContactLastName$$","FOR PEDRO");
-			//lwacht 180103
+			rFiles = []				
+			addParameter(eParams, "$$altID$$", capId.getCustomID());
 
 			if(appTypeArray[2] == "Temporary") {
 				licType = "";
@@ -66,11 +61,8 @@ function sendLocalAuthNotification() {
 					else	
 						if(!matches(priContact.capContact.middleName,null,"",undefined))
 							addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
-			}
-			//lwacht 180103: test
-			//sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov", locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov", "LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
-			sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LCA_APPLICATION_SUBMITTED",eParams, rFiles,capId);
-			//lwacht 180103: end
+			}			
+			sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
 		}
 		else {
 			showmessage = true;
