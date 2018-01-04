@@ -1,3 +1,4 @@
+//lwacht 180104 Story 5105 start
 try{
 	if(appTypeArray[2]!="Temporary"){
 		cancel = true;
@@ -10,7 +11,7 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/Application: No Submittal: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
 }
-
+//lwacht 180104 Story 5105 end
 
 
 //lwacht: double checking required docs
