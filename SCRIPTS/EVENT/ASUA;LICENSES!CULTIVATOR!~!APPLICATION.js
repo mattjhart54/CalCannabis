@@ -34,5 +34,27 @@ try{
 }catch(err){
 	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
 	logDebug(err.stack);
+} 
+
+//Mhart 01/04/2018 story 5095 void application
+try{
+	if(appStatus == "Voided") {
+		taskCloseAllActive("Voided","Task Closed by script. Record status was updated to Voided");
+		var arrChild = getRelatedRecdsDown(capId);
+		if(!matches(arrChild, null, "", "undefined")&& arrChild.length>0){
+			for(ch in arrChild){
+				thisChild = arrChild[ch];
+				capChild = aa.cap.getCap(thisChild).getOutput();
+				currCap = thisChild;
+				capId = thisChild;
+				taskCloseAllActive("Voided","Task Closed by script. Record status was updated to Voided");
+				updateAppStatus("Voided","Task Closed by script. Parent status was updated to Voided");
+				capId = currCap;
+			}
+		}
+	}
+}catch(err){
+	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
+	logDebug(err.stack);
 }
 
