@@ -42,7 +42,10 @@ try{
 			//wacht 171220 adding county to app name
 			//mhart reoved county from app name
 			//var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
-			var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
+			//lwacht 180104 Story 5104 start
+			//var newAppName = "Temporary Cultivator License - " + AInfo["License Type"];
+			var newAppName = AInfo["License Type"];
+			//lwacht 180104 Story 5104 end
 			//logDebug("workDescGet(capId): " + workDescGet(capId));
 			//logDebug("getShortNotes(): " + getShortNotes());
 			logDebug("newAppName: " + newAppName);
