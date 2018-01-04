@@ -7,7 +7,7 @@ try{
 	}
 }catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ASB:Licenses/Cultivation/*/Application: Doc check: " + err.message);
+	logDebug("An error has occurred in ASB:Licenses/Cultivation/*/Application: No Submittal: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/Application: No Submittal: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
 }
