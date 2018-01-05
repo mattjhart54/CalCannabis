@@ -108,7 +108,7 @@ try{
 						addParameter(emailParameters, "$$firstName$$", ""+drpFirst);
 						addParameter(emailParameters, "$$lastName$$", ""+drpLast);
 						addParameter(emailParameters, "$$today$$", sysDateMMDDYYYY);
-						addParameter(emailParameters, "$$ACAUrl$$", getACAUrl());
+						addParameter(emailParameters, "$$ACAUrl$$", getACAlinkForEdit(desigRecId, "Licenses", "1005"));
 						sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,desigRecId);
 					}
 				}
