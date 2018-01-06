@@ -18,7 +18,7 @@ Parameters:
 		1009: pay fee due
 		1010: pay fee due in renewal
 ============================================= */
-\
+
 function getACAlinkForEdit(itemCap, module, linkType){
 try{
 	if(!matches(linkType, "1008","1005","1000","1006","1009","1010")){
