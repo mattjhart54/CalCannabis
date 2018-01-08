@@ -65,7 +65,11 @@ try{
 
 //lwacht: create submission report
 try{
-	runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
+	//lwacht: 180108: defect 5120: don't run for temporary
+	if(appTypeArray[2]!="Temporary"){
+		runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
+	}
+	//lwacht: 180108: defect 5120: end
 } catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
 	logDebug(err.stack);
