@@ -67,7 +67,7 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters  
-
+elycia.juco@cdfa.ca.gov
 aa.env.setValue("lookAheadDays", "-10");
 aa.env.setValue("daySpan", "10");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
@@ -78,7 +78,7 @@ aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
 aa.env.setValue("recordCategory", "Application");
-aa.env.setValue("activeTask", "Administrative Review");
+aa.env.setValue("taskToCheck", "Administrative Review");
 aa.env.setValue("contactType", "Designated Responsible Party");
 */
 
@@ -87,7 +87,7 @@ var lookAheadDays = getJobParam("lookAheadDays");
 var daySpan = getJobParam("daySpan");
 var sysFromEmail = getJobParam("sysFromEmail");
 var sendToEmail = getJobParam("sendToEmail");
-var rptName = getJobParam("reportName");
+//var rptName = getJobParam("reportName");
 var appGroup = getJobParam("recordGroup");
 var appTypeType = getJobParam("recordType");
 var appSubtype = getJobParam("recordSubType");
@@ -252,9 +252,9 @@ try{
 			}
 			rptLine+=thisContact.phone3 +",";
 			if(thisContact.middleName.length>100){
-				rptLine+=thisContact.middleName.substring(0,100) +",";
+				rptLine+=thisContact.middleName.substring(0,100);
 			}else{
-				rptLine+=thisContact.middleName +",";
+				rptLine+=thisContact.middleName;
 			}
 			//Line return after each record has been written.
 			rptLine += "\r\n";
