@@ -151,6 +151,7 @@ try{
 	var recdsFound = false;
 	var tmpRecd = 0;
 	var noContactType = 0;
+	var capCount = 0;
 	var rptDate = new Date();
 	var pYear = rptDate.getYear() + 1900;
 	var pMonth = rptDate.getMonth();
@@ -260,6 +261,7 @@ try{
 			rptLine += "\r\n";
 			aa.util.writeToFile(rptLine,rptToEmail);
 			recdsFound = true;
+			capCount ++;
 		}else{
 			logDebug("Skipping due to no contact type: " + contactType);
 			noContactType++;
