@@ -66,22 +66,41 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters 
+/* test parameters  
 
-aa.env.setValue("lookAheadDays", "-4");
-//aa.env.setValue("daySpan", "0");
+aa.env.setValue("lookAheadDays", "-10");
+aa.env.setValue("daySpan", "10");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA_Franwell_Export");
- */
+aa.env.setValue("recordGroup", "Licenses");
+aa.env.setValue("recordType", "Cultivator");
+aa.env.setValue("recordSubType", "*");
+aa.env.setValue("recordCategory", "Application");
+aa.env.setValue("activeTask", "Administrative Review");
+aa.env.setValue("contactType", "Designated Responsible Party");
+*/
 
-var emailAddress = getParam("emailAddress");			// email to send report
-var lookAheadDays = getParam("lookAheadDays");
-//var daySpan = getParam("daySpan");
-var sysFromEmail = getParam("sysFromEmail");
-var sendToEmail = getParam("sendToEmail");
-var rptName = getParam("reportName");
+var emailAddress = getJobParam("emailAddress");			// email to send report
+var lookAheadDays = getJobParam("lookAheadDays");
+var daySpan = getJobParam("daySpan");
+var sysFromEmail = getJobParam("sysFromEmail");
+var sendToEmail = getJobParam("sendToEmail");
+var rptName = getJobParam("reportName");
+var appGroup = getJobParam("recordGroup");
+var appTypeType = getJobParam("recordType");
+var appSubtype = getJobParam("recordSubType");
+var appCategory = getJobParam("recordCategory");
+var task = getJobParam("activeTask");
+var contactType = getJobParam("contactType");
+
+
+if(appTypeType=="*") appTypeType="";
+if(appSubtype=="*")  appSubtype="";
+if(appCategory=="*") appCategory="";
+var filepath = "c://test"; 
+
 
 /*----------------------------------------------------------------------------------------------------/
 |
@@ -98,12 +117,12 @@ var startTime = startDate.getTime();			// Start timer
 var currentUserID = "ADMIN";
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 var fromDate = dateAdd(null,parseInt(lookAheadDays));
-//var toDate = dateAdd(null,parseInt(lookAheadDays)+parseInt(daySpan));
+var toDate = dateAdd(null,parseInt(lookAheadDays)+parseInt(daySpan));
 fromJSDate = new Date(fromDate);
-//toJSDate = new Date(toDate);
+toJSDate = new Date(toDate);
 var dFromDate = aa.date.parseDate(fromDate);
-//var dToDate = aa.date.parseDate(toDate);
-logDebug("fromDate: " + fromDate); // + "  toDate: " + toDate);
+var dToDate = aa.date.parseDate(toDate);
+logDebug("fromDate: " + fromDate + "  toDate: " + toDate);
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
@@ -129,6 +148,9 @@ if (showDebug) {
 
 function mainProcess() {
 try{
+	var recdsFound = false;
+	var tmpRecd = 0;
+	var noContactType = 0;
 	var rptDate = new Date();
 	var pYear = rptDate.getYear() + 1900;
 	var pMonth = rptDate.getMonth();
@@ -158,12 +180,97 @@ try{
 		var minute = "0" + pMinute.toString();
 	
 	var rptDateFormatted = "" + pYear.toString() + mth + day + hour + minute;
-	var newRptName = "CDFA" + rptDateFormatted;
+	var newRptName = "CDFA" + rptDateFormatted + ".CSV";
 	logDebug("newRptName: " + newRptName);
-	var rptFile = renameReport(rptName, newRptName, "p1value", fromDate);
-	if (rptFile) {
-		var rFiles = new Array();
-		rFiles.push(rptFile);
+	var rptToEmail = filepath + "/" + newRptName;
+	var capFilterBalance = 0;
+	var capFilterDateRange = 0;
+	var capCount = 0;
+	setCreated = false
+	var taskItemScriptModel = aa.workflow.getTaskItemScriptModel().getOutput();
+	//taskItemScriptModel.setActiveFlag("Y");
+	//taskItemScriptModel.setCompleteFlag("N");
+	taskItemScriptModel.setTaskDescription(task);
+	 taskItemScriptModel.setDisposition("noStatus");
+	// taskItemScriptModel.setDisposition("noStatus");
+	 //Setup the cap type criteria
+	 var capTypeScriptModel = aa.workflow.getCapTypeScriptModel().getOutput();
+	 capTypeScriptModel.setGroup(appGroup);
+	 capTypeScriptModel.setType(appTypeType);
+	 capTypeScriptModel.setSubType(appSubtype);
+	 capTypeScriptModel.setCategory(appCategory); 
+	 //Set the date range for the task due date criteria
+	 //var startDueDate = aa.date.parseDate(fromDate));
+	 //var endDueDate = aa.date.getCurrentDate();
+	 //for testing purposes only
+	 //var startDueDate = aa.date.parseDate(fromDate);
+	 //var endDueDate = aa.date.parseDate(toDate);
+	 //var appStatusList = [];
+	 //appStatusList = arrAppStatus;
+	 //var capResult = aa.workflow.getCapIdsByCriteria(taskItemScriptModel, startDueDate, endDueDate, capTypeScriptModel, appStatusList);
+	 var capResult = aa.workflow.getCapIdsByCriteria(taskItemScriptModel, dFromDate, dToDate, capTypeScriptModel, null);
+	if (capResult.getSuccess()) {
+		myCaps = capResult.getOutput();
+		logDebug("Found " + myCaps.length + " records to process");
+	}else { 
+		logDebug("Error: Getting records, reason is: " + capResult.getErrorMessage()) ;
+		return false;
+	}
+	for (myCapsXX in myCaps) {
+    	capId = myCaps[myCapsXX].getCapID();
+   		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
+		altId = capId.getCustomID();
+		logDebug("Processing altId: " + altId);
+		cap = aa.cap.getCap(capId).getOutput();		
+		appTypeResult = cap.getCapType();	
+		appTypeString = appTypeResult.toString();	
+		appTypeArray = appTypeString.split("/");
+		if(appTypeArray[2]=="Temporary"){
+			logDebug("Skipping due to temp record");
+			tmpRecd++;
+			continue;
+		}
+		var rptLine = "";
+		rptLine = altId+",";
+		var thisContact = getContactByType(contactType,capId);
+		if(thisContact){
+			if(thisContact.firstName.length>100){
+				rptLine+=thisContact.firstName.substring(0,100) +",";
+			}else{
+				rptLine+=thisContact.firstName +",";
+			}
+			rptLine+=",";
+			if(thisContact.lastName.length>100){
+				rptLine+=thisContact.lastName.substring(0,100) +",";
+			}else{
+				rptLine+=thisContact.lastName +",";
+			}
+			if(thisContact.email.length>255){
+				rptLine+=thisContact.email.substring(0,255) +",";
+			}else{
+				rptLine+=thisContact.email +",";
+			}
+			rptLine+=thisContact.phone3 +",";
+			if(thisContact.middleName.length>100){
+				rptLine+=thisContact.middleName.substring(0,100) +",";
+			}else{
+				rptLine+=thisContact.middleName +",";
+			}
+			//Line return after each record has been written.
+			rptLine += "\r\n";
+			aa.util.writeToFile(rptLine,rptToEmail);
+			recdsFound = true;
+		}else{
+			logDebug("Skipping due to no contact type: " + contactType);
+			noContactType++;
+		}
+	}
+
+
+
+	if(recdsFound){
+		var rFiles = [];
+		rFiles.push(rptToEmail);
 		//sendNotification(sysFromEmail,sendToEmail,"","","", rFiles,null);
 		var result = aa.sendEmail(sysFromEmail, sendToEmail, "", newRptName, ".", rFiles);
 		if(result.getSuccess()){
@@ -171,8 +278,12 @@ try{
 		}else{
 			logDebug("Failed to send mail. - " + result.getErrorType());
 		}
-
 	}
+ 	logDebug("Total CAPS qualified : " + myCaps.length);
+ 	logDebug("Ignored due to temp record: " + tmpRecd);
+ 	logDebug("Ignored due to no contact type: " + noContactType);
+ 	logDebug("Total CAPS processed: " + capCount);
+
 }catch (err){
 	logDebug("An error occurred in BATCH_APP_DATA_EXPORT_FRANWELL: " + err.message);
 	logDebug(err.stack);
@@ -255,4 +366,27 @@ try{
 }catch(err){
 	logDebug("An error occurred in renameReport: " + err.message);
 	logDebug(err.stack);
+}}
+
+function getJobParam(pParamName){ //gets parameter value and logs message showing param value
+try{
+	var ret;
+	if (aa.env.getValue("paramStdChoice") != "") {
+		var b = aa.bizDomain.getBizDomainByValue(aa.env.getValue("paramStdChoice"),pParamName);
+		if (b.getSuccess()) {
+			ret = b.getOutput().getDescription();
+			}	
+
+		ret = ret ? "" + ret : "";   // convert to String
+		
+		logDebug("Parameter (from std choice " + aa.env.getValue("paramStdChoice") + ") : " + pParamName + " = " + ret);
+		}
+	else {
+			ret = "" + aa.env.getValue(pParamName);
+			logDebug("Parameter (from batch job) : " + pParamName + " = " + ret);
+		}
+	return ret;
+}catch (err){
+	logDebug("ERROR: getJobParam: " + err.message + " In " + batchJobName);
+	logDebug("Stack: " + err.stack);
 }}
