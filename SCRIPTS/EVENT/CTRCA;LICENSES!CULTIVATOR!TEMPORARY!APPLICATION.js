@@ -87,12 +87,3 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Set Preferred Channel: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
-
-//lwacht: 180111 create submission report
-try{
-	runReportAttach(capId,"Temporary Completed Application", "altId", capId.getCustomID());
-} catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Submission Report: " + err.message);
-	logDebug(err.stack);
-}
-//lwacht: 180111: end
