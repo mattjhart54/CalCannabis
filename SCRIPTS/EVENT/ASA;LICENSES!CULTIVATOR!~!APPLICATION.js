@@ -56,7 +56,7 @@ try{
 		}
 		//lwacht: 180118: story 5149: set application status on new record submitted via AV
 		if(!publicUser){
-			updateAppStatus("Application Fee Due", "Updated via CTRCA:LICENSES/CULTIVATOR/* /APPLICATION.");
+			updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION.");
 			deactivateTask("Owner Application Reviews");
 			deactivateTask("Administrative Review");
 		}
