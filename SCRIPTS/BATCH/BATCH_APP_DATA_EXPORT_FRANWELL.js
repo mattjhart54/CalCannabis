@@ -66,9 +66,9 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters  
-elycia.juco@cdfa.ca.gov
-aa.env.setValue("lookAheadDays", "-10");
+/* test parameters  */
+// elycia.juco@cdfa.ca.gov
+aa.env.setValue("lookAheadDays", "-30");
 aa.env.setValue("daySpan", "10");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
@@ -80,7 +80,8 @@ aa.env.setValue("recordSubType", "*");
 aa.env.setValue("recordCategory", "Application");
 aa.env.setValue("taskToCheck", "Administrative Review");
 aa.env.setValue("contactType", "Designated Responsible Party");
-*/
+aa.env.setValue("appStatus", "nul,Submitted,Application Fee Due");
+
 
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
@@ -94,6 +95,7 @@ var appSubtype = getJobParam("recordSubType");
 var appCategory = getJobParam("recordCategory");
 var task = getJobParam("activeTask");
 var contactType = getJobParam("contactType");
+var sArray = getJobParam("appStatus").split(",");
 
 
 if(appTypeType=="*") appTypeType="";
@@ -148,8 +150,12 @@ if (showDebug) {
 
 function mainProcess() {
 try{
+	var arrProcRecds = [];
 	var recdsFound = false;
 	var tmpRecd = 0;
+	var badDate = 0;
+	var incompRecd = 0;
+	var dupedRecds = 0;
 	var noContactType = 0;
 	var capCount = 0;
 	var rptDate = new Date();
@@ -187,75 +193,136 @@ try{
 	var capFilterBalance = 0;
 	var capFilterDateRange = 0;
 	var capCount = 0;
-	setCreated = false
-	var taskItemScriptModel = aa.workflow.getTaskItemScriptModel().getOutput();
-	//taskItemScriptModel.setActiveFlag("Y");
-	//taskItemScriptModel.setCompleteFlag("N");
-	taskItemScriptModel.setTaskDescription(task);
-	 taskItemScriptModel.setDisposition("noStatus");
-	// taskItemScriptModel.setDisposition("noStatus");
-	 //Setup the cap type criteria
-	 var capTypeScriptModel = aa.workflow.getCapTypeScriptModel().getOutput();
-	 capTypeScriptModel.setGroup(appGroup);
-	 capTypeScriptModel.setType(appTypeType);
-	 capTypeScriptModel.setSubType(appSubtype);
-	 capTypeScriptModel.setCategory(appCategory); 
-	 //Set the date range for the task due date criteria
-	 //var startDueDate = aa.date.parseDate(fromDate));
-	 //var endDueDate = aa.date.getCurrentDate();
-	 //for testing purposes only
-	 //var startDueDate = aa.date.parseDate(fromDate);
-	 //var endDueDate = aa.date.parseDate(toDate);
-	 //var appStatusList = [];
-	 //appStatusList = arrAppStatus;
-	 //var capResult = aa.workflow.getCapIdsByCriteria(taskItemScriptModel, startDueDate, endDueDate, capTypeScriptModel, appStatusList);
-	 var capResult = aa.workflow.getCapIdsByCriteria(taskItemScriptModel, dFromDate, dToDate, capTypeScriptModel, null);
-	if (capResult.getSuccess()) {
-		myCaps = capResult.getOutput();
-		logDebug("Found " + myCaps.length + " records to process");
+	var capModel = aa.cap.getCapModel().getOutput();
+	capTypeModel = capModel.getCapType();
+	capTypeModel.setGroup(appGroup);
+	capTypeModel.setType(appTypeType);
+	capTypeModel.setSubType(appSubtype);
+	capTypeModel.setCategory(appCategory); 
+	capModel.setCapType(capTypeModel);
+	var capList = new Array();
+	//look for null statuses first
+	// query a list of records based on the above criteria
+//	capListResult = aa.cap.getCapIDListByCapModel(capModel);
+//	if (capListResult.getSuccess()) {
+//		tempcapList = capListResult.getOutput();
+//		logDebug("Null Status count: " + tempcapList.length);
+//		if (tempcapList.length > 0) {
+//			capList = capList.concat(tempcapList);
+//		}
+//	}else{
+//		logDebug("Error retrieving records: " + capListResult.getErrorMessage());
+//	}
+	for (i in sArray) {
+		logDebug("status: " + sArray[i]);
+		// Specify the application status to query
+		if(sArray[i]=="null"){
+				capModel.setCapStatus(null);
+		}else{
+			capModel.setCapStatus(sArray[i]);
+		}
+		// query a list of records based on the above criteria
+		capListResult = aa.cap.getCapIDListByCapModel(capModel);
+
+		if (capListResult.getSuccess()) {
+			tempcapList = capListResult.getOutput();
+			logDebug("Status count: " + tempcapList.length);
+			if (tempcapList.length > 0) {
+				capList = capList.concat(tempcapList);
+			}
+		}else{
+			logDebug("Error retrieving records: " + capListResult.getErrorMessage());
+		}
+	}
+	if (capList.length > 0) {
+		logDebug("Found " + capList.length + " records to process");
 	}else { 
-		logDebug("Error: Getting records, reason is: " + capResult.getErrorMessage()) ;
+		logDebug("No records found to process.") ;
 		return false;
 	}
-	for (myCapsXX in myCaps) {
-    	capId = myCaps[myCapsXX].getCapID();
+	for (myCapsXX in capList) {
+    	//capId = capList[myCapsXX].getCapID();
+		capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
    		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
-		altId = capId.getCustomID();
-		logDebug("Processing altId: " + altId);
-		cap = aa.cap.getCap(capId).getOutput();		
+		altId =	 capId.getCustomID();
+		if(getCapIdStatusClass(capId)!="COMPLETE"){
+			incompRecd++;
+			continue;
+		}
+		if(exists(altId, arrProcRecds)){
+			logDebug("Skipping due to duplicated record: " + altId);
+			dupedRecds++;
+			continue;
+		}else{
+			arrProcRecds = arrProcRecds.concat(altId);
+		}
+		cap = aa.cap.getCap(capId).getOutput();	
+		var capModel = aa.cap.getCap(capId).getOutput().getCapModel();
+		var rptDateOrig = capModel.getReportedDate().toString().substring(0,10);
+		var rptDateConv = rptDateOrig.split("-");
+		var rptDate = new Date(""+rptDateConv[0], ""+rptDateConv[1] - 1, ""+rptDateConv[2]);
+		var fromTime = fromJSDate.getTime();
+		var toTime = toJSDate.getTime();
+		if(rptDate.getTime() < fromTime || rptDate.getTime() > toTime){
+			logDebug("Skipping due to incorrect date: " + altId);
+			badDate++;
+			continue;
+		}
 		appTypeResult = cap.getCapType();	
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
 		if(appTypeArray[2]=="Temporary"){
-			logDebug("Skipping due to temp record");
+			logDebug("Skipping due to temp record: " + altId );
 			tmpRecd++;
 			continue;
 		}
+		logDebug("Processing altId: " + altId);
 		var rptLine = "";
 		rptLine = altId+",";
 		var thisContact = getContactByType(contactType,capId);
 		if(thisContact){
-			if(thisContact.firstName.length>100){
-				rptLine+=thisContact.firstName.substring(0,100) +",";
+			if(thisContact.firstName==null){
+				rptLine+","
 			}else{
-				rptLine+=thisContact.firstName +",";
+				if(thisContact.firstName.length>100){
+					var fName = testForSpecialCharacter(thisContact.firstName.substring(0,100));
+				}else{
+					var fName = testForSpecialCharacter(thisContact.firstName);
+				}
+				rptLine+=fName +",";
 			}
 			rptLine+=",";
-			if(thisContact.lastName.length>100){
-				rptLine+=thisContact.lastName.substring(0,100) +",";
+			if(thisContact.lastName==null){
+				rptLine+","
 			}else{
-				rptLine+=thisContact.lastName +",";
+				if(thisContact.lastName.length>100){
+					var lName = testForSpecialCharacter(thisContact.lastName.substring(0,100));
+				}else{
+					var lName = testForSpecialCharacter(thisContact.lastName);
+				}
+				rptLine+=lName +",";
 			}
-			if(thisContact.email.length>255){
-				rptLine+=thisContact.email.substring(0,255) +",";
+			if(thisContact.email==null){
+				rptLine+=","
 			}else{
-				rptLine+=thisContact.email +",";
+				if(thisContact.email.length>255){
+					var eMail = testForSpecialCharacter(thisContact.email.substring(0,255));
+				}else{
+					var eMail = testForSpecialCharacter(thisContact.email);
+				}
+				rptLine+=eMail +",";
 			}
 			rptLine+=thisContact.phone3 +",";
-			if(thisContact.middleName.length>100){
-				rptLine+=thisContact.middleName.substring(0,100);
+			var bsnsName = workDescGet(capId);
+			if(bsnsName==null){
+				rptLine+=","
 			}else{
-				rptLine+=thisContact.middleName;
+				if(bsnsName.length>100){
+					var bName = testForSpecialCharacter(bsnsName.substring(0,100));
+				}else{
+					var bName = testForSpecialCharacter(bsnsName);
+				}
+				rptLine+=bName +",";
 			}
 			//Line return after each record has been written.
 			rptLine += "\r\n";
@@ -281,14 +348,18 @@ try{
 			logDebug("Failed to send mail. - " + result.getErrorType());
 		}
 	}
- 	logDebug("Total CAPS qualified : " + myCaps.length);
+ 	logDebug("Total CAPS qualified : " + capList.length);
  	logDebug("Ignored due to temp record: " + tmpRecd);
+ 	logDebug("Ignored due to bad date: " + badDate);
+ 	logDebug("Ignored due to incomplete record: " + incompRecd);
+ 	logDebug("Ignored due to duped record: " + dupedRecds);
  	logDebug("Ignored due to no contact type: " + noContactType);
  	logDebug("Total CAPS processed: " + capCount);
 
 }catch (err){
 	logDebug("An error occurred in BATCH_APP_DATA_EXPORT_FRANWELL: " + err.message);
 	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, emailAddress, "", "An error has occurred in " + batchJobName, err.message + br + err.stack + br + "env: av6(prod)");
 }}
 	
 /*------------------------------------------------------------------------------------------------------/
@@ -301,74 +372,6 @@ function getCapIdByIDs(s_id1, s_id2, s_id3)  {
     else
        return null;
 }
-
-function renameReport(rptName, newRptName){
-try{
-	// Get the report Object
-	if(newRptName!=null){
-		var thisRptName = newRptName;
-	}else{
-		var thisRptName = rptName +".PDF";
-	}
-	var rptResult = aa.reportManager.getReportInfoModelByName(rptName);
-	if (!rptResult.getSuccess()) {
-		logDebug("**WARNING** couldn't load report " + rptName + " " + rptResult.getErrorMessage());
-		return false;
-	}
-	var report = rptResult.getOutput();
-	// set the report module
-	//var itemCap = aa.cap.getCap(capId).getOutput();
-	//appTypeResult = itemCap.getCapType();
-	//appTypeString = appTypeResult.toString();
-	//appTypeArray = appTypeString.split("/");
-	report.setModule("Licenses");
-	//report.setCapId(capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3());
-	//report.getEDMSEntityIdModel().setAltId(capId.getCustomID());
-	logDebug("Report ID: " + report.getReportId());	// create a hashmap for report parameters
-	var parameters = aa.util.newHashMap();
-	for (var i = 2; i < arguments.length; i = i + 2) {
-		parameters.put(arguments[i], arguments[i + 1]);
-		logDebug("Report parameter: " + arguments[i] + " = " + arguments[i + 1]);
-	}
-
-	report.setReportParameters(parameters);
-	logDebug("Running Report as User: " + currentUserID);
-	// check if the current user has permission to run the report
-	var checkPermission = aa.reportManager.hasPermission(rptName,currentUserID); 
-	if(checkPermission.getOutput().booleanValue()){ 
-		// execute the report using Report Manager
-		var rptResult = aa.reportManager.getReportResult(report); 
-		if(rptResult.getSuccess()) {
-			rptResult = rptResult.getOutput(); 
-			if (rptResult != null){
-				// save the report to a file
-				var reportFile = aa.reportManager.storeReportToDisk(rptResult); 
-				reportFile = reportFile.getOutput();
-				//logDebug("reportFile created " + reportFile);
-				// use Java.IO to save the file to a specific folder
-				var file = new java.io.File(reportFile); 
-				logDebug("file.parentFile: " + file.parentFile);
-				var newFilePath = file.parentFile+ "\\" + thisRptName +".csv";
-				var renmSuccess = file.renameTo(new java.io.File(newFilePath));
-				if(renmSuccess){
-					logDebug("File has been successfully renamed to " + newFilePath);
-					return newFilePath;
-				}else{
-					logDebug("Error renaming file to Report Manager file name " + thisRptName);
-				}
-			}else{
-				logDebug("Report result was null");
-			}
-		}else{
-			logDebug("ERROR Executing Report: " + rptResult.getErrorMessage());
-		}
-	}else{
-		logDebug("No permission to report: "+ rptName + " for " + systemUserObj);
-	}
-}catch(err){
-	logDebug("An error occurred in renameReport: " + err.message);
-	logDebug(err.stack);
-}}
 
 function getJobParam(pParamName){ //gets parameter value and logs message showing param value
 try{
@@ -392,3 +395,24 @@ try{
 	logDebug("ERROR: getJobParam: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}
+
+function getCapIdStatusClass(inCapId){
+    var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
+    var retClass = null;
+    if(inCapScriptModel){
+        var tempCapModel = inCapScriptModel.getCapModel();
+        retClass = tempCapModel.getCapClass();
+    }
+   
+    return retClass;
+}
+
+function testForSpecialCharacter(testPhrase){
+	if (testPhrase.indexOf('"') != -1) {
+		testPhrase = testPhrase.replace(/"/g, '""');
+	}
+	if (testPhrase.match(/"|,/)) {
+		testPhrase = '"' + testPhrase + '"';
+	}
+	return testPhrase;
+}
