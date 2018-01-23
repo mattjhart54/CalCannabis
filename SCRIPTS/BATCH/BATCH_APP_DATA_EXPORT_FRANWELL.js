@@ -66,10 +66,10 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters  */
+/* test parameters 
 // elycia.juco@cdfa.ca.gov
-aa.env.setValue("lookAheadDays", "-30");
-aa.env.setValue("daySpan", "10");
+aa.env.setValue("lookAheadDays", "-6");
+aa.env.setValue("daySpan", "3");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
@@ -81,7 +81,7 @@ aa.env.setValue("recordCategory", "Application");
 aa.env.setValue("taskToCheck", "Administrative Review");
 aa.env.setValue("contactType", "Designated Responsible Party");
 aa.env.setValue("appStatus", "nul,Submitted,Application Fee Due");
-
+ */
 
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
@@ -322,7 +322,7 @@ try{
 				}else{
 					var bName = testForSpecialCharacter(bsnsName);
 				}
-				rptLine+=bName +",";
+				rptLine+=bName;
 			}
 			//Line return after each record has been written.
 			rptLine += "\r\n";
@@ -408,11 +408,13 @@ function getCapIdStatusClass(inCapId){
 }
 
 function testForSpecialCharacter(testPhrase){
-	if (testPhrase.indexOf('"') != -1) {
-		testPhrase = testPhrase.replace(/"/g, '""');
-	}
-	if (testPhrase.match(/"|,/)) {
+	var testPhraseNew = "";
+	if (testPhrase.indexOf(',')!= -1) {
 		testPhrase = '"' + testPhrase + '"';
+	}else{
+		if (testPhrase.indexOf('"') != -1) {
+			testPhrase = (""+testPhrase).replace(/"/g, '""');
+		}
 	}
 	return testPhrase;
 }
