@@ -38,7 +38,7 @@ function sendLocalAuthNotification() {
 			}
 			
 			if(!matches(AInfo["Premise Address"], null,"",undefined)) {
-				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " APN: " + AInfo["APN"]);
+				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " with APN: " + AInfo["APN"]);
 			}
 			else {
 				addParameter(eParams,"$$premisesAddress$$", "APN: " + AInfo["APN"]);
