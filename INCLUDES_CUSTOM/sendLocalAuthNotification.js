@@ -25,16 +25,20 @@ function sendLocalAuthNotification() {
 			if(appTypeArray[2] == "Temporary") {
 				licType = "";
 				licType1 = "a temporary";
+				licType2 = "temporary";
 				addParameter(eParams, "$$appType$$", AInfo["App Type"] + " " + AInfo["License Type"]);
 				addParameter(eParams, "$$licType$$", licType);
 				addParameter(eParams, "$$licType1$$", licType1);
+				addParameter(eParams, "$$licType2$$", licType2);
 			}
 			else {
 				licType = "annual";
 				licType1 = "an annual";
+				licType2 = "annual";				
 				addParameter(eParams, "$$appType$$", appTypeArray[2] + " " + AInfo["License Type"]);
 				addParameter(eParams, "$$licType$$", licType);
 				addParameter(eParams, "$$licType1$$", licType1);
+				addParameter(eParams, "$$licType2$$", licType2);
 			}
 			
 			if(!matches(AInfo["Premise Address"], null,"",undefined)) {
@@ -58,10 +62,13 @@ function sendLocalAuthNotification() {
 				if(!matches(priContact.capContact.middleName,null,"",undefined))
 					addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
 			}
-			var drpContact = getContactObj(capId,"Designated Responsible Party");
+			if(appTypeArray[2] == "Temporary") 
+				var drpContact = getContactObj(capId,"DRP - Temporary License");
+			else
+				var drpContact = getContactObj(capId,"Designated Responsible Party");
 			if(drpContact) {
 				if(!matches(drpContact.capContact.firstName,null,"",undefined))
-					addParameter(eParams, "$$drpName$$", drpContact.capContact.firstName + " " + drpContact.capContact.lastName);
+						addParameter(eParams, "$$drpName$$", drpContact.capContact.firstName + " " + drpContact.capContact.lastName);
 			}
 // MHART 01/24/18 Story  5125: Local Authority e-mail content update
 			sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
