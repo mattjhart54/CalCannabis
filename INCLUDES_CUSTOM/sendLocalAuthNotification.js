@@ -32,7 +32,7 @@ function sendLocalAuthNotification() {
 				addParameter(eParams, "$$licType2$$", licType2);
 			}
 			else {
-				licType = "annual";
+				licType = "Annual";
 				licType1 = "an annual";
 				licType2 = "annual";				
 				addParameter(eParams, "$$appType$$", appTypeArray[2] + " " + AInfo["License Type"]);
@@ -42,7 +42,7 @@ function sendLocalAuthNotification() {
 			}
 			
 			if(!matches(AInfo["Premise Address"], null,"",undefined)) {
-				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " with APN: " + AInfo["APN"]);
+				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " " + AInfo["Premise City"] + " with APN: " + AInfo["APN"]);
 			}
 			else {
 				addParameter(eParams,"$$premisesAddress$$", "APN: " + AInfo["APN"]);
