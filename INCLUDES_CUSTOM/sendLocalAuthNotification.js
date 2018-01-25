@@ -51,17 +51,19 @@ function sendLocalAuthNotification() {
 				addParameter(eParams, "$$days$$", "60 business");
 				updateAppStatus("Pending Local Authorization 60");
 			}
+// MHART 01/24/18 Story  5125: Local Authority e-mail content update
+// Added parameters for DRP Name.  Chnaged format of displaying Business Name.  Changed format of display the Address and APN
 			var priContact = getContactObj(capId,"Business");
 			if(priContact) {
-				if(!matches(priContact.capContact.firstName,null,"",undefined) && !matches(priContact.capContact.middleName,null,"",undefined))
-					addParameter(eParams, "$$businessName$$", priContact.capContact.firstName + " " + priContact.capContact.lastName + ", " + priContact.capContact.middleName);
-				else 
-					if(!matches(priContact.capContact.firstName,null,"",undefined))
-						addParameter(eParams, "$$businessName$$", priContact.capContact.firstName + " " + priContact.capContact.lastName);
-					else	
-						if(!matches(priContact.capContact.middleName,null,"",undefined))
-							addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
-			}			
+				if(!matches(priContact.capContact.middleName,null,"",undefined))
+					addParameter(eParams, "$$businessName$$", priContact.capContact.middleName);
+			}
+			var drpContact = getContactObj(capId,"Designated Responsible Party");
+			if(drpContact) {
+				if(!matches(drpContact.capContact.firstName,null,"",undefined))
+					addParameter(eParams, "$$drpName$$", drpContact.capContact.firstName + " " + drpContact.capContact.lastName);
+			}
+// MHART 01/24/18 Story  5125: Local Authority e-mail content update
 			sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
 		}
 		else {
