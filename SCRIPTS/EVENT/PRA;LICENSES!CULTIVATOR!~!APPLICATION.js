@@ -33,7 +33,7 @@ try{
 				if(priChannel.indexOf("Postal") > -1 ){
 					var sName = createSet("LICENSE_ISSUED","License Notifications", "New");
 					if(sName){
-						setAddResult=aa.set.add(sName,capId);
+						setAddResult=aa.set.add(sName,parCapId);
 						if(setAddResult.getSuccess()){
 							logDebug(capId.getCustomID() + " successfully added to set " +sName);
 						}else{
