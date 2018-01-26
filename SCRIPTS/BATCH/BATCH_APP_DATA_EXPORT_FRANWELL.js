@@ -414,6 +414,7 @@ function testForSpecialCharacter(testPhrase){
 	}else{
 		if (testPhrase.indexOf('"') != -1) {
 			testPhrase = (""+testPhrase).replace(/"/g, '""');
+			testPhrase = '"' + testPhrase + '"';
 		}
 	}
 	return testPhrase;
