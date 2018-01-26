@@ -14,7 +14,7 @@ try{
 				editFirstIssuedDate(janOne);
 				editAppSpecific("Valid From Date", "01/01/2018", licCapId);
 				//lwacht 171219: updating file date for aca display
-				var capMdl = aa.cap.getCap(licCapId).getOutput(); //returns CapScriptModel object
+				//returns CapScriptModel object
 				var newJanOne = aa.date.parseDate("01/01/2018")
 				var updFileDt = capMdl.setFileDate(newJanOne);
 				var capModel = capMdl.getCapModel();
