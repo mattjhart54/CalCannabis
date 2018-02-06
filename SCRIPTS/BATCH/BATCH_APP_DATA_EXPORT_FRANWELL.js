@@ -66,7 +66,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters  */
+/* test parameters
 // elycia.juco@cdfa.ca.gov
 aa.env.setValue("lookAheadDays", "-30");
 aa.env.setValue("daySpan", "30");
@@ -81,7 +81,7 @@ aa.env.setValue("recordCategory", "Application");
 aa.env.setValue("taskToCheck", "Administrative Review");
 aa.env.setValue("contactType", "Designated Responsible Party");
 aa.env.setValue("appStatus", "nul,Submitted,Application Fee Due");
-
+  */
 
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
