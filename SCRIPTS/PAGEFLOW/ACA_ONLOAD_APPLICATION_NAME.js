@@ -82,7 +82,13 @@ try{
 	loadAppSpecific4ACA(AInfo);
 	editAppName(AInfo["License Type"]);
 	//lwacht: 171121: force user to go through the entire process again in case something changed
-	resetCapIdStatusClass("INCOMPLETE CAP");
+	//lwacht: 180206: story 5160: do not change capId status if it is already complete
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(capIdStatusClass != "COMPLETE"){
+		resetCapIdStatusClass("INCOMPLETE CAP");
+		aa.print("Flipping capId "+capId+" to INCOMPLETE CAP")
+	}
+	//lwacht: 180206: story 5160: end
 	//lwacht: 171121 end
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: " + err.message);
