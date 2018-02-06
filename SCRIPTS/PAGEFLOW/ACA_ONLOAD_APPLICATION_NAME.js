@@ -84,7 +84,7 @@ try{
 	//lwacht: 171121: force user to go through the entire process again in case something changed
 	//lwacht: 180206: story 5160: do not change capId status if it is already complete
 	var capIdStatusClass = getCapIdStatusClass(capId);
-	if(!matches(capIdStatusClass, "INCOMPLETE TMP","COMPLETE"){
+	if(!matches(capIdStatusClass, "INCOMPLETE TMP","COMPLETE")){
 		resetCapIdStatusClass("INCOMPLETE CAP");
 		aa.print("Flipping capId "+capId+" to INCOMPLETE CAP")
 	}
