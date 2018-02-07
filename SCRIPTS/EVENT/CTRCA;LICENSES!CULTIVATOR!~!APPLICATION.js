@@ -194,6 +194,23 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
 
+//lwacht 180206: story 5200: updating file date for aca display
+try{
+	var capMdl = aa.cap.getCap(capId).getOutput(); //returns CapScriptModel object
+	var toDay = dateAdd(null,0);
+	var currDate = aa.date.parseDate(toDay)
+	var updFileDt = capMdl.setFileDate(currDate);
+	var capModel = capMdl.getCapModel();
+	setDateResult = aa.cap.editCapByPK(capModel);
+	if (!setDateResult.getSuccess()) {
+		logDebug("**WARNING: error setting file date : " + setDatesetDateResult.getErrorMessage());
+	}
+} catch(err){
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Force file date to be submission date: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Force file date to be submission date: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+}
+//lwacht 180206: story 5200: end
 
 
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
