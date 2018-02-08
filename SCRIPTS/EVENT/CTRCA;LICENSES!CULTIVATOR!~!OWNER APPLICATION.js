@@ -42,3 +42,14 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION:  AltID Logic: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 }
+
+//lwacht 180208: story 5200: updating file date 
+try{
+	editAppSpecific("Created Date", fileDate);
+	updateFileDate(null);
+} catch(err){
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Force file date to be submission date: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Force file date to be submission date: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+}
+//lwacht 180208: story 5200: end
