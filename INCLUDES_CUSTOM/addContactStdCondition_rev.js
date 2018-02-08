@@ -1,6 +1,7 @@
 /*===========================================
 Title: addContactStdCondition_rev
-Purpose: adds a standard condition to a contact
+Purpose: adds a standard condition to a contact, allows the
+	short comments field to be updated 
 	and returns the condId so it can be further modified
 Author: Lynda Wacht		
 Functional Area : ACA
@@ -9,19 +10,21 @@ Reviewed By:
 Script Type : (EMSE, EB, Pageflow, Batch): EMSE
 General Purpose/Client Specific : General
 Client developed for : CDFA_CalCannabis story 2896
-Parameters:
+Parameters:	
+	contSeqNum: number: contact reference sequence number
 	cType: text: condition type
 	cDesc: text: condition name
+	addComment: text: added to the short comments
 	capId: capid: optional capid
 ============================================== */
-function addContactStdCondition_rev(contSeqNum,cType, cDesc) {    // optional cap ID
+function addContactStdCondition_rev(contSeqNum,cType, cDesc, addComment) {    // optional cap ID
 try{
 	var foundCondition = false;
 	var javascriptDate = new Date()
 	var javautilDate = aa.date.transToJavaUtilDate(javascriptDate.getTime());
 	cStatus = "Applied";
-	if (arguments.length > 3)
-		cStatus = arguments[3]; // use condition status in args	
+	if (arguments.length > 4)
+		cStatus = arguments[4]; // use condition status in args	
 	if (!aa.capCondition.getStandardConditions){
 		logDebug("addAddressStdCondition function is not available in this version of Accela Automation.");
 	}else{
@@ -44,7 +47,12 @@ try{
 								newCondition.setConditionDescription(standardCondition.getConditionDesc());
 								newCondition.setConditionGroup(standardCondition.getConditionGroup());
 								newCondition.setConditionType(standardCondition.getConditionType());
-								newCondition.setConditionComment(standardCondition.getConditionComment());
+								if(addComment!=null){
+									var condComment = standardCondition.getConditionComment() + ": " + addComment;
+								}else{
+									var condComment = standardCondition.getConditionComment() ;
+								}
+								newCondition.setConditionComment(condComment);
 								newCondition.setImpactCode(standardCondition.getImpactCode());
 								newCondition.setConditionStatus(cStatus)
 								newCondition.setAuditStatus("A");
@@ -72,7 +80,12 @@ try{
 					newCondition.setConditionDescription(standardCondition.getConditionDesc());
 					newCondition.setConditionGroup(standardCondition.getConditionGroup());
 					newCondition.setConditionType(standardCondition.getConditionType());
-					newCondition.setConditionComment(standardCondition.getConditionComment());
+					if(addComment!=null){
+						var condComment = standardCondition.getConditionComment() + ": " + addComment;
+					}else{
+						var condComment = standardCondition.getConditionComment() ;
+					}
+					newCondition.setConditionComment(condComment);
 					newCondition.setImpactCode(standardCondition.getImpactCode());
 					newCondition.setConditionStatus(cStatus)
 					newCondition.setAuditStatus("A");

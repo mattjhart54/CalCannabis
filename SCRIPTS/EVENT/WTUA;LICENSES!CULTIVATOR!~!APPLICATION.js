@@ -258,6 +258,20 @@ try{
 	aa.print(err.stack);
 }
 
+//lwacht: 180207: story 2896: add a generic condition when a denial is appealed and remove when denial is done
+try{
+	if(wfStatus=="Appealed" && wfTask =="Application Disposition"){
+		var drpContact = getContactObj(capId,"Designated Responsible Party");
+		var drpSeqNbr = drpContact.refSeqNumber;
+		addContactStdCondition_rev(drpSeqNbr,"Application Condition", "Appeal Pending",capIDString);
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Add appeal denial condition: " + err.message);
+	aa.print(err.stack);
+}
+//lwacht: 180207: story 2896: end
+
+
 //lwacht
 //if the perm application is set to denied, then close out any related temp licenses
 //MJH User Story 3556 remove this functionality
@@ -337,3 +351,4 @@ try{
 	logDebug(err.stack);
 }
 lwacht end */
+
