@@ -4,7 +4,7 @@ Purpose: adds a standard condition to a contact, allows the
 	short comments field to be updated 
 	and returns the condId so it can be further modified
 Author: Lynda Wacht		
-Functional Area : ACA
+Functional Area : condition
 Description : 
 Reviewed By: 
 Script Type : (EMSE, EB, Pageflow, Batch): EMSE
