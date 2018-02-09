@@ -262,11 +262,63 @@ try{
 try{
 	if(wfStatus=="Appealed" && wfTask =="Application Disposition"){
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
-		var drpSeqNbr = drpContact.refSeqNumber;
-		addContactStdCondition_rev(drpSeqNbr,"Application Condition", "Appeal Pending",capIDString);
+		if(drpContact){
+			var drpSeqNbr = drpContact.refSeqNumber;
+			addContactStdCondition_rev(drpSeqNbr,"Application Condition", "Appeal Pending",capIDString);
+		}
+		var busContact = getContactObj(capId,"Business");
+		if(busContact){
+			var busSeqNbr = busContact.refSeqNumber;
+			if(busSeqNbr!=drpSeqNbr){
+				addContactStdCondition_rev(busSeqNbr,"Application Condition", "Appeal Pending",capIDString);
+			}else{
+				logDebug("Business and DRP are the same, not adding condition again.")
+			}
+		}
+		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
+		for(ch in arrChild){
+			var oCapId = arrChild[ch];
+			var ownContact = getContactObj(oCapId,"Owner");
+			if(ownContact){
+				var ownSeqNbr = ownContact.refSeqNumber;
+				if(ownSeqNbr!=busSeqNbr && ownSeqNbr!=drpSeqNbr){
+					addContactStdCondition_rev(ownSeqNbr,"Application Condition", "Appeal Pending",capIDString);
+				}else{
+					logDebug("Owner and (Business and/or DRP) are the same, not adding condition again.")
+				}
+			}
+		}
 	}
 }catch(err){
-	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Add appeal denial condition: " + err.message);
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Add/remove appeal denial condition: " + err.message);
+	aa.print(err.stack);
+}
+
+try{
+	if( wfTask =="Appeal"){
+		var drpContact = getContactObj(capId,"Designated Responsible Party");
+		var drpSeqNbr = drpContact.refSeqNumber;
+		var arrCond = getContactConditions_rev("Application Condition", "Applied", "Appeal Pending", null);
+		if(arrCond.length>0){
+			for (con in arrCond){
+				var thisCond = arrCond[con];
+				if(thisCond.comment.indexOf(capIDString) > -1){
+					var condResult = aa.commonCondition.removeCommonCondition("CONTACT", drpSeqNbr, thisCond.condNbr);
+					if(condResult.getSuccess()){
+						logDebug("Successfully removed condition: " + thisCond.comment);
+					}else{
+						logDebug("Error removing condition: " + condResult.getErrorMessage());
+					}
+				}else{
+					logDebug("Condition is not for record " + capIDString + ": " + thisCond.comment);
+				}
+			}
+		}else{
+			logDebug("Search returned no conditions.");
+		}
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Add/remove appeal denial condition: " + err.message);
 	aa.print(err.stack);
 }
 //lwacht: 180207: story 2896: end
