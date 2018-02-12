@@ -311,28 +311,36 @@ try{
 					}else{
 						logDebug("Error removing condition from DRP Contact: " + condResult.getErrorMessage());
 					}
-					var condResult = aa.commonCondition.removeCommonCondition("CONTACT", busSeqNbr, thisCond.condNbr);
-					if(condResult.getSuccess()){
-						logDebug("Successfully removed condition from Business Contact: " + thisCond.comment);
+					if(busSeqNbr!=drpSeqNbr){
+						var condResult = aa.commonCondition.removeCommonCondition("CONTACT", busSeqNbr, thisCond.condNbr);
+						if(condResult.getSuccess()){
+							logDebug("Successfully removed condition from Business Contact: " + thisCond.comment);
+						}else{
+							logDebug("Error removing condition from Business Contact: " + condResult.getErrorMessage());
+						}
 					}else{
-						logDebug("Error removing condition from Business Contact: " + condResult.getErrorMessage());
+						logDebug("Business and DRP are the same, not removing condition again.")
+					}
+					var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
+					for(ch in arrChild){
+						var oCapId = arrChild[ch];
+						var ownContact = getContactObj(oCapId,"Owner");
+						if(ownContact){
+							var ownSeqNbr = ownContact.refSeqNumber;
+							if(ownSeqNbr!=busSeqNbr && ownSeqNbr!=drpSeqNbr){
+								var condResult = aa.commonCondition.removeCommonCondition("CONTACT", ownSeqNbr, thisCond.condNbr);
+								if(condResult.getSuccess()){
+									logDebug("Successfully removed condition from Owner Contact: " + thisCond.comment);
+								}else{
+									logDebug("Error removing condition from Owner Contact: " + condResult.getErrorMessage());
+								}
+							}else{
+								logDebug("Owner and (Business and/or DRP) are the same, not adding condition again.")
+							}
+						}
 					}
 				}else{
 					logDebug("Condition is not for record " + capIDString + ": " + thisCond.comment);
-				}
-				var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
-				for(ch in arrChild){
-					var oCapId = arrChild[ch];
-					var ownContact = getContactObj(oCapId,"Owner");
-					if(ownContact){
-						var ownSeqNbr = ownContact.refSeqNumber;
-						var condResult = aa.commonCondition.removeCommonCondition("CONTACT", ownSeqNbr, thisCond.condNbr);
-						if(condResult.getSuccess()){
-							logDebug("Successfully removed condition from Owner Contact: " + thisCond.comment);
-						}else{
-							logDebug("Error removing condition from Owner Contact: " + condResult.getErrorMessage());
-						}
-					}
 				}
 			}
 		}else{
