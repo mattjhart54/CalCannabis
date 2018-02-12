@@ -335,7 +335,7 @@ try{
 									logDebug("Error removing condition from Owner Contact: " + condResult.getErrorMessage());
 								}
 							}else{
-								logDebug("Owner and (Business and/or DRP) are the same, not adding condition again.")
+								logDebug("Owner and (Business and/or DRP) are the same, not removing condition again.")
 							}
 						}
 					}
@@ -351,6 +351,7 @@ try{
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Remove appeal denial condition: " + err.message);
 	aa.print(err.stack);
 }
+
 //lwacht: 180207: story 2896: end
 
 
