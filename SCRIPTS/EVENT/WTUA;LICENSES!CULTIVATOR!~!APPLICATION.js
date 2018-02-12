@@ -290,7 +290,7 @@ try{
 		}
 	}
 }catch(err){
-	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Add/remove appeal denial condition: " + err.message);
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Add appeal denial condition: " + err.message);
 	aa.print(err.stack);
 }
 
@@ -298,6 +298,8 @@ try{
 	if( wfTask =="Appeal"){
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var drpSeqNbr = drpContact.refSeqNumber;
+		var busContact = getContactObj(capId,"Business");
+		var busSeqNbr = drpContact.refSeqNumber;
 		var arrCond = getContactConditions_rev("Application Condition", "Applied", "Appeal Pending", null);
 		if(arrCond.length>0){
 			for (con in arrCond){
@@ -305,12 +307,32 @@ try{
 				if(thisCond.comment.indexOf(capIDString) > -1){
 					var condResult = aa.commonCondition.removeCommonCondition("CONTACT", drpSeqNbr, thisCond.condNbr);
 					if(condResult.getSuccess()){
-						logDebug("Successfully removed condition: " + thisCond.comment);
+						logDebug("Successfully removed condition from DRP Contact " + thisCond.comment);
 					}else{
-						logDebug("Error removing condition: " + condResult.getErrorMessage());
+						logDebug("Error removing condition from DRP Contact: " + condResult.getErrorMessage());
+					}
+					var condResult = aa.commonCondition.removeCommonCondition("CONTACT", busSeqNbr, thisCond.condNbr);
+					if(condResult.getSuccess()){
+						logDebug("Successfully removed condition from Business Contact: " + thisCond.comment);
+					}else{
+						logDebug("Error removing condition from Business Contact: " + condResult.getErrorMessage());
 					}
 				}else{
 					logDebug("Condition is not for record " + capIDString + ": " + thisCond.comment);
+				}
+				var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
+				for(ch in arrChild){
+					var oCapId = arrChild[ch];
+					var ownContact = getContactObj(oCapId,"Owner");
+					if(ownContact){
+						var ownSeqNbr = ownContact.refSeqNumber;
+						var condResult = aa.commonCondition.removeCommonCondition("CONTACT", ownSeqNbr, thisCond.condNbr);
+						if(condResult.getSuccess()){
+							logDebug("Successfully removed condition from Owner Contact: " + thisCond.comment);
+						}else{
+							logDebug("Error removing condition from Owner Contact: " + condResult.getErrorMessage());
+						}
+					}
 				}
 			}
 		}else{
@@ -318,7 +340,7 @@ try{
 		}
 	}
 }catch(err){
-	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Add/remove appeal denial condition: " + err.message);
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Remove appeal denial condition: " + err.message);
 	aa.print(err.stack);
 }
 //lwacht: 180207: story 2896: end
