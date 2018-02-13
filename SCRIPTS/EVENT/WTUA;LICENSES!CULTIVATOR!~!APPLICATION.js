@@ -321,13 +321,25 @@ try{
 					}else{
 						logDebug("Business and DRP are the same, not removing condition again.")
 					}
-					var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
-					for(ch in arrChild){
-						var oCapId = arrChild[ch];
-						var ownContact = getContactObj(oCapId,"Owner");
-						if(ownContact){
-							var ownSeqNbr = ownContact.refSeqNumber;
-							if(ownSeqNbr!=busSeqNbr && ownSeqNbr!=drpSeqNbr){
+				}else{
+					logDebug("Condition is not for record " + capIDString + ": " + thisCond.comment);
+				}
+			}
+		}else{
+			logDebug("Search returned no conditions.");
+		}
+		var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
+		for(ch in arrChild){
+			var oCapId = arrChild[ch];
+			var ownContact = getContactObj(oCapId,"Owner");
+			if(ownContact){
+				var ownSeqNbr = ownContact.refSeqNumber;
+				if(ownSeqNbr!=busSeqNbr && ownSeqNbr!=drpSeqNbr){
+					var arrCondOwn = getContactConditions_rev("Application Condition", "Applied", "Appeal Pending", null, oCapId);
+					if(arrCondOwn.length>0){
+						for (con in arrCondOwn){
+							var thisCond = arrCondOwn[con];
+							if(thisCond.comment.indexOf(capIDString) > -1){
 								var condResult = aa.commonCondition.removeCommonCondition("CONTACT", ownSeqNbr, thisCond.condNbr);
 								if(condResult.getSuccess()){
 									logDebug("Successfully removed condition from Owner Contact: " + thisCond.comment);
@@ -339,12 +351,8 @@ try{
 							}
 						}
 					}
-				}else{
-					logDebug("Condition is not for record " + capIDString + ": " + thisCond.comment);
 				}
 			}
-		}else{
-			logDebug("Search returned no conditions.");
 		}
 	}
 }catch(err){
