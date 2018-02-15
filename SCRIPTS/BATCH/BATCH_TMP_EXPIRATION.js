@@ -68,9 +68,9 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters 
-aa.env.setValue("lookAheadDays", "150");
-aa.env.setValue("daySpan", "60");
+/* test parameters   */
+aa.env.setValue("lookAheadDays", "-365");
+aa.env.setValue("daySpan", "700");
 aa.env.setValue("gracePeriodDays", "0");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
@@ -94,8 +94,8 @@ aa.env.setValue("taskToAssign", "License");
 aa.env.setValue("assignTaskTo", "LICENSE/NA/NA/NA/NA/ADMIN");
 aa.env.setValue("setParentWorkflowTaskAndStatus", "License,About to Expire");
 aa.env.setValue("respectNotifyPrefs", "Y");
-aa.env.setValue("checkForPermApplication", "N");
-*/
+aa.env.setValue("checkForPermApplication", "Y");
+
 var paramStdChoice = getJobParam("paramStdChoice")  // use this standard choice for parameters instead of batch jobs
 var fromDate = getJobParam("fromDate"); // Hardcoded dates.   Use for testing only
 var toDate = getJobParam("toDate"); // ""
@@ -283,14 +283,36 @@ try{
 			continue;
 		}
 		// Filter by Related Permanent Application
-		logDebug("chkPermApp " + chkPermApp)
+		//logDebug("chkPermApp " + chkPermApp)
 		if (chkPermApp) {
-			useAppSpecificGroupName = false;
-			var AInfo = [];
-			loadAppSpecific(AInfo);
-			if(!matches(AInfo["App Number"],"",null,"undefined")){
+			//need to check for parent record
+			//useAppSpecificGroupName = false;
+			//var AInfo = [];
+			//loadAppSpecific(AInfo);
+			//if(!matches(AInfo["App Number"],"",null,"undefined")){
+			var chLic = getChildren("Licenses/Cultivator/*/License", capId);
+			if(chLic!=null) if(chLic.length<1) chLic = null;
+			var chAApp = getChildren("Licenses/Cultivator/Adult Use/Application", capId);
+			if(chAApp!=null) if(chAApp.length<1) chAApp = null;
+			var chMApp = getChildren("Licenses/Cultivator/Medical/Application", capId);
+			if(chMApp!=null) if(chMApp.length<1) chMApp = null;
+			var chTApp = getChildren("Licenses/Cultivator/Temporary/Application", capId);
+			if(chTApp!=null) {
+				var currCap = capId;
+				capId = chTApp[0];
+				var chPar = getParents("Licenses/Cultivator/*/Application");
+				if(chPar == null){
+					chPar = getParents("Licenses/Cultivator/Adult Use/License");
+					if(chPar == null){
+						chPar = getParents("Licenses/Cultivator/Medical/License");
+					}
+				}
+				if(chPar!=null) if(chPar.length<1) chPar = null;
+				capId = currCap;
+			}
+			if(getParent() || chLic!=null || chAApp!=null || chMApp!=null || chPar!=null) {
 				capPermApp++;
-				logDebug("     " +"skipping, due to related permanent application " + AInfo["App Number"])
+				logDebug("     " +"skipping, due to related permanent application." )
 				continue;
 			}
 		}
