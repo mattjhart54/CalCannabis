@@ -13,7 +13,8 @@ try {
 				var date = new Date();
 				var curDate = null;
 				do { curDate = new Date(); } 
-					while(curDate-date < 10);			}
+					while(curDate-date < 10);
+			}
 			//lwacht: 180215: story 4796: end
 		}
 		removeASITable("DEFICIENCIES"); 
