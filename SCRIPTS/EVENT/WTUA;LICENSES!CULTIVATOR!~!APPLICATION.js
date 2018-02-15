@@ -1,7 +1,7 @@
 //lwacht: send a deficiency email when the status is "Deficiency Letter Sent" 
 try{
 	if("Deficiency Letter Sent".equals(wfStatus)){
-		/* lwacht 171129: moving to WTUB to try to get report to work
+/* lwacht 171129: moving to WTUB to try to get report to work
 		var newAppName = "Deficiency: " + capName;
 		//create child amendment record
 		ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
@@ -54,7 +54,7 @@ try{
 				editAppSpecific("AltId", newAltId,newDefId);
 				logDebug("Deficiency record ID updated to : " + newAltId);
 			}
-			*/
+*/
 			var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
 			var cntChild = childAmend.length;
 			logDebug("cntChild: " + cntChild);
@@ -135,6 +135,22 @@ try{
 							editAppSpecific("AltId", newOAltId,newODefId);
 							logDebug("Deficiency owner record ID updated to : " + newOAltId);
 						}
+// mhart 20180214 user story 4873 - Run deficincy report and send notification to the owner.
+						var ownerContact = getContactObj(thisOwnCapId,"Owner");
+						if(ownerContact){
+							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ ownerContact.capContact.getPreferredChannel());
+							if(!matches(priChannel,"",null,"undefined")){
+								if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+									comment("<font color='purple'>Use this value for the Deficiency Record ID on the report: " + newAltId + "</font>");
+								}
+							}
+						}
+						runReportAttach(thisOwnCapId,"Deficiency Report", "p1value", thisOwnCapId.getCustomID(), "p2value",newOAltId);
+						holdCapId = capId;
+						capId = thisOwnCapId;
+						emailRptContact("", "LCA_DEFICIENCY", "", false, capStatus, thisOwnCapId, "Owner", "p1value", thisOwnCapId.getCustomID());
+						capId = holdCapId;
+// mhart 20180214 user story 4873 
 					}
 				}
 			}
