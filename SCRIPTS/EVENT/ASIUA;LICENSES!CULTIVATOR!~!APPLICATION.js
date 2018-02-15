@@ -1,6 +1,5 @@
 try {
 	if (typeof(DEFICIENCIES) == "object") {
-		removeASITable("DEFICIENCIES"); 
 		for(x in DEFICIENCIES) {
 			if(matches(DEFICIENCIES[x]["Deficiency Details"], null, "", undefined)) {
 				defDesc = lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[x]["Deficiency Type"]);
@@ -17,6 +16,7 @@ try {
 					while(curDate-date < 10);			}
 			//lwacht: 180215: story 4796: end
 		}
+		removeASITable("DEFICIENCIES"); 
 		addASITable("DEFICIENCIES", DEFICIENCIES)
 	}
 	if (typeof(DENIALREASONS) == "object") {
