@@ -78,7 +78,12 @@ try{
 				var currCapId = capId;
 				capId = acaCapId;
 				//getACARecordParam4Notification(eParams,acaUrl);
-				var acaUrlForAmend = "https://aca.supp.accela.com/CALCANNABIS/urlrouting.ashx?type=1008&Module=Licenses&capID1="+capId.ID1+"&capID2="+capId.ID2+"&capID3="+capId.ID3+"&agencyCode=CALCANNABIS&HideHeader=true";
+// mhart 20180215 set if for notifications to use asc deep links.
+				if(matches(notName,"LCA_DEFICIENCY_OWNER")) 
+					acaUrlForAmend = getACAlinkForEdit(acaCapId,"Licenses","1008");
+				else
+					var acaUrlForAmend = "https://aca.supp.accela.com/CALCANNABIS/urlrouting.ashx?type=1008&Module=Licenses&capID1="+capId.ID1+"&capID2="+capId.ID2+"&capID3="+capId.ID3+"&agencyCode=CALCANNABIS&HideHeader=true";
+// mhart 20180215 				
 				addParameter(eParams, "$$acaRecordUrl$$", acaUrlForAmend);
 				capId = currCapId;
 				var staffUser = new userObj(wfStaffUserID);
