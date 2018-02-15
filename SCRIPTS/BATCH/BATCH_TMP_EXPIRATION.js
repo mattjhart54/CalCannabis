@@ -68,7 +68,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters   */
+/* test parameters  
 aa.env.setValue("lookAheadDays", "-365");
 aa.env.setValue("daySpan", "700");
 aa.env.setValue("gracePeriodDays", "0");
@@ -95,7 +95,7 @@ aa.env.setValue("assignTaskTo", "LICENSE/NA/NA/NA/NA/ADMIN");
 aa.env.setValue("setParentWorkflowTaskAndStatus", "License,About to Expire");
 aa.env.setValue("respectNotifyPrefs", "Y");
 aa.env.setValue("checkForPermApplication", "Y");
-
+ */
 var paramStdChoice = getJobParam("paramStdChoice")  // use this standard choice for parameters instead of batch jobs
 var fromDate = getJobParam("fromDate"); // Hardcoded dates.   Use for testing only
 var toDate = getJobParam("toDate"); // ""
