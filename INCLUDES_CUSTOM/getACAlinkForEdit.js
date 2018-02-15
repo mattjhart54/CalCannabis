@@ -35,7 +35,7 @@ try{
 	acaBase = acaBase.replace("Admin/", "");
 	acaBase = acaBase.replace("login.aspx", "");
 	logDebug("acaBase: " + acaBase);
-	var acaEdit = "urlrouting.ashx?type=linkType&Module="+module+"&capID1=" + sca[0] + "&capID2=" + sca[1] + "&capID3=" + sca[2] + "&agencyCode=" + servProvCode;
+	var acaEdit = "urlrouting.ashx?type=" + linkType + "&Module=" + module + "&capID1=" + sca[0] + "&capID2=" + sca[1] + "&capID3=" + sca[2] + "&agencyCode=" + servProvCode;
 	var fullACAlink = acaBase + acaEdit;
 	return fullACAlink;
 }catch (err){
