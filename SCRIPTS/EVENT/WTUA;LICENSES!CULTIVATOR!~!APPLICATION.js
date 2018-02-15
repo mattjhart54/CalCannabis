@@ -148,7 +148,7 @@ try{
 						runReportAttach(thisOwnCapId,"Deficiency Report", "p1value", thisOwnCapId.getCustomID(), "p2value",newOAltId);
 						holdCapId = capId;
 						capId = thisOwnCapId;
-						emailRptContact("", "LCA_DEFICIENCY", "", false, capStatus, thisOwnCapId, "Owner", "p1value", thisOwnCapId.getCustomID());
+						emailRptContact("", "LCA_DEFICIENCY_OWNER", "", false, capStatus, thisOwnCapId, "Owner", "p1value", thisOwnCapId.getCustomID());
 						capId = holdCapId;
 // mhart 20180214 user story 4873 
 					}
