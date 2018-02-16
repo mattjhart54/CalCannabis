@@ -15,7 +15,7 @@ try{
 								parTblDef[rP]["Resolution"] = DEFICIENCIES[rT]["Resolution"];
 								parTblDef[rP]["Additional Notes"] = DEFICIENCIES[rT]["Additional Notes"];
 								parTblDef[rP]["Status"] = DEFICIENCIES[rT]["Status"];
-								parTblDef[rP]["UID"] = DEFICIENCIES[rT]"UID"];
+								parTblDef[rP]["UID"] = DEFICIENCIES[rT]["UID"];
 							}
 						}
 					}
@@ -31,7 +31,7 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/AMENDMENT: Copy deficiencies back to parent: " + err.message);
+	logDebug("An error has occurred in WTUA:Licenses/Cultivator/*/Amendment: Copy deficiencies back to parent: " + err.message);
 	logDebug(err.stack);
 }
 //lwacht: 180215: story 4796: end
