@@ -68,11 +68,11 @@ try{
 try{
 	//lwacht: 180108: defect 5120: don't run for temporary
 	if(appTypeArray[2]!="Temporary"){
-		runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
+		runReportAttach(capId,"Completed Application", "altId",capIDString);
 	}
 	//lwacht: 180108: defect 5120: end
 } catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
 	logDebug(err.stack);
 }
 //lwacht: 180216: story 5177: end
