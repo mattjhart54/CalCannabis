@@ -11,7 +11,7 @@ try{
 							if(""+parTblDef[rP]["UID"]==""+DEFICIENCIES[rT]["UID"]){
 								oldRecd = false;
 								parTblDef[rP]["Deficiency Type"] = DEFICIENCIES[rT]["Deficiency Type"];
-								parTblDef[rP]["Deficiency Details"] = DEFICIENCIES[rT]["Deficiency Detail"];
+								parTblDef[rP]["Deficiency Details"] = DEFICIENCIES[rT]["Deficiency Details"];
 								parTblDef[rP]["Resolution"] = DEFICIENCIES[rT]["Resolution"];
 								parTblDef[rP]["Additional Notes"] = DEFICIENCIES[rT]["Additional Notes"];
 								parTblDef[rP]["Status"] = DEFICIENCIES[rT]["Status"];
