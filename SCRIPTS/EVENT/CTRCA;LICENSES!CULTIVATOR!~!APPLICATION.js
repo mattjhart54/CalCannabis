@@ -62,18 +62,20 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
+//lwacht: 180216: story 5177: adding this back in
 // mhart: Comment out report to test payment processor time out issue
 //lwacht: create submission report
-//try{
+try{
 	//lwacht: 180108: defect 5120: don't run for temporary
-//	if(appTypeArray[2]!="Temporary"){
-//		runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
-//	}
+	if(appTypeArray[2]!="Temporary"){
+		runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
+	}
 	//lwacht: 180108: defect 5120: end
-//} catch(err){
-//	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
-//	logDebug(err.stack);
-//}
+} catch(err){
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
+	logDebug(err.stack);
+}
+//lwacht: 180216: story 5177: end
 
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 //lwacht: 171108: and send email
