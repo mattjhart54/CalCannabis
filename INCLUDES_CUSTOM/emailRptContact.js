@@ -82,12 +82,13 @@ try{
 			var currCapId = capId;
 			capId = acaCapId;
 			//getACARecordParam4Notification(eParams,acaUrl);
-// mhart 20180215 set if for notifications to use asc deep links.
-			if(matches(notName,"LCA_DEFICIENCY_OWNER")) 
-				acaUrlForAmend = getACAlinkForEdit(acaCapId,"Licenses","1008");
+// mhart 20180215 added if statement for notifications to use ACA deep links.
+			var acaBase = getACABaseUrl();
+			if(matches(notName,"LCA_XXXXX")) 
+				acaUrlForAmend = getACAlinkForEdit(acaCapId,"Licenses","1008",acaBase);
 			else
-				var acaUrlForAmend = "https://aca.supp.accela.com/CALCANNABIS/urlrouting.ashx?type=1008&Module=Licenses&capID1="+capId.ID1+"&capID2="+capId.ID2+"&capID3="+capId.ID3+"&agencyCode=CALCANNABIS&HideHeader=true";
-// mhart 20180215 				
+				var acaUrlForAmend = acaBase;
+// mhart 20180215 							
 			addParameter(eParams, "$$acaRecordUrl$$", acaUrlForAmend);
 			capId = currCapId;	
 			var contPhone = priContact.capContact.phone1;
