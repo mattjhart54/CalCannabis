@@ -17,10 +17,9 @@ Parameters:
 		1006: renewal
 		1009: pay fee due
 		1010: pay fee due in renewal
-	acaBase:  The base aca url for the current environment (supp,test,pre6,prod)
 ============================================= */
 
-function getACAlinkForEdit(itemCap, module, linkType,acaBase){
+function getACAlinkForEdit(itemCap, module, linkType){
 try{
 	if(!matches(linkType, "1008","1005","1000","1006","1009","1010")){
 		logDebug("The link type must be one of: 1000, 1005, 1006, 1008, 1009, 1010");
@@ -31,6 +30,7 @@ try{
 		logDebug("itemCap is not a capId");
 		return false;
 	}
+	var acaBase = getACABaseUrl();
 	var acaEdit = "urlrouting.ashx?type=linkType&Module="+module+"&capID1=" + sca[0] + "&capID2=" + sca[1] + "&capID3=" + sca[2] + "&agencyCode=" + servProvCode;
 	var fullACAlink = acaBase + acaEdit;
 	return fullACAlink;

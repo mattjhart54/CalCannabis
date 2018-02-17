@@ -83,11 +83,12 @@ try{
 			capId = acaCapId;
 			//getACARecordParam4Notification(eParams,acaUrl);
 // mhart 20180215 added if statement for notifications to use ACA deep links.
-			var acaBase = getACABaseUrl();
 			if(matches(notName,"LCA_XXXXX")) 
-				acaUrlForAmend = getACAlinkForEdit(acaCapId,"Licenses","1008",acaBase);
-			else
+				acaUrlForAmend = getACAlinkForEdit(acaCapId,"Licenses","1008");
+			else {
+				var acaBase = getACABaseUrl();
 				var acaUrlForAmend = acaBase;
+			}
 // mhart 20180215 							
 			addParameter(eParams, "$$acaRecordUrl$$", acaUrlForAmend);
 			capId = currCapId;	
