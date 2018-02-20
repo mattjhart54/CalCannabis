@@ -276,7 +276,27 @@ try {
 	if (showMessage) aa.env.setValue("ErrorMessage", message);
 	if (showDebug) aa.env.setValue("ErrorMessage", debug);
 }
-
+//mhart 20180220 user story 4689 validate Date Interest Obtained
+try {
+	var badDate = false;
+	for(x in CANNABISFINANCIALINTEREST){
+		nbrDays = getDateDiff(CANNABISFINANCIALINTEREST[x]["Date Interest Obtained"]);
+		if(nbrDays < 0) {
+			badDate = true;
+		}
+	}
+	if (badDate) {
+		cancel = true;
+		showMessage = true;
+		logMessage("Date Interest Obtained cannot be in the future");
+	}
+}
+catch (err){
+	logDebug("A JavaScript Error occurred:Date Interest Obtained Validation: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
+//mhart 20180220 user story 4689 
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========END=Main=Loop================>
