@@ -177,7 +177,7 @@ catch (err){
 try {
 	var badDate = false;
 	for(x in CANNABISFINANCIALINTEREST){
-		nbrDays = getDateDiff(CANNABISFINANCIALINTEREST[x}["Date Interest Obtained"]);
+		nbrDays = getDateDiff(CANNABISFINANCIALINTEREST[x]["Date Interest Obtained"]);
 		if(nbrDays < 0) {
 			badDate = true;
 		}
