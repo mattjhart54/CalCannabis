@@ -272,13 +272,14 @@ try {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_FINANCIAL_INTEREST: Main Loop: "+ startDate, capId + br + err.message+ br + err.stack + br + currEnv);
-	aa.env.setValue("ErrorCode", "-2");
-	if (showMessage) aa.env.setValue("ErrorMessage", message);
-	if (showDebug) aa.env.setValue("ErrorMessage", debug);
 }
 //mhart 20180220 user story 4689 validate Date Interest Obtained
 try {
 	var badDate = false;
+	var capId = cap.getCapID();
+	var AInfo = [];
+	loadAppSpecific4ACA(AInfo);
+	loadASITables4ACA_corrected();
 	for(x in CANNABISFINANCIALINTEREST){
 		nbrDays = getDateDiff(CANNABISFINANCIALINTEREST[x]["Date Interest Obtained"]);
 		if(nbrDays < 0) {
