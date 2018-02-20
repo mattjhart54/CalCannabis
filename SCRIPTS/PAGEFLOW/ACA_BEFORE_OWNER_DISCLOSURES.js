@@ -83,20 +83,24 @@ try {
 	loadAppSpecific4ACA(AInfo);
 	loadASITables4ACA_corrected();
 	if(AInfo["Convicted of a Crime"] == "Yes" && CONVICTIONS.length<1) {
-	//	var fnd = false;
-	//	if (CONVICTIONS == "object") {
-	//		for(x in CONVICTIONS) {
-	//			if(CONVICTIONS[x]["Offense"] != "" && CONVICTIONS[x]["Offense"] != null) {
-	//				fnd = true;
-	//			}
-	//		}
-	//	}
-	//	if (!fnd) {
 			showMessage = true;
 			cancel = true;
 			logMessage("When disclosure of a conviction of a crime is set to yes you must enter the conviction information in the Conviction table");
-	//	}
 	}
+	// mhart 20180220 user story 4689 Incarceration date must not be future date or older than 150 years
+	var badDate = false;
+	for(x in CONVICTIONS){
+		nbrDays = getDateDiff(CONVICTIONS[x]["Incarceration Date"]);
+		if(nbrDays < 0 || nbrDays > 54600) {
+			badDate = true;
+		}
+	}
+	if (badDate) {
+		cancel = true;
+		showMessage = true;
+		logMessage("Invalid Incarceration Date.  Date cannot be in the future or older than 150 years");
+	}
+	//mhart 20180220 user story 4689 
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_OWNER_DISCLOSURE: " + err.message);
 	logDebug(err.stack);
