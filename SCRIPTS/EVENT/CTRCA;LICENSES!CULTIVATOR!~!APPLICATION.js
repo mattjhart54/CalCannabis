@@ -62,20 +62,6 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
-//lwacht: 180216: story 5177: adding this back in
-// mhart: Comment out report to test payment processor time out issue
-//lwacht: create submission report
-try{
-	//lwacht: 180108: defect 5120: don't run for temporary
-	if(appTypeArray[2]!="Temporary"){
-		runReportAttach(capId,"Completed Application", "altId",capIDString);
-	}
-	//lwacht: 180108: defect 5120: end
-} catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
-	logDebug(err.stack);
-}
-//lwacht: 180216: story 5177: end
 
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 //lwacht: 171108: and send email
@@ -207,6 +193,35 @@ try{
 }
 //lwacht 180208: story 5200: end
 
+//lwacht: 180216: story 5177: adding this back in
+// mhart: Comment out report to test payment processor time out issue
+//lwacht: create submission report
+
+try{
+	//lwacht: 180108: defect 5120: don't run for temporary
+	if(appTypeArray[2]!="Temporary"){
+		//lwacht: 180220: story 5177: completed app report needs to run in a (un)specified amount of time
+		var eTxt = "";
+		var sDate = new Date();
+		var sTime = sDate.getTime();
+		var scriptName = "asyncRunComplApplicRpt";
+		var envParameters = aa.util.newHashMap();
+		envParameters.put("sendCap",capIDString); 
+		envParameters.put("currentUserID",currentUserID);
+		aa.runAsyncScript(scriptName, envParameters);
+		var thisDate = new Date();
+		var thisTime = thisDate.getTime();
+		var eTime = (thisTime - sTime) / 1000;
+		logDebug("elapsed time: " + eTime + " seconds.");
+		//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: "+ startDate, capId + br +"elapsed time: " + eTime + " seconds. " + br + "capIDString: " + capIDString + br + currEnv);
+	}
+	//lwacht: 180108: defect 5120: end
+} catch(err){
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+}
+//lwacht: 180216: story 5177: end
 
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 //lwacht: 171108: and send email
