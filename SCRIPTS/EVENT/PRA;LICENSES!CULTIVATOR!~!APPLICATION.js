@@ -25,6 +25,25 @@ try{
 		runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
 		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "", false, capStatus, capId, "Designated Responsible Party", "RECORD_ID", capId.getCustomID());
 		//emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "", false, capStatus, capId, "Primary Contact", "RECORD_ID", capId.getCustomID());
+		//lwacht: 180123: story 4679: add post contacts to a set; create set if it does not exist
+		var priContact = getContactObj(capId,"Designated Responsible Party");
+		if(priContact){
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+			if(!matches(priChannel, "",null,"undefined", false)){
+				if(priChannel.indexOf("Postal") > -1 ){
+					var sName = createSet("LICENSE_ISSUED","License Notifications", "New");
+					if(sName){
+						setAddResult=aa.set.add(sName,parCapId);
+						if(setAddResult.getSuccess()){
+							logDebug(capId.getCustomID() + " successfully added to set " +sName);
+						}else{
+							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+						}
+					}
+				}
+			}
+		}
+		//lwacht: 180123: story 4679: end
 	}
 }catch(err){
 	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: License Fee Paid: " + err.message);
