@@ -315,7 +315,7 @@ try{
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		var drpSeqNbr = drpContact.refSeqNumber;
 		var busContact = getContactObj(capId,"Business");
-		var busSeqNbr = drpContact.refSeqNumber;
+		var busSeqNbr = busContact.refSeqNumber;
 		var arrCond = getContactConditions_rev("Application Condition", "Applied", "Appeal Pending", null);
 		if(arrCond.length>0){
 			for (con in arrCond){
