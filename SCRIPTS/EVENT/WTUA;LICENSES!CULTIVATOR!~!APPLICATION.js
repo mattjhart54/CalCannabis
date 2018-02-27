@@ -282,14 +282,14 @@ try{
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		if(drpContact){
 			var drpSeqNbr = drpContact.refSeqNumber;
-			condComment += "; Contact " + drpContact.firstName + " " + drpContact.lastName + "(ref ID: " + drpSeqNbr + ")";
+			condComment += "; Contact " + drpContact.people.firstName + " " + drpContact.people.lastName + " (ref ID: " + drpSeqNbr + ")";
 			addContactStdCondition_rev(drpSeqNbr,"Application Condition", "Appeal Pending",condComment);
 		}
 		var busContact = getContactObj(capId,"Business");
 		if(busContact){
 			var busSeqNbr = busContact.refSeqNumber;
 			if(busSeqNbr!=drpSeqNbr){
-				condComment += "; Contact " + busContact.firstName + " " + busContact.lastName + "(ref ID: " + busSeqNbr + ")";
+				condComment += "; Contact " + busContact.people.firstName + " " + busContact.people.lastName + " (ref ID: " + busSeqNbr + ")";
 				addContactStdCondition_rev(busSeqNbr,"Application Condition", "Appeal Pending",condComment);
 			}else{
 				logDebug("Business and DRP are the same, not adding condition again.")
@@ -302,7 +302,7 @@ try{
 			if(ownContact){
 				var ownSeqNbr = ownContact.refSeqNumber;
 				if(ownSeqNbr!=busSeqNbr && ownSeqNbr!=drpSeqNbr){
-					condComment += "; Contact " + ownContact.firstName + " " + ownContact.lastName + "(ref ID: " + ownSeqNbr + ")";
+					condComment += "; Contact " + ownContact.people.firstName + " " + ownContact.people.lastName + " (ref ID: " + ownSeqNbr + ")";
 					addContactStdCondition_rev(ownSeqNbr,"Application Condition", "Appeal Pending",condComment);
 				}else{
 					logDebug("Owner and (Business and/or DRP) are the same, not adding condition again.")
