@@ -91,7 +91,7 @@ try {
 	var badDate = false;
 	for(x in CONVICTIONS){
 		nbrDays = getDateDiff(CONVICTIONS[x]["Incarceration Date"]);
-		if(nbrDays < 0 || nbrDays > 54600) {
+		if(nbrDays < 0 || nbrDays > 54787) {
 			badDate = true;
 		}
 	}
