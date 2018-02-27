@@ -275,18 +275,22 @@ try{
 }
 
 //lwacht: 180207: story 2896: add a generic condition when a denial is appealed and remove when denial is done
+//lwacht: 180227: story 5291: add reference contact information to the condition as well
 try{
 	if(wfStatus=="Appealed" && wfTask =="Application Disposition"){
+		var condComment = capIDString;
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		if(drpContact){
 			var drpSeqNbr = drpContact.refSeqNumber;
-			addContactStdCondition_rev(drpSeqNbr,"Application Condition", "Appeal Pending",capIDString);
+			condComment += "; Contact " + drpContact.firstName + " " + drpContact.lastName + "(ref ID: " + drpSeqNbr + ")";
+			addContactStdCondition_rev(drpSeqNbr,"Application Condition", "Appeal Pending",condComment);
 		}
 		var busContact = getContactObj(capId,"Business");
 		if(busContact){
 			var busSeqNbr = busContact.refSeqNumber;
 			if(busSeqNbr!=drpSeqNbr){
-				addContactStdCondition_rev(busSeqNbr,"Application Condition", "Appeal Pending",capIDString);
+				condComment += "; Contact " + busContact.firstName + " " + busContact.lastName + "(ref ID: " + busSeqNbr + ")";
+				addContactStdCondition_rev(busSeqNbr,"Application Condition", "Appeal Pending",condComment);
 			}else{
 				logDebug("Business and DRP are the same, not adding condition again.")
 			}
@@ -298,7 +302,8 @@ try{
 			if(ownContact){
 				var ownSeqNbr = ownContact.refSeqNumber;
 				if(ownSeqNbr!=busSeqNbr && ownSeqNbr!=drpSeqNbr){
-					addContactStdCondition_rev(ownSeqNbr,"Application Condition", "Appeal Pending",capIDString);
+					condComment += "; Contact " + ownContact.firstName + " " + ownContact.lastName + "(ref ID: " + ownSeqNbr + ")";
+					addContactStdCondition_rev(ownSeqNbr,"Application Condition", "Appeal Pending",condComment);
 				}else{
 					logDebug("Owner and (Business and/or DRP) are the same, not adding condition again.")
 				}
@@ -309,7 +314,7 @@ try{
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Add appeal denial condition: " + err.message);
 	aa.print(err.stack);
 }
-
+//lwacht: 180227: story 5291: end
 try{
 	if( wfTask =="Appeal"){
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
