@@ -16,7 +16,10 @@ try{
 				var currCap = capId;
 				capId = parCapId;
 				//lwacht 171214: changing who gets emailed
-				emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", false, wfStatus, parCapId, "DRP - Temporary License", "altId", capId.getCustomID());
+				//lwacht 180229: story : email the report to the DRP
+				emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", true, wfStatus, parCapId, "DRP - Temporary License", "altId", capId.getCustomID());
+				//emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", false, wfStatus, parCapId, "DRP - Temporary License", "altId", capId.getCustomID());
+				//lwacht 180229: story : email the report to the DRP
 				//emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "Official Temporary License", false, wfStatus, parCapId, "Business", "altId", capId.getCustomID());
 				//lwacht: 171214: end
 				//emailRptContact("WTUA", "LCA_TEMP_LIC_APPROVAL", "", false, wfStatus, capId, "Owner", "RECORD_ID", capId.getCustomID());
