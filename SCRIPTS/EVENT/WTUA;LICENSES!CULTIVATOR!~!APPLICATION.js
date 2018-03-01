@@ -125,9 +125,10 @@ try{
 							cntOChild = "0" +cntOChild;
 						}
 						var newOAltId = thisOwnCapId.getCustomID() +"-DEF"  + cntOChild;
+						var defAltIdT = newOAltId + "T";
 						//logDebug("newOAltId: " + newOAltId);
 						//lwacht adding a 't' because something quit working 
-						var updOAltId = aa.cap.updateCapAltID(newODefId,newOAltId+"T");
+						var updOAltId = aa.cap.updateCapAltID(newODefId,defAltIdT);
 						if(!updOAltId.getSuccess()){
 							logDebug("Error updating Owner Alt Id: " + newOAltId + ":: " +updOAltId.getErrorMessage());
 						}else{
@@ -145,7 +146,7 @@ try{
 								}
 							}
 						}
-						runReportAttach(thisOwnCapId,"Deficiency Report - Owner", "p1value", thisOwnCapId.getCustomID(), "p2value",updOAltId);
+						runReportAttach(thisOwnCapId,"Deficiency Report - Owner", "p1value", thisOwnCapId.getCustomID(), "p2value",defAltIdT);
 						holdCapId = capId;
 						capId = thisOwnCapId;
 						emailRptContact("", "LCA_DEFICIENCY_OWNER", "", false, capStatus, thisOwnCapId, "Owner", "p1value", thisOwnCapId.getCustomID());
