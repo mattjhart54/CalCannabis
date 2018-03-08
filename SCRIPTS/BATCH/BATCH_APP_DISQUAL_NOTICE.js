@@ -170,7 +170,10 @@ try{
 			logDebug("Could not get Cap ID");
 			continue;
 		}
-		cap = aa.cap.getCap(capId).getOutput();		
+		cap = aa.cap.getCap(capId).getOutput();	
+		fileDateObj = cap.getFileDate();
+		fileDate = "" + fileDateObj.getMonth() + "/" + fileDateObj.getDayOfMonth() + "/" + fileDateObj.getYear();
+		fileDateYYYYMMDD = dateFormatted(fileDateObj.getMonth(),fileDateObj.getDayOfMonth(),fileDateObj.getYear(),"YYYY-MM-DD");
 		appTypeResult = cap.getCapType();	
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
