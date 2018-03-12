@@ -83,70 +83,71 @@ try{
 	var capIdStatusClass = getCapIdStatusClass(capId);
 	if(!matches(capIdStatusClass, "COMPLETE")){
 	//lwacht: 180305: story 5294: end
-	docsMissing = false;
-	showList = true;
-	addConditions = false;
-	addTableRows = true;
-	var conditionTable = [];
-	dr = "";
-	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-	r = getReqdDocs("Owner");
-	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
-	uploadedDocs = new Array();
-	for (var i in submittedDocList ){
-		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
-	}
-	if (r.length > 0 && (showList || addTableRows)) {
-		for (x in r) { 
-			//going to add the condition, even if the document has been added, in case they want to change it
-			if(uploadedDocs[r[x].document] == undefined) {	
-				//showMessage = true; 
-				//if (!docsMissing)  {
-				//	comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
-				//	docsMissing = true; 
-				//}
-				conditionType = "License Required Documents";
-				dr = r[x].condition;
-				publicDisplayCond = null;
-				if (dr) {
-					ccr = aa.capCondition.getStandardConditions(conditionType, dr).getOutput();
-					for(var i = 0; i<ccr.length; i++) 
-						if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) 
-							publicDisplayCond = ccr[i];
-				}
-				//if (dr && ccr.length > 0 && showList && publicDisplayCond) {
-				//	message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
-				//}
-				if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
-					addStdCondition(conditionType,dr);
-				}
-				if (dr && ccr.length > 0 && addTableRows) {
-					var tblRow = [];
-					tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
-					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
-					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
-					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
-					//tblRow["Document Type"] = ""+dr; 
-					//tblRow["Document Description"]= ""+lookup("LIC_CC_ATTACHMENTS", dr); 
-					//tblRow["Uploaded"] = "UNCHECKED"; 
-					//tblRow["Status"] = "Not Submitted"; 
-					conditionTable.push(tblRow);
-					//logDebug("tblRow: " + tblRow["Document Type"]);
-					//logDebug("tblRow: " + tblRow["Document Description"]);
-					//logDebug("tblRow: " + tblRow["Uploaded"]);
-					//logDebug("tblRow: " + tblRow["Status"]);
+		docsMissing = false;
+		showList = true;
+		addConditions = false;
+		addTableRows = true;
+		var conditionTable = [];
+		dr = "";
+		capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
+		r = getReqdDocs("Owner");
+		submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
+		uploadedDocs = new Array();
+		for (var i in submittedDocList ){
+			uploadedDocs[submittedDocList[i].getDocCategory()] = true;
+		}
+		if (r.length > 0 && (showList || addTableRows)) {
+			for (x in r) { 
+				//going to add the condition, even if the document has been added, in case they want to change it
+				if(uploadedDocs[r[x].document] == undefined) {	
+					//showMessage = true; 
+					//if (!docsMissing)  {
+					//	comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
+					//	docsMissing = true; 
+					//}
+					conditionType = "License Required Documents";
+					dr = r[x].condition;
+					publicDisplayCond = null;
+					if (dr) {
+						ccr = aa.capCondition.getStandardConditions(conditionType, dr).getOutput();
+						for(var i = 0; i<ccr.length; i++) 
+							if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) 
+								publicDisplayCond = ccr[i];
+					}
+					//if (dr && ccr.length > 0 && showList && publicDisplayCond) {
+					//	message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
+					//}
+					if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
+						addStdCondition(conditionType,dr);
+					}
+					if (dr && ccr.length > 0 && addTableRows) {
+						var tblRow = [];
+						tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
+						tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
+						tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
+						tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
+						//tblRow["Document Type"] = ""+dr; 
+						//tblRow["Document Description"]= ""+lookup("LIC_CC_ATTACHMENTS", dr); 
+						//tblRow["Uploaded"] = "UNCHECKED"; 
+						//tblRow["Status"] = "Not Submitted"; 
+						conditionTable.push(tblRow);
+						//logDebug("tblRow: " + tblRow["Document Type"]);
+						//logDebug("tblRow: " + tblRow["Document Description"]);
+						//logDebug("tblRow: " + tblRow["Uploaded"]);
+						//logDebug("tblRow: " + tblRow["Status"]);
+					}	
 				}	
-			}	
+			}
+			//if (dr && ccr.length > 0 && addTableRows) {
+			if (conditionTable.length > 0 && addTableRows) {
+				removeASITable("ATTACHMENTS"); 
+				asit = cap.getAppSpecificTableGroupModel();
+				var newASIT = addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
+			}
 		}
-		//if (dr && ccr.length > 0 && addTableRows) {
-		if (conditionTable.length > 0 && addTableRows) {
-			removeASITable("ATTACHMENTS"); 
-			asit = cap.getAppSpecificTableGroupModel();
-			var newASIT = addASITable4ACAPageFlow(asit,"ATTACHMENTS",conditionTable);
+		if (r.length > 0 && showList && docsMissing) {
+			comment("</ol></div>");
 		}
-	}
-	if (r.length > 0 && showList && docsMissing) {
-		comment("</ol></div>");
 	}
 } catch (err) {
 	showDebug =true;
