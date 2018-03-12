@@ -74,46 +74,51 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-	var appName = cap.getSpecialText();
-	if(!matches(appName,null,"","undefined")){
-		if(appName.indexOf("(")>1){
-			var parenLoc = appName.indexOf("(");
-			var ownerName = appName.substring(0,parseInt(parenLoc));
-			var appNameLen = 0
-			appNameLen = appName.length();
-			var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
-			//var resCurUser = aa.person.getUser(publicUserID);
-			var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-			if(resCurUser.getSuccess()){
-				var currUser = resCurUser.getOutput();
-				var currEmail = currUser.email;
-				if(!matches(ownerEmail,"",null,"undefined")){
-					if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
-						//lwacht 171121: hiding the page if it's not the right person
-						//lwacht 171122: that didn't work out so great. 
-						showMessage = true;
-						logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
-						//aa.acaPageFlow.hideCapPage4ACA(capId, 1, 1);
-						//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-						//aa.acaPageFlow.hideCapPage4ACA(capId, 1, 2);
-						//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-						//aa.acaPageFlow.hideCapPage4ACA(capId, 2, 1);
-						//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-						//aa.acaPageFlow.hideCapPage4ACA(capId, 3, 1);
-						//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-						//lwacht 171121: end
-						//lwacht 171122: end
+	//lwacht: 180306: story 5312: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5312: end
+		var appName = cap.getSpecialText();
+		if(!matches(appName,null,"","undefined")){
+			if(appName.indexOf("(")>1){
+				var parenLoc = appName.indexOf("(");
+				var ownerName = appName.substring(0,parseInt(parenLoc));
+				var appNameLen = 0
+				appNameLen = appName.length();
+				var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
+				//var resCurUser = aa.person.getUser(publicUserID);
+				var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+				if(resCurUser.getSuccess()){
+					var currUser = resCurUser.getOutput();
+					var currEmail = currUser.email;
+					if(!matches(ownerEmail,"",null,"undefined")){
+						if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
+							//lwacht 171121: hiding the page if it's not the right person
+							//lwacht 171122: that didn't work out so great. 
+							showMessage = true;
+							logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
+							//aa.acaPageFlow.hideCapPage4ACA(capId, 1, 1);
+							//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+							//aa.acaPageFlow.hideCapPage4ACA(capId, 1, 2);
+							//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+							//aa.acaPageFlow.hideCapPage4ACA(capId, 2, 1);
+							//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+							//aa.acaPageFlow.hideCapPage4ACA(capId, 3, 1);
+							//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+							//lwacht 171121: end
+							//lwacht 171122: end
+						}
 					}
+				}else{
+					logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+					aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage());
 				}
 			}else{
-				logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-				aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage());
+				logDebug("Error on app name: "+ appName);
 			}
 		}else{
-			logDebug("Error on app name: "+ appName);
+			logDebug("No application name for this record: " + capId);
 		}
-	}else{
-		logDebug("No application name for this record: " + capId);
 	}
 } catch (err) {
 	showDebug =true;
@@ -124,31 +129,36 @@ try{
 
 
 try{
-	var emailText = "";
-	var contactList = cap.getContactsGroup();
-	if(contactList != null && contactList.size() > 0){
-		var arrContacts = contactList.toArray();
-		for(var i in arrContacts) {
-			var thisCont = arrContacts[i];
-			var contType = thisCont.contactType;
-/*			showMessage=true;
-			if(contType =="Owner") {
-				var pplRes = aa.people.getPeople(thisCont.refContactNumber);
-				if(pplRes.getSuccess()){
-					var thisPpl = pplRes.getOutput();
-					var ssn = thisPpl.MaskedSsn;
-					if (matches(ssn,null, "", "undefined")) {
-						showMessage = true;
-						logMessage("'Social Security Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
-					}
-					var bDate = thisPpl.birthDate;
-					if (matches(bDate,null, "", "undefined")) {
-						showMessage = true;
-						logMessage("'Birth Date' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
+	//lwacht: 180306: story 5312: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5312: end
+		var emailText = "";
+		var contactList = cap.getContactsGroup();
+		if(contactList != null && contactList.size() > 0){
+			var arrContacts = contactList.toArray();
+			for(var i in arrContacts) {
+				var thisCont = arrContacts[i];
+				var contType = thisCont.contactType;
+	/*			showMessage=true;
+				if(contType =="Owner") {
+					var pplRes = aa.people.getPeople(thisCont.refContactNumber);
+					if(pplRes.getSuccess()){
+						var thisPpl = pplRes.getOutput();
+						var ssn = thisPpl.MaskedSsn;
+						if (matches(ssn,null, "", "undefined")) {
+							showMessage = true;
+							logMessage("'Social Security Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
+						}
+						var bDate = thisPpl.birthDate;
+						if (matches(bDate,null, "", "undefined")) {
+							showMessage = true;
+							logMessage("'Birth Date' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
+						}
 					}
 				}
+	*/
 			}
-*/
 		}
 	}
 } catch (err) {

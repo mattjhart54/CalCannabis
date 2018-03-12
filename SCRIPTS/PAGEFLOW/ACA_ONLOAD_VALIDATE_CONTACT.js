@@ -74,56 +74,59 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try {
-	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-
-	if(resCurUser.getSuccess()){
-		contactFnd = false;
-		drpFnd = false;
-		prepFnd = false;
-		pcFnd = false;
-		var currUser = resCurUser.getOutput();
-		var currEmail = currUser.email;
-		//lwacht: 170810: need person logged in to be able to access the application in the future
-		if(matches(AInfo["publicUserEmail"],"",null)){
-			editAppSpecific4ACA("publicUserEmail",currEmail);
-			prepFnd = true;
-		}else{
-			if(AInfo["publicUserEmail"]==currEmail){
+	//lwacht: 180306: story 5315: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5315: end
+		var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+		if(resCurUser.getSuccess()){
+			contactFnd = false;
+			drpFnd = false;
+			prepFnd = false;
+			pcFnd = false;
+			var currUser = resCurUser.getOutput();
+			var currEmail = currUser.email;
+			//lwacht: 170810: need person logged in to be able to access the application in the future
+			if(matches(AInfo["publicUserEmail"],"",null)){
+				editAppSpecific4ACA("publicUserEmail",currEmail);
 				prepFnd = true;
+			}else{
+				if(AInfo["publicUserEmail"]==currEmail){
+					prepFnd = true;
+				}
 			}
-		}
-		var contactList = cap.getContactsGroup();
-		logDebug("got contactlist " + contactList.size());
-		if(contactList != null && contactList.size() > 0){
-			var arrContacts = contactList.toArray();
-			for(var i in arrContacts) {
-				var thisCont = arrContacts[i];
-				var contEmail = thisCont.email;
-				var contType = thisCont.contactType;
-				if(contType == "Designated Responsible Party")
-					drpFnd = true;
-				if(contType == "Business")
-					pcFnd = true;
-				if(!matches(contEmail,"",null,"undefined")){
-					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business")){
-						contactFnd = true
+			var contactList = cap.getContactsGroup();
+			logDebug("got contactlist " + contactList.size());
+			if(contactList != null && contactList.size() > 0){
+				var arrContacts = contactList.toArray();
+				for(var i in arrContacts) {
+					var thisCont = arrContacts[i];
+					var contEmail = thisCont.email;
+					var contType = thisCont.contactType;
+					if(contType == "Designated Responsible Party")
+						drpFnd = true;
+					if(contType == "Business")
+						pcFnd = true;
+					if(!matches(contEmail,"",null,"undefined")){
+						if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business")){
+							contactFnd = true
+						}
 					}
 				}
 			}
+			if(!prepFnd){
+				if(contactFnd == false && drpFnd == true && pcFnd == true) {
+					showMessage = true;
+					logMessage("Warning: Only the Business Contact and the Designated Responsible party can update this application.");
+				}	
+			}
 		}
-		if(!prepFnd){
-			if(contactFnd == false && drpFnd == true && pcFnd == true) {
-				showMessage = true;
-				logMessage("Warning: Only the Business Contact and the Designated Responsible party can update this application.");
-			}	
+		else{
+			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
 	}
-	else{
-		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
-	}
-}
-catch (err){
+}catch (err){
 	logDebug("A JavaScript Error occurred: ACA_ONLOAD_VALIDATE_CONTACT: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);

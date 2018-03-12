@@ -78,40 +78,45 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-	var appName = cap.getSpecialText();
-	if(!matches(appName,null,"","undefined")){
-		if(appName.indexOf("(")>1){
-			var parenLoc = appName.indexOf("(");
-			var ownerName = appName.substring(0,parseInt(parenLoc));
-			var appNameLen = 0
-			appNameLen = appName.length();
-			var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
-			//var resCurUser = aa.person.getUser(publicUserID);
-			var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-			if(resCurUser.getSuccess()){
-				var currUser = resCurUser.getOutput();
-				var currEmail = currUser.email;
-				if(!matches(ownerEmail,"",null,"undefined")){
-					if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
-						//lwacht 171121: hiding the page if it's not the right person
-						//lwacht 171122: that didn't work out so great. 
-						showMessage = true;
-						logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
-						//aa.acaPageFlow.hideCapPage4ACA(capId, 3, 1);
-						//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-						//lwacht 171121: end
-						//lwacht 171122: end
+	//lwacht: 180306: story 5313: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5313: end
+		var appName = cap.getSpecialText();
+		if(!matches(appName,null,"","undefined")){
+			if(appName.indexOf("(")>1){
+				var parenLoc = appName.indexOf("(");
+				var ownerName = appName.substring(0,parseInt(parenLoc));
+				var appNameLen = 0
+				appNameLen = appName.length();
+				var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
+				//var resCurUser = aa.person.getUser(publicUserID);
+				var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+				if(resCurUser.getSuccess()){
+					var currUser = resCurUser.getOutput();
+					var currEmail = currUser.email;
+					if(!matches(ownerEmail,"",null,"undefined")){
+						if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
+							//lwacht 171121: hiding the page if it's not the right person
+							//lwacht 171122: that didn't work out so great. 
+							showMessage = true;
+							logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
+							//aa.acaPageFlow.hideCapPage4ACA(capId, 3, 1);
+							//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+							//lwacht 171121: end
+							//lwacht 171122: end
+						}
 					}
+				}else{
+					logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+					aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage());
 				}
 			}else{
-				logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-				aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage());
+				logDebug("Error on app name: "+ appName);
 			}
 		}else{
-			logDebug("Error on app name: "+ appName);
+			logDebug("No application name for this record: " + capId);
 		}
-	}else{
-		logDebug("No application name for this record: " + capId);
 	}
 } catch (err) {
 	showDebug =true;
@@ -120,70 +125,75 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_APP_CONTACT: Correct Contact: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
 }
 try{
-	docsMissing = false;
-	showList = true;
-	addConditions = false;
-	addTableRows = true;
-	var conditionTable = [];
-	dr = "";
-	capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-	r = getReqdDocs("Owner");
-	submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
-	uploadedDocs = new Array();
-	for (var i in submittedDocList ){
-		uploadedDocs[submittedDocList[i].getDocCategory()] = true;
-	}
-	if (r.length > 0 && (showList || addTableRows)) {
-		for (x in r) { 
-			//going to add the condition, even if the document has been added, in case they want to change it
-			if(uploadedDocs[r[x].document] == undefined) {	
-				//showMessage = true; 
-				//if (!docsMissing)  {
-				//	comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
-				//	docsMissing = true; 
-				//}
-				conditionType = "License Required Documents";
-				dr = r[x].condition;
-				publicDisplayCond = null;
-				if (dr) {
-					ccr = aa.capCondition.getStandardConditions(conditionType, dr).getOutput();
-					for(var i = 0; i<ccr.length; i++) 
-						if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) 
-							publicDisplayCond = ccr[i];
-				}
-				//if (dr && ccr.length > 0 && showList && publicDisplayCond) {
-				//	message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
-				//}
-				if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
-					addStdCondition(conditionType,dr);
-				}
-				if (dr && ccr.length > 0 && addTableRows) {
-					var tblRow = [];
-					tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
-					tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
-					tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
-					tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
-					//tblRow["Document Type"] = ""+dr; 
-					//tblRow["Document Description"]= ""+lookup("LIC_CC_ATTACHMENTS", dr); 
-					//tblRow["Uploaded"] = "UNCHECKED"; 
-					//tblRow["Status"] = "Not Submitted"; 
-					conditionTable.push(tblRow);
-					//logDebug("tblRow: " + tblRow["Document Type"]);
-					//logDebug("tblRow: " + tblRow["Document Description"]);
-					//logDebug("tblRow: " + tblRow["Uploaded"]);
-					//logDebug("tblRow: " + tblRow["Status"]);
+	//lwacht: 180306: story 5313: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5313: end
+		docsMissing = false;
+		showList = true;
+		addConditions = false;
+		addTableRows = true;
+		var conditionTable = [];
+		dr = "";
+		capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
+		r = getReqdDocs("Owner");
+		submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
+		uploadedDocs = new Array();
+		for (var i in submittedDocList ){
+			uploadedDocs[submittedDocList[i].getDocCategory()] = true;
+		}
+		if (r.length > 0 && (showList || addTableRows)) {
+			for (x in r) { 
+				//going to add the condition, even if the document has been added, in case they want to change it
+				if(uploadedDocs[r[x].document] == undefined) {	
+					//showMessage = true; 
+					//if (!docsMissing)  {
+					//	comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>The following documents are required based on the information you have provided: </span><ol>"); 	
+					//	docsMissing = true; 
+					//}
+					conditionType = "License Required Documents";
+					dr = r[x].condition;
+					publicDisplayCond = null;
+					if (dr) {
+						ccr = aa.capCondition.getStandardConditions(conditionType, dr).getOutput();
+						for(var i = 0; i<ccr.length; i++) 
+							if(ccr[i].getConditionDesc().toUpperCase() == dr.toUpperCase()) 
+								publicDisplayCond = ccr[i];
+					}
+					//if (dr && ccr.length > 0 && showList && publicDisplayCond) {
+					//	message += "<li><span>" + dr + "</span>: " + publicDisplayCond.getPublicDisplayMessage() + "</li>";
+					//}
+					if (dr && ccr.length > 0 && addConditions && !appHasCondition(conditionType,null,dr,null)) {
+						addStdCondition(conditionType,dr);
+					}
+					if (dr && ccr.length > 0 && addTableRows) {
+						var tblRow = [];
+						tblRow["Document Type"] = new asiTableValObj("Document Type",""+dr, "Y"); 
+						tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", dr), "Y"); 
+						tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
+						tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
+						//tblRow["Document Type"] = ""+dr; 
+						//tblRow["Document Description"]= ""+lookup("LIC_CC_ATTACHMENTS", dr); 
+						//tblRow["Uploaded"] = "UNCHECKED"; 
+						//tblRow["Status"] = "Not Submitted"; 
+						conditionTable.push(tblRow);
+						//logDebug("tblRow: " + tblRow["Document Type"]);
+						//logDebug("tblRow: " + tblRow["Document Description"]);
+						//logDebug("tblRow: " + tblRow["Uploaded"]);
+						//logDebug("tblRow: " + tblRow["Status"]);
+					}	
 				}	
-			}	
+			}
+			//if (dr && ccr.length > 0 && addTableRows) {
+			if (conditionTable.length > 0 && addTableRows) {
+				removeASITable("ATTACHMENTS"); 
+				asit = cap.getAppSpecificTableGroupModel();
+				var newASIT = copyASITable4PageFlowLocal(asit,"ATTACHMENTS",conditionTable);
+			}
 		}
-		//if (dr && ccr.length > 0 && addTableRows) {
-		if (conditionTable.length > 0 && addTableRows) {
-			removeASITable("ATTACHMENTS"); 
-			asit = cap.getAppSpecificTableGroupModel();
-			var newASIT = copyASITable4PageFlowLocal(asit,"ATTACHMENTS",conditionTable);
+		if (r.length > 0 && showList && docsMissing) {
+			comment("</ol></div>");
 		}
-	}
-	if (r.length > 0 && showList && docsMissing) {
-		comment("</ol></div>");
 	}
 } catch (err) {
 	logDebug("An error has occurred in ACA_AFTER_OWNER_COND_DOCS: Main function: " + err.message);

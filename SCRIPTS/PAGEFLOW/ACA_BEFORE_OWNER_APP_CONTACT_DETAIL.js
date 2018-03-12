@@ -76,85 +76,92 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	var capId = cap.getCapID();
-	var emailText="Information: " + br;
-	var contactList = cap.getContactsGroup(); 
-
-	if(contactList != null && contactList.size() > 0){ 
-		var arrContacts = contactList.toArray(); 
-		for(var i in arrContacts) { 
-			var thisCont = arrContacts[i]; 
-//			showMessage=true; 
-//			for(x in thisCont){ 
-//				if(typeof(thisCont[x])!="function"){ 
-//					emailText+= (x+ ": " + thisCont[x] +br); 
-//					logMessage(x+ ": " + thisCont[x]); 
-//				} 
-//			} 
-			var contactTypeFlag = thisCont.contactTypeFlag
-			if(contactTypeFlag!=null) {
-				if(contactTypeFlag.toUpperCase() =="INDIVIDUAL") { 
-					var ssNbr = thisCont.socialSecurityNumber;
-					var poBox = thisCont.postOfficeBox;
-					if (matches(ssNbr,null, "", "undefined") && matches(poBox,null, "", "undefined")) { 
-						cancel = true; 
-						showMessage = true; 
-						logMessage("Your social security number or NIN needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
-					} 
-					var birthDate = thisCont.birthDate; 
-					if (matches(birthDate,null, "", "undefined")) { 
-						cancel = true; 
-						showMessage = true; 
-						logMessage("Your birth date needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
-					} 
-	/*				var pplRes = aa.people.getPeople(thisCont.refContactNumber); 
-					if(pplRes.getSuccess()){ 
-						var thisPpl = pplRes.getOutput(); 
-						var boeSeller = thisPpl.businessName2; 
-						if (matches(boeSeller,null, "", "undefined")) { 
+	//lwacht: 180306: story 5303: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5303: end
+		var capId = cap.getCapID();
+		var emailText="Information: " + br;
+		var contactList = cap.getContactsGroup(); 
+		if(contactList != null && contactList.size() > 0){ 
+			var arrContacts = contactList.toArray(); 
+			for(var i in arrContacts) { 
+				var thisCont = arrContacts[i]; 
+				//showMessage=true; 
+				//for(x in thisCont){ 
+					//if(typeof(thisCont[x])!="function"){ 
+						//emailText+= (x+ ": " + thisCont[x] +br); 
+						//logMessage(x+ ": " + thisCont[x]); 
+					//} 
+				//} 
+				var contactTypeFlag = thisCont.contactTypeFlag
+				if(contactTypeFlag!=null) {
+					if(contactTypeFlag.toUpperCase() =="INDIVIDUAL") { 
+						var ssNbr = thisCont.socialSecurityNumber;
+						var poBox = thisCont.postOfficeBox;
+						if (matches(ssNbr,null, "", "undefined") && matches(poBox,null, "", "undefined")) { 
 							cancel = true; 
 							showMessage = true; 
-							logMessage("'BOE Seller Permit Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
+							logMessage("Your social security number or NIN needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
 						} 
-					}  
-	*/
-				} 
+						var birthDate = thisCont.birthDate; 
+						if (matches(birthDate,null, "", "undefined")) { 
+							cancel = true; 
+							showMessage = true; 
+							logMessage("Your birth date needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
+						} 
+						/*var pplRes = aa.people.getPeople(thisCont.refContactNumber); 
+						if(pplRes.getSuccess()){ 
+							var thisPpl = pplRes.getOutput(); 
+							var boeSeller = thisPpl.businessName2; 
+							if (matches(boeSeller,null, "", "undefined")) { 
+								cancel = true; 
+								showMessage = true; 
+								logMessage("'BOE Seller Permit Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update."); 
+							} 
+						}  */
+					} 
+				}
 			}
-		}
-		//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Complete contact  " + startDate, "capId: " + capId + br +emailText);
-
-	} 
+			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Complete contact  " + startDate, "capId: " + capId + br +emailText);
+		} 
+	}
 } catch (err) {
-	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Correct contact : " + err.message);
+	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Complete contact : " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_OWNER_APP_CONTACT_DETAIL: Complete contact  " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 
 try{
-	var capId = cap.getCapID();
-	var appName = cap.getSpecialText();
-	if(appName.indexOf("(")>-1){
-		var parenLoc = appName.indexOf("(");
-		var ownerName = appName.substring(0,parseInt(parenLoc));
-		var appNameLen = 0
-		appNameLen = appName.length();
-		var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
-		//var resCurUser = aa.person.getUser(publicUserID);
-		var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-		if(resCurUser.getSuccess()){
-			var currUser = resCurUser.getOutput();
-			var currEmail = currUser.email;
-			if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
-				showMessage = true;
-				cancel = true;
-				comment("Error: Only " + ownerName + " can edit and submit this application.");
+	//lwacht: 180306: story 5303: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5303: end
+		var capId = cap.getCapID();
+		var appName = cap.getSpecialText();
+		if(appName.indexOf("(")>-1){
+			var parenLoc = appName.indexOf("(");
+			var ownerName = appName.substring(0,parseInt(parenLoc));
+			var appNameLen = 0
+			appNameLen = appName.length();
+			var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
+			//var resCurUser = aa.person.getUser(publicUserID);
+			var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+			if(resCurUser.getSuccess()){
+				var currUser = resCurUser.getOutput();
+				var currEmail = currUser.email;
+				if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
+					showMessage = true;
+					cancel = true;
+					comment("Error: Only " + ownerName + " can edit and submit this application.");
+				}
+			}else{
+				logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+				aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
 			}
 		}else{
-			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
+			logDebug("Error with appName: " + appName);
 		}
-	}else{
-		logDebug("Error with appName: " + appName);
 	}
 } catch (err) {
 	showDebug =true;

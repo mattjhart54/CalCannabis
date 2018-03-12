@@ -76,62 +76,67 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try {
-	var AInfo = [];
-	loadAppSpecific4ACA(AInfo);
-	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+	//lwacht: 180305: story 5296: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180305: story 5296: end
+		var AInfo = [];
+		loadAppSpecific4ACA(AInfo);
+		var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 
-	if(resCurUser.getSuccess()){
-		var contactFnd = false
-		var drpFnd = false;
-		var prepFnd = false;
-		var appFnd = false;
-		var currUser = resCurUser.getOutput();
-		var currEmail = currUser.email;
-		//lwacht: 170810: need person logged in to be able to access the application in the future
-		if(matches(AInfo["publicUserEmail"],"",null)){
-			editAppSpecific4ACA("publicUserEmail",currEmail);
-			prepFnd = true;
-		}else{
-			if(AInfo["publicUserEmail"]==currEmail){
+		if(resCurUser.getSuccess()){
+			var contactFnd = false
+			var drpFnd = false;
+			var prepFnd = false;
+			var appFnd = false;
+			var currUser = resCurUser.getOutput();
+			var currEmail = currUser.email;
+			//lwacht: 170810: need person logged in to be able to access the application in the future
+			if(matches(AInfo["publicUserEmail"],"",null)){
+				editAppSpecific4ACA("publicUserEmail",currEmail);
 				prepFnd = true;
+			}else{
+				if(AInfo["publicUserEmail"]==currEmail){
+					prepFnd = true;
+				}
 			}
-		}
-		var contactList = cap.getContactsGroup();
-		if(contactList != null && contactList.size() > 0){
-			var arrContacts = contactList.toArray();
-			for(var i in arrContacts) {
-				var thisCont = arrContacts[i];
-				var contEmail = thisCont.email;
-				var contType = thisCont.contactType;
-				if(contType == "Designated Responsible Party")
-					drpFnd = true;
-				if(contType == "Business")
-					appFnd = true;
-				if(!matches(contEmail,"",null,"undefined")){
-					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business")){
-						contactFnd = true;
+			var contactList = cap.getContactsGroup();
+			if(contactList != null && contactList.size() > 0){
+				var arrContacts = contactList.toArray();
+				for(var i in arrContacts) {
+					var thisCont = arrContacts[i];
+					var contEmail = thisCont.email;
+					var contType = thisCont.contactType;
+					if(contType == "Designated Responsible Party")
+						drpFnd = true;
+					if(contType == "Business")
+						appFnd = true;
+					if(!matches(contEmail,"",null,"undefined")){
+						if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business")){
+							contactFnd = true;
+						}
 					}
 				}
 			}
+			//lwacht: changed logic to check for DRP *or* Business
+			if(!prepFnd){
+				if(contactFnd == false && (drpFnd == true || appFnd == true)) {
+					cancel = true;
+					showMessage = true;
+					logMessage("  Warning: Only the Business or the Designated Responsible party can update this application.");
+				}	
+			}
 		}
-		//lwacht: changed logic to check for DRP *or* Business
-		if(!prepFnd){
-			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
+		else{
+			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
+		}
+		if(matches(AInfo["License Type"], "Specialty Cottage Indoor", "Specialty Cottage Mixed-Light Tier 1", "Specialty Cottage Mixed-Light Tier 2", "Specialty Indoor", "Specialty Mixed-Light Tier 1", "Specialty Mixed-Light Tier 2", "Small Indoor", "Small Mixed-Light Tier 1", "Small Mixed-Light Tier 2", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
+			if(AInfo["Grid"] !="CHECKED" && AInfo["Solar"] !="CHECKED" && AInfo["Generator"] !="CHECKED" && AInfo["Generator Under 50 HP"] !="CHECKED" && AInfo["Other"] !="CHECKED") {
 				cancel = true;
 				showMessage = true;
-				logMessage("  Warning: Only the Business or the Designated Responsible party can update this application.");
-			}	
-		}
-	}
-	else{
-		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
-	}
-	if(matches(AInfo["License Type"], "Specialty Cottage Indoor", "Specialty Cottage Mixed-Light Tier 1", "Specialty Cottage Mixed-Light Tier 2", "Specialty Indoor", "Specialty Mixed-Light Tier 1", "Specialty Mixed-Light Tier 2", "Small Indoor", "Small Mixed-Light Tier 1", "Small Mixed-Light Tier 2", "Medium Indoor", "Medium Mixed-Light Tier 1", "Medium Mixed-Light Tier 2")) {
-		if(AInfo["Grid"] !="CHECKED" && AInfo["Solar"] !="CHECKED" && AInfo["Generator"] !="CHECKED" && AInfo["Generator Under 50 HP"] !="CHECKED" && AInfo["Other"] !="CHECKED") {
-			cancel = true;
-			showMessage = true;
-			comment("At least one of the power source types must be selected");
+				comment("At least one of the power source types must be selected");
+			}
 		}
 	}
 }catch (err){

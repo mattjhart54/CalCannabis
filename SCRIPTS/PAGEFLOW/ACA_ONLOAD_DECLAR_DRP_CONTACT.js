@@ -75,28 +75,33 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	var appName = cap.getSpecialText();
-	if(!matches(appName,null,"","undefined")){
-		var parenLoc = appName.indexOf("(");
-		var ownerName = appName.substring(0,parseInt(parenLoc));
-		var appNameLen = 0
-		appNameLen = appName.length();
-		var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
-		//var resCurUser = aa.person.getUser(publicUserID);
-		var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-		if(resCurUser.getSuccess()){
-			var currUser = resCurUser.getOutput();
-			var currEmail = currUser.email;
-			if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
-				showMessage = true;
-				logMessage("Warning: Only " + ownerName + " can submit this application.");
+	//lwacht: 180306: story 5311: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5311: end
+		var appName = cap.getSpecialText();
+		if(!matches(appName,null,"","undefined")){
+			var parenLoc = appName.indexOf("(");
+			var ownerName = appName.substring(0,parseInt(parenLoc));
+			var appNameLen = 0
+			appNameLen = appName.length();
+			var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
+			//var resCurUser = aa.person.getUser(publicUserID);
+			var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+			if(resCurUser.getSuccess()){
+				var currUser = resCurUser.getOutput();
+				var currEmail = currUser.email;
+				if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
+					showMessage = true;
+					logMessage("Warning: Only " + ownerName + " can submit this application.");
+				}
+			}else{
+				logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+				aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_DECLAR_DRP_CONTACT: " + startDate, resCurUser.getErrorMessage());
 			}
 		}else{
-			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, resCurUser.getErrorMessage());
+			logDebug("No application name for this record: " + capId);
 		}
-	}else{
-		logDebug("No application name for this record: " + capId);
 	}
 } catch (err) {
 	logDebug("An error has occurred in ACA_ONLOAD_DECLAR_DRP_CONTACT: Correct Contact: " + err.message);
@@ -106,25 +111,30 @@ try{
 
 
 try{
-	var emailText = "";
-	var contactList = cap.getContactsGroup();
-	if(contactList != null && contactList.size() > 0){
-		var arrContacts = contactList.toArray();
-		for(var i in arrContacts) {
-			var thisCont = arrContacts[i];
-			//for(x in thisCont){
-			//	if(typeof(thisCont[x])!="function"){
-			//		emailText+= (x+ ": " + thisCont[x] +br);
-			//		logMessage(x+ ": " + thisCont[x]);
-			//	}
-			//}
-			var contType = thisCont.contactType;
-			showMessage=true;
-			if(contType =="Designated Responsible Party") {
-				var county = ""+thisCont.addressLine3;
-				if (matches(county,null, "", "undefined")) {
-					showMessage = true;
-					logMessage("Contact and BOE Seller Permit Number need to be populated on the contact form before continuing.  Click 'Edit' to update.");
+	//lwacht: 180306: story 5311: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5311: end
+		var emailText = "";
+		var contactList = cap.getContactsGroup();
+		if(contactList != null && contactList.size() > 0){
+			var arrContacts = contactList.toArray();
+			for(var i in arrContacts) {
+				var thisCont = arrContacts[i];
+				//for(x in thisCont){
+				//	if(typeof(thisCont[x])!="function"){
+				//		emailText+= (x+ ": " + thisCont[x] +br);
+				//		logMessage(x+ ": " + thisCont[x]);
+				//	}
+				//}
+				var contType = thisCont.contactType;
+				showMessage=true;
+				if(contType =="Designated Responsible Party") {
+					var county = ""+thisCont.addressLine3;
+					if (matches(county,null, "", "undefined")) {
+						showMessage = true;
+						logMessage("Contact and BOE Seller Permit Number need to be populated on the contact form before continuing.  Click 'Edit' to update.");
+					}
 				}
 			}
 		}

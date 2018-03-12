@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_BEFORE_APPLICANT_OWNER_TABLE.js
+| Program : ACA_ONLOAD_APPLICANT_OWNER_TABLE.js
 | Event   : ACA Page Flow attachments before event
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -77,39 +77,44 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-	loadASITables4ACA_corrected();
-	var tblOwner = [];
-	var tblCorrection = false;
-	var correctLastName = false;
-	var correctFirstName = false;
-	if(OWNERS.length<1){
-		var contactList = cap.getContactsGroup();
-		if(contactList != null && contactList.size() > 0){
-			var arrContacts = contactList.toArray();
-			for(var i in arrContacts) {
-				var thisCont = arrContacts[i];
-				var emailText = "";
-				//for(x in thisCont){
-				//	if(typeof(thisCont[x])!="function"){
-				//		logDebug(x+ ": " + thisCont[x]);
-				//		emailText +=(x+ ": " + thisCont[x]) + br;
-				//	}
-				//}
-				var contType = thisCont.contactType;
-				showMessage=true;
-				if(contType =="Designated Responsible Party") {
-					//var refContNrb = thisCont.refContactNumber;
-					var drpContact = [];
-					var drpFName = thisCont.firstName;
-					var drpLName = thisCont.lastName;
-					var drpEmail = thisCont.email;
-					drpContact["First Name"]=drpFName;
-					drpContact["Last Name"]=drpLName;
-					drpContact["Email Address"]=drpEmail;
-					tblOwner.push(drpContact);
-					var asit = cap.getAppSpecificTableGroupModel();
-					addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
-					addToASITable("OWNERS",tblOwner);
+	//lwacht: 180306: story 5308: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5308: end
+		loadASITables4ACA_corrected();
+		var tblOwner = [];
+		var tblCorrection = false;
+		var correctLastName = false;
+		var correctFirstName = false;
+		if(OWNERS.length<1){
+			var contactList = cap.getContactsGroup();
+			if(contactList != null && contactList.size() > 0){
+				var arrContacts = contactList.toArray();
+				for(var i in arrContacts) {
+					var thisCont = arrContacts[i];
+					var emailText = "";
+					//for(x in thisCont){
+					//	if(typeof(thisCont[x])!="function"){
+					//		logDebug(x+ ": " + thisCont[x]);
+					//		emailText +=(x+ ": " + thisCont[x]) + br;
+					//	}
+					//}
+					var contType = thisCont.contactType;
+					showMessage=true;
+					if(contType =="Designated Responsible Party") {
+						//var refContNrb = thisCont.refContactNumber;
+						var drpContact = [];
+						var drpFName = thisCont.firstName;
+						var drpLName = thisCont.lastName;
+						var drpEmail = thisCont.email;
+						drpContact["First Name"]=drpFName;
+						drpContact["Last Name"]=drpLName;
+						drpContact["Email Address"]=drpEmail;
+						tblOwner.push(drpContact);
+						var asit = cap.getAppSpecificTableGroupModel();
+						addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
+						addToASITable("OWNERS",tblOwner);
+					}
 				}
 			}
 		}

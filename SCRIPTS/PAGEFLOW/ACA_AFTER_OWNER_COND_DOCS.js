@@ -79,6 +79,10 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
+	//lwacht: 180305: story 5294: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180305: story 5294: end
 	docsMissing = false;
 	showList = true;
 	addConditions = false;

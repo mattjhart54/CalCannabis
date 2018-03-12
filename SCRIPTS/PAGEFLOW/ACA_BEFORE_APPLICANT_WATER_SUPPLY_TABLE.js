@@ -77,101 +77,106 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-	var noRows = false;
-/*	var row = new Array();
-	var tblWater = new Array();
-	row["Authorized Place of Use"] = new asiTableValObj("Authorized Place of Use", "" + "", "Y");
-	row["Description"] = new asiTableValObj("Description", "" + "", "Y");
-	row["Diversion Number"] = new asiTableValObj("Diversion Number", "" , "Y");
-	row["Geographical Location Coordinates"] = new asiTableValObj("Geographical Location Coordinates", "", "Y");
-	row["Maximum Amount of Water Delivered"] = new asiTableValObj("Maximum Amount of Water Delivered", "", "Y");
-	row["Name of Supplier"] = new asiTableValObj("Name of Supplier", "", "Y");
-	row["Total Square Footage"] = new asiTableValObj("Total Square Footage", "", "Y");
-	row["Total Storage Capacity"] = new asiTableValObj("Total Storage Capacity", "", "Y");
-	row["Type of Water Supply"] = new asiTableValObj("Type of Water Supply", "", "Y");
-	tblWater.push(row);
-	asit = cap.getAppSpecificTableGroupModel();
-	new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", tblWater);
-	var ta = new_asit.getTablesMap();
-	var tai = ta.values().iterator();
-	while (tai.hasNext())
-	  {
-	  var tsm = tai.next();
+	//lwacht: 180305: story 5299: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180305: story 5299: end
+		var noRows = false;
+	/*	var row = new Array();
+		var tblWater = new Array();
+		row["Authorized Place of Use"] = new asiTableValObj("Authorized Place of Use", "" + "", "Y");
+		row["Description"] = new asiTableValObj("Description", "" + "", "Y");
+		row["Diversion Number"] = new asiTableValObj("Diversion Number", "" , "Y");
+		row["Geographical Location Coordinates"] = new asiTableValObj("Geographical Location Coordinates", "", "Y");
+		row["Maximum Amount of Water Delivered"] = new asiTableValObj("Maximum Amount of Water Delivered", "", "Y");
+		row["Name of Supplier"] = new asiTableValObj("Name of Supplier", "", "Y");
+		row["Total Square Footage"] = new asiTableValObj("Total Square Footage", "", "Y");
+		row["Total Storage Capacity"] = new asiTableValObj("Total Storage Capacity", "", "Y");
+		row["Type of Water Supply"] = new asiTableValObj("Type of Water Supply", "", "Y");
+		tblWater.push(row);
+		asit = cap.getAppSpecificTableGroupModel();
+		new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", tblWater);
+		var ta = new_asit.getTablesMap();
+		var tai = ta.values().iterator();
+		while (tai.hasNext())
+		  {
+		  var tsm = tai.next();
 
-	  if (tsm.rowIndex.isEmpty()) continue;  // empty table
+		  if (tsm.rowIndex.isEmpty()) continue;  // empty table
 
-	  var tempObject = new Array();
-	  var tempArray = new Array();
-	  var tn = tsm.getTableName();
+		  var tempObject = new Array();
+		  var tempArray = new Array();
+		  var tn = tsm.getTableName();
 
-	  tn = String(tn).replace(/[^a-zA-Z0-9]+/g,'');
+		  tn = String(tn).replace(/[^a-zA-Z0-9]+/g,'');
 
-	  if (!isNaN(tn.substring(0,1))) tn = "TBL" + tn  // prepend with TBL if it starts with a number
+		  if (!isNaN(tn.substring(0,1))) tn = "TBL" + tn  // prepend with TBL if it starts with a number
 
-  	  var tsmfldi = tsm.getTableField().iterator();
-	  var tsmcoli = tsm.getColumns().iterator();
-	  var numrows = 1;
+		  var tsmfldi = tsm.getTableField().iterator();
+		  var tsmcoli = tsm.getColumns().iterator();
+		  var numrows = 1;
 
-	  while (tsmfldi.hasNext())  // cycle through fields
-		{
-		if (!tsmcoli.hasNext())  // cycle through columns
+		  while (tsmfldi.hasNext())  // cycle through fields
 			{
+			if (!tsmcoli.hasNext())  // cycle through columns
+				{
 
-			var tsmcoli = tsm.getColumns().iterator();
-			tempArray.push(tempObject);  // end of record
-			var tempObject = new Array();  // clear the temp obj
-			numrows++;
+				var tsmcoli = tsm.getColumns().iterator();
+				tempArray.push(tempObject);  // end of record
+				var tempObject = new Array();  // clear the temp obj
+				numrows++;
+				}
+			var tcol = tsmcoli.next();
+			var tval = tsmfldi.next();
+			tempObject[tcol.getColumnName()] = tval;
 			}
-		var tcol = tsmcoli.next();
-		var tval = tsmfldi.next();
-		tempObject[tcol.getColumnName()] = tval;
-		}
-	  tempArray.push(tempObject);  // end of record
-	  var copyStr = "" + tn + " = tempArray";
-	  logDebug("ASI Table Array : " + tn + " (" + numrows + " Rows)");
-	  eval(copyStr);  // move to table name
-	  }
-*/
-	
-/*	loadASITables4ACA_corrected();
-	var asiTables = getASITablesArray();
-	//showMessage=true
-	//comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
-	if(SOURCEOFWATERSUPPLY.length<1){
-		noRows = true;
-	}
-	else {
-		var rowFound = false;
-		for(x in SOURCEOFWATERSUPPLY){
-			rowFound = true;
-		}
-		if(matches(SOURCEOFWATERSUPPLY[0]["Type of Water Supply"], null, "", undefined)) {
-			noRows = true;
-		}
-	}
-*/
-	var asiTables = loadASITables4ACAasArray();
-	if(asiTables["SOURCE OF WATER SUPPLY"]){
-		if(asiTables["SOURCE OF WATER SUPPLY"].length<1){
+		  tempArray.push(tempObject);  // end of record
+		  var copyStr = "" + tn + " = tempArray";
+		  logDebug("ASI Table Array : " + tn + " (" + numrows + " Rows)");
+		  eval(copyStr);  // move to table name
+		  }
+	*/
+		
+	/*	loadASITables4ACA_corrected();
+		var asiTables = getASITablesArray();
+		//showMessage=true
+		//comment("table Legnth " + SOURCEOFWATERSUPPLY.length + "table data " + SOURCEOFWATERSUPPLY[0]["Type of Water Supply"])
+		if(SOURCEOFWATERSUPPLY.length<1){
 			noRows = true;
 		}
 		else {
 			var rowFound = false;
-			for(x in asiTables["SOURCE OF WATER SUPPLY"]){
+			for(x in SOURCEOFWATERSUPPLY){
 				rowFound = true;
 			}
+			if(matches(SOURCEOFWATERSUPPLY[0]["Type of Water Supply"], null, "", undefined)) {
+				noRows = true;
+			}
 		}
-		if(matches(asiTables["SOURCE OF WATER SUPPLY"][0]["Type of Water Supply"], null, "", undefined)) {
+	*/
+		var asiTables = loadASITables4ACAasArray();
+		if(asiTables["SOURCE OF WATER SUPPLY"]){
+			if(asiTables["SOURCE OF WATER SUPPLY"].length<1){
+				noRows = true;
+			}
+			else {
+				var rowFound = false;
+				for(x in asiTables["SOURCE OF WATER SUPPLY"]){
+					rowFound = true;
+				}
+			}
+			if(matches(asiTables["SOURCE OF WATER SUPPLY"][0]["Type of Water Supply"], null, "", undefined)) {
+				noRows = true;
+			}
+		}else{
 			noRows = true;
 		}
-	}else{
-		noRows = true;
-	}
 
-	if(noRows) {
-		cancel = true;
-		showMessage = true;
-		comment("The SOURCE OF WATER SUPPLY table requires at least one row.");
+		if(noRows) {
+			cancel = true;
+			showMessage = true;
+			comment("The SOURCE OF WATER SUPPLY table requires at least one row.");
+		}
 	}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate table: " + err.message);
@@ -180,60 +185,65 @@ try{
 }
 //validate contacts
 try {
-	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+	//lwacht: 180305: story 5299: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180305: story 5299: end
+		var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 
-	if(resCurUser.getSuccess()){
-		var contactFnd = false
-		var drpFnd = false;
-		var prepFnd = false;
-		var appFnd = false;
-		var currUser = resCurUser.getOutput();
-		var currEmail = currUser.email;
-		//lwacht: 170810: need person logged in to be able to access the application in the future
-		if(matches(AInfo["publicUserEmail"],"",null)){
-			editAppSpecific4ACA("publicUserEmail",currEmail);
-			prepFnd = true;
-		}else{
-			if(AInfo["publicUserEmail"]==currEmail){
+		if(resCurUser.getSuccess()){
+			var contactFnd = false
+			var drpFnd = false;
+			var prepFnd = false;
+			var appFnd = false;
+			var currUser = resCurUser.getOutput();
+			var currEmail = currUser.email;
+			//lwacht: 170810: need person logged in to be able to access the application in the future
+			if(matches(AInfo["publicUserEmail"],"",null)){
+				editAppSpecific4ACA("publicUserEmail",currEmail);
 				prepFnd = true;
+			}else{
+				if(AInfo["publicUserEmail"]==currEmail){
+					prepFnd = true;
+				}
 			}
-		}
-		var contactList = cap.getContactsGroup();
-		if(contactList != null && contactList.size() > 0){
-			var arrContacts = contactList.toArray();
-			for(var i in arrContacts) {
-				var thisCont = arrContacts[i];
-				var contEmail = thisCont.email;
-				var contType = thisCont.contactType;
-				if(contType == "Designated Responsible Party")
-					drpFnd = true;
-				if(contType == "Business")
-					appFnd = true;
-				if(!matches(contEmail,"",null,"undefined")){
-					if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business")){
-						contactFnd = true;
+			var contactList = cap.getContactsGroup();
+			if(contactList != null && contactList.size() > 0){
+				var arrContacts = contactList.toArray();
+				for(var i in arrContacts) {
+					var thisCont = arrContacts[i];
+					var contEmail = thisCont.email;
+					var contType = thisCont.contactType;
+					if(contType == "Designated Responsible Party")
+						drpFnd = true;
+					if(contType == "Business")
+						appFnd = true;
+					if(!matches(contEmail,"",null,"undefined")){
+						if(contEmail.toUpperCase() == currEmail.toUpperCase() && matches(contType, "Designated Responsible Party", "Business")){
+							contactFnd = true;
+						}
 					}
 				}
 			}
+			//lwacht: changed logic to check for DRP *or* Business
+			if(!prepFnd){
+				if(contactFnd == false && (drpFnd == true || appFnd == true)) {
+					cancel = true;
+					showMessage = true;
+					logMessage("  Error: Only the Business and the Designated Responsible party can update this application.");
+				}	
+			}
 		}
-		//lwacht: changed logic to check for DRP *or* Business
-		if(!prepFnd){
-			if(contactFnd == false && (drpFnd == true || appFnd == true)) {
-				cancel = true;
-				showMessage = true;
-				logMessage("  Error: Only the Business and the Designated Responsible party can update this application.");
-			}	
+		else{
+			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate Contact: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
-	}
-	else{
-		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: Validate Contact: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 	}
 }
 catch (err){
-	logDebug("A JavaScript Error occurred:ACA_ONLOAD_OWNER_APP_UPDATE: Validate Contact: " + err.message);
+	logDebug("A JavaScript Error occurred:ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: Validate Contact: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 /*------------------------------------------------------------------------------------------------------/

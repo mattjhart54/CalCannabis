@@ -1,3 +1,20 @@
+
+
+
+/*------------------------
+	THIS PAGE FLOW IS NOT BEING USED AND SHOULD BE REMOVED
+------------------------*/
+
+
+
+
+
+
+
+
+
+
+
 /*
 | Program : ACA_ONLOAD_OWNER_AMEND_DEFICIENCIES.js
 | Event   : ACA Page Flow onload attachments component
@@ -75,30 +92,35 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	var parCapId = getParent();
-	if(parCapId){
-		var currCap = capId; 
-		capId = parCapId;
-		logDebug("capId: " + parCapId);
-		loadASITables();
-		capId = currCap;
-		if(DEFICIENCIES.length>0){
-			var eText = "Your application " + capIDString + " needs the following information: "  + "\r\n"  + "\r\n";
-			for(row in DEFICIENCIES){
-				if(DEFICIENCIES[row]["Status"]=="Deficient"){
-					eText += " - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"] + "; " + "\r\n"  + "\r\n";
+	//lwacht: 180306: story 5306: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180306: story 5306: end
+		var parCapId = getParent();
+		if(parCapId){
+			var currCap = capId; 
+			capId = parCapId;
+			logDebug("capId: " + parCapId);
+			loadASITables();
+			capId = currCap;
+			if(DEFICIENCIES.length>0){
+				var eText = "Your application " + capIDString + " needs the following information: "  + "\r\n"  + "\r\n";
+				for(row in DEFICIENCIES){
+					if(DEFICIENCIES[row]["Status"]=="Deficient"){
+						eText += " - " + DEFICIENCIES[row]["Field or Document Name"] + ": " + DEFICIENCIES[row]["Deficiency Details"] + "; " + "\r\n"  + "\r\n";
+					}
 				}
+				var appContact = getContactObj(capId,"Bussiness");
+				editAppSpecific4ACA("Application Deficiencies", eText);
+			}else{
+				editAppSpecific4ACA("Application Deficiencies", "There are currently no deficiencies on your application.");
 			}
-			var appContact = getContactObj(capId,"Bussiness");
-			editAppSpecific4ACA("Application Deficiencies", eText);
-		}else{
-			editAppSpecific4ACA("Application Deficiencies", "There are currently no deficiencies on your application.");
 		}
 	}
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_OWNER_AMEND_DEFICIENCIES: Main function: " + err.message + br + err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_AMEND_DEFICIENCIES: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_AMEND_DEFICIENCIES: Main function: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 
 // page flow custom code end

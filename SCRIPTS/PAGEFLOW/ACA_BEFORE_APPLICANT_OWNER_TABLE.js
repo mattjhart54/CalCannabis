@@ -77,138 +77,143 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-	var contactList = cap.getContactsGroup();
-	if(contactList != null && contactList.size() > 0){
-		var arrContacts = contactList.toArray();
-		for(var i in arrContacts) {
-			var thisCont = arrContacts[i];
-			var emailText = "";
-			//for(x in thisCont){
-			//	if(typeof(thisCont[x])!="function"){
-			//		logDebug(x+ ": " + thisCont[x]);
-			//		emailText +=(x+ ": " + thisCont[x]) + br;
-			//	}
-			//}
-			var contType = thisCont.contactType;
-			showMessage=true;
-			if(contType =="Designated Responsible Party") {
-				//var refContNrb = thisCont.refContactNumber;
-				var drpContact = [];
-				var drpFName = ""+thisCont.firstName;
-				var drpLName = ""+thisCont.lastName;
-				var drpEmail = ""+thisCont.email.toLowerCase();
-			}
-		}
-	}
-	loadASITables4ACA_corrected();
-	var tblOwner = [];
-	var tblCorrection = false;
-	if(OWNERS.length<1){
-		cancel = true;
-		showMessage = true;
-		comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
-	}else{
-		var drpInTable = false;
-		for(row in OWNERS){
-			//get contact by email
-			var correctLastName = false;
-			var capitalLastName = false;
-			var matchLastName = "";
-			var correctFirstName = false;
-			tblOwner.push(OWNERS[row]);
-			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
-			var ownerEmail = ""+OWNERS[row]["Email Address"];
-			ownEmail = ownerEmail.toLowerCase();
-			qryPeople.setEmail(ownEmail);
-			var ownFName = ""+OWNERS[row]["First Name"];
-			var ownLName = ""+OWNERS[row]["Last Name"];
-			if(ownEmail==drpEmail && ownLName==drpLName){
-				drpInTable = true;
-			}
-			//get reference contact(s)
-			var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
-			if (!qryResult.getSuccess()){ 
-				logDebug("WARNING: error searching for people : " + qryResult.getErrorMessage());
-			}else{
-				var peopResult = qryResult.getOutput();
-				if (peopResult.length > 0){
-					for(p in peopResult){
-						var thisPerson = peopResult[p];
-						var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
-						if(pplRes.getSuccess()){
-							var thisPpl = pplRes.getOutput();
-							logDebug("first name: " + thisPpl.getResFirstName());
-							var thisFName = ""+thisPpl.getResFirstName();
-							var thisLName = ""+thisPpl.getResLastName();
-							//logDebug("Owner table: " + ownFName + " " + ownLName );
-							//logDebug("People table: " + thisFName + " " + thisLName );
-							if(ownLName==thisLName){
-								correctLastName = true;
-								capitalLastName = true;
-							}else{
-								if(ownLName.toUpperCase()==thisLName.toUpperCase()){
-									capitalLastName = true;
-								}else{
-									matchLastName = thisLName;
-								}
-							}
-							if(ownFName==thisFName){
-								correctFirstName = true;
-							}
-						}else{
-							logDebug("WARNING: error retrieving reference contact : " + pplRes.getErrorMessage());
-						}
-					}
-				}else{
-					//email doesn't exist, continue without error
-					correctLastName = true;
-					correctFirstName = true;
-					capitalLastName = true;
-				}
-				//if the capitalization is incorrect, have the user correct
-				//if the last name is wrong, don't allow applicant to progress
-				if(!correctLastName){
-					cancel = true;
-					showMessage = true;
-					comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
-				}else{
-					//if last name is correct, check for capitalization
-					if(!capitalLastName){
-						cancel = true;
-						showMessage = true;
-						comment("The capitalization of the last name '" + ownLName + "' does not match the name on file  '" + matchLastName + "'.  Please correct before continuing.");
-					}
-					//if last name is correct but first name is wrong, just correct the first name and go on.
-					if(!correctFirstName){
-						tblOwner[row]["First Name"]=thisFName;
-						tblCorrection = true;
-					}
+	//lwacht: 180305: story 5298: don't allow script to run against completed records
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if(!matches(capIdStatusClass, "COMPLETE")){
+	//lwacht: 180305: story 5298: end
+		var contactList = cap.getContactsGroup();
+		if(contactList != null && contactList.size() > 0){
+			var arrContacts = contactList.toArray();
+			for(var i in arrContacts) {
+				var thisCont = arrContacts[i];
+				var emailText = "";
+				//for(x in thisCont){
+				//	if(typeof(thisCont[x])!="function"){
+				//		logDebug(x+ ": " + thisCont[x]);
+				//		emailText +=(x+ ": " + thisCont[x]) + br;
+				//	}
+				//}
+				var contType = thisCont.contactType;
+				showMessage=true;
+				if(contType =="Designated Responsible Party") {
+					//var refContNrb = thisCont.refContactNumber;
+					var drpContact = [];
+					var drpFName = ""+thisCont.firstName;
+					var drpLName = ""+thisCont.lastName;
+					var drpEmail = ""+thisCont.email.toLowerCase();
 				}
 			}
 		}
-		if(!drpInTable){
+		loadASITables4ACA_corrected();
+		var tblOwner = [];
+		var tblCorrection = false;
+		if(OWNERS.length<1){
 			cancel = true;
 			showMessage = true;
-			//comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
-			//lwacht 171105: required text per defect 4615
-			comment("Must have at least one owner in the owner table below. At least one owner must be the DRP.");
-		}
-		//table isn't getting removed, so working around for now by putting code to get the first name in the 
-		//script that adds the owner records.
-		/*
-		if(tblCorrection){
-			for(x in tblOwner){
-				logDebug(x + ": " + tblOwner[x]);
+			comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
+		}else{
+			var drpInTable = false;
+			for(row in OWNERS){
+				//get contact by email
+				var correctLastName = false;
+				var capitalLastName = false;
+				var matchLastName = "";
+				var correctFirstName = false;
+				tblOwner.push(OWNERS[row]);
+				var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
+				var ownerEmail = ""+OWNERS[row]["Email Address"];
+				ownEmail = ownerEmail.toLowerCase();
+				qryPeople.setEmail(ownEmail);
+				var ownFName = ""+OWNERS[row]["First Name"];
+				var ownLName = ""+OWNERS[row]["Last Name"];
+				if(ownEmail==drpEmail && ownLName==drpLName){
+					drpInTable = true;
+				}
+				//get reference contact(s)
+				var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
+				if (!qryResult.getSuccess()){ 
+					logDebug("WARNING: error searching for people : " + qryResult.getErrorMessage());
+				}else{
+					var peopResult = qryResult.getOutput();
+					if (peopResult.length > 0){
+						for(p in peopResult){
+							var thisPerson = peopResult[p];
+							var pplRes = aa.people.getPeople(thisPerson.getContactSeqNumber());
+							if(pplRes.getSuccess()){
+								var thisPpl = pplRes.getOutput();
+								logDebug("first name: " + thisPpl.getResFirstName());
+								var thisFName = ""+thisPpl.getResFirstName();
+								var thisLName = ""+thisPpl.getResLastName();
+								//logDebug("Owner table: " + ownFName + " " + ownLName );
+								//logDebug("People table: " + thisFName + " " + thisLName );
+								if(ownLName==thisLName){
+									correctLastName = true;
+									capitalLastName = true;
+								}else{
+									if(ownLName.toUpperCase()==thisLName.toUpperCase()){
+										capitalLastName = true;
+									}else{
+										matchLastName = thisLName;
+									}
+								}
+								if(ownFName==thisFName){
+									correctFirstName = true;
+								}
+							}else{
+								logDebug("WARNING: error retrieving reference contact : " + pplRes.getErrorMessage());
+							}
+						}
+					}else{
+						//email doesn't exist, continue without error
+						correctLastName = true;
+						correctFirstName = true;
+						capitalLastName = true;
+					}
+					//if the capitalization is incorrect, have the user correct
+					//if the last name is wrong, don't allow applicant to progress
+					if(!correctLastName){
+						cancel = true;
+						showMessage = true;
+						comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
+					}else{
+						//if last name is correct, check for capitalization
+						if(!capitalLastName){
+							cancel = true;
+							showMessage = true;
+							comment("The capitalization of the last name '" + ownLName + "' does not match the name on file  '" + matchLastName + "'.  Please correct before continuing.");
+						}
+						//if last name is correct but first name is wrong, just correct the first name and go on.
+						if(!correctFirstName){
+							tblOwner[row]["First Name"]=thisFName;
+							tblCorrection = true;
+						}
+					}
+				}
 			}
-			removeASITable("OWNERS");
-			var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN");
-			if(!tssmResult.getSuccess()){
-				aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: RemoveASIT: "+ startDate, capId + "; " + tssmResult.getErrorMessage() + "; ");
+			if(!drpInTable){
+				cancel = true;
+				showMessage = true;
+				//comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
+				//lwacht 171105: required text per defect 4615
+				comment("Must have at least one owner in the owner table below. At least one owner must be the DRP.");
 			}
-			asit = cap.getAppSpecificTableGroupModel();
-			addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
+			//table isn't getting removed, so working around for now by putting code to get the first name in the 
+			//script that adds the owner records.
+			/*
+			if(tblCorrection){
+				for(x in tblOwner){
+					logDebug(x + ": " + tblOwner[x]);
+				}
+				removeASITable("OWNERS");
+				var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN");
+				if(!tssmResult.getSuccess()){
+					aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: RemoveASIT: "+ startDate, capId + "; " + tssmResult.getErrorMessage() + "; ");
+				}
+				asit = cap.getAppSpecificTableGroupModel();
+				addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
+			}
+			*/
 		}
-		*/
 	}
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_APPLICANT_OWNER_TABLE: " + err.message);
