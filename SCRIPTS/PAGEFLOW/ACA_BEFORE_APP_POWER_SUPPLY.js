@@ -145,6 +145,16 @@ try {
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_APP_POWER_SUPPLY: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
+function getCapIdStatusClass(inCapId){
+    var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
+    var retClass = null;
+    if(inCapScriptModel){
+        var tempCapModel = inCapScriptModel.getCapModel();
+        retClass = tempCapModel.getCapClass();
+    }
+   
+    return retClass;
+}
 // page flow custom code end
 
 

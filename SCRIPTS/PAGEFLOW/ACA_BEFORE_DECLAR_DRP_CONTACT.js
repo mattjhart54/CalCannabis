@@ -173,6 +173,7 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Require County and BOE: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
+
 try {
 	//lwacht: 180306: story 5301: don't allow script to run against completed records
 	var capIdStatusClass = getCapIdStatusClass(capId);
@@ -238,6 +239,18 @@ try {
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_DECLAR_DRP_CONTACT: Owner Percentage: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 
 }
+
+function getCapIdStatusClass(inCapId){
+    var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
+    var retClass = null;
+    if(inCapScriptModel){
+        var tempCapModel = inCapScriptModel.getCapModel();
+        retClass = tempCapModel.getCapClass();
+    }
+   
+    return retClass;
+}
+
 // page flow custom code end
 
 

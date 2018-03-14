@@ -221,6 +221,16 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, publicUserID + br + capId + br + err.message+ br + err.stack);
 }
 
+function getCapIdStatusClass(inCapId){
+    var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
+    var retClass = null;
+    if(inCapScriptModel){
+        var tempCapModel = inCapScriptModel.getCapModel();
+        retClass = tempCapModel.getCapClass();
+    }
+   
+    return retClass;
+}
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========END=Main=Loop================>

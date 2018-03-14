@@ -246,6 +246,16 @@ catch (err){
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_APPLICANT_WATER_SUPPLY_TABLE: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
+function getCapIdStatusClass(inCapId){
+    var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
+    var retClass = null;
+    if(inCapScriptModel){
+        var tempCapModel = inCapScriptModel.getCapModel();
+        retClass = tempCapModel.getCapClass();
+    }
+   
+    return retClass;
+}
 /*------------------------------------------------------------------------------------------------------/
 | <===========END=Main=Loop================>
 /-----------------------------------------------------------------------------------------------------*/

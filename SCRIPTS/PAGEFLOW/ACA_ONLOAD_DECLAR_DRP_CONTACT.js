@@ -144,6 +144,17 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_DECLAR_DRP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
+
+function getCapIdStatusClass(inCapId){
+    var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
+    var retClass = null;
+    if(inCapScriptModel){
+        var tempCapModel = inCapScriptModel.getCapModel();
+        retClass = tempCapModel.getCapClass();
+    }
+   
+    return retClass;
+}
 // page flow custom code end
 
 
