@@ -47,8 +47,7 @@ try{
 	logDebug("An error has occurred in WTUB:ENFORCEMENT/CASE/NA/NA: Prevent NOV Workflow updates: " + err.message);
 	logDebug(err.stack);
 }
-//
-lwacht: 180320: story 5233: end
+//lwacht: 180320: story 5233: end
 /*lwacht: 180320: 
 		story 5228: Corrective Action Plan = Yes, the Supervisor Review Case Disposition workflow task status 
 		cannot be set to "Closed - Corrective Action Plan Approved" if a document with the type "Corrective 
