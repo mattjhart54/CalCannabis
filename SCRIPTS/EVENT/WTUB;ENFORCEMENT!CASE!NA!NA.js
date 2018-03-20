@@ -47,4 +47,31 @@ try{
 	logDebug("An error has occurred in WTUB:ENFORCEMENT/CASE/NA/NA: Prevent NOV Workflow updates: " + err.message);
 	logDebug(err.stack);
 }
-
+//
+lwacht: 180320: story 5233: end
+/*lwacht: 180320: 
+		story 5228: Corrective Action Plan = Yes, the Supervisor Review Case Disposition workflow task status 
+		cannot be set to "Closed - Corrective Action Plan Approved" if a document with the type "Corrective 
+		Action Plan" is not attached to the case (dependent on Story 5204).
+*/
+try{
+	if(wfTask=="Case Disposition" && wfStatus == "Closed - Corrective Action Plan Approved" && matches(AInfo["Corrective Action Plan"], "Yes", "Y", "YES")){
+		var docExists = false;
+		var arrDocs = getDocumentList();
+		for(doc in arrDocs){
+			var thisDocument = arrDocs[doc];
+			if (thisDocument.getDocCategory() == "Corrective Action Plan"){
+				docExists=true;
+			}
+		}
+		if(!docExists){
+			cancel = true;
+			showMessage = true;
+			comment("The 'Corrective Action Plan' document must be uploaded before continuing");
+		}
+	}
+} catch(err){
+	logDebug("An error has occurred in WTUB:ENFORCEMENT/CASE/NA/NA: Prevent Corrective Action Workflow updates:" + err.message);
+	logDebug(err.stack);
+}
+//lwacht: 180320: story 5228: end 
