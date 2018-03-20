@@ -38,7 +38,7 @@ try{
 				if(!docExists){
 					cancel = true;
 					showMessage = true;
-					comment("The 'Request for Hearing' document must be uploaded before continuing");
+					comment("The 'Request for Hearing' document must be uploaded before continuing.");
 				}
 			}
 		}
@@ -66,7 +66,7 @@ try{
 		if(!docExists){
 			cancel = true;
 			showMessage = true;
-			comment("The 'Corrective Action Plan' document must be uploaded before continuing");
+			comment("The 'Corrective Action Plan' document must be uploaded before continuing.");
 		}
 	}
 } catch(err){
