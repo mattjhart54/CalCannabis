@@ -6,7 +6,6 @@
 */
 try{
 	if(wfTask=="Investigation" && matches(wfStatus, "NOV Non-Monetary Approved", "NOV Monetary Approved")){
-		logDebug("VOTE FOR PEDRO");
 		var tblViolNotUpdated = false;
 		var violContested = false;
 		if(VIOLATION){
