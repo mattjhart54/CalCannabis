@@ -8,13 +8,12 @@ try{
 	if(wfTask=="Investigation" && matches(wfStatus, "NOV Non-Monetary Approved", "NOV Monetary Approved")){
 		var violNotUpdated = false;
 		var violContested = false;
-			if(!matches(AInfo["NOV Date"], "",null,"undefined") && matches(AInfo["Violation Contested"], "",null,"undefined")){
-				violNotUpdated = true;
-				logDebug("Bad");
-			}
-			if( matches(AInfo["Violation Contested"], "Y", "YES", "Yes")){
-				violContested = true;
-			}
+		if(!matches(AInfo["NOV Date"], "",null,"undefined") && matches(AInfo["Violation Contested"], "",null,"undefined")){
+			violNotUpdated = true;
+			logDebug("Bad");
+		}
+		if( matches(AInfo["Violation Contested"], "Y", "YES", "Yes")){
+			violContested = true;
 		}
 		if(violNotUpdated){
 			cancel =true;
