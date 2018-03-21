@@ -6,25 +6,20 @@
 */
 try{
 	if(wfTask=="Investigation" && matches(wfStatus, "NOV Non-Monetary Approved", "NOV Monetary Approved")){
-		var tblViolNotUpdated = false;
+		var violNotUpdated = false;
 		var violContested = false;
-		if(VIOLATION){
-			if(VIOLATION.length>0){
-				for(row in VIOLATION){
-					if(!matches(VIOLATION[row]["NOV Date"], "",null,"undefined") && matches(VIOLATION[row]["Violation Contested"], "",null,"undefined")){
-						tblViolNotUpdated = true;
-						logDebug("Bad");
-					}
-					if( matches(VIOLATION[row]["Violation Contested"], "Y", "YES", "Yes")){
-						violContested = true;
-					}
-				}
+			if(!matches(AInfo["NOV Date"], "",null,"undefined") && matches(AInfo["Violation Contested"], "",null,"undefined")){
+				violNotUpdated = true;
+				logDebug("Bad");
+			}
+			if( matches(AInfo["Violation Contested"], "Y", "YES", "Yes")){
+				violContested = true;
 			}
 		}
-		if(tblViolNotUpdated){
+		if(violNotUpdated){
 			cancel =true;
 			showMessage = true;
-			comment("'Violation Contested' field in the VIOLATION table must be updated for one or more rows.");
+			comment("'Violation Contested' field must be updated for one or more rows.");
 		}else{
 			if(violContested){
 				var docExists = false;
