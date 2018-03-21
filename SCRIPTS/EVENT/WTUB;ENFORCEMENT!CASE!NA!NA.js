@@ -18,7 +18,7 @@ try{
 		if(violNotUpdated){
 			cancel =true;
 			showMessage = true;
-			comment("'Violation Contested' field must be updated for one or more rows.");
+			comment("'Violation Contested' field must be updated.");
 		}else{
 			if(violContested){
 				var docExists = false;
