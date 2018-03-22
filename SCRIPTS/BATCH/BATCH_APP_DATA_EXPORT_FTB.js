@@ -67,6 +67,7 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters 
+
 // elycia.juco@cdfa.ca.gov
 aa.env.setValue("lookAheadDays", "-300");
 aa.env.setValue("daySpan", "300");
@@ -82,8 +83,9 @@ aa.env.setValue("licenseContactType", "Designated Responsible Party");
 aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
+aa.env.setValue("appStatus", "Active,Inactive");
  */
-
+ 
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
 var daySpan = getJobParam("daySpan");
@@ -99,6 +101,7 @@ var licenseContactType = getJobParam("licenseContactType");
 var licenseAddressType = getJobParam("licenseAddressType");
 var businessContactType = getJobParam("businessContactType");
 var businessAddressType = getJobParam("licenseAddressType");
+var sArray = getJobParam("appStatus").split(",");
 
 
 if(appTypeType=="*") appTypeType="";
