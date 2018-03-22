@@ -346,7 +346,12 @@ try{
 		
 	//these documents are always required
 		arrReqdDocs_Own.push(governmentIssuedID);
-		arrReqdDocs_Own.push(fingerprintApp);
+		//lwacht : 180322: story ????: only require fingerprint doc when live scan is available
+		var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
+		if(!liveScanNotActive){
+			arrReqdDocs_Own.push(fingerprintApp);
+		}
+		//lwacht : 180322: story ????: end
 		
 	//these are now optional documents
 
