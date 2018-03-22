@@ -348,7 +348,7 @@ try{
 		arrReqdDocs_Own.push(governmentIssuedID);
 		//lwacht : 180322: story ????: only require fingerprint doc when live scan is available
 		var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
-		if(!liveScanNotActive){
+		if(!matches(liveScanNotActive,true, "true")){
 			arrReqdDocs_Own.push(fingerprintApp);
 		}
 		//lwacht : 180322: story ????: end
