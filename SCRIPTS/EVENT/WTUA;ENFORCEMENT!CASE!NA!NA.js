@@ -1,6 +1,6 @@
 //lwacht: 180323: test: close case disposition task with whatever status activated it 
 try{
-	if(isTaskActive("Case Disposition"){
+	if(isTaskActive("Case Disposition")){
 		closeTask("Case Disposition", "Closed - " + wfStatus, "Close via WTUA:ENFORCEMENT/CASE/NA/NA", "");
 	}
 } catch(err){
