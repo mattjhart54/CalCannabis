@@ -193,18 +193,20 @@ try{
 }
 //lwacht 180208: story 5200: end
 
-//mhart 180321: story ????: add no live scan condition
+//mhart 180321: story 5376: add live scan required condition
 try{
-	lScan = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
-	if (lScan) {
-		addStdCondition("Application Condition","LiveScan Required");
+	if(appTypeArray[2]!="Temporary"){
+		lScan = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
+		if (lScan) {
+			addStdCondition("Application Condition","LiveScan Required");
+		}
 	}
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Add livescan condition: " + err.message);
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Add livescan required condition: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Add livescan condition: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Add livescan required condition: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
-//mhart 180321: story ????: end
+//mhart 180321: story 5376: end
 
 //lwacht: 180216: story 5177: adding this back in
 // mhart: Comment out report to test payment processor time out issue
