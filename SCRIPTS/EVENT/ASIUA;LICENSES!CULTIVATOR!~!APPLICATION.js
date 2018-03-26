@@ -62,9 +62,9 @@ try{
 			var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
 			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: getReqdDocs: " + startDate, "capId: " + capId + ": " + br + liveScanNotActive);
 			if(!matches(liveScanNotActive,true, "true")){
-				runReportAttach(capId,"Submitted Annual Application No LiveScan", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
-			}else{
 				runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+			}else{
+				runReportAttach(capId,"Submitted Annual Application No LiveScan", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
 			}
 		}
 		//lwacht 171218 end
