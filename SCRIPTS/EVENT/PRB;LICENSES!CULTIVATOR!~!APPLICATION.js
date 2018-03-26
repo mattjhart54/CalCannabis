@@ -47,7 +47,16 @@ try{
 			//logDebug("getShortNotes(): " + getShortNotes());
 			//logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
-			updateShortNotes(AInfo["Premise County"],licCapId);
+			
+// mhart 180326 User Story 5193 - add city to short notes that already displays county
+			if(matches(AInfo["Premise City"], null, "")) {
+				updateShortNotes(AInfo["Premise County"],licCapId);
+			}
+			else {
+				updateShortNotes(AInfo["Premise City"] + " - " + AInfo["Premise County"],licCapId);
+			}
+// mhart 180326 User Story 5193 
+			
 			updateWorkDesc(workDescGet(capId),licCapId);
 			copyAppSpecific(licCapId);
 			editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
