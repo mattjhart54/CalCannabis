@@ -64,7 +64,7 @@ try{
 			if(!matches(liveScanNotActive,true, "true")){
 				runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
 			}else{
-				runReportAttach(capId,"Submitted Annual Application No LiveScan", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+				runReportAttach(capId,"Submitted Annual App No LiveScan", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
 			}
 		}
 		//lwacht 171218 end
