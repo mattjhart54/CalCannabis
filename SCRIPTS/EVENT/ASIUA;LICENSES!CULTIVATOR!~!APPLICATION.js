@@ -53,8 +53,8 @@ try{
 	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")) {
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
-		updateTask("Administrative Review","Under Review","In Compliance notification recieved from Local Authority","");
-		updateAppStatus("Under Administrative Review", "In Compliance notification recieved from Local Authority");
+		updateTask("Administrative Review","Under Review","In Compliance notification received from Local Authority","");
+		updateAppStatus("Under Administrative Review", "In Compliance notification received from Local Authority");
 		//lwacht 171218: two reports now: temp and annual
 		if(appTypeArray[2] == "Temporary") {
 			runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
@@ -62,9 +62,9 @@ try{
 			var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
 			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: getReqdDocs: " + startDate, "capId: " + capId + ": " + br + liveScanNotActive);
 			if(!matches(liveScanNotActive,true, "true")){
-				runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+				runReportAttach(capId,"Submitted Annual Application", "altId", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
 			}else{
-				runReportAttach(capId,"Submitted Annual App No LiveScan", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+				runReportAttach(capId,"Submitted Annual App No LiveScan", "altId", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
 			}
 		}
 		//lwacht 171218 end
