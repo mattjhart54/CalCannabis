@@ -51,9 +51,14 @@ try{
 			logDebug("newAppName: " + newAppName);
 			editAppName(newAppName,licCapId);
 			//lwacht 171220: uncommenting short notes update
-			//mhart update shortnotes with premise county
-			//updateShortNotes(getShortNotes(),licCapId);
-			updateShortNotes(AInfo["Premise County"],licCapId);
+// mhart 180326 User Story 5193 - add city to short notes that already displays county
+			if(matches(AInfo["Premise City"], null, "")) {
+				updateShortNotes(AInfo["Premise County"],licCapId);
+			}
+			else {
+				updateShortNotes(AInfo["Premise City"] + " - " + AInfo["Premise County"],licCapId);
+			}
+// mhart 180326 User Story 5193 
 			//lwacht 171220: end
 			//lwacht 171214: uncommenting this line as the legal business name is required again
 			//updateWorkDesc(workDescGet(capId),licCapId);
