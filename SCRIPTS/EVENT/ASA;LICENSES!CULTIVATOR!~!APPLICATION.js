@@ -110,3 +110,19 @@ try{
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
 	logDebug(err.stack);
 }
+//mhart 180321: story 5376: add live scan required condition
+try{
+	if(!publicUser){
+		if(appTypeArray[2]!="Temporary"){
+			lScan = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
+			if (lScan) {
+				addStdCondition("Application Condition","LiveScan Required");
+			}
+		}
+	}
+} catch(err){
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Add livescan required condition: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Add livescan required condition: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+}
+//mhart 180321: story 5376: end
