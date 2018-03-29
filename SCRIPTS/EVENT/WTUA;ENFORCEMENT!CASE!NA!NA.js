@@ -2,7 +2,7 @@
 try{
 	if(isTaskActive("Case Disposition")){
 		closeTask("Case Disposition", "Closed - " + wfStatus, "Closed via WTUA:ENFORCEMENT/CASE/NA/NA", "");
-		updateAppStatus("Closed - " + wfStatus,"Closed via WTUA:ENFORCEMENT/CASE/NA/NA");
+		updateAppStatus("CL: " + wfStatus,"Closed via WTUA:ENFORCEMENT/CASE/NA/NA");
 	}
 } catch(err){
 	logDebug("An error has occurred in WTUA:ENFORCEMENT/CASE/NA/NA: Close Case Disposition task:" + err.message);
