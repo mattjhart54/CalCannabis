@@ -6,7 +6,7 @@ try{
 				closeTask("Case Disposition", "CL-Corrective Action Plan APV", "Closed via WTUA:ENFORCEMENT/CASE/NA/NA", "");
 				updateAppStatus("CL-Corrective Action Plan APV","Closed via WTUA:ENFORCEMENT/CASE/NA/NA");
 			}else{
-				if(isTaskStatus("Supervisor Review", "Administrative Plan Approved")){
+				if(isTaskStatus("Supervisor Review", "Administrative Hold Approved")){
 					closeTask("Case Disposition", "CL-Administrative Hold APV", "Closed via WTUA:ENFORCEMENT/CASE/NA/NA", "");
 					updateAppStatus("CL-Administrative Hold APV","Closed via WTUA:ENFORCEMENT/CASE/NA/NA");
 				}else{
