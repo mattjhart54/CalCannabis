@@ -5,7 +5,10 @@
 		"NOV Non-Monetary Approved" if a document with the type "Request for Hearing" is not attached to the case (dependent on Story 5204).
 */
 try{
+	//lwacht: 180320: story 5233: because of changed workflow, removing the wfTask criterion
 	if(wfTask=="Investigation" && matches(wfStatus, "NOV Non-Monetary Approved", "NOV Monetary Approved")){
+	if(matches(wfStatus, "NOV Non-Monetary Approved", "NOV Monetary Approved")){
+	//lwacht: 180320: story 5233: end
 		var violNotUpdated = false;
 		var violContested = false;
 		if(!matches(AInfo["NOV Date"], "",null,"undefined") && matches(AInfo["Violation Contested"], "",null,"undefined")){
