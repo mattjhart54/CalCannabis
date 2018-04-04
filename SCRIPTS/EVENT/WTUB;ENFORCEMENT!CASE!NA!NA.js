@@ -48,7 +48,10 @@ try{
 		Action Plan" is not attached to the case (dependent on Story 5204).
 */
 try{
-	if(wfTask=="Case Disposition" && wfStatus == "Closed - Corrective Action Plan Approved" && matches(AInfo["Corrective Action Plan"], "Yes", "Y", "YES")){
+	//lwacht: 180404: story 5233: because of changed workflow, removing the wfTask criterion
+	//if(wfTask=="Case Disposition" && wfStatus == "Closed - Corrective Action Plan Approved" && matches(AInfo["Corrective Action Plan"], "Yes", "Y", "YES")){
+	if(wfStatus == "Closed - Corrective Action Plan Approved" && matches(AInfo["Corrective Action Plan"], "Yes", "Y", "YES")){
+	//lwacht: 180404: story 5233: end
 		var docExists = false;
 		var arrDocs = getDocumentList();
 		for(doc in arrDocs){
