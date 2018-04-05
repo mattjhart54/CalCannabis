@@ -52,9 +52,8 @@ try{
 */
 try{
 	//lwacht: 180404: story 5233: because of changed workflow, removing the wfTask criterion
-	//mhart 180404 story 5233 adding task check for legal review per jennifer
 	//if(wfTask=="Case Disposition" && wfStatus == "Closed - Corrective Action Plan Approved" && matches(AInfo["Corrective Action Plan"], "Yes", "Y", "YES")){
-	if(wfTask == "Legal Review" && wfStatus == "Corrective Action Plan Approved" && matches(AInfo["Corrective Action Plan"], "Yes", "Y", "YES")){
+	if(wfStatus == "Corrective Action Plan Approved" && matches(AInfo["Corrective Action Plan"], "Yes", "Y", "YES")){
 	//lwacht: 180404: story 5233: end
 		var docExists = false;
 		var arrDocs = getDocumentList();
