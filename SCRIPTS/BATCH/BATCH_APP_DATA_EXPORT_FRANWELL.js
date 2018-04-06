@@ -68,7 +68,7 @@ else
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
 // elycia.juco@cdfa.ca.gov
-aa.env.setValue("lookAheadDays", "-30");
+aa.env.setValue("lookAheadDays", "-1");
 aa.env.setValue("daySpan", "30");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
@@ -258,13 +258,13 @@ try{
 		}
 		cap = aa.cap.getCap(capId).getOutput();	
 		var capModel = aa.cap.getCap(capId).getOutput().getCapModel();
-		var rptDateOrig = capModel.getReportedDate().toString().substring(0,10);
+		var rptDateOrig = capModel.getFileDate().toString().substring(0,10);
 		var rptDateConv = rptDateOrig.split("-");
 		var rptDate = new Date(""+rptDateConv[0], ""+rptDateConv[1] - 1, ""+rptDateConv[2]);
 		var fromTime = fromJSDate.getTime();
 		var toTime = toJSDate.getTime();
 		if(rptDate.getTime() < fromTime || rptDate.getTime() > toTime){
-			logDebug("Skipping due to incorrect date: " + altId);
+			logDebug("Skipping due to incorrect date: " + altId + "( " + rptDateOrig + ")");
 			badDate++;
 			continue;
 		}
@@ -277,6 +277,7 @@ try{
 			continue;
 		}
 		logDebug("Processing altId: " + altId);
+		//capCount++;
 		var rptLine = "";
 		rptLine = altId+",";
 		var thisContact = getContactByType(contactType,capId);
