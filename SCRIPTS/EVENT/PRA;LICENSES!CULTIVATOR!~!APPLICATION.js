@@ -62,3 +62,31 @@ try{
 	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Fees Paid: " + err.message);
 	logDebug(err.stack);
 }
+//mhart 180409 user story 5391 - Send submitted application notice when the application fee is paid in full
+try {
+	if(balanceDue<=0){
+		feeFound = false
+		feeTbl = loadFees(capId);
+			for(x in feeTbl) {
+				feeItem = feeTbl[x];
+				if(feeItem.code.indexOf("LI",6) > 0  || feeItem.code == "LIC_NSF") {
+					feeFound = true;
+				}
+			}
+		if(!feeFound) {
+			contType = "Designated Responsible Party";
+			addrType = "Mailing";
+			var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
+			if(!matches(liveScanNotActive,true, "true")){
+				runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+			}else{
+				runReportAttach(capId,"Submitted Annual App No LiveScan", "altId", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+			}	
+			emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);	
+		}
+	}
+}catch(err){
+	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Fees Paid: " + err.message);
+	logDebug(err.stack);
+}
+//mhart 180409 user story 5391 - end
