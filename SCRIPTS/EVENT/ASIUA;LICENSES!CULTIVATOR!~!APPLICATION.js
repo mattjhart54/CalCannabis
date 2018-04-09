@@ -56,9 +56,12 @@ try{
 		updateTask("Administrative Review","Under Review","In Compliance notification received from Local Authority","");
 		updateAppStatus("Under Administrative Review", "In Compliance notification received from Local Authority");
 		//lwacht 171218: two reports now: temp and annual
+		//mhart 180409: user story 5391 comment out code to send submitted letter and email for annual application.  this now runs when application fee is paid.
 		if(appTypeArray[2] == "Temporary") {
 			runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
-		}else{
+			emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);
+		}
+	/*	else{
 			var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
 			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: getReqdDocs: " + startDate, "capId: " + capId + ": " + br + liveScanNotActive);
 			if(!matches(liveScanNotActive,true, "true")){
@@ -66,9 +69,10 @@ try{
 			}else{
 				runReportAttach(capId,"Submitted Annual App No LiveScan", "altId", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
 			}
+			emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);
 		}
 		//lwacht 171218 end
-		emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);
+	*/ //mhart 180409: user story 5391 end
 	}
 	if(AInfo["Local Authority Response"] == "Non Compliance"  && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60"))  {
 		closeTask("Administrative Review","Incomplete Response","Non-Compliance notification recieved from Local Authority","");
