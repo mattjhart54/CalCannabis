@@ -594,13 +594,13 @@ try{
 			rptLine += "N";
 		}
 		//sic: never collected
-		rptLine += spacePad("",4);
+		rptLine += spacePad("9999",4);
 		//type of license--unknown how to populate at this timeExpired
 		rptLine += spacePad("",4);
 		//frequency: always annual?
 		rptLine += "A";
 		//licensing board number
-		rptLine += spacePad("",3);
+		rptLine += spacePad("859",3);
 		//date of birth
 		rptLine += bDate;
 		//drivers license: not collected

@@ -68,7 +68,7 @@ else
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
 // elycia.juco@cdfa.ca.gov
-aa.env.setValue("lookAheadDays", "-1");
+aa.env.setValue("lookAheadDays", "-6");
 aa.env.setValue("daySpan", "30");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
