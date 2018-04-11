@@ -45,7 +45,11 @@ try{
 	var ownership = {condition : "Premises - Property Ownership Documentation", document : "Premises - Property Ownership Documentation"};
 	//var operationDate = {condition : "Premises - Evidence of the Date Operations Began", document : "Premises - Evidence of the Date Operations Began"};
 	var enviroStor = {condition : "Premises - EnviroStor Hazardous Materials Search", document : "Premises - EnviroStor Hazardous Materials Search"};
-	var premiseDiagram = {condition : "Cultivation Plan - Property Diagram and Detailed Premises Diagram", document : "Cultivation Plan - Property Diagram and Detailed Premises Diagram"};
+//mhart 180411 user story 5353 new doc types	
+	//var premiseDiagram = {condition : "Cultivation Plan - Property Diagram and Detailed Premises Diagram", document : "Cultivation Plan - Property Diagram and Detailed Premises Diagram"};
+	var propertyDiagram = {condition : "Cultivation Plan - Property Diagram", document : "Cultivation Plan - Property Diagram"};
+	var detailPremises = {condition : "Cultivation Plan - Detailed Premises", document : "Cultivation Plan - Detailed Premises"};
+//mhart 180411 user story 5353
 	var wastePlan = {condition : "Cultivation Plan - Waste Management Plan", document : "Cultivation Plan - Waste Management Plan"};
 	var pestPlan = {condition : "Cultivation Plan - Pest Management Plan", document : "Cultivation Plan - Pest Management Plan"};
 	var lightDiagram = {condition : "Cultivation Plan - Lighting Diagram", document : "Cultivation Plan - Lighting Diagram"};
@@ -124,17 +128,26 @@ try{
 		if(matches(AInfo["License Type"],"Specialty Cottage Indoor","Specialty Cottage Mixed-Light Tier 1","Specialty Cottage Mixed-Light Tier 2",
 				"Specialty Indoor","Specialty Mixed-Light Tier 1","Specialty Mixed-Light Tier 2","Small Indoor","Small Mixed-Light Tier 1","Small Mixed-Light Tier 2",
 				"Medium Indoor","Medium Mixed-Light Tier 1","Medium Mixed-Light Tier 2")) {
-			need_premiseDiagram = true;
+//mhart 180411 user story 5353 new doc types				
+			need_propertyDiagram = true;
+			need_detailPremises = true;	
+//mhart 180411 user story 5353 end			
 			need_wastePlan = true;
 			need_pestPlan = true;
 			need_lightDiagram = true;		}
 		if(matches(AInfo["License Type"],"Specialty Cottage Outdoor","Specialty Outdoor","Small Outdoor","Medium Outdoor","Nursery")) {
-			need_premiseDiagram = true;
+//mhart 180411 user story 5353 new doc types		
+			need_propertyDiagram = true;
+			need_detailPremises = true;
+//mhart 180411 user story 5353 end			
 			need_wastePlan = true;
 			need_pestPlan = true;
 		}
 		if(AInfo["License Type"] =="Processor") {
-			need_premiseDiagram = true;
+//mhart 180411 user story 5353 new doc types		
+			need_propertyDiagram = true;
+			need_detailPremises = true;
+//mhart 180411 user story 5353 end			
 			need_wastePlan = true;
 		}
 
@@ -145,13 +158,22 @@ try{
 				removeCapCondition(conditionType, lightDiagram.condition);
 			}
 		}
-		if(need_premiseDiagram){
-			arrReqdDocs_App.push(premiseDiagram);
+//mhart 180411 user story 5353 new doc types
+		if(need_detailPremises){
+			arrReqdDocs_App.push(detailPremises);
 		}else{
-			if(appHasCondition(conditionType, null, premiseDiagram.condition, null)){
-				removeCapCondition(conditionType, premiseDiagram.condition);
+			if(appHasCondition(conditionType, null, detailPremises.condition, null)){
+				removeCapCondition(conditionType, detailPremises.condition);
 			}
 		}
+		if(need_propertyDiagram){
+			arrReqdDocs_App.push(propertyDiagram);
+		}else{
+			if(appHasCondition(conditionType, null, propertyDiagram.condition, null)){
+				removeCapCondition(conditionType, propertyDiagram.condition);
+			}
+		}
+//mhart 180411 user story 5353 end		
 		if(need_pestPlan){
 			arrReqdDocs_App.push(pestPlan);
 		}else{
