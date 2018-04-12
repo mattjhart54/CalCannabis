@@ -13,3 +13,6 @@ try{
 	logDebug(err.stack);
 }
 */
+		showMessage = true;
+		comment("VOTE FOR PEDRO!");
+		cancel = true;
