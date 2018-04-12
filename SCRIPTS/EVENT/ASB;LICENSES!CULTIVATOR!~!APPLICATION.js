@@ -1,4 +1,34 @@
+//lwacht: 180412: story 5428:  don't allow submission until everything is completed
+try{
+	var incompleteApp = false;
+	if(matches(AInfo["License Type"],"",null,"undefined")){
+		incompleteApp = true;
+	}
+	if(matches(AInfo["Business Entity Structure"],"",null,"undefined")){
+		incompleteApp = true;
+	}
+	if(matches(AInfo["Premise County"],"",null,"undefined")){
+		incompleteApp = true;
+	}
+	if(matches(AInfo["Local Authority Type"],"",null,"undefined")){
+		incompleteApp = true;
+	}
+	if(incompleteApp){
+		showMessage = true;
+		cancel = true;
+		comment("The declaration record has not been completed.  Please edit each page to ensure all required fields are populated.");
+	}
+} catch (err) {
+	showDebug =true;
+	logDebug("An error has occurred in ASB:Licenses/Cultivation/*/Declaration: Completed field check: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/OwnerApplication: Completed field check: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
+}
+//lwacht: 180412: story 5428: end
+
+
 //lwacht 180104 Story 5105 start
+/*
 try{
 	if(appTypeArray[2]!="Temporary"){
 		cancel = true;
@@ -7,12 +37,12 @@ try{
 	}
 }catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ASB:Licenses/Cultivation/*/Application: No Submittal: " + err.message);
+	logDebug("An error has occurred in ASB:Licenses/Cultivation/* /Application: No Submittal: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/Application: No Submittal: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/ * /Application: No Submittal: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
 }
 //lwacht 180104 Story 5105 end
-
+*/
 
 //lwacht: double checking required docs
 /* lwacht: not working - removing
