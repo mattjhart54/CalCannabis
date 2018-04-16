@@ -1,22 +1,24 @@
 //lwacht: 180412: story 5428:  don't allow submission until everything is completed
 try{
-	var incompleteApp = false;
-	if(matches(AInfo["License Type"],"",null,"undefined")){
-		incompleteApp = true;
-	}
-	if(matches(AInfo["Business Entity Structure"],"",null,"undefined")){
-		incompleteApp = true;
-	}
-	if(matches(AInfo["Premise County"],"",null,"undefined")){
-		incompleteApp = true;
-	}
-	if(matches(AInfo["Local Authority Type"],"",null,"undefined")){
-		incompleteApp = true;
-	}
-	if(incompleteApp){
-		showMessage = true;
-		cancel = true;
-		comment("The declaration record has not been completed.  Please edit each page to ensure all required fields are populated.");
+	if(publicUser){
+		var incompleteApp = false;
+		if(matches(AInfo["License Type"],"",null,"undefined")){
+			incompleteApp = true;
+		}
+		if(matches(AInfo["Business Entity Structure"],"",null,"undefined")){
+			incompleteApp = true;
+		}
+		if(matches(AInfo["Premise County"],"",null,"undefined")){
+			incompleteApp = true;
+		}
+		if(matches(AInfo["Local Authority Type"],"",null,"undefined")){
+			incompleteApp = true;
+		}
+		if(incompleteApp){
+			showMessage = true;
+			cancel = true;
+			comment("The record has not been completed.  Please edit each page to ensure all required fields are populated.");
+		}
 	}
 } catch (err) {
 	showDebug =true;
