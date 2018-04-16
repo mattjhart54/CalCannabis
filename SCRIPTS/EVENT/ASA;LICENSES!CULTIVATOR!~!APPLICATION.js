@@ -19,7 +19,7 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application:  DRP Notification: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-//lwacht: 171214: story 5175: create a reference contact for the temp drp and bsns contact
+//lwacht: 180416: story 5175: create a reference contact for the temp drp and bsns contact
 try{
 	if(!publicUser){
 		//lwacht: create reference contact and public user account for the DRP		
@@ -213,7 +213,7 @@ try{
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: Create DRP/Bsns/ASOP: " + err.message);
 	logDebug(err.stack);
 }
-//lwacht: 171214: story 5175: end
+//lwacht: 180416: story 5175: end
 
 //mhart
 //update work description with Legal Business Name

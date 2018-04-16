@@ -166,3 +166,48 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: AltID Logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
+
+//lwacht: 180416: story 5175: create a reference contact for the Owner contact
+try{
+	if(!publicUser){
+		//lwacht: create reference contact and public user account for the Owner		
+		var capContactResult = aa.people.getCapContactByCapID(capId);
+		var ownExists = false;
+		var ownEmail = false;
+		if (capContactResult.getSuccess()){
+			Contacts = capContactResult.getOutput();
+			for (yy in Contacts){
+				var thisCont = Contacts[yy].getCapContactModel();
+				var contType = thisCont.contactType;
+				showMessage=true;
+				if(contType =="Owner") {
+					var ownRefContNrb = thisCont.refContactNumber;
+					ownEmail = thisCont.email.toLowerCase();
+					logDebug("ownEmail: " + ownEmail);
+					var ownCont = Contacts[yy].getCapContactModel();
+				}
+			}
+		}
+		if(ownEmail){
+			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel();
+			qryPeople.setEmail(ownEmail);
+			var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
+			if (!qryResult.getSuccess()){ 
+				logDebug("WARNING: error searching for people : " + qryResult.getErrorMessage());
+			}else{
+				var peopResult = qryResult.getOutput();
+				if (peopResult.length > 0){
+					ownExists = true;
+				}
+			}
+		}
+		if(!ownExists){
+			createRefContactsFromCapContactsAndLink(capId,["Owner"], null, false, false, comparePeopleStandard);
+			logDebug("Successfully created Owner");
+		}
+	}
+}catch (err){
+	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Owner Application: Create Owner: " + err.message);
+	logDebug(err.stack);
+}
+//lwacht: 180416: story 5175: end
