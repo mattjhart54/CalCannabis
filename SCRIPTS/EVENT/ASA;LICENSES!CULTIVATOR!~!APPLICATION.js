@@ -156,6 +156,7 @@ try{
 			if (addResult.getSuccess()){
 				logDebug("Successfully added addresses to DRP.");
 				createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
+				var drpUser = createPublicUserFromContact_Rev("Designated Responsible Party");
 				logDebug("Successfully created DRP");
 			}else{
 				logDebug("failure: " + addResult.getErrorMessage());
@@ -164,11 +165,13 @@ try{
 		if(appTypeArray[2]!="Temporary"){
 			if(bsnsEmail && !bsnsExists && bsnsEmail!=drpEmail){
 				createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleStandard);
+				var bsnsUser = createPublicUserFromContact_Rev("Business");
 				logDebug("Successfully created Business");
 			}
 			//not needed now but leaving for when they change their minds
 			//if(asopEmail && !asopExists && asopEmail!=drpEmail && asopEmail!=bsnsEmail){
 			//	createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleStandard);
+			//	var asopUser = createPublicUserFromContact_Rev("Agent for Service of ProcessS");
 			//	logDebug("Successfully created ASOP");
 			//}
 		}
@@ -194,17 +197,17 @@ try{
 				peopleModel.setContactAddressList(contactAddressModelArr);    
 				var addResult = aa.people.editCapContactWithAttribute(tdrpCont);
 				if (addResult.getSuccess()){
-					logDebug("Successfully added addresses to DRP.");
-					createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleStandard);
-					logDebug("Successfully created DRP");
+					logDebug("Successfully added addresses to T0DRP.");
+					createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
+					var tdrpUser = createPublicUserFromContact_Rev("DRP - Temporary License");
+					logDebug("Successfully created Temp DRP");
 				}else{
 					logDebug("failure: " + addResult.getErrorMessage());
 				}
-				createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleStandard);
-				logDebug("Successfully created Temp DRP");
 			}
 			if(bsnsEmail && !bsnsExists && bsnsEmail!=tdrpEmail){
 				createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleStandard);
+				var bsnsUser = createPublicUserFromContact_Rev("Business");
 				logDebug("Successfully created Business");
 			}
 		}
