@@ -66,15 +66,15 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters 
+/* test parameters
 
 // elycia.juco@cdfa.ca.gov
-aa.env.setValue("lookAheadDays", "-300");
-aa.env.setValue("daySpan", "300");
+aa.env.setValue("lookAheadDays", "-365");
+aa.env.setValue("daySpan", "365");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
-aa.env.setValue("reportName", "OCLCDFA");
+aa.env.setValue("reportName", "oclcdfaty");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
@@ -84,7 +84,7 @@ aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
 aa.env.setValue("appStatus", "Active,Inactive");
- */
+  */
  
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
@@ -165,7 +165,7 @@ try{
 	var noContactType = 0;
 	var capCount = 0;
 	var rptDate = new Date();
-	var pYear = rptDate.getYear() + 1900;
+	var pYear = rptDate.getYear() + 1899;
 	var pMonth = rptDate.getMonth();
 	var pDay = rptDate.getDate();
 	var pHour = rptDate.getHours();
@@ -192,8 +192,8 @@ try{
 	else
 		var minute = "0" + pMinute.toString();
 	
-	var rptDateFormatted = "" + pYear.toString() + mth + day + hour + minute;
-	var newRptName = rptName + "_" + rptDateFormatted + ".TXT";
+	var rptDateFormatted = "" + pYear.toString();// + mth + day + hour + minute;
+	var newRptName = rptName + rptDateFormatted + ".txt";
 	logDebug("newRptName: " + newRptName);
 	var rptToEmail = filepath + "/" + newRptName;
 	var capFilterBalance = 0;
@@ -401,6 +401,8 @@ try{
 								}else{
 									licLine += zeroPad(vZip,9);
 								}
+								//3 char diff between us and foreign addresses
+								licLine += "000";
 							//addresses outside of the u.s.
 							}else{
 								//country, country code (not stored)
@@ -492,12 +494,12 @@ try{
 						}
 					}
 					if(bAddrNotFound){
-						bsnsLine += spacePad("",76);
+						bsnsLine += spacePad("",79);
 					}
 				}
 			}
 			if(licNotFound){
-				licLine = spacePad("",103);
+				licLine = spacePad("",106);
 			}
 			if(busNotFound){
 				bsnsLine = spacePad("",76);
@@ -546,6 +548,7 @@ try{
 				rptLine += " "; break;
 		}
 		rptLine +=licLine;
+		logDebug("RPTLINE: " + rptLine);
 		//business name
 		rptLine +=bsnsName;
 		//business contact info
