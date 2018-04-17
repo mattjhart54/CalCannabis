@@ -202,7 +202,7 @@ try{
 			}
 		}
 		if(!ownExists){
-			createRefContactsFromCapContactsAndLink(capId,["Owner"], null, false, false, comparePeopleStandard);
+			createRefContactsFromCapContactsAndLink(capId,["Owner"], null, false, false, comparePeopleGeneric);
 			var ownUser = createPublicUserFromContact_Rev("Owner");
 			logDebug("Successfully created Owner");
 		}
