@@ -83,6 +83,7 @@ try{
 	putMethod.releaseConnection();
 
 	//if any response other than transaction success, set success to false and catch the error type string
+	var statusCode = resultObj.resultCode;
 	if (resultObj.resultCode.toString().substr(0, 1) !== '2') {
 		resp_success = false;
 		switch (statusCode) {
@@ -130,7 +131,7 @@ try{
 			default: resp_errorType = statusCode + " - Unknown Status Code";
 		}
 	}
-	resp_errorType = httpStatusCodeMessage(resultObj.resultCode);
+	//resp_errorType = httpStatusCodeMessage(resultObj.resultCode);
 	//create script result object with status flag, error type, error message, and output and return
 	var postResp = new com.accela.aa.emse.dom.ScriptResult(resp_success, resp_errorType, resultObj.result, resultObj);
     //if success, write out the response code and message. Otherwise, get the error message
