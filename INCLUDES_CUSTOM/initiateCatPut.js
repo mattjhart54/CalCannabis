@@ -84,6 +84,7 @@ try{
 
 	//if any response other than transaction success, set success to false and catch the error type string
 	var statusCode = resultObj.resultCode;
+	logDebug("statusCode: " + statusCode );
 	if (resultObj.resultCode.toString().substr(0, 1) !== '2') {
 		resp_success = false;
 		switch (statusCode) {
