@@ -13,7 +13,7 @@
 | Dependencies : licenseNumberToCatJson.js
 /------------------------------------------------------------------------------------------------------*/
 //lwacht: 180417: story 5411: adding try/catch and removing functions not called elsewhere
-function httpClientPut(licenseNumStrings, url, key) {
+function initiateCatPut(licenseNumStrings, url, key) {
 try{
     var result = {
         totalCount : licenseNumStrings.length,
@@ -26,7 +26,6 @@ try{
         resultBody: null
     };
     var dataJsonArray = [];
-
     for (var i = 0, len = licenseNumStrings.length; i < len; i++) {
         try {
             var jsonData = licenseNumberToCatJson(licenseNumStrings[i]);
@@ -45,7 +44,6 @@ try{
             logDebug(errorMessage);
         }
     }
-
     ////////////FORMAT DATA TO JSON////////////////////////////////////////////////////
     var nData = {
         "Key": key,
@@ -80,13 +78,9 @@ try{
 		resultCode: 999,
 		result: null
 	};
-
-	try {
-		resultObj.resultCode = httpClient.executeMethod(putMethod);
-		resultObj.result = putMethod.getResponseBodyAsString();
-	} finally {
-		putMethod.releaseConnection();
-	}
+	resultObj.resultCode = httpClient.executeMethod(putMethod);
+	resultObj.result = putMethod.getResponseBodyAsString();
+	putMethod.releaseConnection();
 
 	//if any response other than transaction success, set success to false and catch the error type string
 	if (resultObj.resultCode.toString().substr(0, 1) !== '2') {
@@ -136,8 +130,7 @@ try{
 			default: resp_errorType = statusCode + " - Unknown Status Code";
 		}
 	}
-		resp_errorType = httpStatusCodeMessage(resultObj.resultCode);
-	}
+	resp_errorType = httpStatusCodeMessage(resultObj.resultCode);
 	//create script result object with status flag, error type, error message, and output and return
 	var postResp = new com.accela.aa.emse.dom.ScriptResult(resp_success, resp_errorType, resultObj.result, resultObj);
     //if success, write out the response code and message. Otherwise, get the error message
@@ -150,7 +143,7 @@ try{
         result.resultBody = String(response.result);
         return new com.accela.aa.emse.dom.ScriptResult(true, null, null, result);
     } else {
-        logDebug("Error message: " + postResp.getErrorMessage());
+        logDebug("Error retrieving postResp: " + postResp.getErrorMessage());
         return postResp;
     }
 }catch (err){
