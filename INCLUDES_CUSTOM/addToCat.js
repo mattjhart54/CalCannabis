@@ -4,12 +4,16 @@ Purpose: Add the given capId to the CAT_UPDATES set. These records will be sent 
 Author: John Towell
 
 Parameters:
-	capId: table model
+	capId: record id
 ============================================== */
+//lwacht: 180417: story 5411: removing function as it's not called anywhere else
 function addToCat(capId) {
     try {
         var SET_ID = 'CAT_UPDATES';
-        var createResult = createSetIfNeeded(SET_ID);
+        var theSetResult = aa.set.getSetByPK(SET_ID);
+        if (!theSetResult.getSuccess()) {
+            theSetResult = aa.set.createSet(SET_ID, SET_ID, null, null);
+        }
         if (!createResult.getSuccess()) {
             logDebug("**ERROR: Failed to create " + SET_ID + " set: " + createResult.getErrorMessage());
             return false;
@@ -23,23 +27,6 @@ function addToCat(capId) {
         logDebug("A JavaScript Error occurred: addToCat: " + err.message);
         logDebug(err.stack);
     }
-
     return true;
-
-    /**
-     * PRIVATE FUNCTIONS
-     */
-
-    /**
-     * Creates the set if needed.
-     */
-    function createSetIfNeeded(setId) {
-        var theSetResult = aa.set.getSetByPK(setId);
-        if (!theSetResult.getSuccess()) {
-            theSetResult = aa.set.createSet(setId, setId, null, null);
-        }
-
-        return theSetResult;
-    }
 }
-
+//lwacht: 180417: story 5411: end
