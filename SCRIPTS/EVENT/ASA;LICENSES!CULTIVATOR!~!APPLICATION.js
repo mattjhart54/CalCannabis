@@ -163,15 +163,13 @@ try{
 			}
 		}
 		if(appTypeArray[2]!="Temporary"){
-			//if(bsnsEmail && !bsnsExists && bsnsEmail!=drpEmail){
-			if(bsnsEmail){
+			if(bsnsEmail && (!bsnsExists || bsnsEmail==drpEmail)){
 				createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
 				var bsnsUser = createPublicUserFromContact_Rev("Business");
 				logDebug("Successfully created Business");
 			}
 			//not needed now but leaving for when they change their minds
-			//if(asopEmail && !asopExists && asopEmail!=drpEmail && asopEmail!=bsnsEmail){
-			//if(asopEmail){
+			//if(asopEmail && (!asopExists || asopEmail==bsnsEmail || asopEmail==drpEmail)){
 			//	createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
 			//	var asopUser = createPublicUserFromContact_Rev("Agent for Service of ProcessS");
 			//	logDebug("Successfully created ASOP");
@@ -207,8 +205,8 @@ try{
 					logDebug("failure: " + addResult.getErrorMessage());
 				}
 			}
-			//if(bsnsEmail && !bsnsExists && bsnsEmail!=tdrpEmail){
-			if(bsnsEmail){
+			if(bsnsEmail && (!bsnsExists || bsnsEmail==drpEmail)){
+				logDebug("here");
 				createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
 				var bsnsUser = createPublicUserFromContact_Rev("Business");
 				logDebug("Successfully created Business");
