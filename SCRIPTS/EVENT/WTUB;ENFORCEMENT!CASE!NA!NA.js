@@ -67,7 +67,7 @@ try{
 		if(!docExists){
 			cancel = true;
 			showMessage = true;
-			comment("The Final Corrective Action Plan document must be uploaded before continuing.");
+			comment("Before this case can be closed the Final Corrective Action Plan document must be attached.");
 		}
 	}
 } catch(err){
