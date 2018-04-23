@@ -62,6 +62,8 @@ try{
 	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Fees Paid: " + err.message);
 	logDebug(err.stack);
 }
+
+//lwacht: 180419: story 5441: report only populates correctly in async mode
 //mhart 180409 user story 5391 - Send submitted application notice when the application fee is paid in full
 try {
 	if(balanceDue<=0){
@@ -78,18 +80,33 @@ try {
 			addrType = "Mailing";
 			var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
 			if(!matches(liveScanNotActive,true, "true")){
-				runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+				//runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+				var scriptName = "asyncRunSubmittedApplicRpt";
+				var envParameters = aa.util.newHashMap();
+				envParameters.put("sendCap",capIDString); 
+				envParameters.put("reportName","Submitted Annual Application"); 
+				envParameters.put("contType",contType); 
+				envParameters.put("addrType",addrType); 
+				envParameters.put("currentUserID",currentUserID);
+				aa.runAsyncScript(scriptName, envParameters);
 			}else{
-				var drpContact = getContactByType("Designated Responsible Party",parentCapId);
-				
-				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY : PRA:LICENSES/CULTIVATOR/*/APPLICATION: " + startDate, "capId: " + capId + ": " + br + "drpContact.getFirstName() : " + drpContact.getFirstName(); + br + drpContact.length);
-				runReportAttach(capId,"Submitted Annual App No LiveScan", "altId", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+				//runReportAttach(capId,"Submitted Annual App No LiveScan", "altId", capIDString, "Contact Type", contType, "Address Type", addrType);
+				var scriptName = "asyncRunSubmittedApplicRpt";
+				var envParameters = aa.util.newHashMap();
+				envParameters.put("sendCap",capIDString); 
+				envParameters.put("reportName","Submitted Annual App No LiveScan"); 
+				envParameters.put("contType",contType); 
+				envParameters.put("addrType",addrType); 
+				envParameters.put("currentUserID",currentUserID);
+				aa.runAsyncScript(scriptName, envParameters);
 			}	
 			emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);	
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Fees Paid: " + err.message);
+	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/* /APPLICATION: Admin Fees Paid: " + err.message);
 	logDebug(err.stack);
 }
 //mhart 180409 user story 5391 - end
+//lwacht: 180419: story 5441: end
+

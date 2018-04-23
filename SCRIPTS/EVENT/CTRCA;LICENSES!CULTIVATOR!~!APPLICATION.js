@@ -70,7 +70,7 @@ try{
 //lwacht: 171116: CTRCB doesn't invoice fees. 
 try{
 //	if(matches(currEnv, "av.test", "av.supp")){
-		var newFeeFound = false;
+		newFeeFound = false;
 		var targetFees = loadFees(capId);
 		for (tFeeNum in targetFees) {
 			targetFee = targetFees[tFeeNum];
@@ -240,6 +240,51 @@ try{
 
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 //lwacht: 171108: and send email
+
+/*lwacht: 180419: story 5441: report only populates in async mode -moving back to PRA in hopes it works there to make the logic easier
+//mhart 180409 user story 5391 - Send submitted application notice when the application fee is paid in full
+try {
+	if(appTypeArray[2]!="Temporary"){
+		//using logic from above
+		//no new fee = not selecting cash payment
+		if(!newFeeFound){
+			contType = "Designated Responsible Party";
+			addrType = "Mailing";
+			var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
+			if(!matches(liveScanNotActive,true, "true")){
+				//runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
+				var scriptName = "asyncRunSubmittedApplicRpt";
+				var envParameters = aa.util.newHashMap();
+				envParameters.put("sendCap",capIDString); 
+				envParameters.put("reportName","Submitted Annual Application"); 
+				envParameters.put("contType",contType); 
+				envParameters.put("addrType",addrType); 
+				envParameters.put("currentUserID",currentUserID);
+				aa.runAsyncScript(scriptName, envParameters);
+			}else{
+				var scriptName = "asyncRunSubmittedApplicRpt";
+				var envParameters = aa.util.newHashMap();
+				envParameters.put("sendCap",capIDString); 
+				envParameters.put("reportName","Submitted Annual App No LiveScan"); 
+				envParameters.put("contType",contType); 
+				envParameters.put("addrType",addrType); 
+				envParameters.put("currentUserID",currentUserID);
+				aa.runAsyncScript(scriptName, envParameters);
+			}	
+			emailRptContact("ASIUA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);	
+			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY : CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: " + startDate, "capId: " + capId + ": " + br + contType + br + addrType + br + capId.getCustomID() + br + debug);
+		}
+	}
+}catch(err){
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Attach submitted letter: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /APPLICATION: Attach submitted letter: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+}
+//mhart 180409 user story 5391 - end
+//lwacht: 180419: story 5441: end */
+
+
+
 //lwacht: 171113: commenting out until CTRCB is figured out
 //lwacht: 171115: CTRCB runs in preprod, so going to have this set up to not run in av.supp and av.test.
 //lwacht: 171116: CTRCB doesn't invoice fees. Commenting this out for now
