@@ -5,6 +5,8 @@
 | Usage   : Adds the given capId to the CAT SET
 | By: John Towell
 /------------------------------------------------------------------------------------------------------*/
+/*lwacht: 180417: story 5411: removing function as it's not called anywhere else
+
 showMessage = true;
 showDebug = true;
 var SET_ID = 'CAT_UPDATES';
@@ -33,3 +35,4 @@ function createSetIfNeeded() {
 
 //testing
 //addToCATSet('TAL17-0000039');
+*/
