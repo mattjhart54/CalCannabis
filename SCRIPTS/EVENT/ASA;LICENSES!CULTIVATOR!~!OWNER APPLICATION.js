@@ -204,7 +204,7 @@ try{
 		if(!ownExists){
 			createRefContactsFromCapContactsAndLink(capId,["Owner"], null, false, false, comparePeopleGeneric);
 			//lwacht 180425: COMMENTING OUT FOR AVTEST6
-			//var ownUser = createPublicUserFromContact_Rev("Owner");
+			//var ownUser = createPublicUserFromContact("Owner");
 			logDebug("Successfully created Owner");
 		}
 	}

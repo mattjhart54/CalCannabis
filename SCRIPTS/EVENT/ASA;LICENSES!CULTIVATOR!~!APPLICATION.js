@@ -8,7 +8,7 @@ try{
 		}
 		//lwacht: create reference contact and public user account for the DRP		
 		createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleGeneric);
-		var drpUser = createPublicUserFromContact();
+		var drpUser = createPublicUserFromContact("Designated Responsible Party");
 		//lwacht: create reference contact and public user account for the business contact		
 		createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
 		var bsnsUser = createPublicUserFromContact("Business");
@@ -157,7 +157,7 @@ try{
 				logDebug("Successfully added addresses to DRP.");
 				createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleGeneric);
 				//lwacht 180425: COMMENTING OUT FOR AVTEST6
-				//var drpUser = createPublicUserFromContact_Rev("Designated Responsible Party");
+				//var drpUser = createPublicUserFromContact("Designated Responsible Party");
 				logDebug("Successfully created DRP");
 			}else{
 				logDebug("failure: " + addResult.getErrorMessage());
@@ -167,13 +167,13 @@ try{
 			if(bsnsEmail && (!bsnsExists || bsnsEmail==drpEmail)){
 				createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
 				//lwacht 180425: COMMENTING OUT FOR AVTEST6
-				//var bsnsUser = createPublicUserFromContact_Rev("Business");
+				//var bsnsUser = createPublicUserFromContact("Business");
 				logDebug("Successfully created Business");
 			}
 			//not needed now but leaving for when they change their minds
 			//if(asopEmail && (!asopExists || asopEmail==bsnsEmail || asopEmail==drpEmail)){
 			//	createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
-			//	var asopUser = createPublicUserFromContact_Rev("Agent for Service of ProcessS");
+			//	var asopUser = createPublicUserFromContact("Agent for Service of ProcessS");
 			//	logDebug("Successfully created ASOP");
 			//}
 		}
@@ -202,7 +202,7 @@ try{
 					logDebug("Successfully added addresses to T0DRP.");
 					createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleGeneric);
 					//lwacht 180425: COMMENTING OUT FOR AVTEST6
-					//var tdrpUser = createPublicUserFromContact_Rev("DRP - Temporary License");
+					//var tdrpUser = createPublicUserFromContact("DRP - Temporary License");
 					logDebug("Successfully created Temp DRP");
 				}else{
 					logDebug("failure: " + addResult.getErrorMessage());
@@ -212,7 +212,7 @@ try{
 				logDebug("here");
 				createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
 				//lwacht 180425: COMMENTING OUT FOR AVTEST6
-				//var bsnsUser = createPublicUserFromContact_Rev("Business");
+				//var bsnsUser = createPublicUserFromContact("Business");
 				logDebug("Successfully created Business");
 			}
 		}
