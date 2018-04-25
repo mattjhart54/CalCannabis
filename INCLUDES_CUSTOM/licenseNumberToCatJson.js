@@ -35,7 +35,7 @@ try{
     var licExp = new Date(vLicenseObj.b1ExpDate);
 	var pYear = licExp.getYear() + 1899;
 	var pMonth = licExp.getMonth();
-	var pDay = licenseExlicExppiration.getDate();
+	var pDay = licExp.getDate();
 	if(pMonth<12){
 		pMonth++;
 	}else{
@@ -96,5 +96,5 @@ try{
 }catch (err){
 	logDebug("A JavaScript Error occurred: licenseNumberToCatJson " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: licenseNumberToCatJson: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, emailAddress, "", "A JavaScript Error occurred: licenseNumberToCatJson: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }}
