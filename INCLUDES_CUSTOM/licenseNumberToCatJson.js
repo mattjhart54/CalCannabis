@@ -16,7 +16,7 @@ try{
     cap = capScriptObj.getOutput();
     var capModel = (capScriptObj.getOutput()).getCapModel();
 	var AInfo = [];
-	loadAppspecific(AInfo);
+	loadAppSpecific(AInfo);
     var legalBusinessName = AInfo["Legal Business Name"].substr(1,100);
 	var firstThree = licenseNumber.substring(0, 3);
 	if(firstThree == "CAL" || firstThree == "TAL") {
