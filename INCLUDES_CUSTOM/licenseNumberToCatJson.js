@@ -32,7 +32,7 @@ try{
 	}
     var licenseValidityStart = AInfo["Valid From Date"].replace("/","-");
     var vLicenseObj = new licenseObject(licenseNumber);
-    var licExp = vLicenseObj.b1ExpDate;
+    var licExp = new Date(vLicenseObj.b1ExpDate);
 	var pYear = licExp.getYear() + 1899;
 	var pMonth = licExp.getMonth();
 	var pDay = licenseExlicExppiration.getDate();
