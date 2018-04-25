@@ -59,7 +59,7 @@ function licenseNumberToCatJson(licenseNumber) {
     var premiseState = AInfo["Premise State"].substr(0, 40);
     var premiseZip = AInfo["Premise Zip"].substr(0, 20);
     var drpFirstName = contDRP.firstName.substr(0, 100);
-    var drpLastName = contDRP.lastName.substr(0 100);
+    var drpLastName = contDRP.lastName.substr(0, 100);
     var apn = AInfo["APN"].substr(0, 75);
     var sellersPermitNumber = AInfo["BOE Seller's Permit Number"].substr(0, 50);
 
