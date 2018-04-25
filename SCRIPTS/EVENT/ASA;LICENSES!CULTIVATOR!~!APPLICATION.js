@@ -8,7 +8,7 @@ try{
 		}
 		//lwacht: create reference contact and public user account for the DRP		
 		createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleGeneric);
-		var drpUser = createPublicUserFromContact("Designated Responsible Party");
+		var drpUser = createPublicUserFromContact();
 		//lwacht: create reference contact and public user account for the business contact		
 		createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
 		var bsnsUser = createPublicUserFromContact("Business");
@@ -156,7 +156,8 @@ try{
 			if (addResult.getSuccess()){
 				logDebug("Successfully added addresses to DRP.");
 				createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleGeneric);
-				var drpUser = createPublicUserFromContact_Rev("Designated Responsible Party");
+				//lwacht 180425: COMMENTING OUT FOR AVTEST6
+				//var drpUser = createPublicUserFromContact_Rev("Designated Responsible Party");
 				logDebug("Successfully created DRP");
 			}else{
 				logDebug("failure: " + addResult.getErrorMessage());
@@ -165,7 +166,8 @@ try{
 		if(appTypeArray[2]!="Temporary"){
 			if(bsnsEmail && (!bsnsExists || bsnsEmail==drpEmail)){
 				createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
-				var bsnsUser = createPublicUserFromContact_Rev("Business");
+				//lwacht 180425: COMMENTING OUT FOR AVTEST6
+				//var bsnsUser = createPublicUserFromContact_Rev("Business");
 				logDebug("Successfully created Business");
 			}
 			//not needed now but leaving for when they change their minds
@@ -199,7 +201,8 @@ try{
 				if (addResult.getSuccess()){
 					logDebug("Successfully added addresses to T0DRP.");
 					createRefContactsFromCapContactsAndLink(capId,["DRP - Temporary License"], null, false, false, comparePeopleGeneric);
-					var tdrpUser = createPublicUserFromContact_Rev("DRP - Temporary License");
+					//lwacht 180425: COMMENTING OUT FOR AVTEST6
+					//var tdrpUser = createPublicUserFromContact_Rev("DRP - Temporary License");
 					logDebug("Successfully created Temp DRP");
 				}else{
 					logDebug("failure: " + addResult.getErrorMessage());
@@ -208,7 +211,8 @@ try{
 			if(bsnsEmail && (!bsnsExists || bsnsEmail==drpEmail)){
 				logDebug("here");
 				createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
-				var bsnsUser = createPublicUserFromContact_Rev("Business");
+				//lwacht 180425: COMMENTING OUT FOR AVTEST6
+				//var bsnsUser = createPublicUserFromContact_Rev("Business");
 				logDebug("Successfully created Business");
 			}
 		}
