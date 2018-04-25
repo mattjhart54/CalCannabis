@@ -9,6 +9,7 @@
 /	180424: lwacht: story 5411: updated to conform to standards, simplify code
 /------------------------------------------------------------------------------------------------------*/
 function licenseNumberToCatJson(licenseNumber) {
+try{
     licenseNumber = "" + licenseNumber;
     capId = aa.cap.getCapID(licenseNumber).getOutput();
     var capScriptObj = aa.cap.getCap(capId);
@@ -91,6 +92,9 @@ function licenseNumberToCatJson(licenseNumber) {
         "AssessorParcelNumber" : apn,
         "SellerPermitNumber" : sellersPermitNumber
     };
-
     return jsonResult;
-
+}catch (err){
+	logDebug("A JavaScript Error occurred: licenseNumberToCatJson " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: licenseNumberToCatJson: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}}
