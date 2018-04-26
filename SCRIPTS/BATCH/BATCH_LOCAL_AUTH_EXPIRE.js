@@ -67,14 +67,14 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 // test parameters
-/*
+/* 
 aa.env.setValue( "lookAheadDays" , "0");
 aa.env.setValue( "daySpan" , "0");
-aa.env.setValue( "emailAddress" , "mhart@trustvip.com");
+aa.env.setValue( "emailAddress" , "lwacht@trustvip.com");
 aa.env.setValue( "asiField" , "Local Authority Notification Expires");
 aa.env.setValue( "asiGroup" , "INTERNAL");
 aa.env.setValue( "newAppStatus" , "Under Administrative Review");
-aa.env.setValue( "sysFromEmail" , "noreply_accela@cdfa.ca.gov");
+aa.env.setValue( "sysFromEmail" , "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue( "setNonEmailPrefix" , "AppSubmitted");
 aa.env.setValue( "emailTemplate" , "LCA_APPLICATION_SUBMITTED");
 aa.env.setValue( "sendEmailNotifications" , "Y");
@@ -177,6 +177,7 @@ try{
 		var capStatus = cap.getCapStatus();
 		logDebug(" cap " + capStatus);
 		if (!matches(capStatus, "Pending Local Authorization 10","Pending Local Authorization 60")) {
+			capFilterStatus++;
 			continue;
 		}
 		capCount++;
@@ -184,7 +185,7 @@ try{
 		
 		//lwacht: 180426: stpry 5436: reset the assigned task
 		var asgnDateAR = getAssignedDate("Administrative Review");
-		var asgnDateOR = getAssignedDate("Administrative Review");
+		var asgnDateOR = getAssignedDate("Owner Application Reviews");
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		if(asgnDateAR){
