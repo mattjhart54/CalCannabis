@@ -52,7 +52,7 @@ try{
 
 	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")) {
 		//lwacht: 180426: stpry 5436: reset the assigned task
-		var asgnDate = convertDate(getAssignedDate("Administrative Review"));
+		var asgnDate = getAssignedDate("Administrative Review");
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		updateTask("Administrative Review","Under Review","In Compliance notification received from Local Authority","");
