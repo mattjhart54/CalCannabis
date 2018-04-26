@@ -51,10 +51,14 @@ try{
 	}
 
 	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")) {
+		//lwacht: 180426: stpry 5436: reset the assigned task
+		var asgnDate = getAssignedDate("Administrative Review");
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		updateTask("Administrative Review","Under Review","In Compliance notification received from Local Authority","");
 		updateAppStatus("Under Administrative Review", "In Compliance notification received from Local Authority");
+		updateTaskAssignedDate("Administrative Review", asgnDate)
+		//lwacht: 180426: stpry 5436: end
 		//lwacht 171218: two reports now: temp and annual
 		//mhart 180409: user story 5391 comment out code to send submitted letter and email for annual application.  this now runs when application fee is paid.
 		if(appTypeArray[2] == "Temporary") {
