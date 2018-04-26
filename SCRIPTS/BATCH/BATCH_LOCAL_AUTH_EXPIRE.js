@@ -182,8 +182,22 @@ try{
 		capCount++;
 		logDebug("----Processing record " + altId + br);
 		
+		//lwacht: 180426: stpry 5436: reset the assigned task
+		var asgnDateAR = getAssignedDate("Administrative Review");
+		var asgnDateOR = getAssignedDate("Administrative Review");
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
+		if(asgnDateAR){
+			updateTaskAssignedDate("Administrative Review", asgnDateAR);
+		}else{
+			logDebug("No assigned date found for Administrative Review");
+		}
+		if(asgnDateOR){
+			updateTaskAssignedDate("Owner Application Reviews", asgnDateAR);
+		}else{
+			logDebug("No assigned date found for Owner Application Reviews");
+		}
+		//lwacht: 180426: stpry 5436: end
 		editAppSpecific("Local Authority Response", "No Response");
 		updateTask("Administrative Review","Under Review","No notification recieved from Local Authority","");
 		updateAppStatus("Under Administrative Review", "No notification recieved from Local Authority");

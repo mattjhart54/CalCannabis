@@ -50,14 +50,24 @@ try{
 		//lwacht 171218 end
 	}
 
-	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")) {
+	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")){
 		//lwacht: 180426: stpry 5436: reset the assigned task
-		var asgnDate = getAssignedDate("Administrative Review");
+		var asgnDateAR = getAssignedDate("Administrative Review");
+		var asgnDateOR = getAssignedDate("Owner Application Reviews");
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		updateTask("Administrative Review","Under Review","In Compliance notification received from Local Authority","");
 		updateAppStatus("Under Administrative Review", "In Compliance notification received from Local Authority");
-		updateTaskAssignedDate("Administrative Review", asgnDate)
+		if(asgnDateAR){
+			updateTaskAssignedDate("Administrative Review", asgnDateAR);
+		}else{
+			logDebug("No assigned date found for Administrative Review");
+		}
+		if(asgnDateOR){
+			updateTaskAssignedDate("Owner Application Reviews", asgnDateOR);
+		}else{
+			logDebug("No assigned date found for Owner Application Reviews");
+		}
 		//lwacht: 180426: stpry 5436: end
 		//lwacht 171218: two reports now: temp and annual
 		//mhart 180409: user story 5391 comment out code to send submitted letter and email for annual application.  this now runs when application fee is paid.
@@ -79,7 +89,15 @@ try{
 	*/ //mhart 180409: user story 5391 end
 	}
 	if(AInfo["Local Authority Response"] == "Non Compliance"  && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60"))  {
+		//lwacht: 180426: stpry 5436: reset the assigned task
+		var asgnDateAR = getAssignedDate("Administrative Review");
 		closeTask("Administrative Review","Incomplete Response","Non-Compliance notification recieved from Local Authority","");
+		if(asgnDateAR){
+			updateTaskAssignedDate("Administrative Review", asgnDateAR);
+		}else{
+			logDebug("No assigned date found for Administrative Review");
+		}
+		//lwacht: 180426: stpry 5436: end
 		activateTask("Administrative Manager Review");
 		updateAppStatus("Ready for Review", "Non Compliance notification recieved from Local Authority");
 		childRecs = getChildren("Licenses/Cultivator/Medical/*");
