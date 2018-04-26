@@ -16,22 +16,24 @@ Parameters:
 	taskName: Text: name of the task for which the assigned date is desired
 	capId: capid: optional capid
 ============================================== */
-
-function getAssignedDate(taskName){
+function getAssignedDate1(taskName){
 try{
-	if (arguments.length > 1)
-		var itemCap = arguments[1]; // use cap ID specified in args
-	else
-		var itemCap = capId;
-	var workflowResult = aa.workflow.getTasks(itemCap);
+	var workflowResult = aa.workflow.getTasks(capId);
  	if (workflowResult.getSuccess()){
   	 	var wfObj = workflowResult.getOutput();
 		for (i in wfObj) {
 			fTask = wfObj[i];
 			wfTask = fTask.getTaskDescription();
 			if(wfTask==taskName){
-				logDebug("Assigned date for " + taskName + ": " + convertDate(fTask.getAssignmentDate()));
-				return fTask.getAssignmentDate();
+				var asgnDate = fTask.getAssignmentDate();
+				logDebug("asgnDate: " + asgnDate);
+				if(isNaN(asgnDate)){
+					logDebug("Assigned date for " + taskName + ": " + convertDate(asgnDate));
+					return convertDate(fTask.getAssignmentDate());
+				}else{
+					logDebug("No assigned date for " + taskName + " (" + asgnDate + ")");
+					return false;
+				}
 			}
 		}
   	}else{ 
