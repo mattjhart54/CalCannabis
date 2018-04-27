@@ -10,6 +10,7 @@
 /------------------------------------------------------------------------------------------------------*/
 function licenseNumberToCatJson(licenseNumber) {
 try{
+	logDebug("licenseNumber: " + licenseNumber);
     licenseNumber = "" + licenseNumber;
     capId = aa.cap.getCapID(licenseNumber).getOutput();
     var capScriptObj = aa.cap.getCap(capId);
@@ -17,7 +18,11 @@ try{
     var capModel = (capScriptObj.getOutput()).getCapModel();
 	var AInfo = [];
 	loadAppSpecific(AInfo);
-    var legalBusinessName = "" + AInfo["Legal Business Name"].substr(0,100);
+	if(AInfo["Legal Business Name"]==null){
+		var legalBusinessName = "No Business Name provided";
+	}else{
+		var legalBusinessName = "" + AInfo["Legal Business Name"].substr(0, 100);
+	}
 	var firstThree = licenseNumber.substring(0, 3);
 	if(firstThree == "CAL" || firstThree == "TAL") {
 		var licenseType ="A-"+AInfo["License Type"];
@@ -174,7 +179,7 @@ try{
     };
     return jsonResult;
 }catch (err){
-	logDebug("A JavaScript Error occurred: licenseNumberToCatJson " + err.message);
+	logDebug("A JavaScript Error occurred: licenseNumberToCatJson: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, emailAddress, "", "A JavaScript Error occurred: licenseNumberToCatJson: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }}

@@ -62,12 +62,12 @@ var sysDate = aa.date.getCurrentDate();
 var batchJobID = aa.batchJob.getJobID().getOutput();
 var batchJobName = "" + aa.env.getValue("batchJobName");
 
-/*test params
+/*test params  */
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("baseUrl", "https://testing-services-ca.metrc.com/licenses/facility");
 aa.env.setValue("apiKey", "6gka3YS4EzoZAG1jrsv-qhe5OszsP8SPJZ4ZoPOCjCGPK1Ra");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
-  */
+
 
 
 var emailAddress = aa.env.getValue("emailAddress"); // email address to send failures
@@ -115,7 +115,8 @@ try {
                 errorRecords: [],
                 errors: []
             };
-            logDebug("capSet: loaded set " + setId + " of status " + status + " with " + size + " records");
+            //logDebug("capSet: loaded set " + setId + " of status " + status + " with " + size + " records");
+            logDebug("capSet: loaded set " + setId + " with " + size + " records");
             var licenseNos = capIdsToLicenseNos(members);
             var start, end, licenseNosChunk;
             for (start = 0, end = licenseNos.length; start < end; start += catAPIChunkSize) { //chunk calls to the API
@@ -188,5 +189,3 @@ function removeFromSet(capIds, errorLicenseNumbers) {
         }
     }
 }
-
-
