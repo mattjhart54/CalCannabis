@@ -49,8 +49,7 @@ try{
         "Key": key,
         "Data": dataJsonArray
     };
-    logDebug("here: " + key);
-    logDebug("here: " + JSON.stringify(nData, null, 4));
+    //logDebug("here: " + JSON.stringify(nData, null, 4));
     var nDataJson = JSON.stringify(nData);
 
     var postResp = httpClientPut(url, nDataJson, 'application/json', 'utf-8');
