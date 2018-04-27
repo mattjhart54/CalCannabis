@@ -17,7 +17,7 @@ try{
     var capModel = (capScriptObj.getOutput()).getCapModel();
 	var AInfo = [];
 	loadAppSpecific(AInfo);
-    var legalBusinessName = AInfo["Legal Business Name"].substr(1,100);
+    var legalBusinessName = "" + AInfo["Legal Business Name"].substr(0,100);
 	var firstThree = licenseNumber.substring(0, 3);
 	if(firstThree == "CAL" || firstThree == "TAL") {
 		var licenseType ="A-"+AInfo["License Type"];
@@ -30,7 +30,8 @@ try{
 	} else  {
 		var licenseStatus = "Inactive";
 	}
-    var licenseValidityStart = AInfo["Valid From Date"].replace("/","-");
+    var licStartDate = convertDate(AInfo["Valid From Date"]);
+    var licenseValidityStart ="" + dateFormatted(licStartDate.getMonth()+1,licStartDate.getDate(),licStartDate.getYear()+1899,"YYYY-MM-DD");
     var vLicenseObj = new licenseObject(licenseNumber);
     var licExp = new Date(vLicenseObj.b1ExpDate);
 	var pYear = licExp.getYear() + 1899;
@@ -49,21 +50,100 @@ try{
 		var day = pDay.toString();
 	else
 		var day = "0" + pDay.toString();
-	var licenseExpiration = day + "/" + mth + "/" + pYear.toString();
+	var licenseExpiration = "" + pYear.toString() + "-" + mth + "-" +  day;
 	var contDRP = getContactByType("Designated Responsible Party",capId);
-	var drpPhoneNumber = contDRP.phone3.substr(0, 20);
-    var facilityPhone = AInfo["Premise Phone"].substr(0,20);
-    var drpEmail = contDRP.email.substr(0, 255);
-    var premiseAddress = stringValue(getAppSpecific("Premise Address"), 100);
-    var premiseCity = AInfo["Premise City"].substr(0, 40);
-    var premiseCounty = AInfo["Premise County"].substr(0, 40);
-    var premiseState = AInfo["Premise State"].substr(0, 40);
-    var premiseZip = AInfo["Premise Zip"].substr(0, 20);
-    var drpFirstName = contDRP.firstName.substr(0, 100);
-    var drpLastName = contDRP.lastName.substr(0, 100);
-    var apn = AInfo["APN"].substr(0, 75);
-    var sellersPermitNumber = AInfo["BOE Seller's Permit Number"].substr(0, 50);
-
+	var contBsns = getContactByType("Business",capId);
+	var drpPhoneNumber = ""+ contDRP.phone3.substr(0, 20);
+    var facilityPhone = ""+ contDRP.phone3.substr(0, 20);
+    var drpEmail = "" + contDRP.email.substr(0, 255);
+	//going to use business address if premise address is not available
+	var bsnsFound = false;
+	if(AInfo["Premise Address"]==null){
+		var capContactResult = aa.people.getCapContactByCapID(capId);
+		if (capContactResult.getSuccess()){
+			var Contacts = capContactResult.getOutput();
+			for (var yy in Contacts){
+				var thisContact = Contacts[yy].getCapContactModel();
+				if(thisContact.contactType=="Business"){
+					var newPeople = thisContact.getPeople();
+					var addressList = aa.address.getContactAddressListByCapContact(thisContact).getOutput();
+					var addrNotFound = true;
+					for (g in addressList){
+						thisAddr = addressList[g];
+						if(thisAddr.addressType=="Business"){
+							bsnsFound = true;
+							var premiseAddress = "" + thisAddr.addressLine1;
+							var premiseAddress2 = "" + thisAddr.addressLine2;
+							var premiseCity = "" + thisAddr.city;
+							var premiseCounty = "" + thisAddr.addressLine3;
+							var premiseState = "" + thisAddr.state;
+							var premiseZip = "" + thisAddr.zip;
+						}
+					}
+				}
+			}
+		}
+	}
+	if(AInfo["Premise Address"]!=null || !bsnsFound){
+		if(AInfo["Premise Address"]==null){
+			var premiseAddress = "N/A";
+		}else{
+			var premiseAddress = "" + AInfo["Premise Address"].substr(0, 100);
+		}
+		var premiseAddress2 = "";
+		if(AInfo["Premise City"]==null){
+			var premiseCity = "N/A";
+		}else{
+			var premiseCity = "" + AInfo["Premise City"].substr(0, 40);
+		}
+		if(AInfo["Premise County"]==null){
+			var premiseCounty = "N/A";
+		}else{
+			var premiseCounty = "" + AInfo["Premise County"].substr(0, 40);
+		}
+		if(AInfo["Premise State"]==null){
+			var premiseState = "N/A";
+		}else{
+			var premiseState = "" + AInfo["Premise State"].substr(0, 40);
+		}
+		if(AInfo["Premise Zip"]==null){
+			var premiseZip = "N/A";
+		}else{
+			 var premiseZip = "" + AInfo["Premise Zip"].substr(0, 20);
+		}
+	}
+    var drpFirstName = "" + contDRP.firstName.substr(0, 100);
+    var drpLastName = "" + contDRP.lastName.substr(0, 100);
+	if(AInfo["APN"]==null){
+		var apn = "N/A";
+	}else{
+		 var apn = "" + AInfo["APN"].substr(0, 75);
+	}
+	if(AInfo["BOE Seller's Permit Number"]==null){
+		var sellersPermitNumber = "N/A";
+	}else{
+		 var sellersPermitNumber = "" + AInfo["BOE Seller's Permit Number"].substr(0, 50);
+	}
+	/*
+	logDebug("licenseNumber: " + licenseNumber);
+	logDebug("legalBusinessName: " + legalBusinessName);
+	logDebug("licenseType: " + licenseType);
+	logDebug("licenseStatus: " + licenseStatus);
+	logDebug("licenseValidityStart: " + licenseValidityStart);
+	logDebug("licenseExpiration: " + licenseExpiration);
+	logDebug("drpPhoneNumber: " + drpPhoneNumber);
+	logDebug("drpEmail: " + drpEmail);
+	logDebug("premiseAddress: " + premiseAddress);
+	logDebug("premiseAddress2: " + premiseAddress2);
+	logDebug("premiseCity: " + premiseCity);
+	logDebug("premiseCounty: " + premiseCounty);
+	logDebug("premiseState: " + premiseState);
+	logDebug("premiseZip: " + premiseZip);
+	logDebug("drpFirstName: " + drpFirstName);
+	logDebug("drpLastName: " + drpLastName);
+	logDebug("apn: " + apn);
+	logDebug("sellersPermitNumber: " + sellersPermitNumber);
+    */
     ////////////FORMAT DATA TO JSON////////////////////////////////////////////////////
     var jsonResult = {
         "LicenseNumber": licenseNumber,
@@ -78,7 +158,7 @@ try{
         "MainEmail": drpEmail,
         "PhysicalAddress": {
             "Street1": premiseAddress,
-            "Street2": "",
+            "Street2": premiseAddress2,
             "Street3": "",
             "Street4": "",
             "City": premiseCity,
@@ -96,5 +176,5 @@ try{
 }catch (err){
 	logDebug("A JavaScript Error occurred: licenseNumberToCatJson " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, emailAddress, "", "A JavaScript Error occurred: licenseNumberToCatJson: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, emailAddress, "", "A JavaScript Error occurred: licenseNumberToCatJson: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }}

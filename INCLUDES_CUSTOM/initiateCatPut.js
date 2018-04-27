@@ -29,8 +29,7 @@ try{
     for (var i = 0, len = licenseNumStrings.length; i < len; i++) {
         try {
             var jsonData = licenseNumberToCatJson(licenseNumStrings[i]);
-			logDebug("jsonData: " + jsonData );
-            if (jsonData["LicenseStatus"] === 'Active') {
+            if (jsonData["LicenseStatus"] == 'Active') {
                 result.activeCount++;
             } else {
                 result.inactiveCount++;
@@ -50,7 +49,8 @@ try{
         "Key": key,
         "Data": dataJsonArray
     };
-    //logDebug(JSON.stringify(nData, null, 4));
+    logDebug("here: " + key);
+    logDebug("here: " + JSON.stringify(nData, null, 4));
     var nDataJson = JSON.stringify(nData);
 
     var postResp = httpClientPut(url, nDataJson, 'application/json', 'utf-8');
@@ -149,7 +149,7 @@ try{
         return postResp;
     }
 }catch (err){
-	logDebug("A JavaScript Error occurred: initiateCatPut " + err.message);
+	logDebug("A JavaScript Error occurred: initiateCatPut: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: initiateCatPut: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, emailAddress, "", "A JavaScript Error occurred: initiateCatPut: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }}
