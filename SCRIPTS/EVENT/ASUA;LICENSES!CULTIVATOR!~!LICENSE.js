@@ -1,16 +1,11 @@
-/*===========================================
-Title: ASUA;LICENSES!CULTIVATOR!~!LICENSE
-Purpose: Sends license to CAT when status becomes 'Inactive'
-Author: John Towell
-============================================== */
-
+//Sends license to CAT when status becomes 'Inactive'
 try{
-    if(matches(appStatus, "Revoked", "Suspended", "Inactive")){
-        if (appTypeArray[2] != "Temporary") {
-            addToCat(capId);
-        }
-    }
+	if (appTypeArray[2] != "Temporary") {
+		if(matches(appStatus, "Revoked", "Suspended", "Inactive")){
+			addToCat(capId);
+		}
+	}
 }catch(err){
-    logDebug("An error has occurred in ASUA;LICENSES!CULTIVATOR!~!LICENSE: Adding to CAT Set: " + err.message);
-    logDebug(err.stack);
+	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/*/LICENSE: Adding to CAT Set: " + err.message);
+	logDebug(err.stack);
 }
