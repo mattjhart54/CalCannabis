@@ -24,7 +24,7 @@ try{
 		}
 		runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
 //mhart 180430 story 5392 Attach the Official License to the email sent
-		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", capId.getCustomID());
+		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
 //mhart 180430 story 5392 end 
 		//emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "", false, capStatus, capId, "Primary Contact", "RECORD_ID", capId.getCustomID());
 		//lwacht: 180123: story 4679: add post contacts to a set; create set if it does not exist
