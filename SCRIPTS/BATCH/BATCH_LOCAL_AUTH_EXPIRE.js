@@ -188,20 +188,20 @@ try{
 		var asgnDateOR = getAssignedDate("Owner Application Reviews");
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
+		editAppSpecific("Local Authority Response", "No Response");
+		updateTask("Administrative Review","Under Review","No notification recieved from Local Authority","");
+		updateAppStatus("Under Administrative Review", "No notification recieved from Local Authority");
 		if(asgnDateAR){
 			updateTaskAssignedDate("Administrative Review", asgnDateAR);
 		}else{
 			logDebug("No assigned date found for Administrative Review");
 		}
 		if(asgnDateOR){
-			updateTaskAssignedDate("Owner Application Reviews", asgnDateAR);
+			updateTaskAssignedDate("Owner Application Reviews", asgnDateOR);
 		}else{
 			logDebug("No assigned date found for Owner Application Reviews");
 		}
 		//lwacht: 180426: stpry 5436: end
-		editAppSpecific("Local Authority Response", "No Response");
-		updateTask("Administrative Review","Under Review","No notification recieved from Local Authority","");
-		updateAppStatus("Under Administrative Review", "No notification recieved from Local Authority");
 		
 		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
 			var conTypeArray = sendEmailToContactTypes.split(",");
