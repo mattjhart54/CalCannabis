@@ -79,8 +79,7 @@ aa.env.setValue( "setNonEmailPrefix" , "AppSubmitted");
 aa.env.setValue( "emailTemplate" , "LCA_APPLICATION_SUBMITTED");
 aa.env.setValue( "sendEmailNotifications" , "Y");
 aa.env.setValue("sendEmailToContactTypes" , "Designated Responsible Party");
-aa.env.setValue("sendEmailAddressType", "Mailing");
- */
+
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
@@ -183,7 +182,7 @@ try{
 		capCount++;
 		logDebug("----Processing record " + altId + br);
 		
-		//lwacht: 180426: stpry 5436: reset the assigned task
+		//lwacht: 180426: story 5436: reset the assigned task
 		var asgnDateAR = getAssignedDate("Administrative Review");
 		var asgnDateOR = getAssignedDate("Owner Application Reviews");
 		activateTask("Administrative Review");
@@ -201,7 +200,7 @@ try{
 		}else{
 			logDebug("No assigned date found for Owner Application Reviews");
 		}
-		//lwacht: 180426: stpry 5436: end
+		//lwacht: 180426: story 5436: end
 		
 		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
 			var conTypeArray = sendEmailToContactTypes.split(",");

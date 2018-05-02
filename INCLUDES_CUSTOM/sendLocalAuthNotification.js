@@ -7,9 +7,22 @@ function sendLocalAuthNotification() {
 		else {
 			editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),60,"Y"));
 		}
-
+		//lwacht: 180426: story 5436: reset the assigned task
+		var asgnDateAR = getAssignedDate("Administrative Review");
+		var asgnDateOR = getAssignedDate("Owner Application Reviews");
 		deactivateTask("Administrative Review");
 		deactivateTask("Owner Application Reviews");
+		if(asgnDateAR){
+			updateTaskAssignedDate("Administrative Review", asgnDateAR);
+		}else{
+			logDebug("No assigned date found for Administrative Review");
+		}
+		if(asgnDateOR){
+			updateTaskAssignedDate("Owner Application Reviews", asgnDateOR);
+		}else{
+			logDebug("No assigned date found for Owner Application Reviews");
+		}
+		//lwacht: 180426: story 5436: end
 		if(AInfo["Local Authority Type"] == "County")
 			var locAuth = AInfo["Local Authority County"];
 		if(AInfo["Local Authority Type"] == "City")

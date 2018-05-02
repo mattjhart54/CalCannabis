@@ -232,8 +232,16 @@ try {
 		if(taskItemScriptModel.getSuccess()){
 			var taskItemScript = taskItemScriptModel.getOutput();
 			if(matches(taskItemScript.disposition, "Recommended for Denial")){
+				//lwacht: 180426: story 5436: reset the assigned task
+				var asgnDateAR = getAssignedDate("Administrative Review");
 				activateTask("Administrative Manager Review");
 				deactivateTask("License Manager");
+				if(asgnDateAR){
+					updateTaskAssignedDate("Administrative Review", asgnDateAR);
+				}else{
+					logDebug("No assigned date found for Administrative Review");
+				}
+				//lwacht: 180426: story 5436: end
 			}
 		}
 		var taskItemScriptModel=aa.workflow.getTask(capId, "Science Manager Review");
@@ -268,7 +276,15 @@ try{
 //lwacht: once the cash letter has been sent, close the workflow until the payment has been received
 try{
 	if(wfStatus=="Cash Payment Due Letter Sent"){
+		//lwacht: 180426: story 5436: reset the assigned task
+		var asgnDateAR = getAssignedDate("Administrative Review");
 		deactivateTask("Administrative Review");
+		if(asgnDateAR){
+			updateTaskAssignedDate("Administrative Review", asgnDateAR);
+		}else{
+			logDebug("No assigned date found for Administrative Review");
+		}
+		//lwacht: 180426: story 5436: end
 	}
 }catch(err){
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Cash Payment Required: " + err.message);
