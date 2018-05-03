@@ -79,7 +79,7 @@ aa.env.setValue( "setNonEmailPrefix" , "AppSubmitted");
 aa.env.setValue( "emailTemplate" , "LCA_APPLICATION_SUBMITTED");
 aa.env.setValue( "sendEmailNotifications" , "Y");
 aa.env.setValue("sendEmailToContactTypes" , "Designated Responsible Party");
-
+*/
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
