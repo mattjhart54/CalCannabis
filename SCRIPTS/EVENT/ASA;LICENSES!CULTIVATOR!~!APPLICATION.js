@@ -272,9 +272,10 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
-
+// mhart 05/03/18 user story 5447 - remove rletaed record relation between Temp and annual applications
 //lwacht
 //add child if app number provided
+/*
 try{
 	logDebug("publicUser " + AInfo["Temp App Number"])
 	if(!publicUser){
@@ -298,10 +299,11 @@ try{
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Relate Temp Record: " + err.message);
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR//APPLICATION: Relate Temp Record: " + err.message);
 	logDebug(err.stack);
 }
-
+*/
+// mhart 05/03/18 user story 5447 end
 //lwacht: create submission report
 try{
 	//lwacht: 180108: defect 5120: don't run for temporary

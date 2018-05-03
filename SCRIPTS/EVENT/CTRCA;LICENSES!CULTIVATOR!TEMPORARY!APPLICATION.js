@@ -1,5 +1,7 @@
+//mhart 05/03/18 user story 5447 - eremove related record relation between Temp and annual applications	
 //lwacht
 //add parent if app number provided
+/*
 try{
 	if(!matches(AInfo["App Number"],null,"", "undefined")){
 		addParent(AInfo["App Number"]);
@@ -10,7 +12,8 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Add Permanent Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-
+*/
+//mhart 05/03/18 user story 5447 - eremove related record relation between Temp and annual applications	
 //lwacht 171214: update app name with legal business name
 try{
 	updateLegalBusinessName()
