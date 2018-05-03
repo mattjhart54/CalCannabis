@@ -104,6 +104,8 @@ try{
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
 			addParameter(eParams, "$$status$$", curStatus);
+			parentId = getParentByCapId(capId);
+			addParameter(eParams, "$$parentId$$", parentId.getCustomID());
 			drpAddresses = priContact.addresses;
 			var addrType = false;
 			for (x in drpAddresses){
