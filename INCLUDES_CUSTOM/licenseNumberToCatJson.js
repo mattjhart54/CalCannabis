@@ -30,7 +30,7 @@ try{
 		var licenseType = "M-"+AInfo["License Type"];
 	}
 	//lwacht: 180424: story 5411/5412: only allowing 'active' and 'inactive' statuses
-	if(capModel.getCapStatus() == "Active") {
+	if(capModel.getCapStatus().indexOf("Active")==0) {
 		var licenseStatus =  "Active";
 	} else  {
 		var licenseStatus = "Inactive";
