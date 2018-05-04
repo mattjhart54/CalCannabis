@@ -36,9 +36,10 @@ try {
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/*/Application: Local Auth: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
+//mhart 05/03/18 user story 5447 - remove rletaed record relation between Temp and annual applications
 //lwacht
 //add child if app number provided
-
+/*
 try{
 	if(!matches(AInfo["Temp App Number"],null,"", "undefined")){
 		var tmpID = aa.cap.getCapID(AInfo["Temp App Number"]);
@@ -63,6 +64,9 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR//APPLICATION: Relate Temp Record: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
+*/
+//mhart 05/03/18 user story 5447 - end
+
 //lwacht: if defer payment is used, then re-invoice the fees and turn the associated forms into real records
 //lwacht: 171108: and send email
 //lwacht: 171112: moving from CTRCB for time being

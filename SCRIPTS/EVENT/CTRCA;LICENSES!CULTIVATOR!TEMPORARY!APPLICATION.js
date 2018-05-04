@@ -13,7 +13,8 @@ try{
 }
 
 */
-//mhart 05/03/18 user story 5447 - eremove related record relation between Temp and annual applications	
+//mhart 05/03/18 user story 5447 - end
+
 //lwacht 171214: update app name with legal business name
 try{
 	updateLegalBusinessName()
