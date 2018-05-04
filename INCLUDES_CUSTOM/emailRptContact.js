@@ -105,8 +105,9 @@ try{
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
 			addParameter(eParams, "$$status$$", curStatus);
 // mhart 20180503 story - 5392 added code to get the parent record to display on notification
-			parentId = getParentByCapId(capId);
-			addParameter(eParams, "$$parentId$$", parentId.getCustomID());
+			var parentId = getParentByCapId(capId);
+			if(!matches(parentId, null, "", "undefined"))
+				addParameter(eParams, "$$parentId$$", parentId.getCustomID());
 // mhart 20180503 story - 5392 end			
 			drpAddresses = priContact.addresses;
 			var addrType = false;
