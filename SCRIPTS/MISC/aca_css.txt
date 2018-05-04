@@ -1,0 +1,399 @@
+	/* made changes suggested by John Schomp avpre6 after changes 20171220 including av6 production 20171220 */
+	/*remove the view link from the related records screen */
+	.ACA_Shot  {
+	 display: none;
+	}
+	/* removed edit button on Edit Cart Pay Fees pages */
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl00_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl01_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl02_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl03_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl04_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl05_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl06_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl07_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl08_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl09_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl10_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl11_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl12_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl13_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl14_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl15_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl16_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl17_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl18_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl19_btnEditApplication, 
+#ctl00_PlaceHolderMain_ShoppingCartListSelected_addressList_ctl00_capList_ctl20_btnEditApplication {display: none; !important} 
+	/* hide associated form resume/complete button */
+	#ctl00_PlaceHolderMain_childCapList_ctl00_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl01_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl02_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl03_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl04_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl05_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl06_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl07_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl08_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl09_lnkChildCapAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl10_lnkChildCapAction{
+	 display: none; }
+
+	#ctl00_PlaceHolderMain_capFeeList_lnkRecalculate{
+		display: none;
+	}
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButton a:hover span { 
+		color: #f8f8f8 !important;
+	}
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButton  a:active span { 
+		color: #ffffff !important;
+	}
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButton a span { 
+		color: #ffffff !important;
+	}
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButton a > span { 
+		color: #ffffff !important;
+	}
+	.ACA_GridView > tbody > tr > td a, .ACA_GridView > tbody > tr > td span {
+		color: #16588c !important;
+	} 
+
+	.aca_gridview_caption > table > tbody > tr > td a {
+		color: #16588c !important;
+	} 
+	 
+	.ACA_Title_Bar h1 > span, .ACA_InfoTitle h1 > span {
+		color: #000000 !important;
+	}
+	 /* remove clone copy */
+	#ctl00_PlaceHolderMain_CapList1_gdvPermitList_gdvPermitListtop4btnCloneRecord {
+		display: none;
+	}
+
+	#ctl00_PlaceHolderMain_PermitList_gdvPermitList_btnCloneRecord {
+		display: none;
+	}
+
+	#ctl00_PlaceHolderMain_CapList1_gdvPermitList_gdvPermitListtop4btnAddCollection {
+		display: none;
+	}
+
+	#ctl00_PlaceHolderMain_lblAddCap2Collection {
+		display: none;
+	}
+
+	/* remove Address on final submit page */
+	#ct100_PlaceHolderMain_addressList_ct100_lblAddress {
+		display: none;
+	}
+
+	#ctl00_PlaceHolderMain_lblAddCap2Collection {
+		display: none;
+	}
+
+	#ctl00_PlaceHolderMain_lblAddCap2Collection {
+		display: none;
+	}
+
+	/* remove Address on final submit page */
+	#divAddress {
+		display: none;
+	}
+
+	#ctl00_PlaceHolderMain_lblAddCap2Collection {
+		display: none;
+	}
+
+	a #ctl00_PlaceHolderMain_CapList1_gdvPermitList_gdvPermitListtop4btnExport {
+		color: #16588c !important;
+	}
+	a #ctl00_PlaceHolderMain_CapList1_gdvPermitList_ctl03_hlPermitNumber {
+		color: #16588c !important;
+	}
+
+	a #ctl00_PlaceHolderMain_CapList1_gdvPermitList_ctl14_btnStatus {
+		color: #16588c !important;
+	}
+
+	/* James title bar and button colors */
+	ACA_Title_Bar {
+		background-color: #93c850  !important;
+	}
+
+	.ACA_SmButton a:hover:hover,
+	.ACA_SmButtonForRight a:hover:hover,
+	.ACA_SmButtonDisable a:hover:hover,
+	.ACA_LgButton a:hover:hover,
+	.ACA_LgButtonForRight a:hover:hover {
+	  background: #2684C8 !important;
+	}
+	.ACA_SmButton a:active,
+	.ACA_SmButtonForRight a:active,
+	.ACA_SmButtonDisable a:active,
+	.ACA_LgButton a:active,
+	.ACA_LgButtonForRight a:active {
+	  background: #165888 !important;
+	  background-color: #165888 !important;
+	  background: -webkit-gradient(linear, left top, left bottom, from(#165888), to(#F8F8F8)) !important;
+	  background: -webkit-linear-gradient(top, #165888, #F8F8F8) !important;
+	  background: -moz-linear-gradient(top, #165888, #F8F8F8) !important;
+	  background: -ms-linear-gradient(top, #165888, #F8F8F8) !important;
+	  background: -o-linear-gradient(top, #165888, #F8F8F8) !important;
+	}
+
+	/* James removing Collections from the top links */
+	#ctl00_HeaderNavigation_lblMyCollection{
+	display: none;}
+
+	/* James removing Trust Account Information from Account Management Title and List */
+	#ctl00_PlaceHolderMain_lblTrustAccountTitle,
+	#ctl00_PlaceHolderMain_trustAcctList_gdvTrustAcctList,
+	#ctl00_PlaceHolderMain_divTrustAccount{
+	display: none;}
+
+	/* James removing Header Navigation from all pages */
+	#ctl00_HeaderNavigation_divMenu{
+	display:none;}
+
+	/* James removing General Search from all pages including Search History and Magnifying Glass Icon*/
+	#txtSearchCondition,
+	#btnSearch,
+	#tdSearchHistory{
+	display:none;}
+		
+	/* James removing License Information from Account Management Title and List */
+	#ctl00_PlaceHolderMain_divLicense,
+	#ctl00_PlaceHolderMain_acc_manage_label_licenseInfo,
+	#ctl00_PlaceHolderMain_acc_manage_label_licenseInfo_sub_label{
+	display: none;}
+	/* James changing color of License Type  .ACA_Area_CapEdit .ACA_Title_Bar h1 { background: black;} */
+	#ctl00_PlaceHolderMain_lbl3aaaa5c2 { color: green;}
+	/* Work around IE document upload bug */
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButton a:hover span { padding: 10px !important;}
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButton a span { padding: 10px !important;}
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButtonForRight a span { padding: 10px !important;}
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButton a { padding-left: 0px !important; padding-right: 0px !important;}
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButtonForRight a { padding-left: 0px !important; padding-right: 0px !important;}
+	#ctl00_PlaceHolderMain_ConditionDocumentEdit_gdvRequiredDocument .ACA_LgButtonDisable a { padding-left: 0px !important; padding-right: 0px !important;}
+	#ctl00_PlaceHolderMain_recordTypeFilterSelection_divSearchBar{
+	display: none;}
+	#ctl00_PlaceHolderMain_childCapList_ctl00_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl01_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl02_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl03_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl04_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl05_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl06_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl07_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl08_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl09_lnkRemoveAction,
+	#ctl00_PlaceHolderMain_childCapList_ctl10_lnkRemoveAction{
+	 display: none; }
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblInsuranceCompany, 
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblInsuranceCompanyValue,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblInsurancePolicy,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblInsurancePolicyValue,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblBusinessExpirationDate,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblBusinessExpirationDateValue,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblBusinessNumber,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblBusinessNumberValue,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeTitle,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeTitleValue,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblContactType,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblContactTypeValue,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeTelephone1,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeTelephone1Value,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeTelephone2,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeTelephone2Value,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeFAX,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeFAXValue,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeEmail,
+	#ctl00_PlaceHolderMain_licenseeGeneralInfo_lblLicenseeEmailValue, 
+	#ctl00_PlaceHolderMain_divTrustAccount {
+		display:none; }
+		
+	/* Associated Forms Buttons */
+	#ctl00_PlaceHolderMain_btnContinue { float: right; }
+	#ctl00_PlaceHolderMain_divShowSaveandResume{ float: left; }
+
+	label #ctl00_PlaceHolderMain_LoginBox_acc_sign_label_rememberMe {
+		color: #16588c !important;
+	} 
+
+	/* remove the section You are now logged in.  */
+	#ctl00_PlaceHolderMain_areaLoggedIn {
+	display: none !important
+	}
+
+	/* JVM 20171208 I am changing to white as per Jeff - it was Pine */
+	.ACA_Content #divRegisterEdit{background-color: #FFFFFF !important;}
+
+	p {
+		font-family: arial, helvetica, sans-serif !important;
+		font-size: 12px !important;
+	}
+	.ACA_Body_Text_FontSize ul,
+	.ACA_Body_Text_FontSize ol,
+	.ACA_Section_Instruction, 
+	.ACA_Section_Instruction_FontSize, 
+	.ACA_Link_Text, 
+	.ACA_Link_Text_FontSize, 
+	.ACA_SmLabel, 
+	.ACA_SmLabel_FontSize, 
+	.ACA_Body_Text, 
+	.ACA_Body_Text_FontSize, 
+	.ACA_LoginBox, 
+	.ACA_Label,
+	.ACA_Page, 
+	.ACA_Page_FontSize {font-size: 12px !important;}
+	p {font-size: 12px !important;}
+	/* JVM 20171211 made ALL background-color background-color: #FFFFFF White and welcome page background-color: #162500 Pine  */
+	.ACA_Content {background-color: #FFFFFF !important;}
+	/* JVM 20180329 remove as per John Schomp .aca_wrapper .ACA_Content.welcome-page > table > tbody > tr > td:first-child {background-color: #162500 !important;}  */
+
+	/* JVM 20171211 I am changing to white as per Jeff - it was Pine */
+	/* JVM 20180329 remove as per John Schomp .aca_wrapper .ACA_Content.welcome-page {background-color: #FFFFFF !important;}  */
+
+	/* JVM 20180329 added as per John Schomp */
+	#ctl00_PlaceHolderMain_divContentLink { display:none; }
+	#ctl00_PlaceHolderMain_divLeft {background-color:white }
+
+
+	/* links are blue */
+	#ctl00_HeaderNavigation_com_headIsLoggedInStatus_label_logout {color: #16588c !important;}
+
+	div #ctl00_PlaceHolderMain_LoginBox_divRegisterAccount, 
+	#ctl00_PlaceHolderMain_LoginBox_divForgotPassword {
+		color: #16588c !important;
+	} 
+
+	/* links are blue */
+	a #ctl00_HeaderNavigation_com_headNav_label_loggedinas, 
+	#ctl00_HeaderNavigation_lblUserName, 
+	#ctl00_HeaderNavigation_com_headNav_label_accountManagement, 
+	#ctl00_HeaderNavigation_com_headIsLoggedInStatus_label_logout, 
+	#ctl00_HeaderNavigation_managerURL, 
+	#ctl00_HeaderNavigation_btnLogout, 
+	#ctl00_HeaderNavigation_afterLogin, 
+	#ctl00_PlaceHolderMain_refContactList_gdvRefContactList_gdvRefContactListtop4btnExport, 
+	#ctl00_PlaceHolderMain_CapList1_gdvPermitList_gdvPermitListtop4btnExport, 
+	#ctl00_PlaceHolderMain_lnkBack, 
+	#ctl00_PlaceHolderMain_LoginBox_hrefForgotPWD, 
+	#ctl00_PlaceHolderMain_LoginBox_hrefRegisterAccount, 
+	#ctl00_PlaceHolderMain_btnGSLoadASI, 
+	#btnGSExpandCollapse, 
+	#ctl00_HeaderNavigation_lblAccessibilityAfter {
+		color: #16588c !important;
+	} 
+
+	a #ctl00_PlaceHolderMain_TopShoppingCartItems_btnMore {
+		color: #16588c !important; } 
+		
+	a > span #ctl00_PlaceHolderMain_LoginBox_acc_sign_label_newUser, 
+	#ctl00_PlaceHolderMain_lblGSExpand, 
+	#ctl00_PlaceHolderMain_ucContactInfo_contactAddressList_lblAddContactAddress {
+		color: #16588c !important;} 
+
+	/* links are blue */
+	.topshoppingcart_title  {color: #16588c !important;}
+
+	.ACA_RightContent #ctl00_PlaceHolderMain_per_permitHome_label_onlinePermit, 
+	.ACA_RightContent #ctl00_PlaceHolderMain_acc_regHome_label_register{	
+		color: #16588c  !important;
+	} 
+
+	.ACA_NaviTitle .ACA_Body_Text, 
+	.ACA_NaviTitle #ctl00_HeaderNavigation_com_headNav_label_loggedinas, 
+	.ACA_NaviTitle #ctl00_HeaderNavigation_lblUserName, 
+	.ACA_NaviTitle #ctl00_HeaderNavigation_lblAccessibilityAfter, 
+	.ACA_NaviTitle #ctl00_HeaderNavigation_lblAccessibilityBefore, 
+	.ACA_NaviTitle #ctl00_HeaderNavigation_managerURL, 
+	.ACA_NaviTitle #ctl00_HeaderNavigation_com_headNav_label_accountManagement, 
+	.ACA_NaviTitle #ctl00_HeaderNavigation_com_headIsLoggedInStatus_label_logout, 
+	.ACA_NaviTitle #ctl00_HeaderNavigation_btnLogout, 
+	.ACA_NaviTitle #ctl00_HeaderNavigation_afterLogin, 
+	.ACA_NaviTitle #ctl00_PlaceHolderMain_refContactList_gdvRefContactList_gdvRefContactListtop4btnExport, 
+	.ACA_NaviTitle #ctl00_PlaceHolderMain_CapList1_gdvPermitList_gdvPermitListtop4btnExport, 
+	.ACA_NaviTitle #ctl00_PlaceHolderMain_lnkBack, 
+	.ACA_NaviTitle #ctl00_PlaceHolderMain_LoginBox_hrefForgotPWD, 
+	.ACA_NaviTitle #ctl00_PlaceHolderMain_LoginBox_hrefRegisterAccount, 
+	.ACA_NaviTitle #ctl00_PlaceHolderMain_btnGSLoadASI, 
+	.ACA_NaviTitle #btnGSExpandCollapse, 
+	.ACA_NaviTitle a {	
+		color: #16588c  !important;
+	} 
+
+	.aca_checkbox label, 
+	.aca_checkbox span, 
+	.aca_checkboxlist label { 
+		color: #16588c  !important;}  
+	/*  
+	a:hover, a:focus, a:active, a:hover span, a:focus span, a:active span  { color: #16588c  !important;}   
+	*/
+	#ctl00_PlaceHolderMain_LoginBox_lblForgotPWD { 
+	color: #16588c  !important;} 
+	 
+	.navbar-table a:hover, 
+	.navbar-table a:focus, 
+	.navbar-table a:active {
+	color: #cee5aa;
+	}
+	.navbar-table a i {
+		color: #cee5aa;
+	}
+	 .content-area p {
+		color: #333;
+		font-size: 15px  !important; font-family: MuseoSans, Arial, Helvetica, Sans-Serif, CalciteWebCoreIcons !important;
+		line-height: 1.5;
+		margin: 0 0 15px 0;
+	}  .content-area {
+		margin: 0;
+		padding: 30px 40px  !important;
+		
+	} .content-section {
+		padding: 20px 30px  !important;
+	}  .feature-desc h3 {
+	text-align: left  !important;
+	}  .feature-desc p {
+	text-align: left  !important;
+	} .ACA_Announcement_Window {
+		position: relative !important;
+		top: 50px;} 
+		
+	#ctl00_phPopup_ucContactInfo_txtAppZipApplicant {display: none !important}
+	#ctl00_phPopup_ucContactInfo_txtAppZipApplicant {display: none !important}
+	#ctl00_phPopup_ucContactInfo_txtAppZipApplicant_td {display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppZipApplicant_label_1{display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppZipApplicant_element_group {display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppOrganizationName_element_group {display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppStreetAdd1_element_group {display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppCity_element_group {display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppCity_element_group {display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppState_State1_element_group  {display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppPhone1_element_group {display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppPhone2_element_group  {display: none !important}
+
+	#ctl00_phPopup_ucContactInfo_txtAppFax_element_group  {display: none !important}
+	#ctl00_phPopup_ucContactInfo_txtAppZipApplicant_parentGrid  {display: none !important}
+
+	/* remove the Add a Contact button from Account Management */
+	#ctl00_PlaceHolderMain_btnAddContact_container {display: none !important;}
+
+	/* added per John Schomp to remove green bar */
+
+	#ctl00_PlaceHolderMain_divContentLink { display:none; }
+	#ctl00_PlaceHolderMain_divLeft {background-color:white }
+
+	/* Licenses Header */
+	#ctl00_PlaceHolderMain_TabDataList_TabsDataList_ctl00_lblModuleName {display: none !important}
+	/* Search and Renew a License */
+	#ctl00_PlaceHolderMain_TabDataList_TabsDataList_ctl00_LinksDataList {display: none !important}
