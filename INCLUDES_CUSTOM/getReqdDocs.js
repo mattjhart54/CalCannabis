@@ -287,6 +287,8 @@ try{
 	}
 	*/
 	//lwacht 171109 power source
+	//mhart 180517 user story 5431 Remove power source document requirement
+	/*
 	if(AInfo["Generator"] == "CHECKED" ) {
 		arrReqdDocs_App.push(pwrGenerator);
 	}else{
@@ -294,6 +296,7 @@ try{
 			removeCapCondition(conditionType, pwrGenerator.condition);
 		}
 	}
+	*/
 	//lwacht 171109 compassionate user
 	if(!matches(AInfo["Date of Intitial Operation"], "",null,"undefined")){
 		dateInitOp = convertDate(AInfo["Date of Intitial Operation"]);
