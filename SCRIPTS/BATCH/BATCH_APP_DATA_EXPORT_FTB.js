@@ -68,7 +68,7 @@ else
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters 
 
-// elycia.juco@cdfa.ca.gov */
+// elycia.juco@cdfa.ca.gov 
 aa.env.setValue("lookAheadDays", "-365");
 aa.env.setValue("daySpan", "365");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
@@ -84,7 +84,7 @@ aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
 aa.env.setValue("appStatus", "Active,Inactive");
-
+*/
  
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");

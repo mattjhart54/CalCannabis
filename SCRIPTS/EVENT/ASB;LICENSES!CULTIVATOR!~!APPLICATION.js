@@ -35,13 +35,13 @@ try{
 	if(publicUser){
 		if(appTypeArray[2]!="Temporary"){
 			var missingContact = false;
-			if(!getContactObj(capId,"Business"){
+			if(!getContactObj(capId,"Business")){
 				missingContact=true;
 			}
-			if(!getContactObj(capId,"Agent for Service of Process"){
+			if(!getContactObj(capId,"Agent for Service of Process")){
 				missingContact=true;
 			}
-			if(!getContactObj(capId,"Designated Responsible Party"){
+			if(!getContactObj(capId,"Designated Responsible Party")){
 				missingContact=true;
 			}
 			if(missingContact){
