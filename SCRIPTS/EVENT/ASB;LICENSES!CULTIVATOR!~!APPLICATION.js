@@ -30,6 +30,35 @@ try{
 }
 //lwacht: 180412: story 5428: end
 
+//lwacht: 180529: story 5511:  don't allow submission if any contacts are missing
+try{
+	if(publicUser){
+		if(appTypeArray[2]!="Temporary"){
+			var missingContact = false;
+			if(!getContactObj(capId,"Business"){
+				missingContact=true;
+			}
+			if(!getContactObj(capId,"Agent for Service of Process"){
+				missingContact=true;
+			}
+			if(!getContactObj(capId,"Designated Responsible Party"){
+				missingContact=true;
+			}
+			if(missingContact){
+				showMessage = true;
+				cancel = true;
+				comment("A system error has occurred. Please contact the CSC to complete your application.");
+			}
+		}
+	}
+} catch (err) {
+	showDebug =true;
+	logDebug("An error has occurred in ASB:Licenses/Cultivation/*/Application: Missing contact check: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/Application: Missing contact check: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
+}
+//lwacht: 180529: story 5511:   end
+
 
 //lwacht 180104 Story 5105 start
 /*

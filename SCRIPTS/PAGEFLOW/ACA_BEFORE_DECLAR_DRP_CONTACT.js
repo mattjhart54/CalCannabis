@@ -124,7 +124,7 @@ try{
 } catch (err) {
 	logDebug("An error has occurred in ACA_BEFORE_DECLAR_DRP_CONTACT: Require Preferred Method of Contact  : " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Require Preferred Method of Contact   " + startDate, "capId: " + capId + br + br + err.message + br + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Require Preferred Method of Contact   " + startDate, "capId: " + capId + br + br + err.message + br + err.stack);
 }
 
 try{
@@ -171,7 +171,7 @@ try{
 	showDebug =true;
 	logDebug("An error has occurred in ACA_BEFORE_DECLAR_DRP_CONTACT: Require County and BOE: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Require County and BOE: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Require County and BOE: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack+ br + currEnv);
 }
 
 try {
@@ -236,9 +236,38 @@ try {
 	showDebug = true;
     logDebug("A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Owner Percentage: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_DECLAR_DRP_CONTACT: Owner Percentage: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_DECLAR_DRP_CONTACT: Owner Percentage: "+ startDate, capId + "; " + err.message+ "; "+ err.stack+ br + currEnv);
 
 }
+
+//lwacht: 180529: story 5511:  don't allow submission if any contacts are missing
+try{
+	if(publicUser){
+		if(appTypeArray[2]!="Temporary"){
+			var missingContact = false;
+			if(!getContactObj(capId,"Business"){
+				missingContact=true;
+			}
+			if(!getContactObj(capId,"Agent for Service of Process"){
+				missingContact=true;
+			}
+			if(!getContactObj(capId,"Designated Responsible Party"){
+				missingContact=true;
+			}
+			if(missingContact){
+				showMessage = true;
+				cancel = true;
+				comment("A system error has occurred. Please contact the CSC to complete your application.");
+			}
+		}
+	}
+} catch (err) {
+	showDebug =true;
+	logDebug("An error has occurred in ACA_BEFORE_DECLAR_DRP_CONTACT: Missing contact check: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Missing contact check: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
+}
+//lwacht: 180529: story 5511:   end
 
 function getCapIdStatusClass(inCapId){
     var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();

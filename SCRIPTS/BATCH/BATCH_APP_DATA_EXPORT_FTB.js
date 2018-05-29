@@ -66,9 +66,9 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters
+/* test parameters 
 
-// elycia.juco@cdfa.ca.gov
+// elycia.juco@cdfa.ca.gov */
 aa.env.setValue("lookAheadDays", "-365");
 aa.env.setValue("daySpan", "365");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
@@ -84,7 +84,7 @@ aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
 aa.env.setValue("appStatus", "Active,Inactive");
-  */
+
  
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
@@ -192,7 +192,7 @@ try{
 	else
 		var minute = "0" + pMinute.toString();
 	
-	var rptDateFormatted = "" + pYear.toString();// + mth + day + hour + minute;
+	var rptDateFormatted = "" + pYear.toString() + mth + day + hour + minute;
 	var newRptName = rptName + rptDateFormatted + ".txt";
 	logDebug("newRptName: " + newRptName);
 	var rptToEmail = filepath + "/" + newRptName;
@@ -399,25 +399,25 @@ try{
 								if(vZip.length>9){
 									licLine += vZip.substr(0,9);
 								}else{
-									licLine += zeroPad(vZip,9);
+									licLine += zeroPadRight(vZip,9);
 								}
-								//3 char diff between us and foreign addresses
-								licLine += "000";
+								//us country code
+								licLine += "001";
 							//addresses outside of the u.s.
 							}else{
 								//country, country code (not stored)
 								if(thisAddr.countryCode.length()>11){
 									licLine += thisAddr.countryCode.substr(0,11);
-									licLine += spacePad("",3);
+									licLine += zeroPad("",3);
 								}else{
 									licLine += spacePad(thisAddr.countryCode,11);
-									licLine += spacePad("",3);
+									licLine += zeroPad("",3);
 								}
 							}
 						}
 					}
 					if(addrNotFound){
-						licLine += spacePad("",76);
+						licLine += spacePad("",79);
 					}
 				}
 				//business contact type--gathering here so do not have to cycle through contacts again but using later
@@ -478,7 +478,7 @@ try{
 								if(vZip.length>9){
 									bsnsLine += vZip.substr(0,9);
 								}else{
-									bsnsLine += zeroPad(vZip,9);
+									bsnsLine += zeroPadRight(vZip,9);
 								}
 							//addresses outside of the u.s.
 							}else{
@@ -712,6 +712,14 @@ function zeroPad(num,count){
 	var numZeropad = num + '';
 	while(numZeropad.length < count) {
 		numZeropad = "0" + numZeropad; 
+	}
+	return numZeropad;
+}
+
+function zeroPadRight(num,count){ 
+	var numZeropad = num + '';
+	while(numZeropad.length < count) {
+		numZeropad = numZeropad + "0" ; 
 	}
 	return numZeropad;
 }
