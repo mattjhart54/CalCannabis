@@ -50,7 +50,10 @@ try{
 	var propertyDiagram = {condition : "Cultivation Plan - Property Diagram", document : "Cultivation Plan - Property Diagram"};
 	//lwacht: 180502: story 5445: changing condition name
 	var detailPremises = {condition : "Cultivation Plan - Detailed Premises", document : "Cultivation Plan - Detailed Premises"};
+	//hwacht: 180529: story 5445: THIS STORY SUPERCEDES 5353
 	//var detailPremises = {condition : "Cultivation Plan - Detailed Premises Diagram", document : "Cultivation Plan - Detailed Premises Diagram"};
+	var detailPremises = {condition : "Cultivation Plan - Detailed Premises Diagram", document : "Cultivation Plan - Detailed Premises Diagram"};
+	//hwacht: 180529: story 5445: end
 	//lwacht: 180502: story 5445: end
 	//mhart 180411 user story 5353
 	var wastePlan = {condition : "Cultivation Plan - Waste Management Plan", document : "Cultivation Plan - Waste Management Plan"};
