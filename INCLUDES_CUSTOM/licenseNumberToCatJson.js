@@ -129,26 +129,27 @@ try{
 	}else{
 		 var sellersPermitNumber = "" + AInfo["BOE Seller's Permit Number"].substr(0, 50);
 	}
-	/*
-	logDebug("licenseNumber: " + licenseNumber);
-	logDebug("legalBusinessName: " + legalBusinessName);
+	/*    */
+	logDebug("LicenseNumber: " + licenseNumber);
+	logDebug("LicenseName: " + legalBusinessName);
 	logDebug("licenseType: " + licenseType);
 	logDebug("licenseStatus: " + licenseStatus);
 	logDebug("licenseValidityStart: " + licenseValidityStart);
 	logDebug("licenseExpiration: " + licenseExpiration);
-	logDebug("drpPhoneNumber: " + drpPhoneNumber);
-	logDebug("drpEmail: " + drpEmail);
-	logDebug("premiseAddress: " + premiseAddress);
-	logDebug("premiseAddress2: " + premiseAddress2);
-	logDebug("premiseCity: " + premiseCity);
-	logDebug("premiseCounty: " + premiseCounty);
-	logDebug("premiseState: " + premiseState);
-	logDebug("premiseZip: " + premiseZip);
-	logDebug("drpFirstName: " + drpFirstName);
-	logDebug("drpLastName: " + drpLastName);
-	logDebug("apn: " + apn);
-	logDebug("sellersPermitNumber: " + sellersPermitNumber);
-    */
+	logDebug("MobilePhoneNumber: " + drpPhoneNumber);
+	logDebug("MainPhoneNumber: " + facilityPhone);
+	logDebug("MainEmail: " + drpEmail);
+	logDebug("Street1: " + premiseAddress);
+	logDebug("Street2: " + premiseAddress2);
+	logDebug("City: " + premiseCity);
+	logDebug("County: " + premiseCounty);
+	logDebug("State: " + premiseState);
+	logDebug("PostalCode: " + premiseZip);
+	logDebug("ManagerFirstName: " + drpFirstName);
+	logDebug("ManagerLastName: " + drpLastName);
+	logDebug("SellerPermitNumber: " + apn);
+	logDebug("SellerPermitNumber: " + sellersPermitNumber);
+
     ////////////FORMAT DATA TO JSON////////////////////////////////////////////////////
     var jsonResult = {
         "LicenseNumber": licenseNumber,

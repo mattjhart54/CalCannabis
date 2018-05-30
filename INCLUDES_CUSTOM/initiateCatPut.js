@@ -29,7 +29,6 @@ try{
     for (var i = 0, len = licenseNumStrings.length; i < len; i++) {
         try {
             var jsonData = licenseNumberToCatJson(licenseNumStrings[i]);
-			logDebug("jsonData: " + jsonData);
             if (jsonData["LicenseStatus"] == 'Active') {
                 result.activeCount++;
             } else {
