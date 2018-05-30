@@ -55,7 +55,7 @@ try{
 	var thisDate = new Date();
 	var thisTime = thisDate.getTime();
 	var eTime = (thisTime - sTime) / 1000
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "lwacht@trustvip.com", "", "INFO ONLY RunAsync: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + sendCap + br + "avpre6" + br + eTxt);
+	//aa.sendMail("calcannabislicensing@cdfa.ca.gov", "lwacht@trustvip.com", "", "INFO ONLY RunAsync: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + sendCap + br + "avpre6" + br + eTxt);
 } catch(err){
 	aa.print("An error has occurred in asyncRunSubmittedApplicRpt: " + err.message);
 	aa.print(err.stack);
