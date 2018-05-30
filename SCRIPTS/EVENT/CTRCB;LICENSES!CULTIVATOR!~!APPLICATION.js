@@ -30,7 +30,7 @@ try{
 }
 */
 
-//lwacht: testing to see if it works
+/*lwacht: testing to see if it works
 try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: CTRCB:LICENSES/CULTIVATOR/* /APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + message + br + currEnv);
 } catch(err){
@@ -38,3 +38,4 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCB:LICENSES/CULTIVATOR/* /APPLICATION: Convert Assoc Forms: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
+*/
