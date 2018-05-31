@@ -79,6 +79,7 @@ try{
 				}
 			}
 				showDebug=true;
+				cancel=true;
 			if(!contBsnsExists || !contDRPExists || !contASOPExists){
 				showMessage = true;
 				cancel = true;
