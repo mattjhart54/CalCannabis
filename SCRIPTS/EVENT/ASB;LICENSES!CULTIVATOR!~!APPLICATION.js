@@ -30,6 +30,7 @@ try{
 				for(var i in arrContacts) {
 					var thisCont = arrContacts[i];
 					var contType = thisCont.contactType;
+					logDebug("contType: " + contType);
 					if(contType=="Business"){
 						contBsnsExists = true;
 					}
