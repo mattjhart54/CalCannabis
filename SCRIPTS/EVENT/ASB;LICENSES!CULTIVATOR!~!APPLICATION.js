@@ -32,6 +32,8 @@ try{
 
 //lwacht: 180529: story 5511:  don't allow submission if any contacts are missing
 try{
+				showDebug=true;
+				cancel=true;
 	if(publicUser){
 		var eTxt = "";
 		/*if(appTypeArray[2]!="Temporary"){
@@ -78,8 +80,6 @@ try{
 					}
 				}
 			}
-				showDebug=true;
-				cancel=true;
 			if(!contBsnsExists || !contDRPExists || !contASOPExists){
 				showMessage = true;
 				cancel = true;
