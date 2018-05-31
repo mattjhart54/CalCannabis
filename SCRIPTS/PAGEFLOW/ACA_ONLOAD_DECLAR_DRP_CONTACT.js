@@ -149,18 +149,21 @@ try{
 try{
 	if(publicUser){
 		if(appTypeArray[2]!="Temporary"){
-			var missingContact = false;
-			if(!getContactObj(capId,"Business")){
-				missingContact=true;
-			}
-			if(!getContactObj(capId,"Agent for Service of Process")){
-				missingContact=true;
-			}
-			if(!getContactObj(capId,"Designated Responsible Party")){
-				missingContact=true;
-			}
-			if(missingContact){
-				comment("A system issue may have occurred. For assistance with your application, please contact CalCannabis Cultivation Licensing Customer Support at 1-833-CAL-GROW or 1-833-225-4769, press option 1, and then option 2.");
+			var parCapId = getParent();
+			if(parCapId){
+				var missingContact = false;
+				if(!getContactObj(parCapId,"Business")){
+					missingContact=true;
+				}
+				if(!getContactObj(parCapId,"Agent for Service of Process")){
+					missingContact=true;
+				}
+				if(!getContactObj(parCapId,"Designated Responsible Party")){
+					missingContact=true;
+				}
+				if(missingContact){
+					comment("A system issue may have occurred. For assistance with your application, please contact CalCannabis Cultivation Licensing Customer Support at 1-833-CAL-GROW or 1-833-225-4769, press option 1, and then option 2.");
+				}
 			}
 		}
 	}
