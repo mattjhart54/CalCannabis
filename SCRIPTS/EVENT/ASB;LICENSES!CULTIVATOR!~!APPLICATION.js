@@ -2,7 +2,7 @@
 try{
 	if(publicUser){
 		if(appTypeArray[2]!="Temporary"){
-			var incompleteApp = false;
+			/*var incompleteApp = false;
 			if(matches(AInfo["License Type"],"",null,"undefined")){
 				incompleteApp = true;
 			}
@@ -16,6 +16,33 @@ try{
 				incompleteApp = true;
 			}
 			if(incompleteApp){
+				showMessage = true;
+				cancel = true;
+				comment("The record has not been completed.  Please edit each page to ensure all required fields are populated.");
+			} */
+			contBsnsExists = false;
+			contDRPExists = false;
+			contASOPExists = false;
+			var contactList = cap.getContactsGroup();
+			logDebug("got contactlist " + contactList.size());
+			if(contactList != null && contactList.size() > 0){
+				var arrContacts = contactList.toArray();
+				for(var i in arrContacts) {
+					var thisCont = arrContacts[i];
+					var contType = thisCont.contactType;
+					if(contType=="Business"){
+						contBsnsExists = true;
+					}
+					if(contType=="Designated Responsible Party"){
+						contDRPExists = true;
+					}
+					if(contType=="Agent for Service of Process"){
+						contASOPExists = true;
+					}
+				}
+			}
+			if(!contBsnsExists || !contDRPExists || !contASOPExists){
+				showDebug=true;
 				showMessage = true;
 				cancel = true;
 				comment("The record has not been completed.  Please edit each page to ensure all required fields are populated.");
