@@ -145,6 +145,33 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_DECLAR_DRP_CONTACT: Complete Contact" + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
 
+//lwacht: 180529: story 5511:  don't allow submission if any contacts are missing
+try{
+	if(publicUser){
+		if(appTypeArray[2]!="Temporary"){
+			var missingContact = false;
+			if(!getContactObj(capId,"Business")){
+				missingContact=true;
+			}
+			if(!getContactObj(capId,"Agent for Service of Process")){
+				missingContact=true;
+			}
+			if(!getContactObj(capId,"Designated Responsible Party")){
+				missingContact=true;
+			}
+			if(missingContact){
+				comment("A system issue may have occurred. For assistance with your application, please contact CalCannabis Cultivation Licensing Customer Support at 1-833-CAL-GROW or 1-833-225-4769, press option 1, and then option 2.");
+			}
+		}
+	}
+} catch (err) {
+	showDebug =true;
+	logDebug("An error has occurred in ACA_ONLOAD_DECLAR_DRP_CONTACT: Missing contact check: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_DECLAR_DRP_CONTACT: Missing contact check: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
+}
+//lwacht: 180529: story 5511:   end
+
 function getCapIdStatusClass(inCapId){
     var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
     var retClass = null;
