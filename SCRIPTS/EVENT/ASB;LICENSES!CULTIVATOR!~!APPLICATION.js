@@ -48,8 +48,9 @@ try{
 				missingContact=true;
 				eTxt+= "Designated Responsible Party: " +getContactObj(capId,"Designated Responsible Party") + br;
 			}
-			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Missing contact check: " + startDate, "capId: " + capId + ": " + br + eTxt + br + currEnv);
+			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Missing contact check: " + startDate, "capId: " + capId + ": " + br + eTxt + br + currEnv);
 			if(missingContact){
+				showDebug = true;
 				showMessage = true;
 				cancel = true;
 				comment("A system issue may have occurred. For assistance with your application, please contact CalCannabis Cultivation Licensing Customer Support at 1-833-CAL-GROW or 1-833-225-4769, press option 1, and then option 2.");
