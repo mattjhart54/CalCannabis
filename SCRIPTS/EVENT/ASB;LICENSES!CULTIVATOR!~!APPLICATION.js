@@ -33,17 +33,22 @@ try{
 //lwacht: 180529: story 5511:  don't allow submission if any contacts are missing
 try{
 	if(publicUser){
+		var eTxt = "";
 		if(appTypeArray[2]!="Temporary"){
 			var missingContact = false;
 			if(!getContactObj(capId,"Business")){
 				missingContact=true;
+				eTxt+= "Business: " +getContactObj(capId,"Business") + br;
 			}
 			if(!getContactObj(capId,"Agent for Service of Process")){
 				missingContact=true;
+				eTxt+= "Agent for Service of Process: " +getContactObj(capId,"Agent for Service of Process") + br;
 			}
 			if(!getContactObj(capId,"Designated Responsible Party")){
 				missingContact=true;
+				eTxt+= "Designated Responsible Party: " +getContactObj(capId,"Designated Responsible Party") + br;
 			}
+			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: ASB:Licenses/Cultivation/*/Application: Missing contact check: " + startDate, "capId: " + capId + ": " + br + eTxt + br + currEnv);
 			if(missingContact){
 				showMessage = true;
 				cancel = true;
