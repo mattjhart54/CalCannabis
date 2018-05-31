@@ -78,8 +78,8 @@ try{
 					}
 				}
 			}
-			if(!contBsnsExists || !contDRPExists || !contASOPExists){
 				showDebug=true;
+			if(!contBsnsExists || !contDRPExists || !contASOPExists){
 				showMessage = true;
 				cancel = true;
 				comment("The record has not been completed.  Please edit each page to ensure all required fields are populated.");
