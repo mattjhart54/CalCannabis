@@ -52,14 +52,14 @@ try{
 */
 try{
  	//lwacht: 180404: story 5233: because of changed workflow, removing the wfTask criterion
-	if(wfTask=="Case Disposition" && wfStatus == "Closed" && matches(AInfo["Corrective Action Plan"], "Yes", "Y", "YES")){
+	if(wfTask=="Legal Review" && wfStatus == "Action Approved" && matches(AInfo["Corrective Action Plan"], "Yes", "Y", "YES")){
 	//lwacht: 180404: story 5233: end
 		var docExists = false;
 		var arrDocs = getDocumentList();
 		for(doc in arrDocs){
 			var thisDocument = arrDocs[doc];
 		//Mhart 180418: story 5402 change criteria to look for document Final Corrective Action Plan			
-			if (thisDocument.getDocCategory() == "Final Corrective Action Plan"){
+			if (matches(thisDocument.getDocCategory(), "Final Corrective Action Plan", "Stipulated Decision and Order")){
 		//Mhart 180418: end
 				docExists=true;
 			}
