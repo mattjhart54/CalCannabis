@@ -151,7 +151,6 @@ try{
 			var conditionTable = [];
 			dr = "";
 			capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-			showDebug=true;
 			r = getReqdDocs("Application");
 			submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 			uploadedDocs = new Array();
