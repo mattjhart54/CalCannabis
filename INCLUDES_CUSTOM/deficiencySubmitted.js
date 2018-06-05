@@ -28,7 +28,15 @@ try {
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
 						logDebug("Admin Amendment record processed");
 						capId = parentCapId;
+						//lwacht: 180426: story ????: reset the assigned task
+						var asgnDateAR = getAssignedDate("Administrative Review");
 						activateTask("Administrative Review");
+						if(asgnDateAR){
+							updateTaskAssignedDate("Administrative Review", asgnDateAR);
+						}else{
+							logDebug("No assigned date found for Administrative Review");
+						}
+						//lwacht: 180426: story ????: end
 						//defect 4763: deactivate manager review when processor reviews are active
 						deactivateTask("Administrative Manager Review");
 						capId = currCap;
@@ -47,7 +55,15 @@ try {
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 						logDebug("Owner Amendment record processed");
 						capId = parentCapId;
+						//lwacht: 180426: story ????: reset the assigned task
+						var asgnDateOR = getAssignedDate("Owner Application Reviews");
 						activateTask("Owner Application Reviews");
+						if(asgnDateOR){
+							updateTaskAssignedDate("Owner Application Reviews", asgnDateOR);
+						}else{
+							logDebug("No assigned date found for Owner Application Reviews");
+						}
+						//lwacht: 180426: story ????: end
 						deactivateTask("Administrative Manager Review");
 						capId = currCap;
 					}
@@ -67,7 +83,15 @@ try {
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 						logDebug("Scientific Amendment record processed");
 						capId = parentCapId;
+						//lwacht: 180426: story ????: reset the assigned task
+						var asgnDateSR = getAssignedDate("Scientific Review");
 						activateTask("Scientific Review");
+						if(asgnDateSR){
+							updateTaskAssignedDate("Scientific Review", asgnDateSR);
+						}else{
+							logDebug("No assigned date found for Scientific Review");
+						}
+						//lwacht: 180426: story ????: end
 						deactivateTask("Science Manager Review");
 						capId = currCap;
 					}
@@ -85,7 +109,15 @@ try {
 						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
 						logDebug("CEQA Amendment record processed");
 						capId = parentCapId;
+						//lwacht: 180426: story ????: reset the assigned task
+						var asgnDateCR = getAssignedDate("CEQA Review");
 						activateTask("CEQA Review");
+						if(asgnDateCR){
+							updateTaskAssignedDate("CEQA Review", asgnDateCR);
+						}else{
+							logDebug("No assigned date found for CEQA Review");
+						}
+						//lwacht: 180426: story ????: end
 						deactivateTask("Science Manager Review");
 						capId = currCap;
 					}

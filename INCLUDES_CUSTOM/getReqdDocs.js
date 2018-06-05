@@ -9,7 +9,6 @@ try{
 		var ccs = capCondResult.getOutput();
 		for (pc1 in ccs){
 			var thisCond = ccs[pc1];
-			logDebug(" thisCond.resConditionDescription: " +  thisCond.resConditionDescription);
 			var stdCond = aa.capCondition.getStandardConditions(cType, thisCond.resConditionDescription).getOutput();
 			if(stdCond.length <1){
 				var rmCapCondResult = aa.capCondition.deleteCapCondition(capId,thisCond.getConditionNumber()); 
