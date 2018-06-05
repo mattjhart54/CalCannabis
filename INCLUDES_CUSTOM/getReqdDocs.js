@@ -1,5 +1,27 @@
 function getReqdDocs(recdType){ //optional callingPgm variable since now having to call this from ASB
 try{
+	//lwacht: 180605: story 5544: remove conditions that are disabled
+	var cType = "License Required Documents";
+	var capCondResult = aa.capCondition.getCapConditions(capId,cType);
+	if (!capCondResult.getSuccess()){
+		logDebug("**WARNING: error getting cap conditions : " + capCondResult.getErrorMessage()) ; 
+	}else{
+		var ccs = capCondResult.getOutput();
+		for (pc1 in ccs){
+			var thisCond = ccs[pc1];
+			logDebug(" thisCond.resConditionDescription: " +  thisCond.resConditionDescription);
+			var stdCond = aa.capCondition.getStandardConditions(cType, thisCond.resConditionDescription).getOutput();
+			if(stdCond.length <1){
+				var rmCapCondResult = aa.capCondition.deleteCapCondition(capId,thisCond.getConditionNumber()); 
+				if (rmCapCondResult.getSuccess()){
+					logDebug("Successfully removed condition to CAP : " + capId + "  (" + cType + ") ");
+				}else{
+					logDebug( "**ERROR: removing condition  (" + cType + "): " + rmCapCondResult.getErrorMessage());
+				}
+			}
+		}
+	}
+	//lwacht: 180605: story 5544: end
 	if (arguments.length == 2){
 		var callPgm = arguments[1];
 	}else{
