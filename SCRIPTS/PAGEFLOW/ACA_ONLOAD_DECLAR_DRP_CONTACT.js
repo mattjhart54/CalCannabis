@@ -147,6 +147,7 @@ try{
 
 //lwacht: 180529: story 5511:  don't allow submission if any contacts are missing
 try{
+	showDebug = true;
 	if(publicUser){
 		if(appTypeArray[2]!="Temporary"){
 			var parCapId = getParent();
