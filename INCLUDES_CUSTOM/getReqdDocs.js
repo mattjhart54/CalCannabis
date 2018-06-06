@@ -116,10 +116,10 @@ try{
 		
 	//Business documents
 		if (AInfo["Business Entity Structure"] != "Sole Proprietorship"){
-			arrReqdDocs_App.push(stateDocuments);
+			arrReqdDocs_App.push(businessFormation);
 		}else{
-			if(appHasCondition(conditionType, null, stateDocuments.condition, null)){
-				removeCapCondition(conditionType, stateDocuments.condition);
+			if(appHasCondition(conditionType, null, businessFormation.condition, null)){
+				removeCapCondition(conditionType, businessFormation.condition);
 			}
 		}
 		
