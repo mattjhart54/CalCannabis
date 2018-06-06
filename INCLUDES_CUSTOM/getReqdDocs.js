@@ -13,7 +13,7 @@ try{
 			if(stdCond.length <1){
 				var rmCapCondResult = aa.capCondition.deleteCapCondition(capId,thisCond.getConditionNumber()); 
 				if (rmCapCondResult.getSuccess()){
-					logDebug("Successfully removed condition to CAP : " + capId + "  (" + cType + ") ");
+					logDebug("Successfully removed condition to CAP : " + capId + "  (" + thisCond.resConditionDescription + ") ");
 				}else{
 					logDebug( "**ERROR: removing condition  (" + cType + "): " + rmCapCondResult.getErrorMessage());
 				}
