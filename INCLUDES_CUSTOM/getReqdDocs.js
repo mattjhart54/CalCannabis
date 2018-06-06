@@ -1,6 +1,6 @@
 function getReqdDocs(recdType){ //optional callingPgm variable since now having to call this from ASB
 try{
-	//lwacht: 180605: story 5544: remove conditions that are disabled
+	/*lwacht: 180605: story 5544: remove conditions that are disabled
 	var cType = "License Required Documents";
 	var capCondResult = aa.capCondition.getCapConditions(capId,cType);
 	if (!capCondResult.getSuccess()){
@@ -20,7 +20,7 @@ try{
 			}
 		}
 	}
-	//lwacht: 180605: story 5544: end
+	//lwacht: 180605: story 5544: end */
 	if (arguments.length == 2){
 		var callPgm = arguments[1];
 	}else{
