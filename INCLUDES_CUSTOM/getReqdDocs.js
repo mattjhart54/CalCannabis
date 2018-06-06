@@ -52,7 +52,7 @@ try{
 	var need_lightDiagram = false;	
 	//application documents
 	var conditionType = "License Required Documents";
-    var businessFormation = {condition : "Business - Business Formation Documents", document : "Business - Business Formation Documents"};
+    var businessFormation = {condition : "Business - Formation Documents", document : "Business - Formation Documents"};
     var businessFI = {condition : "Business - List of Financial Interest Holders", document : "Business - List of Financial Interest Holders"};
     var businessBond = {condition : "Business - Evidence Surety Bond", document : "Business - Evidence Surety Bond"};
 	var foriegnCorp = {condition : "Business - Foreign Corp. Certificate of Qualification", document : "Business - Foreign Corp. Certificate of Qualification"};
