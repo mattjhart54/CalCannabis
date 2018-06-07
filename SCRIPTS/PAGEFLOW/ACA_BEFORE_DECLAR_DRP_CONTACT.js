@@ -257,6 +257,8 @@ try{
 					missingContact=true;
 				}
 				if(missingContact){
+					showMessage=true;
+					cancel = true;
 					comment("A system issue may have occurred. For assistance with your application, please contact CalCannabis Cultivation Licensing Customer Support at 1-833-CAL-GROW or 1-833-225-4769, press option 1, and then option 2.");
 				}
 			}
