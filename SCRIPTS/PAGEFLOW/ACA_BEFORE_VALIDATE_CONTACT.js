@@ -113,6 +113,27 @@ try {
 							contactFnd = true;
 						}
 					}
+					var contactAddresses = aa.address.getContactAddressListByCapContact(thisCont);
+					if (contactAddresses.getSuccess()) {
+						var contAddrs = contactAddresses.getOutput();
+						var contactAddressModelArr = convertContactAddressModelArr(contactAddresses.getOutput());
+						//this.people.setContactAddressList(contactAddressModelArr);
+						showDebug=true;
+						cancel = true;
+						for (r in contactAddressModelArr){
+							var thisAddr = contactAddressModelArr[r];
+							for(z in thisAddr){
+								if(typeof(thisAddr[z])!="function"){
+									logDebug(z+": " + thisAddr[z]);
+								}
+							}
+						}
+					}else {
+						pmcal = thisCont.people.getContactAddressList();
+						if (pmcal) {
+							var contAddrs = pmcal.toArray();
+						}
+					}
 				}
 			}
 			//lwacht: changed logic to check for DRP *or* Business
@@ -123,6 +144,7 @@ try {
 					logMessage("  Warning: Only the Business or the Designated Responsible party can update this application.");
 				}	
 			}
+
 		}
 		else{
 			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
