@@ -4,7 +4,7 @@ try{
 	showMessage = true;
 	logDebug("ApplicantContactAddressModelList:"+ ApplicantContactAddressModelList);
 	logDebug("RefAddressType:"+ RefAddressType);
-	for (x inApplicantContactAddressModelList){
+	for (x in ApplicantContactAddressModelList){
 		var thisAddr = ApplicantContactAddressModelList[x];
 		for(y in thisAddr){
 			if(typeof(thisAddr[y])!="function"){
