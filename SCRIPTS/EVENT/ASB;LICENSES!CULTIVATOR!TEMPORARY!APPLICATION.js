@@ -2,6 +2,8 @@ try{
 	cancel = true;
 	showDebug =true;
 	showMessage = true;
+	var ApplicantContactAddressModelList = aa.env.getValue("ViolationZip");
+	var RefAddressType = aa.env.getValue("RefAddressType");
 	logDebug("ApplicantContactAddressModelList:"+ ApplicantContactAddressModelList);
 	logDebug("RefAddressType:"+ RefAddressType);
 	for (x in ApplicantContactAddressModelList){
