@@ -67,7 +67,7 @@ try{
 		if(!docExists){
 			cancel = true;
 			showMessage = true;
-			comment("Before this case can be closed the Final Corrective Action Plan document must be attached.");
+			comment("Before this case can be closed the Final Corrective Action Plan or Stipulated Decision and Order document must be attached.");
 		}
 	}
 } catch(err){
