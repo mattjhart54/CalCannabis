@@ -36,10 +36,14 @@ try{
 		var licenseStatus = "Inactive";
 	}
     var licStartDate = convertDate(AInfo["Valid From Date"]);
-    var licenseValidityStart ="" + dateFormatted(licStartDate.getMonth()+1,licStartDate.getDate(),licStartDate.getYear()+1899,"YYYY-MM-DD");
+	//lwacht: 180613: story 5563: dates are off by a year
+    //var licenseValidityStart ="" + dateFormatted(licStartDate.getMonth()+1,licStartDate.getDate(),licStartDate.getYear()+1899,"YYYY-MM-DD");
+    var licenseValidityStart ="" + dateFormatted(licStartDate.getMonth()+1,licStartDate.getDate(),licStartDate.getYear()+1900,"YYYY-MM-DD");
     var vLicenseObj = new licenseObject(licenseNumber);
     var licExp = new Date(vLicenseObj.b1ExpDate);
-	var pYear = licExp.getYear() + 1899;
+	//var pYear = licExp.getYear() + 1899;
+	var pYear = licExp.getYear() + 1900;
+	//lwacht: 180613: story 5563: end
 	var pMonth = licExp.getMonth();
 	var pDay = licExp.getDate();
 	if(pMonth<12){
@@ -130,6 +134,8 @@ try{
 		 var sellersPermitNumber = "" + AInfo["BOE Seller's Permit Number"].substr(0, 50);
 	}
 	/*    */
+	logDebug("------------------------------------------------");
+	logDebug("NOTE: ANY FIELDS NOT REPRESENTED BELOW ARE BLANK");
 	logDebug("LicenseNumber: " + licenseNumber);
 	logDebug("LicenseName: " + legalBusinessName);
 	logDebug("licenseType: " + licenseType);
@@ -149,6 +155,7 @@ try{
 	logDebug("ManagerLastName: " + drpLastName);
 	logDebug("SellerPermitNumber: " + apn);
 	logDebug("SellerPermitNumber: " + sellersPermitNumber);
+	logDebug("------------------------------------------------");
 
     ////////////FORMAT DATA TO JSON////////////////////////////////////////////////////
     var jsonResult = {
