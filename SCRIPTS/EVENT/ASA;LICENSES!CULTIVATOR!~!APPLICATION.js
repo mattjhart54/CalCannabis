@@ -323,7 +323,7 @@ try{
 		if(appTypeArray[2]!="Temporary"){
 			lScan = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
 			if (lScan == true) {
-				logDebug("lscan " + lscan);
+				logDebug("lscan " + lScan);
 				addStdCondition("Application Condition","LiveScan Required");
 			}
 		}
