@@ -256,14 +256,14 @@ try{
 				if(!getContactObj(parCapId,"Designated Responsible Party")){
 					missingContact=true;
 				}
-				//lwacht: 180621: story ????:  don't allow submission if any contacts are missing from owner as well
+				//lwacht: 180621: story 5572:  don't allow submission if any contacts are missing from owner as well
 				var arrOwner =  getChildren("Licenses/Cultivator/*/Owner Application", parCapId);
 				for(o in arrOwner){
 					if(!getContactObj(arrOwner[o],"Owner")){
 						missingContact = true;
 					}
 				}
-				//lwacht: 180621: story ????:  end
+				//lwacht: 180621: story 5572:  end
 				if(missingContact){
 					showMessage=true;
 					cancel = true;
