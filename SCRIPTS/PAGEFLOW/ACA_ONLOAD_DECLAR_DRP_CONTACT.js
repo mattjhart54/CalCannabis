@@ -161,6 +161,14 @@ try{
 				if(!getContactObj(parCapId,"Designated Responsible Party")){
 					missingContact=true;
 				}
+				//lwacht: 180621: story ????:  don't allow submission if any contacts are missing from owner as well
+				var arrOwner =  getChildren("License/Cannabis/*/Owner Application"), parCapId);
+				for(o in arrOwner){
+					if(!getContactObj(arrOwner[o],"Owner")){
+						missingContact = true;
+					}
+				}
+				//lwacht: 180621: story ????:  end
 				if(missingContact){
 					showMessage=true;
 					comment("A system issue may have occurred. For assistance with your application, please contact CalCannabis Cultivation Licensing Customer Support at 1-833-CAL-GROW or 1-833-225-4769, press option 1, and then option 2.");
