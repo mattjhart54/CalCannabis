@@ -35,7 +35,7 @@ function sendLocalAuthNotification() {
 			rFiles = []				
 			addParameter(eParams, "$$altID$$", capId.getCustomID());
 			if(!matches(AInfo["Premise Address"], null,"",undefined)) {
-				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " " + AInfo["Premise City"] + ", " + AInfo["Premise County"] + " with associated Assessor's Parcel Number " + AInfo["APN"]);
+				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + ",  " + AInfo["Premise City"] + ", " + AInfo["Premise County"] + " with associated Assessor's Parcel Number " + AInfo["APN"]);
 			}
 			else {
 				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise City"] + ", " + AInfo["Premise County"] + " with associated Assessor's Parcel Number " + AInfo["APN"]);
