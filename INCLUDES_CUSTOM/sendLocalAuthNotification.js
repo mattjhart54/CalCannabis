@@ -34,31 +34,11 @@ function sendLocalAuthNotification() {
 			var eParams = aa.util.newHashtable();
 			rFiles = []				
 			addParameter(eParams, "$$altID$$", capId.getCustomID());
-
-			if(appTypeArray[2] == "Temporary") {
-				licType = "";
-				licType1 = "a temporary";
-				licType2 = "temporary";
-				addParameter(eParams, "$$appType$$", AInfo["App Type"] + " " + AInfo["License Type"]);
-				addParameter(eParams, "$$licType$$", licType);
-				addParameter(eParams, "$$licType1$$", licType1);
-				addParameter(eParams, "$$licType2$$", licType2);
-			}
-			else {
-				licType = "Annual";
-				licType1 = "an annual";
-				licType2 = "annual";				
-				addParameter(eParams, "$$appType$$", appTypeArray[2] + " " + AInfo["License Type"]);
-				addParameter(eParams, "$$licType$$", licType);
-				addParameter(eParams, "$$licType1$$", licType1);
-				addParameter(eParams, "$$licType2$$", licType2);
-			}
-			
 			if(!matches(AInfo["Premise Address"], null,"",undefined)) {
-				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " " + AInfo["Premise City"] + " with APN: " + AInfo["APN"]);
+				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise Address"] + " " + AInfo["Premise City"] + ", " + AInfo["Premise County"] + " with associated Assessor's Parcel Number " + AInfo["APN"]);
 			}
 			else {
-				addParameter(eParams,"$$premisesAddress$$", "APN: " + AInfo["APN"]);
+				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise City"] + ", " + AInfo["Premise County"] + " with associated Assessor's Parcel Number " + AInfo["APN"]);
 			}
 			if(wfStatus == "Local Auth Sent - 10") {
 				addParameter(eParams, "$$days$$", "10 calendar");
@@ -68,8 +48,8 @@ function sendLocalAuthNotification() {
 				addParameter(eParams, "$$days$$", "60 business");
 				updateAppStatus("Pending Local Authorization 60");
 			}
-// MHART 01/24/18 Story  5125: Local Authority e-mail content update
-// Added parameters for DRP Name.  Chnaged format of displaying Business Name.  Changed format of display the Address and APN
+	// MHART 01/24/18 Story  5125: Local Authority e-mail content update
+	// Added parameters for DRP Name.  Changed format of displaying Business Name.  
 			var priContact = getContactObj(capId,"Business");
 			if(priContact) {
 				if(!matches(priContact.capContact.middleName,null,"",undefined))
@@ -83,8 +63,30 @@ function sendLocalAuthNotification() {
 				if(!matches(drpContact.capContact.firstName,null,"",undefined))
 						addParameter(eParams, "$$drpName$$", drpContact.capContact.firstName + " " + drpContact.capContact.lastName);
 			}
+			if(appTypeArray[2] == "Temporary") {
+				licType = "";
+				licType1 = "a temporary";
+				licType2 = "temporary";
+				addParameter(eParams, "$$appType$$", AInfo["App Type"] + " " + AInfo["License Type"]);
+				addParameter(eParams, "$$licType$$", licType);
+				addParameter(eParams, "$$licType1$$", licType1);
+				addParameter(eParams, "$$licType2$$", licType2);
 // MHART 01/24/18 Story  5125: Local Authority e-mail content update
-			sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
+				sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
+			}
+			else {
+				licType = "Annual";
+				licType1 = "an annual";
+				licType2 = "annual";				
+				addParameter(eParams, "$$appType$$", appTypeArray[2] + " " + AInfo["License Type"]);
+				addParameter(eParams, "$$licType$$", licType);
+				addParameter(eParams, "$$licType1$$", licType1);
+				addParameter(eParams, "$$licType2$$", licType2);
+				if(wfStatus == "Local Auth Sent - 10")
+					sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH-10",eParams, rFiles,capId);
+				else
+					sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH-60",eParams, rFiles,capId);				
+			}
 		}
 		else {
 			showmessage = true;
