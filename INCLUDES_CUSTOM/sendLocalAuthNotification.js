@@ -83,9 +83,9 @@ function sendLocalAuthNotification() {
 				addParameter(eParams, "$$licType1$$", licType1);
 				addParameter(eParams, "$$licType2$$", licType2);
 				if(wfStatus == "Local Auth Sent - 10")
-					sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH-10",eParams, rFiles,capId);
+					sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH_10",eParams, rFiles,capId);
 				else
-					sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH-60",eParams, rFiles,capId);				
+					sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH_60",eParams, rFiles,capId);				
 			}
 		}
 		else {
