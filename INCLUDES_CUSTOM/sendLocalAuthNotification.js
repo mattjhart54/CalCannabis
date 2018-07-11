@@ -64,9 +64,9 @@ function sendLocalAuthNotification() {
 						addParameter(eParams, "$$drpName$$", drpContact.capContact.firstName + " " + drpContact.capContact.lastName);
 			}
 			if(appTypeArray[2] == "Temporary") {
-				licType = "";
-				licType1 = "a temporary";
-				licType2 = "temporary";
+				var licType = "";
+				var licType1 = "a temporary";
+				var licType2 = "temporary";
 				addParameter(eParams, "$$appType$$", AInfo["App Type"] + " " + AInfo["License Type"]);
 				addParameter(eParams, "$$licType$$", licType);
 				addParameter(eParams, "$$licType1$$", licType1);
@@ -75,10 +75,14 @@ function sendLocalAuthNotification() {
 				sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,"cdfa.CalCannabis_Local_Verification@cdfa.ca.gov","LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
 			}
 			else {
-				licType = "Annual";
-				licType1 = "an annual";
-				licType2 = "annual";				
-				addParameter(eParams, "$$appType$$", appTypeArray[2] + " " + AInfo["License Type"]);
+				var appType = "Adult-Use"
+				if(appTypeArray[2] == "Medical") 
+					appType = "Medicinal"
+				var licType = "Annual";
+				varlicType1 = "an annual";
+				var licType2 = "annual";
+
+				addParameter(eParams, "$$appType$$", appType + " " + AInfo["License Type"]);
 				addParameter(eParams, "$$licType$$", licType);
 				addParameter(eParams, "$$licType1$$", licType1);
 				addParameter(eParams, "$$licType2$$", licType2);
