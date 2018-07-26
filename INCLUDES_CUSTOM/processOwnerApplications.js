@@ -114,6 +114,7 @@ try {
 							var newCapId = result.getOutput(); 
 							logDebug("Created new associated form record " + newCapId.getCustomID() + " for type " + r.Alias); 
 							aa.cap.createAssociatedFormsHierarchy(currCapId, newCapId); 
+							capId = newCapId;
 							qryPeople.setServiceProviderCode(aa.getServiceProviderCode());
 							qryPeople.setContactTypeFlag("Individual");
 							qryPeople.setContactType("Individual");
