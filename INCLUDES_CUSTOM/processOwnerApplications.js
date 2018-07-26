@@ -99,9 +99,13 @@ try {
 				//logDebug("owner status: " + tblOwners[o]["Status"]);
 				if(tblOwners[o]["Status"]!="Submitted"){
 					//lwacht: 180726: record should not exist, so create first
-					var ctm = recTypeAlias; 
+					ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
+					ctm.setGroup("Licenses");
+					ctm.setType("Cultivator");
+					ctm.setSubType("Medical");
+					ctm.setCategory("Owner Application");
 					logDebug("Attempting to create record : " + recTypeAlias); 
-					var result = aa.cap.createSimplePartialRecord(recTypeAlias, null, "INCOMPLETE CAP"); 
+					var result = aa.cap.createSimplePartialRecord(ctm, null, "INCOMPLETE CAP"); 
 					if (result.getSuccess() && result.getOutput() != null) { 
 						var newCapId = result.getOutput(); 
 						logDebug("Created new associated form record " + newCapId.getCustomID() + " for type " + r.Alias); 
