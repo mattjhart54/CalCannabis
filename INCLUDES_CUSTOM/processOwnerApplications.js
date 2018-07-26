@@ -98,6 +98,16 @@ try {
 			for(o in tblOwners){
 				//logDebug("owner status: " + tblOwners[o]["Status"]);
 				if(tblOwners[o]["Status"]!="Submitted"){
+					//lwacht: 180726: record should not exist, so create first
+					var ctm = recTypeAlias; 
+					logDebug("Attempting to create record : " + recTypeAlias); 
+					var result = aa.cap.createSimplePartialRecord(recTypeAlias, null, "INCOMPLETE CAP"); 
+					if (result.getSuccess() && result.getOutput() != null) { 
+						var newCapId = result.getOutput(); 
+						logDebug("Created new associated form record " + newCapId.getCustomID() + " for type " + r.Alias); 
+						aa.cap.createAssociatedFormsHierarchy(currCapId, newCapId); 
+						capId = newCapId;
+					}
 					var vFirst = tblOwners[o]["First Name"];
 					var vLast = tblOwners[o]["Last Name"];
 					var vEmail = tblOwners[o]["Email Address"];
@@ -106,31 +116,21 @@ try {
 					//logDebug("appName: " + vFirst + " " + vLast + " (" + vEmail + ")");
 					var ownerSeqNum = addRefContactByEmailLastName(vFirst, vLast,vEmail);
 					if(!ownerSeqNum){
-						//lwacht: 180726: record should not exist, so create first
-						var ctm = allRecordTypeMap.get(recTypeAlias); 
-						logDebug("Attempting to create record : " + ctm); 
-						var result = aa.cap.createSimplePartialRecord(ctm, null, "INCOMPLETE CAP"); 
-						if (result.getSuccess() && result.getOutput() != null) { 
-							var newCapId = result.getOutput(); 
-							logDebug("Created new associated form record " + newCapId.getCustomID() + " for type " + r.Alias); 
-							aa.cap.createAssociatedFormsHierarchy(currCapId, newCapId); 
-							capId = newCapId;
-							qryPeople.setServiceProviderCode(aa.getServiceProviderCode());
-							qryPeople.setContactTypeFlag("Individual");
-							qryPeople.setContactType("Individual");
-							qryPeople.setFirstName(vFirst);
-							qryPeople.setLastName(vLast);
-							qryPeople.setEmail(vEmail);
-							qryPeople.setAuditStatus("A");
-							var resPpl = aa.people.createPeople(qryPeople);
-							if(!resPpl.getSuccess()){
-								logDebug("Error creating people: " + resPpl.getErrorMessage());
-							}else{
-								logDebug("Succesfully create ref contact, so adding to record");
-								var ownerSeqNumAgain = addRefContactByEmailLastName(vFirst, vLast,vEmail);
-								if(!ownerSeqNumAgain){
-									logDebug("Error adding ref contact: "+ ownerSeqNumAgain);
-								}
+						qryPeople.setServiceProviderCode(aa.getServiceProviderCode());
+						qryPeople.setContactTypeFlag("Individual");
+						qryPeople.setContactType("Individual");
+						qryPeople.setFirstName(vFirst);
+						qryPeople.setLastName(vLast);
+						qryPeople.setEmail(vEmail);
+						qryPeople.setAuditStatus("A");
+						var resPpl = aa.people.createPeople(qryPeople);
+						if(!resPpl.getSuccess()){
+							logDebug("Error creating people: " + resPpl.getErrorMessage());
+						}else{
+							logDebug("Succesfully create ref contact, so adding to record");
+							var ownerSeqNumAgain = addRefContactByEmailLastName(vFirst, vLast,vEmail);
+							if(!ownerSeqNumAgain){
+								logDebug("Error adding ref contact: "+ ownerSeqNumAgain);
 							}
 						}
 					}
