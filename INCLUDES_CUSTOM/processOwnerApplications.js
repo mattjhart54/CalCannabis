@@ -108,7 +108,7 @@ try {
 					var result = aa.cap.createSimplePartialRecord(ctm, null, "INCOMPLETE CAP"); 
 					if (result.getSuccess() && result.getOutput() != null) { 
 						var newCapId = result.getOutput(); 
-						logDebug("Created new associated form record " + newCapId.getCustomID() + " for type " + r.Alias); 
+						logDebug("Created new associated form record " + newCapId.getCustomID() + " for type " + recTypeAlias); 
 						aa.cap.createAssociatedFormsHierarchy(currCapId, newCapId); 
 						capId = newCapId;
 					}
