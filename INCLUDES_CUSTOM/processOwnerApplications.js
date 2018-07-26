@@ -96,6 +96,7 @@ try {
 				logDebug("Error removing record : " + arrContacts[0]["lastName"] + " : from record " + this.capId.getCustomID() + " : " + removeResult.getErrorMessage());
 			}
 		}
+		//lwacht: 180726: end
 		if(!hasOwnerContact){
 			logDebug("Owner not found.  Attempting to add owner contact. ");
 			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel(); 
@@ -121,6 +122,7 @@ try {
 						aa.cap.createAssociatedFormsHierarchy(currCapId, newCapId); 
 						capId = newCapId;
 					}
+					//lwacht: 180726: end
 					var vFirst = tblOwners[o]["First Name"];
 					var vLast = tblOwners[o]["Last Name"];
 					var vEmail = tblOwners[o]["Email Address"];
