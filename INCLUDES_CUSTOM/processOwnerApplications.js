@@ -75,12 +75,16 @@ try {
 				}
 			}
 			if(!ownerRecdExists){
-				var removeResult = aa.people.removeCapContact(capId, contSeq); 
+				//lwacht: 180726: delete the record instead of re-using
+				//var removeResult = aa.people.removeCapContact(capId, contSeq); 
+				var capIDModel = aa.cap.getCapIDModel(capId.getID1(),capId.getID2(),capId.getID3()).getOutput();
+				var removeResult = aa.cap.deletePartialCAP(capIDModel);
 				if (removeResult.getSuccess()){
-					logDebug("Contact removed : " + this + " from record " + this.capId.getCustomID());
+					logDebug("Owner app removed : " + this + " from record " + this.capId.getCustomID());
 				}else{
-					logDebug("Error removing contact : " + arrContacts[0]["lastName"] + " : from record " + this.capId.getCustomID() + " : " + removeResult.getErrorMessage());
+					logDebug("Error removing record : " + arrContacts[0]["lastName"] + " : from record " + this.capId.getCustomID() + " : " + removeResult.getErrorMessage());
 				}
+				//lwacht: 180726: end
 			}
 		}
 		if(!hasOwnerContact){
