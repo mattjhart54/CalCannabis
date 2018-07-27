@@ -50,21 +50,21 @@ try {
 			var contFName = arrContacts[0]["firstName"]; //should only be one
 			var contLName = arrContacts[0]["lastName"]; //should only be one
 			var contEmail = arrContacts[0]["email"]; //should only be one
-			//logDebug("contFName: " + contFName);
-			//logDebug("contLName: " + contLName);
-			//logDebug("contEmail: " + contEmail);
+			logDebug("contFName: " + contFName);
+			logDebug("contLName: " + contLName);
+			logDebug("contEmail: " + contEmail);
 			var ownerRecdExists = false;
 			for(ow in tblOwners){
 				var vFirst = tblOwners[ow]["First Name"];
 				var vLast = tblOwners[ow]["Last Name"];
 				var vEmail = tblOwners[ow]["Email Address"];
 				var vStatus = tblOwners[ow]["Status"];
-				//logDebug("---first match: " + (""+vFirst==""+contFName));
-				//logDebug("---last match: " + (""+vLast==""+contLName));
-				//logDebug("---email match: " + (""+vEmail==""+contEmail));
-				//logDebug("---vFirst: " + vFirst);
-				//logDebug("---vLast: " + vLast);
-				//logDebug("---vEmail: " + vEmail);
+				logDebug("---first match: " + (""+vFirst==""+contFName));
+				logDebug("---last match: " + (""+vLast==""+contLName));
+				logDebug("---email match: " + (""+vEmail==""+contEmail));
+				logDebug("---vFirst: " + vFirst);
+				logDebug("---vLast: " + vLast);
+				logDebug("---vEmail: " + vEmail);
 				if(""+contFName==""+vFirst && ""+contLName==""+vLast && ""+contEmail==""+vEmail && vStatus!="Submitted"){
 					tblOwners[ow]["Status"]="Submitted";
 					//removeASITable("OWNERS");
