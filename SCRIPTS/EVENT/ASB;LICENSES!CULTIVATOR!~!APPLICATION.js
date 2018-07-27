@@ -21,8 +21,7 @@ try{
 				comment("The record has not been completed.  Please edit each page to ensure all required fields are populated.");
 			}
 	// mhart: 180727 Owner Issue
-			tblOwners = loadASITable("OWNERS")
-			if(tblOwners.length==0 || tblOwners==null) {
+			if(typeof(OWNERS) != "object"{
 				showMessage = true;
 				cancel = true;
 				comment("The record has not been completed.  Must have at least one owner in the owner table below. At least one owner must be the DRP.");
