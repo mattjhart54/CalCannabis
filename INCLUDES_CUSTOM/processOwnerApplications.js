@@ -66,7 +66,7 @@ try {
 				logDebug("---vLast: " + vLast);
 				logDebug("---vEmail: " + vEmail);
 				logDebug("---vStatus: " + vStatus)
-				if(""+contFName==""+vFirst && ""+contLName==""+vLast && ""+contEmail==""+vEmail && vStatus!="Submitted"){
+				if(""+contFName==""+vFirst && ""+contLName==""+vLast && ""+contEmail==""+vEmail) { //&& vStatus!="Submitted"){
 					tblOwners[ow]["Status"]="Submitted";
 					//removeASITable("OWNERS");
 					//addASITable("OWNERS",tblOwners);
