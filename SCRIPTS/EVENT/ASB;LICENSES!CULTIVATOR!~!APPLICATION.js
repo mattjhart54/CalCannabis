@@ -19,7 +19,14 @@ try{
 				showMessage = true;
 				cancel = true;
 				comment("The record has not been completed.  Please edit each page to ensure all required fields are populated.");
+			}				
+			tblOwners = loadASITable("OWNERS")
+			if(tblOwners.length==0 || tblOwners==null) {
+				showMessage = true;
+				cancel = true;
+				comment("The record has not been completed.  Must have at least one owner in the owner table below. At least one owner must be the DRP.");
 			}
+
 		}
 	}
 } catch (err) {
