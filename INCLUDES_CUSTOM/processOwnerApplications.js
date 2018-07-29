@@ -81,7 +81,7 @@ try {
 				var capIDModel = aa.cap.getCapIDModel(capId.getID1(),capId.getID2(),capId.getID3()).getOutput();
 				var removeResult = aa.cap.deletePartialCAP(capIDModel);
 				if (removeResult.getSuccess()){
-					logDebug("Owner app removed : " + this + " from record " + this.capId.getCustomID());
+					logDebug("Owner app removed : " + contFName + " " + contLName + " from record " + this.capId.getCustomID());
 				}else{
 					logDebug("Error removing record : " + arrContacts[0]["lastName"] + " : from record " + this.capId.getCustomID() + " : " + removeResult.getErrorMessage());
 				}
@@ -92,14 +92,14 @@ try {
 			var capIDModel = aa.cap.getCapIDModel(capId.getID1(),capId.getID2(),capId.getID3()).getOutput();
 			var removeResult = aa.cap.deletePartialCAP(capIDModel);
 			if (removeResult.getSuccess()){
-				logDebug("Owner app removed : " + this + " from record " + this.capId.getCustomID());
+				logDebug("Owner app removed : "  + contFName + " " + contLName +  " from record " + this.capId.getCustomID());
 			}else{
 				logDebug("Error removing record : " + arrContacts[0]["lastName"] + " : from record " + this.capId.getCustomID() + " : " + removeResult.getErrorMessage());
 			}
 		}
 		//lwacht: 180726: end
 		if(!hasOwnerContact){
-			logDebug("Owner not found.  Attempting to add owner contact. ");
+			logDebug("At least one owner not found.  Attempting to add owner contact. ");
 			var qryPeople = aa.people.createPeopleModel().getOutput().getPeopleModel(); 
 			//for(bb in qryPeople){
 			//	if(typeof(qryPeople[bb])=="function"){
@@ -107,7 +107,8 @@ try {
 			//	}
 			//}
 			for(o in tblOwners){
-				//logDebug("owner status: " + tblOwners[o]["Status"]);
+				logDebug("owner status: " + tblOwners[o]["Status"]);
+				logDebug("owner email: " + tblOwners[o]["Email Address"]);
 				if(tblOwners[o]["Status"]!="Submitted"){
 					//lwacht: 180726: record should not exist, so create first
 					ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
@@ -124,34 +125,34 @@ try {
 						capId = newCapId;
 					}
 					//lwacht: 180726: end
-					var vFirst = tblOwners[o]["First Name"];
-					var vLast = tblOwners[o]["Last Name"];
-					var vEmail = tblOwners[o]["Email Address"];
-					editAppName(vFirst + " " + vLast + " (" + vEmail + ")");
-					updateShortNotes(vFirst + " " + vLast + " (" + vEmail + ")");
-					//logDebug("appName: " + vFirst + " " + vLast + " (" + vEmail + ")");
-					var ownerSeqNum = addRefContactByEmailLastName(vFirst, vLast,vEmail);
+					var nFirst = tblOwners[o]["First Name"];
+					var nLast = tblOwners[o]["Last Name"];
+					var nEmail = tblOwners[o]["Email Address"];
+					editAppName(nFirst + " " + nLast + " (" + nEmail + ")");
+					updateShortNotes(nFirst + " " + nLast + " (" + nEmail + ")");
+					//logDebug("appName: " + nFirst + " " + nLast + " (" + nEmail + ")");
+					var ownerSeqNum = addRefContactByEmailLastName(nFirst, nLast,nEmail);
 					if(!ownerSeqNum){
 						qryPeople.setServiceProviderCode(aa.getServiceProviderCode());
 						qryPeople.setContactTypeFlag("Individual");
 						qryPeople.setContactType("Individual");
-						qryPeople.setFirstName(vFirst);
-						qryPeople.setLastName(vLast);
-						qryPeople.setEmail(vEmail);
+						qryPeople.setFirstName(nFirst);
+						qryPeople.setLastName(nLast);
+						qryPeople.setEmail(nEmail);
 						qryPeople.setAuditStatus("A");
 						var resPpl = aa.people.createPeople(qryPeople);
 						if(!resPpl.getSuccess()){
 							logDebug("Error creating people: " + resPpl.getErrorMessage());
 						}else{
 							logDebug("Succesfully create ref contact, so adding to record");
-							var ownerSeqNumAgain = addRefContactByEmailLastName(vFirst, vLast,vEmail);
+							var ownerSeqNumAgain = addRefContactByEmailLastName(nFirst, nLast,nEmail);
 							if(!ownerSeqNumAgain){
 								logDebug("Error adding ref contact: "+ ownerSeqNumAgain);
 							}
 						}
 					}
 					editContactType("Individual", "Owner");
-					errMsg += vEmail + br;
+					errMsg += nEmail + br;
 					var ownUser = createPublicUserFromContact_Rev("Owner");
 					var ownPubUser = ownUser.auditID;
 					//lwacht: 171124: make the owner the person who created the record so the applicant
@@ -163,17 +164,17 @@ try {
 					var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
 					addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
 					addParameter(emailParameters, "$$ParentAltID$$", currCapId.getCustomID());
-					addParameter(emailParameters, "$$fName$$",""+vFirst);
-					addParameter(emailParameters, "$$lName$$",""+vLast);
+					addParameter(emailParameters, "$$fName$$",""+nFirst);
+					addParameter(emailParameters, "$$lName$$",""+nLast);
 					addParameter(emailParameters, "$$mmddyy$$", sysDateMMDDYYYY);
 					var resCurUser = aa.person.getUser(publicUserID);	
 					if(resCurUser.getSuccess()){
 						var currUser = resCurUser.getOutput();
 						var currUserEmail = ""+currUser.email;
 						setContactsSyncFlag("Y");
-					}
-					if(currUserEmail!=vEmail){
-						sendNotification(sysEmail,vEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
+					}//only send if not the current user 
+					if(currUserEmail!=nEmail){
+						sendNotification(sysEmail,nEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
 					}
 					break;
 				}
