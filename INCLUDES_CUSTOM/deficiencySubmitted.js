@@ -17,58 +17,76 @@ try {
 			parAppTypeString = parAppType.toString();
 			parAppTypeArray = parAppTypeString.split("/");
 			if(parAppTypeArray[3]=="Application"){
-				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
-				if(taskItemScriptModel.getSuccess()){
-					var taskItemScript = taskItemScriptModel.getOutput();
-					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
-						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
-						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-						var taskUpdater = taskUpdaterModel.getOutput(); 
-						staffEmail = taskUpdater.email;
-						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
-						logDebug("Admin Amendment record processed");
-						capId = parentCapId;
-						//lwacht: 180426: story ????: reset the assigned task
-						var asgnDateAR = getAssignedDate("Administrative Review");
-						activateTask("Administrative Review");
-						if(asgnDateAR){
-							updateTaskAssignedDate("Administrative Review", asgnDateAR);
-						}else{
-							logDebug("No assigned date found for Administrative Review");
+				//lwacht: 180806: 5608: only update the Admin Review when the submitted app is not an owner app
+				if(appTypeArray[2]=="Medical"){
+				//lwacht: 180806: 5608: end
+					var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
+					if(taskItemScriptModel.getSuccess()){
+						var taskItemScript = taskItemScriptModel.getOutput();
+						if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
+							var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+							var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
+							var taskUpdater = taskUpdaterModel.getOutput(); 
+							staffEmail = taskUpdater.email;
+							email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
+							logDebug("Admin Amendment record processed");
+							capId = parentCapId;
+							//lwacht: 180426: story ????: reset the assigned task
+							var asgnDateAR = getAssignedDate("Administrative Review");
+							activateTask("Administrative Review");
+							if(asgnDateAR){
+								updateTaskAssignedDate("Administrative Review", asgnDateAR);
+							}else{
+								logDebug("No assigned date found for Administrative Review");
+							}
+							//lwacht: 180426: story ????: end
+							//defect 4763: deactivate manager review when processor reviews are active
+							deactivateTask("Administrative Manager Review");
+							capId = currCap;
 						}
-						//lwacht: 180426: story ????: end
-						//defect 4763: deactivate manager review when processor reviews are active
-						deactivateTask("Administrative Manager Review");
-						capId = currCap;
+					}else{
+						logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
 					}
-				}else{
-					logDebug("Error occurred getting taskItemScriptModel: Administrative Review: " + taskItemScriptModel.getErrorMessage());
 				}
-				var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Owner Application Reviews");
-				if(taskItemScriptModel.getSuccess()){
-					var taskItemScript = taskItemScriptModel.getOutput();
-					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") ){
-						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
-						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-						var taskUpdater = taskUpdaterModel.getOutput(); 
-						staffEmail = taskUpdater.email;
-						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
-						logDebug("Owner Amendment record processed");
-						capId = parentCapId;
-						//lwacht: 180426: story ????: reset the assigned task
-						var asgnDateOR = getAssignedDate("Owner Application Reviews");
-						activateTask("Owner Application Reviews");
-						if(asgnDateOR){
-							updateTaskAssignedDate("Owner Application Reviews", asgnDateOR);
-						}else{
-							logDebug("No assigned date found for Owner Application Reviews");
+				//lwacht: 180806: 5608: only update the Owner Review when the submitted app is the last owner app
+				if(appTypeArray[2]=="Owner"){
+					var resParCapId = getChildren("Licenses/Cultivator/Owner/Amendment",resParCapId);
+					var unSubRecd = false;
+					for(c in resParCapId){
+						var thisChild = resParCapId[c].getCustomID();
+						if(thisChild.indexOf("T")>6){
+							unSubRecd = true;
 						}
-						//lwacht: 180426: story ????: end
-						deactivateTask("Administrative Manager Review");
-						capId = currCap;
 					}
-				}else{
-					logDebug("Error occurred getting taskItemScriptModel: Owner Application Reviews: " + taskItemScriptModel.getErrorMessage());
+					if(!unSubRecd){
+				//lwacht: 180806: 5608: end
+						var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Owner Application Reviews");
+						if(taskItemScriptModel.getSuccess()){
+							var taskItemScript = taskItemScriptModel.getOutput();
+							if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") ){
+								var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+								var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
+								var taskUpdater = taskUpdaterModel.getOutput(); 
+								staffEmail = taskUpdater.email;
+								email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
+								logDebug("Owner Amendment record processed");
+								capId = parentCapId;
+								//lwacht: 180426: story ????: reset the assigned task
+								var asgnDateOR = getAssignedDate("Owner Application Reviews");
+								activateTask("Owner Application Reviews");
+								if(asgnDateOR){
+									updateTaskAssignedDate("Owner Application Reviews", asgnDateOR);
+								}else{
+									logDebug("No assigned date found for Owner Application Reviews");
+								}
+								//lwacht: 180426: story ????: end
+								deactivateTask("Administrative Manager Review");
+								capId = currCap;
+							}
+						}else{
+							logDebug("Error occurred getting taskItemScriptModel: Owner Application Reviews: " + taskItemScriptModel.getErrorMessage());
+						}
+					}
 				}
 			}
 			if(parAppTypeArray[3]=="Application"){
