@@ -53,7 +53,7 @@ function sendLocalAuthNotification() {
 						msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises City"];
 					}
 					msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises County"];
-					msgAddr =msgAddr+"/b";
+					msgAddr =msgAddr+"<br>";
 				}
 			}
 			if(msgAddr != null) {
