@@ -52,8 +52,8 @@ function sendLocalAuthNotification() {
 					if(!matches(PREMISESADDRESSES[x]["Premises City"], null,"",undefined)) {
 						msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises City"];
 					}
-					msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises County"];
-					msgAddr =msgAddr+"<br>";
+					msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises County"] + ";   ";
+
 				}
 			}
 			if(msgAddr != null) {
