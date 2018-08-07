@@ -40,6 +40,27 @@ function sendLocalAuthNotification() {
 			else {
 				addParameter(eParams,"$$premisesAddress$$", AInfo["Premise City"] + ", " + AInfo["Premise County"] + " with associated Assessor's Parcel Number " + AInfo["APN"]);
 			}
+			
+	// MHART 08/07/18 Story 5617 and 5618: Local Authority e-mail content update - List Additional Premises addresses
+			if (typeof(PREMISESADDRESSES) == "object") {
+				var msgAddr = "";
+				for(x in PREMISESADDRESSES){
+					msgAddr = msgAddr + "APN: " + PREMISESADDRESSES[x]["APN"];
+					if(!matches(PREMISESADDRESSES[x]["Premises Address"], null,"",undefined)) {
+						msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises Address"];
+					}
+					if(!matches(PREMISESADDRESSES[x]["Premises City"], null,"",undefined)) {
+						msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises City"];
+					}
+					msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises County"];
+					msgAddr =msgAddr+"/b";
+				}
+			}
+			if(msgAddr != null) {
+				addParameter(eParams, "$$additionalAddresses$$", msgAddr);
+			}
+	// MHART 08/07/18 Story 5617 and 5618:  End
+		
 			if(wfStatus == "Local Auth Sent - 10") {
 				addParameter(eParams, "$$days$$", "10 calendar");
 				updateAppStatus("Pending Local Authorization 10");
