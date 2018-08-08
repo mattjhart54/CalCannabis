@@ -20,13 +20,6 @@ try {
 		resParCapId = aa.cap.getCapID(parentAltId);
 		if(resParCapId.getSuccess()){
 			parentCapId = resParCapId.getOutput();
-			//lwacht: 180806: 5608: deactivate Admin Mgr Review on first submitted deficiency record
-			capId = parentCapId;
-			if(isTaskActive("Administrative Manager Review")){
-				deactivateTask("Administrative Manager Review");
-			}
-			capId = currCap;
-			//lwacht: 180806: 5608: end
 			var linkResult = aa.cap.createAppHierarchy(parentCapId, capId);
 			if (linkResult.getSuccess()){
 				logDebug("Successfully linked to Parent Application : " + parentAltId);
@@ -40,6 +33,13 @@ try {
 			//lwacht: 180806: 5608: only update the Admin Review when the submitted app is not an owner app
 			if(matches(parAppTypeArray[3], "Application", "Owner Application")){
 				if(appTypeArray[2]=="Medical"){
+					//lwacht: 180806: 5608: deactivate Admin Mgr Review on first submitted deficiency record
+					capId = parentCapId;
+					if(isTaskActive("Administrative Manager Review")){
+						deactivateTask("Administrative Manager Review");
+					}
+					capId = currCap;
+					//lwacht: 180806: 5608: end
 			//lwacht: 180806: 5608: end
 					var taskItemScriptModel=aa.workflow.getTask(parentCapId, "Administrative Review");
 					if(taskItemScriptModel.getSuccess()){
@@ -62,7 +62,7 @@ try {
 							}
 							//lwacht: 180426: story ????: end
 							//defect 4763: deactivate manager review when processor reviews are active
-							//deactivateTask("Administrative Manager Review");
+							deactivateTask("Administrative Manager Review");
 							capId = currCap;
 						}
 					}else{
@@ -76,6 +76,13 @@ try {
 				if(appTypeArray[2]=="Owner"){
 					var grandParCapId =  getParentByCapId(parentCapId);
 					if(grandParCapId){
+						//lwacht: 180806: 5608: deactivate Admin Mgr Review on first submitted deficiency record
+						capId = grandParCapId;
+						if(isTaskActive("Administrative Manager Review")){
+							deactivateTask("Administrative Manager Review");
+						}
+						capId = currCap;
+						//lwacht: 180806: 5608: end
 						var arrOwnChild = getChildren("Licenses/Cultivator/Medical/Owner Application",grandParCapId);
 						var unSubRecd = false;
 						for(c in arrOwnChild){
@@ -110,7 +117,7 @@ try {
 										logDebug("No assigned date found for Owner Application Reviews");
 									}
 									//lwacht: 180426: story ????: end
-									//deactivateTask("Administrative Manager Review");
+									deactivateTask("Administrative Manager Review");
 									capId = currCap;
 								}
 							}else{
