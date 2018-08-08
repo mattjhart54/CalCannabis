@@ -20,6 +20,13 @@ try {
 		resParCapId = aa.cap.getCapID(parentAltId);
 		if(resParCapId.getSuccess()){
 			parentCapId = resParCapId.getOutput();
+			//lwacht: 180806: 5608: deactivate Admin Mgr Review on first submitted deficiency record
+			capId = parentCapId;
+			if(isTaskActive("Administrative Manager Review")){
+				deactivateTask("Administrative Manager Review");
+			}
+			capId = currCap;
+			//lwacht: 180806: 5608: end
 			var linkResult = aa.cap.createAppHierarchy(parentCapId, capId);
 			if (linkResult.getSuccess()){
 				logDebug("Successfully linked to Parent Application : " + parentAltId);
@@ -55,7 +62,7 @@ try {
 							}
 							//lwacht: 180426: story ????: end
 							//defect 4763: deactivate manager review when processor reviews are active
-							deactivateTask("Administrative Manager Review");
+							//deactivateTask("Administrative Manager Review");
 							capId = currCap;
 						}
 					}else{
@@ -103,7 +110,7 @@ try {
 										logDebug("No assigned date found for Owner Application Reviews");
 									}
 									//lwacht: 180426: story ????: end
-									deactivateTask("Administrative Manager Review");
+									//deactivateTask("Administrative Manager Review");
 									capId = currCap;
 								}
 							}else{
