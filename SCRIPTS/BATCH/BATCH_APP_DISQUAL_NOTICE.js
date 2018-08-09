@@ -85,6 +85,7 @@ aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
 aa.env.setValue("reportName", "30 Day Deficiency Notification Letter");
 aa.env.setValue("sendEmailAddressType", "Mailing");
 aa.env.setValue("updateWorkflowStatus", "Disqualified");
+aa.env.setValue("closeOwnerApps", "Y");
  */
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
@@ -103,6 +104,7 @@ var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var rptName = getParam("reportName");
 var addrType = getParam("sendEmailAddressType");
 var wkflStatus = getParam("updateWorkflowStatus");
+var closeOwnerApps = getParam("closeChildren");
 /*----------------------------------------------------------------------------------------------------/
 |
 | End: BATCH PARAMETERS
@@ -191,7 +193,8 @@ try{
 		if (conditionName && conditionName != "" && conditionType && conditionType != "") {
 			addStdCondition(conditionType, conditionName);
 		}
-		if(!matches (wkflStatus, null, "", false, "undefined")){		var taskList =loadTasks(capId); 
+		if(!matches (wkflStatus, null, "", false, "undefined")){		
+			var taskList =loadTasks(capId); 
 			for (task in taskList){
 				if(isTaskActive(task)){
 					setTask(task,"N","Y"); 
@@ -199,6 +202,18 @@ try{
 				} 
 			}
 		}
+	//MJH: 180809 Story 5607 - Close Owner records when application Disqualified. 
+		if(closeOwnerApps == "Y") {
+			holdId = capId;
+			childArray = getChildren("Licenses/Cultivator/Medical/Owner Application");
+			for (x in childArray) {
+				capId = childArray[x];
+				updateAppStatus(newAppStatus, "set by " + batchJobName +  " batch");
+				deactivateTask("Owner Application Review");
+			}
+			capId = holdId;
+		}
+	//MJH: 180809 Story 5607 - End 
 		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
 			var conTypeArray = sendEmailToContactTypes.split(",");
 			var	conArray = getContactArray(capId);
