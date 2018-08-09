@@ -398,6 +398,24 @@ try{
 	aa.print(err.stack);
 }
 
+//MJH: 180809 Story 5607 - Close Owner records when application Disqualified. 
+try {
+
+	if(wfStatus == "Disqualified") {
+		holdId = capId;
+		childArray = getChildren("Licenses/Cultivator/Medical/Owner Application");
+		for (x in childArray) {
+			capId = childArray[x];
+			updateAppStatus("Disqualified", "set by script");
+			deactivateTask("Owner Application Review");
+		}
+		capId = holdId;
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: CLose Owner Records: " + err.message);
+	aa.print(err.stack);
+}
+
 //lwacht: 180207: story 2896: end
 
 
