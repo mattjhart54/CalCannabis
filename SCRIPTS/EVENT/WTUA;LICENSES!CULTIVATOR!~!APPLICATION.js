@@ -410,11 +410,14 @@ try {
 			deactivateTask("Owner Application Review");
 		}
 		capId = holdId;
+		runReportAttach(capId,"Final Deficiency Disqualification Letter", "altId", capId.getCustomID());
+		emailRptContact("WTUA", "LCA_GENERAL NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "altId", capId.getCustomID());
 	}
 }catch(err){
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: CLose Owner Records: " + err.message);
 	aa.print(err.stack);
 }
+//MJH: 180809 Story 5607 - End
 
 //lwacht: 180207: story 2896: end
 
