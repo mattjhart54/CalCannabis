@@ -238,7 +238,7 @@ try{
 		}
 		if(showReport){
 			var rptName = "Final Deficiency Disqualification Letter";
-			displayReport(rptName, "altId", capIDString);
+			displayReport(rptName, "altId", capIDString, "addressType", "Mailing", "contactType", "Designated Responsible Party");
 		}
 	}
 }catch(err){
