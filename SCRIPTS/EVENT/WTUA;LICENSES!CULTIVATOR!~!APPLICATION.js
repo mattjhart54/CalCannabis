@@ -410,8 +410,8 @@ try {
 			deactivateTask("Owner Application Review");
 		}
 		capId = holdId;
-		runReportAttach(capId,"Final Deficiency Disqualification Letter", "altId", capId.getCustomID(), "addressType", "Mailing", "contactType", "Designated Responsible Party");
-		emailRptContact("WTUA", "LCA_GENERAL NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "altId", capId.getCustomID());
+		runReportAttach(capId,"Final Deficiency Disqualification Letter", "altid", capId.getCustomID(), "addressType", "Mailing", "contactType", "Designated Responsible Party");
+		emailRptContact("WTUA", "LCA_GENERAL NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "altid", capId.getCustomID());
 	}
 }catch(err){
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: CLose Owner Records: " + err.message);
