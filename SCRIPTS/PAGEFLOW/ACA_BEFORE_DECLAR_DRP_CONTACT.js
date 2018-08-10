@@ -266,7 +266,7 @@ try{
 						missingContact = true;
 					}
 					//lwacht: 180810: 5687: verify owner record has been completed
-					if(matches(getAppSpecific("Disciplinary Actions", arrOwner[o]),"",null,"undefined")){
+					if(getCapIdStatusClass(inCapId)rrOwner[o])!="INCOMPLETE EST"){
 						incompleteOwnerRecord= true;
 						incompleteRecdId = arrOwner[o].getCustomID();
 						incompleteOwnerInfo = getShortNotes(arrOwner[o]);
