@@ -283,6 +283,7 @@ try{
 					cancel = true;
 					comment("The following owner record must be completed before the Final Affidavit can be completed: " + incompleteRecdId + ": " + incompleteOwnerInfo);
 				}
+				//lwacht: 180621: story 5572: end
 			}
 		}
 	}
