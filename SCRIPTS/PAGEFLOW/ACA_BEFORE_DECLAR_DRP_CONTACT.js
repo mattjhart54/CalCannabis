@@ -266,7 +266,7 @@ try{
 						missingContact = true;
 					}
 					//lwacht: 180810: 5687: verify owner record has been completed
-					if(getCapIdStatusClass(inCapId)rrOwner[o])!="INCOMPLETE EST"){
+					if(getCapIdStatusClass(arrOwner[o])!="INCOMPLETE EST"){
 						incompleteOwnerRecord= true;
 						incompleteRecdId = arrOwner[o].getCustomID();
 						incompleteOwnerInfo = getShortNotes(arrOwner[o]);
