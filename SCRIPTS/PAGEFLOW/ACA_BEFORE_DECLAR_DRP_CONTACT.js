@@ -258,9 +258,18 @@ try{
 				}
 				//lwacht: 180621: story 5572:  don't allow submission if any contacts are missing from owner as well
 				var arrOwner =  getChildren("Licenses/Cultivator/*/Owner Application", parCapId);
+				var incompleteOwnerRecord = false;
+				var incompleteRecdId = "";
+				var incompleteOwnerInfo = "";
 				for(o in arrOwner){
 					if(!getContactObj(arrOwner[o],"Owner")){
 						missingContact = true;
+					}
+					//lwacht: 180810: 5687: verify owner record has been completed
+					if(matches(getAppSpecific("Disciplinary Actions", arrOwner[o]),"",null,"undefined")){
+						incompleteOwnerRecord= true;
+						incompleteRecdId = arrOwner[o].getCustomID();
+						incompleteOwnerInfo = getShortNotes(arrOwner[o]);
 					}
 				}
 				//lwacht: 180621: story 5572:  end
@@ -268,6 +277,11 @@ try{
 					showMessage=true;
 					cancel = true;
 					comment("A system issue may have occurred. For assistance with your application, please contact CalCannabis Cultivation Licensing Customer Support at 1-833-CAL-GROW or 1-833-225-4769, press option 1, and then option 2.");
+				}
+				if(incompleteOwnerRecord){
+					showMessage=true;
+					cancel = true;
+					comment("The following owner record must be completed before the Final Affidavit can be completed: " + incompleteRecdId + ": " + incompleteOwnerInfo);
 				}
 			}
 		}
