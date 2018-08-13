@@ -104,7 +104,8 @@ var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var rptName = getParam("reportName");
 var addrType = getParam("sendEmailAddressType");
 var wkflStatus = getParam("updateWorkflowStatus");
-var closeOwnerApps = getParam("closeChildren");
+var newAppStatus = getParam("newAppStatus")
+var closeOwnerApps = getParam("closeOwnerApps");
 /*----------------------------------------------------------------------------------------------------/
 |
 | End: BATCH PARAMETERS
