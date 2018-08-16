@@ -10,7 +10,7 @@ try{
 	}else{
 		logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
 	}
-	if(AInfo["Changes"]=="Y") {
+	if(AInfo["Changes"]=="N") {
 		var expDate = dateAddMonths(null,12);
 		setLicExpirationDate(parentCapId,null,expDate,"Active");
 		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parentCapId.getCustomID());
