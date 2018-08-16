@@ -17,7 +17,7 @@ try{
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Update AltId: " + err.message);
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
