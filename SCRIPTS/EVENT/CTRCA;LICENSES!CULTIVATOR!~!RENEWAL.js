@@ -2,7 +2,7 @@
 try{
 	parentCapId = getParentLicenseCapID(capId)
 	logDebug("parentCapId: " + parentCapId);
-	if (vLicenseID != null) {
+	if (parentCapId != null) {
 		var newAltId = parentCapId.getCustomID() + "-REN2018";
 		var resAltId = aa.cap.updateCapAltID(capId,newAltId);
 		if(resAltId.getSuccess()==true){
