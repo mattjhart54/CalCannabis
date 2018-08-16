@@ -1,9 +1,9 @@
 //lwacht: 080816: prototype
 try{
-	parentCapId = getParentLicenseCapID(capId)
-	logDebug("parentCapId: " + parentCapId);
-	if (parentCapId != null) {
-		var newAltId = parentCapId.getCustomID() + "-REN2018";
+	var parCapId = getParentLicenseCapID(capId)
+	logDebug("parCapId: " + parCapId);
+	if (parCapId != null) {
+		var newAltId = parCapId.getCustomID() + "-REN2018";
 		var resAltId = aa.cap.updateCapAltID(capId,newAltId);
 		if(resAltId.getSuccess()==true){
 			logDebug("Alt ID set to " + newAltId);
@@ -12,8 +12,8 @@ try{
 		}
 		if(AInfo["Changes"]=="Y") {
 			var expDate = dateAddMonths(null,12);
-			setLicExpirationDate(parentCapId,null,expDate,"Active");
-			emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parentCapId.getCustomID());
+			setLicExpirationDate(parCapId,null,expDate,"Active");
+			emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
 		}
 	}
 } catch(err){
