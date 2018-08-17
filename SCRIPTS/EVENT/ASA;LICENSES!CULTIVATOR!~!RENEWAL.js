@@ -5,8 +5,7 @@
 try{
 	var partialCapId = getIncompleteCapId();
 	var parentCapId = aa.env.getValue("ParentCapID");
-	var parentCapId =getParentCapID4Renewal();
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + parentCapId + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + parentCapId.getCustomID() + br + currEnv);
 	//1. Check to see if license is ready for renew
 	if (isRenewProcess(parentCapId, partialCapId)){
 		logDebug("CAPID(" + parentCapId + ") is ready for renew. PartialCap (" + partialCapId + ")");
