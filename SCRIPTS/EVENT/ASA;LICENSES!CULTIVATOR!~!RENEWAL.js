@@ -7,12 +7,14 @@ try{
 	var parentCapId = aa.env.getValue("ParentCapID");
 	//1. Check to see if license is ready for renew
 	if (isRenewProcess(parentCapId, partialCapId)){
-		aa.print("CAPID(" + parentCapId + ") is ready for renew. PartialCap (" + partialCapId + ")");
+		logDebug("CAPID(" + parentCapId + ") is ready for renew. PartialCap (" + partialCapId + ")");
+		aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + parentCapId + br + currEnv);
 		//2. Associate partial cap with parent CAP.
 		var result = aa.cap.createRenewalCap(parentCapId, partialCapId, true);
 		if (result.getSuccess()){
 			//3. Copy key information from parent license to partial cap
 			//copyKeyInfo(parentCapId, partialCapId);
+			editAppSpecific("Parent ID",parentCapId);
 			//4. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
 			aa.cap.updateAccessByACA(partialCapId, "N");
 		}else{
