@@ -3,11 +3,11 @@
 //lwacht: commenting out and putting in CTRCA
 
 try{
-	//var partialCapId = getIncompleteCapId();
-	//var parentCapId = aa.env.getValue("ParentCapID");
+	var partialCapId = getIncompleteCapId();
+	var parentCapId = aa.env.getValue("ParentCapID");
 	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + parentCapId + br + currEnv);
 	//1. Check to see if license is ready for renew
-	/*if (isRenewProcess(parentCapId, partialCapId)){
+	if (isRenewProcess(parentCapId, partialCapId)){
 		logDebug("CAPID(" + parentCapId + ") is ready for renew. PartialCap (" + partialCapId + ")");
 		//2. Associate partial cap with parent CAP.
 		var result = aa.cap.createRenewalCap(parentCapId, partialCapId, true);
@@ -20,13 +20,13 @@ try{
 		}else{
 			aa.print("ERROR: Associate partial cap with parent CAP. " + result.getErrorMessage());
 		}
-	} */
+	}
 } catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/* /RENEWAL: Update AltId: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
-/*
+
 function isRenewProcess(parentCapID, partialCapID)
 {
 	//1. Check to see parent CAP ID is null.
@@ -100,4 +100,3 @@ function getIncompleteCapId() {
 	}
 }
 
-*/
