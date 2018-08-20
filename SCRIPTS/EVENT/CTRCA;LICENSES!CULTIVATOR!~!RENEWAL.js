@@ -1,6 +1,6 @@
 //lwacht: 080816: prototype
 try{
-	var parCapId = getParentLicenseCapID(capId)
+	var parCapId =AInfo["Parent ID"];
 	logDebug("parCapId: " + parCapId);
 	if (parCapId != null) {
 		var newAltId = parCapId.getCustomID() + "-REN2018";
