@@ -14,6 +14,9 @@ try{
 			var expDate = dateAddMonths(null,12);
 			setLicExpirationDate(parCapId,null,expDate,"Active");
 			emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
+			renewCapProj = getRenewalCapByParentCapIDForReview(parCapId);
+			renewCapProj.setStatus("Complete");
+			aa.cap.updateProject(renewCapProj);
 		}
 	}
 } catch(err){
