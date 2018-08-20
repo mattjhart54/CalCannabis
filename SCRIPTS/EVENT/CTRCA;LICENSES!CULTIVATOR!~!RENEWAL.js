@@ -15,7 +15,7 @@ try{
 			var validFromDate = dateAddMonths(null,0);
 			setLicExpirationDate(parCapId,null,expDate,"Active");
 			updateAppStatus("Active", "Updated via CTRCA:LICENSES/CULTIVATOR/*/RENEWAL");
-			emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
+			//emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
 			result = aa.cap.getProjectByMasterID(parCapId, "Renewal", "Incomplete");
 			if (result.getSuccess()) {
 				var renewCapProjArr=result.getOutput();
@@ -26,7 +26,7 @@ try{
 			}
 		}
 	}
-	//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + message + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + message + br + currEnv);
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
 	logDebug(err.stack);
