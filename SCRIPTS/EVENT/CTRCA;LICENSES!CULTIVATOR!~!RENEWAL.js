@@ -1,7 +1,7 @@
 //lwacht: 080816: prototype
 try{
-	var parCapId =AInfo["Parent ID"];
-	logDebug("parCapId: " + parCapId);
+	var parCapArr =AInfo["Parent ID"].split("-");
+	var parCapId = aa.cap.getCapID(parCapArr[0],parCapArr[1],parCapArr[2]).getOutput();
 	if (parCapId != null) {
 		var newAltId = parCapId.getCustomID() + "-REN2018";
 		var resAltId = aa.cap.updateCapAltID(capId,newAltId);
@@ -10,13 +10,19 @@ try{
 		}else{
 			logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
 		}
-		if(AInfo["Changes"]=="Y") {
+		if(AInfo["Changes"]=="No") {
 			var expDate = dateAddMonths(null,12);
+			var validFromDate = dateAddMonths(null,0);
 			setLicExpirationDate(parCapId,null,expDate,"Active");
 			emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
-			renewCapProj = getRenewalCapByParentCapIDForReview(parCapId);
-			renewCapProj.setStatus("Complete");
-			aa.cap.updateProject(renewCapProj);
+			result = aa.cap.getProjectByMasterID(parCapId, "Renewal", "Incomplete");
+			if (result.getSuccess()) {
+				var renewCapProjArr=result.getOutput();
+				var renewCapProj = renewCapProjArr[0];
+				renewCapProj.setStatus("Complete");
+				var updRes = aa.cap.updateProject(renewCapProj);
+				editAppSpecific("Valid From Date", validFromDate);
+			}
 		}
 	}
 } catch(err){
@@ -24,4 +30,5 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
+
 //lwacht: 080816: prototype end
