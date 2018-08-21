@@ -1,8 +1,8 @@
 //lwacht: 080816: prototype
 try{
-	var parCapArr =AInfo["Parent ID"].split("-");
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, "parCapArr"+parCapArr + br + message + br + currEnv);
+	var parCapArr=AInfo["Parent ID"].split("-");
 	var parCapId = aa.cap.getCapID(parCapArr[0],parCapArr[1],parCapArr[2]).getOutput();
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: "+ startDate, "parCapId: " + parCapId + br + message + br + currEnv) + br + "AInfo: " + AInfo["Parent ID"];
 	if (parCapId != null) {
 		var newAltId = parCapId.getCustomID() + "-REN2018";
 		var resAltId = aa.cap.updateCapAltID(capId,newAltId);
