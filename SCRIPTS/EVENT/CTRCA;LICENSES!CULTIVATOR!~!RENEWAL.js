@@ -17,6 +17,7 @@ try{
 			var validFromDate = dateAddMonths(null,0);
 			setLicExpirationDate(parCapId,null,expDate,"Active");
 			updateAppStatus("Active", "Updated via CTRCA:LICENSES/CULTIVATOR/*/RENEWAL",parCapId);
+			updateAppStatus("Renewed", "Updated via CTRCA:LICENSES/CULTIVATOR/*/RENEWAL");
 			editAppSpecific("Valid From Date", validFromDate,parCapId);
 			//emailRptContact("ASA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
 			result = aa.cap.getProjectByMasterID(parCapId, "Renewal", "Incomplete");
