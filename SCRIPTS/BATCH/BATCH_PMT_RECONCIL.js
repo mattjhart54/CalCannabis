@@ -161,10 +161,11 @@ try{
 		paymentResult = payResult.getOutput();
 		logDebug("Payment count: " + paymentResult.length);
 		var chkYear = (fromJSDate.getYear()-100);
-		if(fromJSDate.getMonth()<10){
-			var chkMonth = "0"+fromJSDate.getMonth();
+		var thisMonth = fromJSDate.getMonth()+1;
+		if(thisMonth<10){
+			var chkMonth = "0"+thisMonth;
 		}else{
-			var chkMonth = fromJSDate.getMonth();
+			var chkMonth = thisMonth;
 		}
 		if(fromJSDate.getDate()<10){
 			var chkDate = "0"+fromJSDate.getDate();
