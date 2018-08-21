@@ -67,30 +67,26 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters */
+/* test parameters 
 aa.env.setValue("lookAheadDays", "-25");
 aa.env.setValue("daySpan", "30");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
-aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
-aa.env.setValue("recordCategory", "License");
+aa.env.setValue("recordCategory", "*");
 aa.env.setValue("licenseContactType", "Designated Responsible Party");
-aa.env.setValue("licenseAddressType", "Mailing");
- 
+ */
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
 var daySpan = getJobParam("daySpan");
 var sysFromEmail = getJobParam("sysFromEmail");
-var sendToEmail = getJobParam("sendToEmail");
 var appGroup = getJobParam("recordGroup");
 var appTypeType = getJobParam("recordType");
 var appSubtype = getJobParam("recordSubType");
 var appCategory = getJobParam("recordCategory");
 var licenseContactType = getJobParam("licenseContactType");
-var licenseAddressType = getJobParam("licenseAddressType");
 
 
 if(appTypeType=="*") appTypeType="";
