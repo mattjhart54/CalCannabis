@@ -2,7 +2,7 @@
 try{
 	var parCapArr=AInfo["Parent ID"].split("-");
 	var parCapId = aa.cap.getCapID(parCapArr[0],parCapArr[1],parCapArr[2]).getOutput();
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: "+ startDate, "parCapId: " + parCapId + br + message + br + currEnv) + br + "AInfo: " + AInfo["Parent ID"];
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: "+ startDate, "parCapId: " + parCapId + br + message + br + currEnv + br + "AInfo: " + AInfo["Parent ID"]);
 	if (parCapId != null) {
 		var newAltId = parCapId.getCustomID() + "-REN2018";
 		var resAltId = aa.cap.updateCapAltID(capId,newAltId);
@@ -10,6 +10,7 @@ try{
 			logDebug("Alt ID set to " + newAltId);
 		}else{
 			logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
+			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: "+ startDate, "parCapId: " + parCapId + br + message + br + currEnv + br + "Error updating Alt ID: " +resAltId.getErrorMessage());
 		}
 		if(AInfo["Changes"]=="No") {
 			var expDate = dateAddMonths(null,12);
