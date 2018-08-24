@@ -300,7 +300,7 @@ try{
 			var chMApp = getChildren("Licenses/Cultivator/Medical/Application", capId);
 			if(chMApp!=null) if(chMApp.length<1) chMApp = null;
 			var chTApp = getChildren("Licenses/Cultivator/Temporary/Application", capId);
-			if(chTApp!=null) {
+			if(chTApp!=null && chTApp!="") {
 				var currCap = capId;
 				capId = chTApp[0];
 				var chPar = getParents("Licenses/Cultivator/*/Application");
