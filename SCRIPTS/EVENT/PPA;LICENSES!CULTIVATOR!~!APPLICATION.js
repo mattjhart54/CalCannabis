@@ -43,8 +43,8 @@ lwacht: 1800809: end */
 //activate admin  review task when app fees are paid
 try{
 	if(balanceDue<=0 && !isTaskComplete("Administrative Review")){
-		//activateTask("Administrative Review")
-		//activateTask("Owner Application Reviews")
+		activateTask("Administrative Review")
+		activateTask("Owner Application Reviews")
 		updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/APPLICATION.");
 	}
 }catch(err){
