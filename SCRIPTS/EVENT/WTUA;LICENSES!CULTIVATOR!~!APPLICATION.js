@@ -195,7 +195,7 @@ try{
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
 		editAppSpecific("App Expiry Date", dateAdd(null,90));
-		deactivateTask("Administrative Manager Review");
+                deactivateTask("Administrative Manager Review");
 		if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
 			editTaskDueDate("Administrative Review", dateAdd(null,90));
 			//activateTask("Administrative Review");
