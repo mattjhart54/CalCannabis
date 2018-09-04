@@ -127,7 +127,7 @@ try{
 				removeASITable("OWNERS"); 
 				addASITable("OWNERS",OWNERS);
 				showMessage=true;
-				comment("No updates can be made to the owner table at this time.");
+				logMessage("No updates can be made to the owner table at this time.");
 			}
 			//lwacht: ???? : 180904: end
 		}
