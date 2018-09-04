@@ -118,6 +118,7 @@ try{
 			}
 			//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
 			var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + arrOwnRecds.length + br + currEnv);
 			if(arrOwnRecds.length>0){
 				for(own in OWNERS){
 					OWNERS[own]["First Name"].readOnly = "Y";
@@ -127,7 +128,6 @@ try{
 				removeASITable("OWNERS"); 
 				addASITable("OWNERS",OWNERS);
 				showMessage=true;
-				showDebug=true;
 				logMessage("No updates can be made to the owner table at this time.");
 				comment("No updates can be made to the owner table at this time.");
 			}
