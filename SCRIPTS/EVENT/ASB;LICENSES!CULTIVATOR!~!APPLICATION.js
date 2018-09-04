@@ -47,9 +47,6 @@ try{
 			var thisOwner = OWNERS[row]["First Name"] + " " + OWNERS[row]["Last Name"] + " ("+OWNERS[row]["Email Address"] + ")";
 			for(own in arrOwnRecds){
 				var ownerCap = aa.cap.getCap(arrOwnRecds[own]).getOutput();
-				logDebug("thisOwner: " + thisOwner);
-				logDebug("ownerCap.getSpecialText(): " + ownerCap.getSpecialText());
-				logDebug("-------------------");
 				if (thisOwner.equals(ownerCap.getSpecialText())){
 					contactMatches=true;
 				}
