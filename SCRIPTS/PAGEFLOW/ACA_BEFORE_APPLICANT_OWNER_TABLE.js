@@ -108,9 +108,8 @@ try{
 		var tblOwner = [];
 		var tblCorrection = false;
 		//lwacht: ???? : 180904: do not allow changes if the application has gone past the review page
-		var capIdStatusClass = getCapIdStatusClass(capId);
-		if(matches(capIdStatusClass, "INCOMPLETE EST")){
-			var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
+		var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
+		if(arrOwnRecds.length>0){
 			if(arrOwnRecds.length!=OWNERS.length){
 				cancel=true;
 				showMessage=true;
@@ -126,7 +125,7 @@ try{
 					var thisOwner = OWNERS[row]["First Name"] + " " + OWNERS[row]["Last Name"] + " ("+OWNERS[row]["Email Address"] + ")";
 					for(own in arrOwnRecds){
 						var ownerCap = aa.cap.getCap(arrOwnRecds[own]).getOutput();
-						if (ownerCap.getSpecialText().equals(thisOwner)){
+						if (thisOwner.equals(ownerCap.getSpecialText())){
 							contactMatches=true;
 						}
 					}
@@ -134,6 +133,21 @@ try{
 						cancel=true;
 						showMessage=true;
 						comment(thisOwner + " was added to the table after the owner records were created.  This contact must be removed before continuing.")
+					}
+				}
+				for(ownA in arrOwnRecds){
+					var contactMatches = false;
+					var ownerCap = aa.cap.getCap(arrOwnRecds[ownA]).getOutput();
+					for(rowA in OWNERS){
+						var thisOwner = OWNERS[rowA]["First Name"] + " " + OWNERS[rowA]["Last Name"] + " ("+OWNERS[rowA]["Email Address"] + ")";
+						if (ownerCap.getSpecialText().equals(thisOwner)){
+							contactMatches=true;
+						}
+					}
+					if(!contactMatches){
+						cancel=true;
+						showMessage=true;
+						comment(ownerCap.getSpecialText() + " was removed from the table after the owner records were created.  This contact must be added back before continuing.")
 					}
 				}
 			}

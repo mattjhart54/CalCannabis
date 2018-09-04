@@ -117,7 +117,8 @@ try{
 				}
 			}
 			//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
-			if(matches(capIdStatusClass, "INCOMPLETE EST")){
+			var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
+			if(arrOwnRecds.length>0){
 				for(own in OWNERS){
 					OWNERS[own]["First Name"].readOnly = "Y";
 					OWNERS[own]["Last Name"].readOnly = "Y";
@@ -125,7 +126,6 @@ try{
 				}
 				removeASITable("OWNERS"); 
 				addASITable("OWNERS",OWNERS);
-				cancel=true;
 				showMessage=true;
 				comment("No updates can be made to the owner table at this time.");
 			}
