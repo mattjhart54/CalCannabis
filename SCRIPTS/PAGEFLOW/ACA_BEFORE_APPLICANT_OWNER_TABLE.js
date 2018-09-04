@@ -115,9 +115,9 @@ try{
 				cancel=true;
 				showMessage=true;
 				if(arrOwnRecds.length<OWNERS.length){
-					var addMsg = "Please add back the owner you removed--it must exactly match before you can proceed."
-				}else{
 					var addMsg = "Please remove the owner you added."
+				}else{
+					var addMsg = "Please add back the owner you removed--it must exactly match before you can proceed."
 				}
 				comment("No changes can be made to the owner table once the owner application records have been created.  " + addMsg); 
 			}else{
