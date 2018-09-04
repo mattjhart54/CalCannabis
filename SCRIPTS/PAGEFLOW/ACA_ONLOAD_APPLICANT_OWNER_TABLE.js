@@ -100,7 +100,6 @@ try{
 					//	}
 					//}
 					var contType = thisCont.contactType;
-					showMessage=true;
 					if(contType =="Designated Responsible Party") {
 						//var refContNrb = thisCont.refContactNumber;
 						var drpContact = [];
@@ -119,8 +118,6 @@ try{
 			}
 			//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
 			if(matches(capIdStatusClass, "INCOMPLETE EST")){
-				showMessage=true;
-				comment("No updates can be made to the owner table at this time.");
 				for(own in OWNERS){
 					OWNERS[own]["First Name"].readOnly = "Y";
 					OWNERS[own]["Last Name"].readOnly = "Y";
@@ -128,6 +125,9 @@ try{
 				}
 				removeASITable("OWNERS"); 
 				addASITable("OWNERS",OWNERS);
+				cancel=true;
+				showMessage=true;
+				comment("No updates can be made to the owner table at this time.");
 			}
 			//lwacht: ???? : 180904: end
 		}
