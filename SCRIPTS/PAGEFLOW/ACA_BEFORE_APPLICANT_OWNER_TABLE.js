@@ -107,6 +107,38 @@ try{
 		loadASITables4ACA_corrected();
 		var tblOwner = [];
 		var tblCorrection = false;
+		//lwacht: ???? : 180904: do not allow changes if the application has gone past the review page
+		var capIdStatusClass = getCapIdStatusClass(capId);
+		if(matches(capIdStatusClass, "INCOMPLETE EST")){
+			var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
+			if(arrOwnRecds.length!=OWNERS.length){
+				cancel=true;
+				showMessage=true;
+				if(arrOwnRecds.length<OWNERS.length){
+					var addMsg = "Please add back the owner you removed--it must exactly match before you can proceed."
+				}else{
+					var addMsg = "Please remove the owner you added."
+				}
+				comment("No changes can be made to the owner table once the owner application records have been created.  " + addMsg); 
+			}else{
+				for(row in OWNERS){
+					var contactMatches = false;
+					var thisOwner = OWNERS[row]["First Name"] + " " + OWNERS[row]["Last Name"] + " ("+OWNERS[row]["Email Address"] + ")";
+					for(own in arrOwnRecds){
+						var ownerCap = aa.cap.getCap(arrOwnRecds[own]).getOutput();
+						if (ownerCap.getSpecialText().equals(thisOwner)){
+							contactMatches=true;
+						}
+					}
+					if(!contactMatches){
+						cancel=true;
+						showMessage=true;
+						comment(thisOwner + " was added to the table after the owner records were created.  This contact must be removed before continuing.")
+					}
+				}
+			}
+		}
+		//lwacht: ???? : 180904: end
 		if(OWNERS.length<1){
 			cancel = true;
 			showMessage = true;

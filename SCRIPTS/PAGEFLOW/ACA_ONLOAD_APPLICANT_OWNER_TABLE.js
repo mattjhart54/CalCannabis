@@ -117,6 +117,17 @@ try{
 					}
 				}
 			}
+			//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
+			if(matches(capIdStatusClass, "INCOMPLETE EST")){
+				for(own in OWNERS){
+					OWNERS[own]["First Name"].readOnly = "Y";
+					OWNERS[own]["Last Name"].readOnly = "Y";
+					OWNERS[own]["Email Address"].readOnly = "Y";
+				}
+				removeASITable("OWNERS"); 
+				addASITable("OWNERS",OWNERS);
+			}
+			//lwacht: ???? : 180904: end
 		}
 	}
 }catch (err) {
