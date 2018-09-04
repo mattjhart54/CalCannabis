@@ -118,8 +118,8 @@ try{
 				}
 			}
 			//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
-			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + capIdStatusClass);
 			if(matches(capIdStatusClass, "INCOMPLETE EST")){
+				showMessage=true;
 				comment("No updates can be made to the owner table at this time.");
 				for(own in OWNERS){
 					OWNERS[own]["First Name"].readOnly = "Y";
