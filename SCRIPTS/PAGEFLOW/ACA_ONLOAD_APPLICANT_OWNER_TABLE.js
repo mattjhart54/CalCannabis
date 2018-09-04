@@ -44,18 +44,16 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 		SAScript = bzr.getOutput().getDescription();
 	}
 }
-
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
-
-eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
+eval(getScriptText("INCLUDES_CUSTOM"));
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
@@ -72,6 +70,7 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 		return "";
 	}
 }
+
 
 var cap = aa.env.getValue("CapModel");
 
@@ -154,20 +153,22 @@ function getCapIdStatusClass(inCapId){
 /-----------------------------------------------------------------------------------------------------*/
 
 if (debug.indexOf("**ERROR") > 0) {
-    aa.env.setValue("ErrorCode", "1");
-    aa.env.setValue("ErrorMessage", debug);
-}
-else {
-    if (cancel) {
-        aa.env.setValue("ErrorCode", "-2");
-        if (showMessage) aa.env.setValue("ErrorMessage", message);
-        if (showDebug) aa.env.setValue("ErrorMessage", debug);
-    }
-    else {
-        aa.env.setValue("ErrorCode", "0");
-        if (showMessage) aa.env.setValue("ErrorMessage", message);
-        if (showDebug) aa.env.setValue("ErrorMessage", debug);
-    }
+	aa.env.setValue("ErrorCode", "1");
+	aa.env.setValue("ErrorMessage", debug);
+} else {
+	if (cancel) {
+		aa.env.setValue("ErrorCode", "-2");
+		if (showMessage)
+			aa.env.setValue("ErrorMessage", message);
+		if (showDebug)
+			aa.env.setValue("ErrorMessage", debug);
+	} else {
+		aa.env.setValue("ErrorCode", "0");
+		if (showMessage)
+			aa.env.setValue("ErrorMessage", message);
+		if (showDebug)
+			aa.env.setValue("ErrorMessage", debug);
+	}
 }
 
 /*------------------------------------------------------------------------------------------------------/
