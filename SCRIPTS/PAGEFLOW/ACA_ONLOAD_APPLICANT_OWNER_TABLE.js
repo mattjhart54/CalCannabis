@@ -23,7 +23,6 @@ var useAppSpecificGroupName = false; // Use Group name when populating App Speci
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
 var SCRIPT_VERSION = 3;
-var useCustomScriptFile = true;  			// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
@@ -125,8 +124,10 @@ try{
 				}
 				removeASITable("OWNERS"); 
 				addASITable("OWNERS",OWNERS);
-				showMessage=true;
+				showMessage = true;
+				showDebug = true;
 				logMessage("No updates can be made to the owner table at this time.");
+				comment("No updates can be made to the owner table at this time.");
 			}
 			//lwacht: ???? : 180904: end
 		}
