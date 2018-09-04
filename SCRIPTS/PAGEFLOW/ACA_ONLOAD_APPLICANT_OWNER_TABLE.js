@@ -23,6 +23,7 @@ var useAppSpecificGroupName = false; // Use Group name when populating App Speci
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
 var SCRIPT_VERSION = 3;
+var useCustomScriptFile = true;  			// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
@@ -43,16 +44,18 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 		SAScript = bzr.getOutput().getDescription();
 	}
 }
+
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM"));
+
+eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
@@ -69,7 +72,6 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 		return "";
 	}
 }
-
 
 var cap = aa.env.getValue("CapModel");
 
@@ -124,8 +126,8 @@ try{
 				}
 				removeASITable("OWNERS"); 
 				addASITable("OWNERS",OWNERS);
-				showMessage = true;
-				showDebug = true;
+				showMessage=true;
+				showDebug=true;
 				logMessage("No updates can be made to the owner table at this time.");
 				comment("No updates can be made to the owner table at this time.");
 			}
@@ -154,22 +156,20 @@ function getCapIdStatusClass(inCapId){
 /-----------------------------------------------------------------------------------------------------*/
 
 if (debug.indexOf("**ERROR") > 0) {
-	aa.env.setValue("ErrorCode", "1");
-	aa.env.setValue("ErrorMessage", debug);
-} else {
-	if (cancel) {
-		aa.env.setValue("ErrorCode", "-2");
-		if (showMessage)
-			aa.env.setValue("ErrorMessage", message);
-		if (showDebug)
-			aa.env.setValue("ErrorMessage", debug);
-	} else {
-		aa.env.setValue("ErrorCode", "0");
-		if (showMessage)
-			aa.env.setValue("ErrorMessage", message);
-		if (showDebug)
-			aa.env.setValue("ErrorMessage", debug);
-	}
+    aa.env.setValue("ErrorCode", "1");
+    aa.env.setValue("ErrorMessage", debug);
+}
+else {
+    if (cancel) {
+        aa.env.setValue("ErrorCode", "-2");
+        if (showMessage) aa.env.setValue("ErrorMessage", message);
+        if (showDebug) aa.env.setValue("ErrorMessage", debug);
+    }
+    else {
+        aa.env.setValue("ErrorCode", "0");
+        if (showMessage) aa.env.setValue("ErrorMessage", message);
+        if (showDebug) aa.env.setValue("ErrorMessage", debug);
+    }
 }
 
 /*------------------------------------------------------------------------------------------------------/
