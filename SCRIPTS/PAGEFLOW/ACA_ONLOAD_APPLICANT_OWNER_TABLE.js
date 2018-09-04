@@ -116,30 +116,37 @@ try{
 					}
 				}
 			}
-			//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
-			var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
-			aa.sendMail("calcannabislicensing@cdfa.ca.gov", "lwacht@trustvip.com", "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + arrOwnRecds.length + br + currEnv);
-			if(arrOwnRecds.length>0){
-				for(own in OWNERS){
-					OWNERS[own]["First Name"].readOnly = "Y";
-					OWNERS[own]["Last Name"].readOnly = "Y";
-					OWNERS[own]["Email Address"].readOnly = "Y";
-				}
-				removeASITable("OWNERS"); 
-				addASITable("OWNERS",OWNERS);
-				showMessage=true;
-				logMessage("No updates can be made to the owner table at this time.");
-				comment("No updates can be made to the owner table at this time.");
-			}
-			//lwacht: ???? : 180904: end
 		}
 	}
 }catch (err) {
-    logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: " + err.message);
+    logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: Populate DRP: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Populate DRP: "+ startDate, capId + "; " + err.message+ "; "+ err.stack + br + currEnv);
 }
+try{
+	//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
+	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
+	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "lwacht@trustvip.com", "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + arrOwnRecds.length + br + currEnv);
+	if(arrOwnRecds.length>0){
+		for(own in OWNERS){
+			OWNERS[own]["First Name"].readOnly = "Y";
+			OWNERS[own]["Last Name"].readOnly = "Y";
+			OWNERS[own]["Email Address"].readOnly = "Y";
+		}
+		removeASITable("OWNERS"); 
+		asit = cap.getAppSpecificTableGroupModel();
+		addASITable4ACAPageFlow(asit, "OWNERS",OWNERS);
+		showMessage=true;
+		logMessage("No updates can be made to the owner table at this time.");
+		comment("No updates can be made to the owner table at this time.");
+	}
+	//lwacht: ???? : 180904: end
 
+}catch (err) {
+    logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + err.message+ "; "+ err.stack + br + currEnv);
+}
 function getCapIdStatusClass(inCapId){
     var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
     var retClass = null;
