@@ -2,7 +2,7 @@ try {
 	updateLegalBusinessName();
 
 }catch (err){
-	logDebug("A JavaScript Error occurred: CEA: Licenses/Cultivation/*/Application: updateLegalBusinessName: " + err.message);
+	logDebug("A JavaScript Error occurred: CEA: Licenses/Cultivation/*/License: updateLegalBusinessName: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CEA:Licenses/Cultivation/*/Application: updateLegalBusinessName: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
@@ -15,7 +15,7 @@ try {
 		editAppSpecific("Legal Business Name", "No Legal Business Name provided");
 	}
 }catch (err){
-	logDebug("A JavaScript Error occurred: CEA: Licenses/Cultivation/*/Application: Edit Legal Business Name: " + err.message);
+	logDebug("A JavaScript Error occurred: CEA: Licenses/Cultivation/*/License: Edit Legal Business Name: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CEA:Licenses/Cultivation/*/Application: Edit Legal Business Name: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CEA:Licenses/Cultivation/*/License: Edit Legal Business Name: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
