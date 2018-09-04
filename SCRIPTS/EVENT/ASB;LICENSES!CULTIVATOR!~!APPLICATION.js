@@ -29,6 +29,63 @@ try{
 }
 //lwacht: 180412: story 5428: end
 
+//lwacht: ???? : 180904: do not allow changes if the application has gone past the review page
+try{
+	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
+	if(arrOwnRecds.length!=OWNERS.length){
+		cancel=true;
+		showMessage=true;
+		if(arrOwnRecds.length<OWNERS.length){
+			var addMsg = "Please remove the owner you added."
+		}else{
+			var addMsg = "Please add back the owner you removed--it must exactly match before you can proceed."
+		}
+		comment("No changes can be made to the owner table once the owner application records have been created.  " + addMsg); 
+	}else{
+		for(row in OWNERS){
+			var contactMatches = false;
+			var thisOwner = OWNERS[row]["First Name"] + " " + OWNERS[row]["Last Name"] + " ("+OWNERS[row]["Email Address"] + ")";
+			for(own in arrOwnRecds){
+				var ownerCap = aa.cap.getCap(arrOwnRecds[own]).getOutput();
+				logDebug("thisOwner: " + thisOwner);
+				logDebug("ownerCap.getSpecialText(): " + ownerCap.getSpecialText());
+				logDebug("-------------------");
+				if (thisOwner.equals(ownerCap.getSpecialText())){
+					contactMatches=true;
+				}
+			}
+			if(!contactMatches){
+				cancel=true;
+				showMessage=true;
+				comment(thisOwner + " was added to the table after the owner records were created.  This contact must be removed before continuing.")
+			}
+		}
+		for(ownA in arrOwnRecds){
+			var contactMatches = false;
+			var ownerCap = aa.cap.getCap(arrOwnRecds[ownA]).getOutput();
+			for(rowA in OWNERS){
+				var thisOwner = OWNERS[rowA]["First Name"] + " " + OWNERS[rowA]["Last Name"] + " ("+OWNERS[rowA]["Email Address"] + ")";
+				if (ownerCap.getSpecialText().equals(thisOwner)){
+					contactMatches=true;
+				}
+			}
+			if(!contactMatches){
+				cancel=true;
+				showMessage=true;
+				comment(ownerCap.getSpecialText() + " was removed from the table after the owner records were created.  This contact must be added back before continuing.")
+			}
+		}
+	}
+}catch (err) {
+	logDebug("An error has occurred in ASB:Licenses/Cultivation/*/Application: Check owner table: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/Application: Check owner table: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
+}
+//lwacht: ???? : 180904: end
+
+
+
+
 //lwacht 180104 Story 5105 start
 /*
 try{
