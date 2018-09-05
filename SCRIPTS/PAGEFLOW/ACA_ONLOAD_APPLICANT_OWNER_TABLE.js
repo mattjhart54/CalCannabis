@@ -136,9 +136,9 @@ try{
 				var fieldInfo = new asiTableValObj("Email Address", OWNERS[own]["Email Address"], "Y");
 				tempArray.push(tempObject); // end of record
 			}
-			//removeASITable("OWNERS"); 
-			//asit = cap.getAppSpecificTableGroupModel();
-			//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
+			removeASITable("OWNERS"); 
+			asit = cap.getAppSpecificTableGroupModel();
+			addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
 			showMessage=true;
 			logMessage("Changes to the owner table are not allowed at this point in the application process. Any changes made to the owner table at this time could result in delayed processing of your application. Please submit your entire application then contact CDFA to make any changes.");
 		}
