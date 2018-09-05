@@ -141,7 +141,6 @@ try{
 		//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
 		showMessage=true;
 		logMessage("No updates can be made to the owner table at this time.");
-		comment("No updates can be made to the owner table at this time.");
 	}
 	//lwacht: ???? : 180904: end
 }catch (err) {
