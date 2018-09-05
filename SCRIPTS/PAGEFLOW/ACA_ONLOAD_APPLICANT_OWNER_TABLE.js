@@ -128,21 +128,21 @@ try{
 	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
 	if(!matches(arrOwnRecds,null,"","undefined")){
 		if(arrOwnRecds.length>0){
-			//loadASITables();
+			loadASITables();
 			removeASITable("OWNERS"); 
 			var tempArray = new Array(); 
 			for(own in OWNERS){
 				var drpContact = []; 
-				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + "read-only: " + OWNERS[own]["First Name"].readOnly + br + currEnv);
+				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + message + br + currEnv);
 				var fName = ""+OWNERS[own]["First Name"];
 				var LName = ""+OWNERS[own]["Last Name"];
 				var eMail = ""+OWNERS[own]["Email Address"];
-				drpContact["First Name"]=new asiTableValObj("First Name", fName, "Y");
+				drpContact["First Name"]=new asiTableValObj("First Name", "VOTE FOR PEDRO", "Y");
 				drpContact["Last Name"]=new asiTableValObj("Last Name", LName, "Y");
 				drpContact["Email Address"]=new asiTableValObj("Email Address", eMail, "Y");
 				tblOwner.push(drpContact);
 				var asit = cap.getAppSpecificTableGroupModel();
-				addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
+				addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
 				addToASITable("OWNERS",tblOwner);
 			}
 			asit = cap.getAppSpecificTableGroupModel();
