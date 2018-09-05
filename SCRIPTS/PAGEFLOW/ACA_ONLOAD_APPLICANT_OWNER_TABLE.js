@@ -130,6 +130,7 @@ try{
 	if(arrOwnRecds.length>0){
 		for(own in OWNERS){
 			var tempObject = []; 
+			var tempArray = []; 
 			var fieldInfo = new asiTableValObj("First Name", OWNERS[own]["First Name"], "Y");
 			var fieldInfo = new asiTableValObj("Last Name", OWNERS[own]["Last Name"], "Y");
 			var fieldInfo = new asiTableValObj("Email Address", OWNERS[own]["Email Address"], "Y");
