@@ -128,12 +128,15 @@ try{
 	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
 	if(!matches(arrOwnRecds,null,"","undefined")){
 		if(arrOwnRecds.length>0){
+			var tempArray = new Array(); 
 			for(own in OWNERS){
-				var tempArray = []; 
-				var fieldInfo = []; 
-				fieldInfo["First Name"] = new asiTableValObj("First Name", ""+OWNERS[own]["First Name"], "Y");
-				fieldInfo["Last Name"] = new asiTableValObj("Last Name", ""+OWNERS[own]["Last Name"], "Y");
-				fieldInfo["Email Address"] = new asiTableValObj("Email Address", ""+OWNERS[own]["Email Address"], "Y");
+				var fieldInfo = new Array(); 
+				var fName = ""+OWNERS[own]["First Name"];
+				var LName = ""+OWNERS[own]["Last Name"];
+				var eMail = ""+OWNERS[own]["Email Address"];
+				fieldInfo["First Name"] = new asiTableValObj("First Name", fName, "Y");
+				fieldInfo["Last Name"] = new asiTableValObj("Last Name", LName, "Y");
+				fieldInfo["Email Address"] = new asiTableValObj("Email Address", eMail, "Y");
 				fieldInfo["Status"] = new asiTableValObj("Status", "Pending", "Y");
 				tempArray.push(fieldInfo); // end of record
 			}
