@@ -129,6 +129,7 @@ try{
 	if(!matches(arrOwnRecds,null,"","undefined")){
 		if(arrOwnRecds.length>0){
 			loadASITables();
+			removeASITable("OWNERS"); 
 			var tempArray = new Array(); 
 			for(own in OWNERS){
 				var fieldInfo = new Array(); 
@@ -141,8 +142,8 @@ try{
 				fieldInfo["Email Address"] = new asiTableValObj("Email Address", eMail, "Y");
 				fieldInfo["Status"] = new asiTableValObj("Status", "Pending", "Y");
 				tempArray.push(fieldInfo); // end of record
+				addToASITable("OWNERS",tblOwner);
 			}
-			removeASITable("OWNERS"); 
 			asit = cap.getAppSpecificTableGroupModel();
 			addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
 			addASITable("OWNERS",tempArray);
