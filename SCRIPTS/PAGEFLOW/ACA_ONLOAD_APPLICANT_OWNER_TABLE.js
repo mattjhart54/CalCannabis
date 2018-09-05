@@ -132,7 +132,7 @@ try{
 				var tempObject = []; 
 				var tempArray = []; 
 				var fieldInfo["First Name"] = new asiTableValObj("First Name", OWNERS[own]["First Name"], "Y");
-				var fieldInfo"Last Name" = new asiTableValObj("Last Name", OWNERS[own]["Last Name"], "Y");
+				var fieldInfo["Last Name"] = new asiTableValObj("Last Name", OWNERS[own]["Last Name"], "Y");
 				var fieldInfo["Email Address"] = new asiTableValObj("Email Address", OWNERS[own]["Email Address"], "Y");
 				tempArray.push(tempObject); // end of record
 			}
