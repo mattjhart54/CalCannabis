@@ -129,11 +129,10 @@ try{
 	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "lwacht@trustvip.com", "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + arrOwnRecds.length + br + currEnv);
 	if(arrOwnRecds.length>0){
 		for(own in OWNERS){
-			var tempObject = new Array();
+			var tempObject = []; 
 			var fieldInfo = new asiTableValObj("First Name", OWNERS[own]["First Name"], "Y");
 			var fieldInfo = new asiTableValObj("Last Name", OWNERS[own]["Last Name"], "Y");
 			var fieldInfo = new asiTableValObj("Email Address", OWNERS[own]["Email Address"], "Y");
-			tempObject[tcol.getColumnName()] = fieldInfo;
 			tempArray.push(tempObject); // end of record
 		}
 		//removeASITable("OWNERS"); 
