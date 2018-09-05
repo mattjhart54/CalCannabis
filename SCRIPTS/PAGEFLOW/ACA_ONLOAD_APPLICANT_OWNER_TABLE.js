@@ -128,7 +128,7 @@ try{
 	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
 	if(!matches(arrOwnRecds,null,"","undefined")){
 		if(arrOwnRecds.length>0){
-			loadASITablesBefore();
+			loadASITables();
 			var tempArray = new Array(); 
 			for(own in OWNERS){
 				var fieldInfo = new Array(); 
