@@ -128,7 +128,7 @@ try{
 	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
 	if(!matches(arrOwnRecds,null,"","undefined")){
 		if(arrOwnRecds.length>0){
-			loadASITables();
+			//loadASITables();
 			removeASITable("OWNERS"); 
 			var tempArray = new Array(); 
 			for(own in OWNERS){
@@ -145,8 +145,8 @@ try{
 				addToASITable("OWNERS",tblOwner);
 			}
 			asit = cap.getAppSpecificTableGroupModel();
-			addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
-			addASITable("OWNERS",tempArray);
+			//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
+			//addASITable("OWNERS",tempArray);
 			showMessage=true;
 			logMessage("Changes to the owner table are not allowed at this point in the application process. Any changes made to the owner table at this time could result in delayed processing of your application. Please submit your entire application then contact CDFA to make any changes.");
 		}
