@@ -126,21 +126,22 @@ try{
 try{
 	//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
 	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "lwacht@trustvip.com", "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + arrOwnRecds.length + br + currEnv);
-	if(arrOwnRecds.length>0){
-		for(own in OWNERS){
-			var tempObject = []; 
-			var tempArray = []; 
-			var fieldInfo = new asiTableValObj("First Name", OWNERS[own]["First Name"], "Y");
-			var fieldInfo = new asiTableValObj("Last Name", OWNERS[own]["Last Name"], "Y");
-			var fieldInfo = new asiTableValObj("Email Address", OWNERS[own]["Email Address"], "Y");
-			tempArray.push(tempObject); // end of record
+	if(!matches(arrOwnRecds,null,"","undefined")){
+		if(arrOwnRecds.length>0){
+			for(own in OWNERS){
+				var tempObject = []; 
+				var tempArray = []; 
+				var fieldInfo = new asiTableValObj("First Name", OWNERS[own]["First Name"], "Y");
+				var fieldInfo = new asiTableValObj("Last Name", OWNERS[own]["Last Name"], "Y");
+				var fieldInfo = new asiTableValObj("Email Address", OWNERS[own]["Email Address"], "Y");
+				tempArray.push(tempObject); // end of record
+			}
+			//removeASITable("OWNERS"); 
+			//asit = cap.getAppSpecificTableGroupModel();
+			//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
+			showMessage=true;
+			logMessage("wAny changes made to the owner table at this time could result in delayed processing of your application. Please submit your application then contact CDFA to make any changes.");
 		}
-		//removeASITable("OWNERS"); 
-		//asit = cap.getAppSpecificTableGroupModel();
-		//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
-		showMessage=true;
-		logMessage("wAny changes made to the owner table at this time could result in delayed processing of your application. Please submit your application then contact CDFA to make any changes.");
 	}
 	//lwacht: ???? : 180904: end
 }catch (err) {
