@@ -134,6 +134,7 @@ try{
 				var fName = ""+OWNERS[own]["First Name"];
 				var LName = ""+OWNERS[own]["Last Name"];
 				var eMail = ""+OWNERS[own]["Email Address"];
+				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + "read-only: " + OWNERS[own]["First Name"].readOnly + br + currEnv);
 				fieldInfo["First Name"] = new asiTableValObj("First Name", fName, "Y");
 				fieldInfo["Last Name"] = new asiTableValObj("Last Name", LName, "Y");
 				fieldInfo["Email Address"] = new asiTableValObj("Email Address", eMail, "Y");
