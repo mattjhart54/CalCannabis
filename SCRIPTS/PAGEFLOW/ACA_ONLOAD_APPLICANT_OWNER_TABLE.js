@@ -129,13 +129,13 @@ try{
 	if(!matches(arrOwnRecds,null,"","undefined")){
 		if(arrOwnRecds.length>0){
 			for(own in OWNERS){
-				var tempObject = []; 
 				var tempArray = []; 
 				var fieldInfo = []; 
-				fieldInfo["First Name"] = new asiTableValObj("First Name", OWNERS[own]["First Name"], "Y");
-				fieldInfo["Last Name"] = new asiTableValObj("Last Name", OWNERS[own]["Last Name"], "Y");
-				fieldInfo["Email Address"] = new asiTableValObj("Email Address", OWNERS[own]["Email Address"], "Y");
-				tempArray.push(tempObject); // end of record
+				fieldInfo["First Name"] = new asiTableValObj("First Name", ""+OWNERS[own]["First Name"], "Y");
+				fieldInfo["Last Name"] = new asiTableValObj("Last Name", ""+OWNERS[own]["Last Name"], "Y");
+				fieldInfo["Email Address"] = new asiTableValObj("Email Address", ""+OWNERS[own]["Email Address"], "Y");
+				fieldInfo["Status"] = new asiTableValObj("Status", "Pending", "Y");
+				tempArray.push(fieldInfo); // end of record
 			}
 			removeASITable("OWNERS"); 
 			asit = cap.getAppSpecificTableGroupModel();
