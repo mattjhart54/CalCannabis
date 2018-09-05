@@ -129,19 +129,20 @@ try{
 	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "lwacht@trustvip.com", "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + arrOwnRecds.length + br + currEnv);
 	if(arrOwnRecds.length>0){
 		for(own in OWNERS){
-			OWNERS[own]["First Name"].readOnly = "Y";
-			OWNERS[own]["Last Name"].readOnly = "Y";
-			OWNERS[own]["Email Address"].readOnly = "Y";
+			var fieldInfo = new asiTableValObj("First Name", OWNERS[own]["First Name"], "Y");
+			var fieldInfo = new asiTableValObj("Last Name", OWNERS[own]["Last Name"], "Y");
+			var fieldInfo = new asiTableValObj("Email Address", OWNERS[own]["Email Address"], "Y");
+			tempObject[tcol.getColumnName()] = fieldInfo;
+			tempArray.push(tempObject); // end of record
 		}
-		removeASITable("OWNERS"); 
-		asit = cap.getAppSpecificTableGroupModel();
-		addASITable4ACAPageFlow(asit, "OWNERS",OWNERS);
+		//removeASITable("OWNERS"); 
+		//asit = cap.getAppSpecificTableGroupModel();
+		//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
 		showMessage=true;
 		logMessage("No updates can be made to the owner table at this time.");
 		comment("No updates can be made to the owner table at this time.");
 	}
 	//lwacht: ???? : 180904: end
-
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: " + err.message);
 	logDebug(err.stack);
