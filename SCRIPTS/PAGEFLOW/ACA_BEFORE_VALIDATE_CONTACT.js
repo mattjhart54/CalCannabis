@@ -216,6 +216,7 @@ try{
 			//asit = cap.getAppSpecificTableGroupModel();
 			//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
 			//addASITable("OWNERS",tempArray);
+			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_BEFORE_VALIDATE_CONTACT: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
 		}
 	}
 	//lwacht: ???? : 180904: end
