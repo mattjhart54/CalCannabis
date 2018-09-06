@@ -1,12 +1,11 @@
-
 /*------------------------------------------------------------------------------------------------------/
 | Program: BATCH_TMP_EXPIRATION
 | Client:  CDFA_CalCannabis
 |
 | Version 1.0 - Base Version. 
 |
-| Script to run nightly to send thirty day notification on applications requiring more information
-| Batch job name: LCA_App_Disqual_Notif
+| Script to run nightly to send notice of license expiring or to expire the license
+| Batch job name: LCA_TMP_ABOUT_TO_EXPIRE, LCA_TMP_EXPIRED 
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
 |
@@ -69,8 +68,8 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters  
-aa.env.setValue("lookAheadDays", "-365");
-aa.env.setValue("daySpan", "700");
+aa.env.setValue("lookAheadDays", "0");
+aa.env.setValue("daySpan", "0");
 aa.env.setValue("gracePeriodDays", "0");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
@@ -84,7 +83,7 @@ aa.env.setValue("setType", "License Notifications");
 aa.env.setValue("setStatus", "New");
 aa.env.setValue("setNonEmailPrefix", "TEMP_EXPIRED");
 aa.env.setValue("skipAppStatusArray", "Denied,Withdrawn,Disqualified,Inactive,Revoked,Suspended");
-aa.env.setValue("emailAddress", "lwacht@trustvip.com");
+aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sendEmailToContactTypes", "Business");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
@@ -95,7 +94,7 @@ aa.env.setValue("assignTaskTo", "LICENSE/NA/NA/NA/NA/ADMIN");
 aa.env.setValue("setParentWorkflowTaskAndStatus", "License,About to Expire");
 aa.env.setValue("respectNotifyPrefs", "Y");
 aa.env.setValue("checkForPermApplication", "Y");
- */
+*/
 var paramStdChoice = getJobParam("paramStdChoice")  // use this standard choice for parameters instead of batch jobs
 var fromDate = getJobParam("fromDate"); // Hardcoded dates.   Use for testing only
 var toDate = getJobParam("toDate"); // ""
@@ -316,6 +315,13 @@ try{
 			if(getParent() || chLic!=null || chAApp!=null || chMApp!=null || chPar!=null) {
 				capPermApp++;
 				logDebug("     " +"skipping, due to related permanent application." )
+				var enfPar = getParents("Enforcement/*/*/*");
+				logDebug("Enforcement parent " + enfPar);
+				if(enfPar!=null) if(enfPar.length<1) enfPar = null;
+				if(enfPar!=null && enfPar!="") {
+					aa.sendMail(sysFromEmail, emailAddress, "", "Error in batch job " + batchJobName, "Record " + capId.getCustomID() + " not processed.  Parent record is an Enforcement record");
+					logDebug("email sent to " + emailAddress);
+				}
 				continue;
 			}
 		}
