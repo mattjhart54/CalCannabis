@@ -130,19 +130,11 @@ try{
 		if(arrOwnRecds.length>0){
 			loadASITables();
 			var tempArray = new Array(); 
-			tempArray = OWNERS; 
-			//removeASITable("OWNERS"); 
-			var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN")
-			if (!tssmResult.getSuccess()){
-				logDebug("**WARNING: error removing ASI table " + tableName + " " + tssmResult.getErrorMessage()) ;
-			}else{
-				logDebug("Successfully removed all rows from ASI Table: ");
-			}
-			for(own in tempArray){
+			for(own in OWNERS){
 				var drpContact = []; 
-				var fName = ""+tempArray[own]["First Name"];
-				var LName = ""+tempArray[own]["Last Name"];
-				var eMail = ""+tempArray[own]["Email Address"];
+				var fName = ""+OWNERS[own]["First Name"];
+				var LName = ""+OWNERS[own]["Last Name"];
+				var eMail = ""+OWNERS[own]["Email Address"];
 				logDebug("fName: " + fName);
 				logDebug("LName: " + LName);
 				logDebug("eMail: " + eMail);
@@ -157,6 +149,13 @@ try{
 			asit = cap.getAppSpecificTableGroupModel();
 			//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
 			//addASITable("OWNERS",tempArray);
+			//removeASITable("OWNERS"); 
+			var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN")
+			if (!tssmResult.getSuccess()){
+				logDebug("**WARNING: error removing ASI table " + tableName + " " + tssmResult.getErrorMessage()) ;
+			}else{
+				logDebug("Successfully removed all rows from ASI Table: ");
+			}
 			showMessage=true;
 			logMessage("Changes to the owner table are not allowed at this point in the application process. Any changes made to the owner table at this time could result in delayed processing of your application. Please submit your entire application then contact CDFA to make any changes.");
 			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
