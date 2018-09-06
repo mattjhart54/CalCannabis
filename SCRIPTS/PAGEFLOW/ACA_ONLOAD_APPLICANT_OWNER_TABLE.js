@@ -124,7 +124,7 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Populate DRP: "+ startDate, capId + "; " + err.message+ "; "+ err.stack + br + currEnv);
 }
 try{
-	//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
+	//lwacht: 5709 : 180904: make the owner table read-only if the application has gone past the review page
 	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
 	if(!matches(arrOwnRecds,null,"","undefined")){
 		if(arrOwnRecds.length>0){
@@ -151,8 +151,8 @@ try{
 				drpContact["Email Address"]=new asiTableValObj("Email Address", eMail, "Y");
 				tblOwner.push(drpContact);
 				var asit = cap.getAppSpecificTableGroupModel();
-				addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
-				addToASITable("OWNERS",tblOwner);
+				//addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
+				//addToASITable("OWNERS",tblOwner);
 			}
 			//asit = cap.getAppSpecificTableGroupModel();
 			//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
@@ -162,7 +162,7 @@ try{
 			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
 		}
 	}
-	//lwacht: ???? : 180904: end
+	//lwacht: 5709 : 180904: end
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: " + err.message);
 	logDebug(err.stack);
