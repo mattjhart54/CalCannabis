@@ -116,7 +116,6 @@ try{
 					}
 				}
 			}
-			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
 		}
 	}
 }catch (err) {
@@ -137,8 +136,8 @@ try{
 			}else{
 				logDebug("Successfully removed all rows from ASI Table: ");
 			}
-
-			var tempArray = new Array(); 
+			var tempArray = []; 
+			var tblOwner = [];
 			for(own in OWNERS){
 				var drpContact = []; 
 				var fName = ""+OWNERS[own]["First Name"];
@@ -155,7 +154,7 @@ try{
 				addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
 				addToASITable("OWNERS",tblOwner);
 			}
-			asit = cap.getAppSpecificTableGroupModel();
+			//asit = cap.getAppSpecificTableGroupModel();
 			//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
 			//addASITable("OWNERS",tempArray);
 			showMessage=true;

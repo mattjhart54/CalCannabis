@@ -219,9 +219,9 @@ try{
 	}
 	//lwacht: ???? : 180904: end
 }catch (err) {
-    logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: " + err.message);
+    logDebug("A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: Lock Owner Table: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + err.message+ "; "+ err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_VALIDATE_CONTACT: Lock Owner Table: "+ startDate, capId + "; " + err.message+ "; "+ err.stack + br + currEnv);
 }
 
 
