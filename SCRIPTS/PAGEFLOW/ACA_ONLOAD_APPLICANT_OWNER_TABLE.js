@@ -138,11 +138,12 @@ try{
 			}
 
 			var tempArray = new Array(); 
-			for(own in OWNERS){
+			tempArray =OWNERS; 
+			for(own in tempArray){
 				var drpContact = []; 
-				var fName = ""+OWNERS[own]["First Name"];
-				var LName = ""+OWNERS[own]["Last Name"];
-				var eMail = ""+OWNERS[own]["Email Address"];
+				var fName = ""+tempArray[own]["First Name"];
+				var LName = ""+tempArray[own]["Last Name"];
+				var eMail = ""+tempArray[own]["Email Address"];
 				logDebug("fName: " + fName);
 				logDebug("LName: " + LName);
 				logDebug("eMail: " + eMail);
