@@ -116,6 +116,7 @@ try{
 					}
 				}
 			}
+			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
 		}
 	}
 }catch (err) {
