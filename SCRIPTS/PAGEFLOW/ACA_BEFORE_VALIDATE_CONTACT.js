@@ -196,6 +196,7 @@ try{
 				logDebug("Successfully removed all rows from ASI Table: ");
 			}
 			var tempArray = new Array(); 
+			var tblOwner = [];
 			for(own in OWNERS){
 				var drpContact = []; 
 				var fName = ""+OWNERS[own]["First Name"];
