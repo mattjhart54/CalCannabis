@@ -133,7 +133,6 @@ try{
 			var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN")
 			if (!tssmResult.getSuccess()){
 				logDebug("**WARNING: error removing ASI table " + tableName + " " + tssmResult.getErrorMessage()) ;
-				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + "**WARNING: error removing ASI table " + tssmResult.getErrorMessage() + br + currEnv);
 			}else{
 				logDebug("Successfully removed all rows from ASI Table: ");
 			}
@@ -141,7 +140,6 @@ try{
 			var tempArray = new Array(); 
 			for(own in OWNERS){
 				var drpContact = []; 
-				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
 				var fName = ""+OWNERS[own]["First Name"];
 				var LName = ""+OWNERS[own]["Last Name"];
 				var eMail = ""+OWNERS[own]["Email Address"];
@@ -158,6 +156,7 @@ try{
 			//addASITable("OWNERS",tempArray);
 			showMessage=true;
 			logMessage("Changes to the owner table are not allowed at this point in the application process. Any changes made to the owner table at this time could result in delayed processing of your application. Please submit your entire application then contact CDFA to make any changes.");
+			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
 		}
 	}
 	//lwacht: ???? : 180904: end
