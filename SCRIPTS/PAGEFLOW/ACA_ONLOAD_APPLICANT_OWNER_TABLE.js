@@ -143,6 +143,9 @@ try{
 				var fName = ""+OWNERS[own]["First Name"];
 				var LName = ""+OWNERS[own]["Last Name"];
 				var eMail = ""+OWNERS[own]["Email Address"];
+				logDebug("fName: " + fName);
+				logDebug("LName: " + LName);
+				logDebug("eMail: " + eMail);
 				drpContact["First Name"]=new asiTableValObj("First Name", "VOTE FOR PEDRO", "Y");
 				drpContact["Last Name"]=new asiTableValObj("Last Name", LName, "Y");
 				drpContact["Email Address"]=new asiTableValObj("Email Address", eMail, "Y");
