@@ -129,7 +129,16 @@ try{
 	if(!matches(arrOwnRecds,null,"","undefined")){
 		if(arrOwnRecds.length>0){
 			loadASITables();
-			removeASITable("OWNERS"); 
+			//removeASITable("OWNERS"); 
+			var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN")
+			if (!tssmResult.getSuccess()){
+				logDebug("**WARNING: error removing ASI table " + tableName + " " + tssmResult.getErrorMessage()) ;
+				aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + "**WARNING: error removing ASI table " + tssmResult.getErrorMessage() + br + currEnv);
+			}else{
+				logDebug("Successfully removed all rows from ASI Table: " + tableName);
+			}
+
+
 			var tempArray = new Array(); 
 			for(own in OWNERS){
 				var drpContact = []; 
