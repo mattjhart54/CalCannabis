@@ -159,7 +159,7 @@ try{
 			//addASITable("OWNERS",tempArray);
 			showMessage=true;
 			logMessage("Changes to the owner table are not allowed at this point in the application process. Any changes made to the owner table at this time could result in delayed processing of your application. Please submit your entire application then contact CDFA to make any changes.");
-			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
+			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
 		}
 	}
 	//lwacht: 5709 : 180904: end

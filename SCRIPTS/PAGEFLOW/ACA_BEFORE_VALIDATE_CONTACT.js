@@ -182,51 +182,6 @@ try {
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-try{
-	//lwacht: ???? : 180904: make the owner table read-only if the application has gone past the review page
-	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
-	if(!matches(arrOwnRecds,null,"","undefined")){
-		if(arrOwnRecds.length>0){
-			//loadASITables();
-			//removeASITable("OWNERS"); 
-			var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN")
-			if (!tssmResult.getSuccess()){
-				logDebug("**WARNING: error removing ASI table " + tableName + " " + tssmResult.getErrorMessage()) ;
-			}else{
-				logDebug("Successfully removed all rows from ASI Table: ");
-			}
-			var tempArray = new Array(); 
-			var tblOwner = [];
-			for(own in OWNERS){
-				var drpContact = []; 
-				var fName = ""+OWNERS[own]["First Name"];
-				var LName = ""+OWNERS[own]["Last Name"];
-				var eMail = ""+OWNERS[own]["Email Address"];
-				logDebug("fName: " + fName);
-				logDebug("LName: " + LName);
-				logDebug("eMail: " + eMail);
-				drpContact["First Name"]=new asiTableValObj("First Name", "VOTE FOR PEDRO", "Y");
-				drpContact["Last Name"]=new asiTableValObj("Last Name", LName, "Y");
-				drpContact["Email Address"]=new asiTableValObj("Email Address", eMail, "Y");
-				tblOwner.push(drpContact);
-				var asit = cap.getAppSpecificTableGroupModel();
-				addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
-				addToASITable("OWNERS",tblOwner);
-			}
-			//asit = cap.getAppSpecificTableGroupModel();
-			//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
-			//addASITable("OWNERS",tempArray);
-			aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_BEFORE_VALIDATE_CONTACT: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
-		}
-	}
-	//lwacht: ???? : 180904: end
-}catch (err) {
-    logDebug("A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: Lock Owner Table: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_VALIDATE_CONTACT: Lock Owner Table: "+ startDate, capId + "; " + err.message+ "; "+ err.stack + br + currEnv);
-}
-
-
 function getCapIdStatusClass(inCapId){
     var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
     var retClass = null;
