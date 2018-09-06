@@ -129,6 +129,8 @@ try{
 	if(!matches(arrOwnRecds,null,"","undefined")){
 		if(arrOwnRecds.length>0){
 			loadASITables();
+			var tempArray = new Array(); 
+			tempArray = OWNERS; 
 			//removeASITable("OWNERS"); 
 			var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN")
 			if (!tssmResult.getSuccess()){
@@ -136,9 +138,6 @@ try{
 			}else{
 				logDebug("Successfully removed all rows from ASI Table: ");
 			}
-
-			var tempArray = new Array(); 
-			tempArray =OWNERS; 
 			for(own in tempArray){
 				var drpContact = []; 
 				var fName = ""+tempArray[own]["First Name"];
