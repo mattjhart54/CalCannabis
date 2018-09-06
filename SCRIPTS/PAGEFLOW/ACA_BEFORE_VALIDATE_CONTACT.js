@@ -210,7 +210,7 @@ try{
 				drpContact["Email Address"]=new asiTableValObj("Email Address", eMail, "Y");
 				tblOwner.push(drpContact);
 				var asit = cap.getAppSpecificTableGroupModel();
-				//addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
+				addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
 				addToASITable("OWNERS",tblOwner);
 			}
 			//asit = cap.getAppSpecificTableGroupModel();
