@@ -8,9 +8,9 @@ try{
 		}
 		//lwacht: create reference contact and public user account for the DRP		
 		createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleGeneric);
-		var drpUser = createPublicUserFromContact("Designated Responsible Party");
+		var drpUser = createPublicUserFromContact_Rev("Designated Responsible Party");
 		//lwacht: create reference contact and public user account for the business contact		
-		createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
+		createRefContactsFromCapContactsAndLink_Rev(capId,["Business"], null, false, false, comparePeopleGeneric);
 		var bsnsUser = createPublicUserFromContact("Business");
 	}
 }catch (err){
