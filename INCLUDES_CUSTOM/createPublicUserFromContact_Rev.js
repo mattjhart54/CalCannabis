@@ -98,15 +98,17 @@ try{
     	else {
     	    logDebug("**Warning creating public user " + contact.getEmail() + "  failure: " + result.getErrorMessage()); return null;
     	}
-    }
+// mhart 091181 -Do not link to user account if the user account already exists for the reference 
+  //  }
 
-	//  Now that we have a public user let's connect to the reference contact		
-	if (refContactNum)
-		{
-		logDebug("CreatePublicUserFromContact: Linking this public user with reference contact : " + refContactNum);
-		aa.licenseScript.associateContactWithPublicUser(userModel.getUserSeqNum(), refContactNum);
-		}
-		
+	    //  Now that we have a public user let's connect to the reference contact		
+	    if (refContactNum)
+	    {
+	    	logDebug("CreatePublicUserFromContact: Linking this public user with reference contact : " + refContactNum);
+	    	aa.licenseScript.associateContactWithPublicUser(userModel.getUserSeqNum(), refContactNum);
+	    }
+    }
+   // mhart 09112018 end
 	return userModel; // send back the new or existing public user
 }catch (err) {
 	logDebug("ERROR: A JavaScript Error occurred: createPublicUserFromContact_Rev: " + err.message);
