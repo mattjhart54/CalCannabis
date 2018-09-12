@@ -319,7 +319,7 @@ try{
 				logDebug("Enforcement parent " + enfPar);
 				if(enfPar!=null) if(enfPar.length<1) enfPar = null;
 				if(enfPar!=null && enfPar!="") {
-					aa.sendMail(sysFromEmail, emailAddress, "", "Error in batch job " + batchJobName, "Record " + capId.getCustomID() + " not processed.  Parent record is an Enforcement record");
+					aa.sendMail(sysFromEmail, emailAddress, "", "Error in batch job " + batchJobName, "Record " + capId.getCustomID() + " not processed.  Parent record is an Enforcement record.");
 					logDebug("email sent to " + emailAddress);
 				}
 				continue;
