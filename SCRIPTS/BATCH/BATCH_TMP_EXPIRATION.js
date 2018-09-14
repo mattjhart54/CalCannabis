@@ -13,6 +13,7 @@
 |
 /------------------------------------------------------------------------------------------------------*/
 var emailText = "";
+var errLog = "";
 var debugText = "";
 var showDebug = false;	
 var showMessage = false;
@@ -182,8 +183,12 @@ logDebug("Start of Job");
 try {
 	mainProcess();
 	logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
-	if (emailAddress.length)
+	if (emailAddress.length) {
 		aa.sendMail(sysFromEmail, emailAddress, "", batchJobName + " Results", emailText);
+		if(errLog != "") {
+			aa.sendMail(sysFromEmail, emailAddress, "", batchJobName + " Errors", errLog);
+		}
+	}
 } catch (err) {
 	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName + " Line " + err.lineNumber);
 	logDebug("Stack: " + err.stack);
@@ -319,8 +324,9 @@ try{
 				logDebug("Enforcement parent " + enfPar);
 				if(enfPar!=null) if(enfPar.length<1) enfPar = null;
 				if(enfPar!=null && enfPar!="") {
-					aa.sendMail(sysFromEmail, emailAddress, "", "Error in batch job " + batchJobName, "Record " + capId.getCustomID() + " not processed.  Parent record is an Enforcement record.");
-					logDebug("email sent to " + emailAddress);
+					errLog = errLog + "Record " + capId.getCustomID() + " not processed.  Parent record is an Enforcement record." + br;
+		//			aa.sendMail(sysFromEmail, emailAddress, "", "Error in batch job " + batchJobName, "Record " + capId.getCustomID() + " not processed.  Parent record is an Enforcement record.");
+		//			logDebug("email sent to " + emailAddress);
 				}
 				continue;
 			}
