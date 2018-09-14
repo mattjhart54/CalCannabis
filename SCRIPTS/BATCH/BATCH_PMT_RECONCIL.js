@@ -275,8 +275,7 @@ try{
 				rcNbr = ""+c[0].getDepositSlip();
 				if(!matches(c[0].getDepositDate(),null,"","undefined")) {
 					depDate = c[0].getDepositDate().toString();
-					rcDate = depDate.substring(5,6) + "/" + depDate.substring(8,9) + "/" + depDate.substring(0,3);
-					logDebug("Deposit Date " + depDate + " " + rcDate);
+					rcDate = depDate.substring(5,7) + "/" + depDate.substring(8,10) + "/" + depDate.substring(0,4);
 				}
 //	mhart 180914 story 5719 end
 			}
@@ -435,23 +434,4 @@ function spacePad(num,count){
 		numZeropad = numZeropad +" "; 
 	}
 	return numZeropad;
-}
-function describeObject(obj2describe)
-{
-	logDebug("Object Class: " + obj2describe.getClass());
-	
-	logDebug("List Object Functions ...");
-	//Print function list
-	for (x in obj2describe) 
-		if (typeof(obj2describe[x]) == "function")
-			logDebug("  " + x)
-
-	logDebug("");
-	logDebug("List Object Properties ...");
-			
-	//Print properties and values of the current function
-	for (x in obj2describe) 
-		if (typeof(obj2describe[x]) != "function")
-			logDebug("  " + x + " = " + obj2describe[x]);
-			
 }
