@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program: BATCH_MPT_RECONCIL
+| Program: BATCH_PMT_RECONCIL
 | Client:  CDFA_CalCannabis
 |
 | Version 1.0 - Base Version. 
@@ -67,17 +67,17 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters 
-aa.env.setValue("lookAheadDays", "-25");
-aa.env.setValue("daySpan", "30");
-aa.env.setValue("emailAddress", "lwacht@trustvip.com");
+// test parameters 
+aa.env.setValue("lookAheadDays", "-1");
+aa.env.setValue("daySpan", "1");
+aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
 aa.env.setValue("recordCategory", "*");
 aa.env.setValue("licenseContactType", "Designated Responsible Party");
- */
+ 
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
 var daySpan = getJobParam("daySpan");
@@ -243,6 +243,7 @@ try{
 			var cashierSesh = thisPmt.sessionNbr;
 			var cashierId = thisPmt.cashierID;
 			var rcNbr = "";
+			var rcDate = "";
 			if(!matches(cashierSesh, null, "","undefined")){
 				var cashierSessionResult = aa.finance.getCashierSessionFromDB();
 				var cashierSession = null;
@@ -250,8 +251,12 @@ try{
 				{
 					logDebug("Get cashier session from database success.");
 					cashierSession = cashierSessionResult.getOutput();
-					if (cashierSession.sessionNumber == cashierSesh){
-						rcNbr = cashierSession.depositSlip;
+					if(!matches(cashierSession, null, "","undefined")){
+//	mhart 180913 story 5718 Add additional error handling
+						if (cashierSession.sessionNumber == cashierSesh){
+							rcNbr = cashierSession.depositSlip;
+						}
+//	mhart 180913 story 5718 end						
 					}
 				}
 				else
@@ -259,6 +264,20 @@ try{
 					logDebug("Get cashier session from database failed.");
 					logDebug(cashierSessionResult.getErrorMessage());
 				}
+
+/*				var cashBiz = aa.proxyInvoker.newInstance("com.accela.aa.finance.cashier.CashierBusiness").getOutput();
+				var cashModel = aa.proxyInvoker.newInstance("com.accela.aa.finance.cashier.CashierSessionModel").getOutput();
+				cashModel.setSessionNumber(cashierSesh);
+				cashModel.setServiceProviderCode(aa.getServiceProviderCode());
+				test=cashBiz.searchCashierSession(cashModel,null);
+				var c = cashBiz.searchCashierSession(cashModel,null).toArray();
+				rcNbr = ""+c[0].getDepositSlip();
+				if(!matches(c[0].getDepositDate(),null,"","undefined")) {
+					depDate = c[0].getDepositDate().toString();
+					rcDate = depDate.substring(5,6) + "/" + depDate.substring(8,9) + "/" + depDate.substring(0,3);
+					logDebug("Deposit Date " + depDate + " " + rcDate);
+				}
+*/
 			}
 			var methodType = thisPmt.paymentMethod;
 			var transCode = (thisPmt.tranCode==null) ? "" : thisPmt.tranCode;
@@ -295,7 +314,7 @@ try{
 			logDebug("Transaction Code: " +transCode); 
 			logDebug("Comments: " ); 
 			logDebug("RC Number: " +rcNbr); 
-			logDebug("RC Date: "); 
+			logDebug("RC Date: " + rcDate); 
 			tblRow["Record ID"] = ""+altId; 
 			tblRow["Fee Type"] = ""+feeType; 
 			tblRow["Total Paid"] = ""+ttlPaid; 
@@ -310,7 +329,7 @@ try{
 			tblRow["Transaction Code"] = ""+transCode; 
 			tblRow["Comments"] = ""; 
 			tblRow["RC Number"] = ""+rcNbr; 
-			tblRow["RC Date"] = ""; 
+			tblRow["RC Date"] = ""+rcDate; 
 			addToASITable("RECONCILIATION",tblRow,recRecd);
 			capCount++;
 		}
@@ -325,7 +344,7 @@ try{
  	logDebug("Total Payments processed: " + capCount);
 
 }catch (err){
-	logDebug("An error occurred in BATCH_APP_DATA_EXPORT_FRANWELL: " + err.message);
+	logDebug("An error occurred in BATCH_PMT_RECONCIL: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, emailAddress, "", "An error has occurred in " + batchJobName, err.message + br + err.stack + br + "env: av6(prod)");
 }}
@@ -415,4 +434,23 @@ function spacePad(num,count){
 		numZeropad = numZeropad +" "; 
 	}
 	return numZeropad;
+}
+function describeObject(obj2describe)
+{
+	logDebug("Object Class: " + obj2describe.getClass());
+	
+	logDebug("List Object Functions ...");
+	//Print function list
+	for (x in obj2describe) 
+		if (typeof(obj2describe[x]) == "function")
+			logDebug("  " + x)
+
+	logDebug("");
+	logDebug("List Object Properties ...");
+			
+	//Print properties and values of the current function
+	for (x in obj2describe) 
+		if (typeof(obj2describe[x]) != "function")
+			logDebug("  " + x + " = " + obj2describe[x]);
+			
 }
