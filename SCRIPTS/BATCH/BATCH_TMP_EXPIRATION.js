@@ -320,6 +320,7 @@ try{
 			if(getParent() || chLic!=null || chAApp!=null || chMApp!=null || chPar!=null) {
 				capPermApp++;
 				logDebug("     " +"skipping, due to related permanent application." )
+// mhart 180914 story 5711 -send email if parent is an enforcement record
 				var enfPar = getParents("Enforcement/*/*/*");
 				logDebug("Enforcement parent " + enfPar);
 				if(enfPar!=null) if(enfPar.length<1) enfPar = null;
@@ -328,6 +329,7 @@ try{
 		//			aa.sendMail(sysFromEmail, emailAddress, "", "Error in batch job " + batchJobName, "Record " + capId.getCustomID() + " not processed.  Parent record is an Enforcement record.");
 		//			logDebug("email sent to " + emailAddress);
 				}
+// mhart 180914 story 5711
 				continue;
 			}
 		}
