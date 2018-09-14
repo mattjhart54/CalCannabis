@@ -245,7 +245,7 @@ try{
 			var rcNbr = "";
 			var rcDate = "";
 			if(!matches(cashierSesh, null, "","undefined")){
-				var cashierSessionResult = aa.finance.getCashierSessionFromDB();
+/*				var cashierSessionResult = aa.finance.getCashierSessionFromDB();
 				var cashierSession = null;
 				if (cashierSessionResult.getSuccess())
 				{
@@ -264,8 +264,9 @@ try{
 					logDebug("Get cashier session from database failed.");
 					logDebug(cashierSessionResult.getErrorMessage());
 				}
-
-/*				var cashBiz = aa.proxyInvoker.newInstance("com.accela.aa.finance.cashier.CashierBusiness").getOutput();
+*/
+//	mhart 180914 story 5719 update RC# and RC Date
+				var cashBiz = aa.proxyInvoker.newInstance("com.accela.aa.finance.cashier.CashierBusiness").getOutput();
 				var cashModel = aa.proxyInvoker.newInstance("com.accela.aa.finance.cashier.CashierSessionModel").getOutput();
 				cashModel.setSessionNumber(cashierSesh);
 				cashModel.setServiceProviderCode(aa.getServiceProviderCode());
@@ -277,7 +278,7 @@ try{
 					rcDate = depDate.substring(5,6) + "/" + depDate.substring(8,9) + "/" + depDate.substring(0,3);
 					logDebug("Deposit Date " + depDate + " " + rcDate);
 				}
-*/
+//	mhart 180914 story 5719 end
 			}
 			var methodType = thisPmt.paymentMethod;
 			var transCode = (thisPmt.tranCode==null) ? "" : thisPmt.tranCode;
