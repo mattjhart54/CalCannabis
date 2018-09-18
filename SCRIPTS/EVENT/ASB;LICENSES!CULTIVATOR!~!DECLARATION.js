@@ -6,7 +6,7 @@ try{
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ASB:Licenses/Cultivation/*/Declaration test: Doc check: " + err.message);
-
+}
 
 //lwacht: 171122: don't allow submission until everything is completed
 try{
