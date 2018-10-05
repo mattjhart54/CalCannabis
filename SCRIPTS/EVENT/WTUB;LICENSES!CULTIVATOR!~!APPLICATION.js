@@ -49,9 +49,9 @@ try{
 			if(cntChild<10){
 				cntChild = "0" +cntChild;
 			}
-			var newAltId = capIDString +"-DEF"+ cntChild;
+			var newAltId = capIDString +"-DEF"+ cntChild + "T";
 			//logDebug("newAltId: " + newAltId);
-			var updAltId = aa.cap.updateCapAltID(newDefId,newAltId+"T");
+			var updAltId = aa.cap.updateCapAltID(newDefId,newAltId);
 			if(!updAltId.getSuccess()){
 				logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
 			}else{
@@ -74,7 +74,7 @@ try{
 		}
 		if(showReport){
 			showDebug=false;
-			displayReport("Deficiency Report", "Record ID", capIDString,"CHILD_RECORD_ID",newAltId );
+			displayReport("Deficiency Report", "p1value", capIDString,"p2value",newAltId );
 		}
 	}
 }catch(err){
