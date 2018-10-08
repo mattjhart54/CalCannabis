@@ -162,33 +162,21 @@ try{
 	logDebug(err.stack);
 }
 
-//lwacht
+//mhart 100818 story 5725 Revise workflow to add Final Review step and sending Pending payment notice
 //send other notifications
 try{
-	//if(matches(wfStatus, "Disqualified", "Withdrawn", "Denied", "Science Manager Review Completed") && appTypeArray[2]!="Temporary"){
-	if(matches(wfStatus, "Science Manager Review Completed") && appTypeArray[2]!="Temporary"){
-		var rptName = "";
-		var notName = "";
-		switch(""+wfStatus){
-			case "Science Manager Review Completed": 
-				rptName = "Approval Letter and Invoice"; 
-				notName = "LCA_GENERAL_NOTIFICATION"; 
-				break;
-			default: 
-				rptName = "Deficiency Report";
-				notName = "LCA_GENERAL_NOTIFICATION";
-		}
+	if(matches(wfStatus, "Approved for Annual License", "Approved for Provisional License") && appTypeArray[2]!="Temporary"){
+		rptName = "Approval Letter and Invoice"; 
+		notName = "LCA_GENERAL_NOTIFICATION"; 
 		runReportAttach(capId,rptName, "p1value", capId.getCustomID());
-		//emailDrpPriContacts("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId);
 		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
-		//emailRptContact("WTUA", notName, "", false, capStatus, capId, "Primary Contact", "p1value", capId.getCustomID());
 		updateTask("Application Disposition", "Pending Payment","Updated by Script","");
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
 	logDebug(err.stack);
 }
-
+//mhart 100818 story 5725 end
 
 // lwacht: set expiration dates
 try{
