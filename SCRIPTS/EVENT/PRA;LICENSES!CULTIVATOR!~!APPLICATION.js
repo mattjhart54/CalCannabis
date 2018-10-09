@@ -14,20 +14,24 @@ try{
 	logDebug(err.stack);
 }
 
-//lwacht
-//create official license record
+// mhart 100918 Story 5738 and 5739 Changes to generate carrect approval letter based on CAP status
 try{
-	if(balanceDue<=0 && capStatus == "License Issued"){
+	if(balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")){
 		var parCapId = getParent();
 		if(parCapId){
 			runReportAttach(parCapId,"Official License Certificate", "altId", parCapId.getCustomID());
 		}
-		runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
+		if(capStatus=="License Issued") 
+			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
+		else
+			runReportAttach(capId,"Approval Letter Provisional", "p1value", capId.getCustomID());
+// mhart 100918 Story end
+		
 //mhart 180430 story 5392 Attach the Official License to the email sent
 		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
 //mhart 180430 story 5392 end 
-		//emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "", false, capStatus, capId, "Primary Contact", "RECORD_ID", capId.getCustomID());
-		//lwacht: 180123: story 4679: add post contacts to a set; create set if it does not exist
+
+//lwacht: 180123: story 4679: add post contacts to a set; create set if it does not exist
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
@@ -45,7 +49,7 @@ try{
 				}
 			}
 		}
-		//lwacht: 180123: story 4679: end
+//lwacht: 180123: story 4679: end
 	}
 }catch(err){
 	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: License Fee Paid: " + err.message);
