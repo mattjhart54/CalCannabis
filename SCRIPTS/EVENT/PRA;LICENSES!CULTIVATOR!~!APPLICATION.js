@@ -37,7 +37,10 @@ try{
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 			if(!matches(priChannel, "",null,"undefined", false)){
 				if(priChannel.indexOf("Postal") > -1 ){
-					var sName = createSet("LICENSE_ISSUED","License Notifications", "New");
+					if(capStatus=="License Issued") 
+						var sName = createSet("LICENSE_ISSUED","License Notifications", "New");
+					else
+						var sName = createSet("LICENSE_ISSUED_PROVISIONAL","License Notifications", "New");
 					if(sName){
 						setAddResult=aa.set.add(sName,parCapId);
 						if(setAddResult.getSuccess()){
