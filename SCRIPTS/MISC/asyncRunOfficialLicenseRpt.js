@@ -6,8 +6,6 @@ try{
 	//aa.env.setValue("addressType", "Mailing");
 	var reportName = "" + aa.env.getValue("reportName");
 	var sendCap = "" + aa.env.getValue("sendCap");
-	var contType = "" + aa.env.getValue("contType");
-	var addrType = "" + aa.env.getValue("addrType");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var br = "<BR>";
 	var eTxt = "";
@@ -32,16 +30,7 @@ try{
 	eTxt+="reportName: " + reportName + br;
 	eTxt+="reportName: " + typeof(reportName) + br;
 	var parameters = aa.util.newHashMap(); 
-	if(reportName=="Submitted Annual App No LiveScan"){
-		parameters.put("altId",sendCap);
-		eTxt+="param altId: " + sendCap + br;
-	}else{
-		parameters.put("Record ID",sendCap);
-	}
-	parameters.put("Contact Type",contType);
-	eTxt+="Contact Type: " + contType + br;
-	parameters.put("Address Type",addrType);
-	eTxt+="Address Type: " + addrType + br;
+	parameters.put("altId",sendCap);
 	report.setReportParameters(parameters);
 	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
 	if(permit.getOutput().booleanValue()) { 
