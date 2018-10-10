@@ -19,7 +19,14 @@ try{
 	if(balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")){
 		var parCapId = getParent();
 		if(parCapId){
-			runReportAttach(parCapId,"Official License Certificate", "altId", parCapId.getCustomID());
+			var licAltId = parCapId.getCustomID();
+			var scriptName = "asyncRunOfficialLicenseRpt";
+			var envParameters = aa.util.newHashMap();
+			envParameters.put("sendCap",licAltId); 
+			envParameters.put("reportName","Official License Certificate"); 
+			envParameters.put("currentUserID",currentUserID);
+			aa.runAsyncScript(scriptName, envParameters);
+//			runReportAttach(parCapId,"Official License Certificate", "altId", parCapId.getCustomID());
 		}
 		if(capStatus=="License Issued") 
 			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
