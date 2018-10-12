@@ -108,12 +108,12 @@ try{
 // mhart 20181012 story - 5729 added code to display annual or provisional on notification
 			var parentId = getParentByCapId(capId);
 			if(!matches(parentId, null, "", "undefined"))
-				pId = parentId.getCustomID()
+				var pId = parentId.getCustomID()
 				addParameter(eParams, "$$parentId$$", pId);
 				if(pId.substring(0,1) == 'C')
-					annualProv = 'annual'
+					var annualProv = 'annual'
 				else
-					annualProv = 'provisional'
+					var annualProv = 'provisional'
 			addParameter(eParams, "$$licType$$", annualProv);	
 // mhart 20180503 story - 5392 end	
 // mhart 20181012 story - 5729 end				
