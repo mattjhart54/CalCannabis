@@ -105,10 +105,18 @@ try{
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
 			addParameter(eParams, "$$status$$", curStatus);
 // mhart 20180503 story - 5392 added code to get the parent record to display on notification
+// mhart 20181012 story - 5729 added code to display annual or provisional on notification
 			var parentId = getParentByCapId(capId);
 			if(!matches(parentId, null, "", "undefined"))
-				addParameter(eParams, "$$parentId$$", parentId.getCustomID());
-// mhart 20180503 story - 5392 end			
+				pId = parentId.getCustomID()
+				addParameter(eParams, "$$parentId$$", pId);
+				if(pId.substring(0,1) == 'C')
+					annualProv = 'annual'
+				else
+					annualProv = 'provisional'
+			addParameter(eParams, "$$licType$$", annualProv);	
+// mhart 20180503 story - 5392 end	
+// mhart 20181012 story - 5729 end				
 			drpAddresses = priContact.addresses;
 			var addrType = false;
 			for (x in drpAddresses){
