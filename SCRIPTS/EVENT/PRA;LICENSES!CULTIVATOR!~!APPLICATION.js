@@ -32,7 +32,6 @@ try{
 			aa.runAsyncScript(scriptName, envParameters);
 //			runReportAttach(parCapId,"Official License Certificate", "altId", parCapId.getCustomID());
 		}	
-		}
 		if(capStatus=="License Issued") 
 			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
 		else
