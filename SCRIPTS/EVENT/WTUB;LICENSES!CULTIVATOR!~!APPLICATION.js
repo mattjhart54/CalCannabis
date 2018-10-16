@@ -246,3 +246,35 @@ try{
 	aa.print(err.stack);
 }
 //MJH: 180809 Story 5607 - End
+
+//MJH 181016 Story 5749 - Check that all deficiency records completed before Manager Review task completed
+try{
+	if("Administrative Manager Review".equals(wfTask) && "Administrative Manager Review Completed".equals(wfStatus)){
+		var currCap = capId;
+		var amendUpdated=true;
+		var arrAmend = getChildren("Licenses/Cultivator/*/Amendment");
+		if(arrAmend){
+			for(ch in arrAmend){
+				capId = arrAmend[ch];
+				capAmend = aa.cap.getCap(capId).getOutput();
+				amendStatus = capAmend.getCapStatus();
+				if(matches(amendStatus ,"Pending", "Submitted", "Under Review")){
+					amendUpdated=false;
+				}
+			}
+			capId = currCap;
+			if(isTaskStatus("Owner Application Reviews", "Additional Information Needed") || isTaskStatus("Owner Application Reviews", "Incomplete Response")) {
+				amendUpdated=false;
+			}
+			if(!amendUpdated){
+				cancel=true;
+				showMessage=true;
+				comment("There are deficiency record(s) that need to be updated before continuing.");
+			}
+		}
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Check owner update: " + err.message);
+	aa.print(err.stack);
+}
+//MJH 181016 Story 5749 end
