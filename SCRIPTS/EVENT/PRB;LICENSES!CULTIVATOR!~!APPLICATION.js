@@ -77,8 +77,8 @@ try {
 			
 			updateWorkDesc(workDescGet(capId),licCapId);
 			copyAppSpecific(licCapId);
-			editAppSpecific("Premise State", "CA", licCapId);
 			editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
+			editAppSpecific("Premise State", "CA", licCapId);
 			if (appTypeArray[2] != "Temporary") {
 				addToCat(licCapId); //send active license to CAT
 			}

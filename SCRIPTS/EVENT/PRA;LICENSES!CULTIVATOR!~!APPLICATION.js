@@ -19,14 +19,19 @@ try{
 	if(balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")){
 		var parCapId = getParent();
 		if(parCapId){
+			var appAltId = capId.getCustomID();
 			var licAltId = parCapId.getCustomID();
 			var scriptName = "asyncRunOfficialLicenseRpt";
 			var envParameters = aa.util.newHashMap();
-			envParameters.put("sendCap",licAltId); 
+			envParameters.put("appCap",appAltId);
+			envParameters.put("licCap",licAltId); 
 			envParameters.put("reportName","Official License Certificate"); 
 			envParameters.put("currentUserID",currentUserID);
+			envParameters.put("contType","Designated Responsible Party");
+			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 			aa.runAsyncScript(scriptName, envParameters);
 //			runReportAttach(parCapId,"Official License Certificate", "altId", parCapId.getCustomID());
+		}	
 		}
 		if(capStatus=="License Issued") 
 			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
@@ -35,7 +40,7 @@ try{
 // mhart 100918 Story end
 		
 //mhart 180430 story 5392 Attach the Official License to the email sent
-		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
+//		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
 //mhart 180430 story 5392 end 
 
 //lwacht: 180123: story 4679: add post contacts to a set; create set if it does not exist
@@ -47,7 +52,7 @@ try{
 					if(capStatus=="License Issued") 
 						var sName = createSet("LICENSE_ISSUED","License Notifications", "New");
 					else
-						var sName = createSet("LICENSE_ISSUED_PROVISIONAL","License Notifications", "New");
+						var sName = createSet("PROV_LICENSE_ISSUED","License Notifications", "New");
 					if(sName){
 						setAddResult=aa.set.add(sName,parCapId);
 						if(setAddResult.getSuccess()){
