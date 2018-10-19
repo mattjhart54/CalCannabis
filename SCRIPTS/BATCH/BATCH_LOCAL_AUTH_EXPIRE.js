@@ -201,50 +201,17 @@ try{
 			logDebug("No assigned date found for Owner Application Reviews");
 		}
 		//lwacht: 180426: story 5436: end
-		
-		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
-			var conTypeArray = sendEmailToContactTypes.split(",");
-			var	conArray = getContactArray(capId);
-			for (thisCon in conArray) {
-				var conEmail = false;
-				thisContact = conArray[thisCon];
-				if (exists(thisContact["contactType"],conTypeArray)) {
-					// Run report letter and attach to record for each contact type
-					//lwacht 171218 report has three parameters and no primary contact and a different report for temp and annual
-					//if(thisContact["contactType"] == "Primary Contact") 
-					//	var addrType = "Mailing";
-					//if(thisContact["contactType"] == "Designated Responsible Party") 
-					//	var addrType = "Home";	
-					if(appTypeArray[2] == "Temporary") {
+//mhart 181019 story 5756 Removed code to generate submitted report for an annual application and to add postal preference records to set.	
+		if(appTypeArray[2] == "Temporary") {
+			if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
+				var conTypeArray = sendEmailToContactTypes.split(",");
+				var	conArray = getContactArray(capId);
+				for (thisCon in conArray) {
+					var conEmail = false;
+					thisContact = conArray[thisCon];
+					if (exists(thisContact["contactType"],conTypeArray)) {
+						// Run report letter and attach to record for each contact type
 						runReportAttach(capId,"Submitted Application", "Record ID", capId.getCustomID(), "Contact Type", thisContact["contactType"], "Address Type", addrType, "servProvCode", "CALCANNABIS");
-					}else{
-						runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", thisContact["contactType"], "Address Type", addrType, "servProvCode", "CALCANNABIS");
-					}
-					//lwacht 171218: end
-					// Check contact preference and add to set if Postal
-					for(a in conTypeArray) {
-						if(thisContact["contactType"] == conTypeArray[a]) {
-							pContact = getContactObj(capId,conTypeArray[a]);
-							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
-							if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Postal") >-1 && setNonEmailPrefix != ""){
-								if(setCreated == false) {
-								   //Create NonEmail Set
-									var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
-									var sNonEmailSet = vNonEmailSet.toUpperCase();
-									var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
-									setHeaderSetType.setRecordSetType("License Notifications");
-									setHeaderSetType.setSetStatus("New");
-									updResult = aa.set.updateSetHeader(setHeaderSetType);          
-									setCreated = true;
-								}
-								setAddResult=aa.set.add(sNonEmailSet,capId);
-							}
-						}	
-					}
-					// Email notification letter if preference is email
-					//lwacht: 171122: emailing all contacts, regardless of preferred channel
-					//if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Email") >= 0) {
-					//lwacht: 171122: end
 						conEmail = thisContact["email"];
 						if (conEmail) {
 							eParams = aa.util.newHashtable();
@@ -255,12 +222,11 @@ try{
 							sendNotification(sysFromEmail,conEmail,"",emailTemplate,eParams, rFiles,capId);
 							logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 						}
-					//lwacht: 171122: emailing all contacts, regardless of preferred channel
-					//}
-					//lwacht: 171122: end
+					}
 				}
 			}
 		}
+//mhart 181019 story 5756 end
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
  	logDebug("Ignored due to application type: " + capFilterType);
