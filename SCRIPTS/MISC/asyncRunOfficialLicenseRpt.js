@@ -52,6 +52,7 @@ try{
 	var reportName = "" + aa.env.getValue("reportName");
 	var appCap = "" + aa.env.getValue("appCap");
 	var licCap = "" + aa.env.getValue("licCap");
+	var licType = "" + aa.env.getValue("licType");	
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var contType = "" + aa.env.getValue("contType");
 	var fromEmail = "" + aa.env.getValue("fromEmail");
@@ -106,6 +107,7 @@ try{
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$parentId$$", licCap);
+		addParameter)eparams, "$$licType$$", licType);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"","LCA_APP_APPROVAL_PAID",eParams, rFiles,tmpID);
 	}else{
