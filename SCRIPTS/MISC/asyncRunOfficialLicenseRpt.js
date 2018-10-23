@@ -105,9 +105,7 @@ try{
 		addParameter(eParams, "$$altID$$", tmpID.getCustomID());
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-		var parentId = getParentByCapId(tmpID);
-		if(!matches(parentId, null, "", "undefined"))
-			addParameter(eParams, "$$parentId$$", parentId.getCustomID());
+		addParameter(eParams, "$$parentId$$", licCap);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"","LCA_APP_APPROVAL_PAID",eParams, rFiles,tmpID);
 	}else{
