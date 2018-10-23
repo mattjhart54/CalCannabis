@@ -107,7 +107,7 @@ try{
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$parentId$$", licCap);
-		addParameter)eparams, "$$licType$$", licType);
+		addParameter(eparams, "$$licType$$", licType);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"","LCA_APP_APPROVAL_PAID",eParams, rFiles,tmpID);
 	}else{
