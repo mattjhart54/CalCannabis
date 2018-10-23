@@ -18,9 +18,9 @@ try{
 try{
 	if(balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")){
 		if(capStatus == "License Issued")
-			var licType = "Annual";
+			var licType = "annual";
 		else 
-			var licType = "Provisional"; 
+			var licType = "provisional"; 
 		var parCapId = getParent();
 		if(parCapId){
 			var appAltId = capId.getCustomID();
