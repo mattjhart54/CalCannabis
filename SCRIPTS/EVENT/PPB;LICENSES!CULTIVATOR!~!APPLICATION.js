@@ -2,7 +2,7 @@
 //create the license record, update altid,  and copy DRP and Owner contacts to it
 //mhart 100918 Story 5738 and 5739 Update code to create provisional license record.
 try {
-	if(balanceDue<=PaymentTotalPaidAmount  && isTaskActive("Application Disposition")){
+	if(balanceDue<=ppPaymentAmount  && isTaskActive("Application Disposition")){
 		var annualLic = false;
 		if(isTaskStatus("Final Review","Approved for Annual License")) {
 			annualLic = true;
