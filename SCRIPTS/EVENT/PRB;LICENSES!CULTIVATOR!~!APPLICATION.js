@@ -39,6 +39,7 @@ try {
 				closeTask("Application Disposition","License Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
 			}
 			else {
+				setLicExpirationDate(licCapId,null,expDate,"Active");
 				if(appTypeArray[2]=="Adult Use"){
 					var newAltFirst = "PAL" ;
 				}else{
