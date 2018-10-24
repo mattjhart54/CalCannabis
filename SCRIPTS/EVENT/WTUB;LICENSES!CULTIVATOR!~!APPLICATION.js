@@ -86,7 +86,7 @@ try{
 //lwacht: when the status is set to a status that requires notification and the preferred channel is *not* email,
 //display the appropriate report for printing
 try{
-	if(matches(wfStatus, "Deficiency Letter Sent", "Science Manager Review Completed")){
+	if(matches(wfStatus, "Deficiency Letter Sent")){
 		showDebug=false;
 		//lwacht : 170823 : removing primary contact
 		//var priContact = getContactObj(capId,"Primary Contact");
@@ -108,11 +108,7 @@ try{
 			}
 		}
 		if(showReport){
-			var rptName = "";
-			switch(""+wfStatus){
-				case "Science Manager Review Completed": rptName = "Approval Letter and Invoice"; break;
-				default: rptName = "Deficiency Report";
-			}
+			var rptName = "Deficiency Report";
 			displayReport(rptName, "Record Id", capIDString);
 		}
 	}
