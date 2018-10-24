@@ -1,20 +1,5 @@
-//lwacht: 170817: moved record creation to before script
-//lwacht
-//send the application fee notification letter
-//lwacht 170920: paid application fee notice is not going to be sent per CDFA decision
-try{
-	if(balanceDue<=0 && isTaskActive("Administrative Review")){
-		//runReportAttach(capId,"Paid Application Fee", "p1value", capId.getCustomID()); 
-		//emailDrpPriContacts("PRA", "LCA_GENERAL_NOTIFICATION", "", false, "Application Fee Paid", capId, "RECORD_ID", capId.getCustomID());
-		//emailRptContact("PRA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "RECORD_ID", capId.getCustomID());
-		//emailRptContact("PRA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Primary Contact", "RECORD_ID", capId.getCustomID());
-	}
-}catch(err){
-	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: App Fee Paid: " + err.message);
-	logDebug(err.stack);
-}
 
-// mhart 100918 Story 5738 and 5739 Changes to generate carrect approval letter based on CAP status
+// mhart 100918 Story 5738 and 5739 Changes to generate correct approval letter based on CAP status
 try{
 	if(balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")){
 		if(capStatus == "License Issued")
@@ -35,15 +20,15 @@ try{
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 			aa.runAsyncScript(scriptName, envParameters);
-//			runReportAttach(parCapId,"Official License Certificate", "altId", parCapId.getCustomID());
 		}	
 		if(capStatus=="License Issued") 
 			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
 		else
 			runReportAttach(capId,"Approval Letter Provisional", "p1value", capId.getCustomID());
-// mhart 100918 Story end
+// mhart 100918 Story 5738 and 5739 end
 		
 //mhart 180430 story 5392 Attach the Official License to the email sent
+//   moved to the asyncRunOfficialLicenseReport
 //		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
 //mhart 180430 story 5392 end 
 
@@ -154,4 +139,3 @@ try {
 }
 //mhart 180409 user story 5391 - end
 //lwacht: 180419: story 5441: end
-
