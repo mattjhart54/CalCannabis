@@ -49,11 +49,12 @@ try{
 			if(cntChild<10){
 				cntChild = "0" +cntChild;
 			}
-			var newAltId = capIDString +"-DEF"+ cntChild + "T";
+			var newAltId = capIDString +"-DEF"+ cntChild;
+			var defAltIdT = newAltId + "T"
 			//logDebug("newAltId: " + newAltId);
-			var updAltId = aa.cap.updateCapAltID(newDefId,newAltId);
+			var updAltId = aa.cap.updateCapAltID(newDefId,defAltIdT);
 			if(!updAltId.getSuccess()){
-				logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
+				logDebug("Error updating Alt Id: " + defAltIdT + ":: " +updAltId.getErrorMessage());
 			}else{
 				editAppSpecific("AltId", newAltId,newDefId);
 				logDebug("Deficiency record ID updated to : " + newAltId);
@@ -74,7 +75,7 @@ try{
 		}
 		if(showReport){
 			showDebug=false;
-			displayReport("Deficiency Report", "p1value", capIDString,"p2value",newAltId );
+			displayReport("Deficiency Report", "p1value", capIDString,"p2value",defAltIdT);
 		}
 	}
 }catch(err){
