@@ -51,7 +51,7 @@ try{
 			}
 			var newAltId = capIDString +"-DEF"+ cntChild;
 			var defAltIdT = newAltId + "T"
-			//logDebug("newAltId: " + newAltId);
+			logDebug("newAltId: " + newAltId);
 			var updAltId = aa.cap.updateCapAltID(newDefId,defAltIdT);
 			if(!updAltId.getSuccess()){
 				logDebug("Error updating Alt Id: " + defAltIdT + ":: " +updAltId.getErrorMessage());
