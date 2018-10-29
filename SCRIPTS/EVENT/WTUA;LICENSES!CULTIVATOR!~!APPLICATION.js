@@ -407,6 +407,15 @@ try {
 	aa.print(err.stack);
 }
 //MJH: 180809 Story 5607 - End
+try{
+	if(wfStatus == "Science Manager Review Completed" && appTypeArray[2]!="Temporary"){
+		addAdHocTask("ADHOC_WORKFLOW", "Final Review", "Added by Script");
+		deactivateTask("License Manager");
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Check owner update: " + err.message);
+	aa.print(err.stack);
+}
 
 //lwacht: 180207: story 2896: end
 
