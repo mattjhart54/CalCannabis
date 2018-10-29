@@ -290,7 +290,7 @@ try{
 				}
 			}
 			capId = currCap;
-			if(isTaskStatus("Owner Application Reviews", "Additional Information Needed") || isTaskStatus("Owner Application Reviews", "Incomplete Response")) {
+			if(isTaskStatus("Owner Application Reviews", "Additional Information Needed") || isTaskStatus("Owner Application Reviews", "Incomplete Response") || isTaskStatus("Owner Application Reviews", "Under Review")) {
 				amendUpdated=false;
 			}
 			if(!amendUpdated){
