@@ -170,6 +170,7 @@ try{
 		notName = "LCA_GENERAL_NOTIFICATION"; 
 		runReportAttach(capId,rptName, "p1value", capId.getCustomID());
 		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+		activateTask("Application Disposition");
 		updateTask("Application Disposition", "Pending Payment","Updated by Script","");
 	}
 }catch(err){
@@ -409,7 +410,7 @@ try {
 //MJH: 180809 Story 5607 - End
 try{
 	if(wfStatus == "Science Manager Review Completed" && appTypeArray[2]!="Temporary"){
-		addAdHocTask("ADHOC_WORKFLOW", "Final Review", "Added by Script");
+		addAdHocTask("ADHOC_WORKFLOW", "Final Review", "");
 		deactivateTask("License Manager");
 	}
 }catch(err){
