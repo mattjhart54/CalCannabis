@@ -1,5 +1,5 @@
 try{
-	if("Owner Application Review".equals(wfTask)){
+	if(wfTask == "Owner Application Review" && wfTask != "Under Review"){
 		var currCap = capId;
 		var ownerUpdated=true;
 		var notUpdated = "Yes";
