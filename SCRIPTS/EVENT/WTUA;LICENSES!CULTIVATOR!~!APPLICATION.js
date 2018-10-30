@@ -410,8 +410,12 @@ try {
 //MJH: 180809 Story 5607 - End
 try{
 	if(wfStatus == "Science Manager Review Completed" && appTypeArray[2]!="Temporary"){
-		addAdHocTask("ADHOC_WORKFLOW", "Final Review", "");
-		deactivateTask("License Manager");
+		openDate = new Date(fileDate);
+		checkDate = new Date(lookup("LIC_CC_FINAL_REVIEW_IMPLEMENTATION_DATE","Effective Date"));
+		if(openDate < checkDate) {
+			addAdHocTask("ADHOC_WORKFLOW", "Final Review", "");
+			deactivateTask("License Manager");
+		}
 	}
 }catch(err){
 	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Check owner update: " + err.message);
