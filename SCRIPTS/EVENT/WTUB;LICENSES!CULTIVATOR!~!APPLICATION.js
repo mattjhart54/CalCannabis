@@ -305,3 +305,16 @@ try{
 	aa.print(err.stack);
 }
 //MJH 181016 Story 5749 end
+
+//MJH 181031 Story 5776 add Adhoc task for final review
+try {
+	if(wfTask == "Final Review" && !matches(currentUserGroup,"LicensesAdmin","LicensesAdminMgr","LicensesManager","LicensesScienceMgr")) {
+		cancel = true;
+		showMessage = true;
+		comment("Only the Administrative Manager, License Manager or Science Manger can update the Final Review")
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Final Review update: " + err.message);
+	aa.print(err.stack);
+}
+//MJH 181031 Story 5776 end
