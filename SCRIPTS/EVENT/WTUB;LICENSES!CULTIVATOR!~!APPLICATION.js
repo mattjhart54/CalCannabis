@@ -165,7 +165,7 @@ try{
 //add fees
 //lwacht: don't run for temporary app 
 try{
-	if(appTypeArray[2]!="Temporary" && wfStatus=="Science Manager Review Completed"){
+	if(appTypeArray[2]!="Temporary" && wfTask == 'Final Review' && matches(wfStatus,"Approved for Annual Application","Approved for Provisional Application")){
 		var feeDesc = AInfo["License Type"] + " - License Fee";
 		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 		if(thisFee){
