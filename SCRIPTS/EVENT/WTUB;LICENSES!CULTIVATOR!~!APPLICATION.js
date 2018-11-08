@@ -246,7 +246,7 @@ try{
 
 //MJH 181016 Story 5749 - Check that all deficiency records completed before Manager Review task completed
 try{
-	if("Administrative Review".equals(wfTask)&& wfStatus != "Under Review")){
+	if("Administrative Review".equals(wfTask)&& wfStatus != "Under Review"){
 		var currCap = capId;
 		var ownerUpdated=true;
 		var notUpdated = "Yes";
