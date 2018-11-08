@@ -311,7 +311,7 @@ try {
 	if(wfTask == "Final Review" && !matches(currentUserGroup,"LicensesAdmin","LicensesAdminMgr","LicensesManager","LicensesScienceMgr","LicensesAgencyAdmin","LicensesISS")) {
 		cancel = true;
 		showMessage = true;
-		comment("Only the Administrative Manager, License Manager or Science Manger can update the Final Review")
+		comment("Only the Administrative Manager, License Manager or Science Manager can update the Final Review")
 	}
 }catch(err){
 	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Final Review update: " + err.message);
