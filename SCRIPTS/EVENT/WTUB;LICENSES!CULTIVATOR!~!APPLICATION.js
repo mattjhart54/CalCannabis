@@ -246,7 +246,7 @@ try{
 
 //MJH 181016 Story 5749 - Check that all deficiency records completed before Manager Review task completed
 try{
-	if("Administrative Review".equals(wfTask)){
+	if("Administrative Review".equals(wfTask)&& wfStatus != "Under Review")){
 		var currCap = capId;
 		var ownerUpdated=true;
 		var notUpdated = "Yes";
@@ -267,7 +267,7 @@ try{
 			if(!ownerUpdated){
 				cancel=true;
 				showMessage=true;
-				comment("The following owner amendment record(s) need to be updated before continuing: " + notUpdated);
+				comment("The following amendment record(s) need to be updated before continuing: " + notUpdated);
 			}
 		}
 	}
@@ -308,7 +308,7 @@ try{
 
 //MJH 181031 Story 5776 add Adhoc task for final review
 try {
-	if(wfTask == "Final Review" && !matches(currentUserGroup,"LicensesAdmin","LicensesAdminMgr","LicensesManager","LicensesScienceMgr")) {
+	if(wfTask == "Final Review" && !matches(currentUserGroup,"LicensesAdmin","LicensesAdminMgr","LicensesManager","LicensesScienceMgr","LicensesAgencyAdmin","LicensesISS")) {
 		cancel = true;
 		showMessage = true;
 		comment("Only the Administrative Manager, License Manager or Science Manger can update the Final Review")
