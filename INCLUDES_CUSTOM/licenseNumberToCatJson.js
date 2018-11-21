@@ -24,7 +24,7 @@ try{
 		var legalBusinessName = "" + AInfo["Legal Business Name"].substr(0, 100);
 	}
 	var firstThree = licenseNumber.substring(0, 3);
-	if(firstThree == "CAL" || firstThree == "TAL") {
+	if(firstThree == "CAL" || firstThree == "TAL" || firstThree == "PAL") {
 		var licenseType ="A-"+AInfo["License Type"];
 	} else {
 		var licenseType = "M-"+AInfo["License Type"];
