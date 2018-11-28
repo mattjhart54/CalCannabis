@@ -89,7 +89,7 @@ try{
 	var parentId = getApplication(varAppNbr);
 	cancel = true;
 	showMessage = true;
-	comment"parent ID " + parentId + " app ID " + varAppNbr);
+	comment("parent ID " + parentId + " app ID " + varAppNbr);
 	/*	loadASITables4ACA_corrected(parentId);
 		if(OWNERS.length<1){
 			cancel = true;
