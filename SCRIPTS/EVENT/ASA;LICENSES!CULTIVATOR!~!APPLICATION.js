@@ -6,22 +6,6 @@ try{
 	//mhart: add the Business reference contact
 			createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
 			var bsnsUser = createPublicUserFromContact("Business");
-	//mhart: send email notification to owners to create account and apply for owner application.
-			var tblOwners = loadASITable("OWNERS");
-			for(o in tblOwners){
-				var nFirst = tblOwners[o]["First Name"];
-				var nLast = tblOwners[o]["Last Name"];
-				var nEmail = tblOwners[o]["Email Address"];
-				emailParameters = aa.util.newHashtable();
-				var sysDate = aa.date.getCurrentDate();
-				var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
-				addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
-				addParameter(emailParameters, "$$ParentAltID$$", capId.getCustomID());
-				addParameter(emailParameters, "$$fName$$",""+nFirst);
-				addParameter(emailParameters, "$$lName$$",""+nLast);
-				addParameter(emailParameters, "$$mmddyy$$", sysDateMMDDYYYY);
-				sendNotification(sysEmail,nEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
-			}
 		}
 	}
 }catch (err){
