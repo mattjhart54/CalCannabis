@@ -87,7 +87,9 @@ try{
 	loadAppSpecific4ACA(AInfo);
 	var  varAppNbr = AInfo["Application ID"];
 	var parentId = getApplication(varAppNbr);
-	logDebug("parent ID " + parentId + " app ID " + varAppNbr);
+	cancel = true;
+	showMessage = true;
+	comment"parent ID " + parentId + " app ID " + varAppNbr);
 	/*	loadASITables4ACA_corrected(parentId);
 		if(OWNERS.length<1){
 			cancel = true;
