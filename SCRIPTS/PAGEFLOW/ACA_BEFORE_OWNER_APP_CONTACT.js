@@ -86,9 +86,8 @@ try{
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	var  varAppNbr = AInfo["Application ID"];
-	var parentId = aa.cap.getCapID(varAppNbr);
+	var parentId = getApplication(varAppNbr);
 	if (parentId.getSuccess()){
-		parentId =  parentId.getOutput();
 		var holdId = capId;
 		capId = parentId;
 		loadASITables4ACA_corrected();
