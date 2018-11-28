@@ -23,6 +23,7 @@ var useAppSpecificGroupName = false; // Use Group name when populating App Speci
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
 var SCRIPT_VERSION = 3;
+var useCustomScriptFile = true;
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
@@ -44,11 +45,11 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,useCustomScriptFile));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",useCustomScriptFile));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
 }
 
