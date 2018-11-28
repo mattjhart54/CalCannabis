@@ -1,28 +1,21 @@
 try{
-//lwacht: add the owner applications
-	//lwacht 171215: don't run for temp apps
+//mhart 181128 story 5784 - update script to remove code to create associated owner records.  Remove old code no longer used
+//mhart: add the Business reference contact
 	if(appTypeArray[2]!="Temporary"){
-	//lwacht 171215: end
 		if(publicUser){
-			processOwnerApplications();
+			createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
+			var bsnsUser = createPublicUserFromContact("Business");
 		}
-		//lwacht: create reference contact and public user account for the DRP		
-		createRefContactsFromCapContactsAndLink(capId,["Designated Responsible Party"], null, false, false, comparePeopleGeneric);
-		var drpUser = createPublicUserFromContact("Designated Responsible Party");
-		//lwacht: create reference contact and public user account for the business contact		
-		createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
-		var bsnsUser = createPublicUserFromContact("Business");
 	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: DRP Notification: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application:  DRP Notification: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
-
-//lwacht: 180416: story 5175: create a reference contact for the temp drp and bsns contact
+//lwacht: 180416: story 5175: create a reference contact for the temp drp and bsns contact for application submitted in back office
 try{
 	if(!publicUser){
-		//lwacht: create reference contact and public user account for the DRP		
+//lwacht: create reference contact and public user account for the DRP		
 		var capContactResult = aa.people.getCapContactByCapID(capId);
 		var drpExists = false;
 		var tdrpExists = false;
@@ -223,10 +216,8 @@ try{
 }
 //lwacht: 180416: story 5175: end
 
-//mhart
-//update work description with Legal Business Name
-//lwacht: don't run for temporary app
-//lwacht: 170929 adding legal business name logic 
+
+//update work description with Legal Business Name, set application name to License Type, update short notes with premise county and update legal business name
 try {
 	updateLegalBusinessName();
 	editAppName(AInfo["License Type"]);
@@ -245,25 +236,23 @@ try {
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Edit App Name: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-//lwacht
-//add fees
-//lwacht: don't run for temporary app 
+//mhart: 181126: For application submitted from the back office access fee, set workflow and run completed application report.
 try{
 	if(appTypeArray[2]!="Temporary"){
-		voidRemoveAllFees();
-		var feeDesc = AInfo["License Type"] + " - Application Fee";
-		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
-		if(thisFee){
-			updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
-		}else{
-			logDebug("An error occurred retrieving fee item: " + feeDesc);
-			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-		}
-		//lwacht: 180118: story 5149: set application status on new record submitted via AV
 		if(!publicUser){
+			voidRemoveAllFees();
+			var feeDesc = AInfo["License Type"] + " - Application Fee";
+			var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
+			if(thisFee){
+				updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
+			}else{
+				logDebug("An error occurred retrieving fee item: " + feeDesc);
+				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+			}
 			updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION.");
 			deactivateTask("Owner Application Reviews");
 			deactivateTask("Administrative Review");
+			runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
 		}
 		//lwacht: 180118: story 5149: end
 	}
@@ -271,51 +260,6 @@ try{
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
-// mhart 05/03/18 user story 5447 - remove rletaed record relation between Temp and annual applications
-//lwacht
-//add child if app number provided
-/*
-try{
-	logDebug("publicUser " + AInfo["Temp App Number"])
-	if(!publicUser){
-		if(!matches(AInfo["Temp App Number"],null,"", "undefined")){
-			var tmpID = aa.cap.getCapID(AInfo["Temp App Number"]);
-			if(tmpID.getSuccess()){
-				var childCapId = tmpID.getOutput();
-				var parId = getParentByCapId(childCapId);
-				if(parId){
-					var linkResult = aa.cap.createAppHierarchy(capId, parId);
-					if (!linkResult.getSuccess()){
-						logDebug( "Error linking to parent application parent cap id (" + capId + "): " + linkResult.getErrorMessage());
-					}
-				}else{
-					var linkResult = aa.cap.createAppHierarchy(capId, childCapId);
-					if (!linkResult.getSuccess()){
-						logDebug( "Error linking to temp application(" + childCapId + "): " + linkResult.getErrorMessage());
-					}
-				}				
-			}
-		}
-	}
-} catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR//APPLICATION: Relate Temp Record: " + err.message);
-	logDebug(err.stack);
-}
-*/
-// mhart 05/03/18 user story 5447 end
-//lwacht: create submission report
-try{
-	//lwacht: 180108: defect 5120: don't run for temporary
-	if(appTypeArray[2]!="Temporary"){
-		if(!publicUser){
-			runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
-		}
-	}
-	//lwacht: 180108: defect 5120: end
-} catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
-	logDebug(err.stack);
 }
 //mhart 180321: story 5376: add live scan required condition
 try{
