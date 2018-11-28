@@ -98,3 +98,28 @@ try{
 }
 //lwacht: 180216: story 5177: end
 
+try{
+//mhart 181129 story 5784: send email notification to owners to create account and apply for owner application.
+	if(appTypeArray[2]!="Temporary"){
+		var tblOwners = loadASITable("OWNERS");
+		for(o in tblOwners){
+			var nFirst = tblOwners[o]["First Name"];
+			var nLast = tblOwners[o]["Last Name"];
+			var nEmail = tblOwners[o]["Email Address"];
+			emailParameters = aa.util.newHashtable();
+			var sysDate = aa.date.getCurrentDate();
+			var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
+			addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
+			addParameter(emailParameters, "$$ParentAltID$$", capId.getCustomID());
+			addParameter(emailParameters, "$$fName$$",""+nFirst);
+			addParameter(emailParameters, "$$lName$$",""+nLast);
+			addParameter(emailParameters, "$$mmddyy$$", sysDateMMDDYYYY);
+			sendNotification(sysEmail,nEmail,"","LCA_OWNER_APP_NOTIF",emailParameters,null,capId);
+		}
+	}
+} catch(err){
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
+}
+//mhart 181129 story 5784: end
