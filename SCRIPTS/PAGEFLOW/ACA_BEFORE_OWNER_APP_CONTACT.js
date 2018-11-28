@@ -95,6 +95,7 @@ try{
 			cancel = true;
 			showMessage = true;
 			comment("Contacts needs to be added to the Owners table.");
+		}
 		ownerFnd = false;
 		for(o in OWNERS) {
 			var ownerEmail = OWNERS[o]["Email Address"];
