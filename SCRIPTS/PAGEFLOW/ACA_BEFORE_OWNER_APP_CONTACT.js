@@ -89,6 +89,7 @@ try{
 	if (parentId.getSuccess()){
 		parentId =  parentId.getOutput();
 		var holdId = capId;
+		capId = parentId;
 		loadASITable("OWNERS");
 		ownerFnd = false;
 		for(o in OWNERS) {
