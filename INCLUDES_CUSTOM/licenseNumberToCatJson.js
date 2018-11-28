@@ -82,7 +82,11 @@ try{
 						if(thisAddr.addressType=="Business"){
 							bsnsFound = true;
 							var premiseAddress = "" + thisAddr.addressLine1;
-							var premiseAddress2 = "" + thisAddr.addressLine2;
+							if(thisAddr.addressLine2 != null) {
+								var premiseAddress2 = "" + thisAddr.addressLine2;
+							}else{
+								var premiseAddress2 = "";
+							}
 							var premiseCity = "" + thisAddr.city;
 							var premiseCounty = "" + thisAddr.addressLine3;
 							var premiseState = "" + thisAddr.state;
