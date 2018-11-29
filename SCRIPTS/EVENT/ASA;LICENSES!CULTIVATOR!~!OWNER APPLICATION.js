@@ -10,7 +10,7 @@ try{
 			ownerEmail = contacts[c]["email"];
 	}
 	parentId = getApplication(appId);
-	ownerTable = loadASITable("Owners",parentId);
+	ownerTable = loadASITable("OWNERS",parentId);
 	var allOwnersSubmitted = true;
 	for(x in ownerTable) {
 		if(ownerEmail == ownerTable[c]["Email Address"]) {
