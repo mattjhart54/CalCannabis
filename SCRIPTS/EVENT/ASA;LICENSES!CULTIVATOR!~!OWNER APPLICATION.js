@@ -21,8 +21,8 @@ try{
 			allOwnersSubmitted = false;
 		}
 	}
-	removeASITable("Owners",parentId)
-	addASITable("Owners",ownerTable,parentId);
+	removeASITable("OWNERS",parentId)
+	addASITable("OWNERS",ownerTable,parentId);
 	
 	if(allOwnersSubmitted){
 		updateAppStatus("Pending Declaration","Updated via ASA:Licenses/Cultivator//Owner Application",parentId);
