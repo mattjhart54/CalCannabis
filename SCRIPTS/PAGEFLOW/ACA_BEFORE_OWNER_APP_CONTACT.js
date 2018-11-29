@@ -87,10 +87,8 @@ try{
 	loadAppSpecific4ACA(AInfo);
 	var  varAppNbr = AInfo["Application ID"];
 	var parentId = getApplication(varAppNbr);
-	cancel = true;
-	showMessage = true;
-	comment("parent ID " + parentId + " app ID " + varAppNbr);
-	/*	loadASITables4ACA_corrected(parentId);
+//	comment("parent ID " + parentId + " app ID " + varAppNbr);
+		loadASITables4ACA_corrected(parentId);
 		if(OWNERS.length<1){
 			cancel = true;
 			showMessage = true;
@@ -109,7 +107,7 @@ try{
 			cancel = true;
 			comment("Error:  Your user email " + publicEmail + " does not match an owner " + ownEmail + " on the License Application " + varAppNbrVal  + " Contact the Designated Responsible Party for this application");
 		}
-	*/
+	
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_BEFORE_OWNER_APP_CONTACT: Correct contact : " + err.message);
