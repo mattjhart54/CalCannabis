@@ -1,88 +1,37 @@
-// ASA:   if this is the last owner record to be submitted, create a temp affidavit record and email the DRP
-try{
-	updateAppStatus("Submitted","Updated via ASA:Licenses/Cultivator//Owner Application");
-	appId = AInfo["Application ID"];
-	addParent(appId);
-	var ownerEmail = null
-	contacts = getContactArray();
-	for(c in contacts) {
-		if(contacts[c]["contactType"] == "Owner")
-			ownerEmail = contacts[c]["email"];
-	}
-	parentId = getApplication(appId);
-	ownerTable = loadASITable("OWNERS",parentId);
-	var allOwnersSubmitted = true;
-	for(x in ownerTable) {
-		if(ownerEmail == ownerTable[c]["Email Address"]) {
-			 ownerTable[c]["Status"] = "Submitted";
-			 continue;
-		}
-		if(ownerTable[c]["Status"] != "Submitted") {
-			allOwnersSubmitted = false;
-		}
-	}
-	removeASITable("OWNERS",parentId)
-	addASITable("OWNERS",ownerTable,parentId);
-	
-	if(allOwnersSubmitted){
-		updateAppStatus("Pending Declaration","Updated via ASA:Licenses/Cultivator//Owner Application",parentId);
-		var drpContact = getContactByType("Designated Responsible Party",parentId);
-		if(drpContact){
-			var drpFirst = drpContact.getFirstName();
-			var drpLast =  drpContact.getLastName();
-			var drpEmail = drpContact.getEmail();
-			if(!matches(drpEmail,null,"","undefined")){
-				emailParameters = aa.util.newHashtable();
-				var sysDate = aa.date.getCurrentDate();
-				var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
-				addParameter(emailParameters, "$$altID$$", parentId.getCustomID());
-				addParameter(emailParameters, "$$firstName$$", ""+drpFirst);
-				addParameter(emailParameters, "$$lastName$$", ""+drpLast);
-				addParameter(emailParameters, "$$today$$", sysDateMMDDYYYY);
-				addParameter(emailParameters, "$$ACAUrl$$", getACAlinkForEdit(parentId, "Licenses", "1005"));
-				sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,parentId);
-			}
-		}
-	}
-}catch (err){
-	logDebug("A JavaScript Error occurred: ASA:Licenses/Cultivator//Owner Application: Update owner table logic: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation//Owner Application: Declaration logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack + br + currEnv);
-}	
-
 // if not ACA, set altId based on application parent
 try{
 	if(!publicUser){
-		nbrToTry = 1;
-		//because owners can be added and deleted, need a way to number the records
-		//but only if they haven't been numbered before
-		if(capId.getCustomID().substring(0,3)!="LCA"){
-			var ownerGotNewAltId = false;
-			var newIdErrMsg = "";
-			for (i = 0; i <= 100; i++) {
-				if(nbrToTry<10){
-					var nbrOwner = "00" + nbrToTry;
-				}else{
-					if(nbrToTry<100){
-						var nbrOwner = "0" + nbrToTry
+		if(parentCapId){
+			nbrToTry = 1;
+			//because owners can be added and deleted, need a way to number the records
+			//but only if they haven't been numbered before
+			if(capId.getCustomID().substring(0,3)!="LCA"){
+				var ownerGotNewAltId = false;
+				var newIdErrMsg = "";
+				for (i = 0; i <= 100; i++) {
+					if(nbrToTry<10){
+						var nbrOwner = "00" + nbrToTry;
+					}else{
+						if(nbrToTry<100){
+							var nbrOwner = "0" + nbrToTry
+						}
+						var nbrOwner = ""+ nbrToTry;
 					}
-					var nbrOwner = ""+ nbrToTry;
+					var newAltId = parentCapId.getCustomID() + "-" + nbrOwner + "O";
+					var updateResult = aa.cap.updateCapAltID(capId, newAltId);
+					if (updateResult.getSuccess()) {
+						logDebug("Updated owner record AltId to " + newAltId + ".");
+						ownerGotNewAltId = true;
+						break;
+					}else {
+						newIdErrMsg += updateResult.getErrorMessage() +"; ";
+						nbrToTry++;
+					}
 				}
-				var newAltId = parentId.getCustomID() + "-" + nbrOwner + "O";
-				var updateResult = aa.cap.updateCapAltID(capId, newAltId);
-				if (updateResult.getSuccess()) {
-					logDebug("Updated owner record AltId to " + newAltId + ".");
-					ownerGotNewAltId = true;
-					break;
-				}else {
-					newIdErrMsg += updateResult.getErrorMessage() +"; ";
-					nbrToTry++;
+				if(!ownerGotNewAltId){
+					logDebug("Error renaming owner record " + capId + ":  " + newIdErrMsg);
+					aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
 				}
-			}
-			if(!ownerGotNewAltId){
-				logDebug("Error renaming owner record " + capId + ":  " + newIdErrMsg);
-				aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
-				
 			}else{
 				logDebug("Owner record AltId already updated: "+ capId.getCustomID());
 			}
@@ -93,6 +42,7 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Owner Application: AltID Logic:  " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
+
 
 //lwacht: 180416: story 5175: create a reference contact for the Owner contact
 try{
