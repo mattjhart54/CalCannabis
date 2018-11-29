@@ -8,18 +8,21 @@ try{
 	contacts = getContactArray();
 	for(c in contacts) {
 		if(contacts[c]["contactType"] == "Owner")
-			ownerEmail = contacts[c]["email"];
+			ownerEmail = ""+ contacts[c]["email"];
 	}
 	parentId = getApplication(appId);
 	ownerTable = loadASITable("OWNERS",parentId);
 	var allOwnersSubmitted = true;
 	for(x in ownerTable) {
-		if(ownerEmail == ownerTable[c]["Email Address"]) {
+		var tblEmail = ""+ ownerTable[c]["Email Address"];
+		logDebug("OwnerEmail " + ownerEmail + " email " + tblEmail);
+		if(ownerEmail == tblEmail) {
 			 ownerTable[c]["Status"] = "Submitted";
-			 continue;
 		}
-		if(ownerTable[c]["Status"] != "Submitted") {
+		else{
+			if(ownerTable[c]["Status"] != "Submitted") {
 			allOwnersSubmitted = false;
+			}
 		}
 	}
 	removeASITable("OWNERS",parentId)
