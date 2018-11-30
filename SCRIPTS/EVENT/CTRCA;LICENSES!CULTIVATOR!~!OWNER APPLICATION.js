@@ -1,7 +1,7 @@
 // lwacht
 // set altId based on application parent
 try{
-	updateAppStatus("Submitted","Updated via ASA:Licenses/Cultivator//Owner Application");
+	updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
 	appId = AInfo["Application ID"];
 	addParent(appId);
 	var ownerEmail = null
@@ -29,7 +29,7 @@ try{
 	addASITable("OWNERS",ownerTable,parentId);
 	
 	if(allOwnersSubmitted){
-		updateAppStatus("Pending Declaration","Updated via ASA:Licenses/Cultivator//Owner Application",parentId);
+		updateAppStatus("Pending Declaration","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
 		var drpContact = getContactByType("Designated Responsible Party",parentId);
 		if(drpContact){
 			var drpFirst = drpContact.getFirstName();
@@ -48,7 +48,7 @@ try{
 			}
 		}
 	}
-		if(parentId){
+	if(parentId){
 		nbrToTry = 1;
 		//because owners can be added and deleted, need a way to number the records
 		//but only if they haven't been numbered before
