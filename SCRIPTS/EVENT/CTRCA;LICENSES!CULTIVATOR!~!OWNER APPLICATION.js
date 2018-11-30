@@ -29,7 +29,7 @@ try{
 	addASITable("OWNERS",ownerTable,parentId);
 	
 	if(allOwnersSubmitted){
-		updateAppStatus("Pending Declaration","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
+		updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
 		var drpContact = getContactByType("Designated Responsible Party",parentId);
 		if(drpContact){
 			var drpFirst = drpContact.getFirstName();
