@@ -77,53 +77,7 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
-try{
-	//lwacht: 180306: story 5313: don't allow script to run against completed records
-	var capIdStatusClass = getCapIdStatusClass(capId);
-	if(!matches(capIdStatusClass, "COMPLETE")){
-	//lwacht: 180306: story 5313: end
-		var appName = cap.getSpecialText();
-		if(!matches(appName,null,"","undefined")){
-			if(appName.indexOf("(")>1){
-				var parenLoc = appName.indexOf("(");
-				var ownerName = appName.substring(0,parseInt(parenLoc));
-				var appNameLen = 0
-				appNameLen = appName.length();
-				var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
-				//var resCurUser = aa.person.getUser(publicUserID);
-				var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-				if(resCurUser.getSuccess()){
-					var currUser = resCurUser.getOutput();
-					var currEmail = currUser.email;
-					if(!matches(ownerEmail,"",null,"undefined")){
-						if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
-							//lwacht 171121: hiding the page if it's not the right person
-							//lwacht 171122: that didn't work out so great. 
-							showMessage = true;
-							logMessage("Warning: Only " + ownerName + " can edit and submit this application.");
-							//aa.acaPageFlow.hideCapPage4ACA(capId, 3, 1);
-							//aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-							//lwacht 171121: end
-							//lwacht 171122: end
-						}
-					}
-				}else{
-					logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-					aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_CONTACT: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage());
-				}
-			}else{
-				logDebug("Error on app name: "+ appName);
-			}
-		}else{
-			logDebug("No application name for this record: " + capId);
-		}
-	}
-} catch (err) {
-	showDebug =true;
-	logDebug("An error has occurred in ACA_ONLOAD_APP_CONTACT: Correct Contact: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_APP_CONTACT: Correct Contact: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack);
-}
+
 try{
 	//lwacht: 180306: story 5313: don't allow script to run against completed records
 	var capIdStatusClass = getCapIdStatusClass(capId);
