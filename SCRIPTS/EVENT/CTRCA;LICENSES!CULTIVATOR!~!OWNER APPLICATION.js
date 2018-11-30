@@ -14,13 +14,13 @@ try{
 	ownerTable = loadASITable("OWNERS",parentId);
 	var allOwnersSubmitted = true;
 	for(x in ownerTable) {
-		var tblEmail = ""+ ownerTable[c]["Email Address"];
+		var tblEmail = ""+ ownerTable[x]["Email Address"];
 		logDebug("OwnerEmail " + ownerEmail + " email " + tblEmail);
 		if(ownerEmail == tblEmail) {
-			 ownerTable[c]["Status"] = "Submitted";
+			 ownerTable[x]["Status"] = "Submitted";
 		}
 		else{
-			if(ownerTable[c]["Status"] != "Submitted") {
+			if(ownerTable[x]["Status"] != "Submitted") {
 			allOwnersSubmitted = false;
 			}
 		}
