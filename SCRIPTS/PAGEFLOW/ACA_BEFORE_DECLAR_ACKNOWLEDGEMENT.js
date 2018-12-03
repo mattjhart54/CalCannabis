@@ -18,7 +18,7 @@
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
 var showMessage = false; // Set to true to see results in popup window
-var showDebug = true; // Set to true to see debug messages in popup window
+var showDebug = false; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
@@ -82,7 +82,9 @@ try {
 		loadAppSpecific4ACA(AInfo);
 		var applicationId = AInfo["Application ID"];
 		var appId = aa.cap.getCapID(applicationId);
-		logDebug("Appid " + appId);
+	cancel = true;
+	showMessage = true;
+	logMessage("Appid " + appId);
 		var contactList = cap.getContactsGroup(appId);
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
