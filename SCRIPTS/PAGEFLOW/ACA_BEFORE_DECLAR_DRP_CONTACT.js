@@ -76,48 +76,17 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	//lwacht: 180306: story 5301: don't allow script to run against completed records
-	var capIdStatusClass = getCapIdStatusClass(capId);
-	if(!matches(capIdStatusClass, "COMPLETE")){
-	//lwacht: 180306: story 5301: end
-		var capId = cap.getCapID();
-		var appName = cap.getSpecialText();
-		if(!matches(appName,"",null,"undefined")){
-			var parenLoc = appName.indexOf("(");
-			var ownerName = appName.substring(0,parseInt(parenLoc));
-			var appNameLen = 0
-			appNameLen = appName.length();
-			var ownerEmail = appName.substring(parseInt(parenLoc)+1, appNameLen-1);
-			//var resCurUser = aa.person.getUser(publicUserID);
-			var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-			if(resCurUser.getSuccess()){
-				var currUser = resCurUser.getOutput();
-				var currEmail = currUser.email;
-				if(ownerEmail.toUpperCase() != currEmail.toUpperCase()){
-					showMessage = true;
-					cancel = true;
-					comment("Error: Only " + ownerName + " can submit this application.");
-				}
-			}else{
-				logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-				aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_DECLAR_DRP_CONTACT: " + startDate, "capId: " + capId + ": " + resCurUser.getErrorMessage());
-			}
-		}else{
-			logDebug("Error retrieving application name.  Application name is null.");
-			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Correct contact  " + startDate, "capId: " + capId + br + br + "Error retrieving application name.  Application name is null.");
-		}
-
-		var contactList = cap.getContactsGroup(); 
-		if(contactList != null && contactList.size() > 0){ 
-			var arrContacts = contactList.toArray(); 
-			for(var i in arrContacts) { 
-				var thisCont = arrContacts[i]; 
-				var pChannel = thisCont.preferredChannel;
-				if (matches(pChannel,null, "", "undefined",0)) { 
-					cancel = true; 
-					showMessage = true; 
-					logMessage("You must select your Preferred Method of Contact before continuing.  Click 'Edit' to update."); 
-				}
+	var capId = cap.getCapID();
+	var contactList = cap.getContactsGroup(); 
+	if(contactList != null && contactList.size() > 0){ 
+		var arrContacts = contactList.toArray(); 
+		for(var i in arrContacts) { 
+			var thisCont = arrContacts[i]; 
+			var pChannel = thisCont.preferredChannel;
+			if (matches(pChannel,null, "", "undefined",0)) { 
+				cancel = true; 
+				showMessage = true; 
+				logMessage("You must select your Preferred Method of Contact before continuing.  Click 'Edit' to update."); 
 			}
 		}
 	}
@@ -127,51 +96,46 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Require Preferred Method of Contact   " + startDate, "capId: " + capId + br + br + err.message + br + err.stack);
 }
 
-try{
-	//lwacht: 180306: story 5301: don't allow script to run against completed records
-	var capIdStatusClass = getCapIdStatusClass(capId);
-	if(!matches(capIdStatusClass, "COMPLETE")){
-	//lwacht: 180306: story 5301: end
-		//var emailText = "";
-		var contactList = cap.getContactsGroup();
+try {
+	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+	if(resCurUser.getSuccess()){
+		var contactFnd = false
+		var drpFnd = false;
+		var appFnd = false;
+		var currUser = resCurUser.getOutput();
+		var currEmail = currUser.email;
+		var AInfo = [];
+		loadAppSpecific4ACA(AInfo);
+		var applicationId = AInfo["Application ID"];
+		var appId = aa.cap.getCapID(applicationId);
+		var contactList = cap.getContactsGroup(appId);
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
 			for(var i in arrContacts) {
 				var thisCont = arrContacts[i];
-				//for(x in thisCont){
-				//	if(typeof(thisCont[x])!="function"){
-				//		emailText+= (x+ ": " + thisCont[x] +br);
-						//logMessage(x+ ": " + thisCont[x]);
-				//	}
-				//}
+				var contEmail = thisCont.email;
 				var contType = thisCont.contactType;
-				showMessage=true;
-				if(contType =="Individual") {
-					var county = ""+thisCont.addressLine3;
-					if (matches(county,null, "", "undefined")) {
+				if(contType == "Designated Responsible Party") {
+					if(contEmail.toUpperCase() != currEmail.toUpperCase()){
 						cancel = true;
 						showMessage = true;
-						logMessage("'County' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
-					}
-					var pplRes = aa.people.getPeople(thisCont.refContactNumber);
-					if(pplRes.getSuccess()){
-						var thisPpl = pplRes.getOutput();
-						var boeSeller = thisPpl.businessName2;
-						if (matches(boeSeller,null, "", "undefined")) {
-							cancel = true;
-							showMessage = true;
-							logMessage("'BOE Seller Permit Number' needs to be populated on the contact form before continuing.  Click 'Edit' to update.");
-						}
-					}
+						logMessage("  Error: Only the Designated Responsible party can update this application.");
+					}	
 				}
 			}
+		}else {
+			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the contacts: ACA_BEFORE_DECLARATION_DRP: Validate Contact: " + startDate, "appId: " + appId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
+	}else {
+			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the public user: ACA_BEFORE_DECLARATION_DRP: Validate Contact: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 	}
-} catch (err) {
-	showDebug =true;
-	logDebug("An error has occurred in ACA_BEFORE_DECLAR_DRP_CONTACT: Require County and BOE: " + err.message);
+}
+catch (err){
+	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLARATION_DRP: Validate Contact: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Require County and BOE: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack+ br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLARATION_DRP: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 try {
