@@ -95,7 +95,7 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Require Preferred Method of Contact   " + startDate, "capId: " + capId + br + br + err.message + br + err.stack);
 }
-
+//mhart 12032018 story 5797 - validate DRP contact agianst application DRP contact
 try {
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
@@ -137,7 +137,7 @@ catch (err){
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLARATION_DRP: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
-
+//mhart 12032018 story 5797 - end
 try {
 	//lwacht: 180306: story 5301: don't allow script to run against completed records
 	var capIdStatusClass = getCapIdStatusClass(capId);
