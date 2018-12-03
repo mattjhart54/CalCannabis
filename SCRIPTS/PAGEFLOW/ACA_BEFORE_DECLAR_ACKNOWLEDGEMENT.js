@@ -18,7 +18,7 @@
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
 var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
@@ -76,15 +76,13 @@ var cap = aa.env.getValue("CapModel");
 try {
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
-		var contactFnd = false
-		var drpFnd = false;
-		var appFnd = false;
 		var currUser = resCurUser.getOutput();
 		var currEmail = currUser.email;
 		var AInfo = [];
 		loadAppSpecific4ACA(AInfo);
 		var applicationId = AInfo["Application ID"];
 		var appId = aa.cap.getCapID(applicationId);
+		logDebug("Appid " + appId);
 		var contactList = cap.getContactsGroup(appId);
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
@@ -102,17 +100,17 @@ try {
 			}
 		}else {
 			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the contacts: ACA_BEFORE_DECLARATION_DRP: Validate Contact: " + startDate, "appId: " + appId + br + resCurUser.getErrorMessage() + br + currEnv);
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the contacts: ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT: Validate Contact: " + startDate, "appId: " + appId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
 	}else {
 			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the public user: ACA_BEFORE_DECLARATION_DRP: Validate Contact: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the public user: ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT: Validate Contact: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 	}
 }
 catch (err){
-	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLARATION_DRP: Validate Contact: " + err.message);
+	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT: Validate Contact: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLARATION_DRP: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 //mhart 12032018 story 5797 - end
 // page flow custom code end
