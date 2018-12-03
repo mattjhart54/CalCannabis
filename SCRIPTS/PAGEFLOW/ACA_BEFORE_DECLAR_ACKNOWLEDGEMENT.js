@@ -83,9 +83,6 @@ try {
 		var applicationId = AInfo["Application ID"];
 		var appId = aa.cap.getCapID(applicationId);
 		appId = appId.getOutput();
-	cancel = true;
-	showMessage = true;
-	logMessage(" AppId " + appId);
 		var contactList = cap.getContactsGroup(appId);
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
