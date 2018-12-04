@@ -1,6 +1,6 @@
 // mhart 113018 story: 5785 - Access fee on annual application and send notice to drp.
 try{
-	updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
+//	updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
 	appId = AInfo["Application ID"];
 	addParent(appId);
 	parentId = getApplication(appId);
@@ -25,9 +25,26 @@ try{
 	
 	updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION.");
 	runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
-	runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID(), "contactType", "Designated Responsible Party");
+	runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID(), "contactType", "Designated Responsible Party","addressType", "Mailing");
 	emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 	
+	var priContact = getContactObj(capId,"Designated Responsible Party");
+	if(priContact){
+		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+		if(!matches(priChannel, "",null,"undefined", false)){
+			if(priChannel.indexOf("Postal") > -1 ){
+				var sName = createSet("APPLICATION_FEE_DUE","License Notifications", "New");
+				if(sName){
+					setAddResult=aa.set.add(sName,parCapId);
+					if(setAddResult.getSuccess()){
+						logDebug(capId.getCustomID() + " successfully added to set " +sName);
+					}else{
+						logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+					}
+				}
+			}
+		}
+	}
 	editAppSpecific("Created Date", fileDate);
 	updateFileDate(null);
 	
