@@ -83,6 +83,7 @@ try {
 		var applicationId = AInfo["Application ID"];
 		var appId = aa.cap.getCapID(applicationId);
 		appId = appId.getOutput();
+		controlString = "Pageflow";
 		var contactList = getContactObjs(appId);
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
