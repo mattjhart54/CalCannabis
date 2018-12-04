@@ -95,49 +95,7 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_DRP_CONTACT: Require Preferred Method of Contact   " + startDate, "capId: " + capId + br + br + err.message + br + err.stack);
 }
-//mhart 12032018 story 5797 - validate DRP contact agianst application DRP contact
-try {
-	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-	if(resCurUser.getSuccess()){
-		var contactFnd = false
-		var drpFnd = false;
-		var appFnd = false;
-		var currUser = resCurUser.getOutput();
-		var currEmail = currUser.email;
-		var AInfo = [];
-		loadAppSpecific4ACA(AInfo);
-		var applicationId = AInfo["Application ID"];
-		var appId = aa.cap.getCapID(applicationId);
-		var contactList = cap.getContactsGroup(appId);
-		if(contactList != null && contactList.size() > 0){
-			var arrContacts = contactList.toArray();
-			for(var i in arrContacts) {
-				var thisCont = arrContacts[i];
-				var contEmail = thisCont.email;
-				var contType = thisCont.contactType;
-				if(contType == "Designated Responsible Party") {
-					if(contEmail.toUpperCase() != currEmail.toUpperCase()){
-						cancel = true;
-						showMessage = true;
-						logMessage("  Error: Only the Designated Responsible party can update this application.");
-					}	
-				}
-			}
-		}else {
-			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the contacts: ACA_BEFORE_DECLARATION_DRP: Validate Contact: " + startDate, "appId: " + appId + br + resCurUser.getErrorMessage() + br + currEnv);
-		}
-	}else {
-			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the public user: ACA_BEFORE_DECLARATION_DRP: Validate Contact: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
-	}
-}
-catch (err){
-	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLARATION_DRP: Validate Contact: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLARATION_DRP: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
-//mhart 12032018 story 5797 - end
+
 try {
 	//lwacht: 180306: story 5301: don't allow script to run against completed records
 	var capIdStatusClass = getCapIdStatusClass(capId);
