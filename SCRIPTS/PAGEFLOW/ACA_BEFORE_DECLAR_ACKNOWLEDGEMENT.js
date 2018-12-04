@@ -110,7 +110,7 @@ try {
 catch (err){
 	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT: Validate Contact: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT : " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 //mhart 12032018 story 5797 - end
 // page flow custom code end
