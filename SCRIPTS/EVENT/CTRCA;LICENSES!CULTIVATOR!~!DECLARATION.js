@@ -35,7 +35,7 @@ try{
 			if(priChannel.indexOf("Postal") > -1 ){
 				var sName = createSet("APPLICATION_FEE_DUE","License Notifications", "New");
 				if(sName){
-					setAddResult=aa.set.add(sName,parCapId);
+					setAddResult=aa.set.add(sName,capId);
 					if(setAddResult.getSuccess()){
 						logDebug(capId.getCustomID() + " successfully added to set " +sName);
 					}else{
@@ -45,7 +45,7 @@ try{
 			}
 		}
 	}
-	editAppSpecific("Created Date", fileDate);
+//	editAppSpecific("Created Date", fileDate);
 	updateFileDate(null);
 	
 	capId = holdId;
