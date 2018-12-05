@@ -83,30 +83,18 @@ try {
 		var applicationId = AInfo["Application ID"];
 		var appId = aa.cap.getCapID(applicationId);
 		appId = appId.getOutput();
-		controlString = "Pageflow";
-		var contactList = getContactObjs(appId);
-		if(contactList != null && contactList.size() > 0){
-			var arrContacts = contactList.toArray();
-			for(var i in arrContacts) {
-				var thisCont = arrContacts[i];
-				var contEmail = thisCont.email;
-				var contType = thisCont.contactType;
-				if(contType == "Designated Responsible Party") {
-					if(contEmail.toUpperCase() != currEmail.toUpperCase()){
+//		controlString = "Pageflow";
+		var contact = getContactObj(appId,"Designated Responsible Party");
+			contactEmail = contact.getEmail;
+			if(contEmail.toUpperCase() != currEmail.toUpperCase()){
 						cancel = true;
 						showMessage = true;
 						logMessage("  Error: Only the Designated Responsible party can update this application.");
 					}	
-				}
-			}
 		}else {
 			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the contacts: ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT: Validate Contact: " + startDate, "appId: " + appId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
-	}else {
-			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
-			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the public user: ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT: Validate Contact: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
-	}
 }
 catch (err){
 	logDebug("A JavaScript Error occurred:ACA_BEFORE_DECLAR_ACKNOWLEDGEMENT: Validate Contact: " + err.message);
