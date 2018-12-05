@@ -86,7 +86,7 @@ try {
 //		controlString = "Pageflow";
 		var contact = getContactObj(appId,"Designated Responsible Party");
 			contactEmail = contact.getEmail;
-			if(contEmail.toUpperCase() != currEmail.toUpperCase()){
+			if(contactEmail.toUpperCase() != currEmail.toUpperCase()){
 						cancel = true;
 						showMessage = true;
 						logMessage("  Error: Only the Designated Responsible party can update this application.");
