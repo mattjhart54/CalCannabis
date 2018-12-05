@@ -105,7 +105,7 @@ try{
 		if(!ownerFnd) {
 			showMessage = true;
 			cancel = true;
-			comment("Error:  Your user email " + publicEmail + " does not match an owner " + ownEmail + " on the License Application " + varAppNbrVal  + " Contact the Designated Responsible Party for this application");
+			comment("Error:  Your user email " + currEmail + " does not match an owner " + ownEmail + " on the License Application " + varAppNbrVal  + " Contact the Designated Responsible Party for this application");
 		}
 	
 } catch (err) {
