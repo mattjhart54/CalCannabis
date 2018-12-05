@@ -88,7 +88,7 @@ try{
 	var  varAppNbr = AInfo["Application ID"];
 	var parentId = getApplication(varAppNbr);
 //	comment("parent ID " + parentId + " app ID " + varAppNbr);
-		loadASITables4ACA(parentId);
+		loadASITables(parentId);
 		if(OWNERS.length<1){
 			cancel = true;
 			showMessage = true;
