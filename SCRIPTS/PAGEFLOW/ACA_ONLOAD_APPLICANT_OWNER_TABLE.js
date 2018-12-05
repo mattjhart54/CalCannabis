@@ -100,15 +100,16 @@ try{
 					//	}
 					//}
 					var contType = thisCont.contactType;
+					showMessage=true;
 					if(contType =="Designated Responsible Party") {
 						//var refContNrb = thisCont.refContactNumber;
 						var drpContact = [];
 						var drpFName = thisCont.firstName;
 						var drpLName = thisCont.lastName;
 						var drpEmail = thisCont.email;
-						drpContact["First Name"]=new asiTableValObj("First Name", drpFName, "Y");
-						drpContact["Last Name"]=new asiTableValObj("Last Name", drpLName, "Y");
-						drpContact["Email Address"]=new asiTableValObj("Email Address", drpEmail, "Y");
+						drpContact["First Name"]=drpFName;
+						drpContact["Last Name"]=drpLName;
+						drpContact["Email Address"]=drpEmail;
 						tblOwner.push(drpContact);
 						var asit = cap.getAppSpecificTableGroupModel();
 						addASITable4ACAPageFlow(asit, "OWNERS", tblOwner)
@@ -119,55 +120,11 @@ try{
 		}
 	}
 }catch (err) {
-    logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: Populate DRP: " + err.message);
+    logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Populate DRP: "+ startDate, capId + "; " + err.message+ "; "+ err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Main Loop: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 }
-try{
-	//lwacht: 5709 : 180904: make the owner table read-only if the application has gone past the review page
-	var arrOwnRecds = getChildren("Licenses/Cultivator/*/Owner Application", capId);
-	if(!matches(arrOwnRecds,null,"","undefined")){
-		if(arrOwnRecds.length>0){
-			//loadASITables();
-			//removeASITable("OWNERS"); 
-			var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN")
-			if (!tssmResult.getSuccess()){
-				logDebug("**WARNING: error removing ASI table " + tableName + " " + tssmResult.getErrorMessage()) ;
-			}else{
-				logDebug("Successfully removed all rows from ASI Table: ");
-			}
-			var tempArray = []; 
-			var tblOwner = [];
-			for(own in OWNERS){
-				var drpContact = []; 
-				var fName = ""+OWNERS[own]["First Name"];
-				var LName = ""+OWNERS[own]["Last Name"];
-				var eMail = ""+OWNERS[own]["Email Address"];
-				logDebug("fName: " + fName);
-				logDebug("LName: " + LName);
-				logDebug("eMail: " + eMail);
-				drpContact["First Name"]=new asiTableValObj("First Name", "VOTE FOR PEDRO", "Y");
-				drpContact["Last Name"]=new asiTableValObj("Last Name", LName, "Y");
-				drpContact["Email Address"]=new asiTableValObj("Email Address", eMail, "Y");
-				tblOwner.push(drpContact);
-				var asit = cap.getAppSpecificTableGroupModel();
-				//addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
-				//addToASITable("OWNERS",tblOwner);
-			}
-			//asit = cap.getAppSpecificTableGroupModel();
-			//addASITable4ACAPageFlow(asit, "OWNERS",tempArray);
-			//addASITable("OWNERS",tempArray);
-			showMessage=true;
-			logMessage("Changes to the owner table are not allowed at this point in the application process. Any changes made to the owner table at this time could result in delayed processing of your application. Please submit your entire application then contact CDFA to make any changes.");
-			//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + debug + br + currEnv);
-		}
-	}
-	//lwacht: 5709 : 180904: end
-}catch (err) {
-    logDebug("A JavaScript Error occurred: ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_ONLOAD_APPLICANT_OWNER_TABLE: Lock Owner Table: "+ startDate, capId + "; " + err.message+ "; "+ err.stack + br + currEnv);
-}
+
 function getCapIdStatusClass(inCapId){
     var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
     var retClass = null;
@@ -203,5 +160,3 @@ else {
 /*------------------------------------------------------------------------------------------------------/
 | <===========External Functions (used by Action entries)
 /------------------------------------------------------------------------------------------------------*/
-
-
