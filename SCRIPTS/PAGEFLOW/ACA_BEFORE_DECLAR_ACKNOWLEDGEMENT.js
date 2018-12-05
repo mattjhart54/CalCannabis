@@ -85,7 +85,7 @@ try {
 		appId = appId.getOutput();
 //		controlString = "Pageflow";
 		var contact = getContactObj(appId,"Designated Responsible Party");
-			contactEmail = contact.getEmail();
+			contactEmail = contact.people.getEmail();
 			if(contactEmail.toUpperCase() != currEmail.toUpperCase()){
 						cancel = true;
 						showMessage = true;
