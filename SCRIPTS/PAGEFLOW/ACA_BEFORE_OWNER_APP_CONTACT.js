@@ -97,7 +97,7 @@ try{
 		ownerFnd = false;
 		for(o in OWNERS) {
 			var ownerEmail = OWNERS[o]["Email Address"];
-			ownEmail = ownerEmail.toUpperCase();
+			ownEmail = String(ownerEmail).toUpperCase();
 			if(ownEmail == currEmail) {
 				ownerFnd = true;
 			}
