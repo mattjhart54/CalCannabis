@@ -81,7 +81,8 @@ try{
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
 		var currUser = resCurUser.getOutput();
-		currEmail = currUser.email;
+		var currEmail = currUser.email;
+		currEmail = String(currEmail).toUpperCase();
 	}
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
