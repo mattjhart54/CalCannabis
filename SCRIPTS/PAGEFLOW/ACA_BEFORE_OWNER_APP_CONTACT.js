@@ -77,7 +77,6 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	showDebug =true;
 	var currEmail = null
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
