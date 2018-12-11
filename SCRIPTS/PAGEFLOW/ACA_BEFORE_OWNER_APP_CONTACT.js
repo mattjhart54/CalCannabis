@@ -77,14 +77,14 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	var capId = cap.getCapID();
+	var userMatch = false;
 	var currEmail = null
-//	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-//	if(resCurUser.getSuccess()){
-//		var currUser = resCurUser.getOutput();
-//		var currEmail = currUser.email;
-//		currEmail = String(currEmail).toUpperCase();
-//	}
+	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+	if(resCurUser.getSuccess()){
+		var currUser = resCurUser.getOutput();
+		var currEmail = currUser.email;
+		currEmail = String(currEmail).toUpperCase();
+	}
 	var contactList = cap.getContactsGroup();
     if(contactList != null && contactList.size() > 0){
     	var arrContacts = contactList.toArray();
@@ -93,9 +93,12 @@ try{
     		var contEmail = thisCont.email;
     		var contType = thisCont.contactType;
     		if(contType == "Owner") {
-    			currEmail = String(contEmail).toUpperCase();
+    			contEmail = String(contEmail).toUpperCase();
     		}
     	}
+    }
+    if(contEmail == currEmail){
+    	userMatch = true;
     }
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
@@ -111,6 +114,7 @@ try{
 		}
 		var ownerFnd = false;
 		var pctMatch = false;
+
 		for(o in OWNERS) {
 			var ownerEmail = OWNERS[o]["Email Address"];
 			var ownerPct = parseFloat(OWNERS[o]["Percent Ownership"]);
@@ -122,15 +126,22 @@ try{
 				}
 			}
 		}
-		if(!ownerFnd) {
+		if(!userMatch) {
 			showMessage = true;
 			cancel = true;
-			comment("Error:  Your user email " + currEmail + " does not match an owner on the License Application " + varAppNbr  + ". Contact the Designated Responsible Party for this application");
-		}
-		if(!pctMatch) {
-			showMessage = true;
-			cancel = true;
-			comment("The Ownership Percentage you entered does not match the Ownership Percentage entered on the annual application " + varOwnership + ".  Please contact the Designated Responsible Party for this application and correct the discrepancy.");
+			comment("Error:  Your public user email " + currEmail + " does not match your contact email " contEmail + " you cannot submit an application.  Go to account managemnt and correct you contact email address.");
+		}else {
+			if(!ownerFnd) {
+				showMessage = true;
+				cancel = true;
+				comment("Error:  Your user email " + currEmail + " does not match an owner on the License Application " + varAppNbr  + ". Contact the Designated Responsible Party for this application");
+			}else {
+				if(!pctMatch) {
+					showMessage = true;
+					cancel = true;
+					comment("The Ownership Percentage you entered does not match the Ownership Percentage entered on the annual application " + varOwnership + ".  Please contact the Designated Responsible Party for this application and correct the discrepancy.");
+				}
+			}
 		}
 	
 } catch (err) {
