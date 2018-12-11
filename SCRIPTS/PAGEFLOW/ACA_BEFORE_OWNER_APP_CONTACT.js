@@ -109,6 +109,7 @@ try{
 				logDebug("Pcts " + varOwnership + " " +  ownerPct);
 				if(varOwnership == ownerPct) {
 					pctMatch = true;
+					logDebug("Pcts Match " + pctMatch);
 				}
 			}
 		}
