@@ -87,7 +87,7 @@ try{
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	var varAppNbr = AInfo["Application ID"];
-	var varOwnership = AInfo["Percent Ownership"];
+	var varOwnership = parseFloat(AInfo["Percent Ownership"]);
 	var parentId = getApplication(varAppNbr);
 //	comment("parent ID " + parentId + " app ID " + varAppNbr);
 		loadASITables(parentId);
@@ -100,7 +100,7 @@ try{
 		pctMatch = false;
 		for(o in OWNERS) {
 			var ownerEmail = OWNERS[o]["Email Address"];
-			var ownerPct = OWNERS[o]["Percent Ownership"];
+			var ownerPct = parseFloat(OWNERS[o]["Percent Ownership"]);
 			ownEmail = String(ownerEmail).toUpperCase();
 			if(ownEmail == currEmail) {
 				ownerFnd = true;
