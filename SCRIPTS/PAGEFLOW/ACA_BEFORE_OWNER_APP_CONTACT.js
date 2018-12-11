@@ -85,7 +85,7 @@ try{
 //		var currEmail = currUser.email;
 //		currEmail = String(currEmail).toUpperCase();
 //	}
-	var contactList = cap.getContactsGroup(capId);
+	var contactList = cap.getContactsGroup();
     if(contactList != null && contactList.size() > 0){
     	var arrContacts = contactList.toArray();
     	for(var i in arrContacts) {
