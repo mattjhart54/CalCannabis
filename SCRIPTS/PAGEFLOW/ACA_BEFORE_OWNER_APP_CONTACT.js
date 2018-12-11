@@ -77,13 +77,17 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
+	var capId = cap.getCapID();
 	var currEmail = null
-	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
-	if(resCurUser.getSuccess()){
-		var currUser = resCurUser.getOutput();
-		var currEmail = currUser.email;
-		currEmail = String(currEmail).toUpperCase();
-	}
+//	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+//	if(resCurUser.getSuccess()){
+//		var currUser = resCurUser.getOutput();
+//		var currEmail = currUser.email;
+//		currEmail = String(currEmail).toUpperCase();
+//	}
+	var contact = getContactObj(capId,"Designated Responsible Party");
+	contactEmail = contact.people.getEmail();
+	currEmail = String(contactEmail).toUpperCase();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	var varAppNbr = AInfo["Application ID"];
