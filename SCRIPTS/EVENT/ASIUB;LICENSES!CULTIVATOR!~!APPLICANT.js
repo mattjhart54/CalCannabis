@@ -1,10 +1,12 @@
 try{
+	logDebug("Start")
 	var totPct = 0;
 	if (typeof(OWNERS) == "object") {
 		for(x in OWNERS) {
 			totPct = totPct + OWNERS[x]["Percent Ownership"] 
 		}
 	}
+	logDebug("TOT PCT " + totPct);
 	if (totPct > 100) {
 		showMessage = true;
 		cancel = true;
