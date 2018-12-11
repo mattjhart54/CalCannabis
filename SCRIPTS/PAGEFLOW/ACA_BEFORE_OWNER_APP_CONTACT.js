@@ -85,14 +85,14 @@ try{
 //		var currEmail = currUser.email;
 //		currEmail = String(currEmail).toUpperCase();
 //	}
-	var contactList = cap.getContactsGroup();
+	var contactList = cap.getContactsGroup(capId);
     if(contactList != null && contactList.size() > 0){
     	var arrContacts = contactList.toArray();
     	for(var i in arrContacts) {
     		var thisCont = arrContacts[i];
     		var contEmail = thisCont.email;
     		var contType = thisCont.contactType;
-    		if(contType == "Designated Responsible Party") {
+    		if(contType == "Owner") {
     			currEmail = String(contEmail).toUpperCase();
     		}
     	}
