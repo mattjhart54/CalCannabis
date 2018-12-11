@@ -102,13 +102,10 @@ try{
 			var ownerEmail = OWNERS[o]["Email Address"];
 			var ownerPct = parseFloat(OWNERS[o]["Percent Ownership"]);
 			ownEmail = String(ownerEmail).toUpperCase();
-			logDebug("Emails " + ownEmail + " " +  currEmail);
 			if(ownEmail == currEmail) {
 				ownerFnd = true;
-				logDebug("Pcts " + varOwnership + " " +  ownerPct);
 				if(varOwnership == ownerPct) {
 					pctMatch = true;
-					logDebug("Pcts Match " + pctMatch);
 				}
 			}
 		}
@@ -120,7 +117,7 @@ try{
 		if(!pctMatch) {
 			showMessage = true;
 			cancel = true;
-			comment("The Ownership Percentage you entered does not match the Ownership Percentage entered on the annual application " + varOwnership + " " + ownerPct + ".  Please contact the Designated Responsible Party for this application and correct the discrepancy.");
+			comment("The Ownership Percentage you entered does not match the Ownership Percentage entered on the annual application " + varOwnership + ".  Please contact the Designated Responsible Party for this application and correct the discrepancy.");
 		}
 	
 } catch (err) {
