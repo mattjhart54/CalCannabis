@@ -77,6 +77,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
+	showDebug =true;
 	var currEmail = null
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
@@ -96,14 +97,16 @@ try{
 			showMessage = true;
 			comment("Contacts needs to be added to the Owners table.");
 		}
-		ownerFnd = false;
-		pctMatch = false;
+		var ownerFnd = false;
+		var pctMatch = false;
 		for(o in OWNERS) {
 			var ownerEmail = OWNERS[o]["Email Address"];
 			var ownerPct = parseFloat(OWNERS[o]["Percent Ownership"]);
 			ownEmail = String(ownerEmail).toUpperCase();
+			logDebug("Emails " + ownEmail + " " +  currEmail);
 			if(ownEmail == currEmail) {
 				ownerFnd = true;
+				logDebug("Pcts " + varOwnership + " " +  ownerPct);
 				if(varOwnership == ownerPct) {
 					pctMatch = true;
 				}
