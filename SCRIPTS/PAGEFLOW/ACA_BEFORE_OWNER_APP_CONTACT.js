@@ -112,12 +112,12 @@ try{
 		if(!ownerFnd) {
 			showMessage = true;
 			cancel = true;
-			comment("Error:  Your user email " + currEmail + " does not match an owner on the License Application " + varAppNbr  + ". Contact the Designated Responsible Party for this application");
+			comment("Error:  Your user email " + currEmail + " does not match an owner on the License Application " + varAppNbr  + ownerPct + ". Contact the Designated Responsible Party for this application");
 		}
 		if(!pctMatch) {
 			showMessage = true;
 			cancel = true;
-			comment("The Ownership Percentage you entered does not match the Ownership Percentage entered on the annual application " + ownerPct + ".  Please contact the Designated Responsible Party for this application and correct the discrepancy.");
+			comment("The Ownership Percentage you entered does not match the Ownership Percentage entered on the annual application " + ownerPct + " " + .  Please contact the Designated Responsible Party for this application and correct the discrepancy.");
 		}
 	
 } catch (err) {
