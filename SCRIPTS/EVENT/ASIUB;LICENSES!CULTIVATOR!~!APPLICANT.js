@@ -1,15 +1,14 @@
+// MHART 121118 user Story 5831 - Owner Table Percentage Check
 try{
-	logDebug("Start")
 	var totPct = 0;
 	if (typeof(OWNERS) == "object") {
 		for(x in OWNERS) {
 			totPct = totPct + OWNERS[x]["Percent Ownership"] 
 		}
 	}
-	logDebug("TOT PCT " + totPct);
 	if (totPct > 100) {
-		showMessage = true;
 		cancel = true;
+		showMessage = true;
 		comment("The total Percent Ownership cannot be greater than 100%.")
 	}
 } catch(err){
