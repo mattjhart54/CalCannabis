@@ -11,6 +11,9 @@ try{
 		showMessage = true;
 		comment("The total Percent Ownership cannot be greater than 100%.")
 	}
+cancel = true;
+showMessage=true;
+comment("scrpit ran " + totPct);
 } catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: AltID Logic: " + err.message);
 	logDebug(err.stack);
