@@ -3,7 +3,8 @@ try{
 	var totPct = 0;
 	if (typeof(OWNERS) == "object") {
 		for(x in OWNERS) {
-			totPct = totPct + OWNERS[x]["Percent Ownership"] 
+			var ownPct = parseFloat(OWNERS[x]["Percent Ownership"]);
+			totPct = totPct + ownPct 
 		}
 	}
 	if (totPct > 100) {
@@ -11,9 +12,6 @@ try{
 		showMessage = true;
 		comment("The total Percent Ownership cannot be greater than 100%.")
 	}
-cancel = true;
-showMessage=true;
-comment("scrpit ran " + totPct);
 } catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: AltID Logic: " + err.message);
 	logDebug(err.stack);
