@@ -86,7 +86,8 @@ try{
 	}
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-	var  varAppNbr = AInfo["Application ID"];
+	var varAppNbr = AInfo["Application ID"];
+	var varOwnership = AInfo["Percent Ownership"];
 	var parentId = getApplication(varAppNbr);
 //	comment("parent ID " + parentId + " app ID " + varAppNbr);
 		loadASITables(parentId);
@@ -96,17 +97,27 @@ try{
 			comment("Contacts needs to be added to the Owners table.");
 		}
 		ownerFnd = false;
+		pctMatch = false;
 		for(o in OWNERS) {
 			var ownerEmail = OWNERS[o]["Email Address"];
+			var ownerPct = OWNERS[o]["Percent Ownership"];
 			ownEmail = String(ownerEmail).toUpperCase();
 			if(ownEmail == currEmail) {
 				ownerFnd = true;
+				if(varOwnership == ownerPct) {
+					pctMatch = true;
+				}
 			}
 		}
 		if(!ownerFnd) {
 			showMessage = true;
 			cancel = true;
 			comment("Error:  Your user email " + currEmail + " does not match an owner on the License Application " + varAppNbr  + ". Contact the Designated Responsible Party for this application");
+		}
+		if(!pctMatch) {
+			showMessage = true;
+			cancel = true;
+			comment("Error:  The Ownership Percentage you entered does not match the Ownership Percentage entered on the annual application " + ownerPct + ".  Please contact the Designated Responsible Party for this application and correct the discrepancy.”);
 		}
 	
 } catch (err) {
