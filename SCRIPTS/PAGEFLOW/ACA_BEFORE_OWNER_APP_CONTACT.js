@@ -85,9 +85,18 @@ try{
 //		var currEmail = currUser.email;
 //		currEmail = String(currEmail).toUpperCase();
 //	}
-	var contact = getContactObj(capId,"Designated Responsible Party");
-	contactEmail = contact.people.getEmail();
-	currEmail = String(contactEmail).toUpperCase();
+	var contactList = cap.getContactsGroup();
+    if(contactList != null && contactList.size() > 0){
+    	var arrContacts = contactList.toArray();
+    	for(var i in arrContacts) {
+    		var thisCont = arrContacts[i];
+    		var contEmail = thisCont.email;
+    		var contType = thisCont.contactType;
+    		if(contType == "Designated Responsible Party") {
+    			currEmail = String(contEmail).toUpperCase();
+    		}
+    	}
+    }
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	var varAppNbr = AInfo["Application ID"];
