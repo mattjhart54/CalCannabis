@@ -7,10 +7,10 @@ try{
 			totPct = totPct + ownPct 
 		}
 	}
-	if (totPct > 100) {
+	if (totPct > 100 || totPct < 0) {
 		cancel = true;
 		showMessage = true;
-		comment("The total Percent Ownership cannot be greater than 100%.")
+		comment("The total Percent Ownership must be greatthan 0 and less than 100.")
 	}
 } catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: AltID Logic: " + err.message);
