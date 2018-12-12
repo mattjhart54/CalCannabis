@@ -113,6 +113,7 @@ try{
 			comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
 		}else{
 			var drpInTable = false;
+			var totPct = 0;
 			for(row in OWNERS){
 				//get contact by email
 				var correctLastName = false;
@@ -129,7 +130,9 @@ try{
 				if(ownEmail==drpEmail && ownLName==drpLName){
 					drpInTable = true;
 				}
-				//get reference contact(s)
+				var ownPct = parseFloat(OWNERS[row]["Percent Ownership"]);
+				totPct = totPct + ownPct 
+			//get reference contact(s)
 				var qryResult = aa.people.getPeopleByPeopleModel(qryPeople);
 				if (!qryResult.getSuccess()){ 
 					logDebug("WARNING: error searching for people : " + qryResult.getErrorMessage());
@@ -196,6 +199,11 @@ try{
 				//comment("The Designated Responsible Party (" + drpFName + " " + drpLName + ") contact needs to be added to the Owners table.");
 				//lwacht 171105: required text per defect 4615
 				comment("Must have at least one owner in the owner table below. At least one owner must be the DRP.");
+			}
+			if (totPct > 100 || totPct < 0) {
+				cancel = true;
+				showMessage = true;
+				comment("The total Percent Ownership must be greatthan 0 and less than 100.")
 			}
 			//table isn't getting removed, so working around for now by putting code to get the first name in the 
 			//script that adds the owner records.
