@@ -129,7 +129,7 @@ try{
 		if(!userMatch) {
 			showMessage = true;
 			cancel = true;
-			comment("Error:  Your public user email " + currEmail + " does not match your contact email " contEmail + " you cannot submit an application.  Go to account managemnt and correct you contact email address.");
+			comment("Error:  Your public user email " + currEmail + " does not match your contact email " + contEmail + " you cannot submit an application.  Go to account managemnt and correct you contact email address.");
 		}else {
 			if(!ownerFnd) {
 				showMessage = true;
