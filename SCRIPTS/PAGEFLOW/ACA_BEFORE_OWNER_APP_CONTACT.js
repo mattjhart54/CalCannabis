@@ -85,7 +85,7 @@ try{
 		var currEmail = currUser.email;
 		currEmail = String(currEmail).toUpperCase();
 	}
-	var contactList = cap.getContactsGroup();
+/*	var contactList = cap.getContactsGroup();
     if(contactList != null && contactList.size() > 0){
     	var arrContacts = contactList.toArray();
     	for(var i in arrContacts) {
@@ -100,6 +100,7 @@ try{
     if(contEmail == currEmail){
     	userMatch = true;
     }
+*/
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	var varAppNbr = AInfo["Application ID"];
@@ -126,11 +127,11 @@ try{
 				}
 			}
 		}
-		if(!userMatch) {
-			showMessage = true;
-			cancel = true;
-			comment("Error:  Your public user email " + currEmail + " does not match your contact email " + contEmail + " you cannot submit an application.  Go to account managemnt and correct you contact email address.");
-		}else {
+//		if(!userMatch) {
+//			showMessage = true;
+//			cancel = true;
+//			comment("Error:  Your public user email " + currEmail + " does not match your contact email " + contEmail + " you cannot submit an application.  Go to account managemnt and correct you contact email address.");
+//		}else {
 			if(!ownerFnd) {
 				showMessage = true;
 				cancel = true;
@@ -142,7 +143,7 @@ try{
 					comment("The Ownership Percentage you entered does not match the Ownership Percentage entered on the annual application " + varOwnership + ".  Please contact the Designated Responsible Party for this application and correct the discrepancy.");
 				}
 			}
-		}
+//		}
 	
 } catch (err) {
 	showDebug =true;
