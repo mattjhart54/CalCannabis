@@ -203,7 +203,7 @@ try{
 			if (totPct > 100 || totPct < 0) {
 				cancel = true;
 				showMessage = true;
-				comment("The total Percent Ownership must be greatthan 0 and less than 100.")
+				comment("The total Percent Ownership must be greater than 0 and less than 100.")
 			}
 			//table isn't getting removed, so working around for now by putting code to get the first name in the 
 			//script that adds the owner records.
