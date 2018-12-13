@@ -190,7 +190,7 @@ function mainProcess() {
 		var fromTime = fromJSDate.getTime();
 		var toTime = toJSDate.getTime();
 		if(rptDate.getTime() < fromTime || rptDate.getTime() > toTime){
-			logDebug("Skipping due to date criteria: " + altId + "( " + rptDateOrig + ")");
+//			logDebug("Skipping due to date criteria: " + altId + "( " + rptDateOrig + ")");
 			badDate++;
 			continue;
 		}
