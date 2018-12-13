@@ -86,16 +86,12 @@ var noticeDays = getJobParam("noticeDays");
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var sysFromEmail = getJobParam("sysFromEmail");
 var sendToEmail = getJobParam("sendToEmail");
-//var rptName = getJobParam("reportName");
 var appGroup = getJobParam("recordGroup");
 var appTypeType = getJobParam("recordType");
-var appSubtype = getJobParam("recordSubType");
 var appCategory = getJobParam("recordCategory");
-var contactType = getJobParam("contactType");
 var sArray = getJobParam("recordSubType").split(",");
 
 if(appTypeType=="*") appTypeType="";
-if(appSubtype=="*")  appSubtype="";
 if(appCategory=="*") appCategory="";
 
 /*----------------------------------------------------------------------------------------------------/
