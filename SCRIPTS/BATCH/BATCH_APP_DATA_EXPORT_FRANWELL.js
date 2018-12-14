@@ -4,7 +4,7 @@
 |
 | Version 1.0 - Base Version. 
 |
-| Script to run nightly to close workflow and update the application status after the appeal perios expires.
+| Script to run nightly to select records for export.
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
 |
@@ -67,42 +67,29 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
-// elycia.juco@cdfa.ca.gov
-aa.env.setValue("lookAheadDays", "-6");
-aa.env.setValue("daySpan", "30");
-aa.env.setValue("emailAddress", "lwacht@trustvip.com");
-aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
+aa.env.setValue("lookAheadDays", "-14");
+aa.env.setValue("daySpan", "14");
+aa.env.setValue("emailAddress", "mhart@trustvip.com");
+aa.env.setValue("sendToEmail", "mhart@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA_Franwell_Export");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
-aa.env.setValue("recordSubType", "*");
+aa.env.setValue("recordSubType", "Medical,Adult Use");
 aa.env.setValue("recordCategory", "Application");
-aa.env.setValue("taskToCheck", "Administrative Review");
 aa.env.setValue("contactType", "Designated Responsible Party");
-aa.env.setValue("appStatus", "nul,Submitted,Application Fee Due");
-  */
-
+*/
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
 var daySpan = getJobParam("daySpan");
 var sysFromEmail = getJobParam("sysFromEmail");
 var sendToEmail = getJobParam("sendToEmail");
-//var rptName = getJobParam("reportName");
 var appGroup = getJobParam("recordGroup");
 var appTypeType = getJobParam("recordType");
-var appSubtype = getJobParam("recordSubType");
 var appCategory = getJobParam("recordCategory");
-var task = getJobParam("activeTask");
 var contactType = getJobParam("contactType");
-var sArray = getJobParam("appStatus").split(",");
-
-
-if(appTypeType=="*") appTypeType="";
-if(appSubtype=="*")  appSubtype="";
-if(appCategory=="*") appCategory="";
+var sArray = getJobParam("recordSubType").split(",");
 var filepath = "c://test"; 
-
 
 /*----------------------------------------------------------------------------------------------------/
 |
@@ -150,12 +137,9 @@ if (showDebug) {
 
 function mainProcess() {
 try{
-	var arrProcRecds = [];
 	var recdsFound = false;
-	var tmpRecd = 0;
-	var badDate = 0;
+	var badStatus = 0;
 	var incompRecd = 0;
-	var dupedRecds = 0;
 	var noContactType = 0;
 	var capCount = 0;
 	var rptDate = new Date();
@@ -193,37 +177,18 @@ try{
 	var capFilterBalance = 0;
 	var capFilterDateRange = 0;
 	var capCount = 0;
-	var capModel = aa.cap.getCapModel().getOutput();
-	capTypeModel = capModel.getCapType();
-	capTypeModel.setGroup(appGroup);
-	capTypeModel.setType(appTypeType);
-	capTypeModel.setSubType(appSubtype);
-	capTypeModel.setCategory(appCategory); 
-	capModel.setCapType(capTypeModel);
 	var capList = new Array();
-	//look for null statuses first
-	// query a list of records based on the above criteria
-//	capListResult = aa.cap.getCapIDListByCapModel(capModel);
-//	if (capListResult.getSuccess()) {
-//		tempcapList = capListResult.getOutput();
-//		logDebug("Null Status count: " + tempcapList.length);
-//		if (tempcapList.length > 0) {
-//			capList = capList.concat(tempcapList);
-//		}
-//	}else{
-//		logDebug("Error retrieving records: " + capListResult.getErrorMessage());
-//	}
 	for (i in sArray) {
-		logDebug("status: " + sArray[i]);
-		// Specify the application status to query
-		if(sArray[i]=="null"){
-				capModel.setCapStatus(null);
-		}else{
-			capModel.setCapStatus(sArray[i]);
-		}
-		// query a list of records based on the above criteria
-		capListResult = aa.cap.getCapIDListByCapModel(capModel);
-
+		logDebug("type: " + sArray[i]);
+		// Specify the application type to query
+		var capModel = aa.cap.getCapModel().getOutput();
+		capTypeModel = capModel.getCapType();
+		capTypeModel.setGroup(appGroup);
+		capTypeModel.setType(appTypeType);
+		capTypeModel.setSubType(sArray[i]);
+		capTypeModel.setCategory(appCategory); 
+		capModel.setCapType(capTypeModel);
+		capListResult = aa.cap.getCapListByCollection(capModel,null,null,dFromDate, dToDate, null, new Array())
 		if (capListResult.getSuccess()) {
 			tempcapList = capListResult.getOutput();
 			logDebug("Status count: " + tempcapList.length);
@@ -241,42 +206,24 @@ try{
 		return false;
 	}
 	for (myCapsXX in capList) {
-    	//capId = capList[myCapsXX].getCapID();
-		capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
+    	capId = capList[myCapsXX].getCapID();
+		//capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
    		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
 		altId =	 capId.getCustomID();
 		if(getCapIdStatusClass(capId)!="COMPLETE"){
 			incompRecd++;
 			continue;
 		}
-		if(exists(altId, arrProcRecds)){
-			logDebug("Skipping due to duplicated record: " + altId);
-			dupedRecds++;
-			continue;
-		}else{
-			arrProcRecds = arrProcRecds.concat(altId);
-		}
 		cap = aa.cap.getCap(capId).getOutput();	
-		var capModel = aa.cap.getCap(capId).getOutput().getCapModel();
-		var rptDateOrig = capModel.getFileDate().toString().substring(0,10);
-		var rptDateConv = rptDateOrig.split("-");
-		var rptDate = new Date(""+rptDateConv[0], ""+rptDateConv[1] - 1, ""+rptDateConv[2]);
-		var fromTime = fromJSDate.getTime();
-		var toTime = toJSDate.getTime();
-		if(rptDate.getTime() < fromTime || rptDate.getTime() > toTime){
-			logDebug("Skipping due to incorrect date: " + altId + "( " + rptDateOrig + ")");
-			badDate++;
+		capStatus = cap.getCapStatus();
+		if(matches(capStatus, "Pending Owner Applications", "Pending Final Affidavit")) {
+			badStatus++;
 			continue;
 		}
 		appTypeResult = cap.getCapType();	
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
-		if(appTypeArray[2]=="Temporary"){
-			logDebug("Skipping due to temp record: " + altId );
-			tmpRecd++;
-			continue;
-		}
-		logDebug("Processing altId: " + altId);
+		logDebug("Processing altId: " + altId + " Status: " + capStatus);
 		//capCount++;
 		var rptLine = "";
 		rptLine = altId+",";
@@ -335,9 +282,6 @@ try{
 			noContactType++;
 		}
 	}
-
-
-
 	if(recdsFound){
 		var rFiles = [];
 		rFiles.push(rptToEmail);
@@ -350,14 +294,12 @@ try{
 		}
 	}
  	logDebug("Total CAPS qualified : " + capList.length);
- 	logDebug("Ignored due to temp record: " + tmpRecd);
- 	logDebug("Ignored due to bad date: " + badDate);
+  	logDebug("Ignored due to Status: " + badStatus);
  	logDebug("Ignored due to incomplete record: " + incompRecd);
- 	logDebug("Ignored due to duped record: " + dupedRecds);
  	logDebug("Ignored due to no contact type: " + noContactType);
  	logDebug("Total CAPS processed: " + capCount);
-
-}catch (err){
+}
+catch (err){
 	logDebug("An error occurred in BATCH_APP_DATA_EXPORT_FRANWELL: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, emailAddress, "", "An error has occurred in " + batchJobName, err.message + br + err.stack + br + "env: av6(prod)");
