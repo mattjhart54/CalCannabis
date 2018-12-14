@@ -25,9 +25,11 @@ try{
 	
 	var scriptName = "asyncRunInvoiceParamsRpt";
 	var envParameters = aa.util.newHashMap();
-	envParameters.put("sendCap",capId.getCustomID()); 
+	envParameters.put("licCap",capId.getCustomID()); 
+	envParameters.put("invNbr", invNbr);
 	envParameters.put("currentUserID",currentUserID);
 	aa.runAsyncScript(scriptName, envParameters);
+
 	
 	updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION.");
 //	runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
