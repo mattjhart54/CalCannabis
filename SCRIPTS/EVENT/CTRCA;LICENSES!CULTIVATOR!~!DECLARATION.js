@@ -23,10 +23,16 @@ try{
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
 	
+	var scriptName = "asyncRunInvoiceParamsRpt";
+	var envParameters = aa.util.newHashMap();
+	envParameters.put("sendCap",capId.getCustomID()); 
+	envParameters.put("currentUserID",currentUserID);
+	aa.runAsyncScript(scriptName, envParameters);
+	
 	updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION.");
-	runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
+//	runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 	runReportAttach(capId,"Cash Payment Due Letter", "altId", capId.getCustomID(), "contactType", "Designated Responsible Party","addressType", "Mailing");
-	emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
+//	emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 	
 	var priContact = getContactObj(capId,"Designated Responsible Party");
 	if(priContact){
