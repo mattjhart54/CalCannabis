@@ -108,7 +108,7 @@ try{
 			var nEmail = tblOwners[o]["Email Address"];
 			emailParameters = aa.util.newHashtable();
 			var sysDate = aa.date.getCurrentDate();
-			var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
+			var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MMMM DD, YYYY");
 			addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
 			addParameter(emailParameters, "$$ParentAltID$$", capId.getCustomID());
 			addParameter(emailParameters, "$$fName$$",""+nFirst);
