@@ -66,7 +66,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-// test parameters
+/* test parameters
 aa.env.setValue("lookAheadDays", "-390");
 aa.env.setValue("daySpan", "90");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
@@ -76,7 +76,7 @@ aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "Temporary");
 aa.env.setValue("recordCategory", "Application");
-
+*/
 var lookAheadDays = getJobParam("lookAheadDays");
 var daySpan = getJobParam("daySpan");
 var emailAddress = getJobParam("emailAddress");			// email to send report
@@ -86,7 +86,6 @@ var appGroup = getJobParam("recordGroup");
 var appTypeType = getJobParam("recordType");
 var appSubtype = getJobParam("recordSubType");
 var appCategory = getJobParam("recordCategory");
-var contactType = getJobParam("contactType");
 var sArray = getJobParam("recordSubType").split(",");
 
 if(appTypeType=="*") appTypeType="";
