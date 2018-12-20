@@ -196,10 +196,9 @@ function mainProcess() {
 		for (thisCon in conArray) {
 			thisContact = conArray[thisCon];
 			if (thisContact["contactType"] == "Designated Responsible Party"){
-								conEmail = thisContact["email"];
-				var eParams = aa.util.newHashtable(); 
-				addParameter(eParams, "$$ALTID$$", capId.getCustomID());
-				addParameter(eParams, "$$DAYS$$", noticeDays);
+				conEmail = thisContact["email"];
+				conFirst = thisContact["firstName"];
+				conLast - thisContact["lastName"];
 				var rFiles = [];
 				if (conEmail) {
 					contactFound = true;
@@ -208,8 +207,10 @@ function mainProcess() {
 					var eParams = aa.util.newHashtable(); 
 					addParameter(eParams, "$$ALTID$$", capId.getCustomID());
 					addParameter(eParams, "$$DAYS$$", noticeDays);
+					addParameter(eParams, "$$firstName$$", conFirst);
+					addParameter(eParams, "$$lastName$$", conlast);
 					var rFiles = [];
-					sendNotification(sysFromEmail,conEmail,"","LCA_UNSUBMITTED_APP",eParams, rFiles,capId);
+					sendNotification(sysFromEmail,conEmail,"","LCA_APP_UNSUBMITTED_NOTIFICATION",eParams, rFiles,capId);
 				}
 			}
 		}
