@@ -198,7 +198,7 @@ function mainProcess() {
 			if (thisContact["contactType"] == "Designated Responsible Party"){
 				conEmail = thisContact["email"];
 				conFirst = thisContact["firstName"];
-				conLast - thisContact["lastName"];
+				conLast = thisContact["lastName"];
 				var rFiles = [];
 				if (conEmail) {
 					contactFound = true;
@@ -208,9 +208,9 @@ function mainProcess() {
 					addParameter(eParams, "$$ALTID$$", capId.getCustomID());
 					addParameter(eParams, "$$DAYS$$", noticeDays);
 					addParameter(eParams, "$$firstName$$", conFirst);
-					addParameter(eParams, "$$lastName$$", conlast);
+					addParameter(eParams, "$$lastName$$", conLast);
 					var rFiles = [];
-					sendNotification(sysFromEmail,conEmail,"","LCA_APP_UNSUBMITTED_NOTIFICATION",eParams, rFiles,capId);
+					sendNotification(sysFromEmail,conEmail,"","LCA_UNSUBMITTED_APP",eParams, rFiles,capId);
 				}
 			}
 		}
