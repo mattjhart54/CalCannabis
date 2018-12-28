@@ -250,7 +250,7 @@ try{
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
 				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 			}
-			updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION.");
+			updateAppStatus("Pending Owner Applications", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION.");
 			deactivateTask("Owner Application Reviews");
 			deactivateTask("Administrative Review");
 			runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());

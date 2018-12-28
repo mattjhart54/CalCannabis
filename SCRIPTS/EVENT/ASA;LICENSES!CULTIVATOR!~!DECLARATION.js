@@ -2,21 +2,16 @@
 // if not ACA, set the altId based on application parent
 try{
 	if(!publicUser){
-		updateFileDate(null);
 		if(parentCapId){
-			nbrToTry = 1;
-			//because owners can be added and deleted, need a way to number the records
-			//but only if they haven't been numbered before
-			if(capId.getCustomID().substring(0,3)!="LCA"){
-				logDebug("parentCapId.getCustomID(): " +parentCapId.getCustomID());
-				var newAltId = parentCapId.getCustomID() + "-DEC";
-				var updateResult = aa.cap.updateCapAltID(capId, newAltId);
-				if (updateResult.getSuccess()) {
-					logDebug("Updated Declaration record AltId to " + newAltId + ".");
-				}else {
-					logDebug("Error renaming declar record " + capId + ":  " + newIdErrMsg);
-					aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming declar record : " + startDate, capId + ": "+ newIdErrMsg);
-				}
+			updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /DECLARATION",parentCapId);
+			logDebug("parentCapId.getCustomID(): " +parentCapId.getCustomID());
+			var newAltId = parentCapId.getCustomID() + "-DEC";
+			var updateResult = aa.cap.updateCapAltID(capId, newAltId);
+			if (updateResult.getSuccess()) {
+				logDebug("Updated Declaration record AltId to " + newAltId + ".");
+			}else {
+				logDebug("Error renaming declar record " + capId);
+				aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming declar record : " + startDate, capId);
 			}
 		}
 	}
