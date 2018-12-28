@@ -2,6 +2,7 @@
 // if not ACA, set the altId based on application parent
 try{
 	if(!publicUser){
+		updateFileDate(null);
 		if(parentCapId){
 			nbrToTry = 1;
 			//because owners can be added and deleted, need a way to number the records
