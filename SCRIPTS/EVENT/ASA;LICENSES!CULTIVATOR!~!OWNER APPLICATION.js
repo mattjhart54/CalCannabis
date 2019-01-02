@@ -47,7 +47,7 @@ try{
 					}
 					var nbrOwner = ""+ nbrToTry;
 				}
-				var newAltId = parentCapId.getCustomID() + "-" + nbrOwner + "O";
+				var newAltId = parentId.getCustomID() + "-" + nbrOwner + "O";
 				var updateResult = aa.cap.updateCapAltID(capId, newAltId);
 				if (updateResult.getSuccess()) {
 					logDebug("Updated owner record AltId to " + newAltId + ".");
