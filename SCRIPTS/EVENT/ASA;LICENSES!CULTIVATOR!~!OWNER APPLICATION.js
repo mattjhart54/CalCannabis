@@ -1,40 +1,69 @@
 // if not ACA, set altId based on application parent
 try{
 	if(!publicUser){
-		if(parentCapId){
-			nbrToTry = 1;
-			//because owners can be added and deleted, need a way to number the records
-			//but only if they haven't been numbered before
-			if(capId.getCustomID().substring(0,3)!="LCA"){
-				var ownerGotNewAltId = false;
-				var newIdErrMsg = "";
-				for (i = 0; i <= 100; i++) {
-					if(nbrToTry<10){
-						var nbrOwner = "00" + nbrToTry;
-					}else{
-						if(nbrToTry<100){
-							var nbrOwner = "0" + nbrToTry
-						}
-						var nbrOwner = ""+ nbrToTry;
-					}
-					var newAltId = parentCapId.getCustomID() + "-" + nbrOwner + "O";
-					var updateResult = aa.cap.updateCapAltID(capId, newAltId);
-					if (updateResult.getSuccess()) {
-						logDebug("Updated owner record AltId to " + newAltId + ".");
-						ownerGotNewAltId = true;
-						break;
-					}else {
-						newIdErrMsg += updateResult.getErrorMessage() +"; ";
-						nbrToTry++;
-					}
-				}
-				if(!ownerGotNewAltId){
-					logDebug("Error renaming owner record " + capId + ":  " + newIdErrMsg);
-					aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
-				}
-			}else{
-				logDebug("Owner record AltId already updated: "+ capId.getCustomID());
+		updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
+		appId = AInfo["Application ID"];
+		addParent(appId);
+		var ownerEmail = null
+		contacts = getContactArray();
+		for(c in contacts) {
+			if(contacts[c]["contactType"] == "Owner")
+				ownerEmail = ""+ contacts[c]["email"];
+		}
+		parentId = getApplication(appId);
+		ownerTable = loadASITable("OWNERS",parentId);
+		var allOwnersSubmitted = true;
+		for(x in ownerTable) {
+			var tblEmail = ""+ ownerTable[x]["Email Address"];
+			logDebug("OwnerEmail " + ownerEmail + " email " + tblEmail);
+			if(ownerEmail == tblEmail) {
+				ownerTable[x]["Status"] = "Submitted";
 			}
+			else{
+				if(ownerTable[x]["Status"] != "Submitted") {
+					allOwnersSubmitted = false;
+				}
+			}
+		}
+		removeASITable("OWNERS",parentId)
+		addASITable("OWNERS",ownerTable,parentId);
+	
+		if(allOwnersSubmitted){
+			updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
+		}
+		
+		nbrToTry = 1;
+		//because owners can be added and deleted, need a way to number the records
+		//but only if they haven't been numbered before
+		if(capId.getCustomID().substring(0,3)!="LCA"){
+			var ownerGotNewAltId = false;
+			var newIdErrMsg = "";
+			for (i = 0; i <= 100; i++) {
+				if(nbrToTry<10){
+					var nbrOwner = "00" + nbrToTry;
+				}else{
+					if(nbrToTry<100){
+						var nbrOwner = "0" + nbrToTry
+					}
+					var nbrOwner = ""+ nbrToTry;
+				}
+				var newAltId = parentCapId.getCustomID() + "-" + nbrOwner + "O";
+				var updateResult = aa.cap.updateCapAltID(capId, newAltId);
+				if (updateResult.getSuccess()) {
+					logDebug("Updated owner record AltId to " + newAltId + ".");
+					ownerGotNewAltId = true;
+					break;
+				}else {
+					newIdErrMsg += updateResult.getErrorMessage() +"; ";
+					nbrToTry++;
+				}
+			}
+			if(!ownerGotNewAltId){
+				logDebug("Error renaming owner record " + capId + ":  " + newIdErrMsg);
+				aa.sendMail(sysFromEmail, debugEmail, "", "Error renaming owner record " + capId + ": " + startDate, newIdErrMsg);
+			}
+		}else{
+			logDebug("Owner record AltId already updated: "+ capId.getCustomID());
 		}
 	}
 } catch(err){
@@ -90,42 +119,3 @@ try{
 	logDebug(err.stack);
 }
 //lwacht: 180416: story 5175: end
-try{
-	if(!publicUser){
-		updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
-		appId = AInfo["Application ID"];
-		addParent(appId);
-		var ownerEmail = null
-		contacts = getContactArray();
-		for(c in contacts) {
-			if(contacts[c]["contactType"] == "Owner")
-				ownerEmail = ""+ contacts[c]["email"];
-		}
-		parentId = getApplication(appId);
-		ownerTable = loadASITable("OWNERS",parentId);
-		var allOwnersSubmitted = true;
-		for(x in ownerTable) {
-			var tblEmail = ""+ ownerTable[x]["Email Address"];
-			logDebug("OwnerEmail " + ownerEmail + " email " + tblEmail);
-			if(ownerEmail == tblEmail) {
-				ownerTable[x]["Status"] = "Submitted";
-			}
-			else{
-				if(ownerTable[x]["Status"] != "Submitted") {
-					allOwnersSubmitted = false;
-				}
-			}
-		}
-		removeASITable("OWNERS",parentId)
-		addASITable("OWNERS",ownerTable,parentId);
-	
-		if(allOwnersSubmitted){
-			updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
-		}
-	}
-} catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/OWNER: AltID Logic: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ASA:LICENSES/CULTIVATOR/*/OWNER: Set AltID: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
-}
-
