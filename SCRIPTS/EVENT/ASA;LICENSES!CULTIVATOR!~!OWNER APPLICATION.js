@@ -91,35 +91,37 @@ try{
 }
 //lwacht: 180416: story 5175: end
 try{
-	updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
-	appId = AInfo["Application ID"];
-	addParent(appId);
-	var ownerEmail = null
-	contacts = getContactArray();
-	for(c in contacts) {
-		if(contacts[c]["contactType"] == "Owner")
-			ownerEmail = ""+ contacts[c]["email"];
-	}
-	parentId = getApplication(appId);
-	ownerTable = loadASITable("OWNERS",parentId);
-	var allOwnersSubmitted = true;
-	for(x in ownerTable) {
-		var tblEmail = ""+ ownerTable[x]["Email Address"];
-		logDebug("OwnerEmail " + ownerEmail + " email " + tblEmail);
-		if(ownerEmail == tblEmail) {
-			 ownerTable[x]["Status"] = "Submitted";
+	if(!publicUser){
+		updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
+		appId = AInfo["Application ID"];
+		addParent(appId);
+		var ownerEmail = null
+		contacts = getContactArray();
+		for(c in contacts) {
+			if(contacts[c]["contactType"] == "Owner")
+				ownerEmail = ""+ contacts[c]["email"];
 		}
-		else{
-			if(ownerTable[x]["Status"] != "Submitted") {
-			allOwnersSubmitted = false;
+		parentId = getApplication(appId);
+		ownerTable = loadASITable("OWNERS",parentId);
+		var allOwnersSubmitted = true;
+		for(x in ownerTable) {
+			var tblEmail = ""+ ownerTable[x]["Email Address"];
+			logDebug("OwnerEmail " + ownerEmail + " email " + tblEmail);
+			if(ownerEmail == tblEmail) {
+				ownerTable[x]["Status"] = "Submitted";
+			}
+			else{
+				if(ownerTable[x]["Status"] != "Submitted") {
+					allOwnersSubmitted = false;
+				}
 			}
 		}
-	}
-	removeASITable("OWNERS",parentId)
-	addASITable("OWNERS",ownerTable,parentId);
+		removeASITable("OWNERS",parentId)
+		addASITable("OWNERS",ownerTable,parentId);
 	
-	if(allOwnersSubmitted){
-		updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
+		if(allOwnersSubmitted){
+			updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
+		}
 	}
 } catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/OWNER: AltID Logic: " + err.message);
