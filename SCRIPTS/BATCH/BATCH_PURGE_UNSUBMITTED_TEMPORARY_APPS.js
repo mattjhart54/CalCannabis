@@ -67,8 +67,8 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
-aa.env.setValue("lookAheadDays", "-390");
-aa.env.setValue("daySpan", "90");
+aa.env.setValue("lookAheadDays", "-500");
+aa.env.setValue("daySpan", "500");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sendToEmail", "mhart@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
@@ -139,7 +139,7 @@ function mainProcess() {
 	var tmpRecd = 0;
 	var notTmpRec = 0;
 	var badDate = 0;
-
+	var totRec = 0;
 	var capList = new Array();
 	for (i in sArray) {
 		var capModel = aa.cap.getCapModel().getOutput();
@@ -150,7 +150,8 @@ function mainProcess() {
 		capTypeModel.setCategory(appCategory); 
 		capModel.setCapType(capTypeModel);
 // query a list of records based on the above criteria
-		capListResult = aa.cap.getCapIDListByCapModel(capModel);
+		capListResult = aa.cap.getByAppType(appGroup,appTypeType,appSubtype,appCategory);
+//		capListResult = aa.cap.getCapIDListByCapModel(capModel);
 		if (capListResult.getSuccess()) {
 			tempcapList = capListResult.getOutput();
 			logDebug("Type count: " + tempcapList.length);
@@ -168,16 +169,19 @@ function mainProcess() {
 		return false;
 	}
 	for (myCapsXX in capList) {
-		capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
-
+		totRec++
+//		if (totRec > 400) break;
+//		capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
+		capId = capList[myCapsXX].getCapID();
 		altId =	 capId.getCustomID();
-		var capIdStatusClass = getCapIdStatusClass(capId);
-		perId1 = capList[myCapsXX].ID1;
+		perId1 = capId.getID1();
 		if(perId1 != "17EST" && perId1 != "18EST") {
 			notTmpRec++;
 			continue;
 		}
 		var capModel = aa.cap.getCap(capId).getOutput().getCapModel();
+		var recStatus = capModel.getAuditStatus();
+
 		var rptDateOrig = capModel.getFileDate().toString().substring(0,10);
 		var rptDateConv = rptDateOrig.split("-");
 		var rptDate = new Date(""+rptDateConv[0], ""+rptDateConv[1] - 1, ""+rptDateConv[2]);
@@ -188,6 +192,9 @@ function mainProcess() {
 			badDate++;
 			continue;
 		}
+		var capIdStatusClass = getCapIdStatusClass(capId);
+		var recStatus = capModel.getAuditStatus();
+		logDebug("Record " + altId + " Status " + capIdStatusClass);
 		tmpRecd++;
 		var capBiz = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapBusiness", null).getOutput();
 		capBiz.removePartialCap(capId,"ADMIN");
