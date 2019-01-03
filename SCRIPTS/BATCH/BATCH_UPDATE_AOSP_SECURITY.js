@@ -126,6 +126,7 @@ if (showDebug) {
 /-----------------------------------------------------------------------------------------------------*/
 
 function mainProcess() {
+	var agentCon = 0;
 	var capList = new Array();
 	for (i in sArray) {
 		var capModel = aa.cap.getCapModel().getOutput();
@@ -157,9 +158,11 @@ function mainProcess() {
 		capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
 
 		altId =	 capId.getCustomID();
+		if(altId.substring(0,3)!="LCA") continue;
 //		if(altId != 'LCA18-0000018') continue;
 		var o = getContactObj(capId, "Agent for Service of Process");
 		if(o) {
+			agentCon++;
 			var oc = o.capContact;
 			logDebug("access level is " + oc.getAccessLevel());
 			oc.setAccessLevel("N"); // no access
@@ -167,6 +170,7 @@ function mainProcess() {
 		}
 	}
 	logDebug("Total CAPS qualified : " + capList.length);
+	logDebug("ASOP contacts : " + agentCon);
 
 }	
 function getCapIdByIDs(s_id1, s_id2, s_id3)  {
