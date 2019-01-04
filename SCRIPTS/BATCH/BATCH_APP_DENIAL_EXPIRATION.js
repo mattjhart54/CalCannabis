@@ -150,7 +150,7 @@ try{
 	logDebug("Found " + myCaps.length + " records to process");
 	    //Create a set of records where an email was not sent
 
-	for (myCapsXX in myCaps) 		
+	for (myCapsXX in myCaps) {		
 // MJH Story 5843 - Remove timeout logic
 /*		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
 			logDebug("WARNING","A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
