@@ -119,11 +119,13 @@ try {
             var licenseNos = capIdsToLicenseNos(members);
             var start, end, licenseNosChunk;
             for (start = 0, end = licenseNos.length; start < end; start += catAPIChunkSize) { //chunk calls to the API
-				if (elapsed() > maxSeconds) { // only continue if time hasn"t expired
+// MJH Story 5843 - Remove timeout logic
+/*            	if (elapsed() > maxSeconds) { // only continue if time hasn"t expired
 					logDebug("WARNING: A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
 					timeExpired = true ;
 					break; 
 				}
+*/				
                 licenseNosChunk = licenseNos.slice(start, start + catAPIChunkSize);
                 var putResult = initiateCatPut(licenseNosChunk, String(baseUrl), String(apiKey));
                 if (putResult.getSuccess()) {

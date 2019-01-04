@@ -155,11 +155,13 @@ try{
 	    //Create a set of records where an email was not sent
 
 	for (myCapsXX in myCaps) {
-		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
+// MJH Story 5843 - Remove timeout logic
+/*		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
 			logDebug("WARNING","A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
 			timeExpired = true ;
 			break; 
 		}
+*/		
     	capId = myCaps[myCapsXX].getCapID();
    		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
 		altId = capId.getCustomID();
