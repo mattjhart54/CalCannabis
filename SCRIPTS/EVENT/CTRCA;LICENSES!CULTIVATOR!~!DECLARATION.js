@@ -1,6 +1,8 @@
 // mhart 113018 story: 5785 - Access fee on annual application and send notice to drp.
 try{
 //	updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
+	editAppSpecific("Created Date", fileDate);
+	updateFileDate(null);
 	appId = AInfo["Application ID"];
 	addParent(appId);
 	parentId = getApplication(appId);
@@ -31,7 +33,8 @@ try{
 	aa.runAsyncScript(scriptName, envParameters);
 
 	
-	updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION.");
+	updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION");
+	updateFileDate(null);
 //	runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 	runReportAttach(capId,"Application Payment Due", "p1value", capId.getCustomID(), "p2value", "Designated Responsible Party","p3value", "Mailing");
 //	emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
@@ -53,13 +56,16 @@ try{
 			}
 		}
 	}
-//	editAppSpecific("Created Date", fileDate);
-	updateFileDate(null);
 	
+	var children = getChildren("Licenses/Cultivator/*/Owner Application",parentId)
+	for(c in children) {
+		capId = children[c];
+		updateFileDate(null);
+	}
 	capId = holdId;
+	
 // set altId based on application parent	
 	if(parentId){
-		nbrToTry = 1;
 		if(capId.getCustomID().substring(0,3)!="LCA"){
 			logDebug("parentId.getCustomID(): " +parentId.getCustomID());
 			var newAltId = parentId.getCustomID() + "-DEC";
