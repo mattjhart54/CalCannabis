@@ -11,7 +11,7 @@ try{
 		if (totPct > 100 || totPct < 0) {
 			cancel = true;
 			showMessage = true;
-			comment("The total Percent Ownership must be greatthan 0 and less than 100.")
+			comment("The total Percent Ownership must be greater than 0 and less than 100.")
 		}
 	}
 } catch(err){
