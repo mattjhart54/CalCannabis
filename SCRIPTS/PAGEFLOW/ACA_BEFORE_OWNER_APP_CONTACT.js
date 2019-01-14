@@ -115,23 +115,30 @@ try{
 		}
 		var ownerFnd = false;
 		var pctMatch = false;
+		var ownerSubmitted = false;
 
 		for(o in OWNERS) {
 			var ownerEmail = OWNERS[o]["Email Address"];
 			var ownerPct = parseFloat(OWNERS[o]["Percent Ownership"]);
+			var ownerStatus = OWNERS[o]["Status"];
 			ownEmail = String(ownerEmail).toUpperCase();
 			if(ownEmail == currEmail) {
 				ownerFnd = true;
-				if(varOwnership == ownerPct) {
-					pctMatch = true;
+				if(ownerStatus == "Submitted") {
+					ownerSubmitted = true;
+				}
+				else {
+					if(varOwnership == ownerPct) {
+						pctMatch = true;
+					}
 				}
 			}
 		}
-//		if(!userMatch) {
-//			showMessage = true;
-//			cancel = true;
-//			comment("Error:  Your public user email " + currEmail + " does not match your contact email " + contEmail + " you cannot submit an application.  Go to account managemnt and correct you contact email address.");
-//		}else {
+		if(ownerSubmitted) {
+			showMessage = true;
+			cancel = true;
+			comment("Error:  An owner application for " + currEmail + " has already been submitted for application " + varAppNbr + ".");
+		}else {
 			if(!ownerFnd) {
 				showMessage = true;
 				cancel = true;
@@ -143,7 +150,7 @@ try{
 					comment("The Ownership Percentage you entered does not match the Ownership Percentage entered on the annual application " + varAppNbr + ".  Please contact the Designated Responsible Party for this application and correct the discrepancy.");
 				}
 			}
-//		}
+		}
 	
 } catch (err) {
 	showDebug =true;
