@@ -154,7 +154,8 @@ function mainProcess() {
 		capTypeModel.setCategory(appCategory); 
 		capModel.setCapType(capTypeModel);
 // query a list of records based on the above criteria
-		capListResult = aa.cap.getCapIDListByCapModel(capModel);
+		capListResult = aa.cap.getByAppType(appGroup,appTypeType,appSubtype,appCategory);
+//		capListResult = aa.cap.getCapIDListByCapModel(capModel);
 		if (capListResult.getSuccess()) {
 			tempcapList = capListResult.getOutput();
 			logDebug("Type count: " + tempcapList.length);
@@ -172,7 +173,8 @@ function mainProcess() {
 		return false;
 	}
 	for (myCapsXX in capList) {
-		capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
+//		capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
+		capId = capList[myCapsXX].getCapID();
 		altId =	 capId.getCustomID();
 		var capIdStatusClass = getCapIdStatusClass(capId);
 		perId1 = capList[myCapsXX].ID1;
