@@ -176,7 +176,7 @@ function mainProcess() {
 //		capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
 		altId =	 capId.getCustomID();
 		var capIdStatusClass = getCapIdStatusClass(capId);
-		perId1 = capList[myCapsXX].ID1;
+		perId1 = capId.getID1();
 		if(perId1 != "17EST" && perId1 != "18EST") {
 			notTmpRec++;
 			continue;
