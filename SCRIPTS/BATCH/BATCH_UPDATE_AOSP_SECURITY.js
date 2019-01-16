@@ -66,7 +66,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-// test parameters
+/* test parameters
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sendToEmail", "mhart@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
@@ -74,7 +74,7 @@ aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "Medical,Adult Use");
 aa.env.setValue("recordCategory", "Application");
-
+*/
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var sysFromEmail = getJobParam("sysFromEmail");
 var sendToEmail = getJobParam("sendToEmail");
