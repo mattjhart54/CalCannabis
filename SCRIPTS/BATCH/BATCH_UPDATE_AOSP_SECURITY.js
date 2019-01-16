@@ -137,7 +137,7 @@ function mainProcess() {
 		capTypeModel.setCategory(appCategory); 
 		capModel.setCapType(capTypeModel);
 // query a list of records based on the above criteria
-		capListResult = aa.cap.getByAppType(appGroup,appTypeType,appSubtype,appCategory);
+		capListResult = aa.cap.getByAppType(appGroup,appTypeType,sArray[i],appCategory);
 //		capListResult = aa.cap.getCapIDListByCapModel(capModel);
 		if (capListResult.getSuccess()) {
 			tempcapList = capListResult.getOutput();
