@@ -103,8 +103,8 @@ try {
 
 	var t = getTempRecordsAll();
 	
-//	for (var i = 0 ; i < 10 ; i++) {
-	for(i in t) {
+	for (var i = 0 ; i < 10 ; i++) {
+//	for(i in t) {
 		var parentId = null;
 		doOneTimeConvert(t[i].Record);
 	}
@@ -453,7 +453,103 @@ function getContactArray1()	{
 function getTempRecordsAll() {
 	return [
   {
-    "Record": "18TMP-000126"
+    "Record": "19TMP-000031"
   },
-];
+  {
+    "Record": "19TMP-000015"
+  },
+  {
+    "Record": "18TMP-002401"
+  },
+  {
+    "Record": "18TMP-002258"
+  },
+  {
+    "Record": "18TMP-002238"
+  },
+  {
+    "Record": "18TMP-002200"
+  },
+  {
+    "Record": "18TMP-002171"
+  },
+  {
+    "Record": "18TMP-002169"
+  },
+  {
+    "Record": "18TMP-002167"
+  },
+  {
+    "Record": "18TMP-002148"
+  },
+  {
+    "Record": "18TMP-002128"
+  },
+  {
+    "Record": "18TMP-002124"
+  },
+  {
+    "Record": "18TMP-002121"
+  },
+  {
+    "Record": "18TMP-002120"
+  },
+  {
+    "Record": "18TMP-002119"
+  },
+  {
+    "Record": "18TMP-002116"
+  },
+  {
+    "Record": "18TMP-002112"
+  },
+  {
+    "Record": "18TMP-002111"
+  },
+  {
+    "Record": "18TMP-002110"
+  },
+  {
+    "Record": "18TMP-002101"
+  },
+  {
+    "Record": "18TMP-002100"
+  },
+  {
+    "Record": "18TMP-002098"
+  },
+  {
+    "Record": "18TMP-002089"
+  },
+  {
+    "Record": "18TMP-002087"
+  },
+  {
+    "Record": "18TMP-002083"
+  },
+  {
+    "Record": "18TMP-002080"
+  },
+  {
+    "Record": "18TMP-002067"
+  },
+  {
+    "Record": "18TMP-002066"
+  },
+  {
+    "Record": "18TMP-002055"
+  },
+  {
+    "Record": "18TMP-002049"
+  },
+  {
+    "Record": "18TMP-002039"
+  },
+  {
+    "Record": "18TMP-002033"
+  },
+  {
+    "Record": "18TMP-002032"
+  }
+]
 }
