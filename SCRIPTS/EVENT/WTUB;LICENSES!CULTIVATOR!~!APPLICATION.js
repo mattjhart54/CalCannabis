@@ -1,11 +1,6 @@
-//lwacht: when the status is "Additional Information Needed" and the preferred channel is *not* email,
-//display the deficiency report for printing. Note: only use the primary contact's preferred channel
 try{ 
-	//lwacht: 171205: deficiency record needs to be created for both science and admin tasks
-	//if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+//lwacht: 171205: deficiency record needs to be created for both science and admin tasks
 	if("Deficiency Letter Sent".equals(wfStatus)){
-	//lwacht: 171205: end
-		//lwacht 171129 start
 		var newAppName = "Deficiency: " + capName;
 		//create child amendment record
 		ctm = aa.proxyInvoker.newInstance("com.accela.aa.aamain.cap.CapTypeModel").getOutput();
@@ -59,45 +54,33 @@ try{
 				editAppSpecific("AltId", newAltId,newDefId);
 				logDebug("Deficiency record ID updated to : " + newAltId);
 			}
-			//runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
-			//emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
-		}
-		//lwacht 171129 end
-		var showReport = false;
-		var drpContact = getContactObj(capId,"Designated Responsible Party");
-		if(drpContact){
-			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
-			if(!matches(priChannel,"",null,"undefined")){
-				if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
-					showReport = true;
+			var showReport = false;
+			var drpContact = getContactObj(capId,"Designated Responsible Party");
+			if(drpContact){
+				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
+				if(!matches(priChannel,"",null,"undefined")){
+					if(priChannel.indexOf("Email") < 0 && priChannel.indexOf("E-mail") < 0){
+						showReport = true;
+					}
 				}
 			}
-		}
-		if(showReport){
-			showDebug=false;
-			displayReport("Deficiency Report", "p1value", capIDString,"p2value",defAltIdT);
+			if(showReport){
+				showDebug=false;
+				displayReport("Deficiency Report", "p1value", capIDString,"p2value",defAltIdT);
+			}
 		}
 	}
+//lwacht 171129 end
 }catch(err){
 	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
 	aa.print(err.stack);
 }
-
+/*
 //lwacht: when the status is set to a status that requires notification and the preferred channel is *not* email,
 //display the appropriate report for printing
 try{
 	if(matches(wfStatus, "Deficiency Letter Sent")){
 		showDebug=false;
-		//lwacht : 170823 : removing primary contact
-		//var priContact = getContactObj(capId,"Primary Contact");
-		//var showReport = false;
-		//if(priContact){
-		//	var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-		//	if(priChannel.indexOf("Postal") >-1){
-		//		showReport = true;
-		//	}
-		//}
-		//lwacht: 170815: uncommenting in preparation for Primary Contact going away
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		if(drpContact){
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ drpContact.capContact.getPreferredChannel());
@@ -113,10 +96,10 @@ try{
 		}
 	}
 }catch(err){
-	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Deficiency Notice: " + err.message);
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/~/APPLICATION: Deficiency Notice: " + err.message);
 	aa.print(err.stack);
 }
-
+*/
 //lwacht: all owner records need to be updated before this task can be updated
 try{
 	if("Owner Application Reviews".equals(wfTask) && "Owner Application Reviews Completed".equals(wfStatus)){
