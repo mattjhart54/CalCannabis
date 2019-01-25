@@ -9,12 +9,14 @@ try{
 		for(c in contacts) {
 			if(contacts[c]["contactType"] == "Owner")
 				ownerEmail = ""+ contacts[c]["email"];
+				ownerEmail = ownerEmail.toUpperCase();
 		}
 		parentId = getApplication(appId);
 		ownerTable = loadASITable("OWNERS",parentId);
 		var allOwnersSubmitted = true;
 		for(x in ownerTable) {
 			var tblEmail = ""+ ownerTable[x]["Email Address"];
+			tblEmail = tblEmail.toUpperCase();
 			logDebug("OwnerEmail " + ownerEmail + " email " + tblEmail);
 			if(ownerEmail == tblEmail) {
 				ownerTable[x]["Status"] = "Submitted";
