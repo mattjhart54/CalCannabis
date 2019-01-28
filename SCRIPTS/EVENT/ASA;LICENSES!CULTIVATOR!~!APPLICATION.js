@@ -241,6 +241,8 @@ try {
 try{
 	if(appTypeArray[2]!="Temporary"){
 		if(!publicUser){
+// MJH story 5785 Move fee assessment from Application record submittal to Declaration record submittal
+/*
 			voidRemoveAllFees();
 			var feeDesc = AInfo["License Type"] + " - Application Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
@@ -248,14 +250,15 @@ try{
 				updateFee(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
 			}else{
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
-				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/~/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 			}
+*/ 
+// MJH story 5785	
 			updateAppStatus("Pending Owner Applications", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION.");
 			deactivateTask("Owner Application Reviews");
 			deactivateTask("Administrative Review");
 			runReportAttach(capId,"Completed Application", "altId", capId.getCustomID());
 		}
-		//lwacht: 180118: story 5149: end
 	}
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
