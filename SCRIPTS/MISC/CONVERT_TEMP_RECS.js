@@ -193,6 +193,7 @@ function convert2RealCAP2(capModel, transactions)
 	convertResult = aa.cap.createRegularCapModel4ACA(capModel, null, false, false);
 	if (convertResult.getSuccess()) {
 		capModel = convertResult.getOutput();
+		createCapComment("This record was converted from temporary record " + originalRecId + " on " + jsDateToMMDDYYYY(startDate),capModel.getCapID());
 		logDebug("Commit OK: Convert partial CAP to real CAP successful: " + originalRecId + " to " + capModel.getCapID().getCustomID());
 	}
 	else {
