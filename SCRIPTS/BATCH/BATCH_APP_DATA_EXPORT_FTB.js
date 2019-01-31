@@ -1,8 +1,9 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program: BATCH_APP_DATA_EXPORT_FRANWELL
+| Program: BATCH_APP_DATA_EXPORT_FTB
 | Client:  CDFA_CalCannabis
 |
 | Version 1.0 - Base Version. 
+| Version 1.1 - eshanower 190111 story 5862: add Provisional records and set License Type codes
 |
 | Script to run nightly to close workflow and update the application status after the appeal perios expires.
 /------------------------------------------------------------------------------------------------------*/
@@ -71,14 +72,14 @@ else
 // elycia.juco@cdfa.ca.gov 
 aa.env.setValue("lookAheadDays", "-365");
 aa.env.setValue("daySpan", "365");
-aa.env.setValue("emailAddress", "lwacht@trustvip.com");
-aa.env.setValue("sendToEmail", "lwacht@trustvip.com"); //ca-licensees@metrc.com
+aa.env.setValue("emailAddress", "eshanower@trustvip.com");
+aa.env.setValue("sendToEmail", "eshanower@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "oclcdfaty");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
-aa.env.setValue("recordCategory", "License");
+aa.env.setValue("recordCategory", "License,Provisional");
 aa.env.setValue("licenseContactType", "Designated Responsible Party");
 aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
@@ -95,7 +96,8 @@ var rptName = getJobParam("reportName");
 var appGroup = getJobParam("recordGroup");
 var appTypeType = getJobParam("recordType");
 var appSubtype = getJobParam("recordSubType");
-var appCategory = getJobParam("recordCategory");
+//var appCategory = getJobParam("recordCategory");
+var appCategoryArray = getJobParam("recordCategory").split(",");
 var task = getJobParam("activeTask");
 var licenseContactType = getJobParam("licenseContactType");
 var licenseAddressType = getJobParam("licenseAddressType");
@@ -106,7 +108,7 @@ var sArray = getJobParam("appStatus").split(",");
 
 if(appTypeType=="*") appTypeType="";
 if(appSubtype=="*")  appSubtype="";
-if(appCategory=="*") appCategory="";
+//if(appCategory=="*") appCategory="";
 var filepath = "c://test"; 
 
 
@@ -199,47 +201,61 @@ try{
 	var capFilterBalance = 0;
 	var capFilterDateRange = 0;
 	var capCount = 0;
-	var capModel = aa.cap.getCapModel().getOutput();
-	capTypeModel = capModel.getCapType();
-	capTypeModel.setGroup(appGroup);
-	capTypeModel.setType(appTypeType);
-	capTypeModel.setSubType(appSubtype);
-	capTypeModel.setCategory(appCategory); 
-	capModel.setCapType(capTypeModel);
 	var capList = new Array();
-	//look for null statuses first
-	// query a list of records based on the above criteria
-	//capListResult = aa.cap.getCapIDListByCapModel(capModel);
-	//if (capListResult.getSuccess()) {
-		//tempcapList = capListResult.getOutput();
-		//logDebug("Null Status count: " + tempcapList.length);
-		//if (tempcapList.length > 0) {
-			//capList = capList.concat(tempcapList);
-		//}
-	//}else{
-		//logDebug("Error retrieving records: " + capListResult.getErrorMessage());
-	//}
-	for (i in sArray) {
-		logDebug("status: " + sArray[i]);
-		// Specify the application status to query
-		if(sArray[i]=="null"){
-				capModel.setCapStatus(null);
-		}else{
-			capModel.setCapStatus(sArray[i]);
-		}
+	
+	// Start appCategoryArray loop --EES
+	
+	for (ee in appCategoryArray) {
+		logDebug("appCategory: " + appCategoryArray[ee]);
+		var capModel = aa.cap.getCapModel().getOutput();
+		capTypeModel = capModel.getCapType();
+		capTypeModel.setGroup(appGroup);
+		capTypeModel.setType(appTypeType);
+		capTypeModel.setSubType(appSubtype);
+		// capTypeModel.setCategory(appCategory); // commented out to allow for multiple appCategories--EES
+		capTypeModel.setCategory(appCategoryArray[ee]); // added appCategoryArray--EES
+		capModel.setCapType(capTypeModel);
+		
+		//var capList = new Array(); // moved to before commencement of this loop--EES
+		//look for null statuses first
 		// query a list of records based on the above criteria
-		capListResult = aa.cap.getCapIDListByCapModel(capModel);
-
-		if (capListResult.getSuccess()) {
-			tempcapList = capListResult.getOutput();
-			logDebug("Status count: " + tempcapList.length);
-			if (tempcapList.length > 0) {
-				capList = capList.concat(tempcapList);
+		//capListResult = aa.cap.getCapIDListByCapModel(capModel);
+		//if (capListResult.getSuccess()) {
+			//tempcapList = capListResult.getOutput();
+			//logDebug("Null Status count: " + tempcapList.length);
+			//if (tempcapList.length > 0) {
+				//capList = capList.concat(tempcapList);
+			//}
+		//}else{
+			//logDebug("Error retrieving records: " + capListResult.getErrorMessage());
+		//}
+		
+		// keep this status loop embedded within the appCategoryArray loop so both statuses of all categories get queried--EES
+		for (i in sArray) {
+			logDebug("status: " + sArray[i]);
+			// Specify the application status to query
+			if(sArray[i]=="null"){
+					capModel.setCapStatus(null);
+			}else{
+				capModel.setCapStatus(sArray[i]);
 			}
-		}else{
-			logDebug("Error retrieving records: " + capListResult.getErrorMessage());
+			// query a list of records based on the above criteria
+			capListResult = aa.cap.getCapIDListByCapModel(capModel);
+
+			if (capListResult.getSuccess()) {
+				tempcapList = capListResult.getOutput();
+				logDebug("Status count: " + tempcapList.length);
+				if (tempcapList.length > 0) {
+					capList = capList.concat(tempcapList);
+				}
+			}else{
+				logDebug("Error retrieving records: " + capListResult.getErrorMessage());
+			}
 		}
-	}
+	}	
+	// end appCategoryArray loop--EES
+	
+	
 	if (capList.length > 0) {
 		logDebug("Found " + capList.length + " records to process");
 	}else { 
@@ -598,8 +614,35 @@ try{
 		}
 		//sic: never collected
 		rptLine += spacePad("9999",4);
-		//type of license--unknown how to populate at this timeExpired
-		rptLine += spacePad("",4);
+		//type of license--unknown how to populate at this time
+		//rptLine += spacePad("",4);	// comment out to set license type code per list provided--EES
+		/*
+		Licenses/Cultivator/Temporary/License code is TCL 
+		Licenses/Cultivator/Adult Use/License code is ACL
+		Licenses/Cultivator/Medical/License code is MCL
+		Licenses/Cultivator/Adult Use/Provisional code is PACL 
+		Licenses/Cultivator/Medical/Provisional code is PMCL
+		*/
+		// Start set the license type code for FTB--EES
+		var licType = "";
+		if (appTypeArray[2] == "Temporary") {
+			licType = "TCL ";	
+		}
+		if (appTypeArray[2] == "Adult Use" && appTypeArray[3] == "License") {
+			licType = "ACL ";
+		}
+		if (appTypeArray[2] == "Medical" && appTypeArray[3] == "License") {
+			licType = "MCL ";
+		}
+		if (appTypeArray[2] == "Adult Use" && appTypeArray[3] == "Provisional") {
+			licType = "PACL";
+		}
+		if (appTypeArray[2] == "Medical" && appTypeArray[3] == "Provisional") {
+			licType = "PMCL";
+		}
+		rptLine += licType;		
+		// End set the license type code for FTB--EES
+
 		//frequency: always annual?
 		rptLine += "A";
 		//licensing board number
