@@ -72,7 +72,7 @@ var useAppSpecificGroupName = false;
 var startTime = startDate.getTime();			// Start timer
 var currentUserID = "ADMIN";
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
-var acaUrl = "https://aca.supp.accela.com/CALCANNABIS";
+var acaUrl = "https://aca.test6.accela.com/CALCANNABIS";
 var sysFromEmail = "calcannabislicensing@cdfa.ca.gov";
 
 /*------------------------------------------------------------------------------------------------------/
