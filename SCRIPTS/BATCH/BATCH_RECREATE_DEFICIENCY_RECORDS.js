@@ -260,7 +260,7 @@ try {
 				}else{
 					logDebug("File date successfully updated to " + tDay);
 				}
-				var	conArray = getContactArray(capId);
+				var	conArray = getContactArray(thisOwnCapId);
 				for (thisCon in conArray) {
 					thisContact = conArray[thisCon];
 					if (thisContact["contactType"] == "Owner"){
@@ -270,13 +270,13 @@ try {
 						var rFiles = [];
 						if (conEmail) {
 							var eParams = aa.util.newHashtable(); 
-							addParameter(eParams, "$$ALTID$$", capId.getCustomID());
+							addParameter(eParams, "$$ALTID$$", thisOwnCapId.getCustomID());
 							addParameter(eParams, "$$DEFICIENCYID$$", defAltIdT);
 							addParameter(eParams, "$$firstName$$", conFirst);
 							addParameter(eParams, "$$lastName$$", conLast);
 							addParameter(eParams, "$$acaRecordUrl$$", acaUrl);
-							runReportAttach(capId,"One-Time Deficiency Replacement Letter - Owner", "p1value",capIdString,"p2value",defAltIdT,"p3value","Owner","p4value","Home");
-							sendNotification(sysFromEmail,conEmail,"","LCA_DEF_REPLACEMENT_OWNER",eParams, rFiles,capId);
+							runReportAttach(thisOwnCapId,"One-Time Deficiency Replacement Letter - Owner", "p1value",capIdString,"p2value",defAltIdT,"p3value","Owner","p4value","Home");
+							sendNotification(sysFromEmail,conEmail,"","LCA_DEF_REPLACEMENT_OWNER",eParams, rFiles,thisOwnCapId);
 						}
 						else {
 							logDebug("Deficiency letter not generated and email not sent as no DRP found on record " + capIdString);
