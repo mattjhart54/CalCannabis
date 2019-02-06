@@ -173,7 +173,7 @@ try {
 				}else{
 					logDebug("File date successfully updated to " + tDay);
 				}
-				if(!matches(capStatus,"Disqualified", "Voided", "Withdrawn", and "Review Complete")) {
+				if(!matches(capStatus,"Disqualified", "Voided", "Withdrawn", "Review Complete")) {
 					var	conArray = getContactArray(capId);
 					for (thisCon in conArray) {
 						thisContact = conArray[thisCon];
@@ -263,7 +263,7 @@ try {
 				}else{
 					logDebug("File date successfully updated to " + tDay);
 				}
-				if(!matches(capStatus,"Disqualified", "Voided", "Withdrawn", and "Review Complete")) {
+				if(!matches(capStatus,"Disqualified", "Voided", "Withdrawn", "Review Complete")) {
 					var	conArray = getContactArray(thisOwnCapId);
 					for (thisCon in conArray) {
 						thisContact = conArray[thisCon];
