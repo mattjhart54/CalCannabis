@@ -198,6 +198,9 @@ try{
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
 		editAppSpecific("App Expiry Date", dateAdd(null,90));
+		//eshanower 20190207: US 5826 start deactivate Science Mgr Review task
+		deactivateTask("Administrative Manager Review");
+		//eshanower 20190207: US 5826 end deactivate Science Mgr Review task
 		if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
 			editTaskDueDate("Scientific Review", dateAdd(null,90));
 			//activateTask("Scientific Review");
