@@ -100,6 +100,7 @@ if (showDebug) {
 function mainProcess() {
 try {
 	showDebug = true;
+	var recCnt = 0;
 	var t = getTempRecordsAll();
 	
 	for(i in t) {
@@ -129,6 +130,7 @@ try {
 			ctm.setCategory("Amendment");
 			var resDefId = aa.cap.createSimplePartialRecord(ctm,newAppName, "INCOMPLETE CAP");
 			if(resDefId.getSuccess()){
+				recCnt++;
 				var newDefId = resDefId.getOutput();
 		//relate amendment to application
 				var resCreateRelat = aa.cap.createAppHierarchy(capId, newDefId); 
@@ -218,6 +220,7 @@ try {
 			ctm.setCategory("Amendment");
 			var newODefId = aa.cap.createSimplePartialRecord(ctm,newOwnAppName, "INCOMPLETE CAP").getOutput();
 			if(newODefId){
+				recCnt++;
 				var resOCreateRelat = aa.cap.createAppHierarchy(thisOwnCapId, newODefId); 
 				if (resOCreateRelat.getSuccess()){
 					logDebug("Child application successfully linked");
@@ -294,6 +297,8 @@ try {
 			}
 		}
 	}
+	logDebug("Total Records to Process : " + t.length);
+	logDebug("Number of deficiency records created: " + recCnt);
 }
 catch (err) {
 	logDebug("A JavaScript Error occured: " + err.message + " at line " + err.lineNumber + " stack: "+ err.stack);
