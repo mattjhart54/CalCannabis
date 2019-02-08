@@ -172,6 +172,8 @@ try{
 		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 		activateTask("Application Disposition");
 		updateTask("Application Disposition", "Pending Payment","Updated by Script","");
+//MJH 201902-8 US 5866 Update License Fee Due date
+		editAppSpecific("License Fee Due",nextWorkDay(dateAdd(null,89));
 	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Generic notifications: " + err.message);
