@@ -1,3 +1,42 @@
+// lwacht: set expiration dates
+// ees: 20190208 US 5868 re-order code to set App Exp Date before reports are generated
+try{
+	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		//set due date and expiration date
+		editAppSpecific("App Expiry Date", dateAdd(null,90));
+        deactivateTask("Administrative Manager Review");
+		if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
+			editTaskDueDate("Administrative Review", dateAdd(null,90));
+			//activateTask("Administrative Review");
+		}
+		if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
+			editTaskDueDate("Owner Application Reviews", dateAdd(null,90));
+			//activateTask("Owner Application Reviews");
+		}
+		//setTask("Administrative Manager Review", "N", "Y");
+	}
+	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		//set due date and expiration date
+		editAppSpecific("App Expiry Date", dateAdd(null,90));
+		//eshanower 20190207: US 5826 start deactivate Science Mgr Review task
+		deactivateTask("Science Manager Review");
+		//eshanower 20190207: US 5826 end deactivate Science Mgr Review task
+		if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
+			editTaskDueDate("Scientific Review", dateAdd(null,90));
+			//activateTask("Scientific Review");
+		}
+		if(matches(taskStatus("CEQA Review"),"Additional Information Needed","Incomplete Response")){
+			editTaskDueDate("CEQA Review", dateAdd(null,90));
+			//activateTask("CEQA Review");
+		}
+		//setTask("Science Manager Review", "N", "Y");
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Expiration Dates: " + err.message);
+	logDebug(err.stack);
+}
+// ees: end US 5868
+
 //lwacht: send a deficiency email when the status is "Deficiency Letter Sent" 
 try{
 	if("Deficiency Letter Sent".equals(wfStatus)){
@@ -55,44 +94,7 @@ try{
 				logDebug("Deficiency record ID updated to : " + newAltId);
 			}
 */
-// ees: 20190208 US 5868 re-order code to set App Exp Date before reports are generated
-// lwacht: set expiration dates
-try{
-	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
-		//set due date and expiration date
-		editAppSpecific("App Expiry Date", dateAdd(null,90));
-                deactivateTask("Administrative Manager Review");
-		if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
-			editTaskDueDate("Administrative Review", dateAdd(null,90));
-			//activateTask("Administrative Review");
-		}
-		if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
-			editTaskDueDate("Owner Application Reviews", dateAdd(null,90));
-			//activateTask("Owner Application Reviews");
-		}
-		//setTask("Administrative Manager Review", "N", "Y");
-	}
-	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
-		//set due date and expiration date
-		editAppSpecific("App Expiry Date", dateAdd(null,90));
-		//eshanower 20190207: US 5826 start deactivate Science Mgr Review task
-		deactivateTask("Science Manager Review");
-		//eshanower 20190207: US 5826 end deactivate Science Mgr Review task
-		if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
-			editTaskDueDate("Scientific Review", dateAdd(null,90));
-			//activateTask("Scientific Review");
-		}
-		if(matches(taskStatus("CEQA Review"),"Additional Information Needed","Incomplete Response")){
-			editTaskDueDate("CEQA Review", dateAdd(null,90));
-			//activateTask("CEQA Review");
-		}
-		//setTask("Science Manager Review", "N", "Y");
-	}
-}catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Expiration Dates: " + err.message);
-	logDebug(err.stack);
-}
-// ees: end US 5868
+
 
 			var childAmend = getChildren("Licenses/Cultivator/Medical/Amendment");
 			var cntChild = childAmend.length;
