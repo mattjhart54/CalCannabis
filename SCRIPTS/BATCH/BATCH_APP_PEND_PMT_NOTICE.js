@@ -68,32 +68,34 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
-aa.env.setValue("lookAheadDays", "-3");
+aa.env.setValue("lookAheadDays", "0");
 aa.env.setValue("daySpan", "0");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
 aa.env.setValue("recordCategory", "Application");
-aa.env.setValue("AppStatusArray", "Pending Payment");
+aa.env.setValue("appStatus", "Pending Payment");
+aa.env.setValue("asiField", "License Fee Due");
+aa.env.setValue("asiGroup", "INTERNAL");
 aa.env.setValue("task", "Application Disposition");
-aa.env.setValue("pastDue", "60");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("reportName", "Payment Due Notification");
-aa.env.setValue("setNonEmailPrefix", "30_DAY_PMT_NOTICE");
-*/
+aa.env.setValue("setNonEmailPrefix", "NO_PMT_30");
+ */
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
 var appGroup = getParam("recordGroup");
 var appTypeType = getParam("recordType");
 var appSubtype = getParam("recordSubType");
 var appCategory = getParam("recordCategory");
-var arrAppStatus = getParam("AppStatusArray").split(",");
+var appStatus = getParam("appStatus");
+var asiField = getParam("asiField");
+var asiGroup = getParam("asiGroup");
 var task = getParam("task");
-var pastDue = getParam("pastDue");
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var emailTemplate = getParam("emailTemplate");
 var sendEmailNotifications = getParam("sendEmailNotifications");
@@ -153,31 +155,11 @@ if (showDebug) {
 function mainProcess() {
 try{
 	var capFilterBalance = 0;
-	var capFilterDateRange = 0;
+	var capFilterStatus = 0;
 	var capCount = 0;
 	setCreated = false
-	var taskItemScriptModel = aa.workflow.getTaskItemScriptModel().getOutput();
-	// taskItemScriptModel.setActiveFlag("N");
-	// taskItemScriptModel.setCompleteFlag("N");
-	taskItemScriptModel.setTaskDescription(task);
-	// taskItemScriptModel.setDisposition("noStatus");
-	// taskItemScriptModel.setDisposition("noStatus");
-	 //Setup the cap type criteria
-	 var capTypeScriptModel = aa.workflow.getCapTypeScriptModel().getOutput();
-	 capTypeScriptModel.setGroup(appGroup);
-	 capTypeScriptModel.setType(appTypeType);
-	 capTypeScriptModel.setSubType(appSubtype);
-	 capTypeScriptModel.setCategory(appCategory); 
-	 //Set the date range for the task due date criteria
-	 //var startDueDate = aa.date.parseDate(dateAdd(null,-2));
-	 //var endDueDate = aa.date.getCurrentDate();
-	 //for testing purposes only
-	 //var startDueDate = aa.date.parseDate(fromDate);
-	 //var endDueDate = aa.date.parseDate(toDate);
-	 var appStatusList = [];
-	 appStatusList = arrAppStatus;
-	 //var capResult = aa.workflow.getCapIdsByCriteria(taskItemScriptModel, startDueDate, endDueDate, capTypeScriptModel, appStatusList);
-	 var capResult = aa.workflow.getCapIdsByCriteria(taskItemScriptModel, null, null, capTypeScriptModel, appStatusList);
+
+ 	var capResult = aa.cap.getCapIDsByAppSpecificInfoDateRange(asiGroup, asiField, dFromDate, dToDate);
 	if (capResult.getSuccess()) {
 		myCaps = capResult.getOutput();
 	}else { 
@@ -186,21 +168,13 @@ try{
 	}
 	logDebug("Found " + myCaps.length + " records to process");
 	for (myCapsXX in myCaps) {
-    	capId = myCaps[myCapsXX].getCapID();
-   		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
-		altId = capId.getCustomID();
-		logDebug("altId: " + altId);
-	}
-		
-	for (myCapsXX in myCaps) {
 // MJH Story 5843 - Remove timeout logic
-/*		
-		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
+/*		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
 			logDebug("WARNING: A script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
 			timeExpired = true ;
 			break; 
 		}
-*/
+*/		
     	capId = myCaps[myCapsXX].getCapID();
    		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
 		altId = capId.getCustomID();
@@ -208,7 +182,7 @@ try{
 			logDebug("Could not get record capId: " + altId);
 			continue;
 		}
-		cap = aa.cap.getCap(capId).getOutput();
+		cap = aa.cap.getCap(capId).getOutput();	
 		fileDateObj = cap.getFileDate();
 		fileDate = "" + fileDateObj.getMonth() + "/" + fileDateObj.getDayOfMonth() + "/" + fileDateObj.getYear();
 		fileDateYYYYMMDD = dateFormatted(fileDateObj.getMonth(),fileDateObj.getDayOfMonth(),fileDateObj.getYear(),"YYYY-MM-DD");
@@ -222,47 +196,18 @@ try{
 			continue;
 		}else{
 			capDetail = capDetailObjResult.getOutput();
-			var houseCount = capDetail.getHouseCount();
-			var feesInvoicedTotal = capDetail.getTotalFee();
 			var balanceDue = capDetail.getBalance();
 			if(balanceDue<=0){
 				logDebug("Skipping record " + altId + " due to balance due: " + balanceDue);
 				capFilterBalance++;
 				continue;
 			}
-			//filter by status date
-			statusResult = aa.cap.getStatusHistoryByCap(capId, "APPLICATION", null);
-			if (statusResult.getSuccess()) {
-				statusArr = statusResult.getOutput();
-				if (statusArr && statusArr.length > 0) {
-					statusArr.sort(compareStatusDate);
-					var ignoreRecd = true;
-					for (xx in statusArr) {
-						if(ignoreRecd == true) {
-							var thisStatus = statusArr[xx];
-							var thisStatusStatus = "" + thisStatus.getStatus();
-							if (thisStatusStatus == arrAppStatus){
-								statusDate = thisStatus.getStatusDate();
-								var cStatusDate = convertDate(statusDate);
-								stime = cStatusDate.getTime();
-								ptime = fromJSDate.getTime();
-			//					if(cStatusDate.getTime()<fromJSDate.getTime() || cStatusDate.getTime()>toJSDate.getTime()){
-								if(stime==ptime) {
-									ignoreRecd = false;
-									var reportDate = cStatusDate;
-								}
-							}
-						}
-					}
-					if(ignoreRecd){
-						logDebug("Skipping record " + altId + " due to date range: " + reportDate);
-						capFilterDateRange++;
-						continue;
-					}
-				}
-			}
-			else {
-				logDebug("Error getting application status history " + statusResult.getErrorMessage());
+			//filter by status Status
+			logDebug("capStatus " + capStatus + " appStatus " + appStatus)
+			if (capStatus != appStatus){
+				logDebug("Skipping record " + altId + " due to application status ");
+				capFilterStatus++;
+				continue;
 			}
 			capCount++;
 			logDebug("----Processing record " + altId + br);
@@ -289,17 +234,11 @@ try{
 							setAddResult=aa.set.add(sNonEmailSet,capId);
 						//lwacht: 171122: emailing all contacts, regardless of preferred channel
 						}
-						//}else{
-						//lwacht: 171122: end
-							conEmail = thisContact["email"];
-							if (conEmail) {
-								recordId = capId.getCustomID();
-								runReportAttach(capId,rptName, "p1value", recordId); 
-								emailRptContact("BATCH", emailTemplate, rptName, false, "Pending Payment", capId, thisContact["contactType"],"altId", recordId);
-								logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
-							}
-						//lwacht: 171122: emailing all contacts, regardless of preferred channel
-						//}
+						conEmail = thisContact["email"];
+						if (conEmail) {
+							runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
+							emailRptContact("BATCH", emailTemplate, rptName, false, "Disqualified", capId, thisContact["contactType"]);
+						}
 						//lwacht: 171122: end
 					}
 				}
@@ -311,7 +250,7 @@ try{
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
  	logDebug("Ignored due to balance due: " + capFilterBalance);
- 	logDebug("Ignored due to date range: " + capFilterDateRange);
+ 	logDebug("Ignored due to date range: " + capFilterStatus);
  	logDebug("Total CAPS processed: " + capCount);
 
 }catch (err){
