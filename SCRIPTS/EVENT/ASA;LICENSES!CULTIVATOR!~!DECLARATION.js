@@ -1,7 +1,5 @@
 try{
 	if(!publicUser){
-		editAppSpecific("Created Date", fileDate); // ees US 5861 add
-		updateFileDate(null); // ees US 5861 add
 		if(!parentCapId){
 			appId = AInfo["Application ID"];
 			addParent(appId);
@@ -10,8 +8,6 @@ try{
 // MJH story 5785 Move fee assessment from Application record submittal to Declaration record submittal
 		var holdId = capId;
 		capId = parentCapId;
-		editAppSpecific("Created Date", fileDate); // ees US 5861 add
-		updateFileDate(null); //ees US 5861 add
 		PInfo = [];
 		loadAppSpecific(PInfo);
 		voidRemoveAllFees();
@@ -30,13 +26,7 @@ try{
 		}		
 		capId = holdId;
 		updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /DECLARATION",parentCapId);
-// ees US 5861 start		
-		var children = getChildren("Licenses/Cultivator/*/Owner Application",parentCapId)
-		for(c in children) {
-			capId = children[c];
-			updateFileDate(null);
-		}
-// ees US 5861 end
+
 // MJH Story 5785 end		
 		logDebug("parentCapId.getCustomID(): " +parentCapId.getCustomID());
 		var newAltId = parentCapId.getCustomID() + "-DEC";
