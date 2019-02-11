@@ -1,6 +1,9 @@
 // if not ACA, set altId based on application parent
 try{
 	if(!publicUser){
+// ees 20190211 story 5861 start Save fileDate as Created Date
+		editAppSpecific("Created Date", fileDate);
+// ees 20190211 story 5861 end
 		updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
 		appId = AInfo["Application ID"];
 		addParent(appId);

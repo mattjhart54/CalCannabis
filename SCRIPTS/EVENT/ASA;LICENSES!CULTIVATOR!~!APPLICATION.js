@@ -16,6 +16,9 @@ try{
 //lwacht: 180416: story 5175: create a reference contact for the temp drp and bsns contact for application submitted in back office
 try{
 	if(!publicUser){
+// ees 20190211 story 5861 start Save fileDate as Created Date
+		editAppSpecific("Created Date", fileDate);
+// ees 20190211 story 5861 end
 //lwacht: create reference contact and public user account for the DRP		
 		var capContactResult = aa.people.getCapContactByCapID(capId);
 		var drpExists = false;
