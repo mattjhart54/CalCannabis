@@ -8,6 +8,8 @@ try{
 		logDebug("expire " + AInfo["App Expiry Date"] + " Sent " + AInfo["Admin Deficiency Letter Sent"] + " new date " + nextDueDay);
 		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
 			editAppSpecific("App Expiry Date", nextDueDay);
+			var expDate = getAppSpecific("App Expiry Date");
+			logDebug("exp Date " + expDate);
 		}
 		if(matches(AInfo["Admin Deficiency Letter Sent"],null,"",undefined)) {
 			editAppSpecific("Admin Deficiency Letter Sent", jsDateToASIDate(new Date()));
