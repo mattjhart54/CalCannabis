@@ -69,8 +69,8 @@ else
 /* test parameters
 aa.env.setValue("lookAheadDays", "-14");
 aa.env.setValue("daySpan", "14");
-aa.env.setValue("emailAddress", "mhart@trustvip.com");
-aa.env.setValue("sendToEmail", "mhart@trustvip.com"); //ca-licensees@metrc.com
+aa.env.setValue("emailAddress", "eshanower@trustvip.com");
+aa.env.setValue("sendToEmail", "eshanower@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA_Franwell_Export");
 aa.env.setValue("recordGroup", "Licenses");
@@ -216,7 +216,7 @@ try{
 		}
 		cap = aa.cap.getCap(capId).getOutput();	
 		capStatus = cap.getCapStatus();
-		if(matches(capStatus, "Pending Owner Applications", "Pending Final Affidavit")) {
+		if(matches(capStatus, "Closed","Denied","Disqualified","Pending Final Affidavit","Pending Owner Applications","Voided","Withdrawn","License Issued","Provisional License Issued","Under Scientific Review","Scientific Review Complete","Additional Information Needed")) {
 			badStatus++;
 			continue;
 		}
