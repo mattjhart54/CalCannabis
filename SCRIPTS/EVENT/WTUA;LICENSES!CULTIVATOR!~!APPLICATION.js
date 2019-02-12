@@ -1,36 +1,48 @@
 // lwacht: set expiration dates
 // ees: 20190208 US 5868 re-order code to set App Exp Date before reports are generated
 try{
+// MJH 20190212 US 5864 and 5865 - update application expiration date, deficiency letter sent and task due dates.
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
-		editAppSpecific("App Expiry Date", dateAdd(null,90));
+		var nextDueDay = nextWorkDay(dateAdd(null,89));
+		logDebug("expire " + AInfo["App Expiry Date"] + " Sent " + AInfo["Admin Deficiency Letter Sent"] + " new date " + nextDueDay);
+		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
+			editAppSpecific("App Expiry Date", nextDueDay);
+		}
+		if(matches(AInfo["Admin Deficiency Letter Sent"],null,"",undefined)) {
+			editAppSpecific("Admin Deficiency Letter Sent", jsDateToASIDate(new Date()));
+			if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
+				editTaskDueDate("Administrative Review", nextDueDay);
+			}
+			if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
+				editTaskDueDate("Owner Application Reviews", nextWorkDay(dateAdd(null,89)));
+			}
+		}
         deactivateTask("Administrative Manager Review");
-		if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
-			editTaskDueDate("Administrative Review", dateAdd(null,90));
-			//activateTask("Administrative Review");
-		}
-		if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
-			editTaskDueDate("Owner Application Reviews", dateAdd(null,90));
-			//activateTask("Owner Application Reviews");
-		}
-		//setTask("Administrative Manager Review", "N", "Y");
 	}
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
-		editAppSpecific("App Expiry Date", dateAdd(null,90));
-		//eshanower 20190207: US 5826 start deactivate Science Mgr Review task
+		if(matches(AInfo["App Expiry Date"],null,"")) {
+			editAppSpecific("App Expiry Date", nextDueDay);
+		}
+		if(matches(AInfo["Science Deficiency Letter Sent"],null,"")) {
+			editAppSpecific("Admin Deficiency Letter Sent", jsDateToASIDate(new Date()));
+			if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
+				editTaskDueDate("Scientific Review", nextDueDay);
+			}
+			if(matches(taskStatus("CEQA Review"),"Additional Information Needed","Incomplete Response")){
+				editTaskDueDate("CEQA Review", nextDueDay);
+			}
+		}
+	//eshanower 20190207: US 5826 start deactivate Science Mgr Review task
 		deactivateTask("Science Manager Review");
-		//eshanower 20190207: US 5826 end deactivate Science Mgr Review task
-		if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
-			editTaskDueDate("Scientific Review", dateAdd(null,90));
-			//activateTask("Scientific Review");
-		}
-		if(matches(taskStatus("CEQA Review"),"Additional Information Needed","Incomplete Response")){
-			editTaskDueDate("CEQA Review", dateAdd(null,90));
-			//activateTask("CEQA Review");
-		}
-		//setTask("Science Manager Review", "N", "Y");
+	//eshanower 20190207: US 5826 end deactivate Science Mgr Review task
 	}
+	if((wfTask == "Administrative Review" && wfStatus == "Administrative Review Completed" && taskStatus("Owner Application Reviews"), "Owner Application Reviews Completed") ||
+		(wfTask == "Owner Application Reviews" && wfStatus == "Owner Application Reviews Completed" && taskStatus("Administrative Review"), "Administrative Review Completed")) {
+			editAppSpecific("App Expiry Date", "")
+	}
+	// MJH US 5864 and 5865 - update application expiration date, deficiency letter sent and task due dates.
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Expiration Dates: " + err.message);
 	logDebug(err.stack);
