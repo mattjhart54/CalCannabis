@@ -22,6 +22,7 @@ try{
 	}
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
+		var nextDueDay = nextWorkDay(dateAdd(null,89));
 		if(matches(AInfo["App Expiry Date"],null,"")) {
 			editAppSpecific("App Expiry Date", nextDueDay);
 		}
