@@ -22,10 +22,10 @@ try{
 		}
         deactivateTask("Administrative Manager Review");
 	}
-	if((wfTask == "Administrative Review" && wfStatus == "Administrative Review Completed" && taskStatus("Owner Application Reviews"), "Owner Application Reviews Completed") ||
-			(wfTask == "Owner Application Reviews" && wfStatus == "Owner Application Reviews Completed" && taskStatus("Administrative Review"), "Administrative Review Completed")) {
-				editAppSpecific("App Expiry Date", "")
-	}
+//	if((wfTask == "Administrative Review" && wfStatus == "Administrative Review Completed" && taskStatus("Owner Application Reviews"), "Owner Application Reviews Completed") ||
+//			(wfTask == "Owner Application Reviews" && wfStatus == "Owner Application Reviews Completed" && taskStatus("Administrative Review"), "Administrative Review Completed")) {
+//				editAppSpecific("App Expiry Date", "")
+//	}
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
 		var nextDueDay = nextWorkDay(dateAdd(null,89));
@@ -45,10 +45,10 @@ try{
 		deactivateTask("Science Manager Review");
 	//eshanower 20190207: US 5826 end deactivate Science Mgr Review task
 	}
-	if((wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed" && taskStatus("CEQA Review"), "CEQA Review Completed") ||
-		(wfTask == "CEQA Review" && wfStatus == "CEQA Review Completed" && taskStatus("Scientific Review"), "Scientific Review Completed")) {
-			editAppSpecific("App Expiry Date", "")
-	}
+//	if((wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed" && taskStatus("CEQA Review"), "CEQA Review Completed") ||
+//		(wfTask == "CEQA Review" && wfStatus == "CEQA Review Completed" && taskStatus("Scientific Review"), "Scientific Review Completed")) {
+//			editAppSpecific("App Expiry Date", "")
+//	}
 	// MJH US 5864 and 5865 - update application expiration date, deficiency letter sent and task due dates.
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Expiration Dates: " + err.message);
