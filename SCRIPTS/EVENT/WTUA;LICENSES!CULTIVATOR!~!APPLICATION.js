@@ -7,7 +7,7 @@ try{
 		var nextDueDay = nextWorkDay(dateAdd(null,89));
 		logDebug("expire " + AInfo["App Expiry Date"] + " Sent " + AInfo["Admin Deficiency Letter Sent"] + " new date " + nextDueDay);
 		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
-			editAppSpecific("App Expiry Date", dateAdd(null,90);
+			editAppSpecific("App Expiry Date", dateAdd(null,90));
 			var expDate = getAppSpecific("App Expiry Date");
 			logDebug("exp Date " + expDate);
 		}
