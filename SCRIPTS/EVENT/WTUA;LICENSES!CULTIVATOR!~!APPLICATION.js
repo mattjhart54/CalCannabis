@@ -27,7 +27,7 @@ try{
 			editAppSpecific("App Expiry Date", nextDueDay);
 		}
 		if(matches(AInfo["Science Deficiency Letter Sent"],null,"")) {
-			editAppSpecific("Admin Deficiency Letter Sent", jsDateToASIDate(new Date()));
+			editAppSpecific("Science Deficiency Letter Sent", jsDateToASIDate(new Date()));
 			if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
 				editTaskDueDate("Scientific Review", nextDueDay);
 			}
