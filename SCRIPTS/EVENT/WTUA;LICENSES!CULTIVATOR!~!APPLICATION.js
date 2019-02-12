@@ -7,7 +7,7 @@ try{
 		var nextDueDay = nextWorkDay(dateAdd(null,89));
 		logDebug("expire " + AInfo["App Expiry Date"] + " Sent " + AInfo["Admin Deficiency Letter Sent"] + " new date " + nextDueDay);
 		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
-			editAppSpecific("App Expiry Date", nextDueDay);
+			editAppSpecific("App Expiry Date", nextWorkDay(dateAdd(null,89)));
 			var expDate = getAppSpecific("App Expiry Date");
 			logDebug("exp Date " + expDate);
 		}
@@ -30,7 +30,7 @@ try{
 		//set due date and expiration date
 		var nextDueDay = nextWorkDay(dateAdd(null,89));
 		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
-			editAppSpecific("App Expiry Date", nextDueDay);
+			editAppSpecific("App Expiry Date", nextWorkDay(dateAdd(null,89)));
 		}
 		if(matches(AInfo["Science Deficiency Letter Sent"],null,"",undefined)) {
 			editAppSpecific("Science Deficiency Letter Sent", jsDateToASIDate(new Date()));
