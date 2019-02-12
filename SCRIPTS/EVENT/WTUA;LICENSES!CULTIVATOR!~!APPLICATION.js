@@ -17,18 +17,22 @@ try{
 				editTaskDueDate("Administrative Review", nextDueDay);
 			}
 			if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
-				editTaskDueDate("Owner Application Reviews", nextWorkDay(dateAdd(null,89)));
+				editTaskDueDate("Owner Application Reviews", nextDueDay);
 			}
 		}
         deactivateTask("Administrative Manager Review");
 	}
+	if((wfTask == "Administrative Review" && wfStatus == "Administrative Review Completed" && taskStatus("Owner Application Reviews"), "Owner Application Reviews Completed") ||
+			(wfTask == "Owner Application Reviews" && wfStatus == "Owner Application Reviews Completed" && taskStatus("Administrative Review"), "Administrative Review Completed")) {
+				editAppSpecific("App Expiry Date", "")
+	}
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
 		var nextDueDay = nextWorkDay(dateAdd(null,89));
-		if(matches(AInfo["App Expiry Date"],null,"")) {
+		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
 			editAppSpecific("App Expiry Date", nextDueDay);
 		}
-		if(matches(AInfo["Science Deficiency Letter Sent"],null,"")) {
+		if(matches(AInfo["Science Deficiency Letter Sent"],null,"",undefined)) {
 			editAppSpecific("Science Deficiency Letter Sent", jsDateToASIDate(new Date()));
 			if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
 				editTaskDueDate("Scientific Review", nextDueDay);
@@ -41,8 +45,8 @@ try{
 		deactivateTask("Science Manager Review");
 	//eshanower 20190207: US 5826 end deactivate Science Mgr Review task
 	}
-	if((wfTask == "Administrative Review" && wfStatus == "Administrative Review Completed" && taskStatus("Owner Application Reviews"), "Owner Application Reviews Completed") ||
-		(wfTask == "Owner Application Reviews" && wfStatus == "Owner Application Reviews Completed" && taskStatus("Administrative Review"), "Administrative Review Completed")) {
+	if((wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed" && taskStatus("CEQA Review"), "CEQA Review Completed") ||
+		(wfTask == "CEQA Review" && wfStatus == "CEQA Review Completed" && taskStatus("Scientific Review"), "Scientific Review Completed")) {
 			editAppSpecific("App Expiry Date", "")
 	}
 	// MJH US 5864 and 5865 - update application expiration date, deficiency letter sent and task due dates.
