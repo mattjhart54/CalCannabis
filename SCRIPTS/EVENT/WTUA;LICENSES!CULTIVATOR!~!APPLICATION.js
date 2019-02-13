@@ -22,15 +22,25 @@ try{
 		}
         deactivateTask("Administrative Manager Review");
 	}
-	if((wfTask == "Administrative Review" && wfStatus == "Administrative Review Completed" && taskStatus("Owner Application Reviews"), "Owner Application Reviews Completed") ||
-			(wfTask == "Owner Application Reviews" && wfStatus == "Owner Application Reviews Completed" && taskStatus("Administrative Review"), "Administrative Review Completed")) {
-				editAppSpecific("App Expiry Date", "")
+	if(wfTask == "Administrative Review" && wfStatus == "Administrative Review Completed") {
+		if(taskStatus("Owner Application Reviews")  == "Owner Application Reviews Completed") {
+			logDebug("Got Here");
+			editAppSpecific("App Expiry Date", "")
+		}
+	}
+	if (wfTask == "Owner Application Reviews" && wfStatus == "Owner Application Reviews Completed") {
+		if(taskStatus("Administrative Review") == "Administrative Review Completed") {
+			logDebug("Got Here2");
+			editAppSpecific("App Expiry Date", "")
+		}
 	}
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
 		var nextDueDay = dateAdd(null,89);
 		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
-			editAppSpecific("App Expiry Date", nextWorkDay(dateAdd(null,89)));
+			editAppSpecific("App Expiry Date", nextWorkDay(nextDueDay));
+			var expDate = getAppSpecific("App Expiry Date");
+			logDebug("exp Date " + expDate + " nextDueDay " + nextDueDay);
 		}
 		if(matches(AInfo["Science Deficiency Letter Sent"],null,"",undefined)) {
 			editAppSpecific("Science Deficiency Letter Sent", jsDateToASIDate(new Date()));
@@ -45,9 +55,17 @@ try{
 		deactivateTask("Science Manager Review");
 	//eshanower 20190207: US 5826 end deactivate Science Mgr Review task
 	}
-	if((wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed" && taskStatus("CEQA Review"), "CEQA Review Completed") ||
-		(wfTask == "CEQA Review" && wfStatus == "CEQA Review Completed" && taskStatus("Scientific Review"), "Scientific Review Completed")) {
+	if(wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed") {
+		if(taskStatus("CEQA Review") == "CEQA Review Completed") {
+				logDebug("Got Here");
+				editAppSpecific("App Expiry Date", "")
+		}
+	}
+	if (wfTask == "CEQA Reviews" && wfStatus == "CEQA Reviews Completed") {
+		if(taskStatus("Scientific Review") == "Scientific Review Completed") {
+			logDebug("Got Here2");
 			editAppSpecific("App Expiry Date", "")
+		}
 	}
 	// MJH US 5864 and 5865 - update application expiration date, deficiency letter sent and task due dates.
 }catch(err){
