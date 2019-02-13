@@ -14,10 +14,10 @@ try{
 		if(matches(AInfo["Admin Deficiency Letter Sent"],null,"",undefined)) {
 			editAppSpecific("Admin Deficiency Letter Sent", jsDateToASIDate(new Date()));
 			if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
-				editTaskDueDate("Administrative Review", nextDueDay);
+				editTaskDueDate("Administrative Review", nextWorkDay(nextDueDay));
 			}
 			if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
-				editTaskDueDate("Owner Application Reviews", nextDueDay);
+				editTaskDueDate("Owner Application Reviews", nextWorkDay(nextDueDay));
 			}
 		}
         deactivateTask("Administrative Manager Review");
@@ -28,17 +28,17 @@ try{
 //	}
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
-		var nextDueDay = nextWorkDay(dateAdd(null,89));
+		var nextDueDay = dateAdd(null,89);
 		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
 			editAppSpecific("App Expiry Date", nextWorkDay(dateAdd(null,89)));
 		}
 		if(matches(AInfo["Science Deficiency Letter Sent"],null,"",undefined)) {
 			editAppSpecific("Science Deficiency Letter Sent", jsDateToASIDate(new Date()));
 			if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
-				editTaskDueDate("Scientific Review", nextDueDay);
+				editTaskDueDate("Scientific Review", nextWorkDay(nextDueDay));
 			}
 			if(matches(taskStatus("CEQA Review"),"Additional Information Needed","Incomplete Response")){
-				editTaskDueDate("CEQA Review", nextDueDay);
+				editTaskDueDate("CEQA Review", nextWorkDay(nextDueDay));
 			}
 		}
 	//eshanower 20190207: US 5826 start deactivate Science Mgr Review task
