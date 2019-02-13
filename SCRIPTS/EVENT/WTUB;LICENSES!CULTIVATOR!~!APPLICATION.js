@@ -1,3 +1,63 @@
+try{
+// MJH 20190212 US 5864 and 5865 - update application expiration date, deficiency letter sent and task due dates. US 5868 - Move from WTUA to WTUB.
+	if(((wfTask == "Administrative Review" && wfStatus == "Administrative Review Completed") && 
+		(taskStatus("Owner Application Reviews")  == "Owner Application Reviews Completed")) ||
+		((wfTask == "Owner Application Reviews" && wfStatus == "Owner Application Reviews Completed") &&
+		(taskStatus("Administrative Review") == "Administrative Review Completed"))) {
+			editAppSpecific("App Expiry Date", "");
+	}
+	if(((wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed") && 
+		(taskStatus("CEQA Review")  == "CEQA Review Completed")) ||
+		((wfTask == "CEQA Review" && wfStatus == "CEQA Review Completed") &&
+		(taskStatus("Scientific Review") == "Scientific Review Completed"))) {
+			editAppSpecific("App Expiry Date", "")
+	}
+	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		//set due date and expiration date
+		var nextDueDay = dateAdd(null,89);
+		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
+			editAppSpecific("App Expiry Date", nextWorkDay(nextDueDay));
+			var expDate = getAppSpecific("App Expiry Date");
+			logDebug("exp Date " + expDate);
+		}
+		if(matches(AInfo["Admin Deficiency Letter Sent"],null,"",undefined)) {
+			editAppSpecific("Admin Deficiency Letter Sent", jsDateToASIDate(new Date()));
+			if(matches(taskStatus("Administrative Review"), "Additional Information Needed", "Incomplete Response")){
+				editTaskDueDate("Administrative Review", nextWorkDay(nextDueDay));
+			}
+			if(matches(taskStatus("Owner Application Reviews"), "Additional Information Needed" , "Incomplete Response")){
+				editTaskDueDate("Owner Application Reviews", nextWorkDay(nextDueDay));
+			}
+		}
+        deactivateTask("Administrative Manager Review");
+	}
+	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
+		//set due date and expiration date
+		var nextDueDay = dateAdd(null,89);
+		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
+			editAppSpecific("App Expiry Date", nextWorkDay(nextDueDay));
+			var expDate = getAppSpecific("App Expiry Date");
+			logDebug("exp Date " + expDate + " nextDueDay " + nextDueDay);
+		}
+		if(matches(AInfo["Science Deficiency Letter Sent"],null,"",undefined)) {
+			editAppSpecific("Science Deficiency Letter Sent", jsDateToASIDate(new Date()));
+			if(matches(taskStatus("Scientific Review"), "Additional Information Needed","Incomplete Response")){
+				editTaskDueDate("Scientific Review", nextWorkDay(nextDueDay));
+			}
+			if(matches(taskStatus("CEQA Review"),"Additional Information Needed","Incomplete Response")){
+				editTaskDueDate("CEQA Review", nextWorkDay(nextDueDay));
+			}
+		}
+	//eshanower 20190207: US 5826 start deactivate Science Mgr Review task
+		deactivateTask("Science Manager Review");
+	//eshanower 20190207: US 5826 end deactivate Science Mgr Review task
+	}
+	// MJH US 5864 and 5865 - update application expiration date, deficiency letter sent and task due dates.
+}catch(err){
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Expiration Dates: " + err.message);
+	logDebug(err.stack);
+}
+
 try{ 
 //lwacht: 171205: deficiency record needs to be created for both science and admin tasks
 	if("Deficiency Letter Sent".equals(wfStatus)){
