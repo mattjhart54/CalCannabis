@@ -267,4 +267,3 @@ function convert2RealCAP2(capModel, transactions, parentId)
 	addParent(parentId);
 	capid = holdChildId;
 }
-
