@@ -69,7 +69,6 @@ logDebug("Batch job ID not found " + batchJobResult.getErrorMessage());
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
-
 aa.env.setValue("newAppStatus", "Disqualified");
 aa.env.setValue("appStatus", "Additional Information Needed");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
@@ -106,13 +105,6 @@ var useAppSpecificGroupName = false;
 var startTime = startDate.getTime();			// Start timer
 var currentUserID = "ADMIN";
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
-var fromDate = dateAdd(null,parseInt(lookAheadDays));
-var toDate = dateAdd(null,parseInt(lookAheadDays)+parseInt(daySpan));
-fromJSDate = new Date(fromDate);
-toJSDate = new Date(toDate);
-var dFromDate = aa.date.parseDate(fromDate);
-var dToDate = aa.date.parseDate(toDate);
-logDebug("fromDate: " + fromDate + "  toDate: " + toDate);
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
@@ -179,7 +171,7 @@ try{
 		}
 		altId = capId.getCustomID();
 		
-	//	if(altId != "LCA18-0000153") continue;
+//		if(altId != "LCA18-0000029") continue;
 	
 		cap = aa.cap.getCap(capId).getOutput();	
 		fileDateObj = cap.getFileDate();
@@ -228,15 +220,15 @@ try{
 			}
 			capId = holdId;
 	//MJH: 1902013 Story 5842 - Close Owner and Owner Amendment records when application Disqualified. 		
-			childArray = getChildren("Licenses/Cultivator/Medical/Owner Application");
-			for (x in childArray) {
-				capId = childArray[x];
+			ownArray = getChildren("Licenses/Cultivator/Medical/Owner Application");
+			for (x in ownArray) {
+				capId = ownArray[x];
 				ownAltId = capId.getCustomID();
 				updateAppStatus(newAppStatus, "set by " + batchJobName +  " batch");
 				deactivateTask("Owner Application Review");
-				childArray = getChildren("Licenses/Cultivator/Owner/Amendment");
-				for (x in childArray) {
-					capId = childArray[x];
+				ownAmendArray = getChildren("Licenses/Cultivator/Owner/Amendment");
+				for (x in ownAmendArray) {
+					capId = ownAmendArray[x];
 					var childIdStatusClass = getCapIdStatusClass(capId);
 					if(childIdStatusClass == "INCOMPLETE CAP") {
 						capModelChild = aa.cap.getCapViewBySingle4ACA(capId);
@@ -424,3 +416,4 @@ function convert2RealCAP2(capModel, transactions, parentId)
 	addParent(parentId);
 	capid = holdChildId;
 }
+
