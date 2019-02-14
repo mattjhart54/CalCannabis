@@ -68,27 +68,19 @@ logDebug("Batch job ID not found " + batchJobResult.getErrorMessage());
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-// test parameters
+/* test parameters
 
 aa.env.setValue("newAppStatus", "Disqualified");
 aa.env.setValue("appStatus", "Additional Information Needed");
-aa.env.setValue("lookAheadDays", "25");
-aa.env.setValue("daySpan", "12");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
-aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
-aa.env.setValue("reportName", "30 Day Deficiency Notification Letter");
+aa.env.setValue("setNonEmailPrefix", "FINAL_DISQUALIF");
+aa.env.setValue("reportName", "Final Deficiency Disqualification Letter");
 aa.env.setValue("sendEmailAddressType", "Mailing");
-aa.env.setValue("recordGroup", "Licenses");
-aa.env.setValue("recordType", "Cultivator");
-aa.env.setValue("recordSubType", "Medical,Adult Use");
-aa.env.setValue("recordCategory", "Application");
-
-var lookAheadDays = getParam("lookAheadDays");
-var daySpan = getParam("daySpan");
+*/
 var emailAddress = getParam("emailAddress");
 var appStatus = getParam("appStatus");
 var newAppStatus = getParam("newAppStatus");
@@ -99,13 +91,7 @@ var sysFromEmail = getParam("sysFromEmail");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var rptName = getParam("reportName");
 var addrType = getParam("sendEmailAddressType");
-var appGroup = getParam("recordGroup");
-var appTypeType = getParam("recordType");
-var appCategory = getParam("recordCategory");
-var sArray = getParam("recordSubType").split(",");
 
-if(appTypeType=="*") appTypeType="";
-if(appCategory=="*") appCategory="";
 /*----------------------------------------------------------------------------------------------------/
 |
 | End: BATCH PARAMETERS
