@@ -45,12 +45,17 @@ try {
 					if(taskItemScriptModel.getSuccess()){
 						var taskItemScript = taskItemScriptModel.getOutput();
 						if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
-							var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel 
+							var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel
 							var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-							var taskUpdater = taskUpdaterModel.getOutput(); 
-							staffEmail = taskUpdater.email;
-							email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
-							logDebug("Admin Amendment record processed");
+							if(taskUpdaterModel.getSuccess()) {
+								var taskUpdater = taskUpdaterModel.getOutput(); 
+								var staffEmail = taskUpdater.email;
+								email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
+								logDebug("Admin Amendment record processed");
+							}
+							else {
+								logDebug("No user assigned to Administrative Review task. No emails sent.");
+							}
 							capId = parentCapId;
 							//lwacht: 180426: story ????: reset the assigned task
 							var asgnDateAR = getAssignedDate("Administrative Review");
@@ -101,12 +106,17 @@ try {
 							if(taskItemScriptModel.getSuccess()){
 								var taskItemScript = taskItemScriptModel.getOutput();
 								if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") ){
-									var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel 
+									var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel
 									var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-									var taskUpdater = taskUpdaterModel.getOutput(); 
-									staffEmail = taskUpdater.email;
-									email(staffEmail, sysFromEmail, "Owner Deficiency Reports for " + grandParCapId.getCustomID(), "All owner deficiency reports for " + grandParCapId.getCustomID() + " have been submitted.") ;
-									logDebug("Owner Amendment record processed");
+									if(taskUpdaterModel.getSuccess()) {
+										var taskUpdater = taskUpdaterModel.getOutput(); 
+										var staffEmail = taskUpdater.email;
+										email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
+										logDebug("Owner Amendment record processed");
+									}
+									else {
+										logDebug("No user assigned to Owner Application Review task. No emails sent.");
+									}
 									capId = grandParCapId;
 									//lwacht: 180426: story ????: reset the assigned task
 									var asgnDateOR = getAssignedDate("Owner Application Reviews");
@@ -132,12 +142,17 @@ try {
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
 					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
-						var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel 
+						var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel
 						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-						var taskUpdater = taskUpdaterModel.getOutput(); 
-						staffEmail = taskUpdater.email;
-						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
-						logDebug("Scientific Amendment record processed");
+						if(taskUpdaterModel.getSuccess()) {
+							var taskUpdater = taskUpdaterModel.getOutput(); 
+							var staffEmail = taskUpdater.email;
+							email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
+							logDebug("Scientific Amendment record processed");
+						}
+						else {
+							logDebug("No user assigned to Scientific Review task. No emails sent.");
+						}
 						capId = parentCapId;
 						//lwacht: 180426: story ????: reset the assigned task
 						var asgnDateSR = getAssignedDate("Scientific Review");
@@ -158,12 +173,17 @@ try {
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
 					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
-						var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel 
+						var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel
 						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
-						var taskUpdater = taskUpdaterModel.getOutput(); 
-						staffEmail = taskUpdater.email;
-						email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.") ;
-						logDebug("CEQA Amendment record processed");
+						if(taskUpdaterModel.getSuccess()) {
+							var taskUpdater = taskUpdaterModel.getOutput(); 
+							var staffEmail = taskUpdater.email;
+							email(staffEmail, sysFromEmail, "Deficiency Report for " + parentAltId, "The deficiency report " + newAltId + " has been submitted.");
+							logDebug("CEQA Amendment record processed");
+						}
+						else {
+							logDebug("No user assigned to CEQA Review task. No emails sent.");
+						}
 						capId = parentCapId;
 						//lwacht: 180426: story ????: reset the assigned task
 						var asgnDateCR = getAssignedDate("CEQA Review");
@@ -192,3 +212,4 @@ try {
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/AMENDMENT: Notify Processor: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }}
+
