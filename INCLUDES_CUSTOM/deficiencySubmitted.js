@@ -45,7 +45,7 @@ try {
 					if(taskItemScriptModel.getSuccess()){
 						var taskItemScript = taskItemScriptModel.getOutput();
 						if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
-							var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+							var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel 
 							var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 							var taskUpdater = taskUpdaterModel.getOutput(); 
 							staffEmail = taskUpdater.email;
@@ -101,7 +101,7 @@ try {
 							if(taskItemScriptModel.getSuccess()){
 								var taskItemScript = taskItemScriptModel.getOutput();
 								if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response") ){
-									var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+									var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel 
 									var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 									var taskUpdater = taskUpdaterModel.getOutput(); 
 									staffEmail = taskUpdater.email;
@@ -132,7 +132,7 @@ try {
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
 					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
-						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+						var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel 
 						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 						var taskUpdater = taskUpdaterModel.getOutput(); 
 						staffEmail = taskUpdater.email;
@@ -158,7 +158,7 @@ try {
 				if(taskItemScriptModel.getSuccess()){
 					var taskItemScript = taskItemScriptModel.getOutput();
 					if(matches(taskItemScript.disposition, "Additional Information Needed", "Incomplete Response")){
-						var actionByUser=taskItemScript.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel 
+						var actionByUser=taskItemScript.getTaskItem().getAssignedUser(); // Get action by user, this is a SysUserModel 
 						var taskUpdaterModel = aa.person.getUser(actionByUser.getFirstName(),actionByUser.getMiddleName(),actionByUser.getLastName());
 						var taskUpdater = taskUpdaterModel.getOutput(); 
 						staffEmail = taskUpdater.email;
