@@ -75,7 +75,7 @@ aa.env.setValue("daySpan", "365");
 aa.env.setValue("emailAddress", "eshanower@trustvip.com");
 aa.env.setValue("sendToEmail", "eshanower@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
-aa.env.setValue("reportName", "oclcdfaty");
+aa.env.setValue("reportName", "oclcdfa");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "*");
@@ -85,7 +85,7 @@ aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
 aa.env.setValue("appStatus", "Active,Inactive");
-*/
+
  
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
@@ -216,6 +216,8 @@ try{
 		capTypeModel.setCategory(appCategoryArray[ee]); // added appCategoryArray--EES
 		capModel.setCapType(capTypeModel);
 		
+		logDebug("----------capModel.getCapType is: " + capModel.getCapType());
+		
 		//var capList = new Array(); // moved to before commencement of this loop--EES
 		//look for null statuses first
 		// query a list of records based on the above criteria
@@ -236,8 +238,10 @@ try{
 			// Specify the application status to query
 			if(sArray[i]=="null"){
 					capModel.setCapStatus(null);
+					logDebug("Status to query is null");
 			}else{
 				capModel.setCapStatus(sArray[i]);
+				logDebug("appCategoryArray loop--capstatus is set to: " + capModel.getCapStatus());
 			}
 			// query a list of records based on the above criteria
 			capListResult = aa.cap.getCapIDListByCapModel(capModel);
