@@ -215,9 +215,7 @@ try{
 		// capTypeModel.setCategory(appCategory); // commented out to allow for multiple appCategories--EES
 		capTypeModel.setCategory(appCategoryArray[ee]); // added appCategoryArray--EES
 		capModel.setCapType(capTypeModel);
-		
-		logDebug("----------capModel.getCapType is: " + capModel.getCapType());
-		
+				
 		//var capList = new Array(); // moved to before commencement of this loop--EES
 		//look for null statuses first
 		// query a list of records based on the above criteria
@@ -241,7 +239,6 @@ try{
 					logDebug("Status to query is null");
 			}else{
 				capModel.setCapStatus(sArray[i]);
-				logDebug("appCategoryArray loop--capstatus is set to: " + capModel.getCapStatus());
 			}
 			// query a list of records based on the above criteria
 			capListResult = aa.cap.getCapIDListByCapModel(capModel);
