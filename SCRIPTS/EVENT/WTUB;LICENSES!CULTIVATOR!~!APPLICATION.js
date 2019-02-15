@@ -194,8 +194,9 @@ try{
 
 
 //lwacht: license can only be issued from PRA
+// ees 20190215 US 5885: add Provisional License Issued status to prevent issuance w/o payment
 try{
-	if("Application Disposition".equals(wfTask) && "License Issued".equals(wfStatus)){
+	if("Application Disposition".equals(wfTask) && ("License Issued".equals(wfStatus) || "Provisional License Issued".equals(wfStatus))){
 		cancel=true;
 		showMessage=true;
 		comment("The license can only be issued upon payment of fees.");
