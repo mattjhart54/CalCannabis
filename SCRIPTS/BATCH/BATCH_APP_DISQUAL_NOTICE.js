@@ -228,7 +228,7 @@ try{
 			childArray = getChildren("Licenses/Cultivator/Medical/Owner Application");
 			for (x in childArray) {
 				childCapId = childArray[x];
-				childCap = aa.cap.getCap(capId).getOutput();	
+				childCap = aa.cap.getCap(childCapId).getOutput();	
 				var childCapStatus = childCap.getCapStatus();
 				if(childCapStatus == appStatus) {
 					var	conArray = getContactArray(childCapId);
