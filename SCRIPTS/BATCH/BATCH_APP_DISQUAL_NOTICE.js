@@ -258,7 +258,7 @@ try{
 							}
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								runReportAttach(childCapId,rptName, "altId", childCapId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
+								runReportAttach(childCapId,rptName, "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
 								holdId = capId;
 								capId = childCapId;
 								emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"]);
