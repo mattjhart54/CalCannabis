@@ -5,12 +5,20 @@ try{
 	appId = AInfo["Application ID"];
 	addParent(appId);
 	var ownerEmail = null
-	contacts = getContactArray();
-	for(c in contacts) {
-		if(contacts[c]["contactType"] == "Owner")
-			ownerEmail = ""+ contacts[c]["email"];
-			ownerEmail = ownerEmail.toUpperCase();
+//MJH 190221 User Story 5884 - validate owner table using public user email instead of owner contact email
+	var currUser = aa.people.getPublicUserByUserName(publicUserID);
+	if(currUser.getSuccess()){
+		var ownerUser = currUser.getOutput();
+		var ownerEmail = ownerUser.email;
+		ownerEmail = String(ownerEmail).toUpperCase();
 	}
+//	contacts = getContactArray();
+//	for(c in contacts) {
+//		if(contacts[c]["contactType"] == "Owner")
+//			ownerEmail = ""+ contacts[c]["email"];
+//			ownerEmail = ownerEmail.toUpperCase();
+//	}
+// MJH MJH 190221 User Story 5884 - end
 	parentId = getApplication(appId);
 	ownerTable = loadASITable("OWNERS",parentId);
 	var allOwnersSubmitted = true;
