@@ -121,6 +121,8 @@ try{
 	
 	var capFilterAppType = 0
 	var capCount = 0;
+	var convertedCount = 0;
+	var disqualifiedCount = 0;
 	var setCreated = false;
 	var currDate = new Date();
 	var capList = new Array();
@@ -149,14 +151,16 @@ try{
 			continue;
 		}
 		altId = capId.getCustomID();
+		
+//	if(altId != "LCA18-0000131") continue;
 				
 		cap = aa.cap.getCap(capId).getOutput();	
 		appTypeResult = cap.getCapType();	
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
 		var capStatus = cap.getCapStatus();
-//	Exclude all except Applications and Owner Applications as parents
-		if(appTypeArray[3] != "Application" && appTypeArray[3] != "Owner Application") {
+//	Exclude all except submitted Applications and Owner Applications as parents
+		if((appTypeArray[3] != "Application" && appTypeArray[3] != "Owner Application") || (altId.indexOf("TMP") >= 0)) {
 				capFilterAppType++;
 				continue;
 		}
@@ -175,8 +179,17 @@ try{
 				var childIdStatusClass = getCapIdStatusClass(capId);
 				if(childIdStatusClass == "INCOMPLETE CAP") {
 					capModelChild = aa.cap.getCapViewBySingle4ACA(capId);
+					// start catch error before going to convert function
+					try {
+						var originalCAPID = capModel.getCapID();
+					} catch(err) {
+						logDebug("Cannot convert child record: " + childCap.getCustomID() + " :: " + err.message());
+						continue;
+					}					
+					// end catch error before going to convert function
 					convert2RealCAP2(capModelChild, "", altId);
 					logDebug("Converted: " + newAltId);
+					convertedCount++;
 				}
 				else {
 					var childCap = aa.cap.getCap(capId).getOutput();
@@ -185,6 +198,7 @@ try{
 						updateAppStatus(newAppStatus, "set by " + batchJobName +  " batch");
 						deactivateTask("Amendment Review");
 						logDebug("Updated submitted record: " + capId.getCustomID());
+						disqualifiedCount++;
 					}
 					else {
 						logDebug("Submitted DEF record " + capId.getCustomID() + " not updated due to Status: " + childCapStatus);
@@ -198,6 +212,8 @@ try{
 	logDebug("Total CAPS qualified : " + capList.length);
 	logDebug("Ignored due to Record Type: " + capFilterAppType);
 	logDebug("Total CAPS processed: " + capCount);
+	logDebug("Total unsubmitted records converted and disqualified: " + convertedCount);
+	logDebug("Total submitted records disqualified: " + disqualifiedCount);
 
 }	catch (err){
 	logDebug("ERROR: " + err.message + " In " + batchJobName);
