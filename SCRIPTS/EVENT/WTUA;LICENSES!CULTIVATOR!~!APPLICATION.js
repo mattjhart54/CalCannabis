@@ -24,6 +24,7 @@ try{
 			envParameters.put("newAltId",newAltId);
 			envParameters.put("reportName","Deficiency Report"); 
 			envParameters.put("currentUserID",currentUserID);
+			logDebug("altId " + capIDString + " newAltId " + newAltId + " curentUser " + currentUserID)
 			aa.runAsyncScript(scriptName, envParameters);
 //			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
 // MJH 190222 User Story 5881 - end
@@ -101,7 +102,17 @@ try{
 								}
 							}
 						}
-						runReportAttach(thisOwnCapId,"Deficiency Report - Owner", "p1value", thisOwnCapId.getCustomID(), "p2value",defAltIdT);
+// MJH 190222 User Story 5881 - run Defieciency report in async mode
+						var scriptName = "asyncRunDeficiencyRpt";
+						var envParameters = aa.util.newHashMap();
+						envParameters.put("altId",thisOwnCapId.getCustomID()); 
+						envParameters.put("newAltId",defAltIdT);
+						envParameters.put("reportName","Deficiency Report - Owner"); 
+						envParameters.put("currentUserID",currentUserID);
+						logDebug("altId " + capIDString + " newAltId " + newAltId + " curentUser " + currentUserID)
+						aa.runAsyncScript(scriptName, envParameters);
+//						runReportAttach(thisOwnCapId,"Deficiency Report - Owner", "p1value", thisOwnCapId.getCustomID(), "p2value",defAltIdT);
+// MJH 190222 User Story 5881 - end
 						holdCapId = capId;
 						capId = thisOwnCapId;
 						emailRptContact("", "LCA_DEFICIENCY_OWNER", "", false, capStatus, thisOwnCapId, "Owner", "p1value", thisOwnCapId.getCustomID());
