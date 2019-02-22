@@ -17,7 +17,16 @@ try{
 					}
 				}
 			}
-			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
+// MJH 190222 User Story 5881 - run Defieciency report in async mode
+			var scriptName = "asyncRunDeficiencyRpt";
+			var envParameters = aa.util.newHashMap();
+			envParameters.put("altId",capIDString); 
+			envParameters.put("newAltId",newAltId);
+			envParameters.put("reportName","Deficiency Report"); 
+			envParameters.put("currentUserID",currentUserID);
+			aa.runAsyncScript(scriptName, envParameters);
+//			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
+// MJH 190222 User Story 5881 - end
 			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 		//}
 		//only create a record if the owner app task on the parent says you should
