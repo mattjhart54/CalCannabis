@@ -6,10 +6,7 @@ try{
 		(taskStatus("Administrative Review") == "Administrative Review Completed"))) {
 			editAppSpecific("App Expiry Date", "");
 	}
-	if(((wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed") && 
-		(taskStatus("CEQA Review")  == "CEQA Review Completed")) ||
-		((wfTask == "CEQA Review" && wfStatus == "CEQA Review Completed") &&
-		(taskStatus("Scientific Review") == "Scientific Review Completed"))) {
+	if(wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed")  {
 			editAppSpecific("App Expiry Date", "")
 	}
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
