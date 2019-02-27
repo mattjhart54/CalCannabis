@@ -213,8 +213,8 @@ try{
 							}
 						}
 						setAddResult=aa.set.add(sNonEmailSet,capId);
-						conEmail = thisContact["email"];
 					}
+					conEmail = thisContact["email"];
 					if (conEmail) {
 						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
 						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
