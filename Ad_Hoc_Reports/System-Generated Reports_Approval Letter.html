@@ -1,0 +1,160 @@
+<!--CSS
+none
+-->
+
+<!--SQL
+-- Detail
+SELECT TOP 100  
+[DBO].[V_CONTACT].[CONTACT_TYPE] AS 'CONTACT TYPE', [DBO].[V_CONTACT].[NAME_FIRST] AS 'NAME FIRST', [DBO].[V_CONTACT].[NAME_LAST] AS 'NAME LAST', [DBO].[V_CONTACT].[EMAIL] AS 'EMAIL', [DBO].[V_CONTACT].[PHONE3] AS 'PHONE3', [DBO].[V_CONTACT_ADDRESS].[ADDRESS_LINE1] AS 'ADDRESS LINE1', [DBO].[V_CONTACT_ADDRESS].[CITY] AS 'CITY', [DBO].[V_CONTACT_ADDRESS].[STATE_] AS 'STATE', [DBO].[V_CONTACT_ADDRESS].[ZIP] AS 'ZIP', [DBO].[V_RECORD].[RECORD_ID] AS 'RECORD ID', [DBO].[V_RECORD].[RECORD_ID] AS 'ALT ID', [DBO].[V_RELATED_RECORD].[PARENT_RECORD_ID] AS 'PARENT RECORD ID'
+FROM [DBO].[V_RECORD] WITH(NOLOCK) 
+INNER JOIN [DBO].[V_CONTACT] WITH(NOLOCK)  ON [DBO].[V_CONTACT].[RECORD_ID]=[DBO].[V_RECORD].[RECORD_ID]
+INNER JOIN [DBO].[V_CONTACT_ADDRESS] WITH(NOLOCK)  ON [DBO].[V_CONTACT_ADDRESS].[CONTACT_NBR]=[DBO].[V_CONTACT].[CONTACT_NBR]
+INNER JOIN [DBO].[V_RELATED_RECORD] WITH(NOLOCK)  ON [DBO].[V_RELATED_RECORD].[CHILD_RECORD_ID]=[DBO].[V_RECORD].[RECORD_ID]
+WHERE (([DBO].[V_CONTACT].[RECORD_ID] = 'LCA18-0000096') AND ([DBO].[V_CONTACT].[CONTACT_TYPE] = 'Designated Responsible Party') AND ([DBO].[V_CONTACT_ADDRESS].[ADDRESS_TYPE] = 'Mailing') AND ([DBO].[V_RECORD].[STATUS] = 'License Issued')) AND (([DBO].[V_RECORD].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT_ADDRESS].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_RELATED_RECORD].[AGENCY_ID] = 'CALCANNABIS'));
+
+-->
+
+<div style="margin: 0px auto; padding: 5px; width: 900px; height: 100%; font-family: Arial; font-size: 23px; position: relative; font-size-adjust: none; font-stretch: normal;">
+    <img alt="CDFA
+    logo" src="https://www.cdfa.ca.gov/calcannabis/images/CDFA_Logo.png" width="100%"
+    height="135" border="0" align="middle">
+    <p id="date">
+    </p>
+    <script>
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    </script>
+    <p>
+        [NAME FIRST] [NAME LAST]
+        <br>
+        [ADDRESS LINE1]
+        <br>
+        [CITY], [STATE] [ZIP]
+        <br>
+        <br>
+        [ALT ID]
+    </p>
+    <p>
+        Dear [NAME FIRST] [NAME LAST]:
+    </p>
+    <p>
+        Thank you for applying for a cultivation license with CalCannabis. This
+        letter is to notify you that your application [ALT ID] has been approved
+        and the license fee has been paid in full.
+    </p>
+    <p>
+        Your official cultivation license can be printed by logging in to your
+        account on the
+        <a title="CalCannabis URL" href="https://aca6.accela.com/CALCANNABIS"
+        target="_blank" data-mce-href="https://aca6.accela.com/CALCANNABIS">CalCannabis Civic Portal</a>. To access your license:
+    </p>
+    <ul>
+        <li>
+            From the menu bar select
+            <b>My Licenses
+            </b>
+        </li>
+        <li>
+            Locate License Number # [PARENT RECORD ID]
+        </li>
+        <li>
+            Click on the License #
+        </li>
+        <li>
+            Click on
+            <b>Record Info
+            </b>
+        </li>
+        <li>
+            Click on Attachments
+        </li>
+        <li>
+            Select the license from the list of attachments
+        </li>
+    </ul>
+    <p>
+        CA Code of Regulations, Title 3, Div 8, Ch 1 requires that your license
+        be prominently displayed on the licensed premises where it can be viewed
+        by state or local agencies.
+    </p>
+    <p>
+        <b>California Cannabis Track-and-Trace (CCTT) System Access:</b>
+        If the Designated Responsible Party for this License has not already registered
+        for and participated in the required CCTT system training, the Designated
+        Responsible Party must register and attend this required training prior
+        to being credentialed as the Licensee’s initial track-and-trace account
+        manager.
+        <u>
+            Access to the CCTT system will not be granted until this training is completed.
+        </u>
+        To register for CCTT system training, please access the following URL:
+        metrc.com/California.
+    </p>
+    <p>
+        If the Designated Responsible Party for the license has already registered
+        and participated in the required training, please contact the Franwell
+        support desk at the following telephone number to establish an initial
+        log-in to the CCTT system:
+        <b>1-877-566-6506</b>.
+    </p>
+    <img alt="LetterFooter" src="https://www.cdfa.ca.gov/calcannabis/images/LetterFooter.jpg"
+    width="100%" height="72" border="0">
+    <br>
+    <img alt="CDFA
+    logo" src="https://www.cdfa.ca.gov/calcannabis/images/CDFA_Logo.png" width="100%"
+    height="135" border="0" align="middle">
+    <br>
+    <br>
+    <p>
+        The Designated Responsible Party will be required to agree to system usage
+        terms and conditions, and provide an attestation upon initial CCTT system
+        log-in. If the Designated Responsible Party intends to delegate primary
+        responsibility for updating and maintaining the Licensee’s cannabis distribution
+        chain information in the CCTT system to another owner or employee in the
+        Licensee’s organization, the Designated Responsible Party will also need
+        to establish that individual up as the track-and-trace account manager
+        within the CCTT system. The track-and-trace account manager is responsible
+        for establishing and maintaining log-ins and permissions for any other
+        Licensee employees that require access to the CCTT system and providing
+        those users training in how to use the CCTT system.
+    </p>
+    <p>
+        Within 30 business days of receipt of required unique identifiers (UIDs)
+        ordered by the licensee, the Licensee is responsible for following the
+        requirements found in Title 3, California Code of Regulations, Section
+        8407, if applicable.
+    </p>
+    <p>
+        Questions regarding this notice can be directed to CalCannabis Licensing
+        staff via telephone at (833)-CAL-GROW (225-4769) or via email at
+        <a href="mailto:calcannabislicensing@cdfa.ca.gov" data-mce-href="mailto:calcannabislicensing@cdfa.ca.gov">calcannabislicensing@cdfa.ca.gov</a>. Please do not send confidential information to this email account.
+    </p>
+    <p>
+        Sincerely,
+        <br>
+        <br>
+        CalCannabis Cultivation Licensing Staff
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <font size="1">
+        Version 1.0
+    </font>
+    <img alt="LetterFooter" src="https://www.cdfa.ca.gov/calcannabis/images/LetterFooter.jpg"
+    width="100%" height="75" border="0">
+</div>

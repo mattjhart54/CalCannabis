@@ -1,0 +1,86 @@
+<!--CSS
+none
+-->
+
+<!--SQL
+-- Detail
+SELECT TOP 100  
+[DBO].[V_CONTACT].[NAME_FIRST] AS 'NAME FIRST', [DBO].[V_CONTACT].[NAME_LAST] AS 'NAME LAST', [DBO].[V_CONTACT_ADDRESS].[ADDRESS_LINE1] AS 'ADDRESS LINE1', [DBO].[V_CONTACT_ADDRESS].[CITY] AS 'CITY', [DBO].[V_CONTACT_ADDRESS].[STATE_] AS 'STATE', [DBO].[V_CONTACT_ADDRESS].[ZIP] AS 'ZIP', [DBO].[V_RECORD].[RECORD_ID] AS 'ALT ID'
+FROM [DBO].[V_RECORD] WITH(NOLOCK) 
+INNER JOIN [DBO].[V_CONTACT] WITH(NOLOCK)  ON [DBO].[V_CONTACT].[RECORD_ID]=[DBO].[V_RECORD].[RECORD_ID]
+INNER JOIN [DBO].[V_CONTACT_ADDRESS] WITH(NOLOCK)  ON [DBO].[V_CONTACT_ADDRESS].[CONTACT_NBR]=[DBO].[V_CONTACT].[CONTACT_NBR]
+WHERE (([DBO].[V_RECORD].[RECORD_ID] = 'TCA18-0000003') AND ([DBO].[V_CONTACT].[CONTACT_TYPE] = 'DRP - Temporary License') AND ([DBO].[V_CONTACT_ADDRESS].[ADDRESS_TYPE] = 'Mailing')) AND (([DBO].[V_RECORD].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT_ADDRESS].[AGENCY_ID] = 'CALCANNABIS'));
+
+-->
+
+<div style="margin: 0px auto; padding: 5px; width: 900px; height: 100%; font-family: Arial; font-size: 23px; position: relative; font-size-adjust: none; font-stretch: normal;">
+    <img alt="CDFA
+    logo" src="https://www.cdfa.ca.gov/calcannabis/images/CDFA_Logo.png" width="100%"
+    height="135" border="0" align="middle">
+    <br>
+    <br>
+    <p id="date">
+    </p>
+    <script>
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    </script>
+    <br>
+    <p>
+        [NAME FIRST] [NAME LAST]
+        <br>
+        [ADDRESS LINE1]
+        <br>
+        [CITY], [STATE] [ZIP]
+        <br>
+        <br>
+        Application ID: [ALT ID]
+    </p>
+    <p>
+        Dear [NAME FIRST] [NAME LAST]:
+    </p>
+    <p>
+        This letter is to notify you that temporary cultivation license application
+        [ALT ID] has been denied because it is incomplete or the local authority
+        authorization is invalid.
+    </p>
+    <p>
+        In accordance with Section 26050.1(3) of the Business and Professions
+        Code, denial by a licensing authority in the issuance of a temporary license
+        shall not entitle the applicant to a hearing or appeal of the decision.
+    </p>
+    <p>
+    </p>
+    <p>
+        Details regarding application [ALT ID] can be reviewed on the online account
+        associated with the application
+        <a title="CalCannabis URL" href="https://aca6.accela.com/CALCANNABIS"
+        target="_blank" data-mce-href="https://aca6.accela.com/CALCANNABIS">CalCannabis Civic Portal</a>. You may reapply for a cultivation license at any time.
+    </p>
+    <p>
+        Questions regarding this notice can be directed to CalCannabis Licensing
+        staff via telephone at (833)-CAL-GROW (225-4769) or via email at
+        <a href="mailto:calcannabis@cdfa.ca.gov" data-mce-href="mailto:calcannabis@cdfa.ca.gov">calcannabis@cdfa.ca.gov</a>. Please do not send confidential information to this email account.
+    </p>
+    <br>
+    <br>
+    <p>
+        Sincerely,
+        <br>
+        <br>
+        CalCannabis Licensing Staff
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <font size="1">
+        Version 1.0
+        <img alt="LetterFooter" src="https://www.cdfa.ca.gov/calcannabis/images/LetterFooter.jpg"
+        width="100%" height="72" border="0">
+    </font>
+</div>

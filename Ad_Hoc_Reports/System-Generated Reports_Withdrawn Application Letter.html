@@ -1,0 +1,90 @@
+<!--CSS
+none
+-->
+
+<!--
+-- Detail
+SELECT TOP 100  
+[DBO].[V_RECORD].[RECORD_ID] AS 'ALT ID', [DBO].[V_CONTACT].[EMAIL] AS 'EMAIL', [DBO].[V_CONTACT].[PHONE1] AS 'PHONE1', [DBO].[V_CONTACT].[CONTACT_TYPE] AS 'CONTACT TYPE', [DBO].[V_CONTACT_ADDRESS].[ADDRESS_LINE1] AS 'ADDRESS LINE1', [DBO].[V_CONTACT_ADDRESS].[CITY] AS 'CITY', [DBO].[V_CONTACT_ADDRESS].[STATE_] AS 'STATE', [DBO].[V_CONTACT_ADDRESS].[ZIP] AS 'ZIP', [DBO].[V_RECORD].[RECORD_ID] AS 'RECORD ID', [DBO].[V_CONTACT_ADDRESS].[ADDRESS_TYPE] AS 'ADDRESS TYPE', [DBO].[V_CONTACT].[PHONE3] AS 'PHONE3', [DBO].[V_RECORD].[RECORD_STATUS_DATE] AS 'RECORD STATUS DATE', [DBO].[V_CONTACT].[NAME_FIRST] AS 'NAME FIRST', [DBO].[V_CONTACT].[NAME_LAST] AS 'NAME LAST'
+FROM [DBO].[V_RECORD] WITH(NOLOCK) 
+INNER JOIN [DBO].[V_CONTACT] WITH(NOLOCK)  ON [DBO].[V_CONTACT].[RECORD_ID]=[DBO].[V_RECORD].[RECORD_ID]
+INNER JOIN [DBO].[V_CONTACT_ADDRESS] WITH(NOLOCK)  ON [DBO].[V_CONTACT_ADDRESS].[CONTACT_NBR]=[DBO].[V_CONTACT].[CONTACT_NBR]
+WHERE (([DBO].[V_RECORD].[RECORD_ID] = 'LCA17-0000106') AND ([DBO].[V_CONTACT].[CONTACT_TYPE] = 'Designated Responsible Party') AND ([DBO].[V_CONTACT_ADDRESS].[ADDRESS_TYPE] = 'Mailing') AND ([DBO].[V_RECORD].[RECORD_STATUS] = 'Withdrawn')) AND (([DBO].[V_RECORD].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT_ADDRESS].[AGENCY_ID] = 'CALCANNABIS'));
+
+-->
+
+<div style="margin: 0px auto; padding: 5px; width: 900px; height: 100%; font-family: Arial; font-size: 23px; position: relative; font-size-adjust: none; font-stretch: normal;">
+    <img alt="CDFA
+    logo" src="https://www.cdfa.ca.gov/calcannabis/images/CDFA_Logo.png" width="100%"
+    height="135" border="0" align="middle">
+    <br>
+    <p id="date">
+        <br>
+        <br>
+        <br>
+    </p>
+    <script>
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    </script>
+    <br>
+    <br>
+    [NAME FIRST] [NAME LAST]
+    <br>
+    [ADDRESS LINE1]
+    <br>
+    [CITY], [STATE] [ZIP]&nbsp;
+    <br>
+    <br>
+    Application ID: [ALT ID]
+    <script type="mce-text/javascript">
+        thatVar = document.getElementById("recId").outerHTML;
+        document.getElementById("recId").innerHTML = thatVar.toString();
+    </script>
+    <br>
+    <br>
+    <p>
+        Dear [NAME FIRST] [NAME LAST]:
+    </p>
+    <p>
+        CalCannabis Licensing received your request to withdraw Application ID
+        [ALT ID]. This application has been withdrawn as of [RECORD STATUS DATE].
+    </p>
+    <p>
+        You may submit a new application for a cultivation license at any time.
+    </p>
+    <p>
+        Questions regarding this notice can be directed to CalCannabis Licensing
+        staff via telephone at (833)-CAL-GROW (225-4769) or via email at
+        <a href="mailto:calcannabislisencing@cdfa.ca.gov" data-mce-href="mailto:calcannabislicensing@cdfa.ca.gov">calcannabislicensing@cdfa.ca.gov</a>. Please do not send confidential information to this email account.
+    </p>
+    <p>
+        Sincerely,
+        <br>
+        <br>
+        <br>
+        CalCannabis Cultivation Licensing Staff
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
+    <font size="1">
+        Version 1.0
+    </font>
+    <img alt="LetterFooter" src="https://www.cdfa.ca.gov/calcannabis/images/LetterFooter.jpg"
+    width="95%" height="75" border="0">
+</div>

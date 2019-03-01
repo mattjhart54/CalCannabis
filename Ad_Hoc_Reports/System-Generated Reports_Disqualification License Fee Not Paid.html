@@ -1,0 +1,84 @@
+<!--CSS
+none
+-->
+
+<!--SQL
+-- Detail
+SELECT TOP 100  
+[DBO].[V_CONTACT].[NAME_FIRST] AS 'NAME FIRST', [DBO].[V_CONTACT].[NAME_LAST] AS 'NAME LAST', [DBO].[V_RECORD].[RECORD_ID] AS 'ALT ID', [DBO].[V_WORKFLOW_HISTORY].[DATE_STATUS] AS 'DATE STATUS', [DBO].[V_CONTACT_ADDRESS].[ADDRESS_LINE1] AS 'ADDRESS LINE1', [DBO].[V_CONTACT_ADDRESS].[CITY] AS 'CITY', [DBO].[V_CONTACT_ADDRESS].[STATE_] AS 'STATE', [DBO].[V_CONTACT_ADDRESS].[ZIP] AS 'ZIP'
+FROM [DBO].[V_RECORD] WITH(NOLOCK) 
+INNER JOIN [DBO].[V_CONTACT] WITH(NOLOCK)  ON [DBO].[V_CONTACT].[RECORD_ID]=[DBO].[V_RECORD].[RECORD_ID]
+INNER JOIN [DBO].[V_CONTACT_ADDRESS] WITH(NOLOCK)  ON [DBO].[V_CONTACT_ADDRESS].[CONTACT_NBR]=[DBO].[V_CONTACT].[CONTACT_NBR]
+INNER JOIN [DBO].[V_WORKFLOW_HISTORY] WITH(NOLOCK)  ON [DBO].[V_WORKFLOW_HISTORY].[RECORD_ID]=[DBO].[V_RECORD].[RECORD_ID]
+WHERE (([DBO].[V_CONTACT].[RECORD_ID] = 'LCA17-0000044') AND ([DBO].[V_WORKFLOW_HISTORY].[TASK] = 'Science Manager Review') AND ([DBO].[V_WORKFLOW_HISTORY].[STATUS] = 'Science Manager Review Completed')AND ([DBO].[V_CONTACT].[CONTACT_TYPE] = 'Designated Responsible Party') AND ([DBO].[V_CONTACT_ADDRESS].[ADDRESS_TYPE] = 'Mailing')) AND (([DBO].[V_RECORD].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT_ADDRESS].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_WORKFLOW_HISTORY].[AGENCY_ID] = 'CALCANNABIS'));
+
+-->
+
+<div style="margin: 0px auto; padding: 5px; width: 900px; height: 100%; font-family: Arial; font-size: 23px; position: relative; font-size-adjust: none; font-stretch: normal;">
+    <img alt="CDFA
+    logo" src="https://www.cdfa.ca.gov/calcannabis/images/CDFA_Logo.png" width="100%"
+    height="135" border="0" align="middle">
+    <br>
+    <p id="date">
+        &nbsp;
+        <br>
+    </p>
+    <script>
+        var n = new Date();
+        var y = n.getFullYear();
+        var m = n.getMonth() + 1;
+        var d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    </script>
+    <br>
+    <br>
+    [NAME FIRST] [NAME LAST]
+    <br>
+    [ADDRESS LINE1]
+    <br>
+    [CITY], [STATE] [ZIP]
+    <br>
+    <br>
+    Application ID: [ALT ID]
+    <br>
+    <br>
+    <p>
+        Dear [NAME FIRST] [NAME LAST]:
+    </p>
+    <p>
+        A letter was sent to you on [DATE STATUS] to notify you that your application
+        [ALT ID] was approved. The payment for your licensing fee has not been
+        received by the Department. Your application has been denied in accordance
+        with the CA Code of Regulations, Title 3, Div 8, Ch 1.
+    </p>
+    <p>
+        Questions regarding this notice can be directed to CalCannabis Licensing
+        staff via telephone at (833)-CAL-GROW (225-4769) or via email at
+        <a href="mailto:calcannabislicensing@cdfa.ca.gov" data-mce-href="mailto:calcannabislicensing@cdfa.ca.gov">calcannabislicensing@cdfa.ca.gov</a>. Do not send confidential information to this email account.
+    </p>
+    <p>
+        Sincerely,
+        <br>
+        <br>
+        CalCannabis Cultivation Licensing Staff
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
+    <font size="1">
+        Version 1.0
+    </font>
+    <img alt="LetterFooter" src="https://www.cdfa.ca.gov/calcannabis/images/LetterFooter.jpg"
+    width="95%" height="75" border="0">
+</div>

@@ -1,0 +1,121 @@
+<!--CSS
+none
+-->
+
+<!--SQL
+-- Detail
+SELECT TOP 100  
+[DBO].[V_CONTACT].[NAME_FIRST] AS 'NAME FIRST', [DBO].[V_CONTACT].[NAME_LAST] AS 'NAME LAST', [DBO].[V_CONTACT_ADDRESS].[ADDRESS_LINE1] AS 'ADDRESS LINE1', [DBO].[V_CONTACT_ADDRESS].[CITY] AS 'CITY', [DBO].[V_CONTACT_ADDRESS].[STATE_] AS 'STATE', [DBO].[V_CONTACT_ADDRESS].[ZIP] AS 'ZIP', [DBO].[V_CONTACT].[PHONE3] AS 'PHONE3', [DBO].[V_CONTACT].[EMAIL] AS 'EMAIL', [DBO].[V_RECORD].[RECORD_ID] AS 'RECORD ID', [DBO].[V_CONTACT].[PHONE3] AS 'PHONE32', [DBO].[V_RECORD].[RECORD_ID] AS 'ALT ID'
+FROM [DBO].[V_RECORD] WITH(NOLOCK) 
+INNER JOIN [DBO].[V_CONTACT] WITH(NOLOCK)  ON [DBO].[V_CONTACT].[RECORD_ID]=[DBO].[V_RECORD].[RECORD_ID]
+INNER JOIN [DBO].[V_CONTACT_ADDRESS] WITH(NOLOCK)  ON [DBO].[V_CONTACT_ADDRESS].[CONTACT_NBR]=[DBO].[V_CONTACT].[CONTACT_NBR]
+WHERE (([DBO].[V_RECORD].[RECORD_ID] = 'LCA18-0000138') AND ([DBO].[V_CONTACT].[CONTACT_TYPE] = 'Designated Responsible Party') AND ([DBO].[V_CONTACT_ADDRESS].[ADDRESS_TYPE] = 'Mailing')) AND (([DBO].[V_RECORD].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT_ADDRESS].[AGENCY_ID] = 'CALCANNABIS'));
+
+-->
+
+<div style="margin: 0px auto; padding: 5px; width: 900px; height: 100%; font-family: Arial; font-size: 23px; position: relative; font-size-adjust: none; font-stretch: normal;">
+    <img alt="CDFA
+    logo" src="https://www.cdfa.ca.gov/calcannabis/images/CDFA_Logo.png" width="100%"
+    height="135" border="0" align="middle">
+    <p id="date">
+    </p>
+    <script>
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    </script>
+    <br>
+    [NAME FIRST] [NAME LAST]
+    <br>
+    [ADDRESS LINE1]
+    <br>
+    [CITY], [STATE] [ZIP]
+    <br>
+    [ALT ID]
+    <script type="mce-text/javascript">
+        thatVar = document.getElementById("recId").outerHTML;
+        document.getElementById("recId").innerHTML = thatVar.toString();
+    </script>
+    <br>
+    <br>
+    <p>
+        Dear [NAME FIRST] [NAME LAST]:
+    </p>
+    <p>
+        Thank you for applying for a cultivation license with CalCannabis. This
+        letter is to notify you that your application [ALT ID] has been approved.
+        Your cultivation license will not be issued until the License fee has been
+        paid in full.
+    </p>
+    <p>
+        Please log in to your account on the
+        <a title="CalCannabis URL" href="https://aca6.accela.com/CALCANNABIS"
+        target="_blank" data-mce-href="https://acapre.accela.com/CALCANNABIS">CalCannabis Civic Portal</a>
+        to view the invoice for your License Fee.
+    </p>
+    <p>
+        If you choose to mail your application payment:
+    </p>
+    <ul>
+        <li>
+            Make your check payable to California Department of Food and Agriculture
+            or CDFA.
+        </li>
+        <ul>
+            <li>
+                <strong> Please note: </strong>
+                Do not send cash through the mail.
+            </li>
+            <li>
+                Make sure your check or money order includes the following information:
+            </li>
+            <ul>
+                <li>
+                    Your name, address and daytime phone number
+                </li>
+                <li>
+                    License application ID# number
+                </li>
+            </ul>
+            <li>
+                Mail your payment to the address listed below
+            </li>
+            <ul>
+                <dt>
+                    Cashier
+                </dt>
+                <dt>
+                    P.O. Box 942872
+                </dt>
+                <dt>
+                    Sacramento, CA 94271-2872
+                </dt>
+            </ul>
+        </ul>
+    </ul>
+    <p>
+    </p>
+    <p>
+        Questions regarding this notice can be directed to CalCannabis Licensing
+        staff via telephone at (833)-CAL-GROW (225-4769) or via email at
+        <a href="mailto:calcannabislicensing@cdfa.ca.gov" data-mce-href="mailto:calcannabislicensing@cdfa.ca.gov">calcannabislicensing@cdfa.ca.gov</a>. Please do not send confidential information to this email account.
+    </p>
+    <p>
+        Sincerely,
+    </p>
+    <p>
+    </p>
+    <p>
+        CalCannabis Cultivation Licensing Staff
+        <br>
+    </p>
+    <br>
+    <br>
+    <font size="1">
+        Version 1.0
+    </font>
+    <img alt="LetterFooter" src="https://www.cdfa.ca.gov/calcannabis/images/LetterFooter.jpg"
+    width="100%" height="76" border="0">
+</div>

@@ -1,0 +1,103 @@
+<!--CSS
+none
+-->
+
+<!--SQL
+-- Detail
+SELECT TOP 100  
+[DBO].[V_CONTACT_ADDRESS].[RECORD_ID] AS 'RECORD ID', [DBO].[V_CONTACT].[NAME_FIRST] AS 'NAME FIRST', [DBO].[V_CONTACT].[NAME_LAST] AS 'NAME LAST', [DBO].[V_CONTACT].[EMAIL] AS 'EMAIL', [DBO].[V_CONTACT_ADDRESS].[ADDRESS_LINE1] AS 'ADDRESS LINE1', [DBO].[V_CONTACT_ADDRESS].[CITY] AS 'CITY', [DBO].[V_CONTACT_ADDRESS].[STATE_] AS 'STATE', [DBO].[V_CONTACT_ADDRESS].[ZIP] AS 'ZIP', [DBO].[V_CONTACT].[PHONE3] AS 'PHONE3', [DBO].[V_RECORD].[RECORD_ID] AS 'ALT ID', [DBO].[V_RELATED_RECORD].[CHILD_RECORD_ID] AS 'CHILD RECORD ID', [DBO].[ASI::LIC_CC_LIC::INTERNAL].[App Expiry Date] AS 'App Expiry Date'
+FROM [DBO].[V_RECORD] WITH(NOLOCK) 
+INNER JOIN [DBO].[V_CONTACT] WITH(NOLOCK)  ON [DBO].[V_CONTACT].[RECORD_ID]=[DBO].[V_RECORD].[RECORD_ID]
+INNER JOIN [DBO].[V_CONTACT_ADDRESS] WITH(NOLOCK)  ON [DBO].[V_CONTACT_ADDRESS].[CONTACT_NBR]=[DBO].[V_CONTACT].[CONTACT_NBR]
+INNER JOIN [DBO].[V_RELATED_RECORD] WITH(NOLOCK)  ON [DBO].[V_RELATED_RECORD].[PARENT_RECORD_ID]=[DBO].[V_RECORD].[RECORD_ID]
+LEFT OUTER JOIN [DBO].[ASI::LIC_CC_LIC::INTERNAL] WITH(NOLOCK)  ON [DBO].[ASI::LIC_CC_LIC::INTERNAL].[ID]=[DBO].[V_RECORD].[TEMPLATE_ID]
+WHERE (([DBO].[V_RECORD].[RECORD_ID] = 'LCA18-0000153') AND ([DBO].[V_RELATED_RECORD].[CHILD_RECORD_ID] = 'LCA18-0000153-DEF01T') AND ([DBO].[V_CONTACT].[CONTACT_TYPE] = 'Designated Responsible Party') AND ([DBO].[V_CONTACT_ADDRESS].[ADDRESS_TYPE] = 'Mailing')) AND (([DBO].[V_RECORD].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_CONTACT_ADDRESS].[AGENCY_ID] = 'CALCANNABIS')) AND (([DBO].[V_RELATED_RECORD].[AGENCY_ID] = 'CALCANNABIS'));
+
+-->
+
+<div style="margin: 0px auto; padding: 5px; width: 900px; height: 100%; font-family: Arial; font-size: 23px; position: relative; font-size-adjust: none; font-stretch: normal;">
+    <img alt="CDFA
+    logo" src="https://www.cdfa.ca.gov/calcannabis/images/CDFA_Logo.png" width="100%"
+    height="135" border="0" align="middle">
+    <br>
+    <p id="date">
+    </p>
+    <script>
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    </script>
+    <p>
+        [NAME FIRST] [NAME LAST]
+        <br>
+        [ADDRESS LINE1]
+        <br>
+        [CITY], [STATE] [ZIP]
+        <br>
+        <br>
+        Application ID: [ALT ID]
+    </p>
+    <p>
+    </p>
+    <p>
+        Dear [NAME FIRST] [NAME LAST]:
+    </p>
+    <p>
+        Thank you for applying for a commercial cannabis cultivation license.
+        We appreciate the time and effort you have put into the application process.
+        This letter is to notify you that your application is incomplete.
+    </p>
+    <p>
+        The deficient items can be addressed by logging into your account on the
+        CalCannabis Civic Portal and uploading any needed attachments.
+    </p>
+    <p>
+        To address the deficient items on the CalCannabis Civic Portal:
+    </p>
+    <ul>
+        <li>
+            Log in to your account:
+            <a title="CalCannabis URL" href="https://aca6.accela.com/CALCANNABIS"
+            target="_blank" data-mce-href="https://aca6.accela.com/CALCANNABIS">CalCannabis Civic Portal</a>.
+        </li>
+        <li>
+            From the menu bar select
+            <b>My Licenses
+            </b>
+        </li>
+        <li>
+            Locate License Number [CHILD RECORD ID]
+        </li>
+        <li>
+            In the Action column for this record, click on "Resume Application"
+        </li>
+    </ul>
+    <p>
+        In accordance with CA Code of Regulations, Title 3, Div 8, Ch 1, the Department
+        shall receive the missing information from the applicant no later than
+        [App Expiry Date]. Failure to provide the designated missing information
+        will result in disqualification of the application from further consideration.
+        If disqualified, the applicant may reapply and pay a new application fee.
+    </p>
+    <p>
+        Questions regarding this notice can be directed to CalCannabis Cultivation
+        Licensing staff via telephone at (833) CALGROW (225-4769) or via email
+        at
+        <a title="CalCannabis URL" href="mailto:calcannabislicensing@cdfa.ca.gov"
+        target="_blank" data-mce-href="http://calcannabislicensing@cdfa.ca.gov">calcannabislicensing@cdfa.ca.gov</a>. Do not send confidential information to this email account.
+    </p>
+    <p>
+        Sincerely,
+        <br>
+        <br>
+        CalCannabis Cultivation Licensing
+    </p>
+    <br>
+    <font size="1">
+        Version 2.0
+    </font>
+    <img alt="LetterFooter" src="https://www.cdfa.ca.gov/calcannabis/images/LetterFooter.jpg"
+    width="95%" height="75" border="0">
+</div>
