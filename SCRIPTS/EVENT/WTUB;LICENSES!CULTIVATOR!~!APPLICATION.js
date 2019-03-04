@@ -5,6 +5,9 @@ try{
 		((wfTask == "Owner Application Reviews" && wfStatus == "Owner Application Reviews Completed") &&
 		(taskStatus("Administrative Review") == "Administrative Review Completed"))) {
 			editAppSpecific("App Expiry Date", "");
+// MJH 201900305 US 5891- update Record status to Administrative Review Completed.
+			updateAppStatus("Administrative Review Completed","updated by script"); 
+// MJH 201900305 US 5891 end
 	}
 	if(wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed")  {
 			editAppSpecific("App Expiry Date", "")
@@ -51,7 +54,7 @@ try{
 	}
 	// MJH US 5864 and 5865 - update application expiration date, deficiency letter sent and task due dates.
 }catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Expiration Dates: " + err.message);
+	logDebug("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Expiration Dates: " + err.message);
 	logDebug(err.stack);
 }
 
