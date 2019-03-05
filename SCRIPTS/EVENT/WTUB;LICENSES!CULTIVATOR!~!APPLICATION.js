@@ -6,7 +6,7 @@ try{
 		(taskStatus("Administrative Review") == "Administrative Review Completed"))) {
 			editAppSpecific("App Expiry Date", "");
 // MJH 201900305 US 5891- update Record status to Administrative Review Completed.
-			updateAppStatus("Administrative Review Completed","updated by script"); 
+			updateAppStatus("Administrative Review Complete","updated by script"); 
 // MJH 201900305 US 5891 end
 	}
 	if(wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed")  {
