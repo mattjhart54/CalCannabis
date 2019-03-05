@@ -147,10 +147,19 @@ try{
 }
 //mhart 100818 story 5725 end
 
-
+// MJH 190305 story 5890 Set record status to Additional Information Needed
+if(((wfTask == "Administrative Review" && wfStatus == "Additional Information Needed") && 
+		(taskStatus("Owner Application Reviews")  != "Incomplete Response")) ||
+		((wfTask == "Owner Application Reviews" && wfStatus == "Additional Information Needed") &&
+		(taskStatus("Administrative Review") != "Incomplete Response"))) {
+			if(isTaskActive("Administrative Manager Review")) {
+				updateAppStatus("Additional Information Needed", "Updated by Script");
+			}
+	}
+//MJH 190305 story 5890 end
 
 //mhart
-//If License Manager requires revisions to the denial reasons reeactivete the task the denial request came from.
+//If License Manager requires revisions to the denial reasons reactivete the task the denial request came from.
 try {
 	if(wfTask == "License Manager" && wfStatus == "Revisions Required") { 
 		altId = capId.getCustomID();
