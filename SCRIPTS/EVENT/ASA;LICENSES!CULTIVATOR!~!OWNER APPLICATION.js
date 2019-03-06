@@ -35,13 +35,14 @@ try{
 
 // ees 20190306: US 5911 start: check for DEC attached to parent before updating parent record status
 		var isDec = getChildren("Licenses/Cultivator/*/Declaration",parentId);
-		if (isDec == "" || isDec == null || isDec == "undefined") {
-// ees 20190306: US 5911 end
+		if (isDec.length == 0 || isDec == "" || isDec == null || isDec == "undefined") {
 			if(allOwnersSubmitted){
 				updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
 			}
+		} else {
+			logDebug("App Status not updated due to DEC already exists");
 		}
-		
+// ees 20190306: US 5911 end		
 		nbrToTry = 1;
 		//because owners can be added and deleted, need a way to number the records
 		//but only if they haven't been numbered before
