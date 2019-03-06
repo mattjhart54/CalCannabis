@@ -37,35 +37,27 @@ try{
 	}
 	removeASITable("OWNERS",parentId)
 	addASITable("OWNERS",ownerTable,parentId);
-
-// ees 20190306: US 5911 start: check for DEC attached to parent before updating parent record status
-		var isDec = getChildren("Licenses/Cultivator/*/Declaration",parentId);
-		if (isDec.length == 0 || isDec == "" || isDec == null || isDec == "undefined") {
-			logDebug("DEC records found: " + isDec.length);	
-			if(allOwnersSubmitted){
-				updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
-				var drpContact = getContactByType("Designated Responsible Party",parentId);
-				if(drpContact){
-					var drpFirst = drpContact.getFirstName();
-					var drpLast =  drpContact.getLastName();
-					var drpEmail = drpContact.getEmail();
-					if(!matches(drpEmail,null,"","undefined")){
-						emailParameters = aa.util.newHashtable();
-						var sysDate = aa.date.getCurrentDate();
-						var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
-						addParameter(emailParameters, "$$altID$$", parentId.getCustomID());
-						addParameter(emailParameters, "$$firstName$$", ""+drpFirst);
-						addParameter(emailParameters, "$$lastName$$", ""+drpLast);
-						addParameter(emailParameters, "$$today$$", sysDateMMDDYYYY);
-						addParameter(emailParameters, "$$ACAUrl$$", getACAlinkForEdit(parentId, "Licenses", "1005"));
-						sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,parentId);
-					}
-				}
+	
+	if(allOwnersSubmitted){
+		updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
+		var drpContact = getContactByType("Designated Responsible Party",parentId);
+		if(drpContact){
+			var drpFirst = drpContact.getFirstName();
+			var drpLast =  drpContact.getLastName();
+			var drpEmail = drpContact.getEmail();
+			if(!matches(drpEmail,null,"","undefined")){
+				emailParameters = aa.util.newHashtable();
+				var sysDate = aa.date.getCurrentDate();
+				var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
+				addParameter(emailParameters, "$$altID$$", parentId.getCustomID());
+				addParameter(emailParameters, "$$firstName$$", ""+drpFirst);
+				addParameter(emailParameters, "$$lastName$$", ""+drpLast);
+				addParameter(emailParameters, "$$today$$", sysDateMMDDYYYY);
+				addParameter(emailParameters, "$$ACAUrl$$", getACAlinkForEdit(parentId, "Licenses", "1005"));
+				sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,parentId);
 			}
-		} else {
-			logDebug("App Status not updated and email not sent due to DEC already exists");
 		}
-// ees 20190306: US 5911 end
+	}
 	if(parentId){
 		nbrToTry = 1;
 		//because owners can be added and deleted, need a way to number the records
