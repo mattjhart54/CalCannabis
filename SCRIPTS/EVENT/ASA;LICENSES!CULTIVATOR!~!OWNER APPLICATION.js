@@ -4,7 +4,7 @@ try{
 // ees 20190211 story 5861 start Save fileDate as Created Date
 		editAppSpecific("Created Date", fileDate);
 // ees 20190211 story 5861 end
-		updateAppStatus("Submitted","Updated via CTRCA:Licenses/Cultivator//Owner Application");
+		updateAppStatus("Submitted","Updated via ASA:LICENSES/CULTIVATOR/* /OWNER APPLICATION");
 		appId = AInfo["Application ID"];
 		addParent(appId);
 		var ownerEmail = null
