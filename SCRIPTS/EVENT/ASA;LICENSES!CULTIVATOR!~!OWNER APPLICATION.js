@@ -35,7 +35,7 @@ try{
 
 // ees 20190306: US 5911 start: check for DEC attached to parent before updating parent record status
 		var isDec = getChildren("Licenses/Cultivator/*/Declaration",parentId);
-		if (!isDec) {
+		if (isDec == "" || isDec == null || isDec == "undefined") {
 // ees 20190306: US 5911 end
 			if(allOwnersSubmitted){
 				updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
