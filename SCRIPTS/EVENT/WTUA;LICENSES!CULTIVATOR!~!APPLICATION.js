@@ -148,14 +148,16 @@ try{
 //mhart 100818 story 5725 end
 
 // MJH 190305 story 5890 Set record status to Additional Information Needed
-if(((wfTask == "Administrative Review" && wfStatus == "Additional Information Needed") && 
-		(taskStatus("Owner Application Reviews")  != "Incomplete Response")) ||
-		((wfTask == "Owner Application Reviews" && wfStatus == "Additional Information Needed") &&
-		(taskStatus("Administrative Review") != "Incomplete Response"))) {
+if(wfTask == "Administrative Review" || wfTask == "Owner Application Reviews") {
+	adminStatus = taskStatus("Administrative Review");
+	ownerStatus = taskStatus("Owner Application Reviews");
+	if((adminStatus  == "Additional Information Needed" && ownerStatus  != "Incomplete Response") ||
+		(ownerStatus == "Additional Information Needed" && adminStatus != "Incomplete Response")) {
 			if(isTaskActive("Administrative Manager Review")) {
 				updateAppStatus("Additional Information Needed", "Updated by Script");
 			}
 	}
+}
 //MJH 190305 story 5890 end
 
 //mhart
