@@ -160,6 +160,20 @@ if(wfTask == "Administrative Review" || wfTask == "Owner Application Reviews") {
 }
 //MJH 190305 story 5890 end
 
+// ees 20190311 story 5894 start Set record status to Additional Information Needed in Scientific section
+if(wfTask == "Scientific Review" || wfTask == "CEQA Review") {
+	sciStatus = taskStatus("Scientific Review");
+	ceqaStatus = taskStatus("CEQA Review");
+	if((sciStatus  == "Additional Information Needed" && ceqaStatus  != "Incomplete Response") ||
+		(ceqaStatus == "Additional Information Needed" && sciStatus != "Incomplete Response")) {
+			if(isTaskActive("Science Manager Review")) {
+				updateAppStatus("Additional Information Needed", "Updated by Script");
+			}
+	}
+}
+// ees 20190311 story 5894 end
+
+
 //mhart
 //If License Manager requires revisions to the denial reasons reactivete the task the denial request came from.
 try {
