@@ -164,7 +164,7 @@ if(wfTask == "Administrative Review" || wfTask == "Owner Application Reviews") {
 if(wfTask == "Scientific Review" || wfTask == "CEQA Review") {
 	sciStatus = taskStatus("Scientific Review");
 	ceqaStatus = taskStatus("CEQA Review");
-	if((sciStatus  == "Additional Information Needed" && ceqaStatus  != "Incomplete Response") ||
+	if((sciStatus  == "Additional Information Needed" && (ceqaStatus  != "Incomplete Response" || ceqaStatus = "undefined") ||
 		(ceqaStatus == "Additional Information Needed" && sciStatus != "Incomplete Response")) {
 			if(isTaskActive("Science Manager Review")) {
 				updateAppStatus("Additional Information Needed", "Updated by Script");
