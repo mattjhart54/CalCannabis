@@ -102,7 +102,7 @@ var task = getJobParam("activeTask");
 var licenseContactType = getJobParam("licenseContactType");
 var licenseAddressType = getJobParam("licenseAddressType");
 var businessContactType = getJobParam("businessContactType");
-var businessAddressType = getJobParam("licenseAddressType");
+var businessAddressType = getJobParam("businessAddressType"); // ees 20190311 defect 5921
 var sArray = getJobParam("appStatus").split(",");
 
 
@@ -497,15 +497,17 @@ try{
 								}else{
 									bsnsLine += zeroPadRight(vZip,9);
 								}
+								//us country code  ees 20190312 defect 5921
+								bsnsLine += "001";
 							//addresses outside of the u.s.
 							}else{
 								//country, country code (not stored)
 								if(thisAddr.countryCode.length()>11){
 									bsnsLine += thisAddr.countryCode.substr(0,11);
-									bsnsLine += spacePad("",3);
+									bsnsLine += zeroPad("",3);	// ees 20190312 defect 5921
 								}else{
 									bsnsLine += spacePad(thisAddr.countryCode,11);
-									bsnsLine += spacePad("",3);
+									bsnsLine += zeroPad("",3);	// ees 20190312 defect 5921
 								}
 							}
 						}
