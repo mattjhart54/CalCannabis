@@ -215,23 +215,12 @@ try{
 		if(thisFee){
 //mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification 
 			feeSeqNbr = updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
-			iListResult = aa.finance.getInvoiceByCapID(capId,null);
-			if (iListResult.getSuccess()) {
-				iList = iListResult.getOutput();
-				invNbr = "";
-				feeAmount = "";
-				//find invoice by matching fee sequence numbers with one passed in
-				for (iNum in iList)	{
-					fList = aa.invoice.getFeeItemInvoiceByInvoiceNbr(iList[iNum].getInvNbr()).getOutput()
-					for (fNum in fList) {
-						logDebug("Sequence " + fList[fNum].getFeeSeqNbr()+ "feeseq " + feeSeqNbr);
-						if (fList[fNum].getFeeSeqNbr() == feeSeqNbr) {
-							invNbr = iList[iNum].getInvNbr();						
+										
 							var licAltId = capId.getCustomID();
 							var scriptName = "asyncApprovalLetterinvoiceRpt";
 							var envParameters = aa.util.newHashMap();
 							envParameters.put("licCap",licAltId); 
-							envParameters.put("invNbr",invNbr); 
+							envParameters.put("feeSeqNbr",feeSeqNbr); 
 							envParameters.put("reportName","Approval Letter and License Fee Invoice"); 
 							envParameters.put("currentUserID",currentUserID);
 							envParameters.put("contType","Designated Responsible Party");
