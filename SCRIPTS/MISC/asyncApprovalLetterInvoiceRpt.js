@@ -43,24 +43,44 @@ function getMasterScriptText(vScriptName) {
 }
 try{
 //---------------------------------------
-	//aa.env.setValue("licCap", "LCA19-0000001");
+	//aa.env.setValue("licCap", "LCA19-0000098");
 	//aa.env.setValue("invNbr", "1138");
-	//aa.env.setValue("currentUserID", "MHART");
+	//aa.env.setValue("feeSeqNbr", "22926505");
+	//aa.env.setValue("currentUserID", "ADMIN");
 	//aa.env.setValue("reportName", "Approval Letter and License Fee Invoice");
 	//aa.env.setValue("contType", "Designated Responsible Party");
 	//aa.env.setValue("addressType", "Mailing");
 	//aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov")
 	var reportName = "" + aa.env.getValue("reportName");
 	var licCap = "" + aa.env.getValue("licCap");
-	var invoicenbr = "" + aa.env.getValue("invNbr");	
+//	var invNbr = "" + aa.env.getValue("invNbr");	
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var contType = "" + aa.env.getValue("contType");
 	var fromEmail = "" + aa.env.getValue("fromEmail");
+	var feeSeqNbr = aa.env.getValue("feeSeqNbr");
 	var br = "<BR>";
 	var eTxt = "";
 	var sDate = new Date();
 	var sTime = sDate.getTime();
 //-----------------------
+	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
+	iListResult = aa.finance.getInvoiceByCapID(tmpID,null);
+			if (iListResult.getSuccess()) {
+				iList = iListResult.getOutput();
+				invNbr = "";
+				feeAmount = "";
+				//find invoice by matching fee sequence numbers with one passed in
+				for (iNum in iList)	{
+					fList = aa.invoice.getFeeItemInvoiceByInvoiceNbr(iList[iNum].getInvNbr()).getOutput()
+					for (fNum in fList) {
+						logDebug("Sequence " + fList[fNum].getFeeSeqNbr()+ "feeseq " + feeSeqNbr);
+						if (fList[fNum].getFeeSeqNbr() == feeSeqNbr) {
+							invNbr = iList[iNum].getInvNbr();	
+logDebug("invNbr " + invNbr);							
+						}
+					}
+				}
+			}
 	reportResult = aa.reportManager.getReportInfoModelByName(reportName);
 	if (!reportResult.getSuccess()){
 		logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
@@ -68,7 +88,7 @@ try{
 	}
 	var rFiles = [];
 	var report = reportResult.getOutput(); 
-	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
+
 	cap = aa.cap.getCap(tmpID).getOutput();
 	appTypeResult = cap.getCapType();
 	appTypeString = appTypeResult.toString(); 
@@ -81,7 +101,7 @@ try{
 	eTxt+="reportName: " + typeof(reportName) + br;
 	var parameters = aa.util.newHashMap(); 
 	parameters.put("capID",licCap);
-		parameters.put("invoicenbr",invoicenbr);
+	parameters.put("invoicenbr",""+invNbr);
 	report.setReportParameters(parameters);
 	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
 	if(permit.getOutput().booleanValue()) { 
