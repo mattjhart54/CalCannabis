@@ -128,6 +128,21 @@ logDebug("invNbr " + invNbr);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,tmpID);
+		
+		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+		if(!matches(priChannel, "",null,"undefined", false)){
+			if(priChannel.indexOf("Postal") > -1 ){
+				var sName = createSet("APPROVAL_LETTER_AND_LICENSE_FEE_INVOICE","License Notifications", "New");
+				if(sName){
+					setAddResult=aa.set.add(sName,tmpID);
+					if(setAddResult.getSuccess()){
+						logDebug(tmpID.getCustomID() + " successfully added to set " +sName);
+					}else{
+						logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+					}
+				}
+			}
+		}
 	}else{
 		logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
 	}
