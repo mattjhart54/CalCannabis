@@ -226,7 +226,6 @@ try{
 							envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 							aa.runAsyncScript(scriptName, envParameters);
 						logDebug("got Here");
-			}
 //mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification 
 		}else{
 			aa.print("An error occurred retrieving fee item: " + feeDesc);
