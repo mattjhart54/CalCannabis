@@ -132,10 +132,12 @@ try{
 //send other notifications
 try{
 	if(matches(wfStatus, "Approved for Annual License", "Approved for Provisional License") && appTypeArray[2]!="Temporary"){
-		rptName = "Approval Letter and Invoice"; 
-		notName = "LCA_GENERAL_NOTIFICATION"; 
-		runReportAttach(capId,rptName, "p1value", capId.getCustomID());
-		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+//mhart 031319 story 5914 Move execution of the Approval Letter and License Fee Invoice report and DRP notification to WTUB		
+//		rptName = "Approval Letter and Invoice"; 
+//		notName = "LCA_GENERAL_NOTIFICATION"; 
+//		runReportAttach(capId,rptName, "p1value", capId.getCustomID());
+//		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+		//mhart 031319 story 5914 end		
 		activateTask("Application Disposition");
 		updateTask("Application Disposition", "Pending Payment","Updated by Script","");
 //MJH 201902-8 US 5866 Update License Fee Due date
