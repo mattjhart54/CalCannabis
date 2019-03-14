@@ -44,11 +44,10 @@ function getMasterScriptText(vScriptName) {
 try{
 //---------------------------------------
 	//aa.env.setValue("licCap", "LCA18-0000154");
-	//aa.env.setValue("payAmt", "2410");
+	//aa.env.setValue("payAmt", "2411.00");
 	//aa.env.setValue("currentUserID", "ADMIN");
 	//aa.env.setValue("reportName", "Approval Letter License Issued");
 	//aa.env.setValue("contType", "Designated Responsible Party");
-	//aa.env.setValue("addressType", "Mailing");
 	//aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov")
 	var reportName = "" + aa.env.getValue("reportName");
 	var licCap = "" + aa.env.getValue("licCap");
@@ -62,84 +61,90 @@ try{
 	var sTime = sDate.getTime();
 //-----------------------
 	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
+	rcptNbr = "";
 	rcpt = aa.finance.getReceiptByCapID(tmpID,null);
 	if(rcpt.getSuccess()) {
 		receipt = rcpt.getOutput();
 		for(r in receipt) {
 			rcptAmt = receipt[r].getReceiptAmount();
-			logDebug(" amt " + rcptAmt + " paid " + payAmt);
+			
+			eTxt+=" receipt amt " + rcptAmt + " receipt nbr " + receipt[r].getReceiptNbr() + br;
 			if(payAmt == rcptAmt) {
 				rcptNbr = receipt[r].getReceiptNbr();
 				logDebug("Receipt " + rcptNbr);
 			}
 		}
 	}
-	reportResult = aa.reportManager.getReportInfoModelByName(reportName);
-	if (!reportResult.getSuccess()){
-		logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
-		eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
-	}
-	var rFiles = [];
-	var report = reportResult.getOutput(); 
-
-	cap = aa.cap.getCap(tmpID).getOutput();
-	appTypeResult = cap.getCapType();
-	appTypeString = appTypeResult.toString(); 
-	appTypeArray = appTypeString.split("/");
-	report.setModule(appTypeArray[0]); 
-	//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
-	report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
-	report.getEDMSEntityIdModel().setAltId(licCap);
-	eTxt+="reportName: " + reportName + br;
-	eTxt+="reportName: " + typeof(reportName) + br;
-	var parameters = aa.util.newHashMap(); 
-	parameters.put("capID",licCap);
-	parameters.put("receiptNbr",""+rcptNbr);
-	report.setReportParameters(parameters);
-	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
-	if(permit.getOutput().booleanValue()) { 
-		var reportResult = aa.reportManager.getReportResult(report); 
-		if(reportResult) {
-			reportOutput = reportResult.getOutput();
-			var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
-			rFile=reportFile.getOutput();
-			rFiles.push(rFile);
-			logDebug("Report '" + reportName + "' has been run for " + licCap);
-			eTxt+=("Report '" + reportName + "' has been run for " + licCap) +br;
-		}else {
-			logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
+	if(rcptNbr) {
+		reportResult = aa.reportManager.getReportInfoModelByName(reportName);
+		if (!reportResult.getSuccess()){
+			logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
+			eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
 		}
-	}else{
-		logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
-		eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
-	}
-	var priContact = getContactObj(tmpID,contType);
-	if(priContact){
-		var eParams = aa.util.newHashtable(); 
-		addParameter(eParams, "$$altID$$", tmpID.getCustomID());
-		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
-		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-		var priEmail = ""+priContact.capContact.getEmail();
-		sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,tmpID);
+		var rFiles = [];
+		var report = reportResult.getOutput(); 
+
+		cap = aa.cap.getCap(tmpID).getOutput();
+		appTypeResult = cap.getCapType();
+		appTypeString = appTypeResult.toString(); 
+		appTypeArray = appTypeString.split("/");
+		report.setModule(appTypeArray[0]); 
+		//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
+		report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
+		report.getEDMSEntityIdModel().setAltId(licCap);
+		eTxt+="reportName: " + reportName + br;
+		eTxt+="reportName: " + typeof(reportName) + br;
+		var parameters = aa.util.newHashMap(); 
+		parameters.put("capID",licCap);
+		parameters.put("receiptNbr",""+rcptNbr);
+		report.setReportParameters(parameters);
+		var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
+		if(permit.getOutput().booleanValue()) { 
+			var reportResult = aa.reportManager.getReportResult(report); 
+			if(reportResult) {
+				reportOutput = reportResult.getOutput();
+				var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
+				rFile=reportFile.getOutput();
+				rFiles.push(rFile);
+				logDebug("Report '" + reportName + "' has been run for " + licCap);
+				eTxt+=("Report '" + reportName + "' has been run for " + licCap) +br;
+			}else {
+				logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
+			}
+		}else{
+			logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
+			eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
+		}
+		var priContact = getContactObj(tmpID,contType);
+		if(priContact){
+			var eParams = aa.util.newHashtable(); 
+			addParameter(eParams, "$$altID$$", tmpID.getCustomID());
+			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+			var priEmail = ""+priContact.capContact.getEmail();
+			sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,tmpID);
 		
-		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-		if(!matches(priChannel, "",null,"undefined", false)){
-			if(priChannel.indexOf("Postal") > -1 ){
-				var sName = createSet("APPROVAL_LETTER_LICENSE_ISSUED ","License Notifications", "New");
-				if(sName){
-					setAddResult=aa.set.add(sName,tmpID);
-					if(setAddResult.getSuccess()){
-						logDebug(tmpID.getCustomID() + " successfully added to set " +sName);
-					}else{
-						logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+			if(!matches(priChannel, "",null,"undefined", false)){
+				if(priChannel.indexOf("Postal") > -1 ){
+					var sName = createSet("APPROVAL_LETTER_LICENSE_ISSUED ","License Notifications", "New");
+					if(sName){
+						setAddResult=aa.set.add(sName,tmpID);
+						if(setAddResult.getSuccess()){
+							logDebug(tmpID.getCustomID() + " successfully added to set " +sName);
+						}else{
+							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+						}
 					}
 				}
 			}
+		}else{
+			logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
 		}
-	}else{
-		logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
+	}else {
+		logDebug("No receipt number found for payment amount " + payAmt + " receipts found " + eTxt);
+		aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunSubmittedApplicRpt: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + "avpre6" + br + eTxt);
 	}
-	
 //----------------------- 
 	var thisDate = new Date();
 	var thisTime = thisDate.getTime();
