@@ -20,12 +20,21 @@ try{
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 			aa.runAsyncScript(scriptName, envParameters);
+// mhart 100918 Story 5738 and 5739 end			
+			
+// mhart 03142019 Story 5918 Run Approval Letter and License Issued Report	
+			var appAltId = capId.getCustomID();
+			var scriptName = "asyncApprovalLetterReceiptRpt";
+			var envParameters = aa.util.newHashMap();
+			envParameters.put("licCap",appAltId);
+			envParameters.put("payAmt",PaymentTotalPaidAmount);
+			envParameters.put("reportName","Approval Letter License Issued"); 
+			envParameters.put("currentUserID",currentUserID);
+			envParameters.put("contType","Designated Responsible Party");
+			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+			aa.runAsyncScript(scriptName, envParameters);
 		}	
-		if(capStatus=="License Issued") 
-			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
-		else
-			runReportAttach(capId,"Approval Letter Provisional", "p1value", capId.getCustomID());
-// mhart 100918 Story 5738 and 5739 end
+// mhart 03142019 Story 5918 end
 		
 //mhart 180430 story 5392 Attach the Official License to the email sent
 //   moved to the asyncRunOfficialLicenseReport
