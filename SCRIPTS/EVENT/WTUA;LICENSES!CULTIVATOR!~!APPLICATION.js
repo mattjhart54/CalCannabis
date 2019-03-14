@@ -22,7 +22,7 @@ try{
 			var envParameters = aa.util.newHashMap();
 			envParameters.put("altId",capIDString); 
 			envParameters.put("newAltId",newAltId);
-			envParameters.put("reportName","Deficiency Report"); 
+			envParameters.put("reportName","Deficiency Letter"); 
 			envParameters.put("currentUserID",currentUserID);
 			logDebug("altId " + capIDString + " newAltId " + newAltId + " curentUser " + currentUserID)
 			aa.runAsyncScript(scriptName, envParameters);
