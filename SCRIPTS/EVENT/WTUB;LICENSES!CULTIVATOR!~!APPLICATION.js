@@ -11,9 +11,9 @@ try{
 	}
 	if(wfTask == "Scientific Review" && wfStatus == "Scientific Review Completed")  {
 			editAppSpecific("App Expiry Date", "")
-// ees 20190319 US 5945 - update Record status to Scientific Review Complete.
+// ees 20190320 US 5945 - update Record status to Under Scientific Review.
 			updateAppStatus("Under Scientific Review","updated by script"); 
-// ees 20190319 US 5945 end
+// ees 20190320 US 5945 end
 	}
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
