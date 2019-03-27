@@ -216,19 +216,18 @@ try{
 		var feeDesc = AInfo["License Type"] + " - License Fee";
 		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 		if(thisFee){
-//mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification 
 			feeSeqNbr = updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
-							var licAltId = capId.getCustomID();
-							var scriptName = "asyncApprovalLetterinvoiceRpt";
-							var envParameters = aa.util.newHashMap();
-							envParameters.put("licCap",licAltId); 
-							envParameters.put("feeSeqNbr",feeSeqNbr); 
-							envParameters.put("reportName","Approval Letter and License Fee Invoice"); 
-							envParameters.put("currentUserID",currentUserID);
-							envParameters.put("contType","Designated Responsible Party");
-							envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
-							aa.runAsyncScript(scriptName, envParameters);
-						logDebug("got Here");
+//mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification
+			var licAltId = capId.getCustomID();
+			var scriptName = "asyncApprovalLetterinvoiceRpt";
+			envParameters = aa.util.newHashMap();
+			envParameters.put("licCap",licAltId); 
+			envParameters.put("feeSeqNbr",feeSeqNbr); 
+			envParameters.put("reportName","Approval Letter and License Fee Invoice"); 
+			envParameters.put("currentUserID",currentUserID);
+			envParameters.put("contType","Designated Responsible Party");
+			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+			aa.runAsyncScript(scriptName, envParameters);
 //mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification 
 		}else{
 			aa.print("An error occurred retrieving fee item: " + feeDesc);
