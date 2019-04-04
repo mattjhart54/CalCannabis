@@ -20,27 +20,25 @@ try{
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 			aa.runAsyncScript(scriptName, envParameters);
-// mhart 100918 Story 5738 and 5739 end			
-			
-// mhart 03142019 Story 5918 Run Approval Letter and License Issued Report	
-			var appAltId = capId.getCustomID();
-			var scriptName = "asyncApprovalLetterReceiptRpt";
-			var envParameters = aa.util.newHashMap();
-			envParameters.put("licCap",appAltId);
-			envParameters.put("payAmt",PaymentTotalPaidAmount);
-			envParameters.put("reportName","Approval Letter License Issued"); 
-			envParameters.put("currentUserID",currentUserID);
-			envParameters.put("contType","Designated Responsible Party");
-			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
-			aa.runAsyncScript(scriptName, envParameters);
-		}	
-// mhart 03142019 Story 5918 end
+		}			
+		if(capStatus=="License Issued") 
+			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
+		else
+			runReportAttach(capId,"Approval Letter Provisional", "p1value", capId.getCustomID());
+// mhart 100918 Story 5738 and 5739 end	
 		
-//mhart 180430 story 5392 Attach the Official License to the email sent
-//   moved to the asyncRunOfficialLicenseReport
-//		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
-//mhart 180430 story 5392 end 
-
+// mhart 03142019 Story 5918 add records to set to email receipt to DRP
+		var srName = createSet("LICENSE_RECEIPT","License Notifications", "New");
+		if(srName){
+			setAddResult=aa.set.add(srName,capId);
+			if(setAddResult.getSuccess()){
+				logDebug(capId.getCustomID() + " successfully added to set " +srName);
+			}else{
+				logDebug("Error adding record to set " + srName + ". Error: " + setAddResult.getErrorMessage());
+			}
+		}
+//mhart 03142019 Story 5918 end	
+		
 //lwacht: 180123: story 4679: add post contacts to a set; create set if it does not exist
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
