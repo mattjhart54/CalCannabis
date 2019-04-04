@@ -67,7 +67,7 @@ logDebug("Batch job ID not found " + batchJobResult.getErrorMessage());
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-// test parameters
+/* test parameters
 aa.env.setValue("lookAheadDays", "-2");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
@@ -75,7 +75,7 @@ aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA Receipt Batch");
 aa.env.setValue("sendEmailAddressType", "Mailing");
-
+*/
 var lookAheadDays = getParam("lookAheadDays");
 var emailAddress = getParam("emailAddress");			// email to send report
 var emailTemplate = getParam("emailTemplate");
