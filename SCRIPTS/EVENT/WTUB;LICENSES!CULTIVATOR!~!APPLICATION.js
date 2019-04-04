@@ -228,6 +228,21 @@ try{
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 			aa.runAsyncScript(scriptName, envParameters);
+			var priContact = getContactObj(capId,"Designated Responsible Party");
+			if(priContact){
+				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+				if(!matches(priChannel, "",null,"undefined", false)){
+					var sName = createSet("APPROVAL_LETTER_AND_LICENSE_FEE_INVOICE","License Notifications", "New");
+					if(sName){
+						setAddResult=aa.set.add(sName,capId);
+						if(setAddResult.getSuccess()){
+							logDebug(capId.getCustomID() + " successfully added to set " +sName);
+						}else{
+							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+						}
+					}
+				}
+			}
 //mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification 
 		}else{
 			aa.print("An error occurred retrieving fee item: " + feeDesc);
