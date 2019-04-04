@@ -26,10 +26,17 @@ try{
 			runReportAttach(capId,"Approval Letter Provisional", "p1value", capId.getCustomID());
 // mhart 100918 Story end
 		
-//mhart 180430 story 5392 Attach the Official License to the email sent
-//   moved to the asyncRunOfficialLicenseReport
-//		emailRptContact("PRA", "LCA_APP_APPROVAL_PAID", "Official License Certificate", true, capStatus, capId, "Designated Responsible Party", "altId", parCapId.getCustomID());
-//mhart 180430 story 5392 end 
+// mhart 03142019 Story 5918 add records to set to email receipt to DRP
+		var srName = createSet("LICENSE_RECEIPT","License Notifications", "New");
+		if(srName){
+			setAddResult=aa.set.add(srName,capId);
+			if(setAddResult.getSuccess()){
+				logDebug(capId.getCustomID() + " successfully added to set " +srName);
+			}else{
+				logDebug("Error adding record to set " + srName + ". Error: " + setAddResult.getErrorMessage());
+			}
+		}
+//mhart 03142019 Story 5918 end	
 
 //lwacht: 180123: story 4679: add post contacts to a set; create set if it does not exist
 		var priContact = getContactObj(capId,"Designated Responsible Party");
