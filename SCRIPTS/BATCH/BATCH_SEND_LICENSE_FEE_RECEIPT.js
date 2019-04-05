@@ -141,7 +141,7 @@ function mainProcess() {
 			var members = memberResult.getOutput().toArray();
 			var setSize = members.length;
 			for(x in members) {
-				capId = members[x];
+				capId = aa.cap.getCapID(members[x].ID1, members[x].ID2, members[x].ID3).getOutput();
 				var altId = capId.getCustomID();
 //	var altId = "LCA18-0000163";
 				reportResult = aa.reportManager.getReportInfoModelByName(reportName);
@@ -157,8 +157,8 @@ function mainProcess() {
 				report.getEDMSEntityIdModel().setAltId(altId);
 				var parameters = aa.util.newHashMap(); 
 				parameters.put("capId",altId);
-				parameters.put("receiptNbr", "488");
-	//			parameters.put("receiptDate", rcptDate);
+	//			parameters.put("receiptNbr", "488");
+				parameters.put("receiptDate", rcptDate);
 				report.setReportParameters(parameters);
 				var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
 				if(permit.getOutput().booleanValue()) { 
