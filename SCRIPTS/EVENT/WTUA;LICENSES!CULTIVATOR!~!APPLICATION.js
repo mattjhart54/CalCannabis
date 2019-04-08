@@ -174,6 +174,17 @@ if(wfTask == "Scientific Review" || wfTask == "CEQA Review") {
 	}
 }
 // ees 20190311 story 5894 end
+try {
+	if(wfTask == "License Manager" && wfStatus == "Denied") { 
+		updateTask("Application Disposition", "Denied - Pending Appeal","Updated by script","");
+		editAppSpecific("Appeal Expiry Date",dateAdd(wfDateMMDDYYYY,30));
+		editAppSpecific("Denial Letter Sent",wfDateMMDDYYYY);
+		emailRptContact("WTUA", "LCA_APP_DENIAL_LETTER", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+	}
+}catch(err){
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: License Manager Denial: " + err.message);
+	aa.print(err.stack);
+}
 
 //mhart: send local auth notice
 try{
