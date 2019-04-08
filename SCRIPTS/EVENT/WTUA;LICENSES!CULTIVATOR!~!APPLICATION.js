@@ -366,6 +366,10 @@ try {
 		var ownerReview = false;
 		var scienceReview = false;
 		var ceqaReview = false;
+		asgnDateAR = null;
+		asgnDateOR = null;
+		asgnDateSR = null;
+		asgnDateCR = null;
 		var workflowResult = aa.workflow.getTasks(capId);
 		if (workflowResult.getSuccess())
 			var wfObj = workflowResult.getOutput();
@@ -383,15 +387,23 @@ try {
 				logDebug("status Date" + scienceDate);
 			}
 			if (fTask.getTaskDescription()== "Administrative Review" && fTask.getDisposition() == "Incomplete Response") {
+				var tempdate = fTask.getAssignmentDate();
+				asgnDateAR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
 				adminReview = true;
 			}
 			if (fTask.getTaskDescription()== "Owner Application Reviews" && fTask.getDisposition() == "Incomplete Response") {
+				var tempdate = fTask.getAssignmentDate();
+				asgnDateOR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
 				ownerReview = true;
 			}
 			if (fTask.getTaskDescription()== "Scientific Review" && fTask.getDisposition() == "Incomplete Response") {
+				var tempdate = fTask.getAssignmentDate();
+				asgnDateSR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
 				scienceReview = true;
 			}
 			if (fTask.getTaskDescription()== "CEQA Review" && fTask.getDisposition() == "Incomplete Response") {
+				var tempdate = fTask.getAssignmentDate();
+				asgnDateCR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
 				ceqaReview = true;
 			}
 		}
@@ -401,29 +413,41 @@ try {
 		}
 		if(scienceDate >= adminDate) {
 			if(scienceReview == false && ceqaReview == false) {
-				activateTask("Administrative Manager Review");
+				activateTask("Science Manager Review");
 				showMessage = true;
 				comment("No Incomplete Response status found.  Science Manager Review was activated.");
 			}
 			deactivateTask("License Manager");			
-			if(scienceReview) 
+			if(scienceReview) {
 				activateTask("Scientific Review");	
-			if(ceqaReview) 
-				activateTask ("CEQA Review");	
+				if(asgnDateSR != null)
+					updateTaskAssignedDate("Scientific Review", asgnDateSR);
+			}
+			if(ceqaReview) {
+				activateTask ("CEQA Review");
+				if(asgnDateCR != null)
+					updateTaskAssignedDate("CEQA Review", asgnDateCR);
+			}				
 		}
 		else {
 			if(adminReview == false && ownerReview == false) {
-				activateTask("Science Manager Review");
+				activateTask("Administrative Manager Review");
 				showMessage = true;
 				comment("No Incomplete Response status found.  Administrative Manager Review was activated.");
 			}
 			deactivateTask("License Manager");
-			if(adminReview)
+			if(adminReview) {
 				activateTask("Administrative Review");
-			if(ownerReview) 
+				if(asgnDateAR != null)
+					updateTaskAssignedDate("Administrative Review", asgnDateAR);
+			}
+			if(ownerReview) {
 				activateTask ("Owner Application Reviews");
+				if(asgnDateOR != null)
+					updateTaskAssignedDate("Owner Application Review", asgnDateOR);
+			}
 		}
-	} 
+	}  
 }catch(err){
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: activate task after Reviesions Required status: " + err.message);
 	aa.print(err.stack);
