@@ -456,7 +456,7 @@ try {
 				activateTask ("Owner Application Reviews");
 		}
 	} 
-}}catch(err){
+}catch(err){
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: activate task after Reviesions Required status: " + err.message);
 	aa.print(err.stack);
 }
