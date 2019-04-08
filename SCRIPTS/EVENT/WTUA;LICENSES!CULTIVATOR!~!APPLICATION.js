@@ -401,12 +401,11 @@ try {
 		}
 		if(scienceDate >= adminDate) {
 			if(scienceReview == false && ceqaReview == false) {
+				activateTask("Administrative Manager Review");
 				showMessage = true;
 				comment("No Incomplete Response status found.  Science Manager Review was activated.");
 			}
-			else {
-				deactivateTask("License Manager");
-			}
+			deactivateTask("License Manager");			
 			if(scienceReview) 
 				activateTask("Scientific Review");	
 			if(ceqaReview) 
@@ -414,12 +413,11 @@ try {
 		}
 		else {
 			if(adminReview == false && ownerReview == false) {
+				activateTask("Science Manager Review");
 				showMessage = true;
 				comment("No Incomplete Response status found.  Administrative Manager Review was activated.");
 			}
-			else {
-				deactivateTask("License Manager");
-			}
+			deactivateTask("License Manager");
 			if(adminReview)
 				activateTask("Administrative Review");
 			if(ownerReview) 
