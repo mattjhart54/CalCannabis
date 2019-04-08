@@ -208,6 +208,51 @@ try{
 	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Stop license issuance: " + err.message);
 	aa.print(err.stack);
 }
+//MJH 180408 Story 5896 check for incomplete children records
+try {
+	if(wfTask == "Final Review" && matches(wfStatus,"Approved for Provisional License","Approved for Annual License")) { 
+		childId = getChildren("Licenses/Cultivator/*/*");
+		var br = "<br>";
+		var openOwnRec = false;
+		var openAmendRec = false;
+		var ownMsg = "The following owner records have not been completed:" + br;
+		var amendMsg = "The following Amendment records have not been completed:" + br;
+		for (c in childId) {
+			childCap = aa.cap.getCap(childId[c]).getOutput();
+			childStatus = childCap.getCapStatus();
+			childTypeResult = childCap.getCapType();	
+			childTypeString = childTypeResult.toString();	
+			childTypeArray = childTypeString.split("/");
+			childAltId = childId[c].getCustomID();
+			if(childTypeArray[3] == "Owner Application") { 
+				if(matches(childStatus,"Additional Information Needed", "Incomplete Response", "Under Review", "Submitted")) {
+					openOwnRec = true;
+					ownMsg = ownMsg + " " + childAltId + " Status " + childStatus + br;
+				}
+			}
+			if(childTypeArray[3] == "Amendment") { 
+				if(matches(childStatus,"Under Review", "Pending")) {
+					openAmendRec = true;
+					amendMsg = amendMsg + " " + childAltId + " Status " + childStatus + br;
+				}
+			}
+		}
+		if(openAmendRec) {
+			showMessage = true;
+			comment(amendMsg);
+		}
+		if(openOwnRec) {
+			showMessage = true;
+			comment(ownMsg);
+		}
+		if(openAmendRec || openOwnRec)
+			cancel = true;
+	} 
+}catch(err){
+	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Final Review child check: " + err.message);
+	aa.print(err.stack);
+}
+//MJH 180408 Story 5896 end
 //lwacht
 //add fees
 //lwacht: don't run for temporary app 
@@ -377,48 +422,4 @@ try {
 	aa.print(err.stack);
 }
 //MJH 181031 Story 5776 end
-//MJH 180408 Story 5896 check for incomplete children records
-try {
-	if(wfTask == "Final Review" && matches(wfStatus,"Approved for Provisional License","Approved for Annual License")) { 
-		childId = getChildren("Licenses/Cultivator/*/*");
-		var br = "<br>";
-		var openOwnRec = false;
-		var openAmendRec = false;
-		var ownMsg = "The following owner records have not been completed:" + br;
-		var amendMsg = "The following Amendment records have not been completed:" + br;
-		for (c in childId) {
-			childCap = aa.cap.getCap(childId[c]).getOutput();
-			childStatus = childCap.getCapStatus();
-			childTypeResult = childCap.getCapType();	
-			childTypeString = childTypeResult.toString();	
-			childTypeArray = childTypeString.split("/");
-			childAltId = childId[c].getCustomID();
-			if(childTypeArray[3] == "Owner Application") { 
-				if(matches(childStatus,"Additional Information Needed", "Incomplete Response", "Under Review", "Submitted")) {
-					openOwnRec = true;
-					ownMsg = ownMsg + " " + childAltId + " Status " + childStatus + br;
-				}
-			}
-			if(childTypeArray[3] == "Amendment") { 
-				if(matches(childStatus,"Under Review", "Pending")) {
-					openAmendRec = true;
-					amendMsg = amendMsg + " " + childAltId + " Status " + childStatus + br;
-				}
-			}
-		}
-		if(openAmendRec) {
-			showMessage = true;
-			comment(amendMsg);
-		}
-		if(openOwnRec) {
-			showMessage = true;
-			comment(ownMsg);
-		}
-		if(openAmendRec || openOwnRec)
-			cancel = true;
-	} 
-}catch(err){
-	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Final Review child check: " + err.message);
-	aa.print(err.stack);
-}
-//MJH 180408 Story 5896 end
+
