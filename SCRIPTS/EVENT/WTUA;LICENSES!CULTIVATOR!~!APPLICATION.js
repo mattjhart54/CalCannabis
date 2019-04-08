@@ -175,47 +175,6 @@ if(wfTask == "Scientific Review" || wfTask == "CEQA Review") {
 }
 // ees 20190311 story 5894 end
 
-
-//mhart
-//If License Manager requires revisions to the denial reasons reactivete the task the denial request came from.
-try {
-	if(wfTask == "License Manager" && wfStatus == "Revisions Required") { 
-		altId = capId.getCustomID();
-		var taskItemScriptModel=aa.workflow.getTask(capId, "Administrative Manager Review");
-		if(taskItemScriptModel.getSuccess()){
-			var taskItemScript = taskItemScriptModel.getOutput();
-			if(matches(taskItemScript.disposition, "Recommended for Denial")){
-				//lwacht: 180426: story 5436: reset the assigned task
-				var asgnDateAR = getAssignedDate("Administrative Review");
-				activateTask("Administrative Manager Review");
-				deactivateTask("License Manager");
-				if(asgnDateAR){
-					updateTaskAssignedDate("Administrative Review", asgnDateAR);
-				}else{
-					logDebug("No assigned date found for Administrative Review");
-				}
-				//lwacht: 180426: story 5436: end
-			}
-		}
-		var taskItemScriptModel=aa.workflow.getTask(capId, "Science Manager Review");
-		if(taskItemScriptModel.getSuccess()){
-			var taskItemScript = taskItemScriptModel.getOutput();
-			if(matches(taskItemScript.disposition, "Recommended for Denial")){
-				activateTask("Science Manager Review");
-				deactivateTask("License Manager");
-			}
-		}	
-	}
-	if(wfTask == "License Manager" && wfStatus == "Denied") { 
-		updateTask("Application Disposition", "Denied - Pending Appeal","Updated by script","");
-		editAppSpecific("Appeal Expiry Date",dateAdd(wfDateMMDDYYYY,30));
-		editAppSpecific("Denial Letter Sent",wfDateMMDDYYYY);
-		emailRptContact("WTUA", "LCA_APP_DENIAL_LETTER", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
-	}
-}catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Denial Revisions Required: " + err.message);
-	logDebug(err.stack);
-}
 //mhart: send local auth notice
 try{
 	if(matches(wfStatus,"Local Auth Sent - 10","Local Auth Sent - 60")){
