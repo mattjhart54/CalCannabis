@@ -84,6 +84,7 @@ try{
 	var wellLog = {condition : "Water - Groundwater Well Log", document : "Water - Groundwater Well Log"};
 	var srs2WellLog = {condition : "Water - Small Retail Supplier Well Log", document : "Water - Small Retail Supplier Well Log"};
 	var SWRCBAhuth = {condition : "Water - SWRCB Diversion Authorization", document : "Water - SWRCB Diversion Authorization"};
+	var waterBill = {condition : "Water - Water Service Bill", document : "Water - Water Service Bill"};
 	//lwacht 171130 new doc type
 	var docWtrSmRetSupDiv = {condition : "Water - Small Retail Supplier Diversion", document : "Water - Small Retail Supplier Diversion"};
 	//lwacht 171130 end
@@ -241,15 +242,19 @@ try{
 		// Water Documents
 		arrReqdDocs_App.push(streambedAlter);
 		arrReqdDocs_App.push(waterQuality);
-		
+//MJH 040819 story 5916 Add code to make water bill document required		
 		var gw=false;
 		var sr=false;
 		var di=false;
 		var de=false;
 		var wtrSmRetSupDiv=false;
+		var rs = false;
 		if(typeof(SOURCEOFWATERSUPPLY)=="object"){
 			var tblWater = SOURCEOFWATERSUPPLY;
 			for(x in tblWater) {
+				if (tblWater[x]["Type of Water Supply"] == "Retail Supplier"){
+					rs=true;
+				}
 				if (tblWater[x]["Type of Water Supply"] == "Groundwater Well"){
 					gw=true;
 				}
@@ -271,6 +276,13 @@ try{
 				}
 			}
 		}
+	if(rs == true) {
+		arrReqdDocs_App.push(waterBill);
+	}else{
+		if(appHasCondition(conditionType, null, waterBill.condition, null)){
+			removeCapCondition(conditionType, waterBill.condition);
+		}
+	}
 	if(gw == true) {
 		arrReqdDocs_App.push(wellLog);
 	}else{
@@ -280,9 +292,13 @@ try{
 	}
 	if(sr == true) {
 		arrReqdDocs_App.push(srs2WellLog);
+		arrReqdDocs_App.push(waterBill);
 	}else{
 		if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
-			removeCapCondition(conditionType, srs2WellLog.condition);
+			removeCapCondition(conditionType, srs2WellLog.condition);	
+		}
+		if(appHasCondition(conditionType, null, waterBill.condition, null)){
+			removeCapCondition(conditionType, waterBill.condition);
 		}
 	}
 	if(di == true) {
@@ -295,11 +311,16 @@ try{
 	//lwacht 171130: new doc type
 	if(wtrSmRetSupDiv == true) {
 		arrReqdDocs_App.push(docWtrSmRetSupDiv);
+		arrReqdDocs_App.push(waterBill);
 	}else{
 		if(appHasCondition(conditionType, null, docWtrSmRetSupDiv.condition, null)){
 			removeCapCondition(conditionType, docWtrSmRetSupDiv.condition);
 		}
+		if(appHasCondition(conditionType, null, waterBill.condition, null)){
+			removeCapCondition(conditionType, waterBill.condition);
+		}
 	}
+//MJH 040819 story 5916 Add code to make water bill document required	
 	//lwacht 171130 end
 	/*lwacht 171127: no longer needed
 	if(de == true) {
