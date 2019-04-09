@@ -84,7 +84,9 @@ try{
 	var wellLog = {condition : "Water - Groundwater Well Log", document : "Water - Groundwater Well Log"};
 	var srs2WellLog = {condition : "Water - Small Retail Supplier Well Log", document : "Water - Small Retail Supplier Well Log"};
 	var SWRCBAhuth = {condition : "Water - SWRCB Diversion Authorization", document : "Water - SWRCB Diversion Authorization"};
-	var waterBill = {condition : "Water - Water Service Bill", document : "Water - Water Service Bill"};
+	var waterBill = {condition : "Water - Retail Water Service Bill", document : "Water - Retail Water Service Bill"};
+	var divWaterBill = {condition : "Water - SR Diversion Water Service Bill", document : "Water - SR Diversion Water Service Bill"};
+	var gwWaterBill = {condition : "Water - SR Groundwater Well Water Service Bill", document : "Water - SR Groundwater Well Water Service Bill"};
 	//lwacht 171130 new doc type
 	var docWtrSmRetSupDiv = {condition : "Water - Small Retail Supplier Diversion", document : "Water - Small Retail Supplier Diversion"};
 	//lwacht 171130 end
@@ -292,13 +294,13 @@ try{
 	}
 	if(sr == true) {
 		arrReqdDocs_App.push(srs2WellLog);
-		arrReqdDocs_App.push(waterBill);
+		arrReqdDocs_App.push(gwWaterBill);
 	}else{
 		if(appHasCondition(conditionType, null, srs2WellLog.condition, null)){
 			removeCapCondition(conditionType, srs2WellLog.condition);	
 		}
-		if(appHasCondition(conditionType, null, waterBill.condition, null)){
-			removeCapCondition(conditionType, waterBill.condition);
+		if(appHasCondition(conditionType, null, gwWaterBill.condition, null)){
+			removeCapCondition(conditionType, gwWaterBill.condition);
 		}
 	}
 	if(di == true) {
@@ -311,13 +313,13 @@ try{
 	//lwacht 171130: new doc type
 	if(wtrSmRetSupDiv == true) {
 		arrReqdDocs_App.push(docWtrSmRetSupDiv);
-		arrReqdDocs_App.push(waterBill);
+		arrReqdDocs_App.push(divWaterBill);
 	}else{
 		if(appHasCondition(conditionType, null, docWtrSmRetSupDiv.condition, null)){
 			removeCapCondition(conditionType, docWtrSmRetSupDiv.condition);
 		}
-		if(appHasCondition(conditionType, null, waterBill.condition, null)){
-			removeCapCondition(conditionType, waterBill.condition);
+		if(appHasCondition(conditionType, null, divWaterBill.condition, null)){
+			removeCapCondition(conditionType, divWaterBill.condition);
 		}
 	}
 //MJH 040819 story 5916 Add code to make water bill document required	
