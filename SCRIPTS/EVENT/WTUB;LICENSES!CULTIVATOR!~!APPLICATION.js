@@ -129,7 +129,7 @@ try{
 			}
 			if(showReport){
 				showDebug=false;
-				displayReport("Deficiency Report", "p1value", capIDString,"p2value",defAltIdT);
+				displayReport("Deficiency Letter", "altId", capIDString,"newAltId",defAltIdT);
 			}
 		}
 	}
