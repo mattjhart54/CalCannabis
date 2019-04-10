@@ -176,12 +176,49 @@ if(wfTask == "Scientific Review" || wfTask == "CEQA Review") {
 }
 // ees 20190311 story 5894 end
 try {
+//mhart 190410 story 5954 - Close record and children records when workflow status Denied is entered.
 	if(wfTask == "License Manager" && wfStatus == "Denied") { 
-		updateTask("Application Disposition", "Denied - Pending Appeal","Updated by script","");
-		editAppSpecific("Appeal Expiry Date",dateAdd(wfDateMMDDYYYY,30));
-		editAppSpecific("Denial Letter Sent",wfDateMMDDYYYY);
-		emailRptContact("WTUA", "LCA_APP_DENIAL_LETTER", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+//		updateTask("Application Disposition", "Denied - Pending Appeal","Updated by script","");
+//		editAppSpecific("Appeal Expiry Date",dateAdd(wfDateMMDDYYYY,30));
+//		editAppSpecific("Denial Letter Sent",wfDateMMDDYYYY);
+//		emailRptContact("WTUA", "LCA_APP_DENIAL_LETTER", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
+		closeTask("Application Disposition", "Denied","Updated by script","");
+		updateAppStatus("Denied", "Updated by script");
+		childRecs = getChildren("Licenses/Cultivator/*/*");
+		var holdId = capId;
+		for (c in childRecs) {
+			capId = childRecs[c]
+			childCap = aa.cap.getCap(capId).getOutput();
+			childStatus = childCap.getCapStatus();
+			childTypeResult = childCap.getCapType();	
+			childTypeString = childTypeResult.toString();	
+			childTypeArray = childTypeString.split("/");
+			childAltId = capId.getCustomID();
+			if(childTypeArray[3] == "Owner Application") { 
+				if(isTaskActive("Owner Application Review")) {
+					closeTask("Owner Application Review","Closed","updated by script","");
+					updateAppStatus("Closed","updated by script");
+					ownChildRecs = getChildren("Licenses/Cultivator/Owner/Amendment");
+					for (o in ownChildRecs) {
+						ownChildCap = aa.cap.getCap(ownChildRecs[o]).getOutput();
+						ownChildStatus = ownChildCap.getCapStatus();
+						if(matches(ownChildStatus,"Under Review", "Pending")) {
+							closeTask("Amendment Review","Closed","updated by script","",ownChildRecs[o]);
+							updateAppStatus("Closed","updated by script",ownChildRecs[o]);
+						}
+					}
+				}
+			}
+			if(childTypeArray[3] == "Amendment") { 
+				if(matches(childStatus,"Under Review", "Pending")) {
+					closeTask("Amendment Review","Closed","updated by script","");
+					updateAppStatus("Closed","updated by script");
+				}
+			}
+		}
+		var capId = holdId;
 	}
+//mhart 190410 story 5954 - end
 }catch(err){
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: License Manager Denial: " + err.message);
 	aa.print(err.stack);
