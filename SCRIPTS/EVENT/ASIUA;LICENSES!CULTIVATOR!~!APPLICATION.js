@@ -88,6 +88,12 @@ try{
 		//lwacht 171218 end
 	*/ //mhart 180409: user story 5391 end
 	}
+//mhart 190410 story 5900 - Add Pending status to Local Authority Response drop down list
+	if(AInfo["Local Authority Response"] == "Pending"  && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60"))  {
+		activateTask("Administrative Review");
+		activateTask("Owner Application Reviews");
+		updateAppStatus("Under Administrative Review","Updated by script");
+	}
 	if(AInfo["Local Authority Response"] == "Non Compliance"  && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60"))  {
 		//lwacht: 180426: story 5436: reset the assigned task
 		var asgnDateAR = getAssignedDate("Administrative Review");
@@ -111,6 +117,16 @@ try{
 		}
 		capId = holdId;
 	}
+	else {
+		if(AInfo["Local Authority Response"] == "Non Compliance"  && !matches(capStatus,"Denied", "Disqualified", "Provisional License Issued", "License Issued")){
+			activateTask("Administrative Manager Review");
+			updateTask("Administrative Manager Review","Locally Non-Compliant","Updated by script");
+			updateAppStatus("Ready for Review","Updated by script");
+			if(!appHasCondition("Application Condition",null,"Locally Non-Compliant",null))
+				addStdCondition("Application Condition","Locally Non-Compliant");
+		}
+	}
+//mhart 190410 story 5900 - end
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: Send Local Auth: " + err.message);
 	logDebug(err.stack);
