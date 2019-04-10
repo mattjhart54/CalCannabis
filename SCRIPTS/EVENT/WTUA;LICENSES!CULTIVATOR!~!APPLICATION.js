@@ -196,7 +196,7 @@ try {
 			childAltId = capId.getCustomID();
 			if(childTypeArray[3] == "Owner Application") { 
 logDebug("got Here ");	
-				if(isTaskActive("Owner Application Review")) {
+				if(matches(childStatus,"Under Review", "Pending","Additional Information Needed")) {
 logDebug("got Here 2");	
 					closeTask("Owner Application Review","Closed","updated by script","");
 					updateAppStatus("Closed","updated by script");
