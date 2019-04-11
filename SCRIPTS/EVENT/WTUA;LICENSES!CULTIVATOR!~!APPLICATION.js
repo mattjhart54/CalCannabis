@@ -200,7 +200,7 @@ logDebug("got Here ");
 logDebug("got Here 2");	
 					closeTask("Owner Application Review","Closed","updated by script","");
 					updateAppStatus("Closed","updated by script",capId);
-					ownChildRecs = getChildren("Licenses/Cultivator/Owner/Amendment");
+					ownChildRecs = getChildren("Licenses/Cultivator/Owner/Amendment",capId);
 					for (o in ownChildRecs) {
 						capId = ownChildRecs[o];
 						ownChildCap = aa.cap.getCap(ownChildRecs[o]).getOutput();
