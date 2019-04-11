@@ -87,6 +87,7 @@ try{
 	var waterBill = {condition : "Water - Retail Water Service Bill", document : "Water - Retail Water Service Bill"};
 	var divWaterBill = {condition : "Water - SR Diversion Water Service Bill", document : "Water - SR Diversion Water Service Bill"};
 	var gwWaterBill = {condition : "Water - SR Groundwater Well Water Service Bill", document : "Water - SR Groundwater Well Water Service Bill"};
+	var rcPhoto = {condition : "Water - Rainwater Catchment Photographs", document : "Water - Rainwater Catchment Photographs"};
 	//lwacht 171130 new doc type
 	var docWtrSmRetSupDiv = {condition : "Water - Small Retail Supplier Diversion", document : "Water - Small Retail Supplier Diversion"};
 	//lwacht 171130 end
@@ -251,6 +252,7 @@ try{
 		var de=false;
 		var wtrSmRetSupDiv=false;
 		var rs = false;
+		var rc=false;
 		if(typeof(SOURCEOFWATERSUPPLY)=="object"){
 			var tblWater = SOURCEOFWATERSUPPLY;
 			for(x in tblWater) {
@@ -276,6 +278,9 @@ try{
 				if (tblWater[x]["Type of Water Supply"] == "Diversion with Exception from Requirement to File a Statement of Diversion and Use"){
 					de=true;
 				}
+				if(matches(tblWater[x]["Type of Water Supply"], "Rainwater Catchment System")){
+					rc=true;
+				}
 			}
 		}
 	if(rs == true) {
@@ -283,6 +288,13 @@ try{
 	}else{
 		if(appHasCondition(conditionType, null, waterBill.condition, null)){
 			removeCapCondition(conditionType, waterBill.condition);
+		}
+	}
+	if(rc == true) {
+		arrReqdDocs_App.push(rcPhoto);
+	}else{
+		if(appHasCondition(conditionType, null, rcPhoto.condition, null)){
+			removeCapCondition(conditionType, rcPhoto.condition);
 		}
 	}
 	if(gw == true) {
