@@ -109,3 +109,16 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Force file date to be submission date: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
 //lwacht 180208: story 5200: end
+//MJH 190411 story 5978 - Update app name with owner name and email
+try {
+	var priContact = getContactObj(capId,"Owner");
+	if(priContact){	
+		ownName = priContact.capContact.firstName + " " + priContact.capContact.lastName + " (" + priContact.capContact.email + ")";
+		logDebug(" Owner Name " + ownName);
+		editAppName(ownName);
+	}
+}catch (err){
+	logDebug("A JavaScript Error occurred: CTRCA: Licenses/Cultivation/*/Owner Application: edit app name: " + err.message);
+	logDebug(err.stack);
+}
+//MJH 190411 story 5978 -
