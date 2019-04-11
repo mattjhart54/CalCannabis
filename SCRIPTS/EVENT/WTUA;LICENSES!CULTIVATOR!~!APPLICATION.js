@@ -187,25 +187,26 @@ try {
 		childRecs = getChildren("Licenses/Cultivator/*/*");
 		var holdId = capId;
 		for (c in childRecs) {
-			capId = childRecs[c]
+			capId = childRecs[c];
 			childCap = aa.cap.getCap(capId).getOutput();
 			childStatus = childCap.getCapStatus();
 			childTypeResult = childCap.getCapType();	
 			childTypeString = childTypeResult.toString();	
 			childTypeArray = childTypeString.split("/");
 			childAltId = capId.getCustomID();
-			if(childTypeArray[3] == "Owner Application") { 
-logDebug("got Here ");	
+			if(childTypeArray[3] == "Owner Application") {
+logDebug("got Here ");			
 				if(matches(childStatus,"Under Review", "Pending","Additional Information Needed")) {
 logDebug("got Here 2");	
 					closeTask("Owner Application Review","Closed","updated by script","");
-					updateAppStatus("Closed","updated by script");
+					updateAppStatus("Closed","updated by script",capId);
 					ownChildRecs = getChildren("Licenses/Cultivator/Owner/Amendment");
 					for (o in ownChildRecs) {
+						capId = ownChildRecs[o];
 						ownChildCap = aa.cap.getCap(ownChildRecs[o]).getOutput();
 						ownChildStatus = ownChildCap.getCapStatus();
 						if(matches(ownChildStatus,"Under Review", "Pending")) {
-							closeTask("Amendment Review","Closed","updated by script","",ownChildRecs[o]);
+							closeTask("Amendment Review","Closed","updated by script","");
 							updateAppStatus("Closed","updated by script",ownChildRecs[o]);
 						}
 					}
@@ -214,7 +215,7 @@ logDebug("got Here 2");
 			if(childTypeArray[3] == "Amendment") { 
 				if(matches(childStatus,"Under Review", "Pending")) {
 					closeTask("Amendment Review","Closed","updated by script","");
-					updateAppStatus("Closed","updated by script");
+					updateAppStatus("Closed","updated by script",capId);
 				}
 			}
 		}
