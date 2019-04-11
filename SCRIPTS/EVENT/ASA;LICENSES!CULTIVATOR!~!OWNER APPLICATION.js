@@ -131,3 +131,18 @@ try{
 	logDebug(err.stack);
 }
 //lwacht: 180416: story 5175: end
+//MJH 190411 story 5978 - Update app name with owner name and email
+try {
+	if(!publicUser){
+		var priContact = getContactObj(capId,"Owner");
+		if(priContact){	
+			ownName = priContact.capContact.firstName + " " + priContact.capContact.lastName + " (" + priContact.capContact.email + ")";
+			logDebug(" Owner Name " + ownName);
+			editAppName(ownName);
+		}
+	}
+}catch (err){
+	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Owner Application: Create Owner: " + err.message);
+	logDebug(err.stack);
+}
+//MJH 190411 story 5978 - end
