@@ -10,7 +10,7 @@ try {
 		}
 	}
 	//MJH 190411 story 5977 - end
-}}catch(err){
+}catch(err){
 	logDebug("An error has occurred in ASUB:LICENSES/CULTIVATOR/*/APPLICATION: Revoke License Check: " + err.message);
 	logDebug(err.stack);
 }
