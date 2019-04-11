@@ -10,6 +10,7 @@ try{
 	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/*/LICENSE: Adding to CAT Set: " + err.message);
 	logDebug(err.stack);
 }
+//MJH 190411 story 5977 - Revoke application when license is revoked
 try {
 	if(capStatus == "Revoked") { 
 		childRecs = getChildren("Licenses/Cultivator/*/Application");
@@ -31,3 +32,4 @@ try {
 	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/*/LICENSE: License Revoked: " + err.message);
 	logDebug(err.stack);
 }
+//MJH 190411 story 5977 - end
