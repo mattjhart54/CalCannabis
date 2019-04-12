@@ -215,6 +215,8 @@ try{
 				var tblEmail = ""+ tblOwnerEmails[x]["Email Address"];
 				tblEmail = tblEmail.toUpperCase();
 				for(o in OWNERS) {
+					if( x == o) 
+						continue;
 					var ownEmail = ""+ OWNERS[o]["Email Address"];
 					ownEmail = ownEmail.toUpperCase();
 					if (tblEmail == ownEmail) {
