@@ -18,7 +18,7 @@
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
 var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
@@ -132,32 +132,39 @@ try {
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_APP_PREMISES: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
 		loadASITables4ACA_corrected();
-		contigousHrs = false;
-		for(row in HOURSOFOPERATION){
-			if(matches(HOURSOFOPERATION[row]["Day"],"Monday","Tuesday","Wednesday","Thursday","Friday")) {
-				var sTime = "" + HOURSOFOPERATION[row]["Start"];
-				var sHH = sTime.substring(0,2)
-				if(sHH < "08" || sHH > "15") {
-					continue;
-				}
-				sHH = sHH * 60;
-				var sMM = sTime.substring(3,5);
-				sTime = parseInt(sHH) + parseInt(sMM);
-				var eTime = "" + HOURSOFOPERATION[row]["End"];
-				var eHH = eTime.substring(0,2) * 60;
-				var eMM = eTime.substring(3,5);
-				eTime = parseInt(eHH) + parseInt(eMM);
-				var tDiff = eTime - sTime;
-				if(tDiff > 120) {
-					contigousHrs = true;
-					break;
-				}
-			}
-		}
-		if(!contigousHrs) {
+		if(HOURSOFOPERATION.length<1){
 			cancel = true;
 			showMessage = true;
-			comment("There must be a minimum of two (2) hours of operation that are between 08:00 and 17:00 (Pacific Time) on each day, Monday through Friday");
+			comment("You must enter at least one row in the Hours of Operations table");
+		} 
+		else {
+			contigousHrs = false;
+			for(row in HOURSOFOPERATION){
+				if(matches(HOURSOFOPERATION[row]["Day"],"Monday","Tuesday","Wednesday","Thursday","Friday")) {
+					var sTime = "" + HOURSOFOPERATION[row]["Start"];
+					var sHH = sTime.substring(0,2)
+					if(sHH < "08" || sHH > "15") {
+						continue;
+					}
+					sHH = sHH * 60;
+					var sMM = sTime.substring(3,5);
+					sTime = parseInt(sHH) + parseInt(sMM);
+					var eTime = "" + HOURSOFOPERATION[row]["End"];
+					var eHH = eTime.substring(0,2) * 60;
+					var eMM = eTime.substring(3,5);
+					eTime = parseInt(eHH) + parseInt(eMM);
+					var tDiff = eTime - sTime;
+					if(tDiff > 120) {
+						contigousHrs = true;
+						break;
+					}
+				}
+			}
+			if(!contigousHrs) {
+				cancel = true;
+				showMessage = true;
+				comment("There must be a minimum of two (2) hours of operation that are between 08:00 and 17:00 (Pacific Time) on each day, Monday through Friday");
+			}
 		}
 	}
 }catch (err){
