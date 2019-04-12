@@ -205,22 +205,30 @@ try{
 				showMessage = true;
 				comment("The total Percent Ownership must be greater than 0 and less than 100.")
 			}
-			//table isn't getting removed, so working around for now by putting code to get the first name in the 
-			//script that adds the owner records.
-			/*
-			if(tblCorrection){
-				for(x in tblOwner){
-					logDebug(x + ": " + tblOwner[x]);
-				}
-				removeASITable("OWNERS");
-				var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos("OWNERS",capId,"ADMIN");
-				if(!tssmResult.getSuccess()){
-					aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_APPLICANT_OWNER_TABLE: RemoveASIT: "+ startDate, capId + "; " + tssmResult.getErrorMessage() + "; ");
-				}
-				asit = cap.getAppSpecificTableGroupModel();
-				addASITable4ACAPageFlow(asit, "OWNERS", tblOwner);
+//MJH 190412 story 5979 - validate that each email address in owner table is unique 
+			var tblOwnerEmails = [];
+			var emailDuplicate = false;
+			for(row in OWNERS){
+				tblOwnerEmails.push(OWNERS[row]);
 			}
-			*/
+			for(x in tblOwnerEmails) {
+				var tblEmail = ""+ tblOwnerEmails[x]["Email Address"];
+				tblEmail = tblEmail.toUpperCase();
+				for(o in OWNERS) {
+					var ownEmail = ""+ OWNERS[o]["Email Address"];
+					ownEmail = ownEmail.toUpperCase();
+					if (tblEmail == ownEmail) {
+						emailDuplicate = true;
+					}
+				}
+				if(emailDuplicate) {
+					cancel = true;
+					showMessage = true;
+					comment("Each Owner in the table must have a unique email address.");
+					break;
+				}
+			}
+//MJH 190412 story 5979 - end
 		}
 	}
 }catch (err) {
