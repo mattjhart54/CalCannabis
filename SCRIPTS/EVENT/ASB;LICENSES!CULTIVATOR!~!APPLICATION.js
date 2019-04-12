@@ -23,6 +23,7 @@ try{
 		}
 	}
 //MJH 190412 story 5979 - validate that each email address in owner table is unique 
+	loadASITables();
 	var tblOwner = [];
 	var emailDuplicate = false;
 	for(row in OWNERS){
