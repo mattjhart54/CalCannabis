@@ -132,15 +132,20 @@ try {
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_APP_PREMISES: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
 		loadASITables4ACA_corrected();
+		monHrs = false;
+		tueHrs = false;
+		wedHrs = false;
+		thuHrs = false;
+		friHrs = false;
 		if(HOURSOFOPERATION.length<1){
 			cancel = true;
 			showMessage = true;
 			comment("You must enter at least one row in the Hours of Operations table");
 		} 
 		else {
-			contigousHrs = false;
 			for(row in HOURSOFOPERATION){
 				if(matches(HOURSOFOPERATION[row]["Day"],"Monday","Tuesday","Wednesday","Thursday","Friday")) {
+					logDebug(HOURSOFOPERATION[row]["Day"] + " " + HOURSOFOPERATION[row]["Start"] + " " + HOURSOFOPERATION[row]["End"]);
 					var sTime = "" + HOURSOFOPERATION[row]["Start"];
 					var sHH = sTime.substring(0,2)
 					if(sHH < "08" || sHH > "15") {
@@ -149,21 +154,37 @@ try {
 					sHH = sHH * 60;
 					var sMM = sTime.substring(3,5);
 					sTime = parseInt(sHH) + parseInt(sMM);
+					logDebug("Start hh " + sHH +  " start MM " + sMM + " Start " + sTime);
 					var eTime = "" + HOURSOFOPERATION[row]["End"];
 					var eHH = eTime.substring(0,2) * 60;
 					var eMM = eTime.substring(3,5);
 					eTime = parseInt(eHH) + parseInt(eMM);
+					logDebug("End hh " + eHH +  " End MM " + eMM + " End " + eTime);	
 					var tDiff = eTime - sTime;
+					logDebug("Time Difference " + tDiff);
 					if(tDiff > 120) {
-						contigousHrs = true;
-						break;
+						if(HOURSOFOPERATION[row]["Day"] = "Monday"){
+							monHrs = true;
+						}
+						if(HOURSOFOPERATION[row]["Day"] = "Tuesday"){
+							tueHrs = true;
+						}
+						if(HOURSOFOPERATION[row]["Day"] = "Wednesday"){
+							wedHrs = true;
+						}
+						if(HOURSOFOPERATION[row]["Day"] = "Thursday"){
+							thuHrs = true;
+						}
+						if(HOURSOFOPERATION[row]["Day"] = "Friday"){
+							friHrs = true;
+						}
 					}
 				}
 			}
-			if(!contigousHrs) {
+			if(!monHrs || !tueHrs || !wedHrs || !thuHrs || !friHrs) {
 				cancel = true;
 				showMessage = true;
-				comment("There must be a minimum of two (2) hours of operation that are between 08:00 and 17:00 (Pacific Time) on each day, Monday through Friday");
+				comment("There must be two contiguous hours of operation on each work week day (Monday thru Friday");
 			}
 		}
 	}
