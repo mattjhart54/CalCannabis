@@ -168,19 +168,19 @@ try {
 					var tDiff = eTime - sTime;
 					logDebug("Time Difference " + tDiff);
 					if(tDiff > 120) {
-						if(HOURSOFOPERATION[row]["Day"] = "Monday"){
+						if(HOURSOFOPERATION[row]["Day"] == "Monday"){
 							monHrs = true;
 						}
-						if(HOURSOFOPERATION[row]["Day"] = "Tuesday"){
+						if(HOURSOFOPERATION[row]["Day"] == "Tuesday"){
 							tueHrs = true;
 						}
-						if(HOURSOFOPERATION[row]["Day"] = "Wednesday"){
+						if(HOURSOFOPERATION[row]["Day"] == "Wednesday"){
 							wedHrs = true;
 						}
-						if(HOURSOFOPERATION[row]["Day"] = "Thursday"){
+						if(HOURSOFOPERATION[row]["Day"] == "Thursday"){
 							thuHrs = true;
 						}
-						if(HOURSOFOPERATION[row]["Day"] = "Friday"){
+						if(HOURSOFOPERATION[row]["Day"] == "Friday"){
 							friHrs = true;
 						}
 					}
