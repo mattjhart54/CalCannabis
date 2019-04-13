@@ -163,7 +163,7 @@ try {
 					var eMM = eTime.substring(3,5);
 					eTime = parseInt(eHH) + parseInt(eMM);
 					var tDiff = eTime - sTime;
-	//				logDebug("Time Difference " + tDiff);
+					logDebug("Time Difference " + tDiff);
 					if(tDiff > 120) {
 						if(HOURSOFOPERATION[row]["Day"] == "Monday"){
 							monHrs = true;
@@ -183,7 +183,7 @@ try {
 					}
 				}
 			}
-		//	logDebug("mon " + monHrs + " tue " + tueHrs + " wed " + wedHrs + " thu " + thuHrs + " fri " + friHrs);
+			logDebug("mon " + monHrs + " tue " + tueHrs + " wed " + wedHrs + " thu " + thuHrs + " fri " + friHrs);
 			if(!monHrs || !tueHrs || !wedHrs || !thuHrs || !friHrs) {
 				cancel = true;
 				showMessage = true;
