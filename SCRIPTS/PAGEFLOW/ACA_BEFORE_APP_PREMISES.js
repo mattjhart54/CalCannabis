@@ -83,7 +83,6 @@ try {
 	//lwacht: 180305: story 5296: don't allow script to run against completed records
 	var capIdStatusClass = getCapIdStatusClass(capId);
 	if(!matches(capIdStatusClass, "COMPLETE")){
-		showDebug = 3;
 	//lwacht: 180305: story 5296: end
 		var AInfo = [];
 		loadAppSpecific4ACA(AInfo);
@@ -150,7 +149,6 @@ try {
 		else {
 			for(row in HOURSOFOPERATION){
 				if(matches(HOURSOFOPERATION[row]["Day"],"Monday","Tuesday","Wednesday","Thursday","Friday")) {
-					logDebug(HOURSOFOPERATION[row]["Day"] + " " + HOURSOFOPERATION[row]["Start"] + " " + HOURSOFOPERATION[row]["End"]);
 					var sTime = "" + HOURSOFOPERATION[row]["Start"];
 					var sHH = sTime.substring(0,2)
 					if(sHH < "08" || sHH > "15") {
@@ -159,14 +157,12 @@ try {
 					sHH = sHH * 60;
 					var sMM = sTime.substring(3,5);
 					sTime = parseInt(sHH) + parseInt(sMM);
-					logDebug("Start hh " + sHH +  " start MM " + sMM + " Start " + sTime);
 					var eTime = "" + HOURSOFOPERATION[row]["End"];
 					var eHH = eTime.substring(0,2) * 60;
 					var eMM = eTime.substring(3,5);
 					eTime = parseInt(eHH) + parseInt(eMM);
-					logDebug("End hh " + eHH +  " End MM " + eMM + " End " + eTime);	
 					var tDiff = eTime - sTime;
-					logDebug("Time Difference " + tDiff);
+	//				logDebug("Time Difference " + tDiff);
 					if(tDiff > 120) {
 						if(HOURSOFOPERATION[row]["Day"] == "Monday"){
 							monHrs = true;
@@ -186,7 +182,7 @@ try {
 					}
 				}
 			}
-			logDebug("mon " + monHrs + " tue " + tueHrs + " wed " + wedHrs + " thu " + thuHrs + " fri " + friHrs);
+		//	logDebug("mon " + monHrs + " tue " + tueHrs + " wed " + wedHrs + " thu " + thuHrs + " fri " + friHrs);
 			if(!monHrs || !tueHrs || !wedHrs || !thuHrs || !friHrs) {
 				cancel = true;
 				showMessage = true;
