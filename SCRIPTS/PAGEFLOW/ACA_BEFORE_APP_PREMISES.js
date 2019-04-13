@@ -137,11 +137,11 @@ try {
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_APP_PREMISES: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
 		loadASITables4ACA_corrected();
-		monHrs = false;
-		tueHrs = false;
-		wedHrs = false;
-		thuHrs = false;
-		friHrs = false;
+		var monHrs = false;
+		var tueHrs = false;
+		var wedHrs = false;
+		var thuHrs = false;
+		var friHrs = false;
 		if(HOURSOFOPERATION.length<1){
 			cancel = true;
 			showMessage = true;
@@ -186,6 +186,7 @@ try {
 					}
 				}
 			}
+			logDebug("mon " + monHrs + " tue " + tueHrs + " wed " + wedHrs + " thu " + thuHrs + " fri " + friHrs);
 			if(!monHrs || !tueHrs || !wedHrs || !thuHrs || !friHrs) {
 				cancel = true;
 				showMessage = true;
