@@ -135,6 +135,7 @@ try {
 			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_APP_PREMISES: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
+		showDebug=3;
 		loadASITables4ACA_corrected();
 		var monHrs = false;
 		var tueHrs = false;
@@ -186,7 +187,7 @@ try {
 			if(!monHrs || !tueHrs || !wedHrs || !thuHrs || !friHrs) {
 				cancel = true;
 				showMessage = true;
-				comment("There must be two contiguous hours of operation on each work week day (Monday thru Friday");
+				comment("There must be two contiguous hours of operation between 8AM and 5PM on each work week day (Monday thru Friday)");
 			}
 		}
 	}
