@@ -135,7 +135,7 @@ try {
 			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_BEFORE_APP_PREMISES: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
 		}
-		showDebug=3;
+//		showDebug=3;
 		loadASITables4ACA_corrected();
 		var monHrs = false;
 		var tueHrs = false;
@@ -164,7 +164,7 @@ try {
 					eTime = parseInt(eHH) + parseInt(eMM);
 					var tDiff = eTime - sTime;
 					logDebug("Time Difference " + tDiff);
-					if(tDiff > 120) {
+					if(tDiff >= 120) {
 						if(HOURSOFOPERATION[row]["Day"] == "Monday"){
 							monHrs = true;
 						}
