@@ -80,6 +80,9 @@ try {
 			copyAppSpecific(licCapId);
 			editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
 			editAppSpecific("Premise State", "CA", licCapId);
+// mhart 190415 User Story 5971 - copy hours of operation to license record
+			copyASITables(capId,licCapId,"DEFICIENCIES","CANNABIS FINACIAL INTEREST","OWNERS","PREMISES ADDRESSES","SOURCE OF WATER SUPPLY","DENIAL REASONS");
+// mhart 190415 User Story 5971 - end	
 			if (appTypeArray[2] != "Temporary") {
 				addToCat(licCapId); //send active license to CAT
 			}
