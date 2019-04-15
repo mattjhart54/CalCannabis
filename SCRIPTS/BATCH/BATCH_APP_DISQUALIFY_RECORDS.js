@@ -193,11 +193,20 @@ try{
 			capFilterDate++;
 			continue;
 		 }
+		if(isTaskActive("Administrative Manager Review") && matches(AInfo["Admin Deficiency Letter Sent"], null, "", undefined)) {
+			capFilterDate++;
+			continue;
+		}
+		if(isTaskActive("Science Manager Review") && matches(AInfo["Science Deficiency Letter Sent"], null, "", undefined)) {
+			capFilterDate++;
+			continue;
+		}
 	// MJH: 190213 Story 5842 - Bypass if pending amendments and the exclude field is checked		
 		if(AInfo["Exclude from Disqualification"] == "CHECKED") {
 			capFilterOverride++;
 			continue;
 		}
+
 		logDebug("----Processing record " + altId + br);
 		capCount++;
 		if (newAppStatus && newAppStatus != ""){
