@@ -92,7 +92,7 @@ sysFromEmail = getParam("sysFromEmail");
 | <===========Main=Loop================>
 |
 /-----------------------------------------------------------------------------------------------------*/
-
+logDebug("Start of Job");
 var SET_ID = "CAT_UPDATES";
 
 try {
@@ -148,6 +148,12 @@ try {
         }
     }
 	logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
+	if (emailAddress.length)
+		aa.sendMail(sysFromEmail, emailAddress, "", batchJobName + " Results", emailText);
+
+	if (showDebug) {
+		aa.eventLog.createEventLog("DEBUG", "Batch Process", batchJobName, aa.date.getCurrentDate(), aa.date.getCurrentDate(),"", emailText ,batchJobID);
+	}
 } catch (err) {
     logDebug("ERROR: " + err.message + " In " + batchJobName);
     logDebug("Stack: " + err.stack);
