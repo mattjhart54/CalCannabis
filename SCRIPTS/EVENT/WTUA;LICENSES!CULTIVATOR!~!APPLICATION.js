@@ -400,7 +400,7 @@ try{
 //mhart 190408 story 5953 - Activate tasks when Revision required status entered
 try {
 	if(wfTask == "License Manager" && wfStatus == "Revisions Required") { 
-		altId = capId.getCustomID();
+//		altId = capId.getCustomID();
 		var adminDate = null;
 		var scienceDate = null;
 		var adminReview = false;
