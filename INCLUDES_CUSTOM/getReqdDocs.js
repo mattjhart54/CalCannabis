@@ -52,6 +52,7 @@ try{
 	var need_lightDiagram = false;	
 	//application documents
 	var conditionType = "License Required Documents";
+	var businessHOO = {condition : "Business - Hours of Operation", document : "Business - Hours of Operation"};
     var businessFormation = {condition : "Business - Formation Documents", document : "Business - Formation Documents"};
     var businessFI = {condition : "Business - List of Financial Interest Holders", document : "Business - List of Financial Interest Holders"};
     var businessBond = {condition : "Business - Evidence Surety Bond", document : "Business - Evidence Surety Bond"};
@@ -138,6 +139,7 @@ try{
 		}
 		
 		arrReqdDocs_App.push(businessFI);
+		arrReqdDocs_App.push(businessHOO);
 		
 		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
 			arrReqdDocs_App.push(soveriegnImmunity);
