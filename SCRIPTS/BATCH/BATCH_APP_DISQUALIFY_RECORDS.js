@@ -187,7 +187,7 @@ try{
 		}
 		var AInfo = [];
 		loadAppSpecific(AInfo);
-		expDate = getAppSpecific("App Expiry Date");
+		expDate = dateAdd(getAppSpecific("App Expiry Date"),1);
 		appExpDate = new Date(expDate);
 		if(appExpDate >= currDate) {
 			capFilterDate++;
