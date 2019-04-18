@@ -189,7 +189,7 @@ try{
 		loadAppSpecific(AInfo);
 		expDate = getAppSpecific("App Expiry Date");
 		appExpDate = new Date(expDate);
-		if(appExpDate > currDate) {
+		if(appExpDate >= currDate) {
 			capFilterDate++;
 			continue;
 		 }
