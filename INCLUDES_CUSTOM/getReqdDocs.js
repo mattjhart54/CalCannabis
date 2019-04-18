@@ -138,8 +138,8 @@ try{
 			}
 		}
 		
+		arrReqdDocs_App.push(businessHOO);		
 		arrReqdDocs_App.push(businessFI);
-		arrReqdDocs_App.push(businessHOO);
 		
 		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
 			arrReqdDocs_App.push(soveriegnImmunity);
