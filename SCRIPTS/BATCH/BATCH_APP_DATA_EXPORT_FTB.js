@@ -377,6 +377,8 @@ try{
 					var addrNotFound = true;
 					for (g in addressList){
 						thisAddr = addressList[g];
+						if(!addrNotFound) 
+								continue;
 						if(thisAddr.addressType==licenseAddressType){
 							addrNotFound = false;
 							if(thisAddr.addressLine1.toUpperCase().substr(0,6)=="PO BOX" ||
@@ -456,6 +458,8 @@ try{
 					var addressList = aa.address.getContactAddressListByCapContact(thisContact).getOutput();
 					for (g in addressList){
 						thisAddr = addressList[g];
+						if(!bAddrNotFound) 
+							continue;
 						if(thisAddr.addressType==businessAddressType){
 							bAddrNotFound = false;
 							if(thisAddr.addressLine1.toUpperCase().substr(0,6)=="PO BOX" ||
