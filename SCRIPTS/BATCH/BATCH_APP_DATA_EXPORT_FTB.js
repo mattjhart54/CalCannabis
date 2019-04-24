@@ -67,25 +67,25 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters 
+// test parameters 
 
-// elycia.juco@cdfa.ca.gov 
-aa.env.setValue("lookAheadDays", "-365");
+ 
+aa.env.setValue("lookAheadDays", "-465");
 aa.env.setValue("daySpan", "365");
-aa.env.setValue("emailAddress", "eshanower@trustvip.com");
-aa.env.setValue("sendToEmail", "eshanower@trustvip.com"); //ca-licensees@metrc.com
+aa.env.setValue("emailAddress", "mhart@trustvip.com");
+aa.env.setValue("sendToEmail", "mhart@trustvip.com"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "oclcdfa");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
-aa.env.setValue("recordSubType", "*");
+aa.env.setValue("recordSubType", "Temporary,Adult Use, Medical");
 aa.env.setValue("recordCategory", "License,Provisional");
 aa.env.setValue("licenseContactType", "Designated Responsible Party");
 aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
 aa.env.setValue("appStatus", "Active,Inactive");
-*/
+//
  
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
@@ -95,7 +95,8 @@ var sendToEmail = getJobParam("sendToEmail");
 var rptName = getJobParam("reportName");
 var appGroup = getJobParam("recordGroup");
 var appTypeType = getJobParam("recordType");
-var appSubtype = getJobParam("recordSubType");
+//var appSubtype = getJobParam("recordSubType");
+var appSubTypeArray = getJobParam("recordSubType").split(",");
 //var appCategory = getJobParam("recordCategory");
 var appCategoryArray = getJobParam("recordCategory").split(",");
 var task = getJobParam("activeTask");
@@ -105,10 +106,6 @@ var businessContactType = getJobParam("businessContactType");
 var businessAddressType = getJobParam("businessAddressType"); // ees 20190311 defect 5921
 var sArray = getJobParam("appStatus").split(",");
 
-
-if(appTypeType=="*") appTypeType="";
-if(appSubtype=="*")  appSubtype="";
-//if(appCategory=="*") appCategory="";
 var filepath = "c://test"; 
 
 
@@ -164,6 +161,7 @@ try{
 	var badDate = 0;
 	var incompRecd = 0;
 	var dupedRecds = 0;
+	var statusRecd = 0;
 	var noContactType = 0;
 	var capCount = 0;
 	var rptDate = new Date();
@@ -203,49 +201,16 @@ try{
 	var capCount = 0;
 	var capList = new Array();
 	
-	// Start appCategoryArray loop --EES
-	
-	for (ee in appCategoryArray) {
-		logDebug("appCategory: " + appCategoryArray[ee]);
-		var capModel = aa.cap.getCapModel().getOutput();
-		capTypeModel = capModel.getCapType();
-		capTypeModel.setGroup(appGroup);
-		capTypeModel.setType(appTypeType);
-		capTypeModel.setSubType(appSubtype);
-		// capTypeModel.setCategory(appCategory); // commented out to allow for multiple appCategories--EES
-		capTypeModel.setCategory(appCategoryArray[ee]); // added appCategoryArray--EES
-		capModel.setCapType(capTypeModel);
-				
-		//var capList = new Array(); // moved to before commencement of this loop--EES
-		//look for null statuses first
-		// query a list of records based on the above criteria
-		//capListResult = aa.cap.getCapIDListByCapModel(capModel);
-		//if (capListResult.getSuccess()) {
-			//tempcapList = capListResult.getOutput();
-			//logDebug("Null Status count: " + tempcapList.length);
-			//if (tempcapList.length > 0) {
-				//capList = capList.concat(tempcapList);
-			//}
-		//}else{
-			//logDebug("Error retrieving records: " + capListResult.getErrorMessage());
-		//}
-		
-		// keep this status loop embedded within the appCategoryArray loop so both statuses of all categories get queried--EES
-		for (i in sArray) {
-			logDebug("status: " + sArray[i]);
-			// Specify the application status to query
-			if(sArray[i]=="null"){
-					capModel.setCapStatus(null);
-					logDebug("Status to query is null");
-			}else{
-				capModel.setCapStatus(sArray[i]);
-			}
-			// query a list of records based on the above criteria
-			capListResult = aa.cap.getCapIDListByCapModel(capModel);
-
+	// Start appSubTypeArray and appCategoryArray loops
+	for (i in appSubTypeArray) {
+		logDebug("subType: " + appSubTypeArray[i]);
+		// keep this category loop embedded within the appSubTypeArray loop so all categories get queried
+		for (ee in appCategoryArray) {
+			logDebug("appCategory: " + appCategoryArray[ee])
+			capListResult = aa.cap.getByAppType(appGroup,appTypeType,appSubTypeArray[i],appCategoryArray[ee]);
 			if (capListResult.getSuccess()) {
 				tempcapList = capListResult.getOutput();
-				logDebug("Status count: " + tempcapList.length);
+				logDebug("Category count: " + tempcapList.length);
 				if (tempcapList.length > 0) {
 					capList = capList.concat(tempcapList);
 				}
@@ -254,9 +219,6 @@ try{
 			}
 		}
 	}	
-	// end appCategoryArray loop--EES
-	
-	
 	if (capList.length > 0) {
 		logDebug("Found " + capList.length + " records to process");
 	}else { 
@@ -264,11 +226,14 @@ try{
 		return false;
 	}
 	for (myCapsXX in capList) {
-    	//capId = capList[myCapsXX].getCapID();
-		capId = aa.cap.getCapID(capList[myCapsXX].ID1, capList[myCapsXX].ID2, capList[myCapsXX].ID3).getOutput();
-   		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
+		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
+			logDebug("WARNING a script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
+			timeExpired = true ;
+			break; 
+		}
+    	capId = capList[myCapsXX].getCapID();
 		altId =	 capId.getCustomID();
-		logDebug("getCapIdStatusClass(capId): " + getCapIdStatusClass(capId));
+// if(altId != "TAL18-0007739" &&altId != "TML18-0002487" && altId != "TAL18-0016638") continue;  
 		if(getCapIdStatusClass(capId)!=null){
 			logDebug("Skipping due to incomplete record: " + altId);
 			incompRecd++;
@@ -282,6 +247,7 @@ try{
 			arrProcRecds = arrProcRecds.concat(altId);
 		}
 		cap = aa.cap.getCap(capId).getOutput();	
+		capStatus = cap.getCapStatus();
 		var capModel = aa.cap.getCap(capId).getOutput().getCapModel();
 		var rptDateOrig = capModel.getFileDate().toString().substring(0,10);
 		var rptDateConv = rptDateOrig.split("-");
@@ -293,18 +259,18 @@ try{
 			badDate++;
 			continue;
 		}
+		if(!exists(capStatus,sArray)) {
+			logDebug("Skipping due to record status: " + altId);
+			statusRecd++;
+			continue;
+		}
 		appTypeResult = cap.getCapType();	
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
-		//if(appTypeArray[2]=="Temporary"){
-		//	logDebug("Skipping due to temp record: " + altId );
-		//	tmpRecd++;
-		//	continue;
-		//}
-		logDebug("Processing altId: " + altId);
+	//	logDebug("Processing altId: " + altId);
 		var rptLine = "";
 		//not all  custom fields are on the license, so pulling from application
-		var arrChild = getChildren("Licenses/Cultivator/*/Application", capId);
+		var arrChild = getChildrenB("Licenses/Cultivator/*/Application", capId);
 		if(arrChild){
 			if(arrChild.length>0){
 				//assuming one child
@@ -381,6 +347,10 @@ try{
 								continue;
 						if(thisAddr.addressType==licenseAddressType){
 							addrNotFound = false;
+							var invalidChar = checkChar(thisAddr.addressLine1);
+							if(invalidChar) {
+								logDebug("Record " + altId + " processed with an invalid character found in DRP address line, " + thisAddr.addressLine1);
+							}
 							if(thisAddr.addressLine1.toUpperCase().substr(0,6)=="PO BOX" ||
 							   thisAddr.addressLine1.toUpperCase().substr(0,8)=="P.O. BOX"){
 								if(thisAddr.addressLine1.length()>20){
@@ -391,6 +361,7 @@ try{
 									licLine += spacePad("",33);
 								}
 							}else{
+							
 								if(thisAddr.addressLine1.length()>33){
 									licLine += spacePad("",20);
 									licLine += thisAddr.addressLine1.substr(0,33);
@@ -449,6 +420,11 @@ try{
 					if(thisContact.middleName==null){
 						var bsnsName = spacePad("",33);
 					}else{
+//			logDebug("bname " + thisContact.middleName);
+					invalidChar = checkChar(thisContact.middleName);
+					if(invalidChar) {
+						logDebug("Record " + altId + " processed with an invalid character found in business name, " + thisContact.middleName);
+					}
 						if(thisContact.middleName.length()>33){
 							var bsnsName = thisContact.middleName.substr(0,33);
 						}else{
@@ -472,6 +448,10 @@ try{
 									bsnsLine += spacePad("",33);
 								}
 							}else{
+								invalidChar = checkChar(thisAddr.addressLine1);
+								if(invalidChar) {
+									logDebug("Record " + altId + " processed with an invalid character found in Business address line, " + thisAddr.addressLine1);
+								}
 								if(thisAddr.addressLine1.length()>33){
 									bsnsLine += spacePad("",20);
 									bsnsLine += thisAddr.addressLine1.substr(0,33);
@@ -571,7 +551,7 @@ try{
 				rptLine += " "; break;
 		}
 		rptLine +=licLine;
-		logDebug("RPTLINE: " + rptLine);
+//		logDebug("RPTLINE: " + rptLine);
 		//business name
 		rptLine +=bsnsName;
 		//business contact info
@@ -609,7 +589,7 @@ try{
 			}
 		}
 		//new or renewal--if no renewal child record, then new
-		var arrChild = getChildren("Licenses/Cultivator/*/Renewal", capId);
+		var arrChild = getChildrenB("Licenses/Cultivator/*/Renewal", capId);
 		if(arrChild){
 			if(arrChild.length>0){
 				rptLine += "R";
@@ -660,7 +640,7 @@ try{
 		rptLine += zeroPad("",8);
 		//phone nbr
 		rptLine += phNbr;
-		logDebug("rptLine: " + rptLine);
+//		logDebug("rptLine: " + rptLine);
 		//Line return after each record has been written.
 		rptLine += "\r\n";
 		aa.util.writeToFile(rptLine,rptToEmail);
@@ -686,6 +666,7 @@ try{
  	logDebug("Ignored due to bad date: " + badDate);
  	logDebug("Ignored due to incomplete record: " + incompRecd);
  	logDebug("Ignored due to duped record: " + dupedRecds);
+	logDebug("Ignored due to status: " + statusRecd);
  	logDebug("Ignored due to no contact type: " + noContactType);
  	logDebug("Total CAPS processed: " + capCount);
 
@@ -740,7 +721,65 @@ function getCapIdStatusClass(inCapId){
     return retClass;
 }
 
+function getChildrenB(pCapType, pParentCapId) 
+	{
+	// Returns an array of children capId objects whose cap type matches pCapType parameter
+	// Wildcard * may be used in pCapType, e.g. "Building/Commercial/*/*"
+	// Optional 3rd parameter pChildCapIdSkip: capId of child to skip
 
+	var retArray = new Array();
+	if (pParentCapId!=null) //use cap in parameter 
+		var vCapId = pParentCapId;
+	else // use current cap
+		var vCapId = capId;
+		
+	if (arguments.length>2)
+		var childCapIdSkip = arguments[2];
+	else
+		var childCapIdSkip = null;
+		
+	var typeArray = pCapType.split("/");
+	if (typeArray.length != 4)
+		logDebug("**ERROR in childGetByCapType function parameter.  The following cap type parameter is incorrectly formatted: " + pCapType);
+		
+	var getCapResult = aa.cap.getChildByMasterID(vCapId);
+	if (!getCapResult.getSuccess())
+		{ logDebug("**WARNING: getChildren returned an error: " + getCapResult.getErrorMessage()); return null }
+		
+	var childArray = getCapResult.getOutput();
+	if (!childArray.length)
+		{ logDebug( "**WARNING: getChildren function found no children"); return null ; }
+
+	var childCapId;
+	var capTypeStr = "";
+	var childTypeArray;
+	var isMatch;
+	for (xx in childArray)
+		{
+		childCapId = childArray[xx].getCapID();
+		if (childCapIdSkip!=null && childCapIdSkip.getCustomID().equals(childCapId.getCustomID())) //skip over this child
+			continue;
+
+		capTypeStr = aa.cap.getCap(childCapId).getOutput().getCapType().toString();	// Convert cap type to string ("Building/A/B/C")
+		childTypeArray = capTypeStr.split("/");
+		isMatch = true;
+		for (yy in childTypeArray) //looking for matching cap type
+			{
+			if (!typeArray[yy].equals(childTypeArray[yy]) && !typeArray[yy].equals("*"))
+				{
+				isMatch = false;
+				continue;
+				}
+			}
+		if (isMatch)
+			retArray.push(childCapId);
+		}
+		
+//	logDebug("getChildren returned " + retArray.length + " capIds");
+	return retArray;
+
+}
+	
 function removeSpecialCharacters(testPhrase){
 	testPhrase = (""+testPhrase).replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
 	return testPhrase;
@@ -780,4 +819,15 @@ function spacePad(num,count){
 		numZeropad = numZeropad +" "; 
 	}
 	return numZeropad;
+}
+function checkChar(input) {
+     var base64test = /[^A-Za-z0-9\&\/\\#,+()$~%.'":*?<>{}=\-\_ ]/g;
+
+     if (base64test.exec(input)) {
+//        logDebug("There were invalid base64 characters in the input text." + input)
+		return true;
+     }
+	 else {
+		return false;
+	}
 }
