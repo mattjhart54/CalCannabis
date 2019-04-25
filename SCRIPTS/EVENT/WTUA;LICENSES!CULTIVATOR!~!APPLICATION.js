@@ -411,6 +411,7 @@ try {
 		asgnDateOR = null;
 		asgnDateSR = null;
 		asgnDateCR = null;
+		logDebug("capId " + capId);
 		var workflowResult = aa.workflow.getTasks(capId);
 		if (workflowResult.getSuccess())
 			var wfObj = workflowResult.getOutput();
