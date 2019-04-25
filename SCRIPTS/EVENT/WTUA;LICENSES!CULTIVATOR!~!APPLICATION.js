@@ -1,5 +1,3 @@
-
-logDebug("capId " + capId);
 //lwacht: send a deficiency email when the status is "Deficiency Letter Sent" 
 try{
 	if("Deficiency Letter Sent".equals(wfStatus)){
@@ -413,7 +411,6 @@ try {
 		asgnDateOR = null;
 		asgnDateSR = null;
 		asgnDateCR = null;
-		logDebug("capId " + capId);
 		var workflowResult = aa.workflow.getTasks(capId);
 		if (workflowResult.getSuccess())
 			var wfObj = workflowResult.getOutput();
