@@ -1,3 +1,5 @@
+
+logDebug("capId " + capId);
 //lwacht: send a deficiency email when the status is "Deficiency Letter Sent" 
 try{
 	if("Deficiency Letter Sent".equals(wfStatus)){
