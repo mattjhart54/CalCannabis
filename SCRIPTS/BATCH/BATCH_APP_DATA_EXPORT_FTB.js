@@ -226,11 +226,11 @@ try{
 		return false;
 	}
 	for (myCapsXX in capList) {
-		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
-			logDebug("WARNING a script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
-			timeExpired = true ;
-			break; 
-		}
+//		if (elapsed() > maxSeconds) { // only continue if time hasn't expired
+//			logDebug("WARNING a script timeout has caused partial completion of this process.  Please re-run.  " + elapsed() + " seconds elapsed, " + maxSeconds + " allowed.") ;
+//			timeExpired = true ;
+//			break; 
+//		}
     	capId = capList[myCapsXX].getCapID();
 		altId =	 capId.getCustomID();
 // if(altId != "TAL18-0007739" &&altId != "TML18-0002487" && altId != "TAL18-0016638") continue;  
