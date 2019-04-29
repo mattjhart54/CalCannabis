@@ -400,9 +400,8 @@ try{
 //mhart 190408 story 5953 - Activate tasks when Revision required status entered
 try {
 	if(wfTask == "License Manager" && wfStatus == "Revisions Required") { 
-//		altId = capId.getCustomID();
-		var adminDate = null;
-		var scienceDate = null;
+		var adminDenial = false;
+		var scienceDenial = false;
 		var adminReview = false;
 		var ownerReview = false;
 		var scienceReview = false;
@@ -419,13 +418,14 @@ try {
 		}
 		for (i in wfObj) {
 			var fTask = wfObj[i];
+	//		logDebug (fTask.getTaskDescription() + " - " + fTask.getDisposition());
 			if (fTask.getTaskDescription()== "Administrative Manager Review" && fTask.getDisposition() == "Recommended for Denial"){
-				adminDate = fTask.getStatusDate();
-				logDebug("status Date" + adminDate);
+				adminDenial = true;
+	//			logDebug("admin Denial" + adminDenial);
 			}
 			if (fTask.getTaskDescription()== "Science Manager Review" && fTask.getDisposition() == "Recommended for Denial") {
-				scienceDate = fTask.getStatusDate();
-				logDebug("status Date" + scienceDate);
+				scienceDenial = true;
+	//			logDebug("science denial" + scienceDenial);
 			}
 			if (fTask.getTaskDescription()== "Administrative Review" && fTask.getDisposition() == "Incomplete Response") {
 				var tempdate = fTask.getAssignmentDate();
@@ -448,11 +448,11 @@ try {
 				ceqaReview = true;
 			}
 		}
-		if(scienceDate == null && adminDate == null) {
+		if(scienceDenial == false && adminDenial == false) {
 			showMessage = true;
 			comment("No Recommended for Denial status found.  License Manager task remains active.");
 		}
-		if(scienceDate >= adminDate) {
+		if(scienceDenial) {
 			if(scienceReview == false && ceqaReview == false) {
 				activateTask("Science Manager Review");
 				showMessage = true;
@@ -488,9 +488,10 @@ try {
 					updateTaskAssignedDate("Owner Application Review", asgnDateOR);
 			}
 		}
-	}  
+	}   
 }catch(err){
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: activate task after Reviesions Required status: " + err.message);
 	aa.print(err.stack);
 }
 //mhart 190408 story 5953 - end
+
