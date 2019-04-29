@@ -429,22 +429,26 @@ try {
 			}
 			if (fTask.getTaskDescription()== "Administrative Review" && fTask.getDisposition() == "Incomplete Response") {
 				var tempdate = fTask.getAssignmentDate();
-				asgnDateAR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
+				if(!matches(tempdate,null,"",undefined))
+					asgnDateAR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
 				adminReview = true;
 			}
 			if (fTask.getTaskDescription()== "Owner Application Reviews" && fTask.getDisposition() == "Incomplete Response") {
 				var tempdate = fTask.getAssignmentDate();
-				asgnDateOR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
+				if(!matches(tempdate,null,"",undefined))
+					asgnDateOR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
 				ownerReview = true;
 			}
 			if (fTask.getTaskDescription()== "Scientific Review" && fTask.getDisposition() == "Incomplete Response") {
 				var tempdate = fTask.getAssignmentDate();
-				asgnDateSR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
+				if(!matches(tempdate,null,"",undefined))
+					asgnDateSR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
 				scienceReview = true;
 			}
 			if (fTask.getTaskDescription()== "CEQA Review" && fTask.getDisposition() == "Incomplete Response") {
 				var tempdate = fTask.getAssignmentDate();
-				asgnDateCR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
+				if(!matches(tempdate,null,"",undefined))
+					asgnDateCR = new Date(tempdate.getMonth() + "/" + tempdate.getDayOfMonth() + "/" + tempdate.getYear());
 				ceqaReview = true;
 			}
 		}
