@@ -59,6 +59,7 @@ function getMasterScriptText(vScriptName) {
 /------------------------------------------------------------------------------------------------------*/
 
 var sysDate = aa.date.getCurrentDate();
+var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(),sysDate.getDayOfMonth(),sysDate.getYear(),"");
 var batchJobID = aa.batchJob.getJobID().getOutput();
 var batchJobName = "" + aa.env.getValue("batchJobName");
 
@@ -149,7 +150,7 @@ try {
     }
 	logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
 	if (emailAddress.length)
-		aa.sendMail(sysFromEmail, emailAddress, "", batchJobName + " Results", emailText);
+		aa.sendMail(sysFromEmail, emailAddress, "",batchJobID + " " + batchJobName + " Results for " + sysDateMMDDYYYY, emailText);
 
 	if (showDebug) {
 		aa.eventLog.createEventLog("DEBUG", "Batch Process", batchJobName, aa.date.getCurrentDate(), aa.date.getCurrentDate(),"", emailText ,batchJobID);
