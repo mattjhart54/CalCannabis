@@ -24,7 +24,7 @@ try {
 			childTypeArray = childTypeString.split("/");
 			childAltId = capId.getCustomID();
 			if(matches(childTypeArray[2], "Adult Use","Medical","Temporary")) 
-				updateAppStatus("Revoked","updated by script",capId);	
+				updateAppStatus("License Revoked","updated by script",capId);	
 		}
 		var capId = holdId;
 	}
