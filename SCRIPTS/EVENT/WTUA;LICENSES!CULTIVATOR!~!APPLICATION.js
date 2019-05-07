@@ -140,7 +140,7 @@ try{
 		//mhart 031319 story 5914 end		
 		activateTask("Application Disposition");
 		updateTask("Application Disposition", "Pending Payment","Updated by Script","");
-		updateAppStatus("Pending Payment","Updated by Script","");
+		updateAppStatus("Pending Payment","Updated by Script");
 //MJH 201902-8 US 5866 Update License Fee Due date
 		editAppSpecific("License Fee Due",nextWorkDay(dateAdd(null,89)));
 	}
