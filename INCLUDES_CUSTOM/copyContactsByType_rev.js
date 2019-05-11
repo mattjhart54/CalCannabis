@@ -15,7 +15,7 @@ function copyContactsByType_rev(pFromCapId, pToCapId, pContactType)
 		var Contacts = capContactResult.getOutput();
 		for (yy in Contacts)
 			{
-			if(Contacts[yy].getCapContactModel().getContactType() == pContactType && Contacts[yy].getCapContactModel().getEndDate() != null)
+			if(Contacts[yy].getCapContactModel().getContactType() == pContactType && Contacts[yy].getCapContactModel().getEndDate() == null)
 			    {
 			    var newContact = Contacts[yy].getCapContactModel();
 			    newContact.setCapID(vToCapId);
