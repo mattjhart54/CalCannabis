@@ -158,7 +158,7 @@ function mainProcess() {
 		altId =	 capId.getCustomID();
 		AInfo = new Array();
 		loadAppSpecific(AInfo);
-//		if(altId != "CAL18-0000121") continue;
+		if(altId != "CAL18-0000121") continue;
 		logDebug("Processing License Record " + altId);
 		rcdsUpdated++;
 		cId = getChildren("Licenses/Cultivator/"+appTypeArray[2]+"/Application");
@@ -191,6 +191,7 @@ function mainProcess() {
 			editAppSpecificB("Local Authorizaton Zip",appInfo["Local Authorizaton Zip"]);
 			editAppSpecificB("Local Authority County",appInfo["Local Authority County"]);
 			editAppSpecificB("Local Authority Phone",appInfo["Local Authority Phone"]);
+			copyASITables(cId[x],capId,"DEFICIENSIES","DENIAL REASONS");
 		}
 			
 	}		
