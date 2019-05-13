@@ -14,7 +14,7 @@ try {
 			amendNbr = "00" +  cIdLen;
 		else
 			if(cIds.length < 99)
-				amendNbr = "00" +  cIdLen;
+				amendNbr = "0" +  cIdLen;
 			else
 				amendNbr = cIdLen
 	}
