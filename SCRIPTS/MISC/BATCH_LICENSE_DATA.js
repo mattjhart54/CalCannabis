@@ -127,10 +127,7 @@ if (showDebug) {
 /-----------------------------------------------------------------------------------------------------*/
 
 function mainProcess() {
-	var tmpRec = 0;
-	var licDateUpdt = 0;
-	var adminDateUpdt = 0;
-	var sciDateUpdt = 0;
+	var rcdsUpdated = 0;
 	var capList = new Array();
 	for (i in sArray) {
 		for(c in cArray) {
@@ -161,8 +158,9 @@ function mainProcess() {
 		altId =	 capId.getCustomID();
 		AInfo = new Array();
 		loadAppSpecific(AInfo);
-		if(altId != "CAL19-0000107") continue;
-		subType = 
+//		if(altId != "CAL18-0000121") continue;
+		logDebug("Processing License Record " + altId);
+		rcdsUpdated++;
 		cId = getChildren("Licenses/Cultivator/"+appTypeArray[2]+"/Application");
 		for(x in cId) {
 			holdId = capId;
@@ -170,38 +168,34 @@ function mainProcess() {
 			appInfo = new Array();
 			loadAppSpecific(appInfo);
 			capId = holdId;
-
-			editAppSpecific("Business Entity Structure",appInfo["Business Entity Structure"]);
-			editAppSpecific("Other Entity",appInfo["Other Entity"]);
-			editAppSpecific("Foreign Corporation",appInfo["Foreign Corporation"]);
-			editAppSpecific("Legal Business Name",appInfo["Legal Business Name"]);
-			editAppSpecific("EIN/ITIN",appInfo["EIN/ITIN"]);
-			editAppSpecific("SSN/ITIN",appInfo["SSN/ITIN"]);
-			editAppSpecific("BOE Seller's Permit Number",appInfo["BOE Seller's Permit Number"]);
-			editAppSpecific("Secretary of State Registration Entity ",appInfo["Secretary of State Registration Entity "]);
-			editAppSpecific("Grid",appInfo["Grid"]);
-			editAppSpecific("Solar",appInfo["Solar"]);
-			editAppSpecific("Generator",appInfo["Generator"]);
-			editAppSpecific("Generator Under 50 HP",appInfo["Generator Under 50 HP"]);
-			editAppSpecific("Other",appInfo["Other"]);
-			editAppSpecific("Other Source Description",appInfo["Other Source Description"]);
-			editAppSpecific("Local Authority Type",appInfo["Local Authority Type"]);
-			editAppSpecific("Local Authorization Name",appInfo["Local Authorization Name"]);
-			editAppSpecific("Local Authorization Number",appInfo["Local Authorization Number"]);
-			editAppSpecific("Expiration Date",appInfo["Expiration Date"]);
-			editAppSpecific("Local Authority Address",appInfo["Local Authority Address"]);
-			editAppSpecific("Local Authority City",appInfo["Local Authority City"]);
-			editAppSpecific("Local Authorizaton Zip",appInfo["Local Authorizaton Zip"]);
-			editAppSpecific("Local Authority County",appInfo["Local Authority County"]);
-			editAppSpecific("Local Authority Phone",appInfo["Local Authority Phone"]);
+			editAppSpecificB("Business Entity Structure",appInfo["Business Entity Structure"]);
+			editAppSpecificB("Other Entity",appInfo["Other Entity"]);
+			editAppSpecificB("Foreign Corporation",appInfo["Foreign Corporation"]);
+			editAppSpecificB("Legal Business Name",appInfo["Legal Business Name"]);
+			editAppSpecificB("EIN/ITIN",appInfo["EIN/ITIN"]);
+			editAppSpecificB("SSN/ITIN",appInfo["SSN/ITIN"]);
+			editAppSpecificB("Secretary of State Registration Entity ",appInfo["Secretary of State Registration Entity "]);
+			editAppSpecificB("Grid",appInfo["Grid"]);
+			editAppSpecificB("Solar",appInfo["Solar"]);
+			editAppSpecificB("Generator",appInfo["Generator"]);
+			editAppSpecificB("Generator Under 50 HP",appInfo["Generator Under 50 HP"]);
+			editAppSpecificB("Other",appInfo["Other"]);
+			editAppSpecificB("Other Source Description",appInfo["Other Source Description"]);
+			editAppSpecificB("Local Authority Type",appInfo["Local Authority Type"]);
+			editAppSpecificB("Local Authority Name",appInfo["Local Authority Name"]);
+			editAppSpecificB("Local Authorization Number",appInfo["Local Authorization Number"]);
+			editAppSpecificB("Expiration Date",appInfo["Expiration Date"]);
+			editAppSpecificB("Local Authority Address",appInfo["Local Authority Address"]);
+			editAppSpecificB("Local Authority City",appInfo["Local Authority City"]);
+			editAppSpecificB("Local Authorization State",appInfo["Local Authorization State"]);
+			editAppSpecificB("Local Authorizaton Zip",appInfo["Local Authorizaton Zip"]);
+			editAppSpecificB("Local Authority County",appInfo["Local Authority County"]);
+			editAppSpecificB("Local Authority Phone",appInfo["Local Authority Phone"]);
 		}
 			
 	}		
-	logDebug("Total CAPS qualified : " + capList.length);
-// 	logDebug("Ignored due temp record: " + tmpRec);
-//	logDebug("Final Review task processed: " + licDateUpdt);
-//	logDebug("Admin Manager Review processed: " + adminDateUpdt);
-//	logDebug("Science Manager Review processed: " + sciDateUpdt);
+	logDebug("Total Records qualified : " + capList.length);
+	logDebug("Toat Records Processed: " + rcdsUpdated)
 }	
 function getCapIdByIDs(s_id1, s_id2, s_id3)  {
 	var s_capResult = aa.cap.getCapID(s_id1, s_id2, s_id3);
@@ -234,6 +228,30 @@ try{
 	logDebug("Stack: " + err.stack);
 }}
 
+function editAppSpecificB(itemName,itemValue)  // optional: itemCap
+{
+	var itemCap = capId;
+	var itemGroup = null;
+	if (arguments.length == 3) itemCap = arguments[2]; // use cap ID specified in args
+   	
+  	if (useAppSpecificGroupName)
+	{
+		if (itemName.indexOf(".") < 0)
+			{ logDebug("**WARNING: editAppSpecific requires group name prefix when useAppSpecificGroupName is true") ; return false }
+		
+		
+		itemGroup = itemName.substr(0,itemName.indexOf("."));
+		itemName = itemName.substr(itemName.indexOf(".")+1);
+	}
+   	
+   	var appSpecInfoResult = aa.appSpecificInfo.editSingleAppSpecific(itemCap,itemName,itemValue,itemGroup);
+
+	if (appSpecInfoResult.getSuccess())
+	 {
+	 	if(arguments.length < 3) //If no capId passed update the ASI Array
+	 		AInfo[itemName] = itemValue; 
+	} 	
+}
 function getCapIdStatusClass(inCapId){
     var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
     var retClass = null;
