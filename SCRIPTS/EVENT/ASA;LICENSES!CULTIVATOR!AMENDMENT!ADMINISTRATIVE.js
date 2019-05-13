@@ -58,6 +58,9 @@ try {
 	editAppSpecific("Local Authorizaton Zip",PInfo["Local Authorizaton Zip"]);
 	editAppSpecific("Local Authority County",PInfo["Local Authority County"]);
 	editAppSpecific("Local Authority Phone",PInfo["Local Authority Phone"]);
+
+//  Send email notification to DRP
+	emailRptContact("", "LCA_AMENMDENT_SUBMISSION", "", false, capStatus, capId, "Designated Responsible Party");
 	
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/AMENDMENT/ADMINISTRATIVE: " + err.message);
