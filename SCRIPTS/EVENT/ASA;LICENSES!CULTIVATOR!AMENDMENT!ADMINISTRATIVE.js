@@ -27,6 +27,8 @@ try {
 		
 // Copy the Designated resposible Party contact from the License Record to the Amanedment record
 	copyContactsByType_rev(parentId,capId,"Designated Responsible Party");
+	copyContactsByType_rev(parentId,capId,"Business");
+	copyContactsByType_rev(parentId,capId,"Agent for Service of Process");
 	
 // Copy custom fields from the license record to the parent record
 	holdId = capId;
@@ -59,7 +61,8 @@ try {
 	editAppSpecific("Local Authorizaton Zip",PInfo["Local Authorizaton Zip"]);
 	editAppSpecific("Local Authority County",PInfo["Local Authority County"]);
 	editAppSpecific("Local Authority Phone",PInfo["Local Authority Phone"]);
-
+	copyASITables(parentId,capId,"DEFICIENSIES","DENIAL REASONS","Premises Addresses","Owners","Source of Water Supply");
+	
 //  Send email notification to DRP
 	emailRptContact("", "LCA_AMENMDENT_SUBMISSION", "", false, capStatus, capId, "Designated Responsible Party");
 	
