@@ -51,6 +51,7 @@ try {
 	editAppSpecific("Property Owner's Mailing Address",PInfo["Property Owner's Mailing Address"]);
 	editAppSpecific("Property Owner's Phone Number",PInfo["Property Owner's Phone Number"]);
 	editAppSpecific("Local Authority Type",PInfo["Local Authority Type"]);
+	editAppSpecificB("Local Authority Name",appInfo["Local Authority Name"]);
 	editAppSpecific("Local Authorization Number",PInfo["Local Authorization Number"]);
 	editAppSpecific("Expiration Date",PInfo["Expiration Date"]);
 	editAppSpecific("Local Authority Address",PInfo["Local Authority Address"]);
