@@ -62,10 +62,43 @@ try {
 	editAppSpecific("Local Authority County",PInfo["Local Authority County"]);
 	editAppSpecific("Local Authority Phone",PInfo["Local Authority Phone"]);
 	copyASITables(parentId,capId,"DEFICIENSIES","DENIAL REASONS","Premises Addresses","Owners","Source of Water Supply");
-	
+
 //  Send email notification to DRP
-	emailRptContact("", "LCA_AMENMDENT_SUBMISSION", "", false, capStatus, capId, "Designated Responsible Party");
-	
+	var priContact = getContactObj(capId,"Designated Responsible Party");
+	if(priContact){
+		var eParams = aa.util.newHashtable(); 
+		addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
+		var contPhone = priContact.capContact.phone1;
+		if(contPhone){
+			var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
+		}else{
+			var fmtPhone = "";
+		}
+		addParameter(eParams, "$$altId$$", newAltId);
+		addParameter(eParams, "$$contactPhone1$$", fmtPhone);
+		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+		addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
+		addParameter(eParams, "$$parentId$$", parentAltId);
+		var rFiles = [];
+		var priEmail = ""+priContact.capContact.getEmail();
+		sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_SUBMISSION",eParams, rFiles,capId)
+	//	emailRptContact("", "LCA_AMENDMENT_SUBMISSION", "", false, capStatus, capId, "Designated Responsible Party");
+		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+		if(!matches(priChannel, "",null,"undefined", false)){
+			if(priChannel.indexOf("Postal") > -1 ){
+				var sName = createSet("Amendment Submission","Amendment Notifications", "New");
+				if(sName){
+					setAddResult=aa.set.add(sName,capId);
+					if(setAddResult.getSuccess()){
+						logDebug(capId.getCustomID() + " successfully added to set " +sName);
+					}else{
+						logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+					}
+				}
+			}
+		}
+	}
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/AMENDMENT/ADMINISTRATIVE: " + err.message);
 	logDebug(err.stack);
