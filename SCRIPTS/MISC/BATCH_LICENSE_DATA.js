@@ -158,7 +158,7 @@ function mainProcess() {
 		altId =	 capId.getCustomID();
 		AInfo = new Array();
 		loadAppSpecific(AInfo);
-		if(altId != "CAL18-0000121") continue;
+//		if(altId != "CAL18-0000121") continue;
 		logDebug("Processing License Record " + altId);
 		rcdsUpdated++;
 		cId = getChildren("Licenses/Cultivator/"+appTypeArray[2]+"/Application");
