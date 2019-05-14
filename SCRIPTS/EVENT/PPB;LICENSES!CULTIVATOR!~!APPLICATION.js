@@ -78,6 +78,7 @@ try {
 			
 			updateWorkDesc(workDescGet(capId),licCapId);
 			copyAppSpecific(licCapId);
+			copyASITables(capId,licCapId,"DEFICIENCIES","DENIAL REASONS");
 			editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
 			editAppSpecific("Premise State", "CA", licCapId);
 			if (appTypeArray[2] != "Temporary") {

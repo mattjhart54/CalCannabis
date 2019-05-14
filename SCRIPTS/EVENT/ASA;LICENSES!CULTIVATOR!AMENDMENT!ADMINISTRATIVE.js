@@ -61,7 +61,7 @@ try {
 	editAppSpecific("Local Authorizaton Zip",PInfo["Local Authorizaton Zip"]);
 	editAppSpecific("Local Authority County",PInfo["Local Authority County"]);
 	editAppSpecific("Local Authority Phone",PInfo["Local Authority Phone"]);
-	copyASITables(parentId,capId,"DEFICIENSIES","DENIAL REASONS","Premises Addresses","Owners","Source of Water Supply");
+	copyASITables(parentId,capId,"DEFICIENCIES","DENIAL REASONS","Premises Addresses","Owners","Source of Water Supply");
 
 //  Send email notification to DRP
 	var priContact = getContactObj(capId,"Designated Responsible Party");
