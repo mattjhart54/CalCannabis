@@ -119,7 +119,7 @@ try {
 		}
 	}
 	if(wfStatus == "Amendment Rejected") {
-/  Send email notification to DRP
+//  Send email notification to DRP
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
