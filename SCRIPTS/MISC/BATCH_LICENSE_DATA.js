@@ -191,7 +191,7 @@ function mainProcess() {
 			editAppSpecificB("Local Authorizaton Zip",appInfo["Local Authorizaton Zip"]);
 			editAppSpecificB("Local Authority County",appInfo["Local Authority County"]);
 			editAppSpecificB("Local Authority Phone",appInfo["Local Authority Phone"]);
-			copyASITables(cId[x],capId,"DEFICIENSIES","DENIAL REASONS");
+			copyASITables(cId[x],capId,"DEFICIENCIES","DENIAL REASONS");
 		}
 			
 	}		
