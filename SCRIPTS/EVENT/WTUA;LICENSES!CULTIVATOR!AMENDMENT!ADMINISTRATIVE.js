@@ -58,14 +58,14 @@ try {
 							if(amendRefNbr == licContacts[i].getCapContactModel().getRefContactNumber()) {
 								logDebug("update contact " + amendRefNbr + " " + amendType);
 								var licCont = licContacts[i].getCapContactModel();
-								var licCont.setEmail(amendEmail);
-								var licCont.setLastName(amendLast);
-								var licCont.setFirstName(amendFirst);
-								var licCont.setMiddleName(amendLBN);
-								var licCont.setTitle(amendTitle);
-								var licCont.setPhone3(amendPhone);
-						//		var licCont.setPreferredChannel(amendChannel);
-								var licCont.setEndDate(amendEnd);
+								licCont.setEmail(amendEmail);
+								licCont.setLastName(amendLast);
+								licCont.setFirstName(amendFirst);
+								licCont.setMiddleName(amendLBN);
+								licCont.setTitle(amendTitle);
+								licCont.setPhone3(amendPhone);
+						//		licCont.setPreferredChannel(amendChannel);
+								licCont.setEndDate(amendEnd);
 								var peopleModel = licCont.getPeople();
 								var licAddressrs = aa.address.getContactAddressListByCapContact(licCont);
 								peopleModel.setContactAddressList(amendAddressModelArr);
