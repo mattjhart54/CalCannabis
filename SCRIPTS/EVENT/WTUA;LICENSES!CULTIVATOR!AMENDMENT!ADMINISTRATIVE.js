@@ -3,31 +3,56 @@ try {
 		// Copy custom fields from the license record to the parent record
 		holdId = capId;
 		capId = parentCapId;
-		editAppSpecific("Cooperative Association",AInfo["CA Update"]);
-		editAppSpecific("Name of Cannabis Cooperative",AInfo["NCA Update"]);
-		editAppSpecific("Business Entity Structure",AInfo["BEA Update"]);
-		editAppSpecific("Other Entity",AInfo["OE Update"]);
-		editAppSpecific("Foreign Corporation",AInfo["FC Update"]);
-		editAppSpecific("Legal Business Name",AInfo["LBN Update"]);
-		editAppSpecific("EIN/ITIN",AInfo["EIN/ITIN Update"]);
-		editAppSpecific("SSN/ITIN",AInfo["SSN/ITIN Update"]);
-		editAppSpecific("BOE Seller's Permit Number",AInfo["BSP Update"]);
-		editAppSpecific("Secretary of State Registration Entity ",AInfo["SSRE Update"]);
-		editAppSpecific("Date of Intitial Operation",AInfo["DOI Update"]);
-		editAppSpecific("Records on Premise Acknowledgement",AInfo["RPA Update"]);
-		editAppSpecific("Legal Possession",AInfo["LP Update"]);
-		editAppSpecific("Other Possession",AInfo["OLP Update"]);
-		editAppSpecific("Property Owner's Mailing Address",AInfo["POMA Update"]);
-		editAppSpecific("Property Owner's Phone Number",AInfo["POPN Update"]);
-		editAppSpecific("Local Authority Type",AInfo["LAT Update"]);
-		editAppSpecific("Local Authority Name",AInfo["LAn Update"]);
-		editAppSpecific("Local Authorization Number",AInfo["LANBR Update"]);
-		editAppSpecific("Expiration Date",AInfo["LAED Update"]);
-		editAppSpecific("Local Authority Address",AInfo["LAA Update"]);
-		editAppSpecific("Local Authority City",AInfo["LAC Update"]);
-		editAppSpecific("Local Authorizaton Zip",AInfo["LAZ Update"]);
-		editAppSpecific("Local Authority County",AInfo["LACO Update"]);
-		editAppSpecific("Local Authority Phone",AInfo["LAP Update"]);
+		if(!matches(AInfo["CA Update"],null,"",undefined))
+			editAppSpecific("Cooperative Association",AInfo["CA Update"]);
+		if(!matches(AInfo["NCA Update"],null,"",undefined))
+			editAppSpecific("Name of Cannabis Cooperative",AInfo["NCA Update"]);
+		if(!matches(AInfo["BEA Update"],null,"",undefined))
+			editAppSpecific("Business Entity Structure",AInfo["BEA Update"]);
+		if(!matches(AInfo["OE Update"],null,"",undefined))
+			editAppSpecific("Other Entity",AInfo["OE Update"]);
+		if(!matches(AInfo["FC Update"],null,"",undefined))
+			editAppSpecific("Foreign Corporation",AInfo["FC Update"]);
+		if(!matches(AInfo["LBN Update"],null,"",undefined))
+			editAppSpecific("Legal Business Name",AInfo["LBN Update"]);
+		if(!matches(AInfo["EIN/ITIN Update"],null,"",undefined))
+			editAppSpecific("EIN/ITIN",AInfo["EIN/ITIN Update"]);
+		if(!matches(AInfo["SSN/ITIN Update"],null,"",undefined))
+			editAppSpecific("SSN/ITIN",AInfo["SSN/ITIN Update"]);
+		if(!matches(AInfo["BSP Update"],null,"",undefined))
+			editAppSpecific("BOE Seller's Permit Number",AInfo["BSP Update"]);
+		if(!matches(AInfo["SSRE Update"],null,"",undefined))
+			editAppSpecific("Secretary of State Registration Entity ",AInfo["SSRE Update"]);
+		if(!matches(AInfo["DOI Update"],null,"",undefined))
+			editAppSpecific("Date of Intitial Operation",AInfo["DOI Update"]);
+		if(!matches(AInfo["RPA Update"],null,"",undefined))
+			editAppSpecific("Records on Premise Acknowledgement",AInfo["RPA Update"]);
+		if(!matches(AInfo["LP Update"],null,"",undefined))
+			editAppSpecific("Legal Possession",AInfo["LP Update"]);
+		if(!matches(AInfo["OLP Update"],null,"",undefined))
+			editAppSpecific("Other Possession",AInfo["OLP Update"]);
+		if(!matches(AInfo["POMA Update"],null,"",undefined))
+			editAppSpecific("Property Owner's Mailing Address",AInfo["POMA Update"]);
+		if(!matches(AInfo["POPN Update"],null,"",undefined))
+			editAppSpecific("Property Owner's Phone Number",AInfo["POPN Update"]);
+		if(!matches(AInfo["LAT Update"],null,"",undefined))	
+			editAppSpecific("Local Authority Type",AInfo["LAT Update"]);
+		if(!matches(AInfo["LAN Update"],null,"",undefined))
+			editAppSpecific("Local Authority Name",AInfo["LAN Update"]);
+		if(!matches(AInfo["LANBR Update"],null,"",undefined))
+			editAppSpecific("Local Authorization Number",AInfo["LANBR Update"]);
+		if(!matches(AInfo["LAED Update"],null,"",undefined))
+			editAppSpecific("Expiration Date",AInfo["LAED Update"]);
+		if(!matches(AInfo["LAA Update"],null,"",undefined))
+			editAppSpecific("Local Authority Address",AInfo["LAA Update"]);
+		if(!matches(AInfo["LAC Update"],null,"",undefined))
+			editAppSpecific("Local Authority City",AInfo["LAC Update"]);
+		if(!matches(AInfo["LAZ Update"],null,"",undefined))
+			editAppSpecific("Local Authorizaton Zip",AInfo["LAZ Update"]);
+		if(!matches(AInfo["LACO Update"],null,"",undefined))
+			editAppSpecific("Local Authority County",AInfo["LACO Update"]);
+		if(!matches(AInfo["LAP Update"],null,"",undefined))
+			editAppSpecific("Local Authority Phone",AInfo["LAP Update"]);
 		removeASITable("CANNABIS FINANCIAL INTEREST");
 		copyASITables(holdId,capId);
 		capId = holdId;
