@@ -25,7 +25,7 @@ try {
 			editAppSpecific("Other",AInfo["Other Update"]);
 		if(!matches(AInfo["OSD Update"],null,"",undefined))
 			editAppSpecific("Other Source Description",AInfo["OSD Update"]);
-		removeASITable("Premises Addrsses");
+		removeASITable("Premises Addresses");
 		removeASITable("Source of Water Supply");
 		copyASITables(holdId,capId);
 		capId = holdId;
@@ -45,17 +45,17 @@ try {
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$parentId$$", parentCapId);
+			addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 			var priEmail = ""+priContact.capContact.getEmail();
 			var rFiles = [];
-			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_REJECTED",eParams, rFiles,capId);
+			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_APPROVAL",eParams, rFiles,capId);
 //			emailRptContact("", "LCA_AMENDMENT_APPROVAL", "", false, capStatus, capId, "Designated Responsible Party");
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 			if(!matches(priChannel, "",null,"undefined", false)){
 				if(priChannel.indexOf("Postal") > -1 ){
 				var sName = createSet("Amendment Approval","Amendment Notifications", "New");
 				if(sName){
-					setAddResult=aa.set.add(sName,parentCapId);
+					setAddResult=aa.set.add(sName,capId);
 					if(setAddResult.getSuccess()){
 						logDebug(capId.getCustomID() + " successfully added to set " +sName);
 					}else{
@@ -83,7 +83,7 @@ try {
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$parentId$$", parentCapId);
+			addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 			var priEmail = ""+priContact.capContact.getEmail();
 			var rFiles = [];
 			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_REJECTED",eParams, rFiles,capId);
@@ -93,7 +93,7 @@ try {
 				if(priChannel.indexOf("Postal") > -1 ){
 					var sName = createSet("Amendment Approval","Amendment Notifications", "New");
 					if(sName){
-						setAddResult=aa.set.add(sName,parentCapId);
+						setAddResult=aa.set.add(sName,capId);
 						if(setAddResult.getSuccess()){
 							logDebug(capId.getCustomID() + " successfully added to set " +sName);
 						}else{

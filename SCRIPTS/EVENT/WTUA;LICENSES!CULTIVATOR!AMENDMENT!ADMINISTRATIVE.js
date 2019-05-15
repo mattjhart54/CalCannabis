@@ -122,7 +122,7 @@ try {
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$parentId$$", parentCapId);
+			addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 			var priEmail = ""+priContact.capContact.getEmail();
 			var rFiles = [];
 			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_REJECTED",eParams, rFiles,capId);
@@ -132,7 +132,7 @@ try {
 				if(priChannel.indexOf("Postal") > -1 ){
 					var sName = createSet("Amendment Approval","Amendment Notifications", "New");
 					if(sName){
-						setAddResult=aa.set.add(sName,parentCapId);
+						setAddResult=aa.set.add(sName,capId);
 						if(setAddResult.getSuccess()){
 							logDebug(capId.getCustomID() + " successfully added to set " +sName);
 						}else{
@@ -160,7 +160,7 @@ try {
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$parentId$$", parentCapId);
+			addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 			var priEmail = ""+priContact.capContact.getEmail();
 			var rFiles = [];
 			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_REJECTED",eParams, rFiles,capId);
@@ -170,7 +170,7 @@ try {
 				if(priChannel.indexOf("Postal") > -1 ){
 					var sName = createSet("Amendment Rejected","Amendment Notifications", "New");
 					if(sName){
-						setAddResult=aa.set.add(sName,parentCapId);
+						setAddResult=aa.set.add(sName,capId);
 						if(setAddResult.getSuccess()){
 							logDebug(capId.getCustomID() + " successfully added to set " +sName);
 						}else{
