@@ -13,16 +13,11 @@ try {
 			editAppSpecific("Premise County",AInfo["PCNTY Update"]);
 		if(!matches(AInfo["APN Update"],null,"",undefined))
 			editAppSpecific("APN",AInfo["APN Update"]);
-		if(!matches(AInfo["Grid Update"],null,"",undefined))
-			editAppSpecific("Grid",AInfo["Grid Update"]);
-		if(!matches(AInfo["Solar Update"],null,"",undefined))
-			editAppSpecific("Solar",AInfo["Solar Update"]);
-		if(!matches(AInfo["Generator Update"],null,"",undefined))
-			editAppSpecific("Generator",AInfo["Generator Update"]);
-		if(!matches(AInfo["G50 Update"],null,"",undefined))
-			editAppSpecific("Generator Under 50 HP",AInfo["G50 Update"]);
-		if(!matches(AInfo["Other Update"],null,"",undefined))
-			editAppSpecific("Other",AInfo["Other Update"]);
+		editAppSpecific("Grid",AInfo["Grid Update"]);
+		editAppSpecific("Solar",AInfo["Solar Update"]);
+		editAppSpecific("Generator",AInfo["Generator Update"]);
+		editAppSpecific("Generator Under 50 HP",AInfo["G50 Update"]);
+		editAppSpecific("Other",AInfo["Other Update"]);
 		if(!matches(AInfo["OSD Update"],null,"",undefined))
 			editAppSpecific("Other Source Description",AInfo["OSD Update"]);
 		removeASITable("Premises Addresses");
