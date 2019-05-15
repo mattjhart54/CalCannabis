@@ -1,8 +1,4 @@
 try {
-// Link Amendment record to License reord as a child
-	var parentAltId = AInfo["License Number"];
-	addParent(parentAltId)
-	
 // Set alt id the amendment record based on the number of chlild amendments records linked to the license record
 	parentId = aa.cap.getCapID(parentAltId).getOutput();
 	cIds = getChildren("Licenses/Cultivator/Amendment/Administrative",parentId);
