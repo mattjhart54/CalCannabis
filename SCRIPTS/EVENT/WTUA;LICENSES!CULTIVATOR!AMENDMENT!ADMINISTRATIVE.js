@@ -22,7 +22,7 @@ try {
 		if(!matches(AInfo["BSP Update"],null,"",undefined))
 			editAppSpecific("BOE Seller's Permit Number",AInfo["BSP Update"]);
 		if(!matches(AInfo["SSRE Update"],null,"",undefined))
-			editAppSpecific("Secretary of State Registration Entity ",AInfo["SSRE Update"]);
+			editAppSpecific("Secretary of State Registration Entity",AInfo["SSRE Update"]);
 		if(!matches(AInfo["DOI Update"],null,"",undefined))
 			editAppSpecific("Date of Intitial Operation",AInfo["DOI Update"]);
 		if(!matches(AInfo["RPA Update"],null,"",undefined))
@@ -182,6 +182,6 @@ try {
 		}
 	}		
 }catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/AMENDMENT/ADMINISTRATIVE: " + err.message);
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/AMENDMENT/ADMINISTRATIVE: " + err.message);
 	logDebug(err.stack);
 }
