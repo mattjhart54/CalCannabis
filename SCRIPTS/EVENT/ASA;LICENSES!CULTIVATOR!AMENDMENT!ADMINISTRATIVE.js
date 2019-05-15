@@ -24,7 +24,11 @@ try {
 		logDebug("Updated amendment record AltId to " + newAltId + ".");
 	else 
 		logDebug("Error renaming amendment record " + capId);
-		
+	
+// Link Amendment record to License reord as a child
+	var parentAltId = AInfo["License Number"];
+	addParent(parentAltId);
+			
 // Copy the Designated resposible Party contact from the License Record to the Amanedment record
 	copyContactsByType_rev(parentId,capId,"Designated Responsible Party");
 	copyContactsByType_rev(parentId,capId,"Business");

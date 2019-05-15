@@ -1,8 +1,5 @@
 try {
-// Link Amendment record to License reord as a child
-	var parentAltId = AInfo["License Number"];
-	addParent(parentAltId)
-	
+
 // Set alt id the amendment record based on the number of chlild amendments records linked to the license record
 	parentId = aa.cap.getCapID(parentAltId).getOutput();
 	cIds = getChildren("Licenses/Cultivator/Amendment/Science",parentId);
@@ -24,7 +21,11 @@ try {
 		logDebug("Updated amendment record AltId to " + newAltId + ".");
 	else 
 		logDebug("Error renaming amendment record " + capId);
-		
+	
+// Link Amendment record to License reord as a child
+	var parentAltId = AInfo["License Number"];
+	addParent(parentAltId);
+			
 // Copy the Designated resposible Party contact from the License Record to the Amanedment record
 	copyContactsByType_rev(parentId,capId,"Designated Responsible Party");
 	
