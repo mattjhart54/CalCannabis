@@ -59,6 +59,7 @@ try {
 	editAppSpecific("Expiration Date",PInfo["Expiration Date"]);
 	editAppSpecific("Local Authority Address",PInfo["Local Authority Address"]);
 	editAppSpecific("Local Authority City",PInfo["Local Authority City"]);
+	editAppSpecific("Local Authorization State",PInfo["Local Authorization State"]);
 	editAppSpecific("Local Authorizaton Zip",PInfo["Local Authorizaton Zip"]);
 	editAppSpecific("Local Authority County",PInfo["Local Authority County"]);
 	editAppSpecific("Local Authority Phone",PInfo["Local Authority Phone"]);
