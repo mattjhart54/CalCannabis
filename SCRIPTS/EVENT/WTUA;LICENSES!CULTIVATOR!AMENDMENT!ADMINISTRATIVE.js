@@ -63,7 +63,7 @@ try {
 			for (i in amendContacts){
 			if(matches(amendContacts[i].getCapContactModel().getContactType(),"Business","Agent for Service of Process")) {
 				var amendCont = amendContacts[i].getCapContactModel();
-				var amendRefNbr = amendCont.contactSeqNumber;
+				var amendRefNbr = amendCont.refContactNumber;
 				var amendType = amendCont.contactType;
 				var amendEmail = amendCont.email;
 				var amendLast = amendCont.lastName;
@@ -80,7 +80,7 @@ try {
 					var licContacts = licContactResult.getOutput();
 					for (i in licContacts){
 						if(licContacts[i].getCapContactModel().getContactType() == amendType) {
-							if(amendRefNbr == licContacts[i].getCapContactModel().getContactSeqNumber()) {
+							if(amendRefNbr == licContacts[i].getCapContactModel().getRefContactNumber()) {
 								logDebug("update contact " + amendRefNbr + " " + amendType);
 								var licCont = licContacts[i].getCapContactModel();
 								licCont.setEmail(amendEmail);
