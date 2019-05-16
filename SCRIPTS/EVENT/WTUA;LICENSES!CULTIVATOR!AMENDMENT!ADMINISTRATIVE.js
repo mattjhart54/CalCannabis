@@ -61,51 +61,65 @@ try {
 		if (amendContactResult.getSuccess()){
 			var amendContacts = amendContactResult.getOutput();
 			for (i in amendContacts){
-			if(matches(amendContacts[i].getCapContactModel().getContactType(),"Business","Agent for Service of Process")) {
-				var amendCont = amendContacts[i].getCapContactModel();
-				var amendRefNbr = amendCont.refContactNumber;
-				var amendType = amendCont.contactType;
-				var amendEmail = amendCont.email;
-				var amendLast = amendCont.lastName;
-				var amendFirst = amendCont.firstName;
-				var amendLBN = amendCont.middleName;
-				var amendTitle = amendCont.title;
-				var amendPhone = amendCont.phone3;
-				var amendChannel = amendCont.preferredChannel;
-				var amendEnd = amendCont.endDate;
-				var amendAddressList = aa.address.getContactAddressListByCapContact(amendCont);
-				var amendAddressModelArr = convertContactAddressModelArr(amendAddressList.getOutput());
-				var licContactResult = aa.people.getCapContactByCapID(parentCapId);
-				if (licContactResult.getSuccess()){
-					var licContacts = licContactResult.getOutput();
-					for (i in licContacts){
-						if(licContacts[i].getCapContactModel().getContactType() == amendType) {
-							if(amendRefNbr == licContacts[i].getCapContactModel().getRefContactNumber()) {
-								logDebug("update contact " + amendRefNbr + " " + amendType);
+				if(matches(amendContacts[i].getCapContactModel().getContactType(),"Business","Agent for Service of Process")) {
+					var amendCont = amendContacts[i].getCapContactModel();
+					var amendRefNbr = amendCont.refContactNumber;
+					var amendType = amendCont.contactType;
+					var amendEmail = amendCont.email;
+					var amendLast = amendCont.lastName;
+					var amendFirst = amendCont.firstName;
+					logDebug(" amend " + amendRefNbr + " " + amendType + " " + amendEmail + " " + amendLast);
+					var amendLBN = amendCont.middleName;
+					var amendTitle = amendCont.title;
+					var amendPhone = amendCont.phone3;
+					var amendChannel = amendCont.preferredChannel;
+					var amendEnd = amendCont.endDate;
+					var amendAddressList = aa.address.getContactAddressListByCapContact(amendCont);
+					var amendAddressModelArr = convertContactAddressModelArr(amendAddressList.getOutput());
+					var licContactResult = aa.people.getCapContactByCapID(parentCapId);
+					if (licContactResult.getSuccess()){
+						var licContacts = licContactResult.getOutput();
+						licFnd = false;
+						for (i in licContacts){
+							if(licContacts[i].getCapContactModel().getContactType() == amendType) {
 								var licCont = licContacts[i].getCapContactModel();
-								licCont.setEmail(amendEmail);
-								licCont.setLastName(amendLast);
-								licCont.setFirstName(amendFirst);
-								licCont.setMiddleName(amendLBN);
-								licCont.setTitle(amendTitle);
-								licCont.setPhone3(amendPhone);
-						//		licCont.setPreferredChannel(amendChannel);
-								licCont.setEndDate(amendEnd);
-								var peopleModel = licCont.getPeople();
-								var licAddressrs = aa.address.getContactAddressListByCapContact(licCont);
-								peopleModel.setContactAddressList(amendAddressModelArr);
-								aa.people.editCapContactWithAttribute(licCont);
+								logDebug("license " + licCont.refContactNumber + " " + licCont.contactType + " " + licCont.email + " " + licCont.lastName);
+								if(amendRefNbr != null && amendRefNbr == licCont.refContactNumber) {
+									licFnd = true;
+									break;
+								}
+								else {							
+									if(amendRefNbr == null && amendEmail.toUpperCase() == licCont.email.toUpperCase()) {
+										licFnd = true;
+										break;
+									}
+
+								}
 							}
-							else {
-								logDebug("add contact " + amendRefNbr + " " + amendType);
-								copyContactsByType_rev(capId,parentCapId,"Business");
-							}
+						}
+						if(licFnd) {
+							licCont.setEmail(amendEmail);
+							licCont.setLastName(amendLast);
+							licCont.setFirstName(amendFirst);
+							licCont.setMiddleName(amendLBN);
+							licCont.setTitle(amendTitle);
+							licCont.setPhone3(amendPhone);
+				//			licCont.setPreferredChannel(amendChannel);
+							licCont.setEndDate(amendEnd);
+							logDebug("update contact1 " + amendRefNbr + " " + amendType);
+							var peopleModel = licCont.getPeople();
+							var licAddressrs = aa.address.getContactAddressListByCapContact(licCont);
+							peopleModel.setContactAddressList(amendAddressModelArr);
+							aa.people.editCapContactWithAttribute(licCont);
+						}
+						else {
+							logDebug("add contact " + amendRefNbr + " " + amendType + " " + amendEmail + " " + amendLast);
+							copyContactsByType_rev(capId,parentCapId,"Business");
 						}
 					}
 				}
 			}
-		}
-	}		
+		}		
 //  Send email notification to DRP
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
