@@ -114,7 +114,7 @@ try {
 						}
 						else {
 							logDebug("add contact " + amendRefNbr + " " + amendType + " " + amendEmail + " " + amendLast);
-							copyContactsByType_rev(capId,parentCapId,"Business");
+							copyContactsByType_rev(capId,parentCapId,amendType);
 						}
 					}
 				}
