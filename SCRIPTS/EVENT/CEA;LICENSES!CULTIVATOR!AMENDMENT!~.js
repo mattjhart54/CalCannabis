@@ -10,9 +10,9 @@ try {
 try {
 	var priContact = getContactObj(capId,"Business");
 	if(priContact){
-		editAppSpecific("Legal Business Name", priContact.capContact.middleName);
+		editAppSpecific("LBN Update", priContact.capContact.middleName);
 	}else{
-		editAppSpecific("Legal Business Name", "No Legal Business Name provided");
+		editAppSpecific("LBN Update", "No Legal Business Name provided");
 	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: CEA: Licenses/Cultivation/*/License: Edit Legal Business Name: " + err.message);
