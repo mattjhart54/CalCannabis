@@ -9,7 +9,7 @@ try {
 	if(matches(cIds, null, "", undefined)) 
 		amendNbr = amendNbr = "00" + 1;
 	else {
-		cIdLen = cIds.length + 1 
+		cIdLen = cIds.length 
 		if(cIds.length < 9)
 			amendNbr = "00" +  cIdLen;
 		else
