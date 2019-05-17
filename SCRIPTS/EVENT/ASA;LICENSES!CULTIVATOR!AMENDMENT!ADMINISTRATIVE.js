@@ -64,7 +64,10 @@ try {
 	editAppSpecific("Local Authority County",PInfo["Local Authority County"]);
 	editAppSpecific("Local Authority Phone",PInfo["Local Authority Phone"]);
 	copyASITables(parentId,capId,"DEFICIENCIES","DENIAL REASONS","Premises Addresses","Owners","Source of Water Supply");
-
+	editAppName(pInfo["License Type"]);
+	updateShortNotes(getShortNotes(parentId));
+	updateWorkDesc(workDescGet(parentId));
+	
 //  Send email notification to DRP
 	var priContact = getContactObj(capId,"Designated Responsible Party");
 	if(priContact){
