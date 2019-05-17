@@ -55,6 +55,7 @@ try {
 			editAppSpecific("Local Authority Phone",AInfo["LAP Update"]);
 		removeASITable("CANNABIS FINANCIAL INTEREST");
 		copyASITables(holdId,capId);
+		updateWorkDesc(workDescGet(holdId));
 		capId = holdId;
 // Update contacts
 		var amendContactResult = aa.people.getCapContactByCapID(capId);
