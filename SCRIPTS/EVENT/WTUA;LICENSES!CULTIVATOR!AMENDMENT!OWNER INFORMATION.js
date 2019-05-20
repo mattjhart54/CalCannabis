@@ -15,7 +15,7 @@ try {
 					var amendLBN = amendCont.middleName;
 					var amendTitle = amendCont.title;
 					var amendPhone = amendCont.phone3;
-					var amendSSN = amendCont.socialSecurityNumber;
+					var amendSSN = amendCont.maskedSsn;
 					amendNIN = amendCont.postOfficeBox;
 					var amendChannel = amendCont.preferredChannel;
 					var amendEnd = amendCont.endDate;
