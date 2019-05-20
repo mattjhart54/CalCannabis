@@ -46,32 +46,55 @@ try {
 			if(ownContact) {
 				if(AInfo["Owner Email"].toUpperCase() == ownContact.capContact.email.toUpperCase() && AInfo["Owner First Name"].toUpperCase() == ownContact.capContact.firstName.toUpperCase() &&
 				   AInfo["Owner Last Name"].toUpperCase() == ownContact.capContact.lastName.toUpperCase()) {
-						// Link Amendment record to License reord as a child
-						var ownerAltId = ownId.getCustomID();
-						addParent(ownerAltId);
-						holdId = capId;
-						capId = ownId;
-						PInfo = new Array;
-						loadAppSpecific(PInfo);
-						capId = holdId;
-	// Copy the Owner contact from the Owner Application to the Amendment record
-						copyContactsByType_rev(ownId,capId,"Owner");
-						copyContactsByType_rev(parentId,capId,"Designated Responsible Party");
-	
 	// Copy custom fields from the license record to the parent record
-
-						editAppSpecific("Percent Ownership",PInfo["Percent Ownership"]);
-						editAppSpecific("Date Owner Acquired Interest",PInfo["Date Owner Acquired Interest"]);
-						editAppSpecific("CA State issued ID #",PInfo["CA State issued ID #"]);
-						editAppSpecific("Other Government issued ID #",PInfo["Other Government issued ID #"]);
-						editAppSpecific("ATI Code",PInfo["ATI Code"]);
-						editAppSpecific("Convicted of a Crime",PInfo["Convicted of a Crime"]);
-						editAppSpecific("License Revoked",PInfo["License Revoked"]);
-						editAppSpecific("Subject to Fines",PInfo["Subject to Fines"]);
-						editAppSpecific("Disciplinary Actions",PInfo["Disciplinary Actions"]);
-						copyASITables(ownId,capId,"DEFICIENCIES","ATTAHMENTS");
-						editAppName(AInfo["Owner Email"] + "-" + AInfo["Owner First Name"] + " " +  AInfo["Owner Last Name"]);
-
+						ownAmendRecs = getChildren("Licenses/Cultivator/Amendment/Owner Information",ownId);
+						if(ownAmendRecs.length > 0) {
+							for(oa in ownAmendRecs) {
+								ownId = ownAmendRecs[oa];
+							}
+							holdId = capId;
+							capId = ownId;
+							PInfo = new Array;
+							loadAppSpecific(PInfo);
+							capId = holdId;
+							editAppSpecific("Percent Ownership",PInfo["Percent Update"]);
+							editAppSpecific("Date Owner Acquired Interest",PInfo["DOAI Update"]);
+							editAppSpecific("CA State issued ID #",PInfo["CSI Update"]);
+							editAppSpecific("Other Government issued ID #",PInfo["OGI Update"]);
+							editAppSpecific("ATI Code",PInfo["ATI Update"]);
+							editAppSpecific("Convicted of a Crime",PInfo["COC Update"]);
+							editAppSpecific("License Revoked",PInfo["LR Update"]);
+							editAppSpecific("Subject to Fines",PInfo["SF Update"]);
+							editAppSpecific("Disciplinary Actions",PInfo["DA Update"]);
+							copyASITables(ownId,capId,"DEFICIENCIES","ATTAHMENTS");
+							editAppName(AInfo["Owner Email"] + "-" + AInfo["Owner First Name"] + " " +  AInfo["Owner Last Name"]);
+						}
+						else {
+							holdId = capId;
+							capId = ownId;
+							PInfo = new Array;
+							loadAppSpecific(PInfo);
+							capId = holdId;
+							editAppSpecific("Percent Ownership",PInfo["Percent Ownership"]);
+							editAppSpecific("Date Owner Acquired Interest",PInfo["Date Owner Acquired Interest"]);
+							editAppSpecific("CA State issued ID #",PInfo["CA State issued ID #"]);
+							editAppSpecific("Other Government issued ID #",PInfo["Other Government issued ID #"]);
+							editAppSpecific("ATI Code",PInfo["ATI Code"]);
+							editAppSpecific("Convicted of a Crime",PInfo["Convicted of a Crime"]);
+							editAppSpecific("License Revoked",PInfo["License Revoked"]);
+							editAppSpecific("Subject to Fines",PInfo["Subject to Fines"]);
+							editAppSpecific("Disciplinary Actions",PInfo["Disciplinary Actions"]);
+							copyASITables(ownId,capId,"DEFICIENCIES","ATTAHMENTS");
+							editAppName(AInfo["Owner Email"] + "-" + AInfo["Owner First Name"] + " " +  AInfo["Owner Last Name"]);
+						}
+	// Link Amendment record to License reord as a child
+				var ownerAltId = ownId.getCustomID();
+				addParent(ownerAltId);
+	// Copy the Owner contact from the License Application to the Amendment record			
+				copyContactsByType_rev(parentId,capId,"Owner");
+				copyContactsByType_rev(parentId,capId,"Designated Responsible Party");		
+				
+				
 	//  Send email notification to DRP
 						var priContact = getContactObj(parentId,"Designated Responsible Party");
 						if(priContact){
@@ -127,4 +150,5 @@ try {
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/AMENDMENT/Owner Information: " + err.message);
 	logDebug(err.stack);
+}
 }
