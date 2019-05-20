@@ -151,4 +151,3 @@ try {
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/AMENDMENT/Owner Information: " + err.message);
 	logDebug(err.stack);
 }
-}
