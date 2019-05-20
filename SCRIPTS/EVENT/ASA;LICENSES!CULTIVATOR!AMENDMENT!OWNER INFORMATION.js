@@ -47,8 +47,8 @@ try {
 				if(AInfo["Owner Email"].toUpperCase() == ownContact.capContact.email.toUpperCase() && AInfo["Owner First Name"].toUpperCase() == ownContact.capContact.firstName.toUpperCase() &&
 				   AInfo["Owner Last Name"].toUpperCase() == ownContact.capContact.lastName.toUpperCase()) {
 	// Copy custom fields from the license record to the parent record
-						ownAmendRecs = getChildren("Licenses/Cultivator/Amendment/Owner Information",ownId);
-						if(ownAmendRecs.length > 0) {
+						var ownAmendRecs = getChildren("Licenses/Cultivator/Amendment/Owner Information",ownId);
+						if(ownAmendRecs != null && ownAmendRecs.length > 0) {
 							for(oa in ownAmendRecs) {
 								ownId = ownAmendRecs[oa];
 							}
