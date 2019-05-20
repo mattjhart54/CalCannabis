@@ -21,6 +21,7 @@ try {
 					var amendEnd = amendCont.endDate;
 					var amendAddressList = aa.address.getContactAddressListByCapContact(amendCont);
 					var amendAddressModelArr = convertContactAddressModelArr(amendAddressList.getOutput());
+					var pIds = getParents("Licenses/Cultivator/*/License");
 					for(p in pIds) {
 						if(AInfo["License Number"] == pIds[p].getCustomID()) {
 							parentCapId = pIds[p];
