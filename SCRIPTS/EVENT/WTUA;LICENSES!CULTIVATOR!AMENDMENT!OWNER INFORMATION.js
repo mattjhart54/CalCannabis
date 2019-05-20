@@ -21,6 +21,11 @@ try {
 					var amendEnd = amendCont.endDate;
 					var amendAddressList = aa.address.getContactAddressListByCapContact(amendCont);
 					var amendAddressModelArr = convertContactAddressModelArr(amendAddressList.getOutput());
+					for(p in pIds) {
+						if(AInfo["License Number"] == pIds[p].getCustomID()) {
+							parentCapId = pIds[p];
+						}
+					}
 					var licContactResult = aa.people.getCapContactByCapID(parentCapId);
 					if (licContactResult.getSuccess()){
 						var licContacts = licContactResult.getOutput();
