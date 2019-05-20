@@ -55,7 +55,7 @@ try {
 							licCont.setMiddleName(amendLBN);
 							licCont.setTitle(amendTitle);
 							licCont.setPostOfficeBox(amendNIN);
-							licCont.setSocialSecurityNumber(amendSSN);
+							licCont.setMaskedSsn(amendSSN);
 							licCont.setPhone3(amendPhone);
 				//			licCont.setPreferredChannel(amendChannel);
 							licCont.setEndDate(amendEnd);
