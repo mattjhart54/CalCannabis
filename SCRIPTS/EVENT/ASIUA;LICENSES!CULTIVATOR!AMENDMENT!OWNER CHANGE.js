@@ -22,7 +22,7 @@ try{
 	if(newOwner) {
 		removeASITable("OWNERS")
 		addASITable("OWNERS",tblOwners);
-		updateAppStatus("Pending Final Affidavit","Updated via ASIUA:LICENSES/CULTIVATOR/AMENDMENT/OWNER CHANGE");
+		updateAppStatus("Pending Owner Applications","Updated via ASIUA:LICENSES/CULTIVATOR/AMENDMENT/OWNER CHANGE");
 		deactivateTask("Ownership Change Amendment Review");
 	}
 	
