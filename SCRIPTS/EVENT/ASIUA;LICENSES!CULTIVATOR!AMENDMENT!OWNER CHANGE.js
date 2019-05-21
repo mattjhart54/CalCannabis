@@ -4,7 +4,7 @@ try{
 	for(o in tblOwners){
 		if(tblOwners[o]["Change Status"] == "New" && matches(tblOwners[o]["Status"],null, "", undefined)) {
 			newOwner = true;
-			tblOwners[o]["Status"] = "Submitted";
+			tblOwners[o]["Status"] = "Pending";
 			var nFirst = tblOwners[o]["First Name"];
 			var nLast = tblOwners[o]["Last Name"];
 			var nEmail = tblOwners[o]["Email Address"];
