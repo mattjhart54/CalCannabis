@@ -18,8 +18,13 @@ try{
 //			ownerEmail = ""+ contacts[c]["email"];
 //			ownerEmail = ownerEmail.toUpperCase();
 //	}
-// MJH MJH 190221 User Story 5884 - end
+// MJH 190221 User Story 5884 - end
 	parentId = getApplication(appId);
+// MJH 190521 Story 6058 Add code to process Owner Application initiated from an Owner Change Amendment
+	pCap = aa.cap.getCap(parentId).getOutput();
+	pAppTypeResult = pCap.getCapType();
+	pAppTypeString = pAppTypeResult.toString();
+	pAppTypeArray = pAppTypeString.split("/");
 	ownerTable = loadASITable("OWNERS",parentId);
 	var allOwnersSubmitted = true;
 	for(x in ownerTable) {
@@ -30,34 +35,45 @@ try{
 			 ownerTable[x]["Status"] = "Submitted";
 		}
 		else{
-			if(ownerTable[x]["Status"] != "Submitted") {
-			allOwnersSubmitted = false;
+			if(matches(pAppTypeArray[2], "Medical","Adult Use") && ownerTable[x]["Status"] != "Submitted") {
+				allOwnersSubmitted = false;
+			}
+			if(matches(pAppTypeArray[2], "Amendment") && ownerTable[x]["Change Status"] == "New" && ownerTable[x]["Status"] != "Submitted") {
+				allOwnersSubmitted = false;
 			}
 		}
 	}
 	removeASITable("OWNERS",parentId)
 	addASITable("OWNERS",ownerTable,parentId);
-	
 	if(allOwnersSubmitted){
-		updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
-		var drpContact = getContactByType("Designated Responsible Party",parentId);
-		if(drpContact){
-			var drpFirst = drpContact.getFirstName();
-			var drpLast =  drpContact.getLastName();
-			var drpEmail = drpContact.getEmail();
-			if(!matches(drpEmail,null,"","undefined")){
-				emailParameters = aa.util.newHashtable();
-				var sysDate = aa.date.getCurrentDate();
-				var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
-				addParameter(emailParameters, "$$altID$$", parentId.getCustomID());
-				addParameter(emailParameters, "$$firstName$$", ""+drpFirst);
-				addParameter(emailParameters, "$$lastName$$", ""+drpLast);
-				addParameter(emailParameters, "$$today$$", sysDateMMDDYYYY);
-				addParameter(emailParameters, "$$ACAUrl$$", getACAlinkForEdit(parentId, "Licenses", "1005"));
+		if(matches(pAppTypeArray[2], "Medical","Adult Use")) {
+			updateAppStatus("Pending Final Affidavit","Updated via CTRCA:Licenses/Cultivator//Owner Application",parentId);
+			var drpContact = getContactByType("Designated Responsible Party",parentId);
+			if(drpContact){
+				var drpFirst = drpContact.getFirstName();
+				var drpLast =  drpContact.getLastName();
+				var drpEmail = drpContact.getEmail();
+				if(!matches(drpEmail,null,"","undefined")){
+					emailParameters = aa.util.newHashtable();
+					var sysDate = aa.date.getCurrentDate();
+					var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
+					addParameter(emailParameters, "$$altID$$", parentId.getCustomID());
+					addParameter(emailParameters, "$$firstName$$", ""+drpFirst);
+					addParameter(emailParameters, "$$lastName$$", ""+drpLast);
+					addParameter(emailParameters, "$$today$$", sysDateMMDDYYYY);
+					addParameter(emailParameters, "$$ACAUrl$$", getACAlinkForEdit(parentId, "Licenses", "1005"));
 				sendNotification(sysEmail,drpEmail,"","LCA_DRP_DECLARATION_NOTIF",emailParameters,null,parentId);
+				}
+			}
+		}
+		if(pAppTypeArray[2] == "Amendment") {
+			if(allOwnersSubmitted){
+				updateAppStatus("Under Review","Updated via ASA:LICENSES/CULTIVATOR/* /OWNER APPLICATION",parentId);
+				activateTask("Ownership Change Amendment Review");
 			}
 		}
 	}
+// MJH 190521 Story 6058 end
 	if(parentId){
 		nbrToTry = 1;
 		//because owners can be added and deleted, need a way to number the records
