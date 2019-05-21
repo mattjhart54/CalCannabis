@@ -15,6 +15,10 @@ try{
 				ownerEmail = ownerEmail.toUpperCase();
 		}
 		parentId = getApplication(appId);
+		pCap = aa.cap.getCap(capId).getOutput();
+		pAppTypeResult = pCap.getCapType();
+		pAppTypeString = pAppTypeResult.toString();
+		pAppTypeArray = pAppTypeString.split("/");
 		ownerTable = loadASITable("OWNERS",parentId);
 		var allOwnersSubmitted = true;
 		for(x in ownerTable) {
@@ -25,7 +29,10 @@ try{
 				ownerTable[x]["Status"] = "Submitted";
 			}
 			else{
-				if(ownerTable[x]["Status"] != "Submitted") {
+				if(matches(pAppTypeArray[2], "Medical","Adult Use") && ownerTable[x]["Status"] != "Submitted") {
+					allOwnersSubmitted = false;
+				}
+				if(matches(pAppTypeArray[2], "Amendment") && ownerTable[x]["Change Status"] == "New" &&ownerTable[x]["Status"] != "Submitted") {
 					allOwnersSubmitted = false;
 				}
 			}
@@ -34,15 +41,24 @@ try{
 		addASITable("OWNERS",ownerTable,parentId);
 
 // ees 20190306: US 5911 start: check for DEC attached to parent before updating parent record status
-		var isDec = getChildren("Licenses/Cultivator/*/Declaration",parentId);
-		if (isDec.length == 0 || isDec == "" || isDec == null || isDec == "undefined") {
-			logDebug("DEC records found: " + isDec.length);
-			if(allOwnersSubmitted){
-				updateAppStatus("Pending Final Affidavit","Updated via ASA:LICENSES/CULTIVATOR/* /OWNER APPLICATION",parentId);
+		if(matches(pAppTypeArray[2], "Medical","Adult Use")) {
+			var isDec = getChildren("Licenses/Cultivator/*/Declaration",parentId);
+			if (isDec.length == 0 || isDec == "" || isDec == null || isDec == "undefined") {
+				logDebug("DEC records found: " + isDec.length);
+				if(allOwnersSubmitted){
+					updateAppStatus("Pending Final Affidavit","Updated via ASA:LICENSES/CULTIVATOR/* /OWNER APPLICATION",parentId);
+				}
+			} else {
+				logDebug("App Status not updated due to DEC already exists");
 			}
-		} else {
-			logDebug("App Status not updated due to DEC already exists");
 		}
+		if(pAppTypeArray[2] == "Amendment") {
+			if(allOwnersSubmitted){
+				updateAppStatus("Under Review","Updated via ASA:LICENSES/CULTIVATOR/* /OWNER APPLICATION",parentId);
+				activateTask("Ownership Change Amendment Review");
+			}
+		}
+			
 // ees 20190306: US 5911 end		
 		nbrToTry = 1;
 		//because owners can be added and deleted, need a way to number the records
