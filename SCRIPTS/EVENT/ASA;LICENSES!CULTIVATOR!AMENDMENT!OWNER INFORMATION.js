@@ -96,7 +96,7 @@ try {
 				
 				
 	//  Send email notification to DRP
-						var priContact = getContactObj(parentId,"Designated Responsible Party");
+						var priContact = getContactObj(capId,"Designated Responsible Party");
 						if(priContact){
 							var eParams = aa.util.newHashtable(); 
 							addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
