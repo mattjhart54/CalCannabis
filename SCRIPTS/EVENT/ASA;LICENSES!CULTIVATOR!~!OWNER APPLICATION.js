@@ -15,7 +15,7 @@ try{
 				ownerEmail = ownerEmail.toUpperCase();
 		}
 		parentId = getApplication(appId);
-		pCap = aa.cap.getCap(capId).getOutput();
+		pCap = aa.cap.getCap(parentId).getOutput();
 		pAppTypeResult = pCap.getCapType();
 		pAppTypeString = pAppTypeResult.toString();
 		pAppTypeArray = pAppTypeString.split("/");
