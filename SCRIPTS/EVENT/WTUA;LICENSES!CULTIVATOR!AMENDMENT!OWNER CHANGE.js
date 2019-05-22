@@ -43,7 +43,7 @@ try {
 							addParameter(eParams, "$$contactFirstName$$", licCont.firstName);
 							addParameter(eParams, "$$contactLastName$$", licCont.lastName);
 							addParameter(eParams, "$$contactEmail$$", licCont.email);
-							addParameter(eParams, "$$parentId$$", parentCapId);
+							addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 							var priEmail = ""+licCont.email;
 							var rFiles = [];
 							if(OWNERS[o]["Change Status"],"Delete")
