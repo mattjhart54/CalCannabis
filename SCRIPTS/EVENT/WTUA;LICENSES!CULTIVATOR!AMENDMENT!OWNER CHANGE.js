@@ -117,7 +117,9 @@ try {
 				}
 			}
 		}
-		copyASITables(capId,parentCapId);
+		amendOwners = loadASITable("OWNERS");
+		removeASITable("OWNERS",parentCapId);
+		addASITable("OWNERS",amendOwners,parentCapId);
 //  Send approval email notification to DRP
 		var priContact = getContactObj(parentCapId,"Designated Responsible Party");
 		if(priContact){
