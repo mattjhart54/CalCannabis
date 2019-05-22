@@ -39,7 +39,25 @@ try{
 				break;
 			}
 		}
-	}			
+// Validate that DRP Owner cannot be deleted
+		contacts = getContactArray();
+		for(c in contacts) {
+			if(contacts[c]["contactType"] == "Designated Responsible Party")
+				var drpEmail = ""+ contacts[c]["email"];
+				drpEmail = drpEmail.toUpperCase();
+		}
+		if (typeof(OWNERS) == "object") {
+			for(o in OWNERS) {
+				var ownEmail = ""+ OWNERS[o]["Email Address"];
+				ownEmail = ownEmail.toUpperCase();
+				if(OWNERS[o]["Change Status"] == "Delete" && ownEmail == drpEmail) {
+					cancel = true;
+					showMessage = true;
+					comment("This Owner, " + ownEmail + ", cannot be deleted as it is the Designated Responsible Party for this license.");
+				}
+			}
+		}
+	}	
 } catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/AMENDMENT/OWNER CHANGE: PCT and EMAIL Check: " + err.message);
 	logDebug(err.stack);
