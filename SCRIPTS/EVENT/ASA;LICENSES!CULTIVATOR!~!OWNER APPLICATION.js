@@ -54,8 +54,11 @@ try{
 		}
 		if(pAppTypeArray[2] == "Amendment") {
 			if(allOwnersSubmitted){
-				updateAppStatus("Under Review","Updated via ASA:LICENSES/CULTIVATOR/* /OWNER APPLICATION",parentId);
+				var holdId = capId;
+				capId = parentId;
+				updateAppStatus("Under Review","Updated via ASA:LICENSES/CULTIVATOR/* /OWNER APPLICATION");
 				activateTask("Ownership Change Amendment Review");
+				capId = holdId;
 			}
 		}
 			
