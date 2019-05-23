@@ -1,8 +1,12 @@
 
-function copyContactsByType_rev(pFromCapId, pToCapId, pContactType)
+function copyContactsByType_rev(pFromCapId, pToCapId, pContactType,pContactEmail)
 	{
 	//Copies all contacts from pFromCapId to pToCapId
 	//where type == pContactType and the contact does not have an end date (is active)
+	if (arguments.length == 4) 
+		var thisEmail = arguments[3];
+	else
+		var thisEmail = null;
 	if (pToCapId==null)
 		var vToCapId = capId;
 	else
@@ -13,21 +17,28 @@ function copyContactsByType_rev(pFromCapId, pToCapId, pContactType)
 	if (capContactResult.getSuccess())
 		{
 		var Contacts = capContactResult.getOutput();
-		for (yy in Contacts)
-			{
-			if(Contacts[yy].getCapContactModel().getContactType() == pContactType && Contacts[yy].getCapContactModel().getEndDate() == null)
-			    {
-			    var newContact = Contacts[yy].getCapContactModel();
-			    newContact.setCapID(vToCapId);
-			    aa.people.createCapContact(newContact);
-			    copied++;
-			    logDebug("Copied contact from "+pFromCapId.getCustomID()+" to "+vToCapId.getCustomID());
-			    }
-		
+		for (yy in Contacts) {
+			if(Contacts[yy].getCapContactModel().getContactType() == pContactType && Contacts[yy].getCapContactModel().getEndDate() == null) {
+				if(thisEmail == null) {
+					var newContact = Contacts[yy].getCapContactModel();
+					newContact.setCapID(vToCapId);
+					aa.people.createCapContact(newContact);
+					copied++;
+					logDebug("Copied contact from "+pFromCapId.getCustomID()+" to "+vToCapId.getCustomID());
+				}
+				else {
+					if(thisEmail == Contacts[yy].getCapContactModel().getEmail()) {
+						var newContact = Contacts[yy].getCapContactModel();
+						newContact.setCapID(vToCapId);
+						aa.people.createCapContact(newContact);
+						copied++;
+						logDebug("Copied contact from " + pFromCapId.getCustomID() + " to " + vToCapId.getCustomID() + " " + thisEmail);
+					}
+				}
 			}
 		}
-	else
-		{
+	}
+	else {
 		logMessage("**ERROR: Failed to get contacts: " + capContactResult.getErrorMessage()); 
 		return false; 
 		}
