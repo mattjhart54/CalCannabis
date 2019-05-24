@@ -1,5 +1,9 @@
 try {
 	if(wfStatus == "Amendment Approved") {
+		var drpEmail = AInfo["DRP Email Address"];
+		drpEmail = drpEmail.toUpperCase();
+		var drpNewEmail = AInfo["DRP Email Address"];
+		drpNewEmail = drpNewEmail.toUpperCase();
 		if(AInfo["Change DRP"] == "Yes") {
 			var licContactResult = aa.people.getCapContactByCapID(parentCapId);
 			if (licContactResult.getSuccess()){
@@ -8,7 +12,10 @@ try {
 				for (i in licContacts){
 					if(licContacts[i].getCapContactModel().getEndDate() != null)
 						continue;
-					if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licContacts[i].getCapContactModel().getEmail() == AInfo["DRP Email Address"]) {
+						var licEmail = licContacts[i].getCapContactModel().getEmail();
+						licEmail = licEmail.toUpperCase();
+						logDebug("emails " + licEmail + " " + drpEmail);
+					if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licEmail == drpEmail) {
 						var licCont = licContacts[i].getCapContactModel();
 						var endDate = new Date();
 						licCont.setEndDate(endDate);
@@ -18,8 +25,12 @@ try {
 						if(AInfo["Remove DRP as Owner"] == "Yes") {
 							amendOwners = loadASITable("OWNERS",parentCapId);
 							for(a in amendOwners) {
-								if(amendOwners[a]["Email Address"] == AInfo["DRP Email Address"])
+								var ownEmail = ""+amendOwners[a]["Email Address"];
+								ownEmail = ownEmail.toUpperCase();
+								logDebug("emails " + ownEmail + " " + drpEmail);
+								if(ownEmail == drpEmail)
 									amendOwners[a]["Change Status"] = "Delete";
+									logDebug("status " + amendOwners[a]["Change Status"]);
 							}
 							removeASITable("OWNERS",parentCapId);
 							addASITable("OWNERS",amendOwners,parentCapId);
@@ -36,7 +47,7 @@ try {
 		licFnd = false;
 		for (i in licContacts){
 			if(AInfo["Change DRP"] == "Yes") {
-				if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licContacts[i].getCapContactModel().getEmail() == AInfo["DRP Email Address"]) {
+				if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licContacts[i].getCapContactModel().getEmail().toUpperCase() == drpEmail) {
 					var drpEmail = AInfo["DRP Email Address"];
 					var drpFirst = AInfo["New DRP First Name"];
 					var drpLast = AInfo["New DRP Last Name"];
@@ -46,7 +57,7 @@ try {
 				}
 			}
 			else {
-				if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licContacts[i].getCapContactModel().getEmail() == AInfo["New DRP Email Address"]) {
+				if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licContacts[i].getCapContactModel().getEmail().toUpperCase() == drpNewEmail) {
 					var drpEmail = AInfo["New DRP Email Address"];
 					var drpFirst = AInfo["New DRP First Name"];
 					var drpLast = AInfo["New DRP Last Name"];
@@ -66,7 +77,7 @@ try {
 			addParameter(eParams, "$$parentId$$", parentCapId);
 			var priEmail = ""+drpEmail;
 			var rFiles = [];
-			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_REJECTED",eParams, rFiles,capId);
+			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_APPROVAL",eParams, rFiles,capId);
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",drpChannel);
 			if(!matches(priChannel, "",null,"undefined", false)){
 				if(priChannel.indexOf("Postal") > -1 ){
@@ -121,6 +132,6 @@ try {
 		}
 	}
 } catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/AMENDMENT/DRP DECLARATION: Amendment Approved/Rejected " + err.message);
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/AMENDMENT/DRP DECLARATION: Amendmeth Approved/Rejected " + err.message);
 	logDebug(err.stack);
 }
