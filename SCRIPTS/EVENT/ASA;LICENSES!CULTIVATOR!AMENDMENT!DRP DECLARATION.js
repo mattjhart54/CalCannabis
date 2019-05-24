@@ -5,7 +5,7 @@ try {
 	
 // Set alt id the amendment record based on the number of chlild amendments records linked to the license record
 	parentId = aa.cap.getCapID(parentAltId).getOutput();
-	cIds = getChildren("Licenses/Cultivator/Amendment/Administrative",parentId);
+	cIds = getChildren("Licenses/Cultivator/Amendment/DRP Declaration",parentId);
 	if(matches(cIds, null, "", undefined)) 
 		amendNbr = amendNbr = "00" + 1;
 	else {
@@ -29,12 +29,24 @@ try {
 // Copy the Designated resposible Party contact from the License Record to the Amanedment record
  
     copyContactsByType_rev(parentId,capId,"Designated Responsible Party");
-	if(AInfo["Change DRP"] == "Yes" && !matches(AInfo["New DRP Email Address"],null,"",undefined))  
-		copyContactsByType_rev(parentId,capId,"Owner",AInfo["New DRP Email Address"]);
+	if(AInfo["Change DRP"] == "Yes" && !matches(AInfo["New DRP Email Address"],null,"",undefined)) 
+		addRefContactByEmailLastName(AInfo["New DRP First Name"], AInfo["New DRP Last Name"], AInfo["New DRP Email Address"]);
+	//	copyContactsByType_revT(parentId,capId,"Owner",AInfo["New DRP Email Address"]);
 	
 // Copy custom fields from the license record to the child amendment record
+
+	if(parentAltId.substring(1,2) == "M")
+		appIds = getChildren("Licenses/Cultivator/Medical/Application",parentId);
+	else
+		appIds = getChildren("Licenses/Cultivator/Adult Use/Application",parentId);
+	for(a in appIds) {
+		decIds = getChildren("Licenses/Cultivator/Medical/Declaration",appIds[a]);
+		for(d in decIds) {
+			decId = decIds[d];
+		}
+	}
 	holdId = capId;
-	capId = parentId;
+	capId = decId;
 	PInfo = new Array;
 	loadAppSpecific(PInfo);
 	capId = holdId;
