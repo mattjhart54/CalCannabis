@@ -12,9 +12,8 @@ try {
 				for (i in licContacts){
 					if(licContacts[i].getCapContactModel().getEndDate() != null)
 						continue;
-						var licEmail = licContacts[i].getCapContactModel().getEmail();
-						licEmail = licEmail.toUpperCase();
-						logDebug("emails " + licEmail + " " + drpEmail);
+					var licEmail = licContacts[i].getCapContactModel().getEmail();
+					licEmail = licEmail.toUpperCase();
 					if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licEmail == drpEmail) {
 						var licCont = licContacts[i].getCapContactModel();
 						var endDate = new Date();
@@ -27,10 +26,8 @@ try {
 							for(a in amendOwners) {
 								var ownEmail = ""+amendOwners[a]["Email Address"];
 								ownEmail = ownEmail.toUpperCase();
-								logDebug("emails " + ownEmail + " " + drpEmail);
 								if(ownEmail == drpEmail)
 									amendOwners[a]["Change Status"] = "Delete";
-									logDebug("status " + amendOwners[a]["Change Status"]);
 							}
 							removeASITable("OWNERS",parentCapId);
 							addASITable("OWNERS",amendOwners,parentCapId);
@@ -111,7 +108,7 @@ try {
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$parentId$$", parentCapId);
+			addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 			var priEmail = ""+priContact.capContact.getEmail();
 			var rFiles = [];
 			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_REJECTED",eParams, rFiles,capId);
