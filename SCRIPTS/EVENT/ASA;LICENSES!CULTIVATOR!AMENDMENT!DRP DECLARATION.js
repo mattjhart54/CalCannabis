@@ -64,7 +64,7 @@ try {
 	editAppSpecific("D9",PInfo["D9"]);
 	editAppSpecific("D10",PInfo["D10"]);
 	editAppSpecific("D11",PInfo["D11"]);
-	editAppSpecific("Certification",PInfo["Ceritfication"]);
+	editAppSpecific("Certification",PInfo["Certification"]);
 	editAppName(getAppSpecific("License Type",parentId));
 	updateShortNotes(getShortNotes(parentId));
 	updateWorkDesc(workDescGet(parentId));
