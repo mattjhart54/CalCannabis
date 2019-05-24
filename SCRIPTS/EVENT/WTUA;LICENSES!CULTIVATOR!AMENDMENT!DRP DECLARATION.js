@@ -21,7 +21,15 @@ try {
 						var peopleModel = licCont.getPeople();
 						aa.people.editCapContactWithAttribute(licCont);
 						logDebug("DRP " + licCont.email + " Deactivated");
-						if(AInfo["Remove DRP as Owner"] == "Yes") {
+					}
+					if(AInfo["Remove DRP as Owner"] == "Yes") {
+						if(licContacts[i].getCapContactModel().getContactType() == "Owner" && licEmail == drpEmail) {
+							var licCont = licContacts[i].getCapContactModel();
+							var endDate = new Date();
+							licCont.setEndDate(endDate);
+							var peopleModel = licCont.getPeople();
+							aa.people.editCapContactWithAttribute(licCont);
+							logDebug("Owner " + licCont.email + " Deactivated");
 							amendOwners = loadASITable("OWNERS",parentCapId);
 							for(a in amendOwners) {
 								var ownEmail = ""+amendOwners[a]["Email Address"];
@@ -32,7 +40,7 @@ try {
 							removeASITable("OWNERS",parentCapId);
 							addASITable("OWNERS",amendOwners,parentCapId);
 						}	
-					}
+					}	
 				}
 			}
 			copyContactsByType_rev(capId,parentCapId,"Designated Responsible Party",AInfo["New DRP Email Address"]);
