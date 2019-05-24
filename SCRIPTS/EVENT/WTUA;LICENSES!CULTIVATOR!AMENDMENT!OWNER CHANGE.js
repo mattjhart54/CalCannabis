@@ -93,7 +93,7 @@ try {
 							addParameter(eParams, "$$contactFirstName$$", cContact.capContact.firstName);
 							addParameter(eParams, "$$contactLastName$$", cContact.capContact.lastName);
 							addParameter(eParams, "$$contactEmail$$", cContact.capContact.email);
-							addParameter(eParams, "$$parentId$$", parentCapId);
+							addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 							var priEmail = ""+cContact.capContact.getEmail();
 							var rFiles = [];
 							sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_NEW",eParams, rFiles,capId);
@@ -136,10 +136,10 @@ try {
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$parentId$$", parentCapId);
+			addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 			var priEmail = ""+priContact.capContact.getEmail();
 			var rFiles = [];
-			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_REJECTED",eParams, rFiles,capId);
+			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_APPROVAL",eParams, rFiles,capId);
 //			emailRptContact("", "LCA_AMENDMENT_APPROVAL", "", false, capStatus, capId, "Designated Responsible Party");
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 			if(!matches(priChannel, "",null,"undefined", false)){
@@ -174,7 +174,7 @@ try {
 				addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 				addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 				addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-				addParameter(eParams, "$$parentId$$", parentCapId);
+				addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 				var priEmail = ""+priContact.capContact.getEmail();
 				var rFiles = [];
 				sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_REJECTED",eParams, rFiles,capId);
