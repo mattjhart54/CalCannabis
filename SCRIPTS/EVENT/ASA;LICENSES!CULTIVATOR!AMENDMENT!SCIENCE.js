@@ -53,10 +53,14 @@ try {
 	editAppSpecific("Other Update",PInfo["Other"]);
 	editAppSpecific("Other Source Description",PInfo["Other Source Description"]);
 	copyASITables(parentId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
-
+	editAppName(PInfo["License Type"]);
+	updateShortNotes(getShortNotes(parentId));
+	updateWorkDesc(workDescGet(parentId));
+	
 //  Send email notification to DRP
 	var priContact = getContactObj(capId,"Designated Responsible Party");
 	if(priContact){
+		runReportAttach(capId,"Amendment Submission", "p1value",newAltId);
 		var eParams = aa.util.newHashtable(); 
 		addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 		var contPhone = priContact.capContact.phone1;
