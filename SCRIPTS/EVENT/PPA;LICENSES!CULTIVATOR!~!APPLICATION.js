@@ -20,10 +20,10 @@ try{
 			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 			aa.runAsyncScript(scriptName, envParameters);
 		}	
-		if(capStatus=="License Issued") 
-			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
-		else
-			runReportAttach(capId,"Approval Letter Provisional", "p1value", capId.getCustomID());
+//		if(capStatus=="License Issued") 
+//			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
+//		else
+//			runReportAttach(capId,"Approval Letter Provisional", "p1value", capId.getCustomID());
 // mhart 100918 Story end
 		
 // mhart 03142019 Story 5918 add records to set to email receipt to DRP
