@@ -43,13 +43,14 @@ try {
 							addParameter(eParams, "$$contactFirstName$$", licCont.firstName);
 							addParameter(eParams, "$$contactLastName$$", licCont.lastName);
 							addParameter(eParams, "$$contactEmail$$", licCont.email);
+							addParameter(eParams, "$$business$$", workDescGet(parentCapId));
 							addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 							var priEmail = ""+licCont.email;
 							var rFiles = [];
 							if(OWNERS[o]["Change Status"],"Delete")
 								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_DELETED",eParams, rFiles,capId);
 							else
-								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_MODIFIED",eParams, rFiles,capId);
+								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_APPROVAL",eParams, rFiles,capId);
 							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",licCont.preferredChannel);
 							if(!matches(priChannel, "",null,"undefined", false)){
 								if(priChannel.indexOf("Postal") > -1 ){
@@ -93,10 +94,11 @@ try {
 							addParameter(eParams, "$$contactFirstName$$", cContact.capContact.firstName);
 							addParameter(eParams, "$$contactLastName$$", cContact.capContact.lastName);
 							addParameter(eParams, "$$contactEmail$$", cContact.capContact.email);
+							addParameter(eParams, "$$business$$", workDescGet(parentCapId));
 							addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 							var priEmail = ""+cContact.capContact.getEmail();
 							var rFiles = [];
-							sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_NEW",eParams, rFiles,capId);
+							sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_APPROVAL",eParams, rFiles,capId);
 //							emailRptContact("", "LCA_AMENDMENT_APPROVAL", "", false, capStatus, capId, "Designated Responsible Party");
 							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ cContact.capContact.getPreferredChannel());
 							if(!matches(priChannel, "",null,"undefined", false)){
@@ -169,6 +171,9 @@ try {
 				}else{
 					var fmtPhone = "";
 				}
+				TInfo = [];
+				loadTaskSpecific(TInfo);
+				addParameter(eParams, "$$rejectReason$$", TInfo["Rejection Reason"]);
 				addParameter(eParams, "$$altId$$", capId.getCustomID());
 				addParameter(eParams, "$$contactPhone1$$", fmtPhone);
 				addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
