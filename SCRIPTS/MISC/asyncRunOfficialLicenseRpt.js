@@ -42,13 +42,15 @@ function getMasterScriptText(vScriptName) {
 	return emseScript.getScriptText() + "";
 }
 try{
-//---------------------------------------
-	//aa.env.setValue("licCap", "LCA18-0000664");
-	//aa.env.setValue("currentUserID", "MHART");
-	//aa.env.setValue("reportName", "Official License Certificate");
-	//aa.env.setValue("contType", "Designated Responsible Party");
-	//aa.env.setValue("addressType", "Mailing");
-	//aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov")
+/*---------------------------------------
+	aa.env.setValue("licCap", "CAL18-0000127");
+	aa.env.setValue("appCap", "LCA18-0000127");
+	aa.env.setValue("currentUserID", "MHART");
+	aa.env.setValue("reportName", "Official License Certificate");
+	aa.env.setValue("contType", "Designated Responsible Party");
+	aa.env.setValue("licType", "Annual");
+	aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov");
+*/
 	var reportName = "" + aa.env.getValue("reportName");
 	var appCap = "" + aa.env.getValue("appCap");
 	var licCap = "" + aa.env.getValue("licCap");
@@ -61,12 +63,13 @@ try{
 	var sDate = new Date();
 	var sTime = sDate.getTime();
 //-----------------------
+	var rFiles = [];
+// Run the official license report
 	reportResult = aa.reportManager.getReportInfoModelByName(reportName);
 	if (!reportResult.getSuccess()){
 		logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
 		eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
 	}
-	var rFiles = [];
 	var report = reportResult.getOutput(); 
 	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
 	cap = aa.cap.getCap(tmpID).getOutput();
@@ -99,7 +102,51 @@ try{
 		logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
 		eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
 	}
-	var tmpID = aa.cap.getCapID(appCap).getOutput();
+// Run the Approval Letter
+	var tmpID = aa.cap.getCapID(appCap).getOutput(); 
+	cap = aa.cap.getCap(tmpID).getOutput();
+	appTypeResult = cap.getCapType();
+	appTypeString = appTypeResult.toString(); 
+	appTypeArray = appTypeString.split("/");
+	capStatus = cap.getCapStatus();
+	if(licType=="Annual") 
+		reportName = "Approval Letter"
+	else
+	reportName = "Approval Letter Provisional"
+	reportResult = aa.reportManager.getReportInfoModelByName(reportName);
+	if (!reportResult.getSuccess()){
+		logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
+		eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
+	}
+	var report = reportResult.getOutput(); 
+
+	report.setModule(appTypeArray[0]); 
+	//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
+	report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
+	report.getEDMSEntityIdModel().setAltId(appCap);
+	eTxt+="reportName: " + reportName + br;
+	eTxt+="reportName: " + typeof(reportName) + br;
+	var parameters = aa.util.newHashMap(); 
+	parameters.put("p1value",appCap);
+	report.setReportParameters(parameters);
+	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
+	if(permit.getOutput().booleanValue()) { 
+		var reportResult = aa.reportManager.getReportResult(report); 
+		if(reportResult) {
+			reportOutput = reportResult.getOutput();
+			var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
+			rFile=reportFile.getOutput();
+			rFiles.push(rFile);
+			logDebug("Report '" + reportName + "' has been run for " + appCap);
+			eTxt+=("Report '" + reportName + "' has been run for " + appCap) +br;
+		}else {
+			logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
+		}
+	}else{
+		logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
+		eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
+	}
+
 	var priContact = getContactObj(tmpID,contType);
 	if(priContact){
 		var eParams = aa.util.newHashtable(); 
