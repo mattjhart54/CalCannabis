@@ -73,6 +73,9 @@ try {
 			}else{
 				var fmtPhone = "";
 			}
+			TInfo = [];
+			loadTaskSpecific(TInfo);
+			addParameter(eParams, "$$rejectReason$$", TInfo["Rejection Reason"]);
 			addParameter(eParams, "$$altId$$", capId.getCustomID());
 			addParameter(eParams, "$$contactPhone1$$", fmtPhone);
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
