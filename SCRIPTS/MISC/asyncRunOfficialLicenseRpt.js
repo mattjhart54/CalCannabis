@@ -109,7 +109,7 @@ try{
 	appTypeString = appTypeResult.toString(); 
 	appTypeArray = appTypeString.split("/");
 	capStatus = cap.getCapStatus();
-	if(licType=="Annual") 
+	if(licType=="annual") 
 		reportName = "Approval Letter"
 	else
 	reportName = "Approval Letter Provisional"
