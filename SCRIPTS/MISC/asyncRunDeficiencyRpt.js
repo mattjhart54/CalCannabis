@@ -36,7 +36,7 @@ try{
 	}
 	report.setReportParameters(parameters);
 	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
-	if(permit.getOutput().booleanValue()) { 
+	if(permitResult.getSuccess() == false || permit.getOutput().booleanValue() == false) { 
 		var reportResult = aa.reportManager.getReportResult(report); 
 		aa.print("Report " + reportName + " has been run for " + altId);
 		eTxt+=("Report Report " + reportName + " has been run for " + altId) +br;
