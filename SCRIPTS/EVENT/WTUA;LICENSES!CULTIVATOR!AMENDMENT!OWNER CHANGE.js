@@ -21,7 +21,7 @@ try {
 							}
 						}
 						if(licFnd) {
-							if(OWNERS[o]["Change Status"],"Delete") {
+							if(OWNERS[o]["Change Status"] == "Delete") {
 								var endDate = new Date();
 								licCont.setEndDate(endDate);
 								logDebug("update contact1 " + licCont.email);
@@ -48,14 +48,14 @@ try {
 							addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 							var priEmail = ""+licCont.email;
 							var rFiles = [];
-							if(OWNERS[o]["Change Status"],"Delete")
+							if(OWNERS[o]["Change Status"] == "Delete")
 								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_DELETED",eParams, rFiles,capId);
 							else
 								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_APPROVAL",eParams, rFiles,capId);
 							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",licCont.preferredChannel);
 							if(!matches(priChannel, "",null,"undefined", false)){
 								if(priChannel.indexOf("Postal") > -1 ){
-									if(OWNERS[o]["Change Status"],"Delete")
+									if(OWNERS[o]["Change Status"] == "Delete")
 										var sName = createSet("Amendment Owner Deleted","Amendment Notifications", "New");
 									else
 										var sName = createSet("Amendment Owner Modified","Amendment Notifications", "New");
