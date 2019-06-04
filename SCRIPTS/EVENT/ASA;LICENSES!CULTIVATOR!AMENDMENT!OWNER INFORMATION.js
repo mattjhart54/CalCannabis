@@ -57,8 +57,8 @@ try {
 							PInfo = new Array;
 							loadAppSpecific(PInfo);
 							capId = holdId;
-							editAppSpecific("Percent Ownership",PInfo["Percent Update"]);
-							editAppSpecific("Date Owner Acquired Interest",PInfo["DOAI Update"]);
+				//			editAppSpecific("Percent Ownership",PInfo["Percent Update"]);
+				//			editAppSpecific("Date Owner Acquired Interest",PInfo["DOAI Update"]);
 							editAppSpecific("CA State issued ID #",PInfo["CSI Update"]);
 							editAppSpecific("Other Government issued ID #",PInfo["OGI Update"]);
 							editAppSpecific("ATI Code",PInfo["ATI Update"]);
@@ -97,7 +97,6 @@ try {
 				
 	//  Send email notification to DRP
 						var priContact = getContactObj(capId,"Designated Responsible Party");
-						runReportAttach(capId,"Amendment Submission", "p1value",newAltId);
 						if(priContact){
 							var eParams = aa.util.newHashtable(); 
 							addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);

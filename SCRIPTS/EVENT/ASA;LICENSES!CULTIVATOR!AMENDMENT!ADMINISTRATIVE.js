@@ -71,7 +71,6 @@ try {
 //  Send email notification to DRP
 	var priContact = getContactObj(capId,"Designated Responsible Party");
 	if(priContact){
-		runReportAttach(capId,"Amendment Submission", "p1value",newAltId);
 		var eParams = aa.util.newHashtable(); 
 		addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 		var contPhone = priContact.capContact.phone1;
