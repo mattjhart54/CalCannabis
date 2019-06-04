@@ -174,7 +174,7 @@ function mainProcess() {
 			editAppSpecificB("Legal Business Name",appInfo["Legal Business Name"]);
 			editAppSpecificB("EIN/ITIN",appInfo["EIN/ITIN"]);
 			editAppSpecificB("SSN/ITIN",appInfo["SSN/ITIN"]);
-			editAppSpecificB("Secretary of State Registration Entity ",appInfo["Secretary of State Registration Entity "]);
+			editAppSpecificB("Secretary of State Registration Entity",appInfo["Secretary of State Registration Entity"]);
 			editAppSpecificB("Grid",appInfo["Grid"]);
 			editAppSpecificB("Solar",appInfo["Solar"]);
 			editAppSpecificB("Generator",appInfo["Generator"]);
