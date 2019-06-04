@@ -1,8 +1,8 @@
 try{
-//	aa.env.setValue("altId", "LCA19-0000071");
-//	aa.env.setValue("newAltId", "LCA19-0000071-DEF01T");
+//	aa.env.setValue("altId", "LCA19-0000388");
+//	aa.env.setValue("newAltId", "LCA19-0000388-DEF03T");
 //	aa.env.setValue("currentUserID", "MHART");
-//	aa.env.setValue("reportName", "Deficiency Report - Owner");
+//	aa.env.setValue("reportName", "Deficiency Letter");
 	var altId = "" + aa.env.getValue("altId");
 	var newAltId = "" + aa.env.getValue("newAltId");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
@@ -36,13 +36,20 @@ try{
 	}
 	report.setReportParameters(parameters);
 	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
-	if(permit.getSuccess() == false || permit.getOutput().booleanValue() == false) {
-		var reportResult = aa.reportManager.getReportResult(report); 
-		aa.print("Report " + reportName + " has been run for " + altId);
-		eTxt+=("Report Report " + reportName + " has been run for " + altId) +br;
-	}else{
-		aa.print("No permission to report: "+ reportName + " for user: " + currentUserID);
-		eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
+	if(permit.getSuccess()) {
+		if(permit.getOutput().booleanValue()) {
+			var reportResult = aa.reportManager.getReportResult(report); 
+			aa.print("Report " + reportName + " has been run for " + altId);
+			eTxt+=("Report Report " + reportName + " has been run for " + altId) +br;
+		}
+		else{
+			aa.print("No permission to report: "+ reportName + " for user: " + currentUserID);
+			eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
+		}
+	}
+	else{
+		aa.print("Issue with getting report permission: "+ reportName + " for user: " + currentUserID);
+		eTxt+="Issue with getting report permission: "+ reportName + " for user: " + currentUserID;
 	}
 //----------------------- 
 } catch(err){
