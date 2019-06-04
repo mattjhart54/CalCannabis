@@ -26,6 +26,7 @@ try {
 								licCont.setEndDate(endDate);
 								logDebug("update contact1 " + licCont.email);
 								var peopleModel = licCont.getPeople();
+								peopleModel.setAuditStatus("I");
 		//						var licAddressrs = aa.address.getContactAddressListByCapContact(licCont);
 		//						peopleModel.setContactAddressList(amendAddressModelArr);
 								aa.people.editCapContactWithAttribute(licCont);
