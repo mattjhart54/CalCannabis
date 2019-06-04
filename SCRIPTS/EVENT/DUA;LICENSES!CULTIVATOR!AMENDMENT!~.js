@@ -10,7 +10,7 @@ try{
 			if(assignedUserID!=null){
 				var staffEmail = assignedUserID.getEmail();
 				if(staffEmail){
-					email(staffEmail, sysFromEmail, "A new document has been uploaded.", "A new document has been uploaded for license application " + capIDString + ". Please review this new document before taking any action on the application.");
+					email(staffEmail, sysFromEmail, "A new document has been uploaded.", "A new document has been uploaded for license amendment " + capIDString + ". Please review this new document before taking any action on the amendment.");
 				}
 			}
 		}
