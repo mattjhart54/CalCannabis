@@ -4,7 +4,7 @@
 |
 | Version 1.0 - Base Version. 
 |
-| Script to update license data from application data on existing license records.
+|  Script to update license data from application data on existing license records.
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
 |
