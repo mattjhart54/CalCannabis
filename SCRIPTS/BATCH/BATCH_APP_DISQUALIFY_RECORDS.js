@@ -181,7 +181,7 @@ try{
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
 		var capStatus = cap.getCapStatus();
-		if(appTypeArray[3] == "Owner Application" ) {
+		if(appTypeArray[3] == "Owner Application" || appTypeArray[2] == "Amendment") {
 				capFilterAppType++;
 				continue;
 		}
