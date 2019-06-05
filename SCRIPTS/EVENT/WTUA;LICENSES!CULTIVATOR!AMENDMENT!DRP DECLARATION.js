@@ -2,7 +2,7 @@ try {
 	if(wfStatus == "Amendment Approved") {
 		var drpEmail = AInfo["DRP Email Address"];
 		drpEmail = drpEmail.toUpperCase();
-		var drpNewEmail = AInfo["DRP Email Address"];
+		var drpNewEmail = AInfo["New DRP Email Address"];
 		drpNewEmail = drpNewEmail.toUpperCase();
 		if(AInfo["Change DRP"] == "Yes") {
 			var licContactResult = aa.people.getCapContactByCapID(parentCapId);
@@ -29,6 +29,7 @@ try {
 							var endDate = new Date();
 							licCont.setEndDate(endDate);
 							var peopleModel = licCont.getPeople();
+							peopleModel.setAuditStatus("I");
 							aa.people.editCapContactWithAttribute(licCont);
 							logDebug("Owner " + licCont.email + " Deactivated");
 							amendOwners = loadASITable("OWNERS",parentCapId);
@@ -44,7 +45,7 @@ try {
 					}	
 				}
 			}
-			copyContactsByType_rev(capId,parentCapId,"Designated Responsible Party",AInfo["New DRP Email Address"]);
+			copyContactsByType_rev(capId,parentCapId,"Designated Responsible Party",drpNewEmail);
 		}
 //  Send approval email notification to current DRP
 		var licContactResult = aa.people.getCapContactByCapID(capId);
