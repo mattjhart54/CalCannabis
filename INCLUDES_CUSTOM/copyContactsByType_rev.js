@@ -3,8 +3,10 @@ function copyContactsByType_rev(pFromCapId, pToCapId, pContactType,pContactEmail
 	{
 	//Copies all contacts from pFromCapId to pToCapId
 	//where type == pContactType and the contact does not have an end date (is active)
-	if (arguments.length == 4) 
+	if (arguments.length == 4) {
 		var thisEmail = arguments[3];
+		thisEmail = thisEmail.toUpperCase();
+	}
 	else
 		var thisEmail = null;
 	if (pToCapId==null)
@@ -27,7 +29,7 @@ function copyContactsByType_rev(pFromCapId, pToCapId, pContactType,pContactEmail
 					logDebug("Copied contact from "+pFromCapId.getCustomID()+" to "+vToCapId.getCustomID());
 				}
 				else {
-					if(thisEmail == Contacts[yy].getCapContactModel().getEmail()) {
+					if(thisEmail == Contacts[yy].getCapContactModel().getEmail().toUpperCase()) {
 						var newContact = Contacts[yy].getCapContactModel();
 						newContact.setCapID(vToCapId);
 						aa.people.createCapContact(newContact);
