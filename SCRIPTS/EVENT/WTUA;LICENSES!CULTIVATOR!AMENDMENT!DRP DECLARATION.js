@@ -19,6 +19,7 @@ try {
 						var endDate = new Date();
 						licCont.setEndDate(endDate);
 						var peopleModel = licCont.getPeople();
+						peopleModel.setAuditStatus("I");
 						aa.people.editCapContactWithAttribute(licCont);
 						logDebug("DRP " + licCont.email + " Deactivated");
 					}
