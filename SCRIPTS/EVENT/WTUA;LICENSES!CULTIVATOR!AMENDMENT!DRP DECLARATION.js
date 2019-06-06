@@ -54,8 +54,8 @@ try {
 		licFnd = false;
 		for (i in licContacts){
 			if(AInfo["Change DRP"] == "Yes") {
-				if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licContacts[i].getCapContactModel().getEmail().toUpperCase() == drpEmail) {
-					var drpEmail = AInfo["DRP Email Address"];
+				if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licContacts[i].getCapContactModel().getEmail().toUpperCase() == drpNewEmail) {
+					var drpEmail = drpNewEmail;
 					var drpFirst = AInfo["New DRP First Name"];
 					var drpLast = AInfo["New DRP Last Name"];
 					var drpChannel = licContacts[i].getCapContactModel().getPreferredChannel();
@@ -64,10 +64,9 @@ try {
 				}
 			}
 			else {
-				if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licContacts[i].getCapContactModel().getEmail().toUpperCase() == drpNewEmail) {
-					var drpEmail = AInfo["New DRP Email Address"];
-					var drpFirst = AInfo["New DRP First Name"];
-					var drpLast = AInfo["New DRP Last Name"];
+				if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licContacts[i].getCapContactModel().getEmail().toUpperCase() == drpEmail) {
+					var drpFirst = AInfo["DRP First Name"];
+					var drpLast = AInfo["DRP Last Name"];
 					var drpChannel = licContacts[i].getCapContactModel().getPreferredChannel();
 					licFnd = true;
 					break;
