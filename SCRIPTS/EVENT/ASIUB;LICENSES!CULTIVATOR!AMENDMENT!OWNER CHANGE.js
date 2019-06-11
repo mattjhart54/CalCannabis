@@ -30,7 +30,8 @@ try{
 					continue;
 				var ownEmail = ""+ OWNERS[o]["Email Address"];
 				ownEmail = ownEmail.toUpperCase();
-				if (tblEmail == ownEmail && OWNERS[o]["Status"] != "Deleted") {
+				logDebug(tblEmail + " " + ownEmail);
+				if (tblEmail == ownEmail) {
 					emailDuplicate = true;
 				}
 			}
