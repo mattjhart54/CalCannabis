@@ -30,7 +30,7 @@ try{
 					continue;
 				var ownEmail = ""+ OWNERS[o]["Email Address"];
 				ownEmail = ownEmail.toUpperCase();
-				logDebug(tblEmail + " " + ownEmail);
+				logDebug(tblEmail + " " + ownEmail + " " + OWNERS[o]["Status"]);
 				if (tblEmail == ownEmail) {
 					emailDuplicate = true;
 				}
