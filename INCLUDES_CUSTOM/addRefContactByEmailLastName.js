@@ -1,7 +1,7 @@
 function addRefContactByEmailLastName(vFirst, vLast, vEmail){
 try{
 	var userFirst = vFirst;
-	var userLast = vLast;
+	var userLast = vLast.toUpperCase();
 	var userEmail = ""+vEmail;
 	logDebug("userEmail: " + userEmail);
 	//Find PeopleModel object for user
@@ -36,6 +36,7 @@ try{
 					if(matches(thisLName, null,"","undefined")){
 						var thisLName = ""+thisPpl.getResLastName();
 					}
+					thisLname = thisLName.toUpperCase()
 					logDebug("thisLName:" + thisLName);
 					logDebug("userLast:" + userLast);
 					if(thisLName==userLast){
