@@ -91,7 +91,7 @@ try {
 				var ownerAltId = ownId.getCustomID();
 				addParent(ownerAltId);
 	// Copy the Owner contact from the License Application to the Amendment record			
-				copyContactsByType_rev(parentId,capId,"Owner");
+				copyContactsByType_rev(ownId,capId,"Owner");
 				copyContactsByType_rev(parentId,capId,"Designated Responsible Party");		
 				
 				
