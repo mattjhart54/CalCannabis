@@ -10,28 +10,20 @@ try {
 				var licContacts = licContactResult.getOutput();
 				licFnd = false;
 				for (i in licContacts){
-					if(licContacts[i].getCapContactModel().getEndDate() != null)
-						continue;
 					var licEmail = licContacts[i].getCapContactModel().getEmail();
 					licEmail = licEmail.toUpperCase();
 					if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licEmail == drpEmail) {
 						var licCont = licContacts[i].getCapContactModel();
-						var endDate = new Date();
-						licCont.setEndDate(endDate);
-						var peopleModel = licCont.getPeople();
-						peopleModel.setAuditStatus("I");
-						aa.people.editCapContactWithAttribute(licCont);
-						logDebug("DRP " + licCont.email + " Deactivated");
+						var licContSeq = licCont.contactSeqNumber;
+						aa.people.removeCapContact(parentCapId,licContSeq);
+						logDebug("DRP " + licCont.email + " Removed");
 					}
 					if(AInfo["Remove DRP as Owner"] == "Yes") {
 						if(licContacts[i].getCapContactModel().getContactType() == "Owner" && licEmail == drpEmail) {
 							var licCont = licContacts[i].getCapContactModel();
-							var endDate = new Date();
-							licCont.setEndDate(endDate);
-							var peopleModel = licCont.getPeople();
-							peopleModel.setAuditStatus("I");
-							aa.people.editCapContactWithAttribute(licCont);
-							logDebug("Owner " + licCont.email + " Deactivated");
+							var licContSeq = licCont.contactSeqNumber;
+							aa.people.removeCapContact(parentCapId,licContSeq);
+							logDebug("Owner Contact" + ownEmail + " Removed");
 							amendOwners = loadASITable("OWNERS",parentCapId);
 							for(a in amendOwners) {
 								var ownEmail = ""+amendOwners[a]["Email Address"];
