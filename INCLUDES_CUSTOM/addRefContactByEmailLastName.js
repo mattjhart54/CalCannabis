@@ -36,7 +36,7 @@ try{
 					if(matches(thisLName, null,"","undefined")){
 						var thisLName = ""+thisPpl.getResLastName();
 					}
-					thisLname = thisLName.toUpperCase()
+					thisLName = thisLName.toUpperCase()
 					logDebug("thisLName:" + thisLName);
 					logDebug("userLast:" + userLast);
 					if(thisLName==userLast){
