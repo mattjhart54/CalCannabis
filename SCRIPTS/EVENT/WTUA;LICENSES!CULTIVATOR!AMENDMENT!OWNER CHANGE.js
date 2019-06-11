@@ -22,14 +22,9 @@ try {
 						}
 						if(licFnd) {
 							if(OWNERS[o]["Change Status"] == "Delete") {
-								var endDate = new Date();
-								licCont.setEndDate(endDate);
-								logDebug("update contact1 " + licCont.email);
-								var peopleModel = licCont.getPeople();
-								peopleModel.setAuditStatus("I");
-		//						var licAddressrs = aa.address.getContactAddressListByCapContact(licCont);
-		//						peopleModel.setContactAddressList(amendAddressModelArr);
-								aa.people.editCapContactWithAttribute(licCont);
+								var licContSeq = licCont.contactSeqNumber();
+								aa.people.removeCapContact(parentCapId,licContSeq);
+								logDebug("Owner Contact" + ownEmail + " Removed");
 							}
 							var eParams = aa.util.newHashtable(); 
 							addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
