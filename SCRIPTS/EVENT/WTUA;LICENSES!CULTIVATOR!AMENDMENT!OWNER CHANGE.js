@@ -116,6 +116,10 @@ try {
 			}
 		}
 		amendOwners = loadASITable("OWNERS");
+		for(i in amendOwners) {
+			if(amendOwners[i]["Change Status"] == "Delete") 
+				amendOwners[i]["Status"] = "Deleted";
+		}
 		removeASITable("OWNERS",parentCapId);
 		addASITable("OWNERS",amendOwners,parentCapId);
 //  Send approval email notification to DRP
