@@ -22,7 +22,7 @@ try {
 						}
 						if(licFnd) {
 							if(OWNERS[o]["Change Status"] == "Delete") {
-								var licContSeq = licCont.contactSeqNumber();
+								var licContSeq = licCont.contactSeqNumber;
 								aa.people.removeCapContact(parentCapId,licContSeq);
 								logDebug("Owner Contact" + ownEmail + " Removed");
 							}
