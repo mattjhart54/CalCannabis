@@ -34,6 +34,7 @@ try {
 		if(amendOwners[i]["Change Status"] != "Delete") 
 			amendOwners[i]["Change Status"] = null;
 	}
+	removeASITable("OWNERS");
 	addASITable("OWNERS",amendOwners);
 
 	// Copy the Owner contact from the License Application to the Amendment record			
