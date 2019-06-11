@@ -29,10 +29,10 @@ try {
 	editAppName(getAppSpecific("License Type",parentId));
 	updateShortNotes(getShortNotes(parentId));
 	updateWorkDesc(workDescGet(parentId));
-	amendOwners = loadASITable("Owners",parentId);
+	amendOwners = loadASITable("OWNERS",parentId);
 	for(i in amendOwners) {
 		if(amendOwners[i]["Change Status"] != "Delete") 
-			amendOwners[i]["Change Status"] = null;
+			amendOwners[i]["Change Status"] = "";
 	}
 	removeASITable("OWNERS");
 	addASITable("OWNERS",amendOwners);
