@@ -25,10 +25,16 @@ try {
 	else 
 		logDebug("Error renaming amendment record " + capId);
 		
-	copyASITables(parentId,capId,"DEFICIENCIES","SOURCE OF WATER SUPPLY","CANNABIS FINANCIAL INTEREST","PREMISES ADRESSES");
+//	copyASITables(parentId,capId,"DEFICIENCIES","SOURCE OF WATER SUPPLY","CANNABIS FINANCIAL INTEREST","PREMISES ADRESSES");
 	editAppName(getAppSpecific("License Type",parentId));
 	updateShortNotes(getShortNotes(parentId));
 	updateWorkDesc(workDescGet(parentId));
+	amendOwners = loadASITable("Owners",parentId);
+	for(i in amendOwners) {
+		if(amendOwners[i]["Change Status"] != "Delete") 
+			amendOwners[i]["Change Status"] = null;
+	}
+	addASITable("OWNERS",amendOwners);
 
 	// Copy the Owner contact from the License Application to the Amendment record			
 	copyContactsByType_rev(parentId,capId,"Designated Responsible Party");		
