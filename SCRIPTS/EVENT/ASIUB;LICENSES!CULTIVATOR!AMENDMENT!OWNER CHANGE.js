@@ -44,7 +44,8 @@ try{
 		for(o in OWNERS) {
 			var ownEmail = ""+ OWNERS[o]["Email Address"];
 			ownEmail = ownEmail.toUpperCase();
-			
+			if(OWNERS[o]["Status"] == "Deleted")
+					continue;
 			for(x in tblOwnerEmails) {
 				if( x == o) 
 					continue;
