@@ -17,25 +17,6 @@ try{
 		}
 
 // Validate for duplicate email addresses
-/*		var tblOwnerEmails = [];
-		var emailDuplicate = false;
-		for(row in OWNERS){
-			tblOwnerEmails.push(OWNERS[row]);
-		}
-		for(x in tblOwnerEmails) {
-			var tblEmail = ""+ tblOwnerEmails[x]["Email Address"];
-			tblEmail = tblEmail.toUpperCase();
-			for(o in OWNERS) {
-				if( x == o) 
-					continue;
-				var ownEmail = ""+ OWNERS[o]["Email Address"];
-				ownEmail = ownEmail.toUpperCase();
-				logDebug(tblEmail + " " + tblOwnerEmails[x]["Status"] + " " + ownEmail + " " + OWNERS[o]["Status"]);
-				if (tblEmail == ownEmail) {
-					emailDuplicate = true;
-				}
-			}
-*/
 		var tblOwnerEmails = [];
 		var emailDuplicate = false;
 		for(row in OWNERS){
