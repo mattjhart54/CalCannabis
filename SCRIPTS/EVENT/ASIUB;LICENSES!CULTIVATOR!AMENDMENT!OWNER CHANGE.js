@@ -17,7 +17,7 @@ try{
 		}
 
 // Validate for duplicate email addresses
-		var tblOwnerEmails = [];
+/*		var tblOwnerEmails = [];
 		var emailDuplicate = false;
 		for(row in OWNERS){
 			tblOwnerEmails.push(OWNERS[row]);
@@ -32,6 +32,26 @@ try{
 				ownEmail = ownEmail.toUpperCase();
 				logDebug(tblEmail + " " + tblOwnerEmails[x]["Status"] + " " + ownEmail + " " + OWNERS[o]["Status"]);
 				if (tblEmail == ownEmail) {
+					emailDuplicate = true;
+				}
+			}
+*/
+		var tblOwnerEmails = [];
+		var emailDuplicate = false;
+		for(row in OWNERS){
+			tblOwnerEmails.push(OWNERS[row]);
+		}
+		for(o in OWNERS) {
+			var ownEmail = ""+ OWNERS[o]["Email Address"];
+			ownEmail = ownEmail.toUpperCase();
+			
+			for(x in tblOwnerEmails) {
+				if( x == o) 
+					continue;
+				var tblEmail = ""+ tblOwnerEmails[x]["Email Address"];
+				tblEmail = tblEmail.toUpperCase();
+				logDebug(ownEmail + " " + OWNERS[o]["Status"] + " " + tblEmail + " " + tblOwnerEmails[x]["Status"]);
+				if (tblEmail == ownEmail && tblOwnerEmails[x]["Status"] != "Deleted") {
 					emailDuplicate = true;
 				}
 			}
