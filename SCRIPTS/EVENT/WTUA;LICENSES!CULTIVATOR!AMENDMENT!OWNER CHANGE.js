@@ -21,11 +21,6 @@ try {
 							}
 						}
 						if(licFnd) {
-							if(OWNERS[o]["Change Status"] == "Delete") {
-								var licContSeq = licCont.contactSeqNumber;
-								aa.people.removeCapContact(parentCapId,licContSeq);
-								logDebug("Owner Contact" + ownEmail + " Removed");
-							}
 							var eParams = aa.util.newHashtable(); 
 							addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 							addParameter(eParams, "$$altId$$", capId.getCustomID());
@@ -46,7 +41,7 @@ try {
 									if(OWNERS[o]["Change Status"] == "Delete") {
 										var amendAltId = capId.getCustomID();
 										var licAltId = parentCapId.getCustomID();
-										var scriptName = "asyncRunAmendmentLetter";
+										var scriptName = "asyncRunAmendmentLetterRpt";
 										var envParameters = aa.util.newHashMap();
 										envParameters.put("amendCap",amendAltId);
 										envParameters.put("licCap",licAltId); 
@@ -59,7 +54,7 @@ try {
 									else {
 										var amendAltId = capId.getCustomID();
 										var licAltId = parentCapId.getCustomID();
-										var scriptName = "asyncRunAmendmentLetter";
+										var scriptName = "asyncRunAmendmentLetterRpt";
 										var envParameters = aa.util.newHashMap();
 										envParameters.put("amendCap",amendAltId);
 										envParameters.put("licCap",licAltId); 
@@ -79,6 +74,11 @@ try {
 										}	
 									}
 								}
+							}
+							if(OWNERS[o]["Change Status"] == "Delete") {
+								var licContSeq = licCont.contactSeqNumber;
+								aa.people.removeCapContact(parentCapId,licContSeq);
+								logDebug("Owner Contact" + ownEmail + " Removed");
 							}
 						}
 					}
@@ -110,7 +110,7 @@ try {
 //	Run report and attach to record for conatact with postal preference	then add to set					
 									var amendAltId = capId.getCustomID();
 									var licAltId = parentCapId.getCustomID();
-									var scriptName = "asyncRunAmendmentLetter";
+									var scriptName = "asyncRunAmendmentLetterRpt";
 									var envParameters = aa.util.newHashMap();
 									envParameters.put("amendCap",amendAltId);
 									envParameters.put("licCap",licAltId); 
