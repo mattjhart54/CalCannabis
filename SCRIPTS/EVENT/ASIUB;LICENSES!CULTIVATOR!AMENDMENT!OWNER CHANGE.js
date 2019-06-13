@@ -45,17 +45,21 @@ try{
 			}
 		}
 // Validate that DRP Owner cannot be deleted
-		contacts = getContactArray();
+		// Validate that DRP Owner cannot be deleted
+		contacts = aa.people.getCapContactByCapID(capId);
 		for(c in contacts) {
-			if(contacts[c]["contactType"] == "Designated Responsible Party")
-				var drpEmail = ""+ contacts[c]["email"];
+			licCont = contacts[c].getCapContactModel();
+			if(licCont.contactType == "Designated Responsible Party") {
+				var endDate = licCont.endDate;
+				var drpEmail = ""+ licCont.email;
 				drpEmail = drpEmail.toUpperCase();
+			}
 		}
 		if (typeof(OWNERS) == "object") {
 			for(o in OWNERS) {
 				var ownEmail = ""+ OWNERS[o]["Email Address"];
 				ownEmail = ownEmail.toUpperCase();
-				if(OWNERS[o]["Change Status"] == "Delete" && ownEmail == drpEmail) {
+				if(OWNERS[o]["Change Status"] == "Delete" && ownEmail == drpEmail && matches(endDate,null,"",undefined)) {
 					cancel = true;
 					showMessage = true;
 					comment("This Owner, " + ownEmail + ", cannot be deleted as it is the Designated Responsible Party for this license.");
