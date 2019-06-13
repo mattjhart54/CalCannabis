@@ -47,13 +47,13 @@ try{
 	aa.env.setValue("amendCap", "CAL18-0000121-OC001");
 	aa.env.setValue("currentUserID", "MHART");
 	aa.env.setValue("reportName", "Amendment Owner Change New");
-	aa.env.setValue("p3value", "mhart@trustvip.com");
+	aa.env.setValue("email", "mhart@trustvip.com");
 */
 	var reportName = "" + aa.env.getValue("reportName");
-	var p2value = "" + aa.env.getValue("amendCap");
-	var p1value = "" + aa.env.getValue("licCap");
+	var amendCap = "" + aa.env.getValue("amendCap");
+	var licCap = "" + aa.env.getValue("licCap");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
-	var p3value = "" + aa.env.getValue("email");
+	var email = "" + aa.env.getValue("email");
 	var br = "<BR>";
 	var eTxt = "";
 	var sDate = new Date();
@@ -66,7 +66,7 @@ try{
 		eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
 	}
 	var report = reportResult.getOutput(); 
-	var tmpID = aa.cap.getCapID(p2value).getOutput(); 
+	var tmpID = aa.cap.getCapID(amendCap).getOutput(); 
 	cap = aa.cap.getCap(tmpID).getOutput();
 	appTypeResult = cap.getCapType();
 	appTypeString = appTypeResult.toString(); 
@@ -74,11 +74,13 @@ try{
 	report.setModule(appTypeArray[0]); 
 	//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
 	report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
-	report.getEDMSEntityIdModel().setAltId(p2value);
+	report.getEDMSEntityIdModel().setAltId(amendCap);
 	eTxt+="reportName: " + reportName + br;
 	eTxt+="reportName: " + typeof(reportName) + br;
 	var parameters = aa.util.newHashMap(); 
-	parameters.put("altId",p2value);
+	parameters.put("p2value",amendCap);
+	parameters.put("p1value",licCap);
+	parameters.put("p3value",email);
 	report.setReportParameters(parameters);
 	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
 	if(permit.getOutput().booleanValue()) { 
@@ -86,8 +88,8 @@ try{
 		if(reportResult) {
 			reportOutput = reportResult.getOutput();
 			var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
-			logDebug("Report '" + reportName + "' has been run for " + p2value);
-			eTxt+=("Report '" + reportName + "' has been run for " + p2value) +br;
+			logDebug("Report '" + reportName + "' has been run for " + amendCap);
+			eTxt+=("Report '" + reportName + "' has been run for " + amendCap) +br;
 		}else {
 			logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
 		}
@@ -103,5 +105,5 @@ try{
 } catch(err){
 	logDebug("An error has occurred in asyncRunSubmittedApplicRpt: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunAmendmentLetter: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + p2value + br + "avpre6" + br + eTxt);
+	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunAmendmentLetter: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + amendCap + br + "avpre6" + br + eTxt);
 }
