@@ -45,24 +45,27 @@ try{
 			}
 		}
 // Validate that DRP Owner cannot be deleted
-		// Validate that DRP Owner cannot be deleted
-		contacts = aa.people.getCapContactByCapID(capId);
-		for(c in contacts) {
-			licCont = contacts[c].getCapContactModel();
-			if(licCont.contactType == "Designated Responsible Party") {
-				var endDate = licCont.endDate;
-				var drpEmail = ""+ licCont.email;
-				drpEmail = drpEmail.toUpperCase();
+		var licContactResult = aa.people.getCapContactByCapID(parentCapId);
+		if (licContactResult.getSuccess()){
+			var licContacts = licContactResult.getOutput();
+			for(c in licContacts) {
+				licCont = licContacts[c].getCapContactModel();
+				logDebug("contact " + licCont.email + " end Date " + licCont.endDate);
+				if(licCont.contactType == "Designated Responsible Party") {
+					var endDate = licCont.endDate;
+					var drpEmail = ""+ licCont.email;
+					drpEmail = drpEmail.toUpperCase();
+				}
 			}
-		}
-		if (typeof(OWNERS) == "object") {
-			for(o in OWNERS) {
-				var ownEmail = ""+ OWNERS[o]["Email Address"];
-				ownEmail = ownEmail.toUpperCase();
-				if(OWNERS[o]["Change Status"] == "Delete" && ownEmail == drpEmail && matches(endDate,null,"",undefined)) {
-					cancel = true;
-					showMessage = true;
-					comment("This Owner, " + ownEmail + ", cannot be deleted as it is the Designated Responsible Party for this license.");
+			if (typeof(OWNERS) == "object") {
+				for(o in OWNERS) {
+					var ownEmail = ""+ OWNERS[o]["Email Address"];
+					ownEmail = ownEmail.toUpperCase();
+					if(OWNERS[o]["Change Status"] == "Delete" && ownEmail == drpEmail && matches(endDate,null,"",undefined)) {
+						cancel = true;
+						showMessage = true;
+						comment("This Owner, " + ownEmail + ", cannot be deleted as it is the Designated Responsible Party for this license.");
+					}
 				}
 			}
 		}
