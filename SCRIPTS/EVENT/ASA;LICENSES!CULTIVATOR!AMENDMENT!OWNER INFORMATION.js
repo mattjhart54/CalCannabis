@@ -92,7 +92,7 @@ try {
 				addParent(ownerAltId);
 	// Copy the Owner contact from the License Application to the Amendment record			
 				copyContactsByType_rev(ownId,capId,"Owner");
-				copyContactsByType_rev(parentId,capId,"Designated Responsible Party");		
+//				copyContactsByType_rev(parentId,capId,"Designated Responsible Party");		
 				
 				
 	//  Send email notification to DRP
