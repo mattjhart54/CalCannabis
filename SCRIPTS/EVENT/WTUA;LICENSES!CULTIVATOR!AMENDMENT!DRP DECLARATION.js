@@ -15,8 +15,9 @@ try {
 					if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licEmail == drpEmail) {
 						var licCont = licContacts[i].getCapContactModel();
 						var licContSeq = licCont.contactSeqNumber;
+						logDebug("seq Number " + licContSeq);
 						aa.people.removeCapContact(parentCapId,licContSeq);
-						logDebug("DRP " + licCont.email + " Removed");
+						logDebug("DRP " + licCont.email + " Removed from license record");
 					}
 					if(AInfo["Remove DRP as Owner"] == "Yes") {
 						if(licContacts[i].getCapContactModel().getContactType() == "Owner" && licEmail == drpEmail) {
@@ -35,6 +36,22 @@ try {
 							addASITable("OWNERS",amendOwners,parentCapId);
 						}	
 					}	
+				}
+			}
+			var licContactResult = aa.people.getCapContactByCapID(capId);
+			if (licContactResult.getSuccess()){
+				var licContacts = licContactResult.getOutput();
+				licFnd = false;
+				for (i in licContacts){
+					var licEmail = licContacts[i].getCapContactModel().getEmail();
+					licEmail = licEmail.toUpperCase();
+					if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licEmail == drpEmail) {
+						var licCont = licContacts[i].getCapContactModel();
+						var licContSeq = licCont.contactSeqNumber;
+						logDebug("seq Number " + licContSeq);
+						aa.people.removeCapContact(parentCapId,licContSeq);
+						logDebug("DRP " + licCont.email + " Removed from DA record");
+					}
 				}
 			}
 			copyContactsByType_rev(capId,parentCapId,"Designated Responsible Party",drpNewEmail);
@@ -135,4 +152,4 @@ try {
 } catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/AMENDMENT/DRP DECLARATION: Amendmeth Approved/Rejected " + err.message);
 	logDebug(err.stack);
-}
+}	
