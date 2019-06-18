@@ -15,7 +15,6 @@ try {
 					if(licContacts[i].getCapContactModel().getContactType() == "Designated Responsible Party" && licEmail == drpEmail) {
 						var licCont = licContacts[i].getCapContactModel();
 						var licContSeq = licCont.contactSeqNumber;
-						logDebug("seq Number " + licContSeq);
 						aa.people.removeCapContact(parentCapId,licContSeq);
 						logDebug("DRP " + licCont.email + " Removed from license record");
 					}
@@ -49,7 +48,7 @@ try {
 						var licCont = licContacts[i].getCapContactModel();
 						var licContSeq = licCont.contactSeqNumber;
 						logDebug("seq Number " + licContSeq);
-						aa.people.removeCapContact(parentCapId,licContSeq);
+						aa.people.removeCapContact(capId,licContSeq);
 						logDebug("DRP " + licCont.email + " Removed from DA record");
 					}
 				}
