@@ -3,16 +3,27 @@ try {
 		// Copy custom fields from the license record to the parent record
 		holdId = capId;
 		capId = parentCapId;
-		if(!matches(AInfo["PA Update"],null,"",undefined))
+		var updateCat = false;
+		if(!matches(AInfo["PA Update"],null,"",undefined)) {
 			editAppSpecific("Premise Address",AInfo["PA Update"]);
-		if(!matches(AInfo["PC Update"],null,"",undefined))
+			updateCat = true;
+		}
+		if(!matches(AInfo["PC Update"],null,"",undefined)) {
 			editAppSpecific("Premise City",AInfo["PC Update"]);
-		if(!matches(AInfo["PZ Update"],null,"",undefined))
+			updateCat = true;
+		}
+		if(!matches(AInfo["PZ Update"],null,"",undefined)) {
 			editAppSpecific("Premise Zip",AInfo["PZ Update"]);
-		if(!matches(AInfo["PCNTY Update"],null,"",undefined))
+			updateCat = true;
+		}
+		if(!matches(AInfo["PCNTY Update"],null,"",undefined)) {
 			editAppSpecific("Premise County",AInfo["PCNTY Update"]);
-		if(!matches(AInfo["APN Update"],null,"",undefined))
+			updateCat = true;
+		}
+		if(!matches(AInfo["APN Update"],null,"",undefined)) {
 			editAppSpecific("APN",AInfo["APN Update"]);
+			updateCat = true;
+		}
 		editAppSpecific("Grid",AInfo["Grid Update"]);
 		editAppSpecific("Solar",AInfo["Solar Update"]);
 		editAppSpecific("Generator",AInfo["Generator Update"]);
@@ -23,6 +34,8 @@ try {
 		removeASITable("Premises Addresses");
 		removeASITable("Source of Water Supply");
 		copyASITables(holdId,capId);
+		if(updateCat)
+			addToCat(capId);
 		capId = holdId;
 //  Send approval email notification to DRP
 		var priContact = getContactObj(capId,"Designated Responsible Party");

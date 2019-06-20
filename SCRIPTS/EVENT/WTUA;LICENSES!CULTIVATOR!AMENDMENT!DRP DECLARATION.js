@@ -54,6 +54,7 @@ try {
 				}
 			}
 			copyContactsByType_rev(capId,parentCapId,"Designated Responsible Party",drpNewEmail);
+			addToCat(capId);
 		}
 //  Send approval email notification to current DRP
 		var licContactResult = aa.people.getCapContactByCapID(capId);

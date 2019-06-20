@@ -3,6 +3,7 @@ try {
 		// Copy custom fields from the license record to the parent record
 		holdId = capId;
 		capId = parentCapId;
+		updateCat = false;
 		if(!matches(AInfo["CA Update"],null,"",undefined))
 			editAppSpecific("Cooperative Association",AInfo["CA Update"]);
 		if(!matches(AInfo["NCA Update"],null,"",undefined))
@@ -13,14 +14,18 @@ try {
 			editAppSpecific("Other Entity",AInfo["OE Update"]);
 		if(!matches(AInfo["FC Update"],null,"",undefined))
 			editAppSpecific("Foreign Corporation",AInfo["FC Update"]);
-		if(!matches(AInfo["LBN Update"],null,"",undefined))
+		if(!matches(AInfo["LBN Update"],null,"",undefined)) {
 			editAppSpecific("Legal Business Name",AInfo["LBN Update"]);
+			updateCat = true;
+		}
 		if(!matches(AInfo["EIN/ITIN Update"],null,"",undefined))
 			editAppSpecific("EIN/ITIN",AInfo["EIN/ITIN Update"]);
 		if(!matches(AInfo["SSN/ITIN Update"],null,"",undefined))
 			editAppSpecific("SSN/ITIN",AInfo["SSN/ITIN Update"]);
-		if(!matches(AInfo["BSP Update"],null,"",undefined))
-			editAppSpecific("BOE Seller's Permit Number",AInfo["BSP Update"]);
+		if(!matches(AInfo["BSP Update"],null,"",undefined)) {
+			editAppSpecific("BOE Seller's Permit Number",AInfo["BSP Update"]); 
+			updateCat = true;
+		}
 		if(!matches(AInfo["SSRE Update"],null,"",undefined))
 			editAppSpecific("Secretary of State Registration Entity",AInfo["SSRE Update"]);
 		if(!matches(AInfo["DIO Update"],null,"",undefined))
@@ -56,6 +61,8 @@ try {
 		removeASITable("CANNABIS FINANCIAL INTEREST");
 		copyASITables(holdId,capId);
 		updateWorkDesc(workDescGet(holdId));
+		if(updateCat)
+			addToCat(capId);
 		capId = holdId;
 // Update contacts
 		var amendContactResult = aa.people.getCapContactByCapID(capId);
