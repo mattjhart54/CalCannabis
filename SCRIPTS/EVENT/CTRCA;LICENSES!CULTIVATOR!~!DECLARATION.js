@@ -36,7 +36,7 @@ try{
 	updateAppStatus("Application Fee Due", "Updated via ASA:LICENSES/CULTIVATOR/* /APPLICATION");
 	updateFileDate(null);
 //	runReportAttach(capId,"CDFA_Invoice_Params", "capID", capId, "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
-	runReportAttach(capId,"Application Payment Due", "p1value", capId.getCustomID(), "p2value", "Designated Responsible Party","p3value", "Mailing");
+	runReportAttach(capId,"Application Payment Due", "capId", capId.getCustomID(), "invoicenbr", invNbr);
 //	emailRptContact("CTRCA", "LCA_GENERAL_NOTIFICATION", "CDFA_Invoice_Params", true, capStatus, capId, "Designated Responsible Party", "capID", capId.getCustomID(), "invoiceNbr", ""+invNbr, "agencyid","CALCANNABIS");
 	
 	var priContact = getContactObj(capId,"Designated Responsible Party");
