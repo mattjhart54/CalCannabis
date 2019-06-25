@@ -11,13 +11,14 @@ try {
 					var amendEmail = amendCont.email;
 					var amendLast = amendCont.lastName;
 					var amendFirst = amendCont.firstName;
-					logDebug(" amend " + amendRefNbr + " " + amendType + " " + amendEmail + " " + amendLast);
+		//			logDebug(" amend " + amendRefNbr + " " + amendType + " " + amendEmail + " " + amendLast);
 					var amendLBN = amendCont.middleName;
 					var amendTitle = amendCont.title;
 					var amendPhone = amendCont.phone3;
 					var amendSSN = amendCont.maskedSsn;
-					amendNIN = amendCont.postOfficeBox;
+					var amendNIN = amendCont.postOfficeBox;
 					var amendChannel = amendCont.preferredChannel;
+					var amendBirth = amendCont.birthDate;
 					var amendEnd = amendCont.endDate;
 					var amendAddressList = aa.address.getContactAddressListByCapContact(amendCont);
 					var amendAddressModelArr = convertContactAddressModelArr(amendAddressList.getOutput());
@@ -57,6 +58,7 @@ try {
 							licCont.setPostOfficeBox(amendNIN);
 							licCont.setMaskedSsn(amendSSN);
 							licCont.setPhone3(amendPhone);
+							licCont.setBirthDate(amendBirth);
 				//			licCont.setPreferredChannel(amendChannel);
 							licCont.setEndDate(amendEnd);
 							logDebug("update contact1 " + amendRefNbr + " " + amendType);
