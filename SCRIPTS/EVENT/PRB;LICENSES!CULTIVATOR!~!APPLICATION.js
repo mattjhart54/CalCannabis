@@ -97,7 +97,7 @@ try {
 	if(capStatus == "Disqualified") {
 		showMessage = true;
 		cancel = true;
-		comment("Payment cannot be made the record has been disqualified";		
+		comment("Payment cannot be made the record has been disqualified");		
 	}
 }catch(err){
 	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: Disqualified record: " + err.message);
