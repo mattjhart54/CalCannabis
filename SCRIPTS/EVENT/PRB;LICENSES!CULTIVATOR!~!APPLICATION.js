@@ -93,16 +93,6 @@ try {
 	logDebug(err.stack);
 }
 
-try { 
-	if(capStatus == "Disqualified") {
-		showMessage = true;
-		cancel = true;
-		comment("Payment cannot be made the record has been disqualified");		
-	}
-}catch(err){
-	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: Disqualified record: " + err.message);
-	logDebug(err.stack);
-}
 //mhart 100918 Story 5738 and 5739 end
 
 //lwacht 171112
