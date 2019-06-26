@@ -29,8 +29,10 @@ try {
 // Copy the Designated resposible Party contact from the License Record to the Amanedment record
  
     copyContactsByType_rev(parentId,capId,"Designated Responsible Party");
-	if(AInfo["Change DRP"] == "Yes" && !matches(AInfo["New DRP Email Address"],null,"",undefined)) 
+	if(AInfo["Change DRP"] == "Yes" && !matches(AInfo["New DRP Email Address"],null,"",undefined)) {
 		addRefContactByEmailLastName(AInfo["New DRP First Name"], AInfo["New DRP Last Name"], AInfo["New DRP Email Address"]);
+		editContactType("Individual", "Designated Responsible Party");
+	}
 	//	copyContactsByType_revT(parentId,capId,"Owner",AInfo["New DRP Email Address"]);
 	
 // Copy custom fields from the license record to the child amendment record
