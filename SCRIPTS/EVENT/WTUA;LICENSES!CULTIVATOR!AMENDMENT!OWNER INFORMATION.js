@@ -59,10 +59,10 @@ try {
 							licCont.setMaskedSsn(amendSSN);
 							licCont.setPhone3(amendPhone);
 							licCont.setBirthDate(amendBirth);
-				//			licCont.setPreferredChannel(amendChannel);
 							licCont.setEndDate(amendEnd);
 							logDebug("update contact1 " + amendRefNbr + " " + amendType);
 							var peopleModel = licCont.getPeople();
+							peopleModel.setPreferredChannel(amendChannel)
 							var licAddressrs = aa.address.getContactAddressListByCapContact(licCont);
 							peopleModel.setContactAddressList(amendAddressModelArr);
 							aa.people.editCapContactWithAttribute(licCont);
