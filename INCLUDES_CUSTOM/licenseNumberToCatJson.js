@@ -63,7 +63,7 @@ function licenseNumberToCatJson(licenseNumber) {
 		var contDRP = getContactByType("Designated Responsible Party",capId);
 		var contBsns = getContactByType("Business",capId);
 		var drpPhoneNumber = ""+ contDRP.phone3.substr(0, 20);
-		var facilityPhone = ""+ contDRP.phone3.substr(0, 20);
+		var facilityPhone = ""+ contBsns.phone3.substr(0, 20);
 		var drpEmail = "" + contDRP.email.substr(0, 255);
 //Mhart 12072018 Story 5827 Remove logic to get Premise adress information form the business contact
 		if(AInfo["Premise Address"]==null){
