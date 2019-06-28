@@ -89,13 +89,34 @@ try {
 			capId = holdId;
 	//		editAppSpecific("Percent Ownership",PInfo["Percent Update"]);
 	//		editAppSpecific("Date Owner Acquired Interest",PInfo["DOAI Update"]);
-			editAppSpecific("CA State issued ID #",PInfo["CSI Update"]);
-			editAppSpecific("Other Government issued ID #",PInfo["OGI Update"]);
-			editAppSpecific("ATI Code",PInfo["ATI Update"]);
-			editAppSpecific("Convicted of a Crime",PInfo["COC Update"]);
-			editAppSpecific("License Revoked",PInfo["LR Update"]);
-			editAppSpecific("Subject to Fines",PInfo["SF Update"]);
-			editAppSpecific("Disciplinary Actions",PInfo["DA Update"]);
+			if(!matches(PInfo["CSI Update"],null,"",undefined)) 
+				editAppSpecific("CA State issued ID #",PInfo["CSI Update"]);
+			else
+				editAppSpecific("CA State issued ID #",PInfo["CA State issued ID #"]);
+			if(!matches(PInfo["OGI Update"],null,"",undefined)) 
+				editAppSpecific("Other Government issued ID #",PInfo["OGI Update"]);
+			else
+				editAppSpecific("Other Government issued ID #",PInfo["Other Government issued ID #"]);
+			if(!matches(PInfo["ATI Update"],null,"",undefined))
+				editAppSpecific("ATI Code",PInfo["ATI Update"]);
+			else
+				editAppSpecific("ATI Code",PInfo["ATI Code"]);
+			if(!matches(PInfo["COC Update"],null,"",undefined))
+				editAppSpecific("Convicted of a Crime",PInfo["COC Update"]);
+			else
+				editAppSpecific("Convicted of a Crime",PInfo["Convicted of a Crime"]);
+			if(!matches(PInfo["LR Update"],null,"",undefined))
+				editAppSpecific("License Revoked",PInfo["LR Update"]);
+			else
+				editAppSpecific("License Revoked",PInfo["License Revoked"]);
+			if(!matches(PInfo["SF Update"],null,"",undefined))
+				editAppSpecific("Subject to Fines",PInfo["SF Update"]);
+			else
+				editAppSpecific("Subject to Fines",PInfo["Subject to Fines"]);
+			if(!matches(PInfo["DA Update"],null,"",undefined))
+				editAppSpecific("Disciplinary Actions",PInfo["DA Update"]);
+			else
+				editAppSpecific("Disciplinary Actions",PInfo["Disciplinary Actions"]);
 			copyASITables(ownId,capId,"DEFICIENCIES","ATTAHMENTS");
 			editAppName(AInfo["Owner Email"] + "-" + AInfo["Owner First Name"] + " " +  AInfo["Owner Last Name"]);
 		}
