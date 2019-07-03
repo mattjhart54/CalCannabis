@@ -137,7 +137,7 @@ try{
 		if(reportResult) {
 			reportOutput = reportResult.getOutput();
 			var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
-			eTxt+="Store Report to Disk: " + reportFile.getOutput() + br;
+			eTxt+="Store Report to Disk: " + reportFile + br;
 			rFile=reportFile.getOutput();
 			rFiles.push(rFile);
 			logDebug("Report '" + reportName + "' has been run for " + appCap);
