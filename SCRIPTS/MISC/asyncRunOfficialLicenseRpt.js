@@ -43,9 +43,9 @@ function getMasterScriptText(vScriptName) {
 }
 try{
 /*---------------------------------------
-	aa.env.setValue("licCap", "CAL18-0000127");
-	aa.env.setValue("appCap", "LCA18-0000127");
-	aa.env.setValue("currentUserID", "MHART");
+	aa.env.setValue("licCap", "PAL18-0002117");
+	aa.env.setValue("appCap", "LCA18-0002117");
+	aa.env.setValue("currentUserID", "ADMIN");
 	aa.env.setValue("reportName", "Official License Certificate");
 	aa.env.setValue("contType", "Designated Responsible Party");
 	aa.env.setValue("licType", "Annual");
@@ -130,11 +130,14 @@ try{
 	parameters.put("p1value",appCap);
 	report.setReportParameters(parameters);
 	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
+	eTxt+="Has Permission: " + permit.getOutput().booleanValue() + br;
 	if(permit.getOutput().booleanValue()) { 
 		var reportResult = aa.reportManager.getReportResult(report); 
+		eTxt+="Get Report: " + reportResult.getOutput() + br;
 		if(reportResult) {
 			reportOutput = reportResult.getOutput();
 			var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
+			eTxt+="Store Report to Disk: " + reportFile.getOutput() + br;
 			rFile=reportFile.getOutput();
 			rFiles.push(rFile);
 			logDebug("Report '" + reportName + "' has been run for " + appCap);
@@ -166,9 +169,9 @@ try{
 	var thisTime = thisDate.getTime();
 	var eTime = (thisTime - sTime) / 1000
 } catch(err){
-	logDebug("An error has occurred in asyncRunSubmittedApplicRpt: " + err.message);
+	logDebug("An error has occurred in asyncRunOfficialLicenseRpt: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunSubmittedApplicRpt: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + "avpre6" + br + eTxt);
+	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunOfficialLicenseRpt: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + eTxt);
 }
  function sendApprovalNotification(emailFrom,emailTo,emailCC,templateName,params,reportFile)
 {
