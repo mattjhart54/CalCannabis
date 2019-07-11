@@ -25,20 +25,3 @@ try{
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Owner Deficiency: " + err.message);
 	logDebug(err.stack);
 }
-try{
-	if(parentCapId) {
-		pCap = aa.cap.getCap(parentCapId).getOutput();
-		pAppTypeResult = pCap.getCapType();
-		pAppTypeString = pAppTypeResult.toString();
-		pAppTypeArray = pAppTypeString.split("/");
-		if(matches(wfStatus, "Review Completed","Withdrawn","Close","Recommended Denial","Non-compliant Child Support") && pAppTypeArray[2] == "Amendment"){
-			var holdId = capId;
-			capId = parentCapId;
-			activateTask("Ownership Change Amendment Review")
-			capId = holdId;
-		}
-	}
-}catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/OWNER APPLICATION: Owner Amendment: " + err.message);
-	logDebug(err.stack);
-}
