@@ -30,7 +30,7 @@ try {
 			editAppSpecific("Secretary of State Registration Entity",AInfo["SSRE Update"]);
 		if(!matches(AInfo["DIO Update"],null,"",undefined))
 			editAppSpecific("Date of Intitial Operation",AInfo["DIO Update"]);
-		if(!matches(AInfo["RPA Update"],null,"",undefined))
+//		if(!matches(AInfo["RPA Update"],null,"",undefined))
 			editAppSpecific("Records on Premise Acknowledgement",AInfo["RPA Update"]);
 		if(!matches(AInfo["LP Update"],null,"",undefined))
 			editAppSpecific("Legal Possession",AInfo["LP Update"]);
