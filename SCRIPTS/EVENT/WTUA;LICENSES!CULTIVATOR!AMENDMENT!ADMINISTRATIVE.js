@@ -122,7 +122,7 @@ try {
 						}
 						else {
 							logDebug("add contact " + amendRefNbr + " " + amendType + " " + amendEmail + " " + amendLast);
-							copyContactsByType_rev(capId,parentCapId,amendType);
+							copyContactsByType_rev(capId,parentCapId,amendType,amendEmail);
 						}
 					}
 				}
