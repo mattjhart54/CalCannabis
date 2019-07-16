@@ -212,6 +212,9 @@ try{
 		capCount++;
 		if (newAppStatus && newAppStatus != ""){
 			updateAppStatus(newAppStatus, "set by " + batchJobName +  " batch");
+			if(!appHasCondition("Application Condition","Applied","Application Hold",null)){
+				addStdCondition("Application Condition","Application Hold");
+			}			
 		} 
 	//MJH: 190213 Story 5842 - Close Amendment records when application Disqualified. 
 			holdId = capId;

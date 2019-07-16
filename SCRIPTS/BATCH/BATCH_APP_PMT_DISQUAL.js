@@ -216,6 +216,9 @@ try{
 			capCount++;
 			logDebug("----Processing record " + altId + br);
 			updateAppStatus(newAppStatus,"Disqualified - No payment within 90 days");
+			if(!appHasCondition("Application Condition","Applied","Application Hold",null)){
+				addStdCondition("Application Condition","Application Hold");
+			}
 			closeTask(task,newTaskStatus,"Disqualified - No payment within 90 days","");
 			if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
 				var conTypeArray = sendEmailToContactTypes.split(",");
