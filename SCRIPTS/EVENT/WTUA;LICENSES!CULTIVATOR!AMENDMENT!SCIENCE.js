@@ -29,11 +29,14 @@ try {
 		editAppSpecific("Generator",AInfo["Generator Update"]);
 		editAppSpecific("Generator Under 50 HP",AInfo["G50 Update"]);
 		editAppSpecific("Other",AInfo["Other Update"]);
-		if(matches(AInfo["Other Update"],null,"",undefined))
+		if(matches(AInfo["Other Update"],null,"",undefined)){
 			editAppSpecific("Other Source Description","");
-		else
-			if(!matches(AInfo["OSD Update"],null,"",undefined))
+		}
+		else {
+			if(!matches(AInfo["OSD Update"],null,"",undefined)) {
 				editAppSpecific("Other Source Description",AInfo["OSD Update"]);
+			}
+		}
 		removeASITable("Premises Addresses");
 		removeASITable("Source of Water Supply");
 		copyASITables(holdId,capId);
