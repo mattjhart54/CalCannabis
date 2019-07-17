@@ -1,4 +1,4 @@
-function editAppTypeAlias(newname) {
+function editAppTypeAlias(newname,newtype) {
 	var itemCap = capId;
 	if (arguments.length == 3) 
 		itemCap = arguments[2]; // use cap ID specified in args
