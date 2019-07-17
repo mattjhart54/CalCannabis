@@ -1,7 +1,7 @@
 try {
 	if(appTypeArray[2] != AInfo["Cultivator Type"]) {
 		if(AInfo["Cultivator Type"] == "Medicinal") {
-			typeUpdated= editAppTypeAlia("Medicinal Cannabis Cultivator License");
+			typeUpdated= editAppTypeAlias("Medicinal Cannabis Cultivator License");
 			if(typeUpdated)
 				logDebug("App Type Alias Succesfully Changed");
 			else
