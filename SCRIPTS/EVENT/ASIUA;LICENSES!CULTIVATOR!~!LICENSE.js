@@ -1,14 +1,14 @@
 try {
 	if(appTypeArray[2] != AInfo["Cultivator Type"]) {
-		if(AInfo["Cultivator Type"] == "Medicinal") {
-			typeUpdated= editAppTypeAlias("Medicinal Cannabis Cultivator License");
+		if(AInfo["Cultivator Type"] == "Medical") {
+			typeUpdated= editAppTypeAlias("Medicinal Cannabis Cultivator License","Medical");
 			if(typeUpdated)
 				logDebug("App Type Alias Succesfully Changed");
 			else
 				logDebug("App Type Alias Update Failed");
 		}
 		else {
-			typeUpdated= editAppTypeAlias("Adult-Use Cannabis Cultivator License");
+			typeUpdated= editAppTypeAlias("Adult-Use Cannabis Cultivator License","Adult Use");
 			if(typeUpdated)
 				logDebug("App Type Alias Succesfully Changed");
 			else
