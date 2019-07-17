@@ -1,7 +1,7 @@
 function editAppTypeAlias(newname) {
 	var itemCap = capId;
-	if (arguments.length == 2) 
-		itemCap = arguments[1]; // use cap ID specified in args
+	if (arguments.length == 3) 
+		itemCap = arguments[2]; // use cap ID specified in args
 
 	capResult = aa.cap.getCap(itemCap)
 
@@ -9,11 +9,12 @@ function editAppTypeAlias(newname) {
 		{logDebug("**WARNING: error getting cap : " + capResult.getErrorMessage()) ; return false }
 
 	capModel = capResult.getOutput().getCapModel();
-//	cType = capModel.getCapType();
+	cType = capModel.getCapType();
 //	describeObject(cType);
-//	cType.setSubType(newtype);
-	capModel.setAppTypeAlias(newname);
-
+	cType.setSubType(newtype);
+	cType.setAlias(newname);
+	capModel.setCapType(cType);
+	capModel.setSpecialText(newname)
 	setNameResult = aa.cap.editCapByPK(capModel)
 
 	if (!setNameResult.getSuccess()) { 
