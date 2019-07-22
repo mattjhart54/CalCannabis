@@ -10,10 +10,10 @@ try {
 		amendNbr = amendNbr = "00" + 1;
 	else {
 		cIdLen = cIds.length
-		if(cIds.length < 9)
+		if(cIds.length <= 9)
 			amendNbr = "00" +  cIdLen;
 		else
-			if(cIds.length < 99)
+			if(cIds.length <= 99)
 				amendNbr = "0" +  cIdLen;
 			else
 				amendNbr = cIdLen
