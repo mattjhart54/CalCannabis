@@ -68,9 +68,9 @@ try {
 		var amendContactResult = aa.people.getCapContactByCapID(capId);
 		if (amendContactResult.getSuccess()){
 			var amendContacts = amendContactResult.getOutput();
-			for (i in amendContacts){
-				if(matches(amendContacts[i].getCapContactModel().getContactType(),"Business","Agent for Service of Process")) {
-					var amendCont = amendContacts[i].getCapContactModel();
+			for (a in amendContacts){
+				if(matches(amendContacts[a].getCapContactModel().getContactType(),"Business","Agent for Service of Process")) {
+					var amendCont = amendContacts[a].getCapContactModel();
 					var amendRefNbr = amendCont.refContactNumber;
 					var amendType = amendCont.contactType;
 					var amendEmail = amendCont.email;
