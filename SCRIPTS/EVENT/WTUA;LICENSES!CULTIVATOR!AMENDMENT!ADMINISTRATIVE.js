@@ -127,6 +127,48 @@ try {
 					}
 				}
 			}
+		}
+//Check for deleted contact
+		var licContactResult = aa.people.getCapContactByCapID(parentCapId);
+		if (licContactResult.getSuccess()){
+			var licContacts = licContactResult.getOutput();
+			for (i in licContacts){
+				if(matches(licContacts[i].getCapContactModel().getContactType(),"Business","Agent for Service of Process")) {
+					var licCont = licContacts[i].getCapContactModel();
+					var licRefNbr = licCont.refContactNumber;
+					var licType = licCont.contactType;
+					var licEmail = licCont.email;
+					var licContSeq = licCont.contactSeqNumber;
+					logDebug("license " + licRefNbr + " " + licType + " " + licEmail + " " + licContSeq);
+					var amendContactResult = aa.people.getCapContactByCapID(capId);
+					if (amendContactResult.getSuccess()){
+						var amendContacts = amendContactResult.getOutput();
+						var amendFnd = false;
+						for (a in amendContacts){
+							var amendCont = amendContacts[a].getCapContactModel();
+							if(amendCont.contactType == licType) {
+								logDebug(" amend " + amendCont.refContactNumber + " " + amendCont.contactType + " " + amendCont.email);
+								if(licRefNbr != null && licRefNbr == amendCont.refContactNumber) {
+									amendFnd = true;
+									break;
+								}
+								else {							
+									if(licRefNbr == null && licEmail.toUpperCase() == amendCont.email.toUpperCase()) {
+										amendFnd = true;
+										break;
+									}
+
+								}
+							}
+						}
+						if(!amendFnd) {
+							aa.people.removeCapContact(parentCapId,licContSeq);
+							logDebug("removed contact " + licCont.contactSeqNumber);
+						}
+					}
+					
+				}
+			}
 		}		
 //  Send email notification to DRP
 		var priContact = getContactObj(capId,"Designated Responsible Party");
