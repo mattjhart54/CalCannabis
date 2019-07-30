@@ -27,9 +27,10 @@ try {
 							for(a in amendOwners) {
 								var ownEmail = ""+amendOwners[a]["Email Address"];
 								ownEmail = ownEmail.toUpperCase();
-								if(ownEmail == drpEmail)
+								if(ownEmail == drpEmail) {
 									amendOwners[a]["Change Status"] = "Delete";
 									amendOwners[a]["Status"] = "Deleted";
+								}
 							}
 							removeASITable("OWNERS",parentCapId);
 							addASITable("OWNERS",amendOwners,parentCapId);
