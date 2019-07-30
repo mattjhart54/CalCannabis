@@ -29,6 +29,7 @@ try {
 								ownEmail = ownEmail.toUpperCase();
 								if(ownEmail == drpEmail)
 									amendOwners[a]["Change Status"] = "Delete";
+									amendOwners[a]["Status"] = "Deleted";
 							}
 							removeASITable("OWNERS",parentCapId);
 							addASITable("OWNERS",amendOwners,parentCapId);
