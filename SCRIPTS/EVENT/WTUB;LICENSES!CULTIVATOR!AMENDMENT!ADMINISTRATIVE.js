@@ -11,13 +11,13 @@ try {
 				++cntASOP;	
 		}
 		if(cntBusiness != 1) {
-			showmessage = true;
 			cancel = true;
+			showmessage = true;
 			comment("There must be one and only one Business contact");
 		}
 		if(cntASOP != 1) {
-			showmessage = true;
 			cancel = true;
+			showmessage = true;
 			comment("There must be one and only one Agent for Service Process contact");
 		}
 	}
