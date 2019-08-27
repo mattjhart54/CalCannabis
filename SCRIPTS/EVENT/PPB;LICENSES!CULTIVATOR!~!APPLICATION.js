@@ -1,16 +1,12 @@
-//lwacht
-//create the license record, update altid,  and copy DRP and Owner contacts to it
-//mhart 100918 Story 5738 and 5739 Update code to create provisional license record.
 try {
+//MJH 082719 Story 6162,6163 - Updated script to create License record type License/Cultivator/License/License, set the record Id prefix to CCL, 
+//                             update new custom fields Cultivator Type and License Issued Type and to include Cultivator type in the application name.
 	if(balanceDue<=ppPaymentAmount  && isTaskActive("Application Disposition")){
 		var annualLic = false;
 		if(isTaskStatus("Final Review","Approved for Annual License")) {
 			annualLic = true;
-			var licCapId = createLicense("Active",false);
 		}
-		else {
-			var licCapId = createParent("Licenses","Cultivator",appTypeArray[2],"Provisional",appTypeArray[2])
-		}
+		var licCapId = createLicenseBySubtype("Active","License",false);
 		if(licCapId){
 			var currCapId = capId;
 			var arrChild = getChildren("Licenses/Cultivator/*/Owner Application");
@@ -26,29 +22,14 @@ try {
 			capId = currCapId;
 			if(childSupport){
 				var expDate = dateAdd(null,120);
+				setLicExpirationDate(licCapId,null,expDate,"Active");
 			}else{
 				var expDate = dateAddMonths(null,12);
-			}
-			if(annualLic) {
 				setLicExpirationDate(licCapId,null,expDate,"Active");
-				if(appTypeArray[2]=="Adult Use"){
-					var newAltFirst = "CAL" ;
-				}else{
-					var newAltFirst = "CML";
-				}
-				closeTask("Application Disposition","License Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
 			}
-			else {
-				setLicExpirationDate(licCapId,null,expDate,"Active");
-				if(appTypeArray[2]=="Adult Use"){
-					var newAltFirst = "PAL" ;
-				}else{
-					var newAltFirst = "PML";
-				}
-				closeTask("Application Disposition","Provisional License Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");				
-			}
+			closeTask("Application Disposition","License Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
 			var newAltLast = capIDString.substr(3,capIDString.length());
-			var newAltId = newAltFirst + newAltLast;
+			var newAltId = "CCL" + newAltLast;
 			var updAltId = aa.cap.updateCapAltID(licCapId,newAltId);
 			if(!updAltId.getSuccess()){
 				logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
@@ -57,14 +38,17 @@ try {
 			}
 
 			//mhart removed county from the app name
-			if(childSupport){
-				var newAppName = "TEMPORARY - " + AInfo["License Type"];
-			}else{
-				var newAppName = AInfo["License Type"];
+			if(appTypeArray[2] == "Medical") {
+				var cultivatorType =  "Medicinal";
 			}
-			//logDebug("workDescGet(capId): " + workDescGet(capId));
-			//logDebug("getShortNotes(): " + getShortNotes());
-			//logDebug("newAppName: " + newAppName);
+			else {
+				var cultivatorType = "Adult-Use";
+			}
+			if(childSupport){
+				var newAppName = "TEMPORARY - " + cultivatorType + " - " + AInfo["License Type"];
+			}else{
+				var newAppName = cultivatorType + " - " + AInfo["License Type"];
+			}
 			editAppName(newAppName,licCapId);
 			
 // mhart 180326 User Story 5193 - add city to short notes that already displays county
@@ -75,15 +59,21 @@ try {
 				updateShortNotes(AInfo["Premise City"] + " - " + AInfo["Premise County"],licCapId);
 			}
 // mhart 180326 User Story 5193 
-			
 			updateWorkDesc(workDescGet(capId),licCapId);
 			copyAppSpecific(licCapId);
 			copyASITables(capId,licCapId,"DEFICIENCIES","DENIAL REASONS");
 			editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
 			editAppSpecific("Premise State", "CA", licCapId);
+			editAppSpecific("Cultivator Type", cultivatorType, licCapId);
+			if(annualLic) {
+				editAppSpecific("License Issued Type", "Annual", licCapId);
+			}else {
+				editAppSpecific("License Issued Type", "Provisional", licCapId);
+			}
 			if (appTypeArray[2] != "Temporary") {
 				addToCat(licCapId); //send active license to CAT
 			}
+			
 		}else{
 			logDebug("Error creating License record: " + licCapId);
 		}
@@ -92,4 +82,4 @@ try {
 	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
 	logDebug(err.stack);
 }
-//mhart 100918 Story 5738 and 5739 end
+//mhart 082719 Story 6162 and 6163 end
