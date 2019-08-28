@@ -162,6 +162,7 @@ try{
 		appTypeResult = cap.getCapType();
 		appTypeString = appTypeResult.toString();
 		appTypeArray = appTypeString.split("/");
+		capStatus = cap.getCapStatus();
 		altId =	 capId.getCustomID();
 		loadAppSpecific(AInfo);
  
@@ -176,7 +177,7 @@ try{
 		var licNum = capId.getCustomID();
 		
 // create the new license record
-		licCapId = createNewLicense("Active",false,appName);
+		licCapId = createNewLicense(capStatus,false,appName);
 		
 //	Update the Renewal information on both the new and current license record
 
