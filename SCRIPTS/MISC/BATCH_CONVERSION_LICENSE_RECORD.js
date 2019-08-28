@@ -66,7 +66,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-// test parameters
+/* test parameters
 
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sendToEmail", "mhart@trustvip.com"); //ca-licensees@metrc.com
@@ -74,10 +74,10 @@ aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA_purge");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
-aa.env.setValue("testRecord", "CAL18-0000121");
+aa.env.setValue("testRecord", "CAL18-0000115");
 aa.env.setValue("recordSubType", "Medical,Adult Use");
 aa.env.setValue("recordCategory", "License,Provisional");
-//
+*/
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var sysFromEmail = getJobParam("sysFromEmail");
 var sendToEmail = getJobParam("sendToEmail");
@@ -166,7 +166,7 @@ try{
 		loadAppSpecific(AInfo);
  
 		if(!matches(testRecord,null,"",undefined)) {
-			if(altId != "CAL18-0000121") {
+			if(altId != testRecord) {
 				continue;
 			}
 		}
@@ -175,7 +175,7 @@ try{
 		appName = appTypeArray[2] + " " + appName;
 		var licNum = capId.getCustomID();
 		
-// create the new licens record
+// create the new license record
 		licCapId = createNewLicense("Active",false,appName);
 		
 //	Update the Renewal information on both the new and current license record
@@ -257,7 +257,68 @@ try{
 		acaDocBiz.transferDocument(aa.getServiceProviderCode(), originalCAPID, targetCaps,"Licenses", "ADMIN");
 		
 		rcdsCreated++;
+		
+		var rFiles = [];
+// Run the official license report
+		reportResult = aa.reportManager.getReportInfoModelByName("Official License Certificate");
+		if (!reportResult.getSuccess()){
+			logDebug("**WARNING** couldn't load report " + "Official License Certificate" + " " + reportResult.getErrorMessage()); 
+		}
+		var report = reportResult.getOutput(); 
+		report.setModule(appTypeArray[0]); 
+		report.setCapId(licCapId.getID1() + "-" + licCapId.getID2() + "-" + licCapId.getID3()); 
+		report.getEDMSEntityIdModel().setAltId(newLicNum);
+		var parameters = aa.util.newHashMap(); 
+		parameters.put("altId",newLicNum);
+		report.setReportParameters(parameters);
+		var permit = aa.reportManager.hasPermission("Official License Certificate",currentUserID); 
+		if(permit.getOutput().booleanValue()) { 
+			var reportResult = aa.reportManager.getReportResult(report); 
+			if(reportResult) {
+				reportOutput = reportResult.getOutput();
+				var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
+				rFile=reportFile.getOutput();
+				rFiles.push(rFile);
+				logDebug("Report '" + "Official License Certificate" + "' has been run for " + newLicNum);
+			}else {
+				logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
+			}
+		}else{
+			logDebug("No permission to report: "+ "Official License Certificate" + " for user: " + currentUserID);
+		}
+// Send notification or add record to set for manual notification		
+		var priContact = getContactObj(licCapId,"Designated Responsible Party");
+		if(priContact){
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+			if(!matches(priChannel, "",null,"undefined", false)){
+				if(priChannel.indexOf("Postal") > -1 ){
+					var sName = createSet("LICENSE CONVERSION NOTIFICATION","License Notifications", "New");
+					if(sName){
+						setAddResult=aa.set.add(sName,licCapId);
+						if(setAddResult.getSuccess()){
+							logDebug(licCapId.getCustomID() + " successfully added to set " +sName);
+						}else{
+							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+						}
+					}
+				}
+				else {
+					var eParams = aa.util.newHashtable(); 
+					addParameter(eParams, "$$altID$$", altId);
+					addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+					addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+					addParameter(eParams, "$$parentId$$", newLicNum);
+					var priEmail = ""+priContact.capContact.getEmail();
+					sendApprovalNotification(sysFromEmail,priEmail,"","LCA_LICENSE_CONVERSION",eParams, rFiles,licCapId);
+				}
+			}
+		}
+		else{
+			logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
+		}
 	}	
+
+	
 	
 	logDebug("Total Records qualified : " + capList.length);
 	logDebug("Total Records Created: " + rcdsCreated);
@@ -405,4 +466,24 @@ function setLicExpirationDate(licCap,newLicCap) {
     logDebug("Successfully set the expiration date and status for " + licNum);
 	
     return true;
+}
+ function sendApprovalNotification(emailFrom,emailTo,emailCC,templateName,params,reportFile)
+{
+	itemCap = arguments[6]; 
+	var id1 = itemCap.ID1;
+	var id2 = itemCap.ID2;
+	var id3 = itemCap.ID3;
+	var capIDScriptModel = aa.cap.createCapIDScriptModel(id1, id2, id3);
+	var result = null;
+	result = aa.document.sendEmailAndSaveAsDocument(emailFrom, emailTo, emailCC, templateName, params, capIDScriptModel, reportFile);
+	if(result.getSuccess())
+	{
+		logDebug("Sent email successfully!");
+		return true;
+	}
+	else
+	{
+		logDebug("Failed to send mail. - " + result.getErrorType());
+		return false;
+	}
 }
