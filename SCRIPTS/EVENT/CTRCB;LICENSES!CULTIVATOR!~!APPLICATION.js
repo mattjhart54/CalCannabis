@@ -51,7 +51,7 @@ try {
 				cntASOP=true;	
 		}
 		
-		if(cntDRP = false) {
+		if(cntDRP = true) {
 			cancel=true;
 			showMessage=true;
 			comment("No required Designated Responsible Party contact has been entered on the application.  Please add before submitting the application");
