@@ -231,7 +231,10 @@ try{
 		updateWorkDesc(workDescGet(capId),licCapId);
 		copyAppSpecific(licCapId);
 		copyASITables(capId,licCapId,"DEFICIENCIES","DENIAL REASONS");
-		editAppSpecific("Cultivator Type",appTypeArray[2],licCapId);
+		if(appTypeArray[2] == "Medical")
+			editAppSpecific("Cultivator Type","Medicinal",licCapId);
+		else
+			ditAppSpecific("Cultivator Type","Adult-Use",licCapId);
 		if(appTypeArray[3] == "Provisional")
 			editAppSpecific("License Issued Type",appTypeArray[3],licCapId);
 		else
