@@ -173,7 +173,6 @@ try{
 		}
 		
 		logDebug("Processing License Record " + altId);
-		appName = appTypeArray[2] + " " + appName;
 		var licNum = capId.getCustomID();
 		
 // create the new license record
@@ -227,14 +226,18 @@ try{
 			logDebug("File date successfully updated to " + fileDateObj);
 		}
 		
-// copy data from the current record to the new record		
+// copy data from the current record to the new record
 		updateWorkDesc(workDescGet(capId),licCapId);
 		copyAppSpecific(licCapId);
 		copyASITables(capId,licCapId,"DEFICIENCIES","DENIAL REASONS");
-		if(appTypeArray[2] == "Medical")
+		if(appTypeArray[2] == "Medical") {
 			editAppSpecific("Cultivator Type","Medicinal",licCapId);
-		else
-			ditAppSpecific("Cultivator Type","Adult-Use",licCapId);
+			editAppName(appName + " - Medicinal",licCapId);
+		}
+		else {
+			editAppSpecific("Cultivator Type","Adult-Use",licCapId);
+			editAppName(appName + " - Adult-Use",licCapId);
+		}
 		if(appTypeArray[3] == "Provisional")
 			editAppSpecific("License Issued Type",appTypeArray[3],licCapId);
 		else
