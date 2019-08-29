@@ -95,7 +95,7 @@ try {
 	}
 			
 } catch(err){
-	logDebug("An error has occurred in CTRCB;LICENSES!CULTIVATOR!~!APPLICATION.js: Check Number of contacts " + err.message);
+	logDebug("An error has occurred in ASB;LICENSES!CULTIVATOR!~!APPLICATION.js: Check Number of contacts " + err.message);
 	logDebug(err.stack);
 }
 
