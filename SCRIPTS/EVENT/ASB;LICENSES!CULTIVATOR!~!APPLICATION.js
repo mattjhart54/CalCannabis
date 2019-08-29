@@ -55,6 +55,51 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASB:Licenses/Cultivation/*/Application: Completed field check: " + startDate, "capId: " + capId + ": " + br + err.message + br + err.stack + br + currEnv);
 }
+
+// IAS User Story Prod Defect 6135 - record app, the business, DRP, and ASOP contacts are missing.
+
+try {
+	var applContactResult = aa.people.getCapContactByCapID(capId);
+	if (applContactResult.getSuccess()){
+		var applContacts = applContactResult.getOutput();
+		var cntDRP = false;
+		var cntBusiness =false;
+		var cntASOP = false;
+		
+		for (a in applContacts){
+			if(applContacts[a].getCapContactModel().getContactType()== "Designated Responsible Party") 
+				cntDRP=true;
+			if(applContacts[a].getCapContactModel().getContactType()== "Business") 
+				cntBusiness=true;
+			if(applContacts[a].getCapContactModel().getContactType()== "Agent for Service of Process") 
+				cntASOP=true;	
+		}
+		
+		
+		if(cntDRP = true) {
+			cancel=true;
+			showMessage=true;
+			comment("No required Designated Responsible Party contact has been entered on the application.  Please add before submitting the application");
+		}
+		if(cntBusiness = false) {
+			cancel=true;
+			showMessage=true;
+			comment("There must be one and only one Business contact");
+		}
+		if(cntASOP = false) {
+			cancel=true;
+			showMessage=true;
+			comment("There must be one and only one Agent for Service Process contact");
+		}
+		
+	}
+			
+} catch(err){
+	logDebug("An error has occurred in CTRCB;LICENSES!CULTIVATOR!~!APPLICATION.js: Check Number of contacts " + err.message);
+	logDebug(err.stack);
+}
+
+
 //lwacht: 180412: story 5428: end
 
 //lwacht 180104 Story 5105 start
