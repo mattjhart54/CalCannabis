@@ -74,7 +74,7 @@ aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA_purge");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
-aa.env.setValue("testRecord", "CAL18-0000115");
+aa.env.setValue("testRecord", "CML19-0000311");
 aa.env.setValue("recordSubType", "Medical,Adult Use");
 aa.env.setValue("recordCategory", "License,Provisional");
 */
@@ -176,7 +176,13 @@ try{
 		var licNum = capId.getCustomID();
 		
 // create the new license record
-		licCapId = createNewLicense(capStatus,false,appName);
+		if(appTypeArray[2] == "Medical") {
+			var newAppName = "Medicinal - "  + appName;
+		}
+		else {
+			var newAppName = "Adult-Use - " + appName;
+		}
+		licCapId = createNewLicense(capStatus,false,newAppName);
 		
 //	Update the Renewal information on both the new and current license record
 
@@ -232,11 +238,9 @@ try{
 		copyASITables(capId,licCapId,"DEFICIENCIES","DENIAL REASONS");
 		if(appTypeArray[2] == "Medical") {
 			editAppSpecific("Cultivator Type","Medicinal",licCapId);
-			editAppName(appName + " - Medicinal",licCapId);
 		}
 		else {
 			editAppSpecific("Cultivator Type","Adult-Use",licCapId);
-			editAppName(appName + " - Adult-Use",licCapId);
 		}
 		if(appTypeArray[3] == "Provisional")
 			editAppSpecific("License Issued Type",appTypeArray[3],licCapId);
