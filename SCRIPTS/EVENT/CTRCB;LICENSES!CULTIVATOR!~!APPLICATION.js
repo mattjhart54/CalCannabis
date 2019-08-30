@@ -52,7 +52,7 @@ try {
 		}
 		
 		
-		if(cntDRP = true) {
+		if(cntDRP = false) {
 			cancel=true;
 			showMessage=true;
 			comment("No required Designated Responsible Party contact has been entered on the application.  Please add before submitting the application");
