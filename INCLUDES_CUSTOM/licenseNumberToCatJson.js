@@ -23,8 +23,9 @@ function licenseNumberToCatJson(licenseNumber) {
 		}else{
 			var legalBusinessName = "" + AInfo["Legal Business Name"].substr(0, 100);
 		}
-		var firstThree = licenseNumber.substring(0, 3);
-		if(firstThree == "CAL" || firstThree == "TAL" || firstThree == "PAL") {
+//		var firstThree = licenseNumber.substring(0, 3);
+//		if(firstThree == "CAL" || firstThree == "TAL" || firstThree == "PAL") {
+		if(AInfo["Cultivator Type"] == "Adult-Use" || AInfo["License Issued Type"] == "Provisional")	{
 			var licenseType ="A-"+AInfo["License Type"];
 		} else {
 			var licenseType = "M-"+AInfo["License Type"];
