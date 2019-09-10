@@ -615,16 +615,16 @@ try{
 		if (appTypeArray[2] == "Temporary") {
 			licType = "TCL ";	
 		}
-		if (appTypeArray[2] == "Adult Use" && appTypeArray[3] == "License") {
+		if (AInfo["Cultivator Type"] == "Adult Use" && AInfo["License Issued Type"] == "License") {
 			licType = "ACL ";
 		}
-		if (appTypeArray[2] == "Medical" && appTypeArray[3] == "License") {
+		if (AInfo["Cultivator Type"] == "Medical" && AInfo["License Issued Type"] == "License") {
 			licType = "MCL ";
 		}
-		if (appTypeArray[2] == "Adult Use" && appTypeArray[3] == "Provisional") {
+		if (AInfo["Cultivator Type"] == "Adult Use" && AInfo["License Issued Type"] == "Provisional") {
 			licType = "PACL";
 		}
-		if (appTypeArray[2] == "Medical" && appTypeArray[3] == "Provisional") {
+		if (AInfo["Cultivator Type"] == "Medical" && AInfo["License Issued Type"] == "Provisional") {
 			licType = "PMCL";
 		}
 		rptLine += licType;		
