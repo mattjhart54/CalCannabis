@@ -615,18 +615,19 @@ try{
 		if (appTypeArray[2] == "Temporary") {
 			licType = "TCL ";	
 		}
-		if (AInfo["Cultivator Type"] == "Adult Use" && AInfo["License Issued Type"] == "License") {
-			licType = "ACL ";
-		}
-		if (AInfo["Cultivator Type"] == "Medical" && AInfo["License Issued Type"] == "License") {
-			licType = "MCL ";
-		}
-		if (AInfo["Cultivator Type"] == "Adult Use" && AInfo["License Issued Type"] == "Provisional") {
-			licType = "PACL";
-		}
-		if (AInfo["Cultivator Type"] == "Medical" && AInfo["License Issued Type"] == "Provisional") {
-			licType = "PMCL";
-		}
+		if (AInfo["Cultivator Type"] == "Adult-Use" && AInfo["License Issued Type"] == "Annual") {
+                     licType = "ACL ";
+              }
+              if (AInfo["Cultivator Type"] == "Medicinal" && AInfo["License Issued Type"] == "Annual") {
+                     licType = "MCL ";
+              }
+              if (AInfo["Cultivator Type"] == "Adult-Use" && AInfo["License Issued Type"] == "Provisional") {
+                     licType = "PACL";
+              }
+              if (AInfo["Cultivator Type"] == "Medicinal" && AInfo["License Issued Type"] == "Provisional") {
+                     licType = "PMCL";
+              }
+
 		rptLine += licType;		
 		// End set the license type code for FTB--EES
 
