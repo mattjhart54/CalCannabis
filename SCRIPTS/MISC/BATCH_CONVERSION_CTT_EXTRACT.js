@@ -197,11 +197,11 @@ try{
 		var rptLine = "";
 		if(AInfo["License Issued Type"] == "Provisional" && AInfo["Cultivator Type"] == "Medicinal")
 			licId = "PML" + altSuffix;
-		if(AInfo["License Issued Type"] == "Provisional" && AInfo["Cultivator Type"] == "Adult USe")
+		if(AInfo["License Issued Type"] == "Provisional" && AInfo["Cultivator Type"] == "Adult-USe")
 			licId = "PAL" + altSuffix;
 		if(AInfo["License Issued Type"] == "Annual" && AInfo["Cultivator Type"] == "Medicinal")
 			licId = "CML" + altSuffix;
-		if(AInfo["License Issued Type"] == "Annual" && AInfo["Cultivator Type"] == "Adult Use")
+		if(AInfo["License Issued Type"] == "Annual" && AInfo["Cultivator Type"] == "Adult-Use")
 			licId = "CAL" + altSuffix;			
 		rptLine += ""+ licId;
 				rptLine += ","+ altId;
