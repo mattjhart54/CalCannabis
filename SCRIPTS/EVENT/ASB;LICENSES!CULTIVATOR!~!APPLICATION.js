@@ -68,11 +68,11 @@ try {
 		var cntBusiness =false;
 		var cntASOP = false;
 		for (a in applContacts){
-			if(applContacts[a].getCapContactModel().getContactType()== "Designated Responsible Party") 
+			if(applContacts[a].getCapContactModel().getContactType()== "Designated Responsible Party" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
 				cntDRP=true;
-			if(applContacts[a].getCapContactModel().getContactType()== "Business") 
+			if(applContacts[a].getCapContactModel().getContactType()== "Business" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
 				cntBusiness=true;
-			if(applContacts[a].getCapContactModel().getContactType()== "Agent for Service of Process") 
+			if(applContacts[a].getCapContactModel().getContactType()== "Agent for Service of Process" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
 				cntASOP=true;	
 		}
 		if(!cntDRP) {
