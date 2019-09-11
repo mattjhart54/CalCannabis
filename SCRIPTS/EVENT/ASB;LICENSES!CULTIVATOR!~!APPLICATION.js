@@ -26,7 +26,7 @@ try{
 	loadASITables();
 	var tblOwner = [];
 	var emailDuplicate = false;
-	if(OWNERS.length>0) {
+	if(typeof(OWNERS) == "object") {
 		for(row in OWNERS){
 			tblOwner.push(OWNERS[row]);
 		}
