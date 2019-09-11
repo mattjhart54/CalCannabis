@@ -17,11 +17,11 @@
 |     will no longer be considered a "Master" script and will not be supported in future releases.  If
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showMessage = true; // Set to true to see results in popup window
+var showDebug = 3; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = false;
+var cancel = true;
 var SCRIPT_VERSION = 3;
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
@@ -73,17 +73,15 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	var cap = aa.env.getValue("CapModel");
 	
 try {
-	var AInfo = [];
-	loadAppSpecific4ACA(AInfo);
-	showDebug=3;
-	showMessage=true;
 	var capModel = aa.env.getValue("CapModel");     
     capId = capModel.getCapID();
 	var parentCapId = aa.env.getValue("ParentCapID");
 	var pAltId = parentCapId.getCustomID();
-	cancel=true;
-	logMessage("pId " + parentCapId + " pALtId " + pAltId);
+	var AInfo = [];
+	loadAppSpecific4ACA(AInfo);
 	editAppSpecific4ACA("License Number",ppAltId);
+	logMessage("pId " + parentCapId + " pALtId " + pAltId);
+	
 	
 }catch (err) {
 	logDebug("An error has occurred in ACA_ONLOAD_Renewal: Main function: " + err.message);
