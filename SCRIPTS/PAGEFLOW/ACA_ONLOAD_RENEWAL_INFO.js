@@ -77,10 +77,9 @@ try {
     capId = capModel.getCapID();
 	var parentCapId = aa.env.getValue("ParentCapID");
 	var pAltId = parentCapId.getCustomID();
-	var AInfo = [];
-	loadAppSpecific4ACA(AInfo);
-	editAppSpecific4ACA("License Number",pAltId);
 	logMessage("pId " + parentCapId + " pALtId " + pAltId);
+	editAppSpecific4ACA("License Number",pAltId);
+	
 	
 	
 }catch (err) {
