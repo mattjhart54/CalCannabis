@@ -79,7 +79,7 @@ try {
 	var pAltId = parentCapId.getCustomID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-	editAppSpecific4ACA("License Number",ppAltId);
+	editAppSpecific4ACA("License Number",pAltId);
 	logMessage("pId " + parentCapId + " pALtId " + pAltId);
 	
 	
