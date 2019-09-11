@@ -73,10 +73,15 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	var cap = aa.env.getValue("CapModel");
 	
 try {
+	
+	showDebug=3;
+	showMessage=true;
 	var capModel = aa.env.getValue("CapModel");     
     capId = capModel.getCapID();
 	var parentCapId = aa.env.getValue("ParentCapID");
-	editAppSpecific4ACA("License Number",parentCapId.getCustomID());
+	var pAltId = parentCapId.getCustomID();
+	logDebug("pALtId " + pAltId)
+	editAppSpecific4ACA("License Number",ppAltId);
 	
 }catch (err) {
 	logDebug("An error has occurred in ACA_ONLOAD_Renewal: Main function: " + err.message);
