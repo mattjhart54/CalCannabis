@@ -36,13 +36,12 @@ try{
 
 try {
 	var applContactResult = aa.people.getCapContactByCapID(capId);
-	if (applContactResult.getSuccess()){
+	if (applContactResult.getSuccess()) {
 		var applContacts = applContactResult.getOutput();
 		var cntDRP = false;
 		var cntBusiness =false;
-		var cntASOP = false;
-		
-		for (a in applContacts){
+		var cntASOP = false;	
+		for (a in applContacts) {
 			if(applContacts[a].getCapContactModel().getContactType()== "Designated Responsible Party") 
 				cntDRP=true;
 			if(applContacts[a].getCapContactModel().getContactType()== "Business") 
@@ -50,24 +49,21 @@ try {
 			if(applContacts[a].getCapContactModel().getContactType()== "Agent for Service of Process") 
 				cntASOP=true;	
 		}
-		
-		
-		if(cntDRP = false) {
+		if(!cntDRP) {
 			cancel=true;
 			showMessage=true;
 			comment("No required Designated Responsible Party contact has been entered on the application.  Please add before submitting the application");
 		}
-		if(cntBusiness = false) {
+		if(!cntBusiness) {
 			cancel=true;
 			showMessage=true;
-			comment("There must be one and only one Business contact");
+			comment("No required Business contact has been entered on the application.  Please add before submitting the application");
 		}
-		if(cntASOP = false) {
+		if(!cntASOP) {
 			cancel=true;
 			showMessage=true;
-			comment("There must be one and only one Agent for Service Process contact");
-		}
-		
+			comment("No required Agent for Process Service contact has been entered on the application.  Please add before submitting the application");
+		}	
 	}
 			
 } catch(err){

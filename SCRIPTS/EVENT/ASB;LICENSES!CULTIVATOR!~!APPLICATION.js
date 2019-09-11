@@ -26,27 +26,29 @@ try{
 	loadASITables();
 	var tblOwner = [];
 	var emailDuplicate = false;
-	for(row in OWNERS){
-		tblOwner.push(OWNERS[row]);
-	}
-	for(x in tblOwner) {
-		var tblEmail = ""+ tblOwner[x]["Email Address"];
-		tblEmail = tblEmail.toUpperCase();
-		for(o in OWNERS) {
-			if( x == o) 
-				continue;
-			var ownEmail = ""+ OWNERS[o]["Email Address"];
-			ownEmail = ownEmail.toUpperCase();
-			logDebug("tblEmail " + tblEmail + " ownEmail " + ownEmail);
-			if (tblEmail == ownEmail) {
-				emailDuplicate = true;
-			}
+	if(typeof(OWNERS) == "object") {
+		for(row in OWNERS){
+			tblOwner.push(OWNERS[row]);
 		}
-		if(emailDuplicate) {
-			cancel = true;
-			showMessage = true;
-			comment("Each Owner in the table must have a unique email address.");
-			break;
+		for(x in tblOwner) {
+			var tblEmail = ""+ tblOwner[x]["Email Address"];
+			tblEmail = tblEmail.toUpperCase();
+			for(o in OWNERS) {
+				if( x == o) 
+					continue;
+				var ownEmail = ""+ OWNERS[o]["Email Address"];
+				ownEmail = ownEmail.toUpperCase();
+				logDebug("tblEmail " + tblEmail + " ownEmail " + ownEmail);
+				if (tblEmail == ownEmail) {
+					emailDuplicate = true;
+				}
+			}
+			if(emailDuplicate) {
+				cancel = true;
+				showMessage = true;
+				comment("Each Owner in the table must have a unique email address.");
+				break;
+			}
 		}
 	}
 //MJH 190412 story 5979 - end
@@ -60,40 +62,36 @@ try{
 
 try {
 	var applContactResult = aa.people.getCapContactByCapID(capId);
-	if (applContactResult.getSuccess()){
+	if (applContactResult.getSuccess()) {
 		var applContacts = applContactResult.getOutput();
 		var cntDRP = false;
 		var cntBusiness =false;
 		var cntASOP = false;
-		
 		for (a in applContacts){
-			if(applContacts[a].getCapContactModel().getContactType()== "Designated Responsible Party") 
+			logDebug("Contact " + applContacts[a].getCapContactModel().getContactType() + " email " + applContacts[a].getCapContactModel().getEmail());
+			if(applContacts[a].getCapContactModel().getContactType()== "Designated Responsible Party" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
 				cntDRP=true;
-			if(applContacts[a].getCapContactModel().getContactType()== "Business") 
+			if(applContacts[a].getCapContactModel().getContactType()== "Business" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
 				cntBusiness=true;
-			if(applContacts[a].getCapContactModel().getContactType()== "Agent for Service of Process") 
+			if(applContacts[a].getCapContactModel().getContactType()== "Agent for Service of Process" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
 				cntASOP=true;	
 		}
-		
-		
-		if(cntDRP = false) {
+		if(!cntDRP) {
 			cancel=true;
 			showMessage=true;
 			comment("No required Designated Responsible Party contact has been entered on the application.  Please add before submitting the application");
 		}
-		if(cntBusiness = false) {
+		if(!cntBusiness) {
 			cancel=true;
 			showMessage=true;
-			comment("There must be one and only one Business contact");
+			comment("No required Business contact has been entered on the application.  Please add before submitting the application");
 		}
-		if(cntASOP = false) {
+		if(!cntASOP) {
 			cancel=true;
 			showMessage=true;
-			comment("There must be one and only one Agent for Service Process contact");
+			comment("No required Agent for Process Service contact has been entered on the application.  Please add before submitting the application");
 		}
-		
-	}
-			
+	}	
 } catch(err){
 	logDebug("An error has occurred in ASB;LICENSES!CULTIVATOR!~!APPLICATION.js: Check Number of contacts " + err.message);
 	logDebug(err.stack);
