@@ -14,7 +14,7 @@ try{
 		if (result.getSuccess()){
 			//3. Copy key information from parent license to partial cap
 		//	copyKeyInfo(parentCapId, partialCapId);
-			editAppSpecific("License Number",parentCapId.getCustomID());
+			editAppSpecific("Parent ID",parentCapId);
 			//4. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
 			aa.cap.updateAccessByACA(partialCapId, "N");
 		}else{
