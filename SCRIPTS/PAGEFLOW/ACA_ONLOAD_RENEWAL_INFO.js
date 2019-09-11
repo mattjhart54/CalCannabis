@@ -80,4 +80,5 @@ try {
 	
 }catch (err) {
 	logDebug("An error has occurred in ACA_ONLOAD_Renewal: Main function: " + err.message);
-	logDebug(err.stack);	
+	logDebug(err.stack);
+}
