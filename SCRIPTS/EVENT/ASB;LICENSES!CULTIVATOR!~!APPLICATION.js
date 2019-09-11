@@ -68,6 +68,7 @@ try {
 		var cntBusiness =false;
 		var cntASOP = false;
 		for (a in applContacts){
+			logDebug("Contact " + applContacts[a].getCapContactModel().getContactType() + " email " + applContacts[a].getCapContactModel().getEmail());
 			if(applContacts[a].getCapContactModel().getContactType()== "Designated Responsible Party" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
 				cntDRP=true;
 			if(applContacts[a].getCapContactModel().getContactType()== "Business" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
