@@ -73,14 +73,16 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	var cap = aa.env.getValue("CapModel");
 	
 try {
-	
+	var AInfo = [];
+	loadAppSpecific4ACA(AInfo);
 	showDebug=3;
 	showMessage=true;
 	var capModel = aa.env.getValue("CapModel");     
     capId = capModel.getCapID();
 	var parentCapId = aa.env.getValue("ParentCapID");
 	var pAltId = parentCapId.getCustomID();
-	logDebug("pALtId " + pAltId)
+	cancel=true;
+	logMessage("pId " + parentCapId + " pALtId " + pAltId);
 	editAppSpecific4ACA("License Number",ppAltId);
 	
 }catch (err) {
