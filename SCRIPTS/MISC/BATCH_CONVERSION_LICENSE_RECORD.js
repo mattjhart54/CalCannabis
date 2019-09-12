@@ -74,7 +74,7 @@ aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA_purge");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
-aa.env.setValue("testRecord", "CML19-0000311");
+aa.env.setValue("testRecord", "CML18-0000088");
 aa.env.setValue("recordSubType", "Medical,Adult Use");
 aa.env.setValue("recordCategory", "License,Provisional");
 */
@@ -176,12 +176,15 @@ try{
 		var licNum = capId.getCustomID();
 		
 // create the new license record
-		if(appTypeArray[2] == "Medical") {
-			var newAppName = "Medicinal - "  + appName;
-		}
-		else {
-			var newAppName = "Adult-Use - " + appName;
-		}
+		if(appTypeArray[2] == "Medical" && appTypeArray[3] == "Provisional") 
+			var newAppName = "Provisional Medicinal - "  + appName;
+		if(appTypeArray[2] == "Medical" && appTypeArray[3] == "License") 
+			var newAppName = "Annual Medicinal - "  + appName;
+		if(appTypeArray[2] == "Adult Use" && appTypeArray[3] == "Provisional") 
+			var newAppName = "Provisional Adult-Use - "  + appName;
+		if(appTypeArray[2] == "Adult Use" && appTypeArray[3] == "License") 
+			var newAppName = "Annual Adult-Use - "  + appName;
+			
 		licCapId = createNewLicense(capStatus,false,newAppName);
 		
 //	Update the Renewal information on both the new and current license record
@@ -234,6 +237,7 @@ try{
 		
 // copy data from the current record to the new record
 		updateWorkDesc(workDescGet(capId),licCapId);
+		copyConditions(capId, licCapId);
 		copyAppSpecific(licCapId);
 		copyASITables(capId,licCapId,"DEFICIENCIES","DENIAL REASONS");
 		if(appTypeArray[2] == "Medical") {
@@ -248,10 +252,17 @@ try{
 			editAppSpecific("License Issued Type","Annual",licCapId);
 			
 //	Update the current record status
-		updateAppStatus("Inactive","License converted to new license record type on " + sysDate);
+		updateAppStatus("Retired","License converted to new license record type on " + sysDate);
 
 //	Add related records to the new license record
 		cId = getChildren("Licenses/Cultivator/*/*");
+		for(x in cId) {
+			holdId = capId;
+			capId = cId[x];
+			addParent(licCapId);
+			capId = holdId;
+		}
+		cId = getChildren("Enforcement/*/*/*");
 		for(x in cId) {
 			holdId = capId;
 			capId = cId[x];
@@ -300,6 +311,13 @@ try{
 // Send notification or add record to set for manual notification		
 		var priContact = getContactObj(licCapId,"Designated Responsible Party");
 		if(priContact){
+			var eParams = aa.util.newHashtable(); 
+			addParameter(eParams, "$$altID$$", altId);
+			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+			addParameter(eParams, "$$parentId$$", newLicNum);
+			var priEmail = ""+priContact.capContact.getEmail();
+			sendApprovalNotification(sysFromEmail,priEmail,"","LCA_LICENSE_CONVERSION",eParams, rFiles,licCapId);
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 			if(!matches(priChannel, "",null,"undefined", false)){
 				if(priChannel.indexOf("Postal") > -1 ){
@@ -312,15 +330,6 @@ try{
 							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
 						}
 					}
-				}
-				else {
-					var eParams = aa.util.newHashtable(); 
-					addParameter(eParams, "$$altID$$", altId);
-					addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
-					addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-					addParameter(eParams, "$$parentId$$", newLicNum);
-					var priEmail = ""+priContact.capContact.getEmail();
-					sendApprovalNotification(sysFromEmail,priEmail,"","LCA_LICENSE_CONVERSION",eParams, rFiles,licCapId);
 				}
 			}
 		}
