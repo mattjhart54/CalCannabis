@@ -44,10 +44,15 @@ try {
 			else {
 				var cultivatorType = "Adult-Use";
 			}
+			if(annualLic) {
+				var issueType =  "Annual";
+			} else {
+				var issueType = "Provisional";
+			}
 			if(childSupport){
 				var newAppName = "TEMPORARY - " + cultivatorType + " - " + AInfo["License Type"];
 			}else{
-				var newAppName = cultivatorType + " - " + AInfo["License Type"];
+				var newAppName = issueType + " " + cultivatorType + " - " + AInfo["License Type"];
 			}
 			editAppName(newAppName,licCapId);
 			
@@ -65,11 +70,7 @@ try {
 			editAppSpecific("Valid From Date", sysDateMMDDYYYY, licCapId);
 			editAppSpecific("Premise State", "CA", licCapId);
 			editAppSpecific("Cultivator Type", cultivatorType, licCapId);
-			if(annualLic) {
-				editAppSpecific("License Issued Type", "Annual", licCapId);
-			}else {
-				editAppSpecific("License Issued Type", "Provisional", licCapId);
-			}
+			editAppSpecific("License Issued Type", issueType, licCapId);
 			if (appTypeArray[2] != "Temporary") {
 				addToCat(licCapId); //send active license to CAT
 			}
