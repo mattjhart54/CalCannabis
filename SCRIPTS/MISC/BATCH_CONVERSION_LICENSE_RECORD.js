@@ -279,36 +279,44 @@ try{
 		acaDocBiz.transferDocument(aa.getServiceProviderCode(), originalCAPID, targetCaps,"Licenses", "ADMIN");
 		
 		rcdsCreated++;
-		
-		var rFiles = [];
+	
 // Run the official license report
-		reportResult = aa.reportManager.getReportInfoModelByName("Official License Certificate");
-		if (!reportResult.getSuccess()){
-			logDebug("**WARNING** couldn't load report " + "Official License Certificate" + " " + reportResult.getErrorMessage()); 
-		}
-		var report = reportResult.getOutput(); 
-		report.setModule(appTypeArray[0]); 
-		report.setCapId(licCapId.getID1() + "-" + licCapId.getID2() + "-" + licCapId.getID3()); 
-		report.getEDMSEntityIdModel().setAltId(newLicNum);
-		var parameters = aa.util.newHashMap(); 
-		parameters.put("altId",newLicNum);
-		report.setReportParameters(parameters);
-		var permit = aa.reportManager.hasPermission("Official License Certificate",currentUserID); 
-		if(permit.getOutput().booleanValue()) { 
-			var reportResult = aa.reportManager.getReportResult(report); 
-			if(reportResult) {
-				reportOutput = reportResult.getOutput();
-				var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
-				rFile=reportFile.getOutput();
-				rFiles.push(rFile);
-				logDebug("Report '" + "Official License Certificate" + "' has been run for " + newLicNum);
-			}else {
-				logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
+		var rFiles = [];
+		if(capStatus == 'Active') {
+			reportResult = aa.reportManager.getReportInfoModelByName("Official License Certificate");
+			if (!reportResult.getSuccess()){
+				logDebug("**WARNING** couldn't load report " + "Official License Certificate" + " " + reportResult.getErrorMessage()); 
 			}
-		}else{
-			logDebug("No permission to report: "+ "Official License Certificate" + " for user: " + currentUserID);
+			var report = reportResult.getOutput(); 
+			report.setModule(appTypeArray[0]); 
+			report.setCapId(licCapId.getID1() + "-" + licCapId.getID2() + "-" + licCapId.getID3()); 
+			report.getEDMSEntityIdModel().setAltId(newLicNum);
+			var parameters = aa.util.newHashMap(); 
+			parameters.put("altId",newLicNum);
+			report.setReportParameters(parameters);
+			var permit = aa.reportManager.hasPermission("Official License Certificate",currentUserID); 
+			if(permit.getOutput().booleanValue()) { 
+				var reportResult = aa.reportManager.getReportResult(report); 
+				if(reportResult) {
+					reportOutput = reportResult.getOutput();
+					var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
+					rFile=reportFile.getOutput();
+					rFiles.push(rFile);
+					logDebug("Report '" + "Official License Certificate" + "' has been run for " + newLicNum);
+				}else {
+					logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
+				}
+			}else{
+				logDebug("No permission to report: "+ "Official License Certificate" + " for user: " + currentUserID);
+			}
 		}
-// Send notification or add record to set for manual notification		
+// Send notification and add record to set for manual notification if preferred channel is Postal
+		if(capStatus == 'Active') {
+			var notification = 'LCA_LICENSE_CONVERSION';
+		}
+		else {
+			var notification = 'LCA_LICENSE_CONVERSION_INACTIVE';
+		}
 		var priContact = getContactObj(licCapId,"Designated Responsible Party");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
@@ -317,7 +325,7 @@ try{
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$parentId$$", newLicNum);
 			var priEmail = ""+priContact.capContact.getEmail();
-			sendApprovalNotification(sysFromEmail,priEmail,"","LCA_LICENSE_CONVERSION",eParams, rFiles,licCapId);
+			sendApprovalNotification(sysFromEmail,priEmail,"",notification,eParams, rFiles,licCapId);
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 			if(!matches(priChannel, "",null,"undefined", false)){
 				if(priChannel.indexOf("Postal") > -1 ){
