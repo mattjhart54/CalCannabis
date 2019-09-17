@@ -2,7 +2,11 @@ try {
 	if(wfStatus == "Amendment Approved") {
 		// Copy custom fields from the license record to the parent record
 		holdId = capId;
-		capId = parentCapId;
+		pIds = getParents("Licenses/Cultivator/License/License");
+		if(matches(pIds,null,'',undefined))
+			capId = parentCapId;
+		else
+			capId = pIds[0];
 		var updateCat = false;
 		if(!matches(AInfo["PA Update"],null,"",undefined)) {
 			editAppSpecific("Premise Address",AInfo["PA Update"]);
