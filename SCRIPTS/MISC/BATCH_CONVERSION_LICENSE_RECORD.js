@@ -74,7 +74,7 @@ aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA_purge");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
-aa.env.setValue("testRecord", "CML18-0000088");
+aa.env.setValue("testRecord", "CAL19-0000253");
 aa.env.setValue("recordSubType", "Medical,Adult Use");
 aa.env.setValue("recordCategory", "License,Provisional");
 */
@@ -97,6 +97,7 @@ if(appCategory=="*") appCategory="";
 |
 /------------------------------------------------------------------------------------------------------*/
 var startDate = new Date();
+var noticeDate = jsDateToMMDDYYYY(startDate);
 var startJSDate = new Date();
 startJSDate.setHours(0,0,0,0);
 var timeExpired = false;
@@ -320,10 +321,35 @@ try{
 		var priContact = getContactObj(licCapId,"Designated Responsible Party");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
-			addParameter(eParams, "$$altID$$", altId);
+			addParameter(eParams, "$$oldAltID$$", altId);
+			addParameter(eParams, "$$newAltID$$", newLicNum);
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-			addParameter(eParams, "$$parentId$$", newLicNum);
+			drpAddresses = priContact.addresses;
+			var addrType = false;
+			for (x in drpAddresses){
+				thisAddr = drpAddresses[x];
+				//lwacht 171214: should use mailing address if it exists
+				if(thisAddr.getAddressType()=="Mailing"){
+					addrType = "Mailing";
+					addParameter(eParams, "$$address$$", thisAddr.addressLine1);
+					addParameter(eParams, "$$cityStZip$$", thisAddr.city + ", " + thisAddr.state + " " + thisAddr.zip);
+				}else{
+					if(thisAddr.getAddressType()=="Business"){
+						addrType = "Business";
+						addParameter(eParams, "$$address$$", thisAddr.addressLine1);
+						addParameter(eParams, "$$cityStZip$$", thisAddr.city + ", " + thisAddr.state + " " + thisAddr.zip);
+					}else{
+						if(thisAddr.getAddressType()=="Home"){
+							addrType = "Home";
+							addParameter(eParams, "$$address$$", thisAddr.addressLine1);
+							addParameter(eParams, "$$cityStZip$$", thisAddr.city + ", " + thisAddr.state + " " + thisAddr.zip);
+						}
+					}
+				}
+			}
+			addParameter(eParams, "$$date$$", noticeDate);
+			logDebug("date " + noticeDate);
 			var priEmail = ""+priContact.capContact.getEmail();
 			sendApprovalNotification(sysFromEmail,priEmail,"",notification,eParams, rFiles,licCapId);
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
