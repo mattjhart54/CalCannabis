@@ -354,7 +354,10 @@ try{
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 			if(!matches(priChannel, "",null,"undefined", false)){
 				if(priChannel.indexOf("Postal") > -1 ){
-					var sName = createSet("LICENSE CONVERSION NOTIFICATION","License Notifications", "New");
+					if(capStatus == 'Active')
+						var sName = createSet("LICENSE CONVERSION NOTIFICATION","License Notifications", "New");
+					else
+						var sName = createSet("LICENSE CONVERSION NOTIFICATION INACTIVE","License Notifications", "New");
 					if(sName){
 						setAddResult=aa.set.add(sName,licCapId);
 						if(setAddResult.getSuccess()){
