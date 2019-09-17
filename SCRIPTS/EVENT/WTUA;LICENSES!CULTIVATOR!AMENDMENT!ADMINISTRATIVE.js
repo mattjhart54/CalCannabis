@@ -113,13 +113,15 @@ try {
 							licCont.setEmail(amendEmail);
 							licCont.setLastName(amendLast);
 							licCont.setFirstName(amendFirst);
-							licCont.setMiddleName(amendLBN);
+				//			licCont.setMiddleName(amendLBN);
 							licCont.setTitle(amendTitle);
 							licCont.setPhone3(amendPhone);
 				//			licCont.setPreferredChannel(amendChannel);
 							licCont.setEndDate(amendEnd);
 							logDebug("update contact1 " + amendRefNbr + " " + amendType);
 							var peopleModel = licCont.getPeople();
+							peopleModel.setPreferredChannel(amendChannel);
+							peopleModel.setMiddleName(amendLBN);
 							var licAddressrs = aa.address.getContactAddressListByCapContact(licCont);
 							peopleModel.setContactAddressList(amendAddressModelArr);
 							aa.people.editCapContactWithAttribute(licCont);
