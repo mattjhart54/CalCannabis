@@ -349,7 +349,6 @@ try{
 				}
 			}
 			addParameter(eParams, "$$date$$", noticeDate);
-			logDebug("date " + noticeDate);
 			var priEmail = ""+priContact.capContact.getEmail();
 			sendApprovalNotification(sysFromEmail,priEmail,"",notification,eParams, rFiles,licCapId);
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
