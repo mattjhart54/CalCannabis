@@ -4,7 +4,9 @@
 
 try{
 	var partialCapId = getIncompleteCapId();
-	var parentCapId = aa.env.getValue("ParentCapID");
+	var parentCapString = aa.env.getValue("ParentCapID");
+	parentArray = parentCapString.split("-");
+	parentCapId = aa.cap.getCapID(parentArray[0], parentArray[1], parentArray[2]).getOutput();
 	var parentAltId = parentCapId.getCustomID();
 	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + parentCapId + br + parentAltId + br + currEnv);
 	//1. Check to see if license is ready for renew
