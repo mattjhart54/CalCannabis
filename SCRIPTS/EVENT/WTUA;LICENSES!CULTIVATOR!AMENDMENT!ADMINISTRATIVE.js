@@ -2,7 +2,11 @@ try {
 	if(wfStatus == "Amendment Approved") {
 		// Copy custom fields from the license record to the parent record
 		holdId = capId;
-		capId = parentCapId;
+		pIds = getParents("Licenses/Cultivator/License/License");
+		if(matches(pIds,null,'',undefined))
+			capId = parentCapId;
+		else
+			capId = pIds[0];
 		updateCat = false;
 		if(!matches(AInfo["CA Update"],null,"",undefined))
 			editAppSpecific("Cooperative Association",AInfo["CA Update"]);
@@ -109,13 +113,15 @@ try {
 							licCont.setEmail(amendEmail);
 							licCont.setLastName(amendLast);
 							licCont.setFirstName(amendFirst);
-							licCont.setMiddleName(amendLBN);
+				//			licCont.setMiddleName(amendLBN);
 							licCont.setTitle(amendTitle);
 							licCont.setPhone3(amendPhone);
 				//			licCont.setPreferredChannel(amendChannel);
 							licCont.setEndDate(amendEnd);
 							logDebug("update contact1 " + amendRefNbr + " " + amendType);
 							var peopleModel = licCont.getPeople();
+							peopleModel.setPreferredChannel(amendChannel);
+							peopleModel.setMiddleName(amendLBN);
 							var licAddressrs = aa.address.getContactAddressListByCapContact(licCont);
 							peopleModel.setContactAddressList(amendAddressModelArr);
 							aa.people.editCapContactWithAttribute(licCont);

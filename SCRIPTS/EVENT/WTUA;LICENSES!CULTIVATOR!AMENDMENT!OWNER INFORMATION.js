@@ -22,12 +22,9 @@ try {
 					var amendEnd = amendCont.endDate;
 					var amendAddressList = aa.address.getContactAddressListByCapContact(amendCont);
 					var amendAddressModelArr = convertContactAddressModelArr(amendAddressList.getOutput());
-					var pIds = getParents("Licenses/Cultivator/*/*");
-					for(p in pIds) {
-						if(AInfo["License Number"] == pIds[p].getCustomID()) {
-							parentCapId = pIds[p];
-						}
-					}
+					pIds = getParents("Licenses/Cultivator/License/License");
+					if(!matches(pIds,null,'',undefined))
+						parentCapId = pIds[0];
 					var licContactResult = aa.people.getCapContactByCapID(parentCapId);
 					if (licContactResult.getSuccess()){
 						var licContacts = licContactResult.getOutput();
