@@ -12,11 +12,10 @@ try{
 	//1. Check to see if license is ready for renew
 	if (isRenewProcess(parentCapId, partialCapId)){
 		logDebug("CAPID(" + parentCapId + ") is ready for renew. PartialCap (" + partialCapId + ")");
-		//2. Associate partial cap with parent CAP.
+	//2. Associate partial cap with parent CAP.
 		var result = aa.cap.createRenewalCap(parentCapId, partialCapId, true);
 		if (result.getSuccess()){
-			//3. Copy key information from parent license to partial cap
-		//	copyKeyInfo(parentCapId, partialCapId);
+	//3. Copy key information from parent license to partial cap
 			pInfo = new Array;
 			loadAppSpecific(pInfo,parentCapId); 
 			editAppSpecific("License Number",parentAltId);
@@ -36,7 +35,22 @@ try{
 					editAppSpecific("Expiration Date", tmpExpDate);
 				}
 			}
-			//4. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
+		//4. Assess Renewal Fee
+			voidRemoveAllFees();
+			var feeDesc = pInfo["License Type"] + " - Renewal Fee";
+			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+			if(thisFee){
+				newSeq = updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+				var invoiceResult = aa.finance.getFeeItemInvoiceByFeeNbr(capId, newSeq, null);
+				if (invoiceResult.getSuccess()) {
+					var invoiceItem = invoiceResult.getOutput();
+					invNbr = invoiceItem[0].getInvoiceNbr();
+				}
+			}else{
+				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+				logDebug("An error occurred retrieving fee item: " + feeDesc);
+			}
+		//5. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
 	//		aa.cap.updateAccessByACA(partialCapId, "N");
 		}else{
 			aa.print("ERROR: Associate partial cap with parent CAP. " + result.getErrorMessage());
