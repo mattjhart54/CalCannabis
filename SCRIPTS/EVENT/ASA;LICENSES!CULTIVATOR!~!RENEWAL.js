@@ -5,7 +5,8 @@
 try{
 	var partialCapId = getIncompleteCapId();
 	var parentCapId = aa.env.getValue("ParentCapID");
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + parentCapId + br + currEnv);
+	var parentAltId = parentCapId.getCustomID();
+	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + parentCapId + br + parentAltId + br + currEnv);
 	//1. Check to see if license is ready for renew
 	if (isRenewProcess(parentCapId, partialCapId)){
 		logDebug("CAPID(" + parentCapId + ") is ready for renew. PartialCap (" + partialCapId + ")");
@@ -16,7 +17,7 @@ try{
 		//	copyKeyInfo(parentCapId, partialCapId);
 			pInfo = new Array;
 			loadAppSpecific(pInfo,parentCapId); 
-			editAppSpecific("License Number",parentCapId.getCustomID());
+			editAppSpecific("License Number",parentAltId);
 			editAppSpecific("License Type", pInfo["License Type"]);
 			editAppSpecific("Legal Business Name", pInfo["Legal Business Name"]);
 			editAppSpecific("Premise Address", pInfo["Premise Address"]);
