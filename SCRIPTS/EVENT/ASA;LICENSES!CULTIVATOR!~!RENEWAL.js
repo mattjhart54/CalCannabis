@@ -15,7 +15,7 @@ try{
 			//3. Copy key information from parent license to partial cap
 		//	copyKeyInfo(parentCapId, partialCapId);
 			pInfo = new Array;
-			loadAppSpecific(PInfo); 
+			loadAppSpecific(pInfo); 
 			editAppSpecific("License Number",parentCapId.getCustomID());
 			editAppSpecific("License Type", pInfo["License Type"]);
 			editAppSpecific("Legal Business Name", pInfo["Legal Business Name"]);
