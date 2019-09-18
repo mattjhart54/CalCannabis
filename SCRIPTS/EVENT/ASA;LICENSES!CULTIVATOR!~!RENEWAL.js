@@ -14,7 +14,25 @@ try{
 		if (result.getSuccess()){
 			//3. Copy key information from parent license to partial cap
 		//	copyKeyInfo(parentCapId, partialCapId);
+			PInfo = new Array;
+			loadAppSpecific(PInfo); 
+			editAppSpecific("License Number",parentCapId.getCustomID());
+			editAppSpecific("License Type", pInfo["License Type"];
+			editAppSpecific("Legal Business Name", pInfo["Legal Business Name"];
+			editAppSpecific("Premise Address", pInfo["Premise Address"];
+			editAppSpecific("APN", pInfo["APN"];
+			editAppSpecific("Cultivator Type", pInfo["Cultivator Type"];
 			editAppSpecific("Parent ID",parentCapId);
+			copyContactsByType(parenCapId,partialCapId,"Designated Responsible Party");
+			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
+			if (b1ExpResult.getSuccess()) {
+				this.b1Exp = b1ExpResult.getOutput();
+				expDate = this.b1Exp.getExpDate();	
+				if(expDate) {
+					tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+					editAppSpecific("Expiration Date", tmpNewDate;
+				}
+			}
 			//4. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
 	//		aa.cap.updateAccessByACA(partialCapId, "N");
 		}else{
