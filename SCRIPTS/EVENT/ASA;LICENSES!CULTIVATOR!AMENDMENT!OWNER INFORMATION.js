@@ -43,6 +43,7 @@ try {
 		}
 		if(ownAppFnd) 
 			break;
+			
 	}
 	if(!ownAppFnd) {
 // Get Owner Application record
