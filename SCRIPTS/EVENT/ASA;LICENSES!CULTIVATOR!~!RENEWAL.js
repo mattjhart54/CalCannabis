@@ -30,7 +30,7 @@ try{
 				expDate = this.b1Exp.getExpDate();	
 				if(expDate) {
 					tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
-					editAppSpecific("Expiration Date", tmpNewDate);
+					editAppSpecific("Expiration Date", tmpExpDate);
 				}
 			}
 			//4. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
