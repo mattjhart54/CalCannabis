@@ -24,7 +24,7 @@ try{
 			editAppSpecific("Premises Address", pInfo["Premise Address"]);
 			editAppSpecific("APN", pInfo["APN"]);
 			editAppSpecific("Cultivator Type", pInfo["Cultivator Type"]);
-			editAppSpecific("Parent ID",parentCapId);
+	//		editAppSpecific("Parent ID",parentCapId);
 			copyContactsByType(parentCapId,partialCapId,"Designated Responsible Party");
 			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
 			if (b1ExpResult.getSuccess()) {
