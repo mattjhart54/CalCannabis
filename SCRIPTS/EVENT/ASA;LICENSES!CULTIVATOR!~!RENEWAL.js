@@ -22,7 +22,7 @@ try{
 			editAppSpecific("License Number",parentAltId);
 			editAppSpecific("License Type", pInfo["License Type"]);
 			editAppSpecific("Business Name", pInfo["Legal Business Name"]);
-			editAppSpecific("Premise Address", pInfo["Premise Address"]);
+			editAppSpecific("Premises Address", pInfo["Premise Address"]);
 			editAppSpecific("APN", pInfo["APN"]);
 			editAppSpecific("Cultivator Type", pInfo["Cultivator Type"]);
 			editAppSpecific("Parent ID",parentCapId);
