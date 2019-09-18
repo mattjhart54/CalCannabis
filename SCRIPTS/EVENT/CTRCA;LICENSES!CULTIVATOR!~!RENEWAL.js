@@ -18,7 +18,7 @@ try{
 		}
 	}
 	if(balanceDue > 0) {
-		updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout"))
+		updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
 		deactivateTask("Renewal Review");
 	}
 } catch(err){
