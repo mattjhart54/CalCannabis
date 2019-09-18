@@ -4,7 +4,7 @@
 
 try{
 	var partialCapId = getIncompleteCapId();
-	var parentCapString = aa.env.getValue("ParentCapID");
+	var parentCapString = "" + aa.env.getValue("ParentCapID");
 	parentArray = parentCapString.split("-");
 	parentCapId = aa.cap.getCapID(parentArray[0], parentArray[1], parentArray[2]).getOutput();
 	var parentAltId = parentCapId.getCustomID();
