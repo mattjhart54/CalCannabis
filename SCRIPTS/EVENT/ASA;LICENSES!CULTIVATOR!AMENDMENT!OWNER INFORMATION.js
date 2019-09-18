@@ -54,6 +54,8 @@ try {
 			typeResult = appCap.getCapType();
 			typeString = typeResult.toString();
 			typeArray = typeString.split("/");
+			
+// IS Story 6210
 			if(matches(AInfo["Cultivator Type"],"Medical","Adult Use")) {
 				appFnd = true;
 				break;
