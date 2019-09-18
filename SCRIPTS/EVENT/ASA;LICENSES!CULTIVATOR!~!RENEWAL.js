@@ -19,7 +19,7 @@ try{
 			loadAppSpecific(pInfo,parentCapId); 
 			editAppSpecific("License Number",parentAltId);
 			editAppSpecific("License Type", pInfo["License Type"]);
-			editAppSpecific("Legal Business Name", pInfo["Legal Business Name"]);
+			editAppSpecific("Business Name", pInfo["Legal Business Name"]);
 			editAppSpecific("Premise Address", pInfo["Premise Address"]);
 			editAppSpecific("APN", pInfo["APN"]);
 			editAppSpecific("Cultivator Type", pInfo["Cultivator Type"]);
