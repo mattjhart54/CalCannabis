@@ -54,7 +54,7 @@ try {
 			typeResult = appCap.getCapType();
 			typeString = typeResult.toString();
 			typeArray = typeString.split("/");
-			if(matches(typeArray[2],"Medical","Adult Use")) {
+			if(matches(AInfo["Cultivator Type"],"Medical","Adult Use")) {
 				appFnd = true;
 				break;
 			}
