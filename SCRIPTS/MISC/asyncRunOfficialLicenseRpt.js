@@ -109,10 +109,19 @@ try{
 	appTypeString = appTypeResult.toString(); 
 	appTypeArray = appTypeString.split("/");
 	capStatus = cap.getCapStatus();
-	if(licType=="annual") 
+	var emailTemplate = "LCA_APP_APPROVAL_PAID"
+	if(licType=="annual") {
 		reportName = "Approval Letter"
-	else
-	reportName = "Approval Letter Provisional"
+	}else {
+		if(licType=="Provisional") {
+			reportName = "Approval Letter Provisional"
+		}else {
+			if(licType=="Renewal") {
+				reportName = "Renewal Approval Letter"
+				var emailTemplate = "LCA_RENEWAL_APPROVAL"
+			}
+		}
+	}
 	reportResult = aa.reportManager.getReportInfoModelByName(reportName);
 	if (!reportResult.getSuccess()){
 		logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
@@ -161,7 +170,7 @@ try{
 		addParameter(eParams, "$$parentId$$", licCap);
 		addParameter(eParams, "$$licType$$", licType);
 		var priEmail = ""+priContact.capContact.getEmail();
-		sendApprovalNotification(fromEmail,priEmail,"","LCA_APP_APPROVAL_PAID",eParams, rFiles,tmpID);
+		sendApprovalNotification(fromEmail,priEmail,"",emailTemplate,eParams, rFiles,tmpID);
 	}else{
 		logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
 	}
