@@ -40,12 +40,7 @@ try{
 			var feeDesc = pInfo["License Type"] + " - Renewal Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
-				newSeq = updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
-				var invoiceResult = aa.finance.getFeeItemInvoiceByFeeNbr(capId, newSeq, null);
-				if (invoiceResult.getSuccess()) {
-					var invoiceItem = invoiceResult.getOutput();
-					invNbr = invoiceItem[0].getInvoiceNbr();
-				}
+				updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
 			}else{
 				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
