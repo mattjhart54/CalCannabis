@@ -17,12 +17,20 @@ try{
 			logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
 		}
 	}
-	if(balanceDue > 0) {
-		updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
-		deactivateTask("Renewal Review");
+	var feeDesc = AInfo["License Type"] + " - Renewal Fee";
+	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+	if(thisFee){
+		var hasFee = feeExists(thisFee.feeCode,"NEW");
+		if(hasFee) {
+			updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
+			deactivateTask("Renewal Review");
+		}
+	}else{
+		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/LICENSE/RENEWAL: Submission: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
