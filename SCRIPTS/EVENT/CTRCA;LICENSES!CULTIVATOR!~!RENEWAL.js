@@ -22,6 +22,7 @@ try{
 	if(thisFee){
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
 		if(hasFee) {
+			var invNbr = invoiceAllFees();
 			updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
 			deactivateTask("Renewal Review");
 		}
