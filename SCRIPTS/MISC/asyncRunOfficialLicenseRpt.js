@@ -117,7 +117,7 @@ try{
 			reportName = "Approval Letter Provisional"
 		}else {
 			if(licType=="Renewal") {
-				reportName = "Renewal Approval Letter"
+				reportName = "Approval Letter Renewal"
 				var emailTemplate = "LCA_RENEWAL_APPROVAL"
 			}
 		}
