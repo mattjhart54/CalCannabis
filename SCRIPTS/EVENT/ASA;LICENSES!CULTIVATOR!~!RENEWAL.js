@@ -47,7 +47,9 @@ try{
 				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
 			}
-			if(pStatus == "Delinquent") {
+			var curDate = new Date();
+			var tmpDate = new Date(tmpExpDate);
+			if(tmpDate <= curDate) {
 				var feeDesc = pInfo["License Type"] + " - Late Fee";
 				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 				if(thisFee){
