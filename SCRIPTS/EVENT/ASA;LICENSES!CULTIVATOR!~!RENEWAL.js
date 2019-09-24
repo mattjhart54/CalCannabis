@@ -8,6 +8,8 @@ try{
 	parentArray = parentCapString.split("-");
 	parentCapId = aa.cap.getCapID(parentArray[0], parentArray[1], parentArray[2]).getOutput();
 	var parentAltId = parentCapId.getCustomID();
+	pCap = aa.cap.getCap(parentCapId).getOutput();
+	var pStatus = pCap.getCapStatus();
 	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + parentCapId + br + parentAltId + br + currEnv);
 	//1. Check to see if license is ready for renew
 	if (isRenewProcess(parentCapId, partialCapId)){
@@ -45,6 +47,17 @@ try{
 				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
 			}
+			if(pStatus == "Delinquent") {
+				var feeDesc = pInfo["License Type"] + " - Late Fee";
+				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+				if(thisFee){
+					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+				}else{
+					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+					logDebug("An error occurred retrieving fee item: " + feeDesc);
+				}
+			}
+				
 		//5. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
 	//		aa.cap.updateAccessByACA(partialCapId, "N");
 		}else{
