@@ -39,7 +39,7 @@ try {
 			var scriptName = "asyncRunOfficialLicenseRpt";
 			var envParameters = aa.util.newHashMap();
 			envParameters.put("licType", "Renewal");
-			envParameters.put("appCap",licAltId);
+			envParameters.put("appCap",capId);
 			envParameters.put("licCap",licAltId); 
 			envParameters.put("reportName","Official License Certificate"); 
 			envParameters.put("currentUserID",currentUserID);
