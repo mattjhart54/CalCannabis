@@ -29,3 +29,4 @@ function addStdConditionEffDate(cType, cDesc, effDate) // optional cap ID
 				}
 			}
 	}
+}
