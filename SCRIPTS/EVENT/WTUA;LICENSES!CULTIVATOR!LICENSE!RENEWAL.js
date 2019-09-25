@@ -11,6 +11,7 @@ try {
 		vIDArray = String(vLicenseID).split("-");
 		vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
 		licAltId = vLicenseID.getCustomID();
+		altId = capId.getCustomID();
 		if (vLicenseID != null) {
 	// Get current expiration date.
 			vLicenseObj = new licenseObject(null, vLicenseID);
@@ -39,7 +40,7 @@ try {
 			var scriptName = "asyncRunOfficialLicenseRpt";
 			var envParameters = aa.util.newHashMap();
 			envParameters.put("licType", "Renewal");
-			envParameters.put("appCap",capId);
+			envParameters.put("appCap",altId);
 			envParameters.put("licCap",licAltId); 
 			envParameters.put("reportName","Official License Certificate"); 
 			envParameters.put("currentUserID",currentUserID);
