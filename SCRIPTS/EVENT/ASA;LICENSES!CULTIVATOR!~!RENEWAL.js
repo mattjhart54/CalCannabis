@@ -55,7 +55,7 @@ try{
 				if(thisFee){
 					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
 					effDate = dateAdd(jsDateToMMDDYYYY(new Date()),30);
-					addStdConditionEffDate("Application Conditions", "Application Hold",effDate)
+					addStdConditionEffDate("Application Condition", "Application Hold",effDate);
 				}else{
 					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 					logDebug("An error occurred retrieving fee item: " + feeDesc);
