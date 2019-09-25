@@ -17,6 +17,18 @@ try{
 			logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
 		}
 	}
+	var feeDesc = AInfo["License Type"] + " - Late Fee";
+	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+	if(thisFee){
+		var hasFee = feeExists(thisFee.feeCode,"NEW");
+		if(hasFee) {
+			effDate = dateAdd(jsDateToMMDDYYYY(new Date()),30);
+			addStdConditionEffDate("Application Condition", "Application Hold",effDate);
+		}
+	}else{
+		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+		logDebug("An error occurred retrieving fee item: " + feeDesc);
+	}
 	var feeDesc = AInfo["License Type"] + " - Renewal Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 	if(thisFee){
@@ -30,6 +42,7 @@ try{
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
+
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
 	logDebug(err.stack);
