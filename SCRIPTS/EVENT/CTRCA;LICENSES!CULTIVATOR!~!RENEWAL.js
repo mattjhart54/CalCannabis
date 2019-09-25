@@ -17,6 +17,9 @@ try{
 			logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
 		}
 	}
+// Copy business contact from license
+	copyContactsByType(vLicenseID,capId,"Business");
+// Add condition effective in thirty days if Late Fee not paid	
 	var feeDesc = AInfo["License Type"] + " - Late Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 	if(thisFee){
@@ -29,6 +32,7 @@ try{
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
+// Invoice all fees if cash payment selected art submission
 	var feeDesc = AInfo["License Type"] + " - Renewal Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 	if(thisFee){
