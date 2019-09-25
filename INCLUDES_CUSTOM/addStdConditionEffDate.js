@@ -1,4 +1,4 @@
-function addStdConditionEffDate(cType, cDesc,effDate) // optional cap ID
+function addStdConditionEffDate(cType, cDesc, effDate) // optional cap ID
 {
 	var itemCap = capId;
 	
@@ -15,7 +15,7 @@ function addStdConditionEffDate(cType, cDesc,effDate) // optional cap ID
 			{
 				standardCondition = standardConditions[i];
 				if(!matches(effDate,null,"",undefined)) {
-					var eDate = new Date(effDate);
+					var eDate = aa.date.parseDate(effDate);
 				}
 				else {
 					var eDate = sysDate;
@@ -29,4 +29,5 @@ function addStdConditionEffDate(cType, cDesc,effDate) // optional cap ID
 				}
 			}
 	}
-}
+}	
+function getRenewalCapByPa
