@@ -25,7 +25,7 @@ try{
 	if(thisFee){
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
 		if(hasFee) {
-			effDate = dateAdd(jsDateToMMDDYYYY(new Date()),30);
+			effDate = dateAdd(AInfo["Expiration Date"]),30);
 			addStdConditionEffDate("Application Condition", "Application Hold",effDate);
 		}
 	}else{
