@@ -260,6 +260,14 @@ try{
 			aa.expiration.editB1Expiration(b1Exp.getB1Expiration());
 			logDebug("Update expiration status: " + newExpStatus);
 		}
+		if(newExpStatus == "Expired") {
+			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
+			if (renewalCapProject != null) {
+				renewalCapProject.setStatus("Complete");
+				renewalCapProject.setRelationShip("R");  // move to related records
+				aa.cap.updateProject(renewalCapProject);
+			}
+		}
 	// update CAP status
 		if (newAppStatus.length > 0) {
             updateAppStatus(newAppStatus, "");
