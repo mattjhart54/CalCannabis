@@ -3,10 +3,14 @@ try {
 		// Copy custom fields from the license record to the parent record
 		holdId = capId;
 		pIds = getParents("Licenses/Cultivator/License/License");
-		if(matches(pIds,null,'',undefined))
+		if(matches(pIds,null,'',undefined)) {
 			capId = parentCapId;
-		else
+		}
+		else {
 			capId = pIds[0];
+			parentAltId = capId.getCustomID();
+			editAppSpecific("License Number",parentAltId,holdId);
+		}
 		updateCat = false;
 		if(!matches(AInfo["CA Update"],null,"",undefined))
 			editAppSpecific("Cooperative Association",AInfo["CA Update"]);
