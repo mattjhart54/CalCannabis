@@ -1,8 +1,11 @@
 try {
 	if(wfStatus == "Amendment Approved") {
 		pIds = getParents("Licenses/Cultivator/License/License");
-		if(!matches(pIds,null,'',undefined))
+		if(!matches(pIds,null,'',undefined)) {
 			parentCapId = pIds[0];
+			parentAltId = parentCapId.getCustomID();
+			editAppSpecific("License Number",parentAltId);
+		}
 		if (typeof(OWNERS) == "object") {
 			for(o in OWNERS) {
 				var ownEmail = ""+ OWNERS[o]["Email Address"];
