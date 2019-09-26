@@ -23,8 +23,11 @@ try {
 					var amendAddressList = aa.address.getContactAddressListByCapContact(amendCont);
 					var amendAddressModelArr = convertContactAddressModelArr(amendAddressList.getOutput());
 					pIds = getParents("Licenses/Cultivator/License/License");
-					if(!matches(pIds,null,'',undefined))
+					if(!matches(pIds,null,'',undefined)) {
 						parentCapId = pIds[0];
+						parentAltId = parentCapId.getCustomID();
+						editAppSpecific("License Number",parentAltId);
+					}
 					var licContactResult = aa.people.getCapContactByCapID(parentCapId);
 					if (licContactResult.getSuccess()){
 						var licContacts = licContactResult.getOutput();
