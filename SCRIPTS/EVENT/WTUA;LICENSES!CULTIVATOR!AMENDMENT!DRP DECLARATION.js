@@ -1,8 +1,11 @@
 try {
 	if(wfStatus == "Amendment Approved") {
 		pIds = getParents("Licenses/Cultivator/License/License");
-		if(!matches(pIds,null,'',undefined))
+		if(!matches(pIds,null,'',undefined)) {
 			parentCapId = pIds[0];
+			parentAltId = parentCapId.getCustomID();
+			editAppSpecific("License Number",parentAltId);
+		}
 		var drpEmail = AInfo["DRP Email Address"];
 		drpEmail = drpEmail.toUpperCase();
 		if(AInfo["Change DRP"] == "Yes") {
