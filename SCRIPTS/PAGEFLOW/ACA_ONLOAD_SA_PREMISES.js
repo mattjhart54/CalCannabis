@@ -1,6 +1,6 @@
 /*
 | Program : ACA_ONLOAD_SA_PREMISES.js
-| Event   : ACA Page Flow onload ASI Component Premises
+| Event   : ACA Page Flow onload ASI Components
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
 |
@@ -75,11 +75,15 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 
 try{
-	var parCapId = getParent();
-	if(parCapId){
+	var capId = cap.getCapID();
+	var AInfo = [];
+	loadAppSpecific4ACA(AInfo);
+	var licNbr = AInfo["License Number"];
+	licCapId = licNbr.getCapID();
+	if(licCapId){
 		var currCap = capId; 
-		capId = parCapId;
-		logDebug("capId: " + parCapId);
+		capId = licCapId;
+		logDebug("licCapId: " + licCapId);
 		PInfo = new Array;
 		loadAppSpecific(PInfo);
 		capId = currCap;
@@ -100,7 +104,7 @@ try{
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_SA_PREMISES: Main function: " + err.message + br + err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_OWNER_AMEND_DEFICIENCIES: Main function: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_SA_PREMISES: Main function: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 
 // page flow custom code end
