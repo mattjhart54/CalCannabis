@@ -76,7 +76,7 @@ try {
 		addParameter(eParams, "$$parentId$$", parentAltId);
 		var rFiles = [];
 		var priEmail = ""+priContact.capContact.getEmail();
-		sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_SUBMISSION",eParams, rFiles,capId)
+		sendNotification(sysFromEmail,priEmail,"","LCA_SCIENCE_AMENDMENT_SUBMITTED",eParams, rFiles,capId)
 	//	emailRptContact("", "LCA_AMENDMENT_SUBMISSION", "", false, capStatus, capId, "Designated Responsible Party");
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 		if(!matches(priChannel, "",null,"undefined", false)){
