@@ -61,9 +61,8 @@ function copyASITables4ACA(pFromCapId, pToCapId) {
 
 			tempArray.push(tempObject); // end of record
 		}
-		pToCap = aa.cap.getCap(pToCapId).getOutput();
-		var asit = pToCap.getAppSpecificTableGroupModel();
-		addASITable4ACAPageFlow(asit, tableName, tableValueArray,pToCapId)
+		var asit = cap.getAppSpecificTableGroupModel();
+		addASITable4ACAPageFlow(asit, tn, tempArray,pToCapId)
 //		addASITable(tn, tempArray, pToCapId);
 		logDebug("ASI Table Array : " + tn + " (" + numrows + " Rows)");
 	}
