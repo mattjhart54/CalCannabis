@@ -88,18 +88,18 @@ try{
 		loadAppSpecific(PInfo);
 		capId = currCap;
 		editAppSpecific4ACA("Premise Address", PInfo["Premise Address"]);
-		editAppSpeceditAppSpecific4ACAific("Premise City",PInfo["Premise City"]);
-		editAppSpeeditAppSpecific4ACAcific("Premise State",PInfo["Premise State"]);
-		editAppSpeeditAppSpecific4ACAcific("Premise Zip",PInfo["Premise Zip"]);
-		editAppSpeeditAppSpecific4ACAcific("Premise County",PInfo["Premise County"]);
-		editAppSpeceditAppSpecific4ACAific("APN",PInfo["APN"]);
-		editAppSpeceditAppSpecific4ACAific("Grid",PInfo["Grid"]);
-		editAppSpecieditAppSpecific4ACAfic("Solar",PInfo["Solar"]);
-		editAppSpeceditAppSpecific4ACAific("Generator",PInfo["Generator"]);
-		editAppSpecieditAppSpecific4ACAfic("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
-		editAppSpecieditAppSpecific4ACAfic("Other",PInfo["Other"]);
-		editAppSpecieditAppSpecific4ACAfic("Other Source Description",PInfo["Other Source Description"]);
-		copyASITables(parentId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
+		editAppSpecific4ACA("Premise City",PInfo["Premise City"]);
+		editAppSpecific4ACA("Premise State",PInfo["Premise State"]);
+		editAppSpecific4ACA("Premise Zip",PInfo["Premise Zip"]);
+		editAppSpecific4ACA("Premise County",PInfo["Premise County"]);
+		editAppSpecific4ACA("APN",PInfo["APN"]);
+		editAppSpecific4ACA("Grid",PInfo["Grid"]);
+		editAppSpecific4ACA("Solar",PInfo["Solar"]);
+		editAppSpecific4ACA("Generator",PInfo["Generator"]);
+		editAppSpecific4ACA("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
+		editAppSpecific4ACA("Other",PInfo["Other"]);
+		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
+		copyASITables(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
 	}
 } catch (err) {
 	showDebug =true;
