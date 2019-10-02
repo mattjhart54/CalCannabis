@@ -87,6 +87,7 @@ try{
 		PInfo = new Array;
 		loadAppSpecific(PInfo);
 		capId = currCap;
+		logDebug("APN " + PInfo["APN"]);
 		editAppSpecific4ACA("Premise Address", PInfo["Premise Address"]);
 		editAppSpecific4ACA("Premise City",PInfo["Premise City"]);
 		editAppSpecific4ACA("Premise State",PInfo["Premise State"]);
