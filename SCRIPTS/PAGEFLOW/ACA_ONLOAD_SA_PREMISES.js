@@ -100,7 +100,7 @@ try{
 		editAppSpecific4ACA("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
 		editAppSpecific4ACA("Other",PInfo["Other"]);
 		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
-		copyASITables(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
+		copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
 	}
 } catch (err) {
 	showDebug =true;
