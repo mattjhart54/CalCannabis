@@ -78,29 +78,31 @@ try{
 	var capId = cap.getCapID();
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
-	var licNbr = AInfo["License Number"];
-	licCapId = aa.cap.getCapID(licNbr).getOutput();
-	if(licCapId){
-		var currCap = capId; 
-		capId = licCapId;
-		logDebug("licCapId: " + licCapId);
-		PInfo = new Array;
-		loadAppSpecific(PInfo);
-		capId = currCap;
-		logDebug("APN " + PInfo["APN"]);
-		editAppSpecific4ACA("Premise Address", PInfo["Premise Address"]);
-		editAppSpecific4ACA("Premise City",PInfo["Premise City"]);
-		editAppSpecific4ACA("Premise State",PInfo["Premise State"]);
-		editAppSpecific4ACA("Premise Zip",PInfo["Premise Zip"]);
-		editAppSpecific4ACA("Premise County",PInfo["Premise County"]);
-		editAppSpecific4ACA("APN",PInfo["APN"]);
-		editAppSpecific4ACA("Grid",PInfo["Grid"]);
-		editAppSpecific4ACA("Solar",PInfo["Solar"]);
-		editAppSpecific4ACA("Generator",PInfo["Generator"]);
-		editAppSpecific4ACA("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
-		editAppSpecific4ACA("Other",PInfo["Other"]);
-		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
-		copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
+	logDebug("APN " + AInfo["APN"]);
+	if(!matches(AInfo["APN"] ,null,"",undefined)) {
+		var licNbr = AInfo["License Number"];
+		licCapId = aa.cap.getCapID(licNbr).getOutput();
+		if(licCapId){
+			var currCap = capId; 
+			capId = licCapId;
+			logDebug("licCapId: " + licCapId);
+			PInfo = new Array;
+			loadAppSpecific(PInfo);
+			capId = currCap;
+			editAppSpecific4ACA("Premise Address", PInfo["Premise Address"]);
+			editAppSpecific4ACA("Premise City",PInfo["Premise City"]);
+			editAppSpecific4ACA("Premise State",PInfo["Premise State"]);
+			editAppSpecific4ACA("Premise Zip",PInfo["Premise Zip"]);
+			editAppSpecific4ACA("Premise County",PInfo["Premise County"]);
+			editAppSpecific4ACA("APN",PInfo["APN"]);
+			editAppSpecific4ACA("Grid",PInfo["Grid"]);
+			editAppSpecific4ACA("Solar",PInfo["Solar"]);
+			editAppSpecific4ACA("Generator",PInfo["Generator"]);
+			editAppSpecific4ACA("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
+			editAppSpecific4ACA("Other",PInfo["Other"]);
+			editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
+			copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
+		}
 	}
 } catch (err) {
 	showDebug =true;
