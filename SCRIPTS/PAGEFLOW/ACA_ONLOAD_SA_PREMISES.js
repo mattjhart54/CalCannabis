@@ -79,7 +79,7 @@ try{
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	var licNbr = AInfo["License Number"];
-	licCapId = licNbr.getCapID();
+	licCapId = aa.cap.getCapID(licNbr).getOutput();
 	if(licCapId){
 		var currCap = capId; 
 		capId = licCapId;
