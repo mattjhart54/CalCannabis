@@ -79,7 +79,7 @@ try{
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	logDebug("APN " + AInfo["APN"]);
-	if(!matches(AInfo["APN"] ,null,"",undefined)) {
+	if(matches(AInfo["APN"] ,null,"",undefined)) {
 		var licNbr = AInfo["License Number"];
 		licCapId = aa.cap.getCapID(licNbr).getOutput();
 		if(licCapId){
