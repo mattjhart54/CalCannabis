@@ -43,12 +43,12 @@ function getMasterScriptText(vScriptName) {
 }
 try{
 /*---------------------------------------
-	aa.env.setValue("licCap", "PAL18-0002117");
-	aa.env.setValue("appCap", "LCA18-0002117");
+	aa.env.setValue("licCap", "CAL18-0000143");
+	aa.env.setValue("appCap", "CAL18-0000143-SA001");
 	aa.env.setValue("currentUserID", "ADMIN");
 	aa.env.setValue("reportName", "Official License Certificate");
 	aa.env.setValue("contType", "Designated Responsible Party");
-	aa.env.setValue("licType", "Annual");
+	aa.env.setValue("licType", "Transition");
 	aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov");
 */
 	var reportName = "" + aa.env.getValue("reportName");
@@ -119,6 +119,11 @@ try{
 			if(licType=="Renewal") {
 				reportName = "Approval Letter Renewal"
 				var emailTemplate = "LCA_RENEWAL_APPROVAL"
+			}else {
+				if(licType=="Transition") {
+					reportName = "Amendment Approval - Transition"
+					var emailTemplate = "LCA_TRANSITION_APPROVAL"
+				}
 			}
 		}
 	}
