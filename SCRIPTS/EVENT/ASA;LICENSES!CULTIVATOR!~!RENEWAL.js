@@ -10,7 +10,6 @@ try{
 	var parentAltId = parentCapId.getCustomID();
 	pCap = aa.cap.getCap(parentCapId).getOutput();
 	var pStatus = pCap.getCapStatus();
-	aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY ASA:LICENSES/CULTIVATOR/* /RENEWAL: Submission: "+ startDate, capId + br + parentCapId + br + parentAltId + br + currEnv);
 	//1. Check to see if license is ready for renew
 	if (isRenewProcess(parentCapId, partialCapId)){
 		logDebug("CAPID(" + parentCapId + ") is ready for renew. PartialCap (" + partialCapId + ")");
