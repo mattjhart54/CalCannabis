@@ -891,7 +891,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters 
+// test parameters 
 
  
 aa.env.setValue("lookAheadDays", "-465");
@@ -902,14 +902,14 @@ aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "oclcdfa");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
-aa.env.setValue("recordSubType", "Temporary,Adult Use, Medical");
+aa.env.setValue("recordSubType", "License");
 aa.env.setValue("recordCategory", "License,Provisional");
 aa.env.setValue("licenseContactType", "Designated Responsible Party");
 aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
 aa.env.setValue("appStatus", "Active,Inactive");
-*/
+//
  
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
@@ -1091,20 +1091,22 @@ try{
 		appTypeResult = cap.getCapType();	
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
-	//	logDebug("Processing altId: " + altId);
+		var AInfo = [];
+		loadAppSpecific(AInfo);
+		logDebug("Processing altId: " + altId);
 		var rptLine = "";
 		//not all  custom fields are on the license, so pulling from application
-		var arrChild = getChildrenB("Licenses/Cultivator/*/Application", capId);
-		if(arrChild){
-			if(arrChild.length>0){
-				//assuming one child
-				var currCap = capId;
-				capId = arrChild[0];
-				var AInfo = [];
-				loadAppSpecific(AInfo);
-				capId = currCap;
-			}
-		}
+//		var arrChild = getChildrenB("Licenses/Cultivator/*/Application", capId);
+//		if(arrChild){
+//			if(arrChild.length>0){
+//				//assuming one child
+//				var currCap = capId;
+//				capId = arrChild[0];
+//				var AInfo = [];
+//				loadAppSpecific(AInfo);
+//				capId = currCap;
+//			}
+//		}
 		var licLine = "";
 		var capContactResult = aa.people.getCapContactByCapID(capId);
 		if (capContactResult.getSuccess()){
@@ -1381,9 +1383,9 @@ try{
 		//business contact info
 		rptLine +=bsnsLine;
 		//effective date of license
-		var lAinfo = [];
-		loadAppSpecific(lAinfo);
-		var lEffDate = lAinfo["Valid From Date"];
+//		var lAinfo = [];
+//		loadAppSpecific(lAinfo);
+		var lEffDate = AInfo["Valid From Date"];
 		if(!matches(lEffDate,null,"", "undefined")){
 			rptLine += ""+lEffDate.substr(6,4) + lEffDate.substr(0,2) + lEffDate.substr(3,2);
 		}else{
@@ -1425,17 +1427,9 @@ try{
 		}
 		//sic: never collected
 		rptLine += spacePad("9999",4);
-		//type of license--unknown how to populate at this time
 		//rptLine += spacePad("",4);	// comment out to set license type code per list provided--EES
-		/*
-		Licenses/Cultivator/Temporary/License code is TCL 
-		Licenses/Cultivator/Adult Use/License code is ACL
-		Licenses/Cultivator/Medical/License code is MCL
-		Licenses/Cultivator/Adult Use/Provisional code is PACL 
-		Licenses/Cultivator/Medical/Provisional code is PMCL
-		*/
 		// Start set the license type code for FTB--EES
-		var licType = "";
+		var licType = "    ";
 		if (appTypeArray[2] == "Temporary") {
 			licType = "TCL ";	
 		}
@@ -1451,7 +1445,7 @@ try{
               if (AInfo["Cultivator Type"] == "Medicinal" && AInfo["License Issued Type"] == "Provisional") {
                      licType = "PMCL";
               }
-
+// logDebug(altId + " License Type " + licType + " " + AInfo["License Issued Type"] + " " + AInfo["Cultivator Type"]);
 		rptLine += licType;		
 		// End set the license type code for FTB--EES
 
