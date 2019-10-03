@@ -615,8 +615,6 @@ try{
 		if (appTypeArray[2] == "Temporary") {
 			licType = "TCL ";	
 		}
-		
-// IS Story 6212		
 		if (AInfo["Cultivator Type"] == "Adult-Use" && AInfo["License Issued Type"] == "Annual") {
                      licType = "ACL ";
               }
