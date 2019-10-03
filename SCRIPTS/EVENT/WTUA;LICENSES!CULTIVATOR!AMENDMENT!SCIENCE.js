@@ -43,6 +43,7 @@ try {
 		}
 		if(AInfo["Transition"] == "Yes") {
 			editAppSpecific("License Issued Type", "Annual",parentCapId);
+			editAppSpecific("Transition Date",jsDateToASIDate(new Date()));
 			updateCat = true;
 		}
 		removeASITable("Premises Addresses",parentCapId);
@@ -141,7 +142,7 @@ try {
 			addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 			var priEmail = ""+priContact.capContact.getEmail();
 			var rFiles = [];
-			sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_REJECTED",eParams, rFiles,capId);
+			sendNotification(sysFromEmail,priEmail,"","LCA_SCIENCE_AMENDMENT_REJECTED",eParams, rFiles,capId);
 	//		emailRptContact("", "LCA_AMENDMENT_APPROVAL", "", false, capStatus, capId, "Designated Responsible Party");
 			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 			if(!matches(priChannel, "",null,"undefined", false)){
