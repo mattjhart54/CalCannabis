@@ -96,6 +96,6 @@ try {
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/AMENDMENT/ADMINISTRATIVE: " + err.message);
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/AMENDMENT/SCIENCE: " + err.message);
 	logDebug(err.stack);
 }
