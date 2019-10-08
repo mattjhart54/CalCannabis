@@ -1,4 +1,44 @@
 try {
+		if(publicUser) {
+		//	var parentCapString = "" + aa.env.getValue("ParentCapID");
+		//	parentArray = parentCapString.split("-");
+		//	parentCapId = aa.cap.getCapID(parentArray[0], parentArray[1], parentArray[2]).getOutput();
+			var parentAltId = parentCapId.getCustomID();
+			pCap = aa.cap.getCap(parentCapId).getOutput();
+			PInfo = new Array;
+			loadAppSpecific(PInfo,parentCapId); 
+			editAppSpecific("License Number",parentAltId);
+			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
+			if (b1ExpResult.getSuccess()) {
+				this.b1Exp = b1ExpResult.getOutput();
+				expDate = this.b1Exp.getExpDate();	
+				if(expDate) {
+					tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+					editAppSpecific("License Expiration Date", tmpExpDate);
+				}
+			}
+			var priContact = getContactObj(parentCapId,"Designated Responsible Party");
+			if(priContact){
+				editAppSpecific("DRP First Name", priContact.capContact.firstName);
+				editAppSpecific("DRP Last Name", priContact.capContact.lastName);
+				editAppSpecific("DRP Email Address", priContact.capContact.email);
+			}
+			editAppSpecific("Premise City",PInfo["Premise City"]);
+			editAppSpecific("Premise State",PInfo["Premise State"]);
+			editAppSpecific("Premise Zip",PInfo["Premise Zip"]);
+			editAppSpecific("Premise County",PInfo["Premise County"]);
+			editAppSpecific("APN",PInfo["APN"]);
+			editAppSpecific("Grid",PInfo["Grid"]);
+			editAppSpecific("Solar",PInfo["Solar"]);
+			editAppSpecific("Generator",PInfo["Generator"]);
+			editAppSpecific("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
+			editAppSpecific("Other",PInfo["Other"]);
+			editAppSpecific("Other Source Description",PInfo["Other Source Description"]);
+			copyASITables(parentCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
+			editAppName(PInfo["License Type"]);
+			updateShortNotes(getShortNotes(parentCapId));
+			updateWorkDesc(workDescGet(parentCapId));
+		}
 	if(!publicUser){
 // Link Amendment record to License reord as a child
 		var parentAltId = AInfo["License Number"];
