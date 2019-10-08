@@ -81,7 +81,8 @@ try{
 	logDebug("APN " + AInfo["APN"]);
 	if(matches(AInfo["APN"] ,null,"",undefined)) {
 		var licNbr = AInfo["License Number"];
-		licCapId = aa.cap.getCapID(licNbr).getOutput();
+//		licCapId = aa.cap.getCapID(licNbr).getOutput();
+		licCapId = parentCapId;
 		if(licCapId){
 			var currCap = capId; 
 			capId = licCapId;
