@@ -106,6 +106,7 @@ try{
 					editAppSpecific4ACA("License Expiration Date", tmpExpDate);
 				}
 			}
+			editAppSpecific4ACA("License Issued Type", PInfo["License Issued Type"]);
 			editAppSpecific4ACA("Premise Address", PInfo["Premise Address"]);
 			editAppSpecific4ACA("Premise City",PInfo["Premise City"]);
 			editAppSpecific4ACA("Premise State",PInfo["Premise State"]);
