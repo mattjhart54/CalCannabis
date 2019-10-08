@@ -91,6 +91,21 @@ try{
 			loadAppSpecific(PInfo);
 			capId = currCap;
 			editAppSpecific4ACA("License Number", parentCapId.getCustomID());
+			var priContact = getContactObj(parentCapId,"Designated Responsible Party");
+			if(priContact){
+				editAppSpecific4ACA("DRP First Name",priContact.capContact.firstName);
+				editAppSpecific4ACA("DRP Last Name",priContact.capContact.lastName);
+				editAppSpecific4ACA("DRP Email Address",priContact.capContact.email);
+			}
+			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
+			if (b1ExpResult.getSuccess()) {
+				this.b1Exp = b1ExpResult.getOutput();
+				expDate = this.b1Exp.getExpDate();	
+				if(expDate) {
+					tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+					editAppSpecific4ACA("License Expiration Date", tmpExpDate);
+				}
+			}
 			editAppSpecific4ACA("Premise Address", PInfo["Premise Address"]);
 			editAppSpecific4ACA("Premise City",PInfo["Premise City"]);
 			editAppSpecific4ACA("Premise State",PInfo["Premise State"]);
