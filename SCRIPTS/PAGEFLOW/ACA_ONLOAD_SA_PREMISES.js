@@ -80,7 +80,7 @@ try{
 	loadAppSpecific4ACA(AInfo);
 	logDebug("APN " + AInfo["APN"]);
 	if(matches(AInfo["APN"] ,null,"",undefined)) {
-		var licNbr = AInfo["License Number"];
+//		var licNbr = AInfo["License Number"];
 //		licCapId = aa.cap.getCapID(licNbr).getOutput();
 		licCapId = parentCapId;
 		if(licCapId){
@@ -90,6 +90,7 @@ try{
 			PInfo = new Array;
 			loadAppSpecific(PInfo);
 			capId = currCap;
+			editAppSpecific4ACA("License Number", parentCapId.getCustomID());
 			editAppSpecific4ACA("Premise Address", PInfo["Premise Address"]);
 			editAppSpecific4ACA("Premise City",PInfo["Premise City"]);
 			editAppSpecific4ACA("Premise State",PInfo["Premise State"]);
