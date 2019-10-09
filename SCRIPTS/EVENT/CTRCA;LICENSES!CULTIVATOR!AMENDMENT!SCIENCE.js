@@ -32,7 +32,7 @@ try {
 	copyContactsByType_rev(parentId,capId,"Designated Responsible Party");
 	var lType = getAppSpecific("License Type",parentId);
 	var iType = getAppSpecific("License Issued Type",parentId);
-	var cType = getAppSpecific("Cultivator Type",paerntId);
+	var cType = getAppSpecific("Cultivator Type",parentId);
 	editAppName(iType + " " + cType + " - " + lType);
 	updateShortNotes(getShortNotes(parentId));
 	updateWorkDesc(workDescGet(parentId));
