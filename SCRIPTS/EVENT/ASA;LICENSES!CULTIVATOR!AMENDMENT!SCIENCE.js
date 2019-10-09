@@ -36,6 +36,7 @@ try {
 		PInfo = new Array;
 		loadAppSpecific(PInfo);
 		capId = holdId;
+		editAppSpecific("License Issued Type", PInfo["License Issued Type"]);
 		editAppSpecific("Premise Address",PInfo["Premise Address"]);
 		editAppSpecific("Premise City",PInfo["Premise City"]);
 		editAppSpecific("Premise State",PInfo["Premise State"]);
