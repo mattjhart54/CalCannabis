@@ -88,6 +88,8 @@ try {
 			if(wfStatus == "Transition Amendment Approved") {
 				if(AInfo["Transition"] == "Yes") {
 					editAppSpecific("License Issued Type", "Annual",parentCapId);
+					var licType = getAppSpecific("License Type",parentCapId)
+					editAppName("Annual - " + licType,parentCapId);
 					editAppSpecific("Transition Date",jsDateToASIDate(new Date()));
 					updateCat = true;
 				}
