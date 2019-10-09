@@ -28,7 +28,7 @@ try {
 			editAppSpecific("APN",AInfo["APN Update"],parentCapId);
 			updateCat = true;
 		}
-		editAppSpecific("Grid",AInfo["Grid Update",parentCapId]);
+		editAppSpecific("Grid",AInfo["Grid Update"],parentCapId);
 		editAppSpecific("Solar",AInfo["Solar Update"],parentCapId);
 		editAppSpecific("Generator",AInfo["Generator Update"],parentCapId);
 		editAppSpecific("Generator Under 50 HP",AInfo["G50 Update"],parentCapId);
