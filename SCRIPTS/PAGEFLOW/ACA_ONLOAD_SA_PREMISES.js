@@ -114,10 +114,15 @@ try{
 			editAppSpecific4ACA("Premise County",PInfo["Premise County"]);
 			editAppSpecific4ACA("APN",PInfo["APN"]);
 			editAppSpecific4ACA("Grid",PInfo["Grid"]);
-			editAppSpecific4ACA("Solar",PInfo["Solar"]);
-			editAppSpecific4ACA("Generator",PInfo["Generator"]);
-			editAppSpecific4ACA("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
-			editAppSpecific4ACA("Other",PInfo["Other"]);
+			editAppSpecific("Grid Update",PInfo["Grid"]);
+			editAppSpecific("Solar",PInfo["Solar"]);
+			editAppSpecific("Solar Update",PInfo["Solar"]);
+			editAppSpecific("Generator",PInfo["Generator"]);
+			editAppSpecific("Generator Update",PInfo["Generator"]);
+			editAppSpecific("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
+			editAppSpecific("G50 Update",PInfo["Generator Under 50 HP"]);
+			editAppSpecific("Other",PInfo["Other"]);
+			editAppSpecific("Other Update",PInfo["Other"]);
 			editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
 			copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
 		}
