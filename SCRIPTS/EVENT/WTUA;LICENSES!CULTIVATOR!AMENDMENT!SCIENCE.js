@@ -6,6 +6,8 @@ try {
 			parentCapId = pIds[0];
 			parentAltId = parentCapId.getCustomID();
 			editAppSpecific("License Number",parentAltId,capId);
+		}else {
+			parentAltId = parentCapId.getCustomID();
 		}
 		var updateCat = false;
 		if(!matches(AInfo["PA Update"],null,"",undefined)) {
