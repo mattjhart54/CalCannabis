@@ -21,6 +21,7 @@ try{
 			loadAppSpecific(pInfo,parentCapId); 
 			editAppSpecific("License Number",parentAltId);
 			editAppSpecific("License Type", pInfo["License Type"]);
+			editAppSpecific("License Issued Type", pInfo["License Issued Type"]);
 			editAppSpecific("Business Name", pInfo["Legal Business Name"]);
 			editAppSpecific("Premises Address", pInfo["Premise Address"]);
 			editAppSpecific("APN", pInfo["APN"]);
