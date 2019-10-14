@@ -93,7 +93,7 @@ try {
 					var licType = getAppSpecific("License Type",parentCapId);
 					var cType = getAppSpecific("Cultivator Type",parentCapId);
 					editAppName("Annual " + cType + " - " + licType,parentCapId);
-					editAppSpecific("Transition Date",jsDateToASIDate(new Date()));
+					editAppSpecific("Transition Date",jsDateToASIDate(new Date()),parentCapId);
 					updateCat = true;
 				}
 				//Run Official License Certificate and Transistion Approval Letter and email the DRP	
