@@ -18,6 +18,7 @@ try{
 		}
 	}
 // Copy business contact from license
+	copyContactsByType(parentCapId,partialCapId,"Designated Responsible Party");
 	copyContactsByType(vLicenseID,capId,"Business");
 // Add condition effective in thirty days if Late Fee not paid	
 	var feeDesc = AInfo["License Type"] + " - Late Fee";
