@@ -78,7 +78,9 @@ aa.env.setValue("recordSubType", "License");
 aa.env.setValue("recordCategory", "License");
 aa.env.setValue("expirationStatus", "About to Expire");
 aa.env.setValue("newExpirationStatus", "Expired");
-aa.env.setValue("newApplicationStatus", "Inactive");
+aa.env.setValue("newApplicationStatus", "Expired");
+aa.env.setValue("workflowTask", "Renewal Review");
+aa.env.setValue("newWorkflowStatus", "Closed");
 aa.env.setValue("createNotifySets", "Y");
 aa.env.setValue("setNonEmailPrefix", "LICENSE_ABOUT_TO_EXPIRE");
 aa.env.setValue("skipAppStatusArray", "Active,Cancelled,Expired,Inactive,Retired,Revoked,Surrendered,Suspended");
@@ -102,6 +104,8 @@ var appCategory = getJobParam("recordCategory");
 var expStatus = getJobParam("expirationStatus"); //   test for this expiration status
 var newExpStatus = getJobParam("newExpirationStatus"); //   update to this expiration status
 var newAppStatus = getJobParam("newApplicationStatus"); //   update the CAP to this status
+var updWfTask = getJobParam("workflowTask"); //   update this workflow task
+var newWfStatus = getJobParam("newWorkflowStatus"); //   update the workflow task to this status
 var setPrefix = getJobParam("setNonEmailPrefix");
 var gracePeriodDays = getJobParam("gracePeriodDays"); //	bump up expiration date by this many days
 var skipAppStatusArray = getJobParam("skipAppStatus").split(","); //   Skip records with one of these application statuses
@@ -271,6 +275,22 @@ try{
 	// update CAP status
 		if (newAppStatus.length > 0) {
             updateAppStatus(newAppStatus, "");
+		}
+		if(matches(newAppStatus, "Revoked", "Suspended", "Inactive","Expired","Surrendered","Cancelled")){
+			addToCat(capId);
+			logDebug("Record added to CAT set");
+		}
+	// workflow task status
+		if (newWfStatus.length > 0 && updWfTask.length > 0) {		
+			cIds = getChildren("Licenses/Cultivator/License/Renewal",capId);
+			if(cIds.length > 0) {
+				rId = cIds.length-1;
+				holdId = capId;
+				capId = cIds[rId];
+				closeTask(updWfTask,newWfStatus,"Closed by License Expiration Batch Process", "");
+				updateAppStatus(newAppStatus, "");
+				capId = holdId;
+			}
 		}	
 	// Send Notification
 		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
