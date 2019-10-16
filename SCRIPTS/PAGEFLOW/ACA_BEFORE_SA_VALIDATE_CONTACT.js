@@ -86,7 +86,7 @@ try {
 		var priContact = getContactObj(parentCapId,"Designated Responsible Party");
 		if(priContact){
 			var conEmail = priContact.capContact.email;
-			if(!matches(contEmail,"",null,"undefined")){
+			if(!matches(conEmail,"",null,"undefined")){
 				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
 					contactFnd = true;
 				}
