@@ -12,6 +12,7 @@ try{
 			//		return false;
 				}
 			}
+			var capId = aa.cap.getCapID(myCapId).getOutput();
 			logDebug("capId " + capId +" " + capIDString);
 			var addResult = aa.set.add(SET_ID, capId);
 			if (!addResult.getSuccess()) {
