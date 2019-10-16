@@ -87,7 +87,7 @@ try {
 		if(priContact){
 			var conEmail = priContact.capContact.email;
 			if(!matches(conEmail,"",null,"undefined")){
-				if(contEmail.toUpperCase() == currEmail.toUpperCase()){
+				if(conEmail.toUpperCase() == currEmail.toUpperCase()){
 					contactFnd = true;
 				}
 			}
