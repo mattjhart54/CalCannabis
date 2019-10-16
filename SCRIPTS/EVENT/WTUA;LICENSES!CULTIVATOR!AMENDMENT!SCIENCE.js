@@ -48,7 +48,7 @@ try {
 		removeASITable("Source of Water Supply",parentCapId);
 		copyASITables(capId,parentCapId);
 		if(updateCat)
-			addToCat(capId);
+			addToCat(parentCapId);
 //  Send approval email notification to DRP
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){

@@ -67,7 +67,7 @@ try {
 				}
 			}
 	// Add record to the CAT set
-			addToCat(capId);
+			addToCat(vLicenseID);
 		}
 	}
 	if (wfTask == "Renewal Review" && wfStatus == "Denied") {
@@ -94,7 +94,7 @@ try {
 				aa.cap.updateProject(renewalCapProject);
 			}
 	// Add record to the CAT set
-			addToCat(capId);
+			addToCat(vLicenseID);
 		}
 	}
 }catch(err){
