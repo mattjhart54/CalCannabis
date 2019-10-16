@@ -107,52 +107,6 @@ try {
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
-try {
-	//lwacht: 180306: story 5306: don't allow script to run against completed records
-	var capIdStatusClass = getCapIdStatusClass(capId);
-	if(!matches(capIdStatusClass, "COMPLETE")){
-	//lwacht: 180306: story 5306: end
-		var contactList = cap.getContactsGroup();
-		if(contactList != null && contactList.size() > 0){
-			var arrContacts = contactList.toArray();
-			for(var i in arrContacts) {
-				var thisCont = arrContacts[i];
-				var contFirst = thisCont.firstName;
-				var contLast = thisCont.lastName;
-				var contLBN = thisCont.middleName;
-				var contType = thisCont.contactType;
-				if(contType == "Agent for Service of Process") {
-					if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined) ||
-						(matches(contFirst,null,"",undefined) && !matches(contLast,null,"",undefined)) ||
-						(!matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined))){
-							cancel = true;
-							showMessage = true;
-							logMessage("The Agent for Process of Service must have a First and Last Name or Legal Business Name.  Please edit the Agent for Service of Process contact.");	
-					}
-				}
-				//mhart - added check to validate required fields completed as expressions not always firing
-				if(contType == "Business") {
-					if(matches(contFirst,null,"",undefined) || matches(contLast,null,"",undefined) || matches(contLBN,null,"",undefined)) {
-							cancel = true;
-							showMessage = true;
-							logMessage("The Business must have a First and Last Name and Legal Business Name and the Individual/Organization field must be set to Individual.  Please edit the Business contact to add these fields.");	
-					}
-				}
-				if(contType == "Designated Responsible Party" || contType == "DRP - Temporary License") {
-					if(matches(contFirst,null,"",undefined) || matches(contLast,null,"",undefined)) {
-							cancel = true;
-							showMessage = true;
-							logMessage("The Designated Responsible Party must have a First and Last Name and the Individual/Organization field must be set to Individual.  Please edit the DRP contact to add these fields.");	
-					}
-				}
-			}
-		}
-	}
-}catch (err){
-	logDebug("A JavaScript Error occurred:ACA_BEFORE_VALIDATE_CONTACT: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
 
 function getCapIdStatusClass(inCapId){
     var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
