@@ -12,7 +12,7 @@ try{
 			//		return false;
 				}
 			}
-			logDebug("capId " + capId);
+			logDebug("capId " + capId +" " + capIDString);
 			var addResult = aa.set.add(SET_ID, capId);
 			if (!addResult.getSuccess()) {
 				logDebug("**ERROR: Failed to add [" + capId + "] to " + SET_ID + " set: " + addResult.getErrorMessage());
