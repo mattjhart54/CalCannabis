@@ -73,7 +73,39 @@ var cap = aa.env.getValue("CapModel");
 
 
 // page flow custom code begin
-
+try {
+//	Only allow DRP to process an SA record
+	
+	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+	if(resCurUser.getSuccess()){
+		var contactFnd = false;
+		var currUser = resCurUser.getOutput();
+		var currEmail = currUser.email;
+		var currUserID = currUser.fullName;
+		var priContact = getContactObj(parentCapId,"Designated Responsible Party");
+		if(priContact){
+			var conEmail = priContact.capContact.email;
+			if(!matches(conEmail,"",null,"undefined")){
+				if(conEmail.toUpperCase() == currEmail.toUpperCase()){
+					contactFnd = true;
+				}
+			}
+		}
+		if(!contactFnd){
+			cancel = true;
+			showMessage = true;
+			logMessage("  Warning: Only the Designated Responsible party can submit a science amendment.");
+		}	
+	}
+	else{
+		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_SA_PREMISE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
+	}
+}catch (err){
+	logDebug("A JavaScript Error occurred:ACA_ONLOAD_SA_PREMISE: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_SA_PREMISE: Validate DRP " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
 try{
 	var capId = cap.getCapID();
 	var AInfo = [];
@@ -129,8 +161,8 @@ try{
 	}
 } catch (err) {
 	showDebug =true;
-	logDebug("An error has occurred in ACA_ONLOAD_SA_PREMISES: Main function: " + err.message + br + err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_SA_PREMISES: Main function: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	logDebug("An error has occurred in ACA_ONLOAD_SA_PREMISES: Load Data: " + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_SA_PREMISES: Load Date: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 
 // page flow custom code end
