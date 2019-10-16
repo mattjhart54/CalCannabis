@@ -2,6 +2,7 @@
 try{
 	if (appTypeArray[2] != "Temporary") {
 		if(matches(appStatus, "Cancelled","Expired","Revoked","Surrendered", "Suspended", "Inactive")){
+			var capId = aa.cap.getCapID(capIDString).getOutput();
 			addToCat(capId);
 		}
 	}
