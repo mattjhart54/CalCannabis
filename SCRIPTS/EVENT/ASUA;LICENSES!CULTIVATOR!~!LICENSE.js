@@ -2,26 +2,10 @@
 try{
 	if (appTypeArray[2] != "Temporary") {
 		if(matches(appStatus, "Cancelled","Expired","Revoked","Surrendered", "Suspended", "Inactive")){
-	//		addToCat(capId);
-			var SET_ID = 'CAT_UPDATES';
-			var theSetResult = aa.set.getSetByPK(SET_ID);
-			if (!theSetResult.getSuccess()) {
-				theSetResult = aa.set.createSet(SET_ID, SET_ID, null, null);
-				if (!theSetResult.getSuccess()) {
-					logDebug("**ERROR: Failed to create " + SET_ID + " set: " + createResult.getErrorMessage());
-			//		return false;
-				}
-			}
 			var capId = aa.cap.getCapID(capIDString).getOutput();
-			logDebug("capId " + capId +" " + capIDString);
-			var addResult = aa.set.add(SET_ID, capId);
-			if (!addResult.getSuccess()) {
-				logDebug("**ERROR: Failed to add [" + capId + "] to " + SET_ID + " set: " + addResult.getErrorMessage());
-			//	return false;
-			}
+			addToCat(capId);
 		}
 	}
-
 }catch(err){
 	logDebug("An error has occurred in ASUA:LICENSES/CULTIVATOR/*/LICENSE: Adding to CAT Set: " + err.message);
 	logDebug(err.stack);
