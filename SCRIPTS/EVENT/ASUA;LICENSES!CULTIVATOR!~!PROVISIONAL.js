@@ -1,7 +1,7 @@
 //Sends license to CAT when status becomes 'Inactive'
 try{
 	if (appTypeArray[2] != "Temporary") {
-		if(matches(appStatus, "Revoked", "Suspended", "Inactive")){
+		if(matches(appStatus, "Cancelled","Expired","Revoked","Surrendered", "Suspended", "Inactive")){
 			addToCat(capId);
 		}
 	}
