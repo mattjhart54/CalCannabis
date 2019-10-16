@@ -1,7 +1,7 @@
 try {
 //MJH 190411 story 5977 - Only License Manager or Legal staff can revoke a license
 	if(appStatus == "Revoked") { 
-		if(!matches(currentUserGroup,"License Manager","Legal Staff")) {
+		if(!matches(currentUserGroup,"LicensesManager","LegalStaff")) {
 			cancel = true;
 			showMessage = true;
 			comment("Only the License Manager or Legal staff can Revoke a license");
