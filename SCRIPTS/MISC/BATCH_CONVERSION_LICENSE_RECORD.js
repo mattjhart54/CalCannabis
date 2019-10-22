@@ -66,7 +66,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters
+// test parameters
 
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sendToEmail", "mhart@trustvip.com"); //ca-licensees@metrc.com
@@ -74,10 +74,10 @@ aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA_purge");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
-aa.env.setValue("testRecord", "");
+aa.env.setValue("testRecord", "CML19-0000392");
 aa.env.setValue("recordSubType", "Medical,Adult Use");
 aa.env.setValue("recordCategory", "License,Provisional");
-*/
+//
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var sysFromEmail = getJobParam("sysFromEmail");
 var sendToEmail = getJobParam("sendToEmail");
@@ -288,6 +288,18 @@ try{
 		rcdsCreated++;
 	
 // Run the official license report
+		var scriptName = "asyncRunConversionCertificate";
+		var envParameters = aa.util.newHashMap();
+		envParameters.put("licStatus", capStatus);
+		envParameters.put("newLicNum",newLicNum);
+		envParameters.put("oldLicNum",altId); 
+		envParameters.put("reportName","Official License Certificate"); 
+		envParameters.put("currentUserID",currentUserID);
+		envParameters.put("contType","Designated Responsible Party");
+		envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+		aa.runAsyncScript(scriptName, envParameters);
+		
+/*		
 		var rFiles = [];
 		if(capStatus == 'Active') {
 			reportResult = aa.reportManager.getReportInfoModelByName("Official License Certificate");
@@ -378,9 +390,8 @@ try{
 		else{
 			logDebug("An error occurred retrieving the contactObj for Designated Responsible Party on record " + altId);
 		}
+*/
 	}	
-
-	
 	
 	logDebug("Total Records qualified : " + capList.length);
 	logDebug("Total Records Created: " + rcdsCreated);
