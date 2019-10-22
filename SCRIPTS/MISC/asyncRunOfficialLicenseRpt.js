@@ -113,7 +113,7 @@ try{
 	if(licType=="annual") {
 		reportName = "Approval Letter"
 	}else {
-		if(licType=="Provisional") {
+		if(licType=="provisional") {
 			reportName = "Approval Letter Provisional"
 		}else {
 			if(licType=="Renewal") {
