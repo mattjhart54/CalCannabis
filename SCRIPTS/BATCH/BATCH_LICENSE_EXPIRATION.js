@@ -76,7 +76,7 @@ aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "License");
 aa.env.setValue("recordCategory", "License");
-aa.env.setValue("expirationStatus", "About to Expire");
+aa.env.setValue("expirationStatus", "About to Expire,Inactive");
 aa.env.setValue("newExpirationStatus", "Expired");
 aa.env.setValue("newApplicationStatus", "Expired");
 aa.env.setValue("workflowTask", "Renewal Review");
@@ -120,7 +120,7 @@ var rptName = getJobParam("reportName");
 if(appTypeType=="*") appTypeType="";
 if(appSubtype=="*")  appSubtype="";
 if(appCategory=="*") appCategory="";
-
+var sArray = getJobParam("expirationStatus").split(",");
 /*----------------------------------------------------------------------------------------------------/
 |
 | End: BATCH PARAMETERS
@@ -178,6 +178,7 @@ try {
 
 function mainProcess() {
 try{
+	var myExp = new Array();
 	var capPermApp = 0;
 	var capFilterType = 0;
 	var capFilterInactive = 0;
@@ -202,15 +203,26 @@ try{
 	if (mi.length < 2)
 		mi = "0" + mi;
 	setPrefix+= ":" + yy + mm + dd + hh + mi;
-
-	var expResult = aa.expiration.getLicensesByDate(expStatus, fromDate, toDate);
-	if (expResult.getSuccess()) {
-		myExp = expResult.getOutput();
-		logDebug("Processing " + myExp.length + " expiration records");
-	} else {
-		logDebug("ERROR: Getting Expirations, reason is: " + expResult.getErrorType() + ":" + expResult.getErrorMessage());
+	
+	for (i in sArray) {
+		var expResult = aa.expiration.getLicensesByDate(sArray[i], fromDate, toDate);
+		if (expResult.getSuccess()) {
+			tempcapList = expResult.getOutput();
+			logDebug("Type count: " + tempcapList.length);
+			if (tempcapList.length > 0) {
+				myExp = myExp.concat(tempcapList);
+			}
+		}else{
+			logDebug("Error retrieving records: " + expResult.getErrorMessage());
+		}
+	}
+	if (myExp.length > 0) {
+		logDebug("Found " + myExp.length + " records to process");
+	}else { 
+		logDebug("No records found to process.") ;
 		return false;
 	}
+		
 	for (thisExp in myExp) // for each b1expiration (effectively, each license app)	
 	{
 		b1Exp = myExp[thisExp];
