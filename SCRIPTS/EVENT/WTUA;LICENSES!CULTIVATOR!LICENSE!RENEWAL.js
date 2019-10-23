@@ -86,7 +86,7 @@ try {
 	// Set license record expiration and status to inactive
 			vLicenseObj = new licenseObject(null, vLicenseID);
 			vLicenseObj.setStatus("Inactive");
-			updateAppStatus("Inactive","License Renewed",vLicenseID);
+	//		updateAppStatus("Inactive","License Renewed",vLicenseID);
 	//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(vLicenseID);
 			if (renewalCapProject != null) {
