@@ -28,6 +28,7 @@ try{
 			editAppSpecific("Cultivator Type", pInfo["Cultivator Type"]);
 	//		editAppSpecific("Parent ID",parentCapId);
 	//		copyContactsByType(parentCapId,partialCapId,"Designated Responsible Party");
+			updateWorkDesc(pInfo["Legal Business Name"]);
 			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
 			if (b1ExpResult.getSuccess()) {
 				this.b1Exp = b1ExpResult.getOutput();
