@@ -14,7 +14,7 @@ try{
 				renewNbr = cIdLen + 1;
 				renewNbr = "0" +  renewNbr;
 			}else {
-				renewNbr = cIdLen;
+				renewNbr = cIdLen + 1;
 			}
 		}
 		newAltId = vLicenseAltId + "-R" + renewNbr;
