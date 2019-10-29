@@ -10,10 +10,12 @@ try{
 			renewNbr = renewNbr = "0" + 1;
 		else {
 			cIdLen = cIds.length 
-			if(cIds.length <= 9)
-				renewNbr = "0" +  cIdLen;
-			else
+			if(cIds.length <= 9) {
+				renewNbr = cIdLen + 1;
+				renewNbr = "0" +  renewNbr;
+			}else {
 				renewNbr = cIdLen;
+			}
 		}
 		newAltId = vLicenseAltId + "-R" + renewNbr;
 		var resAltId = aa.cap.updateCapAltID(capId,newAltId);
