@@ -7,24 +7,31 @@ try {
 // Set alt id the amendment record based on the number of chlild amendments records linked to the license record
 		parentId = aa.cap.getCapID(parentAltId).getOutput();
 		cIds = getChildren("Licenses/Cultivator/Amendment/Science",parentId);
-		if(matches(cIds, null, "", undefined)) {
+		var recCnt = 0;
+		for(x in cIds) {
+			var recId = "" + cIds[x];
+			if(recId.substring(2,5) != "EST") {
+				recCnt++;
+				logDebug("id " + recId.substring(2,5) + " cnt" + recCnt);
+			}
+		}
+		if(matches(cIds, null, "", undefined)) 
 			amendNbr = amendNbr = "00" + 1;
-		}else {
-			cIdLen = cIds.length 
-			if(cIds.length <= 9)
-				amendNbr = "00" +  cIdLen;
+		else {
+			if(recCnt <= 9)
+				amendNbr = "00" +  recCnt;
 			else
-				if(cIds.length <= 99)
-				amendNbr = "0" +  cIdLen;
-			else
-				amendNbr = cIdLen;
+				if(recCnt <= 99)
+					amendNbr = "0" +  recCnt;
+				else
+					amendNbr = recCnt;
 		}
 		newAltId = parentId.getCustomID() + "-SA" + amendNbr;
 		var updateResult = aa.cap.updateCapAltID(capId, newAltId);
 		if (updateResult.getSuccess()) 
 			logDebug("Updated amendment record AltId to " + newAltId + ".");
 		else 
-			logDebug("Error renaming amendment record " + capId);
+			logDebug("Error renaming amendment record " + capId + " to " + newAltId);
 	
 		
 // Copy the Designated resposible Party contact from the License Record to the Amanedment record
