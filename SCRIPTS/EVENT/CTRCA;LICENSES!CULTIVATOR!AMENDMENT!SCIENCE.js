@@ -8,7 +8,7 @@ try {
 	parentId = parentCapId;
 	parentAltId = parentCapId.getCustomID();
 	cIds = getChildren("Licenses/Cultivator/Amendment/Science",parentId);
-	var recCnt = 0;
+	var recCnt = 1;
 	for(x in cIds) {
 		var recId = "" + cIds[x];
 		if(recId.substring(2,5) != "EST") {
@@ -27,7 +27,7 @@ try {
 			else
 				amendNbr = recCnt;
 	}
-	newAltId = parentId.getCustomID() + "-SA" + amendNbr;
+	newAltId = parentAltId + "-SA" + amendNbr;
 	var updateResult = aa.cap.updateCapAltID(capId, newAltId);
 	if (updateResult.getSuccess()) 
 		logDebug("Updated amendment record AltId to " + newAltId + ".");
