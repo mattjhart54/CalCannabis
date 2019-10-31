@@ -1,8 +1,8 @@
 try{
 	if(documentUploadedFrom == "ACA"){
+		cancel = true;		
 		showMessage = true;
-		cancel = true;
-		message = "No documents are allowed to be attached to a License Renewal record";
+		comment("No documents are allowed to be attached to a License Renewal record");
 	}
 }catch(err){
 	logDebug("An error has occurred in DUB:LICENSES/CULTIVATOR/LICENSE/RENEWAL: No Documents: " + err.message);
