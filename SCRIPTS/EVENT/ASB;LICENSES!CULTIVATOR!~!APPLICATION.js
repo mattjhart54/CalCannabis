@@ -62,16 +62,17 @@ try{
 
 try {
 	var envContactList = aa.env.getValue("ContactList");
+	logDebug("Contact list " + envContactList);
 	var capContactArray = envContactList.toArray();
 	if (capContactArray){
-	for (yy in capContactArray){
-		lName = capContactArray[yy].getPeople().lastName;
-		fName = capContactArray[yy].getPeople().firstName;
-		email = capContactArray[yy].getPeople().email;
-		cType = capContactArray[yy].getPeople().contactType;
-		logDebug("Contact " + cType);
+		for (yy in capContactArray){
+			lName = capContactArray[yy].getPeople().lastName;
+			fName = capContactArray[yy].getPeople().firstName;
+			email = capContactArray[yy].getPeople().email;
+			cType = capContactArray[yy].getPeople().contactType;
+			logDebug("Contact " + cType);
+		}
 	}
-}
 /*
 	var applContactResult = aa.people.getCapContactByCapID(capId);
 	if (applContactResult.getSuccess()) {
