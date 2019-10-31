@@ -12,7 +12,8 @@ try{
 	logDebug("An error has occurred in ASUB:LICENSES/CULTIVATOR/TEMPORARY/APPLICATION: Voided Security: " + err.message);
 	logDebug(err.stack);
 }
-*/
+
 		showMessage = true;
 		comment("VOTE FOR PEDRO!");
 		cancel = true;
+*/
