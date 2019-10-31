@@ -61,6 +61,18 @@ try{
 // IAS User Story Prod Defect 6135 - record app, the business, DRP, and ASOP contacts are missing.
 
 try {
+	var envContactList = aa.env.getValue("ContactList");
+	var capContactArray = envContactList.toArray();
+	if (capContactArray){
+	for (yy in capContactArray){
+		lName = capContactArray[yy].getPeople().lastName;
+		fName = capContactArray[yy].getPeople().firstName;
+		email = capContactArray[yy].getPeople().email;
+		cType = capContactArray[yy].getPeople().contactType;
+		logDebug("Contact " + cType);
+	}
+}
+/*
 	var applContactResult = aa.people.getCapContactByCapID(capId);
 	if (applContactResult.getSuccess()) {
 		var applContacts = applContactResult.getOutput();
@@ -91,7 +103,8 @@ try {
 			showMessage=true;
 			comment("No required Agent for Process Service contact has been entered on the application.  Please add before submitting the application");
 		}
-	}	
+	}
+*/
 } catch(err){
 	logDebug("An error has occurred in ASB;LICENSES!CULTIVATOR!~!APPLICATION.js: Check Number of contacts " + err.message);
 	logDebug(err.stack);
