@@ -167,7 +167,21 @@ try {
 function capIdsToLicenseNos(capIdArray) {
     var licenseNoArray = [];
     for (var i = 0, len = capIdArray.length; i < len; i++) {
-        var licenseNo = aa.cap.getCap(capIdArray[i]).getOutput().getCapID().getCustomID();
+    	var licenseNo = aa.cap.getCap(capIdArray[i]).getOutput().getCapID().getCustomID();
+		logDebug("licenseNumber: " + licenseNo);
+		capId = aa.cap.getCapID(capIdArray[i].ID1, capIdArray[i].ID2, capIdArray[i].ID3).getOutput();
+		cap = aa.cap.getCap(capId).getOutput();
+		capStatus = cap.getCapStatus();
+		if(capStatus == "Expired") {
+			var vLicenseObj = new licenseObject(licenseNo);
+			var licExp = vLicenseObj.b1ExpDate;
+			var diff = getDateDiff(licExp);
+//			logDebug("expiration: " + licExp + " days diff " + diff);
+			if(diff < 45) {
+				logDebug("License Ignored");
+				continue;
+			}
+		}
         licenseNoArray.push(licenseNo.toString());
     }
     return licenseNoArray;
