@@ -61,13 +61,13 @@ try{
 				}
 			}
 			
-			if(balanceDue>0 && !isTaskComplete("Renewal Review")){
+			if(balanceDue<=0 && !isTaskComplete("Renewal Review")){
 		activateTask("Renewal Review")
-		updateAppStatus("Payment Pending", "Updated via PRB:LICENSES/CULTIVATOR/*/Renewal.");
+		updateAppStatus("Submitted", "Updated via ASA:LICENSES/CULTIVATOR/*/Renewal.");
 		
 		}else{
 		
-		updateAppStatus("Submitted", "Updated via PRB:LICENSES/CULTIVATOR/*/Renewal.");
+		updateAppStatus("Payment Pending", "Updated via ASA:LICENSES/CULTIVATOR/*/Renewal.");
 	}
 				
 		//5. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
