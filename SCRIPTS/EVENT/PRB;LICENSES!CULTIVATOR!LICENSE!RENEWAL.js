@@ -1,7 +1,7 @@
 try{
 	if(balanceDue>0 && !isTaskComplete("Renewal Review")){
 		activateTask("Renewal Review")
-		updateAppStatus("Payment Pending", "Updated via PRB:LICENSES/CULTIVATOR/*/Renewal.");
+		updateAppStatus("Fee Paid", "Updated via PRB:LICENSES/CULTIVATOR/*/Renewal.");
 		
 		}else{
 		
