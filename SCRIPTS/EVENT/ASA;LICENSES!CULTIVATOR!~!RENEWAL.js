@@ -61,9 +61,6 @@ try{
 				}
 			}
 			
-			
-		
-		updateAppStatus("Pending Payment", "Updated via ASA:LICENSES/CULTIVATOR/*/Renewal.");
 		
 
 				
