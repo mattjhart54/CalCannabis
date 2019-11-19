@@ -60,10 +60,6 @@ try{
 					logDebug("An error occurred retrieving fee item: " + feeDesc);
 				}
 			}
-			
-		
-
-				
 		//5. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
 	//		aa.cap.updateAccessByACA(partialCapId, "N");
 		}else{
