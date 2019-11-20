@@ -41,7 +41,12 @@ try{
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
-// Invoice all fees if cash payment selected art submission
+// Set status and deactivate workflow if fees are due
+	if(balanceDue > 0) {
+		updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
+		deactivateTask("Renewal Review");
+	}
+// Invoice all fees if cash payment selected at submission in ACA
 	var feeDesc = AInfo["License Type"] + " - Renewal Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 	if(thisFee){
