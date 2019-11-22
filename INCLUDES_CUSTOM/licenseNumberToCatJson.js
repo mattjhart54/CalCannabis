@@ -127,7 +127,7 @@ function licenseNumberToCatJson(licenseNumber) {
 	logDebug("PostalCode: " + premiseZip);
 	logDebug("ManagerFirstName: " + drpFirstName);
 	logDebug("ManagerLastName: " + drpLastName);
-	logDebug("SellerPermitNumber: " + apn);
+	logDebug("APN: " + apn);
 	logDebug("SellerPermitNumber: " + sellersPermitNumber);
 	logDebug("------------------------------------------------");
 
