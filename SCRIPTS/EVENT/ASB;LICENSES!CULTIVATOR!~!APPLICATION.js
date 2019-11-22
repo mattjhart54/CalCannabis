@@ -61,33 +61,28 @@ try{
 // IAS User Story Prod Defect 6135 - record app, the business, DRP, and ASOP contacts are missing.
 
 try {
-	var envContactList = aa.env.getValue("ContactList");
-	logDebug("Contact list " + envContactList);
-	var capContactArray = envContactList.toArray();
-	if (capContactArray){
-		for (yy in capContactArray){
-			lName = capContactArray[yy].getPeople().lastName;
-			fName = capContactArray[yy].getPeople().firstName;
-			email = capContactArray[yy].getPeople().email;
-			cType = capContactArray[yy].getPeople().contactType;
-			logDebug("Contact " + cType);
-		}
-	}
-/*
-	var applContactResult = aa.people.getCapContactByCapID(capId);
-	if (applContactResult.getSuccess()) {
-		var applContacts = applContactResult.getOutput();
+	if(publicUser){
 		var cntDRP = false;
 		var cntBusiness =false;
 		var cntASOP = false;
-		for (a in applContacts){
-			logDebug("Contact " + applContacts[a].getCapContactModel().getContactType() + " email " + applContacts[a].getCapContactModel().getEmail());
-			if(applContacts[a].getCapContactModel().getContactType()== "Designated Responsible Party" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
-				cntDRP=true;
-			if(applContacts[a].getCapContactModel().getContactType()== "Business" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
-				cntBusiness=true;
-			if(applContacts[a].getCapContactModel().getContactType()== "Agent for Service of Process" && !matches(applContacts[a].getCapContactModel().getEmail(), null,"",undefined)) 
-				cntASOP=true;	
+			
+		var envContactList = aa.env.getValue("ContactList");
+		logDebug("Contact list " + envContactList);
+		var capContactArray = envContactList.toArray();
+		if (capContactArray){
+			for (yy in capContactArray){
+				p = capContactArray[yy].getPeople();
+				cType = p.getContactType();
+				if(cType == "Designated Responsible Party"){ 
+					cntDRP=true;
+				}
+				if(cType == "Business"){
+					cntBusiness=true;
+				}
+				if(cType == "Agent for Service of Process"){
+					cntASOP=true;
+				}
+			}
 		}
 		if(!cntDRP) {
 			cancel=true;
@@ -104,8 +99,8 @@ try {
 			showMessage=true;
 			comment("No required Agent for Process Service contact has been entered on the application.  Please add before submitting the application");
 		}
-	}
-*/
+	}	
+	
 } catch(err){
 	logDebug("An error has occurred in ASB;LICENSES!CULTIVATOR!~!APPLICATION.js: Check Number of contacts " + err.message);
 	logDebug(err.stack);
