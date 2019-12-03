@@ -27,7 +27,7 @@ try {
 				var expDate = dateAddMonths(null,12);
 				setLicExpirationDate(licCapId,null,expDate,"Active");
 			}
-			closeTask("Application Disposition","License Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
+			
 			var newAltLast = capIDString.substr(3,capIDString.length());
 			var newAltId = "CCL" + newAltLast;
 			var updAltId = aa.cap.updateCapAltID(licCapId,newAltId);
@@ -46,8 +46,10 @@ try {
 			}
 			if(annualLic) {
 				var issueType =  "Annual";
+				closeTask("Application Disposition","License Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
 			} else {
 				var issueType = "Provisional";
+				closeTask("Application Disposition","Provisional License Issued","Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION","");
 			}
 			if(childSupport){
 				var newAppName = "TEMPORARY - " + cultivatorType + " - " + AInfo["License Type"];
