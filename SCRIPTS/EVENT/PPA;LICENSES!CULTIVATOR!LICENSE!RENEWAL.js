@@ -1,6 +1,8 @@
 try{
 	if(balanceDue<=0){
-		updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
+		if (getAppStatus() != "Submitted"){
+			updateAppStatus("Submitted", "Updated via PRA:LICENSES/CULTIVATOR/*/Renewal.");
+		}
 		if(!isTaskComplete("Renewal Review")){
 			activateTask("Renewal Review")
 		}
