@@ -1,9 +1,11 @@
 try{
+// Make the renewal record accessible in ACA	
+	aa.cap.updateAccessByACA(capId,"Y");
+// Update alt id on renewal record
 	vLicenseID = getParentLicenseCapID(capId);
 	vIDArray = String(vLicenseID).split("-");
 	vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
 	if (vLicenseID != null) {
-// Update alt id on renewal record
 		vLicenseAltId = vLicenseID.getCustomID();
 		cIds = getChildren("Licenses/Cultivator/License/Renewal",vLicenseID);
 		if(matches(cIds, null, "", undefined)) 
