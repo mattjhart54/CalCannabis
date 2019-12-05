@@ -29,7 +29,7 @@ var message = "";						// Message String
 var debug = "";							// Debug String
 var br = "<BR>";						// Break Tag
 var emailText = "";
-var catAPIChunkSize = 10;
+
 
 eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 eval(getScriptText("INCLUDES_BATCH"));
@@ -74,7 +74,7 @@ aa.env.setValue("nbrDays", "45")
 var emailAddress = aa.env.getValue("emailAddress"); // email address to send failures
 var baseUrl = aa.env.getValue("baseUrl"); // base url for CAT API
 var apiKey = aa.env.getValue("apiKey"); // key for CAT API
-sysFromEmail = getParam("sysFromEmail");
+var nbrDays = aa.env.getValue("nbrDays");
 var nbrDays = aa.env.getValue("nbrDays");
 
 
@@ -87,6 +87,10 @@ var nbrDays = aa.env.getValue("nbrDays");
 // Your variables go here
 // Ex. var appGroup = getParam("Group");
 //
+var catAPIChunkSize = getParam("chunkSize"); //get Number of records to send to CAT during each iteration
+var SET_ID = getParam("setId"); //Set that records will be processing from
+var sysFromEmail = getParam("sysFromEmail");
+
 /*----------------------------------------------------------------------------------------------------/
 |
 | End: BATCH PARAMETERS
