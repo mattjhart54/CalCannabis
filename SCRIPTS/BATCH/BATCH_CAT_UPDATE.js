@@ -75,7 +75,6 @@ var emailAddress = aa.env.getValue("emailAddress"); // email address to send fai
 var baseUrl = aa.env.getValue("baseUrl"); // base url for CAT API
 var apiKey = aa.env.getValue("apiKey"); // key for CAT API
 var nbrDays = aa.env.getValue("nbrDays");
-var nbrDays = aa.env.getValue("nbrDays");
 
 
 /*----------------------------------------------------------------------------------------------------/
@@ -100,7 +99,6 @@ var sysFromEmail = getParam("sysFromEmail");
 |
 /-----------------------------------------------------------------------------------------------------*/
 logDebug("Start of Job");
-var SET_ID = "CAT_UPDATES";
 
 try {
     var theSet = aa.set.getSetByPK(SET_ID).getOutput();
