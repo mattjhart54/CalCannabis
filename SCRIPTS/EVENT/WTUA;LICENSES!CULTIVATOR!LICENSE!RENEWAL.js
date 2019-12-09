@@ -100,6 +100,7 @@ try {
 	}
 	if (wfTask == "License Manager" && wfStatus == "Revisions Required") {
 		reactivateActiveTasksWithStatus("Recommended for Denial");
+		deactivateTask("License Manager");
 	}			
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/LICENSE/RENEWAL: " + err.message);
