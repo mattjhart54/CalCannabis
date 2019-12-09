@@ -70,7 +70,8 @@ try {
 			addToCat(vLicenseID);
 		}
 	}
-	if (matches(wfTask,"Annual Renewal Review","Provisional Renewal Review") && wfStatus == "Recommended for Denial") {
+	//Removing as per 6355, 6313, 6314, 6315
+	/*if (matches(wfTask,"Annual Renewal Review","Provisional Renewal Review") && wfStatus == "Recommended for Denial") {
 		var vLicenseID;
 		var vIDArray;
 		var renewalCapProject;
@@ -97,7 +98,7 @@ try {
 	// Add record to the CAT set
 			addToCat(vLicenseID);
 		}
-	}
+	}*/
 	if (wfTask == "License Manager" && wfStatus == "Revisions Required") {
 		reactivateActiveTasksWithStatus("Recommended for Denial");
 		deactivateTask("License Manager");
