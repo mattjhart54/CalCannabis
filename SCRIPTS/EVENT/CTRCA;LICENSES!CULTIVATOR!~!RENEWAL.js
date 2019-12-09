@@ -44,15 +44,17 @@ try{
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
 // Set status and deactivate workflow if fees are due
-	if(balanceDue > 0) {
-		if (AInfo["License Issued Type"] == "Provisional") {
-			updateTask("Provisional Renewal Review","In Progress","","");
-		}else{
-			updateTask("Annual Renewal Review","In Progress","","");
-		}
-		updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
+	
+	if (AInfo["License Issued Type"] == "Provisional") {
+		updateTask("Provisional Renewal Review","In Progress","","");
 		deactivateTask("Annual Renewal Review");
+	}else{
+		updateTask("Annual Renewal Review","In Progress","","");
 		deactivateTask("Provisional Renewal Review");
+	}
+	if(balanceDue > 0) {
+		updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
+		deactivateActiveTasks();
 	}
 // Invoice all fees if cash payment selected at submission in ACA
 	var feeDesc = AInfo["License Type"] + " - Renewal Fee";
