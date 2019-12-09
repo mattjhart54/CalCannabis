@@ -12,7 +12,7 @@ function reactivateActiveTasksWithStatus(uStatus,processName) {
         if (fTask.getProcessCode().equals(processName) || processName == null)
             if (fTask.getDisposition() == uStatus) {
                 activateTask(fTask.getTaskDescription());
-                updateTask(fTask.getTaskDescription(),"","","");
+                //updateTask(fTask.getTaskDescription(),"","","");
                 
             }
 
