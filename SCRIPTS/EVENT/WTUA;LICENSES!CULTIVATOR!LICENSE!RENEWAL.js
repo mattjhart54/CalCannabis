@@ -1,5 +1,5 @@
 try {
-	if (wfTask == "Renewal Review" && wfStatus == "Approved") {
+	if (matches(wfTask,"Renewal Review","Annual Renewal Review","Provisional Renewal Review") && wfStatus == "Approved") {
 		var vLicenseID;
 		var vIDArray;
 		var renewalCapProject;
@@ -70,7 +70,7 @@ try {
 			addToCat(vLicenseID);
 		}
 	}
-	if (wfTask == "Renewal Review" && wfStatus == "Denied") {
+	if (matches(wfTask,"Annual Renewal Review","Provisional Renewal Review") && wfStatus == "Recommended for Denial") {
 		var vLicenseID;
 		var vIDArray;
 		var renewalCapProject;
@@ -98,6 +98,9 @@ try {
 			addToCat(vLicenseID);
 		}
 	}
+	if (wfTask == "License Manager" && wfStatus == "Revisions Required") {
+		reactivateActiveTasksWithStatus("Recommended for Denial");
+	}			
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/LICENSE/RENEWAL: " + err.message);
 	logDebug(err.stack);

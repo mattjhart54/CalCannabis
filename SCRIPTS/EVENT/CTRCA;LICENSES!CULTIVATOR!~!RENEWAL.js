@@ -46,7 +46,8 @@ try{
 // Set status and deactivate workflow if fees are due
 	if(balanceDue > 0) {
 		updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
-		deactivateTask("Renewal Review");
+		deactivateTask("Annual Renewal Review");
+		deactivateTask("Provisional Renewal Review");
 	}
 // Invoice all fees if cash payment selected at submission in ACA
 	var feeDesc = AInfo["License Type"] + " - Renewal Fee";
@@ -56,7 +57,8 @@ try{
 		if(hasFee) {
 			var invNbr = invoiceAllFees();
 			updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
-			deactivateTask("Renewal Review");
+			deactivateTask("Annual Renewal Review");
+			deactivateTask("Provisional Renewal Review");
 		}
 	}else{
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
