@@ -81,19 +81,11 @@ try{
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
-			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
-			var contPhone = priContact.capContact.phone1;
-			if(contPhone){
-				var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
-			}else{
-				var fmtPhone = "";
-			}
-			addParameter(eParams, "$$altId$$", newAltId);
-			addParameter(eParams, "$$contactPhone1$$", fmtPhone);
+			addParameter(eParams, "$$altId$$", capId.getCustom());
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$parentId$$", parentAltId);
+			addParameter(eParams, "$$parentId$$", vLicenseAltId);
 			var rFiles = [];
 			var priEmail = ""+priContact.capContact.getEmail();
 			sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_SUBMISSION",eParams, rFiles,capId)
