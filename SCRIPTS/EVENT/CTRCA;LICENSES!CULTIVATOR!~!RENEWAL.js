@@ -76,6 +76,43 @@ try{
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
+	
+	//  Send email notification to DRP
+		var priContact = getContactObj(capId,"Designated Responsible Party");
+		if(priContact){
+			var eParams = aa.util.newHashtable(); 
+			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
+			var contPhone = priContact.capContact.phone1;
+			if(contPhone){
+				var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
+			}else{
+				var fmtPhone = "";
+			}
+			addParameter(eParams, "$$altId$$", newAltId);
+			addParameter(eParams, "$$contactPhone1$$", fmtPhone);
+			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
+			addParameter(eParams, "$$parentId$$", parentAltId);
+			var rFiles = [];
+			var priEmail = ""+priContact.capContact.getEmail();
+			sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_SUBMISSION",eParams, rFiles,capId)
+	
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+			if(!matches(priChannel, "",null,"undefined", false)){
+				if(priChannel.indexOf("Postal") > -1 ){
+					var sName = createSet("Renewal Submission","Renewal Notifications", "New");
+					if(sName){
+						setAddResult=aa.set.add(sName,capId);
+						if(setAddResult.getSuccess()){
+							logDebug(capId.getCustomID() + " successfully added to set " +sName);
+						}else{
+							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+						}
+					}
+				}
+			}
+		}
 
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
