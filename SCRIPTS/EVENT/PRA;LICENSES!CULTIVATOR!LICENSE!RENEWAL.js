@@ -14,6 +14,9 @@ try{
 		}
 		//	6316: If Parent record of Provisional license does not have science Amendment with Status of "Approved for Provisional Renewl" within last year
 		if (AInfo['License Issued Type'] == "Provisional"){
+			var vLicenseID = getParentLicenseCapID(capId);
+			var vIDArray = String(vLicenseID).split("-");
+			var vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
 			var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",vLicenseID);
 			var issueDate = getAppSpecific("Valid From Date",vLicenseID);
 			var approvedRen = false;
