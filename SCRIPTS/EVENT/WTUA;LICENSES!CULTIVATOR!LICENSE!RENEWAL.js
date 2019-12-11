@@ -75,11 +75,19 @@ try {
 				}
 			
 	// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
-			if(priContact){
-				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-				if(!matches(priChannel, "",null,"undefined", false)){
-					if(priChannel.indexOf("Postal") > -1 ){
+		if(priContact){
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+			if(!matches(priChannel, "",null,"undefined", false)){
+				if(priChannel.indexOf("Postal") > -1 ){
+					
+					if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
+					var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
+					
+					}if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
+						var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
+						}
 						
+<<<<<<< HEAD
 						if (wfTask == "Provisional Renewal Review" && wfStatus == "Approved") {
 						var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 						
@@ -94,10 +102,19 @@ try {
 							}else{
 								logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
 							}
+=======
+					if(sName){
+						setAddResult=aa.set.add(sName,vLicenseID);
+						if(setAddResult.getSuccess()){
+							logDebug(capId.getCustomID() + " successfully added to set " +sName);
+						}else{
+							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+>>>>>>> branch 'master' of https://github.com/mattjhart54/CalCannabis.git
 						}
 					}
 				}
 			}
+		}
 	// Add record to the CAT set
 			addToCat(vLicenseID);
 		}
