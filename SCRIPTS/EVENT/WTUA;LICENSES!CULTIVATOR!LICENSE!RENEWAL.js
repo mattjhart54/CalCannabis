@@ -40,7 +40,6 @@ try {
 			
 	//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
 			
-									
 			var scriptName = "asyncRunOfficialLicenseRpt";
 			var envParameters = aa.util.newHashMap();
 			envParameters.put("licType", "Renewal");
@@ -65,33 +64,23 @@ try {
 			var rFiles = [];
 			var priEmail = ""+priContact.priContact.getEmail();
 				
-			if (wfTask == "Provisional Renewal Review" && wfStatus == "Approved") {
-				
-					sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",envParams, rFiles,capId);
+			if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
+				sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",envParams, rFiles,capId);
+			}
+			if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
+				sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_APPROVAL",envParams, rFiles,capId);	
+			}
 			
-			}else if  (wfTask =="Annual Renewal Review" && wfStatus == "Approved"){
-					
-					sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_APPROVAL",envParams, rFiles,capId);	
-				}
-			
-	// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
-		if(priContact){
-			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-			if(!matches(priChannel, "",null,"undefined", false)){
-				if(priChannel.indexOf("Postal") > -1 ){
-					
-					if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
-					var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
-					
-					}if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
-						var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
-						}
+		// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
+			if(priContact){
+				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+				if(!matches(priChannel, "",null,"undefined", false)){
+					if(priChannel.indexOf("Postal") > -1 ){
 						
-
-						if (wfTask == "Provisional Renewal Review" && wfStatus == "Approved") {
+						if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
 						var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 						
-						}else if (wfTask == "Annual Renewal Review" && wfStatus == "Approved"){
+						}if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
 							var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 							}
 							
@@ -102,17 +91,10 @@ try {
 							}else{
 								logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
 							}
-			if(sName){
-						setAddResult=aa.set.add(sName,vLicenseID);
-						if(setAddResult.getSuccess()){
-							logDebug(capId.getCustomID() + " successfully added to set " +sName);
-						}else{
-							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
-
+						}
 					}
 				}
 			}
-		}
 	// Add record to the CAT set
 			addToCat(vLicenseID);
 		}
