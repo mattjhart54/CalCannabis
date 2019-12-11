@@ -87,7 +87,7 @@ try {
 						var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 						}
 						
-<<<<<<< HEAD
+
 						if (wfTask == "Provisional Renewal Review" && wfStatus == "Approved") {
 						var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 						
