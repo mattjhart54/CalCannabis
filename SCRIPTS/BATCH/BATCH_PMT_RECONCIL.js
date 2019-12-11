@@ -232,12 +232,14 @@ try{
 									feeType="Renewal"
 									continue;
 								}
-								if(fFee.feeDescription.indexOf("Late")>-1 && feeType == "Renewal"){
-									feeType="Renewal- Late"
-									continue;
-								}else {
-									feeType="Late"
-									continue;
+								if(fFee.feeDescription.indexOf("Late")>-1) {
+									if(feeType == "Renewal") {
+										feeType="Renewal- Late"
+											continue;
+									}else {
+										feeType="Late"
+											continue;
+									}
 								}
 							}
 						}
