@@ -63,10 +63,10 @@ try {
 			var rFiles = [];
 			var priEmail = ""+priContact.capContact.email;
 				
-			if (wfTask == "Provisional Renewal Review" && wfStatus == "Approved") {
+			if (AInfo['License Issued Type' == "Provisional") {
 				sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",eParams, rFiles,capId);
 			}
-			if (wfTask == "Annual Renewal Review" && wfStatus == "Approved"){
+			if (AInfo['License Issued Type' == "Annual"){
 				sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_APPROVAL",eParams, rFiles,capId);	
 			}
 			
