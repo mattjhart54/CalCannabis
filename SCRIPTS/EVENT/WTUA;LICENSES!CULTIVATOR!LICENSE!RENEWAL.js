@@ -102,15 +102,13 @@ try {
 							}else{
 								logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
 							}
-=======
-					if(sName){
+			if(sName){
 						setAddResult=aa.set.add(sName,vLicenseID);
 						if(setAddResult.getSuccess()){
 							logDebug(capId.getCustomID() + " successfully added to set " +sName);
 						}else{
 							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
->>>>>>> branch 'master' of https://github.com/mattjhart54/CalCannabis.git
-						}
+
 					}
 				}
 			}
