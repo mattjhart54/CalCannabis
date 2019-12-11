@@ -37,7 +37,10 @@ try {
 				renewalCapProject.setRelationShip("R");  // move to related records
 				aa.cap.updateProject(renewalCapProject);
 			}
-	//Run Official License Certificate and Renewal Approval Letter and email the DRP	
+			
+	//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
+			
+									
 			var scriptName = "asyncRunOfficialLicenseRpt";
 			var envParameters = aa.util.newHashMap();
 			envParameters.put("licType", "Renewal");
@@ -49,12 +52,40 @@ try {
 			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 			aa.runAsyncScript(scriptName, envParameters);
 			var priContact = getContactObj(capId,"Designated Responsible Party");
-	// If DRP preference is Postal ad license record to Renewal Issued set
+			
+			var eParams = aa.util.newHashtable(); 
+			
+			addParameter(eParams, "$$altId$$", newAltId);
+			addParameter(eParams, "$$contactPhone1$$", fmtPhone);
+			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
+			addParameter(eParams, "$$parentId$$", parentAltId);
+			
+			var rFiles = [];
+			var priEmail = ""+priContact.priContact.getEmail();
+				
+			if (wfTask =="Provisional Renewal Review") && wfStatus == "Approved") {
+				
+					sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",envParams, rFiles,capId);
+			
+			}if (wfTask =="Annual Renewal Review") && wfStatus == "Approved"){
+					sendNotification(sysFromEmail,priEmail,"","LCA_ANNUAL_RENEWAL_APPROVAL",envParams, rFiles,capId);	
+				}
+			
+	// If DRP preference is Postal add license record to Annual/Provisional Renewal Approved set
 			if(priContact){
 				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 				if(!matches(priChannel, "",null,"undefined", false)){
 					if(priChannel.indexOf("Postal") > -1 ){
-						var sName = createSet("LICENSE_RENEWAL_ISSUED","License Notifications", "New");
+						
+						if (wfTask =="Provisional Renewal Review") && wfStatus == "Approved") {
+						var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
+						
+						}if (wfTask =="Annual Renewal Review") && wfStatus == "Approved"){
+							var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
+							}
+							
 						if(sName){
 							setAddResult=aa.set.add(sName,vLicenseID);
 							if(setAddResult.getSuccess()){
