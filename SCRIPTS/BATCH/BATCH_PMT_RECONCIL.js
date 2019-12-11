@@ -235,6 +235,9 @@ try{
 								if(fFee.feeDescription.indexOf("Late")>-1 && feeType == "Renewal"){
 									feeType="Renewal- Late"
 									continue;
+								}else {
+									feeType="Late"
+									continue;
 								}
 							}
 						}
