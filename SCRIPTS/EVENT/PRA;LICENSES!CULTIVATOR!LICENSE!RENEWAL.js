@@ -36,7 +36,7 @@ try{
 							var status = fTask.getDisposition();
 							var taskDesc = fTask.getTaskDescription();
 							if(status != null && taskDesc != null && status.equals("Approved for Provisional Renewal")){
-								if((getDateDiff(issueDate) > 0) && (getDateDiff(issueDate) <= 365)){
+								if((getDateDiff(issueDate) >= 0) && (getDateDiff(issueDate) <= 365)){
 									approvedRen = true;
 								}
 							}	
