@@ -45,7 +45,7 @@ try{
 				}
 			}
 			if (!approvedRen){
-				addStdCondition("Application Conditions", "Provisional Renewal Missing Science Amendment");
+				addStdCondition("Application Condition", "Provisional Renewal Missing Science Amendment");
 			}
 		}
 	}
