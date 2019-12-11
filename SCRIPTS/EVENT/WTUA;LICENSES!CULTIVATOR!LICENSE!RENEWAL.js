@@ -70,10 +70,10 @@ try {
 					sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",envParams, rFiles,capId);
 			
 			}if (wfTask =="Annual Renewal Review") && wfStatus == "Approved"){
-					sendNotification(sysFromEmail,priEmail,"","LCA_ANNUAL_RENEWAL_APPROVAL",envParams, rFiles,capId);	
+					sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_APPROVAL",envParams, rFiles,capId);	
 				}
 			
-	// If DRP preference is Postal add license record to Annual/Provisional Renewal Approved set
+	// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
 			if(priContact){
 				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 				if(!matches(priChannel, "",null,"undefined", false)){
