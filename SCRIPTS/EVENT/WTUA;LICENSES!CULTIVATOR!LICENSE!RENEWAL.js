@@ -75,57 +75,27 @@ try {
 				}
 			
 	// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
-			if(priContact){
-				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-				if(!matches(priChannel, "",null,"undefined", false)){
-					if(priChannel.indexOf("Postal") > -1 ){
+		if(priContact){
+			var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+			if(!matches(priChannel, "",null,"undefined", false)){
+				if(priChannel.indexOf("Postal") > -1 ){
+					
+					if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
+					var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
+					
+					}if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
+						var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
+						}
 						
-						if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
-						var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
-						
-						}if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
-							var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
-							}
-							
-						if(sName){
-							setAddResult=aa.set.add(sName,vLicenseID);
-							if(setAddResult.getSuccess()){
-								logDebug(capId.getCustomID() + " successfully added to set " +sName);
-							}else{
-								logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
-							}
+					if(sName){
+						setAddResult=aa.set.add(sName,vLicenseID);
+						if(setAddResult.getSuccess()){
+							logDebug(capId.getCustomID() + " successfully added to set " +sName);
+						}else{
+							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
 						}
 					}
 				}
-			}
-	//	6316: If Parent record of Provisional license does not have science Amendment with Status of "Approved for Provisional Renewl" within last year
-		if (AInfo['License Issued Type'] == "Provisional"){
-			var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",vLicenseID);
-			var issueDate = getAppSpecific("Valid From Date",vLicenseID);
-			var approvedRen = false;
-			for (x in scienceArr){
-				var scienceCap = scienceArr[x];
-				var workflowResult = aa.workflow.getTasks(scienceCap);
-				if (workflowResult.getSuccess()){
-					wfObj = workflowResult.getOutput();
-				}else {
-					logDebug("**ERROR: Failed to get workflow object: "+wfObj );
-				}
-				
-				for (i in wfObj) {
-					fTask = wfObj[i];
-					var status = fTask.getDisposition();
-					var taskDesc = fTask.getTaskDescription();
-					if(status != null && taskDesc != null && status.equals("Approved for Provisional Renewal")){
-						if((getDateDiff(issueDate) > 0) && (getDateDiff(issueDate) <= 365)){
-							approvedRen = true;
-							
-						}
-					}	
-				}
-			}
-			if (!approvedRen){
-				addStdCondition("Application Conditions", "Provisional Renewal Missing Science Amendment");
 			}
 		}
 	// Add record to the CAT set
