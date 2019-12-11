@@ -78,12 +78,11 @@ try {
 					if(priChannel.indexOf("Postal") > -1 ){
 						
 						if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
-						var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
-						
-						}if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
+							var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
+						}
+						if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
 							var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
-							}
-							
+						}
 						if(sName){
 							setAddResult=aa.set.add(sName,vLicenseID);
 							if(setAddResult.getSuccess()){
