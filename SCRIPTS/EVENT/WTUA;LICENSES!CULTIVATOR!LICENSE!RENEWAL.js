@@ -67,7 +67,7 @@ try {
 			if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
 				sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",envParams, rFiles,capId);
 			}
-			if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
+			else if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
 				sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_APPROVAL",envParams, rFiles,capId);	
 			}
 			
@@ -80,7 +80,7 @@ try {
 						if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
 							var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 						}
-						if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
+						else if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
 							var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 						}
 						if(sName){
