@@ -54,12 +54,11 @@ try {
 			
 			var eParams = aa.util.newHashtable(); 
 			
-			addParameter(eParams, "$$altId$$", newAltId);
-			addParameter(eParams, "$$contactPhone1$$", fmtPhone);
+			addParameter(eParams, "$$altId$$", altId);
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$parentId$$", parentAltId);
+			addParameter(eParams, "$$parentId$$", licAltId);
 			
 			var rFiles = [];
 			var priEmail = ""+priContact.priContact.getEmail();
@@ -67,7 +66,7 @@ try {
 			if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
 				sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",envParams, rFiles,capId);
 			}
-			else if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
+			if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
 				sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_APPROVAL",envParams, rFiles,capId);	
 			}
 			
@@ -80,7 +79,7 @@ try {
 						if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
 							var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 						}
-						else if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
+						if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
 							var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 						}
 						if(sName){
