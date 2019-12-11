@@ -61,13 +61,13 @@ try {
 			addParameter(eParams, "$$parentId$$", licAltId);
 			
 			var rFiles = [];
-			var priEmail = ""+priContact.priContact.getEmail();
+			var priEmail = ""+priContact.capContact.email;
 				
 			if (matches(wfTask,"Provisional Renewal Review") && wfStatus == "Approved") {
-				sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",envParams, rFiles,capId);
+				sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",eParams, rFiles,capId);
 			}
 			if (matches(wfTask,"Annual Renewal Review") && wfStatus == "Approved"){
-				sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_APPROVAL",envParams, rFiles,capId);	
+				sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_APPROVAL",eParams, rFiles,capId);	
 			}
 			
 		// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
