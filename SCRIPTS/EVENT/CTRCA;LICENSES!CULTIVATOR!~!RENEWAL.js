@@ -88,6 +88,7 @@ try{
 		addParameter(eParams, "$$parentId$$", vLicenseAltId);
 		var rFiles = [];
 		var priEmail = ""+priContact.capContact.getEmail();
+		
 		sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_SUBMISSION",eParams, rFiles,capId)
 
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
