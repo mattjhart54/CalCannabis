@@ -228,6 +228,14 @@ try{
 									feeType="Application"
 									continue
 								}
+								if(fFee.feeDescription.indexOf("Renewal")>-1){
+									feeType="Renewal"
+									continue;
+								}
+								if(fFee.feeDescription.indexOf("Late")>-1){
+									feeType="Late"
+									continue;
+								}
 							}
 						}
 					}
