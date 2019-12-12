@@ -16,7 +16,7 @@ try{
 		if (AInfo['License Issued Type'] == "Provisional"){
 			var vLicenseID = getParentLicenseCapID(capId);
 			var vIDArray = String(vLicenseID).split("-");
-			var vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();			
+			var vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
 			var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",vLicenseID);
 			var issueDate = getAppSpecific("Valid From Date",vLicenseID);
 			var approvedRen = false;
@@ -36,8 +36,13 @@ try{
 							var status = fTask.getDisposition();
 							var taskDesc = fTask.getTaskDescription();
 							if(status != null && taskDesc != null && status.equals("Approved for Provisional Renewal")){
-								if((getDateDiff(issueDate) >= 0) && (getDateDiff(issueDate) <= 365)){
-									approvedRen = true;		
+								var taskDate = fTask.getStatusDate()
+								var taskDateMMDDYYYY = dateFormatted(taskDate.getMonth(), taskDate.getDate(), taskDate.getYear()+1900, "MM/DD/YYYY");
+								var issueDateObj = new Date(issueDate);
+								var taskDateObj = new Date(taskDateMMDDYYYY);
+								var diffDays = parseInt((taskDateObj - issueDateObj) / (1000 * 60 * 60 * 24));
+								if((diffDays >= 0) && (diffDays <= 365)){
+									approvedRen = true;
 								}
 							}	
 						}
