@@ -122,7 +122,7 @@ try{
 			}else {
 				if(licType=="pRenewal") {
 					reportName = "Provisional Renewal Approval"
-					var emailTemplate = "LCA_PROVISIONAL_RENEWAL_APPROVAL"
+					var emailTemplate = "LCA_RENEWAL_APPROVAL"
 				}else {
 					if(licType=="Transition") {
 						reportName = "Amendment Approval - Transition"
