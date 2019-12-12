@@ -39,10 +39,13 @@ try {
 			}
 			
 	//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
-			
+			if (AInfo['License Issued Type'] == "Provisional")
+				var licType = pRenewal;
+			else
+				var licType = aRenewal;
 			var scriptName = "asyncRunOfficialLicenseRpt";
 			var envParameters = aa.util.newHashMap();
-			envParameters.put("licType", "Renewal");
+			envParameters.put("licType", lictype);
 			envParameters.put("appCap",altId);
 			envParameters.put("licCap",licAltId); 
 			envParameters.put("reportName","Official License Certificate"); 
@@ -50,26 +53,8 @@ try {
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 			aa.runAsyncScript(scriptName, envParameters);
+			
 			var priContact = getContactObj(capId,"Designated Responsible Party");
-			
-			var eParams = aa.util.newHashtable(); 
-			
-			addParameter(eParams, "$$altId$$", altId);
-			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
-			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$parentId$$", licAltId);
-			
-			var rFiles = [];
-			var priEmail = ""+priContact.capContact.email;
-				
-			if (AInfo['License Issued Type'] == "Provisional") {
-				sendNotification(sysFromEmail,priEmail,"","LCA_PROVISIONAL_RENEWAL_APPROVAL",eParams, rFiles,capId);
-			}
-			if (AInfo['License Issued Type'] == "Annual"){
-				sendNotification(sysFromEmail,priEmail,"","LCA_RENEWAL_APPROVAL",eParams, rFiles,capId);	
-			}
-			
 		// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
 			if(priContact){
 				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
