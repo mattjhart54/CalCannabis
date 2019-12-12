@@ -166,6 +166,10 @@ try {
 			}
 		}
 	}
+	if (wfTask == "Science Manager Review" && wfStatus == "Revisions Required"){
+		activateTask("Science Amendment Review");
+		updateTask("Science Amendment Review","Revisions Required","","");
+	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/AMENDMENT/SCIENCE: " + err.message);
 	logDebug(err.stack);
