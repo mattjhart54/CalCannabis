@@ -37,7 +37,7 @@ try{
 							var taskDesc = fTask.getTaskDescription();
 							if(status != null && taskDesc != null && status.equals("Approved for Provisional Renewal")){
 								var taskDate = fTask.getStatusDate()
-								var taskDateMMDDYYYY = dateFormatted(taskDate.getMonth(), taskDate.getDate(), taskDate.getYear()+1900, "MM/DD/YYYY");
+								var taskDateMMDDYYYY = dateFormatted(taskDate.getMonth()+1, taskDate.getDate(), taskDate.getYear()+1900, "MM/DD/YYYY");
 								var issueDateObj = new Date(issueDate);
 								var taskDateObj = new Date(taskDateMMDDYYYY);
 								var diffDays = parseInt((taskDateObj - issueDateObj) / (1000 * 60 * 60 * 24));
