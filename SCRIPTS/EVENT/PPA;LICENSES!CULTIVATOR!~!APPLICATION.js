@@ -1,10 +1,13 @@
 // mhart 100918 Story 5738 and 5739 Changes to generate carrect approval letter based on CAP status
 try{
 	if(balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")){
-		if(capStatus == "License Issued")
+		if(capStatus == "License Issued") {
 			var licType = "annual";
-		else 
+			var approvalLetter = "Approval Letter"; 
+		}else {
 			var licType = "provisional"; 
+			var approvalLetter = "Approval Letter Provisional";
+		}
 		var parCapId = getParent();
 		if(parCapId){
 			var appAltId = capId.getCustomID();
@@ -15,11 +18,14 @@ try{
 			envParameters.put("appCap",appAltId);
 			envParameters.put("licCap",licAltId); 
 			envParameters.put("reportName","Official License Certificate"); 
+			envParameters.put("approvalLetter", approvalLetter);
+			envParameters.put("reason", "");
+			envParameters.put("emailTemplate", "LCA_APP_APPROVAL_PAID");
 			envParameters.put("currentUserID",currentUserID);
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 			aa.runAsyncScript(scriptName, envParameters);
-		}	
+		}			
 //		if(capStatus=="License Issued") 
 //			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());
 //		else
