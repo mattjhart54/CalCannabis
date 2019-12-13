@@ -308,7 +308,7 @@ try{
 		if (newAppStatus == "Expired - Pending Renewal"){
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
 			if (renewalCapProject != null) {
-				var feeDesc = getApplication("License Type",renewalCapProject) + " - Late Fee";
+				var feeDesc = getAppSpecific("License Type",renewalCapProject) + " - Late Fee";
 				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 				if(thisFee){
 					holdId = capId;
