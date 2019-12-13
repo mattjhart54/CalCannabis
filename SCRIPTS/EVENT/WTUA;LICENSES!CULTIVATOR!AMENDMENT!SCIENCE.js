@@ -46,32 +46,52 @@ try {
 
 		removeASITable("Premises Addresses",parentCapId);
 		removeASITable("Source of Water Supply",parentCapId);
-		copyASITables(capId,parentCapId);
-		if(updateCat)
+		copyASITables(capId,parentCapId);		
+		var rFiles = [];
+		if(updateCat) {
 			addToCat(parentCapId);
-//  Send approval email notification to DRP
+		}
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
 			if(wfStatus == "Physical Modification Approved") {
-				var eParams = aa.util.newHashtable(); 
-				addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
-				var contPhone = priContact.capContact.phone1;
-				if(contPhone){
-					var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
-				}else{
-					var fmtPhone = "";
+				if(updateCat) {
+				//Run Official License Certificate and Physical Modification Approved email the DRP
+					var appAltId = capId.getCustomID();
+					var licAltId = parentCapId.getCustomID();
+					var scriptName = "asyncRunOfficialLicenseRpt";
+					var envParameters = aa.util.newHashMap();
+					envParameters.put("approvalLetter", "");
+					envParameters.put("emailTemplate", "LCA_PHYSICAL_MOD_APPROVED");
+					envParameters.put("reason", "");
+					envParameters.put("appCap",appAltId);
+					envParameters.put("licCap",licAltId); 
+					envParameters.put("reportName","Official License Certificate"); 
+					envParameters.put("currentUserID",currentUserID);
+					envParameters.put("contType","Designated Responsible Party");
+					envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+					aa.runAsyncScript(scriptName, envParameters);
 				}
-				addParameter(eParams, "$$altId$$", capId.getCustomID());
-				addParameter(eParams, "$$contactPhone1$$", fmtPhone);
-				addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
-				addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-				addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-				addParameter(eParams, "$$parentId$$", parentAltId);
-				var priEmail = ""+priContact.capContact.getEmail();
-				var rFiles = [];
-				emailTemplate = "LCA_PHYSICAL_MOD_APPROVED";
-				sendNotification(sysFromEmail,priEmail,"",emailTemplate,eParams, rFiles,capId);
-//				emailRptContact("", "emailTemplate", "", false, capStatus, capId, "Designated Responsible Party");
+				else {
+		//  Send Physical Modification Approval email notification to DRP
+					var eParams = aa.util.newHashtable(); 
+					addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
+					var contPhone = priContact.capContact.phone1;
+					if(contPhone){
+						var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
+					}else{
+						var fmtPhone = "";
+					}
+					addParameter(eParams, "$$altId$$", capId.getCustomID());
+					addParameter(eParams, "$$contactPhone1$$", fmtPhone);
+					addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+					addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+					addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
+					addParameter(eParams, "$$parentId$$", parentAltId);
+					var priEmail = ""+priContact.capContact.getEmail();
+					emailTemplate = "LCA_PHYSICAL_MOD_APPROVED";
+					var rFiles = [];
+					sendNotification(sysFromEmail,priEmail,"",emailTemplate,eParams, rFiles,capId);
+				}
 				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 				if(!matches(priChannel, "",null,"undefined", false)){
 					if(priChannel.indexOf("Postal") > -1 ){
@@ -87,6 +107,64 @@ try {
 					}
 				}
 			}
+			if(wfStatus == "Approved for Provisional Renewal") {
+				if(updateCat) {
+				//Run Official License Certificate and Approved for Provisional Renewal email the DRP
+					TInfo = [];
+					loadTaskSpecific(TInfo);
+					var reason = TInfo["Reason for Provisional Renewal"];
+					var appAltId = capId.getCustomID();
+					var licAltId = parentCapId.getCustomID();
+					var scriptName = "asyncRunOfficialLicenseRpt";
+					var envParameters = aa.util.newHashMap();
+					envParameters.put("approvalLetter", "");
+					envParameters.put("emailTemplate", "LCA_APPROVED_FOR_PROVISIONAL_RENEWAL");
+					envParameters.put("reason", reason);
+					envParameters.put("appCap",appAltId);
+					envParameters.put("licCap",licAltId); 
+					envParameters.put("reportName","Official License Certificate"); 
+					envParameters.put("currentUserID",currentUserID);
+					envParameters.put("contType","Designated Responsible Party");
+					envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+					aa.runAsyncScript(scriptName, envParameters);
+				}
+				else {
+		//  Send  Approved for Provisional Renewal email notification to DRP
+					var eParams = aa.util.newHashtable(); 
+					addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
+					var contPhone = priContact.capContact.phone1;
+					if(contPhone){
+						var fmtPhone = contPhone.substr(0,3) + "-" + contPhone.substr(3,3) +"-" + contPhone.substr(6,4);
+					}else{
+						var fmtPhone = "";
+					}
+					addParameter(eParams, "$$reason$$", reason);					
+					addParameter(eParams, "$$altId$$", capId.getCustomID());
+					addParameter(eParams, "$$contactPhone1$$", fmtPhone);
+					addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+					addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+					addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
+					addParameter(eParams, "$$parentId$$", parentAltId);
+					var priEmail = ""+priContact.capContact.getEmail();
+					emailTemplate = "LCA_APPROVED_FOR_PROVISIONAL_RENEWAL";
+					var rFiles = [];
+					sendNotification(sysFromEmail,priEmail,"",emailTemplate,eParams, rFiles,capId);
+				}
+				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+				if(!matches(priChannel, "",null,"undefined", false)){
+					if(priChannel.indexOf("Postal") > -1 ){
+						var sName = createSet("APPROVED FOR PROVISIONAL RENEWAL","Amendment Notifications", "New");
+						if(sName){
+							setAddResult=aa.set.add(sName,capId);
+							if(setAddResult.getSuccess()){
+								logDebug(capId.getCustomID() + " successfully added to set " +sName);
+							}else{
+								logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+							}
+						}
+					}
+				}
+			}			
 			if(wfStatus == "Transition Amendment Approved") {
 				if(AInfo["Transition"] == "Yes") {
 					editAppSpecific("License Issued Type", "Annual",parentCapId);
@@ -96,10 +174,12 @@ try {
 					editAppSpecific("Transition Date",jsDateToASIDate(new Date()),parentCapId);
 					updateCat = true;
 				}
-				//Run Official License Certificate and Transistion Approval Letter and email the DRP	
+			//Run Official License Certificate and Transistion Approval Letter and email the DRP	
 				var scriptName = "asyncRunOfficialLicenseRpt";
 				var envParameters = aa.util.newHashMap();
-				envParameters.put("licType", "Transition");
+				envParameters.put("approvalLetter", "Amendment Approval - Transition");
+				envParameters.put("emailTempalte", "LCA_TRANSITION_APPROVAL");
+				envParameters.put("reason", "");
 				envParameters.put("appCap",capId.getCustomID());
 				envParameters.put("licCap",parentAltId); 
 				envParameters.put("reportName","Official License Certificate"); 
@@ -166,6 +246,7 @@ try {
 			}
 		}
 	}
+	
 	if (wfTask == "Science Manager Review" && wfStatus == "Revisions Required"){
 		activateTask("Science Amendment Review");
 		updateTask("Science Amendment Review","Revisions Required","","");
