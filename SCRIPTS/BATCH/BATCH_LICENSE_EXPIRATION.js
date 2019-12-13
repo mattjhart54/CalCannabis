@@ -309,7 +309,7 @@ try{
 		if (newAppStatus == "Expired - Pending Renewal"){
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
 			if (renewalCapProject != null) {
-				var renCapId = renewalCapProject.getProjectID();
+				var renCapId = renewalCapProject.getCapID();
 				var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee";
 				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 				if(thisFee){
