@@ -303,7 +303,26 @@ try{
 				updateAppStatus(newAppStatus, "");
 				capId = holdId;
 			}
-		}	
+		}
+	// Add Late Fee
+		if (newAppStatus == "Expired - Pending Renewal"){
+			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
+			if (renewalCapProject != null) {
+				var feeDesc = AInfo["License Type"] + " - Late Fee";
+				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+				if(thisFee){
+					holdId = capId;
+					capId = renewalCapProject;
+					if (!feeExists(thisFee.feeCode,"NEW")){
+						updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+					}
+					capId = holdId;
+				}else{
+					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+					logDebug("An error occurred retrieving fee item: " + feeDesc);
+				}
+			}
+		}
 	// Send Notification
 		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
 			var conTypeArray = sendEmailToContactTypes.split(",");
