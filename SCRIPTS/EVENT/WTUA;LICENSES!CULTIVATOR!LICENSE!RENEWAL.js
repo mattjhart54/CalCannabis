@@ -39,7 +39,7 @@ try {
 			}
 			
 	//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
-			if (AInfo['License Issued Type'] == "Provisional")
+			if (AInfo["License Issued Type"] == "Provisional")
 				var approvalLetter = "Provisional Renewal Approval";
 			else
 				var approvalLetter = "Approval Letter Renewal";
