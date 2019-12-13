@@ -43,18 +43,24 @@ function getMasterScriptText(vScriptName) {
 }
 try{
 /*---------------------------------------
-	aa.env.setValue("licCap", "CAL18-0000143");
-	aa.env.setValue("appCap", "CAL18-0000143-SA001");
+	aa.env.setValue("licCap", "CCL19-0000162");
+	aa.env.setValue("appCap", "CCL19-0000162-SA001");
+	aa.env.setValue("licType", "");
 	aa.env.setValue("currentUserID", "ADMIN");
 	aa.env.setValue("reportName", "Official License Certificate");
 	aa.env.setValue("contType", "Designated Responsible Party");
-	aa.env.setValue("licType", "Transition");
+	aa.env.setValue("approvalLetter", "");
+	aa.env.setValue("emailTemplate", "LCA_APPROVED_FOR_PROVISIONAL_RENEWAL");
+	aa.env.setValue("reason", "becasue");
 	aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov");
 */
 	var reportName = "" + aa.env.getValue("reportName");
 	var appCap = "" + aa.env.getValue("appCap");
 	var licCap = "" + aa.env.getValue("licCap");
 	var licType = "" + aa.env.getValue("licType");	
+	var approvalLetter = "" + aa.env.getValue("approvalLetter");
+	var emailTemplate = "" + aa.env.getValue("emailTemplate");
+	var reason = "" + aa.env.getValue("reason");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var contType = "" + aa.env.getValue("contType");
 	var fromEmail = "" + aa.env.getValue("fromEmail");
@@ -109,68 +115,47 @@ try{
 	appTypeString = appTypeResult.toString(); 
 	appTypeArray = appTypeString.split("/");
 	capStatus = cap.getCapStatus();
-	var emailTemplate = "LCA_APP_APPROVAL_PAID"
-	if(licType=="annual") {
-		reportName = "Approval Letter"
-	}else {
-		if(licType=="provisional") {
-			reportName = "Approval Letter Provisional"
-		}else {
-			if(licType=="aRenewal") {
-				reportName = "Approval Letter Renewal"
-				var emailTemplate = "LCA_RENEWAL_APPROVAL"
+	
+	if(!matches(approvalLetter,"",null,undefined)) {
+		reportName = approvalLetter;
+		reportResult = aa.reportManager.getReportInfoModelByName(reportName);
+		if (!reportResult.getSuccess()){
+			logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
+			eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
+		}
+		var report = reportResult.getOutput(); 
+		report.setModule(appTypeArray[0]); 
+		//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
+		report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
+		report.getEDMSEntityIdModel().setAltId(appCap);
+		eTxt+="reportName: " + reportName + br;
+		eTxt+="reportName: " + typeof(reportName) + br;
+		var parameters = aa.util.newHashMap(); 
+		parameters.put("p1value",appCap);
+		parameters.put("p2value","Designated Responsible Party");
+		parameters.put("p3value","Mailing");
+		report.setReportParameters(parameters);
+		var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
+		eTxt+="Has Permission: " + permit.getOutput().booleanValue() + br;
+		if(permit.getOutput().booleanValue()) { 
+			var reportResult = aa.reportManager.getReportResult(report); 
+			eTxt+="Get Report: " + reportResult.getOutput() + br;
+			if(reportResult) {
+				reportOutput = reportResult.getOutput();
+				var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
+				eTxt+="Store Report to Disk: " + reportFile + br;
+				rFile=reportFile.getOutput();
+				rFiles.push(rFile);
+				logDebug("Report '" + reportName + "' has been run for " + appCap);
+				eTxt+=("Report '" + reportName + "' has been run for " + appCap) +br;
 			}else {
-				if(licType=="pRenewal") {
-					reportName = "Provisional Renewal Approval"
-					var emailTemplate = "LCA_RENEWAL_APPROVAL"
-				}else {
-					if(licType=="Transition") {
-						reportName = "Amendment Approval - Transition"
-							var emailTemplate = "LCA_TRANSITION_APPROVAL"
-					}
-				}
+				logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
 			}
+		}else{
+			logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
+			eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
 		}
 	}
-	reportResult = aa.reportManager.getReportInfoModelByName(reportName);
-	if (!reportResult.getSuccess()){
-		logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
-		eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
-	}
-	var report = reportResult.getOutput(); 
-
-	report.setModule(appTypeArray[0]); 
-	//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
-	report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
-	report.getEDMSEntityIdModel().setAltId(appCap);
-	eTxt+="reportName: " + reportName + br;
-	eTxt+="reportName: " + typeof(reportName) + br;
-	var parameters = aa.util.newHashMap(); 
-	parameters.put("p1value",appCap);
-	parameters.put("p2value","Designated Responsible Party");
-	parameters.put("p3value","Mailing");
-	report.setReportParameters(parameters);
-	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
-	eTxt+="Has Permission: " + permit.getOutput().booleanValue() + br;
-	if(permit.getOutput().booleanValue()) { 
-		var reportResult = aa.reportManager.getReportResult(report); 
-		eTxt+="Get Report: " + reportResult.getOutput() + br;
-		if(reportResult) {
-			reportOutput = reportResult.getOutput();
-			var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
-			eTxt+="Store Report to Disk: " + reportFile + br;
-			rFile=reportFile.getOutput();
-			rFiles.push(rFile);
-			logDebug("Report '" + reportName + "' has been run for " + appCap);
-			eTxt+=("Report '" + reportName + "' has been run for " + appCap) +br;
-		}else {
-			logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
-		}
-	}else{
-		logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
-		eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
-	}
-
 	var priContact = getContactObj(tmpID,contType);
 	if(priContact){
 		var eParams = aa.util.newHashtable(); 
@@ -179,6 +164,7 @@ try{
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$parentId$$", licCap);
 		addParameter(eParams, "$$licType$$", licType);
+		addParameter(eParams, "$$reason$$", reason);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"",emailTemplate,eParams, rFiles,tmpID);
 	}else{
