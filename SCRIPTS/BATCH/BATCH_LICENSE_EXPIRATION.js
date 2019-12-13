@@ -309,13 +309,14 @@ try{
 		if (newAppStatus == "Expired - Pending Renewal"){
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
 			if (renewalCapProject != null) {
-				var feeDesc = getAppSpecific("License Type",renewalCapProject) + " - Late Fee";
+				var renCapId = renewalCapProject.getProjectID();
+				var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee";
 				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 				if(thisFee){
 					holdId = capId;
-					capId = renewalCapProject;
+					capId = renCapId;
 					if (!feeExists(thisFee.feeCode)){
-						addFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+						updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
 					}
 					capId = holdId;
 				}else{
