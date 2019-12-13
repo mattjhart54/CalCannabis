@@ -140,6 +140,7 @@ acaSite = acaSite.substr(0, acaSite.toUpperCase().indexOf("/ADMIN"));
 
 logDebug("Date Range -- fromDate: " + fromDate + ", toDate: " + toDate)
 
+var useAppSpecificGroupName = false;
 var startTime = startDate.getTime(); // Start timer
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 
