@@ -116,7 +116,7 @@ var createNotifySets = getJobParam("createNotifySets").substring(0, 1).toUpperCa
 var sendEmailNotifications = getJobParam("sendEmailNotifications");
 var sysFromEmail = getJobParam("sysFromEmail");
 var rptName = getJobParam("reportName");
-var feeSeqList = [];
+
 
 if(appTypeType=="*") appTypeType="";
 if(appSubtype=="*")  appSubtype="";
@@ -142,6 +142,8 @@ acaSite = acaSite.substr(0, acaSite.toUpperCase().indexOf("/ADMIN"));
 logDebug("Date Range -- fromDate: " + fromDate + ", toDate: " + toDate)
 
 var useAppSpecificGroupName = false;
+var AInfo = [];
+var feeSeqList = [];
 var startTime = startDate.getTime(); // Start timer
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 
