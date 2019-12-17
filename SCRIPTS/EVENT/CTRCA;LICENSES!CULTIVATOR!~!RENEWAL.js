@@ -81,7 +81,7 @@ try{
 	var priContact = getContactObj(capId,"Designated Responsible Party");
 	if(priContact){
 		var eParams = aa.util.newHashtable(); 
-		addParameter(eParams, "$$altId$$", capId.getCustomID());
+		addParameter(eParams, "$$altId$$", newAltId);
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
