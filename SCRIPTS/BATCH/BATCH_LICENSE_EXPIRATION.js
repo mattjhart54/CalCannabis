@@ -363,7 +363,7 @@ try{
 					conEmail = thisContact["email"];
 					if (conEmail) {
 						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
-						emailRptContact("BATCH", emailTemplate, "", true, "Deficiency Letter Sent", capId, thisContact["contactType"],"License Number",capId.getCustomID());
+						emailRptContact("BATCH", emailTemplate, "", true, "Deficiency Letter Sent", capId, thisContact["contactType"]);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
 				}
