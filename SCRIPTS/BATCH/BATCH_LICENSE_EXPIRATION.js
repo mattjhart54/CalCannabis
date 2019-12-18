@@ -116,6 +116,7 @@ var createNotifySets = getJobParam("createNotifySets").substring(0, 1).toUpperCa
 var sendEmailNotifications = getJobParam("sendEmailNotifications");
 var sysFromEmail = getJobParam("sysFromEmail");
 var rptName = getJobParam("reportName");
+var addrType = getParam("sendEmailAddressType");
 
 
 if(appTypeType=="*") appTypeType="";
