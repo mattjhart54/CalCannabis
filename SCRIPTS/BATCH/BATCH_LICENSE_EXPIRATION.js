@@ -362,9 +362,24 @@ try{
 					}
 					conEmail = thisContact["email"];
 					if (conEmail) {
-						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
-						emailRptContact("BATCH", emailTemplate, "", true, "Deficiency Letter Sent", capId, thisContact["contactType"]);
-						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType, "numberDays", lookAheadDays); 
+						var rParams=aa.util.newHashMap();
+						rParams.put("capId", capId.getCustomID());
+						rParams.put("contactType", thisContact["contactType"]);
+						rParams.put("addrType", addrType);
+						rParams.put("numberDays", lookAheadDays);
+
+						var eParams=aa.util.newHashtable();
+						eParams.put("$$altID$$", capId.getCustomID());
+						
+						noticeSent = runReport4Email(capId,"Permit Renewal Report",pContact,rParams,eParams,emailTemplate,"Licenses",sysFromEmail);
+						if (!noticeSent){
+							logDebug("Multiple Record Notice was not sent");
+						}else{
+							logDebug(capId + ": Sent Email template " + emailTemplate + " to " + b3Contact["contactType"] + " : " + conEmail);
+						}
+						//emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
+						//logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
 				}
 			}
