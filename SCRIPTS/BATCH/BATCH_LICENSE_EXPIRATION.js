@@ -371,12 +371,14 @@ try{
 
 						var eParams=aa.util.newHashtable();
 						eParams.put("$$altID$$", capId.getCustomID());
+						eParams.put("$$contactFirstName$$",thisContact["firstName"]);
+						eParams.put("$$contactLastName$$",thisContact["lastName"]);
 						
 						noticeSent = runReport4Email(capId,rptName,pContact,rParams,eParams,emailTemplate,"Licenses",sysFromEmail);
 						if (!noticeSent){
-							logDebug("Multiple Record Notice was not sent");
+							logDebug("Renewal Notification Letter was not sent");
 						}else{
-							logDebug(capId + ": Sent Email template " + emailTemplate + " to " + b3Contact["contactType"] + " : " + conEmail);
+							logDebug(capId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 						}
 						//emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
 						//logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
