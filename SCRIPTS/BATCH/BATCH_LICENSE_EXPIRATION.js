@@ -362,24 +362,7 @@ try{
 					}
 					conEmail = thisContact["email"];
 					if (conEmail) {
-						runReportAttach(capId,rptName, "altId", altId, "contactType", thisContact["contactType"], "addressType", addrType, "numberDays", lookAheadDays); 
-						var rParams=aa.util.newHashMap();
-						rParams.put("capId", altId);
-						rParams.put("contactType", thisContact["contactType"]);
-						rParams.put("addrType", addrType);
-						rParams.put("numberDays", lookAheadDays);
-
-						var eParams=aa.util.newHashtable();
-						eParams.put("$$altID$$", altId);
-						eParams.put("$$contactFirstName$$",thisContact["firstName"]);
-						eParams.put("$$contactLastName$$",thisContact["lastName"]);
-						
-						noticeSent = runReport4Email(capId,rptName,pContact,rParams,eParams,emailTemplate,"Licenses",sysFromEmail);
-						if (!noticeSent){
-							logDebug("Renewal Notification Letter was not sent");
-						}else{
-							logDebug(capId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
-						}
+						runReportAttach(capId,rptName, "p1Value", altId, "p2Value", thisContact["contactType"], "p3Value", addrType, "p4Value", lookAheadDays); 
 						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], "capId", altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
