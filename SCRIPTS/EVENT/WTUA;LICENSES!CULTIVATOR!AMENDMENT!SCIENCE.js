@@ -86,7 +86,7 @@ try {
 					addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 					addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 					addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-					addParameter(eParams, "$$parentId$$", parentAltId);
+					addParameter(eParams, "$$parentId$$", licAltId);
 					var priEmail = ""+priContact.capContact.getEmail();
 					emailTemplate = "LCA_PHYSICAL_MOD_APPROVED";
 					var rFiles = [];
@@ -144,7 +144,7 @@ try {
 					addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 					addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 					addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
-					addParameter(eParams, "$$parentId$$", parentAltId);
+					addParameter(eParams, "$$parentId$$", licAltId);
 					var priEmail = ""+priContact.capContact.getEmail();
 					emailTemplate = "LCA_APPROVED_FOR_PROVISIONAL_RENEWAL";
 					var rFiles = [];
