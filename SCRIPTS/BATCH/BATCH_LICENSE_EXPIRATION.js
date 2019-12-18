@@ -362,15 +362,15 @@ try{
 					}
 					conEmail = thisContact["email"];
 					if (conEmail) {
-						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType, "numberDays", lookAheadDays); 
+						runReportAttach(capId,rptName, "altId", altId, "contactType", thisContact["contactType"], "addressType", addrType, "numberDays", lookAheadDays); 
 						var rParams=aa.util.newHashMap();
-						rParams.put("capId", capId.getCustomID());
+						rParams.put("capId", altId);
 						rParams.put("contactType", thisContact["contactType"]);
 						rParams.put("addrType", addrType);
 						rParams.put("numberDays", lookAheadDays);
 
 						var eParams=aa.util.newHashtable();
-						eParams.put("$$altID$$", capId.getCustomID());
+						eParams.put("$$altID$$", altId);
 						eParams.put("$$contactFirstName$$",thisContact["firstName"]);
 						eParams.put("$$contactLastName$$",thisContact["lastName"]);
 						
@@ -380,8 +380,8 @@ try{
 						}else{
 							logDebug(capId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 						}
-						//emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
-						//logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], "capId", altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
+						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
 				}
 			}
