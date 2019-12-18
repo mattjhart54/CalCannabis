@@ -146,6 +146,7 @@ var useAppSpecificGroupName = false;
 var AInfo = [];
 var feeSeqList = [];
 var startTime = startDate.getTime(); // Start timer
+var currentUserID = "ADMIN";
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 
 appGroup = appGroup == "" ? "*" : appGroup;
