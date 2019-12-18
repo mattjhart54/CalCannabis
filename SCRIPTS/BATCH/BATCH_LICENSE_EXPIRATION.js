@@ -362,7 +362,7 @@ try{
 					}
 					conEmail = thisContact["email"];
 					if (conEmail) {
-						runReportAttach(capId,rptName, "p1Value", altId, "p2Value", thisContact["contactType"], "p3Value", addrType, "p4Value", lookAheadDays); 
+						runReportAttach(capId,rptName, "capId", altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays); 
 						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], "capId", altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
