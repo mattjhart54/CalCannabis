@@ -372,7 +372,7 @@ try{
 						var eParams=aa.util.newHashtable();
 						eParams.put("$$altID$$", capId.getCustomID());
 						
-						noticeSent = runReport4Email(capId,"Permit Renewal Report",pContact,rParams,eParams,emailTemplate,"Licenses",sysFromEmail);
+						noticeSent = runReport4Email(capId,rptName,pContact,rParams,eParams,emailTemplate,"Licenses",sysFromEmail);
 						if (!noticeSent){
 							logDebug("Multiple Record Notice was not sent");
 						}else{
