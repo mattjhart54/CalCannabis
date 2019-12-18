@@ -342,10 +342,10 @@ try{
 					contactFound = true;
 					pContact = getContactObj(capId,thisContact["contactType"]);
 					var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
-					if((matches(priChannel,null,"",undefined) || priChannel.indexOf("Postal") >-1) && addrType != ""){
+					if((matches(priChannel,null,"",undefined) || priChannel.indexOf("Postal") >-1) && setPrefix != ""){
 						if(setCreated == false) {
 						   //Create NonEmail Set
-							var vNonEmailSet =  createExpirationSet(addrType);
+							var vNonEmailSet =  createExpirationSet(setPrefix);
 							if(vNonEmailSet){
 								var sNonEmailSet = vNonEmailSet.toUpperCase();
 								var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
