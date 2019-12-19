@@ -362,8 +362,13 @@ try{
 					}
 					conEmail = thisContact["email"];
 					if (conEmail) {
-						runReportAttach(capId,rptName, "capId", altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays); 
-						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], "capId", altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
+						if (expStatus == "Expired"){
+							var capReportVar = "RECORD_ID";
+						}else{
+							var capReportVar = "capId";
+						}
+						runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays); 
+						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
 				}
