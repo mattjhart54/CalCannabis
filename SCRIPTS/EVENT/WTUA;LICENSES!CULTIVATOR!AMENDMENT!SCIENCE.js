@@ -178,7 +178,7 @@ try {
 				var scriptName = "asyncRunOfficialLicenseRpt";
 				var envParameters = aa.util.newHashMap();
 				envParameters.put("approvalLetter", "Amendment Approval - Transition");
-				envParameters.put("emailTempalte", "LCA_TRANSITION_APPROVAL");
+				envParameters.put("emailTemplate", "LCA_TRANSITION_APPROVAL");
 				envParameters.put("reason", "");
 				envParameters.put("appCap",capId.getCustomID());
 				envParameters.put("licCap",parentAltId); 
