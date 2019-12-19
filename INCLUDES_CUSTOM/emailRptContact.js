@@ -117,7 +117,17 @@ try{
 			}
 			addParameter(eParams, "$$licType$$", annualProv);	
 // mhart 20180503 story - 5392 end	
-// mhart 20181012 story - 5729 end				
+// mhart 20181012 story - 5729 end
+			//jshear 20181219 story - 6311 Start
+			licExpObj = new licenseObject(capId.getCustomID(),capId);
+			if (licExpObj){
+				var expDate = licExpObj.b1ExpDate
+				if (expDate) {
+					var b1ExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+					addParameter(eParams, "$$expDate$$", b1ExpDate);
+				}
+			}
+			//jshear 20181219 story - 6311 end
 			drpAddresses = priContact.addresses;
 			var addrType = false;
 			for (x in drpAddresses){
