@@ -108,11 +108,11 @@ try {
 				}
 			}
 			if(wfStatus == "Approved for Provisional Renewal") {
+				TInfo = [];
+				loadTaskSpecific(TInfo);
+				var reason = TInfo["Reason for Provisional Renewal"];
 				if(updateCat) {
 				//Run Official License Certificate and Approved for Provisional Renewal email the DRP
-					TInfo = [];
-					loadTaskSpecific(TInfo);
-					var reason = TInfo["Reason for Provisional Renewal"];
 					var appAltId = capId.getCustomID();
 					var licAltId = parentCapId.getCustomID();
 					var scriptName = "asyncRunOfficialLicenseRpt";
