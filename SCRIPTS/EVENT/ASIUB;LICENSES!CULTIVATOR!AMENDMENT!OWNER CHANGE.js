@@ -25,7 +25,7 @@ try{
 		for(o in OWNERS) {
 			var ownEmail = ""+ OWNERS[o]["Email Address"];
 			ownEmail = ownEmail.toUpperCase();
-			if(OWNERS[o]["Change Status"] == "Deleted")
+			if(OWNERS[o]["Change Status"] == "Delete")
 					continue;
 			for(x in tblOwnerEmails) {
 				if( x == o) 
@@ -33,7 +33,7 @@ try{
 				var tblEmail = ""+ tblOwnerEmails[x]["Email Address"];
 				tblEmail = tblEmail.toUpperCase();
 				logDebug(ownEmail + " " + OWNERS[o]["Status"] + " " + tblEmail + " " + tblOwnerEmails[x]["Change Status"]);
-				if (tblEmail == ownEmail && tblOwnerEmails[x]["Change Status"] != "Deleted") {
+				if (tblEmail == ownEmail && tblOwnerEmails[x]["Change Status"] != "Delete") {
 					emailDuplicate = true;
 				}
 			}
