@@ -32,8 +32,8 @@ try{
 					continue;
 				var tblEmail = ""+ tblOwnerEmails[x]["Email Address"];
 				tblEmail = tblEmail.toUpperCase();
-				logDebug(ownEmail + " " + OWNERS[o]["Status"] + " " + tblEmail + " " + tblOwnerEmails[x]["Status"]);
-				if (tblEmail == ownEmail && tblOwnerEmails[x]["Status"] != "Deleted") {
+				logDebug(ownEmail + " " + OWNERS[o]["Status"] + " " + tblEmail + " " + tblOwnerEmails[x]["Change Status"]);
+				if (tblEmail == ownEmail && tblOwnerEmails[x]["Change Status"] != "Deleted") {
 					emailDuplicate = true;
 				}
 			}
