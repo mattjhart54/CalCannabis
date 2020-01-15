@@ -25,6 +25,7 @@ try{
 			editAppSpecific("Business Name", pInfo["Legal Business Name"]);
 			editAppSpecific("Premises Address", pInfo["Premise Address"]);
 			editAppSpecific("Premises City", pInfo["Premise City"]);
+			editAppSpecific("Premises Zip", pInfo["Premise Zip"]);
 			editAppSpecific("Premises County", pInfo["Premise County"]);
 			editAppSpecific("APN", pInfo["APN"]);
 			editAppSpecific("Cultivator Type", pInfo["Cultivator Type"]);
