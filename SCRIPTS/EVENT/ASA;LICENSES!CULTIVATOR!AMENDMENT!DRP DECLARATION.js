@@ -39,10 +39,11 @@ try {
 
 //	if(parentAltId.substring(1,2) == "M")
 	var cType = getAppSpecific("Cultivator Type",parentId)
-	if(cType == "Medicinal")
-		appIds = getChildren("Licenses/Cultivator/Medical/Application",parentId);
-	else
-		appIds = getChildren("Licenses/Cultivator/Adult Use/Application",parentId);
+//	if(cType == "Medicinal")
+//		appIds = getChildren("Licenses/Cultivator/Medical/Application",parentId);
+//	else
+//		appIds = getChildren("Licenses/Cultivator/Adult Use/Application",parentId);
+	appIds = getChildren("Licenses/Cultivator/*/Application",parentId);
 	for(a in appIds) {
 		decIds = getChildren("Licenses/Cultivator/Medical/Declaration",appIds[a]);
 		for(d in decIds) {
@@ -110,6 +111,6 @@ try {
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/AMENDMENT/ADMINISTRATIVE: " + err.message);
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/AMENDMENT/DRP Declaration: " + err.message);
 	logDebug(err.stack);
 }
