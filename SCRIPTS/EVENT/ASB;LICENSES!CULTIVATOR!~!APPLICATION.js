@@ -109,6 +109,61 @@ try {
 
 //lwacht: 180412: story 5428: end
 
+//jshear: 200117: story 6306: start - look for Smart Characters in data passing to METRIC
+try {
+	
+	var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
+	var invalidChar = false;
+	var myObj = new Object();
+	var envContactList = aa.env.getValue("ContactList");
+	var capContactArray = envContactList.toArray();
+	if (capContactArray){
+		for (yy in capContactArray){
+			p = capContactArray[yy].getPeople();
+			cType = p.getContactType();
+			if(cType == "Designated Responsible Party"){ 
+				myObj['DRP Phone Number'] = ""+ p.phone3;
+				myObj['DRP Email'] = "" + p.email;
+				myObj['DRP First Name'] = "" + p.firstName;
+				myObj['drpLastName'] = "" + p.lastName;
+			}
+			if(cType == "Business"){ 
+				myObj['Facility Phone']  = ""+ p.phone3;
+			}
+		}
+	}
+	myObj['Premise Address'] = AInfo["Premise Address"];
+	myObj['Premice City'] = AInfo["Premise City"];
+	myObj['Premise County'] = "" + AInfo["Premise County"];
+	myObj['Premise State'] = "" + AInfo["Premise State"];
+	myObj['premiseZip'] = "" + AInfo["Premise Zip"];
+	myObj['APN'] = "" + AInfo["APN"];
+	myObj["BOE Seller's Permit Number"] = "" + AInfo["BOE Seller's Permit Number"];
+
+
+	for (i in myObj){
+		if (myObj.hasOwnProperty(i)){	
+			var smartChar = isUnicode(String(myObj[i]));
+			if (smartChar){
+				invalidChar = true;
+				smartCharMessage += ", " + i;
+			}
+		}
+	}
+
+	if (invalidChar){
+		cancel = true;
+		showMessage = true;
+	}	comment(smartCharMessage);
+
+
+	}
+catch (err) {
+	logDebug("An error has occurred in ASB;LICENSES!CULTIVATOR!~!APPLICATION.js: " + err.message);
+	logDebug(err.stack);
+	}
+//jshear: 200117: story 6306: end
+
 //lwacht 180104 Story 5105 start
 /*
 try{
