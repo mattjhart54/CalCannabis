@@ -125,7 +125,7 @@ try {
 				myObj['DRP Phone Number'] = ""+ p.phone3;
 				myObj['DRP Email'] = "" + p.email;
 				myObj['DRP First Name'] = "" + p.firstName;
-				myObj['drpLastName'] = "" + p.lastName;
+				myObj['DRP Last Name'] = "" + p.lastName;
 			}
 			if(cType == "Business"){ 
 				myObj['Facility Phone']  = ""+ p.phone3;
@@ -133,12 +133,12 @@ try {
 		}
 	}
 	myObj['Premise Address'] = AInfo["Premise Address"];
-	myObj['Premice City'] = AInfo["Premise City"];
+	myObj['Premise City'] = AInfo["Premise City"];
 	myObj['Premise County'] = "" + AInfo["Premise County"];
 	myObj['Premise State'] = "" + AInfo["Premise State"];
-	myObj['premiseZip'] = "" + AInfo["Premise Zip"];
+	myObj['Premise Zip'] = "" + AInfo["Premise Zip"];
 	myObj['APN'] = "" + AInfo["APN"];
-	myObj["BOE Seller's Permit Number"] = "" + AInfo["BOE Seller's Permit Number"];
+	myObj["Seller's Permit Number"] = "" + AInfo["BOE Seller's Permit Number"];
 
 
 	for (i in myObj){
