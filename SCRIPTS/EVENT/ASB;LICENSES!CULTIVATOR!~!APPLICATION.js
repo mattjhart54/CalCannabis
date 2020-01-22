@@ -115,22 +115,20 @@ try {
 	var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
 	var invalidChar = false;
 	var myObj = new Object();
-	var envContactList = aa.env.getValue("ContactList");
-	var capContactArray = envContactList.toArray();
-	if (capContactArray){
-		for (xx in capContactArray){
-			p = capContactArray[xx].getPeople();
-			cType = p.getContactType();
-			logDebug("Contact Type: " + cType);
-			if(cType == "Designated Responsible Party"){ 
-				logDebug("Phone: " + p.phone3 + " Email: " + p.email + " First Name: " + p.firstName + " Last Name: " + p.lastName);
-				myObj['DRP Phone Number'] = ""+ p.phone3;
-				myObj['DRP Email'] = "" + p.email;
-				myObj['DRP First Name'] = "" + p.firstName;
-				myObj['DRP Last Name'] = "" + p.lastName;
+	ca = getContactArrayBefore();
+	if (ca) {
+		for (i in ca){
+			var contactArray = ca[i];
+			var contactType = contactArray["contactType"];
+			if(contactType == "Designated Responsible Party"){ 
+				logDebug(contactArray["contactType"] + " Email: " + contactArray["email"] + " First Name: " + contactArray["firstName"] + " Last Name: " + contactArray["lastName"]);
+				//myObj['DRP Phone Number'] = ""+ p.phone3;
+				myObj['DRP Email'] = "" + contactArray["email"];
+				myObj['DRP First Name'] = "" + contactArray["firstName"];
+				myObj['DRP Last Name'] = "" + contactArray["lastName"];
 			}
-			if(cType == "Business"){ 
-				myObj['Facility Phone']  = ""+ p.phone3;
+			if(contactType == "Business"){ 
+				//myObj['Facility Phone']  = ""+ p.phone3;
 			}
 		}
 	}
