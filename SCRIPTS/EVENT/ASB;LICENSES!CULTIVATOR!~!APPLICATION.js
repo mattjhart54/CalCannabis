@@ -115,14 +115,15 @@ try {
 	var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
 	var invalidChar = false;
 	var myObj = new Object();
-	var contactList = aa.env.getValue("ContactList");
+	cap = aa.cap.getCap(capId).getOutput();
+	var contactList = cap.getContactsGroup();
 	logDebug("Contact list " + contactList);
-		var contactArray = contactList.toArray();
+		var contactArray = contactList.toArray(); 
 		if (contactArray){
-			for (xx in contactArray){
-				capContact = contactArray[xx].getPeople();
-				contactType = capContact.getContactType();
-				logDebug(contactType + " Email: " + capContact.email + " First Name: " + capContact.firstName + " Last Name: " + capContact.lastName);
+			for (i in contactArray){
+				thisCont = contactArray[i];;
+				contactType = thisCont.contactType;
+				logDebug(contactType + " Email: " + capContact.email + " First Name: " + capContact.firstName + " Last Name: " + capContact.lastName + " Phone: " + capContact.phone3);
 				if(contactType == "Designated Responsible Party"){
 				
 				myObj['DRP Phone Number'] = ""+ capContact.phone3;
