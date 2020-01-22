@@ -115,13 +115,8 @@ try {
 	var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
 	var invalidChar = false;
 	var myObj = new Object();
-	cap = aa.cap.getCap(capId).getOutput();
-	var contactList = cap.getContactsGroup();
-	var arrContacts = contactList.toArray();
-	for(var i in arrContacts) {
-		var thisCont = arrContacts[i];
-		logDebug(thisCont);
-	}
+	var envContactList = aa.env.getValue("ContactList");
+	logDebug("Contact list " + envContactList);
 	/*var conObjDRP = getContactObj(capId,"Designated Responsible Party");
 	var conObjBus = getContactObj(capId,"Business");
 	if (conObjDRP){				
