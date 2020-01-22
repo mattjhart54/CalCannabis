@@ -118,10 +118,12 @@ try {
 	var envContactList = aa.env.getValue("ContactList");
 	var capContactArray = envContactList.toArray();
 	if (capContactArray){
-		for (yy in capContactArray){
-			p = capContactArray[yy].getPeople();
+		for (xx in capContactArray){
+			p = capContactArray[xx].getPeople();
 			cType = p.getContactType();
+			logDebug("Contact Type: " + cType);
 			if(cType == "Designated Responsible Party"){ 
+				logDebug("Phone: " + p.phone3 + " Email: " + p.email + " First Name: " + p.firstName + " Last Name: " + p.lastName);
 				myObj['DRP Phone Number'] = ""+ p.phone3;
 				myObj['DRP Email'] = "" + p.email;
 				myObj['DRP First Name'] = "" + p.firstName;
