@@ -115,7 +115,14 @@ try {
 	var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
 	var invalidChar = false;
 	var myObj = new Object();
-	var conObjDRP = getContactObj(capId,"Designated Responsible Party");
+	cap = aa.cap.getCap(capId).getOutput();
+	var contactList = cap.getContactsGroup();
+	var arrContacts = contactList.toArray();
+	for(var i in arrContacts) {
+		var thisCont = arrContacts[i];
+		logDebug(thisCont);
+	}
+	/*var conObjDRP = getContactObj(capId,"Designated Responsible Party");
 	var conObjBus = getContactObj(capId,"Business");
 	if (conObjDRP){				
 		myObj['DRP Phone Number'] = ""+ conObjDRP.people.getPhone3();
@@ -125,7 +132,7 @@ try {
 	}
 	if(conObjBus){ 
 		myObj['Facility Phone']  = ""+ conObjBus.people.getPhone3();
-	}
+	}*/
 	myObj['Premise Address'] = AInfo["Premise Address"];
 	myObj['Premise City'] = AInfo["Premise City"];
 	myObj['Premise County'] = "" + AInfo["Premise County"];
