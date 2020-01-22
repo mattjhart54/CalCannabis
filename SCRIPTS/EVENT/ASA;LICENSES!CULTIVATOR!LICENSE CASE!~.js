@@ -42,8 +42,8 @@ try {
 	capId = holdId;
 	editAppSpecific("License Type",PInfo["License Type"]);
 	editAppSpecific("Legal Business Name",PInfo["Legal Business Name"]);
-	editAppSpecific("Premises City",PInfo["Premises City"]);
-	editAppSpecific("Premises County",PInfo["Premises County"]);
+	editAppSpecific("Premises City",PInfo["Premise City"]);
+	editAppSpecific("Premises County",PInfo["Premise County"]);
 	editAppSpecific("Local Authority Type",PInfo["Local Authority Type"]);
 	
 }catch(err){
