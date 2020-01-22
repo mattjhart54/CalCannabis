@@ -111,49 +111,56 @@ try {
 
 //jshear: 200117: story 6306: start - look for Smart Characters in data passing to METRIC
 try {
-	
-	var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
-	var invalidChar = false;
-	var myObj = new Object();
-	var envContactList = aa.env.getValue("ContactList");
-	logDebug("Contact list " + envContactList);
-	/*var conObjDRP = getContactObj(capId,"Designated Responsible Party");
-	var conObjBus = getContactObj(capId,"Business");
-	if (conObjDRP){				
-		myObj['DRP Phone Number'] = ""+ conObjDRP.people.getPhone3();
-		myObj['DRP Email'] = "" + conObjDRP.people.getEmail();
-		myObj['DRP First Name'] = "" + conObjDRP.people.getFirstName();
-		myObj['DRP Last Name'] = "" + conObjDRP.people.getLastName();
-	}
-	if(conObjBus){ 
-		myObj['Facility Phone']  = ""+ conObjBus.people.getPhone3();
-	}*/
-	myObj['Premise Address'] = AInfo["Premise Address"];
-	myObj['Premise City'] = AInfo["Premise City"];
-	myObj['Premise County'] = "" + AInfo["Premise County"];
-	myObj['Premise State'] = "" + AInfo["Premise State"];
-	myObj['Premise Zip'] = "" + AInfo["Premise Zip"];
-	myObj['APN'] = "" + AInfo["APN"];
-	myObj["Seller's Permit Number"] = "" + AInfo["BOE Seller's Permit Number"];
 
-
-	for (i in myObj){
-		if (myObj.hasOwnProperty(i)){	
-			var smartChar = isUnicode(String(myObj[i]));
-			if (smartChar){
-				invalidChar = true;
-				smartCharMessage += ", " + i;
+	if (!publicUser){	
+		var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
+		var invalidChar = false;
+		var myObj = new Object();
+		var arrayList = aa.util.newArrayList();
+		arrayList = aa.env.getValue("ContactList");
+		var capContactArrayCharCheck = arrayList.toArray();
+		
+		if (capContactArrayCharCheck){
+			for (var yy in capContactArray){
+				capContact = capContactArray[yy].getPeople();
+				if(capContact.contactType == "Designated Responsible Party"){
+					myObj['DRP Phone Number'] = ""+ capContact.phone3;
+					myObj['DRP Email'] = "" + capContact.email;
+					myObj['DRP First Name'] = "" + capContact.firstName;
+					myObj['DRP Last Name'] = "" + capContact.lastName;
+				}
+				if(capContact.contactType == "Business"){
+					myObj['Facility Phone']  = ""+ capContact.phone3;
+				}
 			}
+		}
+		myObj['Premise Address'] = AInfo["Premise Address"];
+		myObj['Premise City'] = AInfo["Premise City"];
+		myObj['Premise County'] = "" + AInfo["Premise County"];
+		myObj['Premise State'] = "" + AInfo["Premise State"];
+		myObj['Premise Zip'] = "" + AInfo["Premise Zip"];
+		myObj['APN'] = "" + AInfo["APN"];
+		myObj["Seller's Permit Number"] = "" + AInfo["BOE Seller's Permit Number"];
+
+
+		for (i in myObj){
+			if (myObj.hasOwnProperty(i)){	
+				var smartChar = isUnicode(String(myObj[i]));
+				if (smartChar){
+					invalidChar = true;
+					smartCharMessage += ", " + i;
+				}
+			}
+		}
+
+		if (invalidChar){
+			cancel = true;
+			showMessage = true;
+			comment(smartCharMessage);
 		}
 	}
 
-	if (invalidChar){
-		cancel = true;
-		showMessage = true;
-	}	comment(smartCharMessage);
-
-
-	}
+}
 catch (err) {
 	logDebug("An error has occurred in ASB;LICENSES!CULTIVATOR!~!APPLICATION.js: " + err.message);
 	logDebug(err.stack);
