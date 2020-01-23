@@ -77,7 +77,12 @@ var parentId = cap.getParentCapID();
 
 try {
 	//mhart: 012320: story 6378: check License cases before submittal
-	childIds  = getChildren("Licenses/Cultivator/License Case/*",parentId);
+	var AInfo = [];
+	loadAppSpecific4ACA(AInfo);
+	var licenseId = AInfo["License Number"];
+	var licId = aa.cap.getCapID(licenseId);
+	licId = licId.getOutput();
+	childIds  = getChildren("Licenses/Cultivator/License Case/*",licId);
 	holdId = capId;
 	var caseHold = false
 	for(c in childIds) {
