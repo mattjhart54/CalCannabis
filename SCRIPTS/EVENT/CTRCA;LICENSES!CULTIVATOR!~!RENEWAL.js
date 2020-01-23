@@ -98,7 +98,7 @@ try{
 		}
 	}	
 	capid = holdId;
-	if(caseReview) {	
+	if(!caseReview && publicUser) {	
 		var renewalCapProject;
 		var vExpDate;
 		var vNewExpDate;
