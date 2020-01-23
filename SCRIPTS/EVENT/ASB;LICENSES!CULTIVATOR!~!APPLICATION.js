@@ -139,7 +139,7 @@ try {
 		myObj['Premise State'] = "" + AInfo["Premise State"];
 		myObj['Premise Zip'] = "" + AInfo["Premise Zip"];
 		myObj['APN'] = "" + AInfo["APN"];
-		myObj["Seller's Permit Number"] = "" + AInfo["BOE Seller's Permit Number"];
+		//myObj["Seller's Permit Number"] = "" + AInfo["BOE Seller's Permit Number"];
 
 
 		for (i in myObj){
