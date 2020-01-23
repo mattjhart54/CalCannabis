@@ -188,7 +188,7 @@ try {
 //jshear: 200123: story 6306: Check for Smart Chars
 try {
 	var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
-	var invalidChar = false;
+	var invalidChar = true;
 	var myObj = new Object();
 	myObj['Premise Address'] = AInfo["Premise Address"];
 	myObj['Premise City'] = AInfo["Premise City"];
