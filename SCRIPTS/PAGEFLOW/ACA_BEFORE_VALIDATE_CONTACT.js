@@ -33,8 +33,6 @@ var br = "<BR>"; // Break Tag
 var useSA = false;
 var SA = null;
 var SAScript = null;
-var AInfo = [];
-loadAppSpecific4ACA(AInfo);
 var bzr = aa.bizDomain.getBizDomainByValue("MULTI_SERVICE_SETTINGS", "SUPER_AGENCY_FOR_EMSE");
 if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 	useSA = true;
