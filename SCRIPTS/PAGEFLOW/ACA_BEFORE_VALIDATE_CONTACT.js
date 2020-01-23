@@ -201,23 +201,23 @@ try {
 			}
 		}
 		//jshear: 200123: story 6306: Check for Smart Chars
-		if (myObj){
-			for (x in myObj){
-				if (myObj.hasOwnProperty(x)){	
-					var smartChar = isUnicode(String(myObj[x]));
-					if (smartChar){
-						invalidChar = true;
-						smartCharMessage += ", " + x;
-					}
+
+		for (x in myObj){
+			if (myObj.hasOwnProperty(x)){	
+				var smartChar = isUnicode(String(myObj[x]));
+				if (smartChar){
+					invalidChar = true;
+					smartCharMessage += ", " + x;
 				}
 			}
-
-			if (invalidChar){
-				cancel = true;
-				showMessage = true;
-				logMessage(smartCharMessage);
-			}
 		}
+
+		if (invalidChar){
+			cancel = true;
+			showMessage = true;
+			logMessage(smartCharMessage);
+		}
+		//jshear: 200123: story 6306: Check for Smart Chars end
 	}
 }catch (err){
 	logDebug("A JavaScript Error occurred:ACA_BEFORE_VALIDATE_CONTACT: " + err.message);
