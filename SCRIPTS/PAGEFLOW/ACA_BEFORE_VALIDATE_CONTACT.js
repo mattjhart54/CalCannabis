@@ -107,6 +107,7 @@ try {
 					var thisCont = arrContacts[i];
 					var contEmail = thisCont.email;
 					var contType = thisCont.contactType;
+					
 					if(contType == "Designated Responsible Party")
 						drpFnd = true;
 					if(contType == "Business")
@@ -143,6 +144,18 @@ try {
 	var capIdStatusClass = getCapIdStatusClass(capId);
 	if(!matches(capIdStatusClass, "COMPLETE")){
 	//lwacht: 180306: story 5306: end
+		//jshear: 200123: story 6306: setting variables and Object values for smart char check
+		var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
+		var invalidChar = false;
+		var myObj = new Object();
+		myObj['Premise Address'] = AInfo["Premise Address"];
+		myObj['Premise City'] = AInfo["Premise City"];
+		myObj['Premise County'] = "" + AInfo["Premise County"];
+		myObj['Premise State'] = "" + AInfo["Premise State"];
+		myObj['Premise Zip'] = "" + AInfo["Premise Zip"];
+		myObj['APN'] = "" + AInfo["APN"];
+		myObj["Seller's Permit Number"] = "" + AInfo["BOE Seller's Permit Number"];
+		//jshear: 200123: story 6306 variable and object value set complete
 		var contactList = cap.getContactsGroup();
 		if(contactList != null && contactList.size() > 0){
 			var arrContacts = contactList.toArray();
@@ -151,6 +164,8 @@ try {
 				var contFirst = thisCont.firstName;
 				var contLast = thisCont.lastName;
 				var contLBN = thisCont.middleName;
+				var contEmail = thisCont.email;
+				var contPhone = thisCont.phone3;
 				var contType = thisCont.contactType;
 				if(contType == "Agent for Service of Process") {
 					if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined) ||
@@ -163,19 +178,44 @@ try {
 				}
 				//mhart - added check to validate required fields completed as expressions not always firing
 				if(contType == "Business") {
+					myObj['Facility Phone']  = ""+ contPhone;
 					if(matches(contFirst,null,"",undefined) || matches(contLast,null,"",undefined) || matches(contLBN,null,"",undefined)) {
-							cancel = true;
-							showMessage = true;
-							logMessage("The Business must have a First and Last Name and Legal Business Name and the Individual/Organization field must be set to Individual.  Please edit the Business contact to add these fields.");	
+						cancel = true;
+						showMessage = true;
+						logMessage("The Business must have a First and Last Name and Legal Business Name and the Individual/Organization field must be set to Individual.  Please edit the Business contact to add these fields.");	
 					}
 				}
 				if(contType == "Designated Responsible Party" || contType == "DRP - Temporary License") {
+					if(contType == "Designated Responsible Party"){
+						myObj['DRP Phone Number'] = ""+ contPhone;
+						myObj['DRP Email'] = "" + contEmail;
+						myObj['DRP First Name'] = "" + contFirst;
+						myObj['DRP Last Name'] = "" + contLast;
+					}
 					if(matches(contFirst,null,"",undefined) || matches(contLast,null,"",undefined)) {
 							cancel = true;
 							showMessage = true;
 							logMessage("The Designated Responsible Party must have a First and Last Name and the Individual/Organization field must be set to Individual.  Please edit the DRP contact to add these fields.");	
 					}
 				}
+			}
+		}
+		//jshear: 200123: story 6306: Check for Smart Chars
+		if (myObj){
+			for (i in myObj){
+				if (myObj.hasOwnProperty(i)){	
+					var smartChar = isUnicode(String(myObj[i]));
+					if (smartChar){
+						invalidChar = true;
+						smartCharMessage += ", " + i;
+					}
+				}
+			}
+
+			if (invalidChar){
+				cancel = true;
+				showMessage = true;
+				comment(smartCharMessage);
 			}
 		}
 	}
