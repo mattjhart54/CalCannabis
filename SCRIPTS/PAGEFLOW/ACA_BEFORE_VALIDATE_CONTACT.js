@@ -215,7 +215,7 @@ try {
 			if (invalidChar){
 				cancel = true;
 				showMessage = true;
-				comment(smartCharMessage);
+				logMessage(smartCharMessage);
 			}
 		}
 	}
