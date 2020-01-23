@@ -71,13 +71,13 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 
 var cap = aa.env.getValue("CapModel");
-//var parentId = cap.getParentCapID();
+var parentId = cap.getParentCapID();
 
 // page flow custom code begin
 
 try {
 	//mhart: 012320: story 6378: check License cases before submittal
-	childIds  = getChildren("Licenses/Cultivator/License Case/*");
+	childIds  = getChildren("Licenses/Cultivator/License Case/*",parentId);
 	holdId = capId;
 	var caseHold = false
 	for(c in childIds) {
