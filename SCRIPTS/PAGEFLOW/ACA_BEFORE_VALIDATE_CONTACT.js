@@ -202,12 +202,12 @@ try {
 		}
 		//jshear: 200123: story 6306: Check for Smart Chars
 		if (myObj){
-			for (i in myObj){
-				if (myObj.hasOwnProperty(i)){	
-					var smartChar = isUnicode(String(myObj[i]));
+			for (x in myObj){
+				if (myObj.hasOwnProperty(x)){	
+					var smartChar = isUnicode(String(myObj[x]));
 					if (smartChar){
 						invalidChar = true;
-						smartCharMessage += ", " + i;
+						smartCharMessage += ", " + x;
 					}
 				}
 			}
