@@ -118,11 +118,11 @@ try {
 		var myObj = new Object();
 		var arrayList = aa.util.newArrayList();
 		arrayList = aa.env.getValue("ContactList");
-		var capContactArrayCharCheck = arrayList.toArray();
+		//var capContactArrayCharCheck = arrayList.toArray();
 		
-		if (capContactArrayCharCheck){
-			for (var yy in capContactArray){
-				capContact = capContactArray[yy].getPeople();
+		if (arrayList){
+			for (var yy in arrayList){
+				capContact = arrayList[yy].getPeople();
 				if(capContact.contactType == "Designated Responsible Party"){
 					myObj['DRP Phone Number'] = ""+ capContact.phone3;
 					myObj['DRP Email'] = "" + capContact.email;
