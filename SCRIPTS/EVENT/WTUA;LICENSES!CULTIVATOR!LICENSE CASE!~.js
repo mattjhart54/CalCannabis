@@ -25,7 +25,7 @@ try{
 		var renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parentCapId);
 		var licAltId = parentCapId.getCustomID();
 		var altId = renewalCapProject.getCustomID();
-		if (renewalCapProject != null && ) {
+		if (renewalCapProject != null) {
 			var capDetailObjResult = aa.cap.getCapDetail(renewalCapProject);
 			if (capDetailObjResult.getSuccess()){
 				capDetail = capDetailObjResult.getOutput();
