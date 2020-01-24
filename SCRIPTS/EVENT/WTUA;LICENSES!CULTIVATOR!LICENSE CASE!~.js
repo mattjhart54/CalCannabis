@@ -1,5 +1,5 @@
 try{
-	if (wfTask == "Licensing Case Assessment" && wfStatus == "Notice of Violation") {
+	if (wfTask == "Licensing Case Assessment" && wfStatus == "Notice Of Violation") {
 		parentCapId = getParent();
 		holdId = capId;
 		capId = parentCapId;
