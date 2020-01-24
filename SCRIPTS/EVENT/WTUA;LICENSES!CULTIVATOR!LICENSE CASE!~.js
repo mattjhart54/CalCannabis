@@ -17,6 +17,15 @@ try{
 		}
 		capId = holdId;
 	}
+	if (wfTask == "Licensing Case Assessment" && wfStatus == "Local Non-Compliance") {
+		parentCapId = getParent();
+		holdId = capId;
+		capId = parentCapId;
+		if(!appHasCondition("License Hold","Applied","Local Non-Compliance",null)){
+			addStdCondition("License Hold","Local Non-Compliance");
+		}
+		capId = holdId;
+	}
 	if (wfTask == "LAU Assessment" && wfStatus == "Refer to Legal") {
 		editAppSpecific("Case Renewal Type","Renewal Hold");
 	}
