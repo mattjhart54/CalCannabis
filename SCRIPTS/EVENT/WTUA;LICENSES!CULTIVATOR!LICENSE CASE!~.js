@@ -23,15 +23,16 @@ try{
 	if (wfTask == "LAU Assessment" && wfStatus == "Resolved") {
 		var parentCapId = getParent();
 		var renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parentCapId);
+		var renCapId = renewalCapProject.getCapID();
 		var licAltId = parentCapId.getCustomID();
-		var altId = renewalCapProject.getCustomID();
+		var altId = renCapId.getCustomID();
 		if (renewalCapProject != null) {
-			var capDetailObjResult = aa.cap.getCapDetail(renewalCapProject);
+			var capDetailObjResult = aa.cap.getCapDetail(renCapId);
 			if (capDetailObjResult.getSuccess()){
 				capDetail = capDetailObjResult.getOutput();
 				var balanceDue = capDetail.getBalance();
 			}
-			if (balanceDue = 0){
+			if (balanceDue == 0){
 				// Get current expiration date.
 				vLicenseObj = new licenseObject(null, parentCapId);
 				vExpDate = vLicenseObj.b1ExpDate;
@@ -96,9 +97,9 @@ try{
 							}
 						}
 					}
-					// Add record to the CAT set
-					addToCat(vLicenseID);
 				}
+				// Add record to the CAT set
+				addToCat(parentCapId);
 			}
 		}
 	}
