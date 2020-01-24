@@ -23,6 +23,8 @@ try{
 	if (wfTask == "LAU Assessment" && wfStatus == "Resolved") {
 		var parentCapId = getParent();
 		var renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parentCapId);
+		var licAltId = parentCapId.getCustomID();
+		var altId = renewalCapProject.getCustomID();
 		if (renewalCapProject != null && ) {
 			var capDetailObjResult = aa.cap.getCapDetail(renewalCapProject);
 			if (capDetailObjResult.getSuccess()){
@@ -44,8 +46,8 @@ try{
 				updateAppStatus("Active","License Renewed",parentCapId);
 				// Update the Cultivation Type on the license record
 				if(AInfo["Designation Change"] == "Yes") {
-					editAppSpecific("Cultivator Type",AInfo["Designation Type"],vLicenseID);
-					editAppName(AInfo["Designation Type"] + " - " + AInfo["License Type"],vLicenseID);
+					editAppSpecific("Cultivator Type",AInfo["Designation Type"],parentCapId);
+					editAppName(AInfo["Designation Type"] + " - " + AInfo["License Type"],parentCapId);
 				}
 				//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 				renewalCapProject.setStatus("Complete");
@@ -85,7 +87,7 @@ try{
 								var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 							}
 							if(sName){
-								setAddResult=aa.set.add(sName,vLicenseID);
+								setAddResult=aa.set.add(sName,parentCapId);
 								if(setAddResult.getSuccess()){
 									logDebug(capId.getCustomID() + " successfully added to set " +sName);
 								}else{
