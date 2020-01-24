@@ -98,7 +98,7 @@ try{
 		}
 	}	
 	capid = holdId;
-	if(!caseReview && publicUser) {	
+	if(!caseReview && balanceDue <= 0) {	
 		var renewalCapProject;
 		var vExpDate;
 		var vNewExpDate;
