@@ -8,6 +8,15 @@ try{
 		}
 		capId = holdId;
 	}
+	if (wfTask == "Licensing Case Assessment" && wfStatus == "Owner Conviction") {
+		parentCapId = getParent();
+		holdId = capId;
+		capId = parentCapId;
+		if(!appHasCondition("License Hold","Applied","Owner Subsequent Convictions",null)){
+			addStdCondition("License Hold","Owner Subsequent Convictions");
+		}
+		capId = holdId;
+	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/LICENSE CASE/NA: " + err.message);
 	logDebug(err.stack);
