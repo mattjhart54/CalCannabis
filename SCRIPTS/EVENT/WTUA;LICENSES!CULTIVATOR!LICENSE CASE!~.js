@@ -7,6 +7,7 @@ try{
 			addStdCondition("License Hold","Applied","Notice of Violation");
 		}
 		capId = holdId;
+	}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/LICENSE CASE/NA: " + err.message);
 	logDebug(err.stack);
