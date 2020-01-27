@@ -29,7 +29,7 @@ try{
 	if (wfTask == "LAU Assessment" && wfStatus == "Refer to Legal") {
 		editAppSpecific("Case Renewal Type","Renewal Hold");
 	}
-	if (wfTask == "LAU Assessment" && wfStatus == "Resolved") {
+	if (matches(wfTask,"LAU Assessment","Licensing Case Assessment") && matches(wfStatus,"Resolved","Closed")) {
 		var parentCapId = getParent();
 		var renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parentCapId);
 		var renCapId = renewalCapProject.getCapID();
