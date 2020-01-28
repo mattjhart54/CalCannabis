@@ -71,17 +71,10 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 
-var fromDate = getParam("fromDate");							// Hardcoded dates.   Use for testing only
-var toDate = getParam("toDate");								// ""
-var dFromDate = aa.date.parseDate(fromDate);					//
-var dToDate = aa.date.parseDate(toDate);						//
-var lookAheadDays = aa.env.getValue("lookAheadDays");   		// Number of days from today
-var daySpan = aa.env.getValue("daySpan");						// Days to search (6 if run weekly, 0 if daily, etc.)
-var appGroup = getParam("appGroup");							//   app Group to process {Licenses}
-var appTypeType = getParam("appTypeType");						//   app type to process {Rental License}
-var appSubtype = getParam("appSubtype");						//   app subtype to process {NA}
-var appCategory = getParam("appCategory");						//   app category to process {NA}
-var expStatus = getParam("expirationStatus")					//   test for this expiration status
+var appGroup = getParam("recordGroup");							//   app Group to process {Licenses}
+var appTypeType = getParam("recordType");						//   app type to process {Rental License}
+var appSubtype = getParam("recordSubtype");						//   app subtype to process {NA}
+var appCategory = getParam("recordCategory");						//   app category to process {NA}
 var gracePeriodDays = getParam("gracePeriodDays")				//	bump up expiration date by this many days
 var skipAppStatusArray = getParam("skipAppStatus").split(",");	//   Skip records with one of these application statuses
 var emailAddress = getParam("emailAddress");					// email to send report
@@ -97,17 +90,11 @@ var emailTemplate = getParam("emailTemplate");					// email Template
 var startDate = new Date();
 var timeExpired = false;
 
-if (!fromDate.length) // no "from" date, assume today + number of days to look ahead
-	fromDate = dateAdd(null,parseInt(lookAheadDays))
-
-if (!toDate.length)  // no "to" date, assume today + number of look ahead days + span
-	toDate = dateAdd(null,parseInt(lookAheadDays)+parseInt(daySpan))
 
 var mailFrom = lookup("ACA_EMAIL_TO_AND_FROM_SETTING","RENEW_LICENSE_AUTO_ISSUANCE_MAILFROM");
 var acaSite = lookup("ACA_CONFIGS","ACA_SITE");
 acaSite = acaSite.substr(0,acaSite.toUpperCase().indexOf("/ADMIN"));
 
-logDebug("Date Range -- fromDate: " + fromDate + ", toDate: " + toDate)
 
 var startTime = startDate.getTime();			// Start timer
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
