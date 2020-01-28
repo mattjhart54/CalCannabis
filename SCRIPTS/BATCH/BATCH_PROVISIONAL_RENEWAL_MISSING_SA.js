@@ -77,6 +77,10 @@ var appSubtype = getParam("recordSubtype");						//   app subtype to process {NA
 var appCategory = getParam("recordCategory");						//   app category to process {NA}
 var skipAppStatusArray = getParam("skipAppStatus").split(",");	//   Skip records with one of these application statuses
 var condType = getParam("condType");							// records with Condition Type applied
+var caseTypeFieldValue = getParam("caseTypeFieldValue");
+var caseDescFieldValue = getParam("caseDescFieldValue");
+var caseOpenByFieldValue = getParam("caseOpenByFieldValue");
+var priorityFieldValue = getParam("priorityFieldValue");
 var emailAddress = getParam("emailAddress");					// email to send report
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");// send out emails?
 var emailTemplate = getParam("emailTemplate");					// email Template
@@ -186,31 +190,58 @@ try{
 						capCount++;
 						vLicenseID = getParent(capId);
 						var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
-						if(matches(licCaseId, null, "", undefined)){
-							amendNbr = amendNbr = "000" + 1;
-						}else{
-							var cIdLen = licCaseId.length
-							if(licCaseId.length <= 9){
-								amendNbr = "000" +  cIdLen;
+						if (licCaseId){
+							// Set alt id for the case record based on the number of child case records linked to the license record
+							if(matches(licCaseId, null, "", undefined)){
+								amendNbr = amendNbr = "000" + 1;
 							}else{
-								if(licCaseId.length <= 99){
-									amendNbr = "00" +  cIdLen;
+								var cIdLen = licCaseId.length
+								if(licCaseId.length <= 9){
+									amendNbr = "000" +  cIdLen;
 								}else{
-									if(licCaseId.length <= 999){
+									if(licCaseId.length <= 99){
 										amendNbr = "00" +  cIdLen;
 									}else{
-										amendNbr = cIdLen
+										if(licCaseId.length <= 999){
+											amendNbr = "00" +  cIdLen;
+										}else{
+											amendNbr = cIdLen
+										}
 									}
 								}
 							}
+							licCaseAltId = licCaseId.getCustomID();
+							yy = licCaseAltId.substring(0,2);
+							newAltId = vLicenseID.getCustomID() + "-LC"+ yy + "-" + amendNbr;
+							var updateResult = aa.cap.updateCapAltID(licCaseId, newAltId);
+							if (updateResult.getSuccess()){
+								logDebug("Created License Case: " + newAltId + ".");
+							}else{ 
+								logDebug("Error renaming amendment record " + licCaseId);
+							}
+							// Copy the Designated resposible Party contact from the License Record to the Case record
+							copyContactsByType_rev(vLicenseID,licCaseId,"Designated Responsible Party");
+							
+							// Copy custom fields from the license record to the Case record
+							holdId = capId;
+							capId = vLicenseID;
+							PInfo = new Array;
+							loadAppSpecific(PInfo);
+							capId = holdId;
+							editAppSpecific("License Type",PInfo["License Type"],licCaseId);
+							editAppSpecific("Legal Business Name",PInfo["Legal Business Name"],licCaseId);
+							editAppSpecific("Premises City",PInfo["Premise City"],licCaseId);
+							editAppSpecific("Premises County",PInfo["Premise County"],licCaseId);
+							editAppSpecific("Local Authority Type",PInfo["Local Authority Type"],licCaseId);
+							editAppSpecific("Case Renewal Type",caseTypeFieldValue,licCaseId);
+							editAppSpecific("Case Description",caseDescFieldValue,licCaseId);
+							editAppSpecific("Case Opened By",caseOpenByFieldValue,licCaseId);
+							editAppSpecific("Priority",priorityFieldValue,licCaseId);
+							editAppName(AInfo["Case Renewal Type"]);
+							removeCapCondition(thisCond.getConditionType(),thisCond.getConditionDescription(),cStatusType,capId);
+						}else{
+							logDebug("Failed to create License Case Record for " + vLicenseID.getCustomID());
 						}
-						altId = capId.getCustomID();
-						yy = altId.substring(0,2);
-						newAltId = vLicenseID.getCustomID() + "-LC"+ yy + "-" + amendNbr;
-						if (licCaseId){
-							logDebug("Created License Case: " + newAltId);
-						}
-						removeCapCondition(thisCond.getConditionType(),thisCond.getConditionDescription(),cStatusType,capId);
 					}
 				}
 			}
