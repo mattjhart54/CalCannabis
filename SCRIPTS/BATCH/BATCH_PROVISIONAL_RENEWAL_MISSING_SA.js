@@ -11,6 +11,7 @@
 |
 /------------------------------------------------------------------------------------------------------*/
 emailText = "";
+showDebug = false;	
 maxSeconds = 4.5 * 60;		// number of seconds allowed for batch processing, usually < 5*60
 message = "";
 br = "<br>";
@@ -24,6 +25,8 @@ eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 eval(getScriptText("INCLUDES_BATCH"));
 eval(getMasterScriptText("INCLUDES_CUSTOM"));
 
+override = "function logDebug(dstr){ if(showDebug) { aa.print(dstr); emailText+= dstr + \"<br>\"; } }";
+eval(override);
 
 function getScriptText(vScriptName) {
 vScriptName = vScriptName.toUpperCase();
@@ -32,12 +35,19 @@ var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(), vScriptName,
 return emseScript.getScriptText() + "";
 }
 
+function getMasterScriptText(vScriptName) {
+    vScriptName = vScriptName.toUpperCase();
+    var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
+    var emseScript = emseBiz.getMasterScript(aa.getServiceProviderCode(), vScriptName);
+    return emseScript.getScriptText() + "";
+}
+
+showDebug = true;
 /*------------------------------------------------------------------------------------------------------/
 |
 | END: USER CONFIGURABLE PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-showDebug = aa.env.getValue("showDebug").substring(0,1).toUpperCase().equals("Y");
 
 sysDate = aa.date.getCurrentDate();
 batchJobResult = aa.batchJob.getJobID()
