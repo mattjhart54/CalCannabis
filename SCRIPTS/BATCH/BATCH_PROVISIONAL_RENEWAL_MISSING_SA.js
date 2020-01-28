@@ -75,7 +75,6 @@ var appGroup = getParam("recordGroup");							//   app Group to process {License
 var appTypeType = getParam("recordType");						//   app type to process {Rental License}
 var appSubtype = getParam("recordSubtype");						//   app subtype to process {NA}
 var appCategory = getParam("recordCategory");						//   app category to process {NA}
-var gracePeriodDays = getParam("gracePeriodDays")				//	bump up expiration date by this many days
 var skipAppStatusArray = getParam("skipAppStatus").split(",");	//   Skip records with one of these application statuses
 var emailAddress = getParam("emailAddress");					// email to send report
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");// send out emails?
@@ -136,9 +135,12 @@ if (emailAddress.length)
 /-----------------------------------------------------------------------------------------------------*/
 
 function mainProcess(){
+
+try{	
+	var capFilterStatus = 0;
+	var capCount  =0;
 	
 	var capModel = aa.cap.getCapModel().getOutput();
-	
 	//Get the Permits from the system 
 	var emptyGISArray=new Array();
 	capTypeModel = capModel.getCapType();
@@ -164,12 +166,19 @@ function mainProcess(){
 		var capValue = aa.cap.getCap(capIdValue).getOutput();
 		var altID = capIdValue.getCustomID();
 		var capStatus = aa.cap.getCap(capIdValue).getOutput().getCapStatus();
+		logDebug("Record: " + altID + " capStatus: " + capStatus + " " + capValue.isCompleteCap() + " Provisional: " + (AInfo['License Issued Type'] == "Provisional"));
 		
-
+		// Filter by CAP Status
+		if (exists(capStatus, skipAppStatusArray)) {
+			capFilterStatus++;
+			logDebug("     " +"skipping, due to application status of " + capStatus)
+			continue;
+		}
 		
 		if (capValue.isCompleteCap() && !matches(capStatus,"Renewal Denied","Approved") && AInfo['License Issued Type'] == "Provisional"){
 			if(appHasCondition("Application Condition","Applied","Provisional Renewal Missing Science Amendment",null)){
-				logDebug("Creating License Case and Removing Condition from " + altId);
+				capCount++;
+				logDebug("Creating License Case and Removing Condition from " + altID);
 				vLicenseID = getParentLicenseCapID(capIdValue);
 				vIDArray = String(vLicenseID).split("-");
 				vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
@@ -180,4 +189,10 @@ function mainProcess(){
 			}
 		}
 	}
-}
+	
+	logDebug("Ignored due to CAP Status: " + capFilterStatus);
+	logDebug("Total CAPS processed: " + capCount);
+}catch (err){
+	logDebug("BATCH_PROVISIONAL_RENEWAL_MISSING_SA: " + err.message + " In " + batchJobName);
+	logDebug("Stack: " + err.stack);
+}}
