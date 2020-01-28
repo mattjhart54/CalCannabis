@@ -98,6 +98,7 @@ try{
 		}
 	}	
 	capid = holdId;
+// Fast track license if qualified and fees paid
 	if(!caseReview && balanceDue <= 0) {	
 		var renewalCapProject;
 		var vExpDate;
@@ -184,11 +185,13 @@ try{
 			}
 	// Add record to the CAT set
 			addToCat(licId);
+	// Update FAst Track checkbox
+			editAppSpecific("Fast Track", "CHECKED");
 		}
 
 	}
 	else {
-		//  Send email notification to DRP
+//  No fast track. Send renewal submitted email notification to DRP
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
