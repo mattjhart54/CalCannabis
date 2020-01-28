@@ -31,6 +31,7 @@ try{
 	copyContactsByType(vLicenseID,capId,"Designated Responsible Party");
 	copyContactsByType(vLicenseID,capId,"Business");
 // Add condition effective in thirty days if Late Fee not paid	
+	var hasFee = false;
 	var feeDesc = AInfo["License Type"] + " - Late Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 	if(thisFee){
@@ -99,7 +100,7 @@ try{
 	}	
 	capid = holdId;
 // Fast track license if qualified and fees paid
-	if(!caseReview && balanceDue <= 0) {	
+	if(!caseReview && !hasFee) {	
 		var renewalCapProject;
 		var vExpDate;
 		var vNewExpDate;
