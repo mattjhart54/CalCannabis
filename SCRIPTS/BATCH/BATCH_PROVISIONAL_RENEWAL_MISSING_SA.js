@@ -192,17 +192,18 @@ try{
 						var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
 						if (licCaseId){
 							// Set alt id for the case record based on the number of child case records linked to the license record
-							if(matches(licCaseId, null, "", undefined)){
-								amendNbr = amendNbr = "000" + 1;
+							cIds = getChildren("Licenses/Cultivator/License Case/*",vLicenseID);
+							if(matches(cIds, null, "", undefined)){
+								amendNbr = "000" + 1;
 							}else{
-								var cIdLen = licCaseId.length
-								if(licCaseId.length <= 9){
+								var cIdLen = cIds.length
+								if(cIds.length <= 9){
 									amendNbr = "000" +  cIdLen;
 								}else{
-									if(licCaseId.length <= 99){
+									if(cIds.length <= 99){
 										amendNbr = "00" +  cIdLen;
 									}else{
-										if(licCaseId.length <= 999){
+										if(cIds.length <= 999){
 											amendNbr = "00" +  cIdLen;
 										}else{
 											amendNbr = cIdLen
@@ -237,7 +238,7 @@ try{
 							editAppSpecific("Case Description",caseDescFieldValue,licCaseId);
 							editAppSpecific("Case Opened By",caseOpenByFieldValue,licCaseId);
 							editAppSpecific("Priority",priorityFieldValue,licCaseId);
-							editAppName(AInfo["Case Renewal Type"]);
+							editAppName(caseTypeFieldValue,licCaseId);
 							removeCapCondition(thisCond.getConditionType(),thisCond.getConditionDescription(),cStatusType,capId);
 						}else{
 							logDebug("Failed to create License Case Record for " + vLicenseID.getCustomID());
