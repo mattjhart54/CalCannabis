@@ -176,7 +176,7 @@ try{
 			continue;
 		}
 		
-		if (capValue.isCompleteCap() && && getAppSpecific("License Issued Type",capId) == "Provisional"){
+		if (capValue.isCompleteCap() && getAppSpecific("License Issued Type",capId) == "Provisional"){
 			var condResult = aa.capCondition.getCapConditions(capId);
 			if (condResult.getSuccess()){
 				var capConds = condResult.getOutput();
