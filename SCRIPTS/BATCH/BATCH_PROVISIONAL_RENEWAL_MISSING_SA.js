@@ -175,7 +175,7 @@ try{
 			continue;
 		}
 		
-		if (capValue.isCompleteCap() && !matches(capStatus,"Renewal Denied","Approved") && AInfo['License Issued Type'] == "Provisional"){
+		if (capValue.isCompleteCap() && AInfo['License Issued Type'] == "Provisional"){
 			if(appHasCondition("Application Condition","Applied","Provisional Renewal Missing Science Amendment",null)){
 				capCount++;
 				logDebug("Creating License Case and Removing Condition from " + altID);
