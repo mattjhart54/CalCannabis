@@ -76,6 +76,7 @@ var appTypeType = getParam("recordType");						//   app type to process {Rental 
 var appSubtype = getParam("recordSubtype");						//   app subtype to process {NA}
 var appCategory = getParam("recordCategory");						//   app category to process {NA}
 var skipAppStatusArray = getParam("skipAppStatus").split(",");	//   Skip records with one of these application statuses
+var condType = getParam("condType");							// records with Condition Type applied
 var emailAddress = getParam("emailAddress");					// email to send report
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");// send out emails?
 var emailTemplate = getParam("emailTemplate");					// email Template
@@ -88,6 +89,7 @@ var emailTemplate = getParam("emailTemplate");					// email Template
 /------------------------------------------------------------------------------------------------------*/
 var startDate = new Date();
 var timeExpired = false;
+var useAppSpecificGroupName = false;
 
 
 var mailFrom = lookup("ACA_EMAIL_TO_AND_FROM_SETTING","RENEW_LICENSE_AUTO_ISSUANCE_MAILFROM");
@@ -98,7 +100,6 @@ acaSite = acaSite.substr(0,acaSite.toUpperCase().indexOf("/ADMIN"));
 var startTime = startDate.getTime();			// Start timer
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 
-var AInfo = new Array();
 
 if (appGroup == "*")
 	appGroup = "";
@@ -162,30 +163,37 @@ try{
 
 
 	for (x in vCapList) {
-		var capIdValue = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
-		var capValue = aa.cap.getCap(capIdValue).getOutput();
-		var altID = capIdValue.getCustomID();
-		var capStatus = aa.cap.getCap(capIdValue).getOutput().getCapStatus();
-		logDebug("Record: " + altID + " capStatus: " + capStatus + " " + capValue.isCompleteCap() + " Provisional: " + (AInfo['License Issued Type'] == "Provisional"));
+		
+		capId = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
+		var capValue = aa.cap.getCap(capId).getOutput();
+		var altID = capId.getCustomID();
+		var capStatus = aa.cap.getCap(capId).getOutput().getCapStatus();
 		
 		// Filter by CAP Status
 		if (exists(capStatus, skipAppStatusArray)) {
 			capFilterStatus++;
-			logDebug("     " +"skipping, due to application status of " + capStatus)
+			logDebug("skipping, " + altID + " due to application status of " + capStatus);
 			continue;
 		}
 		
-		if (capValue.isCompleteCap() && AInfo['License Issued Type'] == "Provisional"){
-			if(appHasCondition("Application Condition","Applied","Provisional Renewal Missing Science Amendment",null)){
-				capCount++;
-				logDebug("Creating License Case and Removing Condition from " + altID);
-				vLicenseID = getParentLicenseCapID(capIdValue);
-				vIDArray = String(vLicenseID).split("-");
-				vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
-				licAltId = vLicenseID.getCustomID();
-				createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
-				removeCapCondition("Application Condition","Provisional Renewal Missing Science Amendment","Applied",capIdValue);
-				
+		if (capValue.isCompleteCap() && && getAppSpecific("License Issued Type",capId) == "Provisional"){
+			var condResult = aa.capCondition.getCapConditions(capId);
+			if (condResult.getSuccess()){
+				var capConds = condResult.getOutput();
+				for (cc in capConds){
+					var thisCond = capConds[cc];
+					var cStatusType = thisCond.getConditionStatusType();
+					if (thisCond.getConditionDescription().equals(condType) && cStatusType == "Applied"){
+						capCount++;
+						logDebug("Creating License Case and Removing Condition from " + altID);
+						vLicenseID = getParentLicenseCapID(capId);
+						vIDArray = String(vLicenseID).split("-");
+						vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
+						licAltId = vLicenseID.getCustomID();
+						createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
+						removeCapCondition(thisCond.getConditionType(),thisCond.getConditionDescription(),cStatusType,capId);
+					}
+				}
 			}
 		}
 	}
