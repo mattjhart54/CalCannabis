@@ -185,8 +185,6 @@ try{
 			}
 	// Add record to the CAT set
 			addToCat(licId);
-	// Update FAst Track checkbox
-			editAppSpecific("Fast Track", "CHECKED");
 		}
 
 	}
