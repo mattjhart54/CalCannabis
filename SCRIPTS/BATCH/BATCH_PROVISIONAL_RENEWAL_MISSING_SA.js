@@ -181,6 +181,7 @@ function mainProcess(){
 		
 		if (vCapList.isCompleteCap() && !matches(capStatus,"Renewal Denied","Approved") && AInfo['License Issued Type'] == "Provisional"){
 			if(appHasCondition("Application Condition","Applied","Provisional Renewal Missing Science Amendment",null)){
+				logDebug("Creating License Case and Removing Condition from " + altId);
 				vLicenseID = getParentLicenseCapID(capIdValue);
 				vIDArray = String(vLicenseID).split("-");
 				vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
