@@ -29,6 +29,11 @@ try{
 	if (wfTask == "LAU Assessment" && wfStatus == "Refer to Legal") {
 		editAppSpecific("Case Renewal Type","Renewal Hold");
 	}
+	if (wfTask == "LAU Assessment" && wfStatus == "Refer to Legal") {
+		if (AInfo("Case Renewal Type") == "Renewal Allowed"){
+			editAppSpecific("Case Renewal Type", "Renewal Manual Review");
+		}
+	}
 	if (matches(wfTask,"LAU Assessment","Licensing Case Assessment") && matches(wfStatus,"Resolved","Closed")) {
 		var parentCapId = getParent();
 		var renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parentCapId);
