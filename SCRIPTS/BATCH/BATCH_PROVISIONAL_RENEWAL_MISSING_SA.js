@@ -161,12 +161,13 @@ function mainProcess(){
 
 	for (x in vCapList) {
 		var capIdValue = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
+		var capValue = aa.cap.getCap(capIdValue).getOutput();
 		var altID = capIdValue.getCustomID();
 		var capStatus = aa.cap.getCap(capIdValue).getOutput().getCapStatus();
 		
 
 		
-		if (vCapList[x].isCompleteCap() && !matches(capStatus,"Renewal Denied","Approved") && AInfo['License Issued Type'] == "Provisional"){
+		if (capValue.isCompleteCap() && !matches(capStatus,"Renewal Denied","Approved") && AInfo['License Issued Type'] == "Provisional"){
 			if(appHasCondition("Application Condition","Applied","Provisional Renewal Missing Science Amendment",null)){
 				logDebug("Creating License Case and Removing Condition from " + altId);
 				vLicenseID = getParentLicenseCapID(capIdValue);
