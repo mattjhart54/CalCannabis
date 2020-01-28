@@ -80,7 +80,7 @@ try{
 						}
 					}
 				}	
-				capid = holdId;
+				capId = holdId;
 			// Fast track license if qualified and fees paid
 				if(!caseReview && balanceDue <= 0) {	
 					var renewalCapProject;
