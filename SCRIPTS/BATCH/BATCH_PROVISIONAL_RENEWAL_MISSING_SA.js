@@ -172,7 +172,6 @@ try{
 		// Filter by CAP Status
 		if (exists(capStatus, skipAppStatusArray)) {
 			capFilterStatus++;
-			logDebug("skipping, " + altID + " due to application status of " + capStatus);
 			continue;
 		}
 		
@@ -185,12 +184,32 @@ try{
 					var cStatusType = thisCond.getConditionStatusType();
 					if (thisCond.getConditionDescription().equals(condType) && cStatusType == "Applied"){
 						capCount++;
-						logDebug("Creating License Case and Removing Condition from " + altID);
-						vLicenseID = getParentLicenseCapID(capId);
-						vIDArray = String(vLicenseID).split("-");
-						vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
-						licAltId = vLicenseID.getCustomID();
-						createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
+						vLicenseID = getParent(capId);
+						var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
+						if(matches(licCaseId, null, "", undefined)){
+							amendNbr = amendNbr = "000" + 1;
+						}else{
+							var cIdLen = licCaseId.length
+							if(licCaseId.length <= 9){
+								amendNbr = "000" +  cIdLen;
+							}else{
+								if(licCaseId.length <= 99){
+									amendNbr = "00" +  cIdLen;
+								}else{
+									if(licCaseId.length <= 999){
+										amendNbr = "00" +  cIdLen;
+									}else{
+										amendNbr = cIdLen
+									}
+								}
+							}
+						}
+						altId = capId.getCustomID();
+						yy = altId.substring(0,2);
+						newAltId = vLicenseID.getCustomID() + "-LC"+ yy + "-" + amendNbr;
+						if (licCaseId){
+							logDebug("Created License Case: " + newAltId);
+						}
 						removeCapCondition(thisCond.getConditionType(),thisCond.getConditionDescription(),cStatusType,capId);
 					}
 				}
