@@ -136,6 +136,8 @@ function mainProcess(){
 try{	
 	var capFilterStatus = 0;
 	var capCount  =0;
+	var recordSkippedArray = [];
+	var recordRenewArray = [];
 	
 	var capModel = aa.cap.getCapModel().getOutput();
 	//Get the Permits from the system 
@@ -186,22 +188,27 @@ try{
 										var cStatusType = thisCond.getConditionStatusType();
 										if (matches(thisCond.getConditionDescription(),"Locally Non-Compliant","DOJ LiveScan Match") && cStatusType == "Applied"){
 											logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
+											recordSkippedArray.push(altId);
 										}else{
 											processRenewal(capId);
+											recordRenewArray.push(altId);
 											capCount++;
 										}
 									}
 								}else{
 									processRenewal(capId);
+									recordRenewArray.push(altId);
 									capCount++;
 								}
 							}
 						}else{
 							logDebug("Skipping Record " + altId + " License Record has a License Case that does not meet criteria.");
+							recordSkippedArray.push(altId);
 						}
 					}
 				}else{
 					logDebug(altId + " has Fee Due, skipping Record");
+					recordSkippedArray.push(altId);
 				}
 			}	
 		}
@@ -209,6 +216,8 @@ try{
 	
 	logDebug("Total Open Renewals: " + capFilterStatus);
 	logDebug("Total CAPS processed: " + capCount);
+	logDebug("Processed Following Records: " + recordRenewArray);
+	logDebug("Skipped Following Records: " + recordSkippedArray);
 }catch (err){
 	logDebug("BATCH_PROVISIONAL_RENEWAL_MISSING_SA: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
