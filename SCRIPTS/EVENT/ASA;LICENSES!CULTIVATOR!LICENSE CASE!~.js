@@ -45,6 +45,8 @@ try {
 	editAppSpecific("Premises City",PInfo["Premise City"]);
 	editAppSpecific("Premises County",PInfo["Premise County"]);
 	editAppSpecific("Local Authority Type",PInfo["Local Authority Type"]);
+	editAppSpecific("Type of License",PInfo["License Issued Type"]);
+	editAppSpecific("License Start Date",PInfo["Valid From Date"]);
 	editAppName(AInfo["Case Renewal Type"]);
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/License Case/*: " + err.message);
