@@ -168,52 +168,59 @@ try{
 		var capStatus = aa.cap.getCap(capId).getOutput().getCapStatus();
 		
 		if (capValue.isCompleteCap()){
-			capFilterStatus++;
-			var capDetailObjResult = aa.cap.getCapDetail(capId);
-			if (capDetailObjResult.getSuccess()){
-				capDetail = capDetailObjResult.getOutput();
-				var balanceDue = capDetail.getBalance();
-				if (balanceDue == 0){
-					vLicenseID = getParent(capId);
-					if (vLicenseID){
-						licAltId = vLicenseID.getCustomID();
-						var caseVerify = licCaseCheck(vLicenseID);
-						if (caseVerify){
-							var condResult = aa.capCondition.getCapConditions(vLicenseID);
-							if (condResult.getSuccess()){
-								var capConds = condResult.getOutput();
-								if (capConds.length > 0){
-									for (cc in capConds){
-										var thisCond = capConds[cc];
-										var cStatusType = thisCond.getConditionStatusType();
-										if (matches(thisCond.getConditionDescription(),"Locally Non-Compliant","DOJ LiveScan Match") && cStatusType == "Applied"){
-											logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
-											recordSkippedArray.push(altId);
-										}else{
-											processRenewal(capId);
-											recordRenewArray.push(altId);
-											capCount++;
+			if (!matches(capStatus,"Approved","Renewal Denied")){
+				capFilterStatus++;
+				var capDetailObjResult = aa.cap.getCapDetail(capId);
+				if (capDetailObjResult.getSuccess()){
+					capDetail = capDetailObjResult.getOutput();
+					var balanceDue = capDetail.getBalance();
+					if (balanceDue == 0){
+						vLicenseID = getParent(capId);
+						if (vLicenseID){
+							logDebug("Parent: " + vLicenseID.getCustomID() + " Renewal: " + altId);
+							licAltId = vLicenseID.getCustomID();
+							var caseVerify = licCaseCheck(vLicenseID);
+							if (caseVerify){
+								var condResult = aa.capCondition.getCapConditions(vLicenseID);
+								if (condResult.getSuccess()){
+									var capConds = condResult.getOutput();
+									if (capConds.length > 0){
+										for (cc in capConds){
+											var thisCond = capConds[cc];
+											var cStatusType = thisCond.getConditionStatusType();
+											logDebug(thisCond.getConditionDescription());
+											if (matches(thisCond.getConditionDescription(),"Locally Non-Compliant","DOJ LiveScan Match") && cStatusType == "Applied"){
+												logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
+												recordSkippedArray.push(altId);
+												break;
+											}else{
+												processRenewal(capId);
+												recordRenewArray.push(altId);
+												capCount++;
+											}
 										}
+									}else{
+										processRenewal(capId);
+										recordRenewArray.push(altId);
+										capCount++;
 									}
-								}else{
-									processRenewal(capId);
-									recordRenewArray.push(altId);
-									capCount++;
 								}
+							}else{
+								logDebug("Skipping Record " + altId + " License Record has a License Case that does not meet criteria.");
+								recordSkippedArray.push(altId);
+								continue;
 							}
-						}else{
-							logDebug("Skipping Record " + altId + " License Record has a License Case that does not meet criteria.");
-							recordSkippedArray.push(altId);
 						}
+					}else{
+						logDebug(altId + " has Fee Due, skipping Record");
+						recordSkippedArray.push(altId);
+						continue;
 					}
-				}else{
-					logDebug(altId + " has Fee Due, skipping Record");
-					recordSkippedArray.push(altId);
 				}
-			}	
+			}
 		}
 	}
-	
+	logDebug("*************************Batch Job Stats******************************");
 	logDebug("Total Open Renewals: " + capFilterStatus);
 	logDebug("Total CAPS processed: " + capCount);
 	logDebug("Processed Following Records: " + recordRenewArray);
@@ -244,7 +251,7 @@ function licCaseCheck(vLicenseID){
 	return false;
 }
 function processRenewal(renCapId){
-	logDebug("Processing Renewal Record " + altId + " for License Record " + licAltId + "___________________________________________");
+	logDebug("*****************************Processing Renewal Record " + altId + " for License Record " + licAltId + "****************************");
 // Get current expiration date.
 		vLicenseObj = new licenseObject(null, vLicenseID);
 		vExpDate = vLicenseObj.b1ExpDate;
