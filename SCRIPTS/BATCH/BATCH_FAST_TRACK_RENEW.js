@@ -223,8 +223,8 @@ try{
 	logDebug("*************************Batch Job Stats******************************");
 	logDebug("Total Open Renewals: " + capFilterStatus);
 	logDebug("Total CAPS processed: " + capCount);
-	logDebug("Processed Following Records: " + recordRenewArray);
-	logDebug("Skipped Following Records: " + recordSkippedArray);
+	logDebug("Processed Following Records: " + recordRenewArray.join('\n'));
+	logDebug("Skipped Following Records: " + recordSkippedArray.join('\n'));
 }catch (err){
 	logDebug("BATCH_PROVISIONAL_RENEWAL_MISSING_SA: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
