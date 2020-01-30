@@ -1,5 +1,6 @@
 function sendLocalAuthNotification() {
 	try{
+		var br = "<BR>";
 		editAppSpecific("Local Authority Notification Sent", jsDateToASIDate(new Date()));
 		if(wfStatus == "Local Auth Sent - 10") {
 			editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),10));
@@ -52,7 +53,7 @@ function sendLocalAuthNotification() {
 					if(!matches(PREMISESADDRESSES[x]["Premises City"], null,"",undefined)) {
 						msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises City"];
 					}
-					msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises County"] + ";   ";
+					msgAddr = msgAddr + ", " + PREMISESADDRESSES[x]["Premises County"] + br";
 
 				}
 			}
