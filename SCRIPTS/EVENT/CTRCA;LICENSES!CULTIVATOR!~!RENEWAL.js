@@ -100,7 +100,7 @@ try{
 	}	
 	capId = holdId;
 // Fast track license if qualified and fees paid
-	if(!caseReview && !hasFee) {	
+	if(!caseReview && !hasFee && publicUser) {	
 		var renewalCapProject;
 		var vExpDate;
 		var vNewExpDate;
