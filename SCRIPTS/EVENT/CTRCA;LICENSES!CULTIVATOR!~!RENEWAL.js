@@ -84,11 +84,11 @@ try{
 	childIds  = getChildren("Licenses/Cultivator/License Case/*",licId);
 	holdId = capId;
 	capId = licId;
-	var caseReview = false
+	var caseReview = false;
 	if(appHasCondition("Owner History","Applied","DOJ LiveScan Match",null))
-		caseReveiw = true;
+		caseReview = true;
 	if(appHasCondition("License Hold","Applied","Local Non-Compliance",null))
-		caseReveiw = true;		
+		caseReview = true;		
 	for(c in childIds) {
 		capId = childIds[c];
 		cCap = aa.cap.getCap(capId).getOutput();
