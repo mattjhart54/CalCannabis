@@ -82,7 +82,7 @@ aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
 aa.env.setValue("reportName", "30 Day Deficiency Notification Letter");
 aa.env.setValue("sendEmailAddressType", "Mailing");
 */
-var appStatus = getParam("appStatus");
+var skipAppStatus = getParam("appStatus");
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
 var emailAddress = getParam("emailAddress");			// email to send report
@@ -95,6 +95,9 @@ var sysFromEmail = getParam("sysFromEmail");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var rptName = getParam("reportName");
 var addrType = getParam("sendEmailAddressType");
+var skipAppStatus = getJobParam("skipAppStatus").split(","); //   Skip records with one of these application statuses
+var skipAppStatusCont = getJobParam("skipAppStatusCont").split(","); //   Skip records with one of these application statuses - Used for overflow
+var skipAppStatusArray = skipAppStatus.concat(skipAppStatusCont); //used to concatenate skipAppStatus and skipAppStatusCont
 /*----------------------------------------------------------------------------------------------------/
 |
 | End: BATCH PARAMETERS
@@ -177,8 +180,14 @@ try{
 
 //MJH 20190219 User Story 5838 - Removed logic to close owner records.  Added logic to send email notifications to Owners.
 		if (capStatus != appStatus) {
-			capFilterStatus++;
+			capFilterType++;
 			logDebug(altId + ": skipping due to application status of " + capStatus)
+			continue;
+		}
+		// Filter by CAP Status
+		if (exists(capStatus, skipAppStatusArray)) {
+			capFilterStatus++;
+			logDebug("     " +"skipping, due to application status of " + capStatus)
 			continue;
 		}
 		capCount++;
