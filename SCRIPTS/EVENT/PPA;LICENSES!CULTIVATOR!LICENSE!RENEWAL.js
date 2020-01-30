@@ -65,6 +65,7 @@ try{
 				licId = licId.getOutput();
 				childIds  = getChildren("Licenses/Cultivator/License Case/*",licId);
 				holdId = capId;
+				capId = licId;
 				var caseReview = false;
 				if(appHasCondition("Owner History","Applied","DOJ LiveScan Match",null))
 					caseReview = true;
