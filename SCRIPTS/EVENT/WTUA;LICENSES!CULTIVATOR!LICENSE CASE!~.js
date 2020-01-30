@@ -1,5 +1,6 @@
 try{
 	if (wfTask == "Licensing Case Assessment" && wfStatus == "Notice Of Violation") {
+		editAppSpecific("Case Renewal Type","Renewal Review");
 		parentCapId = getParent();
 		holdId = capId;
 		capId = parentCapId;
@@ -9,6 +10,7 @@ try{
 		capId = holdId;
 	}
 	if (wfTask == "Licensing Case Assessment" && wfStatus == "Owner Conviction") {
+		editAppSpecific("Case Renewal Type","Renewal Review");
 		parentCapId = getParent();
 		holdId = capId;
 		capId = parentCapId;
@@ -18,6 +20,7 @@ try{
 		capId = holdId;
 	}
 	if (wfTask == "Licensing Case Assessment" && wfStatus == "Local Non-Compliance") {
+		editAppSpecific("Case Renewal Type","Renewal Review");
 		parentCapId = getParent();
 		holdId = capId;
 		capId = parentCapId;
@@ -25,6 +28,9 @@ try{
 			addStdCondition("License Hold","Local Non-Compliance");
 		}
 		capId = holdId;
+	}
+	if (wfTask == "Licensing Case Assessment" && wfStatus == "Refer to LAU") {
+		editAppSpecific("Case Renewal Type","Renewal Review");
 	}
 	if (wfTask == "LAU Assessment" && wfStatus == "Refer to Legal") {
 		editAppSpecific("Case Renewal Type","Renewal Hold");
