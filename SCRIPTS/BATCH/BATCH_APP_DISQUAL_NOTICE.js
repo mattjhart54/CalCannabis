@@ -95,8 +95,8 @@ var sysFromEmail = getParam("sysFromEmail");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var rptName = getParam("reportName");
 var addrType = getParam("sendEmailAddressType");
-var skipAppStatus = getJobParam("skipAppStatus").split(","); //   Skip records with one of these application statuses
-var skipAppStatusCont = getJobParam("skipAppStatusCont").split(","); //   Skip records with one of these application statuses - Used for overflow
+var skipAppStatus = getParam("skipAppStatus").split(","); //   Skip records with one of these application statuses
+var skipAppStatusCont = getParam("skipAppStatusCont").split(","); //   Skip records with one of these application statuses - Used for overflow
 var skipAppStatusArray = skipAppStatus.concat(skipAppStatusCont); //used to concatenate skipAppStatus and skipAppStatusCont
 /*----------------------------------------------------------------------------------------------------/
 |
