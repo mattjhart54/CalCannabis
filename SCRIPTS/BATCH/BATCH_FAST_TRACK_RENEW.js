@@ -213,7 +213,7 @@ try{
 								}
 							}
 						}else{
-							logDebug("Skipping Record, workflow status does not meet criteria");
+							logDebug("Skipping Record, " + altId +" workflow status does not meet criteria");
 							recordSkippedArray.push(altId);
 							continue;
 						}
