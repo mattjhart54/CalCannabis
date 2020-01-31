@@ -172,11 +172,9 @@ try{
 		var capValue = aa.cap.getCap(capId).getOutput();
 		var altID = capId.getCustomID();
 		var capStatus = aa.cap.getCap(capId).getOutput().getCapStatus();
-		logDebug(skipAppStatusArray);
 		
 		// Filter by CAP Status
 		if (exists(capStatus, skipAppStatusArray)) {
-			logDebug(altID + " Cap Status: " + capStatus);
 			capFilterStatus++;
 			continue;
 		}
@@ -190,7 +188,9 @@ try{
 					var cStatusType = thisCond.getConditionStatusType();
 					if (thisCond.getConditionDescription().equals(condType) && cStatusType == "Applied"){
 						capCount++;
-						vLicenseID = getParent(capId);
+						vLicenseID = getParentLicenseCapID(capId);
+						vIDArray = String(vLicenseID).split("-");
+						vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
 						var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
 						if (licCaseId){
 							// Set alt id for the case record based on the number of child case records linked to the license record
@@ -257,9 +257,3 @@ try{
 	logDebug("BATCH_PROVISIONAL_RENEWAL_MISSING_SA: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}
-
-function exists(eVal, eArray) {
-	  for (ii in eArray)
-	  	if (eArray[ii] == eVal) return true;
-	  return false;
-}
