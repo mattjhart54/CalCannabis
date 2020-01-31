@@ -71,19 +71,18 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 
-var appGroup = "Licenses";							//   app Group to process {Licenses}
-var appTypeType = "Cultivator";						//   app type to process {Rental License}
-var appSubtype = "License";						//   app subtype to process {NA}
-var appCategory = "Renewal";						//   app category to process {NA}
-var skipAppStatusArray = ['Renewal Denied','Approved'];	//   Skip records with one of these application statuses
-var condType = "Provisional Renewal Missing Science Amendment";							// records with Condition Type applied
-var caseTypeFieldValue = "Renewal Allowed";
-var caseDescFieldValue = "Provisional Renewal Missing Science Amendment";
-var caseOpenByFieldValue = "Science Provisional";
-var priorityFieldValue = "Moderate";
+var appGroup = getParam("recordGroup");							//   app Group to process {Licenses}
+var appTypeType = getParam("recordType");						//   app type to process {Rental License}
+var appSubtype = getParam("recordSubtype");						//   app subtype to process {NA}
+var appCategory = getParam("recordCategory");						//   app category to process {NA}
+var skipAppStatusArray = getParam("skipAppStatus").split(",");	//   Skip records with one of these application statuses
+var caseTypeFieldValue = getParam("caseTypeFieldValue");
+var caseDescFieldValue = getParam("caseDescFieldValue");
+var caseOpenByFieldValue = getParam("caseOpenByFieldValue");
+var priorityFieldValue = getParam("priorityFieldValue");
 var emailAddress = getParam("emailAddress");					// email to send report
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");// send out emails?
-var emailTemplate = getParam("emailTemplate");					// email Template
+var emailTemplate = getParam("emailTemplate");				// email Template
 
 
 /*----------------------------------------------------------------------------------------------------/
