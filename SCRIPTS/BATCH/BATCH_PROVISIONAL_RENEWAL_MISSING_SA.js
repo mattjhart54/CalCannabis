@@ -172,10 +172,11 @@ try{
 		var capValue = aa.cap.getCap(capId).getOutput();
 		var altID = capId.getCustomID();
 		var capStatus = aa.cap.getCap(capId).getOutput().getCapStatus();
-		logDebug(altID + " Cap Status: " + capStatus);
+		logDebug(skipAppStatusArray);
 		
 		// Filter by CAP Status
 		if (exists(capStatus, skipAppStatusArray)) {
+			logDebug(altID + " Cap Status: " + capStatus);
 			capFilterStatus++;
 			continue;
 		}
