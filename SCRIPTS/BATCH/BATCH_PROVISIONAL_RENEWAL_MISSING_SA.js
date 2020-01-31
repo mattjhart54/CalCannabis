@@ -181,7 +181,7 @@ try{
 		
 		if (capValue.isCompleteCap() && getAppSpecific("License Issued Type",capId) == "Provisional"){
 			if(appHasCondition("Application Condition","Applied","Provisional Renewal Missing Science Amendment",null)){
-				logDebug("Missing Science Amendment Applied to " + altID);
+				logDebug("Provisional Renewal Missing Science Amendment Condition Applied to " + altID);
 				capCount++;
 				vLicenseID = getParentLicenseCapID(capId);
 				vIDArray = String(vLicenseID).split("-");
