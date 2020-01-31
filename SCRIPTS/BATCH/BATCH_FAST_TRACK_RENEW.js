@@ -175,41 +175,47 @@ try{
 					capDetail = capDetailObjResult.getOutput();
 					var balanceDue = capDetail.getBalance();
 					if (balanceDue == 0){
-						vLicenseID = getParent(capId);
-						if (vLicenseID){
-							logDebug("Parent: " + vLicenseID.getCustomID() + " Renewal: " + altId);
-							licAltId = vLicenseID.getCustomID();
-							var caseVerify = licCaseCheck(vLicenseID);
-							if (caseVerify){
-								var condResult = aa.capCondition.getCapConditions(vLicenseID);
-								if (condResult.getSuccess()){
-									var capConds = condResult.getOutput();
-									if (capConds.length > 0){
-										for (cc in capConds){
-											var thisCond = capConds[cc];
-											var cStatusType = thisCond.getConditionStatusType();
-											logDebug(thisCond.getConditionDescription());
-											if (matches(thisCond.getConditionDescription(),"Locally Non-Compliant","DOJ LiveScan Match") && cStatusType == "Applied"){
-												logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
-												recordSkippedArray.push(altId);
-												break;
-											}else{
-												processRenewal(capId);
-												recordRenewArray.push(altId);
-												capCount++;
+						if((!isTaskActive("Provisional Renewal Review") || !isTaskActive("Annual Renewal Review")) && (!isTaskStatus("Provisional Renewal Review","Additional Information Needed") || !isTaskStatus("Provisional Renewal Review","Under Review") || !isTaskStatus("Annual Renewal Review","Additional Information Needed") || !isTaskStatus("Annual Renewal Review","Under Review"))){
+							vLicenseID = getParent(capId);
+							if (vLicenseID){
+								logDebug("Parent: " + vLicenseID.getCustomID() + " Renewal: " + altId);
+								licAltId = vLicenseID.getCustomID();
+								var caseVerify = licCaseCheck(vLicenseID);
+								if (caseVerify){
+									var condResult = aa.capCondition.getCapConditions(vLicenseID);
+									if (condResult.getSuccess()){
+										var capConds = condResult.getOutput();
+										if (capConds.length > 0){
+											for (cc in capConds){
+												var thisCond = capConds[cc];
+												var cStatusType = thisCond.getConditionStatusType();
+												logDebug(thisCond.getConditionDescription());
+												if (matches(thisCond.getConditionDescription(),"Locally Non-Compliant","DOJ LiveScan Match") && cStatusType == "Applied"){
+													logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
+													recordSkippedArray.push(altId);
+													break;
+												}else{
+													processRenewal(capId);
+													recordRenewArray.push(altId);
+													capCount++;
+												}
 											}
+										}else{
+											processRenewal(capId);
+											recordRenewArray.push(altId);
+											capCount++;
 										}
-									}else{
-										processRenewal(capId);
-										recordRenewArray.push(altId);
-										capCount++;
 									}
+								}else{
+									logDebug("Skipping Record " + altId + " License Record has a License Case that does not meet criteria.");
+									recordSkippedArray.push(altId);
+									continue;
 								}
-							}else{
-								logDebug("Skipping Record " + altId + " License Record has a License Case that does not meet criteria.");
-								recordSkippedArray.push(altId);
-								continue;
 							}
+						}else{
+							logDebug("Skipping Record, workflow status does not meet criteria");
+							recordSkippedArray.push(altId);
+							continue;
 						}
 					}else{
 						logDebug(altId + " has Fee Due, skipping Record");
