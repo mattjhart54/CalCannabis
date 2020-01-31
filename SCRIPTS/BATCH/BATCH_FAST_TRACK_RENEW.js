@@ -177,6 +177,9 @@ try{
 					if (balanceDue == 0){
 						if((!isTaskActive("Provisional Renewal Review") || !isTaskActive("Annual Renewal Review")) && (!isTaskStatus("Provisional Renewal Review","Additional Information Needed") || !isTaskStatus("Provisional Renewal Review","Under Review") || !isTaskStatus("Annual Renewal Review","Additional Information Needed") || !isTaskStatus("Annual Renewal Review","Under Review"))){
 							vLicenseID = getParent(capId);
+							vLicenseID = getParentLicenseCapID(capId);
+							vIDArray = String(vLicenseID).split("-");
+							vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
 							if (vLicenseID){
 								logDebug("Parent: " + vLicenseID.getCustomID() + " Renewal: " + altId);
 								licAltId = vLicenseID.getCustomID();
@@ -239,22 +242,18 @@ try{
 
 function licCaseCheck(vLicenseID){
 	cIds = getChildren("Licenses/Cultivator/License Case/*",vLicenseID);
-	if(cIds.length > 0){
-		for (x in cIds){
-			caseCapId = cIds[x];
-			var caseCapValue = aa.cap.getCap(caseCapId).getOutput();
-			var caseAltID = caseCapId.getCustomID();
-			var caseCapStatus = aa.cap.getCap(caseCapId).getOutput().getCapStatus();
-			if (matches(caseCapStatus,"Resolved","Closed") || getAppSpecific("Case Renewal Type",caseCapId) == "Renewal Allowed"){
-				return true;
-			}else{
-				return false;
-			}
+	for (x in cIds){
+		caseCapId = cIds[x];
+		var caseCapValue = aa.cap.getCap(caseCapId).getOutput();
+		var caseAltID = caseCapId.getCustomID();
+		var caseCapStatus = aa.cap.getCap(caseCapId).getOutput().getCapStatus();
+		if (matches(caseCapStatus,"Resolved","Closed") || getAppSpecific("Case Renewal Type",caseCapId) == "Renewal Allowed"){
+			return true;
+		}else{
+			return false;
 		}
-	}else{
-		return true;
 	}
-	return false;
+	return true;
 }
 function processRenewal(renCapId){
 	logDebug("*****************************Processing Renewal Record " + altId + " for License Record " + licAltId + "****************************");
