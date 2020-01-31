@@ -257,3 +257,9 @@ try{
 	logDebug("BATCH_PROVISIONAL_RENEWAL_MISSING_SA: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}
+
+function exists(eVal, eArray) {
+	  for (ii in eArray)
+	  	if (eArray[ii] == eVal) return true;
+	  return false;
+}
