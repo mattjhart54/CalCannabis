@@ -144,6 +144,7 @@ try {
 	//lwacht: 180306: story 5306: don't allow script to run against completed records
 	var capIdStatusClass = getCapIdStatusClass(capId);
 	if(!matches(capIdStatusClass, "COMPLETE")){
+		var myObj = new Object();
 	//lwacht: 180306: story 5306: end
 		var contactList = cap.getContactsGroup();
 		if(contactList != null && contactList.size() > 0){
@@ -153,6 +154,8 @@ try {
 				var contFirst = thisCont.firstName;
 				var contLast = thisCont.lastName;
 				var contLBN = thisCont.middleName;
+				var conPhone = thisCont.phone3;
+				var conEmail = thisCont.email;
 				var contType = thisCont.contactType;
 				if(contType == "Agent for Service of Process") {
 					if(matches(contFirst,null,"",undefined) && matches(contLast,null,"",undefined) && matches(contLBN,null,"",undefined) ||
@@ -165,6 +168,7 @@ try {
 				}
 				//mhart - added check to validate required fields completed as expressions not always firing
 				if(contType == "Business") {
+					myObj['Facility Phone'] = conPhone;
 					if(matches(contFirst,null,"",undefined) || matches(contLast,null,"",undefined) || matches(contLBN,null,"",undefined)) {
 							cancel = true;
 							showMessage = true;
@@ -172,6 +176,10 @@ try {
 					}
 				}
 				if(contType == "Designated Responsible Party" || contType == "DRP - Temporary License") {
+					myObj['DRP Phone'] = conPhone;
+					myObj['DRP Email'] = conEmail;
+					myObj['DRP First Name'] = contFirst;
+					myObj['DRP Last Name'] = contLast;
 					if(matches(contFirst,null,"",undefined) || matches(contLast,null,"",undefined)) {
 							cancel = true;
 							showMessage = true;
@@ -191,13 +199,13 @@ try {
 try {
 	var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
 	var invalidChar = false;
-	var myObj = new Object();
 	myObj['Premise Address'] = AInfo["Premise Address"];
 	myObj['Premise City'] = AInfo["Premise City"];
 	myObj['Premise County'] = "" + AInfo["Premise County"];
 	myObj['Premise State'] = "" + AInfo["Premise State"];
 	myObj['Premise Zip'] = "" + AInfo["Premise Zip"];
 	myObj['APN'] = "" + AInfo["APN"];
+	myObj['CDTFA Sellers Permit Number'] = "" + AInfo["BOE Seller's Permit Number"];
 	for (x in myObj){
 		if (myObj.hasOwnProperty(x)){			
 			var smartChar = isUnicode(String(myObj[x]));
