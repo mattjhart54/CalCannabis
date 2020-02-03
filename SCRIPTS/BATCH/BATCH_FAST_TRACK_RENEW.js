@@ -192,7 +192,7 @@ try{
 												var thisCond = capConds[cc];
 												var cStatusType = thisCond.getConditionStatusType();
 												logDebug(thisCond.getConditionDescription());
-												if (matches(thisCond.getConditionDescription(),"Locally Non-Compliant","DOJ LiveScan Match") && cStatusType == "Applied"){
+												if (matches(thisCond.getConditionDescription(),"Local Non-Compliance","DOJ LiveScan Match") && cStatusType == "Applied"){
 													logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
 													recordSkippedArray.push(altId);
 													break;
