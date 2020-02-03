@@ -120,6 +120,32 @@ try{
 				}
 				// Add record to the CAT set
 				addToCat(parentCapId);
+				//Update Renewal Workflow and Record Status to Approved
+				var workflowResult = aa.workflow.getTasks(renCapId);
+				if (workflowResult.getSuccess()){
+					var wfObj = workflowResult.getOutput();
+				}else{ 
+					logDebug("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage()); 
+				}
+				var fTask;
+				var stepnumber;
+				var dispositionDate = aa.date.getCurrentDate();
+				var wfnote = " ";
+				var wftask;
+				var taskArray = ['Renewal Review','Provisional Renewal Review','Annual Renewal Review'];
+				for (i in wfObj) {
+					fTask = wfObj[i];
+					wftask = fTask.getTaskDescription();
+					stepnumber = fTask.getStepNumber();
+					if (exists(wftask,taskArray)) {
+						if(fTask.getActiveFlag() == "Y") {
+							updateTask(wftask,"Approved","","");
+							deactivateTask(wftask)
+							logDebug("Deactivating Workflow Task " + wftask + " with status Approved");
+						}
+					}
+				}
+				updateAppStatus("Approved","",renCapId);
 			}
 		}
 	}
