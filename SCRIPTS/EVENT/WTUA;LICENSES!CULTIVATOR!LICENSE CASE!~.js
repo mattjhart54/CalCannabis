@@ -94,7 +94,7 @@ try{
 					aa.runAsyncScript(scriptName, envParameters);
 				}
 				
-				var priContact = getContactObj(capId,"Designated Responsible Party");
+				var priContact = getContactObj(parentCapId,"Designated Responsible Party");
 				// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
 				if(priContact){
 					var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
