@@ -325,13 +325,13 @@ function processRenewal(renCapId){
 			}
 		}
 		editAppSpecific("Fast Track","CHECKED",capId);
-		if (isTaskActive("Renewal Review"){ 
+		if (isTaskActive("Renewal Review")){ 
 			closeTask("Renewal Review","Approved","","");
 		}
-		if (isTaskActive("Provisional Renewal Review"){ 
+		if (isTaskActive("Provisional Renewal Review")){ 
 			closeTask("Provisional Renewal Review","Approved","","");
 		}
-		if (isTaskActive("Annual Renewal Review"){ 
+		if (isTaskActive("Annual Renewal Review")){ 
 			closeTask("Annual Renewal Review","Approved","","");
 		}
 		updateAppStatus("Approved","");
