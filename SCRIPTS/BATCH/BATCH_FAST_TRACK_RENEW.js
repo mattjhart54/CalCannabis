@@ -176,7 +176,6 @@ try{
 					var balanceDue = capDetail.getBalance();
 					if (balanceDue == 0){
 						if((!isTaskActive("Renewal Review") || !isTaskActive("Provisional Renewal Review") || !isTaskActive("Annual Renewal Review")) && (!isTaskStatus("Renewal Review","Additional Information Needed") || !isTaskStatus("Renewal Review","Under Review") || !isTaskStatus("Provisional Renewal Review","Additional Information Needed") || !isTaskStatus("Provisional Renewal Review","Under Review") || !isTaskStatus("Annual Renewal Review","Additional Information Needed") || !isTaskStatus("Annual Renewal Review","Under Review"))){
-							vLicenseID = getParent(capId);
 							vLicenseID = getParentLicenseCapID(capId);
 							vIDArray = String(vLicenseID).split("-");
 							vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
