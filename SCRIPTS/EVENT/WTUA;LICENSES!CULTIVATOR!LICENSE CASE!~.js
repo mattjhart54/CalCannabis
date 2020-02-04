@@ -67,8 +67,11 @@ try{
 				updateAppStatus("Active","License Renewed",parentCapId);
 				// Update the Cultivation Type on the license record
 				var desChange = getAppSpecific("Designation Change",renCapId);
+				logDebug("desChange: " + desChange);
 				var licType = getAppSpecific("License Type",renCapId);
+				logDebug("licType: " + licType);
 				var licIssueType = getAppSpecific("License Issued Type",renCapId);
+				logDebug("licIssueType: " + licIssueType);
 				if(desChange == "Yes") {
 					editAppSpecific("Cultivator Type",desChange,parentCapId);
 					editAppName(desChange + " - " + licType,parentCapId);
