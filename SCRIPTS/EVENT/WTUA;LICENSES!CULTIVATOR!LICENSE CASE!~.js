@@ -68,6 +68,7 @@ try{
 				// Update the Cultivation Type on the license record
 				var desChange = getAppSpecific("Designation Change",renCapId);
 				var licType = getAppSpecific("License Type",renCapId);
+				var licIssueType = getAppSpecific("License Issued Type",renCapId);
 				if(desChange == "Yes") {
 					editAppSpecific("Cultivator Type",desChange,parentCapId);
 					editAppName(desChange + " - " + licType,parentCapId);
@@ -77,10 +78,11 @@ try{
 				renewalCapProject.setRelationShip("R");  // move to related records
 				aa.cap.updateProject(renewalCapProject);			
 				//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
-				if (licType == "Provisional"){
+				if (licIssueType == "Provisional"){
 					var approvalLetter = "Provisional Renewal Approval";
 				}else{
 					var approvalLetter = "Approval Letter Renewal";
+				}
 					var scriptName = "asyncRunOfficialLicenseRpt";
 					var envParameters = aa.util.newHashMap();
 					envParameters.put("licType", "");
