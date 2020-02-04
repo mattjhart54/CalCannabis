@@ -83,20 +83,19 @@ try{
 				}else{
 					var approvalLetter = "Approval Letter Renewal";
 				}
-					var scriptName = "asyncRunOfficialLicenseRpt";
-					var envParameters = aa.util.newHashMap();
-					envParameters.put("licType", "");
-					envParameters.put("appCap",altId);
-					envParameters.put("licCap",licAltId); 
-					envParameters.put("reportName","Official License Certificate");
-					envParameters.put("approvalLetter", approvalLetter);
-					envParameters.put("emailTemplate", "LCA_RENEWAL_APPROVAL");
-					envParameters.put("reason", "");
-					envParameters.put("currentUserID",currentUserID);
-					envParameters.put("contType","Designated Responsible Party");
-					envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
-					aa.runAsyncScript(scriptName, envParameters);
-				}
+				var scriptName = "asyncRunOfficialLicenseRpt";
+				var envParameters = aa.util.newHashMap();
+				envParameters.put("licType", "");
+				envParameters.put("appCap",altId);
+				envParameters.put("licCap",licAltId); 
+				envParameters.put("reportName","Official License Certificate");
+				envParameters.put("approvalLetter", approvalLetter);
+				envParameters.put("emailTemplate", "LCA_RENEWAL_APPROVAL");
+				envParameters.put("reason", "");
+				envParameters.put("currentUserID",currentUserID);
+				envParameters.put("contType","Designated Responsible Party");
+				envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+				aa.runAsyncScript(scriptName, envParameters);
 				
 				var priContact = getContactObj(renCapId,"Designated Responsible Party");
 				// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
