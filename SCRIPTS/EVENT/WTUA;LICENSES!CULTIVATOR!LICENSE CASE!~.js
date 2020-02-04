@@ -66,16 +66,18 @@ try{
 				vLicenseObj.setStatus("Active");
 				updateAppStatus("Active","License Renewed",parentCapId);
 				// Update the Cultivation Type on the license record
-				if(AInfo["Designation Change"] == "Yes") {
-					editAppSpecific("Cultivator Type",AInfo["Designation Type"],parentCapId);
-					editAppName(AInfo["Designation Type"] + " - " + AInfo["License Type"],parentCapId);
+				var desChange = getAppSpecific("Designation Change",renCapId);
+				var licType = getAppSpecific("License Type",renCapId);
+				if(desChange == "Yes") {
+					editAppSpecific("Cultivator Type",desChange,parentCapId);
+					editAppName(desChange + " - " + licType,parentCapId);
 				}
 				//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 				renewalCapProject.setStatus("Complete");
 				renewalCapProject.setRelationShip("R");  // move to related records
 				aa.cap.updateProject(renewalCapProject);			
 				//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
-				if (AInfo["License Issued Type"] == "Provisional"){
+				if (licType == "Provisional"){
 					var approvalLetter = "Provisional Renewal Approval";
 				}else{
 					var approvalLetter = "Approval Letter Renewal";
@@ -94,7 +96,7 @@ try{
 					aa.runAsyncScript(scriptName, envParameters);
 				}
 				
-				var priContact = getContactObj(parentCapId,"Designated Responsible Party");
+				var priContact = getContactObj(renCapId,"Designated Responsible Party");
 				// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
 				if(priContact){
 					var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
@@ -110,7 +112,7 @@ try{
 							if(sName){
 								setAddResult=aa.set.add(sName,parentCapId);
 								if(setAddResult.getSuccess()){
-									logDebug(capId.getCustomID() + " successfully added to set " +sName);
+									logDebug(parentCapId.getCustomID() + " successfully added to set " +sName);
 								}else{
 									logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
 								}
