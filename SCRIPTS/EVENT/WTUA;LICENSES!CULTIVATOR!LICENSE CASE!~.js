@@ -104,10 +104,10 @@ try{
 					if(!matches(priChannel, "",null,"undefined", false)){
 						if(priChannel.indexOf("Postal") > -1 ){
 							
-							if (AInfo['License Issued Type'] == "Provisional") {
+							if (licIssueType == "Provisional") {
 								var sName = createSet("PROVISIONAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 							}
-							if (AInfo['License Issued Type'] == "Annual"){
+							if (licIssueType == "Annual"){
 								var sName = createSet("ANNUAL_LICENSE_RENEWAL_ISSUED","License Notifications", "New");
 							}
 							if(sName){
