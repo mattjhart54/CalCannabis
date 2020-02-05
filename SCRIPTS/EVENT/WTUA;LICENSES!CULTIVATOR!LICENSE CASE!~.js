@@ -46,7 +46,6 @@ try{
 		var renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parentCapId);
 		if (renewalCapProject != null) {
 			var renCapId = renewalCapProject.getCapID();
-			var altId = renCapId.getCustomID();
 			var capDetailObjResult = aa.cap.getCapDetail(renCapId);
 			if (capDetailObjResult.getSuccess()){
 				capDetail = capDetailObjResult.getOutput();
@@ -121,7 +120,8 @@ try{
 						logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
 						eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
 					}
-					var report = reportResult.getOutput(); 
+					var report = reportResult.getOutput();
+					var altId = renCapId.getCustomID();
 					cap = aa.cap.getCap(parentCapId).getOutput();
 					capStatus = cap.getCapStatus();
 					appTypeResult = cap.getCapType();
