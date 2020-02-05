@@ -121,7 +121,7 @@ try{
 						eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
 					}
 					var report = reportResult.getOutput();
-					var altId = renCapId.getCustomID();
+					var altId = parentCapId.getCustomID();
 					cap = aa.cap.getCap(parentCapId).getOutput();
 					capStatus = cap.getCapStatus();
 					appTypeResult = cap.getCapType();
@@ -204,7 +204,7 @@ try{
 						addParameter(eParams, "$$altID$$", parentCapId.getCustomID());
 						addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 						addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-						addParameter(eParams, "$$parentId$$", licAltId);
+						addParameter(eParams, "$$parentId$$", parentCapId);
 						addParameter(eParams, "$$licType$$", licType);
 						addParameter(eParams, "$$reason$$", reason);
 						var priEmail = ""+priContact.capContact.getEmail();
