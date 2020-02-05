@@ -120,7 +120,7 @@ try{
 					envParameters.put("currentUserID",currentUserID);
 					envParameters.put("contType","Designated Responsible Party");
 					envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
-					include("asyncRunOfficialLicenseRpt");
+					aa.runAsyncScript(scriptName, envParameters);
 					
 					var priContact = getContactObj(parentCapId,"Designated Responsible Party");
 					// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
