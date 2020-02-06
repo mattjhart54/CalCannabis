@@ -51,8 +51,8 @@ try{
 				childCapId = childIds[c];
 				cCap = aa.cap.getCap(childCapId).getOutput();
 				cStatus = cCap.getCapStatus();
-				if (!matches(cStatus,"Resolved","Closed"){
-					if(matches(getAppSpecific("Case Renewal Type",childCapId),"Renewal Review","Renewal Hold") {
+				if (!matches(cStatus,"Resolved","Closed")){
+					if(matches(getAppSpecific("Case Renewal Type",childCapId),"Renewal Review","Renewal Hold")) {
 						caseReview = true;
 					}
 				}
