@@ -112,8 +112,8 @@ try{
 							stepnumber = fTask.getStepNumber();
 							if (exists(wftask,taskArray)) {
 								if(fTask.getActiveFlag() == "Y") {
-									updateTask(wftask,"Approved","","",renCapId);
-									logDebug("Applying " + wftask + " with status Approved");
+									fTask.setDisposition("Approved");
+									logDebug("Results: "  + fTask.getTaskDescription() + " " + fTask.getDisposition());
 								}
 							}
 						}
