@@ -104,15 +104,17 @@ try{
 						var stepnumber;
 						var dispositionDate = aa.date.getCurrentDate();
 						var wfnote = " ";
+						var wfcomment = "";
 						var wftask;
 						var taskArray = ['Renewal Review','Provisional Renewal Review','Annual Renewal Review'];
 						for (i in wfObj) {
 							fTask = wfObj[i];
 							wftask = fTask.getTaskDescription();
 							stepnumber = fTask.getStepNumber();
+							dispositionDate = aa.date.getCurrentDate();
 							if (exists(wftask,taskArray)) {
 								if(fTask.getActiveFlag() == "Y") {
-									fTask.setDisposition("Approved");
+									aa.workflow.handleDisposition(renCapId, stepnumber, "Approved", dispositionDate, wfnote, wfcomment, systemUserObj, "U");
 									logDebug("Results: "  + fTask.getTaskDescription() + " " + fTask.getDisposition());
 								}
 							}
