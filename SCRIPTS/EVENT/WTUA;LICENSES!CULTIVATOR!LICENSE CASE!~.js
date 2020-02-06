@@ -112,9 +112,8 @@ try{
 							stepnumber = fTask.getStepNumber();
 							if (exists(wftask,taskArray)) {
 								if(fTask.getActiveFlag() == "Y") {
-									updateTask(wftask,"Approved","","");
-									deactivateTask(wftask)
-									logDebug("Deactivating Workflow Task " + wftask + " with status Approved");
+									updateTask(wftask,"Approved","","",renCapId);
+									logDebug("Applying " + wftask + " with status Approved");
 								}
 							}
 						}
