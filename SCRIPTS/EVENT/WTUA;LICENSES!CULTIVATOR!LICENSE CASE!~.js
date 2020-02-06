@@ -114,7 +114,7 @@ try{
 							dispositionDate = aa.date.getCurrentDate();
 							if (exists(wftask,taskArray)) {
 								if(fTask.getActiveFlag() == "Y") {
-									aa.workflow.handleDisposition(renCapId, stepnumber, "Approved", dispositionDate, wfnote, wfcomment, systemUserObj, "U");
+									aa.workflow.handleDisposition(renCapId, stepnumber, "Approved", dispositionDate, wfnote, wfcomment, systemUserObj, "Y");
 									logDebug("Results: "  + fTask.getTaskDescription() + " " + fTask.getDisposition());
 								}
 							}
