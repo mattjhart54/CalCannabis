@@ -175,7 +175,8 @@ try{
 					capDetail = capDetailObjResult.getOutput();
 					var balanceDue = capDetail.getBalance();
 					if (balanceDue == 0){
-						if((!isTaskActive("Renewal Review") || !isTaskActive("Provisional Renewal Review") || !isTaskActive("Annual Renewal Review")) && (!isTaskStatus("Renewal Review","Additional Information Needed") || !isTaskStatus("Renewal Review","Under Review") || !isTaskStatus("Provisional Renewal Review","Additional Information Needed") || !isTaskStatus("Provisional Renewal Review","Under Review") || !isTaskStatus("Annual Renewal Review","Additional Information Needed") || !isTaskStatus("Annual Renewal Review","Under Review"))){
+						var wftaskStatusCheck = acceptaedTaskValue(capId);
+						if(wftaskStatusCheck){
 							vLicenseID = getParentLicenseCapID(capId);
 							vIDArray = String(vLicenseID).split("-");
 							vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
@@ -250,6 +251,32 @@ function licCaseCheck(vLicenseID){
 			return true;
 		}else{
 			return false;
+		}
+	}
+	return true;
+}
+function acceptaedTaskValue(capId){
+
+	var workflowResult = aa.workflow.getTasks(capId);
+	if (workflowResult.getSuccess()){
+		var wfObj = workflowResult.getOutput();
+	}else{ 
+		logDebug("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage()); 
+	}
+	var fTask;
+	var stepnumber;
+	var wftask;
+	var taskArray = ['Renewal Review','Provisional Renewal Review','Annual Renewal Review'];
+	for (i in wfObj) {
+		fTask = wfObj[i];
+		wftask = fTask.getTaskDescription();
+		stepnumber = fTask.getStepNumber();
+		if (exists(wftask,taskArray)) {
+			if(fTask.getActiveFlag() == "Y" && matches(fTask.getDisposition(),"Additional Information Needed","Under Review") {
+				return false;
+			}
+		}else{
+			return true;
 		}
 	}
 	return true;
