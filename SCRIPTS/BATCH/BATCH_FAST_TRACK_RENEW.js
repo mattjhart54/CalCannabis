@@ -176,7 +176,7 @@ try{
 					var balanceDue = capDetail.getBalance();
 					if (balanceDue == 0){
 						var wftaskStatusCheck = acceptaedTaskValue(capId);
-						if(wftaskStatusCheck){
+						if(!isTaskActive("License Manager") && wftaskStatusCheck){
 							vLicenseID = getParentLicenseCapID(capId);
 							vIDArray = String(vLicenseID).split("-");
 							vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
