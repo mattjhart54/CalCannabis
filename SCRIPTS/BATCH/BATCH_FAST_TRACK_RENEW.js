@@ -196,6 +196,7 @@ try{
 												logDebug(thisCond.getConditionDescription());
 												if (matches(thisCond.getConditionDescription(),"Local Non-Compliance","DOJ LiveScan Match") && cStatusType == "Applied"){
 													condVerified = false;
+													break;
 												}
 											}
 											if(condVerified){
@@ -277,10 +278,7 @@ function acceptaedTaskValue(capId){
 		if (exists(wftask,taskArray)) {
 			if(fTask.getActiveFlag() == "Y" && matches(fTask.getDisposition(),"Additional Information Needed","Under Review")) {
 				return false;
-				break;
 			}
-		}else{
-			return true;
 		}
 	}
 	return true;
