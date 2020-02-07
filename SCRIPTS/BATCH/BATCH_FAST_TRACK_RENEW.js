@@ -251,9 +251,7 @@ function licCaseCheck(vLicenseID){
 		var caseCapValue = aa.cap.getCap(caseCapId).getOutput();
 		var caseAltID = caseCapId.getCustomID();
 		var caseCapStatus = aa.cap.getCap(caseCapId).getOutput().getCapStatus();
-		if (matches(caseCapStatus,"Resolved","Closed") || getAppSpecific("Case Renewal Type",caseCapId) == "Renewal Allowed"){
-			return true;
-		}else{
+		if (!matches(caseCapStatus,"Resolved","Closed") && getAppSpecific("Case Renewal Type",caseCapId) != "Renewal Allowed"){
 			return false;
 		}
 	}
