@@ -189,19 +189,22 @@ try{
 									if (condResult.getSuccess()){
 										var capConds = condResult.getOutput();
 										if (capConds.length > 0){
+											var condVerified = true;
 											for (cc in capConds){
 												var thisCond = capConds[cc];
 												var cStatusType = thisCond.getConditionStatusType();
 												logDebug(thisCond.getConditionDescription());
 												if (matches(thisCond.getConditionDescription(),"Local Non-Compliance","DOJ LiveScan Match") && cStatusType == "Applied"){
-													logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
-													recordSkippedArray.push(altId);
-													break;
-												}else{
-													processRenewal(capId);
-													recordRenewArray.push(altId);
-													capCount++;
+													condVerified = false;
 												}
+											}
+											if(condVerified){
+												processRenewal(capId);
+												recordRenewArray.push(altId);
+												capCount++;
+											}else{
+												recordSkippedArray.push(altId);
+												logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
 											}
 										}else{
 											processRenewal(capId);
@@ -274,6 +277,7 @@ function acceptaedTaskValue(capId){
 		if (exists(wftask,taskArray)) {
 			if(fTask.getActiveFlag() == "Y" && matches(fTask.getDisposition(),"Additional Information Needed","Under Review")) {
 				return false;
+				break;
 			}
 		}else{
 			return true;
