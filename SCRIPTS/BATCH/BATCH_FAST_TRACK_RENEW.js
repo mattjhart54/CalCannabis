@@ -272,7 +272,7 @@ function acceptaedTaskValue(capId){
 		wftask = fTask.getTaskDescription();
 		stepnumber = fTask.getStepNumber();
 		if (exists(wftask,taskArray)) {
-			if(fTask.getActiveFlag() == "Y" && matches(fTask.getDisposition(),"Additional Information Needed","Under Review") {
+			if(fTask.getActiveFlag() == "Y" && matches(fTask.getDisposition(),"Additional Information Needed","Under Review")) {
 				return false;
 			}
 		}else{
