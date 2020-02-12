@@ -37,13 +37,16 @@ try{
 		addParameter(eParams,"$$caseType$$", AInfo["Case Type"]);
 		addParameter(eParams,"$$priority$$", AInfo["Priority"]);
 		addParameter(eParams,"$$dueDate$$", AInfo["Due Date"]);
-		addParameter(eParams,"$$source$$", AInfo["Source"]);
+		addParameter(eParams,"$$source$$", AInfo["Source of Complaint"]);
 		addParameter(eParams,"$$otherEntity$$", AInfo["Other Source"]);
 		addParameter(eParams,"$$typeSubmittal$$", AInfo["Type of Submittal"]);
-		addParameter(eParams,"$$type$$", AInfo["Compaint Type"]);
+		addParameter(eParams,"$$type$$", AInfo["Complaint Type"]);
 		addParameter(eParams,"$$otherType$$", AInfo["Other Complaint Type"]);
 		addParameter(eParams,"$$typeSubmittal$$", AInfo["Type of Submittal"]);
-		locEmail =  TInfo["Email Address"];
+		var location = AInfo["Address"] + " " + AInfo["City"] + " " + AInfo["County"] + " " + AInfo["Zip Code"];
+		addParameter(eParams,"$$APN$$", AInfo["APN"]);
+		addParameter(eParams,"$$location$$", lcoation);
+		var locEmail =  TInfo["Email Address"];
 		var caseContact = getContactObj(capId,"Subject");
 		if(caseContact) {
 			if(!matches(caseContact.capContact.firstName,null,"",undefined)) {
