@@ -168,7 +168,7 @@ try{
 		var capStatus = aa.cap.getCap(capId).getOutput().getCapStatus();
 		
 		if (capValue.isCompleteCap()){
-			if (!matches(capStatus,"Approved","Renewal Denied")){
+			if (!matches(capStatus,"Approved","Renewal Denied","Disqualified")){
 				capFilterStatus++;
 				var capDetailObjResult = aa.cap.getCapDetail(capId);
 				if (capDetailObjResult.getSuccess()){
