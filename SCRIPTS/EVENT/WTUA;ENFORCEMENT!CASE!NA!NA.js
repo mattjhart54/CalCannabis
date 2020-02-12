@@ -43,9 +43,11 @@ try{
 		addParameter(eParams,"$$type$$", AInfo["Complaint Type"]);
 		addParameter(eParams,"$$otherType$$", AInfo["Other Complaint Type"]);
 		addParameter(eParams,"$$typeSubmittal$$", AInfo["Type of Submittal"]);
-		var location = AInfo["Address"] + " " + AInfo["City"] + " " + AInfo["County"] + " " + AInfo["Zip Code"];
 		addParameter(eParams,"$$APN$$", AInfo["APN"]);
-		addParameter(eParams,"$$location$$", location);
+		addParameter(eParams,"$$location$$", AInfo["Address"]);
+		addParameter(eParams,"$$city$$", AInfo["City"]);
+		addParameter(eParams,"$$county$$", AInfo["County"]);
+		addParameter(eParams,"$$caseComments$$", wfComment);
 		var locEmail =  TInfo["Email Address"];
 		var caseContact = getContactObj(capId,"Subject");
 		if(caseContact) {
