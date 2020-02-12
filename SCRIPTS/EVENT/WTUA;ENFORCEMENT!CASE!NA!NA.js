@@ -24,6 +24,49 @@ try{
 			updateAppStatus(capStatus,"Closed via WTUA:ENFORCEMENT/CASE/NA/NA");
 		}
 	}
+	if(wfTask == "Case Assessment" && wfStatus == "Referred") {
+		var TInfo = [];
+		loadTaskSpecific(TInfo);
+		var rFiles = [];
+		var eParams = aa.util.newHashtable();
+		addParameter(eParams,"$$fileDate$$", fileDate);
+		var caseDesc = workDescGet(capId);
+		addParameter(eParams,"$$caseDesc$$", caseDesc);
+		addParameter(eParams,"$$appType$$", appTypeAlias);
+		addParameter(eParams,"$$caseName$$", capName);
+		addParameter(eParams,"$$caseType$$", AInfo["Case Type"]);
+		addParameter(eParams,"$$priority$$", AInfo["Priority"]);
+		addParameter(eParams,"$$dueDate$$", AInfo["Due Date"]);
+		addParameter(eParams,"$$source$$", AInfo["Source"]);
+		addParameter(eParams,"$$otherEntity$$", AInfo["Other Source"]);
+		addParameter(eParams,"$$typeSubmittal$$", AInfo["Type of Submittal"]);
+		addParameter(eParams,"$$type$$", AInfo["Compaint Type"]);
+		addParameter(eParams,"$$otherType$$", AInfo["Other Complaint Type"]);
+		addParameter(eParams,"$$typeSubmittal$$", AInfo["Type of Submittal"]);
+		locEmail =  TInfo["Email Address"];
+		var caseContact = getContactObj(capId,"Subject");
+		if(caseContact) {
+			if(!matches(caseContact.capContact.firstName,null,"",undefined)) {
+				addParameter(eParams, "$$contactName$$", caseContact.capContact.firstName + " " + caseContact.capContact.lastName);
+				addParameter(eParams, "$$contactPhone$$", caseContact.capContact.phone3);
+				addParameter(eParams, "$$contactEmail$$", caseContact.capContact.email);
+			}
+		}
+		var docList = aa.document.getDocumentListByEntity(capId.toString(),"CAP").getOutput();
+	//	logDebug("Doc List " + docList.size());
+		var num = docList.size();
+		if(num>0) {
+			for(var i=0;i<num;i++){
+				if(docList.get(i).getDocCategory() == "Weed Tip Referral") {
+					docContent = aa.document.downloadFile2Disk(docList.get(i), "Enforcement", "", "", true);
+					rFile = docContent.getOutput();
+					rFiles.push(rFile);
+	//				logDebug("doc content " + docContent);
+				}
+			}
+		}
+		sendNotification("CDFA.CalCannabis_Enforcement@cdfa.ca.gov",locEmail,"","ENF_REFERRAL_NOTIFICATION",eParams,rFiles,capId);
+	}	
 } catch(err){
 	logDebug("An error has occurred in WTUA:ENFORCEMENT/CASE/NA/NA: Close Case Disposition task:" + err.message);
 	logDebug(err.stack);
