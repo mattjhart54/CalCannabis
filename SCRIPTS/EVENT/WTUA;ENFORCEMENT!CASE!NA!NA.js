@@ -48,7 +48,7 @@ try{
 		addParameter(eParams,"$$city$$", AInfo["City"]);
 		addParameter(eParams,"$$county$$", AInfo["County"]);
 		addParameter(eParams,"$$caseComments$$", wfComment);
-		var locEmail =  TInfo["Email Address"];
+		var locEmail =  TInfo["E-mail Address"];
 		var caseContact = getContactObj(capId,"Subject");
 		if(caseContact) {
 			if(!matches(caseContact.capContact.firstName,null,"",undefined)) {
