@@ -300,7 +300,7 @@ function processRenewal(renCapId){
 		logDebug("Updating Expiration Date to: " + vNewExpDate);
 		vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 // Set license record expiration and status to active
-		vLicenseObj.setStatus("Active");
+		//vLicenseObj.setStatus("Active");
 		updateAppStatus("Active","License Renewed",vLicenseID);
 // Update the Cultivation Type on the license record
 		if(getAppSpecific("Designation Change",capId) == "Yes") {
@@ -316,10 +316,11 @@ function processRenewal(renCapId){
 		}
 		
 //Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
-		if (getAppSpecific("License Issued Type",capId) == "Provisional")
+		if (getAppSpecific("License Issued Type",capId) == "Provisional"){
 			var approvalLetter = "Provisional Renewal Approval";
-		else
+		}else{
 			var approvalLetter = "Approval Letter Renewal";
+		}
 		var scriptName = "asyncRunOfficialLicenseRpt";
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("licType", "");
