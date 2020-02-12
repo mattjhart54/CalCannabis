@@ -45,7 +45,7 @@ try{
 		addParameter(eParams,"$$typeSubmittal$$", AInfo["Type of Submittal"]);
 		var location = AInfo["Address"] + " " + AInfo["City"] + " " + AInfo["County"] + " " + AInfo["Zip Code"];
 		addParameter(eParams,"$$APN$$", AInfo["APN"]);
-		addParameter(eParams,"$$location$$", lcoation);
+		addParameter(eParams,"$$location$$", location);
 		var locEmail =  TInfo["Email Address"];
 		var caseContact = getContactObj(capId,"Subject");
 		if(caseContact) {
