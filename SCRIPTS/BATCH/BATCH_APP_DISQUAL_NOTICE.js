@@ -82,7 +82,7 @@ aa.env.setValue("setNonEmailPrefix", "30_DAY_DISQUAL_NOTICE");
 aa.env.setValue("reportName", "30 Day Deficiency Notification Letter");
 aa.env.setValue("sendEmailAddressType", "Mailing");
 */
-var skipAppStatus = getParam("appStatus");
+var appStatus = getParam("appStatus");
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
 var emailAddress = getParam("emailAddress");			// email to send report
