@@ -321,7 +321,7 @@ function processRenewal(renCapId){
 		logDebug("Updating Expiration Date to: " + vNewExpDate);
 		vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 // Set license record expiration and status to active
-		//vLicenseObj.setStatus("Active");
+		vLicenseObj.setStatus("Active");
 		updateAppStatus("Active","License Renewed",vLicenseID);
 // Update the Cultivation Type on the license record
 		if(getAppSpecific("Designation Change",capId) == "Yes") {
