@@ -180,50 +180,52 @@ try{
 							vLicenseID = getParentLicenseCapID(capId);
 							vIDArray = String(vLicenseID).split("-");
 							vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
-							if (!vLicenseID.toString().contains("EST")){
-								licCapStatus = aa.cap.getCap(vLicenseID).getOutput().getCapStatus();
-								logDebug("Parent: " + vLicenseID.getCustomID() + " License Status: " + licCapStatus + " Renewal: " + altId);
-								if (!matches(licCapStatus,"Cancelled","Expired","Inactive","Retired","Revoked","Surrendered","Suspended")){
-									licAltId = vLicenseID.getCustomID();
-									var caseVerify = licCaseCheck(vLicenseID);
-									if (caseVerify){
-										var condResult = aa.capCondition.getCapConditions(vLicenseID);
-										if (condResult.getSuccess()){
-											var capConds = condResult.getOutput();
-											if (capConds.length > 0){
-												var condVerified = true;
-												for (cc in capConds){
-													var thisCond = capConds[cc];
-													var cStatusType = thisCond.getConditionStatusType();
-													logDebug(thisCond.getConditionDescription());
-													if (matches(thisCond.getConditionDescription(),"Local Non-Compliance","DOJ LiveScan Match") && cStatusType == "Applied"){
-														condVerified = false;
-														break;
+							if (vLicenseID){
+								if (!vLicenseID.toString().contains("EST")){
+									licCapStatus = aa.cap.getCap(vLicenseID).getOutput().getCapStatus();
+									logDebug("Parent: " + vLicenseID.getCustomID() + " License Status: " + licCapStatus + " Renewal: " + altId);
+									if (!matches(licCapStatus,"Cancelled","Expired","Inactive","Retired","Revoked","Surrendered","Suspended")){
+										licAltId = vLicenseID.getCustomID();
+										var caseVerify = licCaseCheck(vLicenseID);
+										if (caseVerify){
+											var condResult = aa.capCondition.getCapConditions(vLicenseID);
+											if (condResult.getSuccess()){
+												var capConds = condResult.getOutput();
+												if (capConds.length > 0){
+													var condVerified = true;
+													for (cc in capConds){
+														var thisCond = capConds[cc];
+														var cStatusType = thisCond.getConditionStatusType();
+														logDebug(thisCond.getConditionDescription());
+														if (matches(thisCond.getConditionDescription(),"Local Non-Compliance","DOJ LiveScan Match") && cStatusType == "Applied"){
+															condVerified = false;
+															break;
+														}
 													}
-												}
-												if(condVerified){
+													if(condVerified){
+														processRenewal(capId);
+														recordRenewArray.push(altId);
+														capCount++;
+													}else{
+														recordSkippedArray.push(altId);
+														logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
+													}
+												}else{
 													processRenewal(capId);
 													recordRenewArray.push(altId);
 													capCount++;
-												}else{
-													recordSkippedArray.push(altId);
-													logDebug("Skipping Record " + altId + " License Record has Condition " + thisCond.getConditionDescription() + " applied.");
 												}
-											}else{
-												processRenewal(capId);
-												recordRenewArray.push(altId);
-												capCount++;
 											}
+										}else{
+											logDebug("Skipping Record " + altId + " License Record has a License Case that does not meet criteria.");
+											recordSkippedArray.push(altId);
+											continue;
 										}
 									}else{
-										logDebug("Skipping Record " + altId + " License Record has a License Case that does not meet criteria.");
+										logDebug("Skipping Record " + altId + " License Record has a Status of " + licCapStatus);
 										recordSkippedArray.push(altId);
 										continue;
 									}
-								}else{
-									logDebug("Skipping Record " + altId + " License Record has a Status of " + licCapStatus);
-									recordSkippedArray.push(altId);
-									continue;
 								}
 							}
 						}else{
@@ -322,7 +324,7 @@ function processRenewal(renCapId){
 		vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 // Set license record expiration and status to active
 		vLicenseObj.setStatus("Active");
-		updateAppStatus("Active","License Renewed",vLicenseID);
+		//updateAppStatus("Active","License Renewed",vLicenseID);
 // Update the Cultivation Type on the license record
 		if(getAppSpecific("Designation Change",capId) == "Yes") {
 			editAppSpecific("Cultivator Type",getAppSpecific("Designation Type",capId),vLicenseID);
