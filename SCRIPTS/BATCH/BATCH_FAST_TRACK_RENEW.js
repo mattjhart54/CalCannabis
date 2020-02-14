@@ -320,7 +320,6 @@ function processRenewal(renCapId){
 // Extend license expiration by 1 year
 		vNewExpDate = new Date(vExpDate.getFullYear() + 1, vExpDate.getMonth(), vExpDate.getDate());
 // Update license expiration date
-		logDebug("Updating Expiration Date to: " + vNewExpDate);
 		vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 // Set license record expiration and status to active
 			var b1ExpResult = aa.expiration.getLicensesByCapID(vLicenseID);
