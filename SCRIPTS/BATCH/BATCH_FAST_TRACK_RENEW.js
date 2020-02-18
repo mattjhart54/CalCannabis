@@ -503,7 +503,7 @@ function processRenewal(renCapId){
 		if (isTaskActive("Annual Renewal Review")){ 
 			closeTask("Annual Renewal Review","Approved","","");
 		}
-		updateAppStatus("Approved","");
+		//updateAppStatus("Approved","");
 // Add record to the CAT set
 		addToCat(vLicenseID);
 	}
