@@ -47,7 +47,17 @@ try{
 		addParameter(eParams,"$$location$$", AInfo["Address"]);
 		addParameter(eParams,"$$city$$", AInfo["City"]);
 		addParameter(eParams,"$$county$$", AInfo["County"]);
-		addParameter(eParams,"$$caseComments$$", wfComment);
+		var capCommentScriptModel = aa.cap.createCapCommentScriptModel();
+		capCommentScriptModel.setCapIDModel(capId);
+		capCommentScriptModel.setCommentType("APP LEVEL COMMENT");
+		var capCommentModel = capCommentScriptModel.getCapCommentModel();
+		capCmts = aa.cap.getCapComment(capCommentModel).getOutput();
+		var caseComments = "";
+		for(x in capCmts) {
+			cmt = capCmts[x].getText();
+			caseComments = caseComments + "<BR>" + cmt + "<BR>";
+		}
+		addParameter(eParams,"$$caseComments$$", caseComments);
 		var locEmail =  TInfo["E-mail Address"];
 		var caseContact = getContactObj(capId,"Subject");
 		if(caseContact) {
