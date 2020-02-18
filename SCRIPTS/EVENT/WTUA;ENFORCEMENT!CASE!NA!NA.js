@@ -25,6 +25,7 @@ try{
 		}
 	}
 	if(wfTask == "Case Assessment" && wfStatus == "Referred") {
+		var br = "<BR>";
 		var TInfo = [];
 		loadTaskSpecific(TInfo);
 		var rFiles = [];
@@ -55,7 +56,7 @@ try{
 		var caseComments = "";
 		for(x in capCmts) {
 			cmt = capCmts[x].getText();
-			caseComments = caseComments + "<BR>" + cmt + "<BR>";
+			caseComments+=(cmt) + br + br;
 		}
 		addParameter(eParams,"$$caseComments$$", caseComments);
 		var locEmail =  TInfo["E-mail Address"];
