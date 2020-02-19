@@ -25,7 +25,7 @@ try{
 		}
 	}
 	if(wfTask == "Case Assessment" && wfStatus == "Referred") {
-		var br = "\n";
+		var br = "\r\n";
 		var TInfo = [];
 		loadTaskSpecific(TInfo);
 		var rFiles = [];
