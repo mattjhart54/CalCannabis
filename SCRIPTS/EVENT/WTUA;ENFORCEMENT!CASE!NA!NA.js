@@ -56,7 +56,7 @@ try{
 		var caseComments = "";
 		for(x in capCmts) {
 			cmt = capCmts[x].getText();
-			caseComments+= "   " + (cmt) + \r\n;
+			caseComments+= "   " + (cmt) + %0A%0A;
 		}
 		addParameter(eParams,"$$caseComments$$", caseComments);
 		var locEmail =  TInfo["E-mail Address"];
