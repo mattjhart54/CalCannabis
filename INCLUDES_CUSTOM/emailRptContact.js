@@ -119,13 +119,18 @@ try{
 // mhart 20180503 story - 5392 end	
 // mhart 20181012 story - 5729 end
 			//jshear 20181219 story - 6311 Start
-			var b1ExpResult = aa.expiration.getLicensesByCapID(capId);
-			if(b1ExpResult.getSuccess()){
-				b1ExpObj = b1ExpResult.getOutput();
-				expDate = b1ExpObj.getExpDate();
-				if (expDate) {
-					var b1ExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
-					addParameter(eParams, "$$expDate$$",b1ExpDate);
+			appType = cap.getCapType();
+			appTypeString = parAppType.toString();
+			appTypeArray = parAppTypeString.split("/");
+			if(parAppTypeArray[3]=="License"){
+				var b1ExpResult = aa.expiration.getLicensesByCapID(capId);
+				if(b1ExpResult.getSuccess()){
+					b1ExpObj = b1ExpResult.getOutput();
+					expDate = b1ExpObj.getExpDate();
+					if (expDate) {
+						var b1ExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+						addParameter(eParams, "$$expDate$$",b1ExpDate);
+					}
 				}
 			}
 			//jshear 20181219 story - 6311 end
