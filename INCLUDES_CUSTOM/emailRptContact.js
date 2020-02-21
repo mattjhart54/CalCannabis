@@ -120,8 +120,8 @@ try{
 // mhart 20181012 story - 5729 end
 			//jshear 20181219 story - 6311 Start
 			appType = cap.getCapType();
-			appTypeString = parAppType.toString();
-			appTypeArray = parAppTypeString.split("/");
+			appTypeString = appType.toString();
+			appTypeArray = appTypeString.split("/");
 			if(appTypeArray[3]=="License"){
 				var b1ExpResult = aa.expiration.getLicensesByCapID(capId);
 				if(b1ExpResult.getSuccess()){
