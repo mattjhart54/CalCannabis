@@ -80,7 +80,7 @@ try{
 						vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 						// Set license record expiration and status to active
 						vLicenseObj.setStatus("Active");
-						updateAppStatus("Active","License Renewed",parentCapId);
+						//updateAppStatus("Active","License Renewed",parentCapId);
 						// Update the Cultivation Type on the license record
 						var desChange = getAppSpecific("Designation Change",renCapId);
 						var licType = getAppSpecific("License Type",renCapId);
