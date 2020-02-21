@@ -119,10 +119,11 @@ try{
 // mhart 20180503 story - 5392 end	
 // mhart 20181012 story - 5729 end
 			//jshear 20181219 story - 6311 Start
-			appType = cap.getCapType();
-			appTypeString = appType.toString();
-			appTypeArray = appTypeString.split("/");
-			if(appTypeArray[3]=="License"){
+			recCap = aa.cap.getCap(capId).getOutput();
+			recType = recCap.getCapType();
+			recTypeString = recType.toString();
+			recTypeArray = recTypeString.split("/");
+			if(recTypeArray[3]=="License"){
 				var b1ExpResult = aa.expiration.getLicensesByCapID(capId);
 				if(b1ExpResult.getSuccess()){
 					b1ExpObj = b1ExpResult.getOutput();
