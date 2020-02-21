@@ -122,7 +122,7 @@ try{
 			appType = cap.getCapType();
 			appTypeString = parAppType.toString();
 			appTypeArray = parAppTypeString.split("/");
-			if(parAppTypeArray[3]=="License"){
+			if(appTypeArray[3]=="License"){
 				var b1ExpResult = aa.expiration.getLicensesByCapID(capId);
 				if(b1ExpResult.getSuccess()){
 					b1ExpObj = b1ExpResult.getOutput();
