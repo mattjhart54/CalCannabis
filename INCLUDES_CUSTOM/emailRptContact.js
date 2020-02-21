@@ -119,9 +119,10 @@ try{
 // mhart 20180503 story - 5392 end	
 // mhart 20181012 story - 5729 end
 			//jshear 20181219 story - 6311 Start
-			licExpObj = new licenseObject(capId.getCustomID(),capId);
-			if (licExpObj){
-				addParameter(eParams, "$$expDate$$", licExpObj.b1ExpDate);
+			var b1ExpResult = aa.expiration.getLicensesByCapID(capId);
+			if(b1ExpResult.getSuccess()){
+				b1ExpResult = b1ExpResult.getOutput();
+				addParameter(eParams, "$$expDate$$",b1ExpResult.getExpDate());
 			}
 			//jshear 20181219 story - 6311 end
 			drpAddresses = priContact.addresses;
