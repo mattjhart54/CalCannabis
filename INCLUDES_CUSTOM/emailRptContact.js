@@ -121,8 +121,12 @@ try{
 			//jshear 20181219 story - 6311 Start
 			var b1ExpResult = aa.expiration.getLicensesByCapID(capId);
 			if(b1ExpResult.getSuccess()){
-				b1ExpResult = b1ExpResult.getOutput();
-				addParameter(eParams, "$$expDate$$",b1ExpResult.getExpDate());
+				b1ExpObj = b1ExpResult.getOutput();
+				expDate = b1ExpObj.getExpDate();
+				if (expDate) {
+					var b1ExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+					addParameter(eParams, "$$expDate$$",b1ExpDate);
+				}
 			}
 			//jshear 20181219 story - 6311 end
 			drpAddresses = priContact.addresses;
