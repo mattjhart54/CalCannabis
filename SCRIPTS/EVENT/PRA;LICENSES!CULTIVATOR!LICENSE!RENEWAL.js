@@ -105,7 +105,7 @@ try{
 						logDebug("Updating Expiration Date to: " + vNewExpDate);
 						vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 			// Set license record expiration and status to active
-						var b1ExpResult = aa.expiration.getLicensesByCapID(vLicenseID);
+						var b1ExpResult = aa.expiration.getLicensesByCapID(licId);
 						if(b1ExpResult.getSuccess()){
 							logDebug("Setting Exp Status");
 							b1ExpResult = b1ExpResult.getOutput();
@@ -113,7 +113,7 @@ try{
 							aa.expiration.editB1Expiration(b1ExpResult.getB1Expiration());
 							logDebug("Exp Status: " + b1ExpResult.getExpStatus());
 						}
-						updateAppStatus("Active","License Renewed",vLicenseID);
+						updateAppStatus("Active","License Renewed",licId);
 			// Update the Cultivation Type on the license record
 						if(AInfo["Designation Change"] == "Yes") {
 							editAppSpecific("Cultivator Type",AInfo["Designation Type"],licId);
