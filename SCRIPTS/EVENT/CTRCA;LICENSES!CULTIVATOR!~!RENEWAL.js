@@ -96,7 +96,7 @@ try{
 		cInfo = new Array;
 		loadAppSpecific(cInfo);
 		logDebug(cInfo["Case Renewal Type"] + " - " + cStatus);
-		if(cInfo["Case Renewal Type"] == "Renewal Review") {
+		if(matches(cInfo["Case Renewal Type"], "Renewal Review", "Renewal Hold")) {
 			if(!matches(cStatus, "Resolved", "Closed")) {
 				caseReview = true;
 				break;
