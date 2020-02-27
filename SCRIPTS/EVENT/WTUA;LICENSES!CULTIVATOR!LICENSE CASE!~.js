@@ -14,8 +14,8 @@ try{
 		parentCapId = getParent();
 		holdId = capId;
 		capId = parentCapId;
-		if(!appHasCondition("License Hold","Applied","Owner Subsequent Convictions",null)){
-			addStdCondition("License Hold","Owner Subsequent Convictions");
+		if(!appHasCondition("Notice","Applied","Owner Subsequent Convictions",null)){
+			addStdCondition("Notice","Owner Subsequent Convictions");
 		}
 		capId = holdId;
 	}
