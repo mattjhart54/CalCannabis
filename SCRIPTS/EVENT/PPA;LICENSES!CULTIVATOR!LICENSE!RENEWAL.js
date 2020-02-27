@@ -69,7 +69,7 @@ try{
 				var caseReview = false;
 				if(appHasCondition("Owner History","Applied","DOJ LiveScan Match",null))
 					caseReview = true;
-				if(appHasCondition("License Hold","Applied","Local Non-Compliance",null))
+				if(appHasCondition("Notice","Applied","Local Non-Compliance",null))
 					caseReview = true;
 				for(c in childIds) {
 					capId = childIds[c];
