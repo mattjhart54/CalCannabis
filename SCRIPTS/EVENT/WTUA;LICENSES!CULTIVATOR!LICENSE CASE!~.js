@@ -4,8 +4,8 @@ try{
 		parentCapId = getParent();
 		holdId = capId;
 		capId = parentCapId;
-		if(!appHasCondition("License Hold","Applied","Notice of Violation",null)){
-			addStdCondition("License Hold","Notice of Violation");
+		if(!appHasCondition("Notice","Applied","Notice of Violation",null)){
+			addStdCondition("Notice","Notice of Violation");
 		}
 		capId = holdId;
 	}
