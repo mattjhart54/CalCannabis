@@ -143,7 +143,7 @@ try{
 			}else{
 				closeTask("Annual Renewal Review","Approved","Renewal Fast Tracked","");
 			}
-			updateAppStatus("Approved","Renewal Fast Tracked");
+	//		updateAppStatus("Approved","Renewal Fast Tracked");
 			editAppSpecific("Fast Track","CHECKED");
 			
 	//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
