@@ -1,7 +1,7 @@
 try{
 	if(balanceDue<=0){
 		if (getAppStatus() != "Submitted"){
-			updateAppStatus("Submitted", "Updated via PRA:LICENSES/CULTIVATOR/*/Renewal.");
+			updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 		if(!isTaskComplete("Annual Renewal Review") && !isTaskComplete("Provisional Renewal Review")){
 			if (AInfo["License Issued Type"] == "Provisional") {
