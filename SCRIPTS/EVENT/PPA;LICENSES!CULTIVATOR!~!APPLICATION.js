@@ -68,7 +68,7 @@ try{
 //lwacht: 180123: story 4679: end
 	}
 }catch(err){
-	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: License Fee Paid: " + err.message);
+	logDebug("An error has occurred in PPA:LICENSES/CULTIVATOR/*/APPLICATION: License Fee Paid: " + err.message);
 	logDebug(err.stack);
 }
 
@@ -78,10 +78,10 @@ try{
 	if(balanceDue<=0 && !isTaskComplete("Administrative Review")){
 		activateTask("Administrative Review")
 		activateTask("Owner Application Reviews")
-		updateAppStatus("Submitted", "Updated via PRA:LICENSES/CULTIVATOR/*/APPLICATION.");
+		updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/APPLICATION.");
 	}
 }catch(err){
-	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Fees Paid: " + err.message);
+	logDebug("An error has occurred in PPA:LICENSES/CULTIVATOR/*/APPLICATION: Admin Fees Paid: " + err.message);
 	logDebug(err.stack);
 }
 
@@ -138,7 +138,7 @@ try {
 							}
 						}
 					}else {
-						emailRptContact("PRA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);
+						emailRptContact("PPA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);
 					}
 				}	
 			}
@@ -146,7 +146,7 @@ try {
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/* /APPLICATION: Admin Fees Paid: " + err.message);
+	logDebug("An error has occurred in PPA:LICENSES/CULTIVATOR/* /APPLICATION: Admin Fees Paid: " + err.message);
 	logDebug(err.stack);
 }
 //mhart 180409 user story 5391 - end
