@@ -37,7 +37,7 @@ try{
 		editAppSpecific("Case Renewal Type","Renewal Hold");
 		editAppName("Renewal Hold");
 	}
-	if (wfTask == "Licensing Case Assessmentt" && matches(wfStatus,"Refer to LAU","Notice of Violation","Local Non-Compliance","Owner Conviction")) {
+	if (wfTask == "Licensing Case Assessment" && matches(wfStatus,"Refer to LAU","Notice of Violation","Local Non-Compliance","Owner Conviction")) {
 		if (AInfo['Case Renewal Type'] == "Renewal Allowed"){
 			editAppSpecific("Case Renewal Type", "Renewal Review");
 			editAppName("Renewal Review");
