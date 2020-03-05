@@ -111,7 +111,7 @@ try{
 		var vNewExpDate;
 		var vLicenseObj;
 		licAltId = licId.getCustomID();
-		altId = capId.getCustomID();
+		altId = newAltId  //capId.getCustomID();
 		if (licId != null) {
 	// Get current expiration date.
 			vLicenseObj = new licenseObject(null, licId);
@@ -163,6 +163,7 @@ try{
 			envParameters.put("currentUserID",currentUserID);
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+			
 			aa.runAsyncScript(scriptName, envParameters);
 			
 			var priContact = getContactObj(capId,"Designated Responsible Party");
