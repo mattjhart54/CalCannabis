@@ -1,7 +1,6 @@
 try{
 	if(balanceDue<=0){
 		if (matches(getAppStatus(), null, "", undefined, "Renewal Fee Due")){
-			updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
 
 			if(!isTaskComplete("Annual Renewal Review") && !isTaskComplete("Provisional Renewal Review")){
 				if (AInfo["License Issued Type"] == "Provisional") {
@@ -58,7 +57,7 @@ try{
 				}
 			}
 		
-			if(!publicUser) {
+			if(!publicUser || getAppStatus() == "Renewal Fee Due") {
 		// Check License Cases to see if renewal can be fast tracked
 				var licenseId = AInfo["License Number"];
 				var licId = aa.cap.getCapID(licenseId);
@@ -174,7 +173,8 @@ try{
 						addToCat(licId);
 					}
 				}
-			}	
+			}
+			updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 	}
 }catch(err){
