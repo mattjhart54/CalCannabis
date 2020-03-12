@@ -4,33 +4,7 @@
 |
 | Version 1.0 - Base Version. 
 | Version 1.1 - eshanower 190111 story 5862: add Provisional records and set License Type codes
-|
-| Script to run nightly to close workflow and update the application status after the appeal perios expires.
-/------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------/
-|
-| START: USER CONFIGURABLE PARAMETERS
-|
-/------------------------------------------------------------------------------------------------------*/
-var emailText = "";
-var debugText = "";
-var showDebug = false;	
-var showMessage = false;
-var message = "";
-var maxSeconds = 4.5 * 60;
-var br = "<br>";
-
-/*------------------------------------------------------------------------------------------------------/
-|
-| END: USER CONFIGURABLE PARAMETERS
-|
-/------------------------------------------------------------------------------------------------------*/
-sysDate = aa.date.getCurrentDate();/*------------------------------------------------------------------------------------------------------/
-| Program: BATCH_APP_DATA_EXPORT_FTB
-| Client:  CDFA_CalCannabis
-|
-| Version 1.0 - Base Version. 
-| Version 1.1 - eshanower 190111 story 5862: add Provisional records and set License Type codes
+| Version 20.0 - Joseph.Espena Story 6212 (2020 spec changes), fixed missing business space padding
 |
 | Script to run nightly to close workflow and update the application status after the appeal perios expires.
 /------------------------------------------------------------------------------------------------------*/
@@ -95,10 +69,10 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters 
-aa.env.setValue("lookAheadDays", "-465");
+aa.env.setValue("lookAheadDays", "-365");
 aa.env.setValue("daySpan", "365");
-aa.env.setValue("emailAddress", "mhart@trustvip.com");
-aa.env.setValue("sendToEmail", "mhart@trustvip.com"); //ca-licensees@metrc.com
+aa.env.setValue("emailAddress", "joseph.espena@cdfa.ca.gov");
+aa.env.setValue("sendToEmail", "joseph.espena@cdfa.ca.gov"); //ca-licensees@metrc.com
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "oclcdfa");
 aa.env.setValue("recordGroup", "Licenses");
@@ -532,8 +506,10 @@ try{
 			if(licNotFound){
 				licLine = spacePad("",106);
 			}
+			// fixed to account for missing space -JE
 			if(busNotFound){
-				bsnsLine = spacePad("",76);
+				bsnsLine = spacePad("",79);
+//				bsnsLine = spacePad("",76);
 			}
 		}else{
 			logDebug("Skipping due to no contacts");
@@ -551,8 +527,10 @@ try{
 		//fein
 		rptLine += lFein;
 		//occupational license nbr
-		rptLine += ""+ altId.substr(6,7);  //not sure if this is right, so leaving just in case
+		//rptLine += ""+ altId.substr(6,7);  //not sure if this is right, so leaving just in case
 		//rptLine += spacePad("",7);
+		// Occupation License No. pos 19-38
+		rptLine += spacePad(altId,20);
 		//ownership type
 		switch(""+AInfo["Business Entity Structure"]){
 			case "Corporation":
@@ -628,8 +606,72 @@ try{
 			rptLine += "N";
 		}
 		//sic: never collected
+		// is 9999 correct or should we just zero fill? leaving as is for now -JE 
 		rptLine += spacePad("9999",4);
 		//rptLine += spacePad("",4);	// comment out to set license type code per list provided--EES
+		// Type of License pos 280-283 -JE
+		// pos 280: Adult-Use or Medicinal?
+		if(AInfo["Cultivator Type"] == "Adult-Use") {
+			rptLine += "A";
+		}else{
+			if(AInfo["Cultivator Type"] == "Medicinal") {
+				rptLine += "M";
+			}else{
+				rptLine += " ";
+			}
+		}
+		// pos 281: Annual or Provisional?
+		if(AInfo["License Issued Type"] == "Annual") {
+			rptLine += "A";
+		}else{
+			if(AInfo["License Issued Type"] == "Provisional") {
+				rptLine += "P";
+			}else{
+				rptLine += " ";
+			}
+		}
+		// pos 282-283: cultivator type
+		switch(""+AInfo["License Type"]){
+			case "Specialty Cottage Outdoor":
+				rptLine += "01"; break;
+			case "Specialty Cottage Indoor":
+				rptLine += "02"; break;
+			case "Specialty Cottage Mixed-Light Tier 1":
+				rptLine += "03"; break;
+			case "Specialty Cottage Mixed-Light Tier 2":
+				rptLine += "04"; break;
+			case "Specialty Outdoor":
+				rptLine += "05"; break;
+			case "Specialty Indoor":
+				rptLine += "06"; break;
+			case "Specialty Mixed-Light Tier 1":
+				rptLine += "07"; break;
+			case "Specialty Mixed-Light Tier 2":
+				rptLine += "08"; break;
+			case "Small Outdoor":
+				rptLine += "09"; break;
+			case "Small Indoor":
+				rptLine += "10"; break;
+			case "Small Mixed-Light Tier 1":
+				rptLine += "11"; break;
+			case "Small Mixed-Light Tier 2":
+				rptLine += "12"; break;
+			case "Medium Outdoor":
+				rptLine += "13"; break;
+			case "Medium Indoor":
+				rptLine += "14"; break;
+			case "Medium Mixed-Light Tier 1":
+				rptLine += "15"; break;
+			case "Medium Mixed-Light Tier 2":
+				rptLine += "16"; break;
+			case "Nursery":
+				rptLine += "17"; break;
+			case "Processor":
+				rptLine += "18"; break;
+			default:
+				rptLine += "  "; break;
+		}
+		/*
 		// Start set the license type code for FTB--EES
 		var licType = "    ";
 		if (appTypeArray[2] == "Temporary") {
@@ -650,6 +692,7 @@ try{
 // logDebug(altId + " License Type " + licType + " " + AInfo["License Issued Type"] + " " + AInfo["Cultivator Type"]);
 		rptLine += licType;		
 		// End set the license type code for FTB--EES
+		*/
 
 		//frequency: always annual?
 		rptLine += "A";
@@ -852,4 +895,3 @@ function checkChar(input) {
 		return false;
 	}
 }
-
