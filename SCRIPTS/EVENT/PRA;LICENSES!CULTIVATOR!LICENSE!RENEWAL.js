@@ -1,13 +1,15 @@
 try{
 	if(balanceDue<=0){
-		if (matches(getAppStatus(), null, "", undefined, "Renewal Fee Due")){
+//		if (matches(getAppStatus(), null, "", undefined, "Renewal Fee Due")){
 
 			if(!isTaskComplete("Annual Renewal Review") && !isTaskComplete("Provisional Renewal Review")){
 				if (AInfo["License Issued Type"] == "Provisional") {
 					activateTask("Provisional Renewal Review");
+					updateTask("Provisional Renewal Review","In Progress","","");
 					deactivateTask("Annual Renewal Review");
 				}else{
 					activateTask("Annual Renewal Review");
+					updateTask("Annual Renewal Review","In Progress","","");
 					deactivateTask("Provisional Renewal Review");
 				}
 			}
@@ -57,7 +59,7 @@ try{
 				}
 			}
 		
-			if(!publicUser || getAppStatus() == "Renewal Fee Due") {
+			if(!publicUser && getAppStatus() == "Renewal Fee Due") {
 		// Check License Cases to see if renewal can be fast tracked
 				var licenseId = AInfo["License Number"];
 				var licId = aa.cap.getCapID(licenseId);
@@ -177,7 +179,7 @@ try{
 			if (AInfo['Fast Track'] != "CHECKED"){
 				updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
 			}
-		}
+//		}
 	}
 }catch(err){
 	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/*/Renewal: Renewal Fees Paid: " + err.message);
