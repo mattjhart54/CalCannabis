@@ -177,12 +177,11 @@ try{
 				}
 			}
 			if (AInfo['Fast Track'] != "CHECKED" && getAppStatus != 'Submitted'){
-				updateAppStatus("Submitted", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
+				updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
 			}
 //		}
 	}
 }catch(err){
 	logDebug("An error has occurred in PPA:LICENSES/CULTIVATOR/*/Renewal: Renewal Fees Paid: " + err.message);
 	logDebug(err.stack);
-}
 }
