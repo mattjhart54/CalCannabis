@@ -53,10 +53,10 @@ try{
 //		updateTask("Annual Renewal Review","In Progress","","");
 //		deactivateTask("Provisional Renewal Review");
 //	}
-//	if(balanceDue > 0) {
-//		updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
-//		deactivateActiveTasks();
-//	}
+	if(balanceDue > 0) {
+		updateAppStatus("Renewal Fee Due","Licensee chose Cash Option at checkout");
+		deactivateActiveTasks();
+	}
 // Invoice all fees if cash payment selected at submission in ACA
 	var feeDesc = AInfo["License Type"] + " - Renewal Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);

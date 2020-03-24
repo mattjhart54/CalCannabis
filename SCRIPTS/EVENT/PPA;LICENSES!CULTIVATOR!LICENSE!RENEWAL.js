@@ -59,7 +59,7 @@ try{
 				}
 			}
 		
-			if(!publicUser && getAppStatus() == "Renewal Fee Due") {
+			if(getAppStatus() == "Renewal Fee Due") {
 		// Check License Cases to see if renewal can be fast tracked
 				var licenseId = AInfo["License Number"];
 				var licId = aa.cap.getCapID(licenseId);
@@ -176,12 +176,13 @@ try{
 					}
 				}
 			}
-			if (AInfo['Fast Track'] != "CHECKED"){
-				updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
+			if (AInfo['Fast Track'] != "CHECKED" && getAppStatus != 'Submitted'){
+				updateAppStatus("Submitted", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
 			}
 //		}
 	}
 }catch(err){
 	logDebug("An error has occurred in PPA:LICENSES/CULTIVATOR/*/Renewal: Renewal Fees Paid: " + err.message);
 	logDebug(err.stack);
+}
 }
