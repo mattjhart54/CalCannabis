@@ -5,6 +5,7 @@
 | Version 1.0 - Base Version. 
 | Version 1.1 - eshanower 190111 story 5862: add Provisional records and set License Type codes
 | Version 20.0 - Joseph.Espena Story 6212 (2020 spec changes), fixed missing business space padding
+| Version 20.1 - Joseph.Espena fixed to grab FEIN from License Record rather than Contact
 |
 | Script to run nightly to close workflow and update the application status after the appeal perios expires.
 /------------------------------------------------------------------------------------------------------*/
@@ -83,7 +84,7 @@ aa.env.setValue("licenseContactType", "Designated Responsible Party");
 aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
-aa.env.setValue("appStatus", "Active,Inactive");
+aa.env.setValue("appStatus", "Active,About to Expire");
 */
  
 var emailAddress = getJobParam("emailAddress");			// email to send report
@@ -298,11 +299,13 @@ try{
 					var licContactType =licenseContactType;
 				}
 				if(thisContact.contactType==licContactType && licNotFound){
+					/* FEIN contact field is not used -JE
 					if(matches(thisContact.fein, null, "", "undefined")){
 						var lFein = zeroPad("",9);
 					}else{
 						var lFein = zeroPad(thisContact.fein,9);
 					}
+					*/
 					if(matches(thisContact.birthDate, null, "", "undefined")){
 						var bDate = zeroPad("",8);
 					}else{
@@ -525,7 +528,14 @@ try{
 			rptLine += zeroPad(vSSN,9);
 		}
 		//fein
-		rptLine += lFein;
+		// rptLine += lFein;
+		// Get FEIN from license record -JE
+		if(AInfo["EIN/ITIN"]==null){
+			rptLine += zeroPad("",9);
+		}else{
+			var vFEIN = (""+AInfo["EIN/ITIN"]).replace(/-/g, "").substr(0,9);
+			rptLine += zeroPad(vFEIN,9);
+		}
 		//occupational license nbr
 		//rptLine += ""+ altId.substr(6,7);  //not sure if this is right, so leaving just in case
 		//rptLine += spacePad("",7);
