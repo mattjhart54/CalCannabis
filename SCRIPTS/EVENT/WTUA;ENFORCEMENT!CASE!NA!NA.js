@@ -25,49 +25,18 @@ try{
 		}
 	}
 	if(wfTask == "Case Assessment" && wfStatus == "Referred") {
-		var br = "\r\n";
 		var TInfo = [];
 		loadTaskSpecific(TInfo);
 		var rFiles = [];
+		var rptParams = aa.util.newHashMap();
+		rptParams.put("CaseNbr", capId.getCustomID());
+		rFile = generateReport(capId,"Case Summary","Enforcement",rptParams);
+		if (rFile) {
+			rFiles.push(rFile);
+		}
 		var eParams = aa.util.newHashtable();
 		addParameter(eParams,"$$fileDate$$", fileDate);
-		var caseDesc = workDescGet(capId);
-		addParameter(eParams,"$$caseDesc$$", caseDesc);
-		addParameter(eParams,"$$appType$$", appTypeAlias);
-		addParameter(eParams,"$$caseName$$", capName);
-		addParameter(eParams,"$$caseType$$", AInfo["Case Type"]);
-		addParameter(eParams,"$$priority$$", AInfo["Priority"]);
-		addParameter(eParams,"$$dueDate$$", AInfo["Due Date"]);
-		addParameter(eParams,"$$source$$", AInfo["Source of Complaint"]);
-		addParameter(eParams,"$$otherEntity$$", AInfo["Other Source"]);
-		addParameter(eParams,"$$typeSubmittal$$", AInfo["Type of Submittal"]);
-		addParameter(eParams,"$$type$$", AInfo["Complaint Type"]);
-		addParameter(eParams,"$$otherType$$", AInfo["Other Complaint Type"]);
-		addParameter(eParams,"$$typeSubmittal$$", AInfo["Type of Submittal"]);
-		addParameter(eParams,"$$APN$$", AInfo["APN"]);
-		addParameter(eParams,"$$location$$", AInfo["Address"]);
-		addParameter(eParams,"$$city$$", AInfo["City"]);
-		addParameter(eParams,"$$county$$", AInfo["County"]);
-		var capCommentScriptModel = aa.cap.createCapCommentScriptModel();
-		capCommentScriptModel.setCapIDModel(capId);
-		capCommentScriptModel.setCommentType("APP LEVEL COMMENT");
-		var capCommentModel = capCommentScriptModel.getCapCommentModel();
-		capCmts = aa.cap.getCapComment(capCommentModel).getOutput();
-		var caseComments = "";
-		for(x in capCmts) {
-			cmt = capCmts[x].getText();
-			caseComments+= "   " + (cmt)+ br + br;
-		}
-		addParameter(eParams,"$$caseComments$$", caseComments);
 		var locEmail =  TInfo["E-mail Address"];
-		var caseContact = getContactObj(capId,"Subject");
-		if(caseContact) {
-			if(!matches(caseContact.capContact.firstName,null,"",undefined)) {
-				addParameter(eParams, "$$contactName$$", caseContact.capContact.firstName + " " + caseContact.capContact.lastName);
-				addParameter(eParams, "$$contactPhone$$", caseContact.capContact.phone3);
-				addParameter(eParams, "$$contactEmail$$", caseContact.capContact.email);
-			}
-		}
 		var docList = aa.document.getDocumentListByEntity(capId.toString(),"CAP").getOutput();
 	//	logDebug("Doc List " + docList.size());
 		var num = docList.size();
@@ -87,4 +56,3 @@ try{
 	logDebug("An error has occurred in WTUA:ENFORCEMENT/CASE/NA/NA: Close Case Disposition task:" + err.message);
 	logDebug(err.stack);
 }
-//lwacht: 180323: story 5204: end 
