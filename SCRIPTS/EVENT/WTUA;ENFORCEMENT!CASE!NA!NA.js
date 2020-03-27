@@ -30,7 +30,7 @@ try{
 		var rFiles = [];
 		var rptParams = aa.util.newHashMap();
 		rptParams.put("CaseNbr", capId.getCustomID());
-		rFile = generateReport(capId,"Enforcement Cases By Type","Enforcement",rptParams);
+		rFile = generateReport(capId,"Case Summary","Enforcement",rptParams);
 		if (rFile) {
 			rFiles.push(rFile);
 		}
