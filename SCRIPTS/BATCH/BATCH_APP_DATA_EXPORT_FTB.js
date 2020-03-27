@@ -6,8 +6,8 @@
 | Version 1.1 - eshanower 190111 story 5862: add Provisional records and set License Type codes
 | Version 20.0 - Joseph.Espena Story 6212 (2020 spec changes), fixed missing business space padding
 | Version 20.1 - Joseph.Espena fixed to grab FEIN from License Record rather than Contact
+| Version 20.2 - Joseph.Espena fixed phone number, deleted erroneous comment
 |
-| Script to run nightly to close workflow and update the application status after the appeal perios expires.
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
 |
@@ -69,7 +69,7 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-/* test parameters 
+// test parameters 
 aa.env.setValue("lookAheadDays", "-365");
 aa.env.setValue("daySpan", "365");
 aa.env.setValue("emailAddress", "joseph.espena@cdfa.ca.gov");
@@ -85,7 +85,7 @@ aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
 aa.env.setValue("appStatus", "Active,About to Expire");
-*/
+//
  
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
@@ -312,10 +312,15 @@ try{
 						bDate= thisContact.birthDate.toString();
 						var bDate = ""+bDate.substr(0,4) + bDate.substr(5,2) + bDate.substr(8,2);
 					}
-					if(matches(thisContact.phone1, null, "", "undefined")){
+					// if(matches(thisContact.phone1, null, "", "undefined")){
+					// Check correct phone field -JE
+					if(matches(thisContact.phone3, null, "", "undefined")){
 						var phNbr = zeroPad("",10);
 					}else{
-						var phNbr = zeroPad(thisContact.phone1,10);
+						// var phNbr = zeroPad(thisContact.phone1,10);
+						// Get correct phone number field -JE
+						var phNbr = (""+thisContact.phone3).replace(/-/g, "");
+						phNbr = zeroPad(phNbr,10);
 					}
 					licNotFound = false;
 					if(thisContact.lastName==null){
