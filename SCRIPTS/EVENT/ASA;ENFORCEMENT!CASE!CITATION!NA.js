@@ -2,7 +2,7 @@ try{
 // Link Amendment record to License reord as a child
 	var parentAltId = AInfo["Case Nbr"];
 	addParent(parentAltId);
-	
+	parentId = aa.cap.getCapID(parentAltId).getOutput();
 // Copy custom fields from the license record to the parent record
 	holdId = capId;
 	capId = parentId;
