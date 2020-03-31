@@ -235,7 +235,7 @@ try{
 					editAppSpecific("Case Opened By",caseOpenByFieldValue,licCaseId);
 					editAppSpecific("Priority",priorityFieldValue,licCaseId);
 					editAppName(caseTypeFieldValue,licCaseId);
-					removeCapCondition("Application Condition","Provisional Renewal Missing Science Amendment","Applied",capId);
+					editCapConditionStatus("Application Condition","Provisional Renewal Missing Science Amendment","Condition Met","Not Applied");
 				}else{
 					logDebug("Failed to create License Case Record for " + vLicenseID.getCustomID());
 				}
