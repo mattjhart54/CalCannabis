@@ -45,7 +45,7 @@ function editCapConditionStatus(pType,pDesc,pStatus,pStatusType) {
             if (fromStatus.toUpperCase().equals(cStatus.toUpperCase()) || fromStatus == "") {
                 thisCond.setConditionStatus(pStatus);
                 thisCond.setConditionStatusType(pStatusType);
-                thisCond.setImpactCode("Required");
+                //thisCond.setImpactCode("Required");
                 aa.capCondition.editCapCondition(thisCond);
                 conditionUpdated = true; // condition has been found and updated
             } 
