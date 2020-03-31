@@ -131,9 +131,9 @@ try{
 		eTxt+="reportName: " + reportName + br;
 		eTxt+="reportName: " + typeof(reportName) + br;
 		var parameters = aa.util.newHashMap(); 
-		parameters.put("p1value",appCap);
-		parameters.put("p2value","Designated Responsible Party");
-		parameters.put("p3value","Mailing");
+		parameters.put("altId",appCap);
+//		parameters.put("p2value","Designated Responsible Party");
+//		parameters.put("p3value","Mailing");
 		report.setReportParameters(parameters);
 		var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
 		eTxt+="Has Permission: " + permit.getOutput().booleanValue() + br;
