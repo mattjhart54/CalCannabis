@@ -7,6 +7,7 @@
 | Version 20.0 - Joseph.Espena Story 6212 (2020 spec changes), fixed missing business space padding
 | Version 20.1 - Joseph.Espena fixed to grab FEIN from License Record rather than Contact
 | Version 20.2 - Joseph.Espena fixed phone number, deleted erroneous comment
+| Version 20.3 - Joseph.Espena fixed phone number validation
 |
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
@@ -319,8 +320,11 @@ try{
 					}else{
 						// var phNbr = zeroPad(thisContact.phone1,10);
 						// Get correct phone number field -JE
-						var phNbr = (""+thisContact.phone3).replace(/-/g, "");
-						phNbr = zeroPad(phNbr,10);
+						var phNbr = (""+thisContact.phone3).replace(/ -()/g, "");
+					}
+					// get rid of any phone number that isn't the right length -JE
+					if(phNbr.length != 10){
+						phNbr = zeroPad("",10);
 					}
 					licNotFound = false;
 					if(thisContact.lastName==null){
