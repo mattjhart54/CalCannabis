@@ -77,6 +77,52 @@ try{
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
+//	6467: Create License Case Record for all Provisional License Renewals when a Science Amendment associated to the License Parent Record has not been submitted prior to submission of a Provisional Renewal for that corresponding renewal year
+	if (AInfo['License Issued Type'] == "Provisional"){
+		var vLicenseID = getParentLicenseCapID(capId);
+		var vIDArray = String(vLicenseID).split("-");
+		var vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
+		var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",vLicenseID);
+		var issueDate = getAppSpecific("Valid From Date",vLicenseID);
+		var approvedRen = false;
+		var licCaseExclusion = false;
+		if (scienceArr) {
+			if (scienceArr.length > 0) {
+				for (x in scienceArr){
+					var scienceCap = scienceArr[x];
+					if (getAppSpecific("Associated Renewal",scienceCap) == "Yes"){
+						var correspondingYear = getAppSpecific("Renewal Year",scienceCap)
+						var thisLic = new licenseObject(null,vLicenseID);
+						var licExpDateObj = new Date(thisLic.b1ExpDate);
+						var	expYear = licExpDateObj.getFullYear();
+						logDebug("expYear: " + expYear);
+						if (String(correspondingYear) == String(expYear)){
+							var saAppStatus = aa.cap.getCap(scienceCap).getOutput().getCapStatus();
+							var workflowResult = aa.workflow.getTasks(scienceCap);
+							if (workflowResult.getSuccess()){
+								wfObj = workflowResult.getOutput();		
+								for (i in wfObj) {
+									fTask = wfObj[i];
+									var status = fTask.getDisposition();
+									var taskDesc = fTask.getTaskDescription();
+									if(status != null && taskDesc != null && status != "Physical Modification Approved" && saAppStatus != "Amendment Approved"){
+										licCaseExclusion = true;
+									}
+								}
+							}else{
+								logDebug("**ERROR: Failed to get workflow object: "+wfObj );
+							}
+						}
+					}
+				}
+			}
+		}
+		if (!licCaseExclusion){
+			if	(!appHasCondition("Application Condition","Applied","Provisional Renewal Missing Science Amendment",null)){
+				addStdCondition("Application Condition", "Provisional Renewal Missing Science Amendment");
+			}
+		}
+	}
 // Check License Cases to see if renewal can be fast tracked
 	var licenseId = AInfo["License Number"];
 	var licId = aa.cap.getCapID(licenseId);
