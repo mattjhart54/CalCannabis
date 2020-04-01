@@ -18,6 +18,7 @@ try{
 	editAppSpecific("City",PInfo["City"]);
 	editAppSpecific("County",PInfo["County"]);
 	editAppSpecific("APN",PInfo["APN"]);
+	copyASITables(parentId,capId,"NOV Tracking","Evidence");
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA:Enforcement/Case/Citation/NA: Update Case Information: " + err.message);
 	logDebug(err.stack);
