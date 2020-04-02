@@ -150,7 +150,7 @@ try{
 					logDebug("Error renaming amendment record " + licCaseId);
 				}
 				// Copy the Designated resposible Party contact from the License Record to the Case record
-				copyContactsByType_rev(vLicenseID,licCaseId,"Designated Responsible Party");
+				//copyContactsByType_rev(vLicenseID,licCaseId,"Designated Responsible Party");
 				
 				// Copy custom fields from the license record to the Case record
 				holdId = capId;
@@ -158,6 +158,7 @@ try{
 				PInfo = new Array;
 				loadAppSpecific(PInfo);
 				capId = holdId;
+				editAppSpecific("License Number",vLicenseID.getCustomID(),licCaseId);
 				editAppSpecific("License Type",PInfo["License Type"],licCaseId);
 				editAppSpecific("Legal Business Name",PInfo["Legal Business Name"],licCaseId);
 				editAppSpecific("Premises City",PInfo["Premise City"],licCaseId);
