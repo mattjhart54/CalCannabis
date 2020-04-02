@@ -20,7 +20,6 @@ var showMessage = false;
 var message = "";
 var maxSeconds = 7 * 60;
 var br = "<br>";
-var paymentPeriodList = [];
 
 /*------------------------------------------------------------------------------------------------------/
 |
