@@ -225,6 +225,7 @@ try{
 					PInfo = new Array;
 					loadAppSpecific(PInfo);
 					capId = holdId;
+					editAppSpecific("License Number",vLicenseID.getCustomID(),licCaseId);
 					editAppSpecific("License Type",PInfo["License Type"],licCaseId);
 					editAppSpecific("Legal Business Name",PInfo["Legal Business Name"],licCaseId);
 					editAppSpecific("Premises City",PInfo["Premise City"],licCaseId);
