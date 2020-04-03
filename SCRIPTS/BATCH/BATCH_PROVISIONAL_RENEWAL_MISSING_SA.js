@@ -217,7 +217,7 @@ try{
 						logDebug("Error renaming amendment record " + licCaseId);
 					}
 					// Copy the Designated resposible Party contact from the License Record to the Case record
-					copyContactsByType_rev(vLicenseID,licCaseId,"Designated Responsible Party");
+					//copyContactsByType_rev(vLicenseID,licCaseId,"Designated Responsible Party");
 					
 					// Copy custom fields from the license record to the Case record
 					holdId = capId;
