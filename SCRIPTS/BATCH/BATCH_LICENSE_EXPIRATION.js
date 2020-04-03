@@ -317,20 +317,22 @@ try{
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
 			if (renewalCapProject != null) {
 				var renCapId = renewalCapProject.getCapID();
-				var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee";
-				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
-				if(thisFee){
-					holdId = capId;
-					capId = renCapId;
-					if (!feeExists(thisFee.feeCode)){
-//						updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
-						addFeeT(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y",capId);
-						invoiceFee(thisFee.feeCode,"FINAL");
+				if (!renCapId.toString().contains("EST")){
+					var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee";
+					var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+					if(thisFee){
+						holdId = capId;
+						capId = renCapId;
+						if (!feeExists(thisFee.feeCode)){
+	//						updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+							addFeeT(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y",capId);
+							invoiceFee(thisFee.feeCode,"FINAL");
+						}
+						capId = holdId;
+					}else{
+						aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+						logDebug("An error occurred retrieving fee item: " + feeDesc);
 					}
-					capId = holdId;
-				}else{
-					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-					logDebug("An error occurred retrieving fee item: " + feeDesc);
 				}
 			}
 		}
