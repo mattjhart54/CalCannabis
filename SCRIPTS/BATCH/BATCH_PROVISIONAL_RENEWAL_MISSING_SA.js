@@ -185,7 +185,7 @@ try{
 				vLicenseID = getParentLicenseCapID(capId);
 				vIDArray = String(vLicenseID).split("-");
 				vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
-				renewalCapProject = getRenewalCapByParentCapIDForIncomplete(licId);
+				renewalCapProject = getRenewalCapByParentCapIDForIncomplete(vLicenseID);
 				if (renewalCapProject != null) {
 					var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
 					if (licCaseId){
