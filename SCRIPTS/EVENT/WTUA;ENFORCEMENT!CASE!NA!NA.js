@@ -29,7 +29,7 @@ try{
 		loadTaskSpecific(TInfo);
 		var rFiles = [];
 		var rptParams = aa.util.newHashMap();
-		rptParams.put("CaseNbr", capId.getCustomID());
+		rptParams.put("Case Number", capId.getCustomID());
 		rFile = generateReport(capId,"Case Summary","Enforcement",rptParams);
 		if (rFile) {
 			rFiles.push(rFile);
