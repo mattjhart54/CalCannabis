@@ -177,6 +177,11 @@ try{
 				vLicenseID = getParentLicenseCapID(capId);
 				vIDArray = String(vLicenseID).split("-");
 				vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
+				renewalCapProject = getRenewalCapByParentCapIDForIncomplete(vLicenseID);
+				if (matches(renewalCapProject,undefined,null,"")) {
+					vLicenseID = getParent();
+				}
+				logDebug("vLicenseID: " + vLicenseID + " vLicAltID: " + vLicenseID.getCustomID());
 				if (String(vLicenseID.getCustomID()).substr(0,3) == "CCL"){
 					logDebug("Parent Record " + vLicenseID.getCustomID());
 					var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
