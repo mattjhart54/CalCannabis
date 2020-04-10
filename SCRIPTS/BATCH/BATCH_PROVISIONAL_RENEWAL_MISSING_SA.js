@@ -75,7 +75,6 @@ var appGroup = getParam("recordGroup");							//   app Group to process {License
 var appTypeType = getParam("recordType");						//   app type to process {Rental License}
 var appSubtype = getParam("recordSubtype");						//   app subtype to process {NA}
 var appCategory = getParam("recordCategory");						//   app category to process {NA}
-var skipAppStatusArray = getParam("skipAppStatus").split(",");	//   Skip records with one of these application statuses
 var caseTypeFieldValue = getParam("caseTypeFieldValue");
 var caseDescFieldValue = getParam("caseDescFieldValue");
 var caseOpenByFieldValue = getParam("caseOpenByFieldValue");
@@ -170,13 +169,6 @@ try{
 		capId = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
 		var capValue = aa.cap.getCap(capId).getOutput();
 		var altID = capId.getCustomID();
-		var capStatus = aa.cap.getCap(capId).getOutput().getCapStatus();
-		
-		// Filter by CAP Status
-		if (exists(capStatus, skipAppStatusArray)) {
-			capFilterStatus++;
-			continue;
-		}
 		
 		if (capValue.isCompleteCap() && getAppSpecific("License Issued Type",capId) == "Provisional"){
 			if(appHasCondition("Application Condition","Applied","Provisional Renewal Missing Science Amendment",null)){
