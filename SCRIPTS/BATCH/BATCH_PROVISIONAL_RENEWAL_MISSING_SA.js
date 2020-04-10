@@ -185,6 +185,7 @@ try{
 				vLicenseID = getParentLicenseCapID(capId);
 				vIDArray = String(vLicenseID).split("-");
 				vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
+				logDebug("Parent Record " + vLicenseID.getCustomID());
 				var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
 				if (licCaseId){
 					// Set alt id for the case record based on the number of child case records linked to the license record
