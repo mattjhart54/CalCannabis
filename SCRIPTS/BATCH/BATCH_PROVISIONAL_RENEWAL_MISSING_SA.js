@@ -71,17 +71,17 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 
-var appGroup = getParam("recordGroup");							//   app Group to process {Licenses}
-var appTypeType = getParam("recordType");						//   app type to process {Rental License}
-var appSubtype = getParam("recordSubtype");						//   app subtype to process {NA}
-var appCategory = getParam("recordCategory");						//   app category to process {NA}
-var caseTypeFieldValue = getParam("caseTypeFieldValue");
-var caseDescFieldValue = getParam("caseDescFieldValue");
-var caseOpenByFieldValue = getParam("caseOpenByFieldValue");
-var priorityFieldValue = getParam("priorityFieldValue");
-var emailAddress = getParam("emailAddress");					// email to send report
-var sendEmailToContactTypes = getParam("sendEmailToContactTypes");// send out emails?
-var emailTemplate = getParam("emailTemplate");				// email Template
+var appGroup = "Licenses"							//   app Group to process {Licenses}
+var appTypeType = "Cultivator"						//   app type to process {Rental License}
+var appSubtype = "License"						//   app subtype to process {NA}
+var appCategory = "Renewal"						//   app category to process {NA}
+var caseTypeFieldValue = "Renewal Allowed"
+var caseDescFieldValue = "Science Provisional"
+var caseOpenByFieldValue = "Science Provisional"
+var priorityFieldValue = "Moderate"
+var emailAddress = ""					// email to send report
+var sendEmailToContactTypes = "";// send out emails?
+var emailTemplate = "";				// email Template
 
 
 /*----------------------------------------------------------------------------------------------------/
@@ -177,7 +177,7 @@ try{
 				vLicenseID = getParentLicenseCapID(capId);
 				vIDArray = String(vLicenseID).split("-");
 				vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
-				if (String(vLicenseID.getCustomID()).substr(0,2) == "CCL"){
+				if (String(vLicenseID.getCustomID()).substr(0,3) == "CCL"){
 					logDebug("Parent Record " + vLicenseID.getCustomID());
 					var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
 					if (licCaseId){
