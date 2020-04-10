@@ -177,7 +177,7 @@ try{
 				vLicenseID = getParentLicenseCapID(capId);
 				vIDArray = String(vLicenseID).split("-");
 				vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
-				if (vLicenseID.getCustomID().substr(0,2) == "CCL"){
+				if (String(vLicenseID.getCustomID()).substr(0,2) == "CCL"){
 					logDebug("Parent Record " + vLicenseID.getCustomID());
 					var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
 					if (licCaseId){
