@@ -160,6 +160,9 @@ try{
 				if (matches(renewalCapProject,undefined,null,"")) {
 					vLicenseID = getParent();
 				}
+				if(!vLicenseID){
+					logDebug("Floater: " + capId.getCustomID());
+				}
 				if (vLicenseID){
 					if (String(vLicenseID.getCustomID()).substr(0,3) == "CCL"){
 						logDebug("altID: " + vLicenseID.getCustomID());
