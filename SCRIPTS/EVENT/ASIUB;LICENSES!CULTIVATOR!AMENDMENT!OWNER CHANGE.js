@@ -4,7 +4,7 @@ try{
 		var totPct = 0;
 		if (typeof(OWNERS) == "object") {
 			for(x in OWNERS) {
-				if(!matches(OWNERS[x]["Change Status"],"Delete","Deleted")) {
+				if(OWNERS[x]["Change Status"] != "Delete") {
 					var ownPct = parseFloat(OWNERS[x]["Percent Ownership"]);
 					totPct = totPct + ownPct;
 				}
@@ -13,7 +13,7 @@ try{
 		if (totPct > 100 || totPct < 0) {
 			cancel = true;
 			showMessage = true;
-			comment("The total Percent Ownership must be greater than 0 and less than or equal to 100.")
+			comment("The total Percent Ownership must be greater than 0 and less than 100.")
 		}
 
 // Validate for duplicate email addresses
