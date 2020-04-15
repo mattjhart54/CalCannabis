@@ -252,38 +252,7 @@ try {
 	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Final Review child check: " + err.message);
 	aa.print(err.stack);
 }
-//MJH 180408 Story 5896 end
-//lwacht
-//add fees
-//lwacht: don't run for temporary app 
-try{
-	if(appTypeArray[2]!="Temporary" && wfTask == "Final Review" && matches(wfStatus,"Approved for Annual License","Approved for Provisional License")){
-		var feeDesc = AInfo["License Type"] + " - License Fee";
-		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
-		if(thisFee){
-			feeSeqNbr = updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
-//mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification
-			var licAltId = capId.getCustomID();
-			var scriptName = "asyncApprovalLetterinvoiceRpt";
-			envParameters = aa.util.newHashMap();
-			envParameters.put("licCap",licAltId); 
-			envParameters.put("feeSeqNbr",feeSeqNbr); 
-			envParameters.put("reportName","Approval Letter and License Fee Invoice"); 
-			envParameters.put("currentUserID",currentUserID);
-			envParameters.put("contType","Designated Responsible Party");
-			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
-			aa.runAsyncScript(scriptName, envParameters);
-//mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification 
-		}else{
-			aa.print("An error occurred retrieving fee item: " + feeDesc);
-			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-		}
-	}
-}catch(err){
-	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
-	aa.print(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
+
 
 //lwacht: if cash has been selected as a payment type, the letter must be sent before anything else can be done on the record
 try{
