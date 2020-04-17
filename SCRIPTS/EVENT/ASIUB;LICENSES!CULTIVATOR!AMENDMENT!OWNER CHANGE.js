@@ -6,7 +6,7 @@ try{
 			for(x in OWNERS) {
 				if(OWNERS[x]["Change Status"] != "Delete") {
 					var ownPct = parseFloat(OWNERS[x]["Percent Ownership"]);
-					totPct = totPct + ownPct;
+					totPct = Math.round((totPct + ownPct) * 1e12) / 1e12;
 				}
 			}
 		}
