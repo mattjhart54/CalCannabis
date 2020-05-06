@@ -31,8 +31,9 @@ function licenseNumberToCatJson(licenseNumber) {
 			var licenseType = "M-"+AInfo["License Type"];
 		}
 //lwacht: 180424: story 5411/5412: only allowing 'active' and 'inactive' statuses
+//espenaj: 200506: Story 6513: adding "Expired - Pending Renewal" to list of active statuses
 		var recStatus = capModel.getCapStatus();
-		if(matches(recStatus,"Active", "About to Expire", "Suspended")) {
+		if(matches(recStatus,"Active", "About to Expire", "Suspended", "Expired - Pending Renewal")) {
 			var licenseStatus =  "Active";
 		} else  {
 			var licenseStatus = "Inactive";
