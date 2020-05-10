@@ -5,7 +5,7 @@ try{
 		if (AInfo['Deferral Approved'] == "CHECKED" && appStatus != "Renewal Fee Due"){
 			cancel = true;
 			showMessage = true;
-			comment("Record Status must be 'Renewal Fee Due' in order the Deferr payment");	
+			comment("Record Status must be 'Renewal Fee Due' in order the Defer payment");	
 		}
 	}
 } catch(err){
