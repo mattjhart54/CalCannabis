@@ -228,7 +228,7 @@ try{
 				editAppSpecific("Cultivator Type",AInfo["Designation Type"],licId); 
 				editAppName(AInfo["License Issued Type"] + " " + AInfo["New Designation"] + " - " + AInfo["License Type"],vLicenseID);
 			}else{
-				editAppName(AInfo["License Issued Type"] + " " + AInfo["Current Designation"] + " - " + AInfo["License Type"],vLicenseID);
+				editAppName(AInfo["License Issued Type"] + " " + AInfo["Cultivator Type"] + " - " + AInfo["License Type"],vLicenseID);
 			}
 	//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(licId);
