@@ -1,6 +1,8 @@
 // JSHEAR 05082020 user Story 6519 - Covid Payment Deferral
 try{
-	if(!publicUser) {
+	vLicenseID = getParentLicenseCapID(capId);
+    result = aa.cap.getProjectByMasterID(parentCapID, "Renewal", "Incomplete");
+    if (result.getSuccess()) {
 		var appStatus = getAppStatus();
 		if (AInfo['Deferral Approved'] == "CHECKED" && appStatus != "Renewal Fee Due"){
 			cancel = true;
