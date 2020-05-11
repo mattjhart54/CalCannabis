@@ -1,36 +1,36 @@
-function voidRemoveFeesByDesc(fsched, feeDesc) {
+function voidRemoveFeesByDesc(itemCap, feeDesc) {
 try {
-	var arrFeesResult = aa.finance.getFeeItemList(null,fsched,null);
+	var arrFeesResult = aa.finance.getFeeItemByCapID(capId);
 	if (arrFeesResult.getSuccess()) {
 		var arrFees = arrFeesResult.getOutput();
 		for (xx in arrFees) {
 			var targetFee = arrFees[xx];
-			var fDesc = targetFee.getFeeDes();
+			var fDesc = targetFee.getFeeDescription();
 			if (fDesc.equals(feeDesc)) {
-				if (targetFee.status == "INVOICED") {
-					var editResult = aa.finance.voidFeeItem(itemCap, targetFee.sequence);
+				if (targetFee..getFeeitemStatus() == "INVOICED") {
+					var editResult = aa.finance.voidFeeItem(itemCap, targetFee.getFeeSeqNbr());
 					if (editResult.getSuccess())
-						logDebug("Voided existing Fee Item: " + targetFee.code);
+						logDebug("Voided existing Fee Item: " + targetFee.getFeeCod());
 					else{ 
-						logDebug( "**ERROR: voiding fee item (" + targetFee.code + "): " + editResult.getErrorMessage()); 
+						logDebug( "**ERROR: voiding fee item (" + targetFee.getFeeCod() + "): " + editResult.getErrorMessage()); 
 						return false; 
 					}
 					var feeSeqArray = new Array();
 					var paymentPeriodArray = new Array();
-					feeSeqArray.push(targetFee.sequence);
-					paymentPeriodArray.push(targetFee.period);
+					feeSeqArray.push(targetFee.getFeeSeqNbr());
+					paymentPeriodArray.push(targetFee.getPaymentPeriod());
 					var invoiceResult_L = aa.finance.createInvoice(itemCap, feeSeqArray, paymentPeriodArray);
 					if (!invoiceResult_L.getSuccess()) {
-						logDebug("**ERROR: Invoicing the fee items voided " + thisFee.code + " was not successful.  Reason: " +  invoiceResult_L.getErrorMessage());
+						logDebug("**ERROR: Invoicing the fee items voided " + thisFee.getFeeCod() + " was not successful.  Reason: " +  invoiceResult_L.getErrorMessage());
 						return false;
 					}
 				}
-				if (targetFee.status == "NEW") {
-					var editResult = aa.finance.removeFeeItem(itemCap, targetFee.sequence);
+				if (targetFee..getFeeitemStatus() == "NEW") {
+					var editResult = aa.finance.removeFeeItem(itemCap, targetFee.getFeeSeqNbr());
 					if (editResult.getSuccess())
-						logDebug("Removed existing Fee Item: " + targetFee.code);
+						logDebug("Removed existing Fee Item: " + targetFee.getFeeCod());
 					else
-						{ logDebug( "**ERROR: removing fee item (" + targetFee.code + "): " + editResult.getErrorMessage()); return false; }
+						{ logDebug( "**ERROR: removing fee item (" + targetFee.getFeeCod() + "): " + editResult.getErrorMessage()); return false; }
 				}
 			}
 	
