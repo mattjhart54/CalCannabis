@@ -65,7 +65,7 @@ try{
 		// Update the Cultivation Type on the license record
 						if(AInfo["Designation Change"] == "Yes") {
 							editAppSpecific("Cultivator Type",AInfo["Designation Type"],licId);
-							editAppName(AInfo["Designation Type"] + " - " + AInfo["License Type"],licId);
+							editAppName(AInfo["License Issued Type"] + " " + AInfo["Designation Type"] + " - " + AInfo["License Type"],licId);
 						}
 		//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 						renewalCapProject = getRenewalCapByParentCapIDForIncomplete(licId);
