@@ -1,6 +1,6 @@
 try{
 	if(balanceDue<=0){
-		if (getAppStatus() != "Approved-Payment Deferral"){
+		if (getAppStatus() != "Deferral Approved"){
 			if(!isTaskComplete("Annual Renewal Review") && !isTaskComplete("Provisional Renewal Review")){
 				if (AInfo["License Issued Type"] == "Provisional") {
 					activateTask("Provisional Renewal Review");

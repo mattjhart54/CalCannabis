@@ -98,7 +98,7 @@ try {
 					}
 				}
 			}
-			updateAppStatus("Approved-Payment Deferral", "Updated via ASIUA:LICENSES/CULTIVATOR/*/Renewal.");
+			updateAppStatus("Deferral Approved", "Updated via ASIUA:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 	}
 	//Removing as per 6355, 6313, 6314, 6315
