@@ -1,8 +1,11 @@
 // JSHEAR 05082020 user Story 6519 - Covid Payment Deferral
 try{
-	if(balanceDue>0 && AInfo['Deferral Approved'] == "CHECKED"){
-//		if (matches(getAppStatus(), null, "", undefined, "Renewal Fee Due")){
-
+	vLicenseID = getParentLicenseCapID(capId);
+	vIDArray = String(vLicenseID).split("-");
+	vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
+	renewalCapProject = getRenewalCapByParentCapIDForIncomplete(vLicenseID);
+	if (matches(renewalCapProject,undefined,null,"")) {
+		if(balanceDue>0 && AInfo['Deferral Approved'] == "CHECKED"){
 			if(!isTaskComplete("Annual Renewal Review") && !isTaskComplete("Provisional Renewal Review")){
 				if (AInfo["License Issued Type"] == "Provisional") {
 					activateTask("Provisional Renewal Review");
@@ -70,7 +73,6 @@ try{
 							editAppName(AInfo["Designation Type"] + " - " + AInfo["License Type"],licId);
 						}
 		//Set renewal to complete, used to prevent more than one renewal record for the same cycle
-						renewalCapProject = getRenewalCapByParentCapIDForIncomplete(licId);
 						if (renewalCapProject != null) {
 							renewalCapProject.setStatus("Complete");
 							renewalCapProject.setRelationShip("R");  // move to related records
@@ -146,7 +148,7 @@ try{
 					}
 				}
 			}
-//		}
+		}
 	}
 } catch(err){
 	logDebug("An error has occurred in ASIUA:LICENSES/CULTIVATOR/*/RENEWAL: " + err.message);
