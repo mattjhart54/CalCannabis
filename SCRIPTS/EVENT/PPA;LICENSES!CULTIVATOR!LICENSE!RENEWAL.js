@@ -1,7 +1,6 @@
 try{
 	if(balanceDue<=0){
-//		if (matches(getAppStatus(), null, "", undefined, "Renewal Fee Due")){
-
+		if (matches(getAppStatus() != "Approved-Payment Deferral")){
 			if(!isTaskComplete("Annual Renewal Review") && !isTaskComplete("Provisional Renewal Review")){
 				if (AInfo["License Issued Type"] == "Provisional") {
 					activateTask("Provisional Renewal Review");
@@ -66,7 +65,7 @@ try{
 		// Update the Cultivation Type on the license record
 						if(AInfo["Designation Change"] == "Yes") {
 							editAppSpecific("Cultivator Type",AInfo["Designation Type"],licId);
-							editAppName(AInfo["License Issued Type"] + " " + AInfo["Designation Type"] + " - " + AInfo["License Type"],licId);
+							editAppName(AInfo["Designation Type"] + " - " + AInfo["License Type"],licId);
 						}
 		//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 						renewalCapProject = getRenewalCapByParentCapIDForIncomplete(licId);
@@ -134,7 +133,7 @@ try{
 			if (AInfo['Fast Track'] != "CHECKED" && getAppStatus != 'Submitted'){
 				updateAppStatus("Submitted", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
 			}
-//		}
+		}
 	}
 }catch(err){
 	logDebug("An error has occurred in PPA:LICENSES/CULTIVATOR/*/Renewal: Renewal Fees Paid: " + err.message);
