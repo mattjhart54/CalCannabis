@@ -4,7 +4,8 @@ try {
 	if (arrFeesResult.getSuccess()) {
 		var arrFees = arrFeesResult.getOutput();
 		for (xx in arrFees) {
-			var fDesc = arrFees[xx].getFeeDes();
+			var targetFee = arrFees[xx];
+			var fDesc = targetFee.getFeeDes();
 			if (fDesc.equals(feeDesc)) {
 				if (targetFee.status == "INVOICED") {
 					var editResult = aa.finance.voidFeeItem(itemCap, targetFee.sequence);
