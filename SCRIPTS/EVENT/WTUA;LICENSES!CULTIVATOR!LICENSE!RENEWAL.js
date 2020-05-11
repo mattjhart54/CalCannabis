@@ -86,6 +86,9 @@ try {
 	// Add record to the CAT set
 			addToCat(vLicenseID);
 		}
+		if(balanceDue>0){
+			updateAppStatus("Approved-Payment Deferral", "Updated via ASIUA:LICENSES/CULTIVATOR/*/Renewal.");
+		}
 	}
 	//Removing as per 6355, 6313, 6314, 6315
 	/*if (matches(wfTask,"Annual Renewal Review","Provisional Renewal Review") && wfStatus == "Recommended for Denial") {
