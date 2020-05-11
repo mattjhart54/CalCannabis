@@ -1,6 +1,6 @@
 // JSHEAR 05082020 user Story 6519 - Covid Payment Deferral
 try{
-	if(balanceDue>0){
+	if(balanceDue>0 && AInfo['Deferral Approved' == "CHECKED"){
 //		if (matches(getAppStatus(), null, "", undefined, "Renewal Fee Due")){
 
 			if(!isTaskComplete("Annual Renewal Review") && !isTaskComplete("Provisional Renewal Review")){
@@ -44,7 +44,7 @@ try{
 				}	
 				capId = holdId;
 		// Fast track license if qualified and fees paid
-				if(!caseReview && balanceDue <= 0) {	
+				if(!caseReview) {	
 					var renewalCapProject;
 					var vExpDate;
 					var vNewExpDate;
