@@ -1,5 +1,9 @@
-function voidRemoveFeesByDesc(itemCap, feeDesc) {
+function voidRemoveFeesByDesc(feeDesc) {
 	try {
+		var itemCap = capId;
+		if (arguments.length > 1){
+			itemCap = arguments[1];
+		}
 		var arrFeesResult = aa.finance.getFeeItemByitemCap(itemCap);
 		if (arrFeesResult.getSuccess()) {
 			var arrFees = arrFeesResult.getOutput();
