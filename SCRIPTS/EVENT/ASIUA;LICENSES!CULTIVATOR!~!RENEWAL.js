@@ -136,16 +136,16 @@ try{
 				updateAppStatus("Approved-Payment Deferral", "Updated via ASIUA:LICENSES/CULTIVATOR/*/Renewal.");
 			}
 			// Remove Late Fees
-			/*if (AInfo['Waive Late Fee'] == "CHECKED"){
+			if (AInfo['Waive Late Fee'] == "CHECKED"){
 				var feeDesc = AInfo["License Type"] + " - Late Fee";
 				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 				if(thisFee){
 					var hasFee = feeExists(thisFee.feeCode);
 					if(hasFee) {
-						voidRemoveFeesByDesc(feeDesc)
+						voidRemoveFeesByDesc(feeDesc);
 					}
 				}
-			}*/
+			}
 //		}
 	}
 } catch(err){
