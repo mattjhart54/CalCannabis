@@ -4,7 +4,7 @@ try{
 	vIDArray = String(vLicenseID).split("-");
 	vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
 	renewalCapProject = getRenewalCapByParentCapIDForIncomplete(vLicenseID);
-	if (matches(renewalCapProject,undefined,null,"")) {
+	if (!matches(renewalCapProject,undefined,null,"")) {
 		if(balanceDue>0 && AInfo['Deferral Approved'] == "CHECKED"){
 			if(!isTaskComplete("Annual Renewal Review") && !isTaskComplete("Provisional Renewal Review")){
 				if (AInfo["License Issued Type"] == "Provisional") {
