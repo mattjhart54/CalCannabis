@@ -142,7 +142,7 @@ try{
 				if(thisFee){
 					var hasFee = feeExists(thisFee.feeCode);
 					if(hasFee) {
-						voidRemoveFeesByDesc("LIC_CC_REN", feeDesc)
+						voidRemoveFeesByDesc(capId, feeDesc)
 					}
 				}
 			}
