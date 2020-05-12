@@ -147,6 +147,7 @@ try{
 
 
 	for (x in vCapList) {
+		capCount++;
 		capId = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
 		var parentAltId = getAppSpecific("License Number",capId);
 		parentId = aa.cap.getCapID(parentAltId).getOutput();
@@ -155,10 +156,9 @@ try{
 			decIds = getChildren("Licenses/Cultivator/Medical/Declaration",appIds[a]);
 			for(d in decIds) {
 				decId = decIds[d];
-				logDebug(decId.getCustomID());
 			}
 		}
-		logDebug(decId.getCustomID());
+		var processedArray = [];
 		var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
 		if (recordASIGroup.getSuccess()){
 			var recordASIGroupArray = recordASIGroup.getOutput();
@@ -169,12 +169,13 @@ try{
 				if (matches(groupName," DISCLOSURES","DECLARATION")){
 					if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
 						if(matches(getAppSpecific(recordField),null,undefined,"","UNCHECKED")){
-							capCount++;
-							logDebug("Group:" + group.getCheckboxDesc() + " " + typeof(recordField));
+							logDebug("Edited Record: " + capId.getCustomID());
+							processedArray.push(String(capId.getCustomID()));
 							editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
 							editAppName(getAppSpecific("License Type",parentId));
 							updateShortNotes(getShortNotes(parentId));
 							updateWorkDesc(workDescGet(parentId));
+							capFilterStatus++;
 						}
 					}
 				}
@@ -183,6 +184,8 @@ try{
 	}
 	
 	logDebug("Total Caps: " + capCount);
+	logDebug("Number Caps Processed: " + capFilterStatus);
+	LogDebug("List of Caps Processed: " + processedArray);
 }catch (err){
 	logDebug("BATCH_PROVISIONAL_RENEWAL_MISSING_SA: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
