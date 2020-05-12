@@ -171,7 +171,7 @@ try{
 						if(matches(getAppSpecific(recordField),null,undefined,"","UNCHECKED")){
 							logDebug("Edited Record: " + capId.getCustomID());
 							processedArray.push(String(capId.getCustomID()));
-							editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
+							editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);							
 							editAppName(getAppSpecific("License Type",parentId));
 							updateShortNotes(getShortNotes(parentId));
 							updateWorkDesc(workDescGet(parentId));
@@ -187,6 +187,6 @@ try{
 	logDebug("Number Caps Processed: " + capFilterStatus);
 	LogDebug("List of Caps Processed: " + processedArray);
 }catch (err){
-	logDebug("BATCH_PROVISIONAL_RENEWAL_MISSING_SA: " + err.message + " In " + batchJobName);
+	logDebug("BATCH_DRP_Updates: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}
