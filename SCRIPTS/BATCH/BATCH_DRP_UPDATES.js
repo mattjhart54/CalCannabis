@@ -147,7 +147,6 @@ try{
 
 
 	for (x in vCapList) {
-		capCount++;
 		capId = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
 		var parentAltId = getAppSpecific("License Number",capId);
 		parentId = aa.cap.getCapID(parentAltId).getOutput();
@@ -156,31 +155,31 @@ try{
 			decIds = getChildren("Licenses/Cultivator/Medical/Declaration",appIds[a]);
 			for(d in decIds) {
 				decId = decIds[d];
+				logDebug(decId.getCustomID());
 			}
 		}
-       holdId = capId;
-       capId = decId;
-       PInfo = new Array;
-       loadAppSpecific(PInfo);
-       capId = holdId;
-       editAppSpecific("Conflicting License",PInfo["Conflicting License"]);
-       editAppSpecific("Unlicensed Activity",PInfo["Unlicensed Activity"]);
-       editAppSpecific("Documented Conduct",PInfo["Documented Conduct"]);
-       editAppSpecific("Fines or Penalties",PInfo["Fines or Penalties"]);
-       editAppSpecific("D1",PInfo["D1"]);
-       editAppSpecific("D2",PInfo["D2"]);
-       editAppSpecific("D3",PInfo["D3"]);
-       editAppSpecific("D4",PInfo["D4"]);
-       editAppSpecific("D5",PInfo["D5"]);
-       editAppSpecific("D7",PInfo["D7"]);
-       editAppSpecific("D8",PInfo["D8"]);
-       editAppSpecific("D9",PInfo["D9"]);
-       editAppSpecific("D10",PInfo["D10"]);
-       editAppSpecific("D11",PInfo["D11"]);
-       editAppSpecific("Certification",PInfo["Certification"]);
-       editAppName(getAppSpecific("License Type",parentId));
-       updateShortNotes(getShortNotes(parentId));
-       updateWorkDesc(workDescGet(parentId));
+		logDebug(decId.getCustomID());
+		var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
+		if (recordASIGroup.getSuccess()){
+			var recordASIGroupArray = recordASIGroup.getOutput();
+			for (i in recordASIGroupArray) {
+				var group = recordASIGroupArray[i];
+				var groupName = String(group.getGroupCode());
+				var recordField = String(group.getCheckboxDesc());
+				if (matches(groupName," DISCLOSURES","DECLARATION")){
+					if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
+						if(matches(getAppSpecific(recordField),null,undefined,"","UNCHECKED")){
+							capCount++;
+							logDebug("Group:" + group.getCheckboxDesc() + " " + typeof(recordField));
+							editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
+							editAppName(getAppSpecific("License Type",parentId));
+							updateShortNotes(getShortNotes(parentId));
+							updateWorkDesc(workDescGet(parentId));
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	logDebug("Total Caps: " + capCount);
