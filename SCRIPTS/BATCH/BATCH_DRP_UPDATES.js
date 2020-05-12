@@ -73,12 +73,8 @@ else
 
 var appGroup = "Licenses"							//   app Group to process {Licenses}
 var appTypeType = "Cultivator"						//   app type to process {Rental License}
-var appSubtype = "License"						//   app subtype to process {NA}
-var appCategory = "Renewal"						//   app category to process {NA}
-var caseTypeFieldValue = "Renewal Allowed"
-var caseDescFieldValue = "Provisional Renewal Missing Science Amendment"
-var caseOpenByFieldValue = "Science Provisional"
-var priorityFieldValue = "Moderate"
+var appSubtype = "Amendment"						//   app subtype to process {NA}
+var appCategory = "DRP Declaration"						//   app category to process {NA}
 var emailAddress = ""					// email to send report
 var sendEmailToContactTypes = "";// send out emails?
 var emailTemplate = "";				// email Template
@@ -171,21 +167,28 @@ try{
 						if(matches(getAppSpecific(recordField),null,undefined,"","UNCHECKED")){
 							logDebug("Edited Record: " + capId.getCustomID());
 							processedArray.push(String(capId.getCustomID()));
-							editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);							
-							editAppName(getAppSpecific("License Type",parentId));
-							updateShortNotes(getShortNotes(parentId));
-							updateWorkDesc(workDescGet(parentId));
+							editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
 							capFilterStatus++;
 						}
 					}
 				}
 			}
 		}
+		var appName = aa.cap.getCap(capId).getOutput().getSpecialText();		
+		if (matches(appName,null,undefined,"",getAppSpecific("License Type",parentId))){
+			editAppName(getAppSpecific("License Type",parentId));
+			updateShortNotes(getShortNotes(parentId));
+			updateWorkDesc(workDescGet(parentId));
+			if (processedArray.indexOf(String(capId.getCustomID())) < 0){
+				processedArray.push(String(capId.getCustomID()));
+				capFilterStatus++;
+			}
+		}
 	}
 	
 	logDebug("Total Caps: " + capCount);
 	logDebug("Number Caps Processed: " + capFilterStatus);
-	LogDebug("List of Caps Processed: " + processedArray);
+	logDebug("List of Caps Processed: " + processedArray);
 }catch (err){
 	logDebug("BATCH_DRP_Updates: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
