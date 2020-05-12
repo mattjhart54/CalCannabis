@@ -16,6 +16,7 @@ try{
 					deactivateTask("Provisional Renewal Review");
 				}
 			}
+			updateAppStatus("Submitted", "Updated via ASIUA:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 	}
 } catch(err){
