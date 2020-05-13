@@ -165,11 +165,12 @@ try{
 				var recordField = String(group.getCheckboxDesc());
 				var subGroup = String(group.getCheckboxType());
 				var fieldValue = String(group.getChecklistComment());
+				var decValue = String(getAppSpecific(recordField,decId));
 				if (matches(subGroup,"DISCLOSURES","DECLARATION")){
 					if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
-						if(matches(fieldValue,null,undefined,"","UNCHECKED")){
-							logDebug("Editing: " + recordField + ": " + fieldValue + " To: " + getAppSpecific(recordField,decId));
-							editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
+						if(fieldValue != decValue){
+							logDebug("Editing: " + recordField + ": " + fieldValue + " To: " + decValue);
+							editAppSpecific(recordField,decValue,capId);
 							if (processedArray.indexOf(String(capId.getCustomID())) < 0){
 								processedArray.push(String(capId.getCustomID()));
 								logDebug("Edited Record: " + capId.getCustomID());
