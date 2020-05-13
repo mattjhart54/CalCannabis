@@ -120,6 +120,7 @@ function mainProcess(){
 try{	
 	var capFilterStatus = 0;
 	var capCount  =0;
+	var processedArray = [];
 	
 	var capModel = aa.cap.getCapModel().getOutput();
 	//Get the Permits from the system 
@@ -155,7 +156,6 @@ try{
 				decId = decIds[d];
 			}
 		}
-		var processedArray = [];
 		var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
 		if (recordASIGroup.getSuccess()){
 			var recordASIGroupArray = recordASIGroup.getOutput();
@@ -165,9 +165,11 @@ try{
 				var recordField = String(group.getCheckboxDesc());
 				if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
 					if(matches(getAppSpecific(recordField),null,undefined,"","UNCHECKED")){
-						logDebug("Edited Record: " + capId.getCustomID());
-						processedArray.push(String(capId.getCustomID()));
 						editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
+						if (processedArray.indexOf(String(capId.getCustomID())) < 0){
+							processedArray.push(String(capId.getCustomID()));
+							logDebug("Edited Record: " + capId.getCustomID());
+						}
 						editCount = true;
 					}
 				}
@@ -176,9 +178,10 @@ try{
 		var appName = String(aa.cap.getCap(capId).getOutput().getSpecialText());
 		if (matches(appName,null,undefined,"",String(getAppSpecific("License Type",parentId)))){
 			editAppName(getAppSpecific("License Type",parentId));
+			editCount = true;
 			if (processedArray.indexOf(String(capId.getCustomID())) < 0){
 				processedArray.push(String(capId.getCustomID()));
-				editCount = true;
+				logDebug("Edited Record: " + capId.getCustomID());
 			}
 		}
 		if (editCount){
