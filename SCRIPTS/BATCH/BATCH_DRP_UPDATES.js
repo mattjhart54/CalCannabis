@@ -163,21 +163,27 @@ try{
 				var group = recordASIGroupArray[i];
 				var groupName = String(group.getGroupCode());
 				var recordField = String(group.getCheckboxDesc());
-				if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
-					if(matches(getAppSpecific(recordField),null,undefined,"","UNCHECKED")){
-						editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
-						if (processedArray.indexOf(String(capId.getCustomID())) < 0){
-							processedArray.push(String(capId.getCustomID()));
-							logDebug("Edited Record: " + capId.getCustomID());
+				var subGroup = String(group.getCheckboxType());
+				var fieldValue = String(group.getChecklistComment());
+				if (matches(subGroup,"DISCLOSURES","DECLARATION")){
+					if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
+						if(matches(fieldValue,null,undefined,"","UNCHECKED")){
+							logDebug("Editing: " + recordField + ": " + fieldValue + " To: " + getAppSpecific(recordField,decId));
+							editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
+							if (processedArray.indexOf(String(capId.getCustomID())) < 0){
+								processedArray.push(String(capId.getCustomID()));
+								logDebug("Edited Record: " + capId.getCustomID());
+							}
+							editCount = true;
 						}
-						editCount = true;
 					}
 				}
 			}
 		}
 		var appName = String(aa.cap.getCap(capId).getOutput().getSpecialText());
-		if (matches(appName,null,undefined,"",String(getAppSpecific("License Type",parentId)))){
+		if (appName =! String(getAppSpecific("License Type",parentId))){
 			editAppName(getAppSpecific("License Type",parentId));
+			logDebug("appName: " + appName + " Edited to: " + getAppSpecific("License Type",parentId));
 			editCount = true;
 			if (processedArray.indexOf(String(capId.getCustomID())) < 0){
 				processedArray.push(String(capId.getCustomID()));
