@@ -144,6 +144,7 @@ try{
 
 	for (x in vCapList) {
 		capCount++;
+		var editCount = false;
 		capId = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
 		var parentAltId = getAppSpecific("License Number",capId);
 		parentId = aa.cap.getCapID(parentAltId).getOutput();
@@ -162,27 +163,26 @@ try{
 				var group = recordASIGroupArray[i];
 				var groupName = String(group.getGroupCode());
 				var recordField = String(group.getCheckboxDesc());
-				if (matches(groupName," DISCLOSURES","DECLARATION")){
-					if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
-						if(matches(getAppSpecific(recordField),null,undefined,"","UNCHECKED")){
-							logDebug("Edited Record: " + capId.getCustomID());
-							processedArray.push(String(capId.getCustomID()));
-							editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
-							capFilterStatus++;
-						}
+				if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
+					if(matches(getAppSpecific(recordField),null,undefined,"","UNCHECKED")){
+						logDebug("Edited Record: " + capId.getCustomID());
+						processedArray.push(String(capId.getCustomID()));
+						editAppSpecific(recordField,getAppSpecific(recordField,decId),capId);
+						editCount = true;
 					}
 				}
 			}
 		}
-		var appName = aa.cap.getCap(capId).getOutput().getSpecialText();		
-		if (matches(appName,null,undefined,"",getAppSpecific("License Type",parentId))){
+		var appName = String(aa.cap.getCap(capId).getOutput().getSpecialText());
+		if (matches(appName,null,undefined,"",String(getAppSpecific("License Type",parentId)))){
 			editAppName(getAppSpecific("License Type",parentId));
-			updateShortNotes(getShortNotes(parentId));
-			updateWorkDesc(workDescGet(parentId));
 			if (processedArray.indexOf(String(capId.getCustomID())) < 0){
 				processedArray.push(String(capId.getCustomID()));
-				capFilterStatus++;
+				editCount = true;
 			}
+		}
+		if (editCount){
+			capFilterStatus++;
 		}
 	}
 	
