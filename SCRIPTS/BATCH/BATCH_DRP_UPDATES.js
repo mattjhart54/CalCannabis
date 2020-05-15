@@ -147,51 +147,54 @@ try{
 		capCount++;
 		var editCount = false;
 		capId = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
-		var parentAltId = getAppSpecific("License Number",capId);
-		parentId = aa.cap.getCapID(parentAltId).getOutput();
-		appIds = getChildren("Licenses/Cultivator/*/Application",parentId);
-		for(a in appIds) {
-			decIds = getChildren("Licenses/Cultivator/Medical/Declaration",appIds[a]);
-			for(d in decIds) {
-				decId = decIds[d];
+		if (String(capId.getCustomID()).substr(0,3) == "CCL"){
+			var parentAltId = getAppSpecific("License Number",capId);
+			if (matches(parentAltId,null,undefined,"")){logDebug(capId.getCustomID() + " Missing Parent ID"); continue;}
+			parentId = aa.cap.getCapID(parentAltId).getOutput();
+			appIds = getChildren("Licenses/Cultivator/*/Application",parentId);
+			for(a in appIds) {
+				decIds = getChildren("Licenses/Cultivator/Medical/Declaration",appIds[a]);
+				for(d in decIds) {
+					decId = decIds[d];
+				}
 			}
-		}
-		var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
-		if (recordASIGroup.getSuccess()){
-			var recordASIGroupArray = recordASIGroup.getOutput();
-			for (i in recordASIGroupArray) {
-				var group = recordASIGroupArray[i];
-				var groupName = String(group.getGroupCode());
-				var recordField = String(group.getCheckboxDesc());
-				var subGroup = String(group.getCheckboxType());
-				var fieldValue = String(group.getChecklistComment());
-				var decValue = String(getAppSpecific(recordField,decId));
-				if (matches(subGroup,"DISCLOSURES","DECLARATION")){
-					if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
-						if(fieldValue != decValue){
-							logDebug("Record: " + capId.getCustomID() + " Editing: " + recordField + ": " + fieldValue + " To: " + decValue);
-							editAppSpecific(recordField,decValue,capId);
-							if (processedArray.indexOf(String(capId.getCustomID())) < 0){
-								processedArray.push(String(capId.getCustomID()));
+			var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
+			if (recordASIGroup.getSuccess()){
+				var recordASIGroupArray = recordASIGroup.getOutput();
+				for (i in recordASIGroupArray) {
+					var group = recordASIGroupArray[i];
+					var groupName = String(group.getGroupCode());
+					var recordField = String(group.getCheckboxDesc());
+					var subGroup = String(group.getCheckboxType());
+					var fieldValue = String(group.getChecklistComment());
+					var decValue = String(getAppSpecific(recordField,decId));
+					if (matches(subGroup,"DISCLOSURES","DECLARATION")){
+						if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
+							if(fieldValue != decValue){
+								logDebug("Record: " + capId.getCustomID() + " Editing: " + recordField + ": " + fieldValue + " To: " + decValue);
+								editAppSpecific(recordField,decValue,capId);
+								if (processedArray.indexOf(String(capId.getCustomID())) < 0){
+									processedArray.push(String(capId.getCustomID()));
+								}
+								editCount = true;
 							}
-							editCount = true;
 						}
 					}
 				}
 			}
-		}
-		var appName = String(aa.cap.getCap(capId).getOutput().getSpecialText());
-		var parentAppName = String(aa.cap.getCap(parentId).getOutput().getSpecialText());
-		if (appName != parentAppName){
-			editAppName(parentAppName);
-			logDebug("Record: " + capId.getCustomID() + " appName: " + appName + " Edited to: " + parentAppName);
-			editCount = true;
-			if (processedArray.indexOf(String(capId.getCustomID())) < 0){
-				processedArray.push(String(capId.getCustomID()));
+			var appName = String(aa.cap.getCap(capId).getOutput().getSpecialText());
+			var parentAppName = String(aa.cap.getCap(parentId).getOutput().getSpecialText());
+			if (appName != parentAppName){
+				editAppName(parentAppName);
+				logDebug("Record: " + capId.getCustomID() + " appName: " + appName + " Edited to: " + parentAppName);
+				editCount = true;
+				if (processedArray.indexOf(String(capId.getCustomID())) < 0){
+					processedArray.push(String(capId.getCustomID()));
+				}
 			}
-		}
-		if (editCount){
-			capFilterStatus++;
+			if (editCount){
+				capFilterStatus++;
+			}
 		}
 	}
 	
