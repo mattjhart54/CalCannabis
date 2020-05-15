@@ -169,11 +169,10 @@ try{
 				if (matches(subGroup,"DISCLOSURES","DECLARATION")){
 					if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
 						if(fieldValue != decValue){
-							logDebug("Editing: " + recordField + ": " + fieldValue + " To: " + decValue);
+							logDebug("Record: " + capId.getCustomID() + " Editing: " + recordField + ": " + fieldValue + " To: " + decValue);
 							editAppSpecific(recordField,decValue,capId);
 							if (processedArray.indexOf(String(capId.getCustomID())) < 0){
 								processedArray.push(String(capId.getCustomID()));
-								logDebug("Edited Record: " + capId.getCustomID());
 							}
 							editCount = true;
 						}
@@ -182,13 +181,13 @@ try{
 			}
 		}
 		var appName = String(aa.cap.getCap(capId).getOutput().getSpecialText());
-		if (appName =! String(getAppSpecific("License Type",parentId))){
-			editAppName(getAppSpecific("License Type",parentId));
-			logDebug("appName: " + appName + " Edited to: " + getAppSpecific("License Type",parentId));
+		var parentAppName = String(aa.cap.getCap(parentId).getOutput().getSpecialText());
+		if (appName != parentAppName){
+			editAppName(parentAppName);
+			logDebug("Record: " + capId.getCustomID() + " appName: " + appName + " Edited to: " + parentAppName);
 			editCount = true;
 			if (processedArray.indexOf(String(capId.getCustomID())) < 0){
 				processedArray.push(String(capId.getCustomID()));
-				logDebug("Edited Record: " + capId.getCustomID());
 			}
 		}
 		if (editCount){
