@@ -1,6 +1,6 @@
 try{
 	if(balanceDue<=0){
-		if (getAppStatus() != "Deferral Approved"){
+		if (!matches(getAppStatus(),"Deferral Approved","Deferral Unpaid")){
 			if(!isTaskComplete("Annual Renewal Review") && !isTaskComplete("Provisional Renewal Review")){
 				if (AInfo["License Issued Type"] == "Provisional") {
 					activateTask("Provisional Renewal Review");
@@ -133,6 +133,8 @@ try{
 			if (AInfo['Fast Track'] != "CHECKED" && getAppStatus != 'Submitted'){
 				updateAppStatus("Submitted", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
 			}
+		}else{
+			updateAppStatus("Deferral Paid", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 	}
 }catch(err){
