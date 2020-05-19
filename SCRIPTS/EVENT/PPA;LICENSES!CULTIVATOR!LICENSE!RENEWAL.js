@@ -133,6 +133,8 @@ try{
 			if (AInfo['Fast Track'] != "CHECKED" && getAppStatus != 'Submitted'){
 				updateAppStatus("Submitted", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
 			}
+		}else{
+			updateAppStatus("Deferral Paid", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 	}
 }catch(err){
