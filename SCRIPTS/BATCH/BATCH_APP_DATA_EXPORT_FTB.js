@@ -4,10 +4,11 @@
 |
 | Version 1.0 - Base Version. 
 | Version 1.1 - eshanower 190111 story 5862: add Provisional records and set License Type codes
-| Version 20.0 - Joseph.Espena Story 6212 (2020 spec changes), fixed missing business space padding
-| Version 20.1 - Joseph.Espena fixed to grab FEIN from License Record rather than Contact
-| Version 20.2 - Joseph.Espena fixed phone number, deleted erroneous comment
-| Version 20.3 - Joseph.Espena fixed phone number validation
+| Version 20.0 - espenaj Story 6212 (2020 spec changes), fixed missing business space padding
+| Version 20.1 - espenaj fixed to grab FEIN from License Record rather than Contact
+| Version 20.2 - espenaj fixed phone number, deleted erroneous comment
+| Version 20.3 - espenaj fixed phone number validation
+| Version 20.4 - espenaj added validation for FEIN and address correction
 |
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
@@ -70,11 +71,11 @@ else
 | Start: BATCH PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-// test parameters 
-aa.env.setValue("lookAheadDays", "-365");
-aa.env.setValue("daySpan", "365");
+/* test parameters 
+aa.env.setValue("lookAheadDays", "-100");
+aa.env.setValue("daySpan", "100");
 aa.env.setValue("emailAddress", "joseph.espena@cdfa.ca.gov");
-aa.env.setValue("sendToEmail", "joseph.espena@cdfa.ca.gov"); //ca-licensees@metrc.com
+aa.env.setValue("sendToEmail", "joseph.espena@cdfa.ca.gov");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "oclcdfa");
 aa.env.setValue("recordGroup", "Licenses");
@@ -86,7 +87,7 @@ aa.env.setValue("businessContactType", "Business");
 aa.env.setValue("licenseAddressType", "Mailing");
 aa.env.setValue("businessAddressType", "Business");
 aa.env.setValue("appStatus", "Active,About to Expire");
-//
+*/
  
 var emailAddress = getJobParam("emailAddress");			// email to send report
 var lookAheadDays = getJobParam("lookAheadDays");
@@ -390,8 +391,23 @@ try{
 							}else{
 								licLine += spacePad(thisAddr.city,12);
 							}
-							//addresses within the u.s.
+							/* JE 20.4 figure out if US address
+							* This is needed because of users incorrectly selecting a country other than US
+							* for addresses that are clearly US addresses.
+							*/
+							var USAddr = false;
+							if(thisAddr.zip!=null){
+								var vZip = (""+thisAddr.zip).replace(/-/g, "");
+								if(!isNaN(vZip) && (vZip.length == 5 || vZip.length == 9)){
+									USAddr = true;
+								}
+							}
 							if(thisAddr.countryCode=="US"){
+								USAddr = true;
+							}
+							//addresses within the u.s.
+							// if(thisAddr.countryCode=="US"){
+							if(USAddr){
 								//state
 								if(thisAddr.state.length()>2){
 									licLine += thisAddr.state.substr(0,2);
@@ -399,7 +415,7 @@ try{
 									licLine += spacePad(thisAddr.state,2);
 								}
 								//zip
-								var vZip = (""+thisAddr.zip).replace(/-/g, "");
+								// var vZip = (""+thisAddr.zip).replace(/-/g, "");
 								if(vZip.length>9){
 									licLine += vZip.substr(0,9);
 								}else{
@@ -480,8 +496,23 @@ try{
 							}else{
 								bsnsLine += spacePad(thisAddr.city,12);
 							}
-							//addresses within the u.s.
+							/* JE 20.4 figure out if US address
+							* This is needed because of users incorrectly selecting a country other than US
+							* for addresses that are clearly US addresses.
+							*/
+							var USAddr = false;
+							if(thisAddr.zip!=null){
+								var vZip = (""+thisAddr.zip).replace(/-/g, "");
+								if(!isNaN(vZip) && (vZip.length == 5 || vZip.length == 9)){
+									USAddr = true;
+								}
+							}
 							if(thisAddr.countryCode=="US"){
+								USAddr = true;
+							} 
+							//addresses within the u.s.
+							// if(thisAddr.countryCode=="US"){
+							if(USAddr){
 								//state
 								if(thisAddr.state.length()>2){
 									bsnsLine += thisAddr.state.substr(0,2);
@@ -489,7 +520,7 @@ try{
 									bsnsLine += spacePad(thisAddr.state,2);
 								}
 								//zip
-								var vZip = (""+thisAddr.zip).replace(/-/g, "");
+								// var vZip = (""+thisAddr.zip).replace(/-/g, "");
 								if(vZip.length>9){
 									bsnsLine += vZip.substr(0,9);
 								}else{
@@ -538,12 +569,17 @@ try{
 		}
 		//fein
 		// rptLine += lFein;
-		// Get FEIN from license record -JE
+		// Pos 10-18 Get FEIN from license record -JE
 		if(AInfo["EIN/ITIN"]==null){
 			rptLine += zeroPad("",9);
 		}else{
 			var vFEIN = (""+AInfo["EIN/ITIN"]).replace(/-/g, "").substr(0,9);
-			rptLine += zeroPad(vFEIN,9);
+			// check for non-numberic values JE 20.4
+			if(isNaN(vFEIN)){
+				rptLine += zeroPad("",9);
+			}else{
+				rptLine += zeroPad(vFEIN,9);
+			}
 		}
 		//occupational license nbr
 		//rptLine += ""+ altId.substr(6,7);  //not sure if this is right, so leaving just in case
