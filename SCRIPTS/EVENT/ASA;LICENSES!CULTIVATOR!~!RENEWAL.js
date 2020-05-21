@@ -77,7 +77,7 @@ try{
 			var feeDesc = pInfo["License Type"] + " - Late Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
-				if (!feeExists("LIC_CC_REN")){
+				if (!feeExists(thisFee.feeCode)){
 					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
 				}
 				}else{
