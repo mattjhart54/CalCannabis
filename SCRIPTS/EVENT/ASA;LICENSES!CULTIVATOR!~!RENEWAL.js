@@ -74,7 +74,7 @@ try{
 	}else{
 		//Check to see if late fee is needed after ACA review.  Used for records saved before expiration and submitted after expiration.
 		if(tmpDate <= curDate) {
-			var feeDesc = pInfo["License Type"] + " - Late Fee";
+			var feeDesc = getAppSpecific("License Type",parentCapId) + " - Late Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
 				if (!feeExists(thisFee.feeCode)){
