@@ -10,6 +10,16 @@ try{
 	var parentAltId = parentCapId.getCustomID();
 	pCap = aa.cap.getCap(parentCapId).getOutput();
 	var pStatus = pCap.getCapStatus();
+	b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
+	var curDate = new Date();
+	if (b1ExpResult.getSuccess()) {
+		this.b1Exp = b1ExpResult.getOutput();
+		expDate = this.b1Exp.getExpDate();
+		if(expDate) {
+			tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+			var tmpDate = new Date(tmpExpDate);
+		}
+	}		
 	//1. Check to see if license is ready for renew
 	if (isRenewProcess(parentCapId, partialCapId)){
 		logDebug("CAPID(" + parentCapId + ") is ready for renew. PartialCap (" + partialCapId + ")");
@@ -32,14 +42,8 @@ try{
 	//		editAppSpecific("Parent ID",parentCapId);
 	//		copyContactsByType(parentCapId,partialCapId,"Designated Responsible Party");
 			updateWorkDesc(pInfo["Legal Business Name"]);
-			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
-			if (b1ExpResult.getSuccess()) {
-				this.b1Exp = b1ExpResult.getOutput();
-				expDate = this.b1Exp.getExpDate();	
-				if(expDate) {
-					tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
-					editAppSpecific("Expiration Date", tmpExpDate);
-				}
+			if(expDate) {
+				editAppSpecific("Expiration Date", tmpExpDate);
 			}
 		//4. Assess Renewal Fee
 			voidRemoveAllFees();
@@ -51,7 +55,6 @@ try{
 				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
 			}
-			var curDate = new Date();
 			var tmpDate = new Date(tmpExpDate);
 			if(tmpDate <= curDate) {
 				var feeDesc = pInfo["License Type"] + " - Late Fee";
@@ -67,6 +70,20 @@ try{
 	//		aa.cap.updateAccessByACA(partialCapId, "N");
 		}else{
 			aa.print("ERROR: Associate partial cap with parent CAP. " + result.getErrorMessage());
+		}
+	}else{
+		//Check to see if late fee is needed after ACA review.  Used for records saved before expiration and submitted after expiration.
+		if(tmpDate <= curDate) {
+			var feeDesc = pInfo["License Type"] + " - Late Fee";
+			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+			if(thisFee){
+				if (!feeExists("LIC_CC_REN")){
+					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+				}
+				}else{
+				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+				logDebug("An error occurred retrieving fee item: " + feeDesc);
+			}
 		}
 	}
 } catch(err){
