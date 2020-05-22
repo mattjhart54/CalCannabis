@@ -58,10 +58,6 @@ try{
 		}
 	}
 	
-	}else{
-		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-		logDebug("An error occurred retrieving fee item: " + feeDesc);
-	}
 // Set status and deactivate workflow if fees are due
 	
 //	if (AInfo["License Issued Type"] == "Provisional") {
