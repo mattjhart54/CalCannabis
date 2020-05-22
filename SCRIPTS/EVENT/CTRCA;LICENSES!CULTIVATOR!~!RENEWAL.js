@@ -46,6 +46,8 @@ try{
 				if(thisFee){
 					if (!feeExists(thisFee.feeCode,"NEW")){
 						updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+						effDate = dateAdd(AInfo["Expiration Date"],30);
+						addStdConditionEffDate("Application Condition", "Application Hold",effDate);
 					}else{
 						effDate = dateAdd(AInfo["Expiration Date"],30);
 						addStdConditionEffDate("Application Condition", "Application Hold",effDate);
