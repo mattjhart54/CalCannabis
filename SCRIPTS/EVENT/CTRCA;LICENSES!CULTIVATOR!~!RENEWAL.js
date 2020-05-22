@@ -31,15 +31,33 @@ try{
 	copyContactsByType(vLicenseID,capId,"Designated Responsible Party");
 	copyContactsByType(vLicenseID,capId,"Business");
 // Add condition effective in thirty days if Late Fee not paid	
-	var hasFee = false;
-	var feeDesc = AInfo["License Type"] + " - Late Fee";
-	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
-	if(thisFee){
-		var hasFee = feeExists(thisFee.feeCode,"NEW");
-		if(hasFee) {
-			effDate = dateAdd(AInfo["Expiration Date"],30);
-			addStdConditionEffDate("Application Condition", "Application Hold",effDate);
+	b1ExpResult = aa.expiration.getLicensesByCapID(vLicenseID);
+	var curDate = new Date();
+	if (b1ExpResult.getSuccess()) {
+		this.b1Exp = b1ExpResult.getOutput();
+		expDate = this.b1Exp.getExpDate();
+		if(expDate) {
+			tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+			var tmpDate = new Date(tmpExpDate);
+	
+			if(tmpDate <= curDate) {
+				var feeDesc = AInfo["License Type"] + " - Late Fee";
+				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+				if(thisFee){
+					if (!feeExists(thisFee.feeCode,"NEW")){
+						updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+					}else{
+						effDate = dateAdd(AInfo["Expiration Date"],30);
+						addStdConditionEffDate("Application Condition", "Application Hold",effDate);
+					}
+				}else{
+					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+					logDebug("An error occurred retrieving fee item: " + feeDesc);
+				}
+			}
 		}
+	}
+	
 	}else{
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
