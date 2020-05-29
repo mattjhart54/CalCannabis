@@ -11,6 +11,7 @@ try{
 	capId = holdId;
 	editAppSpecific("Priority",PInfo["Priority"]);
 	editAppSpecific("Due Date",PInfo["Due Date"]);
+	editAppSpecific("Complaint Type",PInfo["Complaint Type"]);
 	editAppSpecific("Source of Complaint",PInfo["Source of Complaint"]);
 	editAppSpecific("Other Source",PInfo["Other Source"]);
 	editAppSpecific("Type of Submittal",PInfo["Type of Submittal"]);
