@@ -80,7 +80,7 @@ try{
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
 		if(hasFee) {
 			var invNbr = invoiceAllFees();
-			runReportAttach(capId,"CDFA Invoice","agencyId", "CALCANNABIS","capID",capId.getCustomID(),"invoiceNbr", invNbr);
+			runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",capId.getCustomID(),"invoiceNbr", invNbr);
 //			if (AInfo["License Issued Type"] == "Provisional") {
 //				updateTask("Provisional Renewal Review","In Progress","","");
 //			}else{
