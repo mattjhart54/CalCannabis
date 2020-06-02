@@ -80,7 +80,12 @@ try{
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
 		if(hasFee) {
 			var invNbr = invoiceAllFees();
-			runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",capId.getCustomID(),"invoiceNbr", invNbr);
+			var scriptName = "asyncRunInvoiceParamsRpt";
+			var envParameters = aa.util.newHashMap();
+			envParameters.put("licCap",capId.getCustomID()); 
+			envParameters.put("invNbr", invNbr);
+			envParameters.put("currentUserID",currentUserID);
+			aa.runAsyncScript(scriptName, envParameters);
 //			if (AInfo["License Issued Type"] == "Provisional") {
 //				updateTask("Provisional Renewal Review","In Progress","","");
 //			}else{
