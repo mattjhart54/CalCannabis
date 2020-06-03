@@ -353,13 +353,13 @@ try{
 			for (fNum in fList){
 				invNbr = iList[iNum].getInvNbr();
 				iFound = true;
-				/*var scriptName = "asyncRunInvoiceParamsRpt";
+				var scriptName = "asyncRunInvoiceParamsRpt";
 				var envParameters = aa.util.newHashMap();
 				envParameters.put("licCap",newAltId); 
 				envParameters.put("invNbr", invNbr);
 				envParameters.put("currentUserID",currentUserID);
-				aa.runAsyncScript(scriptName, envParameters);*/
-				runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",newAltId,"invoiceNbr", invNbr);
+				aa.runAsyncScript(scriptName, envParameters);
+				//runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",newAltId,"invoiceNbr", invNbr);
 			}
 			if (!iFound){
 				  logMessage("Invoice not found");
