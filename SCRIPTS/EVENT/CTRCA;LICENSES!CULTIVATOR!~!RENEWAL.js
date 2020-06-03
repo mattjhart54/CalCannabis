@@ -348,18 +348,12 @@ try{
 		iList = iListResult.getOutput();
 		invNbr = "";
 		iFound = false;
-		//find invoice by matching fee sequence numbers with one passed in
 		for (iNum in iList){
 			fList = aa.invoice.getFeeItemInvoiceByInvoiceNbr(iList[iNum].getInvNbr()).getOutput()
 			for (fNum in fList){
 				invNbr = iList[iNum].getInvNbr();
 				iFound = true;
-				var scriptName = "asyncRunInvoiceParamsRpt";
-				var envParameters = aa.util.newHashMap();
-				envParameters.put("licCap",capId.getCustomID()); 
-				envParameters.put("invNbr", invNbr);
-				envParameters.put("currentUserID",currentUserID);
-				aa.runAsyncScript(scriptName, envParameters);
+				runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",capId.getCustomID(),"invoiceNbr", invNbr);
 			}
 			if (!iFound){
 				  logMessage("Invoice not found");
