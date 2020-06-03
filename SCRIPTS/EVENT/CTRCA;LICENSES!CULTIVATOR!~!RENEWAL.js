@@ -80,12 +80,6 @@ try{
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
 		if(hasFee) {
 			var invNbr = invoiceAllFees();
-			var scriptName = "asyncRunInvoiceParamsRpt";
-			var envParameters = aa.util.newHashMap();
-			envParameters.put("licCap",capId.getCustomID()); 
-			envParameters.put("invNbr", invNbr);
-			envParameters.put("currentUserID",currentUserID);
-			aa.runAsyncScript(scriptName, envParameters);
 //			if (AInfo["License Issued Type"] == "Provisional") {
 //				updateTask("Provisional Renewal Review","In Progress","","");
 //			}else{
@@ -347,7 +341,31 @@ try{
 				}
 			}
 		}
-	} 
+	}
+	//send Invoice for all submitted records
+	iListResult = aa.finance.getInvoiceByCapID(capId,null);
+	if (iListResult.getSuccess()) {
+		iList = iListResult.getOutput();
+		invNbr = "";
+		iFound = false;
+		//find invoice by matching fee sequence numbers with one passed in
+		for (iNum in iList){
+			fList = aa.invoice.getFeeItemInvoiceByInvoiceNbr(iList[iNum].getInvNbr()).getOutput()
+			for (fNum in fList){
+				invNbr = iList[iNum].getInvNbr();
+				iFound = true;
+				var scriptName = "asyncRunInvoiceParamsRpt";
+				var envParameters = aa.util.newHashMap();
+				envParameters.put("licCap",capId.getCustomID()); 
+				envParameters.put("invNbr", invNbr);
+				envParameters.put("currentUserID",currentUserID);
+				aa.runAsyncScript(scriptName, envParameters);
+			}
+			if (!iFound){
+				  logMessage("Invoice not found");
+			}
+		}	
+	}
 
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
