@@ -359,7 +359,7 @@ try{
 				envParameters.put("invNbr", invNbr);
 				envParameters.put("currentUserID",currentUserID);
 				aa.runAsyncScript(scriptName, envParameters);
-				runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",newAltId,"invoiceNbr", invNbr);
+				//runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",newAltId,"invoiceNbr", invNbr);
 			}
 			if (!iFound){
 				  logMessage("Invoice not found");
