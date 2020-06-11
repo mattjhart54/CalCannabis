@@ -95,7 +95,7 @@ function licenseNumberToCatJson(licenseNumber) {
 			}
 	//Mhart 12072018 Story 5827 Remove logic to get Premise adress information form the business contact
 				if(AInfo["Premise Address"]==null){
-					validationMessage += " Record " + licenseNumber + "- The Premises Adreess is null";
+					var premiseAddress = "N/A";
 				}else{
 					if(!isUnicode(AInfo["Premise Address"])){
 						var premiseAddress = "" + AInfo["Premise Address"].substr(0, 100);
