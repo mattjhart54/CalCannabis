@@ -13,7 +13,7 @@
 | Dependencies : licenseNumberToCatJson.js
 /------------------------------------------------------------------------------------------------------*/
 //lwacht: 180417: story 5411: adding try/catch and removing functions not called elsewhere
-function initiateCatPut(licenseNumStrings, url, key) {
+function initiateCatPutTest(licenseNumStrings, url, key) {
 try{
     var result = {
         totalCount : licenseNumStrings.length,
@@ -28,13 +28,17 @@ try{
     var dataJsonArray = [];
     for (var i = 0, len = licenseNumStrings.length; i < len; i++) {
         try {
-            var jsonData = licenseNumberToCatJson(licenseNumStrings[i]);
-            if (jsonData["LicenseStatus"] == 'Active') {
-                result.activeCount++;
-            } else {
-                result.inactiveCount++;
-            }
-            dataJsonArray.push(jsonData);
+			var jsonData = licenseNumberToCatJson(licenseNumStrings[i]);
+			if (typeof(jsonData) == "object"){
+				if (jsonData["LicenseStatus"] == 'Active') {
+					result.activeCount++;
+				} else {
+					result.inactiveCount++;
+				}
+				dataJsonArray.push(jsonData);
+			}else{
+				throw jsonData;
+			}
         } catch (err) {
             aa.print(err.stack);
             result.errorRecordCount++;
