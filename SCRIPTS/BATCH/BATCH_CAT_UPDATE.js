@@ -209,7 +209,7 @@ function removeFromSet(capIds, errorLicenseNumbers) {
             if (!removeResult.getSuccess()) {
                 logDebug("**WARNING** error removing record from set " + SET_ID + " : " + removeResult.getErrorMessage());
             } else {
-                logDebug("capSet: removed record " + capIds[i] + " from set " + SET_ID);
+                logDebug("capSet: removed record " + capIds[i].getCustomID() + " from set " + SET_ID);
             }
         }
     }
