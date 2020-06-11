@@ -13,7 +13,7 @@
 | Dependencies : licenseNumberToCatJson.js
 /------------------------------------------------------------------------------------------------------*/
 //lwacht: 180417: story 5411: adding try/catch and removing functions not called elsewhere
-function initiateCatPutTest(licenseNumStrings, url, key) {
+function initiateCatPut(licenseNumStrings, url, key) {
 try{
     var result = {
         totalCount : licenseNumStrings.length,
