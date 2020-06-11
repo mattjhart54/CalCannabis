@@ -95,7 +95,7 @@ function licenseNumberToCatJson(licenseNumber) {
 			}
 	//Mhart 12072018 Story 5827 Remove logic to get Premise adress information form the business contact
 				if(AInfo["Premise Address"]==null){
-					validationMessage += " Record " + licenseNumber + "- The Premises County is null";
+					validationMessage += " Record " + licenseNumber + "- The Premises Adreess is null";
 				}else{
 					if(!isUnicode(AInfo["Premise Address"])){
 						var premiseAddress = "" + AInfo["Premise Address"].substr(0, 100);
@@ -110,7 +110,7 @@ function licenseNumberToCatJson(licenseNumber) {
 				var premiseCity = "" + AInfo["Premise City"].substr(0, 40);
 			}
 			if(AInfo["Premise County"]==null){
-				var premiseCounty = "N/A";
+				validationMessage += " Record " + licenseNumber + "- The Premises County is null";
 			}else{
 				var premiseCounty = "" + AInfo["Premise County"].substr(0, 40);
 			}
