@@ -199,7 +199,7 @@ function licenseNumberToCatJson(licenseNumber) {
 					"SellerPermitNumber" : sellersPermitNumber
 				};
 			}else{
-				jsonResult = "Record " + licenseNumber + "was not processed due to validation errors: " + validationMessage;
+				jsonResult = "Record " + licenseNumber + " was not processed due to validation errors: " + validationMessage;
 			}
 		}else{
 			var jsonResult =  "Record " + licenseNumber + " is not a valid record number";			
