@@ -71,6 +71,7 @@ aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("nbrDays", "45")
 */
 
+
 var emailAddress = aa.env.getValue("emailAddress"); // email address to send failures
 var baseUrl = aa.env.getValue("baseUrl"); // base url for CAT API
 var apiKey = aa.env.getValue("apiKey"); // key for CAT API
@@ -135,7 +136,7 @@ try {
 			cap = aa.cap.getCap(capId).getOutput();
 			capStatus = cap.getCapStatus();
 			if(capStatus == "Expired") {
-				var vLicenseObj = new licenseObject(licenseNo);
+				var vLicenseObj = new licenseObject(altId);
 				var licExp = vLicenseObj.b1ExpDate;
 				var diff = getDateDiff(licExp);
 				if(diff < nbrDays) {
@@ -258,7 +259,7 @@ try {
 	logDebug(correctionRecordCount + " records have invalid information and where not processed.");
 	logDebug("records to be corrected: " + correctionArray);
 	logDebug(expWithinNbrDaysCount + " records have been skipped, because they have expired within last 45 days.");
-	logDebug("records to be corrected: " + expWithinNbrDays);
+	logDebug("records expired within last 45 days: " + expWithinNbrDays);
 	logDebug(invalidRecordCount + " records have invalid Record Numbers.");
 	logDebug("records to be corrected: " + invalidRecordArray);
 	logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
