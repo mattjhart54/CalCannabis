@@ -107,6 +107,8 @@ try {
 	var members = [];
 	var correctionArray = [];
 	var correctionRecordCount = 0;
+	var expWithinNbrDays = [];
+	var expWithinNbrDaysCount = 0; 
 	var invalidRecordArray = [];
 	var invalidRecordCount = 0;
 	
@@ -130,6 +132,19 @@ try {
 			license= license.getOutput();
 			capId = license.getCapID();
 			var altId = capId.getCustomID();
+			cap = aa.cap.getCap(capId).getOutput();
+			capStatus = cap.getCapStatus();
+			if(capStatus == "Expired") {
+				var vLicenseObj = new licenseObject(licenseNo);
+				var licExp = vLicenseObj.b1ExpDate;
+				var diff = getDateDiff(licExp);
+				if(diff < nbrDays) {
+					logDebug(altId + ": Ignored, Expired within last 45 days");
+					expWithinNbrDays.push(altId);
+					expWithinNbrDaysCount++;
+					continue;
+				}
+			}
 			var AInfo = [];
 			var validationMessage = "";
 			loadAppSpecific(AInfo);
@@ -242,6 +257,8 @@ try {
 	}
 	logDebug(correctionRecordCount + " records have invalid information and where not processed.");
 	logDebug("records to be corrected: " + correctionArray);
+	logDebug(expWithinNbrDaysCount + " records have been skipped, because they have expired within last 45 days.");
+	logDebug("records to be corrected: " + expWithinNbrDays);
 	logDebug(invalidRecordCount + " records have invalid Record Numbers.");
 	logDebug("records to be corrected: " + invalidRecordArray);
 	logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
