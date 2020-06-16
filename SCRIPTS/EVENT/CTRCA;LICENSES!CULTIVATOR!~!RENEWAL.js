@@ -357,7 +357,7 @@ try{
 				var envParameters = aa.util.newHashMap();
 				envParameters.put("licCap",newAltId); 
 				envParameters.put("invNbr", invNbr);
-				envParameters.put("currentUserID",currentUserID);
+				envParameters.put("currentUserID","ADMIN");
 				aa.runAsyncScript(scriptName, envParameters);
 				//runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",newAltId,"invoiceNbr", invNbr);
 			}
