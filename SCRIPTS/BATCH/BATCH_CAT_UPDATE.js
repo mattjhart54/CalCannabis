@@ -156,7 +156,7 @@ try {
 				continue;
 			}else{
 				if(AInfo["Legal Business Name"]!=null){
-					if(isUnicode(AInfo["Legal Business Name"])){	
+					if(!isUnicode(AInfo["Legal Business Name"])){	
 						validationMessage += " An illegal character has been found in Legal Business Name of " + altId;
 					}
 				}
@@ -187,7 +187,7 @@ try {
 					validationMessage += " Record " + altId + " - The DRP email address is null";
 				}
 				if(!matches(AInfo["Premise Address"],null,undefined,"")){
-					if(isUnicode(AInfo["Premise Address"])){
+					if(!isUnicode(AInfo["Premise Address"])){
 						validationMessage += " An illegal character has been found in Premise Address of " + altId;
 					}
 				}
