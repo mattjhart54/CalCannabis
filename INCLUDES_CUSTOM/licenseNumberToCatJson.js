@@ -13,7 +13,7 @@ function licenseNumberToCatJson(licenseNumber) {
 			if(AInfo["Legal Business Name"]==null){
 				var legalBusinessName = "No Business Name provided";
 			}else{
-				if(!isUnicode(AInfo["Legal Business Name"])){
+				if(!isUnicode(String(AInfo["Legal Business Name"]))){
 					var legalBusinessName = "" + AInfo["Legal Business Name"].substr(0, 100);
 				}else{	
 					validationMessage += " An illegal character has been found in Legal Business Name of " + licenseNumber;
@@ -97,7 +97,7 @@ function licenseNumberToCatJson(licenseNumber) {
 				if(AInfo["Premise Address"]==null){
 					var premiseAddress = "N/A";
 				}else{
-					if(!isUnicode(AInfo["Premise Address"])){
+					if(!isUnicode(String(AInfo["Premise Address"]))){
 						var premiseAddress = "" + AInfo["Premise Address"].substr(0, 100);
 					}else{	
 						validationMessage += " An illegal character has been found in Premise Address of " + licenseNumber;
