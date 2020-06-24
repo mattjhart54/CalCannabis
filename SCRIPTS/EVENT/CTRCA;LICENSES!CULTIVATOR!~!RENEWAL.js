@@ -158,10 +158,10 @@ try{
 				}
 				licCaseAltId = licCaseId.getCustomID();
 				yy = licCaseAltId.substring(0,2);
-				newLCAltId = vLicenseID.getCustomID() + "-LC"+ yy + "-" + amendNbr;
-				var updateResult = aa.cap.updateCapAltID(licCaseId, newLCAltId);
+				newAltId = vLicenseID.getCustomID() + "-LC"+ yy + "-" + amendNbr;
+				var updateResult = aa.cap.updateCapAltID(licCaseId, newAltId);
 				if (updateResult.getSuccess()){
-					logDebug("Created License Case: " + newLCAltId + ".");
+					logDebug("Created License Case: " + newAltId + ".");
 				}else{ 
 					logDebug("Error renaming amendment record " + licCaseId);
 				}
@@ -341,25 +341,7 @@ try{
 				}
 			}
 		}
-	}
-	//attach invoice for all submitted records
-	iListResult = aa.finance.getInvoiceByCapID(capId,null);
-	if (iListResult.getSuccess()) {
-		iList = iListResult.getOutput();
-		invNbr = "";
-		iFound = false;
-		for (iNum in iList){
-			fList = aa.invoice.getFeeItemInvoiceByInvoiceNbr(iList[iNum].getInvNbr()).getOutput()
-			for (fNum in fList){
-				invNbr = iList[iNum].getInvNbr();
-				iFound = true;
-				runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",newAltId,"invoiceNbr", String(invNbr));
-			}
-			if (!iFound){
-				  logMessage("Invoice not found");
-			}
-		}	
-	}
+	} 
 
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
