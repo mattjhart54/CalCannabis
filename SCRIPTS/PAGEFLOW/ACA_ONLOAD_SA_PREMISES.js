@@ -95,14 +95,6 @@ try {
 			cancel = true;
 			showMessage = true;
 			logMessage("  Warning: Only the Designated Responsible party can submit a science amendment.");
-		}else{
-			//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
-			if(priContact){
-				priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
-				priContact.people.setContactType("Designated Responsible Party");	
-				cap.setApplicantModel(priContact.capContact);
-				aa.env.setValue("CapModel",cap);
-			}
 		}
 	}else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
@@ -135,6 +127,11 @@ try{
 				editAppSpecific4ACA("DRP First Name",priContact.capContact.firstName);
 				editAppSpecific4ACA("DRP Last Name",priContact.capContact.lastName);
 				editAppSpecific4ACA("DRP Email Address",priContact.capContact.email);
+				//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
+				priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
+				priContact.people.setContactType("Designated Responsible Party");	
+				cap.setApplicantModel(priContact.capContact);
+				aa.env.setValue("CapModel",cap);
 			}
 			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
 			if (b1ExpResult.getSuccess()) {
