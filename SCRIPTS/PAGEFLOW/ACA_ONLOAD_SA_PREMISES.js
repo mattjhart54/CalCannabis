@@ -165,6 +165,24 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_SA_PREMISES: Load Date: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 
+try{
+	//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
+	if (appMatch("Licenses/Cultivator/Amendment/Science")){
+		var c = getContactObj(parentCapId,"Designated Responsible Party");
+
+		if (c) {
+			c.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
+			c.people.setContactType("Designated Responsible Party");	
+			cap.setApplicantModel(c.capContact);
+			aa.env.setValue("CapModel",cap);
+		}
+	}
+} catch (err) {
+	showDebug =true;
+	logDebug("An error has occurred in ACA_ONLOAD_SA_PREMISES: Load DRP: " + err.message + br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_SA_PREMISES: Load DRP: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+}	
+
 // page flow custom code end
 
 
