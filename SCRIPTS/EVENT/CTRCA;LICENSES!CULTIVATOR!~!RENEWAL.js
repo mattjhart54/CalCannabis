@@ -352,8 +352,9 @@ try{
 			fList = aa.invoice.getFeeItemInvoiceByInvoiceNbr(iList[iNum].getInvNbr()).getOutput()
 			for (fNum in fList){
 				invNbr = iList[iNum].getInvNbr();
+				logDebug("invNbr: " + invNbr);
 				iFound = true;
-				runReportAttach(capId,"CDFA_Invoice_Params","agencyid", "CALCANNABIS","capID",newAltId,"invoiceNbr", String(invNbr));
+				runReportAttach(capId,"CDFA_Invoice_Params");
 			}
 			if (!iFound){
 				  logMessage("Invoice not found");
