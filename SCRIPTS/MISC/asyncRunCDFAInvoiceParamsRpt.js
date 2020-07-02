@@ -54,7 +54,7 @@ try{
 	var sTime = sDate.getTime();
 //-----------------------
 
-runReportAttach(capId,"CDFA_Invoice_Params","capID",capId.getCustomID(),"invoiceNbr", String(invNbr)),"agencyId", "CALCANNABIS";	
+runReportAttach(capId,reportName,"capID",licCap,"invoiceNbr", invNbr,"agencyId", "CALCANNABIS");	
 //----------------------- 
 	var thisDate = new Date();
 	var thisTime = thisDate.getTime();
