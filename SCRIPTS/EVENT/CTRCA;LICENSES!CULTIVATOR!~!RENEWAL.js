@@ -352,7 +352,7 @@ try{
 			invNbr = iList[iNum].getInvNbr();
 			invNbrString = String(invNbr);
 			logDebug("Invoice nbr " + invNbrString);
-			runReportAttach(capId,"CDFA_Invoice_Params","capID",newAltId,"invoiceNbr",invNbrString,"agencyId", "CALCANNABIS");
+			runReportAttach(capId,"CDFA_Invoice_Params","capID",newAltId,"invoiceNbr",invNbr,"agencyId", "CALCANNABIS");
 	//		var scriptName = "asyncRunInvoiceParamsRpt";
 	//		var envParameters = aa.util.newHashMap();
 	//		envParameters.put("licCap",capId.getCustomID());
