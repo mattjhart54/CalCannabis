@@ -36,8 +36,8 @@ try{
 		editAppSpecific("Case Renewal Type","Renewal Review");
 		editAppName("Renewal Review");
 	}
-	if (wfTask == "Licensing Case Assessment" && wfStatus == "Notice of Non-Compliance Issued") {
-		updateAppStatus("Notice of Non-Compliance Issued");
+	if (wfTask == "Licensing Case Assessment" && wfStatus == "Notice Non-Compliance Issued") {
+		updateAppStatus("Notice Non-Compliance Issued");
 	}
 	if (wfTask == "LAU Assessment" && wfStatus == "Refer to Legal") {
 		editAppSpecific("Case Renewal Type","Renewal Hold");
