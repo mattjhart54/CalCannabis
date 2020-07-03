@@ -48,7 +48,7 @@ try{
 //  aa.env.setValue("capId", "DUB20-00000-000T9");
 //	aa.env.setValue("invNbr",2015);
 	var licCap = "" + aa.env.getValue("licCap");
-	var capID = "" + aa.env.getValue("capId");
+//	var capID = "" + aa.env.getValue("capId");
 	var invNbr = "" + aa.env.getValue("invNbr");	
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var reportName = "CDFA_INVOICE_PARAMS";
@@ -65,10 +65,10 @@ try{
 	}
 	var rFiles = [];
 	var report = reportResult.getOutput(); 
-	sca = capID.split("-");
-	capId = aa.cap.getCapID(sca[0],sca[1],sca[2]).getOutput();
-	var tmpID = capId;
-//	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
+//	sca = capID.split("-");
+//	capId = aa.cap.getCapID(sca[0],sca[1],sca[2]).getOutput();
+//	var tmpID = capId;
+	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
 	cap = aa.cap.getCap(tmpID).getOutput();
 	appTypeResult = cap.getCapType();
 	appTypeString = appTypeResult.toString(); 
