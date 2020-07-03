@@ -66,7 +66,6 @@ try{
 	var report = reportResult.getOutput(); 
 	sca = String(aa.env.getValue("CapID")).split("-");
 	capId = aa.cap.getCapID(sca[0],sca[1],sca[2]).getOutput();
-}
 	var tmpID = capId;
 //	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
 	cap = aa.cap.getCap(tmpID).getOutput();
