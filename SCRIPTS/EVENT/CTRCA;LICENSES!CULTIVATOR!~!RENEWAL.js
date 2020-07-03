@@ -351,14 +351,14 @@ try{
 		for (iNum in iList){
 			invNbr = iList[iNum].getInvNbr();
 			invNbrString = String(invNbr);
-	//		runReportAttach(capId,"CDFA_Invoice_Params","capID",newAltId,"invoiceNbr",invNbrString,"agencyId", "CALCANNABIS");
-			var scriptName = "asyncRunInvoiceParamsRpt";
-			var envParameters = aa.util.newHashMap();
-			envParameters.put("licCap",capId.getCustomID());
-			envParameters.put("capID", capId);
-			envParameters.put("invNbr", invNbr);
-			envParameters.put("currentUserID",currentUserID);
-			aa.runAsyncScript(scriptName, envParameters);
+			runReportAttach(capId,"CDFA_Invoice_Params","capID",newAltId,"invoiceNbr",invNbrString,"agencyId", "CALCANNABIS");
+	//		var scriptName = "asyncRunInvoiceParamsRpt";
+	//		var envParameters = aa.util.newHashMap();
+	//		envParameters.put("licCap",capId.getCustomID());
+	//		envParameters.put("capID", capId);
+	//		envParameters.put("invNbr", invNbr);
+	//		envParameters.put("currentUserID",currentUserID);
+	//		aa.runAsyncScript(scriptName, envParameters);
 		}
 	}
 
