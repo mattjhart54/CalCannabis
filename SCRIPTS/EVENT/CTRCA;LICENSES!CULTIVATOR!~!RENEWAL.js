@@ -351,6 +351,7 @@ try{
 		for (iNum in iList){
 			invNbr = iList[iNum].getInvNbr();
 			invNbrString = String(invNbr);
+			logDebug("Invoice nbr " + invNbrString);
 			runReportAttach(capId,"CDFA_Invoice_Params","capID",newAltId,"invoiceNbr",invNbrString,"agencyId", "CALCANNABIS");
 	//		var scriptName = "asyncRunInvoiceParamsRpt";
 	//		var envParameters = aa.util.newHashMap();
