@@ -47,6 +47,7 @@ try{
 	//aa.env.setValue("currentUserID", "MHART");
 	//aa.env.setValue("invNbr",907);
 	var licCap = "" + aa.env.getValue("licCap");
+	var capId = "" + aa.env.getValue("capId");
 	var invNbr = "" + aa.env.getValue("invNbr");	
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var reportName = "CDFA_INVOICE_PARAMS";
@@ -63,7 +64,8 @@ try{
 	}
 	var rFiles = [];
 	var report = reportResult.getOutput(); 
-	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
+	var tmpID = capId;
+//	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
 	cap = aa.cap.getCap(tmpID).getOutput();
 	appTypeResult = cap.getCapType();
 	appTypeString = appTypeResult.toString(); 
