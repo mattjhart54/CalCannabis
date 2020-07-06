@@ -367,9 +367,11 @@ try{
 					appTypeString = appTypeResult.toString(); 
 					appTypeArray = appTypeString.split("/");
 					report.setModule(appTypeArray[0]); 
+					logDebug("Testing Category: " + appTypeArray[0]);
 					//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
+					logDebug("Testing capId: " + capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3());
 					report.setCapId(capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3()); 
-					report.getEDMSEntityIdModel().setAltId(licCap);
+					report.getEDMSEntityIdModel().setAltId(newAltId);
 					eTxt+="reportName: " + reportName + br;
 					eTxt+="reportName: " + typeof(reportName) + br;
 					var parameters = aa.util.newHashMap(); 
@@ -385,8 +387,8 @@ try{
 							var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
 							rFile=reportFile.getOutput();
 							rFiles.push(rFile);
-							logDebug("Report '" + reportName + "' has been run for " + licCap);
-							eTxt+=("Report '" + reportName + "' has been run for " + licCap) +br;
+							logDebug("Report '" + reportName + "' has been run for " + newAltId);
+							eTxt+=("Report '" + reportName + "' has been run for " + newAltId) +br;
 						}else {
 							logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
 						}
