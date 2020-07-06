@@ -347,21 +347,18 @@ try{
 	if (iListResult.getSuccess()) {
 		iList = iListResult.getOutput();
 		invNbr = "";
-		invNbrString = "";
+		iFound = false;
 		for (iNum in iList){
-			invNbr = iList[iNum].getInvNbr();
-			invNbrString = String(invNbr);
-			logDebug("Invoice nbr " + invNbrString);
-			runReportAttach(capId,"CDFA_Invoice_Params","capID",newAltId,"invoiceNbr",invNbr,"agencyId", "CALCANNABIS");
-	//		var scriptName = "asyncRunInvoiceParamsRpt";
-	//		var envParameters = aa.util.newHashMap();
-	//		envParameters.put("licCap",capId.getCustomID());
-	//		envParameters.put("capID", capId);
-	//		envParameters.put("invNbr", invNbr);
-	//		envParameters.put("currentUserID",currentUserID);
-	//		aa.runAsyncScript(scriptName, envParameters);
+			invNbr = iList[iNum].getInvNbr();			
+			if (!matches(invNbr,null,undefined,"")){
+				iFound = true;
+				runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",newAltId,"invoiceNbr", String(invNbr));
+			}
 		}
-	}
+		if (!iFound){
+			  logMessage("Invoice not found");
+		}
+	}	
 
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
