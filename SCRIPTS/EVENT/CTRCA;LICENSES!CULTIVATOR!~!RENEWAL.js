@@ -352,7 +352,59 @@ try{
 			invNbr = iList[iNum].getInvNbr();			
 			if (!matches(invNbr,null,undefined,"")){
 				iFound = true;
-				runReportAttach(capId,"CDFA_Invoice_Params","agencyId", "CALCANNABIS","capID",newAltId,"invoiceNbr", String(invNbr));
+					var reportName = "CDFA_Invoice_Params";
+					var currentUserID = "ADMIN";
+					reportResult = aa.reportManager.getReportInfoModelByName(reportName);
+					if (!reportResult.getSuccess()){
+						logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
+						eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
+					}
+					var rFiles = [];
+					var report = reportResult.getOutput(); 
+					//var tmpID = aa.cap.getCapID(licCap).getOutput(); 
+					cap = aa.cap.getCap(capId).getOutput();
+					appTypeResult = cap.getCapType();
+					appTypeString = appTypeResult.toString(); 
+					appTypeArray = appTypeString.split("/");
+					report.setModule(appTypeArray[0]); 
+					//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
+					report.setCapId(capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3()); 
+					report.getEDMSEntityIdModel().setAltId(licCap);
+					eTxt+="reportName: " + reportName + br;
+					eTxt+="reportName: " + typeof(reportName) + br;
+					var parameters = aa.util.newHashMap(); 
+					parameters.put("capID",newAltId);
+					parameters.put("invoiceNbr", invNbr);
+					parameters.put("agencyId", "CALCANNABIS");
+					report.setReportParameters(parameters);
+					var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
+					if(permit.getOutput().booleanValue()) { 
+						var reportResult = aa.reportManager.getReportResult(report); 
+						if(reportResult) {
+							reportOutput = reportResult.getOutput();
+							var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
+							rFile=reportFile.getOutput();
+							rFiles.push(rFile);
+							logDebug("Report '" + reportName + "' has been run for " + licCap);
+							eTxt+=("Report '" + reportName + "' has been run for " + licCap) +br;
+						}else {
+							logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
+						}
+					}else{
+						logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
+						eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
+					}
+					var priContact = getContactObj(tmpID,"Designated Responsible Party");
+					if(priContact){
+						var eParams = aa.util.newHashtable(); 
+						addParameter(eParams, "$$altID$$", tmpID.getCustomID());
+						addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+						addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+						var priEmail = ""+priContact.capContact.getEmail();
+						sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,tmpID);
+					}else{
+						logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
+					}
 			}
 		}
 		if (!iFound){
