@@ -354,6 +354,11 @@ try{
 				iFound = true;
 					var reportName = "CDFA_Invoice_Params";
 					var currentUserID = "ADMIN";
+					var fromEmail = "calcannabislicensing@cdfa.ca.gov"
+					var br = "<BR>";
+					var eTxt = "";
+					var sDate = new Date();
+					var sTime = sDate.getTime();
 					reportResult = aa.reportManager.getReportInfoModelByName(reportName);
 					if (!reportResult.getSuccess()){
 						logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
