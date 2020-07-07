@@ -23,7 +23,7 @@ try{
     	var pType = "Application Condition";
     	var pDesc = "Application Hold";
     	var pStatus = "Applied";
-    	var pEffDate = dateAdd(AInfo["Expiration Date"],60);
+    	var pEffDate = dateAdd(AInfo["Expiration Date"],61);
     	editCapConditionEffDate(pType,pDesc,pStatus,pEffDate) 
     }
 } catch(err){
