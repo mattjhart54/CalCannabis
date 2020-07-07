@@ -1,11 +1,11 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program: BATCH_SEND_LICENSE_FEE_RECEIPT
+| Program: BATCH_SEND_RENEWAL_FEE_INVOICE
 | Client:  CDFA_CalCannabis
 |
 | Version 1.0 - Base Version. 
 |
 | Script to run nightly to send the receipt fpr the license fee paid 
-| Batch job name: LCA_SEND_RECEIPT
+| Batch job name: LCA_SEND_INVOICE
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
 |
