@@ -342,82 +342,16 @@ try{
 			}
 		}
 	}
-	//attach invoice for all submitted records
-	iListResult = aa.finance.getInvoiceByCapID(capId,null);
-	if (iListResult.getSuccess()) {
-		iList = iListResult.getOutput();
-		invNbr = "";
-		iFound = false;
-		for (iNum in iList){
-			invNbr = iList[iNum].getInvNbr();			
-			if (!matches(invNbr,null,undefined,"")){
-				iFound = true;
-					var reportName = "CDFA_Invoice_Params";
-					var currentUserID = "ADMIN";
-					var fromEmail = "calcannabislicensing@cdfa.ca.gov"
-					var br = "<BR>";
-					var eTxt = "";
-					var sDate = new Date();
-					var sTime = sDate.getTime();
-					reportResult = aa.reportManager.getReportInfoModelByName(reportName);
-					if (!reportResult.getSuccess()){
-						logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
-						eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
-					}
-					var rFiles = [];
-					var report = reportResult.getOutput(); 
-					//var tmpID = aa.cap.getCapID(licCap).getOutput(); 
-					cap = aa.cap.getCap(capId).getOutput();
-					appTypeResult = cap.getCapType();
-					appTypeString = appTypeResult.toString(); 
-					appTypeArray = appTypeString.split("/");
-					report.setModule(appTypeArray[0]); 
-					logDebug("Testing Category: " + appTypeArray[0]);
-					//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
-					logDebug("Testing capId: " + capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3());
-					report.setCapId(capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3()); 
-					report.getEDMSEntityIdModel().setAltId(newAltId);
-					eTxt+="reportName: " + reportName + br;
-					eTxt+="reportName: " + typeof(reportName) + br;
-					var parameters = aa.util.newHashMap(); 
-					parameters.put("capID",newAltId);
-					parameters.put("invoiceNbr", invNbr);
-					parameters.put("agencyId", "CALCANNABIS");
-					report.setReportParameters(parameters);
-					var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
-					if(permit.getOutput().booleanValue()) { 
-						var reportResult = aa.reportManager.getReportResult(report); 
-						if(reportResult) {
-							reportOutput = reportResult.getOutput();
-							var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
-							rFile=reportFile.getOutput();
-							rFiles.push(rFile);
-							logDebug("Report '" + reportName + "' has been run for " + newAltId);
-							eTxt+=("Report '" + reportName + "' has been run for " + newAltId) +br;
-						}else {
-							logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
-						}
-					}else{
-						logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
-						eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
-					}
-					var priContact = getContactObj(tmpID,"Designated Responsible Party");
-					if(priContact){
-						var eParams = aa.util.newHashtable(); 
-						addParameter(eParams, "$$altID$$", tmpID.getCustomID());
-						addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
-						addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-						var priEmail = ""+priContact.capContact.getEmail();
-						sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,tmpID);
-					}else{
-						logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
-					}
-			}
+	// add records to set to email Invoice to DRP
+	var srName = createSet("RENEWAL_INVOICE","Renewal", "New");
+	if(srName){
+		setAddResult=aa.set.add(srName,capId);
+		if(setAddResult.getSuccess()){
+			logDebug(capId.getCustomID() + " successfully added to set " +srName);
+		}else{
+			logDebug("Error adding record to set " + srName + ". Error: " + setAddResult.getErrorMessage());
 		}
-		if (!iFound){
-			  logMessage("Invoice not found");
-		}
-	}	
+	}
 
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
