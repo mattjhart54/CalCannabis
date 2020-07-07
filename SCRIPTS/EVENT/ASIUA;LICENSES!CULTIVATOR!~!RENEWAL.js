@@ -24,11 +24,11 @@ try{
     	var pDesc = "Application Hold";
     	var pStatus = "Applied";
     	var pEffDate = dateAdd(AInfo["Expiration Date"],61);
-    	if(appHasCondition(pType,null,pDesc,null) {
-    		editCapConditionEffDate(pType,pDesc,pStatus,pEffDate) 
+    	if(appHasCondition(pType,null,pDesc,null)) {
+    		editCapConditionEffDate(pType,pDesc,pStatus,pEffDate); 
     	}
     	else{
-    		addStdConditionEffDate(pType,pDesc,pEffDate)
+    		addStdConditionEffDate(pType,pDesc,pEffDate);
     	}
     }
 } catch(err){
