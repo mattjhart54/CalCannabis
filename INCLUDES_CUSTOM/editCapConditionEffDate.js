@@ -26,7 +26,7 @@ function editCapConditionEffDate(pType,pDesc,pStatus,pEffDate) {
         var cDesc = thisCond.getConditionDescription();
         var cStatus = thisCond.getConditionStatus();
         var cStatusType = thisCond.getConditionStatusType();
-        logDebug(cStatus + ": " + cStatusType + " " + cEffectDate);   
+   
         if (cDesc.toUpperCase() == pDesc.toUpperCase()) {
             if (pStatus.toUpperCase().equals(cStatus.toUpperCase())) {
             	eDate = aa.date.parseDate(pEffDate)
