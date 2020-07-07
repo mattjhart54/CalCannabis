@@ -19,6 +19,13 @@ try{
 			updateAppStatus("Submitted", "Updated via ASIUA:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 	}
+    if(AInfo["Deferral Approved"] == "CHECKED") {
+    	var pType = "Application Condition";
+    	var pDesc = "Application Hold";
+    	var pStatus = "Applied";
+    	var pEffDate = dateAdd(AInfo["Expiration Date"],60);
+    	editCapConditionEffDate(pType,pDesc,pStatus,pEffDate) 
+    }
 } catch(err){
 	logDebug("An error has occurred in ASIUA:LICENSES/CULTIVATOR/*/RENEWAL: " + err.message);
 	logDebug(err.stack);
