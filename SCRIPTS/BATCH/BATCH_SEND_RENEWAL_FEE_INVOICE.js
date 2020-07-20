@@ -159,12 +159,13 @@ function mainProcess() {
 					invNbr = "";
 					iFound = false;
 					for (iNum in iList){
-						invNbr = iList[iNum].getInvNbr();			
+						invNbr = iList[iNum].getInvNbr();
+						logDebug("invNbr: " + invNbr);
 						if (!matches(invNbr,null,undefined,"")){
 							iFound = true;
 							var parameters = aa.util.newHashMap(); 
 							parameters.put("capID",altId);
-							parameters.put("invoiceNbr", invNbr);
+							parameters.put("invoiceNbr", String(invNbr));
 							parameters.put("agencyId", "CALCANNABIS");
 							report.setReportParameters(parameters);
 							var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
