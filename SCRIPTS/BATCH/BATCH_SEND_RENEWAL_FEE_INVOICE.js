@@ -74,7 +74,6 @@ aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
 aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("reportName", "CDFA Receipt Batch");
-aa.env.setValue("sendEmailAddressType", "Mailing");
 */
 var lookAheadDays = getParam("lookAheadDays");
 var emailAddress = getParam("emailAddress");			// email to send report
@@ -82,7 +81,7 @@ var emailTemplate = getParam("emailTemplate");
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var sysFromEmail = getParam("sysFromEmail");
 var reportName = getParam("reportName");
-var addrType = getParam("sendEmailAddressType");
+
 /*----------------------------------------------------------------------------------------------------/
 |
 | End: BATCH PARAMETERS
@@ -164,7 +163,7 @@ function mainProcess() {
 						if (!matches(invNbr,null,undefined,"")){
 							iFound = true;
 							var parameters = aa.util.newHashMap(); 
-							parameters.put("capId",altId);
+							parameters.put("capID",altId);
 							parameters.put("invoiceNbr", invNbr);
 							parameters.put("agencyId", "CALCANNABIS");
 							report.setReportParameters(parameters);
