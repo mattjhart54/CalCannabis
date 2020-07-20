@@ -135,8 +135,7 @@ function mainProcess() {
 		var memberResult = aa.set.getCAPSetMembersByPK(setName);
 		if (!memberResult.getSuccess()) {
 			logDebug("**WARNING** error retrieving set members " + memberResult.getErrorMessage());
-		} 
-		else {
+		}else{
 			var members = memberResult.getOutput().toArray();
 			var setSize = members.length;
 			for(x in members) {
@@ -184,40 +183,41 @@ function mainProcess() {
 							}else{
 								logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
 							}
-							var conTypeArray = sendEmailToContactTypes.split(",");
-							var	conArray = getContactArray(capId);
-							var contactFound = false;
-							for (thisCon in conArray) {
-								thisContact = conArray[thisCon];
-								if (exists(thisContact["contactType"],conTypeArray)){
-									contactFound = true;
-									var conEmail = true;
-									priContact = getContactObj(capId,thisContact["contactType"]);
-									logDebug("Processing record " + altId); 
-									var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-									if(!matches(priChannel,null,"",undefined)){
-										if(priChannel.indexOf("Email") >-1){
-											var fromEmail = "calcannabislicensing@cdfa.ca.gov";
-											var eParams = aa.util.newHashtable(); 
-											addParameter(eParams, "$$altID$$", altId);
-											addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
-											addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-											var priEmail = ""+priContact.capContact.getEmail();
-											logDebug(" Sending invoice to " + priContact.capContact.getEmail());
-											emailCnt++;
-											sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,capId);
-										}
-										else {
-											logDebug("DRP preference is postal, invoice not emailed");
-											++postalCnt;
-										}
+						}
+					}
+					if(iFound){
+						var conTypeArray = sendEmailToContactTypes.split(",");
+						var	conArray = getContactArray(capId);
+						var contactFound = false;
+						for (thisCon in conArray) {
+							thisContact = conArray[thisCon];
+							if (exists(thisContact["contactType"],conTypeArray)){
+								contactFound = true;
+								var conEmail = true;
+								priContact = getContactObj(capId,thisContact["contactType"]);
+								logDebug("Processing record " + altId); 
+								var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
+								if(!matches(priChannel,null,"",undefined)){
+									if(priChannel.indexOf("Email") >-1){
+										var fromEmail = "calcannabislicensing@cdfa.ca.gov";
+										var eParams = aa.util.newHashtable(); 
+										addParameter(eParams, "$$altID$$", altId);
+										addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+										addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+										var priEmail = ""+priContact.capContact.getEmail();
+										logDebug(" Sending invoice to " + priContact.capContact.getEmail());
+										emailCnt++;
+										sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,capId);
+									}
+									else {
+										logDebug("DRP preference is postal, invoice not emailed");
+										++postalCnt;
 									}
 								}
 							}
 						}
-						if (!iFound){
-							logMessage("Invoice not found");					
-						}
+					}else{
+						logMessage("Invoice not found");					
 					}
 				}
 			}
@@ -226,8 +226,7 @@ function mainProcess() {
 			logDebug("Email Preference - Emails Sent: " + emailCnt);
 			logDebug("Postal Preference - No Emails Sent: " + postalCnt);
 		}		
-	}
-	catch (err){
+	}catch (err){
 		logDebug("ERROR: " + err.message + " In " + batchJobName);
 		logDebug("Stack: " + err.stack);
 	}
