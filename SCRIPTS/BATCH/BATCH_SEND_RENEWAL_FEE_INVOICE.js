@@ -143,7 +143,6 @@ function mainProcess() {
 			for(x in members) {
 				capId = aa.cap.getCapID(members[x].ID1, members[x].ID2, members[x].ID3).getOutput();
 				var altId = capId.getCustomID();
-//	var altId = "LCA18-0000163";
 				reportResult = aa.reportManager.getReportInfoModelByName(reportName);
 				if (!reportResult.getSuccess()){
 					logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
