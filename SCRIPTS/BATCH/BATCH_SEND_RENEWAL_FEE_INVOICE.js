@@ -121,7 +121,7 @@ function mainProcess() {
 	try {
 		var emailCnt = 0;
 		var postalCnt = 0;
-		var rcptCnt = 0;
+		var invCnt = 0;
 		var startDate = new Date(parmDate);
 		var yy = startDate.getFullYear().toString().substr(2,2);
 		var mm = (startDate.getMonth() +1 ).toString(); //getMonth() returns (0 - 11)
@@ -131,8 +131,8 @@ function mainProcess() {
 		if (dd.length<2)
 			dd = "0"+dd;
 		var setName = "RENEWAL_INVOICE" + "_" + yy + mm + dd;
-		rcptDate = "20" + yy + "-"+ mm + "-" + dd;
-		logDebug("Set Name " + setName + " Receipt Date " + rcptDate);
+		invDate = "20" + yy + "-"+ mm + "-" + dd;
+		logDebug("Set Name " + setName + " Invoice Date " + invDate);
 		var memberResult = aa.set.getCAPSetMembersByPK(setName);
 		if (!memberResult.getSuccess()) {
 			logDebug("**WARNING** error retrieving set members " + memberResult.getErrorMessage());
@@ -176,7 +176,7 @@ function mainProcess() {
 									var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
 									rFile=reportFile.getOutput();
 									rFiles.push(rFile);
-									++rcptCnt;
+									++invCnt;
 									logDebug("Report '" + reportName + "' has been run for " + altId);
 								}else {
 									logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
@@ -203,12 +203,12 @@ function mainProcess() {
 											addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 											addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 											var priEmail = ""+priContact.capContact.getEmail();
-											logDebug(" Sending receipt to " + priContact.capContact.getEmail());
+											logDebug(" Sending invoice to " + priContact.capContact.getEmail());
 											emailCnt++;
 											sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,capId);
 										}
 										else {
-											logDebug("DRP preference is postal, receipt not emailed");
+											logDebug("DRP preference is postal, invoice not emailed");
 											++postalCnt;
 										}
 									}
@@ -222,7 +222,7 @@ function mainProcess() {
 				}
 			}
 			logDebug("Total Set Members : " + setSize);
-			logDebug("Receipt Attached: " + rcptCnt);
+			logDebug("invoice Attached: " + invCnt);
 			logDebug("Email Preference - Emails Sent: " + emailCnt);
 			logDebug("Postal Preference - No Emails Sent: " + postalCnt);
 		}		
