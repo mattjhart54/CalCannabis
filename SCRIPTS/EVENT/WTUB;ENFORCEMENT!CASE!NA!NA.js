@@ -75,3 +75,22 @@ try{
 	logDebug(err.stack);
 }
 //lwacht: 180320: story 5228: end 
+
+try {
+	if(wfTask == "Case Assessment" && wfStatus == "Referred") {
+		var cdScriptObj = aa.cap.getCapDetail(capId).getOutput();
+		if (!cdScriptObj){
+			logDebug("**ERROR: No cap detail script object") ; 
+		}
+		si = cdScriptObj.getAsgnStaff();
+		logDebug("Special Investigator " + si);	
+		if(matches(si,null,"",undefined)) {
+			cancel = true;
+			showMessage = true;
+			comment("Before this case can be referred you must assign the case to a Special investigator)");
+		}
+	}
+}catch(err){
+	logDebug("An error has occurred in WTUB:ENFORCEMENT/CASE/NA/NA: Case unassigned on Referral" + err.message);
+	logDebug(err.stack);
+}

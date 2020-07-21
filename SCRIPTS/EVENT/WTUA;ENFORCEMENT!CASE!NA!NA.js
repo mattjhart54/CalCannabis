@@ -25,6 +25,7 @@ try{
 		}
 	}
 	if(wfTask == "Case Assessment" && wfStatus == "Referred") {
+// Run the case summary report to attach to the email notification
 		var TInfo = [];
 		loadTaskSpecific(TInfo);
 		var rFiles = [];
@@ -34,9 +35,24 @@ try{
 		if (rFile) {
 			rFiles.push(rFile);
 		}
+//	Get the user name and email assigned to the case to include in the email
+		var cdScriptObj = aa.cap.getCapDetail(capId).getOutput();
+		if (!cdScriptObj){
+			logDebug("**ERROR: No cap detail script object") ; 
+		}
+		si = cdScriptObj.getAsgnStaff();
+		logDebug("Special Investigator " + si);	
+		if(!matches(si,null,"",undefined)) {
+			userObject = aa.person.getUser(si).getOutput();
+			siEmail = userObject.getEmail();
+			siFN = userObject.getFullName();
+			logDebug("SI Full Name " + siFN + " SI Email " + siEmail);
+		}
 		var eParams = aa.util.newHashtable();
-		addParameter(eParams,"$$fileDate$$", fileDate);
+		addParameter(eParams,"$$SI$$", siFN);
+		addParameter(eParams,"$$SIEMAIL$$", siEmail);
 		var locEmail =  TInfo["E-mail Address"];
+// Get the weed tip referral document to attach to the email notification 
 		var docList = aa.document.getDocumentListByEntity(capId.toString(),"CAP").getOutput();
 	//	logDebug("Doc List " + docList.size());
 		var num = docList.size();
