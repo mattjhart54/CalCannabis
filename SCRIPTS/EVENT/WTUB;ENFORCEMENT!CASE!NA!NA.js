@@ -87,7 +87,7 @@ try {
 		if(matches(si,null,"",undefined)) {
 			cancel = true;
 			showMessage = true;
-			comment("Before this case can be referred you must assign the case to a Special investigator)");
+			comment("Before this case can be referred you must assign the case to a Special Investigator");
 		}
 	}
 }catch(err){
