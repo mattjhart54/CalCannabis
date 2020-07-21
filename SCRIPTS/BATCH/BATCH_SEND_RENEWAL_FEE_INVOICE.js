@@ -119,7 +119,6 @@ if (showDebug) {
 function mainProcess() {
 	try {
 		var emailCnt = 0;
-		var postalCnt = 0;
 		var invCnt = 0;
 		var startDate = new Date(parmDate);
 		var yy = startDate.getFullYear().toString().substr(2,2);
@@ -196,24 +195,15 @@ function mainProcess() {
 								var conEmail = true;
 								priContact = getContactObj(capId,thisContact["contactType"]);
 								logDebug("Processing record " + altId); 
-								var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-								if(!matches(priChannel,null,"",undefined)){
-									if(priChannel.indexOf("Email") >-1){
-										var fromEmail = "calcannabislicensing@cdfa.ca.gov";
-										var eParams = aa.util.newHashtable(); 
-										addParameter(eParams, "$$altID$$", altId);
-										addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
-										addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-										var priEmail = ""+priContact.capContact.getEmail();
-										logDebug(" Sending invoice to " + priContact.capContact.getEmail());
-										emailCnt++;
-										sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,capId);
-									}
-									else {
-										logDebug("DRP preference is postal, invoice not emailed");
-										++postalCnt;
-									}
-								}
+								var fromEmail = "calcannabislicensing@cdfa.ca.gov";
+								var eParams = aa.util.newHashtable(); 
+								addParameter(eParams, "$$altID$$", altId);
+								addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+								addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+								var priEmail = ""+priContact.capContact.getEmail();
+								logDebug(" Sending invoice to " + priContact.capContact.getEmail());
+								emailCnt++;
+								sendApprovalNotification(fromEmail,priEmail,"","LCA_GENERAL_NOTIFICATION",eParams, rFiles,capId);
 							}
 						}
 					}else{
@@ -223,8 +213,7 @@ function mainProcess() {
 			}
 			logDebug("Total Set Members : " + setSize);
 			logDebug("invoice Attached: " + invCnt);
-			logDebug("Email Preference - Emails Sent: " + emailCnt);
-			logDebug("Postal Preference - No Emails Sent: " + postalCnt);
+			logDebug("Emails Sent: " + emailCnt);
 		}		
 	}catch (err){
 		logDebug("ERROR: " + err.message + " In " + batchJobName);
