@@ -37,10 +37,18 @@ try {
 							addParameter(eParams, "$$parentId$$", parentCapId.getCustomID());
 							var priEmail = ""+licCont.email;
 							var rFiles = [];
-							if(OWNERS[o]["Change Status"] == "Delete")
+							if(OWNERS[o]["Change Status"] == "Delete"){
+								var licContSeq = licCont.contactSeqNumber;
+								var removeResult = aa.people.removeCapContact(parentCapId, licContSeq); 
+								if (removeResult.getSuccess()){
+									logDebug("(contactObj) contact removed : " + licContSeq + " from record " + parentCapId.getCustomID());
+								}else{
+									logDebug("(contactObj) error removing contact : " + licContSeq + " : from record " + parentCapId.getCustomID() + " : " + removeResult.getErrorMessage());
+								}
 								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_DELETED",eParams, rFiles,capId);
-							else
+							}else{
 								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_APPROVAL",eParams, rFiles,capId);
+							}
 							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",licCont.preferredChannel);
 							if(!matches(priChannel, "",null,"undefined", false)){
 								if(priChannel.indexOf("Postal") > -1 ){
@@ -80,11 +88,6 @@ try {
 										}	
 									}
 								}
-							}
-							if(OWNERS[o]["Change Status"] == "Delete") {
-								var licContSeq = licCont.contactSeqNumber;
-								aa.people.removeCapContact(parentCapId,licContSeq);
-								logDebug("Owner Contact" + ownEmail + " Removed");
 							}
 						}
 					}
