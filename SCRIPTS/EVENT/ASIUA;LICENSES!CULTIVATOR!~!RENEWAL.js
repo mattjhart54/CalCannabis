@@ -31,6 +31,16 @@ try{
     		addStdConditionEffDate(pType,pDesc,pEffDate);
     	}
     }
+	if (AInfo['Waive Late Fee'] == "CHECKED"){
+		var feeDesc = AInfo["License Type"] + " - Late Fee";
+		var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+		if(thisFee){
+			var hasFee = feeExists(thisFee.feeCode,"INVOICED");
+			if(hasFee) {
+				voidRemoveFeesByDesc(feeDesc);
+			}
+		}
+	}
 } catch(err){
 	logDebug("An error has occurred in ASIUA:LICENSES/CULTIVATOR/*/RENEWAL: " + err.message);
 	logDebug(err.stack);
