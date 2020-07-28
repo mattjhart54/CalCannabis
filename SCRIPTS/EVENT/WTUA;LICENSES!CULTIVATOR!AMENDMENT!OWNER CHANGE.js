@@ -47,6 +47,12 @@ try {
 								}
 								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_DELETED",eParams, rFiles,capId);
 							}else{
+								//Modify Contact Name
+								if ((licCont.email.equals(OWNERS[o]["Email Address"])) || (licCont.lastName != OWNERS[o]["Last Name"])){
+									var licContSeq = licCont.contactSeqNumber;
+									var theContact = getContactObjsBySeqNbr(parentCapId,licContSeq);
+									doNameAmendment(theContact,OWNERS[o]["Email Address"],OWNERS[o]["Last Name"],parentCapId);
+								}
 								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_APPROVAL",eParams, rFiles,capId);
 							}
 							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",licCont.preferredChannel);
