@@ -51,7 +51,7 @@ try {
 								if ((licCont.email.equals(OWNERS[o]["Email Address"])) || (licCont.lastName != OWNERS[o]["Last Name"])){
 									var licContSeq = licCont.contactSeqNumber;
 									var theContact = getContactObjsBySeqNbr(parentCapId,licContSeq);
-									doNameAmendment(theContact,OWNERS[o]["Email Address"],OWNERS[o]["Last Name"],parentCapId);
+									doNameAmendment(theContact,OWNERS[o]["First Name"],OWNERS[o]["Last Name"],parentCapId);
 								}
 								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_APPROVAL",eParams, rFiles,capId);
 							}
