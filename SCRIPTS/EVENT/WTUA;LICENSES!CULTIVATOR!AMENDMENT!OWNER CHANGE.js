@@ -17,12 +17,18 @@ try {
 						var licContacts = licContactResult.getOutput();
 						licFnd = false;
 						for (i in licContacts){
-							if(licContacts[i].getCapContactModel().getContactType() == "Owner") {
-								var licCont = licContacts[i].getCapContactModel();
-								logDebug("license " + licCont.refContactNumber + " " + licCont.contactType + " " + licCont.email + " " + licCont.lastName);
-								if(ownEmail == licCont.email.toUpperCase() && matches(licCont.endDate, null, "", undefined)) {
+							if(matches(licContacts[i].getCapContactModel().getContactType(),"Owner","Designated Responsible Party")) {
+								var thisContactModel = licContacts[i].getCapContactModel();
+								if(ownEmail == thisContactModel.email.toUpperCase() && matches(thisContactModel.endDate, null, "", undefined)) {
+									if (thisContactModel.getContactType() == "Owner"){
+										var licCont = thisContactModel;
+										logDebug("license " + licCont.refContactNumber + " " + licCont.contactType + " " + licCont.email + " " + licCont.lastName);
 										licFnd = true;
-										break;
+									}else{
+										var DRPCont = thisContactModel;
+										logDebug("license " + DRPCont.refContactNumber + " " + DRPCont.contactType + " " + DRPCont.email + " " + DRPCont.lastName);
+										DRPFnd = true;
+									}
 								}
 							}
 						}
@@ -52,6 +58,14 @@ try {
 									var licContSeq = licCont.contactSeqNumber;
 									var theContact = getContactObjsBySeqNbr(parentCapId,licContSeq);
 									doNameAmendment(theContact,OWNERS[o]["First Name"],OWNERS[o]["Last Name"],parentCapId);
+									if (DRPFnd){
+										var DRPContSeq = DRPCont.contactSeqNumber;
+										var DRPContact = getContactObjsBySeqNbr(parentCapId,licContSeq);
+										DRPContact.people.setFirstName(OWNERS[o]["First Name"]);
+										DRPContact.people.setLastName(OWNERS[o]["Last Name"]);	
+										DRPContact.save();
+									}
+										
 								}
 								sendNotification(sysFromEmail,priEmail,"","LCA_AMENDMENT_OWNER_APPROVAL",eParams, rFiles,capId);
 							}
