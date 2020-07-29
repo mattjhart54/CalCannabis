@@ -60,7 +60,7 @@ try {
 									doNameAmendment(theContact,OWNERS[o]["First Name"],OWNERS[o]["Last Name"],parentCapId);
 									if (DRPFnd){
 										var DRPContSeq = DRPCont.contactSeqNumber;
-										var DRPContact = getContactObjsBySeqNbr(parentCapId,licContSeq);
+										var DRPContact = getContactObjsBySeqNbr(parentCapId,DRPContSeq);
 										DRPContact.people.setFirstName(OWNERS[o]["First Name"]);
 										DRPContact.people.setLastName(OWNERS[o]["Last Name"]);	
 										DRPContact.save();
