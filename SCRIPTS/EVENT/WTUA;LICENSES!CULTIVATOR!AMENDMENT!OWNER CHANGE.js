@@ -16,6 +16,7 @@ try {
 					if (licContactResult.getSuccess()){
 						var licContacts = licContactResult.getOutput();
 						licFnd = false;
+						DRPFnd = false;
 						for (i in licContacts){
 							if(matches(licContacts[i].getCapContactModel().getContactType(),"Owner","Designated Responsible Party")) {
 								var thisContactModel = licContacts[i].getCapContactModel();
