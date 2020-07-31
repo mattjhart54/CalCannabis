@@ -302,7 +302,16 @@ try{
 							}else{
 								logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
 							}
-						}
+						}					
+						var invoiceSet = createSet("POSTAL_RENEWAL INVOICE","Renewal Notifications", "New");
+						if(invoiceSet){
+							setAddResult=aa.set.add(invoiceSet,capId);
+							if(setAddResult.getSuccess()){
+								logDebug(capId.getCustomID() + " successfully added to set " +invoiceSet);
+							}else{
+								logDebug("Error adding record to set " + invoiceSet + ". Error: " + setAddResult.getErrorMessage());
+							}
+						}	
 					}
 				}
 			}
@@ -336,6 +345,15 @@ try{
 							logDebug(capId.getCustomID() + " successfully added to set " +sName);
 						}else{
 							logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
+						}
+					}
+					var invoiceSet = createSet("POSTAL_RENEWAL INVOICE","Renewal Notifications", "New");
+					if(invoiceSet){
+						setAddResult=aa.set.add(invoiceSet,capId);
+						if(setAddResult.getSuccess()){
+							logDebug(capId.getCustomID() + " successfully added to set " +invoiceSet);
+						}else{
+							logDebug("Error adding record to set " + invoiceSet + ". Error: " + setAddResult.getErrorMessage());
 						}
 					}
 				}
