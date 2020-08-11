@@ -156,10 +156,11 @@ try{
 			logDebug("----Processing record " + altId + br);
 			editAppSpecific("One-Time Increase Plant Tags","",capId);
 			editAppSpecific("One-Time Increase Package Tags","",capId);
+	}
 
 
- 	logDebug("Total CAPS qualified : " + myCaps.length);
- 	logDebug("Total CAPS processed: " + capCount);
+	logDebug("Total CAPS qualified : " + myCaps.length);
+	logDebug("Total CAPS processed: " + capCount);
 
 }catch (err){
 	logDebug("ERROR: " + err.message + " In " + batchJobName);
