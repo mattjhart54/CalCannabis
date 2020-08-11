@@ -158,8 +158,6 @@ try{
 			editAppSpecific("One-Time Increase Package Tags","",capId);
 	}
 
-
-	logDebug("Total CAPS qualified : " + myCaps.length);
 	logDebug("Total CAPS processed: " + capCount);
 
 }catch (err){
