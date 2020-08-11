@@ -5,13 +5,13 @@ try {
 				licenseNumber = TAQREQUEST[r]["License Number"];
 				licenseCapId = aa.cap.getCapID(licenseNumber).getOutput();
 				if (matches(TAQREQUEST[r]["Increase Type"],"Permitted")) {
-					editAppSpecific(licenseCapId,"Current Plant Tags",TAQREQUEST[r]["New Plant Tags"]);
-					editAppSpecific(licenseCapId,"Current Package Tags",TAQREQUEST[r]["New Package Tags"]);
+					editAppSpecific("Current Plant Tags",TAQREQUEST[r]["New Plant Tags"],licenseCapId);
+					editAppSpecific("Current Package Tags",TAQREQUEST[r]["New Package Tags"],licenseCapId);
 				}
 				if (matches(TAQREQUEST[r]["Increase Type"],"One-Time")) {
-					editAppSpecific(licenseCapId,"One-Time Increase Plant Tags",TAQREQUEST[r]["One-Time Plant Tags"]);
-					editAppSpecific(licenseCapId,"One-Time Increase Package Tags",TAQREQUEST[r]["One-Time Package Tags"]);
-					editAppSpecific(licenseCapId,"One-Time Increase Expiration Date",TAQREQUEST[r]["One-Time Expiration Date"]);
+					editAppSpecific("One-Time Increase Plant Tags",TAQREQUEST[r]["One-Time Plant Tags"],licenseCapId);
+					editAppSpecific("One-Time Increase Package Tags",TAQREQUEST[r]["One-Time Package Tags"],licenseCapId);
+					editAppSpecific("One-Time Increase Expiration Date",TAQREQUEST[r]["One-Time Expiration Date"],licenseCapId);
 				}
 				// link the tag request record as a child to the license record
 			}	
