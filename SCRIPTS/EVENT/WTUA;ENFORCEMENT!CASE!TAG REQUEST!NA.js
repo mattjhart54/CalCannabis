@@ -9,9 +9,9 @@ try {
 					editAppSpecific(licenseCapId,"Current Package Tags",TAQREQUEST[r]["New Package Tags"]);
 				}
 				if (matches(TAQREQUEST[r]["Increase Type"],"One-Time")) {
-					editAppSpecific(licenseCapId,"One-Time Increase Plant Tags",TAQREQUEST[r]["One-Time Plant Tags"]);
-					editAppSpecific(licenseCapId,"One-Time Increase Package Tags",TAQREQUEST[r]["One-Time Package Tags"]);
-					editAppSpecific(licenseCapId,"One-Time Increase Expiration Date",TAQREQUEST[r]["One-Time Expiration Date"]);
+					editAppSpecific(licenseCapId,"One-Time Increase Plant Tags",TAQREQUEST[r]["One-Time Increase Plant Tags"]);
+					editAppSpecific(licenseCapId,"One-Time Increase Package Tags",TAQREQUEST[r]["One-Time Increase Package Tags"]);
+					editAppSpecific(licenseCapId,"One-Time Increase Expiration Date",TAQREQUEST[r]["One-Time Increase Expiration Date"]);
 				}
 				// link the tag request record as a child to the license record
 			}	
