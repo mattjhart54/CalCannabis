@@ -3,7 +3,7 @@ try {
 		if (typeof(TAQREQUEST) == "object") {
 			for(r in TAQREQUEST) {
 				licenseNumber = TAQREQUEST[r]["License Number"];
-				licenseCapId = aa.cap.getCapID(licenseNumber).getOutput();
+				licenseCapId = aa.cap.getCapID(licenseNumber);
 				if (matches(TAQREQUEST[r]["Increase Type"],"Permitted")) {
 					editAppSpecific("Current Plant Tags",TAQREQUEST[r]["New Plant Tags"],licenseCapId);
 					editAppSpecific("Current Package Tags",TAQREQUEST[r]["New Package Tags"],licenseCapId);
