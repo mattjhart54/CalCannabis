@@ -13,7 +13,7 @@ try {
 					editAppSpecific("One-Time Increase Package Tags",TAQREQUEST[r]["One-Time Package Tags"],licenseCapId);
 					editAppSpecific("One-Time Increase Expiration Date",TAQREQUEST[r]["One-Time Expiration Date"],licenseCapId);
 				}
-				// link the tag request record as a child to the license record
+				aa.cap.createAppHierarchy(licenseCapId,capId);
 			}	
 		}
 	}
