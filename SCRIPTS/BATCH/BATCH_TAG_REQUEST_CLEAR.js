@@ -75,7 +75,7 @@ aa.env.setValue("emailAddress", "jshear@trustvip.com");
 aa.env.setValue("asiField", "One-Time Increase Expiration Date");
 aa.env.setValue("asiGroup", "TAGS");
 */
-var sysFromEmail = getJobParam("sysFromEmail");
+var sysFromEmail = getParam("sysFromEmail");
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
