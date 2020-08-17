@@ -70,10 +70,12 @@ else
 
 aa.env.setValue("lookAheadDays", "0");
 aa.env.setValue("daySpan", "0");
+var sysFromEmail = ("sysFromEmail","calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue("emailAddress", "jshear@trustvip.com");
 aa.env.setValue("asiField", "One-Time Increase Expiration Date");
 aa.env.setValue("asiGroup", "TAGS");
 */
+var sysFromEmail = getJobParam("sysFromEmail");
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
