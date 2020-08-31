@@ -332,7 +332,7 @@ try{
 							if(AInfo["Waive Late Fee"] == "CHECKED") {
 								voidRemoveFeesByDesc(feeDesc);
 							}
-							if (!matches(rptName,null,undefined,""){
+							if (!matches(rptName,null,undefined,"")){
 								rptName.split(",");
 								rptName.push("Balance Due Report");
 						}
