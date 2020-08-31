@@ -335,6 +335,7 @@ try{
 							if (!matches(rptName,null,undefined,"")){
 								rptName.split(",");
 								rptName.push("Balance Due Report");
+							}
 						}
 						capId = holdId;
 					}else{
