@@ -190,7 +190,7 @@ try{
 				var rFile;
 				if (typeof(rptName) == "object"){
 					for (ii in rptName){
-					rFile = generateReport(capId,rptName[ii],"Licenses",rptParams);
+					rFile = generateReport(capId,String(rptName[ii]),"Licenses",rptParams);
 						if (rFile) {
 							rFiles.push(rFile);
 						}
