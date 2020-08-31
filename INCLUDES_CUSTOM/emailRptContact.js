@@ -15,7 +15,7 @@ Client developed for : CDFA_CalCannabis
 Parameters:
 	callingPgm: Text: Master script calling this function
 	notName: Text: Name of the email template notification
-	rptName: Text: Name of the report
+	rptName: Text: Name of the report(s), seperated by commas
 	emailRpt: true/false: whether or not the report should be attached to the email
 	curStatus: Text: Status to use for general notification template
 	acaCapId: capId: The capId to use for the ACA URL
@@ -127,10 +127,15 @@ try{
 			var rFiles = [];
 			if(!matches(rptName, null, "", "undefined")){
 				var rFile;
-				rFile = generateReport(capId,rptName,"Licenses",rptParams);
-				if (rFile) {
-					rFiles.push(rFile);
-				}
+				rptArray = rptName.split(',');
+				if (typeof(rptArray) == "object"){
+					for (ii in rptArray){
+					rFile = generateReport(capId,rptArray[ii],"Licenses",rptParams);
+						if (rFile) {
+							rFiles.push(rFile);
+						}
+					}
+				}				
 			}
 			if(emailRpt){
 				sendNotification(sysFromEmail,priEmail,"",notName,eParams, rFiles,capId);
