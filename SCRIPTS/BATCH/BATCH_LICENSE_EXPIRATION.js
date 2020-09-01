@@ -117,7 +117,7 @@ var emailTemplate = getJobParam("emailTemplate"); // email Template
 var createNotifySets = getJobParam("createNotifySets").substring(0, 1).toUpperCase().equals("Y") ; // different sets based on notification preferences
 var sendEmailNotifications = getJobParam("sendEmailNotifications");
 var sysFromEmail = getJobParam("sysFromEmail");
-var rptName = getJobParam("reportName");
+var rptName = getJobParam("reportName").split(",");
 var addrType = getParam("sendEmailAddressType");
 
 
@@ -378,8 +378,15 @@ try{
 						}else{
 							var capReportVar = "capId";
 						}
-						runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays); 
-						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
+						if (typeof(rptName) == "object"){
+							for (i = 0; i < rptName.length; i++) {
+								thisRptName = String(rptName[i]);
+								runReportAttach(capId,thisRptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",altId);								
+							}
+						}else{
+							runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",altId); 
+						}
+						emailMultRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",altId);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
 				}
