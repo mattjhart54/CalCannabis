@@ -1,5 +1,5 @@
 
-function emailMultRptContact(callingPgm, notName, rptName, emailRpt, curStatus, acaCapId, contactType) {
+function emailMultRptContactTest(callingPgm, notName, rptName, emailRpt, curStatus, acaCapId, contactType) {
 try{
 	// create a hashmap for report parameters
 	var rptParams = aa.util.newHashMap();
@@ -162,7 +162,8 @@ try{
 				var rFile;
 				if (typeof(rptName) == "object"){
 					for (i = 0; i < rptName.length; i++) {
-						rFile = generateReport(capId,String(rptName[ii]),"Licenses",rptParams);
+						var thisRptName = String(rptName[i]);
+						rFile = generateReport(capId,thisRptName,"Licenses",rptParams);
 						if (rFile) {
 							rFiles.push(rFile);
 						}
