@@ -332,6 +332,9 @@ try{
 							if(AInfo["Waive Late Fee"] == "CHECKED") {
 								voidRemoveFeesByDesc(feeDesc);
 							}
+							if (!matches(rptName,null,undefined,"")){
+								rptName.push("Balance Due Report");
+							}
 						}
 						capId = holdId;
 					}else{
