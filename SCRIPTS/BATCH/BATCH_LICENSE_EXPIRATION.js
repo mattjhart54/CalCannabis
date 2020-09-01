@@ -332,10 +332,6 @@ try{
 							if(AInfo["Waive Late Fee"] == "CHECKED") {
 								voidRemoveFeesByDesc(feeDesc);
 							}
-							if (!matches(rptName,null,undefined,"")){
-								rptName.split(",");
-								rptName.push("Balance Due Report");
-							}
 						}
 						capId = holdId;
 					}else{
@@ -382,13 +378,7 @@ try{
 						}else{
 							var capReportVar = "capId";
 						}
-						if (typeof(rptName) == "object"){
-							for (ii in rptName){
-								runReportAttach(capId,rptName[ii], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);								
-							}
-						}else{
-							runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays); 
-						}
+						runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays); 
 						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
