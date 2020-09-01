@@ -186,20 +186,10 @@ try{
 			//var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
 			var rFiles = [];
 			if(!matches(rptName, null, "", "undefined")){
-				//Story 6611 allowing rptName to be string value or array;
 				var rFile;
-				if (typeof(rptName) == "object"){
-					for (ii in rptName){
-					rFile = generateReport(capId,String(rptName[ii]),"Licenses",rptParams);
-						if (rFile) {
-							rFiles.push(rFile);
-						}
-					}
-				}else{
-					rFile = generateReport(capId,rptName,"Licenses",rptParams);
-					if (rFile) {
-						rFiles.push(rFile);
-					}
+				rFile = generateReport(capId,rptName,"Licenses",rptParams);
+				if (rFile) {
+					rFiles.push(rFile);
 				}
 			}
 			if(emailRpt){
