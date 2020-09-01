@@ -38,6 +38,8 @@ try{
 			var hasFee = feeExists(thisFee.feeCode,"INVOICED");
 			if(hasFee) {
 				voidRemoveFeesByDesc(feeDesc);
+				runReportAttach(capId,"Balance Due Report", "altId", capId.getCustomID());
+				emailRptContact("WTUA", "LCA_BALANCE_DUE", "Balance Due Report", true, appStatus, capId, "Designated Responsible Party", "altId", capId.getCustomID());
 			}
 		}
 	}
