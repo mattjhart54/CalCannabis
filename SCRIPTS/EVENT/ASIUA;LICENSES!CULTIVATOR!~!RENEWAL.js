@@ -45,7 +45,7 @@ try{
 				if (rFile) {
 					rFiles.push(rFile);
 				}
-				var priContact = getContactObj(capId,"Designated Responsible Party");
+				var priContact = getContactObj(vLicenseID,"Designated Responsible Party");
 				if(priContact){
 					var eParams = aa.util.newHashtable(); 
 					addParameter(eParams, "$$altId$$", capId.getCustomID());
