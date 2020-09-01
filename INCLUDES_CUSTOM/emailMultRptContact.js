@@ -161,8 +161,8 @@ try{
 				//Story 6611 allowing rptName to be string value or array;
 				var rFile;
 				if (typeof(rptName) == "object"){
-					for (ii in rptName){
-					rFile = generateReport(capId,String(rptName[ii]),"Licenses",rptParams);
+					for (i = 0; i < rptName.length; i++) {
+						rFile = generateReport(capId,String(rptName[ii]),"Licenses",rptParams);
 						if (rFile) {
 							rFiles.push(rFile);
 						}
@@ -185,6 +185,6 @@ try{
 		logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
 	}
 }catch(err){
-	logDebug("An error occurred in emailRptContact: " + err.message);
+	logDebug("An error occurred in emailMultRptContact: " + err.message);
 	logDebug(err.stack);
 }}
