@@ -379,14 +379,14 @@ try{
 							var capReportVar = "capId";
 						}
 						if (typeof(rptName) == "object"){
-							for (ii in rptName){
-								rptName = String(rptName[ii]);
-								runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);								
+							for (i = 0; i < rptName.length; i++) {
+								thisRptName = String(rptName[i]);
+								runReportAttach(capId,thisRptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",altId);								
 							}
 						}else{
-							runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays); 
+							runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",altId); 
 						}
-						emailMultRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
+						emailMultRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",altId);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
 				}
