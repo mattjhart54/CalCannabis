@@ -95,10 +95,12 @@ try {
 					var hasFee = feeExists(thisFee.feeCode);
 					if(hasFee) {
 						voidRemoveFeesByDesc(feeDesc);
+						runReportAttach(capId,"Balance Due Report", "altId", capId.getCustomID());
+						emailRptContact("WTUA", "LCA_BALANCE_DUE", "Balance Due Report", true, capStatus, capId, "Designated Responsible Party", "altId", capId.getCustomID());
 					}
 				}
 			}
-			updateAppStatus("Deferral Approved", "Updated via ASIUA:LICENSES/CULTIVATOR/*/Renewal.");
+			updateAppStatus("Deferral Approved", "Updated via WTUA:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 	}
 	//Removing as per 6355, 6313, 6314, 6315
