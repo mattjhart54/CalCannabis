@@ -1,10 +1,7 @@
 try {
-//	var invDate = aa.env.getValue("StatusDate");
-//	logDebug("inv Date " + invDate);
 	var invoiceItem = aa.env.getValue("InvoiceNbrArray");
 	var feeDesc = AInfo["License Type"] + " - Late Fee";
 	for (i in invoiceItem) {
-		logDebug("InvoiceNbrArray[" + i + "] = " + InvoiceNbrArray[i]);
 		var feeResult = aa.finance.getFeeItemInvoiceByInvoiceNbr(capId,invoiceItem[i],null);
 		if(feeResult.getSuccess()) {
 			feeItem = feeResult.getOutput();
