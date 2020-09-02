@@ -95,8 +95,14 @@ try {
 					var hasFee = feeExists(thisFee.feeCode);
 					if(hasFee) {
 						voidRemoveFeesByDesc(feeDesc);
-						runReportAttach(capId,"Balance Due Report", "altId", capId.getCustomID());
-						emailRptContact("WTUA", "LCA_BALANCE_DUE", "Balance Due Report", true, capStatus, capId, "Designated Responsible Party", "altId", capId.getCustomID());
+						var scriptName = "asyncRunBalanceDueRpt";
+						var envParameters = aa.util.newHashMap();
+						envParameters.put("altId",capId.getCustomID()); 
+						envParameters.put("reportName","Balance Due Report"); 
+						envParameters.put("contType","Designated Responsible Party"); 
+						envParameters.put("currentUserID",currentUserID);
+						envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+						aa.runAsyncScript(scriptName, envParameters);
 					}
 				}
 			}
