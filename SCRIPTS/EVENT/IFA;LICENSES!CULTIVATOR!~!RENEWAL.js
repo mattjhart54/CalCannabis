@@ -1,4 +1,8 @@
 try {
+	var InvoiceNbrArray = aa.env.getValue("InvoiceNbrArray")
+	for (var xyz in InvoiceNbrArray)
+		logDebug("InvoiceNbrArray[" + xyz + "] = " + InvoiceNbrArray[xyz]);
+	
 	var feeDesc = AInfo["License Type"] + " - Late Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 	if(thisFee){
