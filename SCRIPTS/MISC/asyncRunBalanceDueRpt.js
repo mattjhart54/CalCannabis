@@ -62,9 +62,9 @@ try{
 //-----------------------
 	var licCapId = aa.cap.getCapID(recNum).getOutput();
 	var rFiles = [];
-		reportResult = aa.reportManager.getReportInfoModelByName("Balance Due Report");
+		reportResult = aa.reportManager.getReportInfoModelByName(reportName);
 		if (!reportResult.getSuccess()){
-			logDebug("**WARNING** couldn't load report " + "Balance Due Report" + " " + reportResult.getErrorMessage()); 
+			logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
 		}
 		var report = reportResult.getOutput(); 
 		report.setModule("Licenses"); 
@@ -73,7 +73,7 @@ try{
 		var parameters = aa.util.newHashMap(); 
 		parameters.put("altId",recNum);
 		report.setReportParameters(parameters);
-		var permit = aa.reportManager.hasPermission("Balance Due Report",currentUserID); 
+		var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
 		if(permit.getOutput().booleanValue()) { 
 			var reportResult = aa.reportManager.getReportResult(report); 
 			if(reportResult) {
@@ -81,17 +81,17 @@ try{
 				var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
 				rFile=reportFile.getOutput();
 				rFiles.push(rFile);
-	//			logDebug("Report '" + "Balance Due Report" + "' has been run for " + recNum);
+	//			logDebug("Report '" + reportName + "' has been run for " + recNum);
 			}else {
 				logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
 			}
 		}else{
-			logDebug("No permission to report: "+ "Official License Certificate" + " for user: " + currentUserID);
+			logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
 		}
 
 // Send notification and add record to set for manual notification if preferred channel is Postal
 	var notification = 'LCA_BALANCE_DUE';
-	var priContact = getContactObj(licCapId,"Designated Responsible Party");
+	var priContact = getContactObj(licCapId,contType);
 	if(priContact){
 		var eParams = aa.util.newHashtable(); 
 		addParameter(eParams, "$$altID$$", recNum);
@@ -126,7 +126,7 @@ try{
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 		if(!matches(priChannel, "",null,"undefined", false)){
 			if(priChannel.indexOf("Postal") > -1 ){
-				var sName = createSet("LICENSE CONVERSION NOTIFICATION","License Notifications", "New");
+				var sName = createSet("Renewal Balance Due","Renewal Notifications", "New");
 					if(sName){
 						setAddResult=aa.set.add(sName,licCapId);
 						if(setAddResult.getSuccess()){
@@ -142,9 +142,9 @@ try{
 			logDebug("An error occurred retrieving the contactObj for Designated Responsible Party on record " + altId);
 	}	
 } catch(err){
-	logDebug("An error has occurred in asyncRunOfficialLicenseRpt: " + err.message);
+	logDebug("An error has occurred in asyncRunBalanceDueRpt: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunOfficialLicenseRpt: ",  licCapId + br + "altId: " + recNum + br + eTxt);
+	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunBalanceDueRpt: ",  licCapId + br + "altId: " + recNum + br + eTxt);
 }
  function sendApprovalNotification(emailFrom,emailTo,emailCC,templateName,params,reportFile)
 {
