@@ -38,22 +38,14 @@ try{
 			var hasFee = feeExists(thisFee.feeCode,"INVOICED");
 			if(hasFee) {
 				voidRemoveFeesByDesc(feeDesc);
-				var rFiles = [];
-				var rptParams = aa.util.newHashMap();
-				rptParams.put("altId", capId.getCustomID());
-				rFile = generateReport(capId,"Balance Due Report","Licenses",rptParams);
-				if (rFile) {
-					rFiles.push(rFile);
-				}
-				var priContact = getContactObj(vLicenseID,"Designated Responsible Party");
-				if(priContact){
-					var eParams = aa.util.newHashtable(); 
-					addParameter(eParams, "$$altId$$", capId.getCustomID());
-					addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
-					addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-					var priEmail = ""+priContact.capContact.getEmail();
-					sendNotification(sysFromEmail,priEmail,"","LCA_BALANCE_DUE",eParams,rFiles,capId);
-				}
+				var scriptName = "asyncRunBalanceDueRpt";
+				var envParameters = aa.util.newHashMap();
+				envParameters.put("altId",capId.getCustomID()); 
+				envParameters.put("reportName","Balance Due Report"); 
+				envParameters.put("contType","Designated Responsible Party"); 
+				envParameters.put("currentUserID",currentUserID);
+				envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+				aa.runAsyncScript(scriptName, envParameters);
 			}
 		}
 	}
