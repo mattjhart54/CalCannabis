@@ -26,9 +26,17 @@ try {
 						curDate =  dateFormatted(cDate.getMonth()+1,cDate.getDate(),cDate.getYear(),"YY-MM-DD");
 						logDebug("Inv " + invoiceItem[i].getInvoiceNbr() + " status " + iStatus + "inv date " + invDate + " cur date " + curDate);
 						if(curDate == invDate && iStatus == "CREDITED" ) {
-							var rParams = aa.util.newHashMap(); 
-							rParams.put("altId", capId.getCustomID());
-							emailRptContact("IFA", "LCA_BALANCE_DUE", "Balance Due Report", true,"","","Designated Responsible Party","altId",capId.getCustomID());
+				//			var rParams = aa.util.newHashMap(); 
+				//			rParams.put("altId", capId.getCustomID());
+				//			emailRptContact("IFA", "LCA_BALANCE_DUE", "Balance Due Report", true,"","","Designated Responsible Party","altId",capId.getCustomID());
+							var scriptName = "asyncRunBalanceDueRpt";
+							var envParameters = aa.util.newHashMap();
+							envParameters.put("recNum",capId.getCustomID()); 
+							envParameters.put("reportName","Balance Due Report"); 
+							envParameters.put("contType","Designated Responsible Party"); 
+							envParameters.put("currentUserID",currentUserID);
+							envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+							aa.runAsyncScript(scriptName, envParameters);
 						}
 					} 
 				}
