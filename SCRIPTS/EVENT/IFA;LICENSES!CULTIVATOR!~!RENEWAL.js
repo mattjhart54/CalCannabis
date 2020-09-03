@@ -1,15 +1,21 @@
 try {
+	var runRpt = false;
 	var invoiceItem = aa.env.getValue("InvoiceNbrArray");
-	var feeDesc = AInfo["License Type"] + " - Late Fee";
-	for (i in invoiceItem) {
-		var feeResult = aa.finance.getFeeItemInvoiceByInvoiceNbr(capId,invoiceItem[i],null);
-		if(feeResult.getSuccess()) {
-			feeItem = feeResult.getOutput();
-			for(f in feeItem) {
-				var feeStatus = feeItem[f].getFeeitemStatus();
-				var feeItemDesc = feeItem[f].getFeeDescription();
-				logDebug("Inv " + invoiceItem[i] + " status " + feeStatus + "fee desc " + feeItemDesc);
-				if(feeStatus == "CREDITED" && feeDesc == feeItemDesc) {
+	appTypeArray = appTypeString.split("/");
+	if(appTypeArray[3] == "Renewal") {
+		for (i in invoiceItem) {
+			var feeResult = aa.finance.getFeeItemInvoiceByInvoiceNbr(capId,1517,null);
+			if(feeResult.getSuccess()) {
+				feeItem = feeResult.getOutput();
+				for(f in feeItem) {
+					var feeStatus = feeItem[f].getFeeitemStatus();
+					var feeItemDesc = feeItem[f].getFeeDescription();
+					logDebug("Inv " + 1517 + " status " + feeStatus + "fee desc " + feeItemDesc);
+					if(feeStatus == "CREDITED") {
+						runRpt = true;
+					}
+				}
+				if(runRpt) {
 					logDebug("Run Report");
 					var scriptName = "asyncRunBalanceDueRpt";
 					var envParameters = aa.util.newHashMap();
