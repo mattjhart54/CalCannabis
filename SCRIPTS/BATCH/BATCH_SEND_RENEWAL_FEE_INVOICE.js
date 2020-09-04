@@ -162,9 +162,7 @@ function mainProcess() {
 						if (!matches(invNbr,null,undefined,"")){
 							iFound = true;
 							var parameters = aa.util.newHashMap(); 
-							parameters.put("capID",altId);
-							parameters.put("invoiceNbr", String(invNbr));
-							parameters.put("agencyId", "CALCANNABIS");
+							parameters.put("altId",altId);
 							report.setReportParameters(parameters);
 							var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
 							if(permit.getOutput().booleanValue()) { 
