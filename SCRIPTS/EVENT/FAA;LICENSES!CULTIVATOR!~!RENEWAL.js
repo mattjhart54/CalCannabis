@@ -13,7 +13,7 @@ try{
 			if(curDateFormatted == feeDateFormatted && feeStatus == "INVOICED"){
 				var scriptName = "asyncRunBalanceDueRpt";
 				var envParameters = aa.util.newHashMap();
-				envParameters.put("altId",capId.getCustomID()); 
+				envParameters.put("recNum",capId.getCustomID()); 
 				envParameters.put("reportName","Balance Due Report"); 
 				envParameters.put("contType","Designated Responsible Party"); 
 				envParameters.put("currentUserID",currentUserID);
