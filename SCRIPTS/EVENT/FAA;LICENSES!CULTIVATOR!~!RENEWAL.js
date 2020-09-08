@@ -23,6 +23,7 @@ try{
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
 				aa.runAsyncScript(scriptName, envParameters);
+				break;
 			}
 		}
 	}
