@@ -4,13 +4,13 @@ try {
 	appTypeArray = appTypeString.split("/");
 	if(appTypeArray[3] == "Renewal") {
 		for (i in invoiceItem) {
-			var feeResult = aa.finance.getFeeItemInvoiceByInvoiceNbr(capId,1517,null);
+			var feeResult = aa.finance.getFeeItemInvoiceByInvoiceNbr(capId,invoiceItem[i],null);
 			if(feeResult.getSuccess()) {
 				feeItem = feeResult.getOutput();
 				for(f in feeItem) {
 					var feeStatus = feeItem[f].getFeeitemStatus();
 					var feeItemDesc = feeItem[f].getFeeDescription();
-					logDebug("Inv " + 1517 + " status " + feeStatus + "fee desc " + feeItemDesc);
+					logDebug("Inv " + invoiceItem[i] + " status " + feeStatus + "fee desc " + feeItemDesc);
 					if(feeStatus == "CREDITED") {
 						runRpt = true;
 					}
