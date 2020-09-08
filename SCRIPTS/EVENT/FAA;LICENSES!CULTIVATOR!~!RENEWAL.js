@@ -10,9 +10,7 @@ try{
 			cDate = new Date();
 			curDateFormatted =  dateFormatted(cDate.getMonth()+1,cDate.getDate(),cDate.getFullYear(),"YY-MM-DD");
 			feeDateFormatted = dateFormatted(feeDate.getMonth(),feeDate.getDayOfMonth(),feeDate.getYear(),"YY-MM-DD");
-			logDebug("feeStatus: " + feeStatus + " feeDateFormatted: " + feeDateFormatted);
-			if(curDateFormatted == feeDateFormatted && feeStatus == "INVOICED"){
-				logDebug("within");
+			if(curDateFormatted == feeDateFormatted && feeStatus == "INVOICED"){;
 				var scriptName = "asyncRunBalanceDueRpt";
 				var envParameters = aa.util.newHashMap();
 				envParameters.put("altId",capId.getCustomID()); 
