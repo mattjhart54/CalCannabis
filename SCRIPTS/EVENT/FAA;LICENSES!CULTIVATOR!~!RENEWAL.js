@@ -6,10 +6,7 @@ try{
 		feeItem = feeResult.getOutput();
 		for(f in feeItem) {
 			var feeStatus = feeItem[f].getFeeitemStatus();
-			var feeItemDesc = feeItem[f].getFeeDescription();
-			var feeSeqNum = feeItem[f].getFeeSeqNbr();
 			var feeDate = feeItem[f].getApplyDate();
-			var jsFeeDate = new Date();
 			cDate = new Date();
 			curDateFormatted =  dateFormatted(cDate.getMonth()+1,cDate.getDate(),cDate.getFullYear(),"YY-MM-DD");
 			feeDateFormatted = dateFormatted(feeDate.getMonth(),feeDate.getDayOfMonth(),feeDate.getYear(),"YY-MM-DD");
