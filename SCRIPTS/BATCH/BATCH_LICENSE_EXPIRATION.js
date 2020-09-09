@@ -195,6 +195,7 @@ try{
 	var capDeactivated = 0;
 	var capCount = 0;
 	var setName;
+	var renAltId = "";
 	var setDescription;
 	var setCreated = false;
 	var yy = startDate.getFullYear().toString().substr(2, 2);
@@ -317,6 +318,9 @@ try{
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
 			if (renewalCapProject != null) {
 				var renCapId = renewalCapProject.getCapID();
+				var renewalCap = aa.cap.getCap(renCapId).getOutput();
+				var renAltId = String(renewalCap.getCapID().getCustomID());;
+				logDebug("renCapId: " + renCapId + " renAltId: " + renAltId);
 				if (!renCapId.toString().contains("EST")){
 					var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee";
 					var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
@@ -384,12 +388,16 @@ try{
 						if (typeof(rptName) == "object"){
 							for (i = 0; i < rptName.length; i++) {
 								thisRptName = String(rptName[i]);
-								runReportAttach(capId,thisRptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",altId);								
+								if (thisRptName == "Balance Due Report"){
+									runReportAttach(capId,thisRptName,"altId",renAltId);
+								}else{
+									runReportAttach(capId,thisRptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
+								}
 							}
 						}else{
-							runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",altId); 
+							runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",renAltId); 
 						}
-						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",altId);
+						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",renAltId);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
 				}
