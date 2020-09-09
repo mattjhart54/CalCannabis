@@ -398,7 +398,13 @@ try{
 				logDebug("No contact found for notification: " + altId);
 			}
 		}
-
+		//Remove Balance Due Report from rptName Array and prepare for next record;
+		logDebug("rptName: " + rptName);
+		var index = rptName.indexOf("Balance Due Report");
+		if (index > -1) {
+		  rptName.splice(index, 1);
+		  logDebug("rptName: " + rptName);
+		}
 	}
 	logDebug("========================================");
 	logDebug("Total CAPS qualified date range: " + myExp.length);
