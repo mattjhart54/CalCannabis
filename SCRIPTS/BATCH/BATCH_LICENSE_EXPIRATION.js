@@ -339,6 +339,7 @@ try{
 							if (!matches(rptName,null,undefined,"")){
 								rptName.push("Balance Due Report");
 							}
+							runReportAttach(capId,thisRptName,"altId",renAltId);
 						}
 						capId = holdId;
 					}else{
@@ -389,7 +390,7 @@ try{
 							for (i = 0; i < rptName.length; i++) {
 								thisRptName = String(rptName[i]);
 								if (thisRptName == "Balance Due Report"){
-									runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",renAltId);
+									runReportAttach(capId,thisRptName,"altId",renAltId);
 								}else{
 									runReportAttach(capId,thisRptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
 								}
