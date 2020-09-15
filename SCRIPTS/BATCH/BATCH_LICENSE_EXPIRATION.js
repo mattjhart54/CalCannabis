@@ -339,7 +339,7 @@ try{
 							if (!matches(rptName,null,undefined,"")){
 								rptName.push("Balance Due Report");
 							}
-							runReportAttach(capId,thisRptName,"altId",renAltId);
+							runReportAttach(capId,"Balance Due Report","altId",renAltId);
 						}
 						capId = holdId;
 					}else{
