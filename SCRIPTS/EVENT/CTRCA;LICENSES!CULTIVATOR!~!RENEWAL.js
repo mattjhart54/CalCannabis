@@ -30,6 +30,9 @@ try{
 // Copy business contact from license
 	copyContactsByType(vLicenseID,capId,"Designated Responsible Party");
 	copyContactsByType(vLicenseID,capId,"Business");
+	pInfo = new Array;
+	loadAppSpecific(pInfo,vLicenseID); 
+	updateWorkDesc(pInfo["Legal Business Name"]);
 // Add condition effective in thirty days if Late Fee not paid	
 	b1ExpResult = aa.expiration.getLicensesByCapID(vLicenseID);
 	var curDate = new Date();
