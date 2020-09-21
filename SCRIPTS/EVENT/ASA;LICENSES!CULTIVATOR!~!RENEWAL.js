@@ -12,6 +12,7 @@ try{
 	var pStatus = pCap.getCapStatus();
 	b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
 	var curDate = new Date();
+	var curDateFormat = curDate.getMonth() + 1 + "/" + curDate.getDate() + "/" + curDate.getFullYear();
 	if (b1ExpResult.getSuccess()) {
 		this.b1Exp = b1ExpResult.getOutput();
 		expDate = this.b1Exp.getExpDate();
@@ -55,8 +56,7 @@ try{
 				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
 			}
-			var tmpDate = new Date(tmpExpDate);
-			if(tmpDate <= curDate) {
+			if(tmpExpDate < curDateFormat) {
 				var feeDesc = pInfo["License Type"] + " - Late Fee";
 				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 				if(thisFee){
@@ -73,7 +73,7 @@ try{
 		}
 	}else{
 		//Check to see if late fee is needed after ACA review.  Used for records saved before expiration and submitted after expiration.
-		if(tmpDate <= curDate) {
+		if(tmpExpDate < curDateFormat) {
 			var feeDesc = getAppSpecific("License Type",parentCapId) + " - Late Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
