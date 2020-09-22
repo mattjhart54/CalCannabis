@@ -166,14 +166,14 @@ try {
 				}
 			}			
 			if(wfStatus == "Transition Amendment Approved") {
-				if(AInfo["Transition"] == "Yes") {
+//				if(AInfo["Transition"] == "Yes") {
 					editAppSpecific("License Issued Type", "Annual",parentCapId);
 					var licType = getAppSpecific("License Type",parentCapId);
 					var cType = getAppSpecific("Cultivator Type",parentCapId);
 					editAppName("Annual " + cType + " - " + licType,parentCapId);
 					editAppSpecific("Transition Date",jsDateToASIDate(new Date()),parentCapId);
 					updateCat = true;
-				}
+//				}
 			//Run Official License Certificate and Transistion Approval Letter and email the DRP	
 				var scriptName = "asyncRunOfficialLicenseRpt";
 				var envParameters = aa.util.newHashMap();
