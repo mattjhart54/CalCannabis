@@ -1,11 +1,10 @@
 try{
 	if(documentUploadedFrom == "ACA"){
 		var workflowResult = aa.workflow.getTasks(capId);
-		if (workflowResult.getSuccess())
+		if (workflowResult.getSuccess()){
 			var wfObj = workflowResult.getOutput();
-		else 	{ 
-			logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage()); 
-			return false; 
+		}else{ 
+			logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage());  
 		}
 		var fTask;
 		var wftask;
