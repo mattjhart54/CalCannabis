@@ -1,5 +1,6 @@
 try{
 	if(documentUploadedFrom == "ACA"){
+		var denyAttachment = false;
 		var workflowResult = aa.workflow.getTasks(capId);
 		if (workflowResult.getSuccess()){
 			var wfObj = workflowResult.getOutput();
@@ -10,13 +11,23 @@ try{
 		var wftask;
 		for (i in wfObj) {
 			fTask = wfObj[i];
-			if(matches(fTask.getTaskDescription(),"Science Amendment Review","Science Manager Review")){
-				if (matches(fTask.getDisposition(),"Amendment Rejected","Recommended for Transition","Physical Modification Approved","Approved for Provisional Renewal","In Progress","Revisions Required","Transition Amendment Approved")){
-					cancel = true;		
-					showMessage = true;
-					comment("The Science Amendment has been finalized. To upload additional documents, please submit a new Science Amendment. For further questions please contact CalCannabis at 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.");
+			if(String(fTask.getTaskDescription()) == "Science Amendment Review"){
+				if (matches(String(fTask.getDisposition()),"Amendment Rejected","Recommended for Transition","Physical Modification Approved","Approved for Provisional Renewal")){
+					denyAttachment = true;
+					break;
+				}
+			}
+			if(String(fTask.getTaskDescription()) == "Science Manager Review")){
+				if (matches(fTask.getDisposition(),"In Progress","Revisions Required","Transition Amendment Approved")){
+					denyAttachment = true
+					break;
 				}
 			}		
+		}
+		if (denyAttachment){
+			cancel = true;		
+			showMessage = true;
+			comment("The Science Amendment has been finalized. To upload additional documents, please submit a new Science Amendment. For further questions please contact CalCannabis at 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.");
 		}
 	}
 }catch(err){
