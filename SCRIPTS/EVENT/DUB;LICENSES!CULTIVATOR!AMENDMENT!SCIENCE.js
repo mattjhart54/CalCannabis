@@ -17,7 +17,7 @@ try{
 					break;
 				}
 			}
-			if(String(fTask.getTaskDescription()) == "Science Manager Review")){
+			if(String(fTask.getTaskDescription()) == "Science Manager Review"){
 				if (matches(fTask.getDisposition(),"In Progress","Revisions Required","Transition Amendment Approved")){
 					denyAttachment = true
 					break;
