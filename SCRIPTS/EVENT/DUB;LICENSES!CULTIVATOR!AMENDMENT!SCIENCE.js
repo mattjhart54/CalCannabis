@@ -11,17 +11,24 @@ try{
 		var wftask;
 		for (i in wfObj) {
 			fTask = wfObj[i];
-			if(String(fTask.getTaskDescription()) == "Science Amendment Review"){
-				if (matches(String(fTask.getDisposition()),"Amendment Rejected","Recommended for Transition","Physical Modification Approved","Approved for Provisional Renewal")){
+			if(fTask.getTaskDescription().equals("Science Amendment Review")){
+				if (matches(fTask.getDisposition(),"Amendment Rejected","Recommended for Transition","Physical Modification Approved","Approved for Provisional Renewal")){
 					denyAttachment = true;
 					break;
 				}
 			}
-			if(String(fTask.getTaskDescription()) == "Science Manager Review"){
-				if (matches(fTask.getDisposition(),"In Progress","Revisions Required","Transition Amendment Approved")){
+			if(fTask.getTaskDescription().equals("Science Manager Review")){
+				if (matches(fTask.getDisposition(),"Revisions Required","Transition Amendment Approved")){
 					denyAttachment = true
 					break;
 				}
+				if (fTask.getActiveFlag().equals("Y")){
+					if (fTask.getDisposition().equals("In Progress")){
+						denyAttachment = true
+						break;
+					}
+				}
+					
 			}		
 		}
 		if (denyAttachment){
