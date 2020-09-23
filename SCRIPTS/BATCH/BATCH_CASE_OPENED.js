@@ -122,9 +122,8 @@ try{
 
 	for (aps in apsArray)
 		{
-		myCap = aa.cap.getCap(apsArray[aps].getCapID()).getOutput();
 		capId = aa.cap.getCapID(apsArray[aps].getCapID().getID1(),apsArray[aps].getCapID().getID2(),apsArray[aps].getCapID().getID3()).getOutput();
-		myAppTypeString = myCap.getCapType().toString();
+		myAppTypeString = aa.cap.getCap(capId).getOutput().getCapType().toString();
 
 		isMatch = true;
 		logDebug("myAppTypeArray: " + myAppTypeString);
