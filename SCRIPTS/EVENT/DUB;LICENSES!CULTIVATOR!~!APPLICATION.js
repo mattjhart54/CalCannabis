@@ -64,7 +64,7 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in DUB:LICENSES/CULTIVATOR/AMENDMENT/SCIENCE: No Documents: " + err.message);
+	logDebug("An error has occurred in DUB:LICENSES/CULTIVATOR/*/APPLICATION: Upload Document: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in DUB:LICENSES/CULTIVATOR/AMENDMENT/SCIENCE: No Documents: "+ startDate, capId + br+ err.message+ br+ err.stack + br + "DOCUMENT ARRAY: " + documentModel);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in DUB:LICENSES/CULTIVATOR/*/APPLICATION: Upload Document: "+ startDate, capId + br+ err.message+ br+ err.stack + br + "DOCUMENT ARRAY: ");
 }
