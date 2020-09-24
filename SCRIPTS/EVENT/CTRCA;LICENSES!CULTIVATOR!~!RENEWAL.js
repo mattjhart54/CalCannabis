@@ -42,8 +42,10 @@ try{
 		if(expDate) {
 			tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
 			curDateFormat = curDate.getMonth() + 1 + "/" + curDate.getDate() + "/" + curDate.getFullYear();
+			var tmpDate = new Date(tmpExpDate);
+			curDate = new Date(curDateFormat);
 	
-			if(tmpExpDate < curDateFormat) {
+			if(tmpDate < curDate) {
 				var feeDesc = AInfo["License Type"] + " - Late Fee";
 				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 				if(thisFee){
