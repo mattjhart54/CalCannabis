@@ -3,7 +3,7 @@ try{
 		pId = getParent();
 		pCap = aa.cap.getCap(pId).getOutput();
 		pStatus = pCap.getCapStatus();
-		if(pStatus == "Disquaified" || capStatus == "Disqualified") {
+		if(pStatus == "Disqualified" || capStatus == "Disqualified") {
 			cancel = true;		
 			showMessage = true;
 			comment("This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling (833) CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.");
