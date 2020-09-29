@@ -13,13 +13,20 @@ try{
 		var wftask;
 		for (i in wfObj) {
 			fTask = wfObj[i];
+			
+			if(fTask.getTaskDescription().equals("Administrative Manager Review")){
+				if (fTask.getDisposition().equals("Disqualified")){
+					denyAttachment = true
+					errorMessage = "This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling (833) CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
+				}
+			}						
 			if(fTask.getTaskDescription().equals("Scientific Review")){
 				if (fTask.getDisposition().equals("Scientific Review Completed")){
 					denyAttachment = true;
 				}
 			}
 			if(fTask.getTaskDescription().equals("Science Manager Review")){
-				if (matches(fTask.getDisposition(),"In Progress","Recommended for Denial","Science Manager Review Completed")){
+				if (matches(fTask.getDisposition(),"Recommended for Denial","Science Manager Review Completed")){
 					denyAttachment = true
 				}
 				if (fTask.getDisposition().equals("Disqualified")){
