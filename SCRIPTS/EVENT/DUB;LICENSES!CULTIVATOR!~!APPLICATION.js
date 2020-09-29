@@ -45,9 +45,6 @@ try{
 				}
 			}
 			if(fTask.getTaskDescription().equals("License Manager")){
-				if (fTask.getDisposition().equals("Denied")){
-					denyAttachment = true
-				}
 				if (fTask.getActiveFlag().equals("Y")){
 					if (fTask.getDisposition().equals("Revisions Required")){
 						denyAttachment = true
