@@ -9,49 +9,25 @@ try{
 		}else{ 
 			logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage());  
 		}
-		var fTask;
-		var wftask;
-		for (i in wfObj) {
-			fTask = wfObj[i];
-			
-			if(fTask.getTaskDescription().equals("Administrative Manager Review")){
-				if (fTask.getDisposition().equals("Disqualified")){
-					denyAttachment = true
-					errorMessage = "This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling (833) CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
-				}
-			}						
-			if(fTask.getTaskDescription().equals("Scientific Review")){
-				if (fTask.getDisposition().equals("Scientific Review Completed")){
+		var activeTask = false;
+		for (i in wfObj){
+			if (wfObj[i].getActiveFlag().equals("Y")){
+				if (matches(wfObj[i].getTaskDescription(),"License Manager", "Final Review", "Application Disposition") && wfObj[i].getDisposition() != ("Denied")){
 					denyAttachment = true;
 				}
-			}
-			if(fTask.getTaskDescription().equals("Science Manager Review")){
-				if (matches(fTask.getDisposition(),"Recommended for Denial","Science Manager Review Completed")){
-					denyAttachment = true
-				}
-				if (fTask.getDisposition().equals("Disqualified")){
-					denyAttachment = true
+			}else{
+				if (wfObj[i].getDisposition().equals("Disqualified")){
+					denyAttachment = true;
 					errorMessage = "This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling (833) CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
+					break;
+				}
+				if (matches(wfObj[i].getDisposition(),"Closed","Provisional License Issued","License Issued")){
+					denyAttachment = true;
+					break;
 				}
 			}
-			if(fTask.getTaskDescription().equals("Final Review")){
-				if (matches(fTask.getDisposition(),"Approved for Annual License","Approved for Provisional License")){
-					denyAttachment = true
-				}
-			}
-			if(fTask.getTaskDescription().equals("Application Disposition")){
-				if (matches(fTask.getDisposition(),"Closed","License Issued","Provisional License Issued")){
-					denyAttachment = true
-				}
-			}
-			if(fTask.getTaskDescription().equals("License Manager")){
-				if (fTask.getActiveFlag().equals("Y")){
-					if (fTask.getDisposition().equals("Revisions Required")){
-						denyAttachment = true
-					}
-				}
-			}					
 		}
+		
 		if (denyAttachment){
 			cancel = true;		
 			showMessage = true;
