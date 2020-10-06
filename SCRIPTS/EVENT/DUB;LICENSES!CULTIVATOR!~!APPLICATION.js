@@ -9,16 +9,33 @@ try{
 		}else{ 
 			logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage());  
 		}
+<<<<<<< .mine
+		var fTask;
+		var wftask;
+		for (i in wfObj) {
+			fTask = wfObj[i];
+			
+			if(fTask.getTaskDescription().equals("Administrative Manager Review")){
+				if (fTask.getDisposition().equals("Disqualified")){
+					denyAttachment = true
+					errorMessage = "This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
+				}
+			}						
+			if(fTask.getTaskDescription().equals("Scientific Review")){
+				if (fTask.getDisposition().equals("Scientific Review Completed")){
+||||||| .r3503
+=======
 		var activeTask = false;
 		for (i in wfObj){
 			if (wfObj[i].getActiveFlag().equals("Y")){
 				if (matches(wfObj[i].getTaskDescription(),"License Manager", "Final Review", "Application Disposition") && wfObj[i].getDisposition() != ("Denied")){
+>>>>>>> .r3505
 					denyAttachment = true;
 				}
 			}else{
 				if (wfObj[i].getDisposition().equals("Disqualified")){
 					denyAttachment = true;
-					errorMessage = "This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling (833) CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
+					errorMessage = "This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
 					break;
 				}
 				if (matches(wfObj[i].getDisposition(),"Closed","Provisional License Issued","License Issued")){
