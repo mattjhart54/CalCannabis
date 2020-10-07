@@ -2,7 +2,7 @@ try{
 	if(documentUploadedFrom == "ACA"){
 		var denyAttachment = false;
 		var disqualifiedStatus = false;
-		var errorMessage = "To upload additional documents, please submit a new amendment. For further questions please contact CalCannabis at 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
+		var errorMessage = "Document upload not allowed. Please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
 		var workflowResult = aa.workflow.getTasks(capId);
 		if (workflowResult.getSuccess()){
 			var wfObj = workflowResult.getOutput();
@@ -18,7 +18,7 @@ try{
 			}else{
 				if (wfObj[i].getDisposition().equals("Disqualified")){
 					denyAttachment = true;
-					errorMessage = "This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling (833) CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
+					errorMessage = "This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
 					break;
 				}
 				if (matches(wfObj[i].getDisposition(),"Closed","Provisional License Issued","License Issued")){
