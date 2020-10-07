@@ -12,7 +12,7 @@ try{
 		var activeTask = false;
 		for (i in wfObj){
 			if (wfObj[i].getActiveFlag().equals("Y")){
-				if (matches(wfObj[i].getTaskDescription(),"License Manager", "Final Review", "Application Disposition") && wfObj[i].getDisposition() != ("Denied")){
+				if (matches(wfObj[i].getTaskDescription(),"Science Manager Review","License Manager", "Final Review", "Application Disposition") && wfObj[i].getDisposition() != ("Denied")){
 					denyAttachment = true;
 				}
 			}else{
