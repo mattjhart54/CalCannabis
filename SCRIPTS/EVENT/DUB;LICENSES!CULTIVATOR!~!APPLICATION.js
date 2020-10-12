@@ -11,13 +11,13 @@ try{
 		}
 		var activeTask = false;
 		for (i in wfObj){
+			if (wfObj[i].getTaskDescription().equals("Scientific Review") && wfObj[i].getDisposition().equals("Additional Information Needed")){
+				denyAttachment = true;
+				errorMessage = "Document upload not allowed in the application. To upload additional documents, utilize the deficiency record (ending in DEF##T or DEF##). For further questions please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to cdfa.CalCannabis_Scientists@cdfa.ca.gov.";
+			}
 			if (wfObj[i].getActiveFlag().equals("Y")){
 				if (matches(wfObj[i].getTaskDescription(),"Science Manager Review","License Manager", "Final Review", "Application Disposition") && wfObj[i].getDisposition() != ("Denied")){
 					denyAttachment = true;
-				}
-				if (wfObj[i].getTaskDescription().equals("Scientific Review") && wfObj[i].getDisposition().equals("Additional Information Needed")){
-					denyAttachment = true;
-					errorMessage = "Document upload not allowed in the application. To upload additional documents, utilize the deficiency record (ending in DEF##T or DEF##). For further questions please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to cdfa.CalCannabis_Scientists@cdfa.ca.gov.";
 				}
 			}else{
 				if (wfObj[i].getDisposition().equals("Disqualified")){
@@ -28,10 +28,6 @@ try{
 				if (matches(wfObj[i].getDisposition(),"Closed","Provisional License Issued","License Issued")){
 					denyAttachment = true;
 					break;
-				}
-				if (wfObj[i].getTaskDescription().equals("Scientific Review") && wfObj[i].getDisposition().equals("Additional Information Needed")){
-					denyAttachment = true;
-					errorMessage = "Document upload not allowed in the application. To upload additional documents, utilize the deficiency record (ending in DEF##T or DEF##). For further questions please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to cdfa.CalCannabis_Scientists@cdfa.ca.gov.";
 				}
 			}
 		}
