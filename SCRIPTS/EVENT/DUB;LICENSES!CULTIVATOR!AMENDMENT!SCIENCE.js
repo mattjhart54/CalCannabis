@@ -1,14 +1,16 @@
 try{
-	if(documentUploadedFrom == "ACA"){
-		var allowAttachment = false;
-		if (isTaskActive("Science Amendment Review")){
-			allowAttachment = true;
-		}
-			
-		if (!allowAttachment){
-			cancel = true;		
-			showMessage = true;
-			comment("The Science Amendment has been finalized. To upload additional documents, please submit a new Science Amendment. For further questions please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to cdfa.CalCannabis_Scientists@cdfa.ca.gov.");
+	var capIdStatusClass = getCapIdStatusClass(capId);
+	if (capIdStatusClass == "COMPLETE") {
+		if(documentUploadedFrom == "ACA"){
+			var allowAttachment = false;
+			if (isTaskActive("Science Amendment Review")){
+				allowAttachment = true;
+			}	
+			if (!allowAttachment){
+				cancel = true;		
+				showMessage = true;
+				comment("The Science Amendment has been finalized. To upload additional documents, please submit a new Science Amendment. For further questions please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to cdfa.CalCannabis_Scientists@cdfa.ca.gov.");
+			}
 		}
 	}
 }catch(err){
