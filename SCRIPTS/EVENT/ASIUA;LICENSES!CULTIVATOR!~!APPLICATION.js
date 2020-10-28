@@ -141,7 +141,15 @@ try {
 				addRow = true;
 				tblLSA[r]["New Row"] = "UNCHECKED";
 				thisLSA = LAKEANDSTREAMBEDALTERATION[r];
+				thisLSA["New Row"] = "UNCHECKED";
 				thisLSA["Covered Activity"] = "";
+				thisLSA["LSA Detail Latitude"] = "";
+				thisLSA["LSA Detail Longitude"] = "";
+				thisLSA["Covered Activity"] = "";
+				thisLSA["APN"] = "";
+				thisLSA["APN Lattitude"] = "";
+				thisLSA["APN Longitude"] = "";
+				thisLSA["Adjacent APN"] = "";	
 				tblLSA.push(thisLSA);
 			}
 		}
