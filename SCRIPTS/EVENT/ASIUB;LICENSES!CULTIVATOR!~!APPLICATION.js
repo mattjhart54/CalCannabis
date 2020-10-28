@@ -19,3 +19,32 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Percent Ownership: "+ startDate, capId + "; " + err.message+ "; "+ err.stack);
 }
+try{
+	if(matches(AInfo["LSA Review Status"],"Annual", "Provisional")) {
+		var cmplt = true;
+		if(!matches(AInfo["APN Matches Premises"],"Yes","N/A","No")) {
+			cmplt = false;
+		}
+		if(!matches(AInfo["APN Matches Adjacent Parcel"],"Yes","N/A","No")) {
+			cmplt = false;
+		}
+		for(r in LAKEANDSTREAMBEDALTERATION) {
+			if(matches(LAKEANDSTREAMBEDALTERATION[r]["LSA ID Number"], null,"",undefined)) {
+				cmplt = false;
+			}
+			if(matches(LAKEANDSTREAMBEDALTERATION[r]["Document Type"], null,"",undefined)) {
+			 	cmplt = false;
+			}
+		}
+		
+		if(!cmplt) {
+			cancel = true;
+			showMessage = true;
+			comment("The LSA Review Status cannot be marked Complete as at least one of the fields is insufficient.");
+		}
+	}
+}catch(err){
+	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: LSA Review Complete: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: LSA Review Complete: "+ startDate, capId + br+ err.message+ br+ err.stack);
+}
