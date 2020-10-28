@@ -132,3 +132,21 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: Send Local Auth: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
+try {
+	var tblLSA = loadASITable("LAKE AND STREAMBED ALTERATION");
+	if(LAKEANDSTREAMBEDALTERATION.length>0) {
+		for(r in LAKEANDSTREAMBEDALTERATION) {
+			logDebug(" LSA" + LAKEANDSTREAMBEDALTERATION[r]["LSA ID Number"]);
+			if(LAKEANDSTREAMBEDALTERATION[r]["New Row"] == "CHECKED") {
+				tblLSA[r]["New Row"] = "UNCHECKED";
+				thisLSA = LAKEANDSTREAMBEDALTERATION[r];
+				thisLSA["Covered Activity"] = "";
+				tblLSA.push(thisLSA);
+			}
+		}
+		removeASITable("LAKE AND STREAMBED ALTERATION");
+		addASITable("LAKE AND STREAMBED ALTERATION",tblLSA);
+}catch (err){
+	logDebug("A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: Update LSA table: " + err.message);
+	logDebug(err.stack);
+}
