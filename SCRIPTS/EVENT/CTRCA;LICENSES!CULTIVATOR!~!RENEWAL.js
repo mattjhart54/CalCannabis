@@ -21,6 +21,7 @@ try{
 		}
 		newAltId = vLicenseAltId + "-R" + renewNbr;
 		var resAltId = aa.cap.updateCapAltID(capId,newAltId);
+		aa.env.setValue("capAltID", newAltId);
 		if(resAltId.getSuccess()==true){
 			logDebug("Alt ID set to " + newAltId);
 		}else{
