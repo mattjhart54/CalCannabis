@@ -146,6 +146,7 @@ try {
 		}
 		removeASITable("LAKE AND STREAMBED ALTERATION");
 		addASITable("LAKE AND STREAMBED ALTERATION",tblLSA);
+	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: Update LSA table: " + err.message);
 	logDebug(err.stack);
