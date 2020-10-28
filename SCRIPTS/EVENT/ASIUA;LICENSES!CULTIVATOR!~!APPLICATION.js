@@ -147,7 +147,7 @@ try {
 				thisLSA["LSA Detail Longitude"] = "";
 				thisLSA["Covered Activity"] = "";
 				thisLSA["APN"] = "";
-				thisLSA["APN Lattitude"] = "";
+				thisLSA["APN Latitude"] = "";
 				thisLSA["APN Longitude"] = "";
 				thisLSA["Adjacent APN"] = "";	
 				tblLSA.push(thisLSA);
