@@ -28,11 +28,11 @@ try{
 		if(!matches(AInfo["APN Matches Adjacent Parcel"],"Yes","N/A","No")) {
 			cmplt = false;
 		}
-		for(r in LAKEANDSTREAMBEDALTERATION) {
-			if(matches(LAKEANDSTREAMBEDALTERATION[r]["LSA ID Number"], null,"",undefined)) {
+		for(ls in LAKEANDSTREAMBEDALTERATION) {
+			if(matches(LAKEANDSTREAMBEDALTERATION[ls]["LSA ID Number"], null,"",undefined)) {
 				cmplt = false;
 			}
-			if(matches(LAKEANDSTREAMBEDALTERATION[r]["Document Type"], null,"",undefined)) {
+			if(matches(LAKEANDSTREAMBEDALTERATION[ls]["Document Type"], null,"",undefined)) {
 			 	cmplt = false;
 			}
 		}
@@ -46,13 +46,13 @@ try{
 	if(AInfo["Water Rights Review Status"] == "Complete") {
 		wsRows = 0;
 		wrRows = 0;
-		for(r in SOURCEOFWATERSUPPLY) {
-			if(SOURCEOFWATERSUPPLY[r]["Type of Water Supply"] == "Diversion from Waterbody") {
+		for(ws in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[ws]["Type of Water Supply"] == "Diversion from Waterbody") {
 				wsRows = wsRows + 1;
 			}
 		}
-			for(r in WATERRIGHTS) {
-			if(WATERRIGHTS[r]["Currently used for Cannabis?"] != "No") {
+			for(wr in WATERRIGHTS) {
+			if(WATERRIGHTS[wr]["Currently used for Cannabis?"] != "No") {
 				wrRows = wrRows + 1;
 			}
 		}
@@ -63,24 +63,42 @@ try{
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
 		}
 	}
-	if(AInfo["Rainwater Catchment Review Status"] == "Complete") {
+		if(AInfo["Rainwater Catchment Review Status"] == "Complete") {
 		wsRows = 0;
 		rcRows = 0;
-		for(r in SOURCEOFWATERSUPPLY) {
-			if(SOURCEOFWATERSUPPLY[r]["Type of Water Supply"] == "Rainwater Catchment System") {
+		cmplt = true;
+		for(ws in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[ws]["Type of Water Supply"] == "Rainwater Catchment System") {
 				wsRows = wsRows + 1;
 			}
 		}
-			for(r in RAINWATERCATCHMENT) {
-			if(RAINWATERCATCHMENT[r]["Currently used for Cannabis?"] != "No") {
+		for(rc in RAINWATERCATCHMENT) {
+			if(RAINWATERCATCHMENT[rc]["Currently Used for Cannabis?"] != "No") 
 				rcRows = rcRows + 1;
-			}
+			if(RAINWATERCATCHMENT[rc]["Total Square footage of catchment footprint"] != "Yes")
+				cmplt = false;
+			if(RAINWATERCATCHMENT[rc]["Total storage capacity"] != "Yes")
+				cmplt = false;
+			if(RAINWATERCATCHMENT[rc]["Detailed description of the type, nature, and location of each catchment surface"] != "Yes")
+				cmplt = false;
+			if(RAINWATERCATCHMENT[rc]["Photos of the rainwater catchment system infrastructure"] != "Yes")
+				cmplt = false;
+			if(!matches(RAINWATERCATCHMENT[rc]["Currently Used for Cannabis?"], "Yes", "No"))
+				cmplt = false;
+			if(matches(RAINWATERCATCHMENT[rc]["Catchment Latitude"], null,"", undefined))
+				cmplt = false;
+			if(matches(RAINWATERCATCHMENT[rc]["Catchment Longitude"], null,"", undefined))
+				cmplt = false;
 		}
-		logDebug("wsRows " + wsRows + " rcRows " + rcRows);
 		if(wsRows != rcRows) {
 			cancel = true;
 			showmessage = true;
 			comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+		}
+		if(!cmplt) {
+			cancel = true;
+			showmessage = true;
+			comment("The Rainwater Catchment Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
 }catch(err){
