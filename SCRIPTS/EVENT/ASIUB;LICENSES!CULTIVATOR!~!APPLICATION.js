@@ -22,7 +22,7 @@ try{
 try{
 	if(matches(AInfo["LSA Review Status"],"Annual", "Provisional")) {
 		var cmplt = true;
-		if(!matches(AInfo["APN Matches Premises"],"Yes","N/A","No")) {
+		if(!matches(AInfo["APN Matches Premises-LSA"],"Yes","N/A","No")) {
 			cmplt = false;
 		}
 		if(!matches(AInfo["APN Matches Adjacent Parcel"],"Yes","N/A","No")) {
