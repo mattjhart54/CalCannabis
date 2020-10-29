@@ -43,7 +43,7 @@ try{
 			comment("The LSA Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
-	if(AInfo["Water Rights Review Status"] == "Complete";
+	if(AInfo["Water Rights Review Status"] == "Complete");
 		wsRows = 0;
 		wrRows = 0;
 		for(r in SOURCEOFWATERSUPPLY) {
