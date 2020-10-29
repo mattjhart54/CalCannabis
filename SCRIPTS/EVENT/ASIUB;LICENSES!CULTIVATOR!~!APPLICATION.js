@@ -63,6 +63,26 @@ try{
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
 		}
 	}
+	if(AInfo["Rainwater Catchment Review Status"] == "Complete") {
+		wsRows = 0;
+		rcRows = 0;
+		for(r in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[r]["Type of Water Supply"] == "Rainwater Catchment System") {
+				wsRows = wsRows + 1;
+			}
+		}
+			for(r in RAINWATERCATCHMENT) {
+			if(RAINWATERCATCHMENT[r]["Currently used for Cannabis?"] != "No") {
+				rcRows = rcRows + 1;
+			}
+		}
+		logDebug("wsRows " + wsRows + " rcRows " + rcRows);
+		if(wsRows != rcRows) {
+			cancel = true;
+			showmessage = true;
+			comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+		}
+	}
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
