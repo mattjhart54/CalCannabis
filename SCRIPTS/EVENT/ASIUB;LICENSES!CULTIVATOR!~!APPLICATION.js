@@ -101,6 +101,43 @@ try{
 			comment("The Rainwater Catchment Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
+	
+	if(AInfo["Groundwater Well Review Status"] == "Complete") {
+		wsRows = 0;
+		gwRows = 0;
+		cmplt = true;
+		for(ws in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[ws]["Type of Water Supply"] == "Groundwater Well") {
+				wsRows = wsRows + 1;
+			}
+		}
+		for(rc in  GROUNDWATERWELL) {
+			if(GROUNDWATERWELL[rc]["Currently Used for Cannabis?"] != "No") 
+				gwRows = gwRows + 1;
+			if(!matches(GROUNDWATERWELL[rc]["Currently Used for Cannabis"],"Yes","No"))
+				cmplt = false;
+			if(!matches(GROUNDWATERWELL[rc]["APN Address Matches Premises"],"Yes","No"))
+				cmplt = false;
+			if(!matches(GROUNDWATERWELL[rc]["DWR Letter"], "Yes", "N/A"))
+				cmplt = false;
+			if(!matches(GROUNDWATERWELL[rc]["Copy of Well completion report from DWR"], "Yes", "N/A"))
+				cmplt = false;
+			if(matches(GROUNDWATERWELL[rc]["Well Latitude"], null,"", undefined))
+				cmplt = false;
+			if(matches(GROUNDWATERWELL[rc]["Well Longitude"], null,"", undefined))
+				cmplt = false;
+		}
+		if(wsRows != gwRows) {
+			cancel = true;
+			showmessage = true;
+			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+		}
+		if(!cmplt) {
+			cancel = true;
+			showmessage = true;
+			comment("The Groundwater Review Status cannot be marked Complete as at least one of the fields is insufficient.");
+		}
+	}
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
