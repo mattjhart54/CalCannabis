@@ -285,8 +285,10 @@ try{
 		editAppSpecific("Created Date", fileDate);
 // ees 20190211 story 5861 end
 try{
-	var wrTbl = new Array();
-	addRow = false
+		var wrTbl = new Array();
+	wrRow = false;
+	var rsTbl = new Array();
+	rsRow = false
 	for(r in SOURCEOFWATERSUPPLY) {
 		if(SOURCEOFWATERSUPPLY[r]["Type of Water Supply"] == "Diversion from Waterbody") {
 			thisTbl = [];
@@ -299,12 +301,26 @@ try{
 			thisTbl["Diversion Longitude"] = "";
 			thisTbl["Currently Used for Cannabis?"] = "";
 			wrTbl.push(thisTbl);
-			addRow = true;
+			wrRow = true;
+		}
+		if(SOURCEOFWATERSUPPLY[r]["Type of Water Supply"] == "Retail Supplier") {
+			thisTbl = [];
+			thisTbl["Retail Water Supplier"] = SOURCEOFWATERSUPPLY[r]["Name of Supplier"];
+			thisTbl["	Name of Retail Water Supplier	"] = "";
+			thisTbl["A copy of the most recent water service bill"] = "";
+			thisTbl["Water Bill Address Matches Premises"] = "";
+			thisTbl["Currently Used for Cannabis"] = "";
+			wrTbl.push(thisTbl);
+			rsRow = true;
 		}
 	}
-	if(addRow) {
+	if(wrRow) {
 		removeASITable("WATER RIGHTS");
 		addASITable("WATER RIGHTS",wrTbl);
+	}
+	if(rsRow) {
+		removeASITable("RETAIL WATER SUPPLIER");
+		addASITable("RETAIL WATER SUPPLIER",wrTbl);
 	}
 			
 }catch(err){
