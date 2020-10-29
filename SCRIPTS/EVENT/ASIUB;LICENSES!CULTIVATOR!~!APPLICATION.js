@@ -138,6 +138,40 @@ try{
 			comment("The Groundwater Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
+	if(AInfo["Retail Water Supplier Review Status"] == "Complete") {
+		wsRows = 0;
+		rsRows = 0;
+		cmplt = true;
+		for(ws in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[ws]["Type of Water Supply"] == "Retail Supplier") {
+				wsRows = wsRows + 1;
+			}
+		}
+		for(rs in  RETAILWATERSUPPLIER) {
+			rsRows = rsRows+1;
+			if(matches(RETAILWATERSUPPLIER[rs]["Retail Water Supplier"], null, "", undefined))
+				cmplt = false;
+			if(!matches(RETAILWATERSUPPLIER[rs]["Currently Used for Cannabis"], "Yes", "No"))
+				cmplt = false;
+			if(RETAILWATERSUPPLIER[rs]["Name of Retail Water Supplier"] != "Yes")
+				cmplt = false;
+			if(RETAILWATERSUPPLIER[rs]["A copy of the most recent water service bill"] != "Yes")
+				cmplt = false;
+			if(RETAILWATERSUPPLIER[rs]["Water Bill Address Matches Premises"] != "Yes")
+				cmplt = false;
+
+		}
+		if(wsRows != rsRows) {
+			cancel = true;
+			showmessage = true;
+			comment("The number of Retail Supplier water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+		}
+		if(!cmplt) {
+			cancel = true;
+			showmessage = true;
+			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
+		}
+	}
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
