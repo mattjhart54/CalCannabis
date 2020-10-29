@@ -111,20 +111,20 @@ try{
 				wsRows = wsRows + 1;
 			}
 		}
-		for(rc in  GROUNDWATERWELL) {
-			if(GROUNDWATERWELL[rc]["Currently Used for Cannabis?"] != "No") 
+		for(gw in  GROUNDWATERWELL) {
+			if(GROUNDWATERWELL[gw]["Currently Used for Cannabis?"] != "No") 
 				gwRows = gwRows + 1;
-			if(!matches(GROUNDWATERWELL[rc]["Currently Used for Cannabis"],"Yes","No"))
+			if(!matches(GROUNDWATERWELL[gw]["Currently Used for Cannabis"],"Yes","No"))
 				cmplt = false;
-			if(!matches(GROUNDWATERWELL[rc]["APN Address Matches Premises"],"Yes","No"))
+			if(!matches(GROUNDWATERWELL[gw]["APN Address Matches Premises"],"Yes","No"))
 				cmplt = false;
-			if(!matches(GROUNDWATERWELL[rc]["DWR Letter"], "Yes", "N/A"))
+			if(!matches(GROUNDWATERWELL[gw]["DWR Letter"], "Yes", "N/A"))
 				cmplt = false;
-			if(!matches(GROUNDWATERWELL[rc]["Copy of Well completion report from DWR"], "Yes", "N/A"))
+			if(!matches(GROUNDWATERWELL[gw]["Copy of Well completion report from DWR"], "Yes", "N/A"))
 				cmplt = false;
-			if(matches(GROUNDWATERWELL[rc]["Well Latitude"], null,"", undefined))
+			if(matches(GROUNDWATERWELL[gw]["Well Latitude"], null,"", undefined))
 				cmplt = false;
-			if(matches(GROUNDWATERWELL[rc]["Well Longitude"], null,"", undefined))
+			if(matches(GROUNDWATERWELL[gw]["Well Longitude"], null,"", undefined))
 				cmplt = false;
 		}
 		if(wsRows != gwRows) {
