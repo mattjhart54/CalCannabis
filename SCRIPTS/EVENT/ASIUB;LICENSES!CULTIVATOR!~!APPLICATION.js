@@ -172,6 +172,62 @@ try{
 			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
+		if(AInfo["Small Retail Water Supplier Review Status"] == "Complete") {
+		wsRows = 0;
+		srRows = 0;
+		cmplt = true;
+		for(ws in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[ws]["Type of Water Supply"] == "Retail Supplier") {
+				wsRows = wsRows + 1;
+			}
+		}
+		for(sr in  SMALLRETAILWATERSUPPLIERS) {
+			srRows = srRows+1;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Currently Used for Cannabis"],"Yes","No"))
+				cmplt = false;
+			if(SMALLRETAILWATERSUPPLIERS[sr]["Verified Small Retail Water Supplier "] != "Yes")
+				cmplt = false;
+			if(SMALLRETAILWATERSUPPLIERS[sr]["Water Bill Address Matches Premises"] != "Yes")
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Coordinates of any POD"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Is the water source a diversion?"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Name of Retail Water Supplier Provided?"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Water source for diversion"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Authorized place of use"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Maximum Amount of Water delivered to Applicant?"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of most recent water service bill?"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Is the water source a well?"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Name of retail supplier under the contract provided?"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Coordinates of well provided?"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Maximum amount of water delivered"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of well completion report"],"Yes","No","N/A"))
+				cmplt = false;
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of the most recent water service bill?"],"Yes","No","N/A"))
+				cmplt = false;
+		}
+		if(wsRows != srRows) {
+			cancel = true;
+			showmessage = true;
+			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+		}
+		if(!cmplt) {
+			cancel = true;
+			showmessage = true;
+			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
+		}
+	}
+	
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
