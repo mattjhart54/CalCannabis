@@ -1,12 +1,10 @@
 try{
 	//if(documentUploadedFrom == "ACA"){
-		for (x in documentModelArray){
-			logDebug(documentModelArray[x].getDocType());
-			if (documentModelArray[x].getDocType() =! "Delegate Contact"){
+		for(var index = 0; index < documentModelArray.size(); index++) {
+		logDebug(String(documentModelArray.get(index).getDocCategory()) + " " + String(documentModelArray.get(index).getDocType()));
 				cancel = true;		
 				showMessage = true;
 				comment("To upload additional documents, please submit a new amendment. For further questions please contact CalCannabis at 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.");
-			}
 		}
 	//}
 }catch(err){
