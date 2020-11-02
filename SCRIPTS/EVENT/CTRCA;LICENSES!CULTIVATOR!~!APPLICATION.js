@@ -123,3 +123,41 @@ try{
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/APPLICATION: Submission Report: "+ startDate, capId + br + err.message + br + err.stack + br + currEnv);
 }
 //mhart 181129 story 5784: end
+try{
+	var srTbl = new Array();
+	srRow = false;
+	for(xx in SOURCEOFWATERSUPPLY) {
+		if(matches(SOURCEOFWATERSUPPLY[xx]["Type of Water Supply"],"Small Retail Supplier Diversion","Small Retail Supplier - Delivery or pickup of water from a groundwater well")) {
+			thisTbl = [];
+			thisTbl["Name of Supplier"] = SOURCEOFWATERSUPPLY[xx]["Name of Supplier"];
+			thisTbl["Currently Used for Cannabis"] = "";
+			thisTbl["Verified Small Retail Water Supplier"] = "";
+			thisTbl["Water Bill Address Matches Premises"] = "";
+			thisTbl["Is the water source a diversion?"] = "";
+			thisTbl["Name of Retail Water Supplier Provided?"] = "";
+			thisTbl["Water source for diversion"] = "";
+			thisTbl["Coordinates of any POD?"] = "";
+			thisTbl["Authorized place of use"] = "";
+			thisTbl["Maximum Amount of Water delivered to Applicant?"] = "";
+			thisTbl["Copy of most recent water service bill?"] = "";
+			thisTbl["Is the water source a well?"] = "";
+			thisTbl["Name of retail supplier under the contract provided?"] = "";
+			thisTbl["Coordinates of well provided?"] = "";
+			
+			thisTbl["Maximum amount of water delivered"] = "";
+			thisTbl["Copy of well completion report"] = "";
+			thisTbl["Copy of the most recent water service bill?"] = "";
+			srTbl.push(thisTbl);
+			srRow = true;
+		}
+	}
+	if(srRow) {
+		removeASITable("SMALL RETAIL WATER SUPPLIERS");
+		addASITable("SMALL RETAIL WATER SUPPLIERS",srTbl);
+	}
+			
+}catch(err){
+	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Add SmallRetail table row: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in DUB:LICENSES/CULTIVATOR/*/APPLICATION: "+ startDate, capId + br+ err.message+ br+ err.stack);
+}
