@@ -2,7 +2,7 @@ try{
 	//if(documentUploadedFrom == "ACA"){
 		var cancelUpload = false;
 		for(var index = 0; index < documentModelArray.size(); index++) {
-			logDebug("Cat: " + String(documentModelArray.get(index).getDocCategory());
+			logDebug("Cat: " + String(documentModelArray.get(index).getDocCategory()));
 			if (String(documentModelArray.get(index).getDocCategory()) =! "Delegate Contact"){
 				logDebug("within");
 				cancelUpload = true;
