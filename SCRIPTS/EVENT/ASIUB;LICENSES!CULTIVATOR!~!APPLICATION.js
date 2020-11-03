@@ -73,8 +73,7 @@ try{
 			}
 		}
 		for(rc in RAINWATERCATCHMENT) {
-			if(RAINWATERCATCHMENT[rc]["Currently Used for Cannabis?"] != "No") 
-				rcRows = rcRows + 1;
+			rcRows = rcRows + 1;
 			if(RAINWATERCATCHMENT[rc]["Total Square footage of catchment footprint"] != "Yes")
 				cmplt = false;
 			if(RAINWATERCATCHMENT[rc]["Total storage capacity"] != "Yes")
@@ -112,8 +111,7 @@ try{
 			}
 		}
 		for(gw in  GROUNDWATERWELL) {
-			if(GROUNDWATERWELL[gw]["Currently Used for Cannabis?"] != "No") 
-				gwRows = gwRows + 1;
+			gwRows = gwRows + 1;
 			if(!matches(GROUNDWATERWELL[gw]["Currently Used for Cannabis"],"Yes","No"))
 				cmplt = false;
 			if(!matches(GROUNDWATERWELL[gw]["APN Address Matches Premises"],"Yes","No"))
@@ -172,7 +170,7 @@ try{
 			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
-		if(AInfo["Small Retail Water Supplier Review Status"] == "Complete") {
+	if(AInfo["Small Retail Water Supplier Review Status"] == "Complete") {
 		wsRows = 0;
 		srRows = 0;
 		cmplt = true;
