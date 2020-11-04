@@ -76,7 +76,7 @@ try{
 			rcRows = rcRows + 1;
 			if(RAINWATERCATCHMENT[rc]["Total Square footage of catchment footprint"] != "Yes")
 				cmplt = false;
-			if(RAINWATERCATCHMENT[rc]["Total storage capacity"] != "Yes")
+			if(RAINWATERCATCHMENT[rc]["Total storage capacity (Gallons)"] != "Yes")
 				cmplt = false;
 			if(RAINWATERCATCHMENT[rc]["Detailed description of the type, nature, and location of each catchment surface"] != "Yes")
 				cmplt = false;
