@@ -220,8 +220,9 @@ try{
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
 		}
 		if(!cmplt) {
-			cancel = true;
+			
 			showmessage = true;
+			cancel = true;
 			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
