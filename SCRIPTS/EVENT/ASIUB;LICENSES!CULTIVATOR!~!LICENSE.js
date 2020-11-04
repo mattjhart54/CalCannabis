@@ -215,15 +215,13 @@ try{
 				cmplt = false;
 		}
 		if(wsRows != srRows) {
-			
-			showMessage = true;
 			cancel = true;
+			showMessage = true;
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
 		if(!cmplt) {
-			
-			showMessage = true;
 			cancel = true;
+			showMessage = true;
 			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
