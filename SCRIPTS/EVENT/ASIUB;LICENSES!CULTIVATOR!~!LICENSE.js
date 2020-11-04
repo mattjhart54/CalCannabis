@@ -11,7 +11,7 @@ try{
 		if (totPct > 100 || totPct < 0) {
 			cancel = true;
 			showMessage = true;
-			comment("The total Percent Ownership must be greater than 0 and less than 100.")
+			comment("The total Percent Ownership must be greater than 0 and less than 100.");
 		}
 	}
 } catch(err){
@@ -59,16 +59,16 @@ try{
 		logDebug("wsRows " + wsRows + " wrRows " + wrRows);
 		if(wsRows != wrRows) {
 			cancel = true;
-			showmessage = true;
-			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+			showMessage = true;
+			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
 	}
 		if(AInfo["Rainwater Catchment Review Status"] == "Complete") {
 		wsRows = 0;
 		rcRows = 0;
 		cmplt = true;
-		for(ws in SOURCEOFWATERSUPPLY) {
-			if(SOURCEOFWATERSUPPLY[ws]["Type of Water Supply"] == "Rainwater Catchment System") {
+		for(wsrc in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[wsrc]["Type of Water Supply"] == "Rainwater Catchment System") {
 				wsRows = wsRows + 1;
 			}
 		}
@@ -91,12 +91,12 @@ try{
 		}
 		if(wsRows != rcRows) {
 			cancel = true;
-			showmessage = true;
-			comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+			showMessage = true;
+			comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
 		if(!cmplt) {
 			cancel = true;
-			showmessage = true;
+			showMessage = true;
 			comment("The Rainwater Catchment Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
@@ -105,8 +105,8 @@ try{
 		wsRows = 0;
 		gwRows = 0;
 		cmplt = true;
-		for(ws in SOURCEOFWATERSUPPLY) {
-			if(SOURCEOFWATERSUPPLY[ws]["Type of Water Supply"] == "Groundwater Well") {
+		for(wsgw in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[wsgw]["Type of Water Supply"] == "Groundwater Well") {
 				wsRows = wsRows + 1;
 			}
 		}
@@ -127,12 +127,12 @@ try{
 		}
 		if(wsRows != gwRows) {
 			cancel = true;
-			showmessage = true;
-			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+			showMessage = true;
+			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
 		if(!cmplt) {
 			cancel = true;
-			showmessage = true;
+			showMessage = true;
 			comment("The Groundwater Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
@@ -140,8 +140,8 @@ try{
 		wsRows = 0;
 		rsRows = 0;
 		cmplt = true;
-		for(ws in SOURCEOFWATERSUPPLY) {
-			if(SOURCEOFWATERSUPPLY[ws]["Type of Water Supply"] == "Retail Supplier") {
+		for(wsrs in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[wsrs]["Type of Water Supply"] == "Retail Supplier") {
 				wsRows = wsRows + 1;
 			}
 		}
@@ -161,12 +161,12 @@ try{
 		}
 		if(wsRows != rsRows) {
 			cancel = true;
-			showmessage = true;
-			comment("The number of Retail Supplier water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+			showMessage = true;
+			comment("The number of Retail Supplier water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
 		if(!cmplt) {
 			cancel = true;
-			showmessage = true;
+			showMessage = true;
 			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
@@ -174,8 +174,8 @@ try{
 		wsRows = 0;
 		srRows = 0;
 		cmplt = true;
-		for(ws in SOURCEOFWATERSUPPLY) {
-			if(SOURCEOFWATERSUPPLY[ws]["Type of Water Supply"] == "Retail Supplier") {
+		for(wssr in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[wssr]["Type of Water Supply"] == "Retail Supplier") {
 				wsRows = wsRows + 1;
 			}
 		}
@@ -216,13 +216,13 @@ try{
 		}
 		if(wsRows != srRows) {
 			
-			showmessage = true;
+			showMessage = true;
 			cancel = true;
-			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.")
+			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
 		if(!cmplt) {
 			
-			showmessage = true;
+			showMessage = true;
 			cancel = true;
 			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
