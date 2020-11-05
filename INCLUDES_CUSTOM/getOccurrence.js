@@ -1,4 +1,4 @@
 function getOccurrence(array, value) {
-	const result = array.filter(x => x == value);
+	var result = array.filter(x => x == value);
     return result.length;
 }
