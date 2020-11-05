@@ -61,8 +61,7 @@ try {
 		editAppSpecific("Other",PInfo["Other"]);
 		editAppSpecific("Other Update",PInfo["Other"]);
 		editAppSpecific("Other Source Description",PInfo["Other Source Description"]);
-		editAppSpecific("Administrative hold area", PInfo["Administrative hold area"]);
-		editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
+	editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
 	editAppSpecific("Administrative hold area", PInfo["Administrative hold area"]);
 	editAppSpecific("Aggregate square footage of noncontiguous canopy", PInfo["Aggregate square footage of noncontiguous canopy"]);
 	editAppSpecific("Cannabis Waste Area", PInfo["Cannabis Waste Area"]);
@@ -132,7 +131,7 @@ try {
 	editAppSpecific("Chemical controls", PInfo["Chemical controls"]);
 	editAppSpecific("Waste Management Review Status", PInfo["Waste Management Review Status"]);
 	editAppSpecific("On-site Composting of Cannabis Waste", PInfo["On-site Composting of Cannabis Waste"]);
-	editAppSpecific("On-site Composting of Cannabis Waste"-NEW, PInfo["On-site Composting of Cannabis Waste"]);
+	editAppSpecific("On-site Composting of Cannabis Waste-NEW", PInfo["On-site Composting of Cannabis Waste"]);
 	editAppSpecific("Local Agency Franchised or Contracted/Permitted Waste Hauler", PInfo["Local Agency Franchised or Contracted/Permitted Waste Hauler"]);
 	editAppSpecific("Local Agency Franchised or Contracted/Permitted Waste Hauler-NEW", PInfo["Local Agency Franchised or Contracted/Permitted Waste Hauler"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility", PInfo["Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"]);
