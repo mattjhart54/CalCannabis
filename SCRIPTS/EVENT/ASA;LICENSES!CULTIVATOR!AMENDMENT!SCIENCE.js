@@ -62,13 +62,15 @@ try {
 		editAppSpecific("Other Update",PInfo["Other"]);
 		editAppSpecific("Other Source Description",PInfo["Other Source Description"]);
 		editAppSpecific("Administrative hold area", PInfo["Administrative hold area"]);
+		editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
+	editAppSpecific("Administrative hold area", PInfo["Administrative hold area"]);
 	editAppSpecific("Aggregate square footage of noncontiguous canopy", PInfo["Aggregate square footage of noncontiguous canopy"]);
 	editAppSpecific("Cannabis Waste Area", PInfo["Cannabis Waste Area"]);
 	editAppSpecific("Canopy area included", PInfo["Canopy area included"]);
 	editAppSpecific("Canopy Plant Count", PInfo["Canopy Plant Count"]);
 	editAppSpecific("Canopy SF", PInfo["Canopy SF"]);
 	editAppSpecific("Canopy SF Limit", PInfo["Canopy SF Limit"]);
-	editAppSpecific("Canopy SF Limit", PInfo["Canopy SF Limit-NEW"]);
+	editAppSpecific("Canopy SF Limit-NEW", PInfo["Canopy SF Limit"]);
 	editAppSpecific("Common Use Area(s)", PInfo["Common Use Area(s)"]);
 	editAppSpecific("Designated shared area(s)", PInfo["Designated shared area(s)"]);
 	editAppSpecific("Does the square footage match dimensions", PInfo["Does the square footage match dimensions"]);
@@ -96,7 +98,6 @@ try {
 	editAppSpecific("Designated shared area(s)-N", PInfo["Designated shared area(s)-N"]);
 	editAppSpecific("Common Use Area(s)-N", PInfo["Common Use Area(s)-N"]);
 	editAppSpecific("Composting area", PInfo["Composting area"]);
-	editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
 	editAppSpecific("Property Diagram Review Status",PInfo["Property Diagram Review Status"]);
 	editAppSpecific("APN-PD", PInfo["APN-PD"]);
 	editAppSpecific("APN located in correct city/county?", PInfo["APN located in correct city/county?"]);
@@ -121,7 +122,7 @@ try {
 	editAppSpecific("Does the Watts per Sqft Match the License Type", PInfo["Does the Watts per Sqft Match the License Type"]);
 	editAppSpecific("Watts/SF", PInfo["Watts/SF"]);
 	editAppSpecific("Watts/SF limit", PInfo["Watts/SF limit"]);
-	editAppSpecific("Watts/SF limit", PInfo["Watts/SF limit-NEW"]);
+	editAppSpecific("Watts/SF limit-NEW", PInfo["Watts/SF limit"]);
 	editAppSpecific("Some or all of the canopy is Light Dep", PInfo["Some or all of the canopy is Light Dep"]);
 	editAppSpecific("Pest Management Review Status", PInfo["Pest Management Review Status"]);
 	editAppSpecific("Pesticide(s) product name(s)", PInfo["Pesticide(s) product name(s)"]);
@@ -131,25 +132,25 @@ try {
 	editAppSpecific("Chemical controls", PInfo["Chemical controls"]);
 	editAppSpecific("Waste Management Review Status", PInfo["Waste Management Review Status"]);
 	editAppSpecific("On-site Composting of Cannabis Waste", PInfo["On-site Composting of Cannabis Waste"]);
-	editAppSpecific("On-site Composting of Cannabis Waste", PInfo["On-site Composting of Cannabis Waste-NEW"]);
+	editAppSpecific("On-site Composting of Cannabis Waste"-NEW, PInfo["On-site Composting of Cannabis Waste"]);
 	editAppSpecific("Local Agency Franchised or Contracted/Permitted Waste Hauler", PInfo["Local Agency Franchised or Contracted/Permitted Waste Hauler"]);
-	editAppSpecific("Local Agency Franchised or Contracted/Permitted Waste Hauler", PInfo["Local Agency Franchised or Contracted/Permitted Waste Hauler-NEW"]);
+	editAppSpecific("Local Agency Franchised or Contracted/Permitted Waste Hauler-NEW", PInfo["Local Agency Franchised or Contracted/Permitted Waste Hauler"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility", PInfo["Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"]);
-	editAppSpecific("Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility", PInfo["Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility-NEW"]);
+	editAppSpecific("Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility-NEW", PInfo["Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted Composting Facility/Operation", PInfo["Self-Haul to a Manned Fully Permitted Composting Facility/Operation"]);
-	editAppSpecific("Self-Haul to a Manned Fully Permitted Composting Facility/Operation", PInfo["Self-Haul to a Manned Fully Permitted Composting Facility/Operation-NEW"]);
+	editAppSpecific("Self-Haul to a Manned Fully Permitted Composting Facility/Operation-NEW", PInfo["Self-Haul to a Manned Fully Permitted Composting Facility/Operation-NEW"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation", PInfo["Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"]);
-	editAppSpecific("Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation", PInfo["Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation-NEW"]);
+	editAppSpecific("Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation-NEW", PInfo["Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation", PInfo["Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"]);
-	editAppSpecific("Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation", PInfo["Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation-NEW"]);
+	editAppSpecific("Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation-NEW", PInfo["Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility", PInfo["Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"]);
-	editAppSpecific("Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility", PInfo["Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility-NEW"]);
+	editAppSpecific("Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility-NEW", PInfo["Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"]);
 	editAppSpecific("Self-Haul to a Recycling Center That Meets Regulations Requirements", PInfo["Self-Haul to a Recycling Center That Meets Regulations Requirements"]);
-	editAppSpecific("Self-Haul to a Recycling Center That Meets Regulations Requirements", PInfo["Self-Haul to a Recycling Center That Meets Regulations Requirements-NEW"]);
+	editAppSpecific("Self-Haul to a Recycling Center That Meets Regulations Requirements-NEW", PInfo["Self-Haul to a Recycling Center That Meets Regulations Requirements"]);
 	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
-	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations", PInfo["Reintroduction of cannabis waste back into Agricultural operations-NEW"]);
+	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations-NEW", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
 	editAppSpecific("Other", PInfo["Other"]);
-	editAppSpecific("Other", PInfo["Other-NEW"]);
+	editAppSpecific("Other-NEW", PInfo["Other"]);
 	editAppSpecific("Other Waste Management Method", PInfo["Other Waste Management Method"]);
 	editAppSpecific("Envirostor Review Status", PInfo["Envirostor Review Status"]);
 	editAppSpecific("Evidence of an Envirostor Search", PInfo["Evidence of an Envirostor Search"]);
@@ -183,7 +184,7 @@ try {
 	editAppSpecific("APN Matches Adjacent Parcel", PInfo["APN Matches Adjacent Parcel"]);
 	editAppSpecific("Notes", PInfo["Notes"]);
 	copyASITables(parentId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
-	if(SOURCEOFWATERSUPPLY == object) {
+	if(SOURCEOFWATERSUPPLY == Object) {
 		for(x in SOURCEOFWATERSUPPLY) {
 			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Groundwater Well" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
 				editAppSpecific("Groundwater Well Review Status", "Incomplete");
