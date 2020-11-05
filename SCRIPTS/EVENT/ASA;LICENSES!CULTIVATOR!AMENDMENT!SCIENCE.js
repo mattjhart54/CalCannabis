@@ -61,8 +61,7 @@ try {
 		editAppSpecific("Other",PInfo["Other"]);
 		editAppSpecific("Other Update",PInfo["Other"]);
 		editAppSpecific("Other Source Description",PInfo["Other Source Description"]);
-	editAppSpecific("Administrative hold area", PInfo["Administrative hold area"]);
-	editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
+		editAppSpecific("Administrative hold area", PInfo["Administrative hold area"]);
 	editAppSpecific("Aggregate square footage of noncontiguous canopy", PInfo["Aggregate square footage of noncontiguous canopy"]);
 	editAppSpecific("Cannabis Waste Area", PInfo["Cannabis Waste Area"]);
 	editAppSpecific("Canopy area included", PInfo["Canopy area included"]);
@@ -97,6 +96,7 @@ try {
 	editAppSpecific("Designated shared area(s)-N", PInfo["Designated shared area(s)-N"]);
 	editAppSpecific("Common Use Area(s)-N", PInfo["Common Use Area(s)-N"]);
 	editAppSpecific("Composting area", PInfo["Composting area"]);
+	editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
 	editAppSpecific("Property Diagram Review Status",PInfo["Property Diagram Review Status"]);
 	editAppSpecific("APN-PD", PInfo["APN-PD"]);
 	editAppSpecific("APN located in correct city/county?", PInfo["APN located in correct city/county?"]);
@@ -182,7 +182,27 @@ try {
 	editAppSpecific("APN Matches Premises-LSA", PInfo["APN Matches Premises-LSA"]);
 	editAppSpecific("APN Matches Adjacent Parcel", PInfo["APN Matches Adjacent Parcel"]);
 	editAppSpecific("Notes", PInfo["Notes"]);
-		copyASITables(parentId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
+	copyASITables(parentId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
+	if(SOURCEOFWATERSUPPLY == object) {
+		for(x in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Groundwater Well" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+				editAppSpecific("Groundwater Well Review Status", "Incomplete");
+			}
+			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Retail Supplier" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+				editAppSpecific("Retail Water Supplier Review Status", "Incomplete");
+			}
+			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Rainwater Catchment" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+				editAppSpecific("Rainwater Catchment Review Status", "Incomplete");
+			}
+			if(matches(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"], "Small Retail Supplier Diversion", "Small Retail Supplier - Delivery or pickup from a groundwater well") && 
+				matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+				editAppSpecific("Small Retail Water Supplier Review Status", "Incomplete");
+			}
+			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Diversion from Waterbody" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+				editAppSpecific("Water Rights Review Status", "Incomplete");
+			}
+		}
+	}
 		editAppName(PInfo["Cultivator Type"] + " " + PInfo["License Issued Type"] + " - " +PInfo["License Type"]);
 		updateShortNotes(getShortNotes(parentId));
 		updateWorkDesc(workDescGet(parentId));
