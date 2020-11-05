@@ -21,7 +21,7 @@ try{
 }
 try{
 	statusArray = [];
-	var cmplt = true;
+	smallRetailCheck = true;
 	if(matches(AInfo["LSA Review Status"],"Annual", "Provisional")) {
 		var lsaCheck = true;
 		if(!matches(AInfo["APN Matches Premises-LSA"],"Yes","N/A","No")) {
@@ -157,7 +157,6 @@ try{
 	}
 	if(AInfo["Small Retail Water Supplier Review Status"] == "Complete") {
 		srRows = 0;
-		smallRetailCheck = true;
 		for(sr in  SMALLRETAILWATERSUPPLIERS) {
 			srRows++;
 			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Currently Used for Cannabis"],"Yes","No"))
