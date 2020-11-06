@@ -183,24 +183,22 @@ try {
 	editAppSpecific("APN Matches Adjacent Parcel", PInfo["APN Matches Adjacent Parcel"]);
 	editAppSpecific("Notes", PInfo["Notes"]);
 	copyASITables(parentId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
-	if(SOURCEOFWATERSUPPLY == Object) {
-		for(x in SOURCEOFWATERSUPPLY) {
-			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Groundwater Well" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
-				editAppSpecific("Groundwater Well Review Status", "Incomplete");
+	for(x in SOURCEOFWATERSUPPLY) {
+		if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Groundwater Well" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+			editAppSpecific("Groundwater Well Review Status", "Incomplete");
+		}
+		if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Retail Supplier" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+			editAppSpecific("Retail Water Supplier Review Status", "Incomplete");
+		}
+		if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Rainwater Catchment" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+			editAppSpecific("Rainwater Catchment Review Status", "Incomplete");
+		}
+		if(matches(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"], "Small Retail Supplier Diversion", "Small Retail Supplier - Delivery or pickup from a groundwater well") && 
+		   matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+			editAppSpecific("Small Retail Water Supplier Review Status", "Incomplete");
 			}
-			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Retail Supplier" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
-				editAppSpecific("Retail Water Supplier Review Status", "Incomplete");
-			}
-			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Rainwater Catchment" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
-				editAppSpecific("Rainwater Catchment Review Status", "Incomplete");
-			}
-			if(matches(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"], "Small Retail Supplier Diversion", "Small Retail Supplier - Delivery or pickup from a groundwater well") && 
-				matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
-				editAppSpecific("Small Retail Water Supplier Review Status", "Incomplete");
-			}
-			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Diversion from Waterbody" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
-				editAppSpecific("Water Rights Review Status", "Incomplete");
-			}
+		if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Diversion from Waterbody" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
+			editAppSpecific("Water Rights Review Status", "Incomplete");
 		}
 	}
 		editAppName(PInfo["Cultivator Type"] + " " + PInfo["License Issued Type"] + " - " +PInfo["License Type"]);
