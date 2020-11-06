@@ -161,7 +161,7 @@ try{
 			srRows++;
 			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Currently Used for Cannabis"],"Yes","No"))
 				smallRetailCheck = false;
-			if(SMALLRETAILWATERSUPPLIERS[sr]["Verified Small Retail Water Supplier "] != "Yes")
+			if(SMALLRETAILWATERSUPPLIERS[sr]["Verified Small Retail Water Supplier"] != "Yes")
 				smallRetailCheck = false;
 			if(SMALLRETAILWATERSUPPLIERS[sr]["Water Bill Address Matches Premises"] != "Yes")
 				smallRetailCheck = false;
