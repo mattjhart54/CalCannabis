@@ -158,7 +158,7 @@ try {
 	editAppSpecific("CEQA Review Status", PInfo["CEQA Review Status"]);
 	editAppSpecific("CEQA Status", PInfo["CEQA Status"]);
 	editAppSpecific("CEQA Document Provided", PInfo["CEQA Document Provided"]);
-	editAppSpecific("Other CEQA Document Provided ", PInfo["Other CEQA Document Provided "]);
+	editAppSpecific("Other CEQA Document Provided", PInfo["Other CEQA Document Provided"]);
 	editAppSpecific("APN Matches Premises-CEQA", PInfo["APN Matches Premises-CEQA"]);
 	editAppSpecific("CDFA CEQA Action", PInfo["CDFA CEQA Action"]);
 	editAppSpecific("Other CDFA CEQA Action", PInfo["Other CDFA CEQA Action"]);
