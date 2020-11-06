@@ -21,7 +21,6 @@ try{
 }
 try{
 	statusArray = [];
-	var cmplt = true;
 	if(matches(AInfo["LSA Review Status"],"Annual", "Provisional")) {
 		var lsaCheck = true;
 		if(!matches(AInfo["APN Matches Premises-LSA"],"Yes","N/A","No")) {
@@ -70,20 +69,27 @@ try{
 		rainwaterCheck = true;
 		for(rc in RAINWATERCATCHMENT) {
 			rcRows++;
-			if(RAINWATERCATCHMENT[rc]["Total Square footage of catchment footprint"] != "Yes")
+			if(RAINWATERCATCHMENT[rc]["Total Square footage of catchment footprint"] != "Yes"){
 				rainwaterCheck = false;
-			if(RAINWATERCATCHMENT[rc]["Total storage capacity"] != "Yes")
+			}
+			if(RAINWATERCATCHMENT[rc]["Total storage capacity"] != "Yes"){
 				rainwaterCheck = false;
-			if(RAINWATERCATCHMENT[rc]["Detailed description of the type, nature, and location of each catchment surface"] != "Yes")
+			}
+			if(RAINWATERCATCHMENT[rc]["Detailed description of the type, nature, and location of each catchment surface"] != "Yes"){
 				rainwaterCheck = false;
-			if(RAINWATERCATCHMENT[rc]["Photos of the rainwater catchment system infrastructure"] != "Yes")
+			}
+			if(RAINWATERCATCHMENT[rc]["Photos of the rainwater catchment system infrastructure"] != "Yes"){
 				rainwaterCheck = false;
-			if(!matches(RAINWATERCATCHMENT[rc]["Currently Used for Cannabis?"], "Yes", "No"))
+			}
+			if(!matches(RAINWATERCATCHMENT[rc]["Currently Used for Cannabis?"], "Yes", "No")){
 				rainwaterCheck = false;
-			if(matches(RAINWATERCATCHMENT[rc]["Catchment Latitude"], null,"", undefined))
+			}
+			if(matches(RAINWATERCATCHMENT[rc]["Catchment Latitude"], null,"", undefined)){
 				rainwaterCheck = false;
-			if(matches(RAINWATERCATCHMENT[rc]["Catchment Longitude"], null,"", undefined))
+			}
+			if(matches(RAINWATERCATCHMENT[rc]["Catchment Longitude"], null,"", undefined)){
 				rainwaterCheck = false;
+			}
 		}
 		
 		if(getOccurrence(statusArray, "Rainwater Catchment") != wsRows) {
@@ -103,18 +109,24 @@ try{
 		groundwaterCheck = true;
 		for(gw in  GROUNDWATERWELL) {
 			gwRows++;
-			if(!matches(GROUNDWATERWELL[gw]["Currently Used for Cannabis"],"Yes","No"))
+			if(!matches(GROUNDWATERWELL[gw]["Currently Used for Cannabis"],"Yes","No")){
 				groundwaterCheck = false;
-			if(!matches(GROUNDWATERWELL[gw]["APN Address Matches Premises"],"Yes","No"))
+			}
+			if(!matches(GROUNDWATERWELL[gw]["APN Address Matches Premises"],"Yes","No")){
 				groundwaterCheck = false;
-			if(!matches(GROUNDWATERWELL[gw]["DWR Letter"], "Yes", "N/A"))
+			}
+			if(!matches(GROUNDWATERWELL[gw]["DWR Letter"], "Yes", "N/A")){
 				groundwaterCheck = false;
-			if(!matches(GROUNDWATERWELL[gw]["Copy of Well completion report from DWR"], "Yes", "N/A"))
+			}
+			if(!matches(GROUNDWATERWELL[gw]["Copy of Well completion report from DWR"], "Yes", "N/A")){
 				groundwaterCheck = false;
-			if(matches(GROUNDWATERWELL[gw]["Well Latitude"], null,"", undefined))
+			}
+			if(matches(GROUNDWATERWELL[gw]["Well Latitude"], null,"", undefined)){
 				groundwaterCheck = false;
-			if(matches(GROUNDWATERWELL[gw]["Well Longitude"], null,"", undefined))
+			}
+			if(matches(GROUNDWATERWELL[gw]["Well Longitude"], null,"", undefined)){
 				groundwaterCheck = false;
+			}
 		}
 		if(getOccurrence(statusArray, "Groundwater Well") != gwRows) {
 			cancel = true;
@@ -132,16 +144,21 @@ try{
 		waterSupplierCheck = true;
 		for(rs in  RETAILWATERSUPPLIER) {
 			rsRows++;
-			if(matches(RETAILWATERSUPPLIER[rs]["Retail Water Supplier"], null, "", undefined))
+			if(matches(RETAILWATERSUPPLIER[rs]["Retail Water Supplier"], null, "", undefined)){
 				waterSupplierCheck = false;
-			if(!matches(RETAILWATERSUPPLIER[rs]["Currently Used for Cannabis"], "Yes", "No"))
+			}
+			if(!matches(RETAILWATERSUPPLIER[rs]["Currently Used for Cannabis"], "Yes", "No")){
 				waterSupplierCheck = false;
-			if(RETAILWATERSUPPLIER[rs]["Name of Retail Water Supplier"] != "Yes")
+			}
+			if(RETAILWATERSUPPLIER[rs]["Name of Retail Water Supplier"] != "Yes"){
 				waterSupplierCheck = false;
-			if(RETAILWATERSUPPLIER[rs]["A copy of the most recent water service bill"] != "Yes")
+			}
+			if(RETAILWATERSUPPLIER[rs]["A copy of the most recent water service bill"] != "Yes"){
 				waterSupplierCheck = false;
-			if(RETAILWATERSUPPLIER[rs]["Water Bill Address Matches Premises"] != "Yes")
+			}
+			if(RETAILWATERSUPPLIER[rs]["Water Bill Address Matches Premises"] != "Yes"){
 				waterSupplierCheck = false;
+			}
 
 		}
 		if(getOccurrence(statusArray, "Retail Supplier") != rsRows) {
@@ -160,38 +177,54 @@ try{
 		smallRetailCheck = true;
 		for(sr in  SMALLRETAILWATERSUPPLIERS) {
 			srRows++;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Currently Used for Cannabis"],"Yes","No"))
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Currently Used for Cannabis"],"Yes","No")){
 				smallRetailCheck = false;
-			if(SMALLRETAILWATERSUPPLIERS[sr]["Verified Small Retail Water Supplier"] != "Yes")
+			}
+			if(SMALLRETAILWATERSUPPLIERS[sr]["Verified Small Retail Water Supplier"] != "Yes"){
 				smallRetailCheck = false;
-			if(SMALLRETAILWATERSUPPLIERS[sr]["Water Bill Address Matches Premises"] != "Yes")
+			}
+			if(SMALLRETAILWATERSUPPLIERS[sr]["Water Bill Address Matches Premises"] != "Yes"){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Coordinates of any POD"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Coordinates of any POD?"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Is the water source a diversion?"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Is the water source a diversion?"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Name of Retail Water Supplier Provided?"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Name of Retail Water Supplier Provided?"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Water source for diversion"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Water source for diversion"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Authorized place of use"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Authorized place of use"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Maximum Amount of Water delivered to Applicant?"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Maximum Amount of Water delivered to Applicant?"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of most recent water service bill?"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of most recent water service bill?"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Is the water source a well?"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Is the water source a well?"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Name of retail supplier under the contract provided?"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Name of retail supplier under the contract provided?"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Coordinates of well provided?"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Coordinates of well provided?"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Maximum amount of water delivered"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Maximum amount of water delivered"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of well completion report"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of well completion report"],"Yes","No","N/A")){
 				smallRetailCheck = false;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of the most recent water service bill?"],"Yes","No","N/A"))
+			}
+			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of the most recent water service bill?"],"Yes","No","N/A")){
 				smallRetailCheck = false;
+			}
 		}
 		if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or Pickup from a Groundwater Well")) != srRows) {
 			cancel = true;
