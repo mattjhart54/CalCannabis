@@ -43,10 +43,53 @@ try {
 				editAppSpecific("Other Source Description",AInfo["OSD Update"],parentCapId);
 			}
 		}
-
+		//Story 6622 Copy New Value Fields to license
+		var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
+		if (recordASIGroup.getSuccess()){
+			var recordASIGroupArray = recordASIGroup.getOutput();
+			
+			for (i in recordASIGroupArray) {
+				var group = recordASIGroupArray[i];
+				var recordField = String(group.getCheckboxDesc());
+				if (recordField.slice(-4) == "-NEW"){
+					if (!matches(group.getChecklistComment(),null,undefined,"")){
+						var parentRecordField = recordField.slice(0,-4);
+						var newFieldValue = group.getChecklistComment();
+						editAppSpecific(parentRecordField,newFieldValue,parentCapId);
+						logDebug(parentRecordField + "edited to: " + newFieldValue);
+					}
+				}
+			}
+		}
+		ignoreTableArray = [];
+		if (matches(getAppSpecific("Small Retail Water Supplier Review Status"),"Complete","N/A"){
+			removeASITable("SMALL RETAIL WATER SUPPLIERS",parentCapId);
+		}else{
+			ignoreTableArray.push("SMALL RETAIL WATER SUPPLIERS");
+		}
+		if (matches(getAppSpecific("Retail Water Supplier Review Status"),"Complete","N/A"){
+			removeASITable("RETAIL WATER SUPPLIER",parentCapId);
+		}else{
+			ignoreTableArray.push("RETAIL WATER SUPPLIER");
+		}
+		if (matches(getAppSpecific("Groundwater Well Review Status "),"Complete","N/A"){
+			removeASITable("GROUNDWATER WELL",parentCapId);
+		}else{
+			ignoreTableArray.push("GROUNDWATER WELL");
+		}
+		if (matches(getAppSpecific("Rainwater Catchment Review Status"),"Complete","N/A"){
+			removeASITable("RAINWATER CATCHMENT",parentCapId);
+		}else{
+			ignoreTableArray.push("RAINWATER CATCHMENT");
+		}
+		if (matches(getAppSpecific("Water Rights Review Status"),"Complete","N/A"){
+			removeASITable("WATER RIGHTS",parentCapId);
+		}else{
+			ignoreTableArray.push("WATER RIGHTS");
+		}		
 		removeASITable("Premises Addresses",parentCapId);
 		removeASITable("Source of Water Supply",parentCapId);
-		copyASITables(capId,parentCapId);		
+		copyASITables(capId,parentCapId,ignoreTableArray);		
 		var rFiles = [];
 		if(updateCat) {
 			addToCat(parentCapId);
