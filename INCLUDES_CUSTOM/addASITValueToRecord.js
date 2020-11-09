@@ -7,7 +7,7 @@ function addASITValueToRecord(subGroupName, tableValuesArray, capID)
 	var appSpecTableScript = aa.appSpecificTableScript.getAppSpecificTableModel(capID, subGroupName)
 	if (!appSpecTableScript.getSuccess())
 	{
-		ELPLogging.debug("**WARNING: error retrieving app specific table " + subGroupName + " " + appSpecTableScript.getErrorMessage());
+		logDebug("**WARNING: error retrieving app specific table " + subGroupName + " " + appSpecTableScript.getErrorMessage());
 		return false
 	}
 	
@@ -37,11 +37,11 @@ function addASITValueToRecord(subGroupName, tableValuesArray, capID)
 	addResult = aa.appSpecificTableScript.editAppSpecificTableInfos(appSpecTableScriptModel, capID, "BATCHUSER");
 	if (!addResult.getSuccess())
 	{
-		ELPLogging.debug("**WARNING: error adding record to ASI Table:  " + subGroupName + " " + addResult.getErrorMessage());
+		logDebug("**WARNING: error adding record to ASI Table:  " + subGroupName + " " + addResult.getErrorMessage());
 		return false
 	} else
 	{
-		ELPLogging.debug("Successfully added record to ASI Table: " + subGroupName);
+		logDebug("Successfully added record to ASI Table: " + subGroupName);
 		return true;
 	}
 }
