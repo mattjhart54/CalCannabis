@@ -52,189 +52,38 @@ try{
 		}
 	}		
 	if(AInfo["Water Rights Review Status"] == "Complete") {
-		wrRows = 0;
-		for(wr in WATERRIGHTS) {
-			if(WATERRIGHTS[wr]["Currently used for Cannabis?"] != "No") {
-				wrRows++;
-			}
-		}
-		if(getOccurrence(statusArray, "Diversion from Waterbody") != wrRows) {
+		if(getOccurrence(statusArray, "Diversion from Waterbody") != WATERRIGHTS.length) {
 			cancel = true;
 			showMessage = true;
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
 	}
-	if(AInfo["Rainwater Catchment Review Status"] == "Complete") {
-		wsRows = 0;
-		rainwaterCheck = true;
-		for(rc in RAINWATERCATCHMENT) {
-			rcRows++;
-			if(RAINWATERCATCHMENT[rc]["Total Square footage of catchment footprint"] != "Yes"){
-				rainwaterCheck = false;
-			}
-			if(RAINWATERCATCHMENT[rc]["Total storage capacity"] != "Yes"){
-				rainwaterCheck = false;
-			}
-			if(RAINWATERCATCHMENT[rc]["Detailed description of the type, nature, and location of each catchment surface"] != "Yes"){
-				rainwaterCheck = false;
-			}
-			if(RAINWATERCATCHMENT[rc]["Photos of the rainwater catchment system infrastructure"] != "Yes"){
-				rainwaterCheck = false;
-			}
-			if(!matches(RAINWATERCATCHMENT[rc]["Currently Used for Cannabis?"], "Yes", "No")){
-				rainwaterCheck = false;
-			}
-			if(matches(RAINWATERCATCHMENT[rc]["Catchment Latitude"], null,"", undefined)){
-				rainwaterCheck = false;
-			}
-			if(matches(RAINWATERCATCHMENT[rc]["Catchment Longitude"], null,"", undefined)){
-				rainwaterCheck = false;
-			}
-		}
-		
-		if(getOccurrence(statusArray, "Rainwater Catchment") != wsRows) {
+	if(AInfo["Rainwater Catchment Review Status"] == "Complete") {		
+		if(getOccurrence(statusArray, "Rainwater Catchment") != RAINWATERCATCHMENT.length) {
 			cancel = true;
 			showMessage = true;
 			comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
-		if(!rainwaterCheck) {
-			cancel = true;
-			showMessage = true;
-			comment("The Rainwater Catchment Review Status cannot be marked Complete as at least one of the fields is insufficient.");
-		}
 	}
-	
 	if(AInfo["Groundwater Well Review Status"] == "Complete") {
-		gwRows = 0;
-		groundwaterCheck = true;
-		for(gw in  GROUNDWATERWELL) {
-			gwRows++;
-			if(!matches(GROUNDWATERWELL[gw]["Currently Used for Cannabis"],"Yes","No")){
-				groundwaterCheck = false;
-			}
-			if(!matches(GROUNDWATERWELL[gw]["APN Address Matches Premises"],"Yes","No")){
-				groundwaterCheck = false;
-			}
-			if(!matches(GROUNDWATERWELL[gw]["DWR Letter"], "Yes", "N/A")){
-				groundwaterCheck = false;
-			}
-			if(!matches(GROUNDWATERWELL[gw]["Copy of Well completion report from DWR"], "Yes", "N/A")){
-				groundwaterCheck = false;
-			}
-			if(matches(GROUNDWATERWELL[gw]["Well Latitude"], null,"", undefined)){
-				groundwaterCheck = false;
-			}
-			if(matches(GROUNDWATERWELL[gw]["Well Longitude"], null,"", undefined)){
-				groundwaterCheck = false;
-			}
-		}
-		if(getOccurrence(statusArray, "Groundwater Well") != gwRows) {
+		if(getOccurrence(statusArray, "Groundwater Well") != GROUNDWATERWELL.length) {
 			cancel = true;
 			showMessage = true;
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
-		if(!groundwaterCheck) {
-			cancel = true;
-			showMessage = true;
-			comment("The Groundwater Review Status cannot be marked Complete as at least one of the fields is insufficient.");
-		}
 	}
 	if(AInfo["Retail Water Supplier Review Status"] == "Complete") {
-		rsRows = 0;
-		waterSupplierCheck = true;
-		for(rs in  RETAILWATERSUPPLIER) {
-			rsRows++;
-			if(matches(RETAILWATERSUPPLIER[rs]["Retail Water Supplier"], null, "", undefined)){
-				waterSupplierCheck = false;
-			}
-			if(!matches(RETAILWATERSUPPLIER[rs]["Currently Used for Cannabis"], "Yes", "No")){
-				waterSupplierCheck = false;
-			}
-			if(RETAILWATERSUPPLIER[rs]["Name of Retail Water Supplier"] != "Yes"){
-				waterSupplierCheck = false;
-			}
-			if(RETAILWATERSUPPLIER[rs]["A copy of the most recent water service bill"] != "Yes"){
-				waterSupplierCheck = false;
-			}
-			if(RETAILWATERSUPPLIER[rs]["Water Bill Address Matches Premises"] != "Yes"){
-				waterSupplierCheck = false;
-			}
-
-		}
-		if(getOccurrence(statusArray, "Retail Supplier") != rsRows) {
+		if(getOccurrence(statusArray, "Retail Supplier") != RETAILWATERSUPPLIER.length) {
 			cancel = true;
 			showMessage = true;
 			comment("The number of Retail Supplier water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
-		if(!waterSupplierCheck) {
-			cancel = true;
-			showMessage = true;
-			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
-		}
 	}
 	if(AInfo["Small Retail Water Supplier Review Status"] == "Complete") {
-		srRows = 0;
-		smallRetailCheck = true;
-		for(sr in  SMALLRETAILWATERSUPPLIERS) {
-			srRows++;
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Currently Used for Cannabis"],"Yes","No")){
-				smallRetailCheck = false;
-			}
-			if(SMALLRETAILWATERSUPPLIERS[sr]["Verified Small Retail Water Supplier"] != "Yes"){
-				smallRetailCheck = false;
-			}
-			if(SMALLRETAILWATERSUPPLIERS[sr]["Water Bill Address Matches Premises"] != "Yes"){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Coordinates of any POD?"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Is the water source a diversion?"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Name of Retail Water Supplier Provided?"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Water source for diversion"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Authorized place of use"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Maximum Amount of Water delivered to Applicant?"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of most recent water service bill?"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Is the water source a well?"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Name of retail supplier under the contract provided?"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Coordinates of well provided?"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Maximum amount of water delivered"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of well completion report"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-			if(!matches(SMALLRETAILWATERSUPPLIERS[sr]["Copy of the most recent water service bill?"],"Yes","No","N/A")){
-				smallRetailCheck = false;
-			}
-		}
-		if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or Pickup from a Groundwater Well")) != srRows) {
+		if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or Pickup from a Groundwater Well")) != SMALLRETAILWATERSUPPLIERS.length) {
 			cancel = true;
 			showMessage = true;
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
-		}
-		if(!smallRetailCheck) {
-			cancel = true;
-			showMessage = true;
-			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
 	
