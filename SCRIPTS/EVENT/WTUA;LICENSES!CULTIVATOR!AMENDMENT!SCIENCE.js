@@ -62,27 +62,27 @@ try {
 			}
 		}
 		ignoreTableArray = [];
-		if (matches(getAppSpecific("Small Retail Water Supplier Review Status"),"Complete","N/A"){
+		if (matches(getAppSpecific("Small Retail Water Supplier Review Status"),"Complete","N/A")){
 			removeASITable("SMALL RETAIL WATER SUPPLIERS",parentCapId);
 		}else{
 			ignoreTableArray.push("SMALL RETAIL WATER SUPPLIERS");
 		}
-		if (matches(getAppSpecific("Retail Water Supplier Review Status"),"Complete","N/A"){
+		if (matches(getAppSpecific("Retail Water Supplier Review Status"),"Complete","N/A")){
 			removeASITable("RETAIL WATER SUPPLIER",parentCapId);
 		}else{
 			ignoreTableArray.push("RETAIL WATER SUPPLIER");
 		}
-		if (matches(getAppSpecific("Groundwater Well Review Status "),"Complete","N/A"){
+		if (matches(getAppSpecific("Groundwater Well Review Status "),"Complete","N/A")){
 			removeASITable("GROUNDWATER WELL",parentCapId);
 		}else{
 			ignoreTableArray.push("GROUNDWATER WELL");
 		}
-		if (matches(getAppSpecific("Rainwater Catchment Review Status"),"Complete","N/A"){
+		if (matches(getAppSpecific("Rainwater Catchment Review Status"),"Complete","N/A")){
 			removeASITable("RAINWATER CATCHMENT",parentCapId);
 		}else{
 			ignoreTableArray.push("RAINWATER CATCHMENT");
 		}
-		if (matches(getAppSpecific("Water Rights Review Status"),"Complete","N/A"){
+		if (matches(getAppSpecific("Water Rights Review Status"),"Complete","N/A")){
 			removeASITable("WATER RIGHTS",parentCapId);
 		}else{
 			ignoreTableArray.push("WATER RIGHTS");
