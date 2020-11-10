@@ -7,4 +7,3 @@ function contains(arr, obj) {
     }
     return false;
 }
-aa.print("success");
