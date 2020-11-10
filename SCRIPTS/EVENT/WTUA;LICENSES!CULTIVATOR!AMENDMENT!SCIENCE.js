@@ -95,6 +95,7 @@ try {
 					if(!matches(premAddrRow["UID"],"",null,"undefined")){
 						var columnName ="UID";
 						var tableName = "PREMISES ADDRESSES";
+						ignoreTableArray.push(tableName);
 						var valuesList = aa.util.newArrayList();
 						valuesList.add(premAddrRow["UID"].fieldValue);
 						if (premAddrRow["Status"].fieldValue == "Delete"){
@@ -144,6 +145,7 @@ try {
 					if(!matches(wtrSrcRow["UID"],"",null,"undefined")){
 						var columnName ="UID";
 						var tableName = "SOURCE OF WATER SUPPLY";
+						ignoreTableArray.push(tableName);
 						var valuesList = aa.util.newArrayList();
 						valuesList.add(wtrSrcRow["UID"].fieldValue);
 						if (wtrSrcRow["Status"].fieldValue == "Delete"){
