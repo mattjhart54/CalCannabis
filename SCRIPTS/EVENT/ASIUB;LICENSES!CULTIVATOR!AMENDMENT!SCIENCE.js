@@ -36,7 +36,7 @@ try{
 			showMessage = true;
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
-		if(WATERRIGHTS.length == 0){
+		if(!WATERRIGHTS.length > 0){
 			cancel = true;
 			showMessage = true;
 			comment("The Water Rights Review Status cannot be marked Complete as at least one of the fields is insufficient.");	
@@ -48,7 +48,7 @@ try{
 			showMessage = true;
 			comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
-		if(RAINWATERCATCHMENT.length == 0){
+		if(!RAINWATERCATCHMENT.length > 0){
 			cancel = true;
 			showMessage = true;
 			comment("The Rainwater Catchment Review Status cannot be marked Complete as at least one of the fields is insufficient");
@@ -60,7 +60,7 @@ try{
 			showMessage = true;
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
-		if(GROUNDWATERWELL.length == 0){
+		if(!GROUNDWATERWELL.length > 0){
 			cancel = true;
 			showMessage = true;
 			comment("The Groundwater Review Status cannot be marked Complete as at least one of the fields is insufficient.");
@@ -72,7 +72,7 @@ try{
 			showMessage = true;
 			comment("The number of Retail Supplier water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
-		if(RETAILWATERSUPPLIER.length == 0){
+		if(!RETAILWATERSUPPLIER.length > 0){
 			cancel = true;
 			showMessage = true;
 			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
@@ -84,7 +84,7 @@ try{
 			showMessage = true;
 			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 		}
-		if(SMALLRETAILWATERSUPPLIERS.length == 0){
+		if(!SMALLRETAILWATERSUPPLIERS.length > 0){
 			cancel = true;
 			showMessage = true;
 			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
