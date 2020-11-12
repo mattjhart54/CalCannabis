@@ -61,6 +61,7 @@ try {
 		editAppSpecific("Other",PInfo["Other"]);
 		editAppSpecific("Other Update",PInfo["Other"]);
 		editAppSpecific("Other Source Description",PInfo["Other Source Description"]);
+	editAppSpecific("Medium Validation",PInfo["Medium Validation"]);
 	editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
 	editAppSpecific("Administrative hold area", PInfo["Administrative hold area"]);
 	editAppSpecific("Aggregate square footage of noncontiguous canopy", PInfo["Aggregate square footage of noncontiguous canopy"]);
