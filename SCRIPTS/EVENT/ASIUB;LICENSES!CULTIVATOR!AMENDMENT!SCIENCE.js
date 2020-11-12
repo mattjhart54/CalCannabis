@@ -2,10 +2,10 @@ try{
 	statusArray = [];
 	if(matches(AInfo["LSA Review Status-NEW"],"Annual", "Provisional")) {
 		var lsaCheck = true;
-		if(!matches(AInfo["APN Matches Premises-LSA"],"Yes","N/A","No")) {
+		if(!matches(AInfo["APN Matches Premises-LSA-NEW"],"Yes","N/A","No")) {
 			lsaCheck = false;
 		}
-		if(!matches(AInfo["APN Matches Adjacent Parcel"],"Yes","N/A","No")) {
+		if(!matches(AInfo["APN Matches Adjacent Parcel-NEW"],"Yes","N/A","No")) {
 			lsaCheck = false;
 		}
 		for(ls in LAKEANDSTREAMBEDALTERATION) {
