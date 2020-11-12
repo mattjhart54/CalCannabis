@@ -67,15 +67,16 @@ try{
 		}
 	}
 	if(AInfo["Retail Water Supplier Review Status-NEW"] == "Complete") {
-		if(getOccurrence(statusArray, "Retail Supplier") != RETAILWATERSUPPLIER.length) {
-			cancel = true;
-			showMessage = true;
-			comment("The number of Retail Supplier water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
-		}
 		if(!RETAILWATERSUPPLIER.length > 0){
 			cancel = true;
 			showMessage = true;
 			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
+		}else{
+			if(getOccurrence(statusArray, "Retail Supplier") != RETAILWATERSUPPLIER.length) {
+				cancel = true;
+				showMessage = true;
+				comment("The number of Retail Supplier water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
+			}
 		}
 	}
 	if(AInfo["Small Retail Water Supplier Review Status-NEW"] == "Complete") {
