@@ -52,7 +52,7 @@ try{
 		}
 	}		
 	if(AInfo["Water Rights Review Status-NEW"] == "Complete") {
-		if (WATERRIGHTS.length > 0)){
+		if (WATERRIGHTS.length > 0){
 			if(getOccurrence(statusArray, "Diversion from Waterbody") != WATERRIGHTS.length) {
 				cancel = true;
 				showMessage = true;
