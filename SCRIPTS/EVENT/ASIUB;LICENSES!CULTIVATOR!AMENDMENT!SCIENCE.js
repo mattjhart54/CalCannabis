@@ -31,61 +31,66 @@ try{
 		}
 	}		
 	if(AInfo["Water Rights Review Status-NEW"] == "Complete") {
-		if(getOccurrence(statusArray, "Diversion from Waterbody") != WATERRIGHTS.length) {
-			cancel = true;
-			showMessage = true;
-			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
-		}
-		if(!WATERRIGHTS.length > 0){
+		if (WATERRIGHTS.length > 0)){
+			if(getOccurrence(statusArray, "Diversion from Waterbody") != WATERRIGHTS.length) {
+				cancel = true;
+				showMessage = true;
+				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
+			}
+		}else{
 			cancel = true;
 			showMessage = true;
 			comment("The Water Rights Review Status cannot be marked Complete as at least one of the fields is insufficient.");	
 		}
 	}
-	if(AInfo["Rainwater Catchment Review Status-NEW"] == "Complete") {		
-		if(getOccurrence(statusArray, "Rainwater Catchment") != RAINWATERCATCHMENT.length) {
-			cancel = true;
-			showMessage = true;
-			comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
-		}
-		if(!RAINWATERCATCHMENT.length > 0){
-			cancel = true;
-			showMessage = true;
-			comment("The Rainwater Catchment Review Status cannot be marked Complete as at least one of the fields is insufficient");
+	if(AInfo["Rainwater Catchment Review Status-NEW"] == "Complete") {	
+		if(RAINWATERCATCHMENT.length > 0){	
+			if(getOccurrence(statusArray, "Rainwater Catchment") != RAINWATERCATCHMENT.length) {
+				cancel = true;
+				showMessage = true;
+				comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
+			}
+		}else{
+				cancel = true;
+				showMessage = true;
+				comment("The Rainwater Catchment Review Status cannot be marked Complete as at least one of the fields is insufficient");
 		}
 	}
+	
 	if(AInfo["Groundwater Well Review Status-NEW"] == "Complete") {
-		if(getOccurrence(statusArray, "Groundwater Well") != GROUNDWATERWELL.length) {
-			cancel = true;
-			showMessage = true;
-			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
-		}
-		if(!GROUNDWATERWELL.length > 0){
+		if(GROUNDWATERWELL.length > 0){
+			if(getOccurrence(statusArray, "Groundwater Well") != GROUNDWATERWELL.length) {
+				cancel = true;
+				showMessage = true;
+				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
+			}
+		}else{
 			cancel = true;
 			showMessage = true;
 			comment("The Groundwater Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
 	if(AInfo["Retail Water Supplier Review Status-NEW"] == "Complete") {
-		if(!RETAILWATERSUPPLIER.length > 0){
-			cancel = true;
-			showMessage = true;
-			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
-		}else{
+		if(RETAILWATERSUPPLIER.length > 0){
 			if(getOccurrence(statusArray, "Retail Supplier") != RETAILWATERSUPPLIER.length) {
 				cancel = true;
 				showMessage = true;
 				comment("The number of Retail Supplier water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 			}
+		}else{
+			cancel = true;
+			showMessage = true;
+			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
 	if(AInfo["Small Retail Water Supplier Review Status-NEW"] == "Complete") {
-		if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or pickup of water from a groundwater well")) != SMALLRETAILWATERSUPPLIERS.length) {
-			cancel = true;
-			showMessage = true;
-			comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
-		}
 		if(!SMALLRETAILWATERSUPPLIERS.length > 0){
+			if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or pickup of water from a groundwater well")) != SMALLRETAILWATERSUPPLIERS.length) {
+				cancel = true;
+				showMessage = true;
+				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
+			}
+		}else{
 			cancel = true;
 			showMessage = true;
 			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
