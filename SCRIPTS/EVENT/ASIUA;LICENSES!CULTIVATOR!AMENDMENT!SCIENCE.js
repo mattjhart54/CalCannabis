@@ -25,6 +25,6 @@ try {
 		}
 	}
 }catch (err){
-	logDebug("A JavaScript Error occurred: ASIUA:Licenses/Cultivation/*/Application: Update LSA table: " + err.message);
+	logDebug("A JavaScript Error occurred: ASIUA:Licenses/Cultivation/Amendment/Science: Update LSA table: " + err.message);
 	logDebug(err.stack);
 }
