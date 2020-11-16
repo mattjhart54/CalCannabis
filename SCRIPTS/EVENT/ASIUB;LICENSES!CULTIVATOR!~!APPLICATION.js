@@ -51,7 +51,7 @@ try{
 			}
 		}
 	}		
-	if(AInfo["Water Rights Review Status-NEW"] == "Complete") {
+	if(AInfo["Water Rights Review Status"] == "Complete") {
 		if (WATERRIGHTS.length > 0){
 			if(getOccurrence(statusArray, "Diversion from Waterbody") != WATERRIGHTS.length) {
 				cancel = true;
@@ -64,7 +64,7 @@ try{
 			comment("The Water Rights Review Status cannot be marked Complete as at least one of the fields is insufficient.");	
 		}
 	}
-	if(AInfo["Rainwater Catchment Review Status-NEW"] == "Complete") {	
+	if(AInfo["Rainwater Catchment Review Status"] == "Complete") {	
 		if(RAINWATERCATCHMENT.length > 0){	
 			if(getOccurrence(statusArray, "Rainwater Catchment") != RAINWATERCATCHMENT.length) {
 				cancel = true;
@@ -78,7 +78,7 @@ try{
 		}
 	}
 	
-	if(AInfo["Groundwater Well Review Status-NEW"] == "Complete") {
+	if(AInfo["Groundwater Well Review Status"] == "Complete") {
 		if(GROUNDWATERWELL.length > 0){
 			if(getOccurrence(statusArray, "Groundwater Well") != GROUNDWATERWELL.length) {
 				cancel = true;
@@ -91,7 +91,7 @@ try{
 			comment("The Groundwater Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
-	if(AInfo["Retail Water Supplier Review Status-NEW"] == "Complete") {
+	if(AInfo["Retail Water Supplier Review Status"] == "Complete") {
 		if(RETAILWATERSUPPLIER.length > 0){
 			if(getOccurrence(statusArray, "Retail Supplier") != RETAILWATERSUPPLIER.length) {
 				cancel = true;
@@ -104,7 +104,7 @@ try{
 			comment("The Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
-	if(AInfo["Small Retail Water Supplier Review Status-NEW"] == "Complete") {
+	if(AInfo["Small Retail Water Supplier Review Status"] == "Complete") {
 		if(!SMALLRETAILWATERSUPPLIERS.length > 0){
 			if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or pickup of water from a groundwater well")) != SMALLRETAILWATERSUPPLIERS.length) {
 				cancel = true;
