@@ -128,7 +128,7 @@ try{
 			if (!apnValid){
 				cancel = true;
 				showMessage = true;
-				comment = "APN does not match " + premCounty + " format - the format should be " + apnPattern + ".";
+				comment("APN does not match " + premCounty + " format - the format should be " + apnPattern + ".");
 			}
 		}
 	}
