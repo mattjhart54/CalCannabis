@@ -1,5 +1,6 @@
 // MHART 121118 user Story 5831 - Owner Table Percentage Check
 try{
+	loadASITables();
 	if(!publicUser) {
 		var totPct = 0;
 		if (typeof(OWNERS) == "object") {
