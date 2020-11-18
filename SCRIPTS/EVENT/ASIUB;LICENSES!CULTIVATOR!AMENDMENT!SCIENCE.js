@@ -1,5 +1,5 @@
 try{
-	var test = loadASITablesBefore();
+	var test = loadASITables();
 	logDebug(test);
 	statusArray = [];
 	if(matches(AInfo["LSA Review Status-NEW"],"Annual", "Provisional")) {
