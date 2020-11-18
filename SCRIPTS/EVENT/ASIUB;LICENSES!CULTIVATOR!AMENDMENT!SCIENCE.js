@@ -107,7 +107,7 @@ try{
 				if(!matches(valAPN,null,undefined,"")){
 					var apnPattern = lookup("Lookup:APN County Format",String(premCounty));
 					if (!matches(apnPattern,null,undefined,"")){
-						var apnPatternArray = apnPattern.split("-");
+						var apnPatternArray = String(apnPattern).split("-");
 						var variable1Array = String(valAPN).split("-");
 						if (apnPatternArray.length == variable1Array.length){
 							for (i = 0; i < apnPatternArray.length; i++) {
