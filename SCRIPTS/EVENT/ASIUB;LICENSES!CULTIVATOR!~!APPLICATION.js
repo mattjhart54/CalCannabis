@@ -1,6 +1,5 @@
 // MHART 121118 user Story 5831 - Owner Table Percentage Check
 try{
-	loadASITables();
 	if(!publicUser) {
 		var totPct = 0;
 		if (typeof(OWNERS) == "object") {
@@ -118,7 +117,7 @@ try{
 			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
-	if (typeof(APNSPATIALINFORMATION) == "object"){
+	/*if (typeof(APNSPATIALINFORMATION) == "object"){
 		if(APNSPATIALINFORMATION.length > 0){
 			var premCounty = getAppSpecific("Premise County");
 			for(apn in APNSPATIALINFORMATION){
@@ -151,7 +150,7 @@ try{
 				comment("APN does not match " + premCounty + " format - the format should be " + apnPattern + ".");
 			}
 		}
-	}
+	}*/
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
