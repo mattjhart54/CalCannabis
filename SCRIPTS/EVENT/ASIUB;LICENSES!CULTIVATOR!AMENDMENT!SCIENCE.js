@@ -1,4 +1,6 @@
 try{
+	var test = loadASITablesBeforeTest();
+	logDebug(test);
 	statusArray = [];
 	if(matches(AInfo["LSA Review Status-NEW"],"Annual", "Provisional")) {
 		var lsaCheck = true;
@@ -97,7 +99,7 @@ try{
 		}
 	}
 	
-	/*if (typeof(APNSPATIALINFORMATION) == "object"){
+	if (typeof(APNSPATIALINFORMATION) == "object"){
 		if(APNSPATIALINFORMATION.length > 0){
 			var premCounty = getAppSpecific("Premise County");
 			for(apn in APNSPATIALINFORMATION){
@@ -130,7 +132,7 @@ try{
 				comment("APN does not match " + premCounty + " format - the format should be " + apnPattern + ".");
 			}
 		}
-	}*/
+	}
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
