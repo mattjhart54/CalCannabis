@@ -129,10 +129,6 @@ try{
 				cancel = true;
 				showMessage = true;
 				comment = "APN does not match " + premCounty + " format - the format should be " + apnPattern + ".";
-			}else{
-				cancel = false;
-				showMessage = false;
-				comment = "";
 			}
 		}
 	}
