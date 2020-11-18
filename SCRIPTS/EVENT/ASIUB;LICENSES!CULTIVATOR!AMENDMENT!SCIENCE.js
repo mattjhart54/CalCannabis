@@ -125,13 +125,13 @@ try{
 			}
 		
 			if (!apnValid){
-				variable1.message="APN does not match " + variable0.value + " format - the format should be " + apnPattern + ".";
-				variable2.message="APN does not match " + variable0.value + " format - the format should be " + apnPattern + ".";
-				variable2.blockSubmit=true;
+				cancel = true;
+				showMessage = true;
+				comment = "APN does not match " + variable0.value + " format - the format should be " + apnPattern + ".";
 			}else{
-				variable1.message="";
-				variable2.message="";
-				variable2.blockSubmit=false;
+				cancel = false;
+				showMessage = false;
+				comment = "";
 			}
 		}
 	}
