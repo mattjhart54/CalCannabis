@@ -117,6 +117,40 @@ try{
 			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
+	if (typeof(APNSPATIALINFORMATION) == "object"){
+		if(APNSPATIALINFORMATION.length > 0){
+			var premCounty = getAppSpecific("Premise County");
+			for(apn in APNSPATIALINFORMATION){
+				var apnValid = true;
+				var valAPN = APNSPATIALINFORMATION[apn]["Validated APN"];
+				if(!matches(valAPN,null,undefined,"")){
+					var apnPattern = lookup("Lookup:APN County Format",String(premCounty));
+					if (!matches(apnPattern,null,undefined,"")){
+						var apnPatternArray = String(apnPattern).split("-");
+						var variable1Array = String(valAPN).split("-");
+						if (apnPatternArray.length == variable1Array.length){
+							for (i = 0; i < apnPatternArray.length; i++) {
+								if (apnPatternArray[i].length == variable1Array[i].length){
+									continue;
+								}else{
+									apnValid = false;
+								}
+								
+							}
+						}else{
+							apnValid = false;
+						}
+					}
+				}
+			}
+		
+			if (!apnValid){
+				cancel = true;
+				showMessage = true;
+				comment("APN does not match " + premCounty + " format - the format should be " + apnPattern + ".");
+			}
+		}
+	}
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
