@@ -97,6 +97,44 @@ try{
 			comment("The Small Retail Water Supplier Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
+	
+	if (typeof(APNSPATIALINFORMATION) == "object"){
+		if(APNSPATIALINFORMATION.length > 0){
+			for(apn in APNSPATIALINFORMATION){
+				var apnValid = true;
+				var valAPN = APNSPATIALINFORMATION[apn]["Validated APN"];
+				if(!matches(valAPN,null,undefined,"")){
+					var apnPattern = lookup("Lookup:APN County Format",String(variable0.value));
+					if (!matches(apnPattern,null,undefined,"")){
+						var apnPatternArray = apnPattern.split("-");
+						var variable1Array = String(variable1.value).split("-");
+						if (apnPatternArray.length == variable1Array.length){
+							for (i = 0; i < apnPatternArray.length; i++) {
+								if (apnPatternArray[i].length == variable1Array[i].length){
+									continue;
+								}else{
+									apnValid = false;
+								}
+								
+							}
+						}else{
+							apnValid = false;
+						}
+					}
+				}
+			}
+		
+			if (!apnValid){
+				variable1.message="APN does not match " + variable0.value + " format - the format should be " + apnPattern + ".";
+				variable2.message="APN does not match " + variable0.value + " format - the format should be " + apnPattern + ".";
+				variable2.blockSubmit=true;
+			}else{
+				variable1.message="";
+				variable2.message="";
+				variable2.blockSubmit=false;
+			}
+		}
+	}
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
