@@ -100,14 +100,15 @@ try{
 	
 	if (typeof(APNSPATIALINFORMATION) == "object"){
 		if(APNSPATIALINFORMATION.length > 0){
+			var premCounty = getAppSpecific("Premise County");
 			for(apn in APNSPATIALINFORMATION){
 				var apnValid = true;
 				var valAPN = APNSPATIALINFORMATION[apn]["Validated APN"];
 				if(!matches(valAPN,null,undefined,"")){
-					var apnPattern = lookup("Lookup:APN County Format",String(variable0.value));
+					var apnPattern = lookup("Lookup:APN County Format",String(premCounty));
 					if (!matches(apnPattern,null,undefined,"")){
 						var apnPatternArray = apnPattern.split("-");
-						var variable1Array = String(variable1.value).split("-");
+						var variable1Array = String(valAPN).split("-");
 						if (apnPatternArray.length == variable1Array.length){
 							for (i = 0; i < apnPatternArray.length; i++) {
 								if (apnPatternArray[i].length == variable1Array[i].length){
@@ -127,7 +128,7 @@ try{
 			if (!apnValid){
 				cancel = true;
 				showMessage = true;
-				comment = "APN does not match " + variable0.value + " format - the format should be " + apnPattern + ".";
+				comment = "APN does not match " + premCounty + " format - the format should be " + apnPattern + ".";
 			}else{
 				cancel = false;
 				showMessage = false;
