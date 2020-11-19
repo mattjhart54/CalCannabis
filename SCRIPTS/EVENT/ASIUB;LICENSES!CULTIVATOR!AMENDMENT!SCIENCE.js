@@ -1,5 +1,4 @@
 try{
-	loadAppSpecificBefore(AInfo); 
 	loadASITablesBefore();
 	logDebug("loadASITablesBefore");
 	statusArray = [];
