@@ -87,7 +87,7 @@ try {
 		}else{
 			ignoreTableArray.push("WATER RIGHTS");
 		}
-		if (typeof(PREMISESADDRESSES) == "object"){
+		/*if (typeof(PREMISESADDRESSES) == "object"){
 			if(PREMISESADDRESSES.length > 0){
 				premTable = new Array();
 				ignoreTableArray.push("PREMISES ADDRESSES");
@@ -111,7 +111,7 @@ try {
 				asit = cap.getAppSpecificTableGroupModel();
 				new_asit = addASITable4ACAPageFlow(asit,"PREMISES ADDRESSES", premTable,parentCapId);
 			}
-		}
+		}*/
 		
 		if (typeof(SOURCEOFWATERSUPPLY) == "object"){
 			if(SOURCEOFWATERSUPPLY.length > 0){
@@ -121,23 +121,22 @@ try {
 					var wtrSrcRow = SOURCEOFWATERSUPPLY[x];
 					row = new Array();
 					if(wtrSrcRow["Status"] != "Delete"){
-						row["Type of Water Supply"] = new asiTableValObj("Type of Water Supply",String(wtrSrcRow["Type of Water Supply"]),"N");
-						row["Name of Supplier"] = new asiTableValObj("Name of Supplier",String(wtrSrcRow["Name of Supplier"]),"N");
-						row["Geographical Location Coordinates"] = new asiTableValObj("Geographical Location Coordinates",String(wtrSrcRow["Geographical Location Coordinates"]),"N");
-						row["Groundwater Well Geographic Location Coordinates"] = new asiTableValObj("Groundwater Well Geographic Location Coordinates",String(wtrSrcRow["Groundwater Well Geographic Location Coordinates"]),"N");
-						row["Authorized Place of Use"] = new asiTableValObj("Authorized Place of Use",String(wtrSrcRow["Authorized Place of Use"]),"N");
-						row["Maximum Amount of Water Delivered"] = new asiTableValObj("Maximum Amount of Water Delivered",String(wtrSrcRow["Maximum Amount of Water Delivered"]),"N");
-						row["Total Square Footage"] = new asiTableValObj("Total Square Footage",String(wtrSrcRow["Total Square Footage"]),"N");
-						row["Total Storage Capacity"] = new asiTableValObj("Total Storage Capacity",String(wtrSrcRow["Total Storage Capacity"]),"N");
-						row["Description"] = new asiTableValObj("Description",String(wtrSrcRow["Description"]),"N");
-						row["Diversion Number"] = new asiTableValObj("Diversion Number",String(wtrSrcRow["Diversion Number"]),"N");
-						row["Water Source"] = new asiTableValObj("Water Source",String(wtrSrcRow["Water Source"]),"N");
+						row["Type of Water Supply"] = wtrSrcRow["Type of Water Supply"];
+						row["Name of Supplier"] = wtrSrcRow["Name of Supplier"];
+						row["Geographical Location Coordinates"] = String(wtrSrcRow["Geographical Location Coordinates"]);
+						row["Groundwater Well Geographic Location Coordinates"] = String(wtrSrcRow["Groundwater Well Geographic Location Coordinates"]);
+						row["Authorized Place of Use"] = String(wtrSrcRow["Authorized Place of Use"]);
+						row["Maximum Amount of Water Delivered"] = String(wtrSrcRow["Maximum Amount of Water Delivered"]);
+						row["Total Square Footage"] = String(wtrSrcRow["Total Square Footage"]);
+						row["Total Storage Capacity"] = String(wtrSrcRow["Total Storage Capacity"]);
+						row["Description"] = String(wtrSrcRow["Description"]);
+						row["Diversion Number"] = String(wtrSrcRow["Diversion Number"]);
+						row["Water Source"] = String(wtrSrcRow["Water Source"]);
 						multTable.push(row);
 					}
 				}
 				removeASITable("SOURCE OF WATER SUPPLY",parentCapId);
-				asit = cap.getAppSpecificTableGroupModel();
-				new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", multTable,capId);
+				addASITable("SOURCE OF WATER SUPPLY",multTable,parentCapId);
 			}
 		}
 			
