@@ -1,4 +1,7 @@
 try{
+	loadAppSpecificBefore(AInfo); 
+	loadASITablesBefore();
+	logDebug("loadASITablesBefore");
 	statusArray = [];
 	if(matches(AInfo["LSA Review Status-NEW"],"Annual", "Provisional")) {
 		var lsaCheck = true;
