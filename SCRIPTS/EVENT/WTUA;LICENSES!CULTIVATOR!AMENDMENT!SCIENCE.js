@@ -89,108 +89,58 @@ try {
 		}
 		if (typeof(PREMISESADDRESSES) == "object"){
 			if(PREMISESADDRESSES.length > 0){
+				premTable = new Array();
+				ignoreTableArray.push("PREMISES ADDRESSES");
 				for(x in PREMISESADDRESSES){
 					var premAddrRow = PREMISESADDRESSES[x];
-					multTable = new Array();
-					if(!matches(premAddrRow["UID"],"",null,"undefined")){
-						var columnName ="UID";
-						var tableName = "PREMISES ADDRESSES";
-						ignoreTableArray.push(tableName);
-						var valuesList = aa.util.newArrayList();
-						valuesList.add(premAddrRow["UID"].fieldValue);
-						if (premAddrRow["Status"].fieldValue == "Delete"){
-							var searchConditionMap = aa.util.newHashMap(); 
-							searchConditionMap.put(columnName, valuesList);
-							deleteRowFromASIT(tableName,searchConditionMap,parentCapId)
-						}
-						if (premAddrRow["Status"].fieldValue == "Modify"){
-							updateRowsToASIT(tableName,columnName,valuesList,"APN",String(premAddrRow["APN"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Premises Address",String(premAddrRow["Premises Address"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Premises City",String(premAddrRow["Premises City"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Premises State",String(premAddrRow["Premises State"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Premises Zip",String(premAddrRow["Premises Zip"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Premises County",String(premAddrRow["Premises County"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Type of Possession",String(premAddrRow["Type of Possession"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Owner Address",String(premAddrRow["Owner Address"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Owner Phone",String(premAddrRow["Owner Phone"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"UID",premAddrRow["UID"].fieldValue,parentCapId);
-						}
-					}
-					if (premAddrRow["Status"].fieldValue == "New"){
-						var tableValuesArray = {};
-						tableValuesArray["APN"] = new asiTableValObj("APN", String(premAddrRow["APN"]), "N");
-						tableValuesArray["Premises Address"] = new asiTableValObj("Premises Address", String(premAddrRow["Premises Address"]), "N");
-						tableValuesArray["Premises City"] = new asiTableValObj("Premises City", String(premAddrRow["Premises City"]), "N");
-						tableValuesArray["Premises State"] = new asiTableValObj("Premises State", String(premAddrRow["Premises State"]), "N");
-						tableValuesArray["Premises Zip"] = new asiTableValObj("Premises Zip", String(premAddrRow["Premises Zip"]), "N");
-						tableValuesArray["Premises County"] = new asiTableValObj("Premises County", String(premAddrRow["Premises County"]), "N");
-						tableValuesArray["Type of Possession"] = new asiTableValObj("Type of Possession", String(premAddrRow["Type of Possession"]), "N");
-						tableValuesArray["Owner Address"] = new asiTableValObj("Owner Address", String(premAddrRow["Type of Possession"]), "N");
-						tableValuesArray["Owner Phone"] = new asiTableValObj("Owner Phone", String(premAddrRow["Owner Phone"]), "N");
-						var thisDate = new Date();
-						var thisTime = ""+thisDate.getTime();
-						var UID=String(thisTime);
-						tableValuesArray["UID"] = new asiTableValObj("UID", String(UID), "Y");
-						addASITValueToRecord(tableName, tableValuesArray, parentCapId);
+					if (premAddrRow["Status"].fieldValue != "Delete"){
+						premRow = new Array();
+						premRow["APN"] = new asiTableValObj("APN", String(premAddrRow["APN"]), "N");
+						premRow["Premises Address"] = new asiTableValObj("Premises Address", String(premAddrRow["Premises Address"]), "N");
+						premRow["Premises City"] = new asiTableValObj("Premises City", String(premAddrRow["Premises City"]), "N");
+						premRow["Premises State"] = new asiTableValObj("Premises State", String(premAddrRow["Premises State"]), "N");
+						premRow["Premises Zip"] = new asiTableValObj("Premises Zip", String(premAddrRow["Premises Zip"]), "N");
+						premRow["Premises County"] = new asiTableValObj("Premises County", String(premAddrRow["Premises County"]), "N");
+						premRow["Type of Possession"] = new asiTableValObj("Type of Possession", String(premAddrRow["Type of Possession"]), "N");
+						premRow["Owner Address"] = new asiTableValObj("Owner Address", String(premAddrRow["Type of Possession"]), "N");
+						premRow["Owner Phone"] = new asiTableValObj("Owner Phone", String(premAddrRow["Owner Phone"]), "N");
+						premTable.push(premRow);
 					}
 				}
+				removeASITable("PREMISES ADDRESSES",parentCapId);
+				asit = cap.getAppSpecificTableGroupModel();
+				new_asit = addASITable4ACAPageFlow(asit,"PREMISES ADDRESSES", premTable,parentCapId);
 			}
 		}
 		
 		if (typeof(SOURCEOFWATERSUPPLY) == "object"){
 			if(SOURCEOFWATERSUPPLY.length > 0){
+				ignoreTableArray.push("SOURCE OF WATER SUPPLY");
+				var multTable = new Array(); 
 				for(x in SOURCEOFWATERSUPPLY){
 					var wtrSrcRow = SOURCEOFWATERSUPPLY[x];
-					multTable = new Array();
-					if(!matches(wtrSrcRow["UID"],"",null,"undefined")){
-						var columnName ="UID";
-						var tableName = "SOURCE OF WATER SUPPLY";
-						ignoreTableArray.push(tableName);
-						var valuesList = aa.util.newArrayList();
-						valuesList.add(wtrSrcRow["UID"].fieldValue);
-						if (wtrSrcRow["Status"].fieldValue == "Delete"){
-							var searchConditionMap = aa.util.newHashMap(); 
-							searchConditionMap.put(columnName, valuesList);
-							deleteRowFromASIT(tableName,searchConditionMap,parentCapId)
-						}
-						if (wtrSrcRow["Status"].fieldValue == "Modify"){
-							updateRowsToASIT(tableName,columnName,valuesList,"Type of Water Supply",String(wtrSrcRow["Type of Water Supply"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Name of Supplier",String(wtrSrcRow["Name of Supplier"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Geographical Location Coordinates",String(wtrSrcRow["Geographical Location Coordinates"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Groundwater Well Geographic Location Coordinates",String(wtrSrcRow["Groundwater Well Geographic Location Coordinates"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Authorized Place of Use",String(wtrSrcRow["Authorized Place of Use"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Maximum Amount of Water Delivered",String(wtrSrcRow["Maximum Amount of Water Delivered"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Total Square Footage",String(wtrSrcRow["Total Square Footage"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Total Storage Capacity",String(wtrSrcRow["Total Storage Capacity"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Description",String(wtrSrcRow["Description"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Diversion Number",String(wtrSrcRow["Diversion Number"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"Water Source",String(wtrSrcRow["Water Source"]),parentCapId);
-							updateRowsToASIT(tableName,columnName,valuesList,"UID",wtrSrcRow["UID"].fieldValue,parentCapId);
-						}
-					}
-					if (wtrSrcRow["Status"].fieldValue == "New"){
-						var tableValuesArray = {};
-						tableValuesArray["Type of Water Supply"] = new asiTableValObj("Type of Water Supply", String(wtrSrcRow["Type of Water Supply"]), "N");
-						tableValuesArray["Name of Supplier"] = new asiTableValObj("Name of Supplier", String(wtrSrcRow["Name of Supplier"]), "N");
-						tableValuesArray["Geographical Location Coordinates"] = new asiTableValObj("Geographical Location Coordinates", String(wtrSrcRow["Geographical Location Coordinates"]), "N");
-						tableValuesArray["Groundwater Well Geographic Location Coordinates"] = new asiTableValObj("Groundwater Well Geographic Location Coordinates", String(wtrSrcRow["Groundwater Well Geographic Location Coordinates"]), "N");
-						tableValuesArray["Authorized Place of Use"] = new asiTableValObj("Authorized Place of Use", String(wtrSrcRow["Authorized Place of Use"]), "N");
-						tableValuesArray["Maximum Amount of Water Delivered"] = new asiTableValObj("Maximum Amount of Water Delivered", String(wtrSrcRow["Maximum Amount of Water Delivered"]), "N");
-						tableValuesArray["Total Square Footage"] = new asiTableValObj("Total Square Footage", String(wtrSrcRow["Total Square Footage"]), "N");
-						tableValuesArray["Total Storage Capacity"] = new asiTableValObj("Total Storage Capacity", String(wtrSrcRow["Total Storage Capacity"]), "N");
-						tableValuesArray["Description"] = new asiTableValObj("Description", String(wtrSrcRow["Description"]), "N");
-						tableValuesArray["Diversion Number"] = new asiTableValObj("Diversion Number", String(wtrSrcRow["Diversion Number"]), "N");
-						tableValuesArray["Water Source"] = new asiTableValObj("Water Source", String(wtrSrcRow["Water Source"]), "N");
-						var thisDate = new Date();
-						var thisTime = ""+thisDate.getTime();
-						var UID=String(thisTime);
-						tableValuesArray["UID"] = new asiTableValObj("UID", String(UID), "Y");
-						addASITValueToRecord(tableName, tableValuesArray, parentCapId);
+					row = new Array();
+					if(wtrSrcRow["Status"] != "Delete"){
+						row["Type of Water Supply"] = new asiTableValObj("Type of Water Supply",String(wtrSrcRow["Type of Water Supply"]),"N");
+						row["Name of Supplier"] = new asiTableValObj("Name of Supplier",String(wtrSrcRow["Name of Supplier"]),"N");
+						row["Geographical Location Coordinates"] = new asiTableValObj("Geographical Location Coordinates",String(wtrSrcRow["Geographical Location Coordinates"]),"N");
+						row["Groundwater Well Geographic Location Coordinates"] = new asiTableValObj("Groundwater Well Geographic Location Coordinates",String(wtrSrcRow["Groundwater Well Geographic Location Coordinates"]),"N");
+						row["Authorized Place of Use"] = new asiTableValObj("Authorized Place of Use",String(wtrSrcRow["Authorized Place of Use"]),"N");
+						row["Maximum Amount of Water Delivered"] = new asiTableValObj("Maximum Amount of Water Delivered",String(wtrSrcRow["Maximum Amount of Water Delivered"]),"N");
+						row["Total Square Footage"] = new asiTableValObj("Total Square Footage",String(wtrSrcRow["Total Square Footage"]),"N");
+						row["Total Storage Capacity"] = new asiTableValObj("Total Storage Capacity",String(wtrSrcRow["Total Storage Capacity"]),"N");
+						row["Description"] = new asiTableValObj("Description",String(wtrSrcRow["Description"]),"N");
+						row["Diversion Number"] = new asiTableValObj("Diversion Number",String(wtrSrcRow["Diversion Number"]),"N");
+						row["Water Source"] = new asiTableValObj("Water Source",String(wtrSrcRow["Water Source"]),"N");
+						multTable.push(row);
 					}
 				}
+				removeASITable("SOURCE OF WATER SUPPLY",parentCapId);
+				asit = cap.getAppSpecificTableGroupModel();
+				new_asit = addASITable4ACAPageFlow(asit,"SOURCE OF WATER SUPPLY", multTable,capId);
 			}
 		}
-				
+			
 		copyASITables(capId,parentCapId,ignoreTableArray);	
 		//End Story 6622 
 		var rFiles = [];
