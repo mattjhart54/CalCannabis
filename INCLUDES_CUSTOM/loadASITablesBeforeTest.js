@@ -4,7 +4,8 @@ function loadASITablesBeforeTest() {
 	// Loads App Specific tables into their own array of arrays.  Creates global array objects
 	//
 	//Sometimes "AppSpecificTableGroupModel" is a list
-	var gm = aa.appSpecificTableScript.getAppSpecificTableGroupModel(capId).getOutput();
+	var cap = aa.cap.getCap(capId).getOutput().getCapModel();
+	var gm = cap.getAppSpecificTableGroupModel();
 	//var gm = aa.env.getValue("AppSpecificTableGroupModel");
 
 	var gmItem = gm;
