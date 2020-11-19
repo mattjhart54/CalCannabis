@@ -87,7 +87,7 @@ try {
 		}else{
 			ignoreTableArray.push("WATER RIGHTS");
 		}
-		/*if (typeof(PREMISESADDRESSES) == "object"){
+		if (typeof(PREMISESADDRESSES) == "object"){
 			if(PREMISESADDRESSES.length > 0){
 				premTable = new Array();
 				ignoreTableArray.push("PREMISES ADDRESSES");
@@ -95,23 +95,22 @@ try {
 					var premAddrRow = PREMISESADDRESSES[x];
 					if (premAddrRow["Status"].fieldValue != "Delete"){
 						premRow = new Array();
-						premRow["APN"] = new asiTableValObj("APN", String(premAddrRow["APN"]), "N");
-						premRow["Premises Address"] = new asiTableValObj("Premises Address", String(premAddrRow["Premises Address"]), "N");
-						premRow["Premises City"] = new asiTableValObj("Premises City", String(premAddrRow["Premises City"]), "N");
-						premRow["Premises State"] = new asiTableValObj("Premises State", String(premAddrRow["Premises State"]), "N");
-						premRow["Premises Zip"] = new asiTableValObj("Premises Zip", String(premAddrRow["Premises Zip"]), "N");
-						premRow["Premises County"] = new asiTableValObj("Premises County", String(premAddrRow["Premises County"]), "N");
-						premRow["Type of Possession"] = new asiTableValObj("Type of Possession", String(premAddrRow["Type of Possession"]), "N");
-						premRow["Owner Address"] = new asiTableValObj("Owner Address", String(premAddrRow["Type of Possession"]), "N");
-						premRow["Owner Phone"] = new asiTableValObj("Owner Phone", String(premAddrRow["Owner Phone"]), "N");
+						premRow["APN"] = premAddrRow["APN"];
+						premRow["Premises Address"] = premAddrRow["Premises Address"];
+						premRow["Premises City"] = premAddrRow["Premises City"];
+						premRow["Premises State"] = premAddrRow["Premises State"];
+						premRow["Premises Zip"] = premAddrRow["Premises Zip"];
+						premRow["Premises County"] = premAddrRow["Premises County"];
+						premRow["Type of Possession"] = premAddrRow["Type of Possession"];
+						premRow["Owner Address"] = premAddrRow["Type of Possession"];
+						premRow["Owner Phone"] = premAddrRow["Owner Phone"];
 						premTable.push(premRow);
 					}
 				}
 				removeASITable("PREMISES ADDRESSES",parentCapId);
-				asit = cap.getAppSpecificTableGroupModel();
-				new_asit = addASITable4ACAPageFlow(asit,"PREMISES ADDRESSES", premTable,parentCapId);
+				addASITable("PREMISES ADDRESSES",premTable,parentCapId);
 			}
-		}*/
+		}
 		
 		if (typeof(SOURCEOFWATERSUPPLY) == "object"){
 			if(SOURCEOFWATERSUPPLY.length > 0){
@@ -123,15 +122,15 @@ try {
 					if(wtrSrcRow["Status"] != "Delete"){
 						row["Type of Water Supply"] = wtrSrcRow["Type of Water Supply"];
 						row["Name of Supplier"] = wtrSrcRow["Name of Supplier"];
-						row["Geographical Location Coordinates"] = String(wtrSrcRow["Geographical Location Coordinates"]);
-						row["Groundwater Well Geographic Location Coordinates"] = String(wtrSrcRow["Groundwater Well Geographic Location Coordinates"]);
-						row["Authorized Place of Use"] = String(wtrSrcRow["Authorized Place of Use"]);
-						row["Maximum Amount of Water Delivered"] = String(wtrSrcRow["Maximum Amount of Water Delivered"]);
-						row["Total Square Footage"] = String(wtrSrcRow["Total Square Footage"]);
-						row["Total Storage Capacity"] = String(wtrSrcRow["Total Storage Capacity"]);
-						row["Description"] = String(wtrSrcRow["Description"]);
-						row["Diversion Number"] = String(wtrSrcRow["Diversion Number"]);
-						row["Water Source"] = String(wtrSrcRow["Water Source"]);
+						row["Geographical Location Coordinates"] = wtrSrcRow["Geographical Location Coordinates"];
+						row["Groundwater Well Geographic Location Coordinates"] = wtrSrcRow["Groundwater Well Geographic Location Coordinates"];
+						row["Authorized Place of Use"] = wtrSrcRow["Authorized Place of Use"];
+						row["Maximum Amount of Water Delivered"] = wtrSrcRow["Maximum Amount of Water Delivered"];
+						row["Total Square Footage"] = wtrSrcRow["Total Square Footage"];
+						row["Total Storage Capacity"] = wtrSrcRow["Total Storage Capacity"];
+						row["Description"] = wtrSrcRow["Description"];
+						row["Diversion Number"] = wtrSrcRow["Diversion Number"];
+						row["Water Source"] = wtrSrcRow["Water Source"];
 						multTable.push(row);
 					}
 				}
