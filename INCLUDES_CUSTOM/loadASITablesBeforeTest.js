@@ -10,7 +10,7 @@ function loadASITablesBeforeTest() {
 
 	var gmItem = gm;
 
-	if (gm != null && typeof(gm).size != "undefined" && gm.size() > 0) {
+	if (gm != null && typeof(gm) != "undefined" && gm.size() > 0) {
 		gmItem = gm.get(0);
 	} else {
 		gmItem = gm;
