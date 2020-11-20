@@ -4,8 +4,10 @@ try{
 		var totPct = 0;
 		if (typeof(OWNERS) == "object") {
 			for(x in OWNERS) {
-				var ownPct = parseFloat(OWNERS[x]["Percent Ownership"]);
-				totPct = totPct + ownPct 
+				if(OWNERS[x]["Change Status"] != "Delete") {
+					var ownPct = parseFloat(OWNERS[x]["Percent Ownership"]);
+					totPct = Math.round((totPct + ownPct) * 1e12) / 1e12;
+				}
 			}
 		}
 		if (totPct > 100 || totPct < 0) {
