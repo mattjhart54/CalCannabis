@@ -107,7 +107,7 @@ try{
 		}
 	}
 	if(AInfo["Small Retail Water Supplier Review Status"] == "Complete") {
-		if(!SMALLRETAILWATERSUPPLIERS.length > 0){
+		if(SMALLRETAILWATERSUPPLIERS.length > 0){
 			if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or pickup of water from a groundwater well")) != SMALLRETAILWATERSUPPLIERS.length) {
 				cancel = true;
 				showMessage = true;
