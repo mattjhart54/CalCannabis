@@ -68,7 +68,7 @@ try{
 	}
 	if(AInfo["Rainwater Catchment Review Status"] == "Complete") {	
 		if(RAINWATERCATCHMENT.length > 0){	
-			if(getOccurrence(statusArray, "Rainwater Catchment") != RAINWATERCATCHMENT.length) {
+			if(getOccurrence(statusArray, "Rainwater Catchment System") != RAINWATERCATCHMENT.length) {
 				cancel = true;
 				showMessage = true;
 				comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
