@@ -182,7 +182,7 @@ try{
 						premTable.push(premRow);
 					}
 					asit = cap.getAppSpecificTableGroupModel();
-					new_asit = addASITable4ACAPageFlow(asit,"PREMISES ADDRESSES", premTable,capId);
+					new_asit = copyASITable4ACAPageFlow(asit,"PREMISES ADDRESSES", premTable);
 				}
 			}
 			/*var sourceWaterSupply = loadASITable("SOURCE OF WATER SUPPLY",licCapId);
@@ -214,7 +214,7 @@ try{
 } catch (err) {
 	showDebug =true;
 	logDebug("An error has occurred in ACA_ONLOAD_SA_PREMISES: Load Data: " + err.message + br + err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_SA_PREMISES: Load Date: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+	//aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_SA_PREMISES: Load Date: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 }
 
 // page flow custom code end
