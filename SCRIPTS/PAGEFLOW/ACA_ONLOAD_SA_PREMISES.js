@@ -160,7 +160,54 @@ try{
 			editAppSpecific4ACA("Other",PInfo["Other"]);
 			editAppSpecific4ACA("Other Update",PInfo["Other"]);
 			editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
-			copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
+			copyASITables4ACA(licCapId,capId,"PREMISES ADDRESSES","SOURCE OF WATER SUPPLY","DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
+			
+			var premAddrTable = loadASITable("PREMISES ADDRESSES",licCapId);
+			if (typeof(premAddrTable) == "object"){
+				if(premAddrTable.length > 0){
+					premTable = new Array();
+					for(ii in premAddrTable){
+						var premAddrRow = premAddrTable[ii];
+						premRow = new Array();
+						premRow["APN"] = premAddrRow["APN"];
+						premRow["Premises Address"] = premAddrRow["Premises Address"];
+						premRow["Premises City"] = premAddrRow["Premises City"];
+						premRow["Premises State"] = premAddrRow["Premises State"];
+						premRow["Premises Zip"] = premAddrRow["Premises Zip"];
+						premRow["Premises County"] = premAddrRow["Premises County"];
+						premRow["Type of Possession"] = premAddrRow["Type of Possession"];
+						premRow["Owner Address"] = premAddrRow["Type of Possession"];
+						premRow["Owner Phone"] = premAddrRow["Owner Phone"];
+						premRow["Status"] = "No Change";
+						premTable.push(premRow);
+					}
+					addASITable("PREMISES ADDRESSES",premTable,parentCapId);
+				}
+			}
+			var sourceWaterSupply = loadASITable("SOURCE OF WATER SUPPLY",licCapId);
+			if (typeof(sourceWaterSupply) == "object"){
+				if(sourceWaterSupply.length > 0){
+					var multTable = new Array(); 
+					for(xx in sourceWaterSupply){
+						var wtrSrcRow = sourceWaterSupply[xx];
+						row = new Array();
+						row["Type of Water Supply"] = wtrSrcRow["Type of Water Supply"];
+						row["Name of Supplier"] = wtrSrcRow["Name of Supplier"];
+						row["Geographical Location Coordinates"] = wtrSrcRow["Geographical Location Coordinates"];
+						row["Groundwater Well Geographic Location Coordinates"] = wtrSrcRow["Groundwater Well Geographic Location Coordinates"];
+						row["Authorized Place of Use"] = wtrSrcRow["Authorized Place of Use"];
+						row["Maximum Amount of Water Delivered"] = wtrSrcRow["Maximum Amount of Water Delivered"];
+						row["Total Square Footage"] = wtrSrcRow["Total Square Footage"];
+						row["Total Storage Capacity"] = wtrSrcRow["Total Storage Capacity"];
+						row["Description"] = wtrSrcRow["Description"];
+						row["Diversion Number"] = wtrSrcRow["Diversion Number"];
+						row["Water Source"] = wtrSrcRow["Water Source"];
+						row["Status"] = "No Change";
+						multTable.push(row);
+					}
+					addASITable("SOURCE OF WATER SUPPLY",multTable,parentCapId);
+				}
+			}					
 		}
 	}
 } catch (err) {
