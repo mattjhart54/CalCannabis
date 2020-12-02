@@ -161,7 +161,7 @@ try{
 			editAppSpecific4ACA("Other Update",PInfo["Other"]);
 			editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
 			copyASITables4ACA(licCapId,capId,"PREMISES ADDRESSES","SOURCE OF WATER SUPPLY","DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
-			
+			removeASITable("PERMIT INFO");
 			var premAddrTable = loadASITable("PREMISES ADDRESSES",licCapId);
 			if (typeof(premAddrTable) == "object"){
 				if(premAddrTable.length > 0){
@@ -238,3 +238,25 @@ if (debug.indexOf("**ERROR") > 0) {
 			aa.env.setValue("ErrorMessage", debug);
 	}
 }
+
+/*------------------------------------------------------------------------------------------------------/
+| <===========External Functions (used by Action entries)
+/------------------------------------------------------------------------------------------------------*/
+	
+
+	function removeASITable(tableName) // optional capId
+  	{
+	//  tableName is the name of the ASI table
+	//  tableValues is an associative array of values.  All elements MUST be strings.
+  	var itemCap = capId
+	if (arguments.length > 1)
+		itemCap = arguments[1]; // use cap ID specified in args
+
+	var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos(tableName,itemCap,currentUserID)
+
+	if (!tssmResult.getSuccess())
+		{ aa.print("**WARNING: error removing ASI table " + tableName + " " + tssmResult.getErrorMessage()) ; return false }
+        else
+	logDebug("Successfully removed all rows from ASI Table: " + tableName);
+
+	}
