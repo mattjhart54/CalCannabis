@@ -169,22 +169,23 @@ try{
 					for(ii in premAddrTable){
 						var premAddrRow = premAddrTable[ii];
 						premRow = new Array();
-						premRow["APN"] = premAddrRow["APN"];
-						premRow["Premises Address"] = premAddrRow["Premises Address"];
-						premRow["Premises City"] = premAddrRow["Premises City"];
-						premRow["Premises State"] = premAddrRow["Premises State"];
-						premRow["Premises Zip"] = premAddrRow["Premises Zip"];
-						premRow["Premises County"] = premAddrRow["Premises County"];
-						premRow["Type of Possession"] = premAddrRow["Type of Possession"];
-						premRow["Owner Address"] = premAddrRow["Type of Possession"];
-						premRow["Owner Phone"] = premAddrRow["Owner Phone"];
-						premRow["Status"] = "No Change";
+						premRow["APN"] = new asiTableValObj("APN",premAddrRow["APN"],"N");
+						premRow["Premises Address"] = new asiTableValObj("Premises Address",premAddrRow["Premises Address"],"N");
+						premRow["Premises City"] = new asiTableValObj("Premises City",premAddrRow["Premises City"],"N");
+						premRow["Premises State"] = new asiTableValObj("Premises State",premAddrRow["Premises State"],"N");
+						premRow["Premises Zip"] = new asiTableValObj("Premises Zip",premAddrRow["Premises Zip"],"N");
+						premRow["Premises County"] = new asiTableValObj("Premises County",premAddrRow["Premises County"],"N");
+						premRow["Type of Possession"] = new asiTableValObj("Type of Possession",premAddrRow["Type of Possession"],"N");
+						premRow["Owner Address"] = new asiTableValObj("Owner Address",premAddrRow["Type of Possession"],"N");
+						premRow["Owner Phone"] = new asiTableValObj("Owner Phone",premAddrRow["Owner Phone"],"N");
+						premRow["Status"] = new asiTableValObj("Status","No Change","N");
 						premTable.push(premRow);
 					}
-					addASITable("PREMISES ADDRESSES",premTable,capId);
+					asit = cap.getAppSpecificTableGroupModel();
+					new_asit = addASITable4ACAPageFlow(asit,"PREMISES ADDRESSES", premTable,capId);
 				}
 			}
-			var sourceWaterSupply = loadASITable("SOURCE OF WATER SUPPLY",licCapId);
+			/*var sourceWaterSupply = loadASITable("SOURCE OF WATER SUPPLY",licCapId);
 			if (typeof(sourceWaterSupply) == "object"){
 				if(sourceWaterSupply.length > 0){
 					var multTable = new Array(); 
@@ -207,7 +208,7 @@ try{
 					}
 					addASITable("SOURCE OF WATER SUPPLY",multTable,capId);
 				}
-			}					
+			}*/					
 		}
 	}
 } catch (err) {
