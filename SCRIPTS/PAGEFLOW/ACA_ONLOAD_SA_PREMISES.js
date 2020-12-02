@@ -181,7 +181,7 @@ try{
 						premRow["Status"] = "No Change";
 						premTable.push(premRow);
 					}
-					addASITable("PREMISES ADDRESSES",premTable,parentCapId);
+					addASITable("PREMISES ADDRESSES",premTable,capId);
 				}
 			}
 			var sourceWaterSupply = loadASITable("SOURCE OF WATER SUPPLY",licCapId);
@@ -205,7 +205,7 @@ try{
 						row["Status"] = "No Change";
 						multTable.push(row);
 					}
-					addASITable("SOURCE OF WATER SUPPLY",multTable,parentCapId);
+					addASITable("SOURCE OF WATER SUPPLY",multTable,capId);
 				}
 			}					
 		}
