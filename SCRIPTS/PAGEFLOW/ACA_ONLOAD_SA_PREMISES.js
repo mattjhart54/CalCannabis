@@ -209,7 +209,7 @@ try{
 					}
 					removeASITable("SOURCE OF WATER SUPPLY"); 
 					asit = cap.getAppSpecificTableGroupModel();
-					new_asit = copyASITable4PageFlowLocal(asit,"SOURCE OF WATER SUPPLY", premTable,capId);
+					new_asit = copyASITable4PageFlowLocal(asit,"SOURCE OF WATER SUPPLY", multTable,capId);
 				}
 			}				
 		}
