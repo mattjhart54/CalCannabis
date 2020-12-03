@@ -186,30 +186,32 @@ try{
 					new_asit = copyASITable4PageFlowLocal(asit,"PREMISES ADDRESSES", premTable,capId);
 				}
 			}
-			/*var sourceWaterSupply = loadASITable("SOURCE OF WATER SUPPLY",licCapId);
+			var sourceWaterSupply = loadASITable("SOURCE OF WATER SUPPLY",licCapId);
 			if (typeof(sourceWaterSupply) == "object"){
 				if(sourceWaterSupply.length > 0){
 					var multTable = new Array(); 
 					for(xx in sourceWaterSupply){
 						var wtrSrcRow = sourceWaterSupply[xx];
 						row = new Array();
-						row["Type of Water Supply"] = wtrSrcRow["Type of Water Supply"];
-						row["Name of Supplier"] = wtrSrcRow["Name of Supplier"];
-						row["Geographical Location Coordinates"] = wtrSrcRow["Geographical Location Coordinates"];
-						row["Groundwater Well Geographic Location Coordinates"] = wtrSrcRow["Groundwater Well Geographic Location Coordinates"];
-						row["Authorized Place of Use"] = wtrSrcRow["Authorized Place of Use"];
-						row["Maximum Amount of Water Delivered"] = wtrSrcRow["Maximum Amount of Water Delivered"];
-						row["Total Square Footage"] = wtrSrcRow["Total Square Footage"];
-						row["Total Storage Capacity"] = wtrSrcRow["Total Storage Capacity"];
-						row["Description"] = wtrSrcRow["Description"];
-						row["Diversion Number"] = wtrSrcRow["Diversion Number"];
-						row["Water Source"] = wtrSrcRow["Water Source"];
-						row["Status"] = "No Change";
+						row["Type of Water Supply"] = new asiTableValObj("Type of Water Supply",wtrSrcRow["Type of Water Supply"],"N");
+						row["Name of Supplier"] = new asiTableValObj("Name of Supplier",wtrSrcRow["Name of Supplier"],"N");
+						row["Geographical Location Coordinates"] = new asiTableValObj("Geographical Location Coordinates",wtrSrcRow["Geographical Location Coordinates"],"N");
+						row["Groundwater Well Geographic Location Coordinates"] = new asiTableValObj("Groundwater Well Geographic Location Coordinates",wtrSrcRow["Groundwater Well Geographic Location Coordinates"],"N");
+						row["Authorized Place of Use"] = new asiTableValObj("Authorized Place of Use",wtrSrcRow["Authorized Place of Use"],"N");
+						row["Maximum Amount of Water Delivered"] = new asiTableValObj("Maximum Amount of Water Delivered",wtrSrcRow["Maximum Amount of Water Delivered"],"N");
+						row["Total Square Footage"] = new asiTableValObj("Total Square Footage",wtrSrcRow["Total Square Footage"],"N");
+						row["Total Storage Capacity"] = new asiTableValObj("Total Storage Capacity",wtrSrcRow["Total Storage Capacity"],"N");
+						row["Description"] = new asiTableValObj("Description",wtrSrcRow["Description"],"N");
+						row["Diversion Number"] = new asiTableValObj("Diversion Number",wtrSrcRow["Diversion Number"],"N");
+						row["Water Source"] = new asiTableValObj("Water Source",wtrSrcRow["Water Source"],"N");
+						row["Status"] = new asiTableValObj("Status","No Change","N");
 						multTable.push(row);
 					}
-					addASITable("SOURCE OF WATER SUPPLY",multTable,capId);
+					removeASITable("SOURCE OF WATER SUPPLY"); 
+					asit = cap.getAppSpecificTableGroupModel();
+					new_asit = copyASITable4PageFlowLocal(asit,"SOURCE OF WATER SUPPLY", premTable,capId);
 				}
-			}*/					
+			}				
 		}
 	}
 } catch (err) {
