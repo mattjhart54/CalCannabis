@@ -140,7 +140,7 @@ try {
 		}
 			
 		copyASITables(capId,parentCapId,ignoreTableArray);
-		runReportAttach(parentCapId,"Scientific Review Checklist","altID",parentCapId.getCustomID());		
+		runReportAttach(parentCapId,"Scientific Review Checklist","altID",capId.getCustomID());		
 		//End Story 6622 
 		var rFiles = [];
 		if(updateCat) {
