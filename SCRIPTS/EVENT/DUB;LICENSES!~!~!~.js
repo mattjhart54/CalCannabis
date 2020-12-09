@@ -49,16 +49,13 @@
 			fileName = documentModel.getFileName();
 			logDebug(" 1 Filename is: " + fileName);
 			
-			if (isContainsSpecialCharacters(fileName)) {
-				fileNameExtensionDtls = String(fileName).split(".");
-				extension = fileNameExtensionDtls[1];
-				logDebug("File Extension = " + extension);
-				if(matches(extension.toLowerCase(),"ade","adp","bat","chm","cmd","com","cpl","exe","hta","htm","html","ins","isp","jar","js","jse","lib","lnk","mde","mht","mhtml","msc","msp","mst","php","pif","scr","sct","shb","sys","vb","vbe","vbs","vxd","wsc","wsf","wsh","zip","dll","pdf")){
-					cancel = true;		
-					showMessage = true;
-					comment("Can not accept file extension");
-				
-				}
+			fileNameExtensionDtls = String(fileName).split(".");
+			extension = fileNameExtensionDtls[1];
+			logDebug("File Extension = " + extension);
+			if(matches(extension.toLowerCase(),"ade","adp","bat","chm","cmd","com","cpl","exe","hta","htm","html","ins","isp","jar","js","jse","lib","lnk","mde","mht","mhtml","msc","msp","mst","php","pif","scr","sct","shb","sys","vb","vbe","vbs","vxd","wsc","wsf","wsh","zip","dll","pdf")){
+				cancel = true;		
+				showMessage = true;
+				comment("Can not accept file extension");
 			
 			}
 		}
