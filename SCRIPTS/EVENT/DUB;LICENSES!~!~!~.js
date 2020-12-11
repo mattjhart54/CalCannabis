@@ -55,7 +55,7 @@
 			if(matches(extension.toLowerCase(),"ade","adp","bat","chm","cmd","com","cpl","exe","hta","htm","html","ins","isp","jar","js","jse","lib","lnk","mde","mht","mhtml","msc","msp","mst","php","pif","scr","sct","shb","sys","vb","vbe","vbs","vxd","wsc","wsf","wsh","zip","dll")){
 				cancel = true;		
 				showMessage = true;
-				comment("Can not accept file extension");
+				comment("We accept the following file types for upload: PDF; Word; Excel; TXT; JPG; PNG; and Tiff.");
 			
 			}
 		}
