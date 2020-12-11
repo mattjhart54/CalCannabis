@@ -32,7 +32,13 @@ try{
 	}		
 	if(AInfo["Water Rights Review Status-NEW"] == "Complete") {
 		if (WATERRIGHTS.length > 0){
-			if(getOccurrence(statusArray, "Diversion from Waterbody") != WATERRIGHTS.length) {
+			wrLines = 0;
+			for(wr in WATERRIGHTS){
+				if (WATERRIGHTS[wr]["Currently used for Cannabis?"] != "No"){
+					wrLines++;
+				}
+			}	
+			if(getOccurrence(statusArray, "Diversion from Waterbody") != wrLines) {
 				cancel = true;
 				showMessage = true;
 				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
@@ -44,8 +50,14 @@ try{
 		}
 	}
 	if(AInfo["Rainwater Catchment Review Status-NEW"] == "Complete") {	
-		if(RAINWATERCATCHMENT.length > 0){	
-			if(getOccurrence(statusArray, "Rainwater Catchment System") != RAINWATERCATCHMENT.length) {
+		if(RAINWATERCATCHMENT.length > 0){
+			rwLines = 0;
+			for(rw in RAINWATERCATCHMENT){
+				if(RAINWATERCATCHMENT[rw]["Currently Used for Cannabis"] != "No"){
+					rwLines++;
+				}
+			}			
+			if(getOccurrence(statusArray, "Rainwater Catchment System") != rwLines) {
 				cancel = true;
 				showMessage = true;
 				comment("The number of water sources in the Rain Catchment table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
@@ -59,7 +71,13 @@ try{
 	
 	if(AInfo["Groundwater Well Review Status-NEW"] == "Complete") {
 		if(GROUNDWATERWELL.length > 0){
-			if(getOccurrence(statusArray, "Groundwater Well") != GROUNDWATERWELL.length) {
+			gwLines = 0;
+			for (gw in GROUNDWATERWELL){
+				if(GROUNDWATERWELL[gw]["Currently Used for Cannabis"] != "No"){
+					gwLines++;
+				}
+			}
+			if(getOccurrence(statusArray, "Groundwater Well") != gwLines) {
 				cancel = true;
 				showMessage = true;
 				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
@@ -72,7 +90,13 @@ try{
 	}
 	if(AInfo["Retail Water Supplier Review Status-NEW"] == "Complete") {
 		if(RETAILWATERSUPPLIER.length > 0){
-			if(getOccurrence(statusArray, "Retail Supplier") != RETAILWATERSUPPLIER.length) {
+			rwsLines = 0;
+			for (rws in RETAILWATERSUPPLIER){
+				if(RETAILWATERSUPPLIER[rws]["Currently Used for Cannabis?"] != "No"){
+					rwsLines++;
+				}
+			}
+			if(getOccurrence(statusArray, "Retail Supplier") != rwsLines) {
 				cancel = true;
 				showMessage = true;
 				comment("The number of Retail Supplier water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
@@ -85,7 +109,13 @@ try{
 	}
 	if(AInfo["Small Retail Water Supplier Review Status-NEW"] == "Complete") {
 		if(SMALLRETAILWATERSUPPLIERS.length > 0){
-			if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or pickup of water from a groundwater well")) != SMALLRETAILWATERSUPPLIERS.length) {
+			srLines = 0;
+			for (sr in SMALLRETAILWATERSUPPLIERS){
+				if (SMALLRETAILWATERSUPPLIERS[sr]["Currently Used for Cannabis"] != "No"){
+					srLines++;
+				}
+			}
+			if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or pickup of water from a groundwater well")) != srLines) {
 				cancel = true;
 				showMessage = true;
 				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
