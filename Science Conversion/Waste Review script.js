@@ -129,22 +129,20 @@ try{
 		else {
 			capId =aa.cap.getCapID(WASTE[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("WASTE Review row for " + WASTE[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("WASTE Review row for " + WASTE[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
 		}
 		recCnt++;
 	//	logDebug("processing record " + WASTE[i]["License_Number"]);
-		AInfo = new Array;
-		loadAppSpecific(AInfo);
 		editAppSpecific("Waste Management Review Status",WASTE[i]["Waste_Review_Status"]);
 	}
 	logDebug("Total Records Processed : " + WASTE.length);
 	logDebug("Total Records Rejected: " + rejCnt);
 	logDebug("Total Records Converted: " + recCnt);
 }catch (err){
-	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
+	logDebug("ERROR: Science Conversion Waste Review: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}	
 	
