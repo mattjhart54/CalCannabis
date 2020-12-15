@@ -134,7 +134,7 @@ try{
 		else {
 			capId =aa.cap.getCapID(APN[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("APN Spatial row for " + APN[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("APN Spatial row for " + APN[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
