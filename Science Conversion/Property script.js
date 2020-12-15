@@ -178,15 +178,13 @@ try{
 		else {
 			capId =aa.cap.getCapID(PROPERTY[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("PROPERTY row for " + PROPERTY[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("PROPERTY row for " + PROPERTY[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
 		}
 		recCnt++;
 	//	logDebug("processing record " + PROPERTY[i]["License_Number"]);
-		AInfo = new Array;
-		loadAppSpecific(AInfo);
 		editAppSpecific("Property Diagram Review Status",PROPERTY[i]["Property_Review_Status"]);
 		editAppSpecific("APN-PD",PROPERTY[i]["APN"]);
 		editAppSpecific("APN located in correct city/county?",PROPERTY[i]["APN located in correct city/county?"]);
