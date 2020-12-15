@@ -128,15 +128,13 @@ try{
 		else {
 			capId =aa.cap.getCapID(WASTE[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("WASTE row for " + WASTE[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("WASTE row for " + WASTE[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
 		}
 		recCnt++;
 	//	logDebug("processing record " + WASTE[i]["License_Number"]);
-		AInfo = new Array;
-		loadAppSpecific(AInfo);
 		if(WASTE[i]["Waste_Management_Method"] == "On-site Composting of Cannabis Waste")
 			editAppSpecific("On-site Composting of Cannabis Waste","CHECKED");
 		if(WASTE[i]["Waste_Management_Method"] == "Local Agency Franchised or Contracted/Permitted Waste Hauler")
@@ -160,7 +158,7 @@ try{
 	logDebug("Total Records Rejected: " + rejCnt);
 	logDebug("Total Records Converted: " + recCnt);
 }catch (err){
-	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
+	logDebug("ERROR: Scienc Conversion Waste: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}	
 	
