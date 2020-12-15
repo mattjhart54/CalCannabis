@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program: BATCH_WRIGHT_TABLE
+| Program: BATCH_WATER_RIGHT_TABLE
 | Client:  CDFA_CalCannabis
 |
 | Version 1.0 - Base Version. 
@@ -183,7 +183,7 @@ try{
 	logDebug("Total Records Converted: " + recCnt);
 	
 }catch (err){
-	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
+	logDebug("ERROR: Science Conversion Water Rights: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}	
 	
