@@ -143,15 +143,13 @@ try{
 		else {
 			capId =aa.cap.getCapID(CEQA[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("CEQA row for " + CEQA[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("CEQA row for " + CEQA[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
 		}
 		recCnt++;
 	//	logDebug("processing record " + CEQA[i]["License_Number"]);
-		AInfo = new Array;
-		loadAppSpecific(AInfo);
 		editAppSpecific("CEQA Review Status",CEQA[i]["CEQA_Review_Status"]);
 		editAppSpecific("CEQA Status",CEQA[i]["CEQA_Status"]);
 		editAppSpecific("CEQA Document Provided",CEQA[i]["CEQA_Document_Provided"]);
