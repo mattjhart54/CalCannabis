@@ -143,7 +143,7 @@ try{
 		else {
 			capId =aa.cap.getCapID(LIGHT[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("LIGHT row for " + LIGHT[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("LIGHT row for " + LIGHT[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
@@ -162,7 +162,7 @@ try{
 	logDebug("Total Records Rejected: " + rejCnt);
 	logDebug("Total Records Converted: " + recCnt);
 }catch (err){
-	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
+	logDebug("ERROR: BATCH_LIGHT: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}	
 	
