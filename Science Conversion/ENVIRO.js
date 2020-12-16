@@ -143,7 +143,7 @@ try{
 		else {
 			capId =aa.cap.getCapID(enviroStor[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("enviroStor row for " + enviroStor[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("enviroStor row for " + enviroStor[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
