@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program: BATCH_APN_TABLE
+| Program: BATCH_LSA_TABLE
 | Client:  CDFA_CalCannabis
 |
 | Version 1.0 - Base Version. 
@@ -133,7 +133,7 @@ try{
 		else {
 			capId =aa.cap.getCapID(LSA[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("LSA Spatial row for " + LSA[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("LSA Spatial row for " + LSA[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
@@ -164,7 +164,7 @@ try{
 	logDebug("Total Records Converted: " + recCnt);
 	
 }catch (err){
-	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
+	logDebug("ERROR: BATCH_LSA: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}	
 	
