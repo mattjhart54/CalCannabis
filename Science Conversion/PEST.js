@@ -143,7 +143,7 @@ try{
 		else {
 			capId =aa.cap.getCapID(PEST[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("PEST row for " + PEST[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("PEST row for " + PEST[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
@@ -161,7 +161,7 @@ try{
 	logDebug("Total Records Rejected: " + rejCnt);
 	logDebug("Total Records Converted: " + recCnt);
 }catch (err){
-	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
+	logDebug("ERROR: BATCH_Pest: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}	
 	
