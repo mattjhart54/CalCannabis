@@ -143,7 +143,7 @@ try{
 		else {
 			capId =aa.cap.getCapID(NOA[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("NOA row for " + NOA[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("NOA row for " + NOA[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
@@ -162,7 +162,7 @@ try{
 	logDebug("Total Records Rejected: " + rejCnt);
 	logDebug("Total Records Converted: " + recCnt);
 }catch (err){
-	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
+	logDebug("ERROR: BATCH_NOA: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}	
 	
