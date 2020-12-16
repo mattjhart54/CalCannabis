@@ -1,6 +1,6 @@
 
 /*------------------------------------------------------------------------------------------------------/
-| Program: BATCH_WSTATUS Update
+| Program: BATCH_WATER_STATUS Update
 | Client:  CDFA_CalCannabis
 |
 | Version 1.0 - Base Version. 
@@ -143,15 +143,13 @@ try{
 		else {
 			capId =aa.cap.getCapID(WSTATUS[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("WSTATUS row for " + WSTATUS[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("WSTATUS row for " + WSTATUS[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
 		}
 		recCnt++;
 	//	logDebug("processing record " + WSTATUS[i]["License_Number"]);
-		AInfo = new Array;
-		loadAppSpecific(AInfo);
 		editAppSpecific("Water Source Review Status",WSTATUS[i]["Water_Source_Review"]);
 		editAppSpecific("Groundwater Well Review Status",WSTATUS[i]["Groundwater_Well_Review"]);
 		editAppSpecific("Rainwater Catchment Review Status",WSTATUS[i]["Rainwater_Review"]);
@@ -163,7 +161,7 @@ try{
 	logDebug("Total Records Rejected: " + rejCnt);
 	logDebug("Total Records Converted: " + recCnt);
 }catch (err){
-	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
+	logDebug("ERROR: Science Conversion Water Status: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}	
 	
