@@ -143,7 +143,7 @@ try{
 		else {
 			capId =aa.cap.getCapID(PREM[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("PREM row for " + PREM[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("PREM row for " + PREM[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
@@ -167,7 +167,7 @@ try{
 	logDebug("Total Records Rejected: " + rejCnt);
 	logDebug("Total Records Converted: " + recCnt);
 }catch (err){
-	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
+	logDebug("ERROR: BATCH_PremNurs: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}	
 	
