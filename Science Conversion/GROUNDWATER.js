@@ -146,7 +146,7 @@ try{
 		else {
 			capId =aa.cap.getCapID(groundWaterArray[i]["Application_Number"]).getOutput();
 			if (!capId) {
-				logDebug("groundWaterArray Spatial row for " + groundWaterArray[i]["License_Number"] + " not processed as Application record not found");
+				logDebug("groundWaterArray Spatial row for " + groundWaterArray[i]["Application_Number"] + " not processed as Application record not found");
 				rejCnt++;
 				continue;
 			}
