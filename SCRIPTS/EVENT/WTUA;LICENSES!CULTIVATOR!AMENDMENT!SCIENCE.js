@@ -54,6 +54,9 @@ try {
 				if (recordField.slice(-4) == "-NEW"){
 					if (!matches(group.getChecklistComment(),null,undefined,"")){
 						var parentRecordField = recordField.slice(0,-4);
+						if (group.getCheckboxType() == "PROPERTY DIAGRAM" && !matches(parentRecordField,"Property Diagram Review Status","APN-PD")){
+							parentRecordField= parentRecordField+"?";
+						}	
 						var newFieldValue = group.getChecklistComment();
 						editAppSpecific(parentRecordField,newFieldValue,parentCapId);
 						logDebug(parentRecordField + "edited to: " + newFieldValue);
