@@ -144,7 +144,7 @@ try {
 				addASITable("SOURCE OF WATER SUPPLY",multTable,parentCapId);
 			}
 		}
-			
+		logDebug("Not copying the following Tables: " + ignoreTableArray);
 		copyASITables(capId,parentCapId,ignoreTableArray);
 		runReportAttach(parentCapId,"Scientific Review Checklist","altID",capId.getCustomID());		
 		//End Story 6622 
