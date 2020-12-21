@@ -56,7 +56,10 @@ try {
 						var parentRecordField = recordField.slice(0,-4);
 						if (group.getCheckboxType() == "PROPERTY DIAGRAM" && !matches(parentRecordField,"Property Diagram Review Status","APN-PD","Does the diagram contain highlighting?")){
 							parentRecordField= parentRecordField+"?";
-						}	
+						}
+						if (group.getCheckboxType() == "ENVIROSTOR" && parentRecordField == "Is a mitigation(s)/Employee Protection Plan supplied"){
+							parentRecordField = "Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site";
+						}
 						var newFieldValue = group.getChecklistComment();
 						editAppSpecific(parentRecordField,newFieldValue,parentCapId);
 						logDebug(parentRecordField + "edited to: " + newFieldValue);
