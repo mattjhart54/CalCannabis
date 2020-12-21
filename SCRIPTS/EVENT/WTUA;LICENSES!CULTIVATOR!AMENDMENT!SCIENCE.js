@@ -54,7 +54,7 @@ try {
 				if (recordField.slice(-4) == "-NEW"){
 					if (!matches(group.getChecklistComment(),null,undefined,"")){
 						var parentRecordField = recordField.slice(0,-4);
-						if (group.getCheckboxType() == "PROPERTY DIAGRAM" && !matches(parentRecordField,"Property Diagram Review Status","APN-PD")){
+						if (group.getCheckboxType() == "PROPERTY DIAGRAM" && !matches(parentRecordField,"Property Diagram Review Status","APN-PD","Does the diagram contain highlighting?")){
 							parentRecordField= parentRecordField+"?";
 						}	
 						var newFieldValue = group.getChecklistComment();
