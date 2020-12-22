@@ -73,7 +73,6 @@ var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 
 var AInfo = new Array();
 var CEQA = CEQAData();
-logDebug("CEQA: " + CEQA);
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
@@ -105,7 +104,6 @@ try{
 	var recCnt = 0;
 	var rejCnt = 0;
 	for (i in CEQA) {
-		logDebug("LIC NUM: " + CEQA[i]["License_Number"]);
 		if(!matches(CEQA[i]["License_Number"],null,"",undefined)) {
 			capId =aa.cap.getCapID(CEQA[i]["License_Number"]).getOutput();
 			if (!capId) {
