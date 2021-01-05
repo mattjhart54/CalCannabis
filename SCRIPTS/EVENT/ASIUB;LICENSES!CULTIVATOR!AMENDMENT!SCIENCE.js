@@ -53,7 +53,7 @@ try{
 		if(RAINWATERCATCHMENT.length > 0){
 			rwLines = 0;
 			for(rw in RAINWATERCATCHMENT){
-				if(RAINWATERCATCHMENT[rw]["Currently Used for Cannabis"] != "No"){
+				if(RAINWATERCATCHMENT[rw]["Currently Used for Cannabis?"] != "No"){
 					rwLines++;
 				}
 			}			
@@ -92,7 +92,7 @@ try{
 		if(RETAILWATERSUPPLIER.length > 0){
 			rwsLines = 0;
 			for (rws in RETAILWATERSUPPLIER){
-				if(RETAILWATERSUPPLIER[rws]["Currently Used for Cannabis?"] != "No"){
+				if(RETAILWATERSUPPLIER[rws]["Currently Used for Cannabis"] != "No"){
 					rwsLines++;
 				}
 			}
