@@ -121,10 +121,14 @@ try{
 		var updt = new Array;
 		var newAPN = new Array;
 		updt["Validated APN"] = APN[i]["APN"];
-		updt["Latitude"]= APN[i]["Latitude"].toString();
-		updt["Longitude"] = APN[i]["Longitude"].toString();
+		if (!matches(APN[i]["Latitude"],null,undefined,"")){
+			updt["Latitude"]= APN[i]["Latitude"].toString();
+		}
+		if (!matches(APN[i]["Longitude"],null,undefined,"")){
+			updt["Longitude"] = APN[i]["Longitude"].toString();
+		}
 		newAPN.push(updt);
-		addASITable("APN SPATIAL INFORMATION", newAPN,capId);
+		addASITable("APN SPATIAL INFORMATION", newAPN);
 		recCnt++;
 	}
 	logDebug("Total Records Processed : " + APN.length);
