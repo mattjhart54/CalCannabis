@@ -127,22 +127,22 @@ try{
 		updt["Expiration Date"] = LSA[i]["Expiration_Date"];
 		updt["Document Type"] = LSA[i]["Document_Provided"];
 		updt["Covered Activity"] = LSA[i]["Covered_Activity"];
-		updt["LSA Detail Latitude"] = LSA[i]["LSA_Detail_Lat"];
-		updt["LSA Detail Longitude"] = LSA[i]["LSA_Detail_Lon"];
+		updt["LSA Detail Latitude"] = String(LSA[i]["LSA_Detail_Lat"]);
+		updt["LSA Detail Longitude"] = String(LSA[i]["LSA_Detail_Lon"]);
 		updt["APN"] = LSA[i]["APN"];
-		updt["APN Latitude"] = LSA[i]["LSA_APN_Lat"];
-		updt["APN Longitude"] = LSA[i]["LSA_APN_Lon"];
+		updt["APN Latitude"] = String(LSA[i]["LSA_APN_Lat"]);
+		updt["APN Longitude"] = String(LSA[i]["LSA_APN_Lon"]);
 		updt["Document Type"] = LSA[i]["Document_Provided"];
 		newGWA.push(updt);
-		addASITable("LAKE AND STREAMBED ALTERATION", newGWA);
+		addASITable("LAKE AND STREAMBED ALTERATION", newGWA,capId);
 		if (!matches(LSA[i]["LSA_Review_Status"],null,undefined,"")){
-			editAppSpecific("LSA Review Status",LSA[i]["LSA_Review_Status"]);
+			editAppSpecific("LSA Review Status",LSA[i]["LSA_Review_Status"],capId);
 		}
 		if (!matches(LSA[i]["APN_Matches_Premises"],null,undefined,"")){
-			editAppSpecific("APN Matches Premises-LSA",LSA[i]["APN_Matches_Premises"]);
+			editAppSpecific("APN Matches Premises-LSA",LSA[i]["APN_Matches_Premises"],capId);
 		}
 		if (!matches(LSA[i]["APN_Matches_Adjacent"],null,undefined,"")){
-			editAppSpecific("APN Matches Adjacent Parcel",LSA[i]["APN_Matches_Adjacent"]);
+			editAppSpecific("APN Matches Adjacent Parcel",LSA[i]["APN_Matches_Adjacent"],capId);
 		}
 		if (!matches(LSA[i]["Notes"],null,undefined,"")){
 			editAppSpecific("Notes",LSA[i]["Notes"]);
