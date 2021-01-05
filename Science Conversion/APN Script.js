@@ -124,8 +124,7 @@ try{
 		updt["Latitude"]= APN[i]["Latitude"].toString();
 		updt["Longitude"] = APN[i]["Longitude"].toString();
 		newAPN.push(updt);
-		removeASITable("APN SPATIAL INFORMATION");
-		addASITable("APN SPATIAL INFORMATION", newAPN);
+		addASITable("APN SPATIAL INFORMATION", newAPN,capId);
 		recCnt++;
 	}
 	logDebug("Total Records Processed : " + APN.length);
