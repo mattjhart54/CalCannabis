@@ -141,9 +141,9 @@ try{
 		}
 		newAPN.push(updt);
 		if (!matches(groundWaterArray[i]["Water_Source_Review"],null,undefined,"")){
-			editAppSpecific("Groundwater Well Review Status",groundWaterArray[i]["Water_Source_Review"].toString(),capId);
+			editAppSpecific("Groundwater Well Review Status",groundWaterArray[i]["Water_Source_Review"].toString());
 		}
-		addASITable("GROUNDWATER WELL", newAPN, capId);
+		addASITable("GROUNDWATER WELL", newAPN);
 		recCnt++;
 	}
 
