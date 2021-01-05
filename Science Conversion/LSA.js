@@ -119,39 +119,20 @@ try{
 				continue;
 			}
 		}
+		removeASITable("LAKE AND STREAMBED ALTERATION", capId);
 		var updt = new Array;
 		var newGWA = new Array;
 		updt["LSA ID Number"] = LSA[i]["LSA_Number"];
-		if (!matches(LSA[i]["Issue_Date"],null,undefined,"")){
-			updt["Issue Date"]= LSA[i]["Issue_Date"];
-		}
-		if (!matches(LSA[i]["Expiration_Date"],null,undefined,"")){
-			updt["Expiration Date"] = LSA[i]["Expiration_Date"];
-		}
-		if (!matches(LSA[i]["Document_Provided"],null,undefined,"")){
-			updt["Document Type"] = LSA[i]["Document_Provided"];
-		}
-		if (!matches(LSA[i]["Covered_Activity"],null,undefined,"")){
-			updt["Covered Activity"] = LSA[i]["Covered_Activity"];
-		}
-		if (!matches(LSA[i]["LSA_Detail_Lat"],null,undefined,"")){
-			updt["LSA Detail Latitude"] = LSA[i]["LSA_Detail_Lat"];
-		}
-		if (!matches(LSA[i]["LSA_Detail_Lon"],null,undefined,"")){
-			updt["LSA Detail Longitude"] = LSA[i]["LSA_Detail_Lon"];
-		}
-		if (!matches(LSA[i]["APN"],null,undefined,"")){
-			updt["APN"] = LSA[i]["APN"];
-		}
-		if (!matches(LSA[i]["LSA_APN_Lat"],null,undefined,"")){
-			updt["APN Latitude"] = LSA[i]["LSA_APN_Lat"];
-		}
-		if (!matches(LSA[i]["LSA_APN_Lon"],null,undefined,"")){
-			updt["APN Longitude"] = LSA[i]["LSA_APN_Lon"];
-		}
-		if (!matches(LSA[i]["Document_Provided"],null,undefined,"")){
-			updt["Document Type"] = LSA[i]["Document_Provided"];
-		}
+		updt["Issue Date"]= LSA[i]["Issue_Date"];
+		updt["Expiration Date"] = LSA[i]["Expiration_Date"];
+		updt["Document Type"] = LSA[i]["Document_Provided"];
+		updt["Covered Activity"] = LSA[i]["Covered_Activity"];
+		updt["LSA Detail Latitude"] = LSA[i]["LSA_Detail_Lat"];
+		updt["LSA Detail Longitude"] = LSA[i]["LSA_Detail_Lon"];
+		updt["APN"] = LSA[i]["APN"];
+		updt["APN Latitude"] = LSA[i]["LSA_APN_Lat"];
+		updt["APN Longitude"] = LSA[i]["LSA_APN_Lon"];
+		updt["Document Type"] = LSA[i]["Document_Provided"];
 		newGWA.push(updt);
 		addASITable("LAKE AND STREAMBED ALTERATION", newGWA);
 		if (!matches(LSA[i]["LSA_Review_Status"],null,undefined,"")){
