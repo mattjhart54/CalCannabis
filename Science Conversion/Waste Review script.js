@@ -34,7 +34,7 @@ wfObjArray = null;
 eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 eval(getScriptText("INCLUDES_BATCH"));
 eval(getMasterScriptText("INCLUDES_CUSTOM"));
-eval(getScriptText("wASTE REVIEW DATA"));
+eval(getScriptText("WASTE REVIEW DATA"));
 
 override = "function logDebug(dstr){ if(showDebug) { aa.print(dstr); emailText+= dstr + \"<br>\"; } }";
 eval(override);
