@@ -123,6 +123,7 @@ try{
 		var updt = new Array;
 		var newGWA = new Array;
 		updt["LSA ID Number"] = LSA[i]["LSA_Number"];
+		updt["Status"] = LSA[i]["LSA_Status"];
 		updt["Issue Date"]= LSA[i]["Issue_Date"];
 		updt["Expiration Date"] = LSA[i]["Expiration_Date"];
 		updt["Document Type"] = LSA[i]["Document_Provided"];
@@ -135,19 +136,7 @@ try{
 		updt["Document Type"] = LSA[i]["Document_Provided"];
 		newGWA.push(updt);
 		addASITable("LAKE AND STREAMBED ALTERATION", newGWA,capId);
-		if (!matches(LSA[i]["LSA_Review_Status"],null,undefined,"")){
-			editAppSpecific("LSA Review Status",LSA[i]["LSA_Review_Status"],capId);
-		}
-		if (!matches(LSA[i]["APN_Matches_Premises"],null,undefined,"")){
-			editAppSpecific("APN Matches Premises-LSA",LSA[i]["APN_Matches_Premises"],capId);
-		}
-		if (!matches(LSA[i]["APN_Matches_Adjacent"],null,undefined,"")){
-			editAppSpecific("APN Matches Adjacent Parcel",LSA[i]["APN_Matches_Adjacent"],capId);
-		}
-		if (!matches(LSA[i]["Notes"],null,undefined,"")){
-			editAppSpecific("Notes",LSA[i]["Notes"]);
-		}
-		recCnt++;
+			recCnt++;
 	}
 	logDebug("Total Records Processed : " + LSA.length);
 	logDebug("Total Records Rejected: " + rejCnt);
