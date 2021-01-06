@@ -119,10 +119,18 @@ try{
 			}
 		}
 		recCnt++;
-		editAppSpecific("LSA Review Status",LSA[i]["CDFW_Review_Status"]);
-		editAppSpecific("APN Matches Premises",LSA[i]["APN_Matches_Premises"]);
-		editAppSpecific("APN_Matches_Adjacent_Parcel",LSA[i]["APN_Matches_Adjacent_Parcel"]);
-		editAppSpecific("Notes",LSA[i]["Notes"]);
+		if (!matches(LSA[i]["LSA_Review_Status"],null,undefined,"")){
+			editAppSpecific("LSA Review Status",LSA[i]["CDFW_Review_Status"]);
+		}
+		if (!matches(LSA[i]["APN_Matches_Premises"],null,undefined,"")){
+			editAppSpecific("APN Matches Premises-LSA",LSA[i]["APN_Matches_Premises"]);
+		}
+		if (!matches(LSA[i]["APN_Matches_Adjacent"],null,undefined,"")){
+			editAppSpecific("APN Matches Adjacent Parcel",LSA[i]["APN_Matches_Adjacent"]);
+		}
+		if (!matches(LSA[i]["Notes"],null,undefined,"")){
+			editAppSpecific("Notes",LSA[i]["Notes"]);
+		}
 	}
 	logDebug("Total Records Processed : " + LSA.length);
 	logDebug("Total Records Rejected: " + rejCnt);
