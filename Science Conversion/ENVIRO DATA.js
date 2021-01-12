@@ -1,4 +1,6 @@
-[
+function ENVIROData (){
+
+var ENVIROarray =[
   {
     "License_Number": "",
     "Application_Number": "LCA18-0000003",
@@ -47671,4 +47673,6 @@
     "Mitigation_Employee_Protection_Included": "N/A",
     "Envirostor_Review_Status": "Complete"
   }
-]
+];
+ return ENVIROarray;
+}
