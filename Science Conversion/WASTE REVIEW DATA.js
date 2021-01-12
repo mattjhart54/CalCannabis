@@ -1,11 +1,6 @@
 function WASTEREVIEWData (){
 
 var WASTEREVIEWarray =[
-{
-   "License_Number": "",
-   "Application_Number": "LCA18-0000003",
-   "Waste_Review_Status": ""
- },
  {
    "License_Number": "CCL18-0000004",
    "Application_Number": "LCA18-0000004",
@@ -47,11 +42,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000013",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000014",
    "Application_Number": "LCA18-0000014",
    "Waste_Review_Status": "Complete"
@@ -70,16 +60,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000017",
    "Application_Number": "LCA18-0000017",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002239",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002301",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000018",
@@ -132,11 +112,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000029",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000030",
    "Application_Number": "LCA18-0000030",
    "Waste_Review_Status": "Complete"
@@ -147,19 +122,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000032",
-   "Application_Number": "LCA18-0000032",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000033",
    "Application_Number": "LCA18-0000033",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000034",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000035",
@@ -180,11 +145,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000038",
    "Application_Number": "LCA18-0000038",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000039",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000040",
@@ -217,11 +177,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000046",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000047",
    "Application_Number": "LCA18-0000047",
    "Waste_Review_Status": "Complete"
@@ -242,44 +197,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000051",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000052",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000053",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000054",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000055",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000056",
    "Application_Number": "LCA18-0000056",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000057",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000058",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000059",
@@ -297,24 +217,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000062",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000063",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000064",
    "Application_Number": "LCA18-0000064",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000065",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000066",
@@ -327,29 +232,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000068",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000069",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000070",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000071",
    "Application_Number": "LCA18-0000071",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000072",
-   "Application_Number": "LCA18-0000072",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000073",
@@ -362,49 +247,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000075",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000076",
    "Application_Number": "LCA18-0000076",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000077",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000078",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000079",
    "Application_Number": "LCA18-0000079",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000080",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000081",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000082",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000083",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000084",
@@ -442,34 +292,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000092",
-   "Application_Number": "LCA18-0000092",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000093",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000094",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000095",
    "Application_Number": "LCA18-0000095",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000097",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000098",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000099",
@@ -492,29 +317,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000103",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000104",
    "Application_Number": "LCA18-0000104",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000105",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000106",
    "Application_Number": "LCA18-0000106",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000107",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000108",
@@ -540,26 +350,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000112",
    "Application_Number": "LCA18-0000112",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000113",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000114",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000115",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000116",
-   "Application_Number": "LCA18-0000116",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000117",
@@ -627,11 +417,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000130",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000131",
    "Application_Number": "LCA18-0000131",
    "Waste_Review_Status": "Complete"
@@ -650,11 +435,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000135",
    "Application_Number": "LCA18-0000135",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000136",
-   "Application_Number": "LCA18-0000136",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000137",
@@ -687,39 +467,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000143",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000144",
-   "Application_Number": "LCA18-0000144",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000145",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000146",
    "Application_Number": "LCA18-0000146",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000147",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000148",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000149",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000150",
@@ -732,84 +482,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000152",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000153",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000154",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000155",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000156",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000157",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000158",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000159",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000160",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000161",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000162",
    "Application_Number": "LCA18-0000162",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000163",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000164",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000165",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000166",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000167",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000168",
@@ -835,11 +510,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000172",
    "Application_Number": "LCA18-0000172",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000173",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000174",
@@ -882,11 +552,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000182",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000183",
    "Application_Number": "LCA18-0000183",
    "Waste_Review_Status": "Complete"
@@ -912,24 +577,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000188",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000189",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000190",
    "Application_Number": "LCA18-0000190",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000191",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000192",
@@ -964,7 +614,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000198",
    "Application_Number": "LCA18-0000198",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000199",
@@ -972,44 +622,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000200",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000201",
-   "Application_Number": "LCA18-0000201",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000202",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000204",
    "Application_Number": "LCA18-0000204",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000205",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000206",
-   "Application_Number": "LCA18-0000206",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000207",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000208",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000209",
@@ -1020,11 +635,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000210",
    "Application_Number": "LCA18-0000210",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000211",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000212",
@@ -1047,26 +657,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000216",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000217",
-   "Application_Number": "LCA18-0000217",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000218",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000219",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000220",
    "Application_Number": "LCA18-0000220",
    "Waste_Review_Status": "Complete"
@@ -1087,44 +677,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000224",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000225",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000226",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000227",
    "Application_Number": "LCA18-0000227",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000228",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000229",
    "Application_Number": "LCA18-0000229",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000230",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000231",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000232",
@@ -1192,19 +752,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000245",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000246",
    "Application_Number": "LCA18-0000246",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000247",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000248",
@@ -1222,11 +772,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000251",
-   "Application_Number": "LCA18-0000251",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000252",
    "Application_Number": "LCA18-0000252",
    "Waste_Review_Status": "Complete"
@@ -1234,7 +779,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000253",
    "Application_Number": "LCA18-0000253",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000254",
@@ -1242,24 +787,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000255",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000256",
    "Application_Number": "LCA18-0000256",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000257",
-   "Application_Number": "LCA18-0000257",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000258",
-   "Application_Number": "LCA18-0000258",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000259",
@@ -1277,11 +807,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000262",
-   "Application_Number": "LCA18-0000262",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000263",
    "Application_Number": "LCA18-0000263",
    "Waste_Review_Status": "Complete"
@@ -1295,11 +820,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000265",
    "Application_Number": "LCA18-0000265",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000266",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000267",
@@ -1324,7 +844,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000271",
    "Application_Number": "LCA18-0000271",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000272",
@@ -1337,24 +857,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000274",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000275",
    "Application_Number": "LCA18-0000275",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000276",
-   "Application_Number": "LCA18-0000276",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000277",
-   "Application_Number": "LCA18-0000277",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000278",
@@ -1377,11 +882,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000282",
-   "Application_Number": "LCA18-0000282",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000283",
    "Application_Number": "LCA18-0000283",
    "Waste_Review_Status": "Complete"
@@ -1397,39 +897,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000286",
-   "Application_Number": "LCA18-0000286",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000287",
-   "Application_Number": "LCA18-0000287",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000288",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000289",
    "Application_Number": "LCA18-0000289",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000290",
-   "Application_Number": "LCA18-0000290",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000291",
    "Application_Number": "LCA18-0000291",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000292",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000293",
@@ -1452,49 +927,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000297",
-   "Application_Number": "LCA18-0000297",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000298",
-   "Application_Number": "LCA18-0000298",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000299",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000300",
    "Application_Number": "LCA18-0000300",
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000301",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000302",
    "Application_Number": "LCA18-0000302",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000303",
-   "Application_Number": "LCA18-0000303",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000304",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000305",
-   "Application_Number": "LCA18-0000305",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000306",
@@ -1507,11 +947,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000308",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000309",
    "Application_Number": "LCA18-0000309",
    "Waste_Review_Status": "Complete"
@@ -1520,26 +955,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000310",
    "Application_Number": "LCA18-0000310",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000311",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000312",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000313",
-   "Application_Number": "LCA18-0000313",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000314",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000315",
@@ -1557,11 +972,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000318",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000319",
    "Application_Number": "LCA18-0000319",
    "Waste_Review_Status": "Complete"
@@ -1572,29 +982,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000321",
-   "Application_Number": "LCA18-0000321",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000322",
-   "Application_Number": "LCA18-0000322",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000323",
-   "Application_Number": "LCA18-0000323",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000324",
    "Application_Number": "LCA18-0000324",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000325",
-   "Application_Number": "LCA18-0000325",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000326",
@@ -1610,11 +1000,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000328",
    "Application_Number": "LCA18-0000328",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000329",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000330",
@@ -1667,11 +1052,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000340",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000341",
    "Application_Number": "LCA18-0000341",
    "Waste_Review_Status": "Complete"
@@ -1687,16 +1067,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000344",
-   "Application_Number": "LCA18-0000344",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000345",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000346",
    "Application_Number": "LCA18-0000346",
    "Waste_Review_Status": "Complete"
@@ -1707,19 +1077,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000348",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000349",
    "Application_Number": "LCA18-0000349",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000350",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000351",
@@ -1732,39 +1092,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000353",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000354",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000355",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000356",
    "Application_Number": "LCA18-0000356",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000357",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000358",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000359",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000360",
@@ -1775,16 +1105,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000361",
    "Application_Number": "LCA18-0000361",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000362",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000363",
-   "Application_Number": "LCA18-0000363",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000364",
@@ -1919,7 +1239,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000390",
    "Application_Number": "LCA18-0000390",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000391",
@@ -1944,7 +1264,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000395",
    "Application_Number": "LCA18-0000395",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000396",
@@ -1982,11 +1302,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000403",
-   "Application_Number": "LCA18-0000403",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000404",
    "Application_Number": "LCA18-0000404",
    "Waste_Review_Status": "Complete"
@@ -1997,19 +1312,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000406",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000407",
    "Application_Number": "LCA18-0000407",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000408",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000409",
@@ -2035,11 +1340,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000413",
    "Application_Number": "LCA18-0000413",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000414",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000415",
@@ -2072,11 +1372,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000421",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000422",
    "Application_Number": "LCA18-0000422",
    "Waste_Review_Status": "Complete"
@@ -2102,29 +1397,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000427",
-   "Application_Number": "LCA18-0000427",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000428",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000429",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000430",
    "Application_Number": "LCA18-0000430",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000431",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000432",
@@ -2135,11 +1410,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000433",
    "Application_Number": "LCA18-0000433",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000434",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000435",
@@ -2172,16 +1442,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000441",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000442",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000443",
    "Application_Number": "LCA18-0000443",
    "Waste_Review_Status": "Complete"
@@ -2189,22 +1449,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000444",
    "Application_Number": "LCA18-0000444",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000445",
    "Application_Number": "LCA18-0000445",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000446",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000447",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000448",
@@ -2247,11 +1497,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000456",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000457",
    "Application_Number": "LCA18-0000457",
    "Waste_Review_Status": "Complete"
@@ -2260,11 +1505,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000458",
    "Application_Number": "LCA18-0000458",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000459",
-   "Application_Number": "LCA18-0000459",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000460",
@@ -2287,16 +1527,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000464",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000465",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000466",
    "Application_Number": "LCA18-0000466",
    "Waste_Review_Status": "Complete"
@@ -2305,11 +1535,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000467",
    "Application_Number": "LCA18-0000467",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000468",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000469",
@@ -2325,11 +1550,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000471",
    "Application_Number": "LCA18-0000471",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000472",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000473",
@@ -2370,11 +1590,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000480",
    "Application_Number": "LCA18-0000480",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000481",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000482",
@@ -2427,16 +1642,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000492",
-   "Application_Number": "LCA18-0000492",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000493",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000494",
    "Application_Number": "LCA18-0000494",
    "Waste_Review_Status": "Complete"
@@ -2445,16 +1650,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000495",
    "Application_Number": "LCA18-0000495",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000496",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000497",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000498",
@@ -2472,11 +1667,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000501",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000502",
    "Application_Number": "LCA18-0000502",
    "Waste_Review_Status": "Complete"
@@ -2485,11 +1675,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000503",
    "Application_Number": "LCA18-0000503",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000504",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000505",
@@ -2572,14 +1757,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000521",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000522",
    "Application_Number": "LCA18-0000522",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000523",
@@ -2607,21 +1787,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000528",
-   "Application_Number": "LCA18-0000528",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000529",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000530",
-   "Application_Number": "LCA18-0000530",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000531",
    "Application_Number": "LCA18-0000531",
    "Waste_Review_Status": "Complete"
@@ -2630,16 +1795,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000532",
    "Application_Number": "LCA18-0000532",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000533",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000534",
-   "Application_Number": "LCA18-0000534",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000535",
@@ -2717,24 +1872,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000550",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000551",
    "Application_Number": "LCA18-0000551",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000552",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000553",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000554",
@@ -2762,16 +1902,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000559",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000560",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000561",
    "Application_Number": "lca18-0000561",
    "Waste_Review_Status": "Complete"
@@ -2787,11 +1917,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000564",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000565",
    "Application_Number": "lca18-0000565",
    "Waste_Review_Status": "Complete"
@@ -2802,19 +1927,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000567",
-   "Application_Number": "LCA18-0000567",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000568",
    "Application_Number": "lca18-0000568",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000569",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000570",
@@ -2830,11 +1945,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000572",
    "Application_Number": "LCA18-0000572",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000573",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000574",
@@ -2862,36 +1972,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000579",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000580",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000581",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000582",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000583",
-   "Application_Number": "LCA18-0000583",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000584",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000585",
    "Application_Number": "LCA18-0000585",
    "Waste_Review_Status": "Complete"
@@ -2904,17 +1984,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000587",
    "Application_Number": "LCA18-0000587",
-   "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000588",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000589",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000590",
@@ -2927,26 +1997,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000592",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000593",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000594",
-   "Application_Number": "LCA18-0000594",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000595",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000596",
    "Application_Number": "LCA18-0000596",
    "Waste_Review_Status": "Incomplete"
@@ -2955,16 +2005,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000597",
    "Application_Number": "LCA18-0000597",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000598",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000599",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000600",
@@ -2987,39 +2027,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000604",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000605",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000606",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000607",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000608",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000609",
    "Application_Number": "LCA18-0000609",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000610",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000611",
@@ -3027,19 +2037,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000612",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000613",
    "Application_Number": "LCA18-0000613",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000614",
-   "Application_Number": "LCA18-0000614",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000615",
@@ -3050,11 +2050,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000616",
    "Application_Number": "LCA18-0000616",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000617",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000618",
@@ -3103,58 +2098,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0000627",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000628",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA18-0000629",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000630",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000631",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000632",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000633",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000634",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000635",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000636",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000637",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000638",
@@ -3162,34 +2107,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000639",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000640",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000641",
    "Application_Number": "LCA18-0000641",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000642",
-   "Application_Number": "LCA18-0000642",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000643",
-   "Application_Number": "LCA18-0000643",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000644",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000645",
@@ -3200,11 +2120,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000646",
    "Application_Number": "LCA18-0000646",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000647",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000648",
@@ -3252,11 +2167,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000657",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000658",
    "Application_Number": "LCA18-0000658",
    "Waste_Review_Status": "Complete"
@@ -3265,16 +2175,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000659",
    "Application_Number": "LCA18-0000659",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000660",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000661",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000662",
@@ -3294,7 +2194,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000665",
    "Application_Number": "LCA18-0000665",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000666",
@@ -3337,11 +2237,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000674",
-   "Application_Number": "LCA18-0000674",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000675",
    "Application_Number": "LCA18-0000675",
    "Waste_Review_Status": "Complete"
@@ -3355,11 +2250,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000677",
    "Application_Number": "LCA18-0000677",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000678",
-   "Application_Number": "LCA18-0000678",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000679",
@@ -3427,16 +2317,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000692",
-   "Application_Number": "LCA18-0000692",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000693",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000694",
    "Application_Number": "LCA18-0000694",
    "Waste_Review_Status": "Complete"
@@ -3482,29 +2362,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000703",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000704",
    "Application_Number": "LCA18-0000704",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000705",
    "Application_Number": "LCA18-0000705",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000706",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000707",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000708",
@@ -3532,19 +2397,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000713",
-   "Application_Number": "LCA18-0000713",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000714",
    "Application_Number": "LCA18-0000714",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000715",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000716",
@@ -3562,24 +2417,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000720",
-   "Application_Number": "LCA18-0000720",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000721",
-   "Application_Number": "LCA18-0000721",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000722",
    "Application_Number": "LCA18-0000722",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000723",
-   "Application_Number": "LCA18-0000723",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000724",
@@ -3590,16 +2430,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000725",
    "Application_Number": "LCA18-0000725",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000726",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000727",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000728",
@@ -3617,84 +2447,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000731",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000732",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000733",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000734",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000735",
    "Application_Number": "LCA18-0000735",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000736",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000737",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000738",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000739",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000740",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000741",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000742",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000743",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000744",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000745",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000746",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000747",
@@ -3702,19 +2457,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000748",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000749",
    "Application_Number": "LCA18-0000749",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000750",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000751",
@@ -3747,11 +2492,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL18-0000757",
-   "Application_Number": "LCA18-0000757",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000758",
    "Application_Number": "LCA18-0000758",
    "Waste_Review_Status": "Complete"
@@ -3765,16 +2505,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000760",
    "Application_Number": "LCA18-0000760",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000761",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000762",
-   "Application_Number": "LCA18-0000762",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000763",
@@ -3812,11 +2542,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000770",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000771",
    "Application_Number": "LCA18-0000771",
    "Waste_Review_Status": "Complete"
@@ -3825,46 +2550,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000772",
    "Application_Number": "LCA18-0000772",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000773",
-   "Application_Number": "LCA18-0000773",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000774",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000775",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000776",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000777",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000778",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000779",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000780",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000781",
@@ -3877,54 +2562,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000783",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000784",
-   "Application_Number": "LCA18-0000784",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000785",
-   "Application_Number": "LCA18-0000785",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000786",
-   "Application_Number": "LCA18-0000786",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000787",
    "Application_Number": "LCA18-0000787",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "CCL18-0000788",
-   "Application_Number": "LCA18-0000788",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000789",
-   "Application_Number": "LCA18-0000789",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000790",
-   "Application_Number": "LCA18-0000790",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000791",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000792",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000793",
@@ -3935,11 +2575,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000794",
    "Application_Number": "LCA18-0000794",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000795",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000796",
@@ -4037,49 +2672,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000815",
-   "Application_Number": "LCA18-0000815",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000816",
    "Application_Number": "LCA18-0000816",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000817",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000818",
-   "Application_Number": "LCA18-0000818",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000819",
-   "Application_Number": "LCA18-0000819",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000820",
-   "Application_Number": "LCA18-0000820",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000821",
-   "Application_Number": "LCA18-0000821",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000822",
-   "Application_Number": "LCA18-0000822",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000823",
-   "Application_Number": "LCA18-0000823",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000824",
@@ -4087,54 +2682,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000825",
-   "Application_Number": "LCA18-0000825",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000826",
-   "Application_Number": "LCA18-0000826",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000827",
-   "Application_Number": "LCA18-0000827",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000828",
-   "Application_Number": "LCA18-0000828",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000829",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000830",
    "Application_Number": "lca18-0000830",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000831",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000832",
    "Application_Number": "lca18-0000832",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000833",
-   "Application_Number": "LCA18-0000833",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000834",
-   "Application_Number": "LCA18-0000834",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000835",
@@ -4150,16 +2705,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000837",
    "Application_Number": "lca18-0000837",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000838",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000839",
-   "Application_Number": "LCA18-0000839",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000840",
@@ -4192,11 +2737,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000846",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000847",
    "Application_Number": "lca18-0000847",
    "Waste_Review_Status": "Complete"
@@ -4227,24 +2767,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000853",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000854",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000855",
    "Application_Number": "LCA18-0000855",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000856",
-   "Application_Number": "LCA18-0000856",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000857",
@@ -4252,29 +2777,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000858",
-   "Application_Number": "LCA18-0000858",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000859",
-   "Application_Number": "LCA18-0000859",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000860",
    "Application_Number": "LCA18-0000860",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000861",
-   "Application_Number": "LCA18-0000861",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000862",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000863",
@@ -4292,29 +2797,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000866",
-   "Application_Number": "LCA18-0000866",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000867",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000868",
    "Application_Number": "LCA18-0000868",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000869",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000870",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000871",
@@ -4349,32 +2834,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000877",
    "Application_Number": "LCA18-0000877",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000878",
-   "Application_Number": "LCA18-0000878",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000879",
-   "Application_Number": "LCA18-0000879",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000881",
-   "Application_Number": "LCA18-0000881",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000882",
    "Application_Number": "LCA18-0000882",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000883",
-   "Application_Number": "LCA18-0000883",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000884",
@@ -4394,7 +2859,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000887",
    "Application_Number": "LCA18-0000887",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000888",
@@ -4412,16 +2877,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000891",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000892",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000893",
    "Application_Number": "LCA18-0000893",
    "Waste_Review_Status": "Complete"
@@ -4434,32 +2889,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000895",
    "Application_Number": "LCA18-0000895",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000896",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000897",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000898",
    "Application_Number": "LCA18-0000898",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000899",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000900",
-   "Application_Number": "LCA18-0000900",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000901",
@@ -4472,21 +2907,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000903",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000904",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000905",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000906",
    "Application_Number": "LCA18-0000906",
    "Waste_Review_Status": "Complete"
@@ -4495,16 +2915,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000907",
    "Application_Number": "LCA18-0000907",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000908",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000909",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000910",
@@ -4547,19 +2957,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000918",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000919",
    "Application_Number": "LCA18-0000919",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000920",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000921",
@@ -4597,16 +2997,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000928",
-   "Application_Number": "LCA18-0000928",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000929",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000930",
    "Application_Number": "LCA18-0000930",
    "Waste_Review_Status": "Complete"
@@ -4620,11 +3010,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000932",
    "Application_Number": "LCA18-0000932",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000933",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000934",
@@ -4644,17 +3029,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0000937",
    "Application_Number": "LCA18-0000937",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0000938",
    "Application_Number": "LCA18-0000938",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000939",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000940",
@@ -4672,16 +3052,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000943",
-   "Application_Number": "LCA18-0000943",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000944",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000945",
    "Application_Number": "LCA18-0000945",
    "Waste_Review_Status": "Complete"
@@ -4697,49 +3067,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000948",
-   "Application_Number": "LCA18-0000948",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000949",
    "Application_Number": "LCA18-0000949",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000950",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000951",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000952",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000953",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000954",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000955",
    "Application_Number": "lca18-0000955",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000956",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000957",
@@ -4767,26 +3102,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000962",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000963",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000964",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000965",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000966",
    "Application_Number": "LCA18-0000966",
    "Waste_Review_Status": "Complete"
@@ -4797,34 +3112,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000968",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000969",
    "Application_Number": "lca18-0000969",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000970",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000971",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000972",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000973",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000974",
@@ -4832,44 +3122,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0000975",
-   "Application_Number": "LCA18-0000975",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000976",
-   "Application_Number": "LCA18-0000976",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000977",
    "Application_Number": "LCA18-0000977",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000978",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000979",
    "Application_Number": "LCA18-0000979",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000980",
-   "Application_Number": "LCA18-0000980",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000981",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0000982",
-   "Application_Number": "LCA18-0000982",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000983",
@@ -4907,11 +3167,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000990",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0000991",
    "Application_Number": "lca18-0000991",
    "Waste_Review_Status": "Complete"
@@ -4935,16 +3190,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0000995",
    "Application_Number": "LCA18-0000995",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0000996",
-   "Application_Number": "LCA18-0000996",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000997",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0000998",
@@ -4992,16 +3237,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001007",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001008",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001009",
    "Application_Number": "LCA18-0001009",
    "Waste_Review_Status": "Incomplete"
@@ -5009,17 +3244,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001010",
    "Application_Number": "LCA18-0001010",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001011",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001012",
    "Application_Number": "LCA18-0001012",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001013",
@@ -5027,49 +3257,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001014",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001015",
-   "Application_Number": "LCA18-0001015",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001016",
    "Application_Number": "LCA18-0001016",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001017",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001018",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001019",
-   "Application_Number": "LCA18-0001019",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001020",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001021",
    "Application_Number": "LCA18-0001021",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001022",
-   "Application_Number": "LCA18-0001022",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001023",
@@ -5080,16 +3275,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001024",
    "Application_Number": "LCA18-0001024",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001025",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001026",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001027",
@@ -5117,11 +3302,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001032",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001033",
    "Application_Number": "LCA18-0001033",
    "Waste_Review_Status": "Complete"
@@ -5132,19 +3312,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001035",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001036",
    "Application_Number": "lca18-0001036",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001037",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001038",
@@ -5157,24 +3327,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001040",
-   "Application_Number": "LCA18-0001040",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001041",
    "Application_Number": "lca18-0001041",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001042",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001043",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001044",
@@ -5202,19 +3357,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001049",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001050",
    "Application_Number": "lca18-0001050",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001051",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001052",
@@ -5227,41 +3372,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001054",
-   "Application_Number": "LCA18-0001054",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001055",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001056",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001057",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001058",
-   "Application_Number": "LCA18-0001058",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001059",
-   "Application_Number": "LCA18-0001059",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001060",
-   "Application_Number": "LCA18-0001060",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001061",
    "Application_Number": "LCA18-0001061",
    "Waste_Review_Status": "Complete"
@@ -5269,12 +3379,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001062",
    "Application_Number": "LCA18-0001062",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001063",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001064",
@@ -5282,24 +3387,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001065",
-   "Application_Number": "LCA18-0001065",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001066",
    "Application_Number": "LCA18-0001066",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001067",
-   "Application_Number": "LCA18-0001067",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001068",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001069",
@@ -5307,54 +3397,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001070",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001071",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001072",
-   "Application_Number": "LCA18-0001072",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001073",
-   "Application_Number": "LCA18-0001073",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001074",
    "Application_Number": "LCA18-0001074",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001075",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001076",
    "Application_Number": "LCA18-0001076",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001077",
-   "Application_Number": "LCA18-0001077",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001078",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001079",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -5367,19 +3417,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001082",
-   "Application_Number": "LCA18-0001082",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001083",
    "Application_Number": "LCA18-0001083",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001084",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001085",
@@ -5387,19 +3427,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001086",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001087",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001088",
    "Application_Number": "LCA18-0001088",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001089",
@@ -5407,49 +3437,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001090",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001091",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001092",
-   "Application_Number": "LCA18-0001092",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001093",
    "Application_Number": "LCA18-0001093",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001094",
-   "Application_Number": "LCA18-0001094",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001095",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001096",
-   "Application_Number": "LCA18-0001096",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001097",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001098",
-   "Application_Number": "LCA18-0001098",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001099",
@@ -5477,119 +3467,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001104",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001105",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001106",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001107",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001108",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001109",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001110",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001111",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001112",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001113",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001114",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001115",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001116",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001117",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001118",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001119",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001120",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001121",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001122",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001123",
    "Application_Number": "LCA18-0001123",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001124",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001125",
-   "Application_Number": "LCA18-0001125",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001126",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001127",
@@ -5607,11 +3487,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001130",
-   "Application_Number": "LCA18-0001130",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001131",
    "Application_Number": "LCA18-0001131",
    "Waste_Review_Status": "Complete"
@@ -5620,11 +3495,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001132",
    "Application_Number": "LCA18-0001132",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001133",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001134",
@@ -5682,26 +3552,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001145",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001146",
-   "Application_Number": "LCA18-0001146",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001147",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001148",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001149",
    "Application_Number": "LCA18-0001149",
    "Waste_Review_Status": "Complete"
@@ -5715,11 +3565,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001151",
    "Application_Number": "LCA18-0001151",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001152",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001153",
@@ -5737,24 +3582,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001156",
-   "Application_Number": "LCA18-0001156",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001157",
-   "Application_Number": "LCA18-0001157",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001158",
    "Application_Number": "LCA18-0001158",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001159",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001160",
@@ -5797,129 +3627,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001168",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001169",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001170",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001171",
-   "Application_Number": "LCA18-0001171",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001172",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001173",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001174",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001175",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001176",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001177",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001178",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001179",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001180",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001181",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001182",
    "Application_Number": "LCA18-0001182",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001183",
-   "Application_Number": "LCA18-0001183",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001184",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001185",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001186",
-   "Application_Number": "LCA18-0001186",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001187",
-   "Application_Number": "LCA18-0001187",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001188",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001189",
-   "Application_Number": "LCA18-0001189",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001190",
    "Application_Number": "LCA18-0001190",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001191",
-   "Application_Number": "LCA18-0001191",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001192",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001193",
@@ -5932,79 +3647,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001195",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001196",
-   "Application_Number": "LCA18-0001196",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001197",
-   "Application_Number": "LCA18-0001197",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001198",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001199",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001200",
-   "Application_Number": "LCA18-0001200",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001201",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001202",
    "Application_Number": "LCA18-0001202",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001203",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001204",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001205",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001206",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001207",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001208",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001209",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001210",
@@ -6017,24 +3662,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001212",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001213",
-   "Application_Number": "LCA18-0001213",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001214",
-   "Application_Number": "LCA18-0001214",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001215",
    "Application_Number": "LCA18-0001215",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001216",
@@ -6047,24 +3677,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001218",
-   "Application_Number": "LCA18-0001218",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001219",
-   "Application_Number": "LCA18-0001219",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001220",
    "Application_Number": "LCA18-0001220",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001221",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001222",
@@ -6080,11 +3695,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001224",
    "Application_Number": "LCA18-0001224",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001225",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001226",
@@ -6128,16 +3738,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0001234",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001235",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA18-0001236",
    "Waste_Review_Status": "Complete"
  },
@@ -6145,11 +3745,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA18-0001237",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001238",
-   "Application_Number": "LCA18-0001238",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001239",
@@ -6162,26 +3757,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001241",
-   "Application_Number": "LCA18-0001241",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001242",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001243",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001244",
-   "Application_Number": "LCA18-0001244",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001245",
    "Application_Number": "LCA18-0001245",
    "Waste_Review_Status": "Complete"
@@ -6190,86 +3765,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001246",
    "Application_Number": "LCA18-0001246",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001247",
-   "Application_Number": "LCA18-0001247",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001248",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001249",
-   "Application_Number": "LCA18-0001249",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001250",
-   "Application_Number": "LCA18-0001250",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001251",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001252",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001253",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001254",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001255",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001256",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001257",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001258",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001259",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001260",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001261",
-   "Application_Number": "LCA18-0001261",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001262",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001263",
@@ -6297,19 +3792,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001268",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001269",
    "Application_Number": "LCA18-0001269",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001270",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001271",
@@ -6317,29 +3802,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001272",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001273",
    "Application_Number": "LCA18-0001273",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001274",
-   "Application_Number": "LCA18-0001274",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001275",
-   "Application_Number": "LCA18-0001275",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001276",
-   "Application_Number": "LCA18-0001276",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001277",
@@ -6347,34 +3812,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001278",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001279",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001280",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001281",
    "Application_Number": "LCA18-0001281",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001282",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001283",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001284",
@@ -6397,29 +3837,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001288",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001289",
    "Application_Number": "LCA18-0001289",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001290",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001292",
    "Application_Number": "LCA18-0001292",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001293",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001294",
@@ -6447,74 +3872,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001299",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001300",
-   "Application_Number": "LCA18-0001300",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001301",
-   "Application_Number": "LCA18-0001301",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001302",
-   "Application_Number": "LCA18-0001302",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001303",
-   "Application_Number": "LCA18-0001303",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001304",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001305",
    "Application_Number": "LCA18-0001305",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001306",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001307",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001308",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001309",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001310",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001311",
    "Application_Number": "LCA18-0001311",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001312",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001313",
@@ -6532,24 +3897,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001316",
-   "Application_Number": "LCA18-0001316",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001317",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001318",
    "Application_Number": "LCA18-0001318",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001319",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001320",
@@ -6562,29 +3912,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001322",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001323",
    "Application_Number": "LCA18-0001323",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001324",
-   "Application_Number": "LCA18-0001324",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001325",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001326",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001327",
@@ -6592,39 +3922,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001328",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001329",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001330",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001331",
    "Application_Number": "LCA18-0001331",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001332",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001333",
    "Application_Number": "LCA18-0001333",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001334",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001335",
@@ -6637,11 +3942,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001337",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001338",
    "Application_Number": "LCA18-0001338",
    "Waste_Review_Status": "Complete"
@@ -6652,39 +3952,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL18-0001340",
-   "Application_Number": "LCA18-0001340",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001341",
    "Application_Number": "LCA18-0001341",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001343",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001344",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001345",
-   "Application_Number": "LCA18-0001345",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001346",
    "Application_Number": "LCA18-0001346",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001347",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001348",
@@ -6702,49 +3977,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001351",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001352",
-   "Application_Number": "LCA18-0001352",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001353",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001354",
    "Application_Number": "LCA18-0001354",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001355",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001356",
-   "Application_Number": "LCA18-0001356",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001357",
-   "Application_Number": "LCA18-0001357",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001358",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001359",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001360",
@@ -6755,16 +3990,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001361",
    "Application_Number": "LCA18-0001361",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001362",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001363",
-   "Application_Number": "LCA18-0001363",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001364",
@@ -6782,59 +4007,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL18-0001367",
-   "Application_Number": "LCA18-0001367",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001368",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001369",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001370",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001371",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001372",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001373",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001374",
    "Application_Number": "LCA18-0001374",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001375",
-   "Application_Number": "LCA18-0001375",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001376",
-   "Application_Number": "LCA18-0001376",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001377",
    "Application_Number": "LCA18-0001377",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -6877,19 +4057,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001386",
-   "Application_Number": "LCA18-0001386",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001387",
    "Application_Number": "LCA18-0001387",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001388",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001389",
@@ -6927,34 +4097,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001396",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001397",
    "Application_Number": "LCA18-0001397",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001398",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001399",
-   "Application_Number": "LCA18-0001399",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001400",
    "Application_Number": "LCA18-0001400",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001401",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001402",
@@ -6967,16 +4117,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001404",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001405",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001406",
    "Application_Number": "LCA18-0001406",
    "Waste_Review_Status": "Complete"
@@ -6987,64 +4127,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001408",
-   "Application_Number": "LCA18-0001408",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001409",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001410",
-   "Application_Number": "LCA18-0001410",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001411",
-   "Application_Number": "LCA18-0001411",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001412",
    "Application_Number": "LCA18-0001412",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001413",
-   "Application_Number": "LCA18-0001413",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001414",
-   "Application_Number": "LCA18-0001414",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001415",
-   "Application_Number": "LCA18-0001415",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001416",
-   "Application_Number": "LCA18-0001416",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001417",
    "Application_Number": "LCA18-0001417",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001418",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001419",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001420",
@@ -7067,44 +4157,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001424",
-   "Application_Number": "LCA18-0001424",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001425",
    "Application_Number": "LCA18-0001425",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001426",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001427",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001428",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001429",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001430",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001431",
-   "Application_Number": "LCA18-0001431",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -7125,11 +4180,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001435",
    "Application_Number": "LCA18-0001435",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001436",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001437",
@@ -7202,16 +4252,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001451",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001452",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001453",
    "Application_Number": "LCA18-0001453",
    "Waste_Review_Status": "Complete"
@@ -7252,11 +4292,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001461",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001462",
    "Application_Number": "LCA18-0001462",
    "Waste_Review_Status": "Complete"
@@ -7267,24 +4302,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001464",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001465",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001466",
    "Application_Number": "LCA18-0001466",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001467",
-   "Application_Number": "LCA18-0001467",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001468",
@@ -7292,49 +4312,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001469",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001470",
-   "Application_Number": "LCA18-0001470",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001471",
    "Application_Number": "LCA18-0001471",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001472",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001473",
    "Application_Number": "LCA18-0001473",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001474",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001475",
-   "Application_Number": "LCA18-0001475",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001476",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001477",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001478",
@@ -7347,29 +4332,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001480",
-   "Application_Number": "LCA18-0001480",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001481",
    "Application_Number": "LCA18-0001481",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001482",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001483",
-   "Application_Number": "LCA18-0001483",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001484",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001485",
@@ -7442,11 +4407,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001499",
-   "Application_Number": "LCA18-0001499",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001500",
    "Application_Number": "LCA18-0001500",
    "Waste_Review_Status": "Complete"
@@ -7460,91 +4420,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001502",
    "Application_Number": "LCA18-0001502",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001503",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001504",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001505",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001506",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001507",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001508",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001509",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001510",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001511",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001512",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001513",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001514",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001515",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001516",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001517",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001518",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001519",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001520",
@@ -7597,44 +4472,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001530",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001531",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001532",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001533",
    "Application_Number": "LCA18-0001533",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001534",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001535",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001536",
    "Application_Number": "LCA18-0001536",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001537",
-   "Application_Number": "LCA18-0001537",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -7647,24 +4492,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001540",
-   "Application_Number": "LCA18-0001540",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA18-0001541",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001542",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001543",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001544",
@@ -7682,54 +4512,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001547",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001548",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001549",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001550",
    "Application_Number": "LCA18-0001550",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001551",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001552",
    "Application_Number": "LCA18-0001552",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001553",
-   "Application_Number": "LCA18-0001553",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001554",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001555",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001556",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001557",
@@ -7757,104 +4547,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001562",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001563",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001564",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001565",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001566",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001567",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001568",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001569",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001570",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001571",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001572",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001573",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001574",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001575",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001576",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001577",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001578",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001579",
    "Application_Number": "LCA18-0001579",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001580",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001581",
-   "Application_Number": "LCA18-0001581",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001582",
@@ -7870,11 +4565,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001584",
    "Application_Number": "LCA18-0001584",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001585",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001586",
@@ -7895,11 +4585,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001589",
    "Application_Number": "LCA18-0001589",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001590",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001591",
@@ -7947,11 +4632,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001600",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001601",
    "Application_Number": "LCA18-0001601",
    "Waste_Review_Status": "Complete"
@@ -7987,16 +4667,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001608",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001609",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001610",
    "Application_Number": "LCA18-0001610",
    "Waste_Review_Status": "Complete"
@@ -8007,29 +4677,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001612",
-   "Application_Number": "LCA18-0001612",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001613",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001614",
-   "Application_Number": "LCA18-0001614",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001615",
    "Application_Number": "LCA18-0001615",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001616",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001617",
@@ -8040,16 +4690,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA18-0001618",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001619",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001620",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -8082,11 +4722,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001627",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001628",
    "Application_Number": "LCA18-0001628",
    "Waste_Review_Status": "Complete"
@@ -8107,19 +4742,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001632",
-   "Application_Number": "LCA18-0001632",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001633",
    "Application_Number": "LCA18-0001633",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001634",
-   "Application_Number": "LCA18-0001634",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001635",
@@ -8130,11 +4755,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001636",
    "Application_Number": "LCA18-0001636",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001637",
-   "Application_Number": "LCA18-0001637",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001638",
@@ -8157,31 +4777,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001642",
-   "Application_Number": "LCA18-0001642",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001643",
-   "Application_Number": "LCA18-0001643",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001644",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001645",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001646",
-   "Application_Number": "LCA18-0001646",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001647",
    "Application_Number": "LCA18-0001647",
    "Waste_Review_Status": "Complete"
@@ -8197,11 +4792,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001650",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001651",
    "Application_Number": "LCA18-0001651",
    "Waste_Review_Status": "Complete"
@@ -8210,11 +4800,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001652",
    "Application_Number": "LCA18-0001652",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001653",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001654",
@@ -8252,21 +4837,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001661",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001662",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001663",
-   "Application_Number": "LCA18-0001663",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001664",
    "Application_Number": "LCA18-0001664",
    "Waste_Review_Status": "Complete"
@@ -8275,11 +4845,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001665",
    "Application_Number": "LCA18-0001665",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001666",
-   "Application_Number": "LCA18-0001666",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001667",
@@ -8352,16 +4917,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001681",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001682",
-   "Application_Number": "LCA18-0001682",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001683",
    "Application_Number": "LCA18-0001683",
    "Waste_Review_Status": "Complete"
@@ -8377,19 +4932,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001686",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001687",
    "Application_Number": "LCA18-0001687",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001688",
-   "Application_Number": "LCA18-0001688",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001689",
@@ -8400,11 +4945,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001690",
    "Application_Number": "LCA18-0001690",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001691",
-   "Application_Number": "LCA18-0001691",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001692",
@@ -8467,21 +5007,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001705",
-   "Application_Number": "LCA18-0001705",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001706",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001707",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001708",
    "Application_Number": "LCA18-0001708",
    "Waste_Review_Status": "Complete"
@@ -8495,11 +5020,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001710",
    "Application_Number": "LCA18-0001710",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001711",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001712",
@@ -8527,21 +5047,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001717",
-   "Application_Number": "LCA18-0001717",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001718",
-   "Application_Number": "LCA18-0001718",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001719",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001720",
    "Application_Number": "LCA18-0001720",
    "Waste_Review_Status": "Complete"
@@ -8560,16 +5065,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001723",
    "Application_Number": "LCA18-0001723",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001725",
-   "Application_Number": "LCA18-0001725",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001726",
-   "Application_Number": "LCA18-0001726",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001727",
@@ -8597,11 +5092,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001732",
-   "Application_Number": "LCA18-0001732",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001733",
    "Application_Number": "LCA18-0001733",
    "Waste_Review_Status": "Complete"
@@ -8622,26 +5112,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001737",
-   "Application_Number": "LCA18-0001737",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001738",
-   "Application_Number": "LCA18-0001738",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001739",
-   "Application_Number": "LCA18-0001739",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001740",
-   "Application_Number": "LCA18-0001740",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001741",
    "Application_Number": "LCA18-0001741",
    "Waste_Review_Status": "Complete"
@@ -8650,26 +5120,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001742",
    "Application_Number": "LCA18-0001742",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001743",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001744",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001745",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001746",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001747",
@@ -8682,11 +5132,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001749",
-   "Application_Number": "LCA18-0001749",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001750",
    "Application_Number": "LCA18-0001750",
    "Waste_Review_Status": "Complete"
@@ -8694,12 +5139,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001751",
    "Application_Number": "LCA18-0001751",
-   "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001752",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001753",
@@ -8707,39 +5147,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001754",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001755",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001756",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001757",
    "Application_Number": "LCA18-0001757",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001758",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001759",
    "Application_Number": "LCA18-0001759",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001760",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001761",
@@ -8752,44 +5167,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001764",
-   "Application_Number": "LCA18-0001764",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001765",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001766",
-   "Application_Number": "LCA18-0001766",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001767",
    "Application_Number": "LCA18-0001767",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001768",
-   "Application_Number": "LCA18-0001768",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001769",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001770",
    "Application_Number": "LCA18-0001770",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001771",
-   "Application_Number": "LCA18-0001771",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001772",
@@ -8837,24 +5222,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001781",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001782",
    "Application_Number": "LCA18-0001782",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001783",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001784",
-   "Application_Number": "LCA18-0001784",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001785",
@@ -8865,16 +5235,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001786",
    "Application_Number": "LCA18-0001786",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001787",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001788",
-   "Application_Number": "LCA18-0001788",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001789",
@@ -8889,22 +5249,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001791",
    "Application_Number": "LCA18-0001791",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001792",
    "Application_Number": "LCA18-0001792",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001793",
    "Application_Number": "LCA18-0001793",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001794",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001795",
@@ -8917,49 +5272,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001797",
-   "Application_Number": "LCA18-0001797",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001798",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001799",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001800",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001801",
-   "Application_Number": "LCA18-0001801",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001802",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001803",
    "Application_Number": "LCA18-0001803",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001804",
    "Application_Number": "LCA18-0001804",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001805",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001806",
@@ -8977,29 +5297,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001809",
-   "Application_Number": "LCA18-0001809",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001810",
-   "Application_Number": "LCA18-0001810",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001811",
-   "Application_Number": "LCA18-0001811",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001812",
    "Application_Number": "LCA18-0001812",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001813",
-   "Application_Number": "LCA18-0001813",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001814",
@@ -9012,11 +5312,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001816",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001817",
    "Application_Number": "LCA18-0001817",
    "Waste_Review_Status": "Complete"
@@ -9024,7 +5319,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001818",
    "Application_Number": "LCA18-0001818",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001819",
@@ -9067,44 +5362,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001828",
-   "Application_Number": "LCA18-0001828",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001829",
-   "Application_Number": "LCA18-0001829",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001830",
-   "Application_Number": "LCA18-0001830",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001831",
-   "Application_Number": "LCA18-0001831",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001832",
-   "Application_Number": "LCA18-0001832",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001833",
-   "Application_Number": "LCA18-0001833",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001834",
    "Application_Number": "LCA18-0001834",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001835",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -9112,64 +5372,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001837",
-   "Application_Number": "LCA18-0001837",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001838",
    "Application_Number": "LCA18-0001838",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001839",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001840",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001841",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001842",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001843",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001844",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001845",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001846",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001847",
    "Application_Number": "LCA18-0001847",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001848",
-   "Application_Number": "LCA18-0001848",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -9202,11 +5412,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001855",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001856",
    "Application_Number": "LCA18-0001856",
    "Waste_Review_Status": "Complete"
@@ -9227,16 +5432,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001860",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001861",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001862",
    "Application_Number": "LCA18-0001862",
    "Waste_Review_Status": "Complete"
@@ -9245,11 +5440,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001863",
    "Application_Number": "LCA18-0001863",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001864",
-   "Application_Number": "LCA18-0001864",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001865",
@@ -9284,12 +5474,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001871",
    "Application_Number": "LCA18-0001871",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001872",
    "Application_Number": "LCA18-0001872",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001873",
@@ -9307,71 +5497,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001876",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001877",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001878",
-   "Application_Number": "LCA18-0001878",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001879",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001880",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001881",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001882",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001883",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001884",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001885",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001886",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001887",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001888",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001889",
    "Application_Number": "LCA18-0001889",
    "Waste_Review_Status": "Complete"
@@ -9379,12 +5504,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001890",
    "Application_Number": "LCA18-0001890",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001891",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001892",
@@ -9402,44 +5522,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001895",
-   "Application_Number": "LCA18-0001895",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001896",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001897",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001898",
-   "Application_Number": "LCA18-0001898",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001899",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001900",
    "Application_Number": "LCA18-0001900",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001901",
-   "Application_Number": "LCA18-0001901",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001902",
-   "Application_Number": "LCA18-0001902",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001903",
@@ -9457,11 +5542,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001906",
-   "Application_Number": "LCA18-0001906",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001907",
    "Application_Number": "LCA18-0001907",
    "Waste_Review_Status": "Complete"
@@ -9474,7 +5554,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001909",
    "Application_Number": "LCA18-0001909",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001910",
@@ -9482,64 +5562,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001911",
-   "Application_Number": "LCA18-0001911",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001912",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001913",
-   "Application_Number": "LCA18-0001913",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001914",
-   "Application_Number": "LCA18-0001914",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001915",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001916",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001917",
    "Application_Number": "LCA18-0001917",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001918",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001919",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001920",
    "Application_Number": "LCA18-0001920",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001921",
-   "Application_Number": "LCA18-0001921",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001922",
-   "Application_Number": "LCA18-0001922",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001923",
@@ -9550,11 +5580,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001924",
    "Application_Number": "LCA18-0001924",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001925",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001926",
@@ -9572,26 +5597,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001929",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001930",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001931",
-   "Application_Number": "LCA18-0001931",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001932",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001933",
    "Application_Number": "LCA18-0001933",
    "Waste_Review_Status": "Complete"
@@ -9600,11 +5605,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001934",
    "Application_Number": "LCA18-0001934",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001935",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001936",
@@ -9644,17 +5644,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001944",
    "Application_Number": "LCA18-0001944",
-   "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "CCL18-0001945",
-   "Application_Number": "LCA18-0001945",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001946",
-   "Application_Number": "LCA18-0001946",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001947",
@@ -9665,11 +5655,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001948",
    "Application_Number": "LCA18-0001948",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001949",
-   "Application_Number": "LCA18-0001949",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001950",
@@ -9707,11 +5692,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001957",
-   "Application_Number": "LCA18-0001957",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001958",
    "Application_Number": "LCA18-0001958",
    "Waste_Review_Status": "Complete"
@@ -9720,16 +5700,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0001959",
    "Application_Number": "LCA18-0001959",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001960",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001961",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001962",
@@ -9742,11 +5712,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001964",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001965",
    "Application_Number": "LCA18-0001965",
    "Waste_Review_Status": "Complete"
@@ -9757,41 +5722,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001967",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001968",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001969",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001970",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001971",
-   "Application_Number": "LCA18-0001971",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001972",
-   "Application_Number": "LCA18-0001972",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001973",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001974",
    "Application_Number": "LCA18-0001974",
    "Waste_Review_Status": "Complete"
@@ -9799,7 +5729,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001975",
    "Application_Number": "LCA18-0001975",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001976",
@@ -9814,42 +5744,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001978",
    "Application_Number": "LCA18-0001978",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001979",
    "Application_Number": "LCA18-0001979",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001980",
    "Application_Number": "LCA18-0001980",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0001981",
-   "Application_Number": "LCA18-0001981",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001982",
-   "Application_Number": "LCA18-0001982",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001983",
-   "Application_Number": "LCA18-0001983",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001984",
-   "Application_Number": "LCA18-0001984",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0001985",
-   "Application_Number": "LCA18-0001985",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001986",
@@ -9862,19 +5767,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0001988",
-   "Application_Number": "LCA18-0001988",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001989",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0001990",
    "Application_Number": "LCA18-0001990",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001991",
@@ -9894,17 +5789,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0001994",
    "Application_Number": "LCA18-0001994",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0001995",
    "Application_Number": "LCA18-0001995",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001996",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0001997",
@@ -9927,11 +5817,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002001",
-   "Application_Number": "LCA18-0002001",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002002",
    "Application_Number": "LCA18-0002002",
    "Waste_Review_Status": "Complete"
@@ -9942,11 +5827,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002004",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002005",
    "Application_Number": "LCA18-0002005",
    "Waste_Review_Status": "Complete"
@@ -9955,11 +5835,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002006",
    "Application_Number": "LCA18-0002006",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002007",
-   "Application_Number": "LCA18-0002007",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002008",
@@ -9997,34 +5872,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002015",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002016",
    "Application_Number": "LCA18-0002016",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002017",
-   "Application_Number": "LCA18-0002017",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002018",
-   "Application_Number": "LCA18-0002018",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002019",
-   "Application_Number": "LCA18-0002019",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002020",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002021",
@@ -10035,11 +5885,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002022",
    "Application_Number": "LCA18-0002022",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002023",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002024",
@@ -10112,21 +5957,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002038",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002039",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002040",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002041",
    "Application_Number": "LCA18-0002041",
    "Waste_Review_Status": "Complete"
@@ -10137,29 +5967,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002043",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002044",
    "Application_Number": "LCA18-0002044",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002045",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002046",
    "Application_Number": "LCA18-0002046",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002047",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002048",
@@ -10182,24 +5997,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002052",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002053",
    "Application_Number": "LCA18-0002053",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002054",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002055",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002056",
@@ -10210,11 +6010,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002057",
    "Application_Number": "LCA18-0002057",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002058",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002059",
@@ -10232,19 +6027,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002063",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002064",
-   "Application_Number": "LCA18-0002064",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002065",
    "Application_Number": "LCA18-0002065",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002066",
@@ -10262,29 +6047,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002069",
-   "Application_Number": "LCA18-0002069",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002070",
-   "Application_Number": "LCA18-0002070",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002071",
    "Application_Number": "LCA18-0002071",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002072",
    "Application_Number": "LCA18-0002072",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002073",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002074",
@@ -10297,21 +6067,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002077",
-   "Application_Number": "LCA18-0002077",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002078",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002079",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002080",
    "Application_Number": "LCA18-0002080",
    "Waste_Review_Status": "Complete"
@@ -10322,11 +6077,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002082",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002083",
    "Application_Number": "LCA18-0002083",
    "Waste_Review_Status": "Complete"
@@ -10334,47 +6084,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA18-0002084",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002085",
-   "Application_Number": "LCA18-0002085",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002086",
    "Application_Number": "LCA18-0002086",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002087",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002088",
-   "Application_Number": "LCA18-0002088",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002089",
-   "Application_Number": "LCA18-0002089",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002090",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002092",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002093",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002094",
@@ -10397,11 +6112,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002098",
-   "Application_Number": "LCA18-0002098",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002099",
    "Application_Number": "LCA18-0002099",
    "Waste_Review_Status": "Complete"
@@ -10422,39 +6132,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002103",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002104",
-   "Application_Number": "LCA18-0002104",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002105",
    "Application_Number": "LCA18-0002105",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002106",
-   "Application_Number": "LCA18-0002106",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002107",
    "Application_Number": "LCA18-0002107",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002108",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002109",
-   "Application_Number": "LCA18-0002109",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002110",
@@ -10477,11 +6162,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002114",
-   "Application_Number": "LCA18-0002114",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002115",
    "Application_Number": "LCA18-0002115",
    "Waste_Review_Status": "Complete"
@@ -10497,29 +6177,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002118",
-   "Application_Number": "LCA18-0002118",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002119",
    "Application_Number": "LCA18-0002119",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002120",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002121",
-   "Application_Number": "LCA18-0002121",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002122",
-   "Application_Number": "LCA18-0002122",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002123",
@@ -10547,11 +6207,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002128",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002129",
    "Application_Number": "LCA18-0002129",
    "Waste_Review_Status": "Complete"
@@ -10559,7 +6214,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002130",
    "Application_Number": "LCA18-0002130",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002131",
@@ -10582,34 +6237,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002135",
-   "Application_Number": "LCA18-0002135",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002136",
-   "Application_Number": "LCA18-0002136",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002137",
    "Application_Number": "LCA18-0002137",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002138",
-   "Application_Number": "LCA18-0002138",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002139",
    "Application_Number": "LCA18-0002139",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002140",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002141",
@@ -10627,11 +6262,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002144",
-   "Application_Number": "LCA18-0002144",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002145",
    "Application_Number": "LCA18-0002145",
    "Waste_Review_Status": "Incomplete"
@@ -10639,32 +6269,22 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002146",
    "Application_Number": "LCA18-0002146",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002147",
    "Application_Number": "LCA18-0002147",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002148",
-   "Application_Number": "LCA18-0002148",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002149",
    "Application_Number": "LCA18-0002149",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002150",
    "Application_Number": "LCA18-0002150",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002151",
-   "Application_Number": "LCA18-0002151",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002152",
@@ -10687,16 +6307,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002156",
-   "Application_Number": "LCA18-0002156",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002157",
-   "Application_Number": "LCA18-0002157",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002158",
    "Application_Number": "LCA18-0002158",
    "Waste_Review_Status": "Complete"
@@ -10705,11 +6315,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002159",
    "Application_Number": "LCA18-0002159",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002160",
-   "Application_Number": "LCA18-0002160",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002161",
@@ -10722,21 +6327,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002163",
-   "Application_Number": "LCA18-0002163",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002164",
-   "Application_Number": "LCA18-0002164",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002165",
-   "Application_Number": "LCA18-0002165",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002166",
    "Application_Number": "LCA18-0002166",
    "Waste_Review_Status": "Complete"
@@ -10744,7 +6334,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002167",
    "Application_Number": "LCA18-0002167",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002168",
@@ -10772,44 +6362,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL18-0002173",
-   "Application_Number": "LCA18-0002173",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002174",
-   "Application_Number": "lca18-0002174",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002175",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002176",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002177",
    "Application_Number": "LCA18-0002177",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002178",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002179",
    "Application_Number": "LCA18-0002179",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002180",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002181",
@@ -10827,11 +6387,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002184",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002185",
    "Application_Number": "LCA18-0002185",
    "Waste_Review_Status": "Complete"
@@ -10845,31 +6400,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002187",
    "Application_Number": "LCA18-0002187",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002188",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002189",
-   "Application_Number": "LCA18-0002189",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002190",
-   "Application_Number": "LCA18-0002190",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002191",
-   "Application_Number": "LCA18-0002191",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002192",
-   "Application_Number": "lca18-0002192",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002193",
@@ -10890,16 +6420,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002196",
    "Application_Number": "LCA18-0002196",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002197",
-   "Application_Number": "LCA18-0002197",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002198",
-   "Application_Number": "LCA18-0002198",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002199",
@@ -10927,11 +6447,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002204",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002205",
    "Application_Number": "lca18-0002205",
    "Waste_Review_Status": "Complete"
@@ -10947,16 +6462,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002208",
-   "Application_Number": "LCA18-0002208",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002209",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002210",
    "Application_Number": "LCA18-0002210",
    "Waste_Review_Status": "Complete"
@@ -10965,26 +6470,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002211",
    "Application_Number": "lca18-0002211",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002212",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002213",
-   "Application_Number": "LCA18-0002213",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002214",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002215",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002216",
@@ -11042,39 +6527,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002227",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002228",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002229",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002230",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002231",
    "Application_Number": "LCA18-0002231",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002232",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002233",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002234",
@@ -11095,11 +6550,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002237",
    "Application_Number": "LCA18-0002237",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002238",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002239",
@@ -11127,29 +6577,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002244",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002245",
    "Application_Number": "lca18-0002245",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002246",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002247",
    "Application_Number": "lca18-0002247",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002248",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002249",
@@ -11190,21 +6625,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002256",
    "Application_Number": "LCA18-0002256",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002257",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002258",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002259",
-   "Application_Number": "LCA18-0002259",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002260",
@@ -11392,11 +6812,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002297",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002298",
    "Application_Number": "LCA18-0002298",
    "Waste_Review_Status": "Complete"
@@ -11407,19 +6822,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002300",
-   "Application_Number": "LCA18-0002300",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002301",
    "Application_Number": "LCA18-0002301",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002302",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002303",
@@ -11430,11 +6835,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002304",
    "Application_Number": "LCA18-0002304",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002305",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002306",
@@ -11452,24 +6852,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002309",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002310",
    "Application_Number": "LCA18-0002310",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002311",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002312",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002313",
@@ -11482,11 +6867,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002315",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002316",
    "Application_Number": "LCA18-0002316",
    "Waste_Review_Status": "Complete"
@@ -11497,11 +6877,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002318",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002319",
    "Application_Number": "LCA18-0002319",
    "Waste_Review_Status": "Complete"
@@ -11510,16 +6885,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002320",
    "Application_Number": "LCA18-0002320",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002321",
-   "Application_Number": "LCA18-0002321",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002322",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002323",
@@ -11544,7 +6909,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002327",
    "Application_Number": "LCA18-0002327",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002328",
@@ -11552,44 +6917,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002329",
-   "Application_Number": "LCA18-0002329",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002330",
-   "Application_Number": "LCA18-0002330",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002331",
    "Application_Number": "LCA18-0002331",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002332",
-   "Application_Number": "LCA18-0002332",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002333",
    "Application_Number": "LCA18-0002333",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002334",
-   "Application_Number": "LCA18-0002334",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002336",
-   "Application_Number": "lca18-0002336",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002337",
-   "Application_Number": "lca18-0002337",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002338",
@@ -11617,11 +6952,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002343",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002344",
    "Application_Number": "LCA18-0002344",
    "Waste_Review_Status": "Complete"
@@ -11645,11 +6975,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002348",
    "Application_Number": "LCA18-0002348",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002349",
-   "Application_Number": "LCA18-0002349",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002350",
@@ -11795,11 +7120,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002378",
    "Application_Number": "LCA18-0002378",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002379",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002380",
@@ -12077,49 +7397,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002435",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002436",
    "Application_Number": "LCA18-0002436",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002437",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002438",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002439",
-   "Application_Number": "LCA18-0002439",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002440",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002441",
-   "Application_Number": "LCA18-0002441",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002442",
    "Application_Number": "LCA18-0002442",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002443",
-   "Application_Number": "LCA18-0002443",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002444",
@@ -12132,54 +7417,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002446",
-   "Application_Number": "LCA18-0002446",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002447",
    "Application_Number": "LCA18-0002447",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002448",
-   "Application_Number": "LCA18-0002448",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002449",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002450",
    "Application_Number": "LCA18-0002450",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002451",
-   "Application_Number": "LCA18-0002451",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002452",
-   "Application_Number": "LCA18-0002452",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002453",
-   "Application_Number": "LCA18-0002453",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002454",
-   "Application_Number": "LCA18-0002454",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002455",
-   "Application_Number": "LCA18-0002455",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002456",
@@ -12222,34 +7467,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002464",
-   "Application_Number": "LCA18-0002464",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002465",
    "Application_Number": "LCA18-0002465",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002466",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002467",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002468",
    "Application_Number": "LCA18-0002468",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002469",
-   "Application_Number": "LCA18-0002469",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002470",
@@ -12267,16 +7492,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002473",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002474",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002475",
    "Application_Number": "LCA18-0002475",
    "Waste_Review_Status": "Complete"
@@ -12287,59 +7502,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002477",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002478",
-   "Application_Number": "LCA18-0002478",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002479",
-   "Application_Number": "LCA18-0002479",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002480",
-   "Application_Number": "LCA18-0002480",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002481",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002482",
-   "Application_Number": "LCA18-0002482",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002483",
    "Application_Number": "LCA18-0002483",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002484",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002485",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002486",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002487",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002488",
@@ -12362,21 +7527,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002492",
-   "Application_Number": "LCA18-0002492",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002493",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002494",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002495",
    "Application_Number": "LCA18-0002495",
    "Waste_Review_Status": "Complete"
@@ -12384,17 +7534,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002496",
    "Application_Number": "LCA18-0002496",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002497",
    "Application_Number": "LCA18-0002497",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002498",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002499",
@@ -12442,11 +7587,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002508",
-   "Application_Number": "LCA18-0002508",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002509",
    "Application_Number": "LCA18-0002509",
    "Waste_Review_Status": "Complete"
@@ -12467,24 +7607,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002513",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002514",
-   "Application_Number": "LCA18-0002514",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002515",
    "Application_Number": "LCA18-0002515",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002516",
-   "Application_Number": "LCA18-0002516",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002517",
@@ -12495,11 +7620,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002518",
    "Application_Number": "LCA18-0002518",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002519",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002520",
@@ -12522,24 +7642,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002524",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002525",
    "Application_Number": "LCA18-0002525",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002526",
-   "Application_Number": "LCA18-0002526",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002527",
-   "Application_Number": "LCA18-0002527",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002528",
@@ -12552,19 +7657,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002530",
-   "Application_Number": "LCA18-0002530",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002531",
    "Application_Number": "LCA18-0002531",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002532",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002533",
@@ -12575,11 +7670,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002534",
    "Application_Number": "LCA18-0002534",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002535",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002536",
@@ -12622,16 +7712,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002544",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002545",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002546",
    "Application_Number": "LCA18-0002546",
    "Waste_Review_Status": "Complete"
@@ -12662,16 +7742,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002552",
-   "Application_Number": "LCA18-0002552",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002553",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002554",
    "Application_Number": "LCA18-0002554",
    "Waste_Review_Status": "Complete"
@@ -12682,14 +7752,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002556",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002557",
    "Application_Number": "LCA18-0002557",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002558",
@@ -12700,11 +7765,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002559",
    "Application_Number": "LCA18-0002559",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002560",
-   "Application_Number": "LCA18-0002560",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002561",
@@ -12732,11 +7792,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002566",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002567",
    "Application_Number": "LCA18-0002567",
    "Waste_Review_Status": "Complete"
@@ -12745,16 +7800,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002568",
    "Application_Number": "LCA18-0002568",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002569",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002570",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002571",
@@ -12802,11 +7847,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002580",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002581",
    "Application_Number": "LCA18-0002581",
    "Waste_Review_Status": "Complete"
@@ -12830,11 +7870,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002585",
    "Application_Number": "LCA18-0002585",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002586",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002587",
@@ -12887,11 +7922,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002597",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002598",
    "Application_Number": "LCA18-0002598",
    "Waste_Review_Status": "Complete"
@@ -12902,19 +7932,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002600",
-   "Application_Number": "LCA18-0002600",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002601",
    "Application_Number": "LCA18-0002601",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002602",
-   "Application_Number": "LCA18-0002602",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002603",
@@ -12925,11 +7945,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002604",
    "Application_Number": "LCA18-0002604",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002605",
-   "Application_Number": "LCA18-0002605",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002606",
@@ -12955,11 +7970,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002610",
    "Application_Number": "LCA18-0002610",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002611",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002612",
@@ -13002,29 +8012,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002620",
-   "Application_Number": "LCA18-0002620",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002621",
    "Application_Number": "LCA18-0002621",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002622",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002623",
    "Application_Number": "LCA18-0002623",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002624",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002625",
@@ -13057,11 +8052,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002632",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002633",
    "Application_Number": "LCA18-0002633",
    "Waste_Review_Status": "Complete"
@@ -13069,22 +8059,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002634",
    "Application_Number": "LCA18-0002634",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002635",
-   "Application_Number": "LCA18-0002635",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002636",
-   "Application_Number": "LCA18-0002636",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002637",
-   "Application_Number": "LCA18-0002637",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002638",
@@ -13114,7 +8089,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002643",
    "Application_Number": "LCA18-0002643",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002644",
@@ -13132,16 +8107,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002647",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002648",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002649",
    "Application_Number": "LCA18-0002649",
    "Waste_Review_Status": "Complete"
@@ -13152,19 +8117,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002651",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002652",
    "Application_Number": "LCA18-0002652",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002653",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002654",
@@ -13178,18 +8133,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0002656",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA18-0002657",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002658",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002659",
@@ -13224,7 +8169,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002665",
    "Application_Number": "LCA18-0002665",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002666",
@@ -13237,29 +8182,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002668",
-   "Application_Number": "LCA18-0002668",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002669",
    "Application_Number": "LCA18-0002669",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002670",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002671",
    "Application_Number": "LCA18-0002671",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002672",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002673",
@@ -13270,16 +8200,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002674",
    "Application_Number": "LCA18-0002674",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002675",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002676",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002677",
@@ -13295,11 +8215,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002679",
    "Application_Number": "LCA18-0002679",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002680",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002681",
@@ -13325,16 +8240,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002685",
    "Application_Number": "LCA18-0002685",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002686",
-   "Application_Number": "LCA18-0002686",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002687",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002688",
@@ -13369,12 +8274,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002694",
    "Application_Number": "LCA18-0002694",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA18-0002695",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002696",
@@ -13387,44 +8292,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002698",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002699",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002700",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002701",
    "Application_Number": "LCA18-0002701",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002702",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002703",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002704",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002705",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002706",
@@ -13437,39 +8307,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002708",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002709",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002710",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002711",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002712",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002713",
    "Application_Number": "LCA18-0002713",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002714",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002715",
@@ -13505,21 +8345,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002722",
    "Application_Number": "LCA18-0002722",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002723",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002724",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002725",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002726",
@@ -13597,16 +8422,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002741",
-   "Application_Number": "LCA18-0002741",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002742",
-   "Application_Number": "LCA18-0002742",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002743",
    "Application_Number": "LCA18-0002743",
    "Waste_Review_Status": "Complete"
@@ -13622,19 +8437,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002746",
-   "Application_Number": "LCA18-0002746",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002747",
    "Application_Number": "LCA18-0002747",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002748",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002749",
@@ -13732,11 +8537,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002768",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002769",
    "Application_Number": "LCA18-0002769",
    "Waste_Review_Status": "Complete"
@@ -13757,24 +8557,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002773",
-   "Application_Number": "LCA18-0002773",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002774",
    "Application_Number": "LCA18-0002774",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002775",
-   "Application_Number": "LCA18-0002775",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002776",
-   "Application_Number": "LCA18-0002776",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002777",
@@ -13793,33 +8578,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0002780",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA18-0002781",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002782",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002783",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002784",
    "Application_Number": "LCA18-0002784",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002785",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002786",
@@ -13832,29 +8597,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002788",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002789",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002790",
    "Application_Number": "LCA18-0002790",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002791",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002792",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002793",
@@ -13865,11 +8610,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002794",
    "Application_Number": "LCA18-0002794",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002795",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002796",
@@ -13892,19 +8632,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002800",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002801",
    "Application_Number": "LCA18-0002801",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002802",
    "Application_Number": "LCA18-0002802",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002803",
@@ -13917,41 +8652,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002805",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002806",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002807",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002808",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002809",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002810",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002811",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002813",
    "Application_Number": "LCA18-0002813",
    "Waste_Review_Status": "Complete"
@@ -13959,12 +8659,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002814",
    "Application_Number": "LCA18-0002814",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002815",
    "Application_Number": "LCA18-0002815",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002816",
@@ -13977,54 +8677,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002818",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002819",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002820",
    "Application_Number": "LCA18-0002820",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002821",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002822",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002823",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002824",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002825",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002826",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002827",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002828",
@@ -14042,54 +8697,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002832",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002833",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002834",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002835",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002836",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002837",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002838",
    "Application_Number": "LCA18-0002838",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002839",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002840",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002841",
-   "Application_Number": "LCA18-0002841",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002842",
@@ -14137,39 +8747,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002851",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002852",
    "Application_Number": "LCA18-0002852",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002853",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002854",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002855",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002856",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002857",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002858",
@@ -14177,59 +8757,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002859",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002860",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002861",
    "Application_Number": "LCA18-0002861",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002862",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002863",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002864",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002865",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002866",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002867",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002868",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002869",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002870",
@@ -14242,54 +8772,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002872",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002873",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002874",
-   "Application_Number": "LCA18-0002874",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002875",
-   "Application_Number": "LCA18-0002875",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002876",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002877",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002878",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002879",
    "Application_Number": "LCA18-0002879",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002880",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002881",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002882",
@@ -14302,39 +8787,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002884",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002885",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002886",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002887",
-   "Application_Number": "LCA18-0002887",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002888",
    "Application_Number": "LCA18-0002888",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002889",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002890",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002891",
@@ -14342,29 +8797,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL18-0002892",
-   "Application_Number": "LCA18-0002892",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002893",
-   "Application_Number": "LCA18-0002893",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002894",
    "Application_Number": "LCA18-0002894",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "CCL18-0002895",
-   "Application_Number": "LCA18-0002895",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002896",
-   "Application_Number": "LCA18-0002896",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002897",
@@ -14392,11 +8827,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0002902",
-   "Application_Number": "LCA18-0002902",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002903",
    "Application_Number": "LCA18-0002903",
    "Waste_Review_Status": "Complete"
@@ -14410,26 +8840,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002905",
    "Application_Number": "LCA18-0002905",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002906",
-   "Application_Number": "LCA18-0002906",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002907",
-   "Application_Number": "LCA18-0002907",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002908",
-   "Application_Number": "LCA18-0002908",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002909",
-   "Application_Number": "LCA18-0002909",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002910",
@@ -14447,16 +8857,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002913",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002914",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002915",
    "Application_Number": "LCA18-0002915",
    "Waste_Review_Status": "Complete"
@@ -14465,21 +8865,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002916",
    "Application_Number": "LCA18-0002916",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002917",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002918",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002919",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002920",
@@ -14492,49 +8877,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002922",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002923",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002924",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002925",
-   "Application_Number": "LCA18-0002925",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002926",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002927",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002928",
-   "Application_Number": "LCA18-0002928",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002929",
    "Application_Number": "LCA18-0002929",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002930",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002931",
@@ -14582,39 +8927,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002940",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002941",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002942",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002943",
    "Application_Number": "LCA18-0002943",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002944",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002945",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002946",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002947",
@@ -14629,17 +8944,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002949",
    "Application_Number": "LCA18-0002949",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002950",
    "Application_Number": "LCA18-0002950",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002951",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002952",
@@ -14659,7 +8969,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0002955",
    "Application_Number": "LCA18-0002955",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0002956",
@@ -14680,11 +8990,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002959",
    "Application_Number": "LCA18-0002959",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002960",
-   "Application_Number": "LCA18-0002960",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002961",
@@ -14752,11 +9057,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002975",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0002976",
    "Application_Number": "LCA18-0002976",
    "Waste_Review_Status": "Complete"
@@ -14770,26 +9070,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002978",
    "Application_Number": "LCA18-0002978",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002979",
-   "Application_Number": "LCA18-0002979",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002980",
-   "Application_Number": "LCA18-0002980",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002981",
-   "Application_Number": "LCA18-0002981",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002982",
-   "Application_Number": "LCA18-0002982",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002983",
@@ -14810,16 +9090,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0002986",
    "Application_Number": "LCA18-0002986",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0002987",
-   "Application_Number": "LCA18-0002987",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002988",
-   "Application_Number": "lca18-0002988",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0002989",
@@ -14852,84 +9122,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002995",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002996",
-   "Application_Number": "LCA18-0002996",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002997",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002998",
-   "Application_Number": "LCA18-0002998",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0002999",
-   "Application_Number": "LCA18-0002999",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003000",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003001",
    "Application_Number": "LCA18-0003001",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003002",
-   "Application_Number": "LCA18-0003002",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003003",
-   "Application_Number": "LCA18-0003003",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003004",
    "Application_Number": "LCA18-0003004",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003005",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003006",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003007",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003008",
-   "Application_Number": "LCA18-0003008",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003009",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003010",
-   "Application_Number": "LCA18-0003010",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003011",
@@ -14937,24 +9137,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003012",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003013",
    "Application_Number": "LCA18-0003013",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003014",
-   "Application_Number": "LCA18-0003014",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003015",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003016",
@@ -14962,34 +9147,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003017",
-   "Application_Number": "LCA18-0003017",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003018",
    "Application_Number": "LCA18-0003018",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003020",
-   "Application_Number": "LCA18-0003020",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003021",
    "Application_Number": "LCA18-0003021",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003022",
    "Application_Number": "LCA18-0003022",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003023",
-   "Application_Number": "LCA18-0003023",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003024",
@@ -15007,11 +9177,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003027",
-   "Application_Number": "lca18-0003027",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003028",
    "Application_Number": "lca18-0003028",
    "Waste_Review_Status": "Complete"
@@ -15020,16 +9185,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003029",
    "Application_Number": "LCA18-0003029",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003030",
-   "Application_Number": "LCA18-0003030",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003031",
-   "Application_Number": "LCA18-0003031",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003032",
@@ -15057,34 +9212,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003037",
-   "Application_Number": "LCA18-0003037",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003038",
    "Application_Number": "LCA18-0003038",
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL18-0003039",
-   "Application_Number": "lca18-0003039",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003040",
-   "Application_Number": "lca18-0003040",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003041",
    "Application_Number": "LCA18-0003041",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003042",
-   "Application_Number": "LCA18-0003042",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003043",
@@ -15099,7 +9234,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003045",
    "Application_Number": "LCA18-0003045",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003046",
@@ -15107,34 +9242,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003047",
-   "Application_Number": "LCA18-0003047",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003048",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003049",
    "Application_Number": "LCA18-0003049",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003050",
-   "Application_Number": "LCA18-0003050",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003051",
-   "Application_Number": "LCA18-0003051",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003052",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003053",
@@ -15150,16 +9260,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003055",
    "Application_Number": "LCA18-0003055",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003056",
-   "Application_Number": "LCA18-0003056",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003057",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003058",
@@ -15182,34 +9282,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003062",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003063",
    "Application_Number": "LCA18-0003063",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003064",
    "Application_Number": "LCA18-0003064",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003065",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003066",
-   "Application_Number": "LCA18-0003066",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003067",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003068",
@@ -15227,34 +9307,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003071",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003072",
    "Application_Number": "LCA18-0003072",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003073",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003074",
-   "Application_Number": "LCA18-0003074",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003075",
-   "Application_Number": "LCA18-0003075",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003076",
    "Application_Number": "LCA18-0003076",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003077",
@@ -15287,11 +9347,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003083",
-   "Application_Number": "LCA18-0003083",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003084",
    "Application_Number": "LCA18-0003084",
    "Waste_Review_Status": "Complete"
@@ -15302,11 +9357,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003086",
-   "Application_Number": "LCA18-0003086",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003087",
    "Application_Number": "LCA18-0003087",
    "Waste_Review_Status": "Complete"
@@ -15315,21 +9365,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003088",
    "Application_Number": "LCA18-0003088",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003089",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003090",
-   "Application_Number": "LCA18-0003090",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003091",
-   "Application_Number": "LCA18-0003091",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003092",
@@ -15357,16 +9392,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003097",
-   "Application_Number": "LCA18-0003097",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003098",
-   "Application_Number": "LCA18-0003098",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003099",
    "Application_Number": "LCA18-0003099",
    "Waste_Review_Status": "Complete"
@@ -15382,16 +9407,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003102",
-   "Application_Number": "LCA18-0003102",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003103",
-   "Application_Number": "LCA18-0003103",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003104",
    "Application_Number": "LCA18-0003104",
    "Waste_Review_Status": "Complete"
@@ -15402,44 +9417,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003106",
-   "Application_Number": "LCA18-0003106",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003107",
-   "Application_Number": "LCA18-0003107",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003108",
-   "Application_Number": "LCA18-0003108",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003109",
-   "Application_Number": "LCA18-0003109",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003110",
    "Application_Number": "LCA18-0003110",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003111",
-   "Application_Number": "LCA18-0003111",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003112",
    "Application_Number": "LCA18-0003112",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003113",
    "Application_Number": "LCA18-0003113",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003114",
@@ -15452,34 +9442,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003116",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003117",
    "Application_Number": "LCA18-0003117",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003118",
-   "Application_Number": "LCA18-0003118",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003119",
-   "Application_Number": "LCA18-0003119",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003120",
-   "Application_Number": "LCA18-0003120",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003121",
-   "Application_Number": "LCA18-0003121",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003122",
@@ -15492,16 +9457,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL18-0003124",
-   "Application_Number": "LCA18-0003124",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003125",
-   "Application_Number": "LCA18-0003125",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003126",
    "Application_Number": "LCA18-0003126",
    "Waste_Review_Status": "Complete"
@@ -15509,12 +9464,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003127",
    "Application_Number": "LCA18-0003127",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003128",
    "Application_Number": "LCA18-0003128",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003129",
@@ -15542,16 +9497,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003134",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003135",
-   "Application_Number": "LCA18-0003135",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003136",
    "Application_Number": "LCA18-0003136",
    "Waste_Review_Status": "Complete"
@@ -15559,42 +9504,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003137",
    "Application_Number": "LCA18-0003137",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003138",
    "Application_Number": "LCA18-0003138",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003139",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003140",
-   "Application_Number": "LCA18-0003140",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003141",
-   "Application_Number": "LCA18-0003141",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003142",
-   "Application_Number": "LCA18-0003142",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003143",
-   "Application_Number": "LCA18-0003143",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003144",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003145",
@@ -15605,16 +9520,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003146",
    "Application_Number": "LCA18-0003146",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003147",
-   "Application_Number": "LCA18-0003147",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003148",
-   "Application_Number": "LCA18-0003148",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003149",
@@ -15677,16 +9582,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003161",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003162",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003163",
    "Application_Number": "LCA18-0003163",
    "Waste_Review_Status": "Complete"
@@ -15702,21 +9597,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003166",
-   "Application_Number": "LCA18-0003166",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003167",
-   "Application_Number": "LCA18-0003167",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003168",
-   "Application_Number": "LCA18-0003168",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003169",
    "Application_Number": "LCA18-0003169",
    "Waste_Review_Status": "Complete"
@@ -15725,11 +9605,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003170",
    "Application_Number": "LCA18-0003170",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003171",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003172",
@@ -15747,19 +9622,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003175",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003176",
    "Application_Number": "LCA18-0003176",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003177",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003178",
@@ -15772,39 +9637,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003180",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003181",
-   "Application_Number": "LCA18-0003181",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003182",
    "Application_Number": "LCA18-0003182",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003183",
-   "Application_Number": "LCA18-0003183",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003184",
    "Application_Number": "LCA18-0003184",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003185",
    "Application_Number": "LCA18-0003185",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003186",
-   "Application_Number": "LCA18-0003186",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003187",
@@ -15814,7 +9659,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003188",
    "Application_Number": "LCA18-0003188",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003189",
@@ -15847,16 +9692,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003195",
-   "Application_Number": "LCA18-0003195",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003196",
-   "Application_Number": "LCA18-0003196",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003197",
    "Application_Number": "LCA18-0003197",
    "Waste_Review_Status": "Complete"
@@ -15887,16 +9722,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003203",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003204",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003205",
    "Application_Number": "LCA18-0003205",
    "Waste_Review_Status": "Complete"
@@ -15907,29 +9732,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003207",
-   "Application_Number": "LCA18-0003207",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003208",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003209",
    "Application_Number": "LCA18-0003209",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003210",
-   "Application_Number": "LCA18-0003210",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003211",
-   "Application_Number": "LCA18-0003211",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003212",
@@ -15950,11 +9755,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003215",
    "Application_Number": "LCA18-0003215",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003216",
-   "Application_Number": "LCA18-0003216",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003217",
@@ -15997,16 +9797,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003225",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003226",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003227",
    "Application_Number": "LCA18-0003227",
    "Waste_Review_Status": "Complete"
@@ -16037,19 +9827,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003233",
-   "Application_Number": "LCA18-0003233",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003234",
    "Application_Number": "LCA18-0003234",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003235",
-   "Application_Number": "LCA18-0003235",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003236",
@@ -16057,54 +9837,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003237",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003238",
-   "Application_Number": "LCA18-0003238",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003239",
    "Application_Number": "LCA18-0003239",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "CCL18-0003240",
-   "Application_Number": "LCA18-0003240",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003241",
-   "Application_Number": "LCA18-0003241",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003242",
-   "Application_Number": "LCA18-0003242",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003243",
-   "Application_Number": "LCA18-0003243",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003244",
-   "Application_Number": "LCA18-0003244",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003245",
-   "Application_Number": "LCA18-0003245",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003246",
-   "Application_Number": "LCA18-0003246",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003247",
@@ -16130,11 +9865,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003251",
    "Application_Number": "LCA18-0003251",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003252",
-   "Application_Number": "LCA18-0003252",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003253",
@@ -16212,11 +9942,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003268",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003269",
    "Application_Number": "LCA18-0003269",
    "Waste_Review_Status": "Complete"
@@ -16267,34 +9992,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003279",
-   "Application_Number": "LCA18-0003279",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003280",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003281",
-   "Application_Number": "LCA18-0003281",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003282",
    "Application_Number": "LCA18-0003282",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003283",
-   "Application_Number": "LCA18-0003283",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003284",
-   "Application_Number": "LCA18-0003284",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003285",
@@ -16317,34 +10017,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003289",
-   "Application_Number": "LCA18-0003289",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003290",
-   "Application_Number": "LCA18-0003290",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003291",
-   "Application_Number": "LCA18-0003291",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003292",
    "Application_Number": "LCA18-0003292",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003293",
-   "Application_Number": "LCA18-0003293",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003294",
-   "Application_Number": "LCA18-0003294",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003295",
@@ -16354,42 +10029,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003296",
    "Application_Number": "LCA18-0003296",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003297",
-   "Application_Number": "LCA18-0003297",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003298",
-   "Application_Number": "LCA18-0003298",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003299",
-   "Application_Number": "LCA18-0003299",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003300",
-   "Application_Number": "LCA18-0003300",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003301",
    "Application_Number": "LCA18-0003301",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003302",
-   "Application_Number": "LCA18-0003302",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003303",
-   "Application_Number": "LCA18-0003303",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003304",
@@ -16429,57 +10074,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003311",
    "Application_Number": "LCA18-0003311",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003312",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003313",
-   "Application_Number": "LCA18-0003313",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003314",
    "Application_Number": "LCA18-0003314",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003315",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003316",
-   "Application_Number": "LCA18-0003316",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003317",
-   "Application_Number": "LCA18-0003317",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003318",
-   "Application_Number": "LCA18-0003318",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003319",
-   "Application_Number": "LCA18-0003319",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003320",
-   "Application_Number": "lca18-0003320",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003321",
-   "Application_Number": "LCA18-0003321",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003322",
@@ -16502,16 +10102,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003326",
-   "Application_Number": "LCA18-0003326",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003327",
-   "Application_Number": "LCA18-0003327",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003328",
    "Application_Number": "LCA18-0003328",
    "Waste_Review_Status": "Complete"
@@ -16532,16 +10122,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003332",
-   "Application_Number": "LCA18-0003332",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003333",
-   "Application_Number": "LCA18-0003333",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003334",
    "Application_Number": "LCA18-0003334",
    "Waste_Review_Status": "Complete"
@@ -16550,16 +10130,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003335",
    "Application_Number": "LCA18-0003335",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003336",
-   "Application_Number": "LCA18-0003336",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003337",
-   "Application_Number": "LCA18-0003337",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003338",
@@ -16572,19 +10142,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003340",
-   "Application_Number": "LCA18-0003340",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003341",
    "Application_Number": "LCA18-0003341",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003342",
-   "Application_Number": "LCA18-0003342",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003343",
@@ -16594,27 +10154,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003344",
    "Application_Number": "LCA18-0003344",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003345",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003346",
-   "Application_Number": "LCA18-0003346",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003347",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003348",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003349",
@@ -16622,24 +10162,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003350",
-   "Application_Number": "LCA18-0003350",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003351",
    "Application_Number": "LCA18-0003351",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003352",
-   "Application_Number": "LCA18-0003352",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003353",
-   "Application_Number": "LCA18-0003353",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003354",
@@ -16652,11 +10177,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003356",
-   "Application_Number": "LCA18-0003356",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003357",
    "Application_Number": "LCA18-0003357",
    "Waste_Review_Status": "Complete"
@@ -16665,16 +10185,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003358",
    "Application_Number": "LCA18-0003358",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003359",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003360",
-   "Application_Number": "LCA18-0003360",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003361",
@@ -16689,7 +10199,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003363",
    "Application_Number": "LCA18-0003363",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003364",
@@ -16699,7 +10209,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003365",
    "Application_Number": "LCA18-0003365",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003366",
@@ -16712,74 +10222,44 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL18-0003368",
-   "Application_Number": "LCA18-0003368",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003369",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003370",
    "Application_Number": "LCA18-0003370",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003371",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003372",
    "Application_Number": "LCA18-0003372",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003373",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003374",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003375",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003376",
    "Application_Number": "LCA18-0003376",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003377",
    "Application_Number": "LCA18-0003377",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003378",
    "Application_Number": "lca18-0003378",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003379",
    "Application_Number": "lca18-0003379",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003380",
    "Application_Number": "lca18-0003380",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003381",
    "Application_Number": "LCA18-0003381",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -16787,19 +10267,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003383",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003384",
    "Application_Number": "LCA18-0003384",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003385",
-   "Application_Number": "LCA18-0003385",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003386",
@@ -16812,79 +10282,34 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003388",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003389",
-   "Application_Number": "LCA18-0003389",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003390",
-   "Application_Number": "LCA18-0003390",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003391",
-   "Application_Number": "LCA18-0003391",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003392",
-   "Application_Number": "LCA18-0003392",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003393",
    "Application_Number": "LCA18-0003393",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003394",
    "Application_Number": "LCA18-0003394",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003395",
    "Application_Number": "LCA18-0003395",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003396",
    "Application_Number": "LCA18-0003396",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003397",
    "Application_Number": "LCA18-0003397",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003398",
-   "Application_Number": "LCA18-0003398",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003399",
-   "Application_Number": "LCA18-0003399",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003400",
-   "Application_Number": "LCA18-0003400",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003401",
    "Application_Number": "LCA18-0003401",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003402",
-   "Application_Number": "LCA18-0003402",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003403",
@@ -16899,17 +10324,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003405",
    "Application_Number": "LCA18-0003405",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003406",
    "Application_Number": "LCA18-0003406",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003407",
    "Application_Number": "LCA18-0003407",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003408",
@@ -16922,184 +10347,39 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003410",
-   "Application_Number": "LCA18-0003410",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003411",
    "Application_Number": "LCA18-0003411",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003412",
-   "Application_Number": "LCA18-0003412",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003413",
-   "Application_Number": "LCA18-0003413",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003414",
-   "Application_Number": "LCA18-0003414",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003415",
-   "Application_Number": "LCA18-0003415",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003416",
-   "Application_Number": "LCA18-0003416",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003417",
-   "Application_Number": "LCA18-0003417",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003418",
    "Application_Number": "LCA18-0003418",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003419",
    "Application_Number": "LCA18-0003419",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003420",
-   "Application_Number": "LCA18-0003420",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003421",
    "Application_Number": "LCA18-0003421",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003422",
    "Application_Number": "LCA18-0003422",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003423",
    "Application_Number": "LCA18-0003423",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003424",
-   "Application_Number": "LCA18-0003424",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003425",
-   "Application_Number": "LCA18-0003425",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003426",
-   "Application_Number": "LCA18-0003426",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003427",
-   "Application_Number": "LCA18-0003427",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003428",
    "Application_Number": "LCA18-0003428",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003429",
-   "Application_Number": "LCA18-0003429",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003430",
-   "Application_Number": "LCA18-0003430",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003431",
-   "Application_Number": "LCA18-0003431",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003432",
-   "Application_Number": "LCA18-0003432",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003433",
-   "Application_Number": "LCA18-0003433",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003434",
-   "Application_Number": "LCA18-0003434",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003435",
-   "Application_Number": "LCA18-0003435",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003436",
-   "Application_Number": "LCA18-0003436",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003437",
-   "Application_Number": "LCA18-0003437",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003438",
-   "Application_Number": "LCA18-0003438",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003439",
-   "Application_Number": "LCA18-0003439",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003440",
-   "Application_Number": "LCA18-0003440",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003441",
-   "Application_Number": "LCA18-0003441",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003442",
-   "Application_Number": "LCA18-0003442",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003443",
-   "Application_Number": "LCA18-0003443",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003444",
-   "Application_Number": "LCA18-0003444",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003445",
-   "Application_Number": "LCA18-0003445",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003446",
@@ -17112,44 +10392,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003448",
-   "Application_Number": "LCA18-0003448",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003449",
    "Application_Number": "LCA18-0003449",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003450",
-   "Application_Number": "LCA18-0003450",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003451",
-   "Application_Number": "LCA18-0003451",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003452",
-   "Application_Number": "LCA18-0003452",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003453",
-   "Application_Number": "LCA18-0003453",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003454",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003455",
-   "Application_Number": "LCA18-0003455",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003456",
@@ -17157,69 +10402,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003457",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003458",
-   "Application_Number": "LCA18-0003458",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003459",
-   "Application_Number": "LCA18-0003459",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003460",
-   "Application_Number": "LCA18-0003460",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003461",
-   "Application_Number": "LCA18-0003461",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003462",
    "Application_Number": "LCA18-0003462",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003463",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003464",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003465",
-   "Application_Number": "LCA18-0003465",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003466",
-   "Application_Number": "LCA18-0003466",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003467",
-   "Application_Number": "LCA18-0003467",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003468",
    "Application_Number": "LCA18-0003468",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003469",
    "Application_Number": "LCA18-0003469",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003470",
@@ -17242,16 +10437,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003474",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003475",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003476",
    "Application_Number": "LCA18-0003476",
    "Waste_Review_Status": "Complete"
@@ -17259,187 +10444,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003477",
    "Application_Number": "LCA18-0003477",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003478",
-   "Application_Number": "LCA18-0003478",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003479",
-   "Application_Number": "lca18-0003479",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003480",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003481",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003482",
-   "Application_Number": "LCA18-0003482",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003483",
-   "Application_Number": "LCA18-0003483",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003484",
-   "Application_Number": "LCA18-0003484",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003485",
-   "Application_Number": "LCA18-0003485",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003486",
-   "Application_Number": "LCA18-0003486",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003487",
-   "Application_Number": "LCA18-0003487",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003488",
-   "Application_Number": "LCA18-0003488",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003489",
-   "Application_Number": "LCA18-0003489",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003490",
-   "Application_Number": "LCA18-0003490",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003491",
-   "Application_Number": "LCA18-0003491",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003492",
-   "Application_Number": "LCA18-0003492",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003493",
-   "Application_Number": "LCA18-0003493",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003494",
-   "Application_Number": "LCA18-0003494",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003495",
    "Application_Number": "LCA18-0003495",
    "Waste_Review_Status": "complete"
- },
- {
-   "License_Number": "CCL18-0003496",
-   "Application_Number": "LCA18-0003496",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003497",
-   "Application_Number": "LCA18-0003497",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003498",
-   "Application_Number": "LCA18-0003498",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003499",
-   "Application_Number": "LCA18-0003499",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003500",
-   "Application_Number": "LCA18-0003500",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003501",
-   "Application_Number": "LCA18-0003501",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003502",
-   "Application_Number": "LCA18-0003502",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003503",
-   "Application_Number": "LCA18-0003503",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003504",
-   "Application_Number": "LCA18-0003504",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003505",
-   "Application_Number": "LCA18-0003505",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003506",
-   "Application_Number": "LCA18-0003506",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003507",
-   "Application_Number": "LCA18-0003507",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003508",
-   "Application_Number": "LCA18-0003508",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003509",
-   "Application_Number": "LCA18-0003509",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003510",
-   "Application_Number": "LCA18-0003510",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003511",
-   "Application_Number": "LCA18-0003511",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003512",
-   "Application_Number": "LCA18-0003512",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003513",
-   "Application_Number": "LCA18-0003513",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003514",
@@ -17467,54 +10477,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003519",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003520",
-   "Application_Number": "LCA18-0003520",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003521",
-   "Application_Number": "LCA18-0003521",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003522",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003523",
    "Application_Number": "LCA18-0003523",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003524",
-   "Application_Number": "LCA18-0003524",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003525",
-   "Application_Number": "LCA18-0003525",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003526",
-   "Application_Number": "LCA18-0003526",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003527",
    "Application_Number": "LCA18-0003527",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003528",
    "Application_Number": "lca18-0003528",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -17539,7 +10514,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003533",
    "Application_Number": "LCA18-0003533",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003534",
@@ -17550,16 +10525,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003535",
    "Application_Number": "LCA18-0003535",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003536",
-   "Application_Number": "LCA18-0003536",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003537",
-   "Application_Number": "LCA18-0003537",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003538",
@@ -17578,16 +10543,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0003541",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003542",
-   "Application_Number": "LCA18-0003542",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA18-0003543",
    "Waste_Review_Status": "Complete"
  },
@@ -17597,34 +10552,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003545",
-   "Application_Number": "LCA18-0003545",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003546",
-   "Application_Number": "LCA18-0003546",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003547",
    "Application_Number": "LCA18-0003547",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003548",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003549",
    "Application_Number": "LCA18-0003549",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003550",
-   "Application_Number": "LCA18-0003550",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003551",
@@ -17635,26 +10570,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003552",
    "Application_Number": "LCA18-0003552",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003553",
-   "Application_Number": "LCA18-0003553",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003554",
-   "Application_Number": "LCA18-0003554",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003555",
-   "Application_Number": "lca18-0003555",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003556",
-   "Application_Number": "LCA18-0003556",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003557",
@@ -17684,17 +10599,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003562",
    "Application_Number": "LCA18-0003562",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003563",
-   "Application_Number": "LCA18-0003563",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003564",
-   "Application_Number": "LCA18-0003564",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003565",
@@ -17702,14 +10607,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003566",
-   "Application_Number": "LCA18-0003566",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003567",
    "Application_Number": "LCA18-0003567",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003568",
@@ -17717,39 +10617,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003569",
-   "Application_Number": "LCA18-0003569",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003570",
    "Application_Number": "LCA18-0003570",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003571",
-   "Application_Number": "LCA18-0003571",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003572",
-   "Application_Number": "LCA18-0003572",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003573",
    "Application_Number": "LCA18-0003573",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003574",
-   "Application_Number": "lca18-0003574",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003575",
-   "Application_Number": "LCA18-0003575",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003576",
@@ -17757,24 +10632,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003577",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003578",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003579",
-   "Application_Number": "LCA18-0003579",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003580",
    "Application_Number": "LCA18-0003580",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003581",
@@ -17805,11 +10665,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003586",
    "Application_Number": "LCA18-0003586",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003587",
-   "Application_Number": "LCA18-0003587",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003588",
@@ -17843,11 +10698,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0003594",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "lca18-0003595",
    "Waste_Review_Status": "Complete"
  },
@@ -17859,12 +10709,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003597",
    "Application_Number": "LCA18-0003597",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003598",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003599",
@@ -17874,62 +10719,22 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003600",
    "Application_Number": "LCA18-0003600",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003601",
    "Application_Number": "LCA18-0003601",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003602",
    "Application_Number": "LCA18-0003602",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003603",
    "Application_Number": "LCA18-0003603",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003604",
-   "Application_Number": "LCA18-0003604",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003605",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003606",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003607",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003608",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003609",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003610",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003611",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003612",
@@ -17937,19 +10742,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003613",
-   "Application_Number": "LCA18-0003613",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003614",
    "Application_Number": "LCA18-0003614",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003615",
-   "Application_Number": "LCA18-0003615",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003616",
@@ -17962,29 +10757,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003618",
-   "Application_Number": "LCA18-0003618",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003619",
-   "Application_Number": "LCA18-0003619",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003620",
-   "Application_Number": "LCA18-0003620",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003621",
-   "Application_Number": "LCA18-0003621",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003622",
    "Application_Number": "LCA18-0003622",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003623",
@@ -18012,24 +10787,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003628",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003629",
    "Application_Number": "LCA18-0003629",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003630",
    "Application_Number": "LCA18-0003630",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003631",
-   "Application_Number": "LCA18-0003631",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003632",
@@ -18040,11 +10805,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003633",
    "Application_Number": "LCA18-0003633",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003634",
-   "Application_Number": "lca18-0003634",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003635",
@@ -18060,11 +10820,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003637",
    "Application_Number": "LCA18-0003637",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003638",
-   "Application_Number": "lca18-0003638",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003639",
@@ -18085,11 +10840,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003642",
    "Application_Number": "LCA18-0003642",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003643",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003644",
@@ -18117,11 +10867,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003649",
-   "Application_Number": "LCA18-0003649",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003650",
    "Application_Number": "LCA18-0003650",
    "Waste_Review_Status": "Complete"
@@ -18144,17 +10889,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003654",
    "Application_Number": "LCA18-0003654",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003655",
-   "Application_Number": "LCA18-0003655",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003656",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003657",
@@ -18162,24 +10897,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003658",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003659",
    "Application_Number": "LCA18-0003659",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003660",
-   "Application_Number": "LCA18-0003660",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003661",
-   "Application_Number": "LCA18-0003661",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003662",
@@ -18189,7 +10909,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003663",
    "Application_Number": "LCA18-0003663",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003664",
@@ -18272,16 +10992,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003680",
-   "Application_Number": "LCA18-0003680",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003681",
-   "Application_Number": "LCA18-0003681",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003682",
    "Application_Number": "LCA18-0003682",
    "Waste_Review_Status": "Complete"
@@ -18297,39 +11007,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003685",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003686",
-   "Application_Number": "LCA18-0003686",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003687",
-   "Application_Number": "LCA18-0003687",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003688",
    "Application_Number": "LCA18-0003688",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003689",
-   "Application_Number": "LCA18-0003689",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003690",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003691",
-   "Application_Number": "LCA18-0003691",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003692",
@@ -18337,29 +11017,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003693",
-   "Application_Number": "LCA18-0003693",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003694",
-   "Application_Number": "LCA18-0003694",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003695",
-   "Application_Number": "LCA18-0003695",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003696",
    "Application_Number": "LCA18-0003696",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003697",
-   "Application_Number": "lca18-0003697",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003698",
@@ -18374,7 +11034,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA18-0003700",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003701",
@@ -18387,16 +11047,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003703",
-   "Application_Number": "LCA18-0003703",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003704",
-   "Application_Number": "LCA18-0003704",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003705",
    "Application_Number": "LCA18-0003705",
    "Waste_Review_Status": "Complete"
@@ -18407,39 +11057,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003707",
-   "Application_Number": "LCA18-0003707",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003708",
-   "Application_Number": "LCA18-0003708",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003709",
-   "Application_Number": "LCA18-0003709",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003710",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003711",
    "Application_Number": "LCA18-0003711",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003712",
-   "Application_Number": "LCA18-0003712",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003713",
-   "Application_Number": "LCA18-0003713",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003714",
@@ -18482,29 +11102,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003722",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003723",
    "Application_Number": "LCA18-0003723",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003724",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003725",
    "Application_Number": "LCA18-0003725",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003726",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003727",
@@ -18513,13 +11118,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0003728",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA18-0003729",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003730",
@@ -18527,24 +11127,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003731",
-   "Application_Number": "LCA18-0003731",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003732",
-   "Application_Number": "LCA18-0003732",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA18-0003733",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003734",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -18552,69 +11137,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003736",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003737",
-   "Application_Number": "LCA18-0003737",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003738",
    "Application_Number": "LCA18-0003738",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003739",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003740",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003741",
-   "Application_Number": "LCA18-0003741",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003742",
-   "Application_Number": "LCA18-0003742",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003743",
    "Application_Number": "LCA18-0003743",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003744",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003745",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003746",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003747",
-   "Application_Number": "LCA18-0003747",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003748",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003749",
@@ -18624,17 +11154,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL18-0003750",
    "Application_Number": "LCA18-0003750",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003751",
-   "Application_Number": "LCA18-0003751",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003752",
    "Application_Number": "LCA18-0003752",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003753",
@@ -18645,26 +11170,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003754",
    "Application_Number": "LCA18-0003754",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003755",
-   "Application_Number": "LCA18-0003755",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003756",
-   "Application_Number": "LCA18-0003756",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003757",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003758",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003759",
@@ -18678,16 +11183,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0003761",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003762",
-   "Application_Number": "LCA18-0003762",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA18-0003763",
    "Waste_Review_Status": "Complete"
  },
@@ -18697,34 +11192,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003765",
-   "Application_Number": "LCA18-0003765",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003766",
    "Application_Number": "LCA18-0003766",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003767",
-   "Application_Number": "LCA18-0003767",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003768",
-   "Application_Number": "LCA18-0003768",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003769",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003770",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL18-0003771",
@@ -18763,21 +11233,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0003778",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003779",
-   "Application_Number": "LCA18-0003779",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003780",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA18-0003781",
    "Waste_Review_Status": "Complete"
  },
@@ -18804,7 +11259,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA18-0003786",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003787",
@@ -18827,41 +11282,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003792",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003793",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003794",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003795",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003796",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003797",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003798",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003799",
    "Application_Number": "LCA18-0003799",
    "Waste_Review_Status": "Complete"
@@ -18874,7 +11294,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA18-0003801",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003802",
@@ -18912,54 +11332,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003809",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003810",
-   "Application_Number": "LCA18-0003810",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003811",
    "Application_Number": "LCA18-0003811",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL18-0003812",
-   "Application_Number": "LCA18-0003812",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003813",
-   "Application_Number": "LCA18-0003813",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003814",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003815",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL18-0003816",
-   "Application_Number": "LCA18-0003816",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL18-0003817",
    "Application_Number": "LCA18-0003817",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003818",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL18-0003819",
@@ -18970,11 +11350,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL18-0003820",
    "Application_Number": "LCA18-0003820",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL18-0003821",
-   "Application_Number": "LCA18-0003821",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000001",
@@ -18989,7 +11364,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000003",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000004",
@@ -19004,42 +11379,42 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000006",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000007",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000008",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000009",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000010",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000011",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000012",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000013",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000014",
@@ -19049,42 +11424,27 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000015",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000016",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000017",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000018",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000019",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000020",
-   "Application_Number": "LCA19-0000020",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000021",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000022",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000023",
@@ -19127,29 +11487,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000031",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000032",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000033",
    "Application_Number": "LCA19-0000033",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000034",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000035",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000036",
@@ -19182,11 +11522,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000042",
-   "Application_Number": "LCA19-0000042",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000043",
    "Application_Number": "LCA19-0000043",
    "Waste_Review_Status": "Complete"
@@ -19199,7 +11534,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000045",
    "Application_Number": "LCA19-0000045",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000046",
@@ -19209,12 +11544,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000048",
    "Application_Number": "LCA19-0000048",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000049",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000050",
@@ -19232,11 +11562,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000053",
-   "Application_Number": "LCA19-0000053",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000054",
    "Application_Number": "LCA19-0000054",
    "Waste_Review_Status": "Complete"
@@ -19249,22 +11574,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000056",
    "Application_Number": "LCA19-0000056",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000057",
    "Application_Number": "lca19-0000057",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000058",
-   "Application_Number": "LCA19-0000058",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000059",
-   "Application_Number": "LCA19-0000059",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000060",
@@ -19274,12 +11589,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000061",
    "Application_Number": "LCA19-0000061",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000062",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000063",
@@ -19292,11 +11602,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000065",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000066",
    "Application_Number": "LCA19-0000066",
    "Waste_Review_Status": "Complete"
@@ -19304,12 +11609,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000067",
    "Application_Number": "LCA19-0000067",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000068",
    "Application_Number": "LCA19-0000068",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000069",
@@ -19322,26 +11627,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000071",
-   "Application_Number": "LCA19-0000071",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000072",
-   "Application_Number": "LCA19-0000072",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000073",
-   "Application_Number": "LCA19-0000073",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000074",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000075",
    "Application_Number": "LCA19-0000075",
    "Waste_Review_Status": "Complete"
@@ -19352,19 +11637,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000077",
-   "Application_Number": "LCA19-0000077",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000078",
-   "Application_Number": "LCA19-0000078",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000079",
    "Application_Number": "LCA19-0000079",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000080",
@@ -19382,34 +11657,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000083",
-   "Application_Number": "LCA19-0000083",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000084",
-   "Application_Number": "LCA19-0000084",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000085",
-   "Application_Number": "LCA19-0000085",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000086",
-   "Application_Number": "LCA19-0000086",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000087",
    "Application_Number": "LCA19-0000087",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000088",
    "Application_Number": "LCA19-0000088",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000089",
@@ -19419,7 +11674,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000090",
    "Application_Number": "LCA19-0000090",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000123",
@@ -19432,54 +11687,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000125",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000126",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000127",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000128",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000129",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000130",
    "Application_Number": "LCA19-0000130",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000131",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000132",
-   "Application_Number": "LCA19-0000132",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000133",
-   "Application_Number": "LCA19-0000133",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000134",
-   "Application_Number": "LCA19-0000134",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000135",
@@ -19492,19 +11702,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000137",
-   "Application_Number": "LCA19-0000137",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000138",
    "Application_Number": "LCA19-0000138",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000139",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000140",
@@ -19524,17 +11724,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000143",
    "Application_Number": "LCA19-0000143",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000144",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000145",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000146",
@@ -19577,29 +11767,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000154",
-   "Application_Number": "LCA19-0000154",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000155",
    "Application_Number": "LCA19-0000155",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000156",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000157",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000158",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -19622,19 +11792,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000163",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000164",
    "Application_Number": "LCA19-0000164",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000165",
-   "Application_Number": "LCA19-0000165",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000166",
@@ -19645,21 +11805,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000167",
    "Application_Number": "LCA19-0000167",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000168",
-   "Application_Number": "LCA19-0000168",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000169",
-   "Application_Number": "LCA19-0000169",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000170",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000171",
@@ -19699,12 +11844,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000178",
    "Application_Number": "LCA19-0000178",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000179",
    "Application_Number": "LCA19-0000179",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000180",
@@ -19714,7 +11859,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000181",
    "Application_Number": "LCA19-0000181",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000182",
@@ -19737,21 +11882,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000186",
-   "Application_Number": "LCA19-0000186",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000187",
-   "Application_Number": "LCA19-0000187",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000188",
-   "Application_Number": "LCA19-0000188",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000189",
    "Application_Number": "LCA19-0000189",
    "Waste_Review_Status": "Complete"
@@ -19760,16 +11890,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000190",
    "Application_Number": "LCA19-0000190",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000191",
-   "Application_Number": "LCA19-0000191",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000192",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -19809,17 +11929,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000200",
    "Application_Number": "LCA19-0000200",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000201",
-   "Application_Number": "LCA19-0000201",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000202",
-   "Application_Number": "LCA19-0000202",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000203",
@@ -19827,24 +11937,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000204",
-   "Application_Number": "LCA19-0000204",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000205",
-   "Application_Number": "LCA19-0000205",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000206",
    "Application_Number": "LCA19-0000206",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000207",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000208",
@@ -19867,19 +11962,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000213",
-   "Application_Number": "LCA19-0000213",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000214",
    "Application_Number": "LCA19-0000214",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000215",
    "Application_Number": "LCA19-0000215",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000216",
@@ -19887,34 +11977,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000217",
-   "Application_Number": "LCA19-0000217",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000218",
-   "Application_Number": "LCA19-0000218",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000219",
    "Application_Number": "lca19-0000219",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000220",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000221",
    "Application_Number": "lca19-0000221",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000222",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000223",
@@ -19942,11 +12012,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000228",
-   "Application_Number": "LCA19-0000228",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA19-0000229",
    "Waste_Review_Status": "Complete"
@@ -19962,24 +12027,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000232",
-   "Application_Number": "LCA19-0000232",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000233",
-   "Application_Number": "LCA19-0000233",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000234",
    "Application_Number": "LCA19-0000234",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000235",
-   "Application_Number": "LCA19-0000235",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000236",
@@ -20019,7 +12069,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000243",
    "Application_Number": "LCA19-0000243",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000244",
@@ -20062,19 +12112,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000252",
-   "Application_Number": "LCA19-0000252",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000253",
    "Application_Number": "LCA19-0000253",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000254",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000255",
@@ -20117,44 +12157,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000263",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000264",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000265",
    "Application_Number": "LCA19-0000265",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000266",
-   "Application_Number": "LCA19-0000266",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000267",
-   "Application_Number": "LCA19-0000267",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000268",
-   "Application_Number": "LCA19-0000268",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000269",
-   "Application_Number": "LCA19-0000269",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000270",
-   "Application_Number": "LCA19-0000270",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000271",
@@ -20164,7 +12169,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000272",
    "Application_Number": "LCA19-0000272",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000273",
@@ -20179,12 +12184,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000275",
    "Application_Number": "LCA19-0000275",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000276",
    "Application_Number": "LCA19-0000276",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000277",
@@ -20207,34 +12212,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000281",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000282",
    "Application_Number": "LCA19-0000282",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000283",
-   "Application_Number": "LCA19-0000283",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000284",
    "Application_Number": "LCA19-0000284",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000285",
-   "Application_Number": "LCA19-0000285",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000286",
-   "Application_Number": "LCA19-0000286",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000287",
@@ -20247,11 +12232,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000289",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000290",
    "Application_Number": "LCA19-0000290",
    "Waste_Review_Status": "Complete"
@@ -20259,12 +12239,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000291",
    "Application_Number": "LCA19-0000291",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000292",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000293",
@@ -20273,13 +12253,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0000294",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0000295",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000296",
@@ -20292,19 +12267,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000298",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000299",
    "Application_Number": "LCA19-0000299",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000300",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000301",
@@ -20320,11 +12285,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000303",
    "Application_Number": "LCA19-0000303",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000304",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000305",
@@ -20352,24 +12312,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000310",
-   "Application_Number": "LCA19-0000310",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000311",
    "Application_Number": "LCA19-0000311",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000312",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000313",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000314",
@@ -20387,29 +12332,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000317",
-   "Application_Number": "LCA19-0000317",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000318",
    "Application_Number": "LCA19-0000318",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0000319",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0000320",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000321",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000322",
@@ -20425,11 +12355,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000324",
    "Application_Number": "LCA19-0000324",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000325",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000326",
@@ -20507,16 +12432,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000341",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000342",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000343",
    "Application_Number": "LCA19-0000343",
    "Waste_Review_Status": "Complete"
@@ -20542,19 +12457,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000348",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000349",
    "Application_Number": "LCA19-0000349",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000350",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000351",
@@ -20562,19 +12467,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000352",
-   "Application_Number": "LCA19-0000352",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000353",
    "Application_Number": "LCA19-0000353",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000354",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -20587,16 +12482,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000357",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000358",
-   "Application_Number": "LCA19-0000358",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000359",
    "Application_Number": "LCA19-0000359",
    "Waste_Review_Status": "Incomplete"
@@ -20605,11 +12490,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000360",
    "Application_Number": "lca19-0000360",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "CCL19-0000361",
-   "Application_Number": "LCA19-0000361",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000362",
@@ -20638,78 +12518,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "lca19-0000371",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000378",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000379",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000380",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000381",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000382",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000383",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000384",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0000385",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000386",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000387",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000388",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000389",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000390",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000391",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -20727,59 +12537,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000395",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000396",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000411",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000412",
    "Application_Number": "LCA19-0000412",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000413",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000414",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000415",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000416",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000417",
    "Application_Number": "LCA19-0000417",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000419",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000420",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000421",
@@ -20788,58 +12553,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0000422",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000423",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000424",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000425",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000427",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000428",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000429",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000430",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000431",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000432",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0000433",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000434",
@@ -20847,84 +12562,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000435",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000436",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000437",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000438",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000439",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000440",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000441",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000442",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000443",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000444",
    "Application_Number": "LCA19-0000444",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000445",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000446",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000447",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000448",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000449",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000450",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000451",
@@ -20932,49 +12572,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL19-0000452",
-   "Application_Number": "LCA19-0000452",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000453",
    "Application_Number": "LCA19-0000453",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000454",
-   "Application_Number": "LCA19-0000454",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA19-0000455",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000456",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000457",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000458",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000459",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000460",
-   "Application_Number": "LCA19-0000460",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000461",
@@ -20992,29 +12597,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000464",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000465",
    "Application_Number": "LCA19-0000465",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000466",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000467",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000468",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000469",
@@ -21022,39 +12607,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000470",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000471",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000472",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000473",
    "Application_Number": "LCA19-0000473",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000474",
-   "Application_Number": "LCA19-0000474",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000476",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000477",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000478",
@@ -21062,79 +12617,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000479",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000480",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000481",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000482",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000483",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000484",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000485",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000486",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000487",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000488",
    "Application_Number": "LCA19-0000488",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000492",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000493",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000494",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000495",
    "Application_Number": "LCA19-0000495",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000496",
-   "Application_Number": "LCA19-0000496",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000497",
@@ -21145,11 +12635,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000498",
    "Application_Number": "LCA19-0000498",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000499",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000500",
@@ -21175,11 +12660,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000504",
    "Application_Number": "LCA19-0000504",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000505",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000506",
@@ -21272,94 +12752,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000524",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000525",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000526",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000527",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000528",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000529",
    "Application_Number": "LCA19-0000529",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000530",
-   "Application_Number": "LCA19-0000530",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000531",
-   "Application_Number": "LCA19-0000531",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000533",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000534",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000535",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000537",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000538",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000539",
-   "Application_Number": "LCA19-0000539",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000543",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000548",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000549",
    "Application_Number": "LCA19-0000549",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000550",
-   "Application_Number": "LCA19-0000550",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000551",
@@ -21375,11 +12775,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000553",
    "Application_Number": "LCA19-0000553",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000554",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000555",
@@ -21412,11 +12807,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000565",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000567",
    "Application_Number": "LCA19-0000567",
    "Waste_Review_Status": "Complete"
@@ -21425,16 +12815,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000574",
    "Application_Number": "LCA19-0000574",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000576",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000578",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000580",
@@ -21457,54 +12837,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000588",
-   "Application_Number": "LCA19-0000588",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000589",
    "Application_Number": "LCA19-0000589",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000590",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000591",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000594",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000595",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000596",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000597",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000598",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000599",
-   "Application_Number": "LCA19-0000599",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000600",
@@ -21514,17 +12849,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000601",
    "Application_Number": "LCA19-0000601",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000602",
-   "Application_Number": "LCA19-0000602",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000603",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000605",
@@ -21537,76 +12862,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000607",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000608",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000612",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000617",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000618",
-   "Application_Number": "LCA19-0000618",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000619",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000621",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000631",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000632",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000633",
-   "Application_Number": "LCA19-0000633",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000634",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000635",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000637",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000638",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000639",
    "Application_Number": "LCA19-0000639",
    "Waste_Review_Status": "Complete"
@@ -21617,29 +12872,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000644",
-   "Application_Number": "LCA19-0000644",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000646",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000648",
-   "Application_Number": "LCA19-0000648",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000649",
    "Application_Number": "LCA19-0000649",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000650",
-   "Application_Number": "LCA19-0000650",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000651",
@@ -21662,24 +12897,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000661",
-   "Application_Number": "LCA19-0000661",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000662",
    "Application_Number": "LCA19-0000662",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000663",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000664",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000665",
@@ -21687,39 +12907,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000666",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000669",
-   "Application_Number": "LCA19-0000669",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000670",
    "Application_Number": "LCA19-0000670",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000671",
-   "Application_Number": "LCA19-0000671",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000672",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000673",
    "Application_Number": "LCA19-0000673",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000674",
-   "Application_Number": "LCA19-0000674",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000675",
@@ -21737,46 +12932,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000678",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000682",
-   "Application_Number": "LCA19-0000682",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000683",
-   "Application_Number": "LCA19-0000683",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000685",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000686",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000687",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000688",
-   "Application_Number": "LCA19-0000688",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000689",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000690",
    "Application_Number": "LCA19-0000690",
    "Waste_Review_Status": "Complete"
@@ -21784,12 +12939,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000691",
    "Application_Number": "LCA19-0000691",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000692",
    "Application_Number": "LCA19-0000692",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000694",
@@ -21804,7 +12959,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000697",
    "Application_Number": "LCA19-0000697",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000699",
@@ -21812,19 +12967,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000702",
-   "Application_Number": "LCA19-0000702",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000704",
    "Application_Number": "LCA19-0000704",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000705",
-   "Application_Number": "LCA19-0000705",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000706",
@@ -21832,29 +12977,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000707",
-   "Application_Number": "LCA19-0000707",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000708",
    "Application_Number": "LCA19-0000708",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000709",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000710",
-   "Application_Number": "LCA19-0000710",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000711",
-   "Application_Number": "LCA19-0000711",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000712",
@@ -21869,7 +12994,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0000714",
    "Application_Number": "LCA19-0000714",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000715",
@@ -21897,31 +13022,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000720",
-   "Application_Number": "LCA19-0000720",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000722",
-   "Application_Number": "LCA19-0000722",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000723",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000724",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000731",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000747",
    "Application_Number": "LCA19-0000747",
    "Waste_Review_Status": "Complete"
@@ -21935,21 +13035,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000752",
    "Application_Number": "LCA19-0000752",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000756",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000758",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000759",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -21972,29 +13057,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000764",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000765",
    "Application_Number": "LCA19-0000765",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000766",
-   "Application_Number": "LCA19-0000766",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000767",
-   "Application_Number": "LCA19-0000767",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000773",
-   "Application_Number": "LCA19-0000773",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000776",
@@ -22047,11 +13112,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000807",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000808",
    "Application_Number": "LCA19-0000808",
    "Waste_Review_Status": "Complete"
@@ -22067,24 +13127,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000814",
-   "Application_Number": "LCA19-0000814",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000817",
-   "Application_Number": "LCA19-0000817",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000818",
    "Application_Number": "LCA19-0000818",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000819",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000820",
@@ -22095,11 +13140,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000821",
    "Application_Number": "LCA19-0000821",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000822",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000823",
@@ -22127,19 +13167,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000829",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000832",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000833",
    "Application_Number": "LCA19-0000833",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0000834",
@@ -22150,11 +13180,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000836",
    "Application_Number": "LCA19-0000836",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000838",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000839",
@@ -22185,16 +13210,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000845",
    "Application_Number": "LCA19-0000845",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0000846",
-   "Application_Number": "LCA19-0000846",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000847",
-   "Application_Number": "LCA19-0000847",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000851",
@@ -22272,11 +13287,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000879",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000884",
    "Application_Number": "LCA19-0000884",
    "Waste_Review_Status": "Complete"
@@ -22327,11 +13337,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000904",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000905",
    "Application_Number": "LCA19-0000905",
    "Waste_Review_Status": "Complete"
@@ -22377,19 +13382,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000923",
-   "Application_Number": "LCA19-0000923",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000927",
    "Application_Number": "LCA19-0000927",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000929",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000932",
@@ -22427,24 +13422,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000948",
-   "Application_Number": "LCA19-0000948",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0000949",
-   "Application_Number": "LCA19-0000949",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000950",
    "Application_Number": "LCA19-0000950",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000951",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000952",
@@ -22455,11 +13435,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0000953",
    "Application_Number": "LCA19-0000953",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000954",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000955",
@@ -22477,184 +13452,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000958",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000959",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000960",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000961",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000962",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000963",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000964",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000965",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000966",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000967",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000968",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000969",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000970",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000971",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000972",
    "Application_Number": "LCA19-0000972",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000973",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000974",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000975",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000976",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000977",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000978",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000979",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000980",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000981",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000982",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000983",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000984",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000985",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000986",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000987",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000988",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000989",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000990",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000991",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000992",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000993",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0000994",
@@ -22672,59 +13472,39 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000997",
-   "Application_Number": "LCA19-0000997",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0000998",
    "Application_Number": "LCA19-0000998",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0000999",
-   "Application_Number": "LCA19-0000999",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001000",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001001",
    "Application_Number": "LCA19-0001001",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001002",
    "Application_Number": "LCA19-0001002",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001003",
    "Application_Number": "LCA19-0001003",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001004",
    "Application_Number": "LCA19-0001004",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001005",
    "Application_Number": "LCA19-0001005",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001006",
    "Application_Number": "LCA19-0001006",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001007",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001008",
@@ -22735,11 +13515,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001009",
    "Application_Number": "LCA19-0001009",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001010",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001011",
@@ -22779,7 +13554,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001018",
    "Application_Number": "LCA19-0001018",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001019",
@@ -22787,29 +13562,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001020",
-   "Application_Number": "LCA19-0001020",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001022",
-   "Application_Number": "LCA19-0001022",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001028",
    "Application_Number": "LCA19-0001028",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001030",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001031",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001032",
@@ -22817,34 +13572,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001036",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001040",
    "Application_Number": "LCA19-0001040",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001041",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001042",
    "Application_Number": "LCA19-0001042",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001043",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001044",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001045",
@@ -22855,21 +13590,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001053",
    "Application_Number": "LCA19-0001053",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001056",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001064",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001065",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001066",
@@ -22900,16 +13620,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001076",
    "Application_Number": "LCA19-0001076",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001079",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001082",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001083",
@@ -22957,51 +13667,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001093",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001094",
-   "Application_Number": "LCA19-0001094",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001095",
-   "Application_Number": "LCA19-0001095",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001096",
-   "Application_Number": "LCA19-0001096",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001097",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001098",
-   "Application_Number": "LCA19-0001098",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001099",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001100",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001101",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001103",
    "Application_Number": "LCA19-0001103",
    "Waste_Review_Status": "Complete"
@@ -23032,11 +13697,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001119",
-   "Application_Number": "LCA19-0001119",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001120",
    "Application_Number": "LCA19-0001120",
    "Waste_Review_Status": "Complete"
@@ -23064,22 +13724,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001125",
    "Application_Number": "LCA19-0001125",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001126",
    "Application_Number": "LCA19-0001126",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001127",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001128",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001132",
@@ -23094,7 +13744,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001135",
    "Application_Number": "LCA19-0001135",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001136",
@@ -23112,39 +13762,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001139",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001140",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001141",
-   "Application_Number": "LCA19-0001141",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001142",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001144",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001145",
    "Application_Number": "LCA19-0001145",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001147",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001148",
@@ -23177,24 +13797,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001158",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001159",
    "Application_Number": "LCA19-0001159",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001160",
-   "Application_Number": "LCA19-0001160",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001161",
    "Application_Number": "LCA19-0001161",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001162",
@@ -23208,11 +13818,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0001166",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0001170",
    "Waste_Review_Status": "Incomplete"
  },
@@ -23222,84 +13827,39 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001173",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001175",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001177",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001179",
-   "Application_Number": "LCA19-0001179",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001182",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001183",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001184",
    "Application_Number": "LCA19-0001184",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001185",
    "Application_Number": "LCA19-0001185",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001186",
    "Application_Number": "LCA19-0001186",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001187",
    "Application_Number": "LCA19-0001187",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001188",
    "Application_Number": "LCA19-0001188",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001189",
    "Application_Number": "LCA19-0001189",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001190",
    "Application_Number": "LCA19-0001190",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001192",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001193",
-   "Application_Number": "LCA19-0001193",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001194",
-   "Application_Number": "LCA19-0001194",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001195",
@@ -23310,16 +13870,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001196",
    "Application_Number": "LCA19-0001196",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001197",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001198",
-   "Application_Number": "LCA19-0001198",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001199",
@@ -23347,54 +13897,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001212",
-   "Application_Number": "LCA19-0001212",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001214",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001217",
-   "Application_Number": "LCA19-0001217",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001226",
-   "Application_Number": "LCA19-0001226",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001227",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001228",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001229",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001230",
    "Application_Number": "LCA19-0001230",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001231",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001232",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001233",
@@ -23402,24 +13907,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001234",
-   "Application_Number": "LCA19-0001234",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001235",
    "Application_Number": "LCA19-0001235",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001236",
-   "Application_Number": "LCA19-0001236",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001237",
-   "Application_Number": "LCA19-0001237",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001238",
@@ -23437,34 +13927,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001241",
-   "Application_Number": "LCA19-0001241",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001242",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001243",
-   "Application_Number": "LCA19-0001243",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001244",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001249",
    "Application_Number": "LCA19-0001249",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001250",
-   "Application_Number": "LCA19-0001250",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001251",
@@ -23482,19 +13947,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001254",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001255",
    "Application_Number": "LCA19-0001255",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001256",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001257",
@@ -23507,11 +13962,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001259",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001260",
    "Application_Number": "lca19-0001260",
    "Waste_Review_Status": "Complete"
@@ -23522,24 +13972,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001262",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001263",
    "Application_Number": "LCA19-0001263",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001264",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001265",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001266",
@@ -23554,12 +13989,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001268",
    "Application_Number": "LCA19-0001268",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001269",
-   "Application_Number": "LCA19-0001269",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001270",
@@ -23594,22 +14024,22 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001276",
    "Application_Number": "LCA19-0001276",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001277",
    "Application_Number": "LCA19-0001277",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001278",
    "Application_Number": "LCA19-0001278",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001279",
    "Application_Number": "LCA19-0001279",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001280",
@@ -23622,11 +14052,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001282",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001283",
    "Application_Number": "LCA19-0001283",
    "Waste_Review_Status": "Complete"
@@ -23635,11 +14060,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001284",
    "Application_Number": "LCA19-0001284",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001285",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001286",
@@ -23687,24 +14107,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001296",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001297",
    "Application_Number": "LCA19-0001297",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001298",
-   "Application_Number": "LCA19-0001298",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001299",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001300",
@@ -23719,22 +14124,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001302",
    "Application_Number": "LCA19-0001302",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001310",
    "Application_Number": "LCA19-0001310",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001311",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001312",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001313",
@@ -23802,16 +14197,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001326",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001327",
-   "Application_Number": "LCA19-0001327",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001328",
    "Application_Number": "LCA19-0001328",
    "Waste_Review_Status": "Complete"
@@ -23820,11 +14205,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001329",
    "Application_Number": "LCA19-0001329",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001330",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001331",
@@ -23844,27 +14224,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001334",
    "Application_Number": "LCA19-0001334",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001335",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001336",
    "Application_Number": "LCA19-0001336",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001337",
-   "Application_Number": "LCA19-0001337",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001338",
    "Application_Number": "LCA19-0001338",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001339",
@@ -23874,7 +14244,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001340",
    "Application_Number": "LCA19-0001340",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001341",
@@ -23882,49 +14252,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001342",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001343",
    "Application_Number": "LCA19-0001343",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001344",
-   "Application_Number": "LCA19-0001344",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001345",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001346",
-   "Application_Number": "LCA19-0001346",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001347",
-   "Application_Number": "LCA19-0001347",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001348",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001349",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001350",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -23932,64 +14262,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001352",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001354",
    "Application_Number": "LCA19-0001354",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001355",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001356",
-   "Application_Number": "LCA19-0001356",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001357",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001358",
    "Application_Number": "LCA19-0001358",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001359",
-   "Application_Number": "LCA19-0001359",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001360",
-   "Application_Number": "LCA19-0001360",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001361",
-   "Application_Number": "LCA19-0001361",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001362",
-   "Application_Number": "LCA19-0001362",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001363",
-   "Application_Number": "LCA19-0001363",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001364",
-   "Application_Number": "LCA19-0001364",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001365",
@@ -24002,16 +14282,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001370",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001371",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001372",
    "Application_Number": "LCA19-0001372",
    "Waste_Review_Status": "Complete"
@@ -24022,39 +14292,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001374",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001375",
-   "Application_Number": "LCA19-0001375",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001376",
    "Application_Number": "LCA19-0001376",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001379",
    "Application_Number": "LCA19-0001379",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001380",
-   "Application_Number": "LCA19-0001380",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001384",
-   "Application_Number": "LCA19-0001384",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001385",
-   "Application_Number": "LCA19-0001385",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001386",
@@ -24065,31 +14310,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001387",
    "Application_Number": "lca19-0001387",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001388",
-   "Application_Number": "LCA19-0001388",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001389",
-   "Application_Number": "LCA19-0001389",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001390",
-   "Application_Number": "LCA19-0001390",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001391",
-   "Application_Number": "LCA19-0001391",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001392",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001393",
@@ -24104,17 +14324,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001395",
    "Application_Number": "LCA19-0001395",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001396",
    "Application_Number": "LCA19-0001396",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001397",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001398",
@@ -24124,7 +14339,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001399",
    "Application_Number": "LCA19-0001399",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001401",
@@ -24138,33 +14353,23 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0001413",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001416",
-   "Application_Number": "LCA19-0001416",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0001417",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001418",
    "Application_Number": "LCA19-0001418",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001419",
    "Application_Number": "LCA19-0001419",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0001420",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001421",
@@ -24177,39 +14382,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001423",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001424",
    "Application_Number": "LCA19-0001424",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001425",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001426",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001427",
-   "Application_Number": "LCA19-0001427",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001430",
    "Application_Number": "LCA19-0001430",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001432",
-   "Application_Number": "LCA19-0001432",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001433",
@@ -24227,29 +14407,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001436",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001437",
    "Application_Number": "LCA19-0001437",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001438",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001439",
    "Application_Number": "LCA19-0001439",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001440",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -24267,21 +14432,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001444",
-   "Application_Number": "LCA19-0001444",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001445",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001446",
-   "Application_Number": "LCA19-0001446",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001448",
    "Application_Number": "LCA19-0001448",
    "Waste_Review_Status": "Complete"
@@ -24290,16 +14440,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001449",
    "Application_Number": "LCA19-0001449",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001450",
-   "Application_Number": "LCA19-0001450",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001451",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001452",
@@ -24317,11 +14457,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001455",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001456",
    "Application_Number": "LCA19-0001456",
    "Waste_Review_Status": "Complete"
@@ -24334,7 +14469,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001458",
    "Application_Number": "LCA19-0001458",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001459",
@@ -24344,7 +14479,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001460",
    "Application_Number": "LCA19-0001460",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001461",
@@ -24374,7 +14509,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001466",
    "Application_Number": "LCA19-0001466",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001467",
@@ -24394,12 +14529,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001475",
    "Application_Number": "LCA19-0001475",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001476",
    "Application_Number": "LCA19-0001476",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001477",
@@ -24407,34 +14542,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001478",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001479",
    "Application_Number": "LCA19-0001479",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001480",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001482",
    "Application_Number": "LCA19-0001482",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001483",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001484",
-   "Application_Number": "LCA19-0001484",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001485",
@@ -24445,16 +14560,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001487",
    "Application_Number": "LCA19-0001487",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001488",
-   "Application_Number": "LCA19-0001488",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001489",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001490",
@@ -24470,11 +14575,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001493",
    "Application_Number": "LCA19-0001493",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001500",
-   "Application_Number": "LCA19-0001500",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001501",
@@ -24499,22 +14599,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001506",
    "Application_Number": "LCA19-0001506",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001507",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001508",
    "Application_Number": "LCA19-0001508",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001509",
-   "Application_Number": "LCA19-0001509",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001510",
@@ -24524,17 +14614,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001511",
    "Application_Number": "LCA19-0001511",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001512",
    "Application_Number": "LCA19-0001512",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001513",
-   "Application_Number": "LCA19-0001513",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001514",
@@ -24557,39 +14642,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001518",
-   "Application_Number": "LCA19-0001518",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001519",
    "Application_Number": "LCA19-0001519",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001520",
-   "Application_Number": "LCA19-0001520",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001521",
-   "Application_Number": "LCA19-0001521",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001523",
    "Application_Number": "LCA19-0001523",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001524",
    "Application_Number": "LCA19-0001524",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001525",
-   "Application_Number": "LCA19-0001525",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001526",
@@ -24604,17 +14669,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001528",
    "Application_Number": "LCA19-0001528",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001529",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001530",
    "Application_Number": "LCA19-0001530",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001531",
@@ -24632,24 +14692,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001538",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001539",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001540",
    "Application_Number": "LCA19-0001540",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001541",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001542",
@@ -24657,24 +14702,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001543",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001544",
-   "Application_Number": "LCA19-0001544",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001545",
    "Application_Number": "LCA19-0001545",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001546",
-   "Application_Number": "LCA19-0001546",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001549",
@@ -24687,54 +14717,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001551",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001552",
    "Application_Number": "LCA19-0001552",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001553",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001554",
-   "Application_Number": "LCA19-0001554",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001555",
-   "Application_Number": "LCA19-0001555",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001556",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001557",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001558",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001561",
    "Application_Number": "LCA19-0001561",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001562",
    "Application_Number": "LCA19-0001562",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001563",
@@ -24747,34 +14742,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001565",
-   "Application_Number": "LCA19-0001565",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001566",
    "Application_Number": "LCA19-0001566",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001567",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001568",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001569",
    "Application_Number": "LCA19-0001569",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001570",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001571",
@@ -24792,19 +14767,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001574",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001578",
    "Application_Number": "LCA19-0001578",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001579",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001580",
@@ -24815,16 +14780,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001581",
    "Application_Number": "LCA19-0001581",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001583",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001584",
-   "Application_Number": "LCA19-0001584",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001585",
@@ -24877,16 +14832,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001598",
-   "Application_Number": "LCA19-0001598",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001599",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA19-0001600",
    "Waste_Review_Status": "Complete"
@@ -24895,11 +14840,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001601",
    "Application_Number": "LCA19-0001601",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001602",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001603",
@@ -24913,33 +14853,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0001605",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001606",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0001608",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001609",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001610",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001611",
-   "Application_Number": "LCA19-0001611",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001612",
@@ -24947,24 +14862,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001616",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001619",
    "Application_Number": "lca19-0001619",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001620",
-   "Application_Number": "LCA19-0001620",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001621",
-   "Application_Number": "LCA19-0001621",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001622",
@@ -24972,29 +14872,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001623",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001624",
    "Application_Number": "LCA19-0001624",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001625",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001626",
-   "Application_Number": "LCA19-0001626",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001627",
    "Application_Number": "LCA19-0001627",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001628",
@@ -25024,12 +14909,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001633",
    "Application_Number": "LCA19-0001633",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001634",
-   "Application_Number": "LCA19-0001634",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001635",
@@ -25037,39 +14917,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001636",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001637",
    "Application_Number": "LCA19-0001637",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001638",
-   "Application_Number": "LCA19-0001638",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001639",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001640",
-   "Application_Number": "LCA19-0001640",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001641",
-   "Application_Number": "LCA19-0001641",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001650",
-   "Application_Number": "LCA19-0001650",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001651",
@@ -25080,11 +14930,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001652",
    "Application_Number": "LCA19-0001652",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001653",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001654",
@@ -25119,22 +14964,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0001660",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0001661",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001662",
-   "Application_Number": "LCA19-0001662",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001663",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001664",
@@ -25147,34 +14982,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001666",
-   "Application_Number": "LCA19-0001666",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001667",
-   "Application_Number": "LCA19-0001667",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001668",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001669",
-   "Application_Number": "LCA19-0001669",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001670",
    "Application_Number": "LCA19-0001670",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001671",
-   "Application_Number": "LCA19-0001671",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001672",
@@ -25193,21 +15003,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0001675",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001678",
-   "Application_Number": "LCA19-0001678",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001679",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0001680",
    "Waste_Review_Status": "Complete"
  },
@@ -25215,11 +15010,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA19-0001681",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001682",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001683",
@@ -25232,39 +15022,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001685",
-   "Application_Number": "LCA19-0001685",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001686",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001687",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001688",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001689",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001690",
    "Application_Number": "LCA19-0001690",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001691",
-   "Application_Number": "LCA19-0001691",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001692",
@@ -25274,12 +15034,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001693",
    "Application_Number": "lca19-0001693",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001694",
    "Application_Number": "lca19-0001694",
-   "Waste_Review_Status": "Incomplete"
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001695",
@@ -25287,29 +15047,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001698",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001699",
    "Application_Number": "LCA19-0001699",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001700",
-   "Application_Number": "LCA19-0001700",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001701",
    "Application_Number": "LCA19-0001701",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001705",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001706",
@@ -25322,29 +15067,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001709",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001710",
-   "Application_Number": "LCA19-0001710",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001711",
-   "Application_Number": "LCA19-0001711",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001712",
    "Application_Number": "LCA19-0001712",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001713",
-   "Application_Number": "LCA19-0001713",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001714",
@@ -25354,7 +15079,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001715",
    "Application_Number": "LCA19-0001715",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001716",
@@ -25367,11 +15092,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001718",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001719",
    "Application_Number": "LCA19-0001719",
    "Waste_Review_Status": "Complete"
@@ -25382,89 +15102,34 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001721",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001722",
    "Application_Number": "LCA19-0001722",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001723",
    "Application_Number": "LCA19-0001723",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001724",
    "Application_Number": "LCA19-0001724",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001725",
    "Application_Number": "LCA19-0001725",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001726",
-   "Application_Number": "LCA19-0001726",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001727",
    "Application_Number": "LCA19-0001727",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001728",
    "Application_Number": "LCA19-0001728",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001729",
-   "Application_Number": "LCA19-0001729",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001730",
-   "Application_Number": "LCA19-0001730",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001731",
-   "Application_Number": "LCA19-0001731",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001732",
-   "Application_Number": "LCA19-0001732",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001733",
-   "Application_Number": "LCA19-0001733",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001734",
-   "Application_Number": "LCA19-0001734",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001735",
-   "Application_Number": "LCA19-0001735",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001736",
-   "Application_Number": "LCA19-0001736",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001737",
-   "Application_Number": "LCA19-0001737",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001741",
@@ -25472,24 +15137,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001742",
-   "Application_Number": "LCA19-0001742",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001743",
-   "Application_Number": "LCA19-0001743",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001744",
    "Application_Number": "LCA19-0001744",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001745",
-   "Application_Number": "LCA19-0001745",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001746",
@@ -25497,29 +15147,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001747",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001748",
    "Application_Number": "LCA19-0001748",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001749",
-   "Application_Number": "LCA19-0001749",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001750",
    "Application_Number": "LCA19-0001750",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001751",
-   "Application_Number": "LCA19-0001751",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001752",
@@ -25539,7 +15174,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001755",
    "Application_Number": "LCA19-0001755",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001756",
@@ -25567,11 +15202,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001765",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001766",
    "Application_Number": "LCA19-0001766",
    "Waste_Review_Status": "Complete"
@@ -25580,16 +15210,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001767",
    "Application_Number": "LCA19-0001767",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001768",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001772",
-   "Application_Number": "LCA19-0001772",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001775",
@@ -25605,16 +15225,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001779",
    "Application_Number": "LCA19-0001779",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001780",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001781",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001782",
@@ -25664,32 +15274,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001797",
    "Application_Number": "LCA19-0001797",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001800",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001802",
-   "Application_Number": "LCA19-0001802",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001804",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001805",
    "Application_Number": "LCA19-0001805",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001806",
-   "Application_Number": "LCA19-0001806",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001807",
@@ -25707,39 +15297,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001810",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001811",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001812",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001813",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001814",
    "Application_Number": "LCA19-0001814",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001815",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001816",
-   "Application_Number": "lca19-0001816",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001817",
@@ -25777,24 +15337,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001825",
-   "Application_Number": "LCA19-0001825",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001826",
-   "Application_Number": "LCA19-0001826",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001827",
    "Application_Number": "LCA19-0001827",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001828",
-   "Application_Number": "LCA19-0001828",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001829",
@@ -25810,11 +15355,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001832",
    "Application_Number": "LCA19-0001832",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001833",
-   "Application_Number": "LCA19-0001833",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001834",
@@ -25837,11 +15377,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001838",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001839",
    "Application_Number": "LCA19-0001839",
    "Waste_Review_Status": "Complete"
@@ -25852,11 +15387,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001847",
-   "Application_Number": "LCA19-0001847",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001848",
    "Application_Number": "LCA19-0001848",
    "Waste_Review_Status": "Complete"
@@ -25865,16 +15395,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001849",
    "Application_Number": "LCA19-0001849",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001850",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001851",
-   "Application_Number": "LCA19-0001851",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001852",
@@ -25897,39 +15417,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001857",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001858",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001859",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001860",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001861",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001862",
    "Application_Number": "LCA19-0001862",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001863",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001864",
@@ -25942,11 +15432,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001869",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001870",
    "Application_Number": "LCA19-0001870",
    "Waste_Review_Status": "Complete"
@@ -25955,21 +15440,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001872",
    "Application_Number": "LCA19-0001872",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001873",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001874",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001875",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001876",
@@ -25982,24 +15452,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001878",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001879",
    "Application_Number": "LCA19-0001879",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001880",
-   "Application_Number": "LCA19-0001880",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001881",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001882",
@@ -26047,11 +15502,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001893",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001894",
    "Application_Number": "LCA19-0001894",
    "Waste_Review_Status": "Complete"
@@ -26060,11 +15510,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001895",
    "Application_Number": "LCA19-0001895",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0001896",
-   "Application_Number": "LCA19-0001896",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001897",
@@ -26077,24 +15522,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001899",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001903",
    "Application_Number": "LCA19-0001903",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001904",
-   "Application_Number": "LCA19-0001904",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001905",
-   "Application_Number": "LCA19-0001905",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001906",
@@ -26102,29 +15532,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001907",
-   "Application_Number": "LCA19-0001907",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001908",
    "Application_Number": "LCA19-0001908",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001909",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001910",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001911",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001912",
@@ -26137,59 +15547,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001914",
-   "Application_Number": "LCA19-0001914",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001915",
-   "Application_Number": "LCA19-0001915",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001916",
-   "Application_Number": "LCA19-0001916",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001917",
-   "Application_Number": "LCA19-0001917",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001918",
-   "Application_Number": "LCA19-0001918",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001919",
    "Application_Number": "LCA19-0001919",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001920",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001921",
    "Application_Number": "LCA19-0001921",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001922",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0001923",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001924",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001925",
@@ -26202,16 +15572,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001927",
-   "Application_Number": "LCA19-0001927",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001928",
-   "Application_Number": "LCA19-0001928",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001931",
    "Application_Number": "LCA19-0001931",
    "Waste_Review_Status": "Complete"
@@ -26219,27 +15579,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001934",
    "Application_Number": "LCA19-0001934",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001935",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001936",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001937",
    "Application_Number": "LCA19-0001937",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001938",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001940",
@@ -26250,11 +15595,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001941",
    "Application_Number": "LCA19-0001941",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001942",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0001943",
@@ -26277,41 +15617,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001947",
-   "Application_Number": "LCA19-0001947",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001948",
-   "Application_Number": "LCA19-0001948",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001949",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001952",
-   "Application_Number": "LCA19-0001952",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001962",
-   "Application_Number": "LCA19-0001962",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001963",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0001966",
-   "Application_Number": "LCA19-0001966",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA19-0001969",
    "Waste_Review_Status": "Complete"
@@ -26319,17 +15624,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0001972",
    "Application_Number": "LCA19-0001972",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001976",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001977",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001979",
@@ -26342,44 +15637,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001982",
-   "Application_Number": "LCA19-0001982",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001983",
    "Application_Number": "LCA19-0001983",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0001984",
-   "Application_Number": "LCA19-0001984",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0001985",
    "Application_Number": "LCA19-0001985",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001986",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001987",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001988",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001989",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0001991",
@@ -26390,16 +15655,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0001992",
    "Application_Number": "LCA19-0001992",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0001995",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002010",
-   "Application_Number": "LCA19-0002010",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002011",
@@ -26417,54 +15672,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002015",
-   "Application_Number": "LCA19-0002015",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002016",
    "Application_Number": "LCA19-0002016",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002017",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002018",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002019",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002020",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002021",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002022",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002023",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002025",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002026",
@@ -26472,39 +15682,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002031",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002032",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002033",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002034",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002035",
    "Application_Number": "LCA19-0002035",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002036",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002037",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002038",
@@ -26517,79 +15697,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002040",
-   "Application_Number": "LCA19-0002040",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002041",
-   "Application_Number": "LCA19-0002041",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002042",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002043",
    "Application_Number": "LCA19-0002043",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002044",
-   "Application_Number": "LCA19-0002044",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002045",
-   "Application_Number": "LCA19-0002045",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002046",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002047",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002048",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002049",
-   "Application_Number": "LCA19-0002049",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002050",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002051",
    "Application_Number": "LCA19-0002051",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002052",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002053",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002054",
-   "Application_Number": "LCA19-0002054",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002056",
@@ -26602,29 +15717,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002058",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002059",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002060",
    "Application_Number": "LCA19-0002060",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002061",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002062",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002063",
@@ -26639,57 +15734,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002065",
    "Application_Number": "LCA19-0002065",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002066",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002067",
    "Application_Number": "LCA19-0002067",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002068",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002069",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002070",
-   "Application_Number": "LCA19-0002070",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002071",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002073",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002074",
-   "Application_Number": "LCA19-0002074",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002075",
-   "Application_Number": "LCA19-0002075",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002076",
-   "Application_Number": "LCA19-0002076",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002077",
@@ -26699,7 +15749,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002078",
    "Application_Number": "LCA19-0002078",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002079",
@@ -26802,114 +15852,24 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002102",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002103",
    "Application_Number": "LCA19-0002103",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002104",
    "Application_Number": "LCA19-0002104",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002105",
    "Application_Number": "LCA19-0002105",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002106",
-   "Application_Number": "LCA19-0002106",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002107",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002108",
-   "Application_Number": "LCA19-0002108",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002109",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002110",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002111",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002112",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002113",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002114",
-   "Application_Number": "LCA19-0002114",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002116",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002117",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002118",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002119",
-   "Application_Number": "LCA19-0002119",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002120",
-   "Application_Number": "LCA19-0002120",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002121",
    "Application_Number": "LCA19-0002121",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002122",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002123",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002124",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002125",
@@ -26932,139 +15892,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002129",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002130",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002131",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002132",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002133",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002134",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002135",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002136",
    "Application_Number": "LCA19-0002136",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002137",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002138",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002139",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002140",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002141",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002142",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002143",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002144",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002145",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002146",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002147",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002148",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002149",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002150",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002151",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002152",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002153",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002154",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002155",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002156",
@@ -27072,24 +15902,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002157",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002158",
    "Application_Number": "LCA19-0002158",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002159",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002160",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002161",
@@ -27102,109 +15917,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002163",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002164",
    "Application_Number": "LCA19-0002164",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0002165",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002166",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002167",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002168",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002169",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002170",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002171",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002172",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002173",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002174",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002175",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002176",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002178",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002180",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002183",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002184",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002185",
-   "Application_Number": "LCA19-0002185",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0002186",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002187",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002188",
@@ -27217,71 +15937,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002190",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002191",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002192",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002193",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002194",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002195",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002196",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002197",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002198",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002199",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002200",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002201",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002204",
-   "Application_Number": "LCA19-0002204",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002205",
    "Application_Number": "LCA19-0002205",
    "Waste_Review_Status": "Complete"
@@ -27289,7 +15944,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002206",
    "Application_Number": "LCA19-0002206",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002207",
@@ -27339,12 +15994,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002222",
    "Application_Number": "LCA19-0002222",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002223",
    "Application_Number": "LCA19-0002223",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002224",
@@ -27352,59 +16007,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002225",
-   "Application_Number": "LCA19-0002225",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002226",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002227",
-   "Application_Number": "LCA19-0002227",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002228",
-   "Application_Number": "LCA19-0002228",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002229",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002230",
    "Application_Number": "LCA19-0002230",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002231",
-   "Application_Number": "LCA19-0002231",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002232",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002233",
    "Application_Number": "LCA19-0002233",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0002234",
-   "Application_Number": "LCA19-0002234",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002235",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002236",
@@ -27422,149 +16032,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002239",
-   "Application_Number": "LCA19-0002239",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002240",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002241",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002242",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002243",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002244",
-   "Application_Number": "LCA19-0002244",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002245",
-   "Application_Number": "LCA19-0002245",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002246",
-   "Application_Number": "LCA19-0002246",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002247",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002248",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002249",
-   "Application_Number": "LCA19-0002249",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002250",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002251",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002252",
    "Application_Number": "LCA19-0002252",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002253",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002254",
-   "Application_Number": "LCA19-0002254",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002255",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002256",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002257",
-   "Application_Number": "LCA19-0002257",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002258",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002259",
-   "Application_Number": "LCA19-0002259",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002261",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002264",
-   "Application_Number": "LCA19-0002264",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002265",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002266",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002267",
-   "Application_Number": "LCA19-0002267",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002268",
-   "Application_Number": "LCA19-0002268",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002269",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002270",
-   "Application_Number": "LCA19-0002270",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002271",
@@ -27582,139 +16052,39 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002276",
-   "Application_Number": "LCA19-0002276",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002277",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002278",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002279",
-   "Application_Number": "LCA19-0002279",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002280",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002282",
    "Application_Number": "LCA19-0002282",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002283",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002285",
    "Application_Number": "LCA19-0002285",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002286",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002288",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002289",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002290",
-   "Application_Number": "LCA19-0002290",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002291",
-   "Application_Number": "LCA19-0002291",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002292",
    "Application_Number": "LCA19-0002292",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002293",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002294",
    "Application_Number": "LCA19-0002294",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002295",
    "Application_Number": "LCA19-0002295",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002296",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002297",
    "Application_Number": "LCA19-0002297",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002298",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002299",
-   "Application_Number": "LCA19-0002299",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002300",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002301",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002302",
    "Application_Number": "LCA19-0002302",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002303",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002304",
-   "Application_Number": "LCA19-0002304",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002305",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002306",
@@ -27730,11 +16100,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0002310",
    "Application_Number": "LCA19-0002310",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0002311",
-   "Application_Number": "LCA19-0002311",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002312",
@@ -27847,16 +16212,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002344",
-   "Application_Number": "LCA19-0002344",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002345",
-   "Application_Number": "LCA19-0002345",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002346",
    "Application_Number": "LCA19-0002346",
    "Waste_Review_Status": "Complete"
@@ -27877,11 +16232,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002350",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002351",
    "Application_Number": "LCA19-0002351",
    "Waste_Review_Status": "Complete"
@@ -27897,19 +16247,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002354",
-   "Application_Number": "LCA19-0002354",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002355",
    "Application_Number": "LCA19-0002355",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0002356",
-   "Application_Number": "LCA19-0002356",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002357",
@@ -27937,19 +16277,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002364",
-   "Application_Number": "LCA19-0002364",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002365",
    "Application_Number": "LCA19-0002365",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0002366",
-   "Application_Number": "LCA19-0002366",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002369",
@@ -27972,16 +16302,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002373",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002374",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002376",
    "Application_Number": "LCA19-0002376",
    "Waste_Review_Status": "Complete"
@@ -27992,16 +16312,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002378",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002379",
-   "Application_Number": "LCA19-0002379",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002380",
    "Application_Number": "LCA19-0002380",
    "Waste_Review_Status": "Complete"
@@ -28010,21 +16320,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0002381",
    "Application_Number": "LCA19-0002381",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "CCL19-0002382",
-   "Application_Number": "LCA19-0002382",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002383",
-   "Application_Number": "LCA19-0002383",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002387",
-   "Application_Number": "LCA19-0002387",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -28042,34 +16337,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002391",
-   "Application_Number": "LCA19-0002391",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002392",
-   "Application_Number": "LCA19-0002392",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002393",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002394",
    "Application_Number": "LCA19-0002394",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002395",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002396",
-   "Application_Number": "LCA19-0002396",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002397",
@@ -28082,104 +16352,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002402",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002403",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002404",
    "Application_Number": "LCA19-0002404",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002405",
-   "Application_Number": "LCA19-0002405",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002406",
-   "Application_Number": "LCA19-0002406",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002407",
-   "Application_Number": "LCA19-0002407",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002408",
-   "Application_Number": "LCA19-0002408",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002409",
-   "Application_Number": "LCA19-0002409",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002410",
-   "Application_Number": "LCA19-0002410",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002411",
-   "Application_Number": "LCA19-0002411",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002412",
-   "Application_Number": "LCA19-0002412",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002415",
-   "Application_Number": "LCA19-0002415",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002421",
-   "Application_Number": "LCA19-0002421",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002423",
-   "Application_Number": "LCA19-0002423",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002433",
-   "Application_Number": "LCA19-0002433",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002434",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002435",
-   "Application_Number": "LCA19-0002435",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002436",
-   "Application_Number": "LCA19-0002436",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002437",
    "Application_Number": "LCA19-0002437",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002439",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002440",
@@ -28192,24 +16372,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002442",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002443",
    "Application_Number": "LCA19-0002443",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0002444",
-   "Application_Number": "LCA19-0002444",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002446",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -28222,19 +16387,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002450",
-   "Application_Number": "LCA19-0002450",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002451",
    "Application_Number": "LCA19-0002451",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0002452",
-   "Application_Number": "LCA19-0002452",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002453",
@@ -28242,39 +16397,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002454",
-   "Application_Number": "LCA19-0002454",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002455",
-   "Application_Number": "LCA19-0002455",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002456",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002457",
    "Application_Number": "LCA19-0002457",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002458",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002459",
-   "Application_Number": "LCA19-0002459",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002460",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002469",
@@ -28284,7 +16409,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002470",
    "Application_Number": "LCA19-0002470",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002471",
@@ -28294,7 +16419,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002472",
    "Application_Number": "LCA19-0002472",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002473",
@@ -28322,74 +16447,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002479",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002480",
-   "Application_Number": "LCA19-0002480",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002481",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002482",
-   "Application_Number": "LCA19-0002482",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002483",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002484",
    "Application_Number": "LCA19-0002484",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002485",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002486",
-   "Application_Number": "LCA19-0002486",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002487",
-   "Application_Number": "LCA19-0002487",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002488",
-   "Application_Number": "LCA19-0002488",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002489",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002490",
-   "Application_Number": "LCA19-0002490",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002491",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002492",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002493",
@@ -28402,11 +16462,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002495",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002496",
    "Application_Number": "LCA19-0002496",
    "Waste_Review_Status": "Complete"
@@ -28414,7 +16469,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002497",
    "Application_Number": "LCA19-0002497",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002498",
@@ -28422,54 +16477,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002499",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002500",
    "Application_Number": "lca19-0002500",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002501",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002504",
-   "Application_Number": "LCA19-0002504",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002505",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002506",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002507",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002508",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002509",
    "Application_Number": "LCA19-0002509",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002510",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002511",
@@ -28477,74 +16492,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002513",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002517",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002518",
-   "Application_Number": "LCA19-0002518",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002519",
-   "Application_Number": "LCA19-0002519",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002520",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002521",
    "Application_Number": "LCA19-0002521",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002522",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002523",
    "Application_Number": "LCA19-0002523",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002524",
-   "Application_Number": "LCA19-0002524",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002525",
-   "Application_Number": "LCA19-0002525",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002526",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002527",
-   "Application_Number": "LCA19-0002527",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002528",
-   "Application_Number": "LCA19-0002528",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002529",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002530",
@@ -28557,84 +16512,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002532",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002533",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002534",
    "Application_Number": "LCA19-0002534",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002535",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002537",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002539",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002540",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002544",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002548",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002549",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002550",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002551",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002552",
-   "Application_Number": "LCA19-0002552",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002553",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002554",
    "Application_Number": "LCA19-0002554",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002555",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002556",
@@ -28645,11 +16530,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0002557",
    "Application_Number": "LCA19-0002557",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002558",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002559",
@@ -28667,24 +16547,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002562",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002563",
    "Application_Number": "LCA19-0002563",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002564",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002565",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002566",
@@ -28692,19 +16557,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002567",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002568",
    "Application_Number": "LCA19-0002568",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002569",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002570",
@@ -28712,29 +16567,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002571",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002572",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002573",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002574",
    "Application_Number": "LCA19-0002574",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002575",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002576",
@@ -28757,11 +16592,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002580",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002581",
    "Application_Number": "LCA19-0002581",
    "Waste_Review_Status": "Complete"
@@ -28782,16 +16612,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002585",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002586",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002587",
    "Application_Number": "LCA19-0002587",
    "Waste_Review_Status": "Complete"
@@ -28807,39 +16627,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002591",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002595",
-   "Application_Number": "LCA19-0002595",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002596",
    "Application_Number": "LCA19-0002596",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002597",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002601",
    "Application_Number": "LCA19-0002601",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002603",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002605",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002606",
@@ -28852,16 +16647,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002608",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002609",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002610",
    "Application_Number": "LCA19-0002610",
    "Waste_Review_Status": "Complete"
@@ -28870,31 +16655,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0002611",
    "Application_Number": "LCA19-0002611",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002612",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002613",
-   "Application_Number": "LCA19-0002613",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002614",
-   "Application_Number": "LCA19-0002614",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002615",
-   "Application_Number": "LCA19-0002615",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002616",
-   "Application_Number": "LCA19-0002616",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002617",
@@ -28912,24 +16672,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002620",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002621",
    "Application_Number": "LCA19-0002621",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002622",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002624",
-   "Application_Number": "LCA19-0002624",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002625",
@@ -28937,69 +16682,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002626",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002627",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002628",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002629",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002630",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002631",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002632",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002635",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002636",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002637",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002638",
-   "Application_Number": "lca19-0002638",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002639",
    "Application_Number": "LCA19-0002639",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002640",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002641",
@@ -29012,36 +16697,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002643",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002644",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002645",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002646",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002647",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002651",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002653",
    "Application_Number": "LCA19-0002653",
    "Waste_Review_Status": "Complete"
@@ -29052,34 +16707,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002655",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002656",
    "Application_Number": "LCA19-0002656",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0002657",
-   "Application_Number": "LCA19-0002657",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002658",
-   "Application_Number": "LCA19-0002658",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002659",
-   "Application_Number": "LCA19-0002659",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002660",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002661",
@@ -29090,21 +16720,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0002662",
    "Application_Number": "LCA19-0002662",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002663",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002664",
-   "Application_Number": "LCA19-0002664",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002665",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -29122,89 +16737,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002669",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002670",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002671",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002672",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002673",
-   "Application_Number": "LCA19-0002673",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002674",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002675",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002676",
-   "Application_Number": "LCA19-0002676",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002677",
-   "Application_Number": "LCA19-0002677",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002678",
    "Application_Number": "LCA19-0002678",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0002679",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002681",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002683",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002685",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002691",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0002696",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002700",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002701",
@@ -29217,124 +16757,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002703",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002704",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002705",
-   "Application_Number": "LCA19-0002705",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002706",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002707",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002708",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002709",
    "Application_Number": "LCA19-0002709",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0002710",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002711",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0002712",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002713",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002714",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002715",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002716",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002717",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002718",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002719",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002720",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002721",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002722",
-   "Application_Number": "LCA19-0002722",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002723",
-   "Application_Number": "LCA19-0002723",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002724",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002725",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0002726",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002730",
@@ -29345,31 +16780,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0002731",
    "Application_Number": "LCA19-0002731",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002738",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002752",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002757",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002758",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002759",
-   "Application_Number": "LCA19-0002759",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002765",
@@ -29442,19 +16852,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002782",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002784",
    "Application_Number": "LCA19-0002784",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002785",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002786",
@@ -29462,44 +16862,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002787",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002788",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002789",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002790",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002791",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002792",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002793",
    "Application_Number": "LCA19-0002793",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002794",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002795",
@@ -29507,19 +16872,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002796",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002797",
    "Application_Number": "LCA19-0002797",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002798",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002799",
@@ -29532,284 +16887,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002801",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002802",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002803",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002804",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002805",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002807",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002808",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002809",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002810",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002812",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002821",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002822",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002823",
    "Application_Number": "LCA19-0002823",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002824",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002825",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002826",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002827",
    "Application_Number": "LCA19-0002827",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002828",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002829",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002830",
-   "Application_Number": "LCA19-0002830",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002831",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002832",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002833",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002834",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002835",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002836",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002837",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002838",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002839",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002840",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002841",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002842",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002843",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002844",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002845",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002846",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002847",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002851",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002853",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002855",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002856",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002857",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002858",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002859",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002860",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002861",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002862",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002863",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002864",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002865",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002866",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002867",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002868",
    "Application_Number": "LCA19-0002868",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002869",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002870",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002871",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002872",
@@ -29818,148 +16908,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0002873",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002874",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002875",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002876",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002877",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002878",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002879",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002880",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002881",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002882",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002883",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002884",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002885",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002886",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002887",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002888",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002889",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002890",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002891",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002894",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002897",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002900",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0002901",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002902",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002907",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002908",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002909",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002910",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002912",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002913",
@@ -29967,44 +16917,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002915",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002916",
    "Application_Number": "LCA19-0002916",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002918",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002919",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002920",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002921",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002922",
    "Application_Number": "LCA19-0002922",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002924",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002926",
@@ -30032,16 +16952,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002938",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002939",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002943",
    "Application_Number": "LCA19-0002943",
    "Waste_Review_Status": "Complete"
@@ -30052,11 +16962,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0002945",
-   "Application_Number": "LCA19-0002945",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA19-0002947",
    "Waste_Review_Status": "Complete"
@@ -30064,32 +16969,27 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002948",
    "Application_Number": "LCA19-0002948",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002949",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0002950",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002951",
    "Application_Number": "LCA19-0002951",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0002952",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002953",
    "Application_Number": "LCA19-0002953",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -30099,7 +16999,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002955",
    "Application_Number": "LCA19-0002955",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -30107,49 +17007,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002957",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002958",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002959",
-   "Application_Number": "LCA19-0002959",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0002960",
-   "Application_Number": "LCA19-0002960",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002961",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0002962",
    "Application_Number": "LCA19-0002962",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002963",
    "Application_Number": "LCA19-0002963",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002964",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0002965",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -30159,12 +17029,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0002967",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002968",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002969",
@@ -30175,11 +17040,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0002970",
    "Application_Number": "LCA19-0002970",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0002972",
-   "Application_Number": "LCA19-0002972",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002973",
@@ -30194,17 +17054,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002975",
    "Application_Number": "LCA19-0002975",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002976",
    "Application_Number": "LCA19-0002976",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0002977",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0002979",
@@ -30294,7 +17149,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0002998",
    "Application_Number": "LCA19-0002998",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0002999",
@@ -30402,11 +17257,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003033",
-   "Application_Number": "LCA19-0003033",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003034",
    "Application_Number": "LCA19-0003034",
    "Waste_Review_Status": "Complete"
@@ -30415,16 +17265,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0003035",
    "Application_Number": "LCA19-0003035",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003036",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003037",
-   "Application_Number": "LCA19-0003037",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003038",
@@ -30457,31 +17297,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003047",
-   "Application_Number": "LCA19-0003047",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003048",
-   "Application_Number": "LCA19-0003048",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003050",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003051",
-   "Application_Number": "LCA19-0003051",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003052",
-   "Application_Number": "LCA19-0003052",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003053",
    "Application_Number": "LCA19-0003053",
    "Waste_Review_Status": "Complete"
@@ -30497,24 +17312,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003056",
-   "Application_Number": "LCA19-0003056",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003057",
-   "Application_Number": "LCA19-0003057",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003058",
    "Application_Number": "LCA19-0003058",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003059",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003060",
@@ -30529,7 +17329,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003062",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -30542,59 +17342,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003065",
-   "Application_Number": "LCA19-0003065",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003066",
    "Application_Number": "LCA19-0003066",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003067",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003069",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003070",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003071",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003072",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003073",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003081",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003082",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003083",
-   "Application_Number": "LCA19-0003083",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003084",
@@ -30607,19 +17362,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003086",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003088",
    "Application_Number": "LCA19-0003088",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003091",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003093",
@@ -30632,29 +17377,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003095",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003097",
    "Application_Number": "LCA19-0003097",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003099",
-   "Application_Number": "LCA19-0003099",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003100",
-   "Application_Number": "LCA19-0003100",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003101",
-   "Application_Number": "LCA19-0003101",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003102",
@@ -30662,104 +17387,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003104",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003106",
    "Application_Number": "LCA19-0003106",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003108",
-   "Application_Number": "LCA19-0003108",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003109",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003110",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003111",
    "Application_Number": "LCA19-0003111",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003112",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003113",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003114",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003115",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003116",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003117",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003118",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003119",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003120",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003121",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003122",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003123",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003127",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003128",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003129",
@@ -30767,54 +17402,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003130",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003131",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003132",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003133",
    "Application_Number": "LCA19-0003133",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003134",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003135",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003136",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003137",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003138",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003139",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003140",
@@ -30828,23 +17418,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0003144",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003146",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0003152",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003153",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003154",
@@ -30858,26 +17433,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0003160",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003161",
-   "Application_Number": "LCA19-0003161",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003162",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003163",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0003164",
    "Waste_Review_Status": "Complete"
  },
@@ -30885,11 +17440,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0003165",
    "Application_Number": "LCA19-0003165",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003166",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -30912,19 +17462,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003171",
-   "Application_Number": "LCA19-0003171",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003172",
    "Application_Number": "LCA19-0003172",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003173",
-   "Application_Number": "LCA19-0003173",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003175",
@@ -30932,34 +17472,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003176",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003177",
-   "Application_Number": "LCA19-0003177",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003178",
-   "Application_Number": "LCA19-0003178",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003179",
    "Application_Number": "LCA19-0003179",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003180",
-   "Application_Number": "LCA19-0003180",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003181",
    "Application_Number": "LCA19-0003181",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003184",
@@ -30988,11 +17508,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0003189",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0003190",
    "Waste_Review_Status": "Complete"
  },
@@ -31005,11 +17520,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA19-0003192",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003193",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003194",
@@ -31047,29 +17557,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003203",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003204",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003205",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003206",
    "Application_Number": "LCA19-0003206",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003207",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003208",
@@ -31102,59 +17592,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003214",
-   "Application_Number": "LCA19-0003214",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003222",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003229",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003230",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003231",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003241",
    "Application_Number": "LCA19-0003241",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003245",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003249",
-   "Application_Number": "LCA19-0003249",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003250",
-   "Application_Number": "LCA19-0003250",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003251",
-   "Application_Number": "LCA19-0003251",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003252",
    "Application_Number": "LCA19-0003252",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003253",
@@ -31172,11 +17617,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003256",
-   "Application_Number": "LCA19-0003256",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003257",
    "Application_Number": "LCA19-0003257",
    "Waste_Review_Status": "Complete"
@@ -31187,24 +17627,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003259",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003260",
    "Application_Number": "LCA19-0003260",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003261",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003262",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003263",
@@ -31252,11 +17677,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003272",
-   "Application_Number": "LCA19-0003272",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003273",
    "Application_Number": "LCA19-0003273",
    "Waste_Review_Status": "Complete"
@@ -31294,92 +17714,22 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003282",
    "Application_Number": "LCA19-0003282",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003283",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003284",
    "Application_Number": "LCA19-0003284",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003285",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003286",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003287",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003288",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003289",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003290",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003291",
-   "Application_Number": "LCA19-0003291",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003292",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003293",
    "Application_Number": "LCA19-0003293",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003294",
    "Application_Number": "LCA19-0003294",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003295",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003297",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003298",
-   "Application_Number": "LCA19-0003298",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003299",
-   "Application_Number": "LCA19-0003299",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003302",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003303",
@@ -31388,18 +17738,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0003304",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0003306",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003309",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003310",
@@ -31412,29 +17752,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003313",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003314",
    "Application_Number": "LCA19-0003314",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003318",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003321",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003322",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003323",
@@ -31442,34 +17762,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003324",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003326",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003329",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003333",
    "Application_Number": "LCA19-0003333",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003334",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003337",
-   "Application_Number": "LCA19-0003337",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003340",
@@ -31477,14 +17772,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003344",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003346",
    "Application_Number": "LCA19-0003346",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003347",
@@ -31497,44 +17787,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003351",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003355",
    "Application_Number": "LCA19-0003355",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003361",
-   "Application_Number": "LCA19-0003361",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003366",
    "Application_Number": "LCA19-0003366",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003367",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003373",
-   "Application_Number": "LCA19-0003373",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003374",
    "Application_Number": "LCA19-0003374",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003378",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003379",
@@ -31547,94 +17812,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "CCL19-0003389",
-   "Application_Number": "LCA19-0003389",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003396",
-   "Application_Number": "LCA19-0003396",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003398",
-   "Application_Number": "LCA19-0003398",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003399",
-   "Application_Number": "LCA19-0003399",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003400",
-   "Application_Number": "LCA19-0003400",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003402",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003404",
-   "Application_Number": "LCA19-0003404",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003407",
-   "Application_Number": "LCA19-0003407",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003408",
-   "Application_Number": "LCA19-0003408",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003409",
-   "Application_Number": "LCA19-0003409",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003410",
-   "Application_Number": "LCA19-0003410",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003411",
-   "Application_Number": "LCA19-0003411",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003412",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003413",
    "Application_Number": "LCA19-0003413",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003414",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003415",
-   "Application_Number": "LCA19-0003415",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003416",
-   "Application_Number": "LCA19-0003416",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003417",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003418",
@@ -31652,84 +17832,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003422",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003424",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003426",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003427",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003428",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003434",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003437",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003438",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003439",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003440",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003441",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003442",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003443",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003444",
    "Application_Number": "LCA19-0003444",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003445",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003449",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003450",
@@ -31737,79 +17842,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003451",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003452",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003453",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003454",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003455",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003456",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003457",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003458",
-   "Application_Number": "LCA19-0003458",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003459",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003460",
    "Application_Number": "LCA19-0003460",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003461",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003462",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003463",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003464",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003465",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003466",
@@ -31817,14 +17852,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003467",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003468",
    "Application_Number": "LCA19-0003468",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003469",
@@ -31867,21 +17897,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003477",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003478",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003479",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003480",
    "Application_Number": "LCA19-0003480",
    "Waste_Review_Status": "Complete"
@@ -31897,19 +17912,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003483",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003484",
    "Application_Number": "LCA19-0003484",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003485",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003486",
@@ -31922,64 +17927,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003488",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003489",
    "Application_Number": "LCA19-0003489",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003490",
-   "Application_Number": "LCA19-0003490",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003491",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003492",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003494",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003496",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003497",
    "Application_Number": "LCA19-0003497",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003498",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003499",
-   "Application_Number": "LCA19-0003499",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003500",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003501",
-   "Application_Number": "LCA19-0003501",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -31987,19 +17942,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003503",
-   "Application_Number": "LCA19-0003503",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003504",
    "Application_Number": "LCA19-0003504",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003505",
-   "Application_Number": "LCA19-0003505",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -32007,44 +17952,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003507",
-   "Application_Number": "LCA19-0003507",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003508",
    "Application_Number": "LCA19-0003508",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003509",
-   "Application_Number": "LCA19-0003509",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003510",
    "Application_Number": "LCA19-0003510",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003511",
-   "Application_Number": "LCA19-0003511",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003512",
-   "Application_Number": "LCA19-0003512",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003516",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003521",
-   "Application_Number": "LCA19-0003521",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003522",
@@ -32052,39 +17967,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003524",
-   "Application_Number": "LCA19-0003524",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003525",
-   "Application_Number": "LCA19-0003525",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003526",
-   "Application_Number": "LCA19-0003526",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003527",
-   "Application_Number": "LCA19-0003527",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003528",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003529",
    "Application_Number": "LCA19-0003529",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003530",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003531",
@@ -32117,19 +18002,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003537",
-   "Application_Number": "LCA19-0003537",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003538",
    "Application_Number": "LCA19-0003538",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003539",
-   "Application_Number": "LCA19-0003539",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003540",
@@ -32137,54 +18012,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003541",
-   "Application_Number": "LCA19-0003541",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003542",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003543",
-   "Application_Number": "LCA19-0003543",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003544",
-   "Application_Number": "LCA19-0003544",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003546",
-   "Application_Number": "LCA19-0003546",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003547",
-   "Application_Number": "LCA19-0003547",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003548",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003549",
-   "Application_Number": "LCA19-0003549",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003552",
    "Application_Number": "LCA19-0003552",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003553",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003554",
@@ -32197,39 +18027,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003556",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003557",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003558",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003559",
    "Application_Number": "LCA19-0003559",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003560",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003561",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003562",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003563",
@@ -32242,39 +18042,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003565",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003566",
-   "Application_Number": "LCA19-0003566",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003567",
-   "Application_Number": "LCA19-0003567",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003568",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003570",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003571",
    "Application_Number": "LCA19-0003571",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003572",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003573",
@@ -32292,11 +18062,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003576",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003577",
    "Application_Number": "LCA19-0003577",
    "Waste_Review_Status": "Complete"
@@ -32307,24 +18072,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003579",
-   "Application_Number": "LCA19-0003579",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003580",
    "Application_Number": "LCA19-0003580",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003581",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003582",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -32332,39 +18082,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003584",
-   "Application_Number": "LCA19-0003584",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003585",
-   "Application_Number": "LCA19-0003585",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003586",
-   "Application_Number": "LCA19-0003586",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003587",
    "Application_Number": "LCA19-0003587",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003588",
-   "Application_Number": "LCA19-0003588",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003590",
-   "Application_Number": "LCA19-0003590",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003591",
-   "Application_Number": "LCA19-0003591",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003592",
@@ -32372,29 +18092,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003593",
-   "Application_Number": "LCA19-0003593",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003595",
    "Application_Number": "LCA19-0003595",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003596",
-   "Application_Number": "LCA19-0003596",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003597",
-   "Application_Number": "LCA19-0003597",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003598",
-   "Application_Number": "LCA19-0003598",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003599",
@@ -32407,44 +18107,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003601",
-   "Application_Number": "LCA19-0003601",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003602",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003603",
-   "Application_Number": "LCA19-0003603",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003606",
-   "Application_Number": "LCA19-0003606",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003609",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003610",
    "Application_Number": "LCA19-0003610",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003611",
    "Application_Number": "LCA19-0003611",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003612",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -32455,11 +18125,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0003614",
    "Application_Number": "LCA19-0003614",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003615",
-   "Application_Number": "LCA19-0003615",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003616",
@@ -32482,19 +18147,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003623",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003624",
    "Application_Number": "LCA19-0003624",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003625",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003626",
@@ -32502,29 +18157,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003627",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003628",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003629",
    "Application_Number": "LCA19-0003629",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003630",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003631",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003632",
@@ -32547,16 +18182,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003637",
-   "Application_Number": "LCA19-0003637",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003638",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003639",
    "Application_Number": "LCA19-0003639",
    "Waste_Review_Status": "Complete"
@@ -32569,7 +18194,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003641",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003642",
@@ -32592,19 +18217,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003646",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003647",
    "Application_Number": "LCA19-0003647",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003648",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003649",
@@ -32619,17 +18234,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003651",
    "Application_Number": "LCA19-0003651",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003652",
-   "Application_Number": "LCA19-0003652",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003653",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003654",
@@ -32637,29 +18247,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003655",
-   "Application_Number": "LCA19-0003655",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003657",
    "Application_Number": "LCA19-0003657",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003658",
-   "Application_Number": "LCA19-0003658",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003659",
    "Application_Number": "LCA19-0003659",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003660",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003661",
@@ -32669,37 +18264,32 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003662",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003663",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003664",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003665",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003666",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003667",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003668",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003669",
@@ -32708,63 +18298,58 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0003672",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0003676",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003679",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003680",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003681",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003683",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003684",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003686",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003687",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003688",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003689",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003690",
    "Application_Number": "LCA19-0003690",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -32777,39 +18362,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003696",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003699",
-   "Application_Number": "LCA19-0003699",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003703",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003706",
-   "Application_Number": "LCA19-0003706",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003709",
    "Application_Number": "LCA19-0003709",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003714",
-   "Application_Number": "LCA19-0003714",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003716",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003717",
@@ -32818,33 +18373,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0003726",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0003733",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003734",
-   "Application_Number": "LCA19-0003734",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003735",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003736",
    "Application_Number": "LCA19-0003736",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003737",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003738",
@@ -32854,7 +18389,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003739",
    "Application_Number": "LCA19-0003739",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003741",
@@ -32863,38 +18398,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0003742",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003743",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0003744",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003745",
-   "Application_Number": "LCA19-0003745",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003746",
-   "Application_Number": "LCA19-0003746",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003747",
    "Application_Number": "LCA19-0003747",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003748",
-   "Application_Number": "LCA19-0003748",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003749",
@@ -32942,24 +18452,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003760",
-   "Application_Number": "LCA19-0003760",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003761",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003762",
    "Application_Number": "LCA19-0003762",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003763",
-   "Application_Number": "LCA19-0003763",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003764",
@@ -32967,24 +18462,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003765",
-   "Application_Number": "LCA19-0003765",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003766",
-   "Application_Number": "LCA19-0003766",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003767",
    "Application_Number": "LCA19-0003767",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003768",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003770",
@@ -32999,7 +18479,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003772",
    "Application_Number": "LCA19-0003772",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003773",
@@ -33007,29 +18487,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003774",
-   "Application_Number": "LCA19-0003774",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003775",
-   "Application_Number": "LCA19-0003775",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003776",
    "Application_Number": "LCA19-0003776",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003777",
-   "Application_Number": "LCA19-0003777",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003778",
-   "Application_Number": "LCA19-0003778",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003782",
@@ -33037,19 +18497,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003783",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003784",
    "Application_Number": "LCA19-0003784",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003785",
-   "Application_Number": "LCA19-0003785",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003786",
@@ -33060,16 +18510,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA19-0003787",
    "Waste_Review_Status": "Incomplete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003788",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003789",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003790",
@@ -33084,12 +18524,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003792",
    "Application_Number": "LCA19-0003792",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003793",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -33102,51 +18537,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003796",
-   "Application_Number": "LCA19-0003796",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003797",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003798",
-   "Application_Number": "LCA19-0003798",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003799",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003800",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003801",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003802",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003803",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003804",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003805",
    "Application_Number": "lca19-0003805",
    "Waste_Review_Status": "Complete"
@@ -33157,16 +18547,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003807",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003808",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003809",
    "Application_Number": "lca19-0003809",
    "Waste_Review_Status": "Complete"
@@ -33174,37 +18554,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003810",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0003811",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003812",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003813",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003814",
    "Application_Number": "LCA19-0003814",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003815",
-   "Application_Number": "LCA19-0003815",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003816",
-   "Application_Number": "LCA19-0003816",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003817",
@@ -33225,11 +18585,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA19-0003820",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003821",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003822",
@@ -33267,16 +18622,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003830",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003831",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003832",
    "Application_Number": "LCA19-0003832",
    "Waste_Review_Status": "Complete"
@@ -33284,17 +18629,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003833",
    "Application_Number": "LCA19-0003833",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003834",
-   "Application_Number": "LCA19-0003834",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003835",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003836",
@@ -33305,11 +18640,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0003837",
    "Application_Number": "LCA19-0003837",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003838",
-   "Application_Number": "LCA19-0003838",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003839",
@@ -33337,19 +18667,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003844",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003845",
    "Application_Number": "LCA19-0003845",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003851",
-   "Application_Number": "LCA19-0003851",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003852",
@@ -33367,11 +18687,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003859",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003860",
    "Application_Number": "LCA19-0003860",
    "Waste_Review_Status": "Complete"
@@ -33382,11 +18697,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003866",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003867",
    "Application_Number": "LCA19-0003867",
    "Waste_Review_Status": "Complete"
@@ -33395,16 +18705,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0003868",
    "Application_Number": "LCA19-0003868",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003869",
-   "Application_Number": "LCA19-0003869",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003870",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003883",
@@ -33432,11 +18732,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003889",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003890",
    "Application_Number": "LCA19-0003890",
    "Waste_Review_Status": "Complete"
@@ -33457,24 +18752,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003894",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003895",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003896",
    "Application_Number": "LCA19-0003896",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003897",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003898",
@@ -33487,39 +18767,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003900",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003901",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003902",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003903",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003904",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003905",
    "Application_Number": "LCA19-0003905",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003906",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003907",
@@ -33527,29 +18777,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003908",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003909",
-   "Application_Number": "LCA19-0003909",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003910",
    "Application_Number": "LCA19-0003910",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003911",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003912",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003913",
@@ -33562,29 +18792,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003915",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003916",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003917",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003918",
    "Application_Number": "LCA19-0003918",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003919",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003920",
@@ -33592,34 +18802,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003921",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003922",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003923",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003924",
    "Application_Number": "LCA19-0003924",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003925",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003927",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -33643,53 +18828,18 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0003932",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0003933",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003934",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003935",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003936",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003937",
    "Application_Number": "LCA19-0003937",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003938",
-   "Application_Number": "lca19-0003938",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003939",
    "Application_Number": "LCA19-0003939",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003940",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003941",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003942",
@@ -33702,69 +18852,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003947",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003948",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003949",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003950",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003951",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003952",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003953",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003954",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003955",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003956",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003957",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003958",
    "Application_Number": "LCA19-0003958",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003959",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003960",
@@ -33779,7 +18869,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003962",
    "Application_Number": "LCA19-0003962",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003963",
@@ -33794,32 +18884,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003965",
    "Application_Number": "LCA19-0003965",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003966",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003967",
-   "Application_Number": "LCA19-0003967",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003968",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003969",
-   "Application_Number": "LCA19-0003969",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003970",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003971",
@@ -33829,12 +18894,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003972",
    "Application_Number": "LCA19-0003972",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003973",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0003974",
@@ -33842,34 +18902,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003975",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0003976",
    "Application_Number": "LCA19-0003976",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003977",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003978",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003979",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003980",
-   "Application_Number": "LCA19-0003980",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0003981",
@@ -33884,17 +18919,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0003985",
    "Application_Number": "LCA19-0003985",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003986",
-   "Application_Number": "LCA19-0003986",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003988",
-   "Application_Number": "LCA19-0003988",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -33902,39 +18927,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0003990",
-   "Application_Number": "LCA19-0003990",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003991",
-   "Application_Number": "LCA19-0003991",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003992",
-   "Application_Number": "LCA19-0003992",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003993",
-   "Application_Number": "LCA19-0003993",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0003994",
-   "Application_Number": "LCA19-0003994",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA19-0003995",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0003996",
-   "Application_Number": "LCA19-0003996",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -33962,24 +18957,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004002",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004003",
    "Application_Number": "LCA19-0004003",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004004",
-   "Application_Number": "LCA19-0004004",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004005",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004008",
@@ -33987,29 +18967,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004009",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004010",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004011",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004012",
    "Application_Number": "LCA19-0004012",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004013",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004014",
@@ -34027,11 +18987,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004017",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004018",
    "Application_Number": "LCA19-0004018",
    "Waste_Review_Status": "Complete"
@@ -34042,24 +18997,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004020",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004021",
    "Application_Number": "LCA19-0004021",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004022",
-   "Application_Number": "LCA19-0004022",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004023",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -34067,44 +19007,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004025",
-   "Application_Number": "LCA19-0004025",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004026",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004027",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004028",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004029",
-   "Application_Number": "LCA19-0004029",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004030",
    "Application_Number": "LCA19-0004030",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004031",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004032",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004033",
@@ -34113,16 +19018,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0004034",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004035",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004036",
    "Application_Number": "LCA19-0004036",
    "Waste_Review_Status": "Complete"
  },
@@ -34138,38 +19033,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0004039",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004044",
-   "Application_Number": "LCA19-0004044",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0004045",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004046",
-   "Application_Number": "LCA19-0004046",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004047",
    "Application_Number": "LCA19-0004047",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004048",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004049",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004050",
@@ -34187,11 +19057,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004053",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004054",
    "Application_Number": "LCA19-0004054",
    "Waste_Review_Status": "Complete"
@@ -34200,11 +19065,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004056",
    "Application_Number": "LCA19-0004056",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004057",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004058",
@@ -34217,34 +19077,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004066",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004067",
    "Application_Number": "LCA19-0004067",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004072",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004073",
-   "Application_Number": "LCA19-0004073",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004074",
-   "Application_Number": "LCA19-0004074",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004075",
-   "Application_Number": "LCA19-0004075",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004076",
@@ -34252,14 +19087,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004077",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004078",
    "Application_Number": "LCA19-0004078",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004079",
@@ -34272,31 +19102,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004081",
-   "Application_Number": "LCA19-0004081",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004083",
-   "Application_Number": "LCA19-0004083",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004084",
-   "Application_Number": "LCA19-0004084",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004085",
-   "Application_Number": "LCA19-0004085",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004086",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004087",
    "Application_Number": "LCA19-0004087",
    "Waste_Review_Status": "Complete"
@@ -34304,17 +19109,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004088",
    "Application_Number": "LCA19-0004088",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004089",
    "Application_Number": "LCA19-0004089",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004090",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -34329,12 +19129,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004093",
    "Application_Number": "LCA19-0004093",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004094",
    "Application_Number": "LCA19-0004094",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004098",
@@ -34347,124 +19147,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004100",
-   "Application_Number": "LCA19-0004100",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004101",
-   "Application_Number": "LCA19-0004101",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004102",
-   "Application_Number": "LCA19-0004102",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004103",
-   "Application_Number": "LCA19-0004103",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004104",
-   "Application_Number": "LCA19-0004104",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004105",
-   "Application_Number": "LCA19-0004105",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004106",
-   "Application_Number": "LCA19-0004106",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004108",
-   "Application_Number": "LCA19-0004108",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004110",
-   "Application_Number": "LCA19-0004110",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004112",
-   "Application_Number": "LCA19-0004112",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004113",
-   "Application_Number": "LCA19-0004113",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004114",
-   "Application_Number": "LCA19-0004114",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004115",
-   "Application_Number": "LCA19-0004115",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004117",
-   "Application_Number": "LCA19-0004117",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004118",
-   "Application_Number": "LCA19-0004118",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004119",
-   "Application_Number": "LCA19-0004119",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004121",
-   "Application_Number": "LCA19-0004121",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004122",
-   "Application_Number": "LCA19-0004122",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004123",
-   "Application_Number": "LCA19-0004123",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004124",
-   "Application_Number": "LCA19-0004124",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004125",
-   "Application_Number": "LCA19-0004125",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004126",
    "Application_Number": "LCA19-0004126",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004127",
-   "Application_Number": "LCA19-0004127",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004128",
-   "Application_Number": "LCA19-0004128",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004129",
@@ -34488,16 +19173,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0004133",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004134",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004136",
    "Application_Number": "LCA19-0004136",
    "Waste_Review_Status": "Complete"
  },
@@ -34557,11 +19232,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004171",
-   "Application_Number": "LCA19-0004171",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004172",
    "Application_Number": "LCA19-0004172",
    "Waste_Review_Status": "Complete"
@@ -34587,11 +19257,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004177",
-   "Application_Number": "LCA19-0004177",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004178",
    "Application_Number": "LCA19-0004178",
    "Waste_Review_Status": "Complete"
@@ -34605,11 +19270,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004180",
    "Application_Number": "LCA19-0004180",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004181",
-   "Application_Number": "LCA19-0004181",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004182",
@@ -34742,11 +19402,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004208",
-   "Application_Number": "LCA19-0004208",
-   "Waste_Review_Status": "Complete"
- },
- {
    "License_Number": "CCL19-0004211",
    "Application_Number": "LCA19-0004211",
    "Waste_Review_Status": "Complete"
@@ -34755,11 +19410,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004212",
    "Application_Number": "LCA19-0004212",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004213",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004215",
@@ -34815,21 +19465,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004225",
    "Application_Number": "LCA19-0004225",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004226",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004227",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004228",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -35057,11 +19692,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004294",
-   "Application_Number": "LCA19-0004294",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004295",
    "Application_Number": "LCA19-0004295",
    "Waste_Review_Status": "Complete"
@@ -35070,11 +19700,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004298",
    "Application_Number": "LCA19-0004298",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004299",
-   "Application_Number": "LCA19-0004299",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004300",
@@ -35103,18 +19728,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0004312",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0004314",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004325",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004335",
@@ -35177,11 +19792,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004354",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004355",
    "Application_Number": "LCA19-0004355",
    "Waste_Review_Status": "Complete"
@@ -35242,11 +19852,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004378",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004379",
    "Application_Number": "LCA19-0004379",
    "Waste_Review_Status": "Complete"
@@ -35265,11 +19870,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004405",
    "Application_Number": "LCA19-0004405",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004413",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004414",
@@ -35302,14 +19902,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004424",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004425",
    "Application_Number": "LCA19-0004425",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004427",
@@ -35317,24 +19912,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004436",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004439",
    "Application_Number": "LCA19-0004439",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004440",
-   "Application_Number": "LCA19-0004440",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004441",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004444",
@@ -35357,21 +19937,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004448",
-   "Application_Number": "LCA19-0004448",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004449",
-   "Application_Number": "LCA19-0004449",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004450",
-   "Application_Number": "LCA19-0004450",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004451",
    "Application_Number": "LCA19-0004451",
    "Waste_Review_Status": "Complete"
@@ -35380,11 +19945,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004453",
    "Application_Number": "LCA19-0004453",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004455",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004457",
@@ -35397,49 +19957,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004460",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004463",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004464",
    "Application_Number": "LCA19-0004464",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004465",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004466",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004467",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004468",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004469",
    "Application_Number": "LCA19-0004469",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004474",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004476",
@@ -35457,59 +19982,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004489",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004491",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004492",
    "Application_Number": "LCA19-0004492",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0004495",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004496",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004497",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004498",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004499",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0004500",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004504",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004506",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004513",
@@ -35527,19 +20012,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004518",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004519",
    "Application_Number": "LCA19-0004519",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004520",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004521",
@@ -35572,11 +20047,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004535",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004536",
    "Application_Number": "LCA19-0004536",
    "Waste_Review_Status": "Complete"
@@ -35592,39 +20062,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004541",
-   "Application_Number": "LCA19-0004541",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004547",
    "Application_Number": "LCA19-0004547",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004549",
-   "Application_Number": "LCA19-0004549",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004550",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004551",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004552",
    "Application_Number": "LCA19-0004552",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004553",
-   "Application_Number": "LCA19-0004553",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004554",
@@ -35637,34 +20082,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004556",
-   "Application_Number": "LCA19-0004556",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004557",
    "Application_Number": "LCA19-0004557",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004558",
-   "Application_Number": "LCA19-0004558",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004559",
    "Application_Number": "LCA19-0004559",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004565",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004568",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004569",
@@ -35699,17 +20124,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004576",
    "Application_Number": "LCA19-0004576",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004577",
    "Application_Number": "LCA19-0004577",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004578",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004579",
@@ -35727,29 +20147,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004584",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004585",
    "Application_Number": "LCA19-0004585",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004586",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004588",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004589",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -35757,29 +20157,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004591",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004592",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004594",
    "Application_Number": "LCA19-0004594",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004595",
-   "Application_Number": "LCA19-0004595",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004596",
-   "Application_Number": "LCA19-0004596",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004597",
@@ -35797,11 +20177,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004600",
-   "Application_Number": "LCA19-0004600",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004601",
    "Application_Number": "LCA19-0004601",
    "Waste_Review_Status": "Complete"
@@ -35817,11 +20192,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004617",
-   "Application_Number": "LCA19-0004617",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004618",
    "Application_Number": "LCA19-0004618",
    "Waste_Review_Status": "Complete"
@@ -35830,11 +20200,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004619",
    "Application_Number": "LCA19-0004619",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004620",
-   "Application_Number": "LCA19-0004620",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004621",
@@ -35857,16 +20222,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004628",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004631",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004638",
    "Application_Number": "LCA19-0004638",
    "Waste_Review_Status": "Complete"
@@ -35882,24 +20237,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004643",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004648",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004649",
    "Application_Number": "LCA19-0004649",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004651",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004653",
@@ -35929,7 +20269,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004664",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004667",
@@ -35942,49 +20282,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004671",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004672",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004673",
    "Application_Number": "LCA19-0004673",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004674",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004675",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004676",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004677",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004678",
-   "Application_Number": "LCA19-0004678",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004679",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004680",
@@ -36057,11 +20357,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004700",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004701",
    "Application_Number": "LCA19-0004701",
    "Waste_Review_Status": "Complete"
@@ -36082,21 +20377,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004705",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004708",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004709",
-   "Application_Number": "LCA19-0004709",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004710",
    "Application_Number": "LCA19-0004710",
    "Waste_Review_Status": "Complete"
@@ -36105,11 +20385,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004711",
    "Application_Number": "LCA19-0004711",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004712",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -36122,11 +20397,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004715",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004716",
    "Application_Number": "LCA19-0004716",
    "Waste_Review_Status": "Complete"
@@ -36135,11 +20405,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004717",
    "Application_Number": "LCA19-0004717",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004718",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004719",
@@ -36152,21 +20417,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004721",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004723",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004724",
-   "Application_Number": "LCA19-0004724",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004725",
    "Application_Number": "LCA19-0004725",
    "Waste_Review_Status": "Complete"
@@ -36174,12 +20424,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004726",
    "Application_Number": "LCA19-0004726",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004727",
-   "Application_Number": "LCA19-0004727",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004728",
@@ -36199,62 +20444,57 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004731",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004732",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004733",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004734",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004735",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004736",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004737",
    "Application_Number": "LCA19-0004737",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004738",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004739",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004740",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004741",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004742",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -36262,19 +20502,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004744",
-   "Application_Number": "LCA19-0004744",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA19-0004745",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004746",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -36293,11 +20523,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0004750",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0004751",
    "Waste_Review_Status": "Complete"
  },
@@ -36307,19 +20532,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004753",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004754",
    "Application_Number": "LCA19-0004754",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004755",
-   "Application_Number": "LCA19-0004755",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004756",
@@ -36345,11 +20560,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA19-0004760",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004761",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -36398,11 +20608,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0004771",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0004772",
    "Waste_Review_Status": "Complete"
  },
@@ -36410,21 +20615,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA19-0004773",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004774",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004775",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004776",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004777",
@@ -36442,21 +20632,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004780",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004781",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004782",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004783",
    "Application_Number": "LCA19-0004783",
    "Waste_Review_Status": "Complete"
@@ -36464,27 +20639,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004784",
    "Application_Number": "LCA19-0004784",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004785",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004786",
    "Application_Number": "LCA19-0004786",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004787",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004788",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -36514,27 +20674,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004794",
    "Application_Number": "LCA19-0004794",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004795",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004796",
    "Application_Number": "LCA19-0004796",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004797",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004798",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004799",
@@ -36547,19 +20692,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004801",
-   "Application_Number": "LCA19-0004801",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004802",
    "Application_Number": "LCA19-0004802",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004803",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -36567,34 +20702,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004805",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004806",
    "Application_Number": "LCA19-0004806",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004807",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004808",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004809",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004810",
-   "Application_Number": "LCA19-0004810",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004811",
@@ -36632,34 +20742,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004818",
-   "Application_Number": "LCA19-0004818",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004819",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004820",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004821",
    "Application_Number": "LCA19-0004821",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004822",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004823",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004824",
@@ -36667,34 +20752,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004825",
-   "Application_Number": "LCA19-0004825",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004826",
-   "Application_Number": "LCA19-0004826",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004827",
    "Application_Number": "LCA19-0004827",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004828",
-   "Application_Number": "LCA19-0004828",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004829",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004830",
-   "Application_Number": "LCA19-0004830",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -36749,17 +20809,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004841",
    "Application_Number": "LCA19-0004841",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004842",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004843",
-   "Application_Number": "LCA19-0004843",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004844",
@@ -36767,74 +20817,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004845",
-   "Application_Number": "LCA19-0004845",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004846",
-   "Application_Number": "LCA19-0004846",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004847",
-   "Application_Number": "LCA19-0004847",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004848",
-   "Application_Number": "LCA19-0004848",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004849",
-   "Application_Number": "LCA19-0004849",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004850",
-   "Application_Number": "LCA19-0004850",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004851",
-   "Application_Number": "LCA19-0004851",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004852",
-   "Application_Number": "LCA19-0004852",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004853",
-   "Application_Number": "LCA19-0004853",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004854",
-   "Application_Number": "LCA19-0004854",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004855",
-   "Application_Number": "LCA19-0004855",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004856",
    "Application_Number": "LCA19-0004856",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004857",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004858",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004859",
@@ -36847,19 +20832,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004861",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004862",
    "Application_Number": "LCA19-0004862",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004863",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004864",
@@ -36867,19 +20842,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004865",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004866",
    "Application_Number": "LCA19-0004866",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004867",
-   "Application_Number": "LCA19-0004867",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004868",
@@ -36887,29 +20852,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004869",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004870",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004871",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004872",
    "Application_Number": "LCA19-0004872",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004873",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004874",
@@ -36927,19 +20872,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004877",
+   "License_Number": "",
    "Application_Number": "LCA19-0004877",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004878",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004879",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004880",
@@ -36947,44 +20882,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004881",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004882",
-   "Application_Number": "LCA19-0004882",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004883",
    "Application_Number": "LCA19-0004883",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004884",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004885",
    "Application_Number": "LCA19-0004885",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004886",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004887",
-   "Application_Number": "LCA19-0004887",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004888",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004889",
@@ -36997,49 +20902,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004891",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004892",
    "Application_Number": "LCA19-0004892",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004893",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004894",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004895",
    "Application_Number": "LCA19-0004895",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004896",
-   "Application_Number": "LCA19-0004896",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004897",
-   "Application_Number": "LCA19-0004897",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004898",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004899",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -37049,7 +20919,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004901",
    "Application_Number": "LCA19-0004901",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004902",
@@ -37057,24 +20927,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004903",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004904",
    "Application_Number": "LCA19-0004904",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004905",
    "Application_Number": "LCA19-0004905",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004906",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004907",
@@ -37084,7 +20944,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004908",
    "Application_Number": "LCA19-0004908",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004909",
@@ -37112,16 +20972,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004914",
-   "Application_Number": "LCA19-0004914",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004915",
-   "Application_Number": "LCA19-0004915",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004916",
    "Application_Number": "LCA19-0004916",
    "Waste_Review_Status": "Complete"
@@ -37130,11 +20980,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0004917",
    "Application_Number": "LCA19-0004917",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004918",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004919",
@@ -37147,34 +20992,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004921",
-   "Application_Number": "LCA19-0004921",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004922",
    "Application_Number": "LCA19-0004922",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004923",
    "Application_Number": "LCA19-0004923",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004924",
-   "Application_Number": "LCA19-0004924",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004925",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004926",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004927",
@@ -37187,11 +21012,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004929",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004930",
    "Application_Number": "LCA19-0004930",
    "Waste_Review_Status": "Complete"
@@ -37202,24 +21022,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004932",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004933",
    "Application_Number": "LCA19-0004933",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004934",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004935",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -37244,7 +21049,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0004940",
    "Application_Number": "LCA19-0004940",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004941",
@@ -37257,39 +21062,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004943",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004944",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004945",
    "Application_Number": "LCA19-0004945",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004946",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004947",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004948",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004949",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004950",
@@ -37304,7 +21079,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004952",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004953",
@@ -37319,7 +21094,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004955",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004956",
@@ -37337,11 +21112,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004959",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004960",
    "Application_Number": "LCA19-0004960",
    "Waste_Review_Status": "Complete"
@@ -37352,64 +21122,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004962",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004963",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004964",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004965",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004966",
    "Application_Number": "LCA19-0004966",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004967",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004968",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004969",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004970",
    "Application_Number": "LCA19-0004970",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004971",
    "Application_Number": "LCA19-0004971",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004972",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004973",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0004974",
@@ -37422,99 +21147,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0004976",
-   "Application_Number": "LCA19-0004976",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004977",
-   "Application_Number": "LCA19-0004977",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0004978",
    "Application_Number": "LCA19-0004978",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0004979",
-   "Application_Number": "LCA19-0004979",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004980",
-   "Application_Number": "LCA19-0004980",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004981",
-   "Application_Number": "LCA19-0004981",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004982",
-   "Application_Number": "LCA19-0004982",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004983",
-   "Application_Number": "LCA19-0004983",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004984",
-   "Application_Number": "LCA19-0004984",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004985",
-   "Application_Number": "LCA19-0004985",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004986",
-   "Application_Number": "LCA19-0004986",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004987",
-   "Application_Number": "LCA19-0004987",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004988",
-   "Application_Number": "LCA19-0004988",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004989",
-   "Application_Number": "LCA19-0004989",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004990",
-   "Application_Number": "LCA19-0004990",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004991",
-   "Application_Number": "LCA19-0004991",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004992",
-   "Application_Number": "LCA19-0004992",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004993",
-   "Application_Number": "LCA19-0004993",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0004994",
-   "Application_Number": "LCA19-0004994",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0004995",
@@ -37542,24 +21177,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005000",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005001",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005002",
    "Application_Number": "LCA19-0005002",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005003",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005004",
@@ -37572,19 +21192,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005006",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005007",
    "Application_Number": "LCA19-0005007",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005008",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005009",
@@ -37592,44 +21202,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Incomplete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005010",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005011",
    "Application_Number": "LCA19-0005011",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005012",
-   "Application_Number": "LCA19-0005012",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005013",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005014",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005015",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005016",
    "Application_Number": "LCA19-0005016",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005017",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005018",
@@ -37645,11 +21225,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005020",
    "Application_Number": "LCA19-0005020",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005021",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005022",
@@ -37682,11 +21257,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005028",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005029",
    "Application_Number": "LCA19-0005029",
    "Waste_Review_Status": "Complete"
@@ -37697,24 +21267,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005031",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005032",
    "Application_Number": "LCA19-0005032",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005033",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005034",
-   "Application_Number": "LCA19-0005034",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005035",
@@ -37727,24 +21282,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005038",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005039",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005040",
    "Application_Number": "LCA19-0005040",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005041",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005042",
@@ -37788,18 +21328,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005051",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0005052",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005053",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -37808,18 +21338,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005055",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0005056",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005057",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -37828,18 +21348,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005059",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0005060",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005061",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005062",
@@ -37864,17 +21374,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005066",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005067",
    "Application_Number": "LCA19-0005067",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005069",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005070",
@@ -37895,11 +21400,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005073",
    "Application_Number": "LCA19-0005073",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005074",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005075",
@@ -37997,16 +21497,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005094",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005095",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005096",
    "Application_Number": "LCA19-0005096",
    "Waste_Review_Status": "Complete"
@@ -38018,11 +21508,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005098",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0005099",
    "Waste_Review_Status": "Complete"
  },
@@ -38030,11 +21515,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005100",
    "Application_Number": "LCA19-0005100",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005101",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005102",
@@ -38072,26 +21552,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005109",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005110",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005111",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005112",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005113",
    "Application_Number": "LCA19-0005113",
    "Waste_Review_Status": "Complete"
@@ -38108,28 +21568,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005117",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005118",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005119",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005120",
    "Application_Number": "LCA19-0005120",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005121",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005122",
@@ -38145,16 +21585,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005124",
    "Application_Number": "LCA19-0005124",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005125",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005126",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005127",
@@ -38202,34 +21632,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005136",
-   "Application_Number": "LCA19-0005136",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005137",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA19-0005138",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005139",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005140",
    "Application_Number": "LCA19-0005140",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005141",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005142",
@@ -38257,29 +21667,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005148",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005149",
    "Application_Number": "LCA19-0005149",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005150",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005151",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005152",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -38297,16 +21687,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005156",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005157",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005158",
    "Application_Number": "LCA19-0005158",
    "Waste_Review_Status": "Complete"
@@ -38317,39 +21697,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005160",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005161",
    "Application_Number": "LCA19-0005161",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005162",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005163",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005164",
    "Application_Number": "LCA19-0005164",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005165",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005166",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -38407,26 +21762,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005178",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005179",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005180",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005181",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005182",
    "Application_Number": "LCA19-0005182",
    "Waste_Review_Status": "Complete"
@@ -38459,7 +21794,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005188",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005189",
@@ -38482,26 +21817,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005193",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005194",
-   "Application_Number": "LCA19-0005194",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005195",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005196",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005197",
    "Application_Number": "LCA19-0005197",
    "Waste_Review_Status": "Complete"
@@ -38514,7 +21829,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0005199",
    "Application_Number": "LCA19-0005199",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005200",
@@ -38527,59 +21842,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005202",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005203",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005204",
    "Application_Number": "LCA19-0005204",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005205",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005206",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005207",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005208",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005209",
    "Application_Number": "LCA19-0005209",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005210",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005211",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005212",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005213",
@@ -38592,21 +21862,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005215",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005216",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005217",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005218",
    "Application_Number": "LCA19-0005218",
    "Waste_Review_Status": "Complete"
@@ -38615,11 +21870,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005219",
    "Application_Number": "LCA19-0005219",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005220",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -38667,54 +21917,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005230",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005231",
    "Application_Number": "LCA19-0005231",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005232",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005233",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005234",
-   "Application_Number": "LCA19-0005234",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005235",
    "Application_Number": "LCA19-0005235",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005236",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005237",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005238",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005239",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005240",
@@ -38735,11 +21945,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005243",
    "Application_Number": "LCA19-0005243",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005244",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005245",
@@ -38787,59 +21992,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005254",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005255",
    "Application_Number": "LCA19-0005255",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005256",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005257",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005258",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005259",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005260",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005261",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005262",
    "Application_Number": "LCA19-0005262",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005263",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005264",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005265",
@@ -38857,11 +22017,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005269",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005270",
    "Application_Number": "LCA19-0005270",
    "Waste_Review_Status": "Complete"
@@ -38870,11 +22025,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005271",
    "Application_Number": "LCA19-0005271",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005272",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005273",
@@ -38887,49 +22037,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005276",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005277",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005278",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005279",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005280",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005281",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005282",
    "Application_Number": "LCA19-0005282",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005283",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005284",
-   "Application_Number": "LCA19-0005284",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005285",
@@ -38942,24 +22052,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005287",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005288",
    "Application_Number": "LCA19-0005288",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005289",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005290",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005291",
@@ -38972,44 +22067,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005293",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005294",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005295",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005296",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005297",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005298",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005299",
    "Application_Number": "LCA19-0005299",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005300",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -39040,21 +22100,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005306",
    "Application_Number": "LCA19-0005306",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0005307",
-   "Application_Number": "LCA19-0005307",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005308",
-   "Application_Number": "LCA19-0005308",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005309",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005310",
@@ -39090,11 +22135,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005317",
    "Application_Number": "LCA19-0005317",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005318",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005319",
@@ -39147,27 +22187,27 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005329",
+   "License_Number": "",
    "Application_Number": "LCA19-0005329",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005330",
+   "License_Number": "",
    "Application_Number": "LCA19-0005330",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005331",
+   "License_Number": "",
    "Application_Number": "LCA19-0005331",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005332",
+   "License_Number": "",
    "Application_Number": "LCA19-0005332",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005333",
+   "License_Number": "",
    "Application_Number": "LCA19-0005333",
    "Waste_Review_Status": "Complete"
  },
@@ -39202,11 +22242,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005340",
-   "Application_Number": "LCA19-0005340",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005341",
    "Application_Number": "LCA19-0005341",
    "Waste_Review_Status": "Complete"
@@ -39220,11 +22255,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005343",
    "Application_Number": "LCA19-0005343",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005344",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005345",
@@ -39257,36 +22287,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005351",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005352",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005353",
-   "Application_Number": "LCA19-0005353",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005354",
-   "Application_Number": "LCA19-0005354",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005355",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005356",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005357",
    "Application_Number": "LCA19-0005357",
    "Waste_Review_Status": "Complete"
@@ -39303,38 +22303,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005360",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005361",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005362",
-   "Application_Number": "LCA19-0005362",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0005363",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0005364",
-   "Application_Number": "LCA19-0005364",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005365",
    "Application_Number": "LCA19-0005365",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005366",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005367",
@@ -39352,24 +22327,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005370",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005371",
    "Application_Number": "LCA19-0005371",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005372",
+   "License_Number": "",
    "Application_Number": "LCA19-0005372",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0005373",
-   "Application_Number": "LCA19-0005373",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005374",
@@ -39380,16 +22345,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005375",
    "Application_Number": "LCA19-0005375",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005376",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005377",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005378",
@@ -39417,11 +22372,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005383",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005384",
    "Application_Number": "LCA19-0005384",
    "Waste_Review_Status": "Complete"
@@ -39430,11 +22380,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA19-0005385",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005386",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005387",
@@ -39452,24 +22397,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005390",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005391",
    "Application_Number": "LCA19-0005391",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005392",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005393",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -39480,11 +22410,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005395",
    "Application_Number": "LCA19-0005395",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005396",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005397",
@@ -39509,12 +22434,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0005401",
    "Application_Number": "LCA19-0005401",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005402",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005403",
@@ -39529,12 +22449,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0005405",
    "Application_Number": "LCA19-0005405",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005406",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005407",
@@ -39542,29 +22457,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005408",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005409",
    "Application_Number": "LCA19-0005409",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005410",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005411",
    "Application_Number": "LCA19-0005411",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005412",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005413",
@@ -39580,11 +22480,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005415",
    "Application_Number": "LCA19-0005415",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005416",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005417",
@@ -39642,11 +22537,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005428",
-   "Application_Number": "LCA19-0005428",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005429",
    "Application_Number": "LCA19-0005429",
    "Waste_Review_Status": "Complete"
@@ -39664,37 +22554,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0005432",
    "Application_Number": "LCA19-0005432",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005433",
    "Application_Number": "LCA19-0005433",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005434",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005435",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005436",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005437",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005438",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005439",
@@ -39704,7 +22569,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0005440",
    "Application_Number": "LCA19-0005440",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005441",
@@ -39713,16 +22578,11 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005442",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005443",
    "Application_Number": "LCA19-0005443",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005444",
+   "License_Number": "",
    "Application_Number": "LCA19-0005444",
    "Waste_Review_Status": "Complete"
  },
@@ -39750,16 +22610,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA19-0005449",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005450",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005451",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005452",
@@ -39797,11 +22647,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005459",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005460",
    "Application_Number": "LCA19-0005460",
    "Waste_Review_Status": "Complete"
@@ -39810,11 +22655,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005461",
    "Application_Number": "LCA19-0005461",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005462",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005463",
@@ -39849,7 +22689,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005469",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005470",
@@ -39872,29 +22712,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005474",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005475",
    "Application_Number": "LCA19-0005475",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005476",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005477",
    "Application_Number": "LCA19-0005477",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL19-0005478",
-   "Application_Number": "LCA19-0005478",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005479",
@@ -39923,18 +22748,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005484",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0005485",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005486",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005487",
@@ -39990,11 +22805,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005497",
    "Application_Number": "LCA19-0005497",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005498",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005499",
@@ -40102,11 +22912,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005520",
-   "Application_Number": "LCA19-0005520",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005521",
    "Application_Number": "LCA19-0005521",
    "Waste_Review_Status": "Complete"
@@ -40127,19 +22932,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005525",
-   "Application_Number": "LCA19-0005525",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005526",
    "Application_Number": "LCA19-0005526",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005527",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005528",
@@ -40147,7 +22942,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005529",
+   "License_Number": "",
    "Application_Number": "LCA19-0005529",
    "Waste_Review_Status": "Complete"
  },
@@ -40307,11 +23102,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005561",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005562",
    "Application_Number": "LCA19-0005562",
    "Waste_Review_Status": "Complete"
@@ -40329,12 +23119,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005565",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005566",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005567",
@@ -40347,11 +23132,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005569",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005570",
    "Application_Number": "LCA19-0005570",
    "Waste_Review_Status": "Complete"
@@ -40360,11 +23140,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005571",
    "Application_Number": "LCA19-0005571",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005572",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005573",
@@ -40397,11 +23172,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005579",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005580",
    "Application_Number": "LCA19-0005580",
    "Waste_Review_Status": "Complete"
@@ -40425,11 +23195,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005584",
    "Application_Number": "LCA19-0005584",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005585",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005586",
@@ -40593,26 +23358,11 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005618",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0005619",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005620",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005621",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL19-0005622",
    "Application_Number": "LCA19-0005622",
    "Waste_Review_Status": "Complete"
  },
@@ -40625,11 +23375,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL19-0005624",
    "Application_Number": "LCA19-0005624",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005625",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005626",
@@ -40647,16 +23392,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005629",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005630",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005631",
    "Application_Number": "LCA19-0005631",
    "Waste_Review_Status": "Complete"
@@ -40667,11 +23402,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL19-0005633",
-   "Application_Number": "LCA19-0005633",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005634",
    "Application_Number": "LCA19-0005634",
    "Waste_Review_Status": "Complete"
@@ -40679,12 +23409,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL19-0005635",
    "Application_Number": "LCA19-0005635",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005636",
    "Application_Number": "LCA19-0005636",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005637",
@@ -40703,53 +23433,38 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005640",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005641",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA19-0005642",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005643",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005644",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005645",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005646",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005647",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005648",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005649",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL19-0005650",
@@ -40757,64 +23472,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005651",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005652",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005653",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005654",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005655",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005656",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005657",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005658",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005659",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL19-0005660",
    "Application_Number": "LCA19-0005660",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005661",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005662",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL19-0005663",
@@ -40827,11 +23487,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000001",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000002",
    "Application_Number": "LCA20-0000002",
    "Waste_Review_Status": "Complete"
@@ -40842,19 +23497,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000004",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000005",
    "Application_Number": "LCA20-0000005",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000006",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000007",
@@ -40864,52 +23509,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000008",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000009",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000010",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000011",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000012",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000013",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000014",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000015",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000016",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000017",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000018",
@@ -40924,47 +23534,37 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000020",
    "Application_Number": "LCA20-0000020",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000021",
    "Application_Number": "LCA20-0000021",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000022",
    "Application_Number": "LCA20-0000022",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000023",
    "Application_Number": "LCA20-0000023",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000024",
    "Application_Number": "LCA20-0000024",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000025",
    "Application_Number": "LCA20-0000025",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000026",
    "Application_Number": "LCA20-0000026",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000027",
-   "Application_Number": "LCA20-0000027",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000028",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000029",
@@ -40992,19 +23592,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000034",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000035",
    "Application_Number": "LCA20-0000035",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL20-0000036",
-   "Application_Number": "LCA20-0000036",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000037",
@@ -41022,49 +23612,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000040",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000041",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000042",
    "Application_Number": "LCA20-0000042",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000043",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000044",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000045",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000046",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000047",
-   "Application_Number": "LCA20-0000047",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000048",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -41077,14 +23627,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000051",
-   "Application_Number": "LCA20-0000051",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000052",
    "Application_Number": "LCA20-0000052",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000053",
@@ -41112,11 +23657,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000058",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000059",
    "Application_Number": "LCA20-0000059",
    "Waste_Review_Status": "Complete"
@@ -41132,14 +23672,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000062",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000063",
    "Application_Number": "LCA20-0000063",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000064",
@@ -41312,29 +23847,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000098",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000099",
-   "Application_Number": "LCA20-0000099",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000100",
    "Application_Number": "LCA20-0000100",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000101",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000102",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000103",
@@ -41344,10 +23864,10 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000104",
    "Application_Number": "LCA20-0000104",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000105",
+   "License_Number": "",
    "Application_Number": "LCA20-0000105",
    "Waste_Review_Status": "Complete"
  },
@@ -41364,12 +23884,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000108",
    "Application_Number": "LCA20-0000108",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000109",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000110",
@@ -41377,59 +23892,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000111",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000112",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000113",
    "Application_Number": "LCA20-0000113",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000114",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000115",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000116",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000117",
    "Application_Number": "LCA20-0000117",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000118",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000119",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000120",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000121",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000122",
@@ -41444,17 +23914,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000124",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000125",
    "Application_Number": "LCA20-0000125",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000126",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000127",
@@ -41472,7 +23937,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000130",
+   "License_Number": "",
    "Application_Number": "LCA20-0000130",
    "Waste_Review_Status": "Complete"
  },
@@ -41507,29 +23972,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000137",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000138",
    "Application_Number": "LCA20-0000138",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000139",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000140",
    "Application_Number": "LCA20-0000140",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000141",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000142",
@@ -41544,12 +23994,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000144",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000145",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000146",
@@ -41564,7 +24014,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000148",
    "Application_Number": "LCA20-0000148",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000149",
@@ -41582,11 +24032,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000152",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000153",
    "Application_Number": "LCA20-0000153",
    "Waste_Review_Status": "Complete"
@@ -41602,19 +24047,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000156",
-   "Application_Number": "LCA20-0000156",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000157",
    "Application_Number": "LCA20-0000157",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000158",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000159",
@@ -41633,43 +24068,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000162",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000163",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000164",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000165",
    "Application_Number": "LCA20-0000165",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000166",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000167",
    "Application_Number": "LCA20-0000167",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000168",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000169",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000170",
@@ -41704,37 +24109,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000176",
    "Application_Number": "LCA20-0000176",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000177",
    "Application_Number": "LCA20-0000177",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000178",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000179",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000180",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000181",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000182",
-   "Application_Number": "LCA20-0000182",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000183",
@@ -41767,29 +24147,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000189",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000190",
    "Application_Number": "LCA20-0000190",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000191",
-   "Application_Number": "LCA20-0000191",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000192",
    "Application_Number": "LCA20-0000192",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000193",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000194",
@@ -41802,11 +24167,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000196",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000197",
    "Application_Number": "LCA20-0000197",
    "Waste_Review_Status": "Complete"
@@ -41817,39 +24177,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000199",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000200",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000201",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000202",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000203",
    "Application_Number": "LCA20-0000203",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000204",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000205",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000206",
@@ -41857,19 +24187,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000207",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000208",
    "Application_Number": "LCA20-0000208",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000209",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000210",
@@ -41894,22 +24214,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000214",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000215",
    "Application_Number": "LCA20-0000215",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000216",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000217",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000218",
@@ -41927,16 +24237,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000221",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000222",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000223",
    "Application_Number": "LCA20-0000223",
    "Waste_Review_Status": "Complete"
@@ -41947,29 +24247,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000225",
-   "Application_Number": "LCA20-0000225",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000226",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000227",
    "Application_Number": "LCA20-0000227",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000228",
+   "License_Number": "",
    "Application_Number": "LCA20-0000228",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000229",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000230",
@@ -41995,11 +24280,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0000234",
    "Application_Number": "LCA20-0000234",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000235",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000236",
@@ -42037,29 +24317,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000243",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000244",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000245",
    "Application_Number": "LCA20-0000245",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000246",
    "Application_Number": "LCA20-0000246",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000247",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000248",
@@ -42087,11 +24352,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000253",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000254",
    "Application_Number": "LCA20-0000254",
    "Waste_Review_Status": "Complete"
@@ -42104,7 +24364,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000256",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000257",
@@ -42137,11 +24397,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000263",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000264",
    "Application_Number": "LCA20-0000264",
    "Waste_Review_Status": "Complete"
@@ -42162,19 +24417,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000268",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000269",
    "Application_Number": "LCA20-0000269",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000270",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000271",
@@ -42192,11 +24437,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000274",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000275",
    "Application_Number": "LCA20-0000275",
    "Waste_Review_Status": "Complete"
@@ -42212,11 +24452,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000278",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000279",
    "Application_Number": "LCA20-0000279",
    "Waste_Review_Status": "Complete"
@@ -42227,19 +24462,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000281",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000282",
    "Application_Number": "LCA20-0000282",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000283",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000284",
@@ -42248,13 +24473,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000285",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000286",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000287",
@@ -42262,34 +24482,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000288",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000289",
    "Application_Number": "LCA20-0000289",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000290",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000291",
-   "Application_Number": "LCA20-0000291",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000292",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000293",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -42307,34 +24502,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000297",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000298",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000299",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000300",
    "Application_Number": "LCA20-0000300",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000301",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000302",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000303",
@@ -42347,11 +24517,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000305",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000306",
    "Application_Number": "LCA20-0000306",
    "Waste_Review_Status": "Complete"
@@ -42362,29 +24527,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000308",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000309",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000310",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000311",
    "Application_Number": "LCA20-0000311",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000312",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000313",
@@ -42412,39 +24557,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
+   "License_Number": "CCL20-0000318",
    "Application_Number": "LCA20-0000318",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000319",
    "Application_Number": "LCA20-0000319",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000320",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000321",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000322",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000323",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000324",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000325",
@@ -42467,7 +24587,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000329",
+   "License_Number": "",
    "Application_Number": "LCA20-0000329",
    "Waste_Review_Status": "Complete"
  },
@@ -42488,23 +24608,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000333",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000334",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000335",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000336",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000337",
@@ -42517,19 +24622,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000339",
+   "License_Number": "",
    "Application_Number": "LCA20-0000339",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000340",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000341",
-   "Application_Number": "LCA20-0000341",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000342",
@@ -42542,11 +24637,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000344",
-   "Application_Number": "LCA20-0000344",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000345",
    "Application_Number": "LCA20-0000345",
    "Waste_Review_Status": "Complete"
@@ -42557,27 +24647,17 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000347",
+   "License_Number": "",
    "Application_Number": "LCA20-0000347",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000348",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000349",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000350",
    "Application_Number": "LCA20-0000350",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000351",
+   "License_Number": "",
    "Application_Number": "LCA20-0000351",
    "Waste_Review_Status": "Complete"
  },
@@ -42602,16 +24682,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000356",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000357",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000358",
    "Application_Number": "LCA20-0000358",
    "Waste_Review_Status": "Complete"
@@ -42627,44 +24697,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000361",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000362",
-   "Application_Number": "LCA20-0000362",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000363",
    "Application_Number": "LCA20-0000363",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000364",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000365",
    "Application_Number": "LCA20-0000365",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000366",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000367",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000368",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000369",
@@ -42693,16 +24733,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000374",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000375",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000376",
    "Application_Number": "LCA20-0000376",
    "Waste_Review_Status": "Complete"
  },
@@ -42714,27 +24744,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000378",
    "Application_Number": "LCA20-0000378",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000379",
    "Application_Number": "LCA20-0000379",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000380",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000381",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000382",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000383",
@@ -42742,29 +24757,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000384",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000385",
    "Application_Number": "LCA20-0000385",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000386",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000387",
    "Application_Number": "LCA20-0000387",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000388",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000389",
@@ -42792,17 +24792,12 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000394",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000395",
    "Application_Number": "LCA20-0000395",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000396",
+   "License_Number": "",
    "Application_Number": "LCA20-0000396",
    "Waste_Review_Status": "Complete"
  },
@@ -42812,7 +24807,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000398",
+   "License_Number": "",
    "Application_Number": "LCA20-0000398",
    "Waste_Review_Status": "Complete"
  },
@@ -42823,43 +24818,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000400",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000401",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000402",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000403",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000404",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000405",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000406",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000407",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000408",
@@ -42872,34 +24837,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000410",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000411",
    "Application_Number": "LCA20-0000411",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000412",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000413",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000414",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000415",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000416",
@@ -42917,11 +24857,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000419",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000420",
    "Application_Number": "LCA20-0000420",
    "Waste_Review_Status": "Complete"
@@ -42932,29 +24867,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000422",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000423",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000424",
    "Application_Number": "LCA20-0000424",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000425",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000426",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000427",
@@ -42998,11 +24913,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000435",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000436",
    "Waste_Review_Status": "Complete"
  },
@@ -43027,29 +24937,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000441",
+   "License_Number": "",
    "Application_Number": "LCA20-0000441",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000442",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000443",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000444",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000445",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000446",
@@ -43064,12 +24954,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000448",
    "Application_Number": "LCA20-0000448",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000449",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000450",
@@ -43102,24 +24987,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000456",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000457",
    "Application_Number": "LCA20-0000457",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000458",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000459",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000460",
@@ -43129,12 +24999,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000461",
    "Application_Number": "LCA20-0000461",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000462",
    "Application_Number": "LCA20-0000462",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000463",
@@ -43142,34 +25012,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000464",
+   "License_Number": "",
    "Application_Number": "LCA20-0000464",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000465",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000466",
    "Application_Number": "LCA20-0000466",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000467",
    "Application_Number": "LCA20-0000467",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000468",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000469",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000470",
@@ -43182,29 +25037,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000472",
+   "License_Number": "",
    "Application_Number": "LCA20-0000472",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000473",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000474",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000475",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000476",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000477",
@@ -43214,7 +25049,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000478",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000479",
@@ -43242,7 +25077,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000484",
+   "License_Number": "",
    "Application_Number": "LCA20-0000484",
    "Waste_Review_Status": "Complete"
  },
@@ -43262,34 +25097,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000488",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000489",
    "Application_Number": "LCA20-0000489",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000490",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000491",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000492",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000493",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000494",
@@ -43298,33 +25108,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000495",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000496",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000497",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000498",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000499",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000500",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000501",
@@ -43347,39 +25132,24 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000505",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000506",
    "Application_Number": "LCA20-0000506",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000507",
-   "Application_Number": "LCA20-0000507",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000508",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000509",
    "Application_Number": "LCA20-0000509",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000510",
    "Application_Number": "LCA20-0000510",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000511",
    "Application_Number": "LCA20-0000511",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000512",
@@ -43389,27 +25159,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000513",
    "Application_Number": "LCA20-0000513",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000514",
    "Application_Number": "LCA20-0000514",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000515",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000516",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000517",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000518",
@@ -43443,23 +25198,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000524",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000525",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000526",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000527",
    "Application_Number": "LCA20-0000527",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000528",
@@ -43469,7 +25214,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000529",
    "Application_Number": "LCA20-0000529",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000530",
@@ -43482,7 +25227,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000532",
+   "License_Number": "",
    "Application_Number": "LCA20-0000532",
    "Waste_Review_Status": "Complete"
  },
@@ -43494,97 +25239,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000534",
    "Application_Number": "LCA20-0000534",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000535",
-   "Application_Number": "LCA20-0000535",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000536",
-   "Application_Number": "LCA20-0000536",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000537",
-   "Application_Number": "LCA20-0000537",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000538",
-   "Application_Number": "LCA20-0000538",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000539",
-   "Application_Number": "LCA20-0000539",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000540",
-   "Application_Number": "LCA20-0000540",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000541",
-   "Application_Number": "LCA20-0000541",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000542",
-   "Application_Number": "LCA20-0000542",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000543",
-   "Application_Number": "LCA20-0000543",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000544",
-   "Application_Number": "LCA20-0000544",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000545",
-   "Application_Number": "LCA20-0000545",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000546",
-   "Application_Number": "LCA20-0000546",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000547",
-   "Application_Number": "LCA20-0000547",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000548",
-   "Application_Number": "LCA20-0000548",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000549",
-   "Application_Number": "LCA20-0000549",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000550",
-   "Application_Number": "LCA20-0000550",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000551",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000552",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -43600,31 +25255,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0000555",
    "Application_Number": "LCA20-0000555",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000556",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000557",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000558",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000559",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000560",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000561",
@@ -43654,7 +25284,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000566",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000567",
@@ -43669,7 +25299,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000569",
    "Application_Number": "LCA20-0000569",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -43679,17 +25309,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000571",
    "Application_Number": "LCA20-0000571",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000572",
    "Application_Number": "LCA20-0000572",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000573",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000574",
@@ -43704,7 +25329,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000576",
    "Application_Number": "LCA20-0000576",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000577",
@@ -43742,11 +25367,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000584",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000585",
    "Application_Number": "LCA20-0000585",
    "Waste_Review_Status": "Complete"
@@ -43782,7 +25402,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000592",
+   "License_Number": "",
    "Application_Number": "LCA20-0000592",
    "Waste_Review_Status": "Complete"
  },
@@ -43798,11 +25418,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000595",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000596",
    "Waste_Review_Status": "Complete"
  },
@@ -43810,11 +25425,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0000597",
    "Application_Number": "LCA20-0000597",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000598",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -43853,16 +25463,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000606",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000607",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000608",
    "Waste_Review_Status": "Complete"
  },
@@ -43898,11 +25498,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000615",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000616",
    "Waste_Review_Status": "Complete"
  },
@@ -43928,11 +25523,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000621",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000622",
    "Waste_Review_Status": "Complete"
  },
@@ -43949,72 +25539,27 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000625",
    "Application_Number": "LCA20-0000625",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000626",
    "Application_Number": "LCA20-0000626",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000627",
    "Application_Number": "LCA20-0000627",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000628",
    "Application_Number": "LCA20-0000628",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000629",
    "Application_Number": "LCA20-0000629",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000630",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000631",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000632",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000633",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000634",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000635",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000636",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000637",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000638",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -44047,11 +25592,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000645",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000646",
    "Application_Number": "LCA20-0000646",
    "Waste_Review_Status": "Complete"
@@ -44072,24 +25612,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000650",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000651",
    "Application_Number": "LCA20-0000651",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000652",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000653",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -44098,11 +25623,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000655",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000656",
    "Application_Number": "LCA20-0000656",
    "Waste_Review_Status": "Complete"
  },
@@ -44110,16 +25630,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0000657",
    "Application_Number": "LCA20-0000657",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000658",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000659",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000660",
@@ -44134,7 +25644,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000662",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000663",
@@ -44157,19 +25667,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000667",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000668",
    "Application_Number": "LCA20-0000668",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000669",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000670",
@@ -44179,12 +25679,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000671",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000672",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Incomplete"
  },
  {
    "License_Number": "CCL20-0000673",
@@ -44192,29 +25687,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000674",
+   "License_Number": "",
    "Application_Number": "LCA20-0000674",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000675",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000676",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000677",
    "Application_Number": "LCA20-0000677",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000678",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000679",
@@ -44222,7 +25702,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000680",
+   "License_Number": "",
    "Application_Number": "LCA20-0000680",
    "Waste_Review_Status": "Complete"
  },
@@ -44233,36 +25713,26 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000682",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000683",
    "Application_Number": "LCA20-0000683",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000684",
    "Application_Number": "LCA20-0000684",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000685",
    "Application_Number": "LCA20-0000685",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000686",
    "Application_Number": "LCA20-0000686",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000687",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "DUB20-00000-0",
+   "License_Number": "CCL20-0000688",
    "Application_Number": "LCA20-0000688",
    "Waste_Review_Status": "Complete"
  },
@@ -44402,11 +25872,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000716",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000717",
    "Application_Number": "LCA20-0000717",
    "Waste_Review_Status": "Complete"
@@ -44415,11 +25880,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0000718",
    "Application_Number": "LCA20-0000718",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000719",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000720",
@@ -44432,44 +25892,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000722",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000723",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000724",
    "Application_Number": "LCA20-0000724",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000725",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000726",
    "Application_Number": "LCA20-0000726",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000727",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000728",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000729",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000730",
@@ -44507,9 +25937,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000737",
+   "License_Number": "",
    "Application_Number": "LCA20-0000737",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -44532,11 +25962,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000742",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000743",
    "Application_Number": "LCA20-0000743",
    "Waste_Review_Status": "Complete"
@@ -44552,49 +25977,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000746",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000747",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000748",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000749",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000750",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000751",
    "Application_Number": "LCA20-0000751",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000752",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000753",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000754",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -44602,19 +25987,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000756",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000757",
    "Application_Number": "LCA20-0000757",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000758",
    "Application_Number": "LCA20-0000758",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000759",
@@ -44624,27 +26004,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000760",
    "Application_Number": "LCA20-0000760",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000761",
-   "Application_Number": "LCA20-0000761",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000762",
    "Application_Number": "LCA20-0000762",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000763",
    "Application_Number": "LCA20-0000763",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000764",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0000765",
@@ -44662,11 +26032,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000768",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000769",
    "Application_Number": "LCA20-0000769",
    "Waste_Review_Status": "Complete"
@@ -44682,22 +26047,12 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000772",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000773",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000774",
    "Application_Number": "LCA20-0000774",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000775",
+   "License_Number": "",
    "Application_Number": "LCA20-0000775",
    "Waste_Review_Status": "Complete"
  },
@@ -44714,12 +26069,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000778",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000779",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000780",
@@ -44733,23 +26083,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000782",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000783",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000784",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000785",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -44777,14 +26112,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000791",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000792",
    "Application_Number": "LCA20-0000792",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000793",
@@ -44804,12 +26134,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "CCL20-0000796",
    "Application_Number": "LCA20-0000796",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000797",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000798",
@@ -44868,11 +26193,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000809",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000810",
    "Waste_Review_Status": "Complete"
  },
@@ -44898,11 +26218,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000815",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000816",
    "Waste_Review_Status": "Complete"
  },
@@ -44923,11 +26238,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000820",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000821",
    "Waste_Review_Status": "Complete"
  },
@@ -44940,11 +26250,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA20-0000823",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000824",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -44963,11 +26268,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000828",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000829",
    "Waste_Review_Status": "Complete"
  },
@@ -44983,11 +26283,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000832",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000833",
    "Waste_Review_Status": "Complete"
  },
@@ -44995,31 +26290,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0000834",
    "Application_Number": "LCA20-0000834",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000835",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000836",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000837",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000838",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000839",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -45158,11 +26428,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000867",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000868",
    "Waste_Review_Status": "Complete"
  },
@@ -45202,19 +26467,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000876",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0000877",
    "Application_Number": "LCA20-0000877",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000878",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -45348,11 +26603,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000905",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000906",
    "Waste_Review_Status": "Complete"
  },
@@ -45428,18 +26678,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000921",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000922",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000923",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -45452,9 +26697,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000926",
+   "License_Number": "",
    "Application_Number": "LCA20-0000926",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -45563,18 +26808,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000948",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000949",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0000950",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0000951",
@@ -45682,7 +26917,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000972",
+   "License_Number": "",
    "Application_Number": "LCA20-0000972",
    "Waste_Review_Status": "Complete"
  },
@@ -45708,71 +26943,66 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000977",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0000978",
    "Application_Number": "LCA20-0000978",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000979",
+   "License_Number": "",
    "Application_Number": "LCA20-0000979",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000980",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000981",
+   "License_Number": "",
    "Application_Number": "LCA20-0000981",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000982",
+   "License_Number": "",
    "Application_Number": "LCA20-0000982",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000983",
+   "License_Number": "",
    "Application_Number": "LCA20-0000983",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000984",
+   "License_Number": "",
    "Application_Number": "LCA20-0000984",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000985",
+   "License_Number": "",
    "Application_Number": "LCA20-0000985",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000986",
+   "License_Number": "",
    "Application_Number": "LCA20-0000986",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000987",
+   "License_Number": "",
    "Application_Number": "LCA20-0000987",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000988",
+   "License_Number": "",
    "Application_Number": "LCA20-0000988",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000989",
+   "License_Number": "",
    "Application_Number": "LCA20-0000989",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000990",
+   "License_Number": "",
    "Application_Number": "LCA20-0000990",
    "Waste_Review_Status": "Complete"
  },
@@ -45782,12 +27012,12 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000992",
+   "License_Number": "",
    "Application_Number": "LCA20-0000992",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0000993",
+   "License_Number": "",
    "Application_Number": "LCA20-0000993",
    "Waste_Review_Status": "Complete"
  },
@@ -45827,12 +27057,12 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001003",
+   "License_Number": "",
    "Application_Number": "LCA20-0001003",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001004",
+   "License_Number": "",
    "Application_Number": "LCA20-0001004",
    "Waste_Review_Status": "Complete"
  },
@@ -45842,124 +27072,114 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001006",
+   "License_Number": "",
    "Application_Number": "LCA20-0001006",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001007",
+   "License_Number": "",
    "Application_Number": "LCA20-0001007",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001008",
+   "License_Number": "",
    "Application_Number": "LCA20-0001008",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001009",
+   "License_Number": "",
    "Application_Number": "LCA20-0001009",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001010",
+   "License_Number": "",
    "Application_Number": "LCA20-0001010",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001011",
+   "License_Number": "",
    "Application_Number": "LCA20-0001011",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001012",
+   "License_Number": "",
    "Application_Number": "LCA20-0001012",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001013",
+   "License_Number": "",
    "Application_Number": "LCA20-0001013",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001014",
+   "License_Number": "",
    "Application_Number": "LCA20-0001014",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001015",
+   "License_Number": "",
    "Application_Number": "LCA20-0001015",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001016",
+   "License_Number": "",
    "Application_Number": "LCA20-0001016",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001017",
+   "License_Number": "",
    "Application_Number": "LCA20-0001017",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001018",
+   "License_Number": "",
    "Application_Number": "LCA20-0001018",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001019",
+   "License_Number": "",
    "Application_Number": "LCA20-0001019",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001020",
+   "License_Number": "",
    "Application_Number": "LCA20-0001020",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001021",
+   "License_Number": "",
    "Application_Number": "LCA20-0001021",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001022",
+   "License_Number": "",
    "Application_Number": "LCA20-0001022",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001023",
+   "License_Number": "",
    "Application_Number": "LCA20-0001023",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001024",
+   "License_Number": "",
    "Application_Number": "LCA20-0001024",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001025",
+   "License_Number": "",
    "Application_Number": "LCA20-0001025",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001028",
    "Application_Number": "LCA20-0001028",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001029",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001030",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001031",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001032",
@@ -45972,29 +27192,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001034",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001035",
    "Application_Number": "LCA20-0001035",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001036",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001037",
    "Application_Number": "LCA20-0001037",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001038",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001039",
@@ -46014,17 +27219,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001044",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001046",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001047",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001048",
@@ -46034,62 +27234,62 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001049",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001050",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001051",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001052",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001053",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001054",
+   "License_Number": "",
    "Application_Number": "LCA20-0001054",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001055",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001056",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001057",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001058",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001059",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001060",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001061",
@@ -46099,7 +27299,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001062",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001065",
@@ -46113,33 +27313,18 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001068",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001069",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001070",
    "Application_Number": "LCA20-0001070",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001072",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001073",
    "Application_Number": "LCA20-0001073",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001074",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001075",
@@ -46242,19 +27427,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001096",
+   "License_Number": "",
    "Application_Number": "LCA20-0001096",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001097",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001098",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001099",
@@ -46332,14 +27507,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001114",
+   "License_Number": "",
    "Application_Number": "LCA20-0001114",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001115",
+   "License_Number": "",
    "Application_Number": "LCA20-0001115",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001116",
@@ -46349,7 +27524,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001117",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001118",
@@ -46368,53 +27543,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001122",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001123",
-   "Application_Number": "LCA20-0001123",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001124",
-   "Application_Number": "LCA20-0001124",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001125",
-   "Application_Number": "LCA20-0001125",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001126",
-   "Application_Number": "LCA20-0001126",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001127",
    "Application_Number": "LCA20-0001127",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001128",
-   "Application_Number": "LCA20-0001128",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001129",
+   "License_Number": "",
    "Application_Number": "LCA20-0001129",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL20-0001130",
-   "Application_Number": "LCA20-0001130",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001131",
-   "Application_Number": "LCA20-0001131",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001132",
@@ -46422,34 +27557,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001133",
-   "Application_Number": "LCA20-0001133",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001134",
    "Application_Number": "LCA20-0001134",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "CCL20-0001135",
-   "Application_Number": "LCA20-0001135",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001136",
-   "Application_Number": "LCA20-0001136",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001137",
-   "Application_Number": "LCA20-0001137",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001138",
-   "Application_Number": "LCA20-0001138",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001139",
@@ -46457,24 +27567,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001140",
-   "Application_Number": "LCA20-0001140",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001141",
-   "Application_Number": "LCA20-0001141",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001142",
-   "Application_Number": "LCA20-0001142",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
    "Application_Number": "LCA20-0001143",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001144",
@@ -46488,11 +27583,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001146",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001147",
    "Waste_Review_Status": "Complete"
  },
@@ -46500,11 +27590,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0001148",
    "Application_Number": "LCA20-0001148",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001149",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001150",
@@ -46532,19 +27617,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001156",
+   "License_Number": "",
    "Application_Number": "LCA20-0001156",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001157",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001158",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001159",
@@ -46562,9 +27637,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001162",
+   "License_Number": "",
    "Application_Number": "LCA20-0001162",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001163",
@@ -46582,7 +27657,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001166",
+   "License_Number": "",
    "Application_Number": "LCA20-0001166",
    "Waste_Review_Status": "Complete"
  },
@@ -46597,11 +27672,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001170",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001171",
    "Application_Number": "LCA20-0001171",
    "Waste_Review_Status": "Complete"
@@ -46609,17 +27679,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001172",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001173",
    "Application_Number": "LCA20-0001173",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001174",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -46637,16 +27702,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001179",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001180",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001181",
    "Application_Number": "LCA20-0001181",
    "Waste_Review_Status": "Complete"
@@ -46660,31 +27715,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0001183",
    "Application_Number": "LCA20-0001183",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001184",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001185",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001186",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001187",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001188",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -46704,37 +27734,37 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001192",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001193",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001194",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001195",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001196",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001197",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001198",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001199",
@@ -46744,57 +27774,57 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001200",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001201",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001202",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001203",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001204",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001205",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001206",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001207",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001208",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001209",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001210",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001211",
@@ -46819,82 +27849,77 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001215",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001216",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001217",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001218",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001219",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001220",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001221",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001222",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001223",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001224",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001225",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001226",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001227",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001228",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001229",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001230",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -46904,67 +27929,52 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001232",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001233",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001234",
+   "License_Number": "",
    "Application_Number": "LCA20-0001234",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001235",
+   "License_Number": "",
    "Application_Number": "LCA20-0001235",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001236",
+   "License_Number": "",
    "Application_Number": "LCA20-0001236",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001237",
+   "License_Number": "",
    "Application_Number": "LCA20-0001237",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001238",
+   "License_Number": "",
    "Application_Number": "LCA20-0001238",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001239",
+   "License_Number": "",
    "Application_Number": "LCA20-0001239",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001240",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001241",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001242",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001243",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001244",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001245",
@@ -46987,14 +27997,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001249",
-   "Application_Number": "LCA20-0001249",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
-   "Application_Number": "LCA20-0001250",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0001249",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001252",
@@ -47013,11 +28018,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001256",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001257",
    "Waste_Review_Status": "Complete"
  },
@@ -47028,23 +28028,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001259",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001260",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001261",
    "Application_Number": "LCA20-0001261",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001262",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001263",
@@ -47077,24 +28062,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001269",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001270",
    "Application_Number": "LCA20-0001270",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001271",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001272",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001273",
@@ -47102,19 +28072,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001274",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001275",
    "Application_Number": "LCA20-0001275",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001276",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001279",
@@ -47127,9 +28087,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001281",
+   "License_Number": "",
    "Application_Number": "LCA20-0001281",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001282",
@@ -47147,19 +28107,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001285",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001286",
    "Application_Number": "LCA20-0001286",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001287",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001289",
@@ -47227,7 +28177,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001302",
+   "License_Number": "",
    "Application_Number": "LCA20-0001302",
    "Waste_Review_Status": "Complete"
  },
@@ -47235,11 +28185,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0001303",
    "Application_Number": "LCA20-0001303",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001304",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001305",
@@ -47272,44 +28217,19 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001313",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001314",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001315",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001316",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001317",
    "Application_Number": "LCA20-0001317",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001318",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001320",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001321",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001322",
@@ -47319,52 +28239,47 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001323",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001324",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001325",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001326",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001327",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001328",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001329",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001331",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001332",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001333",
+   "License_Number": "",
    "Application_Number": "LCA20-0001333",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001334",
@@ -47374,10 +28289,10 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001335",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001336",
+   "License_Number": "",
    "Application_Number": "LCA20-0001336",
    "Waste_Review_Status": "Complete"
  },
@@ -47387,24 +28302,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001339",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001340",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001341",
    "Application_Number": "LCA20-0001341",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001342",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001343",
@@ -47413,18 +28313,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001344",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001345",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001346",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001347",
@@ -47442,11 +28332,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001350",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001351",
    "Application_Number": "LCA20-0001351",
    "Waste_Review_Status": "Complete"
@@ -47462,11 +28347,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001354",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001356",
    "Application_Number": "LCA20-0001356",
    "Waste_Review_Status": "Complete"
@@ -47477,34 +28357,14 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001358",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001359",
    "Application_Number": "LCA20-0001359",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001360",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001361",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001362",
    "Application_Number": "LCA20-0001362",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001363",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001364",
@@ -47520,11 +28380,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0001366",
    "Application_Number": "LCA20-0001366",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001367",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -47553,13 +28408,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001374",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001376",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001377",
@@ -47582,7 +28432,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001381",
+   "License_Number": "",
    "Application_Number": "LCA20-0001381",
    "Waste_Review_Status": "Complete"
  },
@@ -47674,7 +28524,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001399",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001400",
@@ -47718,11 +28568,6 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001408",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001409",
    "Waste_Review_Status": "Complete"
  },
@@ -47737,7 +28582,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001412",
+   "License_Number": "",
    "Application_Number": "LCA20-0001412",
    "Waste_Review_Status": "Complete"
  },
@@ -47859,7 +28704,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001437",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001438",
@@ -47894,7 +28739,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001444",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -47924,7 +28769,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001451",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001452",
@@ -47957,11 +28802,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001458",
-   "Application_Number": "LCA20-0001458",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001459",
    "Application_Number": "LCA20-0001459",
    "Waste_Review_Status": "Complete"
@@ -47970,331 +28810,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0001460",
    "Application_Number": "LCA20-0001460",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001461",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001462",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001463",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001464",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001465",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001466",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001467",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001468",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001469",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001470",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001471",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001472",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001473",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001474",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001475",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001476",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001477",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001478",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001479",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001480",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001481",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001482",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001483",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001484",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001485",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001486",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001487",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001488",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001489",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001490",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001491",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001492",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001493",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001494",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001495",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001496",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001497",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001498",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001499",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001500",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001501",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001502",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001503",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001504",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001505",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001506",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001507",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001508",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001509",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001510",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001511",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001512",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001513",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001514",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001515",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001516",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001517",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001518",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001519",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001520",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001521",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001522",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001523",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001524",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001525",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001526",
@@ -48312,11 +28827,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001529",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001530",
    "Application_Number": "LCA20-0001530",
    "Waste_Review_Status": "Complete"
@@ -48324,7 +28834,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001531",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001532",
@@ -48404,12 +28914,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001547",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001549",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001550",
@@ -48449,7 +28954,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001557",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001558",
@@ -48459,27 +28964,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001559",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001560",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001561",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001562",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001563",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001564",
@@ -48532,14 +29017,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001574",
-   "Application_Number": "LCA20-0001574",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
-   "Application_Number": "LCA20-0001575",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0001574",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001576",
@@ -48562,29 +29042,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001580",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001582",
    "Application_Number": "LCA20-0001582",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001583",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001584",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001585",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001586",
@@ -48594,27 +29054,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001587",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001589",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001590",
    "Application_Number": "LCA20-0001590",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001591",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001592",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001593",
@@ -48647,16 +29097,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001600",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001602",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001603",
    "Application_Number": "LCA20-0001603",
    "Waste_Review_Status": "Complete"
@@ -48685,16 +29125,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0001608",
    "Application_Number": "LCA20-0001608",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001609",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001610",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -48757,21 +29187,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001623",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001624",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001625",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001626",
    "Application_Number": "LCA20-0001626",
    "Waste_Review_Status": "Complete"
@@ -48779,17 +29194,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001627",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001628",
    "Application_Number": "LCA20-0001628",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001629",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001630",
@@ -48839,7 +29249,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001639",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001640",
@@ -48853,23 +29263,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001642",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001643",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001644",
    "Application_Number": "LCA20-0001644",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001645",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001646",
@@ -48924,7 +29324,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001656",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -48932,7 +29332,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001659",
+   "License_Number": "",
    "Application_Number": "LCA20-0001659",
    "Waste_Review_Status": "Complete"
  },
@@ -48940,11 +29340,6 @@ var WASTEREVIEWarray =[
    "License_Number": "",
    "Application_Number": "LCA20-0001660",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001661",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001662",
@@ -48955,21 +29350,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0001664",
    "Application_Number": "LCA20-0001664",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001669",
-   "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001670",
-   "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001675",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -49009,12 +29389,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001683",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001684",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -49043,63 +29418,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001690",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001692",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001693",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001694",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001695",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001696",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001697",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001698",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001699",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001700",
    "Application_Number": "LCA20-0001700",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001701",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001702",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001703",
@@ -49122,49 +29447,34 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001708",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001709",
    "Application_Number": "LCA20-0001709",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001711",
+   "License_Number": "",
    "Application_Number": "LCA20-0001711",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001712",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001714",
    "Application_Number": "LCA20-0001714",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001715",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001716",
+   "License_Number": "",
    "Application_Number": "LCA20-0001716",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001717",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001718",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -49172,7 +29482,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001722",
+   "License_Number": "",
    "Application_Number": "LCA20-0001722",
    "Waste_Review_Status": "Complete"
  },
@@ -49183,18 +29493,8 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001726",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001727",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001728",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001729",
@@ -49202,9 +29502,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
+   "License_Number": "CCL20-0001730",
    "Application_Number": "LCA20-0001730",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001731",
@@ -49214,7 +29514,7 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001732",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -49229,62 +29529,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001735",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001736",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001737",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001738",
    "Application_Number": "LCA20-0001738",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001739",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001740",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001741",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001742",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001743",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001744",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001745",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001746",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001747",
@@ -49294,87 +29549,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001748",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001749",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001751",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001753",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001754",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001755",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001756",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001757",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001758",
    "Application_Number": "LCA20-0001758",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001759",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001760",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001761",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001762",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001763",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001764",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001766",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001767",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -49397,21 +29582,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001772",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001773",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001774",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001775",
    "Application_Number": "LCA20-0001775",
    "Waste_Review_Status": "Complete"
@@ -49422,9 +29592,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
+   "License_Number": "CCL20-0001777",
    "Application_Number": "LCA20-0001777",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001778",
@@ -49439,12 +29609,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001784",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001785",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001786",
@@ -49459,42 +29629,17 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001788",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001789",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001790",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001791",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001792",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001793",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001794",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001795",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -49505,21 +29650,6 @@ var WASTEREVIEWarray =[
    "License_Number": "CCL20-0001798",
    "Application_Number": "LCA20-0001798",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001799",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001800",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001801",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001802",
@@ -49542,14 +29672,9 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001806",
+   "License_Number": "",
    "Application_Number": "LCA20-0001806",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001807",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "CCL20-0001808",
@@ -49562,11 +29687,6 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001811",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0001812",
    "Application_Number": "LCA20-0001812",
    "Waste_Review_Status": "Complete"
@@ -49574,17 +29694,12 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001813",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001814",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001815",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -49594,10 +29709,10 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001817",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001818",
+   "License_Number": "",
    "Application_Number": "LCA20-0001818",
    "Waste_Review_Status": "Complete"
  },
@@ -49608,68 +29723,28 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001820",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001821",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001822",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001823",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001824",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001825",
+   "License_Number": "",
    "Application_Number": "LCA20-0001825",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001826",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001827",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001828",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001829",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001830",
-   "Application_Number": "LCA20-0001830",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001831",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0001828",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001832",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0001829",
+   "Waste_Review_Status": "Complete"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001830",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001833",
@@ -49678,18 +29753,13 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001834",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001835",
    "Application_Number": "LCA20-0001835",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001836",
+   "License_Number": "",
    "Application_Number": "LCA20-0001836",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001837",
@@ -49697,7 +29767,7 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001838",
+   "License_Number": "",
    "Application_Number": "LCA20-0001838",
    "Waste_Review_Status": "Complete"
  },
@@ -49707,289 +29777,179 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001840",
+   "License_Number": "",
    "Application_Number": "LCA20-0001840",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001841",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001845",
+   "License_Number": "",
    "Application_Number": "LCA20-0001845",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001849",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001850",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001851",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001852",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001853",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001854",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001855",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001857",
    "Application_Number": "LCA20-0001857",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001859",
-   "Application_Number": "LCA20-0001859",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "",
-   "Application_Number": "LCA20-0001860",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0001859",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001861",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001862",
+   "License_Number": "",
    "Application_Number": "LCA20-0001862",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001863",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001865",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001866",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001867",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001868",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001869",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001870",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001871",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001872",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001873",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001874",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001875",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001876",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001877",
    "Application_Number": "LCA20-0001877",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001878",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001879",
    "Application_Number": "LCA20-0001879",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001880",
+   "License_Number": "",
    "Application_Number": "LCA20-0001880",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001881",
+   "License_Number": "",
    "Application_Number": "LCA20-0001881",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001882",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001883",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001884",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001885",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001886",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001887",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001888",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001889",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001890",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001891",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001892",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001893",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001894",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001895",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001896",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001897",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001898",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001899",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001901",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001902",
+   "License_Number": "",
    "Application_Number": "LCA20-0001902",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001903",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001904",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001905",
    "Waste_Review_Status": "Complete"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001906",
-   "Waste_Review_Status": ""
  },
  {
    "License_Number": "",
@@ -50004,32 +29964,22 @@ var WASTEREVIEWarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001910",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001911",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001912",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001913",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001914",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001915",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001916",
@@ -50038,43 +29988,23 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001919",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001921",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001922",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001923",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001924",
    "Application_Number": "LCA20-0001924",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001925",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001926",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001927",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001928",
@@ -50093,41 +30023,11 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001931",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001932",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001933",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001934",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001935",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001936",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001937",
    "Application_Number": "LCA20-0001937",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001938",
+   "License_Number": "",
    "Application_Number": "LCA20-0001938",
    "Waste_Review_Status": "Complete"
  },
@@ -50137,29 +30037,29 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001942",
+   "License_Number": "",
    "Application_Number": "LCA20-0001942",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001943",
+   "License_Number": "",
    "Application_Number": "LCA20-0001943",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001944",
+   "License_Number": "",
    "Application_Number": "LCA20-0001944",
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0001945",
+   "License_Number": "",
    "Application_Number": "LCA20-0001945",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001946",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0001947",
@@ -50173,173 +30073,28 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001949",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001950",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001951",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001952",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001953",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001954",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001955",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001956",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0001957",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001958",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001960",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001961",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001962",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
+   "License_Number": "CCL20-0001963",
    "Application_Number": "LCA20-0001963",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001964",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001965",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001967",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001968",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001969",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001970",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001971",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001972",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001973",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001974",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001975",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001976",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001977",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001978",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001979",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001980",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001981",
    "Application_Number": "LCA20-0001981",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0001982",
-   "Application_Number": "LCA20-0001982",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001983",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001984",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -50347,114 +30102,34 @@ var WASTEREVIEWarray =[
    "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001990",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001992",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001993",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001994",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001996",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001997",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001998",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001999",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002000",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002001",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002003",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002004",
-   "Waste_Review_Status": ""
- },
- {
    "License_Number": "CCL20-0002005",
    "Application_Number": "LCA20-0002005",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002006",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0002007",
    "Application_Number": "LCA20-0002007",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0002008",
    "Application_Number": "LCA20-0002008",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0002009",
    "Application_Number": "LCA20-0002009",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002011",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002012",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002013",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002014",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002016",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0002017",
@@ -50463,328 +30138,108 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002018",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002019",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002020",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002021",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002022",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0002023",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002024",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002025",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002026",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002027",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002028",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002029",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002030",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002031",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002032",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002033",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002035",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002036",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002037",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002038",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002039",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002040",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002041",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002042",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002043",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002044",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002045",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002046",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002047",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002048",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002049",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0002050",
+   "License_Number": "",
    "Application_Number": "LCA20-0002050",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002051",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002054",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002056",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002058",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002059",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002060",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002061",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002063",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002065",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002066",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002067",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002068",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002070",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002071",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002072",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002078",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002080",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002081",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002082",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002083",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002084",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002085",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002086",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002087",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002088",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002089",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002090",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002091",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002092",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002093",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002095",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002096",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002097",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002098",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0002099",
@@ -50793,308 +30248,113 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002100",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002101",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002102",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002103",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0002106",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002107",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002108",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002109",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002110",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002111",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002112",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002113",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002114",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002115",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002117",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002118",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002119",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002120",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002121",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002122",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002123",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002125",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002126",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002127",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002128",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002129",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002130",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002131",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002132",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002133",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002134",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002135",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002136",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002137",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002138",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002139",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002140",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002141",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002143",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002144",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002145",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002146",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002147",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002148",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002149",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002150",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002151",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002152",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002153",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002154",
    "Application_Number": "LCA20-0002154",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002155",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002156",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002158",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002159",
    "Application_Number": "LCA20-0002159",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002160",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002161",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002162",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002163",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002165",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002166",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002167",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
@@ -51103,3124 +30363,529 @@ var WASTEREVIEWarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002172",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0002173",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002174",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002175",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002176",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002177",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002178",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002179",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002180",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002181",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002182",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002183",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002184",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002186",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002187",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002188",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002189",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002190",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002191",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002192",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002193",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "CCL20-0002194",
+   "License_Number": "",
    "Application_Number": "LCA20-0002194",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002195",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002196",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002197",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002198",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002204",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002205",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002206",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002207",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002208",
    "Application_Number": "LCA20-0002208",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002211",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002212",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002213",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002214",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002215",
    "Application_Number": "LCA20-0002215",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002216",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002217",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002218",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002219",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002220",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002221",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002222",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002223",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002224",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002225",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002226",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002227",
    "Application_Number": "LCA20-0002227",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002228",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0002229",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002230",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002231",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002232",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002233",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002234",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002235",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002236",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002237",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002238",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002240",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002241",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002242",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002243",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002244",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002245",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002246",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002247",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002248",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002249",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002250",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002251",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002252",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002257",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002261",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002262",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002254",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002263",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002264",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002265",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002266",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002267",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002268",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002269",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002270",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002271",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002272",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002273",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002274",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002275",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002276",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002277",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002278",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002279",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002280",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002281",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002282",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002283",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002284",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002285",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002286",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002287",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002288",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002289",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002290",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002291",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002292",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002293",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002294",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002295",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002296",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002297",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002298",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002299",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002300",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002302",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002303",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002304",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002305",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002306",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002307",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002308",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002310",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002311",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002313",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002314",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002315",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002316",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002317",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002318",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002320",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002321",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002322",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002323",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002324",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002325",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002326",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002327",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002328",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002329",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002330",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002331",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002332",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002334",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002335",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002336",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002337",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002338",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002339",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002340",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002341",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002342",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002344",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002346",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002347",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002348",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002349",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002350",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002351",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002352",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002353",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002354",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002355",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002356",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002357",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002358",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002359",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002360",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "CCL20-0002361",
    "Application_Number": "LCA20-0002361",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002362",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002364",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002365",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002369",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002370",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002371",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002372",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002375",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002376",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002377",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002378",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002379",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Incomplete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002380",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002384",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002385",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002386",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002387",
    "Application_Number": "LCA20-0002387",
    "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002388",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002389",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002390",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002391",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002392",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002393",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002398",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002402",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002414",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002416",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA20-0002417",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002418",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002419",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002420",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002421",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002422",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
+   "License_Number": "CCL20-0002423",
    "Application_Number": "LCA20-0002423",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002424",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002425",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002428",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002430",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002431",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002432",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002433",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002434",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002435",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002437",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002438",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002439",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002441",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002442",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002443",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002444",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002445",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002446",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002447",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002448",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002449",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002450",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002451",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002452",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002456",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002457",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002458",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002459",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002460",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002461",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002462",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002463",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002464",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002465",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002466",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002467",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002468",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002469",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002470",
-   "Application_Number": "LCA20-0002470",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002471",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002472",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002473",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002476",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002479",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002481",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002482",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002483",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002484",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002485",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002486",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002487",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002488",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002489",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002490",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002491",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002492",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002493",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002494",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002495",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002496",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002497",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002498",
-   "Application_Number": "LCA20-0002498",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002499",
-   "Application_Number": "LCA20-0002499",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002500",
-   "Application_Number": "LCA20-0002500",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "CCL20-0002501",
-   "Application_Number": "LCA20-0002501",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002513",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002514",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002516",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002517",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002518",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002519",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002522",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001842",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002063",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002254",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002256",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002319",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002363",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002367",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002368",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002426",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002440",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002428",
+   "Waste_Review_Status": "Complete"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002431",
+   "Waste_Review_Status": "Complete"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002434",
+   "Waste_Review_Status": "Complete"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002435",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002454",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002455",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002470",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002477",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002478",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002471",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002480",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002504",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002487",
+   "Waste_Review_Status": "Complete"
+ },
+ {
+   "License_Number": "CCL20-0002498",
+   "Application_Number": "LCA20-0002498",
+   "Waste_Review_Status": "Complete"
+ },
+ {
+   "License_Number": "CCL20-0002499",
+   "Application_Number": "LCA20-0002499",
+   "Waste_Review_Status": "Complete"
+ },
+ {
+   "License_Number": "CCL20-0002500",
+   "Application_Number": "LCA20-0002500",
+   "Waste_Review_Status": "Complete"
+ },
+ {
+   "License_Number": "CCL20-0002501",
+   "Application_Number": "LCA20-0002501",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002506",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002507",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002514",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002508",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002515",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002521",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002526",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002528",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002522",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002530",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002533",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002534",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002537",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002538",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002539",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002551",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002552",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002553",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002555",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002556",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002557",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002558",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002559",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002560",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002561",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002562",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002563",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002565",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002566",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002567",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002568",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002569",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002570",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002571",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002575",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002576",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002577",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002578",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002580",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002581",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002582",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002583",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002584",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002585",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002587",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002588",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002589",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002590",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002596",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002607",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002621",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002622",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002623",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002624",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002625",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002627",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002628",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002629",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002630",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002632",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002633",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002635",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002637",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002638",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002639",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002640",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002641",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002642",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002643",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002645",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002676",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002309",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002509",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002510",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002532",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002535",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002536",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002540",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002541",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002543",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002544",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002545",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002546",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002547",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002548",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002549",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002550",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002554",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002572",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002573",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002574",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002579",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002591",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002592",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002593",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002594",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002607",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002595",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002625",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002597",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002598",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002599",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002600",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002601",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002602",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002603",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002604",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002605",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002606",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002608",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002609",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002610",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002611",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002612",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002613",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002614",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002615",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002616",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002617",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002618",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002619",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002620",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002631",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002634",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002796",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002797",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002798",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002799",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002800",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002801",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002802",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002803",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002804",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002805",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002806",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002807",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002808",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002809",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002810",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002811",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002812",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002813",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002814",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002817",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002636",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002644",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002646",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002647",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002651",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002652",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002653",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002654",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002656",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002657",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002658",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002659",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002660",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002661",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002662",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002663",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002664",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002666",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002667",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002668",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002669",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002670",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002671",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002672",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002673",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002674",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002675",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002677",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002678",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002679",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002680",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002681",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002682",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002683",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002684",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002685",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002686",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002687",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002688",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002689",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002690",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002691",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002692",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002693",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002694",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002696",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002697",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002698",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002699",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002700",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002701",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002702",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002703",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002704",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002705",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002706",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002707",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002708",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002709",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002711",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002712",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002713",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002714",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002715",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002716",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002717",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002718",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002719",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002720",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002721",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002722",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002723",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002724",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002725",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002726",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002727",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002728",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002729",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002730",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002731",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002732",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002733",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002734",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002735",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002736",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002737",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002738",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002739",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002740",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002741",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002742",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002743",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002744",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002745",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002746",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002747",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002748",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002749",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002751",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002752",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002753",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002754",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002755",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002756",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002757",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002758",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002759",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002760",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002761",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002762",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002763",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002764",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002765",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002766",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002767",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002768",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002769",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002770",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002771",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002772",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002773",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002774",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002775",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002776",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002777",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002779",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002780",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002781",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002782",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002783",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002784",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002785",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002786",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002787",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002788",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002789",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002790",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002791",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002792",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002793",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002794",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002795",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002818",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002819",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002820",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002821",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002823",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002632",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002832",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002835",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002836",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002837",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002839",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002840",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002841",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002842",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002843",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002844",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002845",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002846",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002847",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002848",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002866",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002867",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002868",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002869",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002870",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002871",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002872",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002873",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002874",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002875",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002876",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002878",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002881",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002882",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002883",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002885",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002886",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002887",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002889",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002892",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0002894",
-   "Waste_Review_Status": ""
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002898",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002917",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002900",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002918",
+   "Waste_Review_Status": "Complete"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002901",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002902",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002903",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002904",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002906",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002908",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002909",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002910",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002911",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002912",
-   "Waste_Review_Status": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0002925",
-   "Waste_Review_Status": ""
+   "Application_Number": "LCA20-0002986",
+   "Waste_Review_Status": "Complete"
  }
- ];
+];
  return WASTEREVIEWarray;
 }

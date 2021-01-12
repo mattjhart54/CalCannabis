@@ -1,7 +1,7 @@
 function WASTESCRIPTData (){
 
 var WASTESCRIPTarray =[
-{
+ {
    "License_Number": "CCL18-0000004",
    "Application_Number": "LCA18-0000004",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -84,6 +84,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000021",
    "Application_Number": "LCA18-0000021",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0000022",
+   "Application_Number": "LCA18-0000022",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -582,6 +587,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL18-0000168",
+   "Application_Number": "LCA18-0000168",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0000169",
    "Application_Number": "LCA18-0000169",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -687,6 +697,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000195",
+   "Application_Number": "LCA18-0000195",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000196",
    "Application_Number": "LCA18-0000196",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -715,6 +730,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0000209",
    "Application_Number": "LCA18-0000209",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000210",
+   "Application_Number": "LCA18-0000210",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000212",
@@ -867,6 +887,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000252",
+   "Application_Number": "LCA18-0000252",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000253",
+   "Application_Number": "LCA18-0000253",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0000254",
    "Application_Number": "LCA18-0000254",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -919,6 +949,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000269",
    "Application_Number": "LCA18-0000269",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000271",
+   "Application_Number": "LCA18-0000271",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -989,7 +1024,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000294",
    "Application_Number": "LCA18-0000294",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL18-0000294",
@@ -1422,6 +1457,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000390",
+   "Application_Number": "LCA18-0000390",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0000391",
    "Application_Number": "LCA18-0000391",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -1444,6 +1484,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000394",
    "Application_Number": "LCA18-0000394",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0000395",
+   "Application_Number": "LCA18-0000395",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -1557,6 +1602,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
+   "License_Number": "CCL18-0000416",
+   "Application_Number": "LCA18-0000416",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000417",
    "Application_Number": "LCA18-0000417",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
@@ -1595,6 +1645,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0000424",
    "Application_Number": "LCA18-0000424",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL18-0000424",
+   "Application_Number": "LCA18-0000424",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000425",
@@ -1677,9 +1732,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000444",
+   "Application_Number": "LCA18-0000444",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000445",
    "Application_Number": "LCA18-0000445",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000445",
+   "Application_Number": "LCA18-0000445",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000448",
@@ -1764,6 +1829,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000467",
    "Application_Number": "LCA18-0000467",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000469",
+   "Application_Number": "LCA18-0000469",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -2089,16 +2159,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000535",
    "Application_Number": "LCA18-0000535",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000535",
    "Application_Number": "LCA18-0000535",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL18-0000536",
-   "Application_Number": "LCA18-0000536",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -2107,8 +2172,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL18-0000537",
-   "Application_Number": "LCA18-0000537",
+   "License_Number": "CCL18-0000536",
+   "Application_Number": "LCA18-0000536",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -2117,8 +2182,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL18-0000538",
-   "Application_Number": "LCA18-0000538",
+   "License_Number": "CCL18-0000537",
+   "Application_Number": "LCA18-0000537",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -2127,8 +2192,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL18-0000539",
-   "Application_Number": "LCA18-0000539",
+   "License_Number": "CCL18-0000538",
+   "Application_Number": "LCA18-0000538",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -2137,8 +2202,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL18-0000540",
-   "Application_Number": "LCA18-0000540",
+   "License_Number": "CCL18-0000539",
+   "Application_Number": "LCA18-0000539",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -2147,14 +2212,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL18-0000541",
-   "Application_Number": "LCA18-0000541",
+   "License_Number": "CCL18-0000540",
+   "Application_Number": "LCA18-0000540",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000541",
    "Application_Number": "LCA18-0000541",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0000541",
+   "Application_Number": "LCA18-0000541",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000542",
@@ -2174,12 +2244,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000544",
    "Application_Number": "LCA18-0000544",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000544",
    "Application_Number": "LCA18-0000544",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000545",
@@ -2299,12 +2369,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000575",
    "Application_Number": "LCA18-0000575",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000575",
    "Application_Number": "LCA18-0000575",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000576",
@@ -2335,6 +2405,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0000586",
    "Application_Number": "LCA18-0000586",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0000587",
+   "Application_Number": "LCA18-0000587",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000590",
@@ -2434,12 +2509,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000624",
    "Application_Number": "LCA18-0000624",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000624",
    "Application_Number": "LCA18-0000624",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000625",
@@ -2484,12 +2559,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000646",
    "Application_Number": "LCA18-0000646",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000646",
    "Application_Number": "LCA18-0000646",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000648",
@@ -2577,6 +2652,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000665",
+   "Application_Number": "LCA18-0000665",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000666",
    "Application_Number": "LCA18-0000666",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -2585,6 +2665,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0000667",
    "Application_Number": "LCA18-0000667",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000667",
+   "Application_Number": "LCA18-0000667",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000668",
@@ -2709,16 +2794,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000695",
    "Application_Number": "LCA18-0000695",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000695",
    "Application_Number": "LCA18-0000695",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0000696",
-   "Application_Number": "LCA18-0000696",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -2727,14 +2807,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL18-0000697",
-   "Application_Number": "LCA18-0000697",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "License_Number": "CCL18-0000696",
+   "Application_Number": "LCA18-0000696",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000697",
    "Application_Number": "LCA18-0000697",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0000697",
+   "Application_Number": "LCA18-0000697",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000698",
@@ -2754,12 +2839,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000700",
    "Application_Number": "LCA18-0000700",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000700",
    "Application_Number": "LCA18-0000700",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0000701",
@@ -2790,6 +2875,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0000708",
    "Application_Number": "LCA18-0000708",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000708",
+   "Application_Number": "LCA18-0000708",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000709",
@@ -2824,12 +2914,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000717",
    "Application_Number": "LCA18-0000717",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000717",
    "Application_Number": "LCA18-0000717",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000718",
@@ -2884,6 +2974,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000749",
    "Application_Number": "LCA18-0000749",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000751",
+   "Application_Number": "LCA18-0000751",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -2989,12 +3084,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000794",
    "Application_Number": "LCA18-0000794",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000794",
    "Application_Number": "LCA18-0000794",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000796",
@@ -3034,12 +3129,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000803",
    "Application_Number": "LCA18-0000803",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000803",
    "Application_Number": "LCA18-0000803",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000804",
@@ -3084,12 +3179,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000809",
    "Application_Number": "LCA18-0000809",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000809",
    "Application_Number": "LCA18-0000809",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000810",
@@ -3102,6 +3197,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000811",
+   "Application_Number": "LCA18-0000811",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0000812",
    "Application_Number": "LCA18-0000812",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -3109,6 +3209,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000812",
    "Application_Number": "LCA18-0000812",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000813",
+   "Application_Number": "LCA18-0000813",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -3269,17 +3374,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000875",
    "Application_Number": "LCA18-0000875",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000875",
    "Application_Number": "LCA18-0000875",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000876",
    "Application_Number": "LCA18-0000876",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0000877",
+   "Application_Number": "LCA18-0000877",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000882",
@@ -3307,6 +3417,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
+   "License_Number": "CCL18-0000887",
+   "Application_Number": "LCA18-0000887",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0000888",
    "Application_Number": "LCA18-0000888",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -3329,6 +3444,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000894",
    "Application_Number": "LCA18-0000894",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000895",
+   "Application_Number": "LCA18-0000895",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -3362,9 +3482,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000910",
+   "Application_Number": "LCA18-0000910",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000911",
    "Application_Number": "LCA18-0000911",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000911",
+   "Application_Number": "LCA18-0000911",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000912",
@@ -3372,9 +3502,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000912",
+   "Application_Number": "LCA18-0000912",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000913",
    "Application_Number": "LCA18-0000913",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000913",
+   "Application_Number": "LCA18-0000913",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000914",
@@ -3382,9 +3522,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000914",
+   "Application_Number": "LCA18-0000914",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000915",
    "Application_Number": "LCA18-0000915",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000915",
+   "Application_Number": "LCA18-0000915",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000916",
@@ -3392,14 +3542,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000916",
+   "Application_Number": "LCA18-0000916",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000917",
    "Application_Number": "LCA18-0000917",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000917",
+   "Application_Number": "LCA18-0000917",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000919",
    "Application_Number": "LCA18-0000919",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000919",
+   "Application_Number": "LCA18-0000919",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000921",
@@ -3412,9 +3577,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000922",
+   "Application_Number": "LCA18-0000922",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000923",
    "Application_Number": "LCA18-0000923",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000923",
+   "Application_Number": "LCA18-0000923",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000924",
@@ -3449,12 +3624,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000931",
    "Application_Number": "LCA18-0000931",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000931",
    "Application_Number": "LCA18-0000931",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0000932",
@@ -3480,6 +3655,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0000936",
    "Application_Number": "LCA18-0000936",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0000937",
+   "Application_Number": "LCA18-0000937",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0000937",
+   "Application_Number": "LCA18-0000937",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000938",
@@ -3509,12 +3694,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000946",
    "Application_Number": "LCA18-0000946",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000946",
    "Application_Number": "LCA18-0000946",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000947",
@@ -3554,17 +3739,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000960",
    "Application_Number": "LCA18-0000960",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0000960",
-   "Application_Number": "LCA18-0000960",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0000960",
    "Application_Number": "LCA18-0000960",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000960",
+   "Application_Number": "LCA18-0000960",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0000961",
@@ -3585,6 +3770,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0000966",
    "Application_Number": "LCA18-0000966",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0000966",
+   "Application_Number": "LCA18-0000966",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0000967",
@@ -3632,19 +3822,14 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0000984",
+   "Application_Number": "LCA18-0000984",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0000985",
    "Application_Number": "LCA18-0000985",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL18-0000986",
-   "Application_Number": "LCA18-0000986",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0000986",
-   "Application_Number": "LCA18-0000986",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0000986",
@@ -3654,7 +3839,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000986",
    "Application_Number": "LCA18-0000986",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0000986",
+   "Application_Number": "LCA18-0000986",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL18-0000986",
+   "Application_Number": "LCA18-0000986",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0000987",
@@ -3684,6 +3879,21 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0000993",
    "Application_Number": "LCA18-0000993",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0000993",
+   "Application_Number": "LCA18-0000993",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0000993",
+   "Application_Number": "LCA18-0000993",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0000993",
+   "Application_Number": "LCA18-0000993",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -3692,29 +3902,9 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Recycling Center That Meets Regulations Requirements"
  },
  {
-   "License_Number": "CCL18-0000993",
-   "Application_Number": "LCA18-0000993",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0000993",
-   "Application_Number": "LCA18-0000993",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0000993",
-   "Application_Number": "LCA18-0000993",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
    "License_Number": "CCL18-0000994",
    "Application_Number": "lca18-0000994",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0000995",
-   "Application_Number": "LCA18-0000995",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0000995",
@@ -3732,14 +3922,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
-   "License_Number": "CCL18-0000999",
-   "Application_Number": "LCA18-0000999",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "License_Number": "CCL18-0000995",
+   "Application_Number": "LCA18-0000995",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0000999",
    "Application_Number": "LCA18-0000999",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0000999",
+   "Application_Number": "LCA18-0000999",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001000",
@@ -3782,6 +3977,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL18-0001010",
+   "Application_Number": "LCA18-0001010",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0001012",
+   "Application_Number": "LCA18-0001012",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0001013",
    "Application_Number": "lca18-0001013",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -3819,12 +4024,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001028",
    "Application_Number": "LCA18-0001028",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL18-0001028",
-   "Application_Number": "LCA18-0001028",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL18-0001028",
@@ -3834,12 +4034,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001028",
    "Application_Number": "LCA18-0001028",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001028",
+   "Application_Number": "LCA18-0001028",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001028",
    "Application_Number": "LCA18-0001028",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001028",
@@ -3859,11 +4064,6 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001031",
    "Application_Number": "LCA18-0001031",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0001031",
-   "Application_Number": "LCA18-0001031",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -3872,9 +4072,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0001031",
+   "Application_Number": "LCA18-0001031",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
    "License_Number": "CCL18-0001033",
    "Application_Number": "LCA18-0001033",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0001033",
+   "Application_Number": "LCA18-0001033",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001034",
@@ -3914,12 +4124,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001045",
    "Application_Number": "LCA18-0001045",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001045",
    "Application_Number": "LCA18-0001045",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001046",
@@ -3955,6 +4165,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0001061",
    "Application_Number": "LCA18-0001061",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0001062",
+   "Application_Number": "LCA18-0001062",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001064",
@@ -4009,12 +4224,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001088",
    "Application_Number": "LCA18-0001088",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001088",
    "Application_Number": "LCA18-0001088",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001089",
@@ -4052,14 +4267,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL18-0001127",
-   "Application_Number": "LCA18-0001127",
+   "License_Number": "CCL18-0001103",
+   "Application_Number": "LCA18-0001103",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001123",
+   "Application_Number": "LCA18-0001123",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001127",
    "Application_Number": "LCA18-0001127",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001127",
+   "Application_Number": "LCA18-0001127",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001128",
@@ -4144,12 +4369,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001144",
    "Application_Number": "LCA18-0001144",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001144",
    "Application_Number": "LCA18-0001144",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001149",
@@ -4244,12 +4469,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001190",
    "Application_Number": "LCA18-0001190",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001190",
    "Application_Number": "LCA18-0001190",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001193",
@@ -4324,12 +4549,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001224",
    "Application_Number": "LCA18-0001224",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001224",
    "Application_Number": "LCA18-0001224",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001226",
@@ -4439,12 +4664,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001277",
    "Application_Number": "LCA18-0001277",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001277",
    "Application_Number": "LCA18-0001277",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001281",
@@ -4455,6 +4680,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0001286",
    "Application_Number": "LCA18-0001286",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0001287",
+   "Application_Number": "LCA18-0001287",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001289",
@@ -4489,12 +4719,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001296",
    "Application_Number": "LCA18-0001296",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001296",
    "Application_Number": "LCA18-0001296",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001297",
@@ -4509,22 +4739,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001298",
    "Application_Number": "LCA18-0001298",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001298",
    "Application_Number": "LCA18-0001298",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL18-0001305",
-   "Application_Number": "LCA18-0001305",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001305",
    "Application_Number": "LCA18-0001305",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001305",
+   "Application_Number": "LCA18-0001305",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001311",
@@ -4624,12 +4854,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001349",
    "Application_Number": "LCA18-0001349",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001349",
    "Application_Number": "LCA18-0001349",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001354",
@@ -4660,6 +4890,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0001374",
    "Application_Number": "LCA18-0001374",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001377",
+   "Application_Number": "LCA18-0001377",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001377",
+   "Application_Number": "LCA18-0001377",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -4779,6 +5019,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001406",
    "Application_Number": "LCA18-0001406",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001407",
+   "Application_Number": "LCA18-0001407",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -4919,6 +5164,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001455",
    "Application_Number": "LCA18-0001455",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001456",
+   "Application_Number": "LCA18-0001456",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -5074,22 +5324,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001500",
    "Application_Number": "LCA18-0001500",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001500",
    "Application_Number": "LCA18-0001500",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL18-0001501",
-   "Application_Number": "LCA18-0001501",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001501",
    "Application_Number": "LCA18-0001501",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001501",
+   "Application_Number": "LCA18-0001501",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001502",
@@ -5134,12 +5384,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001523",
    "Application_Number": "LCA18-0001523",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001523",
    "Application_Number": "LCA18-0001523",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001524",
@@ -5154,12 +5404,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001525",
    "Application_Number": "LCA18-0001525",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001525",
    "Application_Number": "LCA18-0001525",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001526",
@@ -5264,27 +5514,32 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001552",
    "Application_Number": "LCA18-0001552",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001552",
+   "Application_Number": "LCA18-0001552",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001552",
    "Application_Number": "LCA18-0001552",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001557",
+   "Application_Number": "LCA18-0001557",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0001557",
+   "Application_Number": "LCA18-0001557",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001557",
    "Application_Number": "LCA18-0001557",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL18-0001557",
-   "Application_Number": "LCA18-0001557",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0001557",
-   "Application_Number": "LCA18-0001557",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001558",
@@ -5355,6 +5610,21 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0001591",
    "Application_Number": "LCA18-0001591",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0001591",
+   "Application_Number": "LCA18-0001591",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0001591",
+   "Application_Number": "LCA18-0001591",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001591",
+   "Application_Number": "LCA18-0001591",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001592",
@@ -5709,12 +5979,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001685",
    "Application_Number": "LCA18-0001685",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001685",
    "Application_Number": "LCA18-0001685",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001687",
+   "Application_Number": "LCA18-0001687",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001689",
@@ -5734,6 +6009,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001693",
    "Application_Number": "LCA18-0001693",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001694",
+   "Application_Number": "LCA18-0001694",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -5912,6 +6192,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL18-0001742",
+   "Application_Number": "LCA18-0001742",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0001747",
    "Application_Number": "LCA18-0001747",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -5919,12 +6204,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001747",
    "Application_Number": "LCA18-0001747",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001747",
    "Application_Number": "LCA18-0001747",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001748",
@@ -5939,6 +6224,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001750",
    "Application_Number": "LCA18-0001750",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001751",
+   "Application_Number": "LCA18-0001751",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001751",
+   "Application_Number": "LCA18-0001751",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -5989,12 +6284,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001772",
    "Application_Number": "LCA18-0001772",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001772",
    "Application_Number": "LCA18-0001772",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001773",
@@ -6057,6 +6352,26 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
+   "License_Number": "CCL18-0001791",
+   "Application_Number": "LCA18-0001791",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001791",
+   "Application_Number": "LCA18-0001791",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001792",
+   "Application_Number": "LCA18-0001792",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001793",
+   "Application_Number": "LCA18-0001793",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0001795",
    "Application_Number": "LCA18-0001795",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -6070,6 +6385,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0001796",
    "Application_Number": "LCA18-0001796",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001803",
+   "Application_Number": "LCA18-0001803",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001804",
+   "Application_Number": "LCA18-0001804",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0001806",
@@ -6094,12 +6419,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001812",
    "Application_Number": "LCA18-0001812",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001812",
    "Application_Number": "LCA18-0001812",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001812",
@@ -6119,6 +6444,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001817",
    "Application_Number": "LCA18-0001817",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001818",
+   "Application_Number": "LCA18-0001818",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -6157,6 +6487,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL18-0001827",
+   "Application_Number": "LCA18-0001827",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0001834",
    "Application_Number": "LCA18-0001834",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -6164,6 +6499,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "lca18-0001836",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0001838",
+   "Application_Number": "LCA18-0001838",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -6179,17 +6519,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001850",
    "Application_Number": "LCA18-0001850",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0001850",
-   "Application_Number": "LCA18-0001850",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001850",
    "Application_Number": "LCA18-0001850",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001850",
+   "Application_Number": "LCA18-0001850",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "",
@@ -6279,17 +6619,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001870",
    "Application_Number": "LCA18-0001870",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001870",
    "Application_Number": "LCA18-0001870",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001871",
    "Application_Number": "LCA18-0001871",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001871",
@@ -6299,7 +6639,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001871",
    "Application_Number": "LCA18-0001871",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001872",
@@ -6324,6 +6664,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001889",
    "Application_Number": "LCA18-0001889",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001890",
+   "Application_Number": "LCA18-0001890",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -6370,6 +6715,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0001908",
    "Application_Number": "LCA18-0001908",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0001909",
+   "Application_Number": "LCA18-0001909",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001910",
@@ -6422,6 +6772,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL18-0001934",
+   "Application_Number": "LCA18-0001934",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0001934",
+   "Application_Number": "LCA18-0001934",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0001936",
    "Application_Number": "LCA18-0001936",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -6457,14 +6817,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL18-0001947",
-   "Application_Number": "LCA18-0001947",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "License_Number": "CCL18-0001944",
+   "Application_Number": "LCA18-0001944",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001947",
    "Application_Number": "LCA18-0001947",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0001947",
+   "Application_Number": "LCA18-0001947",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0001948",
@@ -6584,22 +6949,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0001977",
    "Application_Number": "LCA18-0001977",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0001977",
+   "Application_Number": "LCA18-0001977",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0001977",
    "Application_Number": "LCA18-0001977",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL18-0001977",
-   "Application_Number": "LCA18-0001977",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL18-0001978",
-   "Application_Number": "LCA18-0001978",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001978",
@@ -6612,8 +6972,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL18-0001979",
-   "Application_Number": "LCA18-0001979",
+   "License_Number": "CCL18-0001978",
+   "Application_Number": "LCA18-0001978",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -6625,6 +6985,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0001979",
    "Application_Number": "LCA18-0001979",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0001979",
+   "Application_Number": "LCA18-0001979",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0001980",
@@ -6725,6 +7090,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0002008",
    "Application_Number": "LCA18-0002008",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002009",
+   "Application_Number": "LCA18-0002009",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002010",
+   "Application_Number": "LCA18-0002010",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002011",
@@ -6829,12 +7204,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002033",
    "Application_Number": "LCA18-0002033",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002033",
    "Application_Number": "LCA18-0002033",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL18-0002034",
@@ -6882,6 +7257,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002046",
+   "Application_Number": "LCA18-0002046",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002049",
    "Application_Number": "LCA18-0002049",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -6917,6 +7297,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002056",
+   "Application_Number": "LCA18-0002056",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002057",
    "Application_Number": "LCA18-0002057",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -6934,12 +7319,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002062",
    "Application_Number": "LCA18-0002062",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002062",
    "Application_Number": "LCA18-0002062",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002065",
+   "Application_Number": "LCA18-0002065",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002066",
@@ -6955,6 +7345,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0002068",
    "Application_Number": "LCA18-0002068",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0002071",
+   "Application_Number": "LCA18-0002071",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002072",
@@ -7019,22 +7414,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002097",
    "Application_Number": "LCA18-0002097",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002097",
    "Application_Number": "LCA18-0002097",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0002099",
-   "Application_Number": "LCA18-0002099",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002099",
    "Application_Number": "LCA18-0002099",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002099",
+   "Application_Number": "LCA18-0002099",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002100",
@@ -7049,12 +7444,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002101",
    "Application_Number": "LCA18-0002101",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002101",
    "Application_Number": "LCA18-0002101",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002105",
@@ -7139,22 +7534,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002125",
    "Application_Number": "LCA18-0002125",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002125",
    "Application_Number": "LCA18-0002125",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0002126",
-   "Application_Number": "LCA18-0002126",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002126",
    "Application_Number": "LCA18-0002126",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0002126",
+   "Application_Number": "LCA18-0002126",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002127",
@@ -7172,6 +7567,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
+   "License_Number": "CCL18-0002130",
+   "Application_Number": "LCA18-0002130",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0002133",
    "Application_Number": "LCA18-0002133",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -7182,8 +7582,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
+   "License_Number": "CCL18-0002134",
+   "Application_Number": "LCA18-0002134",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0002137",
    "Application_Number": "LCA18-0002137",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002139",
+   "Application_Number": "LCA18-0002139",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -7207,6 +7617,36 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002146",
+   "Application_Number": "LCA18-0002146",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002146",
+   "Application_Number": "LCA18-0002146",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0002147",
+   "Application_Number": "LCA18-0002147",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002147",
+   "Application_Number": "LCA18-0002147",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0002149",
+   "Application_Number": "LCA18-0002149",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002149",
+   "Application_Number": "LCA18-0002149",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002150",
    "Application_Number": "LCA18-0002150",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -7215,6 +7655,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0002150",
    "Application_Number": "LCA18-0002150",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002150",
+   "Application_Number": "LCA18-0002150",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002152",
@@ -7234,12 +7679,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002154",
    "Application_Number": "LCA18-0002154",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002154",
    "Application_Number": "LCA18-0002154",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002155",
@@ -7264,11 +7709,6 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002162",
    "Application_Number": "LCA18-0002162",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL18-0002162",
-   "Application_Number": "LCA18-0002162",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -7277,9 +7717,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL18-0002162",
+   "Application_Number": "LCA18-0002162",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002166",
    "Application_Number": "LCA18-0002166",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0002167",
+   "Application_Number": "LCA18-0002167",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002168",
@@ -7334,12 +7784,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002186",
    "Application_Number": "LCA18-0002186",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002186",
    "Application_Number": "LCA18-0002186",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002187",
@@ -7365,6 +7815,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0002194",
    "Application_Number": "LCA18-0002194",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0002195",
+   "Application_Number": "LCA18-0002195",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002196",
@@ -7409,12 +7864,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002207",
    "Application_Number": "LCA18-0002207",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002207",
    "Application_Number": "LCA18-0002207",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002210",
+   "Application_Number": "LCA18-0002210",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002211",
@@ -7634,12 +8094,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002267",
    "Application_Number": "LCA18-0002267",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002267",
    "Application_Number": "LCA18-0002267",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002268",
@@ -7844,12 +8304,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002316",
    "Application_Number": "LCA18-0002316",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002316",
    "Application_Number": "LCA18-0002316",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002317",
@@ -7887,6 +8347,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002327",
+   "Application_Number": "LCA18-0002327",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0002328",
    "Application_Number": "LCA18-0002328",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -7909,12 +8374,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002338",
    "Application_Number": "LCA18-0002338",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002338",
    "Application_Number": "LCA18-0002338",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002339",
@@ -7940,6 +8405,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0002341",
    "Application_Number": "LCA18-0002341",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002342",
+   "Application_Number": "LCA18-0002342",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002344",
@@ -8409,12 +8879,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002445",
    "Application_Number": "LCA18-0002445",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002445",
    "Application_Number": "LCA18-0002445",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002447",
@@ -8452,6 +8922,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL18-0002457",
+   "Application_Number": "LCA18-0002457",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002458",
    "Application_Number": "LCA18-0002458",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -8467,9 +8942,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL18-0002460",
+   "Application_Number": "LCA18-0002460",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002461",
    "Application_Number": "LCA18-0002461",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002461",
+   "Application_Number": "LCA18-0002461",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002462",
@@ -8477,9 +8962,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL18-0002462",
+   "Application_Number": "LCA18-0002462",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002463",
    "Application_Number": "LCA18-0002463",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002463",
+   "Application_Number": "LCA18-0002463",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002465",
@@ -8499,7 +8994,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002471",
    "Application_Number": "LCA18-0002471",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002471",
@@ -8509,7 +9004,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002471",
    "Application_Number": "LCA18-0002471",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002472",
@@ -8522,6 +9017,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL18-0002475",
+   "Application_Number": "LCA18-0002475",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0002476",
    "Application_Number": "LCA18-0002476",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -8532,14 +9032,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002483",
+   "Application_Number": "LCA18-0002483",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002488",
    "Application_Number": "LCA18-0002488",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002488",
+   "Application_Number": "LCA18-0002488",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002489",
    "Application_Number": "LCA18-0002489",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002489",
+   "Application_Number": "LCA18-0002489",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002490",
@@ -8567,9 +9082,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002497",
+   "Application_Number": "LCA18-0002497",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0002499",
    "Application_Number": "LCA18-0002499",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002499",
+   "Application_Number": "LCA18-0002499",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002500",
@@ -8577,9 +9102,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002500",
+   "Application_Number": "LCA18-0002500",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002501",
    "Application_Number": "LCA18-0002501",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002501",
+   "Application_Number": "LCA18-0002501",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002502",
@@ -8587,9 +9122,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002502",
+   "Application_Number": "LCA18-0002502",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002503",
    "Application_Number": "LCA18-0002503",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002503",
+   "Application_Number": "LCA18-0002503",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002504",
@@ -8597,9 +9142,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002504",
+   "Application_Number": "LCA18-0002504",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002505",
    "Application_Number": "LCA18-0002505",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002505",
+   "Application_Number": "LCA18-0002505",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002506",
@@ -8607,9 +9162,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002506",
+   "Application_Number": "LCA18-0002506",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002507",
    "Application_Number": "LCA18-0002507",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002507",
+   "Application_Number": "LCA18-0002507",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002509",
@@ -8617,9 +9182,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002509",
+   "Application_Number": "LCA18-0002509",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002510",
    "Application_Number": "LCA18-0002510",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002510",
+   "Application_Number": "LCA18-0002510",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002511",
@@ -8627,9 +9202,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002511",
+   "Application_Number": "LCA18-0002511",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002512",
    "Application_Number": "LCA18-0002512",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002512",
+   "Application_Number": "LCA18-0002512",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002515",
@@ -8799,6 +9384,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002555",
    "Application_Number": "LCA18-0002555",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002557",
+   "Application_Number": "LCA18-0002557",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -9157,6 +9747,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002634",
+   "Application_Number": "LCA18-0002634",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0002638",
    "Application_Number": "LCA18-0002638",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -9192,6 +9787,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002643",
+   "Application_Number": "LCA18-0002643",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0002644",
    "Application_Number": "LCA18-0002644",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -9224,17 +9824,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002652",
    "Application_Number": "LCA18-0002652",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0002652",
+   "Application_Number": "LCA18-0002652",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002652",
    "Application_Number": "LCA18-0002652",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0002652",
-   "Application_Number": "LCA18-0002652",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002654",
@@ -9249,12 +9849,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA18-0002657",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA18-0002657",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002659",
@@ -9285,6 +9885,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0002664",
    "Application_Number": "LCA18-0002664",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0002665",
+   "Application_Number": "LCA18-0002665",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002666",
@@ -9384,17 +9989,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002693",
    "Application_Number": "LCA18-0002693",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0002693",
+   "Application_Number": "LCA18-0002693",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002693",
    "Application_Number": "LCA18-0002693",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL18-0002693",
-   "Application_Number": "LCA18-0002693",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002694",
@@ -9454,12 +10059,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002718",
    "Application_Number": "LCA18-0002718",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002718",
    "Application_Number": "LCA18-0002718",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002719",
@@ -9529,12 +10134,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002735",
    "Application_Number": "LCA18-0002735",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002735",
    "Application_Number": "LCA18-0002735",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002736",
@@ -9672,6 +10277,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002769",
+   "Application_Number": "LCA18-0002769",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0002770",
    "Application_Number": "LCA18-0002770",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -9684,12 +10294,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002772",
    "Application_Number": "LCA18-0002772",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002772",
    "Application_Number": "LCA18-0002772",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002774",
@@ -9709,12 +10319,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002779",
    "Application_Number": "LCA18-0002779",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002779",
    "Application_Number": "LCA18-0002779",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "",
@@ -9724,12 +10334,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002784",
    "Application_Number": "LCA18-0002784",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002784",
    "Application_Number": "LCA18-0002784",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002786",
@@ -9744,17 +10354,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002790",
    "Application_Number": "LCA18-0002790",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL18-0002790",
-   "Application_Number": "LCA18-0002790",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002790",
    "Application_Number": "LCA18-0002790",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0002790",
+   "Application_Number": "LCA18-0002790",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002793",
@@ -9787,6 +10397,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002801",
+   "Application_Number": "LCA18-0002801",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002802",
+   "Application_Number": "LCA18-0002802",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0002803",
    "Application_Number": "LCA18-0002803",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -9799,6 +10419,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002813",
    "Application_Number": "LCA18-0002813",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002814",
+   "Application_Number": "LCA18-0002814",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002815",
+   "Application_Number": "LCA18-0002815",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -9839,12 +10469,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002838",
    "Application_Number": "LCA18-0002838",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002838",
    "Application_Number": "LCA18-0002838",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0002842",
@@ -9929,12 +10559,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002882",
    "Application_Number": "LCA18-0002882",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002882",
    "Application_Number": "LCA18-0002882",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002883",
@@ -9949,6 +10579,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002897",
    "Application_Number": "LCA18-0002897",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002898",
+   "Application_Number": "LCA18-0002898",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -9979,22 +10614,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002904",
    "Application_Number": "LCA18-0002904",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002904",
    "Application_Number": "LCA18-0002904",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0002905",
-   "Application_Number": "LCA18-0002905",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002905",
    "Application_Number": "LCA18-0002905",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0002905",
+   "Application_Number": "LCA18-0002905",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002910",
@@ -10084,12 +10719,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002937",
    "Application_Number": "LCA18-0002937",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002937",
    "Application_Number": "LCA18-0002937",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002938",
@@ -10115,6 +10750,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0002947",
    "Application_Number": "LCA18-0002947",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0002949",
+   "Application_Number": "LCA18-0002949",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002950",
@@ -10144,12 +10784,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002955",
    "Application_Number": "LCA18-0002955",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002955",
    "Application_Number": "LCA18-0002955",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0002956",
@@ -10157,9 +10797,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0002957",
+   "Application_Number": "LCA18-0002957",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0002958",
    "Application_Number": "LCA18-0002958",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0002959",
+   "Application_Number": "LCA18-0002959",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0002961",
@@ -10314,17 +10964,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0002992",
    "Application_Number": "LCA18-0002992",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "CCL18-0002992",
+   "Application_Number": "LCA18-0002992",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0002992",
    "Application_Number": "LCA18-0002992",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0002992",
-   "Application_Number": "LCA18-0002992",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
  },
  {
    "License_Number": "CCL18-0002993",
@@ -10372,6 +11022,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0003018",
+   "Application_Number": "LCA18-0003018",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003021",
+   "Application_Number": "LCA18-0003021",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003022",
    "Application_Number": "LCA18-0003022",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -10409,12 +11069,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003029",
    "Application_Number": "LCA18-0003029",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003029",
    "Application_Number": "LCA18-0003029",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003032",
@@ -10434,17 +11094,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003035",
    "Application_Number": "LCA18-0003035",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003035",
+   "Application_Number": "LCA18-0003035",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003035",
    "Application_Number": "LCA18-0003035",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
- },
- {
-   "License_Number": "CCL18-0003035",
-   "Application_Number": "LCA18-0003035",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003036",
@@ -10460,6 +11120,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0003043",
    "Application_Number": "LCA18-0003043",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003045",
+   "Application_Number": "LCA18-0003045",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0003046",
@@ -10499,12 +11164,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003058",
    "Application_Number": "LCA18-0003058",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003058",
    "Application_Number": "LCA18-0003058",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003059",
@@ -10525,6 +11190,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0003061",
    "Application_Number": "LCA18-0003061",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003063",
+   "Application_Number": "LCA18-0003063",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003064",
@@ -10555,6 +11225,21 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0003072",
    "Application_Number": "LCA18-0003072",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003076",
+   "Application_Number": "LCA18-0003076",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003076",
+   "Application_Number": "LCA18-0003076",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003076",
+   "Application_Number": "LCA18-0003076",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL18-0003077",
@@ -10644,7 +11329,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003100",
    "Application_Number": "LCA18-0003100",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003100",
@@ -10654,7 +11339,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003100",
    "Application_Number": "LCA18-0003100",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003101",
@@ -10689,16 +11374,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003114",
    "Application_Number": "LCA18-0003114",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003114",
    "Application_Number": "LCA18-0003114",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0003115",
-   "Application_Number": "LCA18-0003115",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -10710,6 +11390,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0003115",
    "Application_Number": "LCA18-0003115",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL18-0003115",
+   "Application_Number": "LCA18-0003115",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003117",
@@ -10749,12 +11434,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003130",
    "Application_Number": "LCA18-0003130",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0003130",
    "Application_Number": "LCA18-0003130",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003131",
@@ -10767,6 +11452,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
+   "License_Number": "CCL18-0003132",
+   "Application_Number": "LCA18-0003132",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL18-0003136",
    "Application_Number": "LCA18-0003136",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -10779,17 +11469,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003137",
    "Application_Number": "LCA18-0003137",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL18-0003137",
+   "Application_Number": "LCA18-0003137",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003137",
    "Application_Number": "LCA18-0003137",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0003137",
-   "Application_Number": "LCA18-0003137",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL18-0003138",
@@ -10879,12 +11569,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003163",
    "Application_Number": "LCA18-0003163",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003163",
    "Application_Number": "LCA18-0003163",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003164",
@@ -10924,17 +11614,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003174",
    "Application_Number": "LCA18-0003174",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003174",
    "Application_Number": "LCA18-0003174",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003176",
    "Application_Number": "LCA18-0003176",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003176",
@@ -10944,7 +11634,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003176",
    "Application_Number": "LCA18-0003176",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003178",
@@ -10962,9 +11652,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0003184",
+   "Application_Number": "LCA18-0003184",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003185",
+   "Application_Number": "LCA18-0003185",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003187",
    "Application_Number": "LCA18-0003187",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003188",
+   "Application_Number": "LCA18-0003188",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0003189",
@@ -11079,12 +11784,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003217",
    "Application_Number": "LCA18-0003217",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003217",
    "Application_Number": "LCA18-0003217",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003218",
@@ -11149,22 +11854,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003236",
    "Application_Number": "LCA18-0003236",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003236",
    "Application_Number": "LCA18-0003236",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0003247",
-   "Application_Number": "LCA18-0003247",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0003247",
    "Application_Number": "LCA18-0003247",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003247",
+   "Application_Number": "LCA18-0003247",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003248",
@@ -11179,12 +11884,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003249",
    "Application_Number": "LCA18-0003249",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003249",
    "Application_Number": "LCA18-0003249",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0003250",
@@ -11204,12 +11909,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003254",
    "Application_Number": "LCA18-0003254",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003254",
    "Application_Number": "LCA18-0003254",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003255",
@@ -11224,12 +11929,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003257",
    "Application_Number": "LCA18-0003257",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003257",
    "Application_Number": "LCA18-0003257",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003258",
@@ -11264,22 +11969,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003263",
    "Application_Number": "LCA18-0003263",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003263",
    "Application_Number": "LCA18-0003263",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0003264",
-   "Application_Number": "LCA18-0003264",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003264",
    "Application_Number": "LCA18-0003264",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0003264",
+   "Application_Number": "LCA18-0003264",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003265",
@@ -11294,17 +11999,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003267",
    "Application_Number": "LCA18-0003267",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003267",
    "Application_Number": "LCA18-0003267",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003269",
    "Application_Number": "LCA18-0003269",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003269",
@@ -11314,7 +12019,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003269",
    "Application_Number": "LCA18-0003269",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003270",
@@ -11329,6 +12034,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003272",
    "Application_Number": "LCA18-0003272",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003273",
+   "Application_Number": "LCA18-0003273",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -11449,12 +12159,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003314",
    "Application_Number": "LCA18-0003314",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003314",
    "Application_Number": "LCA18-0003314",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003322",
@@ -11469,7 +12179,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003324",
    "Application_Number": "LCA18-0003324",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003324",
@@ -11479,7 +12189,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003324",
    "Application_Number": "LCA18-0003324",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003325",
@@ -11532,8 +12242,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0003341",
+   "Application_Number": "LCA18-0003341",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003343",
    "Application_Number": "LCA18-0003343",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003344",
+   "Application_Number": "LCA18-0003344",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -11564,12 +12284,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003358",
    "Application_Number": "LCA18-0003358",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003358",
    "Application_Number": "LCA18-0003358",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0003361",
@@ -11582,9 +12302,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0003363",
+   "Application_Number": "LCA18-0003363",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003364",
    "Application_Number": "LCA18-0003364",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003365",
+   "Application_Number": "LCA18-0003365",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003365",
+   "Application_Number": "LCA18-0003365",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003366",
@@ -11597,8 +12332,48 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0003372",
+   "Application_Number": "LCA18-0003372",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003376",
+   "Application_Number": "LCA18-0003376",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003377",
+   "Application_Number": "LCA18-0003377",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003378",
+   "Application_Number": "lca18-0003378",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003379",
+   "Application_Number": "lca18-0003379",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003380",
+   "Application_Number": "lca18-0003380",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003381",
    "Application_Number": "LCA18-0003381",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003381",
+   "Application_Number": "LCA18-0003381",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "CCL18-0003384",
+   "Application_Number": "LCA18-0003384",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -11609,6 +12384,31 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003387",
    "Application_Number": "LCA18-0003387",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003393",
+   "Application_Number": "LCA18-0003393",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003394",
+   "Application_Number": "LCA18-0003394",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003395",
+   "Application_Number": "LCA18-0003395",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003396",
+   "Application_Number": "LCA18-0003396",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003397",
+   "Application_Number": "LCA18-0003397",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -11625,6 +12425,31 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0003404",
    "Application_Number": "LCA18-0003404",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003405",
+   "Application_Number": "LCA18-0003405",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003405",
+   "Application_Number": "LCA18-0003405",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003405",
+   "Application_Number": "LCA18-0003405",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003406",
+   "Application_Number": "LCA18-0003406",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003407",
+   "Application_Number": "LCA18-0003407",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003408",
@@ -11644,11 +12469,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003418",
    "Application_Number": "LCA18-0003418",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003418",
    "Application_Number": "LCA18-0003418",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003419",
+   "Application_Number": "LCA18-0003419",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -11657,8 +12487,33 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL18-0003419",
-   "Application_Number": "LCA18-0003419",
+   "License_Number": "CCL18-0003421",
+   "Application_Number": "LCA18-0003421",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003421",
+   "Application_Number": "LCA18-0003421",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003422",
+   "Application_Number": "LCA18-0003422",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003422",
+   "Application_Number": "LCA18-0003422",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003423",
+   "Application_Number": "LCA18-0003423",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003423",
+   "Application_Number": "LCA18-0003423",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -11734,12 +12589,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003495",
    "Application_Number": "LCA18-0003495",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003495",
    "Application_Number": "LCA18-0003495",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003514",
@@ -11777,6 +12632,36 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL18-0003527",
+   "Application_Number": "LCA18-0003527",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003527",
+   "Application_Number": "LCA18-0003527",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003527",
+   "Application_Number": "LCA18-0003527",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003528",
+   "Application_Number": "lca18-0003528",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003528",
+   "Application_Number": "lca18-0003528",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003528",
+   "Application_Number": "lca18-0003528",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "",
    "Application_Number": "LCA18-0003529",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -11797,9 +12682,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0003533",
+   "Application_Number": "LCA18-0003533",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003534",
    "Application_Number": "LCA18-0003534",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003535",
+   "Application_Number": "LCA18-0003535",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003535",
+   "Application_Number": "LCA18-0003535",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003535",
@@ -11810,16 +12710,6 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0003535",
    "Application_Number": "LCA18-0003535",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0003535",
-   "Application_Number": "LCA18-0003535",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0003535",
-   "Application_Number": "LCA18-0003535",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003538",
@@ -11834,12 +12724,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003540",
    "Application_Number": "LCA18-0003540",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003540",
    "Application_Number": "LCA18-0003540",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "",
@@ -11859,12 +12749,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003549",
    "Application_Number": "LCA18-0003549",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003549",
    "Application_Number": "LCA18-0003549",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003551",
@@ -11874,12 +12764,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003552",
    "Application_Number": "LCA18-0003552",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003552",
    "Application_Number": "LCA18-0003552",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003557",
@@ -11904,6 +12794,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003559",
    "Application_Number": "LCA18-0003559",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003559",
+   "Application_Number": "LCA18-0003559",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -11912,9 +12807,9 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
-   "License_Number": "CCL18-0003559",
-   "Application_Number": "LCA18-0003559",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "License_Number": "CCL18-0003560",
+   "Application_Number": "LCA18-0003560",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003560",
@@ -11924,16 +12819,6 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003560",
    "Application_Number": "LCA18-0003560",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0003560",
-   "Application_Number": "LCA18-0003560",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL18-0003561",
-   "Application_Number": "LCA18-0003561",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -11945,6 +12830,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0003561",
    "Application_Number": "LCA18-0003561",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0003561",
+   "Application_Number": "LCA18-0003561",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003562",
+   "Application_Number": "LCA18-0003562",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003565",
@@ -12057,6 +12952,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0003597",
+   "Application_Number": "LCA18-0003597",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003599",
    "Application_Number": "LCA18-0003599",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -12064,6 +12964,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003600",
    "Application_Number": "LCA18-0003600",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003600",
+   "Application_Number": "LCA18-0003600",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -12072,11 +12977,6 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL18-0003600",
-   "Application_Number": "LCA18-0003600",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
    "License_Number": "CCL18-0003601",
    "Application_Number": "LCA18-0003601",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -12094,6 +12994,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003602",
    "Application_Number": "LCA18-0003602",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003602",
+   "Application_Number": "LCA18-0003602",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -12102,14 +13007,9 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL18-0003602",
-   "Application_Number": "LCA18-0003602",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
    "License_Number": "CCL18-0003603",
    "Application_Number": "LCA18-0003603",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003603",
@@ -12119,7 +13019,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003603",
    "Application_Number": "LCA18-0003603",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0003612",
@@ -12134,12 +13034,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003616",
    "Application_Number": "LCA18-0003616",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003616",
    "Application_Number": "LCA18-0003616",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003617",
@@ -12177,6 +13077,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0003629",
+   "Application_Number": "LCA18-0003629",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003630",
    "Application_Number": "LCA18-0003630",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -12197,6 +13102,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL18-0003637",
+   "Application_Number": "LCA18-0003637",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003639",
    "Application_Number": "LCA18-0003639",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -12204,12 +13114,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003640",
    "Application_Number": "LCA18-0003640",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003640",
    "Application_Number": "LCA18-0003640",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0003641",
@@ -12239,12 +13149,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003647",
    "Application_Number": "LCA18-0003647",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003647",
    "Application_Number": "LCA18-0003647",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003648",
+   "Application_Number": "LCA18-0003648",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003648",
@@ -12255,11 +13170,6 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL18-0003648",
    "Application_Number": "LCA18-0003648",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
- },
- {
-   "License_Number": "CCL18-0003648",
-   "Application_Number": "LCA18-0003648",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL18-0003650",
@@ -12282,6 +13192,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL18-0003654",
+   "Application_Number": "LCA18-0003654",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "CCL18-0003654",
+   "Application_Number": "LCA18-0003654",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003657",
    "Application_Number": "LCA18-0003657",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -12299,6 +13219,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003662",
    "Application_Number": "LCA18-0003662",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003663",
+   "Application_Number": "LCA18-0003663",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003663",
+   "Application_Number": "LCA18-0003663",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -12472,6 +13402,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
+   "License_Number": "CCL18-0003706",
+   "Application_Number": "LCA18-0003706",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003711",
    "Application_Number": "LCA18-0003711",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -12524,17 +13459,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003725",
    "Application_Number": "LCA18-0003725",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0003725",
+   "Application_Number": "LCA18-0003725",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL18-0003725",
    "Application_Number": "LCA18-0003725",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL18-0003725",
-   "Application_Number": "LCA18-0003725",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003727",
@@ -12594,6 +13529,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003749",
    "Application_Number": "LCA18-0003749",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0003749",
+   "Application_Number": "LCA18-0003749",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -12602,9 +13542,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
-   "License_Number": "CCL18-0003749",
-   "Application_Number": "LCA18-0003749",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "License_Number": "CCL18-0003750",
+   "Application_Number": "LCA18-0003750",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0003750",
+   "Application_Number": "LCA18-0003750",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003752",
+   "Application_Number": "LCA18-0003752",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL18-0003752",
+   "Application_Number": "LCA18-0003752",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL18-0003752",
+   "Application_Number": "LCA18-0003752",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003753",
@@ -12630,6 +13590,11 @@ var WASTESCRIPTarray =[
    "License_Number": "",
    "Application_Number": "LCA18-0003763",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL18-0003764",
+   "Application_Number": "LCA18-0003764",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003766",
@@ -12664,12 +13629,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003776",
    "Application_Number": "LCA18-0003776",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003776",
    "Application_Number": "LCA18-0003776",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003777",
@@ -12714,12 +13679,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL18-0003788",
    "Application_Number": "LCA18-0003788",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL18-0003788",
    "Application_Number": "LCA18-0003788",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL18-0003789",
@@ -12802,6 +13767,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL18-0003817",
+   "Application_Number": "LCA18-0003817",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL18-0003817",
+   "Application_Number": "LCA18-0003817",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL18-0003819",
    "Application_Number": "LCA18-0003819",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -12829,12 +13804,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000004",
    "Application_Number": "LCA19-0000004",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0000004",
-   "Application_Number": "LCA19-0000004",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
    "License_Number": "CCL19-0000004",
@@ -12844,12 +13814,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000004",
    "Application_Number": "LCA19-0000004",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL19-0000004",
    "Application_Number": "LCA19-0000004",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000004",
+   "Application_Number": "LCA19-0000004",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0000004",
@@ -12972,6 +13947,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0000033",
+   "Application_Number": "LCA19-0000033",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0000036",
    "Application_Number": "LCA19-0000036",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -12997,6 +13977,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0000041",
+   "Application_Number": "LCA19-0000041",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0000043",
    "Application_Number": "LCA19-0000043",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -13014,6 +13999,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000046",
    "Application_Number": "LCA19-0000046",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000048",
+   "Application_Number": "LCA19-0000048",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -13057,13 +14047,23 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0000063",
-   "Application_Number": "LCA19-0000063",
+   "License_Number": "CCL19-0000061",
+   "Application_Number": "LCA19-0000061",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0000061",
+   "Application_Number": "LCA19-0000061",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0000061",
+   "Application_Number": "LCA19-0000061",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0000064",
-   "Application_Number": "LCA19-0000064",
+   "License_Number": "CCL19-0000063",
+   "Application_Number": "LCA19-0000063",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -13072,9 +14072,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0000064",
+   "Application_Number": "LCA19-0000064",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0000066",
    "Application_Number": "LCA19-0000066",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0000067",
+   "Application_Number": "LCA19-0000067",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000068",
+   "Application_Number": "LCA19-0000068",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000069",
@@ -13099,12 +14114,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000079",
    "Application_Number": "LCA19-0000079",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000079",
    "Application_Number": "LCA19-0000079",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000080",
@@ -13127,14 +14142,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0000089",
-   "Application_Number": "LCA19-0000089",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "License_Number": "CCL19-0000088",
+   "Application_Number": "LCA19-0000088",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000089",
    "Application_Number": "LCA19-0000089",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000089",
+   "Application_Number": "LCA19-0000089",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000090",
@@ -13194,12 +14214,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000142",
    "Application_Number": "lca19-0000142",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000142",
    "Application_Number": "lca19-0000142",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000143",
+   "Application_Number": "LCA19-0000143",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000143",
+   "Application_Number": "LCA19-0000143",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0000146",
@@ -13337,6 +14367,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0000178",
+   "Application_Number": "LCA19-0000178",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000179",
+   "Application_Number": "LCA19-0000179",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0000180",
    "Application_Number": "LCA19-0000180",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -13399,12 +14439,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000196",
    "Application_Number": "lca19-0000196",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000196",
    "Application_Number": "lca19-0000196",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000197",
@@ -13424,6 +14464,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0000199",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000200",
+   "Application_Number": "LCA19-0000200",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -13457,6 +14502,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL19-0000214",
+   "Application_Number": "LCA19-0000214",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000215",
+   "Application_Number": "LCA19-0000215",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0000216",
    "Application_Number": "LCA19-0000216",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -13474,12 +14529,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000221",
    "Application_Number": "lca19-0000221",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000221",
    "Application_Number": "lca19-0000221",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000223",
@@ -13547,6 +14602,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0000239",
+   "Application_Number": "LCA19-0000239",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000240",
+   "Application_Number": "LCA19-0000240",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0000241",
    "Application_Number": "LCA19-0000241",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -13555,6 +14620,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0000242",
    "Application_Number": "lca19-0000242",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000243",
+   "Application_Number": "LCA19-0000243",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000244",
@@ -13589,12 +14659,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000250",
    "Application_Number": "lca19-0000250",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000250",
    "Application_Number": "lca19-0000250",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000251",
@@ -13667,6 +14737,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0000272",
+   "Application_Number": "LCA19-0000272",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0000273",
    "Application_Number": "LCA19-0000273",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -13684,6 +14759,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000274",
    "Application_Number": "LCA19-0000274",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000275",
+   "Application_Number": "LCA19-0000275",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000276",
+   "Application_Number": "LCA19-0000276",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -13729,6 +14814,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000290",
    "Application_Number": "LCA19-0000290",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000291",
+   "Application_Number": "LCA19-0000291",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -13804,6 +14894,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000311",
    "Application_Number": "LCA19-0000311",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000314",
+   "Application_Number": "LCA19-0000314",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -13939,12 +15034,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000345",
    "Application_Number": "LCA19-0000345",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000345",
    "Application_Number": "LCA19-0000345",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000346",
@@ -13952,14 +15047,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0000347",
-   "Application_Number": "LCA19-0000347",
+   "License_Number": "CCL19-0000346",
+   "Application_Number": "LCA19-0000346",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000347",
    "Application_Number": "LCA19-0000347",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000347",
+   "Application_Number": "LCA19-0000347",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000349",
@@ -14062,6 +15162,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA19-0000433",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0000433",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0000434",
    "Application_Number": "LCA19-0000434",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -14069,7 +15179,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000434",
    "Application_Number": "LCA19-0000434",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0000444",
@@ -14115,6 +15225,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0000469",
    "Application_Number": "LCA19-0000469",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL19-0000473",
+   "Application_Number": "LCA19-0000473",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000478",
+   "Application_Number": "LCA19-0000478",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000488",
@@ -14267,14 +15387,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0000549",
+   "Application_Number": "LCA19-0000549",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0000551",
    "Application_Number": "LCA19-0000551",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0000551",
+   "Application_Number": "LCA19-0000551",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0000552",
    "Application_Number": "LCA19-0000552",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000552",
+   "Application_Number": "LCA19-0000552",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000553",
@@ -14329,12 +15464,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000581",
    "Application_Number": "LCA19-0000581",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0000581",
    "Application_Number": "LCA19-0000581",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000585",
@@ -14355,6 +15490,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0000600",
    "Application_Number": "LCA19-0000600",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0000601",
+   "Application_Number": "LCA19-0000601",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000605",
@@ -14399,12 +15539,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000655",
    "Application_Number": "LCA19-0000655",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000655",
    "Application_Number": "LCA19-0000655",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000659",
@@ -14454,17 +15594,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000675",
    "Application_Number": "LCA19-0000675",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL19-0000675",
-   "Application_Number": "LCA19-0000675",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000675",
    "Application_Number": "LCA19-0000675",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0000675",
+   "Application_Number": "LCA19-0000675",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0000676",
+   "Application_Number": "LCA19-0000676",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000676",
@@ -14477,14 +15622,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
-   "License_Number": "CCL19-0000676",
-   "Application_Number": "LCA19-0000676",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
    "License_Number": "CCL19-0000677",
    "Application_Number": "LCA19-0000677",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000690",
+   "Application_Number": "LCA19-0000690",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0000691",
+   "Application_Number": "LCA19-0000691",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0000692",
+   "Application_Number": "LCA19-0000692",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000694",
@@ -14509,6 +15664,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000704",
    "Application_Number": "LCA19-0000704",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000706",
+   "Application_Number": "LCA19-0000706",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000708",
+   "Application_Number": "LCA19-0000708",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -14539,12 +15704,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000716",
    "Application_Number": "LCA19-0000716",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000716",
    "Application_Number": "LCA19-0000716",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000717",
@@ -14614,7 +15779,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000763",
    "Application_Number": "LCA19-0000763",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0000765",
@@ -14727,6 +15892,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0000833",
+   "Application_Number": "LCA19-0000833",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0000833",
+   "Application_Number": "LCA19-0000833",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0000834",
    "Application_Number": "LCA19-0000834",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -14739,6 +15914,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000839",
    "Application_Number": "LCA19-0000839",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0000840",
+   "Application_Number": "LCA19-0000840",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -14769,17 +15949,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000845",
    "Application_Number": "LCA19-0000845",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0000845",
+   "Application_Number": "LCA19-0000845",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000845",
    "Application_Number": "LCA19-0000845",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL19-0000845",
-   "Application_Number": "LCA19-0000845",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000851",
@@ -14854,12 +16034,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000872",
    "Application_Number": "LCA19-0000872",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0000872",
    "Application_Number": "LCA19-0000872",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000872",
@@ -14969,12 +16149,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000932",
    "Application_Number": "LCA19-0000932",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0000932",
    "Application_Number": "LCA19-0000932",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0000940",
@@ -14994,7 +16174,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0000945",
    "Application_Number": "LCA19-0000945",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0000946",
@@ -15082,6 +16262,31 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0001001",
+   "Application_Number": "LCA19-0001001",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001002",
+   "Application_Number": "LCA19-0001002",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001003",
+   "Application_Number": "LCA19-0001003",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001004",
+   "Application_Number": "LCA19-0001004",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001005",
+   "Application_Number": "LCA19-0001005",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0001006",
    "Application_Number": "LCA19-0001006",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -15119,6 +16324,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001017",
    "Application_Number": "LCA19-0001017",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001018",
+   "Application_Number": "LCA19-0001018",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -15237,6 +16447,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001103",
+   "Application_Number": "LCA19-0001103",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001104",
    "Application_Number": "LCA19-0001104",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -15259,12 +16474,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001108",
    "Application_Number": "LCA19-0001108",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0001108",
    "Application_Number": "LCA19-0001108",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001110",
@@ -15314,6 +16529,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001133",
    "Application_Number": "LCA19-0001133",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001135",
+   "Application_Number": "LCA19-0001135",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -15382,9 +16602,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001161",
+   "Application_Number": "LCA19-0001161",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0001162",
    "Application_Number": "LCA19-0001162",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001163",
+   "Application_Number": "LCA19-0001163",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -15397,14 +16627,44 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0001190",
-   "Application_Number": "LCA19-0001190",
+   "License_Number": "CCL19-0001184",
+   "Application_Number": "LCA19-0001184",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001185",
+   "Application_Number": "LCA19-0001185",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001186",
+   "Application_Number": "LCA19-0001186",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001187",
+   "Application_Number": "LCA19-0001187",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001188",
+   "Application_Number": "LCA19-0001188",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001189",
+   "Application_Number": "LCA19-0001189",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001190",
    "Application_Number": "LCA19-0001190",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001190",
+   "Application_Number": "LCA19-0001190",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001195",
@@ -15464,6 +16724,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001233",
    "Application_Number": "LCA19-0001233",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001235",
+   "Application_Number": "LCA19-0001235",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -15537,6 +16802,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001263",
+   "Application_Number": "LCA19-0001263",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001266",
    "Application_Number": "LCA19-0001266",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -15569,12 +16839,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001272",
    "Application_Number": "LCA19-0001272",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001272",
    "Application_Number": "LCA19-0001272",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001273",
+   "Application_Number": "LCA19-0001273",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001274",
@@ -15587,8 +16862,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001276",
+   "Application_Number": "LCA19-0001276",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0001277",
    "Application_Number": "LCA19-0001277",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001278",
+   "Application_Number": "LCA19-0001278",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -15799,6 +17084,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001332",
    "Application_Number": "LCA19-0001332",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0001332",
+   "Application_Number": "LCA19-0001332",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -15807,19 +17097,34 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0001332",
-   "Application_Number": "LCA19-0001332",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
- },
- {
    "License_Number": "CCL19-0001333",
    "Application_Number": "LCA19-0001333",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001334",
+   "Application_Number": "LCA19-0001334",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001336",
+   "Application_Number": "LCA19-0001336",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001338",
+   "Application_Number": "LCA19-0001338",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0001339",
    "Application_Number": "LCA19-0001339",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001340",
+   "Application_Number": "LCA19-0001340",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001341",
@@ -15849,12 +17154,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001354",
    "Application_Number": "LCA19-0001354",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001354",
    "Application_Number": "LCA19-0001354",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001358",
+   "Application_Number": "LCA19-0001358",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001365",
@@ -15875,6 +17185,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0001373",
    "Application_Number": "LCA19-0001373",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001373",
+   "Application_Number": "LCA19-0001373",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001376",
@@ -15907,6 +17222,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001395",
+   "Application_Number": "LCA19-0001395",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0001396",
    "Application_Number": "LCA19-0001396",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -15915,6 +17235,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0001398",
    "Application_Number": "LCA19-0001398",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001399",
+   "Application_Number": "LCA19-0001399",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001401",
@@ -15942,9 +17267,34 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
+   "License_Number": "CCL19-0001418",
+   "Application_Number": "LCA19-0001418",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0001418",
+   "Application_Number": "LCA19-0001418",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001419",
+   "Application_Number": "LCA19-0001419",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001419",
+   "Application_Number": "LCA19-0001419",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0001419",
+   "Application_Number": "LCA19-0001419",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
    "License_Number": "",
    "Application_Number": "LCA19-0001420",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -15954,7 +17304,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0001420",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0001421",
@@ -15985,6 +17335,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0001433",
    "Application_Number": "LCA19-0001433",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001433",
+   "Application_Number": "LCA19-0001433",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001434",
@@ -16067,6 +17422,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001458",
+   "Application_Number": "LCA19-0001458",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0001459",
    "Application_Number": "LCA19-0001459",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -16074,6 +17434,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001460",
    "Application_Number": "LCA19-0001460",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001461",
+   "Application_Number": "LCA19-0001461",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -16089,12 +17454,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001464",
    "Application_Number": "LCA19-0001464",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001464",
    "Application_Number": "LCA19-0001464",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001465",
@@ -16127,14 +17492,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL19-0001479",
-   "Application_Number": "LCA19-0001479",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "License_Number": "CCL19-0001475",
+   "Application_Number": "LCA19-0001475",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001476",
+   "Application_Number": "LCA19-0001476",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001477",
+   "Application_Number": "LCA19-0001477",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001479",
    "Application_Number": "LCA19-0001479",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001479",
+   "Application_Number": "LCA19-0001479",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001482",
@@ -16169,12 +17549,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001493",
    "Application_Number": "LCA19-0001493",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001493",
    "Application_Number": "LCA19-0001493",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001501",
@@ -16207,9 +17587,9 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0001508",
-   "Application_Number": "LCA19-0001508",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "License_Number": "CCL19-0001506",
+   "Application_Number": "LCA19-0001506",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001508",
@@ -16219,6 +17599,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001508",
    "Application_Number": "LCA19-0001508",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001508",
+   "Application_Number": "LCA19-0001508",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -16229,7 +17614,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001510",
    "Application_Number": "LCA19-0001510",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "CCL19-0001511",
+   "Application_Number": "LCA19-0001511",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001512",
@@ -16265,6 +17655,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0001519",
    "Application_Number": "LCA19-0001519",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001523",
+   "Application_Number": "LCA19-0001523",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001524",
@@ -16309,12 +17704,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0001532",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0001532",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001533",
@@ -16357,6 +17752,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL19-0001561",
+   "Application_Number": "LCA19-0001561",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001562",
+   "Application_Number": "LCA19-0001562",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0001563",
    "Application_Number": "LCA19-0001563",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -16375,6 +17780,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0001569",
    "Application_Number": "LCA19-0001569",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001571",
+   "Application_Number": "LCA19-0001571",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001572",
@@ -16399,7 +17809,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001580",
    "Application_Number": "LCA19-0001580",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0001581",
@@ -16452,6 +17862,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA19-0001597",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0001600",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
    "License_Number": "CCL19-0001601",
    "Application_Number": "LCA19-0001601",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -16479,12 +17899,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001622",
    "Application_Number": "LCA19-0001622",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001622",
    "Application_Number": "LCA19-0001622",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001624",
+   "Application_Number": "LCA19-0001624",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001627",
+   "Application_Number": "LCA19-0001627",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001628",
@@ -16562,6 +17992,26 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA19-0001660",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0001660",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0001661",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0001661",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0001664",
    "Application_Number": "LCA19-0001664",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -16579,12 +18029,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001670",
    "Application_Number": "LCA19-0001670",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001670",
    "Application_Number": "LCA19-0001670",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0001672",
@@ -16619,7 +18069,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001684",
    "Application_Number": "LCA19-0001684",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001684",
@@ -16629,7 +18079,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001684",
    "Application_Number": "LCA19-0001684",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0001690",
@@ -16639,6 +18089,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001693",
    "Application_Number": "lca19-0001693",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001694",
+   "Application_Number": "lca19-0001694",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -16652,6 +18107,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001701",
+   "Application_Number": "LCA19-0001701",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0001706",
    "Application_Number": "LCA19-0001706",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -16662,6 +18122,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001708",
+   "Application_Number": "LCA19-0001708",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0001712",
    "Application_Number": "LCA19-0001712",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -16669,6 +18134,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001714",
    "Application_Number": "LCA19-0001714",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001715",
+   "Application_Number": "LCA19-0001715",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -16682,6 +18152,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001717",
+   "Application_Number": "LCA19-0001717",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001719",
    "Application_Number": "LCA19-0001719",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -16692,8 +18167,43 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0001722",
+   "Application_Number": "LCA19-0001722",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001723",
+   "Application_Number": "LCA19-0001723",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001724",
+   "Application_Number": "LCA19-0001724",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001725",
+   "Application_Number": "LCA19-0001725",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001727",
+   "Application_Number": "LCA19-0001727",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001728",
+   "Application_Number": "LCA19-0001728",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0001741",
    "Application_Number": "LCA19-0001741",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001744",
+   "Application_Number": "LCA19-0001744",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -16702,9 +18212,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001746",
+   "Application_Number": "LCA19-0001746",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001748",
    "Application_Number": "LCA19-0001748",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001748",
+   "Application_Number": "LCA19-0001748",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001750",
@@ -16712,9 +18232,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001750",
+   "Application_Number": "LCA19-0001750",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001752",
    "Application_Number": "LCA19-0001752",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001752",
+   "Application_Number": "LCA19-0001752",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001753",
@@ -16722,9 +18252,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001753",
+   "Application_Number": "LCA19-0001753",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001754",
    "Application_Number": "LCA19-0001754",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001754",
+   "Application_Number": "LCA19-0001754",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001755",
+   "Application_Number": "LCA19-0001755",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001756",
@@ -16732,9 +18277,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001756",
+   "Application_Number": "LCA19-0001756",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001757",
    "Application_Number": "LCA19-0001757",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001757",
+   "Application_Number": "LCA19-0001757",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001762",
@@ -16757,14 +18312,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001764",
+   "Application_Number": "LCA19-0001764",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001766",
    "Application_Number": "LCA19-0001766",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001766",
+   "Application_Number": "LCA19-0001766",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001767",
    "Application_Number": "LCA19-0001767",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001767",
+   "Application_Number": "LCA19-0001767",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001775",
@@ -16824,22 +18394,32 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001796",
    "Application_Number": "LCA19-0001796",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001796",
    "Application_Number": "LCA19-0001796",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001797",
+   "Application_Number": "LCA19-0001797",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001797",
+   "Application_Number": "LCA19-0001797",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001805",
    "Application_Number": "LCA19-0001805",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0001805",
    "Application_Number": "LCA19-0001805",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001807",
@@ -16859,17 +18439,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001814",
    "Application_Number": "LCA19-0001814",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL19-0001814",
-   "Application_Number": "LCA19-0001814",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001814",
    "Application_Number": "LCA19-0001814",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001814",
+   "Application_Number": "LCA19-0001814",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0001817",
+   "Application_Number": "LCA19-0001817",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001817",
@@ -16880,11 +18465,6 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0001817",
    "Application_Number": "LCA19-0001817",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
- },
- {
-   "License_Number": "CCL19-0001817",
-   "Application_Number": "LCA19-0001817",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001818",
@@ -16904,6 +18484,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001820",
    "Application_Number": "LCA19-0001820",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0001820",
+   "Application_Number": "LCA19-0001820",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -16912,14 +18497,9 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
-   "License_Number": "CCL19-0001820",
-   "Application_Number": "LCA19-0001820",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
    "License_Number": "CCL19-0001821",
    "Application_Number": "LCA19-0001821",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001821",
@@ -16929,7 +18509,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001821",
    "Application_Number": "LCA19-0001821",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001822",
@@ -17082,14 +18662,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001883",
+   "Application_Number": "LCA19-0001883",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001884",
    "Application_Number": "LCA19-0001884",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001884",
+   "Application_Number": "LCA19-0001884",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001885",
    "Application_Number": "LCA19-0001885",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001885",
+   "Application_Number": "LCA19-0001885",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001887",
@@ -17102,6 +18697,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001889",
+   "Application_Number": "LCA19-0001889",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001890",
    "Application_Number": "LCA19-0001890",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -17112,9 +18712,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001891",
+   "Application_Number": "LCA19-0001891",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001892",
    "Application_Number": "LCA19-0001892",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001892",
+   "Application_Number": "LCA19-0001892",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001894",
@@ -17122,9 +18732,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001894",
+   "Application_Number": "LCA19-0001894",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001895",
    "Application_Number": "LCA19-0001895",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001895",
+   "Application_Number": "LCA19-0001895",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001897",
@@ -17132,9 +18752,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001897",
+   "Application_Number": "LCA19-0001897",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001898",
    "Application_Number": "LCA19-0001898",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001898",
+   "Application_Number": "LCA19-0001898",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0001903",
+   "Application_Number": "LCA19-0001903",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001906",
@@ -17192,6 +18827,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0001931",
+   "Application_Number": "LCA19-0001931",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0001934",
    "Application_Number": "LCA19-0001934",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
@@ -17204,17 +18844,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001940",
    "Application_Number": "LCA19-0001940",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001940",
    "Application_Number": "LCA19-0001940",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001941",
    "Application_Number": "LCA19-0001941",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0001941",
@@ -17224,7 +18864,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001941",
    "Application_Number": "LCA19-0001941",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001943",
@@ -17249,12 +18889,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0001969",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0001969",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001972",
@@ -17289,12 +18929,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0001985",
    "Application_Number": "LCA19-0001985",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0001985",
    "Application_Number": "LCA19-0001985",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0001991",
+   "Application_Number": "LCA19-0001991",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0001992",
@@ -17332,6 +18977,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL19-0002035",
+   "Application_Number": "LCA19-0002035",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0002038",
    "Application_Number": "LCA19-0002038",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -17345,6 +18995,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0002043",
    "Application_Number": "LCA19-0002043",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0002051",
+   "Application_Number": "LCA19-0002051",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0002056",
@@ -17377,9 +19032,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0002067",
+   "Application_Number": "LCA19-0002067",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0002077",
    "Application_Number": "LCA19-0002077",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002078",
+   "Application_Number": "LCA19-0002078",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0002079",
@@ -17414,6 +19079,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002085",
    "Application_Number": "LCA19-0002085",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002086",
+   "Application_Number": "LCA19-0002086",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -17474,12 +19144,32 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002101",
    "Application_Number": "LCA19-0002101",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0002101",
    "Application_Number": "LCA19-0002101",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002103",
+   "Application_Number": "LCA19-0002103",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002104",
+   "Application_Number": "LCA19-0002104",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002105",
+   "Application_Number": "LCA19-0002105",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002121",
+   "Application_Number": "LCA19-0002121",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0002125",
@@ -17537,14 +19227,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
-   "License_Number": "CCL19-0002207",
-   "Application_Number": "LCA19-0002207",
+   "License_Number": "CCL19-0002206",
+   "Application_Number": "LCA19-0002206",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0002207",
    "Application_Number": "LCA19-0002207",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0002207",
+   "Application_Number": "LCA19-0002207",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0002208",
@@ -17559,22 +19254,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002209",
    "Application_Number": "LCA19-0002209",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0002209",
    "Application_Number": "LCA19-0002209",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL19-0002210",
-   "Application_Number": "LCA19-0002210",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0002210",
    "Application_Number": "LCA19-0002210",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0002210",
+   "Application_Number": "LCA19-0002210",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0002211",
@@ -17585,6 +19280,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0002211",
    "Application_Number": "LCA19-0002211",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0002212",
+   "Application_Number": "LCA19-0002212",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0002213",
@@ -17592,8 +19292,23 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0002214",
+   "Application_Number": "LCA19-0002214",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "",
    "Application_Number": "LCA19-0002215",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002222",
+   "Application_Number": "LCA19-0002222",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0002222",
+   "Application_Number": "LCA19-0002222",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -17664,12 +19379,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002285",
    "Application_Number": "LCA19-0002285",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0002285",
    "Application_Number": "LCA19-0002285",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0002292",
@@ -17685,6 +19400,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0002294",
    "Application_Number": "LCA19-0002294",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0002295",
+   "Application_Number": "LCA19-0002295",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0002297",
@@ -17744,22 +19464,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002314",
    "Application_Number": "LCA19-0002314",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0002314",
    "Application_Number": "LCA19-0002314",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0002316",
-   "Application_Number": "LCA19-0002316",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0002316",
    "Application_Number": "LCA19-0002316",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002316",
+   "Application_Number": "LCA19-0002316",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0002323",
@@ -17844,12 +19564,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002333",
    "Application_Number": "LCA19-0002333",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0002333",
    "Application_Number": "LCA19-0002333",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0002336",
@@ -17939,12 +19659,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002348",
    "Application_Number": "LCA19-0002348",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0002348",
    "Application_Number": "LCA19-0002348",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0002349",
@@ -18004,12 +19724,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002358",
    "Application_Number": "LCA19-0002358",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0002358",
    "Application_Number": "LCA19-0002358",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0002359",
@@ -18094,6 +19814,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0002389",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002390",
+   "Application_Number": "LCA19-0002390",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -18267,6 +19992,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0002523",
+   "Application_Number": "LCA19-0002523",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0002530",
    "Application_Number": "LCA19-0002530",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -18392,6 +20122,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0002588",
+   "Application_Number": "LCA19-0002588",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0002589",
    "Application_Number": "LCA19-0002589",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -18444,12 +20179,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002621",
    "Application_Number": "LCA19-0002621",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0002621",
    "Application_Number": "LCA19-0002621",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
    "License_Number": "CCL19-0002625",
@@ -18474,7 +20209,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002642",
    "Application_Number": "LCA19-0002642",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0002653",
@@ -18909,12 +20644,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002980",
    "Application_Number": "LCA19-0002980",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0002980",
    "Application_Number": "LCA19-0002980",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0002981",
@@ -18964,12 +20699,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002989",
    "Application_Number": "LCA19-0002989",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0002989",
    "Application_Number": "LCA19-0002989",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0002990",
@@ -18999,6 +20734,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0002997",
    "Application_Number": "LCA19-0002997",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0002998",
+   "Application_Number": "LCA19-0002998",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -19109,12 +20849,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003034",
    "Application_Number": "LCA19-0003034",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0003034",
    "Application_Number": "LCA19-0003034",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003035",
@@ -19239,7 +20979,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003085",
    "Application_Number": "LCA19-0003085",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0003088",
@@ -19275,6 +21015,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0003106",
    "Application_Number": "LCA19-0003106",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0003111",
+   "Application_Number": "LCA19-0003111",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0003129",
@@ -19319,7 +21064,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003165",
    "Application_Number": "LCA19-0003165",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003165",
@@ -19334,7 +21079,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003165",
    "Application_Number": "LCA19-0003165",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003165",
@@ -19344,7 +21089,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003165",
    "Application_Number": "LCA19-0003165",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003165",
@@ -19549,7 +21294,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003264",
    "Application_Number": "LCA19-0003264",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0003264",
+   "Application_Number": "LCA19-0003264",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003264",
@@ -19564,12 +21314,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003264",
    "Application_Number": "LCA19-0003264",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL19-0003264",
-   "Application_Number": "LCA19-0003264",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003265",
@@ -19639,12 +21384,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003281",
    "Application_Number": "LCA19-0003281",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003281",
    "Application_Number": "LCA19-0003281",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0003282",
@@ -19654,22 +21399,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003284",
    "Application_Number": "LCA19-0003284",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003284",
    "Application_Number": "LCA19-0003284",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0003293",
-   "Application_Number": "LCA19-0003293",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0003293",
    "Application_Number": "LCA19-0003293",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0003293",
+   "Application_Number": "LCA19-0003293",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003294",
@@ -19702,8 +21447,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0003314",
+   "Application_Number": "LCA19-0003314",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0003323",
    "Application_Number": "LCA19-0003323",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0003333",
+   "Application_Number": "LCA19-0003333",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -19757,6 +21512,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0003413",
+   "Application_Number": "LCA19-0003413",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0003418",
    "Application_Number": "LCA19-0003418",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -19792,6 +21552,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0003468",
+   "Application_Number": "LCA19-0003468",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0003469",
    "Application_Number": "LCA19-0003469",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -19804,12 +21569,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003471",
    "Application_Number": "LCA19-0003471",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003471",
    "Application_Number": "LCA19-0003471",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003472",
@@ -19869,17 +21634,32 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003487",
    "Application_Number": "LCA19-0003487",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003487",
    "Application_Number": "LCA19-0003487",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003489",
    "Application_Number": "LCA19-0003489",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0003497",
+   "Application_Number": "LCA19-0003497",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0003497",
+   "Application_Number": "LCA19-0003497",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0003497",
+   "Application_Number": "LCA19-0003497",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "",
@@ -19954,22 +21734,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003536",
    "Application_Number": "LCA19-0003536",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0003536",
    "Application_Number": "LCA19-0003536",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL19-0003538",
-   "Application_Number": "LCA19-0003538",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003538",
    "Application_Number": "LCA19-0003538",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0003538",
+   "Application_Number": "LCA19-0003538",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0003540",
@@ -20022,6 +21802,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0003575",
+   "Application_Number": "LCA19-0003575",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0003577",
    "Application_Number": "LCA19-0003577",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -20049,12 +21834,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003592",
    "Application_Number": "LCA19-0003592",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003592",
    "Application_Number": "LCA19-0003592",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003595",
@@ -20124,12 +21909,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003629",
    "Application_Number": "LCA19-0003629",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0003629",
    "Application_Number": "LCA19-0003629",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003632",
@@ -20149,12 +21934,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003636",
    "Application_Number": "LCA19-0003636",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003636",
    "Application_Number": "LCA19-0003636",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003639",
@@ -20239,22 +22024,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003659",
    "Application_Number": "LCA19-0003659",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003659",
    "Application_Number": "LCA19-0003659",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL19-0003661",
-   "Application_Number": "LCA19-0003661",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003661",
    "Application_Number": "LCA19-0003661",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0003661",
+   "Application_Number": "LCA19-0003661",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -20344,12 +22129,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003690",
    "Application_Number": "LCA19-0003690",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003690",
    "Application_Number": "LCA19-0003690",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -20434,12 +22219,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003752",
    "Application_Number": "LCA19-0003752",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003752",
    "Application_Number": "LCA19-0003752",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL19-0003754",
@@ -20454,22 +22239,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003756",
    "Application_Number": "LCA19-0003756",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL19-0003756",
    "Application_Number": "LCA19-0003756",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
- },
- {
-   "License_Number": "CCL19-0003757",
-   "Application_Number": "LCA19-0003757",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003757",
    "Application_Number": "LCA19-0003757",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL19-0003757",
+   "Application_Number": "LCA19-0003757",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003758",
@@ -20484,12 +22269,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003759",
    "Application_Number": "LCA19-0003759",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003759",
    "Application_Number": "LCA19-0003759",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL19-0003762",
@@ -20514,12 +22299,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003767",
    "Application_Number": "LCA19-0003767",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL19-0003767",
    "Application_Number": "LCA19-0003767",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0003770",
@@ -20574,6 +22359,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003791",
    "Application_Number": "LCA19-0003791",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0003792",
+   "Application_Number": "LCA19-0003792",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "CCL19-0003792",
+   "Application_Number": "LCA19-0003792",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -20839,12 +22634,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003899",
    "Application_Number": "LCA19-0003899",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003899",
    "Application_Number": "LCA19-0003899",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003905",
@@ -20912,6 +22707,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0003937",
+   "Application_Number": "LCA19-0003937",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0003939",
    "Application_Number": "LCA19-0003939",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
@@ -20919,22 +22719,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003942",
    "Application_Number": "LCA19-0003942",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003942",
    "Application_Number": "LCA19-0003942",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0003946",
-   "Application_Number": "LCA19-0003946",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003946",
    "Application_Number": "LCA19-0003946",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0003946",
+   "Application_Number": "LCA19-0003946",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0003958",
@@ -20947,14 +22747,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0003962",
-   "Application_Number": "LCA19-0003962",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "License_Number": "CCL19-0003961",
+   "Application_Number": "LCA19-0003961",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0003962",
    "Application_Number": "LCA19-0003962",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0003962",
+   "Application_Number": "LCA19-0003962",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0003963",
@@ -20964,6 +22769,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0003964",
    "Application_Number": "LCA19-0003964",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0003965",
+   "Application_Number": "LCA19-0003965",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -21119,22 +22929,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004018",
    "Application_Number": "LCA19-0004018",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0004018",
    "Application_Number": "LCA19-0004018",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0004019",
-   "Application_Number": "LCA19-0004019",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0004019",
    "Application_Number": "LCA19-0004019",
    "Waste_Management_Method": "Self-Haul to a Recycling Center That Meets Regulations Requirements"
+ },
+ {
+   "License_Number": "CCL19-0004019",
+   "Application_Number": "LCA19-0004019",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0004019",
@@ -21154,12 +22964,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004019",
    "Application_Number": "LCA19-0004019",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0004019",
    "Application_Number": "LCA19-0004019",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL19-0004021",
@@ -21192,13 +23002,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL19-0004036",
+   "License_Number": "",
    "Application_Number": "LCA19-0004036",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0004037",
    "Application_Number": "LCA19-0004037",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0004038",
+   "Application_Number": "LCA19-0004038",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -21224,12 +23039,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004051",
    "Application_Number": "LCA19-0004051",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0004051",
    "Application_Number": "LCA19-0004051",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0004052",
@@ -21244,12 +23059,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004054",
    "Application_Number": "LCA19-0004054",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0004054",
    "Application_Number": "LCA19-0004054",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0004056",
@@ -21277,11 +23092,26 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0004067",
+   "Application_Number": "LCA19-0004067",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0004076",
    "Application_Number": "LCA19-0004076",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0004076",
+   "Application_Number": "LCA19-0004076",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0004078",
+   "Application_Number": "LCA19-0004078",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0004079",
    "Application_Number": "LCA19-0004079",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -21289,6 +23119,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004079",
    "Application_Number": "LCA19-0004079",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0004080",
+   "Application_Number": "LCA19-0004080",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -21297,14 +23132,14 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
-   "License_Number": "CCL19-0004080",
-   "Application_Number": "LCA19-0004080",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
    "License_Number": "CCL19-0004087",
    "Application_Number": "LCA19-0004087",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0004088",
+   "Application_Number": "LCA19-0004088",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0004089",
@@ -21397,7 +23232,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0004136",
+   "License_Number": "",
    "Application_Number": "LCA19-0004136",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
@@ -21624,11 +23459,6 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004207",
    "Application_Number": "LCA19-0004207",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0004208",
-   "Application_Number": "LCA19-0004208",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -22147,6 +23977,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0004427",
+   "Application_Number": "LCA19-0004427",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0004439",
    "Application_Number": "LCA19-0004439",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -22229,12 +24064,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004500",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004500",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -22319,12 +24154,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004533",
    "Application_Number": "LCA19-0004533",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0004533",
    "Application_Number": "LCA19-0004533",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0004534",
@@ -22339,6 +24174,21 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004538",
    "Application_Number": "LCA19-0004538",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL19-0004538",
+   "Application_Number": "LCA19-0004538",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0004538",
+   "Application_Number": "LCA19-0004538",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0004538",
+   "Application_Number": "LCA19-0004538",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -22349,27 +24199,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004538",
    "Application_Number": "LCA19-0004538",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
- },
- {
-   "License_Number": "CCL19-0004538",
-   "Application_Number": "LCA19-0004538",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
- },
- {
-   "License_Number": "CCL19-0004538",
-   "Application_Number": "LCA19-0004538",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "Self-Haul to a Recycling Center That Meets Regulations Requirements"
  },
  {
    "License_Number": "CCL19-0004538",
    "Application_Number": "LCA19-0004538",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0004538",
-   "Application_Number": "LCA19-0004538",
-   "Waste_Management_Method": "Self-Haul to a Recycling Center That Meets Regulations Requirements"
  },
  {
    "License_Number": "CCL19-0004540",
@@ -22442,6 +24277,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0004576",
+   "Application_Number": "LCA19-0004576",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0004577",
    "Application_Number": "LCA19-0004577",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -22509,12 +24349,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004612",
    "Application_Number": "LCA19-0004612",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL19-0004612",
    "Application_Number": "LCA19-0004612",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0004618",
@@ -22540,6 +24380,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0004625",
    "Application_Number": "LCA19-0004625",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0004627",
+   "Application_Number": "LCA19-0004627",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0004638",
@@ -22709,12 +24554,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004711",
    "Application_Number": "LCA19-0004711",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0004711",
    "Application_Number": "LCA19-0004711",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "",
@@ -22754,16 +24599,21 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004720",
    "Application_Number": "LCA19-0004720",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0004720",
    "Application_Number": "LCA19-0004720",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0004725",
    "Application_Number": "LCA19-0004725",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0004726",
+   "Application_Number": "LCA19-0004726",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -22874,12 +24724,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004752",
    "Application_Number": "LCA19-0004752",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0004752",
    "Application_Number": "LCA19-0004752",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0004754",
@@ -22897,8 +24747,83 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004758",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004759",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004760",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004762",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004763",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004764",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004765",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004766",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004767",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004768",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004769",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004770",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004772",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004773",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0004777",
    "Application_Number": "LCA19-0004777",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004778",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -22929,12 +24854,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004790",
    "Application_Number": "LCA19-0004790",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0004790",
-   "Application_Number": "LCA19-0004790",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0004790",
@@ -22942,6 +24862,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL19-0004790",
+   "Application_Number": "LCA19-0004790",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0004791",
    "Application_Number": "LCA19-0004791",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -22949,7 +24874,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004791",
    "Application_Number": "LCA19-0004791",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0004791",
@@ -22959,22 +24884,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004792",
    "Application_Number": "LCA19-0004792",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL19-0004792",
-   "Application_Number": "LCA19-0004792",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
- },
- {
-   "License_Number": "CCL19-0004792",
-   "Application_Number": "LCA19-0004792",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0004792",
+   "Application_Number": "LCA19-0004792",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "CCL19-0004792",
+   "Application_Number": "LCA19-0004792",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0004793",
    "Application_Number": "LCA19-0004793",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0004793",
@@ -22984,6 +24909,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004793",
    "Application_Number": "LCA19-0004793",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0004794",
+   "Application_Number": "LCA19-0004794",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0004794",
+   "Application_Number": "LCA19-0004794",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -23029,12 +24964,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004811",
    "Application_Number": "LCA19-0004811",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0004811",
    "Application_Number": "LCA19-0004811",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0004812",
@@ -23044,17 +24979,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004813",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004813",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0004813",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004813",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0004814",
@@ -23069,6 +25004,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004816",
    "Application_Number": "LCA19-0004816",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0004817",
+   "Application_Number": "LCA19-0004817",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -23087,6 +25027,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004831",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0004832",
    "Application_Number": "LCA19-0004832",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -23099,12 +25044,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004833",
    "Application_Number": "LCA19-0004833",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0004833",
    "Application_Number": "LCA19-0004833",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0004834",
@@ -23207,6 +25152,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0004862",
+   "Application_Number": "LCA19-0004862",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0004864",
    "Application_Number": "LCA19-0004864",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -23247,14 +25197,14 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0004877",
-   "Application_Number": "LCA19-0004877",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0004877",
+   "License_Number": "",
    "Application_Number": "LCA19-0004877",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004877",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0004880",
@@ -23317,6 +25267,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0004902",
+   "Application_Number": "LCA19-0004902",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0004904",
    "Application_Number": "LCA19-0004904",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -23334,6 +25289,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004907",
    "Application_Number": "LCA19-0004907",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0004908",
+   "Application_Number": "LCA19-0004908",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -23367,8 +25327,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0004917",
+   "Application_Number": "LCA19-0004917",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0004920",
    "Application_Number": "LCA19-0004920",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0004922",
+   "Application_Number": "LCA19-0004922",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -23390,6 +25360,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0004928",
    "Application_Number": "LCA19-0004928",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0004930",
+   "Application_Number": "LCA19-0004930",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0004931",
@@ -23422,6 +25397,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0004939",
+   "Application_Number": "LCA19-0004939",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0004940",
+   "Application_Number": "LCA19-0004940",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0004941",
    "Application_Number": "LCA19-0004941",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -23447,6 +25432,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0004951",
+   "Application_Number": "LCA19-0004951",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
    "License_Number": "",
    "Application_Number": "LCA19-0004952",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -23462,6 +25452,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
+   "License_Number": "CCL19-0004954",
+   "Application_Number": "LCA19-0004954",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "",
    "Application_Number": "LCA19-0004955",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -23470,6 +25465,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL19-0004956",
    "Application_Number": "LCA19-0004956",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0004956",
+   "Application_Number": "LCA19-0004956",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0004957",
@@ -23494,12 +25494,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0004961",
    "Application_Number": "LCA19-0004961",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0004966",
    "Application_Number": "LCA19-0004966",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0004970",
+   "Application_Number": "LCA19-0004970",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0004971",
+   "Application_Number": "LCA19-0004971",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0004974",
@@ -23579,12 +25589,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005009",
    "Application_Number": "LCA19-0005009",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005009",
    "Application_Number": "LCA19-0005009",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005011",
@@ -23594,12 +25604,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005016",
    "Application_Number": "LCA19-0005016",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005016",
    "Application_Number": "LCA19-0005016",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005018",
@@ -23634,12 +25644,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005024",
    "Application_Number": "LCA19-0005024",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005024",
    "Application_Number": "LCA19-0005024",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -23669,7 +25679,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005032",
    "Application_Number": "LCA19-0005032",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0005032",
+   "Application_Number": "LCA19-0005032",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005032",
@@ -23679,12 +25694,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005032",
    "Application_Number": "LCA19-0005032",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
- },
- {
-   "License_Number": "CCL19-0005032",
-   "Application_Number": "LCA19-0005032",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005035",
@@ -23737,14 +25747,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0005049",
-   "Application_Number": "LCA19-0005049",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "License_Number": "CCL19-0005048",
+   "Application_Number": "LCA19-0005048",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005049",
    "Application_Number": "LCA19-0005049",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0005049",
+   "Application_Number": "LCA19-0005049",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -23779,12 +25794,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005062",
    "Application_Number": "LCA19-0005062",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005062",
    "Application_Number": "LCA19-0005062",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005063",
@@ -23799,12 +25814,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005065",
    "Application_Number": "LCA19-0005065",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005065",
    "Application_Number": "LCA19-0005065",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005066",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005067",
@@ -23984,12 +26004,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005105",
    "Application_Number": "LCA19-0005105",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005105",
    "Application_Number": "LCA19-0005105",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005105",
@@ -23997,6 +26017,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005106",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0005107",
    "Application_Number": "LCA19-0005107",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -24009,12 +26034,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005108",
    "Application_Number": "LCA19-0005108",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005108",
    "Application_Number": "LCA19-0005108",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005113",
@@ -24032,7 +26057,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0005120",
+   "License_Number": "",
    "Application_Number": "LCA19-0005120",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
@@ -24074,12 +26099,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005131",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005131",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005132",
@@ -24089,12 +26114,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005132",
    "Application_Number": "LCA19-0005132",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005132",
    "Application_Number": "LCA19-0005132",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005133",
@@ -24114,12 +26139,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005135",
    "Application_Number": "LCA19-0005135",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005135",
    "Application_Number": "LCA19-0005135",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -24129,12 +26154,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005140",
    "Application_Number": "LCA19-0005140",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005140",
    "Application_Number": "LCA19-0005140",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005142",
@@ -24184,12 +26209,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005155",
    "Application_Number": "LCA19-0005155",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005155",
    "Application_Number": "LCA19-0005155",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005158",
@@ -24199,12 +26224,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005158",
    "Application_Number": "LCA19-0005158",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005158",
    "Application_Number": "LCA19-0005158",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005158",
@@ -24219,7 +26244,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005161",
    "Application_Number": "LCA19-0005161",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005161",
@@ -24229,7 +26254,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005161",
    "Application_Number": "LCA19-0005161",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0005164",
+   "Application_Number": "LCA19-0005164",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -24239,7 +26269,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005168",
    "Application_Number": "LCA19-0005168",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005168",
@@ -24249,7 +26279,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005168",
    "Application_Number": "LCA19-0005168",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "",
@@ -24327,14 +26357,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0005190",
-   "Application_Number": "LCA19-0005190",
+   "License_Number": "",
+   "Application_Number": "LCA19-0005188",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005189",
+   "Application_Number": "LCA19-0005189",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005190",
    "Application_Number": "LCA19-0005190",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0005190",
+   "Application_Number": "LCA19-0005190",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005191",
@@ -24344,17 +26384,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005192",
    "Application_Number": "LCA19-0005192",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005192",
    "Application_Number": "LCA19-0005192",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL19-0005197",
-   "Application_Number": "LCA19-0005197",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005197",
@@ -24362,8 +26397,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0005197",
+   "Application_Number": "LCA19-0005197",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0005198",
    "Application_Number": "LCA19-0005198",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005199",
+   "Application_Number": "LCA19-0005199",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -24587,6 +26632,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0005285",
+   "Application_Number": "LCA19-0005285",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0005286",
    "Application_Number": "LCA19-0005286",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -24674,12 +26724,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005316",
    "Application_Number": "LCA19-0005316",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005316",
    "Application_Number": "LCA19-0005316",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005317",
@@ -24737,39 +26787,39 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL19-0005329",
+   "License_Number": "",
    "Application_Number": "LCA19-0005329",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL19-0005330",
+   "License_Number": "",
    "Application_Number": "LCA19-0005330",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL19-0005331",
+   "License_Number": "",
    "Application_Number": "LCA19-0005331",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL19-0005332",
+   "License_Number": "",
    "Application_Number": "LCA19-0005332",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL19-0005333",
+   "License_Number": "",
    "Application_Number": "LCA19-0005333",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005334",
    "Application_Number": "LCA19-0005334",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005334",
    "Application_Number": "LCA19-0005334",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005335",
@@ -24814,12 +26864,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005339",
    "Application_Number": "LCA19-0005339",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005339",
    "Application_Number": "LCA19-0005339",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005341",
@@ -24839,12 +26889,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005345",
    "Application_Number": "LCA19-0005345",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005345",
    "Application_Number": "LCA19-0005345",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005346",
@@ -24917,7 +26967,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0005372",
+   "License_Number": "",
    "Application_Number": "LCA19-0005372",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
@@ -25024,16 +27074,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005398",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005398",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL19-0005399",
-   "Application_Number": "LCA19-0005399",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -25042,8 +27087,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0005399",
+   "Application_Number": "LCA19-0005399",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0005400",
    "Application_Number": "LCA19-0005400",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005401",
+   "Application_Number": "LCA19-0005401",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -25057,8 +27112,33 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0005405",
+   "Application_Number": "LCA19-0005405",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0005405",
+   "Application_Number": "LCA19-0005405",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0005407",
    "Application_Number": "LCA19-0005407",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005409",
+   "Application_Number": "LCA19-0005409",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0005409",
+   "Application_Number": "LCA19-0005409",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0005409",
+   "Application_Number": "LCA19-0005409",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -25099,12 +27179,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005415",
    "Application_Number": "LCA19-0005415",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005415",
    "Application_Number": "LCA19-0005415",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005417",
@@ -25129,22 +27209,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005419",
    "Application_Number": "LCA19-0005419",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005419",
    "Application_Number": "LCA19-0005419",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL19-0005420",
-   "Application_Number": "LCA19-0005420",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005420",
    "Application_Number": "LCA19-0005420",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005420",
+   "Application_Number": "LCA19-0005420",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005421",
@@ -25159,12 +27239,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005422",
    "Application_Number": "LCA19-0005422",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005422",
    "Application_Number": "LCA19-0005422",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005423",
@@ -25194,17 +27274,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005425",
    "Application_Number": "LCA19-0005425",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005426",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005426",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005426",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005427",
@@ -25227,6 +27307,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0005432",
+   "Application_Number": "LCA19-0005432",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL19-0005433",
    "Application_Number": "LCA19-0005433",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -25237,17 +27322,22 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL19-0005440",
+   "Application_Number": "LCA19-0005440",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0005441",
    "Application_Number": "LCA19-0005441",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0005443",
+   "License_Number": "",
    "Application_Number": "LCA19-0005443",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL19-0005444",
+   "License_Number": "",
    "Application_Number": "LCA19-0005444",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
@@ -25309,7 +27399,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005457",
    "Application_Number": "Lca19-0005457",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "CCL19-0005457",
+   "Application_Number": "Lca19-0005457",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005457",
@@ -25319,22 +27414,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005457",
    "Application_Number": "Lca19-0005457",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
- },
- {
-   "License_Number": "CCL19-0005457",
-   "Application_Number": "Lca19-0005457",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL19-0005458",
-   "Application_Number": "LCA19-0005458",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005458",
    "Application_Number": "LCA19-0005458",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005458",
+   "Application_Number": "LCA19-0005458",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005460",
@@ -25344,7 +27434,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005461",
    "Application_Number": "LCA19-0005461",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005461",
@@ -25354,7 +27444,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005461",
    "Application_Number": "LCA19-0005461",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005463",
@@ -25369,12 +27459,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005465",
    "Application_Number": "LCA19-0005465",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL19-0005465",
    "Application_Number": "LCA19-0005465",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005466",
@@ -25384,6 +27474,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005467",
    "Application_Number": "LCA19-0005467",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005468",
+   "Application_Number": "LCA19-0005468",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005469",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -25399,12 +27499,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005472",
    "Application_Number": "LCA19-0005472",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005472",
    "Application_Number": "LCA19-0005472",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005473",
@@ -25417,17 +27517,17 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0005477",
+   "License_Number": "",
    "Application_Number": "LCA19-0005477",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL19-0005477",
+   "License_Number": "",
    "Application_Number": "LCA19-0005477",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
-   "License_Number": "CCL19-0005477",
+   "License_Number": "",
    "Application_Number": "LCA19-0005477",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
@@ -25452,14 +27552,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL19-0005483",
-   "Application_Number": "LCA19-0005483",
+   "License_Number": "CCL19-0005482",
+   "Application_Number": "LCA19-0005482",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005483",
    "Application_Number": "LCA19-0005483",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0005483",
+   "Application_Number": "LCA19-0005483",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -25484,12 +27589,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005490",
    "Application_Number": "LCA19-0005490",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005490",
    "Application_Number": "LCA19-0005490",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL19-0005491",
@@ -25659,17 +27764,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005526",
    "Application_Number": "LCA19-0005526",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005526",
+   "Application_Number": "LCA19-0005526",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL19-0005526",
    "Application_Number": "LCA19-0005526",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL19-0005526",
-   "Application_Number": "LCA19-0005526",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005528",
@@ -25682,13 +27787,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
-   "License_Number": "CCL19-0005529",
+   "License_Number": "",
+   "Application_Number": "LCA19-0005529",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA19-0005529",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL19-0005529",
-   "Application_Number": "LCA19-0005529",
+   "License_Number": "CCL19-0005530",
+   "Application_Number": "LCA19-0005530",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -25729,12 +27839,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005537",
    "Application_Number": "LCA19-0005537",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005537",
    "Application_Number": "LCA19-0005537",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005538",
@@ -25867,6 +27977,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005565",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0005567",
    "Application_Number": "LCA19-0005567",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -25894,12 +28009,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005574",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005574",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL19-0005575",
@@ -26102,6 +28217,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL19-0005613",
+   "Application_Number": "LCA19-0005613",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL19-0005614",
    "Application_Number": "LCA19-0005614",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -26127,7 +28247,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL19-0005622",
+   "License_Number": "",
    "Application_Number": "LCA19-0005622",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
@@ -26154,12 +28274,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005627",
    "Application_Number": "LCA19-0005627",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005627",
    "Application_Number": "LCA19-0005627",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -26177,6 +28297,41 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL19-0005634",
+   "Application_Number": "LCA19-0005634",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL19-0005635",
+   "Application_Number": "LCA19-0005635",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005635",
+   "Application_Number": "LCA19-0005635",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL19-0005635",
+   "Application_Number": "LCA19-0005635",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL19-0005636",
+   "Application_Number": "LCA19-0005636",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL19-0005636",
+   "Application_Number": "LCA19-0005636",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL19-0005636",
+   "Application_Number": "LCA19-0005636",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL19-0005637",
    "Application_Number": "LCA19-0005637",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -26194,12 +28349,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005638",
    "Application_Number": "LCA19-0005638",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
    "License_Number": "CCL19-0005638",
    "Application_Number": "LCA19-0005638",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL19-0005638",
@@ -26209,6 +28364,41 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL19-0005639",
    "Application_Number": "LCA19-0005639",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005642",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005643",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005644",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005645",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005646",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005647",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005648",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -26242,9 +28432,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0000005",
+   "Application_Number": "LCA20-0000005",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL20-0000007",
    "Application_Number": "LCA20-0000007",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000008",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000009",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000017",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000018",
@@ -26255,6 +28465,76 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0000019",
    "Application_Number": "LCA20-0000019",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000020",
+   "Application_Number": "LCA20-0000020",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000020",
+   "Application_Number": "LCA20-0000020",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000021",
+   "Application_Number": "LCA20-0000021",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000021",
+   "Application_Number": "LCA20-0000021",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000022",
+   "Application_Number": "LCA20-0000022",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000022",
+   "Application_Number": "LCA20-0000022",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000023",
+   "Application_Number": "LCA20-0000023",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000023",
+   "Application_Number": "LCA20-0000023",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000024",
+   "Application_Number": "LCA20-0000024",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000024",
+   "Application_Number": "LCA20-0000024",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000025",
+   "Application_Number": "LCA20-0000025",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000025",
+   "Application_Number": "LCA20-0000025",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000026",
+   "Application_Number": "LCA20-0000026",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000026",
+   "Application_Number": "LCA20-0000026",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000029",
@@ -26269,6 +28549,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000031",
    "Application_Number": "LCA20-0000031",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000032",
+   "Application_Number": "LCA20-0000032",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -26289,12 +28574,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000038",
    "Application_Number": "LCA20-0000038",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000038",
    "Application_Number": "LCA20-0000038",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000039",
@@ -26304,12 +28589,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000042",
    "Application_Number": "LCA20-0000042",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000042",
    "Application_Number": "LCA20-0000042",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -26322,6 +28607,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL20-0000052",
+   "Application_Number": "LCA20-0000052",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000052",
+   "Application_Number": "LCA20-0000052",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL20-0000053",
    "Application_Number": "LCA20-0000053",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
@@ -26329,12 +28624,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000054",
    "Application_Number": "LCA20-0000054",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000054",
    "Application_Number": "LCA20-0000054",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000055",
@@ -26367,9 +28662,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0000063",
+   "Application_Number": "LCA20-0000063",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL20-0000063",
+   "Application_Number": "LCA20-0000063",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000064",
+   "Application_Number": "LCA20-0000064",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0000064",
    "Application_Number": "LCA20-0000064",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000065",
+   "Application_Number": "LCA20-0000065",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000065",
@@ -26379,7 +28694,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000066",
    "Application_Number": "LCA20-0000066",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000066",
+   "Application_Number": "LCA20-0000066",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000067",
+   "Application_Number": "LCA20-0000067",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000067",
@@ -26392,6 +28717,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0000068",
+   "Application_Number": "LCA20-0000068",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000069",
+   "Application_Number": "LCA20-0000069",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0000069",
    "Application_Number": "LCA20-0000069",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -26402,9 +28737,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0000070",
+   "Application_Number": "LCA20-0000070",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000071",
+   "Application_Number": "LCA20-0000071",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0000071",
    "Application_Number": "LCA20-0000071",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000072",
+   "Application_Number": "LCA20-0000072",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000072",
@@ -26417,6 +28767,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0000073",
+   "Application_Number": "LCA20-0000073",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000074",
+   "Application_Number": "LCA20-0000074",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0000074",
    "Application_Number": "LCA20-0000074",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -26424,7 +28784,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000075",
    "Application_Number": "LCA20-0000075",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000075",
+   "Application_Number": "LCA20-0000075",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000076",
+   "Application_Number": "LCA20-0000076",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000076",
@@ -26437,9 +28807,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0000077",
+   "Application_Number": "LCA20-0000077",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000078",
+   "Application_Number": "LCA20-0000078",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0000078",
    "Application_Number": "LCA20-0000078",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000079",
+   "Application_Number": "LCA20-0000079",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000079",
@@ -26449,7 +28834,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000080",
    "Application_Number": "LCA20-0000080",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000080",
+   "Application_Number": "LCA20-0000080",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000081",
+   "Application_Number": "LCA20-0000081",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000081",
@@ -26462,9 +28857,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0000082",
+   "Application_Number": "LCA20-0000082",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000083",
+   "Application_Number": "LCA20-0000083",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0000083",
    "Application_Number": "LCA20-0000083",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000084",
+   "Application_Number": "LCA20-0000084",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000084",
@@ -26484,12 +28894,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000086",
    "Application_Number": "LCA20-0000086",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000086",
    "Application_Number": "LCA20-0000086",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000087",
@@ -26504,16 +28914,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000088",
    "Application_Number": "LCA20-0000088",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000088",
    "Application_Number": "LCA20-0000088",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0000089",
-   "Application_Number": "LCA20-0000089",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -26522,8 +28927,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000090",
-   "Application_Number": "LCA20-0000090",
+   "License_Number": "CCL20-0000089",
+   "Application_Number": "LCA20-0000089",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -26532,8 +28937,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000091",
-   "Application_Number": "LCA20-0000091",
+   "License_Number": "CCL20-0000090",
+   "Application_Number": "LCA20-0000090",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -26542,14 +28947,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000092",
-   "Application_Number": "LCA20-0000092",
+   "License_Number": "CCL20-0000091",
+   "Application_Number": "LCA20-0000091",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000092",
    "Application_Number": "LCA20-0000092",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000092",
+   "Application_Number": "LCA20-0000092",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -26574,16 +28984,21 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000097",
    "Application_Number": "LCA20-0000097",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000097",
    "Application_Number": "LCA20-0000097",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000100",
    "Application_Number": "LCA20-0000100",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000102",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -26592,7 +29007,12 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000105",
+   "License_Number": "CCL20-0000104",
+   "Application_Number": "LCA20-0000104",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0000105",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -26605,6 +29025,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0000107",
    "Application_Number": "LCA20-0000107",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000108",
+   "Application_Number": "LCA20-0000108",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL20-0000108",
+   "Application_Number": "LCA20-0000108",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000110",
@@ -26637,6 +29067,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000124",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000124",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0000125",
    "Application_Number": "LCA20-0000125",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -26662,7 +29102,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000130",
+   "License_Number": "",
    "Application_Number": "LCA20-0000130",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -26674,7 +29114,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000132",
    "Application_Number": "LCA20-0000132",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL20-0000133",
@@ -26707,6 +29147,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "CCL20-0000140",
+   "Application_Number": "LCA20-0000140",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0000142",
    "Application_Number": "LCA20-0000142",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -26717,14 +29162,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000146",
-   "Application_Number": "LCA20-0000146",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "License_Number": "",
+   "Application_Number": "LCA20-0000144",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000145",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000146",
    "Application_Number": "LCA20-0000146",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000146",
+   "Application_Number": "LCA20-0000146",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000147",
@@ -26739,12 +29194,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000149",
    "Application_Number": "LCA20-0000149",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL20-0000149",
    "Application_Number": "LCA20-0000149",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000149",
@@ -26842,6 +29297,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL20-0000176",
+   "Application_Number": "LCA20-0000176",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000177",
+   "Application_Number": "LCA20-0000177",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0000183",
    "Application_Number": "LCA20-0000183",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -26879,17 +29344,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000192",
    "Application_Number": "LCA20-0000192",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0000192",
-   "Application_Number": "LCA20-0000192",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000192",
    "Application_Number": "LCA20-0000192",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "CCL20-0000192",
+   "Application_Number": "LCA20-0000192",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000194",
@@ -26904,22 +29369,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000195",
    "Application_Number": "LCA20-0000195",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000195",
    "Application_Number": "LCA20-0000195",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0000197",
-   "Application_Number": "LCA20-0000197",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000197",
    "Application_Number": "LCA20-0000197",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "CCL20-0000197",
+   "Application_Number": "LCA20-0000197",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000197",
@@ -26977,6 +29442,21 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000214",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000214",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000214",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0000215",
    "Application_Number": "LCA20-0000215",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -27012,7 +29492,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000228",
+   "License_Number": "",
    "Application_Number": "LCA20-0000228",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -27082,6 +29562,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL20-0000245",
+   "Application_Number": "LCA20-0000245",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0000246",
    "Application_Number": "LCA20-0000246",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -27104,12 +29589,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000250",
    "Application_Number": "LCA20-0000250",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000250",
    "Application_Number": "LCA20-0000250",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000250",
@@ -27137,6 +29622,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000256",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0000257",
    "Application_Number": "LCA20-0000257",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -27149,12 +29639,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000259",
    "Application_Number": "LCA20-0000259",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000259",
    "Application_Number": "LCA20-0000259",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000260",
@@ -27257,6 +29747,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000286",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0000287",
    "Application_Number": "LCA20-0000287",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -27309,12 +29804,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000304",
    "Application_Number": "LCA20-0000304",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000304",
    "Application_Number": "LCA20-0000304",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL20-0000306",
@@ -27339,7 +29834,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000307",
    "Application_Number": "LCA20-0000307",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL20-0000311",
@@ -27372,19 +29867,29 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000319",
-   "Application_Number": "LCA20-0000319",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "License_Number": "CCL20-0000318",
+   "Application_Number": "LCA20-0000318",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0000325",
-   "Application_Number": "LCA20-0000325",
+   "License_Number": "CCL20-0000318",
+   "Application_Number": "LCA20-0000318",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0000318",
+   "Application_Number": "LCA20-0000318",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0000325",
-   "Application_Number": "LCA20-0000325",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "License_Number": "CCL20-0000318",
+   "Application_Number": "LCA20-0000318",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000319",
+   "Application_Number": "LCA20-0000319",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000325",
@@ -27395,6 +29900,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0000325",
    "Application_Number": "LCA20-0000325",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000325",
+   "Application_Number": "LCA20-0000325",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0000325",
+   "Application_Number": "LCA20-0000325",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "",
@@ -27412,7 +29927,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0000329",
+   "License_Number": "",
    "Application_Number": "LCA20-0000329",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
@@ -27424,16 +29939,21 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000331",
    "Application_Number": "LCA20-0000331",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000331",
    "Application_Number": "LCA20-0000331",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000332",
    "Application_Number": "LCA20-0000332",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000334",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -27447,7 +29967,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000339",
+   "License_Number": "",
    "Application_Number": "LCA20-0000339",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -27469,20 +29989,25 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000346",
    "Application_Number": "LCA20-0000346",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000346",
    "Application_Number": "LCA20-0000346",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0000350",
+   "License_Number": "",
+   "Application_Number": "LCA20-0000347",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0000350",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000351",
+   "License_Number": "",
    "Application_Number": "LCA20-0000351",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
@@ -27509,12 +30034,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000355",
    "Application_Number": "LCA20-0000355",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000355",
    "Application_Number": "LCA20-0000355",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL20-0000358",
@@ -27559,7 +30084,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000371",
    "Application_Number": "LCA20-0000371",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "",
@@ -27572,13 +30097,23 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000376",
+   "License_Number": "",
    "Application_Number": "LCA20-0000376",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000377",
    "Application_Number": "LCA20-0000377",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000378",
+   "Application_Number": "LCA20-0000378",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000379",
+   "Application_Number": "LCA20-0000379",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -27627,7 +30162,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0000396",
+   "License_Number": "",
    "Application_Number": "LCA20-0000396",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
@@ -27637,8 +30172,23 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000398",
+   "License_Number": "",
    "Application_Number": "LCA20-0000398",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000399",
+   "Application_Number": "LCA20-0000399",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000401",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000407",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -27650,6 +30200,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0000409",
    "Application_Number": "LCA20-0000409",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000411",
+   "Application_Number": "LCA20-0000411",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000411",
@@ -27679,17 +30234,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000421",
    "Application_Number": "LCA20-0000421",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0000421",
+   "Application_Number": "LCA20-0000421",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000421",
    "Application_Number": "LCA20-0000421",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL20-0000421",
-   "Application_Number": "LCA20-0000421",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL20-0000424",
@@ -27709,12 +30264,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000428",
    "Application_Number": "LCA20-0000428",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000428",
    "Application_Number": "LCA20-0000428",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000429",
@@ -27759,12 +30314,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000438",
    "Application_Number": "LCA20-0000438",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000438",
    "Application_Number": "LCA20-0000438",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000439",
@@ -27777,7 +30332,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000441",
+   "License_Number": "",
    "Application_Number": "LCA20-0000441",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -27789,6 +30344,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000447",
    "Application_Number": "LCA20-0000447",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000448",
+   "Application_Number": "LCA20-0000448",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -27837,24 +30397,34 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0000462",
+   "Application_Number": "LCA20-0000462",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0000463",
    "Application_Number": "LCA20-0000463",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000464",
+   "License_Number": "",
    "Application_Number": "LCA20-0000464",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0000467",
-   "Application_Number": "LCA20-0000467",
+   "License_Number": "CCL20-0000466",
+   "Application_Number": "LCA20-0000466",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000467",
    "Application_Number": "LCA20-0000467",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000467",
+   "Application_Number": "LCA20-0000467",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000470",
@@ -27867,7 +30437,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000472",
+   "License_Number": "",
    "Application_Number": "LCA20-0000472",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -27875,6 +30445,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0000477",
    "Application_Number": "LCA20-0000477",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000478",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000479",
@@ -27902,7 +30477,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000484",
+   "License_Number": "",
    "Application_Number": "LCA20-0000484",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -27919,12 +30494,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000487",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000487",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000489",
@@ -27935,6 +30510,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0000494",
    "Application_Number": "LCA20-0000494",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000499",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000501",
@@ -27959,6 +30539,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000506",
    "Application_Number": "LCA20-0000506",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000509",
+   "Application_Number": "LCA20-0000509",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -27994,12 +30579,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000519",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000519",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000520",
@@ -28019,6 +30604,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000523",
    "Application_Number": "LCA20-0000523",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000525",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000527",
+   "Application_Number": "LCA20-0000527",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -28042,7 +30637,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000532",
+   "License_Number": "",
    "Application_Number": "LCA20-0000532",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -28064,11 +30659,6 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000554",
    "Application_Number": "LCA20-0000554",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL20-0000554",
-   "Application_Number": "LCA20-0000554",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
@@ -28079,21 +30669,21 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000554",
    "Application_Number": "LCA20-0000554",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0000554",
+   "Application_Number": "LCA20-0000554",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000555",
    "Application_Number": "LCA20-0000555",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
    "License_Number": "CCL20-0000555",
    "Application_Number": "LCA20-0000555",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
- },
- {
-   "License_Number": "CCL20-0000561",
-   "Application_Number": "LCA20-0000561",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -28102,8 +30692,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0000562",
-   "Application_Number": "LCA20-0000562",
+   "License_Number": "CCL20-0000561",
+   "Application_Number": "LCA20-0000561",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -28112,14 +30702,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0000563",
-   "Application_Number": "LCA20-0000563",
+   "License_Number": "CCL20-0000562",
+   "Application_Number": "LCA20-0000562",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000563",
    "Application_Number": "LCA20-0000563",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0000563",
+   "Application_Number": "LCA20-0000563",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000564",
@@ -28134,11 +30729,21 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000565",
    "Application_Number": "LCA20-0000565",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000565",
    "Application_Number": "LCA20-0000565",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000566",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000567",
+   "Application_Number": "LCA20-0000567",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -28147,8 +30752,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0000567",
-   "Application_Number": "LCA20-0000567",
+   "License_Number": "CCL20-0000568",
+   "Application_Number": "LCA20-0000568",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -28157,14 +30762,39 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0000568",
-   "Application_Number": "LCA20-0000568",
+   "License_Number": "CCL20-0000569",
+   "Application_Number": "LCA20-0000569",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0000569",
+   "Application_Number": "LCA20-0000569",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000570",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000571",
+   "Application_Number": "LCA20-0000571",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000571",
+   "Application_Number": "LCA20-0000571",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0000572",
+   "Application_Number": "LCA20-0000572",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0000572",
+   "Application_Number": "LCA20-0000572",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000574",
@@ -28174,12 +30804,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000575",
    "Application_Number": "LCA20-0000575",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000575",
    "Application_Number": "LCA20-0000575",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000576",
@@ -28209,12 +30839,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000581",
    "Application_Number": "LCA20-0000581",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000581",
    "Application_Number": "LCA20-0000581",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -28229,12 +30859,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000583",
    "Application_Number": "LCA20-0000583",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000583",
    "Application_Number": "LCA20-0000583",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000585",
+   "Application_Number": "LCA20-0000585",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000585",
@@ -28242,19 +30877,14 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0000585",
-   "Application_Number": "LCA20-0000585",
+   "License_Number": "CCL20-0000586",
+   "Application_Number": "LCA20-0000586",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000586",
    "Application_Number": "LCA20-0000586",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
- },
- {
-   "License_Number": "CCL20-0000586",
-   "Application_Number": "LCA20-0000586",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000587",
@@ -28294,15 +30924,15 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000591",
    "Application_Number": "LCA20-0000591",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000591",
    "Application_Number": "LCA20-0000591",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0000592",
+   "License_Number": "",
    "Application_Number": "LCA20-0000592",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -28319,12 +30949,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000596",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000596",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000597",
@@ -28364,16 +30994,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000602",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000602",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000603",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -28383,13 +31008,18 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000604",
+   "Application_Number": "LCA20-0000603",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000604",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000604",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -28414,16 +31044,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000609",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000609",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000610",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -28433,13 +31058,18 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000611",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Application_Number": "LCA20-0000610",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000611",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000611",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -28474,12 +31104,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000617",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000617",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -28494,12 +31124,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000619",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000619",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000620",
@@ -28519,16 +31149,36 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000623",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000623",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000624",
    "Application_Number": "LCA20-0000624",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000625",
+   "Application_Number": "LCA20-0000625",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000626",
+   "Application_Number": "LCA20-0000626",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000627",
+   "Application_Number": "LCA20-0000627",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000628",
+   "Application_Number": "LCA20-0000628",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -28559,12 +31209,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000641",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000641",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -28592,6 +31242,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0000646",
+   "Application_Number": "LCA20-0000646",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0000647",
    "Application_Number": "LCA20-0000647",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -28617,7 +31272,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000656",
+   "License_Number": "",
    "Application_Number": "LCA20-0000656",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -28635,6 +31290,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0000661",
    "Application_Number": "LCA20-0000661",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000662",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000663",
@@ -28674,15 +31334,15 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000673",
    "Application_Number": "LCA20-0000673",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
-   "License_Number": "CCL20-0000674",
+   "License_Number": "",
    "Application_Number": "LCA20-0000674",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000677",
+   "License_Number": "",
    "Application_Number": "LCA20-0000677",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -28697,7 +31357,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0000680",
+   "License_Number": "",
    "Application_Number": "LCA20-0000680",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -28707,8 +31367,188 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000683",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000684",
+   "Application_Number": "LCA20-0000684",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000685",
+   "Application_Number": "LCA20-0000685",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000686",
+   "Application_Number": "LCA20-0000686",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000688",
+   "Application_Number": "LCA20-0000688",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000689",
+   "Application_Number": "LCA20-0000689",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000690",
+   "Application_Number": "LCA20-0000690",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000691",
+   "Application_Number": "LCA20-0000691",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000692",
+   "Application_Number": "LCA20-0000692",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000693",
+   "Application_Number": "LCA20-0000693",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000694",
+   "Application_Number": "LCA20-0000694",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000695",
+   "Application_Number": "LCA20-0000695",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000696",
+   "Application_Number": "LCA20-0000696",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000697",
+   "Application_Number": "LCA20-0000697",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000698",
+   "Application_Number": "LCA20-0000698",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000699",
+   "Application_Number": "LCA20-0000699",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000700",
+   "Application_Number": "LCA20-0000700",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000701",
+   "Application_Number": "LCA20-0000701",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000702",
+   "Application_Number": "LCA20-0000702",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000703",
+   "Application_Number": "LCA20-0000703",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000704",
+   "Application_Number": "LCA20-0000704",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000705",
+   "Application_Number": "LCA20-0000705",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000706",
+   "Application_Number": "LCA20-0000706",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000707",
+   "Application_Number": "LCA20-0000707",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000708",
+   "Application_Number": "LCA20-0000708",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000709",
+   "Application_Number": "LCA20-0000709",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000710",
+   "Application_Number": "LCA20-0000710",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000711",
+   "Application_Number": "LCA20-0000711",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000712",
+   "Application_Number": "LCA20-0000712",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000713",
+   "Application_Number": "LCA20-0000713",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000714",
+   "Application_Number": "LCA20-0000714",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000715",
+   "Application_Number": "LCA20-0000715",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000717",
+   "Application_Number": "LCA20-0000717",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000718",
+   "Application_Number": "LCA20-0000718",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000720",
+   "Application_Number": "LCA20-0000720",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0000721",
    "Application_Number": "LCA20-0000721",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000724",
+   "Application_Number": "LCA20-0000724",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -28724,12 +31564,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000731",
    "Application_Number": "LCA20-0000731",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000731",
    "Application_Number": "LCA20-0000731",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000732",
@@ -28744,12 +31584,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000733",
    "Application_Number": "LCA20-0000733",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000733",
    "Application_Number": "LCA20-0000733",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -28783,13 +31623,23 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
+   "Application_Number": "LCA20-0000737",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000738",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0000738",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000738",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Application_Number": "LCA20-0000739",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -28797,8 +31647,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000739",
+   "License_Number": "CCL20-0000740",
+   "Application_Number": "LCA20-0000740",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -28807,24 +31657,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000740",
-   "Application_Number": "LCA20-0000740",
+   "License_Number": "CCL20-0000741",
+   "Application_Number": "LCA20-0000741",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL20-0000741",
+   "Application_Number": "LCA20-0000741",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL20-0000741",
    "Application_Number": "LCA20-0000741",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0000741",
-   "Application_Number": "LCA20-0000741",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
- },
- {
-   "License_Number": "CCL20-0000741",
-   "Application_Number": "LCA20-0000741",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000743",
@@ -28849,16 +31694,36 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000755",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000755",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000757",
+   "Application_Number": "LCA20-0000757",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000758",
+   "Application_Number": "LCA20-0000758",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000759",
    "Application_Number": "LCA20-0000759",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000760",
+   "Application_Number": "LCA20-0000760",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000762",
+   "Application_Number": "LCA20-0000762",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -28902,7 +31767,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000775",
+   "License_Number": "",
    "Application_Number": "LCA20-0000775",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
@@ -28917,6 +31782,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000778",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0000780",
    "Application_Number": "LCA20-0000780",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -28925,6 +31795,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0000781",
    "Application_Number": "LCA20-0000781",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000783",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "",
@@ -28939,7 +31814,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000788",
    "Application_Number": "LCA20-0000788",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000788",
+   "Application_Number": "LCA20-0000788",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL20-0000789",
+   "Application_Number": "lca20-0000789",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0000789",
@@ -28949,7 +31834,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000790",
    "Application_Number": "lca20-0000790",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0000790",
+   "Application_Number": "lca20-0000790",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL20-0000792",
+   "Application_Number": "LCA20-0000792",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000792",
+   "Application_Number": "LCA20-0000792",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL20-0000793",
@@ -28964,6 +31864,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000795",
    "Application_Number": "LCA20-0000795",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0000796",
+   "Application_Number": "LCA20-0000796",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -29004,12 +31909,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000803",
    "Application_Number": "LCA20-0000803",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000803",
    "Application_Number": "LCA20-0000803",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000804",
@@ -29029,12 +31934,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000806",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0000806",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -29144,7 +32049,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000834",
    "Application_Number": "LCA20-0000834",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
  },
  {
    "License_Number": "CCL20-0000834",
@@ -29154,12 +32059,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0000834",
    "Application_Number": "LCA20-0000834",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
    "License_Number": "CCL20-0000834",
    "Application_Number": "LCA20-0000834",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -29553,6 +32458,11 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
+   "Application_Number": "LCA20-0000923",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0000924",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -29560,6 +32470,11 @@ var WASTESCRIPTarray =[
    "License_Number": "",
    "Application_Number": "LCA20-0000925",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000926",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "",
@@ -29665,6 +32580,11 @@ var WASTESCRIPTarray =[
    "License_Number": "",
    "Application_Number": "LCA20-0000947",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000950",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0000951",
@@ -29782,7 +32702,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000972",
+   "License_Number": "",
    "Application_Number": "LCA20-0000972",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -29812,124 +32732,129 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000978",
-   "Application_Number": "LCA20-0000978",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0000978",
+   "License_Number": "",
    "Application_Number": "LCA20-0000978",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000979",
+   "License_Number": "",
+   "Application_Number": "LCA20-0000978",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000979",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0000979",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000979",
-   "Application_Number": "LCA20-0000979",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "License_Number": "",
+   "Application_Number": "LCA20-0000980",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000981",
-   "Application_Number": "LCA20-0000981",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0000981",
+   "License_Number": "",
    "Application_Number": "LCA20-0000981",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000982",
+   "License_Number": "",
+   "Application_Number": "LCA20-0000981",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0000982",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000982",
+   "License_Number": "",
    "Application_Number": "LCA20-0000982",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000983",
+   "License_Number": "",
    "Application_Number": "LCA20-0000983",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000983",
+   "License_Number": "",
    "Application_Number": "LCA20-0000983",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000984",
-   "Application_Number": "LCA20-0000984",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0000984",
+   "License_Number": "",
    "Application_Number": "LCA20-0000984",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000985",
+   "License_Number": "",
+   "Application_Number": "LCA20-0000984",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0000985",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000985",
+   "License_Number": "",
    "Application_Number": "LCA20-0000985",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000986",
+   "License_Number": "",
    "Application_Number": "LCA20-0000986",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000986",
+   "License_Number": "",
    "Application_Number": "LCA20-0000986",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000987",
+   "License_Number": "",
    "Application_Number": "LCA20-0000987",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000987",
+   "License_Number": "",
    "Application_Number": "LCA20-0000987",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000988",
+   "License_Number": "",
    "Application_Number": "LCA20-0000988",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000988",
+   "License_Number": "",
    "Application_Number": "LCA20-0000988",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000989",
+   "License_Number": "",
    "Application_Number": "LCA20-0000989",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000989",
+   "License_Number": "",
    "Application_Number": "LCA20-0000989",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000990",
-   "Application_Number": "LCA20-0000990",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0000990",
+   "License_Number": "",
    "Application_Number": "LCA20-0000990",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000990",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000991",
@@ -29937,24 +32862,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000992",
-   "Application_Number": "LCA20-0000992",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0000992",
+   "License_Number": "",
    "Application_Number": "LCA20-0000992",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0000993",
-   "Application_Number": "LCA20-0000993",
+   "License_Number": "",
+   "Application_Number": "LCA20-0000992",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0000993",
+   "License_Number": "",
    "Application_Number": "LCA20-0000993",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000993",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0000994",
@@ -29992,17 +32917,17 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001003",
+   "License_Number": "",
    "Application_Number": "LCA20-0001003",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001004",
+   "License_Number": "",
    "Application_Number": "LCA20-0001004",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001004",
+   "License_Number": "",
    "Application_Number": "LCA20-0001004",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -30012,203 +32937,213 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001006",
+   "License_Number": "",
    "Application_Number": "LCA20-0001006",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001006",
+   "License_Number": "",
    "Application_Number": "LCA20-0001006",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001007",
-   "Application_Number": "LCA20-0001007",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001007",
+   "License_Number": "",
    "Application_Number": "LCA20-0001007",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001008",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001007",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001008",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001008",
+   "License_Number": "",
    "Application_Number": "LCA20-0001008",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001009",
+   "License_Number": "",
    "Application_Number": "LCA20-0001009",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001009",
+   "License_Number": "",
    "Application_Number": "LCA20-0001009",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001010",
+   "License_Number": "",
    "Application_Number": "LCA20-0001010",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001010",
+   "License_Number": "",
    "Application_Number": "LCA20-0001010",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001011",
-   "Application_Number": "LCA20-0001011",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0001011",
+   "License_Number": "",
    "Application_Number": "LCA20-0001011",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001012",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001011",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001012",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001012",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001012",
-   "Application_Number": "LCA20-0001012",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001013",
-   "Application_Number": "LCA20-0001013",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001013",
+   "License_Number": "",
    "Application_Number": "LCA20-0001013",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001014",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001013",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001014",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001014",
+   "License_Number": "",
    "Application_Number": "LCA20-0001014",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001015",
-   "Application_Number": "LCA20-0001015",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001015",
+   "License_Number": "",
    "Application_Number": "LCA20-0001015",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001016",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001015",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001016",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001016",
+   "License_Number": "",
    "Application_Number": "LCA20-0001016",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001017",
+   "License_Number": "",
    "Application_Number": "LCA20-0001017",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001017",
+   "License_Number": "",
    "Application_Number": "LCA20-0001017",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001018",
+   "License_Number": "",
    "Application_Number": "LCA20-0001018",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001018",
+   "License_Number": "",
    "Application_Number": "LCA20-0001018",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001019",
+   "License_Number": "",
    "Application_Number": "LCA20-0001019",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001019",
+   "License_Number": "",
    "Application_Number": "LCA20-0001019",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001020",
+   "License_Number": "",
    "Application_Number": "LCA20-0001020",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001020",
+   "License_Number": "",
    "Application_Number": "LCA20-0001020",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001021",
+   "License_Number": "",
    "Application_Number": "LCA20-0001021",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001021",
+   "License_Number": "",
    "Application_Number": "LCA20-0001021",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001022",
+   "License_Number": "",
    "Application_Number": "LCA20-0001022",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001022",
+   "License_Number": "",
    "Application_Number": "LCA20-0001022",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001023",
-   "Application_Number": "LCA20-0001023",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001023",
+   "License_Number": "",
    "Application_Number": "LCA20-0001023",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001024",
-   "Application_Number": "LCA20-0001024",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001023",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001024",
+   "License_Number": "",
    "Application_Number": "LCA20-0001024",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001025",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001024",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001025",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001025",
+   "License_Number": "",
    "Application_Number": "LCA20-0001025",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0001028",
+   "Application_Number": "LCA20-0001028",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001029",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -30252,18 +33187,88 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001044",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001046",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001048",
    "Application_Number": "LCA20-0001048",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001054",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001049",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001050",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001051",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001052",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001053",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001054",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001055",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001056",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001057",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001058",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001059",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001060",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001061",
    "Application_Number": "LCA20-0001061",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001062",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -30275,6 +33280,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0001067",
    "Application_Number": "LCA20-0001067",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001070",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001072",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001073",
@@ -30289,17 +33304,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001077",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001077",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0001078",
-   "Application_Number": "LCA20-0001078",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001078",
@@ -30307,8 +33317,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001079",
-   "Application_Number": "LCA20-0001079",
+   "License_Number": "CCL20-0001078",
+   "Application_Number": "LCA20-0001078",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -30317,14 +33327,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001080",
-   "Application_Number": "LCA20-0001080",
+   "License_Number": "CCL20-0001079",
+   "Application_Number": "LCA20-0001079",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001080",
    "Application_Number": "LCA20-0001080",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL20-0001080",
+   "Application_Number": "LCA20-0001080",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001081",
@@ -30349,12 +33364,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001083",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001083",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -30369,12 +33384,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001085",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001085",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -30399,12 +33414,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001088",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001088",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
@@ -30454,12 +33469,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001094",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001094",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -30472,7 +33487,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001096",
+   "License_Number": "",
    "Application_Number": "LCA20-0001096",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -30499,22 +33514,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001101",
    "Application_Number": "LCA20-0001101",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001101",
    "Application_Number": "LCA20-0001101",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL20-0001102",
-   "Application_Number": "LCA20-0001102",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001102",
    "Application_Number": "LCA20-0001102",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL20-0001102",
+   "Application_Number": "LCA20-0001102",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001103",
@@ -30539,12 +33554,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001105",
    "Application_Number": "LCA20-0001105",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001105",
    "Application_Number": "LCA20-0001105",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001106",
@@ -30569,12 +33584,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001108",
    "Application_Number": "LCA20-0001108",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001108",
    "Application_Number": "LCA20-0001108",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001109",
@@ -30599,12 +33614,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001111",
    "Application_Number": "LCA20-0001111",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001111",
    "Application_Number": "LCA20-0001111",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001112",
@@ -30622,6 +33637,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001114",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001115",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL20-0001116",
    "Application_Number": "LCA20-0001116",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -30629,6 +33654,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001116",
    "Application_Number": "LCA20-0001116",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001117",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -30652,12 +33682,12 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001127",
+   "License_Number": "",
    "Application_Number": "LCA20-0001127",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001129",
+   "License_Number": "",
    "Application_Number": "LCA20-0001129",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
@@ -30674,6 +33704,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001139",
    "Application_Number": "LCA20-0001139",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001143",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -30704,12 +33739,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001150",
    "Application_Number": "LCA20-0001150",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001150",
    "Application_Number": "LCA20-0001150",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001152",
@@ -30734,6 +33769,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001155",
    "Application_Number": "LCA20-0001155",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0001155",
+   "Application_Number": "LCA20-0001155",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -30742,12 +33782,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001155",
-   "Application_Number": "LCA20-0001155",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0001156",
+   "License_Number": "",
    "Application_Number": "LCA20-0001156",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -30767,14 +33802,14 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001163",
-   "Application_Number": "LCA20-0001163",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "License_Number": "",
+   "Application_Number": "LCA20-0001162",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001163",
    "Application_Number": "LCA20-0001163",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001163",
@@ -30784,7 +33819,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001163",
    "Application_Number": "LCA20-0001163",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "CCL20-0001163",
+   "Application_Number": "LCA20-0001163",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
  {
    "License_Number": "CCL20-0001164",
@@ -30797,7 +33837,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001166",
+   "License_Number": "",
    "Application_Number": "LCA20-0001166",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
@@ -30814,12 +33854,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001171",
    "Application_Number": "LCA20-0001171",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001171",
    "Application_Number": "LCA20-0001171",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001172",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001173",
@@ -30872,8 +33917,38 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001199",
-   "Application_Number": "LCA20-0001199",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001192",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001193",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001194",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001195",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001196",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001197",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001198",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -30885,6 +33960,66 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0001199",
    "Application_Number": "LCA20-0001199",
    "Waste_Management_Method": "Self-Haul to a Recycling Center That Meets Regulations Requirements"
+ },
+ {
+   "License_Number": "CCL20-0001199",
+   "Application_Number": "LCA20-0001199",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001200",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001201",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001202",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001203",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001204",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001205",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001206",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001207",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001208",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001209",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001210",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001211",
@@ -30894,17 +34029,17 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001212",
    "Application_Number": "LCA20-0001212",
+   "Waste_Management_Method": "Self-Haul to a Recycling Center That Meets Regulations Requirements"
+ },
+ {
+   "License_Number": "CCL20-0001212",
+   "Application_Number": "LCA20-0001212",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001212",
    "Application_Number": "LCA20-0001212",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL20-0001212",
-   "Application_Number": "LCA20-0001212",
-   "Waste_Management_Method": "Self-Haul to a Recycling Center That Meets Regulations Requirements"
  },
  {
    "License_Number": "",
@@ -30918,78 +34053,173 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
+   "Application_Number": "LCA20-0001215",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001216",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001217",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001218",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001219",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001220",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001222",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001223",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001224",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001225",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001226",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001227",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001228",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001229",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001230",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001231",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001234",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001232",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001233",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001234",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001235",
-   "Application_Number": "LCA20-0001235",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL20-0001235",
-   "Application_Number": "LCA20-0001235",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001235",
+   "License_Number": "",
    "Application_Number": "LCA20-0001235",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001236",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001235",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001235",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001236",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001236",
-   "Application_Number": "LCA20-0001236",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL20-0001236",
+   "License_Number": "",
    "Application_Number": "LCA20-0001236",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001237",
-   "Application_Number": "LCA20-0001237",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001236",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001237",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001237",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001237",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001237",
+   "License_Number": "",
    "Application_Number": "LCA20-0001237",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001238",
+   "License_Number": "",
    "Application_Number": "LCA20-0001238",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001239",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001239",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001239",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001239",
+   "License_Number": "",
    "Application_Number": "LCA20-0001239",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001239",
-   "Application_Number": "LCA20-0001239",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "License_Number": "",
+   "Application_Number": "LCA20-0001241",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001242",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001245",
@@ -31009,12 +34239,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001247",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001247",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0001248",
+   "Application_Number": "LCA20-0001248",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL20-0001248",
+   "Application_Number": "LCA20-0001248",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001248",
@@ -31022,14 +34262,9 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001248",
-   "Application_Number": "LCA20-0001248",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001248",
-   "Application_Number": "LCA20-0001248",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "License_Number": "",
+   "Application_Number": "LCA20-0001249",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001252",
@@ -31057,7 +34292,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001261",
+   "License_Number": "",
    "Application_Number": "LCA20-0001261",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -31084,12 +34319,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001265",
    "Application_Number": "LCA20-0001265",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001265",
    "Application_Number": "LCA20-0001265",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001266",
@@ -31145,6 +34380,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0001280",
    "Application_Number": "LCA20-0001280",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001281",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001282",
@@ -31232,7 +34472,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001302",
+   "License_Number": "",
    "Application_Number": "LCA20-0001302",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
@@ -31254,12 +34494,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001307",
    "Application_Number": "LCA20-0001307",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001307",
    "Application_Number": "LCA20-0001307",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001308",
@@ -31269,12 +34509,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001309",
    "Application_Number": "LCA20-0001309",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001309",
    "Application_Number": "LCA20-0001309",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001311",
@@ -31287,39 +34527,119 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001320",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001321",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001322",
    "Application_Number": "LCA20-0001322",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001334",
-   "Application_Number": "LCA20-0001334",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001323",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001323",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001324",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001325",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001326",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001327",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001328",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001329",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001332",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001332",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001333",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001333",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001334",
    "Application_Number": "LCA20-0001334",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0001334",
+   "Application_Number": "LCA20-0001334",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001336",
-   "Application_Number": "LCA20-0001336",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001335",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001335",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001336",
+   "License_Number": "",
    "Application_Number": "LCA20-0001336",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001336",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "CCL20-0001338",
+   "Application_Number": "LCA20-0001338",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001338",
    "Application_Number": "LCA20-0001338",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "CCL20-0001338",
-   "Application_Number": "LCA20-0001338",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001341",
@@ -31330,6 +34650,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0001343",
    "Application_Number": "LCA20-0001343",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001345",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001345",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001347",
@@ -31437,6 +34767,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001376",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001377",
    "Application_Number": "LCA20-0001377",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
@@ -31457,7 +34792,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001381",
+   "License_Number": "",
    "Application_Number": "LCA20-0001381",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
@@ -31552,6 +34887,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001399",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001400",
    "Application_Number": "LCA20-0001400",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -31607,7 +34947,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001412",
+   "License_Number": "",
    "Application_Number": "LCA20-0001412",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -31624,22 +34964,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001414",
    "Application_Number": "LCA20-0001414",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001414",
    "Application_Number": "LCA20-0001414",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001415",
-   "Application_Number": "LCA20-0001415",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001415",
    "Application_Number": "LCA20-0001415",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0001415",
+   "Application_Number": "LCA20-0001415",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001416",
@@ -31649,7 +34989,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001416",
    "Application_Number": "LCA20-0001416",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
  },
  {
    "License_Number": "CCL20-0001418",
@@ -31747,6 +35087,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001437",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001438",
    "Application_Number": "LCA20-0001438",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -31778,6 +35123,11 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
+   "Application_Number": "LCA20-0001444",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001445",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -31804,6 +35154,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001449",
    "Application_Number": "LCA20-0001449",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001451",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -31849,12 +35204,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001460",
    "Application_Number": "LCA20-0001460",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001460",
    "Application_Number": "LCA20-0001460",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001526",
@@ -31869,22 +35224,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001527",
    "Application_Number": "LCA20-0001527",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001527",
    "Application_Number": "LCA20-0001527",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001528",
-   "Application_Number": "LCA20-0001528",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001528",
    "Application_Number": "LCA20-0001528",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0001528",
+   "Application_Number": "LCA20-0001528",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001530",
@@ -31895,6 +35250,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0001530",
    "Application_Number": "LCA20-0001530",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001531",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001532",
@@ -31972,6 +35332,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001547",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001547",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001550",
    "Application_Number": "LCA20-0001550",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -31984,12 +35354,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001552",
    "Application_Number": "LCA20-0001552",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001552",
    "Application_Number": "LCA20-0001552",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001553",
@@ -32012,8 +35382,18 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001557",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001558",
    "Application_Number": "LCA20-0001558",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001559",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -32067,6 +35447,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001574",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL20-0001576",
    "Application_Number": "LCA20-0001576",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -32102,6 +35487,16 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001587",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001589",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0001590",
    "Application_Number": "LCA20-0001590",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -32109,12 +35504,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001593",
    "Application_Number": "LCA20-0001593",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001593",
    "Application_Number": "LCA20-0001593",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001594",
@@ -32179,7 +35574,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001605",
    "Application_Number": "LCA20-0001605",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001605",
@@ -32189,7 +35584,7 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001605",
    "Application_Number": "LCA20-0001605",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001606",
@@ -32204,12 +35599,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001607",
    "Application_Number": "LCA20-0001607",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001607",
    "Application_Number": "LCA20-0001607",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001608",
@@ -32239,12 +35634,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001613",
    "Application_Number": "LCA20-0001613",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001613",
    "Application_Number": "LCA20-0001613",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001614",
@@ -32289,11 +35684,21 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001619",
    "Application_Number": "LCA20-0001619",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001619",
    "Application_Number": "LCA20-0001619",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0001620",
+   "Application_Number": "LCA20-0001620",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0001620",
+   "Application_Number": "LCA20-0001620",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
@@ -32302,16 +35707,6 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001620",
-   "Application_Number": "LCA20-0001620",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL20-0001620",
-   "Application_Number": "LCA20-0001620",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
    "License_Number": "CCL20-0001621",
    "Application_Number": "LCA20-0001621",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
@@ -32342,9 +35737,9 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001628",
-   "Application_Number": "LCA20-0001628",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "License_Number": "",
+   "Application_Number": "LCA20-0001627",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001628",
@@ -32352,14 +35747,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001630",
-   "Application_Number": "LCA20-0001630",
+   "License_Number": "CCL20-0001628",
+   "Application_Number": "LCA20-0001628",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001630",
    "Application_Number": "LCA20-0001630",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0001630",
+   "Application_Number": "LCA20-0001630",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001631",
@@ -32374,22 +35774,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001633",
    "Application_Number": "LCA20-0001633",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001633",
    "Application_Number": "LCA20-0001633",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001634",
-   "Application_Number": "LCA20-0001634",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001634",
    "Application_Number": "LCA20-0001634",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0001634",
+   "Application_Number": "LCA20-0001634",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001635",
@@ -32404,17 +35804,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001636",
    "Application_Number": "LCA20-0001636",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001636",
    "Application_Number": "LCA20-0001636",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001637",
-   "Application_Number": "LCA20-0001637",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001637",
@@ -32422,8 +35817,8 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001638",
-   "Application_Number": "LCA20-0001638",
+   "License_Number": "CCL20-0001637",
+   "Application_Number": "LCA20-0001637",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -32432,13 +35827,28 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
+   "License_Number": "CCL20-0001638",
+   "Application_Number": "LCA20-0001638",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001639",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0001640",
+   "Application_Number": "LCA20-0001640",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
    "License_Number": "CCL20-0001640",
    "Application_Number": "LCA20-0001640",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001640",
-   "Application_Number": "LCA20-0001640",
+   "License_Number": "CCL20-0001641",
+   "Application_Number": "LCA20-0001641",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
@@ -32447,19 +35857,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001641",
-   "Application_Number": "LCA20-0001641",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001643",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "CCL20-0001644",
+   "Application_Number": "LCA20-0001644",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001644",
    "Application_Number": "LCA20-0001644",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "CCL20-0001644",
-   "Application_Number": "LCA20-0001644",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001646",
@@ -32469,12 +35879,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001647",
    "Application_Number": "LCA20-0001647",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001647",
    "Application_Number": "LCA20-0001647",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001648",
@@ -32533,11 +35943,16 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
+   "Application_Number": "LCA20-0001656",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001658",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0001659",
+   "License_Number": "",
    "Application_Number": "LCA20-0001659",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
  },
@@ -32554,21 +35969,11 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001664",
    "Application_Number": "LCA20-0001664",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001664",
    "Application_Number": "LCA20-0001664",
-   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001669",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001670",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -32594,22 +35999,22 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001678",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001678",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001679",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001679",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001679",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001680",
@@ -32625,6 +36030,11 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0001682",
    "Application_Number": "LCA20-0001682",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001683",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -32649,6 +36059,16 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001689",
    "Application_Number": "LCA20-0001689",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001700",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001702",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -32677,28 +36097,38 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001711",
-   "Application_Number": "LCA20-0001711",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
- },
- {
-   "License_Number": "CCL20-0001711",
+   "License_Number": "",
    "Application_Number": "LCA20-0001711",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001711",
+   "License_Number": "",
    "Application_Number": "LCA20-0001711",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
-   "License_Number": "CCL20-0001714",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001711",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001714",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001716",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001715",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001716",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001718",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -32707,7 +36137,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001722",
+   "License_Number": "",
    "Application_Number": "LCA20-0001722",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
@@ -32717,9 +36147,19 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001727",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001729",
    "Application_Number": "LCA20-0001729",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0001730",
+   "Application_Number": "LCA20-0001730",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0001731",
@@ -32747,9 +36187,34 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001738",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001735",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001738",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001740",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001740",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001740",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001740",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001747",
@@ -32757,14 +36222,24 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001758",
-   "Application_Number": "LCA20-0001758",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "License_Number": "",
+   "Application_Number": "LCA20-0001748",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001756",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001758",
    "Application_Number": "LCA20-0001758",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0001758",
+   "Application_Number": "LCA20-0001758",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -32797,6 +36272,11 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "CCL20-0001777",
+   "Application_Number": "LCA20-0001777",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
    "License_Number": "CCL20-0001778",
    "Application_Number": "LCA20-0001778",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
@@ -32805,6 +36285,16 @@ var WASTESCRIPTarray =[
    "License_Number": "CCL20-0001782",
    "Application_Number": "LCA20-0001782",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001784",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001785",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001786",
@@ -32818,13 +36308,28 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0001794",
+   "Application_Number": "LCA20-0001788",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001788",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001791",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001794",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001794",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "",
@@ -32834,12 +36339,12 @@ var WASTESCRIPTarray =[
  {
    "License_Number": "CCL20-0001798",
    "Application_Number": "LCA20-0001798",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001798",
    "Application_Number": "LCA20-0001798",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
  {
    "License_Number": "CCL20-0001802",
@@ -32862,7 +36367,7 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001806",
+   "License_Number": "",
    "Application_Number": "LCA20-0001806",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -32883,16 +36388,36 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
+   "Application_Number": "LCA20-0001813",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001815",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001815",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001816",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001818",
-   "Application_Number": "LCA20-0001818",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "License_Number": "",
+   "Application_Number": "LCA20-0001817",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001818",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001818",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001818",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -32907,7 +36432,37 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001830",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001825",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001825",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001825",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001825",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001828",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001829",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001830",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
  },
@@ -32917,9 +36472,14 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001837",
-   "Application_Number": "LCA20-0001837",
-   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+   "License_Number": "",
+   "Application_Number": "LCA20-0001835",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001836",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001837",
@@ -32927,7 +36487,12 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
  },
  {
-   "License_Number": "CCL20-0001838",
+   "License_Number": "CCL20-0001837",
+   "Application_Number": "LCA20-0001837",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001838",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -32937,43 +36502,228 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001840",
+   "License_Number": "",
    "Application_Number": "LCA20-0001840",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001845",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001841",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001841",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001845",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001857",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001852",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001852",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001853",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001853",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001854",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001854",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001857",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001877",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001859",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001861",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001861",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001862",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001863",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001865",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001865",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001866",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001866",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001867",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001867",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001868",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001868",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001869",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001871",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001874",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001877",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0001879",
+   "License_Number": "",
    "Application_Number": "LCA20-0001879",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0001880",
+   "License_Number": "",
    "Application_Number": "LCA20-0001880",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0001881",
+   "License_Number": "",
    "Application_Number": "LCA20-0001881",
    "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
  },
  {
-   "License_Number": "CCL20-0001902",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001882",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001883",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001884",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001886",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001887",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001888",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001889",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001899",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001901",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001902",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001903",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001903",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001904",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001904",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
@@ -32992,9 +36742,79 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001910",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001910",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001911",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001911",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001912",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001912",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001913",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001913",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
    "License_Number": "CCL20-0001916",
    "Application_Number": "LCA20-0001916",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001922",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001924",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001924",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001924",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001926",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001927",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001928",
@@ -33012,12 +36832,12 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0001937",
+   "License_Number": "",
    "Application_Number": "LCA20-0001937",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001938",
+   "License_Number": "",
    "Application_Number": "LCA20-0001938",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -33027,34 +36847,39 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001942",
+   "License_Number": "",
    "Application_Number": "LCA20-0001942",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001943",
+   "License_Number": "",
    "Application_Number": "LCA20-0001943",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001944",
+   "License_Number": "",
    "Application_Number": "LCA20-0001944",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0001945",
+   "License_Number": "",
    "Application_Number": "LCA20-0001945",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001946",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0001947",
+   "Application_Number": "LCA20-0001947",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001947",
    "Application_Number": "LCA20-0001947",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
- },
- {
-   "License_Number": "CCL20-0001947",
-   "Application_Number": "LCA20-0001947",
-   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0001948",
@@ -33063,8 +36888,93 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
+   "Application_Number": "LCA20-0001957",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001957",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001958",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0001963",
+   "Application_Number": "LCA20-0001963",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001973",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001981",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001981",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001989",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0002005",
+   "Application_Number": "LCA20-0002005",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0002005",
+   "Application_Number": "LCA20-0002005",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL20-0002007",
+   "Application_Number": "LCA20-0002007",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL20-0002007",
+   "Application_Number": "LCA20-0002007",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0002008",
+   "Application_Number": "LCA20-0002008",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL20-0002008",
+   "Application_Number": "LCA20-0002008",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "CCL20-0002009",
+   "Application_Number": "LCA20-0002009",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "CCL20-0002009",
+   "Application_Number": "LCA20-0002009",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002013",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002016",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
    "License_Number": "CCL20-0002017",
@@ -33072,19 +36982,159 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0002050",
+   "License_Number": "",
+   "Application_Number": "LCA20-0002023",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002039",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002039",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002040",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002040",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002042",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002042",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002046",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002049",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0002050",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0002097",
+   "Application_Number": "LCA20-0002051",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002054",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "",
+   "Application_Number": "LCA20-0002063",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002065",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002065",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002068",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002085",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002085",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002086",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002086",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002087",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002087",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002088",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002088",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002089",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002091",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002091",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002095",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002096",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0002097",
-   "Waste_Management_Method": "Reintroduction of cannabis waste back into agricultural operations"
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002097",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
    "License_Number": "CCL20-0002099",
@@ -33092,12 +37142,157 @@ var WASTESCRIPTarray =[
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0002154",
+   "License_Number": "",
+   "Application_Number": "LCA20-0002106",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002121",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002121",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002122",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002122",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002123",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002125",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002125",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002126",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002127",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002129",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002130",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002130",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002131",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002131",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002132",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002132",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002133",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002133",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002134",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002134",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002135",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002135",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002136",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002136",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002137",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002137",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002140",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002143",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0002154",
    "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
  },
  {
-   "License_Number": "CCL20-0002159",
+   "License_Number": "",
    "Application_Number": "LCA20-0002159",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
@@ -33113,24 +37308,614 @@ var WASTESCRIPTarray =[
  },
  {
    "License_Number": "",
+   "Application_Number": "LCA20-0002163",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0002169",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0002215",
+   "License_Number": "",
+   "Application_Number": "LCA20-0002173",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002174",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002175",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002176",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002177",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002178",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002179",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002180",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002181",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002182",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002183",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002184",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002186",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002187",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002188",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002189",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002190",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002191",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002192",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002193",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002193",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002194",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002197",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002198",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002204",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002205",
+   "Waste_Management_Method": "Reintroduction of cannabis waste back into Agricultural operations"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002208",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0002215",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0002227",
+   "License_Number": "",
+   "Application_Number": "LCA20-0002216",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002220",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002220",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0002227",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  },
  {
-   "License_Number": "CCL20-0002387",
+   "License_Number": "",
+   "Application_Number": "LCA20-0002229",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002230",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002237",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002238",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002238",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002243",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002244",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002245",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002246",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002247",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002248",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002249",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002250",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002254",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002263",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002263",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002264",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002264",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002265",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002265",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002266",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002266",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002267",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002270",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002270",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002299",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002306",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002314",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002315",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002316",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002320",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002321",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002322",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002323",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002324",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002325",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002326",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002327",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002328",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002329",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002335",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002355",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0002361",
+   "Application_Number": "LCA20-0002361",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002371",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0002387",
    "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002417",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002420",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0002423",
+   "Application_Number": "LCA20-0002423",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002425",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002426",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002428",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002428",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002431",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002434",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002435",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002435",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002454",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002470",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002471",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002480",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002487",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0002498",
+   "Application_Number": "LCA20-0002498",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0002499",
+   "Application_Number": "LCA20-0002499",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0002500",
+   "Application_Number": "LCA20-0002500",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "CCL20-0002501",
+   "Application_Number": "LCA20-0002501",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002506",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002514",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002514",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002522",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002530",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002530",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002555",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002587",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002591",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002591",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002593",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002607",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002625",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002632",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002832",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002832",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002832",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002832",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Composting Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002874",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002894",
+   "Waste_Management_Method": "Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002917",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002918",
+   "Waste_Management_Method": "Local Agency Franchised or Contracted/Permitted Waste Hauler"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002986",
+   "Waste_Management_Method": "On-site Composting of Cannabis Waste"
  }
- ];
+];
  return WASTESCRIPTarray;
 }

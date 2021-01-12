@@ -8,7 +8,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Willow Creek Community Service District"
  },
  {
@@ -18,7 +17,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of California City"
  },
  {
@@ -28,7 +26,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -38,7 +35,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -48,7 +44,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -58,7 +53,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -68,7 +62,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "city of needles"
  },
  {
@@ -78,7 +71,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -88,17 +80,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "desert water agency"
  },
  {
    "License_Number": "CCL18-0000032",
    "Application_Number": "LCA18-0000032",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -108,7 +98,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -118,7 +107,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Humboldt Community Services District"
  },
  {
@@ -128,7 +116,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Jose Water"
  },
  {
@@ -138,7 +125,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Cathedral City Power"
  },
  {
@@ -148,7 +134,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "San Jose Water Company"
  },
  {
@@ -158,7 +143,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Shasta Lake City Public Works"
  },
  {
@@ -168,7 +152,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Jose Water Company"
  },
  {
@@ -178,7 +161,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -188,7 +170,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Adelanto"
  },
  {
@@ -198,7 +179,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -208,7 +188,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -218,7 +197,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -228,7 +206,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Watsoville"
  },
  {
@@ -238,7 +215,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "East Bay Mud"
  },
  {
@@ -248,7 +224,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Coachella"
  },
  {
@@ -258,7 +233,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay MUD"
  },
  {
@@ -268,7 +242,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Needles"
  },
  {
@@ -278,7 +251,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Millview County Water District"
  },
  {
@@ -288,7 +260,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Laytonville Co. Water district"
  },
  {
@@ -298,7 +269,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "PG&E"
  },
  {
@@ -308,7 +278,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -318,7 +287,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento - Department of Utilities"
  },
  {
@@ -328,7 +296,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -338,17 +305,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Shasta Lake"
  },
  {
    "License_Number": "CCL18-0000210",
    "Application_Number": "LCA18-0000210",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -358,18 +323,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
- },
- {
-   "License_Number": "CCL18-0000215",
-   "Application_Number": "LCA18-0000215",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
-   "Retail Water Supplier": "City of Adelanto - Public Utility"
  },
  {
    "License_Number": "CCL18-0000220",
@@ -378,7 +332,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of San Diego"
  },
  {
@@ -388,7 +341,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Santa Rosa"
  },
  {
@@ -398,7 +350,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "DESERT WATER AGENCY"
  },
  {
@@ -408,7 +359,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -418,7 +368,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Adelanto Water Department"
  },
  {
@@ -428,27 +377,24 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
    "License_Number": "CCL18-0000264",
    "Application_Number": "LCA18-0000264",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Humboldt Community Services District"
  },
  {
    "License_Number": "CCL18-0000265",
    "Application_Number": "LCA18-0000265",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "East Bay Municipality Utility District Oakland"
  },
  {
@@ -458,7 +404,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "No",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -468,7 +413,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Watsonville"
  },
  {
@@ -478,7 +422,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Adelanto"
  },
  {
@@ -488,18 +431,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Sacramento County Water Agency Zone 41"
- },
- {
-   "License_Number": "CCL18-0000291",
-   "Application_Number": "LCA18-0000291",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "Yes",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "City of Adelanto"
  },
  {
    "License_Number": "CCL18-0000300",
@@ -508,7 +440,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Watsonville"
  },
  {
@@ -518,7 +449,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water & Power"
  },
  {
@@ -528,7 +458,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Carpinteria Water District"
  },
  {
@@ -538,7 +467,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -548,27 +476,24 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Santa Rosa Water"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA18-0000320",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
    "License_Number": "CCL18-0000328",
    "Application_Number": "LCA18-0000328",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Willits"
  },
  {
@@ -578,7 +503,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Carpinteria Valley Municipal District"
  },
  {
@@ -588,7 +512,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -598,7 +521,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -608,7 +530,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -618,7 +539,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -628,7 +548,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Carpinteria Valley Municipal Water District"
  },
  {
@@ -638,7 +557,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Adelanto Water Department"
  },
  {
@@ -648,7 +566,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Lynwood Water Department"
  },
  {
@@ -658,17 +575,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Carpinteria Valley Municipal Water District"
  },
  {
    "License_Number": "CCL18-0000492",
    "Application_Number": "LCA18-0000492",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -678,7 +593,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Humboldt Community Services District"
  },
  {
@@ -688,7 +602,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -698,7 +611,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Hollister - Water Department"
  },
  {
@@ -708,7 +620,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Mckinleyville Community Services District"
  },
  {
@@ -718,7 +629,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Sacramento County"
  },
  {
@@ -728,7 +638,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -738,7 +647,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -748,7 +656,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "East Bay Municipal Utilities District"
  },
  {
@@ -758,7 +665,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -768,7 +674,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Brook trails Community Services District"
  },
  {
@@ -778,7 +683,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -788,7 +692,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -798,7 +701,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Adelanto Water Department"
  },
  {
@@ -808,7 +710,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Santa Cruz Municipal Utilities"
  },
  {
@@ -818,7 +719,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -828,17 +728,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "LADWP"
  },
  {
    "License_Number": "CCL18-0000678",
    "Application_Number": "LCA18-0000678",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Trinity County Waterworks"
  },
  {
@@ -848,7 +746,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -858,7 +755,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -868,7 +764,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -878,17 +773,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
    "License_Number": "CCL18-0000714",
    "Application_Number": "LCA18-0000714",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -898,7 +791,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water & Power"
  },
  {
@@ -908,7 +800,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "No",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -918,17 +809,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "LADWP"
  },
  {
    "License_Number": "CCL18-0000806",
    "Application_Number": "LCA18-0000806",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -938,7 +827,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -948,17 +836,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "LADWP"
  },
  {
    "License_Number": "CCL18-0000823",
    "Application_Number": "LCA18-0000823",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -968,7 +854,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -978,7 +863,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Needles"
  },
  {
@@ -988,7 +872,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "San Francisco Water Department"
  },
  {
@@ -998,17 +881,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
    "License_Number": "CCL18-0000859",
    "Application_Number": "LCA18-0000859",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "East Bay MUD"
  },
  {
@@ -1018,7 +899,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Colusa Industrial Park"
  },
  {
@@ -1028,7 +908,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities Water S"
  },
  {
@@ -1038,7 +917,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1048,7 +926,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1058,7 +935,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Dept of Water and Power"
  },
  {
@@ -1068,7 +944,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1078,27 +953,24 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley County Water"
  },
  {
    "License_Number": "CCL18-0000942",
    "Application_Number": "LCA18-0000942",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Santa Rosa Water"
  },
  {
    "License_Number": "CCL18-0000943",
    "Application_Number": "LCA18-0000943",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "San Francisco Public Utilities Commission"
  },
  {
@@ -1108,7 +980,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "PERC Water for City of Adelanto"
  },
  {
@@ -1118,7 +989,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento-DOU"
  },
  {
@@ -1128,7 +998,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1138,7 +1007,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Pajaro Valley Water District"
  },
  {
@@ -1148,17 +1016,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "No",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
    "License_Number": "CCL18-0001019",
    "Application_Number": "LCA18-0001019",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Tract 180 Mutual Water Company"
  },
  {
@@ -1168,7 +1034,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento-DOU"
  },
  {
@@ -1178,7 +1043,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Whitethorn Water District: 1206012"
  },
  {
@@ -1188,7 +1052,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Willits"
  },
  {
@@ -1198,7 +1061,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "County of Sacramento"
  },
  {
@@ -1208,7 +1070,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -1218,7 +1079,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Bellflower Home Garden Water"
  },
  {
@@ -1228,7 +1088,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1238,7 +1097,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Alderpoint County Water District"
  },
  {
@@ -1248,7 +1106,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Carpinteria Valley Municipal Water District"
  },
  {
@@ -1258,7 +1115,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1268,7 +1124,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1278,7 +1133,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1288,7 +1142,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Rosco Corporation"
  },
  {
@@ -1298,7 +1151,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "HLM Water Trucking"
  },
  {
@@ -1308,7 +1160,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -1318,7 +1169,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City Of Sacramento"
  },
  {
@@ -1328,7 +1178,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -1338,7 +1187,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Covelo Fire Protection District"
  },
  {
@@ -1348,7 +1196,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Covelo Fire Protection District"
  },
  {
@@ -1358,7 +1205,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Covelo Fire Protection District"
  },
  {
@@ -1368,7 +1214,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Dessert Water Agency"
  },
  {
@@ -1378,7 +1223,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Covelo Fire Protection District"
  },
  {
@@ -1388,7 +1232,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -1398,7 +1241,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -1408,7 +1250,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -1418,7 +1259,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -1428,7 +1268,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "HLM Water"
  },
  {
@@ -1438,18 +1277,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "HLM Water"
- },
- {
-   "License_Number": "CCL18-0001431",
-   "Application_Number": "LCA18-0001431",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Mission Springs Water District"
  },
  {
    "License_Number": "CCL18-0001450",
@@ -1458,7 +1286,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Shasta Lake"
  },
  {
@@ -1468,7 +1295,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "SF - Water"
  },
  {
@@ -1478,7 +1304,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of California City Water Supply"
  },
  {
@@ -1488,7 +1313,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Desert Water Authority"
  },
  {
@@ -1498,17 +1322,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Calaveras County Water District"
  },
  {
    "License_Number": "CCL18-0001499",
    "Application_Number": "LCA18-0001499",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1518,7 +1340,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -1528,7 +1349,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "No",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley County Water District"
  },
  {
@@ -1538,7 +1358,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Mckinleyville Community Services District"
  },
  {
@@ -1548,7 +1367,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "WIllow Creek Community Services District"
  },
  {
@@ -1558,7 +1376,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Francisco Water Power Sewer"
  },
  {
@@ -1568,7 +1385,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Santa Rosa Water"
  },
  {
@@ -1578,18 +1394,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
- },
- {
-   "License_Number": "CCL18-0001637",
-   "Application_Number": "LCA18-0001637",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
-   "Retail Water Supplier": "City of Watsonville"
  },
  {
    "License_Number": "CCL18-0001658",
@@ -1598,7 +1403,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -1608,7 +1412,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Willits"
  },
  {
@@ -1618,7 +1421,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Carpinteria Valley Water District"
  },
  {
@@ -1628,7 +1430,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Mendocino Water Company"
  },
  {
@@ -1638,7 +1439,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Watsonville"
  },
  {
@@ -1648,7 +1448,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "McKinleyville Community Services District (MCSD)"
  },
  {
@@ -1658,7 +1457,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -1668,7 +1466,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Carpinteria Valley Water District"
  },
  {
@@ -1678,7 +1475,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -1688,7 +1484,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Adelanto Water Department"
  },
  {
@@ -1698,7 +1493,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "City of Arcata"
  },
  {
@@ -1708,7 +1502,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento-DOU"
  },
  {
@@ -1718,7 +1511,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -1728,7 +1520,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Adelanto, PERC"
  },
  {
@@ -1738,7 +1529,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Long Beach"
  },
  {
@@ -1748,7 +1538,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -1758,7 +1547,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -1768,7 +1556,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mt Shasta City Public Works department"
  },
  {
@@ -1778,7 +1565,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -1788,7 +1574,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Long Beach Water Department"
  },
  {
@@ -1798,17 +1583,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Potter Valley Irrigation District"
  },
  {
    "License_Number": "CCL18-0001909",
    "Application_Number": "LCA18-0001909",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -1818,7 +1601,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Jose Water Co."
  },
  {
@@ -1828,7 +1610,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Jose Water Co."
  },
  {
@@ -1838,7 +1619,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "San Jose Water Co."
  },
  {
@@ -1848,7 +1628,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "MYERS FLAT MUNICIPAL WATER COMPANY"
  },
  {
@@ -1858,7 +1637,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Jose Water Co."
  },
  {
@@ -1868,7 +1646,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Hayfork Water work"
  },
  {
@@ -1878,7 +1655,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -1888,7 +1664,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Dept. of Utilities"
  },
  {
@@ -1898,7 +1673,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Central Water District"
  },
  {
@@ -1908,7 +1682,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Santa Cruz"
  },
  {
@@ -1918,7 +1691,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Adelanto Water & Sewer Services"
  },
  {
@@ -1928,7 +1700,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Town of Windsor Water"
  },
  {
@@ -1938,17 +1709,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Eureka"
  },
  {
    "License_Number": "CCL18-0002086",
    "Application_Number": "LCA18-0002086",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "No",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "George Pinches"
  },
  {
@@ -1958,7 +1727,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento-DOU"
  },
  {
@@ -1968,7 +1736,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Orleans Community Service District"
  },
  {
@@ -1978,7 +1745,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "PERC WATER/CITY OF ADELANTO WATER SUPPLY"
  },
  {
@@ -1988,17 +1754,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
    "License_Number": "CCL18-0002151",
    "Application_Number": "LCA18-0002151",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Adelanto Water Department"
  },
  {
@@ -2008,7 +1772,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "SF-Water"
  },
  {
@@ -2018,7 +1781,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Brooktrails Township Community Services District"
  },
  {
@@ -2028,7 +1790,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Santa Rosa"
  },
  {
@@ -2038,7 +1799,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Town of Windsor"
  },
  {
@@ -2048,7 +1808,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks"
  },
  {
@@ -2058,7 +1817,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Jose Water"
  },
  {
@@ -2068,17 +1826,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Trinity County Water Works"
  },
  {
    "License_Number": "CCL18-0002217",
    "Application_Number": "LCA18-0002217",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Petaluma"
  },
  {
@@ -2088,7 +1844,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -2098,7 +1853,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Myers Flat Mutual Water System"
  },
  {
@@ -2108,27 +1862,24 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "San Francisco Water Power Sewer"
  },
  {
    "License_Number": "CCL18-0002332",
    "Application_Number": "LCA18-0002332",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "NPUA"
  },
  {
    "License_Number": "CCL18-0002439",
    "Application_Number": "LCA18-0002439",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -2138,7 +1889,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -2148,7 +1898,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Adelanto"
  },
  {
@@ -2158,7 +1907,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Yolo County"
  },
  {
@@ -2168,18 +1916,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "San Francisco Water Power Sewer"
- },
- {
-   "License_Number": "CCL18-0002548",
-   "Application_Number": "LCA18-0002548",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Encinal Road WS #01"
  },
  {
    "License_Number": "CCL18-0002559",
@@ -2188,7 +1925,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Valley County Water District"
  },
  {
@@ -2198,7 +1934,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Covelo Fire Dept"
  },
  {
@@ -2208,27 +1943,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
- },
- {
-   "License_Number": "CCL18-0002577",
-   "Application_Number": "LCA18-0002577",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
-   "Retail Water Supplier": "Garberville Sanitary District"
  },
  {
    "License_Number": "CCL18-0002578",
    "Application_Number": "LCA18-0002578",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Horseshoe Circle Water Association"
  },
  {
@@ -2238,7 +1961,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -2248,7 +1970,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -2258,7 +1979,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Mendocino County Russian River Flood Control and W"
  },
  {
@@ -2268,7 +1988,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Bill's Water Service"
  },
  {
@@ -2278,7 +1997,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sonoma"
  },
  {
@@ -2288,7 +2006,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "California City Water Department"
  },
  {
@@ -2298,37 +2015,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
- },
- {
-   "License_Number": "CCL18-0002652",
-   "Application_Number": "LCA18-0002652",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "Yes",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "City of Adelanto Water Department"
- },
- {
-   "License_Number": "CCL18-0002652",
-   "Application_Number": "LCA18-0002652",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "City of Adelanto Water Department"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA18-0002657",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -2338,7 +2033,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Laytonville County Water District"
  },
  {
@@ -2348,7 +2042,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Arcata"
  },
  {
@@ -2358,7 +2051,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Helix Water District"
  },
  {
@@ -2368,7 +2060,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -2378,7 +2069,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "San Francisco Water Power Sewer"
  },
  {
@@ -2388,8 +2078,16 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Carpinteria Valley Water District"
+ },
+ {
+   "License_Number": "CCL20-0000471",
+   "Application_Number": "LCA20-0000471",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
+   "Retail Water Supplier": "City of Sacramento"
  },
  {
    "License_Number": "CCL18-0002770",
@@ -2398,7 +2096,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -2408,7 +2105,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -2418,7 +2114,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -2428,7 +2123,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Puryear Domestic Water Delivery"
  },
  {
@@ -2438,7 +2132,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City Of Watsonville Utilities"
  },
  {
@@ -2448,7 +2141,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -2458,7 +2150,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Willow Creek CSD"
  },
  {
@@ -2468,7 +2159,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -2478,7 +2168,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -2488,7 +2177,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -2498,7 +2186,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -2508,7 +2195,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Garberville Sanitary District"
  },
  {
@@ -2518,7 +2204,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento, Department of Utilities"
  },
  {
@@ -2528,17 +2213,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
    "License_Number": "CCL18-0003083",
    "Application_Number": "LCA18-0003083",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Public Works Department of Rio Dell"
  },
  {
@@ -2548,7 +2231,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Smith Property Restoration"
  },
  {
@@ -2558,7 +2240,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Long Beach"
  },
  {
@@ -2568,7 +2249,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "SF Water"
  },
  {
@@ -2578,27 +2258,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Mission Springs Water District"
- },
- {
-   "License_Number": "CCL18-0003224",
-   "Application_Number": "LCA18-0003224",
-   "Name of Retail Water Supplier": "",
-   "A copy of the most recent water service bill": "",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": ""
  },
  {
    "License_Number": "CCL18-0003282",
    "Application_Number": "LCA18-0003282",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "CALIFORNIA CITY WATER DEPARTMENT"
  },
  {
@@ -2608,7 +2276,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Water and Power"
  },
  {
@@ -2618,7 +2285,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -2628,18 +2294,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
- },
- {
-   "License_Number": "CCL18-0003358",
-   "Application_Number": "LCA18-0003358",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "CALIFORNIA CITY WATER DEPARTMENT"
  },
  {
    "License_Number": "CCL18-0003360",
@@ -2648,7 +2303,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "CALIFORNIA CITY WATER DEPARTMENT"
  },
  {
@@ -2658,7 +2312,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -2668,17 +2321,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Hollister"
  },
  {
    "License_Number": "CCL18-0003386",
    "Application_Number": "LCA18-0003386",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA DWP"
  },
  {
@@ -2688,7 +2339,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -2698,7 +2348,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "DWP - City of Los Angeles"
  },
  {
@@ -2708,7 +2357,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "east bay municipal utility district"
  },
  {
@@ -2718,7 +2366,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Orleans Community Service District"
  },
  {
@@ -2728,7 +2375,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -2738,7 +2384,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Greenfield"
  },
  {
@@ -2748,7 +2393,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "MIRANDA COMM SVCS"
  },
  {
@@ -2758,7 +2402,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Needles"
  },
  {
@@ -2768,7 +2411,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -2778,7 +2420,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Garberville Sanitary District"
  },
  {
@@ -2788,7 +2429,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Del Oro Water Company"
  },
  {
@@ -2798,17 +2438,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Willow Creek Community Service"
  },
  {
    "License_Number": "CCL18-0003538",
    "Application_Number": "LCA18-0003538",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -2818,7 +2456,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Laytonville County Water District"
  },
  {
@@ -2828,7 +2465,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Municipal Water"
  },
  {
@@ -2838,7 +2474,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "DWP"
  },
  {
@@ -2848,7 +2483,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "DWP"
  },
  {
@@ -2858,7 +2492,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Laytonville County Water District"
  },
  {
@@ -2868,7 +2501,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Humboldt Community Service District"
  },
  {
@@ -2878,17 +2510,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "LA DWP"
- },
- {
-   "License_Number": "CCL18-0003644",
-   "Application_Number": "LCA18-0003644",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA DWP"
  },
  {
@@ -2898,7 +2519,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA DWP"
  },
  {
@@ -2908,7 +2528,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Sacramento-DOU"
  },
  {
@@ -2918,47 +2537,24 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
- },
- {
-   "License_Number": "CCL18-0003682",
-   "Application_Number": "LCA18-0003682",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
-   "Retail Water Supplier": "City of Greenfield"
  },
  {
    "License_Number": "CCL18-0003692",
    "Application_Number": "LCA18-0003692",
-   "Name of Retail Water Supplier": "N/A",
+   "Name of Retail Water Supplier": "Yes",
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley County Water District"
- },
- {
-   "License_Number": "CCL18-0003725",
-   "Application_Number": "LCA18-0003725",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
-   "Retail Water Supplier": "California Water Service Company"
  },
  {
    "License_Number": "CCL18-0003743",
    "Application_Number": "LCA18-0003743",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "California Water Service Company"
  },
  {
@@ -2968,7 +2564,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -2978,17 +2573,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley County Water District"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA18-0003763",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "ladwp"
  },
  {
@@ -2998,7 +2591,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -3008,7 +2600,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley Water District"
  },
  {
@@ -3018,7 +2609,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -3028,7 +2618,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water & Power"
  },
  {
@@ -3038,7 +2627,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Arcata"
  },
  {
@@ -3048,18 +2636,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Modesto"
- },
- {
-   "License_Number": "CCL19-0000071",
-   "Application_Number": "LCA19-0000071",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
-   "Retail Water Supplier": "Coachella Valley Water District"
  },
  {
    "License_Number": "CCL19-0000077",
@@ -3068,7 +2645,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -3078,7 +2654,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Alderpoint Water Dept"
  },
  {
@@ -3088,7 +2663,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -3098,7 +2672,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Municipality of Long Beach"
  },
  {
@@ -3108,7 +2681,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Power and Water"
  },
  {
@@ -3118,7 +2690,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City Of Long Beach"
  },
  {
@@ -3128,7 +2699,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -3138,7 +2708,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Myers Flat Mutual Water System"
  },
  {
@@ -3148,7 +2717,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Smith Property Restoration"
  },
  {
@@ -3158,7 +2726,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Lewiston Community Services District"
  },
  {
@@ -3168,7 +2735,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Utilities Dept"
  },
  {
@@ -3178,7 +2744,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -3188,7 +2753,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -3198,7 +2762,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Trinity County Waterworks Dist. #1"
  },
  {
@@ -3208,7 +2771,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Willow County Water District"
  },
  {
@@ -3218,7 +2780,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks"
  },
  {
@@ -3228,7 +2789,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "city of colusa water and sewer utilities"
  },
  {
@@ -3238,7 +2798,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3248,7 +2807,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Tract 349 Mutual Water Co."
  },
  {
@@ -3258,7 +2816,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Long Beach Water"
  },
  {
@@ -3268,7 +2825,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Santa Cruz Utilities"
  },
  {
@@ -3278,7 +2834,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3288,7 +2843,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3298,7 +2852,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -3308,17 +2861,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Willits water dept"
  },
  {
    "License_Number": "CCL19-0000460",
    "Application_Number": "LCA19-0000460",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": ""
  },
  {
@@ -3328,7 +2879,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Arcata"
  },
  {
@@ -3338,7 +2888,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -3348,7 +2897,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento - Water"
  },
  {
@@ -3358,7 +2906,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -3368,7 +2915,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -3378,7 +2924,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LONG BEACH WATER DEPARTMENT"
  },
  {
@@ -3388,7 +2933,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Santa Rosa"
  },
  {
@@ -3398,7 +2942,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3408,7 +2951,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -3418,7 +2960,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs"
  },
  {
@@ -3428,7 +2969,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -3438,7 +2978,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -3448,18 +2987,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
- },
- {
-   "License_Number": "CCL19-0000702",
-   "Application_Number": "LCA19-0000702",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
-   "Retail Water Supplier": "San Francisco Public Utilities Commission"
  },
  {
    "License_Number": "CCL19-0000705",
@@ -3468,7 +2996,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of perris"
  },
  {
@@ -3478,7 +3005,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "city of long beach"
  },
  {
@@ -3488,7 +3014,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Shasta Lake City"
  },
  {
@@ -3498,7 +3023,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -3508,7 +3032,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA WATER AND POWER"
  },
  {
@@ -3518,7 +3041,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA WATER AND POWER"
  },
  {
@@ -3528,7 +3050,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA WATER AND POWER"
  },
  {
@@ -3538,7 +3059,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -3548,7 +3068,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3558,7 +3077,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "HLM"
  },
  {
@@ -3568,7 +3086,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Elsinore Valley Municipal Water District"
  },
  {
@@ -3578,7 +3095,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -3588,7 +3104,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -3598,7 +3113,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA WATER AND POWER"
  },
  {
@@ -3608,7 +3122,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -3618,7 +3131,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks"
  },
  {
@@ -3628,7 +3140,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -3638,7 +3149,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley Water District"
  },
  {
@@ -3648,7 +3158,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3658,7 +3167,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water & Power"
  },
  {
@@ -3668,7 +3176,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Nevada Irrigation District"
  },
  {
@@ -3678,7 +3185,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA WATER AND POWER"
  },
  {
@@ -3688,7 +3194,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Willits"
  },
  {
@@ -3698,7 +3203,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3708,7 +3212,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3718,7 +3221,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "SACRAMENTO CITY"
  },
  {
@@ -3728,7 +3230,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -3738,7 +3239,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Ukiah"
  },
  {
@@ -3748,7 +3248,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "No",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3758,7 +3257,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "golden state water"
  },
  {
@@ -3768,7 +3266,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mckinleyville Community service district"
  },
  {
@@ -3778,7 +3275,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Sacramento Municipal Utility District"
  },
  {
@@ -3788,7 +3284,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Carpinteria Valley Water District"
  },
  {
@@ -3798,7 +3293,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Adelanto"
  },
  {
@@ -3808,7 +3302,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -3818,7 +3311,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Perc Water"
  },
  {
@@ -3828,7 +3320,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3838,7 +3329,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3848,7 +3338,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3858,7 +3347,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3868,7 +3356,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3878,7 +3365,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Jose Water Company"
  },
  {
@@ -3888,7 +3374,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -3898,28 +3383,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA WATER AND POWER"
- },
- {
-   "License_Number": "CCL19-0001419",
-   "Application_Number": "LCA19-0001419",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Mckinleyville Community Services District"
- },
- {
-   "License_Number": "CCL19-0001424",
-   "Application_Number": "LCA19-0001424",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Santa Rosa Water"
  },
  {
    "License_Number": "CCL19-0001433",
@@ -3928,7 +3392,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -3938,7 +3401,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -3948,7 +3410,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Los Angeles Regional Water Qauilty Control Board"
  },
  {
@@ -3958,7 +3419,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -3968,7 +3428,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Coachella Valley Water Department"
  },
  {
@@ -3978,7 +3437,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -3988,7 +3446,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Perc Water Corporation"
  },
  {
@@ -3998,7 +3455,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks"
  },
  {
@@ -4008,7 +3464,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "No",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -4018,7 +3473,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City and County of Sacramento"
  },
  {
@@ -4028,18 +3482,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Santa Rosa"
- },
- {
-   "License_Number": "CCL19-0001520",
-   "Application_Number": "LCA19-0001520",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Mission Springs Water District"
  },
  {
    "License_Number": "CCL19-0001524",
@@ -4048,7 +3491,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Needles"
  },
  {
@@ -4058,7 +3500,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -4068,7 +3509,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4078,7 +3518,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Los Angeles Department of Water and Power"
  },
  {
@@ -4088,7 +3527,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "City of Adelanto"
  },
  {
@@ -4098,7 +3536,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Nevada Irrigation District"
  },
  {
@@ -4108,7 +3545,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4118,7 +3554,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks District 1"
  },
  {
@@ -4128,7 +3563,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Alderpoint County Water District"
  },
  {
@@ -4138,7 +3572,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -4148,7 +3581,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -4158,7 +3590,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -4168,7 +3599,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4178,7 +3608,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -4188,7 +3617,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Adelanto Water & Sewer Services"
  },
  {
@@ -4198,7 +3626,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -4208,7 +3635,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4218,7 +3644,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -4228,7 +3653,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -4238,7 +3662,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Keyes Water District"
  },
  {
@@ -4248,7 +3671,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Adelanto"
  },
  {
@@ -4258,17 +3680,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Greenfield"
  },
  {
    "License_Number": "CCL19-0001692",
    "Application_Number": "LCA19-0001692",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Greenfield"
  },
  {
@@ -4278,7 +3698,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "McKinleyville Community Services District"
  },
  {
@@ -4288,7 +3707,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Coachella Valley Water District"
  },
  {
@@ -4298,7 +3716,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Carpinteria Valley Water District"
  },
  {
@@ -4308,7 +3725,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -4318,7 +3734,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4328,7 +3743,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "No",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -4338,7 +3752,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -4348,7 +3761,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4358,7 +3770,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -4368,7 +3779,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Potter Valley Irrigation District"
  },
  {
@@ -4378,7 +3788,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "CalWater Monterey County"
  },
  {
@@ -4388,7 +3797,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -4398,7 +3806,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -4408,7 +3815,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Rio Vista Water Department"
  },
  {
@@ -4418,7 +3824,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -4428,7 +3833,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Adelanto Water and Sewer Services"
  },
  {
@@ -4438,7 +3842,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Santa Ana Municipal Utility Services"
  },
  {
@@ -4448,7 +3851,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4458,7 +3860,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -4468,7 +3869,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA Dept of Water and Power (LADWP)"
  },
  {
@@ -4478,7 +3878,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Russian River Flood Control"
  },
  {
@@ -4488,7 +3887,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Potter Valley Irrigation District"
  },
  {
@@ -4498,7 +3896,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -4508,7 +3905,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water & Power"
  },
  {
@@ -4518,7 +3914,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "City of Ukiah"
  },
  {
@@ -4528,7 +3923,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Francisco Public Utilities"
  },
  {
@@ -4538,7 +3932,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Santa Ana"
  },
  {
@@ -4548,7 +3941,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -4558,7 +3950,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Dept. of Utilities"
  },
  {
@@ -4568,7 +3959,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -4578,7 +3968,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4588,7 +3977,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -4598,7 +3986,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4608,7 +3995,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4618,7 +4004,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Eastern Municipal Water District"
  },
  {
@@ -4628,7 +4013,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4638,7 +4022,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Nevada Irrigation District"
  },
  {
@@ -4648,7 +4031,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Adelanto Water & Sewer Services"
  },
  {
@@ -4658,7 +4040,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Del Oro Water Company"
  },
  {
@@ -4668,7 +4049,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4678,7 +4058,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -4688,7 +4067,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Covelo Water"
  },
  {
@@ -4698,7 +4076,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Rumsey Water Users Association"
  },
  {
@@ -4708,7 +4085,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Rumsey Water User Association"
  },
  {
@@ -4718,7 +4094,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4728,7 +4103,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA Department of Water and Power"
  },
  {
@@ -4738,7 +4112,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water"
  },
  {
@@ -4748,7 +4121,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -4758,7 +4130,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4768,7 +4139,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "DWP"
  },
  {
@@ -4778,7 +4148,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -4788,7 +4157,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4798,7 +4166,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Blythe"
  },
  {
@@ -4808,7 +4175,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA Department of Water and Power"
  },
  {
@@ -4818,7 +4184,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA Department of Water and Power"
  },
  {
@@ -4828,7 +4193,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4838,7 +4202,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4848,18 +4211,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
- },
- {
-   "License_Number": "CCL19-0002579",
-   "Application_Number": "LCA19-0002579",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Coalinga City Utility Service"
  },
  {
    "License_Number": "CCL19-0002596",
@@ -4868,7 +4220,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Nevada Irrigation District"
  },
  {
@@ -4878,7 +4229,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Millview Water District"
  },
  {
@@ -4888,7 +4238,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -4898,7 +4247,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4908,7 +4256,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power (DWP) through the Ci"
  },
  {
@@ -4918,7 +4265,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4928,7 +4274,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4938,7 +4283,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4948,7 +4292,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -4958,7 +4301,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "NID"
  },
  {
@@ -4968,7 +4310,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -4978,7 +4319,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -4988,7 +4328,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "adelanto city"
  },
  {
@@ -4998,7 +4337,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Mud"
  },
  {
@@ -5008,7 +4346,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "CR Water Service and Trucking"
  },
  {
@@ -5018,7 +4355,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Adelanto"
  },
  {
@@ -5028,7 +4364,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Needles Water Department"
  },
  {
@@ -5038,7 +4373,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "california city water department"
  },
  {
@@ -5048,7 +4382,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5058,7 +4391,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -5068,7 +4400,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5078,7 +4409,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -5088,7 +4418,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power (LADWP)"
  },
  {
@@ -5098,7 +4427,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of San Diego Public Utilities Water and Waste"
  },
  {
@@ -5108,7 +4436,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Long Beach Water Department"
  },
  {
@@ -5118,7 +4445,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Arcata"
  },
  {
@@ -5128,7 +4454,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5138,7 +4463,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Long Beach"
  },
  {
@@ -5148,7 +4472,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMud"
  },
  {
@@ -5158,7 +4481,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5168,7 +4490,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5178,7 +4499,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Long Beach"
  },
  {
@@ -5188,7 +4508,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Long Beach"
  },
  {
@@ -5198,7 +4517,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -5208,7 +4526,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5218,7 +4535,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "HLM Water Delivery"
  },
  {
@@ -5228,7 +4544,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "POTTER VALLEY IRRIGATION DISTRICT"
  },
  {
@@ -5238,7 +4553,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -5248,7 +4562,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "LA Department of Water and Power"
  },
  {
@@ -5258,7 +4571,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5268,7 +4580,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5278,7 +4589,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Carpinteria Valley Water District"
  },
  {
@@ -5288,7 +4598,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Santa Ana Water Company"
  },
  {
@@ -5298,7 +4607,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5308,7 +4616,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": ""
  },
  {
@@ -5318,7 +4625,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Vista Hills Mutual Water Company"
  },
  {
@@ -5328,7 +4634,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5338,7 +4643,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5348,7 +4652,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA County Waterworks Districts"
  },
  {
@@ -5358,7 +4661,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water & Power"
  },
  {
@@ -5368,7 +4670,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "McKinleyville Community Services District"
  },
  {
@@ -5378,7 +4679,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -5388,18 +4688,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003613",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
-   "Retail Water Supplier": ""
  },
  {
    "License_Number": "CCL19-0003614",
@@ -5408,7 +4697,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Potter Valley Irrigation District"
  },
  {
@@ -5418,7 +4706,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Town of Windsor"
  },
  {
@@ -5428,7 +4715,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5438,7 +4724,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks District"
  },
  {
@@ -5448,7 +4733,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5458,7 +4742,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -5468,7 +4751,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5478,7 +4760,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Los Angeles County Department of Public Works Wate"
  },
  {
@@ -5488,7 +4769,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "yes",
    "Currently Used for Cannabis": "yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -5498,7 +4778,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5508,7 +4787,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -5518,7 +4796,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Carpinteria Valley Water District"
  },
  {
@@ -5528,7 +4805,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -5538,7 +4814,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -5548,7 +4823,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -5558,18 +4832,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of San Bernardino Municipal Water Department"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003787",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "No",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
-   "Retail Water Supplier": ""
  },
  {
    "License_Number": "",
@@ -5578,7 +4841,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5588,7 +4850,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "San Francisco PUC"
  },
  {
@@ -5598,7 +4859,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -5608,7 +4868,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utilities District"
  },
  {
@@ -5618,7 +4877,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LOS ANGELES DEPARTMENT OF WATER AND POWER"
  },
  {
@@ -5628,7 +4886,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5638,7 +4895,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Regional Water Quality Control Board"
  },
  {
@@ -5648,7 +4904,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Coachella"
  },
  {
@@ -5658,7 +4913,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Melody Oaks Municipal Irrigation Company"
  },
  {
@@ -5668,7 +4922,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA DPW"
  },
  {
@@ -5678,7 +4931,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of San Diego"
  },
  {
@@ -5688,7 +4940,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -5698,7 +4949,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -5708,7 +4958,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5718,7 +4967,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -5728,7 +4976,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -5738,7 +4985,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -5748,7 +4994,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -5758,7 +5003,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -5768,7 +5012,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -5778,7 +5021,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley County Water District"
  },
  {
@@ -5788,7 +5030,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA DPW"
  },
  {
@@ -5798,7 +5039,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -5808,7 +5048,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -5818,7 +5057,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -5828,7 +5066,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -5838,7 +5075,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Willow Creek Community Services District"
  },
  {
@@ -5848,7 +5084,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5858,18 +5093,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Adelanto Water and Sewer Services"
- },
- {
-   "License_Number": "CCL19-0004036",
-   "Application_Number": "LCA19-0004036",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "Yes",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": ""
  },
  {
    "License_Number": "CCL19-0004050",
@@ -5878,7 +5102,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -5888,7 +5111,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5898,7 +5120,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5908,7 +5129,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5918,7 +5138,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -5928,7 +5147,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA DPW"
  },
  {
@@ -5938,7 +5156,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "NID"
  },
  {
@@ -5948,7 +5165,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -5958,17 +5174,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
-   "Retail Water Supplier": ""
- },
- {
-   "License_Number": "CCL19-0004533",
-   "Application_Number": "LCA19-0004533",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -5978,7 +5183,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -5988,18 +5192,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
- },
- {
-   "License_Number": "CCL19-0004553",
-   "Application_Number": "LCA19-0004553",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "City of Rio Dell"
  },
  {
    "License_Number": "CCL19-0004557",
@@ -6008,7 +5201,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks"
  },
  {
@@ -6018,7 +5210,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6028,7 +5219,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6038,7 +5228,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "California City Water Department"
  },
  {
@@ -6048,7 +5237,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6058,7 +5246,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "golden state water"
  },
  {
@@ -6068,7 +5255,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -6078,7 +5264,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Long Beach"
  },
  {
@@ -6088,7 +5273,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Fort Bragg Public Works Municipal Water"
  },
  {
@@ -6098,7 +5282,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "County of Sacramento"
  },
  {
@@ -6108,7 +5291,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Carpinteria Valley Water District"
  },
  {
@@ -6118,7 +5300,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Arcata City Water"
  },
  {
@@ -6128,7 +5309,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -6138,7 +5318,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks District 2"
  },
  {
@@ -6148,7 +5327,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Needles"
  },
  {
@@ -6158,7 +5336,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Santa Rosa"
  },
  {
@@ -6168,7 +5345,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Colusa Industrial Park"
  },
  {
@@ -6178,7 +5354,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Bellflower-Somerset Mutual Water Co"
  },
  {
@@ -6188,7 +5363,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Goleta Water District"
  },
  {
@@ -6198,7 +5372,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -6208,7 +5381,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Dept of Water and Power"
  },
  {
@@ -6218,7 +5390,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "City of Coachella"
  },
  {
@@ -6228,7 +5399,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -6238,7 +5408,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -6248,7 +5417,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6258,7 +5426,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -6268,7 +5435,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -6278,7 +5444,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -6288,7 +5453,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -6298,7 +5462,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of California City Water"
  },
  {
@@ -6308,7 +5471,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -6318,7 +5480,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "County of Sacramento"
  },
  {
@@ -6328,7 +5489,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redding Water Utility"
  },
  {
@@ -6338,7 +5498,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -6348,7 +5507,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -6358,7 +5516,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "HLM Water Delivery"
  },
  {
@@ -6368,18 +5525,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
- },
- {
-   "License_Number": "CCL19-0004961",
-   "Application_Number": "LCA19-0004961",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "City of Santa Rosa"
  },
  {
    "License_Number": "CCL19-0004976",
@@ -6388,8 +5534,16 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "R.Skinner Trucking purchasing & delivering under c"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001859",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
+   "Retail Water Supplier": ""
  },
  {
    "License_Number": "CCL19-0005005",
@@ -6398,7 +5552,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "HLM Bulk Water Hauling"
  },
  {
@@ -6408,7 +5561,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Perris"
  },
  {
@@ -6418,7 +5570,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Redding"
  },
  {
@@ -6428,7 +5579,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of needles"
  },
  {
@@ -6438,7 +5588,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Cotati"
  },
  {
@@ -6448,7 +5597,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Lorens Water Express"
  },
  {
@@ -6458,7 +5606,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -6468,7 +5615,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Willits"
  },
  {
@@ -6478,7 +5624,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LOS ANGELES DEPARTMENT OF WATER & POWER"
  },
  {
@@ -6488,27 +5633,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "East Bay Municipal District"
- },
- {
-   "License_Number": "CCL19-0005044",
-   "Application_Number": "LCA19-0005044",
-   "Name of Retail Water Supplier": "yes",
-   "A copy of the most recent water service bill": "yes",
-   "Water Bill Address Matches Premises": "yes",
-   "Currently Used for Cannabis": "yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "East Bay Municipal District"
- },
- {
-   "License_Number": "CCL19-0005044",
-   "Application_Number": "LCA19-0005044",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal District"
  },
  {
@@ -6518,7 +5642,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "No",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6528,7 +5651,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": ""
  },
  {
@@ -6538,7 +5660,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6548,7 +5669,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6558,7 +5678,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6568,7 +5687,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Francisco Public Utilities Commission"
  },
  {
@@ -6578,7 +5696,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -6588,17 +5705,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
-   "License_Number": "CCL19-0005120",
+   "License_Number": "",
    "Application_Number": "LCA19-0005120",
    "Name of Retail Water Supplier": "Yes",
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6608,7 +5723,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -6618,7 +5732,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "CITY OF EUREKA"
  },
  {
@@ -6628,7 +5741,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6638,7 +5750,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento Utilities"
  },
  {
@@ -6648,7 +5759,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Lera's Potable Water"
  },
  {
@@ -6658,7 +5768,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City Of Modesto"
  },
  {
@@ -6668,7 +5777,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "TRINITY COUNTY WATERWORS"
  },
  {
@@ -6678,7 +5786,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "GARBERVILLE SANITARY DISTRICT"
  },
  {
@@ -6688,7 +5795,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LAWP"
  },
  {
@@ -6698,7 +5804,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "",
    "Retail Water Supplier": "Sierra Business Park Owners' Association"
  },
  {
@@ -6708,7 +5813,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Santa Rosa Utilities"
  },
  {
@@ -6718,7 +5822,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Millview Water District"
  },
  {
@@ -6728,17 +5831,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Long Beach Water Dept"
  },
  {
    "License_Number": "CCL19-0005222",
    "Application_Number": "LCA19-0005222",
-   "Name of Retail Water Supplier": "N/A",
-   "A copy of the most recent water service bill": "N/A",
+   "Name of Retail Water Supplier": "No",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "No",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6748,7 +5849,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Los Angeles"
  },
  {
@@ -6758,7 +5858,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Sacramento Utilities"
  },
  {
@@ -6768,7 +5867,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento department of Utilities"
  },
  {
@@ -6778,7 +5876,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
@@ -6788,7 +5885,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mendo Water Express"
  },
  {
@@ -6798,7 +5894,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Colusa"
  },
  {
@@ -6808,7 +5903,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA DWP"
  },
  {
@@ -6818,7 +5912,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Incomplete",
    "Retail Water Supplier": "Pajaro / Sunny Mesa Community Services District CS"
  },
  {
@@ -6828,7 +5921,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of California City"
  },
  {
@@ -6838,7 +5930,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -6848,7 +5939,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs"
  },
  {
@@ -6858,7 +5948,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mission Springs Water District"
  },
  {
@@ -6868,7 +5957,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "potter valley irrigation district"
  },
  {
@@ -6878,7 +5966,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Elsinore Valley Municipal Water District"
  },
  {
@@ -6888,7 +5975,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Hollister"
  },
  {
@@ -6898,7 +5984,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LOS ANGELES DEPARTMENT OF WATER AND POWER"
  },
  {
@@ -6908,7 +5993,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Gabriel Valley Water Company"
  },
  {
@@ -6918,17 +6002,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power (LADWP)"
  },
  {
-   "License_Number": "CCL19-0005372",
+   "License_Number": "",
    "Application_Number": "LCA19-0005372",
    "Name of Retail Water Supplier": "Yes",
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -6938,7 +6020,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Davis Public Works"
  },
  {
@@ -6948,18 +6029,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
- },
- {
-   "License_Number": "CCL19-0005380",
-   "Application_Number": "LCA19-0005380",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "Yes",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "LA Dept of Water and Power"
  },
  {
    "License_Number": "CCL19-0005382",
@@ -6968,7 +6038,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "California City"
  },
  {
@@ -6978,7 +6047,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Water and Power (LADWP)"
  },
  {
@@ -6988,7 +6056,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Needles"
  },
  {
@@ -6998,7 +6065,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Adelanto Water Department"
  },
  {
@@ -7008,7 +6074,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Willow Creek Community Service District"
  },
  {
@@ -7018,7 +6083,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Encinal Road WS #01"
  },
  {
@@ -7028,7 +6092,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Watter and Power"
  },
  {
@@ -7038,17 +6101,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "American Water Company"
  },
  {
-   "License_Number": "CCL19-0005444",
+   "License_Number": "",
    "Application_Number": "LCA19-0005444",
    "Name of Retail Water Supplier": "Yes",
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7058,7 +6119,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7068,7 +6128,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LAWP"
  },
  {
@@ -7078,18 +6137,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Los Angeles"
- },
- {
-   "License_Number": "CCL19-0005463",
-   "Application_Number": "LCA19-0005463",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Desert Water Authority"
  },
  {
    "License_Number": "CCL19-0005464",
@@ -7098,17 +6146,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of water and power"
  },
  {
    "License_Number": "CCL19-0005465",
    "Application_Number": "LCA19-0005465",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "N/A",
+   "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Loren's Water Express"
  },
  {
@@ -7118,7 +6164,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "yes",
    "Currently Used for Cannabis": "yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Oceanside"
  },
  {
@@ -7128,7 +6173,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Arcata Water supply and sewar"
  },
  {
@@ -7138,7 +6182,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "The Water Lady"
  },
  {
@@ -7148,7 +6191,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Dept of Water and Power"
  },
  {
@@ -7158,7 +6200,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Dept of Water and Power"
  },
  {
@@ -7168,7 +6209,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Garberville Services District"
  },
  {
@@ -7178,7 +6218,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7188,7 +6227,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7198,7 +6236,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -7208,17 +6245,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Los Angeles Department of Water and Power"
- },
- {
-   "License_Number": "CCL19-0005639",
-   "Application_Number": "LCA19-0005639",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -7228,7 +6254,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7238,7 +6263,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "MID"
  },
  {
@@ -7248,7 +6272,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -7258,7 +6281,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Dwp"
  },
  {
@@ -7268,7 +6290,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA-Dept. of Water and Power"
  },
  {
@@ -7278,7 +6299,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley County Water District"
  },
  {
@@ -7288,7 +6308,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "city of Greenfield"
  },
  {
@@ -7298,7 +6317,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Desert Water Agency"
  },
  {
@@ -7308,7 +6326,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks"
  },
  {
@@ -7318,7 +6335,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Laytonville County Water District"
  },
  {
@@ -7328,7 +6344,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -7338,7 +6353,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "yes",
    "Currently Used for Cannabis": "yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "DWP"
  },
  {
@@ -7348,7 +6362,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Laytonville County Water District"
  },
  {
@@ -7358,7 +6371,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LOS ANGELES DEPARTMENT OF WATER AND POWER"
  },
  {
@@ -7368,7 +6380,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "McKinleyville Community Services District"
  },
  {
@@ -7378,7 +6389,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -7388,7 +6398,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Pinches Water Delivery"
  },
  {
@@ -7398,7 +6407,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Mendocino Water Company"
  },
  {
@@ -7408,7 +6416,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7418,7 +6425,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley County Water District"
  },
  {
@@ -7428,7 +6434,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "city of long beach"
  },
  {
@@ -7438,7 +6443,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "yes",
    "Currently Used for Cannabis": "yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Los Angeles"
  },
  {
@@ -7448,7 +6452,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "O'Ferrall Trucking & Excavation"
  },
  {
@@ -7458,8 +6461,25 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
+ },
+ {
+   "License_Number": "CCL19-0000702",
+   "Application_Number": "LCA19-0000702",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "No",
+   "Water Bill Address Matches Premises": "",
+   "Currently Used for Cannabis": "Yes",
+   "Retail Water Supplier": "San Francisco Public Utilities Commission"
+ },
+ {
+   "License_Number": "CCL19-0002579",
+   "Application_Number": "LCA19-0002579",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "",
+   "Currently Used for Cannabis": "Yes",
+   "Retail Water Supplier": "Coalinga City Utility Service"
  },
  {
    "License_Number": "CCL20-0000252",
@@ -7468,7 +6488,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "yes",
    "Currently Used for Cannabis": "yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "San Gabriel Valley Water Company"
  },
  {
@@ -7478,7 +6497,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Rio Vista"
  },
  {
@@ -7488,7 +6506,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LA DWP"
  },
  {
@@ -7498,18 +6515,7 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water & Power"
- },
- {
-   "License_Number": "CCL20-0000276",
-   "Application_Number": "LCA20-0000276",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "Yes",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Adelanto Water Department"
  },
  {
    "License_Number": "CCL20-0000314",
@@ -7518,7 +6524,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Laytonville Water District"
  },
  {
@@ -7528,7 +6533,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Miranda Community Services District"
  },
  {
@@ -7538,8 +6542,16 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Needles"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0004036",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
+   "Retail Water Supplier": ""
  },
  {
    "License_Number": "CCL20-0000354",
@@ -7548,7 +6560,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "yes",
    "Currently Used for Cannabis": "yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -7558,7 +6569,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks"
  },
  {
@@ -7568,7 +6578,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks District #1"
  },
  {
@@ -7578,7 +6587,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "George Pinches"
  },
  {
@@ -7588,7 +6596,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Department of Water and Power"
  },
  {
@@ -7598,37 +6605,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "City of Sacramento"
- },
- {
-   "License_Number": "CCL20-0000450",
-   "Application_Number": "LCA20-0000450",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "Yes",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "City of Sacramento"
- },
- {
-   "License_Number": "CCL20-0000471",
-   "Application_Number": "LCA20-0000471",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "Yes",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "City of Sacramento"
- },
- {
-   "License_Number": "CCL20-0000471",
-   "Application_Number": "LCA20-0000471",
-   "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "Yes",
-   "Water Bill Address Matches Premises": "Yes",
-   "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -7638,7 +6614,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Nevada Irrigation District"
  },
  {
@@ -7648,18 +6623,16 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks District 2"
  },
  {
-   "License_Number": "CCL20-0000554",
-   "Application_Number": "LCA20-0000554",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001714",
    "Name of Retail Water Supplier": "Yes",
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
-   "Retail Water Supplier": "Pajaro Valley Water District"
+   "Retail Water Supplier": ""
  },
  {
    "License_Number": "CCL20-0000575",
@@ -7668,7 +6641,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -7678,17 +6650,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "East Bay Municipal Utility District"
  },
  {
-   "License_Number": "CCL20-0000775",
+   "License_Number": "",
    "Application_Number": "LCA20-0000775",
    "Name of Retail Water Supplier": "Yes",
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7698,7 +6668,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "ADELANTO"
  },
  {
@@ -7708,7 +6677,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "yes",
    "Currently Used for Cannabis": "yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7718,7 +6686,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Colusa"
  },
  {
@@ -7728,17 +6695,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "No",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Colusa"
  },
  {
-   "License_Number": "CCL20-0001129",
+   "License_Number": "",
    "Application_Number": "LCA20-0001129",
    "Name of Retail Water Supplier": "Yes",
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7748,7 +6713,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Big Basin Water Co."
  },
  {
@@ -7758,7 +6722,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Carpinteria"
  },
  {
@@ -7768,17 +6731,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Redwood Valley Water District"
  },
  {
-   "License_Number": "CCL20-0001166",
+   "License_Number": "",
    "Application_Number": "LCA20-0001166",
    "Name of Retail Water Supplier": "Yes",
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7788,7 +6749,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -7798,7 +6758,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "EBMUD"
  },
  {
@@ -7808,7 +6767,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Trinity County Waterworks District"
  },
  {
@@ -7818,17 +6776,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Watsonville"
  },
  {
-   "License_Number": "CCL20-0001302",
+   "License_Number": "",
    "Application_Number": "LCA20-0001302",
    "Name of Retail Water Supplier": "yes",
    "A copy of the most recent water service bill": "yes",
    "Water Bill Address Matches Premises": "yes",
    "Currently Used for Cannabis": "yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7838,7 +6794,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Laytonville County Water District"
  },
  {
@@ -7848,7 +6803,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Sacramento"
  },
  {
@@ -7858,7 +6812,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Arcata"
  },
  {
@@ -7868,7 +6821,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Nevada Irrigation District"
  },
  {
@@ -7878,7 +6830,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "City of Eureka"
  },
  {
@@ -7888,7 +6839,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
  },
  {
@@ -7898,7 +6848,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "brooktrails township"
  },
  {
@@ -7908,17 +6857,15 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
-   "License_Number": "CCL20-0001714",
+   "License_Number": "",
    "Application_Number": "LCA20-0001714",
    "Name of Retail Water Supplier": "Yes",
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7928,7 +6875,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": ""
  },
  {
@@ -7938,7 +6884,6 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Laytonville Water District"
  },
  {
@@ -7948,10 +6893,17 @@ var RETAILWATERarray =[
    "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
-   "Water_Source_Review": "Complete",
    "Retail Water Supplier": "Los Angeles Department of Water and Power"
+ },
+ {
+   "License_Number": "CCL18-0003644",
+   "Application_Number": "LCA18-0003644",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "",
+   "Currently Used for Cannabis": "Yes",
+   "Retail Water Supplier": "LA DWP"
  }
- 
- ];
+];
  return RETAILWATERarray;
 }

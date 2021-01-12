@@ -1,7 +1,7 @@
 function RAINData (){
 
 var RAINarray =[
-{
+ {
    "License_Number": "CCL18-0000004",
    "Application_Number": "LCA18-0000004",
    "Total Square footage of catchment footprint": "Yes",
@@ -10,6 +10,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.23972,
    "Catchment_Lon": -123.83915,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0000004",
+   "Application_Number": "LCA18-0000004",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.254,
+   "Catchment_Lon": -123.944,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -29,42 +40,20 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.243777,
-   "Catchment_Lon": -124.158055,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000041",
-   "Application_Number": "LCA18-0000041",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000041",
-   "Application_Number": "LCA18-0000041",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.243777,
-   "Catchment_Lon": -124.158055,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000041",
-   "Application_Number": "LCA18-0000041",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.24791,
    "Catchment_Lon": -124.16511,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0000041",
+   "Application_Number": "LCA18-0000041",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.243777,
+   "Catchment_Lon": -124.158055,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -96,8 +85,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0918,
-   "Catchment_Lon": -123.9407,
+   "Catchment_Lat": 40.09212,
+   "Catchment_Lon": -123.93948,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -107,8 +96,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.09212,
-   "Catchment_Lon": -123.93948,
+   "Catchment_Lat": 40.0918,
+   "Catchment_Lon": -123.9407,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -118,31 +107,9 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.34943,
+   "Catchment_Lon": -124.3309,
    "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL18-0000071",
-   "Application_Number": "LCA18-0000071",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL18-0000073",
-   "Application_Number": "LCA18-0000073",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.5736,
-   "Catchment_Lon": -123.395,
-   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0000073",
@@ -153,6 +120,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.578111,
    "Catchment_Lon": -123.396944,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0000073",
+   "Application_Number": "LCA18-0000073",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 39.5736,
+   "Catchment_Lon": -123.395,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -183,42 +161,20 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.06992,
-   "Catchment_Lon": -123.00296,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000082",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0699,
-   "Catchment_Lon": -123.003,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000082",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.07,
    "Catchment_Lon": -124.00222,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000084",
-   "Application_Number": "LCA18-0000084",
+   "License_Number": "",
+   "Application_Number": "LCA18-0000082",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.06992,
+   "Catchment_Lon": -123.00296,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -228,8 +184,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.220071,
+   "Catchment_Lon": -124.169595,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -239,19 +195,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000085",
-   "Application_Number": "LCA18-0000085",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.220071,
+   "Catchment_Lon": -124.169595,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -293,21 +238,10 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000113",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.316967,
+   "Catchment_Lon": -124.2847,
+   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0000117",
@@ -334,23 +268,23 @@ var RAINarray =[
  {
    "License_Number": "CCL18-0000140",
    "Application_Number": "LCA18-0000140",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.32052,
+   "Catchment_Lon": -123.81521,
+   "Currently Used for Cannabis?": ""
  },
  {
-   "License_Number": "CCL18-0000140",
-   "Application_Number": "LCA18-0000140",
+   "License_Number": "CCL18-0000168",
+   "Application_Number": "LCA18-0000168",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 39.66596944,
+   "Catchment_Lon": -123.4744444,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -365,25 +299,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000168",
-   "Application_Number": "LCA18-0000168",
+   "License_Number": "CCL18-0000175",
+   "Application_Number": "LCA18-0000175",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.66596944,
-   "Catchment_Lon": -123.4744444,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000194",
-   "Application_Number": "LCA18-0000194",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.859765,
-   "Catchment_Lon": -123.573206,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.65605,
+   "Catchment_Lon": -123.48608,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -394,7 +317,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.86009722,
-   "Catchment_Lon": 123.5713889,
+   "Catchment_Lon": -123.571388,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -448,8 +371,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.11479,
+   "Catchment_Lon": 123.76792,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -459,19 +382,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000227",
-   "Application_Number": "LCA18-0000227",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2617,
+   "Catchment_Lon": -123.7897,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -492,19 +404,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000267",
-   "Application_Number": "LCA18-0000267",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 41.36748,
+   "Catchment_Lon": -123.50651,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -514,19 +415,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000268",
-   "Application_Number": "LCA18-0000268",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 41.36748,
+   "Catchment_Lon": -123.50651,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -539,6 +429,28 @@ var RAINarray =[
    "Catchment_Lat": 40.1684,
    "Catchment_Lon": -123.8845,
    "Currently Used for Cannabis?": "No"
+ },
+ {
+   "License_Number": "CCL18-0000281",
+   "Application_Number": "LCA18-0000281",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.12372222,
+   "Catchment_Lon": -123.3063889,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0000290",
+   "Application_Number": "LCA18-0000290",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.12372222,
+   "Catchment_Lon": -123.3063889,
+   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0000295",
@@ -614,7 +526,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 38.22136,
-   "Catchment_Lon": 122.501606,
+   "Catchment_Lon": -122.501606,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -625,7 +537,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 38.22136,
-   "Catchment_Lon": 122.501606,
+   "Catchment_Lon": -122.501606,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -637,6 +549,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.87529,
    "Catchment_Lon": -123.56847,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA18-0000431",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.47185,
+   "Catchment_Lon": -123.75597,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -659,28 +582,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.862,
    "Catchment_Lon": -123.6101,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000466",
-   "Application_Number": "LCA18-0000466",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000466",
-   "Application_Number": "LCA18-0000466",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -717,39 +618,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000490",
-   "Application_Number": "LCA18-0000490",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.304944,
-   "Catchment_Lon": -123.063611,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000494",
-   "Application_Number": "LCA18-0000494",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000494",
-   "Application_Number": "LCA18-0000494",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.243777,
-   "Catchment_Lon": -124.158055,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0000494",
    "Application_Number": "LCA18-0000494",
    "Total Square footage of catchment footprint": "Yes",
@@ -761,19 +629,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000531",
-   "Application_Number": "LCA18-0000531",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000531",
-   "Application_Number": "LCA18-0000531",
+   "License_Number": "CCL18-0000494",
+   "Application_Number": "LCA18-0000494",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -794,19 +651,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000544",
-   "Application_Number": "LCA18-0000544",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000544",
-   "Application_Number": "LCA18-0000544",
+   "License_Number": "CCL18-0000531",
+   "Application_Number": "LCA18-0000531",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -824,6 +670,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.24791,
    "Catchment_Lon": -124.16511,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0000544",
+   "Application_Number": "LCA18-0000544",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.243777,
+   "Catchment_Lon": -124.158055,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -843,42 +700,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.11833333,
-   "Catchment_Lon": -123.9136111,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL18-0000549",
-   "Application_Number": "LCA18-0000549",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.11855833,
    "Catchment_Lon": -123.9136111,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000578",
-   "Application_Number": "LCA18-0000578",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000578",
-   "Application_Number": "LCA18-0000578",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.243777,
-   "Catchment_Lon": -124.158055,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -893,14 +717,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000599",
+   "License_Number": "CCL18-0000578",
+   "Application_Number": "LCA18-0000578",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.2571,
-   "Catchment_Lon": -123.0182,
+   "Catchment_Lat": 40.243777,
+   "Catchment_Lon": -124.158055,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -909,9 +733,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.2571,
-   "Catchment_Lon": -123.018,
+   "Catchment_Lon": -123.0182,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -926,17 +750,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000600",
-   "Application_Number": "LCA18-0000600",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2571,
-   "Catchment_Lon": -123.018,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0000601",
    "Application_Number": "LCA18-0000601",
    "Total Square footage of catchment footprint": "Yes",
@@ -945,17 +758,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.2571,
    "Catchment_Lon": -123.0182,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000601",
-   "Application_Number": "LCA18-0000601",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2571,
-   "Catchment_Lon": -123.018,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -976,8 +778,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
+   "Catchment_Lat": 40.24791,
+   "Catchment_Lon": -124.16511,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -989,28 +791,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.243777,
    "Catchment_Lon": -124.158055,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000648",
-   "Application_Number": "LCA18-0000648",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.24791,
-   "Catchment_Lon": -124.16511,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000649",
-   "Application_Number": "LCA18-0000649",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1042,19 +822,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000650",
-   "Application_Number": "lca18-0000650",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 38.91066,
+   "Catchment_Lon": -123.09486,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1064,41 +833,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000653",
-   "Application_Number": "lca18-0000653",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000658",
-   "Application_Number": "LCA18-0000658",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000658",
-   "Application_Number": "LCA18-0000658",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.243777,
-   "Catchment_Lon": -124.158055,
+   "Catchment_Lat": 38.91066,
+   "Catchment_Lon": -123.09486,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1113,47 +849,25 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000674",
-   "Application_Number": "LCA18-0000674",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000674",
-   "Application_Number": "LCA18-0000674",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000705",
-   "Application_Number": "LCA18-0000705",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000705",
-   "Application_Number": "LCA18-0000705",
+   "License_Number": "CCL18-0000658",
+   "Application_Number": "LCA18-0000658",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.243777,
    "Catchment_Lon": -124.158055,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0000674",
+   "Application_Number": "LCA18-0000674",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.808,
+   "Catchment_Lon": -124.0119,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1168,14 +882,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000718",
-   "Application_Number": "LCA18-0000718",
+   "License_Number": "CCL18-0000705",
+   "Application_Number": "LCA18-0000705",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.243777,
+   "Catchment_Lon": -124.158055,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1207,19 +921,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000754",
-   "Application_Number": "LCA18-0000754",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.3581,
+   "Catchment_Lon": -123.7253,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1250,17 +953,6 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.243777,
-   "Catchment_Lon": -124.158055,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000804",
-   "Application_Number": "LCA18-0000804",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.24791,
    "Catchment_Lon": -124.16511,
@@ -1272,9 +964,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.243777,
+   "Catchment_Lon": -124.158055,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1284,19 +976,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000824",
-   "Application_Number": "LCA18-0000824",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.72755,
+   "Catchment_Lon": -123.50411,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1308,17 +989,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.2571,
    "Catchment_Lon": -123.0182,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0000829",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2571,
-   "Catchment_Lon": -123.018,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1361,19 +1031,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0000888",
-   "Application_Number": "LCA18-0000888",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.4628,
+   "Catchment_Lon": -123.8518,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1399,26 +1058,15 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000942",
-   "Application_Number": "LCA18-0000942",
+   "License_Number": "CCL18-0000966",
+   "Application_Number": "LCA18-0000966",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0000942",
-   "Application_Number": "LCA18-0000942",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 39.66596944,
+   "Catchment_Lon": -123.4744444,
+   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0000966",
@@ -1432,14 +1080,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0000966",
-   "Application_Number": "LCA18-0000966",
+   "License_Number": "CCL18-0000995",
+   "Application_Number": "LCA18-0000995",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.66596944,
-   "Catchment_Lon": -123.4744444,
+   "Catchment_Lat": 38.99663,
+   "Catchment_Lon": -123.15589,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1449,8 +1097,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.00149,
+   "Catchment_Lon": -123.1589,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1460,9 +1108,20 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.00286,
+   "Catchment_Lon": -123.15847,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0000995",
+   "Application_Number": "LCA18-0000995",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 39.00382,
+   "Catchment_Lon": -123.15568,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0000998",
@@ -1471,20 +1130,20 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.28938,
+   "Catchment_Lon": -124.32174,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0000998",
    "Application_Number": "LCA18-0000998",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.28676,
+   "Catchment_Lon": -124.32296,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0001001",
@@ -1504,20 +1163,20 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.28938,
+   "Catchment_Lon": -124.32174,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0001002",
    "Application_Number": "LCA18-0001002",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.28676,
+   "Catchment_Lon": -124.32296,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0001004",
@@ -1537,8 +1196,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2237,
+   "Catchment_Lon": -124.1125,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1548,8 +1207,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2237,
-   "Catchment_Lon": -124.1125,
+   "Catchment_Lat": 40.223299,
+   "Catchment_Lon": -124.113489,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1592,8 +1251,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.237458,
-   "Catchment_Lon": -123.310944,
+   "Catchment_Lat": 39.237508,
+   "Catchment_Lon": -123.309028,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1603,8 +1262,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.237508,
-   "Catchment_Lon": -123.309028,
+   "Catchment_Lat": 39.237458,
+   "Catchment_Lon": -123.310944,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1638,17 +1297,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.313,
    "Catchment_Lon": -124.2685,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001072",
-   "Application_Number": "LCA18-0001072",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.31466,
-   "Catchment_Lon": -124.268906,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1740,6 +1388,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0001123",
+   "Application_Number": "LCA18-0001123",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.34774,
+   "Catchment_Lon": -123.40057,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "",
    "Application_Number": "LCA18-0001126",
    "Total Square footage of catchment footprint": "Yes",
@@ -1747,7 +1406,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2386,
-   "Catchment_Lon": 123.9746,
+   "Catchment_Lon": -123.9746,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1833,9 +1492,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.10429,
+   "Catchment_Lon": -123.730939,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1878,8 +1537,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.30491,
-   "Catchment_Lon": -123.06361,
+   "Catchment_Lat": 39.30531,
+   "Catchment_Lon": -123.06406,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1899,31 +1558,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.304944,
-   "Catchment_Lon": -123.063611,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001319",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.30531,
-   "Catchment_Lon": -123.06406,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001324",
-   "Application_Number": "LCA18-0001324",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.225423,
-   "Catchment_Lon": -123.328378,
+   "Catchment_Lat": 39.30491,
+   "Catchment_Lon": -123.06361,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1935,6 +1572,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.2228085,
    "Catchment_Lon": -123.332857,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0001324",
+   "Application_Number": "LCA18-0001324",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 39.225423,
+   "Catchment_Lon": -123.328378,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -1977,19 +1625,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001425",
-   "Application_Number": "LCA18-0001425",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.01206522,
-   "Catchment_Lon": -123.0259748,
+   "Catchment_Lat": 38.91066,
+   "Catchment_Lon": 123.09486,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -2004,8 +1641,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001426",
+   "License_Number": "CCL18-0001425",
+   "Application_Number": "LCA18-0001425",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -2027,7 +1664,7 @@ var RAINarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0001428",
+   "Application_Number": "LCA18-0001426",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -2049,7 +1686,7 @@ var RAINarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0001429",
+   "Application_Number": "LCA18-0001428",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -2067,6 +1704,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.009421,
    "Catchment_Lon": -123.009441,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA18-0001429",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -2126,50 +1774,6 @@ var RAINarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0001538",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001538",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001541",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001541",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "",
    "Application_Number": "LCA18-0001551",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -2178,270 +1782,6 @@ var RAINarray =[
    "Catchment_Lat": 40.4538,
    "Catchment_Lon": -123.6743,
    "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL18-0001582",
-   "Application_Number": "LCA18-0001582",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001582",
-   "Application_Number": "LCA18-0001582",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001589",
-   "Application_Number": "LCA18-0001589",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001589",
-   "Application_Number": "LCA18-0001589",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001599",
-   "Application_Number": "LCA18-0001599",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001599",
-   "Application_Number": "LCA18-0001599",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001618",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001618",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001621",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001621",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001622",
-   "Application_Number": "LCA18-0001622",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001622",
-   "Application_Number": "LCA18-0001622",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001624",
-   "Application_Number": "LCA18-0001624",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001624",
-   "Application_Number": "LCA18-0001624",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001628",
-   "Application_Number": "LCA18-0001628",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001628",
-   "Application_Number": "LCA18-0001628",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001629",
-   "Application_Number": "LCA18-0001629",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001629",
-   "Application_Number": "LCA18-0001629",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001630",
-   "Application_Number": "LCA18-0001630",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001630",
-   "Application_Number": "LCA18-0001630",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001633",
-   "Application_Number": "LCA18-0001633",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001633",
-   "Application_Number": "LCA18-0001633",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001635",
-   "Application_Number": "LCA18-0001635",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001635",
-   "Application_Number": "LCA18-0001635",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
  },
  {
    "License_Number": "",
@@ -2466,336 +1806,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0001647",
-   "Application_Number": "LCA18-0001647",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001647",
-   "Application_Number": "LCA18-0001647",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001649",
-   "Application_Number": "LCA18-0001649",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001649",
-   "Application_Number": "LCA18-0001649",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001652",
-   "Application_Number": "LCA18-0001652",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001652",
-   "Application_Number": "LCA18-0001652",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001654",
-   "Application_Number": "LCA18-0001654",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001654",
-   "Application_Number": "LCA18-0001654",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001655",
-   "Application_Number": "LCA18-0001655",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001655",
-   "Application_Number": "LCA18-0001655",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001657",
-   "Application_Number": "LCA18-0001657",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001657",
-   "Application_Number": "LCA18-0001657",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001660",
-   "Application_Number": "LCA18-0001660",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001660",
-   "Application_Number": "LCA18-0001660",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001664",
-   "Application_Number": "LCA18-0001664",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001664",
-   "Application_Number": "LCA18-0001664",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001665",
-   "Application_Number": "LCA18-0001665",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001665",
-   "Application_Number": "LCA18-0001665",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001667",
-   "Application_Number": "LCA18-0001667",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001667",
-   "Application_Number": "LCA18-0001667",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001668",
-   "Application_Number": "LCA18-0001668",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001668",
-   "Application_Number": "LCA18-0001668",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001670",
-   "Application_Number": "LCA18-0001670",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001670",
-   "Application_Number": "LCA18-0001670",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001673",
-   "Application_Number": "LCA18-0001673",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001673",
-   "Application_Number": "LCA18-0001673",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001678",
-   "Application_Number": "LCA18-0001678",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001678",
-   "Application_Number": "LCA18-0001678",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001683",
-   "Application_Number": "LCA18-0001683",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001683",
-   "Application_Number": "LCA18-0001683",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
    "License_Number": "CCL18-0001685",
    "Application_Number": "LCA18-0001685",
    "Total Square footage of catchment footprint": "Yes",
@@ -2804,28 +1814,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 37.105118,
    "Catchment_Lon": -122.041943,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001685",
-   "Application_Number": "LCA18-0001685",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001686",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -2851,116 +1839,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0001695",
-   "Application_Number": "LCA18-0001695",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001695",
-   "Application_Number": "LCA18-0001695",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001696",
-   "Application_Number": "LCA18-0001696",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001696",
-   "Application_Number": "LCA18-0001696",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001700",
-   "Application_Number": "LCA18-0001700",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001700",
-   "Application_Number": "LCA18-0001700",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001702",
-   "Application_Number": "LCA18-0001702",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001702",
-   "Application_Number": "LCA18-0001702",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001703",
-   "Application_Number": "LCA18-0001703",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL18-0001703",
-   "Application_Number": "LCA18-0001703",
-   "Total Square footage of catchment footprint": "",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
    "License_Number": "CCL18-0001712",
    "Application_Number": "LCA18-0001712",
    "Total Square footage of catchment footprint": "Yes",
@@ -2979,7 +1857,18 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0574,
-   "Catchment_Lon": 123.5494,
+   "Catchment_Lon": -123.5494,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0001713",
+   "Application_Number": "LCA18-0001713",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 39.88916667,
+   "Catchment_Lon": -123.5572222,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3005,17 +1894,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0001713",
-   "Application_Number": "LCA18-0001713",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.88916667,
-   "Catchment_Lon": -123.5572222,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0001732",
    "Application_Number": "LCA18-0001732",
    "Total Square footage of catchment footprint": "Yes",
@@ -3038,91 +1916,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001743",
+   "License_Number": "CCL18-0001749",
+   "Application_Number": "LCA18-0001749",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001743",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001744",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001744",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001745",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001745",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001746",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0001746",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.91208,
+   "Catchment_Lon": -123.7023,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3198,30 +1999,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001810",
-   "Application_Number": "LCA18-0001810",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001848",
-   "Application_Number": "LCA18-0001848",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.261181,
-   "Catchment_Lon": -123.275664,
+   "Catchment_Lat": 39.181978,
+   "Catchment_Lon": -123.583956,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3236,6 +2015,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0001848",
+   "Application_Number": "LCA18-0001848",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 39.261181,
+   "Catchment_Lon": -123.275664,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL18-0001852",
    "Application_Number": "LCA18-0001852",
    "Total Square footage of catchment footprint": "Yes",
@@ -3243,7 +2033,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0574,
-   "Catchment_Lon": 123.5494,
+   "Catchment_Lon": -123.5494,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3258,36 +2048,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0001854",
-   "Application_Number": "LCA18-0001854",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2386,
-   "Catchment_Lon": 123.9746,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0001873",
    "Application_Number": "LCA18-0001873",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001873",
-   "Application_Number": "LCA18-0001873",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.09298,
+   "Catchment_Lon": -123.76946,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3297,19 +2065,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001874",
-   "Application_Number": "LCA18-0001874",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.09298,
+   "Catchment_Lon": -123.76946,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3319,19 +2076,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001875",
-   "Application_Number": "LCA18-0001875",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.09298,
+   "Catchment_Lon": -123.76946,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3368,15 +2114,37 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0001924",
-   "Application_Number": "LCA18-0001924",
+   "License_Number": "",
+   "Application_Number": "LCA18-0001919",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2932,
+   "Catchment_Lon": -123.6318,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA18-0001919",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2933,
+   "Catchment_Lon": -123.6356,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0001924",
+   "Application_Number": "LCA18-0001924",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2932,
+   "Catchment_Lon": -123.6318,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0001924",
@@ -3385,19 +2153,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001933",
-   "Application_Number": "LCA18-0001933",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.19042,
-   "Catchment_Lon": -123.80537,
+   "Catchment_Lat": 40.2933,
+   "Catchment_Lon": -123.6356,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3412,25 +2169,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0001939",
-   "Application_Number": "LCA18-0001939",
+   "License_Number": "CCL18-0001933",
+   "Application_Number": "LCA18-0001933",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.5202,
-   "Catchment_Lon": -123.6397,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001939",
-   "Application_Number": "LCA18-0001939",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.5125,
-   "Catchment_Lon": -123.6383,
+   "Catchment_Lat": 40.19042,
+   "Catchment_Lon": -123.80537,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3456,8 +2202,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0001940",
-   "Application_Number": "LCA18-0001940",
+   "License_Number": "CCL18-0001939",
+   "Application_Number": "LCA18-0001939",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -3471,10 +2217,10 @@ var RAINarray =[
    "Application_Number": "LCA18-0001940",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.5125,
-   "Catchment_Lon": -123.6391,
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.5202,
+   "Catchment_Lon": -123.6397,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3496,7 +2242,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.5125,
-   "Catchment_Lon": -123.6383,
+   "Catchment_Lon": -123.6391,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3530,17 +2276,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.5125,
    "Catchment_Lon": -123.638,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001941",
-   "Application_Number": "LCA18-0001941",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.5125,
-   "Catchment_Lon": -123.6383,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3573,7 +2308,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2606,
-   "Catchment_Lon": 124.088,
+   "Catchment_Lon": -124.088,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3583,19 +2318,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001965",
-   "Application_Number": "LCA18-0001965",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.94418,
+   "Catchment_Lon": -123.68324,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3605,19 +2329,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001966",
-   "Application_Number": "LCA18-0001966",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.15513,
+   "Catchment_Lon": -123.96514,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3627,8 +2340,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.27582,
+   "Catchment_Lon": 123.63809,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3638,19 +2351,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0001994",
-   "Application_Number": "LCA18-0001994",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.04916,
+   "Catchment_Lon": -123.58265,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3661,7 +2363,18 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.1474,
-   "Catchment_Lon": 123.976,
+   "Catchment_Lon": -123.976,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA18-0002004",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.9277,
+   "Catchment_Lon": -123.62362,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3671,20 +2384,31 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.10129,
+   "Catchment_Lon": -123.98835,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0002009",
    "Application_Number": "LCA18-0002009",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.09792,
+   "Catchment_Lon": -123.98673,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0002010",
+   "Application_Number": "LCA18-0002010",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.09792,
+   "Catchment_Lon": -123.98673,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0002010",
@@ -3693,19 +2417,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002010",
-   "Application_Number": "LCA18-0002010",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.10129,
+   "Catchment_Lon": -123.98835,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3726,19 +2439,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002019",
-   "Application_Number": "LCA18-0002019",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.05692,
+   "Catchment_Lon": -123.66311,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3748,19 +2450,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002033",
-   "Application_Number": "LCA18-0002033",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.0146,
+   "Catchment_Lon": -123.8422,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3777,13 +2468,24 @@ var RAINarray =[
  {
    "License_Number": "CCL18-0002044",
    "Application_Number": "LCA18-0002044",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 39.9279,
+   "Catchment_Lon": -123.6182,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0002044",
+   "Application_Number": "LCA18-0002044",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 39.934,
+   "Catchment_Lon": -123.6097,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0002044",
@@ -3792,8 +2494,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.9247,
+   "Catchment_Lon": -123.6224,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3816,17 +2518,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.15,
    "Catchment_Lon": -123.8599,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002052",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.1496,
-   "Catchment_Lon": -123.8602,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3865,13 +2556,35 @@ var RAINarray =[
  {
    "License_Number": "CCL18-0002064",
    "Application_Number": "LCA18-0002064",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.05775,
+   "Catchment_Lon": -123.57311,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0002064",
+   "Application_Number": "LCA18-0002064",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.05731,
+   "Catchment_Lon": -123.57306,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0002064",
+   "Application_Number": "LCA18-0002064",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.05978,
+   "Catchment_Lon": -123.57366,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0002064",
@@ -3880,8 +2593,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.06085,
+   "Catchment_Lon": -123.57254,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -3914,52 +2627,30 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.419719,
-   "Catchment_Lon": 123.946069,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002069",
-   "Application_Number": "LCA18-0002069",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.419719,
    "Catchment_Lon": -123.946069,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002069",
-   "Application_Number": "LCA18-0002069",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.419806,
-   "Catchment_Lon": 123.946281,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0002071",
    "Application_Number": "LCA18-0002071",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "N/A",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.01291,
+   "Catchment_Lon": -123.85582,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0002071",
    "Application_Number": "LCA18-0002071",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "N/A",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.01211,
+   "Catchment_Lon": -123.85293,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "",
@@ -3969,7 +2660,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2196,
-   "Catchment_Lon": 123.8683,
+   "Catchment_Lon": -123.8683,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4028,17 +2719,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002083",
-   "Application_Number": "LCA18-0002083",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1496,
-   "Catchment_Lon": -123.8602,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0002105",
    "Application_Number": "LCA18-0002105",
    "Total Square footage of catchment footprint": "Yes",
@@ -4067,6 +2747,17 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.313,
+   "Catchment_Lon": -124.2685,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0002117",
+   "Application_Number": "LCA18-0002117",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.314,
    "Catchment_Lon": -124.2686,
    "Currently Used for Cannabis?": "Yes"
@@ -4080,28 +2771,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.319,
    "Catchment_Lon": -124.2686,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002117",
-   "Application_Number": "LCA18-0002117",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.313,
-   "Catchment_Lon": -124.2685,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002117",
-   "Application_Number": "LCA18-0002117",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.31466,
-   "Catchment_Lon": -124.268906,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4129,13 +2798,13 @@ var RAINarray =[
  {
    "License_Number": "CCL18-0002145",
    "Application_Number": "LCA18-0002145",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 39.61038,
+   "Catchment_Lon": -123.34812,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0002145",
@@ -4144,8 +2813,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.61172,
+   "Catchment_Lon": -123.35018,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4155,19 +2824,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002155",
-   "Application_Number": "LCA18-0002155",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.13447,
+   "Catchment_Lon": -123.48225,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4232,8 +2890,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.7652363,
-   "Catchment_Lon": -123.4642974,
+   "Catchment_Lat": 40.7615022,
+   "Catchment_Lon": -123.4618712,
    "Currently Used for Cannabis?": "No"
  },
  {
@@ -4243,8 +2901,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.7615022,
-   "Catchment_Lon": -123.4618712,
+   "Catchment_Lat": 40.7652363,
+   "Catchment_Lon": -123.4642974,
    "Currently Used for Cannabis?": "No"
  },
  {
@@ -4257,6 +2915,28 @@ var RAINarray =[
    "Catchment_Lat": 40.77088,
    "Catchment_Lon": -123.46318,
    "Currently Used for Cannabis?": "No"
+ },
+ {
+   "License_Number": "CCL18-0002185",
+   "Application_Number": "LCA18-0002185",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.14979,
+   "Catchment_Lon": -123.86984,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0002185",
+   "Application_Number": "LCA18-0002185",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.15137,
+   "Catchment_Lon": -123.87132,
+   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0002185",
@@ -4278,28 +2958,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.14973,
    "Catchment_Lon": -123.874,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002185",
-   "Application_Number": "LCA18-0002185",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.15137,
-   "Catchment_Lon": -123.87132,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002185",
-   "Application_Number": "LCA18-0002185",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.14979,
-   "Catchment_Lon": -123.86984,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4353,17 +3011,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.14770605,
-   "Catchment_Lon": -123.9275654,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002298",
-   "Application_Number": "LCA18-0002298",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.14668,
    "Catchment_Lon": -123.9311,
    "Currently Used for Cannabis?": "Yes"
@@ -4386,19 +3033,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002303",
-   "Application_Number": "LCA18-0002303",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.16628,
+   "Catchment_Lon": -124.01813,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4410,28 +3046,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.27048,
    "Catchment_Lon": -123.65643,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002313",
-   "Application_Number": "LCA18-0002313",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.27042,
-   "Catchment_Lon": -123.65629,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002314",
-   "Application_Number": "LCA18-0002314",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.27042,
-   "Catchment_Lon": -123.65629,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4453,17 +3067,6 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.14761269,
-   "Catchment_Lon": -123.9275654,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002317",
-   "Application_Number": "LCA18-0002317",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.14770605,
    "Catchment_Lon": -123.9275654,
    "Currently Used for Cannabis?": "Yes"
  },
@@ -4506,17 +3109,6 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1064,
-   "Catchment_Lon": -123.896,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002442",
-   "Application_Number": "LCA18-0002442",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.106388,
    "Catchment_Lon": -123.896388,
@@ -4529,19 +3121,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002470",
-   "Application_Number": "LCA18-0002470",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.16628,
+   "Catchment_Lon": -124.01813,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4551,19 +3132,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002471",
-   "Application_Number": "LCA18-0002471",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.198302,
+   "Catchment_Lon": -123.028849,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4572,20 +3142,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002475",
-   "Application_Number": "LCA18-0002475",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.114,
+   "Catchment_Lon": -123.857,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4606,19 +3165,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0002481",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.39805,
+   "Catchment_Lon": -123.93956,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4628,19 +3176,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002495",
-   "Application_Number": "LCA18-0002495",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.01348,
+   "Catchment_Lon": -123.99515,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4650,19 +3187,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002496",
-   "Application_Number": "LCA18-0002496",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.01799,
+   "Catchment_Lon": -123.99692,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4688,6 +3214,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0002523",
+   "Application_Number": "LCA18-0002523",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.3104,
+   "Catchment_Lon": -123.6024,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "",
    "Application_Number": "LCA18-0002524",
    "Total Square footage of catchment footprint": "Yes",
@@ -4705,8 +3242,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 41.24662,
+   "Catchment_Lon": 123.74842,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4715,31 +3252,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002527",
-   "Application_Number": "LCA18-0002527",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002531",
-   "Application_Number": "LCA18-0002531",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.059,
-   "Catchment_Lon": -123.7629,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.568056,
+   "Catchment_Lon": -123.575833,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4754,15 +3269,26 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002533",
-   "Application_Number": "LCA18-0002533",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "License_Number": "CCL18-0002531",
+   "Application_Number": "LCA18-0002531",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.0576,
+   "Catchment_Lon": 123.7627,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0002531",
+   "Application_Number": "LCA18-0002531",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.0576,
+   "Catchment_Lon": -123.7627,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0002533",
@@ -4771,8 +3297,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.760058,
+   "Catchment_Lon": -123.452594,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4798,14 +3324,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002560",
-   "Application_Number": "LCA18-0002560",
+   "License_Number": "CCL18-0002557",
+   "Application_Number": "LCA18-0002557",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.47185,
+   "Catchment_Lon": -123.75597,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4815,8 +3341,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.8618,
+   "Catchment_Lon": -123.26825,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4844,13 +3370,24 @@ var RAINarray =[
  {
    "License_Number": "CCL18-0002573",
    "Application_Number": "LCA18-0002573",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.059,
-   "Catchment_Lon": -123.7629,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.0576,
+   "Catchment_Lon": -123.7627,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0002573",
+   "Application_Number": "LCA18-0002573",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.0576,
+   "Catchment_Lon": 123.7627,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0002573",
@@ -4871,7 +3408,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2606,
-   "Catchment_Lon": 124.088,
+   "Catchment_Lon": -124.088,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4882,7 +3419,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.9326,
-   "Catchment_Lon": 123.7105,
+   "Catchment_Lon": -123.7105,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4914,8 +3451,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0918,
-   "Catchment_Lon": -123.9407,
+   "Catchment_Lat": 40.09212,
+   "Catchment_Lon": -123.93948,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -4925,8 +3462,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.09212,
-   "Catchment_Lon": -123.93948,
+   "Catchment_Lat": 40.0918,
+   "Catchment_Lon": -123.9407,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5023,9 +3560,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.0368,
-   "Catchment_Lon": -123.582,
+   "Catchment_Lon": -123.5818,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5034,9 +3571,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0368,
-   "Catchment_Lon": -123.5818,
+   "Catchment_Lon": -123.582,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5067,6 +3604,17 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.0393,
+   "Catchment_Lon": -123.5841,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0002625",
+   "Application_Number": "LCA18-0002625",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0368,
    "Catchment_Lon": -123.582,
@@ -5084,14 +3632,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002625",
-   "Application_Number": "LCA18-0002625",
+   "License_Number": "CCL18-0002626",
+   "Application_Number": "LCA18-0002626",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.0393,
-   "Catchment_Lon": -123.5841,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0912,
+   "Catchment_Lon": -123.6676,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5106,47 +3654,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002626",
-   "Application_Number": "LCA18-0002626",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0912,
-   "Catchment_Lon": -123.6676,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0002629",
    "Application_Number": "LCA18-0002629",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002629",
-   "Application_Number": "LCA18-0002629",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002649",
-   "Application_Number": "LCA18-0002649",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.094583,
+   "Catchment_Lon": -123.813264,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5178,19 +3693,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002671",
-   "Application_Number": "LCA18-0002671",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.844,
+   "Catchment_Lon": -123.1408,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5210,61 +3714,6 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002691",
-   "Application_Number": "LCA18-0002691",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002691",
-   "Application_Number": "LCA18-0002691",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002691",
-   "Application_Number": "LCA18-0002691",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.3439,
-   "Catchment_Lon": -123.7065,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002691",
-   "Application_Number": "LCA18-0002691",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002692",
-   "Application_Number": "LCA18-0002692",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.3439,
    "Catchment_Lon": -123.7065,
@@ -5277,19 +3726,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002692",
-   "Application_Number": "LCA18-0002692",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.3439,
+   "Catchment_Lon": -123.7065,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5315,17 +3753,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002718",
-   "Application_Number": "LCA18-0002718",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0002719",
    "Application_Number": "LCA18-0002719",
    "Total Square footage of catchment footprint": "Yes",
@@ -5342,10 +3769,10 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0384,
-   "Catchment_Lon": -123.7476,
-   "Currently Used for Cannabis?": ""
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.0379,
+   "Catchment_Lon": -123.7477,
+   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0002739",
@@ -5353,21 +3780,10 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.0379,
-   "Catchment_Lon": -123.7477,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002740",
-   "Application_Number": "LCA18-0002740",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0379,
-   "Catchment_Lon": -123.7477,
-   "Currently Used for Cannabis?": "Yes"
+   "Catchment_Lat": 40.0384,
+   "Catchment_Lon": -123.7476,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0002740",
@@ -5377,6 +3793,17 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0384,
+   "Catchment_Lon": -123.7477,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0002740",
+   "Application_Number": "LCA18-0002740",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0379,
    "Catchment_Lon": -123.7477,
    "Currently Used for Cannabis?": "Yes"
  },
@@ -5433,6 +3860,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.8891,
    "Catchment_Lon": -123.7789,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0002769",
+   "Application_Number": "LCA18-0002769",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 41.258446,
+   "Catchment_Lon": 123.597938,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5497,8 +3935,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.69975,
+   "Catchment_Lon": 123.14343,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5541,19 +3979,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002799",
-   "Application_Number": "LCA18-0002799",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.041923,
+   "Catchment_Lon": -123.582844,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5563,19 +3990,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL18-0002804",
-   "Application_Number": "LCA18-0002804",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.50648,
+   "Catchment_Lon": -123.54819,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -5640,19 +4056,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002897",
-   "Application_Number": "LCA18-0002897",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 38.358594,
+   "Catchment_Lon": -122.543117,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5662,19 +4067,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002898",
-   "Application_Number": "LCA18-0002898",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 38.358594,
+   "Catchment_Lon": -122.543117,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5689,17 +4083,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002932",
-   "Application_Number": "LCA18-0002932",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.247,
-   "Catchment_Lon": -124.125,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0002933",
    "Application_Number": "LCA18-0002933",
    "Total Square footage of catchment footprint": "Yes",
@@ -5708,28 +4091,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.247,
    "Catchment_Lon": -124.1247,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002933",
-   "Application_Number": "LCA18-0002933",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.247,
-   "Catchment_Lon": -124.125,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002934",
-   "Application_Number": "LCA18-0002934",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.247,
-   "Catchment_Lon": -124.125,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5750,19 +4111,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002948",
-   "Application_Number": "LCA18-0002948",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.72808,
+   "Catchment_Lon": -123.49115,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5782,9 +4132,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 0,
-   "Catchment_Lon": 0,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.9405,
+   "Catchment_Lon": -123.7208,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5810,17 +4160,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002963",
-   "Application_Number": "LCA18-0002963",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.562607,
-   "Catchment_Lon": -123.451227,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0002964",
    "Application_Number": "LCA18-0002964",
    "Total Square footage of catchment footprint": "Yes",
@@ -5838,13 +4177,13 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.01538829,
-   "Catchment_Lon": -123.6307612,
+   "Catchment_Lat": 40.043897,
+   "Catchment_Lon": -123.595741,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002965",
-   "Application_Number": "LCA18-0002965",
+   "License_Number": "CCL18-0002966",
+   "Application_Number": "LCA18-0002966",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -5865,14 +4204,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002966",
-   "Application_Number": "LCA18-0002966",
+   "License_Number": "CCL18-0002968",
+   "Application_Number": "LCA18-0002968",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.043897,
-   "Catchment_Lon": -123.595741,
+   "Catchment_Lat": 40.01538829,
+   "Catchment_Lon": -123.6307612,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -5887,28 +4226,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002968",
-   "Application_Number": "LCA18-0002968",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.01538829,
-   "Catchment_Lon": -123.6307612,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002969",
-   "Application_Number": "LCA18-0002969",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.01538829,
-   "Catchment_Lon": -123.6307612,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0002969",
    "Application_Number": "LCA18-0002969",
    "Total Square footage of catchment footprint": "Yes",
@@ -5920,8 +4237,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002970",
-   "Application_Number": "LCA18-0002970",
+   "License_Number": "CCL18-0002969",
+   "Application_Number": "LCA18-0002969",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -5942,8 +4259,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0002971",
-   "Application_Number": "LCA18-0002971",
+   "License_Number": "CCL18-0002970",
+   "Application_Number": "LCA18-0002970",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -5961,17 +4278,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.043897,
    "Catchment_Lon": -123.595741,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0002972",
-   "Application_Number": "LCA18-0002972",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.01538829,
-   "Catchment_Lon": -123.6307612,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6058,6 +4364,17 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.2121,
+   "Catchment_Lon": -123.9043,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003020",
+   "Application_Number": "LCA18-0003020",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.2134,
    "Catchment_Lon": -123.9061,
    "Currently Used for Cannabis?": "Yes"
@@ -6074,8 +4391,30 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0003020",
-   "Application_Number": "LCA18-0003020",
+   "License_Number": "CCL18-0003029",
+   "Application_Number": "LCA18-0003029",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1512,
+   "Catchment_Lon": -124.0573,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0003031",
+   "Application_Number": "LCA18-0003031",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.2123,
+   "Catchment_Lon": -123.9037,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003031",
+   "Application_Number": "LCA18-0003031",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -6085,36 +4424,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0003029",
-   "Application_Number": "LCA18-0003029",
+   "License_Number": "CCL18-0003031",
+   "Application_Number": "LCA18-0003031",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL18-0003029",
-   "Application_Number": "LCA18-0003029",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL18-0003049",
-   "Application_Number": "LCA18-0003049",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.2134,
+   "Catchment_Lon": -123.9061,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6124,8 +4441,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.94418,
+   "Catchment_Lon": -123.68324,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6135,19 +4452,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003051",
-   "Application_Number": "LCA18-0003051",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.39805,
+   "Catchment_Lon": -123.93956,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6180,40 +4486,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.568056,
-   "Catchment_Lon": 123.575833,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003063",
-   "Application_Number": "LCA18-0003063",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1496,
-   "Catchment_Lon": -123.8602,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003063",
-   "Application_Number": "LCA18-0003063",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1507,
-   "Catchment_Lon": -123.8617,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003063",
-   "Application_Number": "LCA18-0003063",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1503,
-   "Catchment_Lon": -123.8603,
+   "Catchment_Lon": -123.575833,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6234,17 +4507,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.1503,
-   "Catchment_Lon": -123.8603,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003063",
-   "Application_Number": "LCA18-0003063",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.15,
    "Catchment_Lon": -123.8599,
    "Currently Used for Cannabis?": "Yes"
@@ -6256,8 +4518,30 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.1496,
-   "Catchment_Lon": -123.8602,
+   "Catchment_Lat": 40.1503,
+   "Catchment_Lon": -123.8603,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003063",
+   "Application_Number": "LCA18-0003063",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1503,
+   "Catchment_Lon": -123.8603,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003063",
+   "Application_Number": "LCA18-0003063",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1507,
+   "Catchment_Lon": -123.8617,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6283,72 +4567,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0003068",
-   "Application_Number": "LCA18-0003068",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003068",
-   "Application_Number": "LCA18-0003068",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003069",
-   "Application_Number": "LCA18-0003069",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003069",
-   "Application_Number": "LCA18-0003069",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003070",
-   "Application_Number": "LCA18-0003070",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003070",
-   "Application_Number": "LCA18-0003070",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL18-0003074",
    "Application_Number": "LCA18-0003074",
    "Total Square footage of catchment footprint": "Yes",
@@ -6366,8 +4584,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1506,
-   "Catchment_Lon": -123.78101,
+   "Catchment_Lat": 40.152,
+   "Catchment_Lon": -123.78091,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6388,8 +4606,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.152,
-   "Catchment_Lon": -123.78091,
+   "Catchment_Lat": 40.1506,
+   "Catchment_Lon": -123.78101,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6401,17 +4619,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.2024,
    "Catchment_Lon": -123.9145,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003082",
-   "Application_Number": "LCA18-0003082",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1237,
-   "Catchment_Lon": -123.755,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6434,17 +4641,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.1224,
    "Catchment_Lon": -123.8896,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003084",
-   "Application_Number": "LCA18-0003084",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1226,
-   "Catchment_Lon": -123.8907,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6492,14 +4688,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": ""
  },
  {
-   "License_Number": "CCL18-0003102",
-   "Application_Number": "LCA18-0003102",
+   "License_Number": "CCL18-0003098",
+   "Application_Number": "LCA18-0003098",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.057,
-   "Catchment_Lon": -123.9885,
+   "Catchment_Lat": 40.1346,
+   "Catchment_Lon": -123.6633,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6514,6 +4710,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0003102",
+   "Application_Number": "LCA18-0003102",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.057,
+   "Catchment_Lon": -123.9885,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL18-0003103",
    "Application_Number": "LCA18-0003103",
    "Total Square footage of catchment footprint": "Yes",
@@ -6522,6 +4729,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 39.26038,
    "Catchment_Lon": -123.27538,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003105",
+   "Application_Number": "LCA18-0003105",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.254,
+   "Catchment_Lon": -123.944,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6597,8 +4815,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.191939,
-   "Catchment_Lon": -123.892785,
+   "Catchment_Lat": 40.191985,
+   "Catchment_Lon": -123.892068,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6608,8 +4826,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.191985,
-   "Catchment_Lon": -123.892068,
+   "Catchment_Lat": 40.191939,
+   "Catchment_Lon": -123.892785,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6697,7 +4915,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.448,
-   "Catchment_Lon": 123.6299,
+   "Catchment_Lon": -123.6299,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6718,8 +4936,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1506,
-   "Catchment_Lon": -123.78101,
+   "Catchment_Lat": 40.15014,
+   "Catchment_Lon": -123.78878,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6751,8 +4969,41 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.15014,
-   "Catchment_Lon": -123.78878,
+   "Catchment_Lat": 40.14872,
+   "Catchment_Lon": 123.79059,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003182",
+   "Application_Number": "LCA18-0003182",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1506,
+   "Catchment_Lon": -123.78101,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003184",
+   "Application_Number": "LCA18-0003184",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.7265,
+   "Catchment_Lon": -123.8835,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003185",
+   "Application_Number": "LCA18-0003185",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.7265,
+   "Catchment_Lon": -123.8835,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6763,7 +5014,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.170452,
-   "Catchment_Lon": 124.16415,
+   "Catchment_Lon": -124.16415,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6855,6 +5106,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0003213",
+   "Application_Number": "LCA18-0003213",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.530335,
+   "Catchment_Lon": -124.167103,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL18-0003214",
    "Application_Number": "LCA18-0003214",
    "Total Square footage of catchment footprint": "Yes",
@@ -6896,17 +5158,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.1469,
    "Catchment_Lon": -123.78373,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003253",
-   "Application_Number": "LCA18-0003253",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1469,
-   "Catchment_Lon": -123.7837,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -6971,39 +5222,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003271",
-   "Application_Number": "LCA18-0003271",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.3439,
-   "Catchment_Lon": -123.7065,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003271",
-   "Application_Number": "LCA18-0003271",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003272",
-   "Application_Number": "LCA18-0003272",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.3439,
    "Catchment_Lon": -123.7065,
    "Currently Used for Cannabis?": "Yes"
@@ -7011,28 +5229,6 @@ var RAINarray =[
  {
    "License_Number": "CCL18-0003272",
    "Application_Number": "LCA18-0003272",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003272",
-   "Application_Number": "LCA18-0003272",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003273",
-   "Application_Number": "LCA18-0003273",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -7048,39 +5244,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003273",
-   "Application_Number": "LCA18-0003273",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003274",
-   "Application_Number": "LCA18-0003274",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003274",
-   "Application_Number": "LCA18-0003274",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.3439,
    "Catchment_Lon": -123.7065,
    "Currently Used for Cannabis?": "Yes"
@@ -7092,8 +5255,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.3439,
+   "Catchment_Lon": -123.7065,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7106,17 +5269,6 @@ var RAINarray =[
    "Catchment_Lat": 40.2364,
    "Catchment_Lon": -123.9534,
    "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL18-0003278",
-   "Application_Number": "LCA18-0003278",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
-   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0003278",
@@ -7143,13 +5295,13 @@ var RAINarray =[
  {
    "License_Number": "CCL18-0003279",
    "Application_Number": "LCA18-0003279",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2908,
+   "Catchment_Lon": -123.6531,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0003279",
@@ -7158,9 +5310,31 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2911,
+   "Catchment_Lon": -123.6325,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003279",
+   "Application_Number": "LCA18-0003279",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2911,
+   "Catchment_Lon": -123.6553,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0003281",
+   "Application_Number": "LCA18-0003281",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2908,
+   "Catchment_Lon": -123.6531,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0003281",
@@ -7169,20 +5343,31 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2911,
+   "Catchment_Lon": -123.6325,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0003281",
    "Application_Number": "LCA18-0003281",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2911,
+   "Catchment_Lon": -123.6553,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0003283",
+   "Application_Number": "LCA18-0003283",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.131,
+   "Catchment_Lon": -123.70589,
+   "Currently Used for Cannabis?": "No"
  },
  {
    "License_Number": "CCL18-0003289",
@@ -7268,8 +5453,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.0416,
-   "Catchment_Lon": -123.6021,
+   "Catchment_Lat": 40.0401,
+   "Catchment_Lon": -123.6057,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7279,8 +5464,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.0401,
-   "Catchment_Lon": -123.6057,
+   "Catchment_Lat": 40.0416,
+   "Catchment_Lon": -123.6021,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7313,7 +5498,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.174,
-   "Catchment_Lon": 123.8872,
+   "Catchment_Lon": -123.8872,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7328,14 +5513,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": ""
  },
  {
-   "License_Number": "CCL18-0003335",
-   "Application_Number": "LCA18-0003335",
+   "License_Number": "CCL18-0003333",
+   "Application_Number": "LCA18-0003333",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1778,
-   "Catchment_Lon": 123.8849,
+   "Catchment_Lat": 40.19133,
+   "Catchment_Lon": -123.966,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7366,9 +5551,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.063774,
-   "Catchment_Lon": 123.963206,
+   "Catchment_Lon": -123.963206,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7421,9 +5606,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.063774,
-   "Catchment_Lon": 123.963206,
+   "Catchment_Lon": -123.963206,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7433,19 +5618,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.473142,
+   "Catchment_Lon": -123.749974,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0003368",
-   "Application_Number": "LCA18-0003368",
+   "License_Number": "CCL18-0003391",
+   "Application_Number": "LCA18-0003391",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.239167,
+   "Catchment_Lon": -123.766111,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7490,17 +5675,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0903,
    "Catchment_Lon": -123.8418,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003410",
-   "Application_Number": "LCA18-0003410",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2941,
-   "Catchment_Lon": -123.6623,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7585,21 +5759,10 @@ var RAINarray =[
    "Application_Number": "LCA18-0003423",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
+   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.14,
    "Catchment_Lon": -123.9295,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003423",
-   "Application_Number": "LCA18-0003423",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1398,
-   "Catchment_Lon": -123.926,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7625,6 +5788,39 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0003423",
+   "Application_Number": "LCA18-0003423",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1398,
+   "Catchment_Lon": -123.926,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003423",
+   "Application_Number": "LCA18-0003423",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "No",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.14,
+   "Catchment_Lon": -123.9295,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003423",
+   "Application_Number": "LCA18-0003423",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "No",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1398,
+   "Catchment_Lon": -123.926,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL18-0003424",
    "Application_Number": "LCA18-0003424",
    "Total Square footage of catchment footprint": "Yes",
@@ -7633,39 +5829,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.1709,
    "Catchment_Lon": -123.9131,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003430",
-   "Application_Number": "LCA18-0003430",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2941,
-   "Catchment_Lon": -123.6623,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003431",
-   "Application_Number": "LCA18-0003431",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2941,
-   "Catchment_Lon": -123.6623,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003432",
-   "Application_Number": "LCA18-0003432",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2941,
-   "Catchment_Lon": -123.6623,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7691,6 +5854,50 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0003446",
+   "Application_Number": "LCA18-0003446",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2932,
+   "Catchment_Lon": -123.6318,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0003446",
+   "Application_Number": "LCA18-0003446",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.2933,
+   "Catchment_Lon": -123.6356,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003447",
+   "Application_Number": "LCA18-0003447",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2932,
+   "Catchment_Lon": -123.6318,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0003447",
+   "Application_Number": "LCA18-0003447",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.2933,
+   "Catchment_Lon": -123.6356,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL18-0003453",
    "Application_Number": "LCA18-0003453",
    "Total Square footage of catchment footprint": "Yes",
@@ -7700,6 +5907,17 @@ var RAINarray =[
    "Catchment_Lat": 40.3265,
    "Catchment_Lon": -123.6311,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003455",
+   "Application_Number": "LCA18-0003455",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.131,
+   "Catchment_Lon": -123.70589,
+   "Currently Used for Cannabis?": "No"
  },
  {
    "License_Number": "CCL18-0003456",
@@ -7719,19 +5937,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003460",
-   "Application_Number": "LCA18-0003460",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2958,
+   "Catchment_Lon": -123.8263,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7741,19 +5948,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003461",
-   "Application_Number": "LCA18-0003461",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2958,
+   "Catchment_Lon": -123.8263,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7776,6 +5972,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.1075,
    "Catchment_Lon": -123.9349,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003520",
+   "Application_Number": "LCA18-0003520",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.239167,
+   "Catchment_Lon": -123.766111,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7829,8 +6036,30 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.31053,
+   "Catchment_Lon": 123.60829,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003545",
+   "Application_Number": "LCA18-0003545",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.2971445,
    "Catchment_Lon": -123.6530631,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003545",
+   "Application_Number": "LCA18-0003545",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.3105,
+   "Catchment_Lon": -123.6025,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7842,17 +6071,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.2193,
    "Catchment_Lon": -123.9522,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003550",
-   "Application_Number": "LCA18-0003550",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.152,
-   "Catchment_Lon": -123.78091,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7873,8 +6091,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1506,
-   "Catchment_Lon": -123.78101,
+   "Catchment_Lat": 40.152,
+   "Catchment_Lon": -123.78091,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7889,6 +6107,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0003550",
+   "Application_Number": "LCA18-0003550",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1506,
+   "Catchment_Lon": -123.78101,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL18-0003552",
    "Application_Number": "LCA18-0003552",
    "Total Square footage of catchment footprint": "Yes",
@@ -7897,6 +6126,28 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.3105,
    "Catchment_Lon": -123.6025,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003552",
+   "Application_Number": "LCA18-0003552",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.2971445,
+   "Catchment_Lon": -123.6530631,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003552",
+   "Application_Number": "LCA18-0003552",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.31053,
+   "Catchment_Lon": 123.60829,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7922,19 +6173,41 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0003556",
-   "Application_Number": "LCA18-0003556",
+   "License_Number": "CCL18-0003557",
+   "Application_Number": "LCA18-0003557",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1469,
-   "Catchment_Lon": -123.7837,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.31053,
+   "Catchment_Lon": 123.60829,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0003557",
    "Application_Number": "LCA18-0003557",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.3105,
+   "Catchment_Lon": -123.6025,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003557",
+   "Application_Number": "LCA18-0003557",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.2971445,
+   "Catchment_Lon": -123.6530631,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003563",
+   "Application_Number": "LCA18-0003563",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -7955,6 +6228,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0003563",
+   "Application_Number": "LCA18-0003563",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.31053,
+   "Catchment_Lon": 123.60829,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL18-0003564",
    "Application_Number": "LCA18-0003564",
    "Total Square footage of catchment footprint": "Yes",
@@ -7972,8 +6256,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1506,
-   "Catchment_Lon": -123.78101,
+   "Catchment_Lat": 40.152,
+   "Catchment_Lon": -123.78091,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -7994,8 +6278,30 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.152,
-   "Catchment_Lon": -123.78091,
+   "Catchment_Lat": 40.1506,
+   "Catchment_Lon": -123.78101,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003569",
+   "Application_Number": "LCA18-0003569",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.14964,
+   "Catchment_Lon": -123.78391,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003569",
+   "Application_Number": "LCA18-0003569",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1506,
+   "Catchment_Lon": -123.78101,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8018,28 +6324,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.152,
    "Catchment_Lon": -123.78091,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003569",
-   "Application_Number": "LCA18-0003569",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1506,
-   "Catchment_Lon": -123.78101,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003569",
-   "Application_Number": "LCA18-0003569",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.14964,
-   "Catchment_Lon": -123.78391,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8056,28 +6340,6 @@ var RAINarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA18-0003583",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0377,
-   "Catchment_Lon": -123.5874,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003583",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0548,
-   "Catchment_Lon": -123.5842,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003583",
    "Total Square footage of catchment footprint": "No",
    "Total storage capacity (Gallons)": "No",
    "Detailed description of the catchment surface": "Yes",
@@ -8088,24 +6350,13 @@ var RAINarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA18-0003584",
+   "Application_Number": "LCA18-0003583",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0377,
    "Catchment_Lon": -123.5874,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA18-0003584",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0548,
-   "Catchment_Lon": -123.5842,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8137,8 +6388,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0548,
-   "Catchment_Lon": -123.5842,
+   "Catchment_Lat": 40.0354,
+   "Catchment_Lon": 123.5843,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA18-0003584",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0377,
+   "Catchment_Lon": -123.5874,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8258,8 +6520,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0406,
-   "Catchment_Lon": -123.5926,
+   "Catchment_Lat": 40.0292,
+   "Catchment_Lon": -123.6037,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8269,8 +6531,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0292,
-   "Catchment_Lon": -123.6037,
+   "Catchment_Lat": 40.0406,
+   "Catchment_Lon": -123.5926,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8292,29 +6554,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2419,
-   "Catchment_Lon": 124.1143,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003615",
-   "Application_Number": "LCA18-0003615",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.006856,
-   "Catchment_Lon": -123.636239,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003615",
-   "Application_Number": "LCA18-0003615",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.009728,
-   "Catchment_Lon": -123.637514,
+   "Catchment_Lon": -124.1143,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8345,28 +6585,6 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.009728,
-   "Catchment_Lon": -123.637514,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003617",
-   "Application_Number": "LCA18-0003617",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.006856,
-   "Catchment_Lon": -123.636239,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003617",
-   "Application_Number": "LCA18-0003617",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.00985,
    "Catchment_Lon": -123.63745,
@@ -8381,28 +6599,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.00691,
    "Catchment_Lon": -123.63624,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003619",
-   "Application_Number": "LCA18-0003619",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.009728,
-   "Catchment_Lon": -123.637514,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003619",
-   "Application_Number": "LCA18-0003619",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.006856,
-   "Catchment_Lon": -123.636239,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8454,10 +6650,10 @@ var RAINarray =[
    "Application_Number": "LCA18-0003624",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0375,
-   "Catchment_Lon": -123.5944,
+   "Detailed description of the catchment surface": "No",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.0374,
+   "Catchment_Lon": -123.5929,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8465,21 +6661,10 @@ var RAINarray =[
    "Application_Number": "LCA18-0003624",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.0374,
-   "Catchment_Lon": -123.5929,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003625",
-   "Application_Number": "LCA18-0003625",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.0374,
-   "Catchment_Lon": -123.5929,
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0375,
+   "Catchment_Lon": -123.5944,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8491,6 +6676,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0375,
    "Catchment_Lon": -123.5944,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003625",
+   "Application_Number": "LCA18-0003625",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "No",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.0374,
+   "Catchment_Lon": -123.5929,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8500,8 +6696,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "N/A",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.0266,
+   "Catchment_Lon": 123.6033,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA18-0003626",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0262,
+   "Catchment_Lon": 123.6,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8511,8 +6718,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "N/A",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.0266,
+   "Catchment_Lon": 123.6033,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA18-0003627",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0262,
+   "Catchment_Lon": 123.6,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8522,19 +6740,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003637",
-   "Application_Number": "LCA18-0003637",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.124289,
+   "Catchment_Lon": -123.756939,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8544,19 +6751,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003638",
-   "Application_Number": "lca18-0003638",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.124289,
+   "Catchment_Lon": -123.756939,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8577,20 +6773,20 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.0708,
+   "Catchment_Lon": -123.6353,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0003688",
    "Application_Number": "LCA18-0003688",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.0723,
+   "Catchment_Lon": -123.6376,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0003703",
@@ -8648,6 +6844,28 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL18-0003750",
+   "Application_Number": "LCA18-0003750",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.1903,
+   "Catchment_Lon": -124.0729,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL18-0003751",
+   "Application_Number": "LCA18-0003751",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.1903,
+   "Catchment_Lon": -124.0729,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL18-0003753",
    "Application_Number": "LCA18-0003753",
    "Total Square footage of catchment footprint": "Yes",
@@ -8676,8 +6894,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.4353,
-   "Catchment_Lon": -123.6826,
+   "Catchment_Lat": 40.4358,
+   "Catchment_Lon": -123.6789,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8687,17 +6905,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.4358,
-   "Catchment_Lon": -123.6789,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003759",
-   "Application_Number": "LCA18-0003759",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.4353,
    "Catchment_Lon": -123.6826,
    "Currently Used for Cannabis?": "Yes"
@@ -8714,14 +6921,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0003767",
-   "Application_Number": "LCA18-0003767",
+   "License_Number": "CCL18-0003759",
+   "Application_Number": "LCA18-0003759",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.4353,
+   "Catchment_Lon": -123.6826,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8731,8 +6938,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.10779,
+   "Catchment_Lon": -123.89961,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8742,20 +6949,31 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.05252,
+   "Catchment_Lon": -123.76076,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL18-0003776",
    "Application_Number": "LCA18-0003776",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.05245,
+   "Catchment_Lon": -123.76002,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL18-0003776",
+   "Application_Number": "LCA18-0003776",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.05123,
+   "Catchment_Lon": -123.760065,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL18-0003787",
@@ -8764,19 +6982,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003787",
-   "Application_Number": "LCA18-0003787",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.60878,
+   "Catchment_Lon": -123.50133,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8786,19 +6993,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL18-0003803",
-   "Application_Number": "LCA18-0003803",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.22,
+   "Catchment_Lon": -123.9151,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8807,20 +7003,20 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.895731,
+   "Catchment_Lon": -123.781958,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL18-0003805",
-   "Application_Number": "LCA18-0003805",
+   "License_Number": "CCL18-0003812",
+   "Application_Number": "LCA18-0003812",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.899009,
+   "Catchment_Lon": -124.076739,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8864,7 +7060,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2419,
-   "Catchment_Lon": 124.1143,
+   "Catchment_Lon": -124.1143,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8879,28 +7075,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0000027",
-   "Application_Number": "LCA19-0000027",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.899,
-   "Catchment_Lon": -124.077,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000028",
-   "Application_Number": "LCA19-0000028",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.899,
-   "Catchment_Lon": -124.077,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL19-0000028",
    "Application_Number": "LCA19-0000028",
    "Total Square footage of catchment footprint": "Yes",
@@ -8909,6 +7083,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.899009,
    "Catchment_Lon": -124.076739,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000033",
+   "Application_Number": "LCA19-0000033",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.9277,
+   "Catchment_Lon": -123.62362,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8962,8 +7147,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.237458,
-   "Catchment_Lon": -123.310944,
+   "Catchment_Lat": 39.237508,
+   "Catchment_Lon": -123.309028,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -8973,8 +7158,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.237508,
-   "Catchment_Lon": -123.309028,
+   "Catchment_Lat": 39.237458,
+   "Catchment_Lon": -123.310944,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000067",
+   "Application_Number": "LCA19-0000067",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0895,
+   "Catchment_Lon": -123.9708,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9017,19 +7213,63 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.3105,
+   "Catchment_Lon": -123.6025,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000132",
+   "Application_Number": "LCA19-0000132",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.2971445,
    "Catchment_Lon": -123.6530631,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0000182",
-   "Application_Number": "LCA19-0000182",
+   "License_Number": "CCL19-0000132",
+   "Application_Number": "LCA19-0000132",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.31053,
+   "Catchment_Lon": 123.60829,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000134",
+   "Application_Number": "LCA19-0000134",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.3104,
+   "Catchment_Lon": -123.6062,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000134",
+   "Application_Number": "LCA19-0000134",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.3104,
+   "Catchment_Lon": -123.6024,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000143",
+   "Application_Number": "LCA19-0000143",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0144,
-   "Catchment_Lon": -123.836,
+   "Catchment_Lat": 40.91208,
+   "Catchment_Lon": -123.7023,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9041,6 +7281,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0123,
    "Catchment_Lon": -123.839,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000182",
+   "Application_Number": "LCA19-0000182",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0144,
+   "Catchment_Lon": -123.836,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9061,19 +7312,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0000210",
-   "Application_Number": "LCA19-0000210",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.72342,
+   "Catchment_Lon": -123.55024,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -9083,42 +7323,9 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.72342,
+   "Catchment_Lon": -123.55024,
    "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0000216",
-   "Application_Number": "LCA19-0000216",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0000223",
-   "Application_Number": "LCA19-0000223",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.06992,
-   "Catchment_Lon": -123.00296,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000223",
-   "Application_Number": "LCA19-0000223",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0699,
-   "Catchment_Lon": -123.003,
-   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL19-0000223",
@@ -9129,6 +7336,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.07,
    "Catchment_Lon": -124.00222,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000223",
+   "Application_Number": "LCA19-0000223",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.06992,
+   "Catchment_Lon": -123.00296,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9171,8 +7389,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0242,
-   "Catchment_Lon": -123.7572,
+   "Catchment_Lat": 40.0272,
+   "Catchment_Lon": -123.7585,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9182,8 +7400,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0272,
-   "Catchment_Lon": -123.7585,
+   "Catchment_Lat": 40.0242,
+   "Catchment_Lon": -123.7572,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9220,36 +7438,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0000314",
-   "Application_Number": "LCA19-0000314",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000314",
-   "Application_Number": "LCA19-0000314",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "",
    "Application_Number": "LCA19-0000320",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "N/A",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.32026,
+   "Catchment_Lon": 123.89977,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -9292,17 +7488,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "N/A",
-   "Catchment_Lat": 40.45731401,
-   "Catchment_Lon": -123.6760043,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0000351",
-   "Application_Number": "LCA19-0000351",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "N/A",
    "Catchment_Lat": 40.45781735,
    "Catchment_Lon": -123.6714563,
    "Currently Used for Cannabis?": ""
@@ -9319,8 +7504,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": ""
  },
  {
-   "License_Number": "CCL19-0000353",
-   "Application_Number": "LCA19-0000353",
+   "License_Number": "CCL19-0000351",
+   "Application_Number": "LCA19-0000351",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -9352,36 +7537,25 @@ var RAINarray =[
    "Currently Used for Cannabis?": ""
  },
  {
-   "License_Number": "CCL19-0000361",
-   "Application_Number": "LCA19-0000361",
+   "License_Number": "CCL19-0000353",
+   "Application_Number": "LCA19-0000353",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Photos of the rainwater catchment system infrastructure": "N/A",
+   "Catchment_Lat": 40.45731401,
+   "Catchment_Lon": -123.6760043,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0000361",
    "Application_Number": "LCA19-0000361",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000365",
-   "Application_Number": "LCA19-0000365",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1927,
-   "Catchment_Lon": -123.9044,
+   "Catchment_Lat": 40.8849,
+   "Catchment_Lon": -123.7766,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9392,6 +7566,17 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.1933,
+   "Catchment_Lon": -123.9044,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000365",
+   "Application_Number": "LCA19-0000365",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1927,
    "Catchment_Lon": -123.9044,
    "Currently Used for Cannabis?": "Yes"
  },
@@ -9440,14 +7625,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0000452",
-   "Application_Number": "LCA19-0000452",
+   "License_Number": "",
+   "Application_Number": "LCA19-0000445",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.2972,
+   "Catchment_Lon": -123.8198,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9501,41 +7686,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 38.550892,
+   "Catchment_Lon": -122.654611,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0000496",
-   "Application_Number": "LCA19-0000496",
+   "License_Number": "",
+   "Application_Number": "LCA19-0000525",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000525",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0000525",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.8849,
+   "Catchment_Lon": -123.7766,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9572,15 +7735,26 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0000618",
-   "Application_Number": "LCA19-0000618",
+   "License_Number": "",
+   "Application_Number": "LCA19-0000617",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.067839,
+   "Catchment_Lon": -123.627461,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0000617",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.068644,
+   "Catchment_Lon": -123.627469,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0000618",
@@ -9589,9 +7763,20 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.067839,
+   "Catchment_Lon": -123.627461,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000618",
+   "Application_Number": "LCA19-0000618",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.068644,
+   "Catchment_Lon": -123.627469,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0000644",
@@ -9600,9 +7785,20 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.63548,
+   "Catchment_Lon": -123.48469,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0000644",
+   "Application_Number": "LCA19-0000644",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.63579,
+   "Catchment_Lon": -123.48495,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0000644",
@@ -9611,8 +7807,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.63618,
+   "Catchment_Lon": -123.48533,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9622,19 +7818,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000650",
-   "Application_Number": "LCA19-0000650",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2344,
+   "Catchment_Lon": -123.9661,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9644,19 +7829,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000651",
-   "Application_Number": "LCA19-0000651",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2344,
+   "Catchment_Lon": -123.9661,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9695,13 +7869,13 @@ var RAINarray =[
  {
    "License_Number": "CCL19-0000714",
    "Application_Number": "LCA19-0000714",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.22189,
+   "Catchment_Lon": -123.96421,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0000714",
@@ -9710,8 +7884,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.22189,
+   "Catchment_Lon": -123.96451,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9724,17 +7898,6 @@ var RAINarray =[
    "Catchment_Lat": 40.14743,
    "Catchment_Lon": -123.6432,
    "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000717",
-   "Application_Number": "LCA19-0000717",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.883054,
-   "Catchment_Lon": -123.794164,
-   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0000717",
@@ -9770,6 +7933,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": ""
  },
  {
+   "License_Number": "CCL19-0000717",
+   "Application_Number": "LCA19-0000717",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.883054,
+   "Catchment_Lon": -123.794164,
+   "Currently Used for Cannabis?": ""
+ },
+ {
    "License_Number": "CCL19-0000763",
    "Application_Number": "LCA19-0000763",
    "Total Square footage of catchment footprint": "Yes",
@@ -9789,17 +7963,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.12738,
    "Catchment_Lon": -124.02638,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000817",
-   "Application_Number": "LCA19-0000817",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9853,19 +8016,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.198302,
+   "Catchment_Lon": -123.028849,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0000869",
-   "Application_Number": "LCA19-0000869",
+   "License_Number": "CCL19-0000870",
+   "Application_Number": "LCA19-0000870",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.30531,
+   "Catchment_Lon": -123.06406,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9885,31 +8048,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.304944,
-   "Catchment_Lon": -123.063611,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000870",
-   "Application_Number": "LCA19-0000870",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.30491,
    "Catchment_Lon": -123.06361,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000870",
-   "Application_Number": "LCA19-0000870",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.30531,
-   "Catchment_Lon": -123.06406,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9930,8 +8071,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.254,
+   "Catchment_Lon": -123.944,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9941,9 +8082,20 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.22634,
+   "Catchment_Lon": -123.94174,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0000929",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2254,
+   "Catchment_Lon": -123.9444,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0000932",
@@ -9974,19 +8126,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000950",
-   "Application_Number": "LCA19-0000950",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.1658,
+   "Catchment_Lon": -123.8678,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -9996,19 +8137,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000997",
-   "Application_Number": "LCA19-0000997",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.0054,
+   "Catchment_Lon": -123.8751,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10018,19 +8148,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0000999",
-   "Application_Number": "LCA19-0000999",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.0054,
+   "Catchment_Lon": -123.8751,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10053,6 +8172,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2714,
    "Catchment_Lon": -124.2306,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0001042",
+   "Application_Number": "LCA19-0001042",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.271449,
+   "Catchment_Lon": -124.230578,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10084,30 +8214,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001106",
-   "Application_Number": "LCA19-0001106",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001120",
-   "Application_Number": "LCA19-0001120",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.225423,
-   "Catchment_Lon": -123.328378,
+   "Catchment_Lat": 40.0162,
+   "Catchment_Lon": -123.76331,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10122,14 +8230,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0001132",
-   "Application_Number": "LCA19-0001132",
+   "License_Number": "CCL19-0001120",
+   "Application_Number": "LCA19-0001120",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0317,
-   "Catchment_Lon": 123.6187,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 39.225423,
+   "Catchment_Lon": -123.328378,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10139,8 +8247,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0322,
-   "Catchment_Lon": 123.6189,
+   "Catchment_Lat": 40.0317,
+   "Catchment_Lon": -123.6187,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10151,7 +8259,18 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0315,
-   "Catchment_Lon": 123.6196,
+   "Catchment_Lon": -123.6196,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0001132",
+   "Application_Number": "LCA19-0001132",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0322,
+   "Catchment_Lon": -123.6189,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10171,20 +8290,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001137",
-   "Application_Number": "LCA19-0001137",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.895731,
+   "Catchment_Lon": -123.781958,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10205,19 +8313,30 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.863003,
+   "Catchment_Lon": -123.524775,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0001163",
-   "Application_Number": "LCA19-0001163",
+   "License_Number": "",
+   "Application_Number": "LCA19-0001166",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.044343,
+   "Catchment_Lon": -123.577634,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0001173",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.044343,
+   "Catchment_Lon": -123.577634,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10238,8 +8357,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 48.30811389,
-   "Catchment_Lon": 48.30811389,
+   "Catchment_Lat": 40.30747,
+   "Catchment_Lon": -123.2425,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10251,17 +8370,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.789232,
    "Catchment_Lon": -123.445573,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001297",
-   "Application_Number": "LCA19-0001297",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "N/A",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10283,7 +8391,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.9426,
-   "Catchment_Lon": 123.6772,
+   "Catchment_Lon": -123.6772,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10294,7 +8402,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.9426,
-   "Catchment_Lon": 123.6772,
+   "Catchment_Lon": -123.6772,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10304,19 +8412,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0001354",
-   "Application_Number": "LCA19-0001354",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.49863,
+   "Catchment_Lon": -123.72254,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -10326,19 +8423,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001360",
-   "Application_Number": "LCA19-0001360",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.0798,
+   "Catchment_Lon": -123.6649,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10348,19 +8434,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001376",
-   "Application_Number": "LCA19-0001376",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.009883,
+   "Catchment_Lon": -123.845814,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10370,19 +8445,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001379",
-   "Application_Number": "LCA19-0001379",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.009883,
+   "Catchment_Lon": -123.845814,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10392,20 +8456,31 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.125556,
+   "Catchment_Lon": -123.857583,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL19-0001416",
    "Application_Number": "LCA19-0001416",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.12558,
+   "Catchment_Lon": -123.85648,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL19-0001416",
+   "Application_Number": "LCA19-0001416",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.12408,
+   "Catchment_Lon": -123.85567,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0001422",
@@ -10447,6 +8522,17 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1318,
+   "Catchment_Lon": -123.7489,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0001501",
+   "Application_Number": "LCA19-0001501",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.132358,
    "Catchment_Lon": -123.74868,
    "Currently Used for Cannabis?": "Yes"
@@ -10458,19 +8544,30 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.123,
+   "Catchment_Lon": -123.7491,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0001501",
-   "Application_Number": "LCA19-0001501",
+   "License_Number": "CCL19-0001506",
+   "Application_Number": "LCA19-0001506",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.123,
+   "Catchment_Lon": -123.7491,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0001506",
+   "Application_Number": "LCA19-0001506",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1318,
+   "Catchment_Lon": -123.7489,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10485,25 +8582,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0001506",
-   "Application_Number": "LCA19-0001506",
+   "License_Number": "CCL19-0001510",
+   "Application_Number": "LCA19-0001510",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001506",
-   "Application_Number": "LCA19-0001506",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.53074858,
+   "Catchment_Lon": -123.6142657,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10524,6 +8610,17 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1318,
+   "Catchment_Lon": -123.7489,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0001523",
+   "Application_Number": "LCA19-0001523",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.132358,
    "Catchment_Lon": -123.74868,
    "Currently Used for Cannabis?": "Yes"
@@ -10535,19 +8632,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001523",
-   "Application_Number": "LCA19-0001523",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.123,
+   "Catchment_Lon": -123.7491,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10557,19 +8643,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001530",
-   "Application_Number": "LCA19-0001530",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.0162,
+   "Catchment_Lon": -123.76331,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10579,20 +8654,42 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.631884,
+   "Catchment_Lon": -123.491615,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0001546",
-   "Application_Number": "LCA19-0001546",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "License_Number": "CCL19-0001565",
+   "Application_Number": "LCA19-0001565",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.163889,
+   "Catchment_Lon": -123.886944,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL19-0001565",
+   "Application_Number": "LCA19-0001565",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.158889,
+   "Catchment_Lon": -123.884167,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL19-0001565",
+   "Application_Number": "LCA19-0001565",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.168509,
+   "Catchment_Lon": -123.884444,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0001565",
@@ -10601,19 +8698,41 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.168509,
+   "Catchment_Lon": -123.889116,
    "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL19-0001565",
    "Application_Number": "LCA19-0001565",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.162982,
+   "Catchment_Lon": -123.889312,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL19-0001565",
+   "Application_Number": "LCA19-0001565",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.156944,
+   "Catchment_Lon": -123.883611,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL19-0001569",
+   "Application_Number": "LCA19-0001569",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.1318,
+   "Catchment_Lon": -123.7489,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10634,19 +8753,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001569",
-   "Application_Number": "LCA19-0001569",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.123,
+   "Catchment_Lon": -123.7491,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10656,19 +8764,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001584",
-   "Application_Number": "LCA19-0001584",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.787,
+   "Catchment_Lon": -123.592,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10689,8 +8786,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.748089,
-   "Catchment_Lon": -123.556303,
+   "Catchment_Lat": 39.749777,
+   "Catchment_Lon": -123.556111,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10700,8 +8797,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.749777,
-   "Catchment_Lon": -123.556111,
+   "Catchment_Lat": 39.748089,
+   "Catchment_Lon": -123.556303,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10733,8 +8830,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.248167,
-   "Catchment_Lon": -124.16595,
+   "Catchment_Lat": 40.24791,
+   "Catchment_Lon": -124.16511,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10749,58 +8846,47 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0001650",
-   "Application_Number": "LCA19-0001650",
+   "License_Number": "",
+   "Application_Number": "LCA19-0001660",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.24791,
-   "Catchment_Lon": -124.16511,
+   "Catchment_Lat": 40.4695,
+   "Catchment_Lon": -123.628552,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0001664",
-   "Application_Number": "LCA19-0001664",
+   "License_Number": "",
+   "Application_Number": "LCA19-0001660",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0322,
-   "Catchment_Lon": -123.6189,
+   "Catchment_Lat": 40.469747,
+   "Catchment_Lon": -123.629322,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0001664",
-   "Application_Number": "LCA19-0001664",
+   "License_Number": "",
+   "Application_Number": "LCA19-0001661",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0315,
-   "Catchment_Lon": -123.6196,
+   "Catchment_Lat": 40.4695,
+   "Catchment_Lon": -123.628552,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0001664",
-   "Application_Number": "LCA19-0001664",
+   "License_Number": "",
+   "Application_Number": "LCA19-0001661",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0317,
-   "Catchment_Lon": -123.6187,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0001664",
-   "Application_Number": "LCA19-0001664",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0322,
-   "Catchment_Lon": -123.6189,
+   "Catchment_Lat": 40.469747,
+   "Catchment_Lon": -123.629322,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10823,6 +8909,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0315,
    "Catchment_Lon": -123.6196,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0001664",
+   "Application_Number": "LCA19-0001664",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0322,
+   "Catchment_Lon": -123.6189,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10843,8 +8940,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0844,
-   "Catchment_Lon": -123.7699,
+   "Catchment_Lat": 40.0829,
+   "Catchment_Lon": -123.7698,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -10854,8 +8951,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0829,
-   "Catchment_Lon": -123.7698,
+   "Catchment_Lat": 40.0844,
+   "Catchment_Lon": -123.7699,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -10909,8 +9006,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.93582,
-   "Catchment_Lon": -123.64408,
+   "Catchment_Lat": 40.93583,
+   "Catchment_Lon": -123.64395,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -10920,8 +9017,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.93583,
-   "Catchment_Lon": -123.64395,
+   "Catchment_Lat": 40.93582,
+   "Catchment_Lon": -123.64408,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11020,7 +9117,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2386,
-   "Catchment_Lon": 123.9746,
+   "Catchment_Lon": -123.9746,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11074,8 +9171,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.01206522,
-   "Catchment_Lon": -123.0259748,
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11085,17 +9182,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0002104",
-   "Application_Number": "LCA19-0002104",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.01206522,
    "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
@@ -11112,8 +9198,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0002105",
-   "Application_Number": "LCA19-0002105",
+   "License_Number": "CCL19-0002104",
+   "Application_Number": "LCA19-0002104",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -11131,6 +9217,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.009421,
    "Catchment_Lon": -123.009441,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0002105",
+   "Application_Number": "LCA19-0002105",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11145,6 +9242,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL19-0002222",
+   "Application_Number": "LCA19-0002222",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.85068,
+   "Catchment_Lon": -123.91356,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL19-0002233",
    "Application_Number": "LCA19-0002233",
    "Total Square footage of catchment footprint": "Yes",
@@ -11156,14 +9264,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0002295",
-   "Application_Number": "LCA19-0002295",
+   "License_Number": "CCL19-0002239",
+   "Application_Number": "LCA19-0002239",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.85068,
+   "Catchment_Lon": -123.91356,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11173,8 +9281,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.397292,
+   "Catchment_Lon": -123.94226,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11261,8 +9369,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": -123.881732,
-   "Catchment_Lon": 40.188879,
+   "Catchment_Lat": 40.188879,
+   "Catchment_Lon": -123.881732,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11272,8 +9380,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": -123.881732,
-   "Catchment_Lon": 40.188879,
+   "Catchment_Lat": 40.188879,
+   "Catchment_Lon": -123.881732,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0002827",
+   "Application_Number": "LCA19-0002827",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.11615,
+   "Catchment_Lon": -123.727587,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11360,19 +9479,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0003466",
-   "Application_Number": "LCA19-0003466",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2459,
+   "Catchment_Lon": -124.1221,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11418,17 +9526,6 @@ var RAINarray =[
    "Catchment_Lat": 40.1075,
    "Catchment_Lon": -123.9349,
    "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0003489",
-   "Application_Number": "LCA19-0003489",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.11833333,
-   "Catchment_Lon": -123.9136111,
-   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0003489",
@@ -11536,9 +9633,20 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.4621,
+   "Catchment_Lon": 123.6788,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0003699",
+   "Application_Number": "LCA19-0003699",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.4636,
+   "Catchment_Lon": -123.6762,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0003748",
@@ -11547,8 +9655,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.11479,
+   "Catchment_Lon": 123.76792,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11558,8 +9666,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.11479,
+   "Catchment_Lon": 123.76792,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11569,19 +9677,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0003774",
-   "Application_Number": "LCA19-0003774",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.902203,
+   "Catchment_Lon": -123.59657,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11593,6 +9690,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.929853,
    "Catchment_Lon": -123.52988,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0003798",
+   "Application_Number": "LCA19-0003798",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.191358,
+   "Catchment_Lon": -123.500831,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11615,17 +9723,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.191555,
    "Catchment_Lon": -123.504189,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0003798",
-   "Application_Number": "LCA19-0003798",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.191358,
-   "Catchment_Lon": -123.500831,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11657,17 +9754,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 38.981131,
-   "Catchment_Lon": -122.993089,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0003887",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.981131,
    "Catchment_Lon": -122.993089,
    "Currently Used for Cannabis?": ""
@@ -11679,19 +9765,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0003898",
-   "Application_Number": "LCA19-0003898",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.15462,
+   "Catchment_Lon": -123.93554,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -11723,19 +9798,52 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.180949,
+   "Catchment_Lon": -123.578118,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0003960",
-   "Application_Number": "LCA19-0003960",
+   "License_Number": "CCL19-0003965",
+   "Application_Number": "LCA19-0003965",
+   "Total Square footage of catchment footprint": "No",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.162778,
+   "Catchment_Lon": -123.872778,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0003965",
+   "Application_Number": "LCA19-0003965",
+   "Total Square footage of catchment footprint": "No",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.156667,
+   "Catchment_Lon": -123.872778,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0003965",
+   "Application_Number": "LCA19-0003965",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.164167,
+   "Catchment_Lon": -123.872778,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0003965",
+   "Application_Number": "LCA19-0003965",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.164167,
+   "Catchment_Lon": -123.8725,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11756,19 +9864,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0004000",
-   "Application_Number": "LCA19-0004000",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.7717,
+   "Catchment_Lon": -123.57619,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -11778,30 +9875,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004021",
-   "Application_Number": "LCA19-0004021",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004046",
-   "Application_Number": "LCA19-0004046",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.960125,
-   "Catchment_Lon": -123.338882,
+   "Catchment_Lat": 40.1452,
+   "Catchment_Lon": -123.98594,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11813,6 +9888,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.360124,
    "Catchment_Lon": -123.337772,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0004046",
+   "Application_Number": "LCA19-0004046",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.960125,
+   "Catchment_Lon": -123.338882,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11829,12 +9915,23 @@ var RAINarray =[
  {
    "License_Number": "CCL19-0004451",
    "Application_Number": "LCA19-0004451",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2254,
+   "Catchment_Lon": -123.9444,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "CCL19-0004451",
+   "Application_Number": "LCA19-0004451",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.22634,
+   "Catchment_Lon": -123.94174,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11844,8 +9941,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.254,
+   "Catchment_Lon": -123.944,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11899,19 +9996,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004521",
-   "Application_Number": "LCA19-0004521",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2779,
+   "Catchment_Lon": -123.6804,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11931,9 +10017,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.6635,
-   "Catchment_Lon": -123.4729,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 39.66596944,
+   "Catchment_Lon": -123.4744444,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11942,9 +10028,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.66596944,
-   "Catchment_Lon": -123.4744444,
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.6635,
+   "Catchment_Lon": -123.4729,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11965,19 +10051,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004617",
-   "Application_Number": "LCA19-0004617",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.09298,
+   "Catchment_Lon": -123.76946,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -11987,19 +10062,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0004653",
-   "Application_Number": "LCA19-0004653",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.7717,
+   "Catchment_Lon": -123.57619,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -12020,8 +10084,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.80490278,
-   "Catchment_Lon": -122.8838889,
+   "Catchment_Lat": 40.80471389,
+   "Catchment_Lon": -122.8847222,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12031,8 +10095,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.80471389,
-   "Catchment_Lon": -122.8847222,
+   "Catchment_Lat": 40.80490278,
+   "Catchment_Lon": -122.8838889,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12076,18 +10140,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.000118,
-   "Catchment_Lon": 123.876642,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004672",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.000118,
-   "Catchment_Lon": 123.87664,
+   "Catchment_Lon": -123.876642,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -12109,18 +10162,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.000118,
-   "Catchment_Lon": 123.876642,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0004681",
-   "Application_Number": "LCA19-0004681",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.000118,
-   "Catchment_Lon": 123.87664,
+   "Catchment_Lon": -123.876642,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -12306,8 +10348,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.10869,
+   "Catchment_Lon": 123.78112,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12317,19 +10359,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1892,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0004714",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1892,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.19013,
+   "Catchment_Lon": -123.97647,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -12340,96 +10371,8 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.1917,
-   "Catchment_Lon": 123.9337,
+   "Catchment_Lon": -123.9337,
    "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL19-0004790",
-   "Application_Number": "LCA19-0004790",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004790",
-   "Application_Number": "LCA19-0004790",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004791",
-   "Application_Number": "LCA19-0004791",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004791",
-   "Application_Number": "LCA19-0004791",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004792",
-   "Application_Number": "LCA19-0004792",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004792",
-   "Application_Number": "LCA19-0004792",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004793",
-   "Application_Number": "LCA19-0004793",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004793",
-   "Application_Number": "LCA19-0004793",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL19-0004794",
@@ -12460,8 +10403,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.3289,
-   "Catchment_Lon": -123.8363,
+   "Catchment_Lat": 40.328,
+   "Catchment_Lon": -123.8347,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0004802",
+   "Application_Number": "LCA19-0004802",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.3291,
+   "Catchment_Lon": -123.8365,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12504,17 +10458,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.27042,
-   "Catchment_Lon": -123.65629,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004889",
-   "Application_Number": "LCA19-0004889",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.27048,
    "Catchment_Lon": -123.65643,
    "Currently Used for Cannabis?": "Yes"
@@ -12522,13 +10465,13 @@ var RAINarray =[
  {
    "License_Number": "CCL19-0004914",
    "Application_Number": "LCA19-0004914",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 39.965517,
+   "Catchment_Lon": -123.89561,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0004914",
@@ -12537,8 +10480,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.968036,
+   "Catchment_Lon": -123.896749,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12548,19 +10491,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.999448,
+   "Catchment_Lon": -123.849693,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0004915",
-   "Application_Number": "LCA19-0004915",
+   "License_Number": "CCL19-0004916",
+   "Application_Number": "LCA19-0004916",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.556489,
+   "Catchment_Lon": -123.382369,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12619,69 +10562,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0004951",
-   "Application_Number": "LCA19-0004951",
+   "License_Number": "CCL19-0004960",
+   "Application_Number": "LCA19-0004960",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004951",
-   "Application_Number": "LCA19-0004951",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004953",
-   "Application_Number": "LCA19-0004953",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004953",
-   "Application_Number": "LCA19-0004953",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004956",
-   "Application_Number": "LCA19-0004956",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004956",
-   "Application_Number": "LCA19-0004956",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.273107,
+   "Catchment_Lon": -123.335386,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12696,58 +10584,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0004960",
-   "Application_Number": "LCA19-0004960",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.273107,
-   "Catchment_Lon": -123.335386,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004974",
-   "Application_Number": "LCA19-0004974",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004974",
-   "Application_Number": "LCA19-0004974",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL19-0004979",
    "Application_Number": "LCA19-0004979",
    "Total Square footage of catchment footprint": "No",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004979",
-   "Application_Number": "LCA19-0004979",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12757,19 +10601,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004980",
-   "Application_Number": "LCA19-0004980",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12779,19 +10612,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004981",
-   "Application_Number": "LCA19-0004981",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12801,19 +10623,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004982",
-   "Application_Number": "LCA19-0004982",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12823,19 +10634,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004983",
-   "Application_Number": "LCA19-0004983",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12845,19 +10645,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004984",
-   "Application_Number": "LCA19-0004984",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12867,19 +10656,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004985",
-   "Application_Number": "LCA19-0004985",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12889,19 +10667,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004986",
-   "Application_Number": "LCA19-0004986",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12955,19 +10722,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004991",
-   "Application_Number": "LCA19-0004991",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -12977,19 +10733,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0004992",
-   "Application_Number": "LCA19-0004992",
-   "Total Square footage of catchment footprint": "No",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "No",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13030,10 +10775,10 @@ var RAINarray =[
    "Application_Number": "LCA19-0004995",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
-   "Catchment_Lon": null,
+   "Catchment_Lon": -123.012185,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13052,10 +10797,10 @@ var RAINarray =[
    "Application_Number": "LCA19-0004996",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
-   "Catchment_Lon": null,
+   "Catchment_Lon": -123.012185,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13074,10 +10819,10 @@ var RAINarray =[
    "Application_Number": "LCA19-0004997",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
-   "Catchment_Lon": null,
+   "Catchment_Lon": -123.012185,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13096,10 +10841,10 @@ var RAINarray =[
    "Application_Number": "LCA19-0004998",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
-   "Catchment_Lon": null,
+   "Catchment_Lon": -123.012185,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13120,19 +10865,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005013",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.844,
+   "Catchment_Lon": -123.1408,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13142,19 +10876,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0005046",
-   "Application_Number": "LCA19-0005046",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.844,
+   "Catchment_Lon": -123.1408,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13164,19 +10887,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0005048",
-   "Application_Number": "LCA19-0005048",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.397292,
+   "Catchment_Lon": -123.94226,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13242,7 +10954,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.4187,
-   "Catchment_Lon": 123.9412,
+   "Catchment_Lon": -123.9412,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13253,7 +10965,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.4187,
-   "Catchment_Lon": 123.9412,
+   "Catchment_Lon": -123.9412,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13264,7 +10976,18 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.4187,
-   "Catchment_Lon": 123.9412,
+   "Catchment_Lon": -123.9412,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005195",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.223299,
+   "Catchment_Lon": -124.113489,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13280,13 +11003,13 @@ var RAINarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA19-0005195",
+   "Application_Number": "LCA19-0005196",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.223299,
+   "Catchment_Lon": -124.113489,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13301,14 +11024,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "",
-   "Application_Number": "LCA19-0005196",
+   "License_Number": "CCL19-0005199",
+   "Application_Number": "LCA19-0005199",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.8435,
+   "Catchment_Lon": -123.5624,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13330,7 +11053,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 38.22136,
-   "Catchment_Lon": 122.501606,
+   "Catchment_Lon": -122.501606,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13341,7 +11064,18 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.464271,
-   "Catchment_Lon": 123.743739,
+   "Catchment_Lon": -123.743739,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005272",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.09429,
+   "Catchment_Lon": -123.80193,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13353,6 +11087,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.1185,
    "Catchment_Lon": -123.7634,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA19-0005276",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.125664,
+   "Catchment_Lon": -123.875917,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13384,19 +11129,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0005365",
-   "Application_Number": "LCA19-0005365",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.09429,
+   "Catchment_Lon": -123.80193,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13407,7 +11141,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2196,
-   "Catchment_Lon": 123.8683,
+   "Catchment_Lon": -123.8683,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13417,19 +11151,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL19-0005391",
-   "Application_Number": "LCA19-0005391",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.19133,
+   "Catchment_Lon": -123.966,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -13455,15 +11178,26 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL19-0005473",
-   "Application_Number": "LCA19-0005473",
+   "License_Number": "CCL19-0005453",
+   "Application_Number": "LCA19-0005453",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.067839,
+   "Catchment_Lon": -123.627461,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL19-0005453",
+   "Application_Number": "LCA19-0005453",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.068644,
+   "Catchment_Lon": -123.627469,
+   "Currently Used for Cannabis?": ""
  },
  {
    "License_Number": "CCL19-0005473",
@@ -13472,8 +11206,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 39.999448,
+   "Catchment_Lon": -123.849693,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14055,8 +11789,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.2237,
-   "Catchment_Lon": -124.1125,
+   "Catchment_Lat": 40.223299,
+   "Catchment_Lon": -124.113489,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14066,8 +11800,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.2237,
+   "Catchment_Lon": -124.1125,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14207,7 +11941,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005600",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14218,7 +11952,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005601",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14251,7 +11985,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005602",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14273,7 +12007,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005603",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14284,7 +12018,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005604",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14306,7 +12040,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005605",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14339,7 +12073,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005606",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14350,7 +12084,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005607",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14372,7 +12106,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005608",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14405,7 +12139,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005609",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14427,7 +12161,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005610",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14449,7 +12183,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005611",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14471,7 +12205,7 @@ var RAINarray =[
    "Application_Number": "LCA19-0005612",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -14483,21 +12217,10 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL19-0005626",
-   "Application_Number": "LCA19-0005626",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.316967,
+   "Catchment_Lon": -124.2847,
+   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL19-0005627",
@@ -14505,21 +12228,10 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
- },
- {
-   "License_Number": "CCL19-0005627",
-   "Application_Number": "LCA19-0005627",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "No"
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.316967,
+   "Catchment_Lon": -124.2847,
+   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "",
@@ -14555,41 +12267,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000055",
-   "Application_Number": "LCA20-0000055",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.415,
-   "Catchment_Lon": -123.345,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "",
    "Application_Number": "LCA20-0000058",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.41728,
-   "Catchment_Lon": -123.94643,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000058",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.415,
-   "Catchment_Lon": -123.345,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000059",
-   "Application_Number": "LCA20-0000059",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -14605,17 +12284,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.415,
-   "Catchment_Lon": -123.345,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000060",
-   "Application_Number": "LCA20-0000060",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.41728,
    "Catchment_Lon": -123.94643,
    "Currently Used for Cannabis?": "Yes"
@@ -14623,17 +12291,6 @@ var RAINarray =[
  {
    "License_Number": "CCL20-0000060",
    "Application_Number": "LCA20-0000060",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.415,
-   "Catchment_Lon": -123.345,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000061",
-   "Application_Number": "LCA20-0000061",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -14649,8 +12306,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.415,
-   "Catchment_Lon": -123.345,
+   "Catchment_Lat": 40.41728,
+   "Catchment_Lon": -123.94643,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000062",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 38.89777,
+   "Catchment_Lon": -122.48648,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14671,19 +12339,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 38.89777,
+   "Catchment_Lon": -122.48648,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000097",
-   "Application_Number": "LCA20-0000097",
+   "License_Number": "",
+   "Application_Number": "LCA20-0000098",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 38.89777,
-   "Catchment_Lon": -122.48648,
+   "Catchment_Lat": 40.53074858,
+   "Catchment_Lon": -123.6142657,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14737,30 +12405,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.27582,
+   "Catchment_Lon": 123.63809,
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000194",
-   "Application_Number": "LCA20-0000194",
+   "License_Number": "",
+   "Application_Number": "LCA20-0000214",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.4178,
-   "Catchment_Lon": -123.93849,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000195",
-   "Application_Number": "LCA20-0000195",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.4178,
-   "Catchment_Lon": -123.93849,
+   "Catchment_Lat": 40.1781,
+   "Catchment_Lon": -123.8986,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14813,31 +12470,9 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.05722,
-   "Catchment_Lon": -123.9867,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000239",
-   "Application_Number": "LCA20-0000239",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.057222,
    "Catchment_Lon": -123.986388,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000239",
-   "Application_Number": "LCA20-0000239",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.05722,
-   "Catchment_Lon": -123.9864,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14847,8 +12482,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 0,
-   "Catchment_Lon": 0,
+   "Catchment_Lat": 40.2972,
+   "Catchment_Lon": -123.8198,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14858,19 +12493,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000264",
-   "Application_Number": "LCA20-0000264",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.125664,
+   "Catchment_Lon": -123.875917,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14880,19 +12504,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000265",
-   "Application_Number": "LCA20-0000265",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.126808,
+   "Catchment_Lon": -123.880014,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14903,7 +12516,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2419,
-   "Catchment_Lon": 124.1143,
+   "Catchment_Lon": -124.1143,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14914,7 +12527,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2419,
-   "Catchment_Lon": 124.1143,
+   "Catchment_Lon": -124.1143,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14926,28 +12539,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.419719,
    "Catchment_Lon": -123.946069,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000271",
-   "Application_Number": "LCA20-0000271",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.419719,
-   "Catchment_Lon": 123.946069,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000271",
-   "Application_Number": "LCA20-0000271",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.419806,
-   "Catchment_Lon": 123.946281,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -14968,19 +12559,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1892,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL20-0000304",
-   "Application_Number": "LCA20-0000304",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1892,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.19013,
+   "Catchment_Lon": -123.97647,
    "Currently Used for Cannabis?": ""
  },
  {
@@ -14991,7 +12571,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.222603,
-   "Catchment_Lon": 123.821956,
+   "Catchment_Lon": -123.821956,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15002,7 +12582,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.323496,
-   "Catchment_Lon": 124.274241,
+   "Catchment_Lon": -124.274241,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15013,7 +12593,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.323496,
-   "Catchment_Lon": 124.274241,
+   "Catchment_Lon": -124.274241,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15039,39 +12619,6 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000338",
-   "Application_Number": "LCA20-0000338",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.419806,
-   "Catchment_Lon": 123.946281,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000338",
-   "Application_Number": "LCA20-0000338",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.419719,
-   "Catchment_Lon": 123.946069,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000342",
-   "Application_Number": "LCA20-0000342",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 39.859765,
-   "Catchment_Lon": -123.573206,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
    "License_Number": "CCL20-0000342",
    "Application_Number": "LCA20-0000342",
    "Total Square footage of catchment footprint": "Yes",
@@ -15079,7 +12626,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.86009722,
-   "Catchment_Lon": 123.5713889,
+   "Catchment_Lon": -123.571388,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15090,7 +12637,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.2196,
-   "Catchment_Lon": 123.8683,
+   "Catchment_Lon": -123.8683,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15111,7 +12658,7 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.14770605,
+   "Catchment_Lat": 40.14761269,
    "Catchment_Lon": -123.9275654,
    "Currently Used for Cannabis?": "Yes"
  },
@@ -15124,17 +12671,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.14668,
    "Catchment_Lon": -123.9311,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000430",
-   "Application_Number": "LCA20-0000430",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.14761269,
-   "Catchment_Lon": -123.9275654,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15215,6 +12751,28 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL20-0000571",
+   "Application_Number": "LCA20-0000571",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.89589,
+   "Catchment_Lon": -123.78255,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL20-0000572",
+   "Application_Number": "LCA20-0000572",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.89589,
+   "Catchment_Lon": -123.78255,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL20-0000576",
    "Application_Number": "LCA20-0000576",
    "Total Square footage of catchment footprint": "Yes",
@@ -15232,30 +12790,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.419806,
-   "Catchment_Lon": 123.946281,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000578",
-   "Application_Number": "LCA20-0000578",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.419719,
    "Catchment_Lon": -123.946069,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000578",
-   "Application_Number": "LCA20-0000578",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.419719,
-   "Catchment_Lon": 123.946069,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15309,8 +12845,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.191985,
-   "Catchment_Lon": -123.892068,
+   "Catchment_Lat": 40.191939,
+   "Catchment_Lon": -123.892785,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15320,8 +12856,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.191939,
-   "Catchment_Lon": -123.892785,
+   "Catchment_Lat": 40.191985,
+   "Catchment_Lon": -123.892068,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15332,7 +12868,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.6996,
-   "Catchment_Lon": 124.1441,
+   "Catchment_Lon": -124.1441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15376,7 +12912,7 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
-   "Catchment_Lon": null,
+   "Catchment_Lon": -123.012185,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15384,7 +12920,7 @@ var RAINarray =[
    "Application_Number": "LCA20-0000757",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
    "Catchment_Lon": -123.012185,
@@ -15406,10 +12942,10 @@ var RAINarray =[
    "Application_Number": "LCA20-0000758",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
-   "Catchment_Lon": null,
+   "Catchment_Lon": -123.012185,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15428,10 +12964,10 @@ var RAINarray =[
    "Application_Number": "LCA20-0000760",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
-   "Catchment_Lon": null,
+   "Catchment_Lon": -123.012185,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15450,10 +12986,21 @@ var RAINarray =[
    "Application_Number": "LCA20-0000761",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
+   "Detailed description of the catchment surface": "No",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.000769,
-   "Catchment_Lon": null,
+   "Catchment_Lon": -123.012185,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL20-0000762",
+   "Application_Number": "LCA20-0000762",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "No",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.000769,
+   "Catchment_Lon": -123.012185,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15468,14 +13015,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000762",
-   "Application_Number": "LCA20-0000762",
+   "License_Number": "CCL20-0000796",
+   "Application_Number": "LCA20-0000796",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.000769,
-   "Catchment_Lon": null,
+   "Catchment_Lat": 40.239167,
+   "Catchment_Lon": -123.766111,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15540,8 +13087,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.01206522,
-   "Catchment_Lon": -123.0259748,
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15551,8 +13098,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15584,8 +13131,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.01206522,
-   "Catchment_Lon": -123.0259748,
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15595,8 +13142,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15628,8 +13175,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.01206522,
-   "Catchment_Lon": -123.0259748,
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15639,17 +13186,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000833",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.01206522,
    "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
@@ -15663,6 +13199,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.009421,
    "Catchment_Lon": -123.009441,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000833",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15694,8 +13241,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.01206522,
-   "Catchment_Lon": -123.0259748,
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15705,17 +13252,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000842",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.01206522,
    "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
@@ -15733,7 +13269,7 @@ var RAINarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000843",
+   "Application_Number": "LCA20-0000842",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -15755,7 +13291,7 @@ var RAINarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000844",
+   "Application_Number": "LCA20-0000843",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -15773,6 +13309,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.009421,
    "Catchment_Lon": -123.009441,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000844",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15870,8 +13417,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.01206522,
-   "Catchment_Lon": -123.0259748,
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -15881,17 +13428,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000851",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.01206522,
    "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
@@ -15905,6 +13441,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.009421,
    "Catchment_Lon": -123.009441,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000851",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -16002,8 +13549,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.01206522,
-   "Catchment_Lon": -123.0259748,
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -16013,17 +13560,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0000858",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.01206522,
    "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
@@ -16041,7 +13577,7 @@ var RAINarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000859",
+   "Application_Number": "LCA20-0000858",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -16063,13 +13599,13 @@ var RAINarray =[
  },
  {
    "License_Number": "",
-   "Application_Number": "LCA20-0000860",
+   "Application_Number": "LCA20-0000859",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -16081,6 +13617,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.01206522,
    "Catchment_Lon": -123.0259748,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0000860",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -16134,8 +13681,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.01206522,
-   "Catchment_Lon": -123.0259748,
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -16145,8 +13692,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
+   "Catchment_Lat": 39.01206522,
+   "Catchment_Lon": -123.0259748,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17129,18 +14676,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000972",
-   "Application_Number": "LCA20-0000972",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 39.009421,
-   "Catchment_Lon": -123.009441,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0000972",
+   "License_Number": "",
    "Application_Number": "LCA20-0000972",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17184,7 +14720,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000978",
+   "License_Number": "",
    "Application_Number": "LCA20-0000978",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17195,7 +14731,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000979",
+   "License_Number": "",
    "Application_Number": "LCA20-0000979",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17206,7 +14742,18 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000981",
+   "License_Number": "",
+   "Application_Number": "LCA20-0000980",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0000981",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17217,7 +14764,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000982",
+   "License_Number": "",
    "Application_Number": "LCA20-0000982",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17228,7 +14775,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000983",
+   "License_Number": "",
    "Application_Number": "LCA20-0000983",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17239,7 +14786,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000984",
+   "License_Number": "",
    "Application_Number": "LCA20-0000984",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17250,7 +14797,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000985",
+   "License_Number": "",
    "Application_Number": "LCA20-0000985",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17261,7 +14808,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000986",
+   "License_Number": "",
    "Application_Number": "LCA20-0000986",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17272,7 +14819,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000987",
+   "License_Number": "",
    "Application_Number": "LCA20-0000987",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17283,7 +14830,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000988",
+   "License_Number": "",
    "Application_Number": "LCA20-0000988",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17294,7 +14841,18 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000990",
+   "License_Number": "",
+   "Application_Number": "LCA20-0000989",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 39.009421,
+   "Catchment_Lon": -123.009441,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0000990",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17305,7 +14863,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000992",
+   "License_Number": "",
    "Application_Number": "LCA20-0000992",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17316,7 +14874,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0000993",
+   "License_Number": "",
    "Application_Number": "LCA20-0000993",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17327,7 +14885,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001004",
+   "License_Number": "",
    "Application_Number": "LCA20-0001004",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17349,7 +14907,18 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001006",
+   "License_Number": "CCL20-0001005",
+   "Application_Number": "LCA20-0001005",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 38.26766037,
+   "Catchment_Lon": -122.7890318,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
    "Application_Number": "LCA20-0001006",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17360,7 +14929,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001007",
+   "License_Number": "",
    "Application_Number": "LCA20-0001007",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17371,7 +14940,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001008",
+   "License_Number": "",
    "Application_Number": "LCA20-0001008",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17382,7 +14951,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001009",
+   "License_Number": "",
    "Application_Number": "LCA20-0001009",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17393,7 +14962,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001010",
+   "License_Number": "",
    "Application_Number": "LCA20-0001010",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17404,7 +14973,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001011",
+   "License_Number": "",
    "Application_Number": "LCA20-0001011",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17415,7 +14984,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001012",
+   "License_Number": "",
    "Application_Number": "LCA20-0001012",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17426,7 +14995,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001013",
+   "License_Number": "",
    "Application_Number": "LCA20-0001013",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17437,7 +15006,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001014",
+   "License_Number": "",
    "Application_Number": "LCA20-0001014",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17448,7 +15017,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001015",
+   "License_Number": "",
    "Application_Number": "LCA20-0001015",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17459,7 +15028,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001016",
+   "License_Number": "",
    "Application_Number": "LCA20-0001016",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17470,7 +15039,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001017",
+   "License_Number": "",
    "Application_Number": "LCA20-0001017",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17481,7 +15050,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001018",
+   "License_Number": "",
    "Application_Number": "LCA20-0001018",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17492,7 +15061,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001019",
+   "License_Number": "",
    "Application_Number": "LCA20-0001019",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17503,7 +15072,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001020",
+   "License_Number": "",
    "Application_Number": "LCA20-0001020",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17514,7 +15083,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001021",
+   "License_Number": "",
    "Application_Number": "LCA20-0001021",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17525,7 +15094,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001022",
+   "License_Number": "",
    "Application_Number": "LCA20-0001022",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17536,7 +15105,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001023",
+   "License_Number": "",
    "Application_Number": "LCA20-0001023",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17547,7 +15116,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001024",
+   "License_Number": "",
    "Application_Number": "LCA20-0001024",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17558,7 +15127,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001025",
+   "License_Number": "",
    "Application_Number": "LCA20-0001025",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -17569,14 +15138,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001032",
-   "Application_Number": "LCA20-0001032",
+   "License_Number": "",
+   "Application_Number": "LCA20-0001029",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1778,
-   "Catchment_Lon": 123.8849,
+   "Catchment_Lat": 39.719188,
+   "Catchment_Lon": -123.491308,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17619,8 +15188,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1512,
-   "Catchment_Lon": 123.8605,
+   "Catchment_Lat": 40.1572,
+   "Catchment_Lon": -123.85663,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17630,8 +15199,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.1572,
-   "Catchment_Lon": 123.85663,
+   "Catchment_Lat": 40.1512,
+   "Catchment_Lon": -123.8605,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17643,28 +15212,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.8849,
    "Catchment_Lon": -123.7766,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0001159",
-   "Application_Number": "LCA20-0001159",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0001160",
-   "Application_Number": "LCA20-0001160",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17687,17 +15234,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.8849,
    "Catchment_Lon": -123.7766,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0001161",
-   "Application_Number": "LCA20-0001161",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17709,6 +15245,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.771114,
    "Catchment_Lon": -123.393906,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL20-0001183",
+   "Application_Number": "LCA20-0001183",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.4214,
+   "Catchment_Lon": -123.6001,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17731,17 +15278,6 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.42241065,
    "Catchment_Lon": -123.5941551,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0001183",
-   "Application_Number": "LCA20-0001183",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.4214,
-   "Catchment_Lon": -123.6001,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17773,31 +15309,9 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 38.981131,
-   "Catchment_Lon": -122.993089,
-   "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "",
-   "Application_Number": "LCA20-0001257",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 39.981131,
    "Catchment_Lon": -122.993089,
    "Currently Used for Cannabis?": ""
- },
- {
-   "License_Number": "CCL20-0001307",
-   "Application_Number": "LCA20-0001307",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.441722,
-   "Catchment_Lon": -123.977719,
-   "Currently Used for Cannabis?": "Yes"
  },
  {
    "License_Number": "CCL20-0001307",
@@ -17811,14 +15325,14 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001322",
-   "Application_Number": "LCA20-0001322",
+   "License_Number": "CCL20-0001307",
+   "Application_Number": "LCA20-0001307",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.0918,
-   "Catchment_Lon": -123.9407,
+   "Catchment_Lat": 40.441722,
+   "Catchment_Lon": -123.977719,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17830,6 +15344,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.09212,
    "Catchment_Lon": -123.93948,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL20-0001322",
+   "Application_Number": "LCA20-0001322",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.0918,
+   "Catchment_Lon": -123.9407,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17850,8 +15375,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.3291,
-   "Catchment_Lon": -123.8365,
+   "Catchment_Lat": 40.328,
+   "Catchment_Lon": -123.8347,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17861,19 +15386,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.328,
-   "Catchment_Lon": -123.8347,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0001369",
-   "Application_Number": "LCA20-0001369",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.328,
-   "Catchment_Lon": -123.8347,
+   "Catchment_Lat": 40.3291,
+   "Catchment_Lon": -123.8365,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17885,6 +15399,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.3291,
    "Catchment_Lon": -123.8365,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL20-0001369",
+   "Application_Number": "LCA20-0001369",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.328,
+   "Catchment_Lon": -123.8347,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17896,6 +15421,28 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.126143,
    "Catchment_Lon": -123.859476,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001547",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.441722,
+   "Catchment_Lon": -123.977719,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001547",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.441492,
+   "Catchment_Lon": -123.994167,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17926,17 +15473,6 @@ var RAINarray =[
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "No",
-   "Catchment_Lat": 40.31466,
-   "Catchment_Lon": -124.268906,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0001597",
-   "Application_Number": "LCA20-0001597",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.313,
    "Catchment_Lon": -124.2685,
@@ -17949,8 +15485,8 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.3291,
-   "Catchment_Lon": -123.8365,
+   "Catchment_Lat": 40.328,
+   "Catchment_Lon": -123.8347,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -17960,17 +15496,6 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": 40.328,
-   "Catchment_Lon": -123.8347,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0001649",
-   "Application_Number": "LCA20-0001649",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.3291,
    "Catchment_Lon": -123.8365,
    "Currently Used for Cannabis?": "Yes"
@@ -17987,8 +15512,8 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001650",
-   "Application_Number": "LCA20-0001650",
+   "License_Number": "CCL20-0001649",
+   "Application_Number": "LCA20-0001649",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
@@ -18006,6 +15531,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.328,
    "Catchment_Lon": -123.8347,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "CCL20-0001650",
+   "Application_Number": "LCA20-0001650",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.3291,
+   "Catchment_Lon": -123.8365,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -18059,8 +15595,19 @@ var RAINarray =[
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.2714,
+   "Catchment_Lon": -124.2306,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001705",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.271449,
-   "Catchment_Lon": 124.230578,
+   "Catchment_Lon": -124.230578,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -18071,7 +15618,18 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.271449,
-   "Catchment_Lon": 124.230578,
+   "Catchment_Lon": -124.230578,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001706",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.2714,
+   "Catchment_Lon": -124.2306,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -18083,6 +15641,50 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.0772,
    "Catchment_Lon": -124.0128,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001727",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.313,
+   "Catchment_Lon": -124.2685,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001727",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.314,
+   "Catchment_Lon": -124.2686,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001727",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.319,
+   "Catchment_Lon": -124.2686,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001735",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.102174,
+   "Catchment_Lon": -123.907824,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -18105,6 +15707,17 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.3291,
    "Catchment_Lon": -123.8365,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001756",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.583576,
+   "Catchment_Lon": -123.136664,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -18130,6 +15743,17 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
+   "License_Number": "CCL20-0001777",
+   "Application_Number": "LCA20-0001777",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 38.89777,
+   "Catchment_Lon": -122.48648,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
    "License_Number": "CCL20-0001778",
    "Application_Number": "LCA20-0001778",
    "Total Square footage of catchment footprint": "Yes",
@@ -18138,6 +15762,28 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 38.89777,
    "Catchment_Lon": -122.48648,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001784",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.170452,
+   "Catchment_Lon": -124.16415,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001784",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.1719,
+   "Catchment_Lon": -124.0113,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -18163,7 +15809,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001806",
+   "License_Number": "",
    "Application_Number": "LCA20-0001806",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -18171,6 +15817,28 @@ var RAINarray =[
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 38.268197,
    "Catchment_Lon": -122.79017,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001806",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 38.26766037,
+   "Catchment_Lon": -122.7890318,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001825",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.192,
+   "Catchment_Lon": -123.894,
    "Currently Used for Cannabis?": "Yes"
  },
  {
@@ -18185,18 +15853,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001838",
-   "Application_Number": "LCA20-0001838",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0001838",
+   "License_Number": "",
    "Application_Number": "LCA20-0001838",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -18207,7 +15864,7 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001838",
+   "License_Number": "",
    "Application_Number": "LCA20-0001838",
    "Total Square footage of catchment footprint": "Yes",
    "Total storage capacity (Gallons)": "Yes",
@@ -18218,26 +15875,136 @@ var RAINarray =[
    "Currently Used for Cannabis?": "Yes"
  },
  {
-   "License_Number": "CCL20-0001838",
-   "Application_Number": "LCA20-0001838",
-   "Total Square footage of catchment footprint": "Yes",
-   "Total storage capacity (Gallons)": "Yes",
-   "Detailed description of the catchment surface": "Yes",
-   "Photos of the rainwater catchment system infrastructure": "Yes",
-   "Catchment_Lat": null,
-   "Catchment_Lon": null,
-   "Currently Used for Cannabis?": "Yes"
- },
- {
-   "License_Number": "CCL20-0001857",
+   "License_Number": "",
    "Application_Number": "LCA20-0001857",
    "Total Square footage of catchment footprint": "No",
    "Total storage capacity (Gallons)": "Yes",
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "Yes",
    "Catchment_Lat": 40.4576,
-   "Catchment_Lon": 123.7019,
+   "Catchment_Lon": -123.7019,
    "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001899",
+   "Total Square footage of catchment footprint": "No",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.4176,
+   "Catchment_Lon": -123.9648,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001903",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.254,
+   "Catchment_Lon": -123.944,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001903",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.22634,
+   "Catchment_Lon": -123.94174,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001903",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2254,
+   "Catchment_Lon": -123.9444,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001904",
+   "Total Square footage of catchment footprint": "",
+   "Total storage capacity (Gallons)": "",
+   "Detailed description of the catchment surface": "",
+   "Photos of the rainwater catchment system infrastructure": "",
+   "Catchment_Lat": 40.2254,
+   "Catchment_Lon": -123.9444,
+   "Currently Used for Cannabis?": ""
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001904",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.254,
+   "Catchment_Lon": -123.944,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001904",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.22634,
+   "Catchment_Lon": -123.94174,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001926",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.980068,
+   "Catchment_Lon": -123.745361,
+   "Currently Used for Cannabis?": "No"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001931",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 38.268197,
+   "Catchment_Lon": -122.79017,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001931",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 38.26766037,
+   "Catchment_Lon": -122.7890318,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001946",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.131,
+   "Catchment_Lon": -123.70589,
+   "Currently Used for Cannabis?": "No"
  },
  {
    "License_Number": "CCL20-0001948",
@@ -18247,10 +16014,130 @@ var RAINarray =[
    "Detailed description of the catchment surface": "Yes",
    "Photos of the rainwater catchment system infrastructure": "No",
    "Catchment_Lat": 40.4598,
-   "Catchment_Lon": 123.7012,
+   "Catchment_Lon": -123.7012,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001958",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.131589,
+   "Catchment_Lon": -123.897358,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001958",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.131319,
+   "Catchment_Lon": -123.896856,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001958",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.131264,
+   "Catchment_Lon": -123.895847,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0001958",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1323,
+   "Catchment_Lon": -123.8981,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002208",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.1505556,
+   "Catchment_Lon": -123.859722,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002270",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.530335,
+   "Catchment_Lon": -124.167103,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002316",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "No",
+   "Catchment_Lat": 40.9405,
+   "Catchment_Lon": -123.7208,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002425",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.044343,
+   "Catchment_Lon": -123.577634,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002632",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.2237,
+   "Catchment_Lon": -124.1125,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002632",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.223299,
+   "Catchment_Lon": -124.113489,
+   "Currently Used for Cannabis?": "Yes"
+ },
+ {
+   "License_Number": "",
+   "Application_Number": "LCA20-0002917",
+   "Total Square footage of catchment footprint": "Yes",
+   "Total storage capacity (Gallons)": "Yes",
+   "Detailed description of the catchment surface": "Yes",
+   "Photos of the rainwater catchment system infrastructure": "Yes",
+   "Catchment_Lat": 40.8891,
+   "Catchment_Lon": -123.7789,
    "Currently Used for Cannabis?": "Yes"
  }
- 
- ];
+];
  return RAINarray;
 }
