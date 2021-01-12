@@ -1,4 +1,6 @@
-[
+function GROUNDWATERData (){
+
+var GROUNDWATERarray =[
   {
     "License_Number": "CCL18-0000005",
     "Application_Number": "LCA18-0000005",
@@ -64179,4 +64181,6 @@
     "Well_Lon": -121.7795,
     "Currently Used for Cannabis": "Yes"
   }
-]
+];
+ return GROUNDWATERarray;
+}
