@@ -1,4 +1,6 @@
-[
+function NOAData (){
+
+var NOAarray =[
   {
     "Application_Number": "LCA19-0000953",
     "License_Number": "CCL19-0000953",
@@ -91103,4 +91105,6 @@
     "Enrollment_level": "",
     "NOA Review Status": "Incomplete"
   }
-]
+];
+ return NOAarray;
+}
