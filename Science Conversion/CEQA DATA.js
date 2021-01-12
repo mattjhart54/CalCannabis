@@ -1,4 +1,6 @@
-[
+function CEQAData (){
+
+var CEQAarray =[
   {
     "License_Number": "CCL18-0000004",
     "Application_Number": "LCA18-0000004",
@@ -73006,4 +73008,6 @@
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
   }
-]
+];
+ return CEQAarray;
+}
