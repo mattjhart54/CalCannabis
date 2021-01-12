@@ -1,4 +1,6 @@
-[
+function LIGHTData (){
+
+var LIGHTarray =[
   {
     "License_Number": "",
     "Application_Number": "LCA18-0000003",
@@ -34703,4 +34705,6 @@
     "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   }
-]
+];
+ return LIGHTarray;
+}
