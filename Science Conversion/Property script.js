@@ -124,9 +124,9 @@ try{
 	//	logDebug("processing record " + PROPERTY[i]["License_Number"]);
 		editAppSpecific("Property Diagram Review Status",PROPERTY[i]["Property_Review_Status"]);
 		editAppSpecific("APN-PD",PROPERTY[i]["APN"]);
-		editAppSpecific("APN located in correct city/county?",PROPERTY[i]["APN located in correct city/county?"]);
-		editAppSpecific("Property boundaries w/dimensions?",PROPERTY[i]["Property boundaries w/dimensions?"]);
-		editAppSpecific("Premises boundaries w/dimensions?",PROPERTY[i]["Premises boundaries w/dimensions?"]);
+		editAppSpecific("APN located in correct city/county?",PROPERTY[i]["APN located in correct city county?"]);
+		editAppSpecific("Property boundaries w/dimensions?",PROPERTY[i]["Property boundaries w dimensions?"]);
+		editAppSpecific("Premises boundaries w/dimensions?",PROPERTY[i]["Premises boundaries w dimensions?"]);
 		editAppSpecific("Entrances and Exits to the property?",PROPERTY[i]["Entrance and Exit to the property and premises?"]);
 		editAppSpecific("Entrances and Exits to the Premises?",PROPERTY[i]["Entrance and Exit to the Premises?"]);
 		editAppSpecific("Other Licenses and Land Uses Identified Clearly?",PROPERTY[i]["Other Licenses and Land Uses Identified Clearly?"]);
