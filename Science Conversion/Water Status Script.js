@@ -122,11 +122,11 @@ try{
 		recCnt++;
 	//	logDebug("processing record " + WSTATUS[i]["License_Number"]);
 		editAppSpecific("Water Source Review Status",WSTATUS[i]["Water_Source_Review"]);
-		/*editAppSpecific("Groundwater Well Review Status",WSTATUS[i]["Groundwater_Well_Review"]);
+		editAppSpecific("Groundwater Well Review Status",WSTATUS[i]["Groundwater_Well_Review"]);
 		editAppSpecific("Rainwater Catchment Review Status",WSTATUS[i]["Rainwater_Review"]);
 		editAppSpecific("Retail Water Supplier Review Status",WSTATUS[i]["Retail_Water_Review"]);
 		editAppSpecific("Small Retail Water Supplier Review Status",WSTATUS[i]["Small_Retail_Water_Review"]);
-		editAppSpecific("Water Rights Review Status",WSTATUS[i]["Water_Right_Review"]);*/
+		editAppSpecific("Water Rights Review Status",WSTATUS[i]["Water_Right_Review"]);
 	}
 	logDebug("Total Records Processed : " + WSTATUS.length);
 	logDebug("Total Records Rejected: " + rejCnt);
