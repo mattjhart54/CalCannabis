@@ -8,8 +8,7 @@
 	//logDebug("Current File Name 1234: " + aa.document.getDocName());
 		
 		
-    for (dl in docsList) 
-    {
+    for (dl in docsList) {
         var thisDocument = docsList[dl];
 		logDebug("FileStatus: " + thisDocument.getDocStatus());
 		logDebug("File Name: " + thisDocument.getDocName());
@@ -18,14 +17,12 @@
         //        assignDocList.add(thisDocument);
     }
 	
-	for ( i in documentModelArray	)
-	{
+	for (i in documentModelArray){
         var thisDocument2 = documentModelArray[i];
-		
-		for (var x in thisDocument2) 
-			{
-				logDebug(" Y is: " + x + "," + thisDocument2[x]);
-			}
+	
+		for (var x in thisDocument2){
+			logDebug(" Y is: " + x + "," + thisDocument2[x]);
+		}
 		//logDebug("Current File Name: " + thisDocument2.getDocName());		
 	}	
 	
@@ -67,11 +64,25 @@
 			}
 		}
 		
-		function isContainsSpecialCharacters(fileName)
-		{
-			logDebug(" In isContainsSpecialCharacters(), Filename is: " + fileName);
-			return false;
-		}	
+	function isContainsSpecialCharacters(fileName){
+		logDebug(" In isContainsSpecialCharacters(), Filename is: " + fileName);
+		return false;
+	}
+	
+	function lookup(stdChoice, stdValue) {
+		var strControl = null;          // RS 8/25/2015 Modified to return NULL if value is not found.
+		var bizDomScriptResult = aa.bizDomain.getBizDomainByValue(stdChoice, stdValue);
+
+		if (bizDomScriptResult.getSuccess()) {
+			var bizDomScriptObj = bizDomScriptResult.getOutput();
+			strControl = "" + bizDomScriptObj.getDescription(); // had to do this or it bombs.  who knows why?
+			logDebug("lookup(" + stdChoice + "," + stdValue + ") = " + strControl);
+		}
+		else {
+			logDebug("lookup(" + stdChoice + "," + stdValue + ") does not exist");
+		}
+		return strControl;
+	}	
 		
 
 
