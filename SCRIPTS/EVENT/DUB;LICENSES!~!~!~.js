@@ -44,11 +44,12 @@
 		for (i = 0; i < documentModels.length; i++) {
 			documentModel = documentModels[i];
 			fileName = documentModel.getFileName();
+			fileName = String(fileName);
 			logDebug(" 1 Filename is: " + fileName);
 			
-			if (String(fileName).indexOf('.') > -1){
-				fileNameExtensionDtls = String(fileName).split(".");
-				extension = fileNameExtensionDtls[1].toLowerCase();
+			if (fileName.indexOf('.') > -1){
+				fileNameExtensionDtls = fileName.substring(fileName.lastIndexOf(".")+1);
+				extension = fileNameExtensionDtls.toLowerCase();
 				logDebug("File Extension = " + extension);
 				var extAllowed =  lookup("AA_EDMS_ALLOWED_FILE_TYPES","ALLOWED_FILE_TYPES");
 				extArray = String(extAllowed).split(",");
