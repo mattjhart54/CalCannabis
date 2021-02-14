@@ -26,6 +26,7 @@ function copyASITablesCDFA(pFromCapId, pToCapId) {
 			var ignore = false;
 			for (var i = 0; i < ignoreArr.length; i++){
 				if (ignoreArr[i] == tn) {
+					logDebug("Skipping table: " + tn);
 					ignore = true;
 					break;
 				}
