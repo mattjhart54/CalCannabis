@@ -9,9 +9,11 @@ function copyASITables4ACA(pFromCapId, pToCapId) {
 	var tableArr = new Array();
 	var ignoreArr = new Array();
 	var limitCopy = false;
-	if (arguments.length > 2) {
-		ignoreArr = arguments[2];
-		limitCopy = true;
+	if (arguments.length > 2){ //Check for tablas to exclude
+		for (var i=2; i<arguments.length; i++){
+			ignoreArr.push(arguments[i]);
+			limitCopy = true;
+		}
 	}
 	while (tai.hasNext()) {
 		var tsm = tai.next();
@@ -26,6 +28,7 @@ function copyASITables4ACA(pFromCapId, pToCapId) {
 			var ignore = false;
 			for (var i = 0; i < ignoreArr.length; i++)
 				if (ignoreArr[i] == tn) {
+					logDebug("skipping " + tn);
 					ignore = true;
 					break;
 				}
