@@ -9,10 +9,14 @@ function copyASITablesCDFA(pFromCapId, pToCapId) {
 	var tableArr = new Array();
 	var ignoreArr = new Array();
 	var limitCopy = false;
-	if (arguments.length > 2) {
-		ignoreArr = arguments[2];
-		limitCopy = true;
+	
+	if (arguments.length > 2){ //Check for tablas to exclude
+		for (var i=2; i<arguments.length; i++){
+			ignoreArr.push(arguments[i]);
+			limitCopy = true;
+		}
 	}
+	
 	while (tai.hasNext()) {
 		var tsm = tai.next();
 
