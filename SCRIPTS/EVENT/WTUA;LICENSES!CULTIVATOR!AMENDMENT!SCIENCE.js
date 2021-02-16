@@ -68,6 +68,7 @@ try {
 			}
 		}
 		ignoreTableArray = [];
+		removeASITable("APN SPATIAL INFORMATION",parentCapId);
 		if (matches(getAppSpecific("Small Retail Water Supplier Review Status-NEW"),"Complete","N/A")){
 			removeASITable("SMALL RETAIL WATER SUPPLIERS",parentCapId);
 		}else{
