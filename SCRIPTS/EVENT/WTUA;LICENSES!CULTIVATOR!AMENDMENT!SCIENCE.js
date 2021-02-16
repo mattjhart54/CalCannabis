@@ -93,6 +93,11 @@ try {
 		}else{
 			ignoreTableArray.push("WATER RIGHTS");
 		}
+		if (matches(getAppSpecific("LSA Review Status-NEW"),"Complete","N/A")){
+			removeASITable("LAKE AND STREAMBED ALTERATION",parentCapId);
+		}else{
+			ignoreTableArray.push("LAKE AND STREAMBED ALTERATION");
+		}
 		if (typeof(PREMISESADDRESSES) == "object"){
 			if(PREMISESADDRESSES.length > 0){
 				premTable = new Array();
