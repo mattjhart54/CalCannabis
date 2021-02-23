@@ -140,7 +140,7 @@ try{
 		editAppSpecific("Does the diagram contain highlighting?",PROPERTY[i]["Does the diagram refrain from highlighting?"]);
 		editAppSpecific("Is the diagram to scale?",PROPERTY[i]["Is the diagram to scale?"]);
 		editAppSpecific("Premises is Contiguous?",PROPERTY[i]["Premises_is_Contiguous?"]);
-		editAppSpecific("APN",PROPERTY[i]["APN"]);
+		//editAppSpecific("APN",PROPERTY[i]["APN"]);
 	}
 	logDebug("Total Records Processed : " + PROPERTY.length);
 	logDebug("Total Records Rejected: " + rejCnt);
