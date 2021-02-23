@@ -34,7 +34,7 @@ wfObjArray = null;
 eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 eval(getScriptText("INCLUDES_BATCH"));
 eval(getMasterScriptText("INCLUDES_CUSTOM"));
-eval(getScriptText("PROPERTY DATA"));
+eval(getScriptText("PROPERTY DATA2"));
 
 override = "function logDebug(dstr){ if(showDebug) { aa.print(dstr); emailText+= dstr + \"<br>\"; } }";
 eval(override);
@@ -72,7 +72,7 @@ var currentUserID = "ADMIN";
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 
 var AInfo = new Array();
-var PROPERTY = PROPERTYData();
+var PROPERTY = PROPERTYData2();
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
@@ -124,9 +124,9 @@ try{
 	//	logDebug("processing record " + PROPERTY[i]["License_Number"]);
 		editAppSpecific("Property Diagram Review Status",PROPERTY[i]["Property_Review_Status"]);
 		editAppSpecific("APN-PD",PROPERTY[i]["APN"]);
-		editAppSpecific("APN located in correct city/county?",PROPERTY[i]["APN located in correct city county?"]);
-		editAppSpecific("Property boundaries w/dimensions?",PROPERTY[i]["Property boundaries w dimensions?"]);
-		editAppSpecific("Premises boundaries w/dimensions?",PROPERTY[i]["Premises boundaries w dimensions?"]);
+		editAppSpecific("APN located in correct city/county?",PROPERTY[i]["APN located in correct city_county?"]);
+		editAppSpecific("Property boundaries w/dimensions?",PROPERTY[i]["Property boundaries w_dimensions?"]);
+		editAppSpecific("Premises boundaries w/dimensions?",PROPERTY[i]["Premises boundaries w_dimensions?"]);
 		editAppSpecific("Entrances and Exits to the property?",PROPERTY[i]["Entrance and Exit to the property and premises?"]);
 		editAppSpecific("Entrances and Exits to the Premises?",PROPERTY[i]["Entrance and Exit to the Premises?"]);
 		editAppSpecific("Other Licenses and Land Uses Identified Clearly?",PROPERTY[i]["Other Licenses and Land Uses Identified Clearly?"]);

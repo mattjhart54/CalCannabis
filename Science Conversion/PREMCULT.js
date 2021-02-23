@@ -138,7 +138,7 @@ try{
 		editAppSpecific("Canopy SF",PREM[i]["Canopy_SF"]);
 		editAppSpecific("Canopy Plant Count",PREM[i]["Canopy_Plants"]);
 		editAppSpecific("Canopy SF Limit",PREM[i]["Canopy SF Limit"]);
-		editAppSpecific("Immature Plant Area SF",PREM[i]["Immature Plant Area square footage"]);
+		editAppSpecific("Immature Plant Area SF",PREM[i]["immature Plant Area square footage"]);
 	}
 	logDebug("Total Records Processed : " + PREM.length);
 	logDebug("Total Records Rejected: " + rejCnt);

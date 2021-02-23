@@ -127,7 +127,7 @@ try{
 		editAppSpecific("General Order",NOA[i]["General_Order?"]);
 		editAppSpecific("Order Number",NOA[i]["Order_Number"]);
 		editAppSpecific("Enrollment Level",NOA[i]["Enrollment_level"]);
-		editAppSpecific("NOA Review Status",NOA[i]["WQ_Review"]);
+		editAppSpecific("NOA Review Status",NOA[i]["NOA Review Status"]);
 	}
 	logDebug("Total Records Processed : " + NOA.length);
 	logDebug("Total Records Rejected: " + rejCnt);
