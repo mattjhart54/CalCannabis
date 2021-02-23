@@ -4765,10 +4765,10 @@ var RETAILWATERarray =[
  {
    "License_Number": "CCL19-0003717",
    "Application_Number": "LCA19-0003717",
-   "Name of Retail Water Supplier": "yes",
-   "A copy of the most recent water service bill": "yes",
-   "Water Bill Address Matches Premises": "yes",
-   "Currently Used for Cannabis": "yes",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": "City of Sacramento Department of Utilities"
  },
  {
@@ -6160,10 +6160,10 @@ var RETAILWATERarray =[
  {
    "License_Number": "CCL19-0005472",
    "Application_Number": "LCA19-0005472",
-   "Name of Retail Water Supplier": "yes",
-   "A copy of the most recent water service bill": "yes",
-   "Water Bill Address Matches Premises": "yes",
-   "Currently Used for Cannabis": "yes",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": "City of Oceanside"
  },
  {
@@ -6215,7 +6215,7 @@ var RETAILWATERarray =[
    "License_Number": "",
    "Application_Number": "LCA19-0005616",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "yes",
+   "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": ""
@@ -6349,10 +6349,10 @@ var RETAILWATERarray =[
  {
    "License_Number": "CCL20-0000127",
    "Application_Number": "LCA20-0000127",
-   "Name of Retail Water Supplier": "yes",
-   "A copy of the most recent water service bill": "yes",
-   "Water Bill Address Matches Premises": "yes",
-   "Currently Used for Cannabis": "yes",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": "DWP"
  },
  {
@@ -6404,7 +6404,7 @@ var RETAILWATERarray =[
    "License_Number": "CCL20-0000151",
    "Application_Number": "LCA20-0000151",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "yes",
+   "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": "Mendocino Water Company"
@@ -6439,10 +6439,10 @@ var RETAILWATERarray =[
  {
    "License_Number": "CCL20-0000190",
    "Application_Number": "LCA20-0000190",
-   "Name of Retail Water Supplier": "yes",
-   "A copy of the most recent water service bill": "yes",
-   "Water Bill Address Matches Premises": "yes",
-   "Currently Used for Cannabis": "yes",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": "City of Los Angeles"
  },
  {
@@ -6484,17 +6484,17 @@ var RETAILWATERarray =[
  {
    "License_Number": "CCL20-0000252",
    "Application_Number": "LCA20-0000252",
-   "Name of Retail Water Supplier": "yes",
-   "A copy of the most recent water service bill": "yes",
-   "Water Bill Address Matches Premises": "yes",
-   "Currently Used for Cannabis": "yes",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": "San Gabriel Valley Water Company"
  },
  {
    "License_Number": "CCL20-0000254",
    "Application_Number": "LCA20-0000254",
    "Name of Retail Water Supplier": "Yes",
-   "A copy of the most recent water service bill": "yes",
+   "A copy of the most recent water service bill": "Yes",
    "Water Bill Address Matches Premises": "Yes",
    "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": "City of Rio Vista"
@@ -6556,10 +6556,10 @@ var RETAILWATERarray =[
  {
    "License_Number": "CCL20-0000354",
    "Application_Number": "LCA20-0000354",
-   "Name of Retail Water Supplier": "yes",
-   "A copy of the most recent water service bill": "yes",
-   "Water Bill Address Matches Premises": "yes",
-   "Currently Used for Cannabis": "yes",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": "LADWP"
  },
  {
@@ -6673,10 +6673,10 @@ var RETAILWATERarray =[
  {
    "License_Number": "CCL20-0001073",
    "Application_Number": "LCA20-0001073",
-   "Name of Retail Water Supplier": "yes",
-   "A copy of the most recent water service bill": "yes",
-   "Water Bill Address Matches Premises": "yes",
-   "Currently Used for Cannabis": "yes",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": ""
  },
  {
@@ -6781,10 +6781,10 @@ var RETAILWATERarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001302",
-   "Name of Retail Water Supplier": "yes",
-   "A copy of the most recent water service bill": "yes",
-   "Water Bill Address Matches Premises": "yes",
-   "Currently Used for Cannabis": "yes",
+   "Name of Retail Water Supplier": "Yes",
+   "A copy of the most recent water service bill": "Yes",
+   "Water Bill Address Matches Premises": "Yes",
+   "Currently Used for Cannabis": "Yes",
    "Retail Water Supplier": ""
  },
  {

@@ -25930,7 +25930,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0,
     "Watts/SF limit": "> 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
@@ -26434,7 +26434,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -26554,7 +26554,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -26956,13 +26956,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL19-0005247",
     "Application_Number": "LCA19-0005247",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 35,
     "Watts/SF limit": "> 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27294,11 +27294,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005320",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27306,11 +27306,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005321",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27318,11 +27318,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005322",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27330,11 +27330,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005323",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27342,11 +27342,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005324",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27354,11 +27354,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005325",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27366,11 +27366,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005326",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27378,11 +27378,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005327",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27390,11 +27390,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005328",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27402,11 +27402,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005329",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27414,11 +27414,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005330",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27426,11 +27426,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005331",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27438,11 +27438,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005332",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27450,11 +27450,11 @@ var LIGHTarray =[
     "Application_Number": "LCA19-0005333",
     "Location of All Lights in Canopy?": "Yes",
     "Max Wattage of Each Light?": "Yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.29,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27598,7 +27598,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 36.23,
     "Watts/SF limit": "> 25",
-    "Some or all of the canopy is Light Dep": "NO",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -27616,20 +27616,20 @@ var LIGHTarray =[
   {
     "License_Number": "CCL19-0005379",
     "Application_Number": "LCA19-0005379",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 37.5,
     "Watts/SF limit": "> 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
     "License_Number": "CCL19-0005380",
     "Application_Number": "LCA19-0005380",
     "Location of All Lights in Canopy?": "Yes",
-    "Max Wattage of Each Light?": "YES",
+    "Max Wattage of Each Light?": "Yes",
     "Reviewer Calculated Watt/SF": "Yes",
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 41.25,
@@ -28180,13 +28180,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL19-0005472",
     "Application_Number": "LCA19-0005472",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 1,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "complete"
   },
   {
@@ -28432,13 +28432,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL19-0005578",
     "Application_Number": "LCA19-0005578",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0,
     "Watts/SF limit": "> 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "complete"
   },
   {
@@ -28828,10 +28828,10 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000007",
     "Application_Number": "LCA20-0000007",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -28858,7 +28858,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0.008,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
@@ -28996,13 +28996,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000100",
     "Application_Number": "LCA20-0000100",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -29129,12 +29129,12 @@ var LIGHTarray =[
     "License_Number": "",
     "Application_Number": "LCA20-0000130",
     "Location of All Lights in Canopy?": "N/A",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -29284,13 +29284,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000151",
     "Application_Number": "LCA20-0000151",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -29344,13 +29344,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000159",
     "Application_Number": "LCA20-0000159",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -29434,7 +29434,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 39.65,
     "Watts/SF limit": "> 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
@@ -29476,13 +29476,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000198",
     "Application_Number": "LCA20-0000198",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0.145,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -29740,13 +29740,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000248",
     "Application_Number": "LCA20-0000248",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -29776,13 +29776,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000252",
     "Application_Number": "LCA20-0000252",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 39.1,
     "Watts/SF limit": "> 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "complete"
   },
   {
@@ -30142,7 +30142,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 3.26,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
@@ -30196,13 +30196,13 @@ var LIGHTarray =[
   {
     "License_Number": "",
     "Application_Number": "LCA20-0000351",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.2,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
@@ -30220,13 +30220,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000354",
     "Application_Number": "LCA20-0000354",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 24.25,
     "Watts/SF limit": "> 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "complete"
   },
   {
@@ -30334,7 +30334,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "complete"
   },
   {
@@ -30346,7 +30346,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 5.69,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "complete"
   },
   {
@@ -30616,10 +30616,10 @@ var LIGHTarray =[
   {
     "License_Number": "",
     "Application_Number": "LCA20-0000464",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -30988,10 +30988,10 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000583",
     "Application_Number": "LCA20-0000583",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -31042,7 +31042,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -31582,7 +31582,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 65,
     "Watts/SF limit": "> 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
@@ -31780,10 +31780,10 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000937",
     "Application_Number": "LCA20-0000937",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -31792,13 +31792,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000946",
     "Application_Number": "LCA20-0000946",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 10.75,
     "Watts/SF limit": "6 - 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "complete"
   },
   {
@@ -31816,13 +31816,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0000951",
     "Application_Number": "LCA20-0000951",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 10.75,
     "Watts/SF limit": "6 - 25",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "complete"
   },
   {
@@ -31948,10 +31948,10 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001039",
     "Application_Number": "LCA20-0001039",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -31960,10 +31960,10 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001040",
     "Application_Number": "LCA20-0001040",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -31972,10 +31972,10 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001041",
     "Application_Number": "LCA20-0001041",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -32020,9 +32020,9 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001067",
     "Application_Number": "LCA20-0001067",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
@@ -32224,13 +32224,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001152",
     "Application_Number": "LCA20-0001152",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0.27,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
@@ -32320,10 +32320,10 @@ var LIGHTarray =[
   {
     "License_Number": "",
     "Application_Number": "LCA20-0001175",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -32560,10 +32560,10 @@ var LIGHTarray =[
   {
     "License_Number": "",
     "Application_Number": "LCA20-0001302",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 23.96,
     "Watts/SF limit": "> 25",
     "Some or all of the canopy is Light Dep": "N/A",
@@ -32662,7 +32662,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0.24,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "no",
+    "Some or all of the canopy is Light Dep": "No",
     "Light_Review_Status": "Complete"
   },
   {
@@ -32800,13 +32800,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001426",
     "Application_Number": "LCA20-0001426",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -32830,7 +32830,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 4.5,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {
@@ -32968,13 +32968,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001572",
     "Application_Number": "LCA20-0001572",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -33184,13 +33184,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001707",
     "Application_Number": "LCA20-0001707",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -33454,7 +33454,7 @@ var LIGHTarray =[
     "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0.072,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "yes",
+    "Some or all of the canopy is Light Dep": "Yes",
     "Light_Review_Status": "Complete"
   },
   {
@@ -33640,10 +33640,10 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001928",
     "Application_Number": "LCA20-0001928",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -33652,10 +33652,10 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001929",
     "Application_Number": "LCA20-0001929",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -33664,10 +33664,10 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001930",
     "Application_Number": "LCA20-0001930",
-    "Location of All Lights in Canopy?": "n/a",
-    "Max Wattage of Each Light?": "n/a",
-    "Reviewer Calculated Watt/SF": "n/a",
-    "Does the Watts per Sqft Match the License Type?": "n/a",
+    "Location of All Lights in Canopy?": "N/A",
+    "Max Wattage of Each Light?": "N/A",
+    "Reviewer Calculated Watt/SF": "N/A",
+    "Does the Watts per Sqft Match the License Type?": "N/A",
     "Watts/SF": 0,
     "Watts/SF limit": "< 6",
     "Some or all of the canopy is Light Dep": "Yes",
@@ -33676,13 +33676,13 @@ var LIGHTarray =[
   {
     "License_Number": "CCL20-0001941",
     "Application_Number": "LCA20-0001941",
-    "Location of All Lights in Canopy?": "yes",
-    "Max Wattage of Each Light?": "yes",
-    "Reviewer Calculated Watt/SF": "yes",
-    "Does the Watts per Sqft Match the License Type?": "yes",
+    "Location of All Lights in Canopy?": "Yes",
+    "Max Wattage of Each Light?": "Yes",
+    "Reviewer Calculated Watt/SF": "Yes",
+    "Does the Watts per Sqft Match the License Type?": "Yes",
     "Watts/SF": 0.7,
     "Watts/SF limit": "< 6",
-    "Some or all of the canopy is Light Dep": "n/a",
+    "Some or all of the canopy is Light Dep": "N/A",
     "Light_Review_Status": "Complete"
   },
   {

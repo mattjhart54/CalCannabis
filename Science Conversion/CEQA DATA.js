@@ -35350,7 +35350,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Annual",
     "CEQA_Document_Provided": "Exemption determination but NOE not filed with SCH",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Exempt Checklist",
     "Notes": "From amendment. See application record for further details",
     "Other_CDFA_CEQA_Action": ""
@@ -45547,7 +45547,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local Approval Document (Non-CEQA)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -53192,7 +53192,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "List",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -54677,7 +54677,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local Approval Document (Non-CEQA)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -55447,7 +55447,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local jurisdiction approval email/letter",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -56448,7 +56448,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "List",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Exempt Checklist",
     "Notes": "",
     "Other_CDFA_CEQA_Action": ""
@@ -57207,7 +57207,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "List",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -57966,7 +57966,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local Approval Document (Non-CEQA)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -58274,7 +58274,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "List",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -58329,7 +58329,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "list",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -58384,7 +58384,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local Approval Document (Non-CEQA)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -58582,7 +58582,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local jurisdiction approval email/letter",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -59044,7 +59044,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local jurisdiction approval email/letter",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "in a provisional only jurisdiction. Approved using email from local jurisidiction and local resolution docs",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -59990,7 +59990,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local Approval Document (Non-CEQA)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -60001,7 +60001,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local Approval Document (Non-CEQA)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -60309,7 +60309,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "provisional",
     "CEQA_Document_Provided": "list",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -61211,7 +61211,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local Approval Document (Non-CEQA)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -61376,7 +61376,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local Approval Document (Non-CEQA)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "Interim Permit extention 12/31/2021",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -62927,7 +62927,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "LVU Check (use when only an LVU check is required)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "pending lvu response is sufficient for provisional per CEQA guidelines",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -64401,7 +64401,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "List",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -64434,7 +64434,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "List",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -65556,7 +65556,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "list",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -65996,7 +65996,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "List",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -66007,7 +66007,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "List",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -66040,7 +66040,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "LVU Check (use when only an LVU check is required)",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "pending lvu response is sufficient for provisional per CEQA guidelines",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -68625,7 +68625,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local jurisdiction approval email/letter",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -69098,7 +69098,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "list",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -69109,7 +69109,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "list",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"
@@ -71309,7 +71309,7 @@ var CEQAarray =[
     "CEQA_Review_Status": "Complete",
     "CEQA_Status": "Provisional",
     "CEQA_Document_Provided": "Local jurisdiction approval email/letter",
-    "APN_Matches_Premises": "yes",
+    "APN_Matches_Premises": "Yes",
     "CDFA_CEQA_Action": "Other",
     "Notes": "Provided NOD. On county list with blank status. Locals confirm applicant is in compliance",
     "Other_CDFA_CEQA_Action": "No Checklist Provisional Approval"

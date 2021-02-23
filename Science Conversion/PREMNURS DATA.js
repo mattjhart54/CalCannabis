@@ -1467,7 +1467,7 @@ var PREMNURSarray =[
    "Composting_Area": "N/A",
    "Cannabis_waste_Area": "N/A",
    "Immature canopy square footage": 18648,
-   "Designated shared area(s)": "yes",
+   "Designated shared area(s)": "Yes",
    "Common Use Area(s)": ""
  },
  {
@@ -2000,7 +2000,7 @@ var PREMNURSarray =[
    "Composting_Area": "No",
    "Cannabis_waste_Area": "N/A",
    "Immature canopy square footage": null,
-   "Designated shared area(s)": "n/a",
+   "Designated shared area(s)": "N/A",
    "Common Use Area(s)": ""
  },
  {
@@ -2435,7 +2435,7 @@ var PREMNURSarray =[
  {
    "License_Number": "CCL19-0003717",
    "Application_Number": "LCA19-0003717",
-   "Immature_Plant_Area": "yes",
+   "Immature_Plant_Area": "Yes",
    "Seed_Production_Area": "N/A",
    "Research_And_Developement_Area": "N/A",
    "Pesticide_Storage_Area": "Yes",
@@ -2819,7 +2819,7 @@ var PREMNURSarray =[
    "Composting_Area": "Yes",
    "Cannabis_waste_Area": "Yes",
    "Immature canopy square footage": 3600,
-   "Designated shared area(s)": "yes",
+   "Designated shared area(s)": "Yes",
    "Common Use Area(s)": ""
  },
  {
@@ -3059,15 +3059,15 @@ var PREMNURSarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005576",
-   "Immature_Plant_Area": "yes",
-   "Seed_Production_Area": "n/a",
-   "Research_And_Developement_Area": "n/a",
-   "Pesticide_Storage_Area": "yes",
-   "Composting_Area": "yes",
-   "Cannabis_waste_Area": "n/a",
+   "Immature_Plant_Area": "Yes",
+   "Seed_Production_Area": "N/A",
+   "Research_And_Developement_Area": "N/A",
+   "Pesticide_Storage_Area": "Yes",
+   "Composting_Area": "Yes",
+   "Cannabis_waste_Area": "N/A",
    "Immature canopy square footage": 5000,
-   "Designated shared area(s)": "yes",
-   "Common Use Area(s)": "n/a"
+   "Designated shared area(s)": "Yes",
+   "Common Use Area(s)": "N/A"
  },
  {
    "License_Number": "CCL19-0005586",
@@ -3098,15 +3098,15 @@ var PREMNURSarray =[
  {
    "License_Number": "",
    "Application_Number": "LCA19-0005617",
-   "Immature_Plant_Area": "yes",
-   "Seed_Production_Area": "yes",
-   "Research_And_Developement_Area": "yes",
-   "Pesticide_Storage_Area": "yes",
-   "Composting_Area": "yes",
-   "Cannabis_waste_Area": "n/a",
+   "Immature_Plant_Area": "Yes",
+   "Seed_Production_Area": "Yes",
+   "Research_And_Developement_Area": "Yes",
+   "Pesticide_Storage_Area": "Yes",
+   "Composting_Area": "Yes",
+   "Cannabis_waste_Area": "N/A",
    "Immature canopy square footage": 12000,
-   "Designated shared area(s)": "yes",
-   "Common Use Area(s)": "n/a"
+   "Designated shared area(s)": "Yes",
+   "Common Use Area(s)": "N/A"
  },
  {
    "License_Number": "",
@@ -3241,28 +3241,28 @@ var PREMNURSarray =[
  {
    "License_Number": "CCL20-0000218",
    "Application_Number": "LCA20-0000218",
-   "Immature_Plant_Area": "yes",
-   "Seed_Production_Area": "n/a",
-   "Research_And_Developement_Area": "n/a",
-   "Pesticide_Storage_Area": "yes",
+   "Immature_Plant_Area": "Yes",
+   "Seed_Production_Area": "N/A",
+   "Research_And_Developement_Area": "N/A",
+   "Pesticide_Storage_Area": "Yes",
    "Composting_Area": "N/A",
-   "Cannabis_waste_Area": "yes",
+   "Cannabis_waste_Area": "Yes",
    "Immature canopy square footage": 2069,
-   "Designated shared area(s)": "yes",
-   "Common Use Area(s)": "n/a"
+   "Designated shared area(s)": "Yes",
+   "Common Use Area(s)": "N/A"
  },
  {
    "License_Number": "CCL20-0000254",
    "Application_Number": "LCA20-0000254",
-   "Immature_Plant_Area": "yes",
-   "Seed_Production_Area": "yes",
-   "Research_And_Developement_Area": "yes",
-   "Pesticide_Storage_Area": "yes",
+   "Immature_Plant_Area": "Yes",
+   "Seed_Production_Area": "Yes",
+   "Research_And_Developement_Area": "Yes",
+   "Pesticide_Storage_Area": "Yes",
    "Composting_Area": "N/A",
-   "Cannabis_waste_Area": "yes",
+   "Cannabis_waste_Area": "Yes",
    "Immature canopy square footage": 2768,
-   "Designated shared area(s)": "n/a",
-   "Common Use Area(s)": "n/a"
+   "Designated shared area(s)": "N/A",
+   "Common Use Area(s)": "N/A"
  },
  {
    "License_Number": "CCL20-0000273",
@@ -3322,8 +3322,8 @@ var PREMNURSarray =[
    "Immature_Plant_Area": "Yes",
    "Seed_Production_Area": "N/A",
    "Research_And_Developement_Area": "N/A",
-   "Pesticide_Storage_Area": "yes",
-   "Composting_Area": "yes",
+   "Pesticide_Storage_Area": "Yes",
+   "Composting_Area": "Yes",
    "Cannabis_waste_Area": "N/A",
    "Immature canopy square footage": 7560,
    "Designated shared area(s)": "N/A",
@@ -3436,15 +3436,15 @@ var PREMNURSarray =[
  {
    "License_Number": "CCL20-0000613",
    "Application_Number": "LCA20-0000613",
-   "Immature_Plant_Area": "yes",
-   "Seed_Production_Area": "n/a",
-   "Research_And_Developement_Area": "n/a",
-   "Pesticide_Storage_Area": "yes",
-   "Composting_Area": "yes",
-   "Cannabis_waste_Area": "n/a",
+   "Immature_Plant_Area": "Yes",
+   "Seed_Production_Area": "N/A",
+   "Research_And_Developement_Area": "N/A",
+   "Pesticide_Storage_Area": "Yes",
+   "Composting_Area": "Yes",
+   "Cannabis_waste_Area": "N/A",
    "Immature canopy square footage": 3660,
-   "Designated shared area(s)": "n/a",
-   "Common Use Area(s)": "n/a"
+   "Designated shared area(s)": "N/A",
+   "Common Use Area(s)": "N/A"
  },
  {
    "License_Number": "CCL20-0000644",
@@ -3517,8 +3517,8 @@ var PREMNURSarray =[
    "Immature_Plant_Area": "Yes",
    "Seed_Production_Area": "N/A",
    "Research_And_Developement_Area": "N/A",
-   "Pesticide_Storage_Area": "yes",
-   "Composting_Area": "yes",
+   "Pesticide_Storage_Area": "Yes",
+   "Composting_Area": "Yes",
    "Cannabis_waste_Area": "N/A",
    "Immature canopy square footage": 35280,
    "Designated shared area(s)": "N/A",
@@ -3528,27 +3528,27 @@ var PREMNURSarray =[
    "License_Number": "CCL20-0000886",
    "Application_Number": "LCA20-0000886",
    "Immature_Plant_Area": "Yes",
-   "Seed_Production_Area": "yes",
-   "Research_And_Developement_Area": "yes",
+   "Seed_Production_Area": "Yes",
+   "Research_And_Developement_Area": "Yes",
    "Pesticide_Storage_Area": "Yes",
    "Composting_Area": "Yes",
-   "Cannabis_waste_Area": "n/a",
+   "Cannabis_waste_Area": "N/A",
    "Immature canopy square footage": 18500,
-   "Designated shared area(s)": "n/a",
-   "Common Use Area(s)": "n/a"
+   "Designated shared area(s)": "N/A",
+   "Common Use Area(s)": "N/A"
  },
  {
    "License_Number": "",
    "Application_Number": "LCA20-0001004",
    "Immature_Plant_Area": "Yes",
-   "Seed_Production_Area": "no",
-   "Research_And_Developement_Area": "yes",
-   "Pesticide_Storage_Area": "yes",
-   "Composting_Area": "yes",
-   "Cannabis_waste_Area": "yes",
+   "Seed_Production_Area": "No",
+   "Research_And_Developement_Area": "Yes",
+   "Pesticide_Storage_Area": "Yes",
+   "Composting_Area": "Yes",
+   "Cannabis_waste_Area": "Yes",
    "Immature canopy square footage": 40000,
-   "Designated shared area(s)": "yes",
-   "Common Use Area(s)": "n/a"
+   "Designated shared area(s)": "Yes",
+   "Common Use Area(s)": "N/A"
  },
  {
    "License_Number": "",

@@ -911,7 +911,7 @@ var PREMPROCarray =[
    "Composting_Area": "N/A",
    "Cannabis_Waste_Area": "Yes",
    "Harvest_Storage_Area": "Yes",
-   "Designated shared area(s)": "yes",
+   "Designated shared area(s)": "Yes",
    "Common Use Area(s)": ""
  },
  {
@@ -1555,12 +1555,12 @@ var PREMPROCarray =[
  {
    "License_Number": "CCL20-0001073",
    "Application_Number": "LCA20-0001073",
-   "Processing_Area": "yes",
-   "Packaging_Area": "yes",
-   "Composting_Area": "n/a",
-   "Cannabis_Waste_Area": "yes",
-   "Harvest_Storage_Area": "yes",
-   "Designated shared area(s)": "n/a",
+   "Processing_Area": "Yes",
+   "Packaging_Area": "Yes",
+   "Composting_Area": "N/A",
+   "Cannabis_Waste_Area": "Yes",
+   "Harvest_Storage_Area": "Yes",
+   "Designated shared area(s)": "N/A",
    "Common Use Area(s)": ""
  },
  {
