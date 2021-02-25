@@ -51,6 +51,7 @@ try {
 	loadAppSpecific(PInfo);
 	capId = holdId;
 	editAppSpecific("License Issued Type", PInfo["License Issued Type"]);
+	editAppSpecific("Premise State",PInfo["Premise State"]);
 	editAppSpecific("Medium Validation",PInfo["Medium Validation"]);
 	editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
 	editAppSpecific("Administrative hold area", PInfo["Administrative hold area"]);
