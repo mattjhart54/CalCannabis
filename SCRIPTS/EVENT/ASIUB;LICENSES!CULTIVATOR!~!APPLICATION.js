@@ -23,7 +23,7 @@ try{
 }
 try{
 	statusArray = [];
-	if(matches(AInfo["LSA Review Status"],"Annual", "Provisional")) {
+/*	if(matches(AInfo["LSA Review Status"],"Annual", "Provisional")) {
 		var lsaCheck = true;
 		if(!matches(AInfo["APN Matches Premises-LSA"],"Yes","N/A","No")) {
 			lsaCheck = false;
@@ -46,6 +46,7 @@ try{
 			comment("The LSA Review Status cannot be marked Complete as at least one of the fields is insufficient.");
 		}
 	}
+*/
 	if (typeof(SOURCEOFWATERSUPPLY) == "object"){
 		if(SOURCEOFWATERSUPPLY.length > 0){
 			for(xx in SOURCEOFWATERSUPPLY){
