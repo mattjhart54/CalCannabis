@@ -148,7 +148,7 @@ try {
 		}
 		logDebug("Not copying the following Tables: " + ignoreTableArray);
 		copyASITables(capId,parentCapId,ignoreTableArray);
-		runReportAttach(parentCapId,"Scientific Review Checklist","altID",capId.getCustomID());		
+		runReportAttach(capId,"Scientific Review Checklist","altID",capId.getCustomID());		
 		//End Story 6622 
 		var rFiles = [];
 		if(updateCat) {
