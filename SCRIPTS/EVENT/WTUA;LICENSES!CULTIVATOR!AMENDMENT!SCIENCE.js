@@ -148,8 +148,17 @@ try {
 		}
 		logDebug("Not copying the following Tables: " + ignoreTableArray);
 		copyASITables(capId,parentCapId,ignoreTableArray);
-		runReportAttach(capId,"Scientific Review Checklist","altID",capId.getCustomID());		
-		//End Story 6622 
+//		runReportAttach(capId,"Scientific Review Checklist","altID",capId.getCustomID());
+		var saAltId = capId.getCustomID();
+		var licAltId = parentCapId.getCustomID();
+		var scriptName = "asyncRunScientificChecklist";
+		var envParameters = aa.util.newHashMap();
+		envParameters.put("saCap",saAltId);
+		envParameters.put("licCap",licAltId); 
+		envParameters.put("reportName","Scientific Review Checklist"); 
+		envParameters.put("currentUserID",currentUserID);
+		aa.runAsyncScript(scriptName, envParameters);
+//End Story 6622 
 		var rFiles = [];
 		if(updateCat) {
 			addToCat(parentCapId);
