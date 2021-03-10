@@ -61,7 +61,7 @@ try{
 		}
 
 		if (!matches(userID,null,undefined,"")){
-			assignTask("Licensing Case Assessment",userID);
+			assignTask("LAU Assessment",userID);
 		}
 	}
 	if (wfTask == "LAU Assessment" && wfStatus == "Refer to Legal") {
