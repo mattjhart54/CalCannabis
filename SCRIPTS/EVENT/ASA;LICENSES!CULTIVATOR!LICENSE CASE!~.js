@@ -48,6 +48,11 @@ try {
 	editAppSpecific("Type of License",PInfo["License Issued Type"]);
 	editAppSpecific("License Start Date",PInfo["Valid From Date"]);
 	editAppName(AInfo["Case Renewal Type"]);
+	
+// Add Condition
+	if(AInfo["Case Opened By"] == "Science - Provisional") {
+		addStdCondition("Notice","Provisional Science Licensing Action in Process",parentId);
+	}
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/License Case/*: " + err.message);
 	logDebug(err.stack);
