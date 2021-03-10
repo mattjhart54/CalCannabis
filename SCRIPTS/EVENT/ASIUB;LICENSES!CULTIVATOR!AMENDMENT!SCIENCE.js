@@ -27,6 +27,7 @@ try{
 	if (typeof(SOURCEOFWATERSUPPLY) == "object"){
 		if(SOURCEOFWATERSUPPLY.length > 0){
 			for(xx in SOURCEOFWATERSUPPLY){
+				
 				statusArray.push(SOURCEOFWATERSUPPLY[xx]["Type of Water Supply"]);
 			}
 		}
@@ -35,7 +36,7 @@ try{
 		if (WATERRIGHTS.length > 0){
 			wrLines = 0;
 			for(wr in WATERRIGHTS){
-				if (WATERRIGHTS[wr]["Currently used for Cannabis?"] != "No"){
+				if (WATERRIGHTS[wr]["Currently used for Cannabis?"] != "No" && WATERRIGHTS[wr]["Status"] != "Delete"){
 					wrLines++;
 				}
 			}	
