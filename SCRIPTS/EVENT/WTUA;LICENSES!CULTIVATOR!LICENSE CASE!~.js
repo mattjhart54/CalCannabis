@@ -39,6 +39,30 @@ try{
 	if (wfTask == "Licensing Case Assessment" && wfStatus == "Notice Non-Compliance Issued") {
 		updateAppStatus("Notice Non-Compliance Issued");
 	}
+	if (wfTask == "Licensing Case Assessment" && wfStatus == "Suspension Lift Requested") {
+		//Assign to user who set LAU Assessment task to LAU Exected - Suspension
+		var workflowResult = aa.workflow.getTasks(capId);
+		if (workflowResult.getSuccess()){
+			wfObj = workflowResult.getOutput();
+			for (var i in wfObj) {
+				fTask = wfObj[i];
+				logDebug(fTask.getTaskDescription() + " | " + fTask.getDisposition() + " | " + fTask.getActiveFlag());
+				if (fTask.getTaskDescription() == "LAU Assessment" && fTask.getDisposition() == "LAU Executed - Suspension"){
+						var actionByUser=fTask.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel
+						var actionByObj = aa.person.getUser(actionByUser.getFirstName(), actionByUser.getMiddleName(), actionByUser.getLastName()).getOutput();
+						if (actionByObj){
+							var userID = actionByObj.getUserID();
+						}
+				}
+			}
+		}else{
+			logDebug("**ERROR: Failed to get workflow object");			
+		}
+
+		if (!matches(userID,null,undefined,"")){
+			assignTask("Licensing Case Assessment",userID);
+		}
+	}
 	if (wfTask == "LAU Assessment" && wfStatus == "Refer to Legal") {
 		editAppSpecific("Case Renewal Type","Renewal Hold");
 		editAppName("Renewal Hold");
