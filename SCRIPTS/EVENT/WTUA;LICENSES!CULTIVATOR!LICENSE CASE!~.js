@@ -52,6 +52,7 @@ try{
 						var actionByObj = aa.person.getUser(actionByUser.getFirstName(), actionByUser.getMiddleName(), actionByUser.getLastName()).getOutput();
 						if (actionByObj){
 							var userID = actionByObj.getUserID();
+							break;
 						}
 				}
 			}
