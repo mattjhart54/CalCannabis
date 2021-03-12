@@ -2,21 +2,21 @@ function sendLocalAuthNotification() {
 	try{
 		var br = "<BR>";
 		editAppSpecific("Local Authority Notification Sent", jsDateToASIDate(new Date()));
-		if(wfStatus == "Local Auth Sent - 10") {
+		if(wfStatus == "10 day Auth") {
 			editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),10));
 		}
 		else {
 			editAppSpecific("Local Authority Notification Expires", dateAdd(jsDateToASIDate(new Date()),60,"Y"));
 		}
 		//lwacht: 180426: story 5436: reset the assigned task
-		var asgnDateAR = getAssignedDate("Administrative Review");
+		var asgnDateAR = getAssignedDate("Local Verification Review");
 		var asgnDateOR = getAssignedDate("Owner Application Reviews");
-		deactivateTask("Administrative Review");
+		deactivateTask("Local Verification Review");
 		deactivateTask("Owner Application Reviews");
 		if(asgnDateAR){
-			updateTaskAssignedDate("Administrative Review", asgnDateAR);
+			updateTaskAssignedDate("Local Verification Review", asgnDateAR);
 		}else{
-			logDebug("No assigned date found for Administrative Review");
+			logDebug("No assigned date found for Local Verification Review");
 		}
 		if(asgnDateOR){
 			updateTaskAssignedDate("Owner Application Reviews", asgnDateOR);
