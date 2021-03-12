@@ -42,13 +42,13 @@ function getMasterScriptText(vScriptName) {
 	return emseScript.getScriptText() + "";
 }
 try{
-//---------------------------------------
+/*---------------------------------------
 	aa.env.setValue("licCap", "CCL19-0000088");
 	aa.env.setValue("saCap", "CCL19-0000088-SA001");
 	aa.env.setValue("currentUserID", "ADMIN");
 	aa.env.setValue("reportName", "Scientific Review Checklist");
 	aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov");
-//
+*/
 	var reportName = "" + aa.env.getValue("reportName");
 	var saCap = "" + aa.env.getValue("saCap");
 	var licCap = "" + aa.env.getValue("licCap");
