@@ -10,18 +10,10 @@ function sendLocalAuthNotification() {
 		}
 		//lwacht: 180426: story 5436: reset the assigned task
 		var asgnDateAR = getAssignedDate("Local Verification Review");
-		var asgnDateOR = getAssignedDate("Owner Application Reviews");
-		deactivateTask("Local Verification Review");
-		deactivateTask("Owner Application Reviews");
 		if(asgnDateAR){
 			updateTaskAssignedDate("Local Verification Review", asgnDateAR);
 		}else{
 			logDebug("No assigned date found for Local Verification Review");
-		}
-		if(asgnDateOR){
-			updateTaskAssignedDate("Owner Application Reviews", asgnDateOR);
-		}else{
-			logDebug("No assigned date found for Owner Application Reviews");
 		}
 		//lwacht: 180426: story 5436: end
 		if(AInfo["Local Authority Type"] == "County")
