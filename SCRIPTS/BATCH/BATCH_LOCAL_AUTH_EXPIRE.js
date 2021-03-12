@@ -73,7 +73,7 @@ aa.env.setValue( "daySpan" , "0");
 aa.env.setValue( "emailAddress" , "lwacht@trustvip.com");
 aa.env.setValue( "asiField" , "Local Authority Notification Expires");
 aa.env.setValue( "asiGroup" , "INTERNAL");
-aa.env.setValue( "newAppStatus" , "Under Local Verification Review");
+aa.env.setValue( "newAppStatus" , "Under Administrative Review");
 aa.env.setValue( "sysFromEmail" , "calcannabislicensing@cdfa.ca.gov");
 aa.env.setValue( "setNonEmailPrefix" , "AppSubmitted");
 aa.env.setValue( "emailTemplate" , "LCA_APPLICATION_SUBMITTED");
@@ -185,17 +185,18 @@ try{
 		logDebug("----Processing record " + altId + br);
 		
 		//lwacht: 180426: story 5436: reset the assigned task
-		var asgnDateAR = getAssignedDate("Local Verification Review");
+		var asgnDateAR = getAssignedDate("Administrative Review");
 		var asgnDateOR = getAssignedDate("Owner Application Reviews");
-		activateTask("Local Verification Review");
+		deactivateTask("Local Verification Review");
+		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
 		editAppSpecific("Local Authority Response", "No Response");
-		updateTask("Local Verification Review","Under Review","No notification recieved from Local Authority","");
-		updateAppStatus("Under Local Verification Review", "No notification recieved from Local Authority");
+		updateTask("Administrative Review","Under Review","No notification recieved from Local Authority","");
+		updateAppStatus("Under Administrative Review", "No notification recieved from Local Authority");
 		if(asgnDateAR){
-			updateTaskAssignedDate("Local Verification Review", asgnDateAR);
+			updateTaskAssignedDate("Administrative Review", asgnDateAR);
 		}else{
-			logDebug("No assigned date found for Local Verification Review");
+			logDebug("No assigned date found for Administrative Review");
 		}
 		if(asgnDateOR){
 			updateTaskAssignedDate("Owner Application Reviews", asgnDateOR);
