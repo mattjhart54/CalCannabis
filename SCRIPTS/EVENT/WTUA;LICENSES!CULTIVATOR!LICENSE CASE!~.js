@@ -64,6 +64,31 @@ try{
 			assignTask("LAU Assessment",userID);
 		}
 	}
+	if (wfTask == "LAU Assessment" && wfStatus == "LAU Executed - Suspension") { 
+		//Assign to user who set LAU Assessment task to LAU Exected - Suspension
+		var workflowResult = aa.workflow.getTasks(capId);
+		if (workflowResult.getSuccess()){
+			wfObj = workflowResult.getOutput();
+			for (var i in wfObj) {
+				fTask = wfObj[i];
+				logDebug(fTask.getTaskDescription() + " | " + fTask.getDisposition() + " | " + fTask.getActiveFlag());
+				if (fTask.getTaskDescription() == "Licensing Case Assessment" && matches(fTask.getDisposition(),"Suspension Lift Requested","Refer to LAU")){
+						var actionByUser=fTask.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel
+						var actionByObj = aa.person.getUser(actionByUser.getFirstName(), actionByUser.getMiddleName(), actionByUser.getLastName()).getOutput();
+						if (actionByObj){
+							var userID = actionByObj.getUserID();
+							break;
+						}
+				}
+			}
+		}else{
+			logDebug("**ERROR: Failed to get workflow object");			
+		}
+
+		if (!matches(userID,null,undefined,"")){
+			assignTask("Licensing Case Assessment",userID);
+		}
+	}
 	if (wfTask == "LAU Assessment" && wfStatus == "Refer to Legal") {
 		editAppSpecific("Case Renewal Type","Renewal Hold");
 		editAppName("Renewal Hold");
