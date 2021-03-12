@@ -275,7 +275,7 @@ try{
 }
 //mhart - check for local auth email
 try {
-	if(matches(wfStatus,"Local Auth Sent - 10","Local Auth Sent - 60") && AInfo["Manually Send Local Authority Notification"] != "CHECKED"){
+	if(matches(wfStatus,"10 day Auth","60 day Auth") && AInfo["Manually Send Local Authority Notification"] != "CHECKED"){
 		if(AInfo["Local Authority Type"] == "County")
 			var locAuth = AInfo["Local Authority County"];
 		if(AInfo["Local Authority Type"] == "City")

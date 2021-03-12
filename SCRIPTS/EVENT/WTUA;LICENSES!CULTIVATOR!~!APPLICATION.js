@@ -229,7 +229,7 @@ logDebug("got Here 2");
 
 //mhart: send local auth notice
 try{
-	if(matches(wfStatus,"Local Auth Sent - 10","Local Auth Sent - 60")){
+	if(matches(wfStatus,"10 day Auth","60 day Auth")){
 		sendLocalAuthNotification();
 	}
 }catch(err){
