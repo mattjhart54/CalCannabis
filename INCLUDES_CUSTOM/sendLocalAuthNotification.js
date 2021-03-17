@@ -54,7 +54,7 @@ function sendLocalAuthNotification() {
 			}
 	// MHART 08/07/18 Story 5617 and 5618:  End
 		
-			if(wfStatus == "Local Auth Sent - 10") {
+			if(wfStatus == "10 day Auth") {
 				addParameter(eParams, "$$days$$", "10 calendar");
 				updateAppStatus("Pending Local Authorization 10");
 			}
