@@ -14,7 +14,7 @@ try {
 			editAppSpecific("County",AInfo["County"],lcId);
 			editAppSpecific("City",AInfo["City"],lcId);
 			editAppSpecific("Referred By Other Description",AInfo["Referred By Other Description"],lcId);
-			updateLicCase(LICENSENUMBERS[1]["License Number"], lcId);
+			updateLicCase(LICENSENUMBERS[i]["License Number"], lcId);
 		}
 	}
 }catch(err){
