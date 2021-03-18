@@ -1,7 +1,7 @@
 try {
-
+	loadASITablesBefore();
 	for(i in LICENSENUMBERS) {
-		loadASITablesBefore();
+	
 		var licNum = LICENSENUMBERS[i]["License Number"]
 		var licId = aa.cap.getCapID(licNum);
 		if (!licId.getSuccess()){
