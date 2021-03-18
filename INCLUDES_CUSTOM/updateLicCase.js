@@ -48,8 +48,11 @@ function updateLicCase(licNbr, capId) {
 	
 // Add Condition
 	if(AInfo["Case Opened By"] == "Science - Provisional") {
+		holdId = capId;
+		capId = parentId;
 		if(!appHasCondition("Notice","Applied","Provisional Science Licensing Action in Process","Notice")) {
-			addStdCondition("Notice","Provisional Science Licensing Action in Process",parentId);
+			addStdCondition("Notice","Provisional Science Licensing Action in Process");
 		}
+		capId = holdId;
 	}
 }	
