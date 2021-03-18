@@ -35,19 +35,16 @@ function updateLicCase(licNbr, capId) {
 	copyContactsByType_rev(parentId,capId,"Designated Responsible Party");
 	
 // Copy custom fields from the license record to the Case record
-	holdId = capId;
-	capId = parentId;
 	PInfo = new Array;
-	loadAppSpecific(PInfo);
-	capId = holdId;
-	editAppSpecific("License Type",PInfo["License Type"]);
-	editAppSpecific("Legal Business Name",PInfo["Legal Business Name"]);
-	editAppSpecific("Premises City",PInfo["Premise City"]);
+	loadAppSpecific(PInfo,parentId);
+	editAppSpecific("License Type",PInfo["License Type"],capId);
+	editAppSpecific("Legal Business Name",PInfo["Legal Business Name"],capId);
+	editAppSpecific("Premises City",PInfo["Premise City"],capId);
 	editAppSpecific("Premises County",PInfo["Premise County"]);
-	editAppSpecific("Local Authority Type",PInfo["Local Authority Type"]);
-	editAppSpecific("Type of License",PInfo["License Issued Type"]);
-	editAppSpecific("License Start Date",PInfo["Valid From Date"]);
-	editAppName(AInfo["Case Renewal Type"]);
+	editAppSpecific("Local Authority Type",PInfo["Local Authority Type"],capId);
+	editAppSpecific("Type of License",PInfo["License Issued Type"],capId);
+	editAppSpecific("License Start Date",PInfo["Valid From Date"],capId);
+	editAppName(AInfo["Case Renewal Type"],capId);
 	
 // Add Condition
 	if(AInfo["Case Opened By"] == "Science - Provisional") {
