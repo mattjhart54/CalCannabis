@@ -1,10 +1,10 @@
 function updateLicCase(licNbr, capId) {
 // Link Case record to License record as a child
 	var parentAltId = licNbr
-	addParent(parentAltId);
-	
-// Set alt id for the case record based on the number of child case records linked to the license record
 	parentId = aa.cap.getCapID(parentAltId).getOutput();
+	aa.cap.createAppHierarchy(parentId,capId);
+	
+// Set alt id for the case record based on the number of child case records linked to the license record	
 	cIds = getChildren("Licenses/Cultivator/License Case/*",parentId);
 	if(matches(cIds, null, "", undefined)) 
 		amendNbr = amendNbr = "000" + 1;
