@@ -15,6 +15,7 @@ try {
 			editAppSpecific("City",AInfo["City"],lcId);
 			editAppSpecific("Referred By Other Description",AInfo["Referred By Other Description"],lcId);
 			updateLicCase(LICENSENUMBERS[i]["License Number"], lcId);
+			updateAppStatus("Complete","Updated by Script",lcId);
 		}
 	}
 }catch(err){
