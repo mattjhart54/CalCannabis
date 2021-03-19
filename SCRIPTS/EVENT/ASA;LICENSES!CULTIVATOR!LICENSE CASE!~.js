@@ -15,8 +15,8 @@ try {
 			editAppSpecific("City",AInfo["City"],lcId);
 			editAppSpecific("Referred By Other Description",AInfo["Referred By Other Description"],lcId);
 			updateLicCase(LICENSENUMBERS[i]["License Number"], lcId);
-			updateAppStatus("Complete","Updated by Script",lcId);
 		}
+		updateAppStatus("Complete","Updated by Script");
 	}
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/License Case/*: " + err.message);
