@@ -61,7 +61,7 @@ if (batchJobResult.getSuccess())
 else
   logDebug("Batch job ID not found " + batchJobResult.getErrorMessage());
 
-var emailAddress = "mhart@trustvip.com";
+var emailAddress = "jshear@trustvip.com";
 var sysFromEmail = "calcannabislicensing@cdfa.ca.gov";
 var useAppSpecificGroupName = false;
 var startDate = new Date();
@@ -139,11 +139,11 @@ try{
 					wfObj = workflowResult.getOutput();
 					for (var i in wfObj) {
 						fTask = wfObj[i];
-						if (fTask.getActiveFlag() == "Yes"){
+						if (String(fTask.getActiveFlag()) == 'Y'){
 								logDebug("Current Task: " + fTask.getTaskDescription() + " Current Status: " + fTask.getDisposition());
 								var actionByUser=fTask.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel
-								var wfTask = fTask.getTaskDescription();
-								var wfStatus = fTask.getDisposition();
+								var wfTask = String(fTask.getTaskDescription());
+								var wfStatus = String(fTask.getDisposition()_;
 								var actionByObj = aa.person.getUser(actionByUser.getFirstName(), actionByUser.getMiddleName(), actionByUser.getLastName()).getOutput();
 								if (actionByObj){
 									var userID = actionByObj.getUserID();
@@ -153,11 +153,10 @@ try{
 						}
 					}
 				}
-				
 				if (!matches(userID,null,undefined,"")){
 					assignTask("Licensing Case Assessment",userID);
 				}
-				var wfDeleteAndAssign = aa.workflow.deleteAndAssignWorkflow(capId,"LIC_CC_LC", true);
+				var wfDeleteAndAssign = aa.workflow.deleteAndAssignWorkflow(capId,"LIC_CC_LC", false);
 				
 				if(wfDeleteAndAssign.getSuccess()){
 					logDebug("Succesfully Deleted and Assigned workflow");
