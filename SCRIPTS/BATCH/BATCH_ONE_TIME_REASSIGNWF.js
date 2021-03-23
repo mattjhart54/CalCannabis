@@ -143,7 +143,7 @@ try{
 								logDebug("Current Task: " + fTask.getTaskDescription() + " Current Status: " + fTask.getDisposition());
 								var actionByUser=fTask.getTaskItem().getSysUser(); // Get action by user, this is a SysUserModel
 								var wfTask = String(fTask.getTaskDescription());
-								var wfStatus = String(fTask.getDisposition()_;
+								var wfStatus = String(fTask.getDisposition());
 								var actionByObj = aa.person.getUser(actionByUser.getFirstName(), actionByUser.getMiddleName(), actionByUser.getLastName()).getOutput();
 								if (actionByObj){
 									var userID = actionByObj.getUserID();
