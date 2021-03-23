@@ -5,6 +5,7 @@ try {
 	else {
 		for(i in LICENSENUMBERS) {
 			lcId = createCap("Licenses/Cultivator/License Case/NA",AInfo["Case Renewal Type"])
+			editAppSpecific("License number",LICENSENUMBERS[i]["License Number"],lcId);
 			editAppSpecific("Case Renewal Type",AInfo["Case Renewal Type"],lcId);
 			editAppSpecific("Priority",AInfo["Priority"],lcId);
 			editAppSpecific("Case Opened By",AInfo["Case Opened By"],lcId);
