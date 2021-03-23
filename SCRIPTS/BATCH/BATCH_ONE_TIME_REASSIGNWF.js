@@ -169,8 +169,11 @@ try{
 				
 				if (wfTask == "LAU Assessment"){
 					deactivateTask("Licensing Case Assessment");
+					activateTask("LAU Assessment");
 				}
-				updateTask(wfTask,wfStatus,"","");
+				if (!matches(undefined,null,"","NA")){
+					updateTask(wfTask,wfStatus,"","");
+				}
 			}
 		}
 	}
