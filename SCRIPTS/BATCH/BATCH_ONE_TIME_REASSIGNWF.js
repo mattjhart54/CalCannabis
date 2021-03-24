@@ -130,7 +130,7 @@ try{
 		capId = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
 		var capValue = aa.cap.getCap(capId).getOutput();	
 		var capStatus = capValue.getCapStatus();
-		if (matches(capStatus, "Additional Info Required","In Progress")){
+		if (capStatus == "In Progress"){
 			if(getAppSpecific("Case Opened By",capId) == "Science - Provisional") {
 				qualRec++;
 				logDebug("Logging: " + capId.getCustomID());
