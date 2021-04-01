@@ -39,22 +39,21 @@ logDebug("Records " + apsArray.length);
 			loadAppSpecific(RInfo);	
 			recTypeResult = recCap.getCapType();	
 			recTypeString = recTypeResult.toString();
-//			logDebug("source: " + srcTypeString + " target: " + recTypeString)
+// Only select record where the record type matches the source record type
 			if(srcTypeString != recTypeString)
 				continue;
 logDebug("Processing Record " + capId.getCustomID() + " capId " + capId);			
 			tgtRow = new Array();
-			tgtRow["Record Status"] = recCap.getCapStatus();
-
+			tgtRow["Record ID"] = capId.getCustomID();
 			var drpContact = getContactByType("Designated Responsible Party",capId);
 			if(drpContact){
 				tgtRow["DRP"] = drpContact.getFirstName() + " " + drpContact.getLastName();
 			}
-			tgtRow["Record ID"] = capId.getCustomID();
 			tgtRow["Legal Business Name"] = RInfo["Legal Business Name"];
 			tgtRow["APN"] = RInfo["APN"];
 			tgtRow["County"] = RInfo["Premise County"];
 			tgtRow["City"] = RInfo["Premise City"];
+			tgtRow["Record Status"] = recCap.getCapStatus();
 			tgtRow["License Type"] = RInfo["License Type"];
 			tgtRow["License Issued Type"] = RInfo["License Issued Type"];
 			tgtTable.push(tgtRow);
