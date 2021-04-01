@@ -1,11 +1,15 @@
 try {
-		if(matches(appTypeArray[3],"License","Application","Science Amendment")) {
-		srcRec = AInfo["Record Number"];
+	if(matches(appTypeArray[3],"License","Application","Science Amendment")) {
+// Science Amendment records do not have the Legal Business Name as a custom field so use the License record to select records
+		if(appTypeArray[3] == "Science Amendment") {
+			srcRec = AInfo["Record Number"];
+			srcRec = srcRec.substring(0,13);
+		}else{
+			srcRec = AInfo["Record Number"];
+		}
+logDebug("srcRec " + srcRec);srcRec = AInfo["Record Number"];
 		srcRecId = aa.cap.getCapID(srcRec).getOutput();
 		LBN = getAppSpecific("Legal Business Name",srcRecId);
-		srcCap = aa.cap.getCap(srcRecId).getOutput();	
-		srcTypeResult = srcCap.getCapType();	
-		srcTypeString = srcTypeResult.toString();
 		
 		var getCapResult = aa.cap.getCapIDsByAppSpecificInfoField("Legal Business Name",LBN);
 		
@@ -14,6 +18,14 @@ try {
 		else
 			logDebug( "**ERROR: getting caps by app type: " + getCapResult.getErrorMessage());
 logDebug("Records " + apsArray.length);
+// Set the record back to the Science Amendment copy record number		
+		if(appTypeArray[3] == "Science Amendment") {
+			srcRec = AInfo["Record Number"];
+			srcRecId = aa.cap.getCapID(srcRec).getOutput();
+		}
+		srcCap = aa.cap.getCap(srcRecId).getOutput();	
+		srcTypeResult = srcCap.getCapType();	
+		srcTypeString = srcTypeResult.toString();
 		holdId = capId;
 		tgtTable = new Array();
 		for(i in apsArray) {
