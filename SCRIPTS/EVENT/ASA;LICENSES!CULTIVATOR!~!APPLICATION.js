@@ -1,7 +1,7 @@
 try{
 //mhart 181128 story 5784 - update script to remove code to create associated owner records.  Reomove old code no longer used
 
-	if(appTypeArray[2]!="Temporary"){
+	if(!matches(appTypeArray[2],"Copy","Temporary")){
 		if(publicUser){
 	//mhart: add the Business reference contact
 			createRefContactsFromCapContactsAndLink(capId,["Business"], null, false, false, comparePeopleGeneric);
