@@ -1,6 +1,14 @@
 try {
-	if(matches(appTypeArray[3],"License","Application","Science Amendment")) {
-		var getCapResult = aa.cap.getCapIDsByAppSpecificInfoField("Legal Business Name",AInfo["Legal Business Name"]);
+		if(matches(appTypeArray[3],"License","Application","Science Amendment")) {
+		srcRec = AInfo["Record Number"];
+		srcRecId = aa.cap.getCapID(srcRec).getOutput();
+		LBN = getAppSpecific("Legal Business Name",srcRecId);
+		srcCap = aa.cap.getCap(srcRecId).getOutput();	
+		srcTypeResult = srcCap.getCapType();	
+		srcTypeString = srcTypeResult.toString();
+		
+		var getCapResult = aa.cap.getCapIDsByAppSpecificInfoField("Legal Business Name",LBN);
+		
 		if (getCapResult.getSuccess())
 			var apsArray = getCapResult.getOutput();
 		else
@@ -19,7 +27,8 @@ logDebug("Records " + apsArray.length);
 			loadAppSpecific(RInfo);	
 			recTypeResult = recCap.getCapType();	
 			recTypeString = recTypeResult.toString();
-			if(appTypeString != recTypeString)
+//			logDebug("source: " + srcTypeString + " target: " + recTypeString)
+			if(srcTypeString != recTypeString)
 				continue;
 logDebug("Processing Record " + capId.getCustomID() + " capId " + capId);			
 			tgtRow = new Array();
@@ -47,7 +56,7 @@ logDebug("Processing Record " + capId.getCustomID() + " capId " + capId);
 			srcRecId = aa.cap.getCapID(srcRec).getOutput();
 			copyASITables(srcRecId,capId,"APN SPATIOL INFORMATION","PREMISES ADDRESSES","LAKE AND STREAMBED ALTERATION","WATER RIGHTS","RETAIL WATER SUPPLIER","GROUNDWATER WELL","RAINWATER CATCHMENT","SMALL RETAIL WATER SUPPLIERS","SOURCE OF WATER SUPPLY");
 		}
-	}	
+	}		
 } catch (err) {
 	logDebug("An error has occurred in ASA:Licenses/Cultivator/Copy/* Main function: " + err.message);
 }
