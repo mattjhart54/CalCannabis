@@ -15,6 +15,7 @@ try{
 }
 //lwacht: 180416: story 5175: create a reference contact for the temp drp and bsns contact for application submitted in back office
 try{
+	if(!matches(appTypeArray[2],"Copy","Temporary")){
 	if(!publicUser){
 //lwacht: create reference contact and public user account for the DRP		
 		var capContactResult = aa.people.getCapContactByCapID(capId);
@@ -211,6 +212,7 @@ try{
 			}
 		}
 	}
+	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASA: Licenses/Cultivation/*/Application: Create DRP/Bsns/ASOP: " + err.message);
 	logDebug(err.stack);
@@ -220,15 +222,17 @@ try{
 
 //update work description with Legal Business Name, set application name to License Type, update short notes with premise county and update legal business name
 try {
-	updateLegalBusinessName();
-	editAppName(AInfo["License Type"]);
-	updateShortNotes(AInfo["Premise County"]);
-	if(appTypeArray[2]!="Temporary"){
-		var priContact = getContactObj(capId,"Business");
-		if(priContact){
-			editAppSpecific("Legal Business Name", priContact.capContact.middleName);
-		}else{
-			editAppSpecific("Legal Business Name", "No Legal Business Name provided");
+	if(!matches(appTypeArray[2],"Copy")){
+		updateLegalBusinessName();
+		editAppName(AInfo["License Type"]);
+		updateShortNotes(AInfo["Premise County"]);
+		if(appTypeArray[2]!="Temporary"){
+			var priContact = getContactObj(capId,"Business");
+			if(priContact){
+				editAppSpecific("Legal Business Name", priContact.capContact.middleName);
+			}else{
+				editAppSpecific("Legal Business Name", "No Legal Business Name provided");
+			}
 		}
 	}
 }catch (err){
@@ -239,7 +243,7 @@ try {
 
 //mhart: 181126: For application submitted from the back office access fee, set workflow and run completed application report.
 try{
-	if(appTypeArray[2]!="Temporary"){
+	if(!matches(appTypeArray[2],"Copy","Temporary")){
 		if(!publicUser){
 // MJH story 5785 Move fee assessment from Application record submittal to Declaration record submittal
 /*
@@ -268,7 +272,7 @@ try{
 //mhart 180321: story 5376: add live scan required condition
 try{
 	if(!publicUser){
-		if(appTypeArray[2]!="Temporary"){
+		if(!matches(appTypeArray[2],"Copy","Temporary")){
 			lScan = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
 			if (lScan == true) {
 				addStdCondition("Application Condition","LiveScan Required");
@@ -285,44 +289,45 @@ try{
 		editAppSpecific("Created Date", fileDate);
 // ees 20190211 story 5861 end
 try{
+	if(!matches(appTypeArray[2],"Copy")){
 		var wrTbl = new Array();
-	wrRow = false;
-	var rsTbl = new Array();
-	rsRow = false
-	for(r in SOURCEOFWATERSUPPLY) {
-		if(SOURCEOFWATERSUPPLY[r]["Type of Water Supply"] == "Diversion from Waterbody") {
-			thisTbl = [];
-			thisTbl["Water Right Number"] = SOURCEOFWATERSUPPLY[r]["Diversion Number"];
-			thisTbl["Copy of Documents?"] = "";
-			thisTbl["APN Matches Premises"] = "";
-			thisTbl["Diversion Type"] = "";
-			thisTbl["Other Diversion"] = "";
-			thisTbl["Diversion Latitude"] = "";
-			thisTbl["Diversion Longitude"] = "";
-			thisTbl["Currently Used for Cannabis?"] = "";
-			wrTbl.push(thisTbl);
-			wrRow = true;
+		wrRow = false;
+		var rsTbl = new Array();
+		rsRow = false
+		for(r in SOURCEOFWATERSUPPLY) {
+			if(SOURCEOFWATERSUPPLY[r]["Type of Water Supply"] == "Diversion from Waterbody") {
+				thisTbl = [];
+				thisTbl["Water Right Number"] = SOURCEOFWATERSUPPLY[r]["Diversion Number"];
+				thisTbl["Copy of Documents?"] = "";
+				thisTbl["APN Matches Premises"] = "";
+				thisTbl["Diversion Type"] = "";
+				thisTbl["Other Diversion"] = "";
+				thisTbl["Diversion Latitude"] = "";
+				thisTbl["Diversion Longitude"] = "";
+				thisTbl["Currently Used for Cannabis?"] = "";
+				wrTbl.push(thisTbl);
+				wrRow = true;
+			}
+			if(SOURCEOFWATERSUPPLY[r]["Type of Water Supply"] == "Retail Supplier") {
+				thisTbl = [];
+				thisTbl["Retail Water Supplier"] = SOURCEOFWATERSUPPLY[r]["Name of Supplier"];
+				thisTbl["	Name of Retail Water Supplier	"] = "";
+				thisTbl["A copy of the most recent water service bill"] = "";
+				thisTbl["Water Bill Address Matches Premises"] = "";
+				thisTbl["Currently Used for Cannabis"] = "";
+				wrTbl.push(thisTbl);
+				rsRow = true;
+				}
+			}
+		if(wrRow) {
+			removeASITable("WATER RIGHTS");
+			addASITable("WATER RIGHTS",wrTbl);
 		}
-		if(SOURCEOFWATERSUPPLY[r]["Type of Water Supply"] == "Retail Supplier") {
-			thisTbl = [];
-			thisTbl["Retail Water Supplier"] = SOURCEOFWATERSUPPLY[r]["Name of Supplier"];
-			thisTbl["	Name of Retail Water Supplier	"] = "";
-			thisTbl["A copy of the most recent water service bill"] = "";
-			thisTbl["Water Bill Address Matches Premises"] = "";
-			thisTbl["Currently Used for Cannabis"] = "";
-			wrTbl.push(thisTbl);
-			rsRow = true;
+		if(rsRow) {
+			removeASITable("RETAIL WATER SUPPLIER");
+			addASITable("RETAIL WATER SUPPLIER",wrTbl);
 		}
-	}
-	if(wrRow) {
-		removeASITable("WATER RIGHTS");
-		addASITable("WATER RIGHTS",wrTbl);
-	}
-	if(rsRow) {
-		removeASITable("RETAIL WATER SUPPLIER");
-		addASITable("RETAIL WATER SUPPLIER",wrTbl);
-	}
-			
+	}	
 }catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/*/APPLICATION: Add WaterRight table row: " + err.message);
 	logDebug(err.stack);
