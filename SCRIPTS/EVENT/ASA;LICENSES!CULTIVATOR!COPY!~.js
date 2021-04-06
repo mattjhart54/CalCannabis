@@ -29,7 +29,7 @@ logDebug("Records " + apsArray.length);
 		holdId = capId;
 		tgtTable = new Array();
 		for(i in apsArray) {
-			capId = apsArray[i].getCapID();
+			capId = aa.cap.getCapID(apsArray[i].getCapID().getID1(),apsArray[i].getCapID().getID2(),apsArray[i].getCapID().getID3()).getOutput();
 			if (!capId) {
 				logDebug("Could not get Cap ID");
 				continue;
