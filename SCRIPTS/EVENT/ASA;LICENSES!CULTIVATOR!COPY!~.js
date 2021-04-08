@@ -1,4 +1,8 @@
 try {
+	//Copy App Specific
+	srcCapId = getApplication(AInfo["Record Number"]);
+	copyAppSpecificInfo(srcCapId, capId);
+	
 	if(matches(appTypeArray[3],"License","Application","Science Amendment")) {
 // Science Amendment records do not have the Legal Business Name as a custom field so use the License record to select records
 		if(appTypeArray[3] == "Science Amendment") {
