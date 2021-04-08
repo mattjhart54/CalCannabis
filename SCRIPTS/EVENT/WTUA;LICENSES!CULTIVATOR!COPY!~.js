@@ -1,5 +1,6 @@
 	if(wfStatus == "Approve Copy"){
 		var sourceRec = getAppSpecific("Record Number",capId);
+		var processedArray = [];
 		if (typeof(TARGETRECORDS) == "object") {
 			for (var x in TARGETRECORDS) {
 				var theRow = TARGETRECORDS[x];
@@ -32,12 +33,23 @@
 									var sourceValue = getAppSpecific(editField,sourceCapId);
 									logDebug("Editing: " + editField + ": " + sourceValue + " To: " + sourceCapId.getCustomID());
 									editAppSpecific(editField,sourceValue,targetCapId);
+									if (processedArray.indexOf(String(targetCapId.getCustomID())) < 0){
+										processedArray.push(String(targetCapId.getCustomID()));
+									}
 								}
 							}
 						}
 					}
 				}
 			}
+		}
+		if (processedArray.length > 0){
+			for (xx in processedArray){
+				var thisRow = processedArray[xx];
+				thisCap = getApplication(thisRow);
+				createCapComment(sourceRec + " was copied on " + wfDate + " at " + endTime + " by " + wfActionByUserID + " to target records " + processedArray +". Reference " + capId.getCustomID() + ".",thisCap);
+			}
 		}			
-	}								
+	}
+
 									
