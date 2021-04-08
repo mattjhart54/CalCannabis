@@ -44,6 +44,8 @@
 			}
 		}
 		if (processedArray.length > 0){
+			processedArray.push(String(capId.getCustomID()));
+			logDebug("Test: " + wfDate + " " + endTime + " "  + wfActionByUserID);
 			for (xx in processedArray){
 				var thisRow = processedArray[xx];
 				thisCap = getApplication(thisRow);
