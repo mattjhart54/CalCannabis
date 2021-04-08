@@ -1,7 +1,23 @@
 try {
 	//Copy App Specific
-	srcCapId = getApplication(AInfo["Record Number"]);
-	copyAppSpecificInfo(srcCapId, capId);
+	var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
+	if (recordASIGroup.getSuccess()){
+		var recordASIGroupArray = recordASIGroup.getOutput();
+		for (i in recordASIGroupArray) {
+			var group = recordASIGroupArray[i];
+			var groupName = String(group.getGroupCode());
+			var recordField = String(group.getCheckboxDesc());
+			var subGroup = String(group.getCheckboxType());
+			var fieldValue = String(group.getChecklistComment());
+
+			if (recordField.substring(0, 5) == "Copy_"){
+				sourceCapId = getApplication(sourceRec);
+				var editField = recordField.substring(5);
+				var sourceValue = getAppSpecific(editField,sourceCapId);
+				editAppSpecific(editField,sourceValue,capId);
+			}
+		}
+	}
 	
 	if(matches(appTypeArray[3],"License","Application","Science Amendment")) {
 // Science Amendment records do not have the Legal Business Name as a custom field so use the License record to select records
