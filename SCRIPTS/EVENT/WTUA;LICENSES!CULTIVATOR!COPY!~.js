@@ -45,14 +45,23 @@
 		}
 		if (processedArray.length > 0){
 			processedArray.push(String(capId.getCustomID()));
-			var d = new Date();
-			var hr = d.getHours();
-			var min = d.getMinutes();
+			var comDate = aa.date.getCurrentDate();
+			var hr = comDate.getHours();
+			var min = comDate.getMinutes();
 			var timeStamp = hr+":"+min;
+			createCapComment(sourceRec + " was copied on " + wfDate + " at " + timeStamp + " by " + wfActionByUserID + " to target records " + processedArray +". Reference " + capId.getCustomID() + ".",capId);
+			var commentArray =[];
+			var capCommentScriptModel = aa.cap.createCapCommentScriptModel();
+			capCommentScriptModel.setCapIDModel(capId);
+			var capCommentModel = capCommentScriptModel.getCapCommentModel();
+			var cQuery = aa.cap.getCapComment(capCommentModel);
+			cResult = cQuery.getOutput();
 			for (xx in processedArray){
 				var thisRow = processedArray[xx];
 				thisCap = getApplication(thisRow);
-				createCapComment(sourceRec + " was copied on " + wfDate + " at " + timeStamp + " by " + wfActionByUserID + " to target records " + processedArray +". Reference " + capId.getCustomID() + ".",thisCap);
+				for (ii in cResult){
+					createCapComment(cResult[ii].getText(),thisCap);
+				}
 			}
 		}			
 	}
