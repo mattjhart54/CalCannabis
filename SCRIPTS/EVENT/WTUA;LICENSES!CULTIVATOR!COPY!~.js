@@ -43,8 +43,8 @@
 				}
 			}
 		}
+		//Apply Comments to all Records
 		if (processedArray.length > 0){
-			processedArray.push(String(capId.getCustomID()));
 			var comDate = aa.date.getCurrentDate();
 			var hr = comDate.getHours();
 			var min = comDate.getMinutes();
