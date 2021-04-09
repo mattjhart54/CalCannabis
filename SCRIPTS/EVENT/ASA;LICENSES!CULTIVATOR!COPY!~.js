@@ -1,5 +1,6 @@
 try {
 	//Copy App Specific
+	var sourceRec = getAppSpecific("Record Number",capId);
 	var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
 	if (recordASIGroup.getSuccess()){
 		var recordASIGroupArray = recordASIGroup.getOutput();
