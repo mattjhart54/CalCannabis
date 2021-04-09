@@ -45,11 +45,14 @@
 		}
 		if (processedArray.length > 0){
 			processedArray.push(String(capId.getCustomID()));
-			logDebug("Test: " + wfDate + " " + endTime + " "  + wfActionByUserID);
+			var d = new Date();
+			var hr = d.getHours();
+			var min = d.getMinutes();
+			var timeStamp = hr+":"+min;
 			for (xx in processedArray){
 				var thisRow = processedArray[xx];
 				thisCap = getApplication(thisRow);
-				createCapComment(sourceRec + " was copied on " + wfDate + " at " + endTime + " by " + wfActionByUserID + " to target records " + processedArray +". Reference " + capId.getCustomID() + ".",thisCap);
+				createCapComment(sourceRec + " was copied on " + wfDate + " at " + timeStamp + " by " + wfActionByUserID + " to target records " + processedArray +". Reference " + capId.getCustomID() + ".",thisCap);
 			}
 		}			
 	}
