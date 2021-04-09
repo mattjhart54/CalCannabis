@@ -50,7 +50,6 @@
 			var min = comDate.getMinutes();
 			var timeStamp = hr+":"+min;
 			createCapComment(sourceRec + " was copied on " + wfDate + " at " + timeStamp + " by " + wfActionByUserID + " to target records " + processedArray +". Reference " + capId.getCustomID() + ".",capId);
-			var commentArray =[];
 			var capCommentScriptModel = aa.cap.createCapCommentScriptModel();
 			capCommentScriptModel.setCapIDModel(capId);
 			var capCommentModel = capCommentScriptModel.getCapCommentModel();
