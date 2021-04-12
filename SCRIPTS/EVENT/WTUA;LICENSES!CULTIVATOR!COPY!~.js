@@ -45,7 +45,7 @@
 		}
 		//Apply Comments to all Records
 		if (processedArray.length > 0){
-			var comDate = aa.date.getCurrentDate();
+			var comDate = new Date();
 			var hr = comDate.getHours();
 			var min = comDate.getMinutes();
 			var timeStamp = hr+":"+min;
