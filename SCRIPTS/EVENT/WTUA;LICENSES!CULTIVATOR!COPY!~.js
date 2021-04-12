@@ -59,7 +59,7 @@
 				var thisRow = processedArray[xx];
 				thisCap = getApplication(thisRow);
 				for (ii in cResult){
-					createCapComment(cResult[ii].getText(),thisCap);
+					createCapComment(String(cResult[ii].getText()),thisCap);
 				}
 			}
 		}			
