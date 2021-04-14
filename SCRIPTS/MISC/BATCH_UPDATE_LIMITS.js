@@ -164,8 +164,9 @@ function mainProcess() {
 		if(matches(perId1,"17EST","18EST","19EST","20EST","21EST","20TEMP")) {
 			continue;
 		}
+		if(matches(altId.substring(0,3),"CAL","PAL","CML","PML")) continue;
 		if(!matches(AInfo["Watts/SF limit"],"",null,undefined) && !matches(AInfo["Canopy SF Limit"],"",null,undefined)) continue;
-//		if(altId != "LCA21-0000005") continue;
+//		if(altId != "CCL20-0000363-SA001") continue;
 
 		recSelected++;
 		logDebug("Processing Record " + altId);
@@ -176,10 +177,14 @@ function mainProcess() {
 					if(appName.length == 4) {
 						var licType = appName[2]+"-"+appName[3];
 					}else 
-						if(appName.length == 3) {
-							var licType = appName[2];
+						if(appName.length == 3 && !matches(appName[1],"Use ","Use undefined ")) {
+							var licType = appName[1]+"-"+appName[2];
 						}else{
-							var licType = appName[1];
+							if(appName.length == 3 && matches(appName[1],"Use ","Use undefined ")) {
+								var licType = appName[2];
+							}else{
+								var licType = appName[1];
+							}
 						}
 					var licType = licType.trim();
 				}
