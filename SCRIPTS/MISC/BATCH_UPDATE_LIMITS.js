@@ -169,7 +169,7 @@ function mainProcess() {
 //		if(altId != "CCL20-0000363-SA001") continue;
 
 		recSelected++;
-		logDebug("Processing Record " + altId);
+		logDebug("Processing Record " + altId + " Record Status " + recStatus);
 		if(appTypeArray[3] == "Science") {
 			if(!matches(capName,null,"",undefined)) {
 				if (capName.indexOf('-') > -1){
@@ -191,26 +191,29 @@ function mainProcess() {
 			}else{
 				var licType = " ";
 			}
-			var lightLimit = lookup("LIC_CC_LICENSE_TYPE_WATTS",licType);
+			var lightLimit = lookupt("LIC_CC_LICENSE_TYPE_WATTS",licType);
 			editAppSpecific("Watts/SF limit-NEW", lightLimit);
+			editAppSpecific("Watts/SF limit", lightLimit);
 	
-			var lType = lookup("LIC_CC_LICENSE_TYPE", licType );
+			var lType = lookupt("LIC_CC_LICENSE_TYPE", licType );
 			if (!matches(lType,null,undefined,"",false)){
 				licTypeArray = lType.split(";");
 				plantLimit = licTypeArray[2];
 				canopyLimit = licTypeArray[0];
 				if(plantLimit*1 > 0) {
 					editAppSpecific("Canopy SF Limit-NEW",canopyLimit + " or " + plantLimit + " plants");
+					editAppSpecific("Canopy SF Limit",canopyLimit + " or " + plantLimit + " plants");
 				}else{
 					editAppSpecific("Canopy SF Limit-NEW",canopyLimit);
+					editAppSpecific("Canopy SF Limit",canopyLimit);
 				}
 			}
 		}else{
 			var licType = AInfo["License Type"];
-			var lightLimit = lookup("LIC_CC_LICENSE_TYPE_WATTS",licType);
+			var lightLimit = lookupt("LIC_CC_LICENSE_TYPE_WATTS",licType);
 			editAppSpecific("Watts/SF limit", lightLimit);
 	
-			var lType = lookup("LIC_CC_LICENSE_TYPE", licType );
+			var lType = lookupt("LIC_CC_LICENSE_TYPE", licType );
 			if (!matches(lType,null,undefined,"",false)){
 				licTypeArray = lType.split(";");
 				plantLimit = licTypeArray[2];
@@ -236,6 +239,24 @@ function getCapIdByIDs(s_id1, s_id2, s_id3)  {
        return null;
 }
 
+function lookupt(stdChoice,stdValue) 
+	{
+	var strControl;
+	var bizDomScriptResult = aa.bizDomain.getBizDomainByValue(stdChoice,stdValue);
+	
+   	if (bizDomScriptResult.getSuccess())
+   		{
+		var bizDomScriptObj = bizDomScriptResult.getOutput();
+		strControl = "" + bizDomScriptObj.getDescription(); // had to do this or it bombs.  who knows why?
+//		logDebug("lookup(" + stdChoice + "," + stdValue + ") = " + strControl);
+		}
+	else
+		{
+		logDebug("lookup(" + stdChoice + "," + stdValue + ") does not exist");
+		}
+	return strControl;
+	}
+	
 function getJobParam(pParamName){ //gets parameter value and logs message showing param value
 try{
 	var ret;
