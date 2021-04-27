@@ -21,6 +21,7 @@ try {
 	}
 	
 	if(matches(appTypeArray[3],"License","Application","Science Amendment")) {
+		assignTask("Sci App Copy Review",currentUserID);
 // Science Amendment records do not have the Legal Business Name as a custom field so use the License record to select records
 		if(appTypeArray[3] == "Science Amendment") {
 			srcRec = AInfo["Record Number"];
