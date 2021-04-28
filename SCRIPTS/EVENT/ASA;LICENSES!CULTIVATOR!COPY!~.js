@@ -16,7 +16,13 @@ try {
 					var sourceValue = getAppSpecific("Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceCapId);
 					editAppSpecific("Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceValue,capId);
 				}else{
-					var editField = recordField.substring(5);
+					if (editField == "Expiration Date"){
+						useAppSpecificGroupName = true;
+						var editField = subGroup + "." + recordField.substring(5);
+					}else{
+						useAppSpecificGroupName = false;
+						var editField = recordField.substring(5);
+					}
 					var sourceValue = getAppSpecific(editField,sourceCapId);
 					if (!matches(sourceValue,null,undefined,"")){
 						editAppSpecific(editField,sourceValue,capId);
