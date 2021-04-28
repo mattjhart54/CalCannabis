@@ -13,8 +13,8 @@ try {
 			var subGroup = String(group.getCheckboxType());
 			var fieldValue = String(group.getChecklistComment());
 			if (recordField.substring(0, 5) == "Copy_"){
-				if (recordField.substring == "Copy_Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on"){
-					var sourceValue = getAppSpecific("Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceCapId);
+				if (recordField == "Copy_Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on"){
+					var sourceValue = getAppSpecific(subGroup + "." + "Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceCapId);
 					editAppSpecific(subGroup + "." + "Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceValue,capId);
 				}else{
 					var editField = subGroup + "." + recordField.substring(5);
