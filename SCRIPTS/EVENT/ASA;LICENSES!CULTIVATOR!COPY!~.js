@@ -4,6 +4,7 @@ try {
 	sourceCapId = getApplication(sourceRec);
 	var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
 	if (recordASIGroup.getSuccess()){
+		useAppSpecificGroupName = true;
 		var recordASIGroupArray = recordASIGroup.getOutput();
 		for (i in recordASIGroupArray) {
 			var group = recordASIGroupArray[i];
@@ -16,13 +17,7 @@ try {
 					var sourceValue = getAppSpecific("Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceCapId);
 					editAppSpecific("Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceValue,capId);
 				}else{
-					if (editField == "Expiration Date"){
-						useAppSpecificGroupName = true;
-						var editField = subGroup + "." + recordField.substring(5);
-					}else{
-						useAppSpecificGroupName = false;
-						var editField = recordField.substring(5);
-					}
+					var editField = subGroup + "." + recordField.substring(5);
 					var sourceValue = getAppSpecific(editField,sourceCapId);
 					if (!matches(sourceValue,null,undefined,"")){
 						editAppSpecific(editField,sourceValue,capId);
@@ -31,7 +26,7 @@ try {
 			}
 		}
 	}
-	
+	useAppSpecificGroupName = false;
 	if(matches(appTypeArray[3],"License","Application","Science Amendment")) {
 		if(appTypeArray[3] == "Science Amendment")
 			assignTask("SA Copy Review",currentUserID);
