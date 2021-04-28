@@ -18,7 +18,9 @@ try {
 				}else{
 					var editField = recordField.substring(5);
 					var sourceValue = getAppSpecific(editField,sourceCapId);
-					editAppSpecific(editField,sourceValue,capId);
+					if (!matches(sourceValue,null,undefined,"")){
+						editAppSpecific(editField,sourceValue,capId);
+					}
 				}
 			}
 		}
