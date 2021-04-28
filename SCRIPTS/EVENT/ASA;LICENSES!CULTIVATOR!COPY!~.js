@@ -15,7 +15,7 @@ try {
 			if (recordField.substring(0, 5) == "Copy_"){
 				if (recordField.substring == "Copy_Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on"){
 					var sourceValue = getAppSpecific("Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceCapId);
-					editAppSpecific("Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceValue,capId);
+					editAppSpecific(subGroup + "." + "Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceValue,capId);
 				}else{
 					var editField = subGroup + "." + recordField.substring(5);
 					var sourceValue = getAppSpecific(editField,sourceCapId);
