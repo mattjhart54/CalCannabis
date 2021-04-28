@@ -1,6 +1,7 @@
 try {
 	//Copy App Specific
 	var sourceRec = getAppSpecific("Record Number",capId);
+	sourceCapId = getApplication(sourceRec);
 	var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
 	if (recordASIGroup.getSuccess()){
 		var recordASIGroupArray = recordASIGroup.getOutput();
@@ -10,12 +11,15 @@ try {
 			var recordField = String(group.getCheckboxDesc());
 			var subGroup = String(group.getCheckboxType());
 			var fieldValue = String(group.getChecklistComment());
-
 			if (recordField.substring(0, 5) == "Copy_"){
-				sourceCapId = getApplication(sourceRec);
-				var editField = recordField.substring(5);
-				var sourceValue = getAppSpecific(editField,sourceCapId);
-				editAppSpecific(editField,sourceValue,capId);
+				if (recordField.substring == "Copy_Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on"){
+					var sourceValue = getAppSpecific("Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceCapId);
+					editAppSpecific("Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceValue,capId);
+				}else{
+					var editField = recordField.substring(5);
+					var sourceValue = getAppSpecific(editField,sourceCapId);
+					editAppSpecific(editField,sourceValue,capId);
+				}
 			}
 		}
 	}
