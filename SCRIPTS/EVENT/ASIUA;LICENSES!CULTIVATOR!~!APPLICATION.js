@@ -50,7 +50,7 @@ try{
 		//lwacht 171218 end
 	}
 
-	if(matches(AInfo["Local Authority Response"],"In Compliance","Pending","No Response") && matches(capStatus,"Submitted","Pending Local Authorization 10","Pending Local Authorization 60") || (capStatus == "Submitted" && isTaskStatus("Local Verification Review", "Under Review"))){
+	if(matches(AInfo["Local Authority Response"],"In Compliance","Pending","No Response") && (matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60") || (capStatus == "Submitted" && isTaskStatus("Local Verification Review", "Under Review")))){
 		//lwacht: 180426: story 5436: reset the assigned task
 		var asgnDateAR = getAssignedDate("Administrative Review");
 		var asgnDateOR = getAssignedDate("Owner Application Reviews");
