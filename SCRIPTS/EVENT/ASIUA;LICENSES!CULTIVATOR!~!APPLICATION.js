@@ -50,14 +50,15 @@ try{
 		//lwacht 171218 end
 	}
 
-	if(matches(AInfo["Local Authority Response"],"In Compliance","No Response") && matches(capStatus,"Pending Local Authorization 10","Pending Local Authorization 60")){
+	if(matches(AInfo["Local Authority Response"],"In Compliance","Pending","No Response") && matches(capStatus,"Submitted","Pending Local Authorization 10","Pending Local Authorization 60")){
 		//lwacht: 180426: story 5436: reset the assigned task
 		var asgnDateAR = getAssignedDate("Administrative Review");
 		var asgnDateOR = getAssignedDate("Owner Application Reviews");
 		activateTask("Administrative Review");
 		activateTask("Owner Application Reviews");
-		updateTask("Administrative Review","Under Review","In Compliance notification received from Local Authority","");
-		updateAppStatus("Under Administrative Review", "In Compliance notification received from Local Authority");
+		updateTask("Administrative Review","Under Review",AInfo["Local Authority Response"] + " notification received from Local Authority","");
+		closeTask("Local Verification Review","Local Verification Complete","","");
+		updateAppStatus("Under Administrative Review", AInfo["Local Authority Response"]+ " notification received from Local Authority");
 		if(asgnDateAR){
 			updateTaskAssignedDate("Administrative Review", asgnDateAR);
 		}else{
