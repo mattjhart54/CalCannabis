@@ -9,7 +9,7 @@ try{
 		if(cancelUpload){
 			cancel = true;		
 			showMessage = true;
-			comment("To upload additional documents, please submit a new amendment. For further questions please contact CalCannabis at 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.");
+			comment("To upload additional documents, please submit a new amendment. For further questions, please contact the Department of Cannabis Control by calling 1 (844) 61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.");
 		}
 	}
 }catch(err){
