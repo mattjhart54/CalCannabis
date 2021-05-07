@@ -81,7 +81,7 @@ function sendLocalAuthNotification() {
 				var sysEmailCC =  "cdfa.CalCannabis_licensing_technical@cdfa.ca.gov";
 			} 
 			else {
-				var sysEmailCC =  "cdfa.CalCannabis_Local_Verification@cdfa.ca.gov";
+				var sysEmailCC =  "localauth@cannabis.ca.gov";
 			}
 			if(appTypeArray[2] == "Temporary") {
 				var licType = "";
@@ -92,7 +92,7 @@ function sendLocalAuthNotification() {
 				addParameter(eParams, "$$licType1$$", licType1);
 				addParameter(eParams, "$$licType2$$", licType2);
 // MHART 01/24/18 Story  5125: Local Authority e-mail content update
-				sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,sysEmailCC,"LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
+				sendNotification("localauth@cannabis.ca.gov",locEmail,sysEmailCC,"LIC_CC_NOTIFY_LOC_AUTH",eParams, rFiles,capId);
 			}
 			else {
 				var appType = "Adult-Use"
@@ -107,9 +107,9 @@ function sendLocalAuthNotification() {
 				addParameter(eParams, "$$licType1$$", licType1);
 				addParameter(eParams, "$$licType2$$", licType2);
 				if(wfStatus == "Local Auth Sent - 10")
-					sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,sysEmailCC,"LIC_CC_NOTIFY_LOC_AUTH_10",eParams, rFiles,capId);
+					sendNotification("localauth@cannabis.ca.gov",locEmail,sysEmailCC,"LIC_CC_NOTIFY_LOC_AUTH_10",eParams, rFiles,capId);
 				else
-					sendNotification("cdfa.CalCannabis_Local_Verification@cdfa.ca.gov",locEmail,sysEmailCC,"LIC_CC_NOTIFY_LOC_AUTH_60",eParams, rFiles,capId);				
+					sendNotification("localauth@cannabis.ca.gov",locEmail,sysEmailCC,"LIC_CC_NOTIFY_LOC_AUTH_60",eParams, rFiles,capId);				
 			}
 		}
 		else {
