@@ -44,7 +44,7 @@ try{
 				envParameters.put("reportName","Balance Due Report"); 
 				envParameters.put("contType","Designated Responsible Party"); 
 				envParameters.put("currentUserID",currentUserID);
-				envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+				envParameters.put("fromEmail","noreply@cannabis.ca.gov");
 				aa.runAsyncScript(scriptName, envParameters);
 			}
 		}
