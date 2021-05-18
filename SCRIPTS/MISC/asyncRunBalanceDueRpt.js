@@ -54,7 +54,6 @@ try{
 	var recNum = "" + aa.env.getValue("recNum");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var contType = "" + aa.env.getValue("contType");
-	var sysFromEmail = "" + aa.env.getValue("fromEmail");
 	var br = "<BR>";
 	var eTxt = "";
 	var sDate = new Date();
