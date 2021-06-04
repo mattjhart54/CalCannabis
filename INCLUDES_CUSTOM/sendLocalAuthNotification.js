@@ -78,10 +78,10 @@ function sendLocalAuthNotification() {
 						addParameter(eParams, "$$drpName$$", drpContact.capContact.firstName + " " + drpContact.capContact.lastName);
 			}
 			if(currEnv != "av6 (prod)") {
-				var sysEmailCC =  "localauth@cannabis.ca.gov";
+				var sysEmailCC =  "LocalVerification@cannabis.ca.gov";
 			} 
 			else {
-				var sysEmailCC =  "localauth@cannabis.ca.gov";
+				var sysEmailCC =  "LocalVerification@cannabis.ca.gov";
 			}
 			if(appTypeArray[2] == "Temporary") {
 				var licType = "";
