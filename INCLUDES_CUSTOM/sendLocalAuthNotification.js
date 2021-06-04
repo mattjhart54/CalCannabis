@@ -78,10 +78,10 @@ function sendLocalAuthNotification() {
 						addParameter(eParams, "$$drpName$$", drpContact.capContact.firstName + " " + drpContact.capContact.lastName);
 			}
 			if(currEnv != "av6 (prod)") {
-				var sysEmailCC =  "cdfa.CalCannabis_licensing_technical@cdfa.ca.gov";
+				var sysEmailCC =  "localauth@cannabis.ca.gov";
 			} 
 			else {
-				var sysEmailCC =  "localverification@cannabis.ca.gov";
+				var sysEmailCC =  "localauth@cannabis.ca.gov";
 			}
 			if(appTypeArray[2] == "Temporary") {
 				var licType = "";
