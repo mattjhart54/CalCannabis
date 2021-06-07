@@ -83,7 +83,7 @@ try {
 										envParameters.put("reportName","Amendment Owner Change Removal"); 
 										envParameters.put("currentUserID",currentUserID);
 										envParameters.put("email",priEmail);
-										envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+										envParameters.put("fromEmail",sysFromEmail);
 										aa.runAsyncScript(scriptName, envParameters);
 									}
 									else {
@@ -96,7 +96,7 @@ try {
 										envParameters.put("reportName","Amendment Owner Change New"); 
 										envParameters.put("currentUserID",currentUserID);
 										envParameters.put("email",priEmail);
-										envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+										envParameters.put("fromEmail",sysFromEmail);
 										aa.runAsyncScript(scriptName, envParameters);
 										var sName = createSet("Amendment Owner Modified","Amendment Notifications", "New");
 									}	
@@ -147,7 +147,7 @@ try {
 									envParameters.put("reportName","Amendment Owner Change New"); 
 									envParameters.put("currentUserID",currentUserID);
 									envParameters.put("email",priEmail);
-									envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+									envParameters.put("fromEmail",sysFromEmail);
 									aa.runAsyncScript(scriptName, envParameters);
 									var sName = createSet("Amendment New Owner","Amendment Notifications", "New");
 									if(sName){

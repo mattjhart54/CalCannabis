@@ -517,7 +517,7 @@ try{
 			envParameters.put("reportName","Approval Letter and License Fee Invoice"); 
 			envParameters.put("currentUserID",currentUserID);
 			envParameters.put("contType","Designated Responsible Party");
-			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+			envParameters.put("fromEmail",sysFromEmail);
 			aa.runAsyncScript(scriptName, envParameters);
 //mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification 
 		}else{

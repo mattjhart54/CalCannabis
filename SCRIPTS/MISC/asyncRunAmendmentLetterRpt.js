@@ -105,5 +105,5 @@ try{
 } catch(err){
 	logDebug("An error has occurred in asyncRunSubmittedApplicRpt: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunAmendmentLetter: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + amendCap + br + "avpre6" + br + eTxt);
+	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunAmendmentLetter: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + amendCap + br + "avpre6" + br + eTxt);
 }

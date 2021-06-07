@@ -360,7 +360,7 @@ function processRenewal(renCapId){
 			var reason = "";
 			var currentUserID = "ADMIN";
 			var contType = "Designated Responsible Party";
-			var fromEmail = "calcannabislicensing@cdfa.ca.gov";
+			var fromEmail = "noreply@cannabis.ca.gov";
 			var br = "<BR>";
 			var eTxt = "";
 			var sDate = new Date();

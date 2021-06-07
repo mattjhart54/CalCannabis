@@ -72,7 +72,7 @@ aa.env.setValue("lookAheadDays", "-2");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
-aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
+aa.env.setValue("sysFromEmail", "noreply@cannabis.ca.gov");
 aa.env.setValue("reportName", "CDFA Receipt Batch");
 aa.env.setValue("sendEmailAddressType", "Mailing");
 */
@@ -189,7 +189,7 @@ function mainProcess() {
 						var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 						if(!matches(priChannel,null,"",undefined)){
 							if(priChannel.indexOf("Email") >-1){
-								var fromEmail = "calcannabislicensing@cdfa.ca.gov";
+								var fromEmail = "noreply@cannabis.ca.gov";
 								var eParams = aa.util.newHashtable(); 
 								addParameter(eParams, "$$altID$$", altId);
 								addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);

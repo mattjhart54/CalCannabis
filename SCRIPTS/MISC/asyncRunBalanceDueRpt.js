@@ -48,7 +48,7 @@ try{
 	aa.env.setValue("currentUserID", "ADMIN");
 	aa.env.setValue("reportName", "Official License Certificate");
 	aa.env.setValue("contType", "Designated Responsible Party");
-	aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov");
+	aa.env.setValue("fromEmail","noreply@cannabis.ca.gov");
 */
 	var reportName = "" + aa.env.getValue("reportName");
 	var recNum = "" + aa.env.getValue("recNum");

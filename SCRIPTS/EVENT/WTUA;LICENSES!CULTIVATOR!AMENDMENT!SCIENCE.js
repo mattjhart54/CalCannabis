@@ -198,7 +198,7 @@ try {
 					envParameters.put("reportName","Official License Certificate"); 
 					envParameters.put("currentUserID",currentUserID);
 					envParameters.put("contType","Designated Responsible Party");
-					envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+					envParameters.put("fromEmail",sysFromEmail);
 					aa.runAsyncScript(scriptName, envParameters);
 				}
 				else {
@@ -255,7 +255,7 @@ try {
 					envParameters.put("reportName","Official License Certificate"); 
 					envParameters.put("currentUserID",currentUserID);
 					envParameters.put("contType","Designated Responsible Party");
-					envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+					envParameters.put("fromEmail",sysFromEmail);
 					aa.runAsyncScript(scriptName, envParameters);
 				}
 				else {
@@ -315,7 +315,7 @@ try {
 				envParameters.put("reportName","Official License Certificate"); 
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("contType","Designated Responsible Party");
-				envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+				envParameters.put("fromEmail",sysFromEmail);
 				aa.runAsyncScript(scriptName, envParameters);
 				
 				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());

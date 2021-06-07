@@ -62,7 +62,7 @@ runReportAttach(capId,reportName,"capID",licCap,"invoiceNbr", invNbr,"agencyId",
 } catch(err){
 	logDebug("An error has occurred in asyncRunCDFAInvoiceParamsRpt: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "jshear@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunInvoiceParamsRpt: ",  tmpID + br + "altId: " + licCap + br +  eTxt);
+	aa.sendMail("noreply@cannabis.ca.gov", "jshear@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunInvoiceParamsRpt: ",  tmpID + br + "altId: " + licCap + br +  eTxt);
 }
  function runReportAttach(itemCapId,aaReportName)
 	{

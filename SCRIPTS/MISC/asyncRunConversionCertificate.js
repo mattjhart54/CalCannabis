@@ -50,7 +50,7 @@ try{
 	aa.env.setValue("reportName", "Official License Certificate");
 	aa.env.setValue("contType", "Designated Responsible Party");
 	aa.env.setValue("licStatus", "Active");
-	aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov");
+	aa.env.setValue("fromEmail","noreply@cannabis.ca.gov");
 */
 	var reportName = "" + aa.env.getValue("reportName");
 	var oldLicNum = "" + aa.env.getValue("oldLicNum");
@@ -159,7 +159,7 @@ try{
 } catch(err){
 	logDebug("An error has occurred in asyncRunOfficialLicenseRpt: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunOfficialLicenseRpt: ",  licCapId + br + "altId: " + oldLicNum + br + eTxt);
+	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunOfficialLicenseRpt: ",  licCapId + br + "altId: " + oldLicNum + br + eTxt);
 }
  function sendApprovalNotification(emailFrom,emailTo,emailCC,templateName,params,reportFile)
 {

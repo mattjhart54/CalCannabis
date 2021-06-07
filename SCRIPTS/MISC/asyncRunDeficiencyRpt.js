@@ -55,5 +55,5 @@ try{
 } catch(err){
 	aa.print("An error has occurred in RunAsync: Deficiency Report: " + err.message);
 	aa.print(err.stack);
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN RunAsync: ", "Report " + reportName + " for record " + altId + br + eTxt);
+	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN RunAsync: ", "Report " + reportName + " for record " + altId + br + eTxt);
 }

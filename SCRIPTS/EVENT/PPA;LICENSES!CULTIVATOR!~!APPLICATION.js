@@ -23,7 +23,7 @@ try{
 			envParameters.put("emailTemplate", "LCA_APP_APPROVAL_PAID");
 			envParameters.put("currentUserID",currentUserID);
 			envParameters.put("contType","Designated Responsible Party");
-			envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+			envParameters.put("fromEmail",sysFromEmail);
 			aa.runAsyncScript(scriptName, envParameters);
 		}			
 //		if(capStatus=="License Issued") 

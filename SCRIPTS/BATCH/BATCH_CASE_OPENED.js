@@ -12,7 +12,7 @@
 |
 /------------------------------------------------------------------------------------------------------*/
 var emailText = "";
-var sysFromEmail = "calcannabislicensing@cdfa.ca.gov";
+var sysFromEmail = "noreply@cannabis.ca.gov";
 var debugText = "";
 var showDebug = false;	
 var showMessage = false;

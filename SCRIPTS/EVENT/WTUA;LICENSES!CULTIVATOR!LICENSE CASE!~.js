@@ -197,7 +197,7 @@ try{
 							envParameters.put("reason", "");
 							envParameters.put("currentUserID",currentUserID);
 							envParameters.put("contType","Designated Responsible Party");
-							envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
+							envParameters.put("fromEmail",sysFromEmail);
 							aa.runAsyncScript(scriptName, envParameters);
 							
 							var priContact = getContactObj(parentCapId,"Designated Responsible Party");

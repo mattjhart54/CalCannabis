@@ -47,7 +47,7 @@ try{
 	aa.env.setValue("saCap", "CCL19-0000088-SA001");
 	aa.env.setValue("currentUserID", "ADMIN");
 	aa.env.setValue("reportName", "Scientific Review Checklist");
-	aa.env.setValue("fromEmail","calcannabislicensing@cdfa.ca.gov");
+	aa.env.setValue("fromEmail","noreply@cannabis.ca.gov");
 */
 	var reportName = "" + aa.env.getValue("reportName");
 	var saCap = "" + aa.env.getValue("saCap");
@@ -106,5 +106,5 @@ try{
 } catch(err){
 	logDebug("An error has occurred in asyncRunScientificChecklist: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("calcannabislicensing@cdfa.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunScientificChecklist: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + eTxt);
+	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunScientificChecklist: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + eTxt);
 }
