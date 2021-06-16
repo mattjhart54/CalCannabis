@@ -2,7 +2,7 @@ try{
 	if(documentUploadedFrom == "ACA"){
 		var denyAttachment = false;
 		var disqualifiedStatus = false;
-		var errorMessage = "Document upload not allowed. Please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
+		var errorMessage = "Document upload not allowed. Please contact Department of Cannabis Control by calling 1 (844) 61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.";
 		var workflowResult = aa.workflow.getTasks(capId);
 		if (workflowResult.getSuccess()){
 			var wfObj = workflowResult.getOutput();
@@ -10,7 +10,7 @@ try{
 			for (i in wfObj){
 				if (wfObj[i].getTaskDescription().equals("Scientific Review") && wfObj[i].getDisposition().equals("Additional Information Needed")){
 					denyAttachment = true;
-					errorMessage = "Document upload not allowed in the application. To upload additional documents, utilize the deficiency record (ending in DEF##T or DEF##). For further questions please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to cdfa.CalCannabis_Scientists@cdfa.ca.gov.";
+					errorMessage = "Document upload not allowed in the application. To upload additional documents, utilize the deficiency record (ending in DEF##T or DEF##). For further questions please contact Department of Cannabis Control by calling 1 (844) 61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.";
 				}
 				if (wfObj[i].getActiveFlag().equals("Y")){
 					if (matches(wfObj[i].getTaskDescription(),"Science Manager Review","License Manager", "Final Review", "Application Disposition") && wfObj[i].getDisposition() != ("Denied")){
@@ -19,7 +19,7 @@ try{
 				}else{
 					if (wfObj[i].getDisposition().equals("Disqualified")){
 						denyAttachment = true;
-						errorMessage = "This application has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling 1-833-CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.";
+						errorMessage = "This application has been placed on hold. Please contact Department of Cannabis Control by calling 1 (844) 61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.";
 						break;
 					}
 					if (matches(wfObj[i].getDisposition(),"Closed","Provisional License Issued","License Issued")){
