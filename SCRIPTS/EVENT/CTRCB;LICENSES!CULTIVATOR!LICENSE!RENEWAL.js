@@ -26,7 +26,7 @@ try {
 		cancel = true;
 		showMessage = true;
 //		if(publicUser)
-//			logMessage("The renewal of this license has been placed on hold. Please contact CalCannabis Cultivation Licensing by calling (833) CALGROW (225-4769) or by sending an email to calcannabis@cdfa.ca.gov.");
+//			logMessage("The renewal of this license has been placed on hold. Please contact the Department of Cannabis Control by calling 1 (844) 61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov");
 //		else
 			comment("The renewal of this license has been placed on hold. A Renewal record cannot be created.")
 	}	
