@@ -67,7 +67,7 @@ var batchJobName = "" + aa.env.getValue("batchJobName");
 aa.env.setValue("emailAddress", "lwacht@trustvip.com");
 aa.env.setValue("baseUrl", "https://testing-services-ca.metrc.com/licenses/facility");
 aa.env.setValue("apiKey", "6gka3YS4EzoZAG1jrsv-qhe5OszsP8SPJZ4ZoPOCjCGPK1Ra");
-aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
+aa.env.setValue("sysFromEmail", "noreply@cannabis.ca.gov");
 aa.env.setValue("nbrDays", "45")
 */
 
@@ -256,7 +256,7 @@ try {
 	} else {
 		logDebug("Completed successfully: No records to process");
 	}
-	logDebug(correctionRecordCount + " records have invalid information and where not processed.");
+	logDebug(correctionRecordCount + " records have invalid information and were not processed.");
 	logDebug("records to be corrected: " + correctionArray);
 	logDebug(expWithinNbrDaysCount + " records have been skipped, because they have expired within last 45 days.");
 	logDebug("records expired within last 45 days: " + expWithinNbrDays);
