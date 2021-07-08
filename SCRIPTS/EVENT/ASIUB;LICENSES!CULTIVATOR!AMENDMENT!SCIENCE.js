@@ -164,6 +164,18 @@ try{
 			}
 		}
 	}*/
+	//6893 DRP custom fields must match DRP contact on License
+	var drpContact = getContactByType("Designated Responsible Party",parentCapId);
+	if(drpContact){
+		var drpFirst = drpContact.getFirstName();
+		var drpLast =  drpContact.getLastName();
+		var drpEmail = drpContact.getEmail();
+		if ((AInfo['DRP First Name'].value.trim().toUpperCase() != drpFirst.toUpperCase()) ||  (AInfo['DRP Last Name'].value.trim().toUpperCase() != drpLast.toUpperCase()) || (AInfo['DRP Email Address'].value.trim().toUpperCase() != drpEmail.toUpperCase())){
+			cancel = true;
+			showMessage = true;
+			comment("DRP does not match License Record.")
+		}
+	}
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
