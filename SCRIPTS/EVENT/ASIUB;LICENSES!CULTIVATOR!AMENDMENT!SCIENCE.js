@@ -170,7 +170,7 @@ try{
 		var drpFirst = drpContact.getFirstName();
 		var drpLast =  drpContact.getLastName();
 		var drpEmail = drpContact.getEmail();
-		if ((AInfo['DRP First Name'].value.trim().toUpperCase() != drpFirst.toUpperCase()) ||  (AInfo['DRP Last Name'].value.trim().toUpperCase() != drpLast.toUpperCase()) || (AInfo['DRP Email Address'].value.trim().toUpperCase() != drpEmail.toUpperCase())){
+		if ((AInfo['DRP First Name'].trim().toUpperCase() != drpFirst.toUpperCase()) ||  (AInfo['DRP Last Name'].trim().toUpperCase() != drpLast.toUpperCase()) || (AInfo['DRP Email Address'].trim().toUpperCase() != drpEmail.toUpperCase())){
 			cancel = true;
 			showMessage = true;
 			comment("DRP does not match License Record.")
