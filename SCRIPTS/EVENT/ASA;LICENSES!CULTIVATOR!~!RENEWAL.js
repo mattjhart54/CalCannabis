@@ -5,6 +5,9 @@
 try{
 	var partialCapId = getIncompleteCapId();
 	parentLic = getParentLicenseCapID(capId);
+	if (!parentLic){
+		parentLic = "" + aa.env.getValue("ParentCapID");
+	}
     pLicArray = String(parentLic).split("-");
     var parentCapId = aa.cap.getCapID(pLicArray[0],pLicArray[1],pLicArray[2]).getOutput();
 	var parentAltId = parentCapId.getCustomID();
