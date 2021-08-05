@@ -78,7 +78,7 @@ function sendLocalAuthNotification() {
 						addParameter(eParams, "$$drpName$$", drpContact.capContact.firstName + " " + drpContact.capContact.lastName);
 			}
 			if(currEnv != "av6 (prod)") {
-				var sysEmailCC =  "localverification@cannabis.ca.gov";
+				var sysEmailCC =  "dcc.calcannabis_licensing_technical@cannabis.ca.gov";
 			} 
 			else {
 				var sysEmailCC =  "localverification@cannabis.ca.gov";
