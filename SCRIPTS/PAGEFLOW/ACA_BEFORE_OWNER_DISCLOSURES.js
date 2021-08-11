@@ -85,11 +85,11 @@ try {
 		var AInfo = [];
 		loadAppSpecific4ACA(AInfo);
 		loadASITables4ACA_corrected();
-		if(AInfo["Convicted of a Crime"] == "Yes" && CONVICTIONS.length<1) {
-				showMessage = true;
-				cancel = true;
-				logMessage("When disclosure of a conviction of a crime is set to yes you must enter the conviction information in the Conviction table");
-		}
+	//	if(AInfo["Convicted of a Crime"] == "Yes" && CONVICTIONS.length<1) {
+	//			showMessage = true;
+	//			cancel = true;
+	//			logMessage("When disclosure of a conviction of a crime is set to yes you must enter the conviction information in the Conviction table");
+	//	}
 		// mhart 20180220 user story 4689 Incarceration date must not be future date or older than 150 years
 		var badDate = false;
 		for(x in CONVICTIONS){
