@@ -99,6 +99,7 @@ try {
 		}else{
 			cIds = getChildren("Licenses/Cultivator/Amendment/Science",parentCapId);
 			var approvedStatus = true;
+			var amendArray = new Array();
 			var recCnt = 0;
 			for(x in cIds) {
 				var recId = "" + cIds[x];
@@ -115,14 +116,16 @@ try {
 							var taskDesc = fTask.getTaskDescription();
 							if (!matches(status,"Physical Modification Approved","Approved for Provisional Renewal","Recommend for Transition","Transition Amendment Approved")){
 								approvedStatus = false;
-								recCnt++;
+								if (amendArray.indexOf(recId) < 0) {
+									amendArray.push(recId);
+								}
 							}
 						}
 					}
 				}
 			}
 			if(!approvedStatus){
-				if(recCnt.length > 1){
+				if(amendArray.length > 1){
 					approvedStatusMessage= "The license for which you are trying to create a Science Amendment already has an active Science Amendment. Navigate back to your licenses page to upload new documents to one of the Science Amendments open for review associated to this license. If you have questions please email environmentalreview@cannabis.ca.gov or call 1-844-61-CA-DCC (1-844-612-2322)."
 				}else{
 					var str = String(recId.getCustomID());
@@ -136,7 +139,7 @@ try {
 				showMessage = true;
 				logMessage(approvedStatusMessage);
 			}
-		}					
+		}				
 	}else{
 		logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
 		aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
