@@ -133,7 +133,7 @@ try {
 						var summaryDeepLink2 = recId.getID1() + "&capID2=" + recId.getID2() + "&capID3=" + recId.getID3() + "&agencyCode=CALCANNABIS";
 						var fullSummaryDeepLink = summaryDeepLink1 + summaryDeepLink2;
 						var result = str.link(fullSummaryDeepLink);
-						approvedStatusMessage="The license for which you are trying to create a Science Amendment already has an active Science Amendment. Navigate back to your licenses page to upload new documents to the Science Amendment open for review associated to this license." + result + " JS If you have questions please email environmentalreview@cannabis.ca.gov or call 1-844-61-CA-DCC (1-844-612-2322)."
+						approvedStatusMessage="The license for which you are trying to create a Science Amendment already has an active Science Amendment. Navigate back to your licenses page to upload new documents to the Science Amendment open for review associated to this license." + result + " If you have questions please email environmentalreview@cannabis.ca.gov or call 1-844-61-CA-DCC (1-844-612-2322)."
 					}
 					cancel = true;
 					showMessage = true;
