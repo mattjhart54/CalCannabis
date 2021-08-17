@@ -102,7 +102,6 @@ try {
 			for(x in cIds) {
 				var recId = "" + cIds[x];
 				if(recId.substring(2,5) != "EST") {
-					recCnt++;
 					var recId = cIds[x];
 					logDebug(recId.getCustomID());
 					var workflowResult = aa.workflow.getTasks(recId);
@@ -115,7 +114,7 @@ try {
 							var taskDesc = fTask.getTaskDescription();
 							if (!matches(status,"Physical Modification Approved","Approved for Provisional Renewal","Recommend for Transition","Transition Amendment Approved")){
 								approvedStatus = false;
-								break;
+								recCnt++;
 							}
 						}
 					}
