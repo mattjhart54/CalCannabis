@@ -106,7 +106,7 @@ try {
 					var recId = cIds[x];
 					logDebug(recId.getCustomID());
 					thisCap = aa.cap.getCap(recId).getOutput();		
-					var thisCapStatus = cap.getCapStatus();
+					var thisCapStatus = thisCap.getCapStatus();
 					if (!matches(thisCapStatus,"Transition Amendment Approved","Amendment Rejected","Amendment Approved")){
 						approvedStatus = false;
 						if (amendArray.indexOf(recId) < 0) {
