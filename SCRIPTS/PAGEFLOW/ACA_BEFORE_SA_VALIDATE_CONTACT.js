@@ -106,20 +106,12 @@ try {
 				if(recId.substring(2,5) != "EST") {
 					var recId = cIds[x];
 					logDebug(recId.getCustomID());
-					var workflowResult = aa.workflow.getTasks(recId);
-					if (workflowResult.getSuccess()){
-						wfObj = workflowResult.getOutput();
-					
-						for (i in wfObj) {
-							fTask = wfObj[i];
-							var status = fTask.getDisposition();
-							var taskDesc = fTask.getTaskDescription();
-							if (!matches(status,"Physical Modification Approved","Approved for Provisional Renewal","Recommend for Transition","Transition Amendment Approved")){
-								approvedStatus = false;
-								if (amendArray.indexOf(recId) < 0) {
-									amendArray.push(recId);
-								}
-							}
+					thisCap = aa.cap.getCap(recId).getOutput();		
+					var thisCapStatus = cap.getCapStatus();
+					if (!matches(thisCapStatus,"Transition Amendment Approved","Amendment Rejected","Amendment Approved")){
+						approvedStatus = false;
+						if (amendArray.indexOf(recId) < 0) {
+							amendArray.push(recId);
 						}
 					}
 				}
