@@ -146,8 +146,8 @@ try{
 							var licType = getAppSpecific("License Type",renCapId);
 							var licIssueType = getAppSpecific("License Issued Type",renCapId);
 							if(desChange == "Yes") {
-								editAppSpecific("Cultivator Type",desChange,parentCapId);
-								editAppName(desChange + " - " + licType,parentCapId);
+								editAppSpecific("Cultivator Type",getAppSpecific("Designation Type",renCapId),parentCapId);
+								editAppName(getAppSpecific("Designation Type",renCapId) + " - " + licType,parentCapId);
 							}
 							//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 							renewalCapProject.setStatus("Complete");
