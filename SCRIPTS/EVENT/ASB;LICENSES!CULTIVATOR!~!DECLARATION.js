@@ -7,7 +7,7 @@ try{
 	if (decCapId){
 		showMessage = true;
 		cancel = true;
-		comment("The following Final Affidavit and Declaration was already submitted for this application: " + decCapId.getCustomID() + ". If you have questions please email licensing@cannabis.ca.gov or call 1-844-61-CA-DCC (1-844-612-2322).");
+		comment("The following Final Affidavit and Declaration was already submitted for this application: " + decCapId[0].getCustomID() + ". If you have questions please email licensing@cannabis.ca.gov or call 1-844-61-CA-DCC (1-844-612-2322).");
 	}else{
 		var incompleteApp = false;
 		//page 2
