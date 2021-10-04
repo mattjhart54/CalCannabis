@@ -1,10 +1,8 @@
-
 //lwacht: 171122: don't allow submission until everything is completed
 try{
 	var parentCapID = getApplication(AInfo['Application ID']);
 	decCapId = getChildren("Licenses/Cultivator/Medical/Declaration",parentCapID);
-	
-	if (decCapId){
+	if (decCapId.length > 0){
 		showMessage = true;
 		cancel = true;
 		comment("The following Final Affidavit and Declaration was already submitted for this application: " + decCapId[0].getCustomID() + ". If you have questions please email licensing@cannabis.ca.gov or call 1-844-61-CA-DCC (1-844-612-2322).");
