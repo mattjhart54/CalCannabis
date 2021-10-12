@@ -189,6 +189,12 @@ try{
 			continue;
 		}
 		cap = aa.cap.getCap(capId).getOutput();	
+		fileDateObj = cap.getFileDate();
+		fileDate = "" + fileDateObj.getMonth() + "/" + fileDateObj.getDayOfMonth() + "/" + fileDateObj.getYear();
+		fileDateYYYYMMDD = dateFormatted(fileDateObj.getMonth(),fileDateObj.getDayOfMonth(),fileDateObj.getYear(),"YYYY-MM-DD");
+		appTypeResult = cap.getCapType();	
+		appTypeString = appTypeResult.toString();	
+		appTypeArray = appTypeString.split("/");
 		var taskDate = getAssignedDate("Final Review")
 		var eRegDate = new Date(eRegDate);
 		if (taskDate < eRegDate){
@@ -219,11 +225,11 @@ try{
 			}
 			capCount++;
 			logDebug("----Processing record " + altId + br);
-			updateAppStatus(newAppStatus,disqualStatus);
+			updateAppStatus(newAppStatus,"Disqualified - No payment within 90 days");
 			if(!appHasCondition("Application Condition","Applied","Application Hold",null)){
 				addStdCondition("Application Condition","Application Hold");
 			}
-			closeTask(task,newTaskStatus,disqualStatus,"");
+			closeTask(task,newTaskStatus,"Disqualified - No payment within 90 days","");
 			if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
 				var conTypeArray = sendEmailToContactTypes.split(",");
 				var	conArray = getContactArray(capId);
