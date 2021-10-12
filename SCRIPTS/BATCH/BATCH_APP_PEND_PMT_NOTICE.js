@@ -81,7 +81,7 @@ aa.env.setValue("task", "Application Disposition");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
-aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
+aa.env.setValue("sysFromEmail", "noreply@cannabis.ca.gov");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("reportName", "Payment Due Notification");
 aa.env.setValue("setNonEmailPrefix", "NO_PMT_30");
@@ -95,6 +95,7 @@ var appCategory = getParam("recordCategory");
 var appStatus = getParam("appStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
+var eRegDate = getParam("eRegsEffectiveDate");
 var task = getParam("task");
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var emailTemplate = getParam("emailTemplate");
@@ -183,12 +184,11 @@ try{
 			continue;
 		}
 		cap = aa.cap.getCap(capId).getOutput();	
-		fileDateObj = cap.getFileDate();
-		fileDate = "" + fileDateObj.getMonth() + "/" + fileDateObj.getDayOfMonth() + "/" + fileDateObj.getYear();
-		fileDateYYYYMMDD = dateFormatted(fileDateObj.getMonth(),fileDateObj.getDayOfMonth(),fileDateObj.getYear(),"YYYY-MM-DD");
-		appTypeResult = cap.getCapType();	
-		appTypeString = appTypeResult.toString();	
-		appTypeArray = appTypeString.split("/");
+		var taskDate = getAssignedDate("Final Review")
+		var eRegDate = new Date(eRegDate);
+		if (taskDate < eRegDate){
+			rptName = "Payment Due Notification";
+		}
 		var capStatus = cap.getCapStatus();
 		var capDetailObjResult = aa.cap.getCapDetail(capId);		
 		if (!capDetailObjResult.getSuccess()){
@@ -320,3 +320,33 @@ function createExpirationSet( prefix ){
 	}
 }
 
+function getAssignedDate(taskName){
+	try{
+		var workflowResult = aa.workflow.getTasks(capId);
+		if (workflowResult.getSuccess()){
+			var wfObj = workflowResult.getOutput();
+			for (i in wfObj) {
+				fTask = wfObj[i];
+				wfTask = fTask.getTaskDescription();
+				if(wfTask==taskName){
+					var asgnDate = fTask.getAssignmentDate();
+					if(isNaN(asgnDate)){
+						logDebug("Assigned date for " + taskName + ": " + convertDate(asgnDate));
+						return convertDate(fTask.getAssignmentDate());
+					}else{
+						logDebug("No assigned date for " + taskName + " (" + asgnDate + ")");
+						return false;
+					}
+				}
+			}
+		}else{ 
+			logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage()); 
+			return false; 
+		}
+		logDebug("Task " + taskName + " not found.  Returning false.");
+		return false;
+	}catch (err){
+		logDebug("A JavaScript Error occurred: getAssignedDate " + err.message);
+		logDebug(err.stack);
+	}
+}
