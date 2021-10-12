@@ -129,7 +129,6 @@ fromJSDate = new Date(fromDate);
 toJSDate = new Date(toDate);
 var dFromDate = aa.date.parseDate(fromDate);
 var dToDate = aa.date.parseDate(toDate);
-logDebug("eRegDate: " + eRegDate + " " + typeof(eRegDate) + new Date(eRegDate));
 logDebug("fromDate: " + fromDate + "  toDate: " + toDate);
 
 /*------------------------------------------------------------------------------------------------------/
@@ -194,7 +193,6 @@ try{
 		var taskDate = getAssignedDate("Final Review");
 		var eRegJSDate = new Date(eRegDate);
 		if (taskDate < eRegJSDate){
-			logDebug("within");
 			rptName = "Payment Due Notification";
 		}
 		var capStatus = cap.getCapStatus();
