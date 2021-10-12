@@ -191,7 +191,10 @@ try{
 		appTypeResult = cap.getCapType();	
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
-		var taskDate = getAssignedDate("Final Review")
+		var taskDate = getAssignedDate("Final Review");
+		logDebug("eRegDate: " + eRegDate);
+		var test = String(eRegDate);
+		logDebug("test: " + test + " " + typeof(test));
 		var eRegDate = new Date(eRegDateParsed);
 		logDebug("taskDate: " + taskDate);
 		logDebug("eRegDate: " + eRegDateParsed);
