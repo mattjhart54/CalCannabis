@@ -129,6 +129,7 @@ fromJSDate = new Date(fromDate);
 toJSDate = new Date(toDate);
 var dFromDate = aa.date.parseDate(fromDate);
 var dToDate = aa.date.parseDate(toDate);
+logDebug("eRegDate: " + eRegDate + " " + typeof(eRegDate) + new Date(eRegDate));
 logDebug("fromDate: " + fromDate + "  toDate: " + toDate);
 
 /*------------------------------------------------------------------------------------------------------/
@@ -191,14 +192,8 @@ try{
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
 		var taskDate = getAssignedDate("Final Review");
-		logDebug("eRegDate: " + eRegDate);
-		var test = eRegDate.getMonth();
-		logDebug("test: " + test + " " + typeof(test));
-		var eRegDate = new Date(eRegDateParsed);
-		logDebug("taskDate: " + taskDate);
-		logDebug("eRegDate: " + eRegDateParsed);
-		logDebug("eRegDate: " + eRegDate);
-		if (taskDate < eRegDate){
+		var eRegJSDate = new Date(eRegDate);
+		if (taskDate < eRegJSDate){
 			logDebug("within");
 			rptName = "Payment Due Notification";
 		}
