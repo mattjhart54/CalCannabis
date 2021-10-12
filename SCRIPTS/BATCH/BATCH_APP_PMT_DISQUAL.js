@@ -197,7 +197,10 @@ try{
 		appTypeArray = appTypeString.split("/");
 		var taskDate = getAssignedDate("Final Review")
 		var eRegDate = new Date(eRegDate);
+		logDebug("taskDate: " + taskDate);
+		logDebug("eRegDate: " + eRegDate);
 		if (taskDate < eRegDate){
+			logDebug("within");
 			rptName = "Disqualification No License Fee Paid";
 			disqualStatus = "Disqualified - No payment within 90 days";
 		}else{
