@@ -96,6 +96,7 @@ var appStatus = getParam("appStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
 var eRegDate = getParam("eRegsEffectiveDate");
+var eRegDateParsed = aa.date.parseDate(eRegDate);
 var task = getParam("task");
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var emailTemplate = getParam("emailTemplate");
@@ -191,8 +192,9 @@ try{
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
 		var taskDate = getAssignedDate("Final Review")
-		var eRegDate = new Date(eRegDate);
+		var eRegDate = new Date(eRegDateParsed);
 		logDebug("taskDate: " + taskDate);
+		logDebug("eRegDate: " + eRegDateParsed);
 		logDebug("eRegDate: " + eRegDate);
 		if (taskDate < eRegDate){
 			logDebug("within");
