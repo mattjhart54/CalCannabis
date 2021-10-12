@@ -193,7 +193,7 @@ try{
 		appTypeArray = appTypeString.split("/");
 		var taskDate = getAssignedDate("Final Review");
 		logDebug("eRegDate: " + eRegDate);
-		var test = String(eRegDate);
+		var test = dateAdd(eRegDate,0);
 		logDebug("test: " + test + " " + typeof(test));
 		var eRegDate = new Date(eRegDateParsed);
 		logDebug("taskDate: " + taskDate);
