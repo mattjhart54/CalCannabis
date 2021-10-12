@@ -95,8 +95,7 @@ var appCategory = getParam("recordCategory");
 var appStatus = getParam("appStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
-var eRegDate = String(getParam("eRegsEffectiveDate"));
-var eRegDateParsed = aa.date.parseDate(eRegDate);
+var eRegDate = getParam("eRegsEffectiveDate");
 var task = getParam("task");
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var emailTemplate = getParam("emailTemplate");
@@ -193,7 +192,7 @@ try{
 		appTypeArray = appTypeString.split("/");
 		var taskDate = getAssignedDate("Final Review");
 		logDebug("eRegDate: " + eRegDate);
-		var test = dateAdd(eRegDate,0);
+		var test = eRegDate.getMonth();
 		logDebug("test: " + test + " " + typeof(test));
 		var eRegDate = new Date(eRegDateParsed);
 		logDebug("taskDate: " + taskDate);
