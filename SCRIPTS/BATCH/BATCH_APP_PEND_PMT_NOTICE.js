@@ -211,35 +211,37 @@ try{
 			}
 			capCount++;
 			logDebug("----Processing record " + altId + br);
-			if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
-				var conTypeArray = sendEmailToContactTypes.split(",");
-				var	conArray = getContactArray(capId);
-				for (thisCon in conArray) {
-					var conEmail = false;
-					thisContact = conArray[thisCon];
-					if (exists(thisContact["contactType"],conTypeArray)){
-						pContact = getContactObj(capId,thisContact["contactType"]);
-						var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
-						if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Postal") >-1 && setNonEmailPrefix != ""){
-							if(setCreated == false) {
-							   //Create NonEmail Set
-								var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
-								var sNonEmailSet = vNonEmailSet.toUpperCase();
-								var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
-								setHeaderSetType.setRecordSetType("License Notifications");
-								setHeaderSetType.setSetStatus("New");
-								updResult = aa.set.updateSetHeader(setHeaderSetType);          
-								setCreated = true;
+			if (!matches(rptName,null,undefined,"")){
+				if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
+					var conTypeArray = sendEmailToContactTypes.split(",");
+					var	conArray = getContactArray(capId);
+					for (thisCon in conArray) {
+						var conEmail = false;
+						thisContact = conArray[thisCon];
+						if (exists(thisContact["contactType"],conTypeArray)){
+							pContact = getContactObj(capId,thisContact["contactType"]);
+							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
+							if(!matches(priChannel,null,"",undefined) && priChannel.indexOf("Postal") >-1 && setNonEmailPrefix != ""){
+								if(setCreated == false) {
+								   //Create NonEmail Set
+									var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
+									var sNonEmailSet = vNonEmailSet.toUpperCase();
+									var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
+									setHeaderSetType.setRecordSetType("License Notifications");
+									setHeaderSetType.setSetStatus("New");
+									updResult = aa.set.updateSetHeader(setHeaderSetType);          
+									setCreated = true;
+								}
+								setAddResult=aa.set.add(sNonEmailSet,capId);
+							//lwacht: 171122: emailing all contacts, regardless of preferred channel
 							}
-							setAddResult=aa.set.add(sNonEmailSet,capId);
-						//lwacht: 171122: emailing all contacts, regardless of preferred channel
+							conEmail = thisContact["email"];
+							if (conEmail) {
+								runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
+								emailRptContact("BATCH", emailTemplate, rptName, false, "Disqualified", capId, thisContact["contactType"]);
+							}
+							//lwacht: 171122: end
 						}
-						conEmail = thisContact["email"];
-						if (conEmail) {
-							runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
-							emailRptContact("BATCH", emailTemplate, rptName, false, "Disqualified", capId, thisContact["contactType"]);
-						}
-						//lwacht: 171122: end
 					}
 				}
 			}
