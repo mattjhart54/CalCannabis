@@ -192,6 +192,7 @@ try{
 		appTypeArray = appTypeString.split("/");
 		var taskDate = getDispositionDate("Final Review");
 		var eRegJSDate = new Date(eRegDate);
+		logDebug("altId: " + altId + " taskDate: " + taskDate + " eRegJSDate: " + eRegJSDate);
 		if (taskDate < eRegJSDate){
 			rptName = "Payment Due Notification";
 		}
