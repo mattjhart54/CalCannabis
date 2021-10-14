@@ -190,7 +190,7 @@ try{
 		appTypeResult = cap.getCapType();	
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
-		var taskDate = getAssignedDate("Final Review");
+		var taskDate = getDispositionDate("Final Review");
 		var eRegJSDate = new Date(eRegDate);
 		if (taskDate < eRegJSDate){
 			rptName = "Payment Due Notification";
