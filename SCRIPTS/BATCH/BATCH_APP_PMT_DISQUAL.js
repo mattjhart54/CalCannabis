@@ -180,7 +180,7 @@ try{
 			timeExpired = true ;
 			break; 
 		}
-*/		
+*/		rptParam = rptName;
     	capId = myCaps[myCapsXX].getCapID();
    		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
 		altId = capId.getCustomID();
@@ -198,7 +198,7 @@ try{
 		var taskDate = getDispositionDate("Final Review");
 		var eRegJSDate = new Date(eRegDate);
 		if (taskDate < eRegJSDate){
-			rptName = "Disqualification No License Fee Paid";
+			rptParam = "Disqualification No License Fee Paid";
 			disqualStatus = "Disqualified - No payment within 90 days";
 		}else{
 			disqualStatus = "Disqualified - No payment within 60 days";
@@ -255,8 +255,8 @@ try{
 						}
 						conEmail = thisContact["email"];
 						if (conEmail) {
-							runReportAttach(capId,rptName, "p1value", capId.getCustomID()); 
-							emailRptContact("BATCH", emailTemplate, rptName, false, "Disqualified", capId, thisContact["contactType"]);
+							runReportAttach(capId,rptParam, "p1value", capId.getCustomID()); 
+							emailRptContact("BATCH", emailTemplate, rptParam, false, "Disqualified", capId, thisContact["contactType"]);
 						}
 						//lwacht: 171122: end
 					}

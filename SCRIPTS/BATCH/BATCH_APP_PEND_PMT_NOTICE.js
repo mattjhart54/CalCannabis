@@ -175,7 +175,7 @@ try{
 			timeExpired = true ;
 			break; 
 		}
-*/		
+*/		rptParam = rptName
     	capId = myCaps[myCapsXX].getCapID();
    		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
 		altId = capId.getCustomID();
@@ -190,7 +190,12 @@ try{
 		appTypeResult = cap.getCapType();	
 		appTypeString = appTypeResult.toString();	
 		appTypeArray = appTypeString.split("/");
-
+		var taskDate = getDispositionDate("Final Review");
+		var eRegJSDate = new Date(eRegDate);
+		logDebug("altId: " + altId + " taskDate: " + taskDate + " eRegJSDate: " + eRegJSDate);
+		if (taskDate < eRegJSDate){
+			rptParam = "Payment Due Notification";
+		}
 		var capStatus = cap.getCapStatus();
 		var capDetailObjResult = aa.cap.getCapDetail(capId);		
 		if (!capDetailObjResult.getSuccess()){
@@ -213,9 +218,7 @@ try{
 			}
 			capCount++;
 			logDebug("----Processing record " + altId + br);
-			var taskDate = getDispositionDate("Final Review");
-			var eRegJSDate = new Date(eRegDate);
-			if (taskDate < eRegJSDate){
+			if (!matches(rptName,null,undefined,"")){
 				if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
 					var conTypeArray = sendEmailToContactTypes.split(",");
 					var	conArray = getContactArray(capId);
@@ -241,8 +244,8 @@ try{
 							}
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								runReportAttach(capId,"Payment Due Notification", "p1value", capId.getCustomID()); 
-								emailRptContact("BATCH", emailTemplate, "Payment Due Notification", false, "Disqualified", capId, thisContact["contactType"]);
+								runReportAttach(capId,rptParam, "p1value", capId.getCustomID()); 
+								emailRptContact("BATCH", emailTemplate, rptParam, false, "Disqualified", capId, thisContact["contactType"]);
 							}
 							//lwacht: 171122: end
 						}
