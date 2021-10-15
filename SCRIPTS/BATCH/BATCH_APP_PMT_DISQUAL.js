@@ -163,6 +163,7 @@ try{
 	var capFilterBalance = 0;
 	var capFilterStatus = 0;
 	var capCount = 0;
+	var rptParam = "";
 	setCreated = false
 
  	var capResult = aa.cap.getCapIDsByAppSpecificInfoDateRange(asiGroup, asiField, dFromDate, dToDate);
