@@ -180,7 +180,8 @@ try{
 			timeExpired = true ;
 			break; 
 		}
-*/		rptParam = rptName;
+*/		
+		rptParam = rptName;
     	capId = myCaps[myCapsXX].getCapID();
    		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
 		altId = capId.getCustomID();
