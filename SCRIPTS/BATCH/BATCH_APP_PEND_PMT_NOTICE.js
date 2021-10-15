@@ -219,7 +219,7 @@ try{
 			}
 			capCount++;
 			logDebug("----Processing record " + altId + br);
-			if (!matches(rptName,null,undefined,"")){
+			if (!matches(rptParam,null,undefined,"")){
 				if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
 					var conTypeArray = sendEmailToContactTypes.split(",");
 					var	conArray = getContactArray(capId);
