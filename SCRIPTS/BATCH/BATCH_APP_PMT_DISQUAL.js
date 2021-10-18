@@ -200,7 +200,7 @@ try{
 		var taskDate = getDispositionDate("Final Review");
 		var eRegJSDate = new Date(eRegDate);
 		if (taskDate < eRegJSDate){
-			rptParam = "Disqualification No License Fee Paid";
+			rptParam = "Disqualification License Fee Not Paid";
 			disqualStatus = "Disqualified - No payment within 90 days";
 		}else{
 			disqualStatus = "Disqualified - No payment within 60 days";
