@@ -257,7 +257,7 @@ try{
 						}
 						conEmail = thisContact["email"];
 						if (conEmail) {
-							runReportAttach(capId,rptParam, "p1value", capId.getCustomID()); 
+							runReportAttach(capId,rptParam, "p1Value", capId.getCustomID()); 
 							emailRptContact("BATCH", emailTemplate, rptParam, false, "Disqualified", capId, thisContact["contactType"]);
 						}
 						//lwacht: 171122: end
