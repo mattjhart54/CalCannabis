@@ -256,7 +256,7 @@ try{
 					}
 					conEmail = thisContact["email"];
 					if (conEmail) {
-						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
+						runReportAttach(capId,rptName, "p1Value", capId.getCustomID(), "p2Value", thisContact["contactType"], "p3Value", addrType); 
 						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
@@ -298,7 +298,7 @@ try{
 							}
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								runReportAttach(childCapId,"90 Day Deficiency Notification Letter - Owner", "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
+								runReportAttach(childCapId,"90 Day Deficiency Notification Letter - Owner", "p1Value", childCapId.getCustomID(), "p2Value", "Owner", "p3Value", "Home"); 
 								holdId = capId;
 								capId = childCapId;
 								emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"]);
