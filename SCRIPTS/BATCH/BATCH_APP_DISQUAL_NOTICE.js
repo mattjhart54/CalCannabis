@@ -212,6 +212,7 @@ try{
 			}
 		}else{ 
 			logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage());
+			++capFilterTaskDate;
 			continue;
 		}
 		//filter by eRegs Date
