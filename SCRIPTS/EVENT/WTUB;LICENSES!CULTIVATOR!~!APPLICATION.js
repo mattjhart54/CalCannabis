@@ -17,7 +17,7 @@ try{
 	}
 	if("Administrative Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
-		var nextDueDay = dateAdd(null,89);
+		var nextDueDay = dateAdd(null,179);
 		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
 			editAppSpecific("App Expiry Date", nextWorkDay(nextDueDay));
 			var expDate = getAppSpecific("App Expiry Date");
@@ -36,7 +36,7 @@ try{
 	}
 	if("Science Manager Review".equals(wfTask) && "Deficiency Letter Sent".equals(wfStatus)){
 		//set due date and expiration date
-		var nextDueDay = dateAdd(null,89);
+		var nextDueDay = dateAdd(null,179);
 		if(matches(AInfo["App Expiry Date"],null,"",undefined)) {
 			editAppSpecific("App Expiry Date", nextWorkDay(nextDueDay));
 			var expDate = getAppSpecific("App Expiry Date");
