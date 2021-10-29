@@ -143,9 +143,9 @@ function mainProcess() {
 try{
 	var capFilterType = 0;
 	var capFilterStatus = 0;
+	var capFilterTaskDate= 0;
 	var capCount = 0;
 	var setCreated = false;
-	var taskDate = "";
 	var capResult = aa.cap.getCapIDsByAppSpecificInfoDateRange(asiGroup, asiField, dFromDate, dToDate);
 	if (capResult.getSuccess()) {
 		myCaps = capResult.getOutput();
@@ -192,8 +192,6 @@ try{
 			logDebug("     " +"skipping, due to application status of " + capStatus)
 			continue;
 		}
-		capCount++;
-		logDebug("----Processing record " + altId + br);
 		
 		//getting last task date for "Deficiency Letter Sent Status"
 		var workflowResult = aa.workflow.getTasks(capId);
@@ -205,9 +203,9 @@ try{
 				if(matches(wfTask,"Administrative Manager Review","Science Manager Review")){
 					if (fTask.getDisposition().equals("Deficiency Letter Sent")){
 						var dispDate = fTask.getDispositionDate();
-						taskDate = convertDate(fTask.getAssignmentDate());
+						var taskDate = convertDate(fTask.getAssignmentDate());
 						if(isNaN(dispDate)){
-							taskDate = convertDate(fTask.getAssignmentDate());
+							var taskDate = convertDate(fTask.getAssignmentDate());
 						}
 					}
 				}
@@ -216,24 +214,72 @@ try{
 			logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage());
 			continue;
 		}
- 
-		if (!matches(taskDate,null,undefined,"")){
-			var eRegJSDate = new Date(eRegDate);
-			if (taskDate < eRegJSDate){
-				if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
-					var conTypeArray = sendEmailToContactTypes.split(",");
-					var	conArray = getContactArray(capId);
-					var contactFound = false;
+		//filter by eRegs Date
+		var eRegJSDate = new Date(eRegDate);
+		if (taskDate > eRegJSDate){
+			logDebug(altId + " skipping, due to Task Date. taskDate: " + taskDate + " eRegJSDate: " + eRegJSDate);
+			++capFilterTaskDate;
+			continue;
+		}
+			
+		capCount++;
+		logDebug("----Processing record " + altId + br);
+		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
+			var conTypeArray = sendEmailToContactTypes.split(",");
+			var	conArray = getContactArray(capId);
+			var contactFound = false;
+			for (thisCon in conArray) {
+				var conEmail = false;
+				thisContact = conArray[thisCon];
+				if (exists(thisContact["contactType"],conTypeArray)){
+					contactFound = true;
+					pContact = getContactObj(capId,thisContact["contactType"]);
+					var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
+					if((matches(priChannel,null,"",undefined) || priChannel.indexOf("Postal") >-1) && setNonEmailPrefix != ""){
+						if(setCreated == false) {
+						   //Create NonEmail Set
+							var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
+							if(vNonEmailSet){
+								var sNonEmailSet = vNonEmailSet.toUpperCase();
+								var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
+								setHeaderSetType.setRecordSetType("License Notifications");
+								setHeaderSetType.setSetStatus("New");
+								updResult = aa.set.updateSetHeader(setHeaderSetType);          
+								setCreated = true;
+							}else{
+								logDebug("Could not create set.  Stopping processing.");
+								break;
+							}
+						}
+						setAddResult=aa.set.add(sNonEmailSet,capId);
+					}
+					conEmail = thisContact["email"];
+					if (conEmail) {
+						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
+						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
+						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+					}
+				}
+			}
+			if(!contactFound){
+				logDebug("No contact found for notification: " + altId);
+			}
+			childArray = getChildren("Licenses/Cultivator/Medical/Owner Application");
+			for (x in childArray) {
+				childCapId = childArray[x];
+				childCap = aa.cap.getCap(childCapId).getOutput();	
+				var childCapStatus = childCap.getCapStatus();
+				if(childCapStatus == appStatus) {
+					var	conArray = getContactArray(childCapId);
 					for (thisCon in conArray) {
 						var conEmail = false;
 						thisContact = conArray[thisCon];
-						if (exists(thisContact["contactType"],conTypeArray)){
-							contactFound = true;
-							pContact = getContactObj(capId,thisContact["contactType"]);
+						if(thisContact["contactType"] == "Owner"){
+							pContact = getContactObj(childCapId,thisContact["contactType"]);
 							var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
 							if((matches(priChannel,null,"",undefined) || priChannel.indexOf("Postal") >-1) && setNonEmailPrefix != ""){
 								if(setCreated == false) {
-								   //Create NonEmail Set
+								//Create NonEmail Set
 									var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
 									if(vNonEmailSet){
 										var sNonEmailSet = vNonEmailSet.toUpperCase();
@@ -247,66 +293,20 @@ try{
 										break;
 									}
 								}
-								setAddResult=aa.set.add(sNonEmailSet,capId);
+								setAddResult=aa.set.add(sNonEmailSet,childCapId);
 							}
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
-								emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
+								runReportAttach(childCapId,"30 Day Deficiency Notification Letter - Owner", "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
+								holdId = capId;
+								capId = childCapId;
+								emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"]);
+								capId = holdId;
 								logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 							}
 						}
-					}
-					if(!contactFound){
-						logDebug("No contact found for notification: " + altId);
-					}
-					childArray = getChildren("Licenses/Cultivator/Medical/Owner Application");
-					for (x in childArray) {
-						childCapId = childArray[x];
-						childCap = aa.cap.getCap(childCapId).getOutput();	
-						var childCapStatus = childCap.getCapStatus();
-						if(childCapStatus == appStatus) {
-							var	conArray = getContactArray(childCapId);
-							for (thisCon in conArray) {
-								var conEmail = false;
-								thisContact = conArray[thisCon];
-								if(thisContact["contactType"] == "Owner"){
-									pContact = getContactObj(childCapId,thisContact["contactType"]);
-									var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
-									if((matches(priChannel,null,"",undefined) || priChannel.indexOf("Postal") >-1) && setNonEmailPrefix != ""){
-										if(setCreated == false) {
-										//Create NonEmail Set
-											var vNonEmailSet =  createExpirationSet(setNonEmailPrefix);
-											if(vNonEmailSet){
-												var sNonEmailSet = vNonEmailSet.toUpperCase();
-												var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
-												setHeaderSetType.setRecordSetType("License Notifications");
-												setHeaderSetType.setSetStatus("New");
-												updResult = aa.set.updateSetHeader(setHeaderSetType);          
-												setCreated = true;
-											}else{
-												logDebug("Could not create set.  Stopping processing.");
-												break;
-											}
-										}
-										setAddResult=aa.set.add(sNonEmailSet,childCapId);
-									}
-									conEmail = thisContact["email"];
-									if (conEmail) {
-										runReportAttach(childCapId,"30 Day Deficiency Notification Letter - Owner", "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
-										holdId = capId;
-										capId = childCapId;
-										emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"]);
-										capId = holdId;
-										logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
-									}
-								}
-							}	
-						}
-					}
+					}	
 				}
-			}else{
-				logDebug("skipping " + altId + " due to eRegs date: taskDate: " + taskDate + " eRegJSDate: " + eRegJSDate);
 			}
 		}
 //MJH: 20190219 Story 5838 - End
@@ -317,6 +317,7 @@ try{
 	logDebug("Total CAPS qualified : " + myCaps.length);
 	logDebug("Ignored due to application type: " + capFilterType);
 	logDebug("Ignored due to CAP Status: " + capFilterStatus);
+	logDebug("Ignored due to eRegs Date: " + capFilterTaskDate);
 	logDebug("Total CAPS processed: " + capCount);
 
 }catch (err){
