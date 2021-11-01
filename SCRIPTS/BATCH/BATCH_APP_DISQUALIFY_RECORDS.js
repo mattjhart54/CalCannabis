@@ -75,7 +75,7 @@ aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sendEmailNotifications","Y");
 aa.env.setValue("emailTemplate","LCA_GENERAL_NOTIFICATION");
 aa.env.setValue("sendEmailToContactTypes", "Designated Responsible Party");
-aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
+aa.env.setValue("sysFromEmail", "noreply@cannabis.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "FINAL_DISQUALIF");
 aa.env.setValue("reportName", "Final Deficiency Disqualification Letter");
 aa.env.setValue("sendEmailAddressType", "Mailing");
@@ -90,6 +90,7 @@ var sysFromEmail = getParam("sysFromEmail");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var rptName = getParam("reportName");
 var addrType = getParam("sendEmailAddressType");
+var eRegDate = getParam("eRegsEffectiveDate");
 
 /*----------------------------------------------------------------------------------------------------/
 |
@@ -207,7 +208,6 @@ try{
 			capFilterOverride++;
 			continue;
 		}
-
 		logDebug("----Processing record " + altId + br);
 		capCount++;
 		if (newAppStatus && newAppStatus != ""){
@@ -299,6 +299,31 @@ try{
 					}
 					conEmail = thisContact["email"];
 					if (conEmail) {
+						//Story 7031 - getting last task date for "Deficiency Letter Sent Status" in order to determine which report to send
+						var workflowResult = aa.workflow.getTasks(capId);
+						if (workflowResult.getSuccess()){
+							var wfObj = workflowResult.getOutput();
+							for (i in wfObj) {
+								fTask = wfObj[i];
+								wfTask = fTask.getTaskDescription();
+								if(matches(wfTask,"Administrative Manager Review","Science Manager Review")){
+									if (fTask.getDisposition().equals("Deficiency Letter Sent")){
+										var dispDate = fTask.getDispositionDate();
+										var taskDate = convertDate(fTask.getAssignmentDate());
+										if(isNaN(dispDate)){
+											var taskDate = convertDate(fTask.getAssignmentDate());
+										}
+										var eRegJSDate = new Date(eRegDate);
+										if (taskDate < eRegJSDate){
+											rptName = "Final Deficiency Disqualification Letter";
+										}
+									}
+								}
+							}
+						}else{ 
+							logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage());
+						}
+						//Story 7031 - End
 						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
 						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"], "p1value", capId.getCustomID());
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
