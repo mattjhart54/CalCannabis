@@ -434,7 +434,6 @@ try{
 		arrReqdDocs_Own = new Array();
 		
 	//these documents are always required
-		arrReqdDocs_Own.push(governmentIssuedID);
 		//lwacht : 180322: story ????: only require fingerprint doc when live scan is available
 		var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
 		//aa.sendMail(sysFromEmail, debugEmail, "", "INFO ONLY: getReqdDocs: " + startDate, "capId: " + capId + ": " + br + liveScanNotActive);
