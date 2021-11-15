@@ -95,6 +95,7 @@ var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var sysFromEmail = getParam("sysFromEmail");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var rptName = getParam("reportName");
+var ownerRptName = getParam("ownerReportName");
 var addrType = getParam("sendEmailAddressType");
 var skipAppStatus = getParam("skipAppStatus").split(","); //   Skip records with one of these application statuses
 var skipAppStatusCont = getParam("skipAppStatusCont").split(","); //   Skip records with one of these application statuses - Used for overflow
@@ -217,7 +218,7 @@ try{
 		}
 		//filter by eRegs Date
 		var eRegJSDate = new Date(eRegDate);
-		if (taskDate > eRegJSDate){
+		if (taskDate < eRegJSDate){
 			logDebug(altId + " skipping, due to Task Date. taskDate: " + taskDate + " eRegJSDate: " + eRegJSDate);
 			++capFilterTaskDate;
 			continue;
@@ -298,7 +299,7 @@ try{
 							}
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								runReportAttach(childCapId,"30 Day Deficiency Notification Letter - Owner", "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
+								runReportAttach(childCapId,ownerRptName, "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
 								holdId = capId;
 								capId = childCapId;
 								emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"]);
