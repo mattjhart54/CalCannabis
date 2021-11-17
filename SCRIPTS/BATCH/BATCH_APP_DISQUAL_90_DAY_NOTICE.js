@@ -95,6 +95,7 @@ var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var sysFromEmail = getParam("sysFromEmail");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var rptName = getParam("reportName");
+var ownerRptName = getParam("ownerReportName");
 var addrType = getParam("sendEmailAddressType");
 var skipAppStatus = getParam("skipAppStatus").split(","); //   Skip records with one of these application statuses
 var skipAppStatusCont = getParam("skipAppStatusCont").split(","); //   Skip records with one of these application statuses - Used for overflow
@@ -298,7 +299,7 @@ try{
 							}
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								runReportAttach(childCapId,"90 Day Deficiency Notification Letter - Owner", "p1Value", childCapId.getCustomID(), "p2Value", "Owner", "p3Value", "Home"); 
+								runReportAttach(childCapId,ownerRptName, "p1Value", childCapId.getCustomID(), "p2Value", "Owner", "p3Value", "Home"); 
 								holdId = capId;
 								capId = childCapId;
 								emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"]);
