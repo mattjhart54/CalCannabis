@@ -195,31 +195,12 @@ try{
 		}
 		
 		//getting last task date for "Deficiency Letter Sent Status"
-		var workflowResult = aa.workflow.getTasks(capId);
-		if (workflowResult.getSuccess()){
-			var wfObj = workflowResult.getOutput();
-			for (i in wfObj) {
-				fTask = wfObj[i];
-				wfTask = fTask.getTaskDescription();
-				if(matches(wfTask,"Administrative Manager Review","Science Manager Review")){
-					if (fTask.getDisposition().equals("Deficiency Letter Sent")){
-						var dispDate = fTask.getDispositionDate();
-						var taskDate = convertDate(fTask.getAssignmentDate());
-						if(isNaN(dispDate)){
-							var taskDate = convertDate(fTask.getAssignmentDate());
-						}
-					}
-				}
-			}
-		}else{ 
-			logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage());
-			++capFilterTaskDate;
-			continue;
-		}
+		var defDate = getAppSpecific("Admin Deficiency Letter Sent",capId);
 		//filter by eRegs Date
 		var eRegJSDate = new Date(eRegDate);
-		if (taskDate < eRegJSDate){
-			logDebug(altId + " skipping, due to Task Date. taskDate: " + taskDate + " eRegJSDate: " + eRegJSDate);
+		var defJSDate = new Date(defDate);
+		if (defJSDate < eRegJSDate){
+			logDebug(altId + " skipping, due to Task Date. Deficiency Sent Date: " + defJSDate + " eRegJSDate: " + eRegJSDate);
 			++capFilterTaskDate;
 			continue;
 		}
