@@ -31,8 +31,8 @@ try{
 		parameters.put("p1value",altId);
 		parameters.put("p2value",newAltId);
 	}else {
-		parameters.put("altId",altId);
-		parameters.put("defAltId",newAltId);
+		parameters.put("p1value",altId);
+		parameters.put("p2value",newAltId);
 	}
 	report.setReportParameters(parameters);
 	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
