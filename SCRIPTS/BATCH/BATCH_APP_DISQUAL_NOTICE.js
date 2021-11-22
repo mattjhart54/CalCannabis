@@ -217,7 +217,7 @@ try{
 		//filter by eRegs Date
 		var eRegJSDate = new Date(eRegDate);
 		var defJSDate = new Date(defDate);
-		if (defJSDate < eRegJSDate){
+		if (defJSDate > eRegJSDate){
 			logDebug(altId + " skipping, due to Task Date. Deficiency Sent Date: " + defJSDate + " eRegJSDate: " + eRegJSDate);
 			++capFilterTaskDate;
 			continue;
