@@ -195,12 +195,25 @@ try{
 		}
 		
 		//getting last task date for "Deficiency Letter Sent Status"
-		if (!matches(getAppSpecific("Science Deficiency Letter Sent",capId),null,undefined,"")){
-			var defDate = getAppSpecific("Science Deficiency Letter Sent",capId);
-		}else{
-			var defDate = getAppSpecific("Admin Deficiency Letter Sent",capId);
+		var workflowResult = aa.workflow.getTasks(capId);
+		if (workflowResult.getSuccess()){
+			var wfObj = workflowResult.getOutput();
+			for (i in wfObj) {
+				fTask = wfObj[i];
+				wfTask = fTask.getTaskDescription();
+				if (fTask.getDisposition().equals("Deficiency Letter Sent")){
+					if(wfTask == "Administrative Manager Review"){
+						var defDate = getAppSpecific("Admin Deficiency Letter Sent",capId);				
+					}else{
+						var defDate = getAppSpecific("Science Deficiency Letter Sent",capId);
+					}
+				}
+			}
+		}else{ 
+			logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage());
+			++capFilterTaskDate;
+			continue;
 		}
-		
 		//filter by eRegs Date
 		var eRegJSDate = new Date(eRegDate);
 		var defJSDate = new Date(defDate);
