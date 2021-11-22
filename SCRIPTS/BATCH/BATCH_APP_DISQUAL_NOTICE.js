@@ -195,7 +195,11 @@ try{
 		}
 		
 		//getting last task date for "Deficiency Letter Sent Status"
-		var defDate = getAppSpecific("Admin Deficiency Letter Sent",capId);
+		if (!matches(getAppSpecific("Science Deficiency Letter Sent",capId),null,undefined,"")){
+			var defDate = getAppSpecific("Science Deficiency Letter Sent",capId);
+		}else{
+			var defDate = getAppSpecific("Admin Deficiency Letter Sent",capId);
+		}
 		
 		//filter by eRegs Date
 		var eRegJSDate = new Date(eRegDate);
