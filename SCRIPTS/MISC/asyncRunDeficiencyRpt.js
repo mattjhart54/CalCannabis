@@ -26,7 +26,7 @@ try{
 	//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
 	report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
 	report.getEDMSEntityIdModel().setAltId(altId);
-	var parameters = aa.util.newHashMap(); {
+	var parameters = aa.util.newHashMap();
 	parameters.put("p1value",altId);
 	parameters.put("p2value",newAltId);
 	report.setReportParameters(parameters);
