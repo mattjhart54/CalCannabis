@@ -224,10 +224,8 @@ try{
 			}
 		}
 		
-		// Local Permit Documents
+	// Local Permit Documents
 		//arrReqdDocs_App.push(planningPermit);
-		arrReqdDocs_App.push(CEQA);
-		
 		if(AInfo["Apply for Equity Waiver"] == "Yes") {
 			arrReqdDocs_App.push(equity);
 		}else{
@@ -235,8 +233,9 @@ try{
 				removeCapCondition(conditionType, equity.condition);
 			}
 		}	
+		arrReqdDocs_App.push(CEQA);
 	
-		// Premise Documents
+	// Premise Documents
 		arrReqdDocs_App.push(enviroStor);	
 		
 		if(AInfo["Legal Possession"] == "Own") {
@@ -254,7 +253,7 @@ try{
 			}
 		}
 
-		// Water Documents
+	// Water Documents
 		arrReqdDocs_App.push(streambedAlter);
 		arrReqdDocs_App.push(waterQuality);
 //MJH 040819 story 5916 Add code to make water bill document required		
