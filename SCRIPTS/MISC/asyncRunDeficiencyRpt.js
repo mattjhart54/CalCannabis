@@ -27,8 +27,8 @@ try{
 	report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
 	report.getEDMSEntityIdModel().setAltId(altId);
 	var parameters = aa.util.newHashMap();
-	parameters.put("p1value",altId);
-	parameters.put("p2value",newAltId);
+	parameters.put("altId",altId);
+	parameters.put("defAltId",newAltId);
 	report.setReportParameters(parameters);
 	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
 	if(permit.getSuccess()) {
