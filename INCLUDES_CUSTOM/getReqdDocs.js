@@ -100,7 +100,7 @@ try{
 	//var planningPermit = {condition : "Local - Certified Planning Permit", document : "Local - Certified Planning Permit"};
 	var goodStanding = {condition : "Local - Evidence of Good Standing", document : "Local - Evidence of Good Standing"};
 	var CEQA = {condition : "Local - Evidence of CEQA Compliance", document : "Local - Evidence of CEQA Compliance"};
-	var equity = {condition : "Local - Equity Fee Waiver Application", document : "Local - Equity Fee Waiver Application"};
+	//var equity = {condition : "Local - Equity Fee Waiver Application", document : "Local - Equity Fee Waiver Application"};
 	//var localComply = {condition : "Local - Certification of Local Compliance", document : "Local - Certification of Local Compliance"};
 	var coopMembers = {condition : "Cannabis Cooperative Association Member List", document : "Cannabis Cooperative Association Member List"};
 	var useCompassionate = {condition : "Priority Review - Compassionate Use Act of 1996", document : "Priority Review - Compassionate Use Act"};
@@ -226,13 +226,13 @@ try{
 		
 	// Local Permit Documents
 		//arrReqdDocs_App.push(planningPermit);
-		if(AInfo["Apply for Equity Waiver"] == "Yes") {
+		/*if(AInfo["Apply for Equity Waiver"] == "Yes") {
 			arrReqdDocs_App.push(equity);
 		}else{
 			if(appHasCondition(conditionType, null, equity.condition, null)){
 				removeCapCondition(conditionType, equity.condition);
 			}
-		}	
+		}*/	
 		arrReqdDocs_App.push(CEQA);
 	
 	// Premise Documents
