@@ -9,6 +9,11 @@ try{
 			comment("This application has been placed on hold. Please contact the Department of Cannabis Control by calling 1 (844) 61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.");
 		}
 	}
+	if(capStatus == "Completed" || capStatus == "Completed-Missing Information") {
+		cancel = true;		
+		showMessage = true;
+		comment("This record has a completed status.");
+	}
 }catch(err){
 	logDebug("An error has occurred in DUB:LICENSES/CULTIVATOR/*/AMENDMENT: No Documents: " + err.message);
 	logDebug(err.stack);
