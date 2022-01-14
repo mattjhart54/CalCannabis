@@ -12,7 +12,7 @@ try{
 	if(capStatus == "Completed" || capStatus == "Completed-Missing Information") {
 		cancel = true;		
 		showMessage = true;
-		comment("This record has a completed status.");
+		comment("Upload not allowed. Please contact the Licensing Division by calling 844-612-2322 or by sending an email to Licensing@cannabis.ca.gov.");
 	}
 }catch(err){
 	logDebug("An error has occurred in DUB:LICENSES/CULTIVATOR/*/AMENDMENT: No Documents: " + err.message);
