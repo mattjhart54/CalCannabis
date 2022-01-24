@@ -46,29 +46,11 @@ function runSQL() {
     try {
         var conn = aa.db.getConnection();
 
-        var usql =   "  DELETE FROM FSHOPPING_CART";
+        var usql =   "  DELETE FSHOPPING_CART_ITEM";
 
         sStmt1 = conn.prepareStatement(usql);
-        rret = sStmt1.executeQuery();  
+        rret = sStmt1.execute();  
 		
-		            for(var currentResult = rret.next(); currentResult == true; currentResult = rret.next())
-            {
-                if(retVal == null)
-                {
-                    retVal = new Array();
-                    retValIndex = 0;
-                }
-                retVal[retValIndex] = rret.getString("REC_FUL_NAM");
-				var result = aa.shoppingCart.removeExpireShoppingCartItems();
-				aa.print(aa.shoppingCart.removeExpireShoppingCartItems().getOutput());
-				if (result.getSuccess()){
-						aa.print("successful");
-				}else{
-						aa.print("fail");
-				}
-                aa.print(" RefLPSeqNum:" + retVal[retValIndex]);
-                retValIndex++;
-            }
 
     } catch (vError) {
         aa.print("Runtime error occurred: " + vError);
