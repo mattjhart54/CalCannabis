@@ -1,0 +1,5 @@
+function doConfigurableScriptActions() {
+
+//dummy method
+
+}
