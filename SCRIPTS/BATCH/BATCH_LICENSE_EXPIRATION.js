@@ -87,7 +87,7 @@ aa.env.setValue("skipAppStatusArray", "Active,Cancelled,Expired,Inactive,Retired
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sendEmailToContactTypes", "Desiganted Responsible Party");
 aa.env.setValue("emailTemplate","LCA_ABOUT_TO_EXPIRE_NOTIFICATION");
-aa.env.setValue("sysFromEmail", "calcannabislicensing@cdfa.ca.gov");
+aa.env.setValue("sysFromEmail", "noreply@cannabis.ca.gov");
 aa.env.setValue("sendEmailNotifications","N");
 aa.env.setValue("reportName", "");
 */
@@ -310,6 +310,7 @@ try{
 				capId = cIds[rId];
 				closeTask(updWfTask,newWfStatus,"Closed by License Expiration Batch Process", "");
 				updateAppStatus(newAppStatus, "");
+				addStdCondition("Application Condition", "Review Lock",capId);
 				capId = holdId;
 			}
 		}
