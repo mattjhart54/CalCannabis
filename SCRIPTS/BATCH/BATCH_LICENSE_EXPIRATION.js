@@ -310,7 +310,7 @@ try{
 				capId = cIds[rId];
 				closeTask(updWfTask,newWfStatus,"Closed by License Expiration Batch Process", "");
 				updateAppStatus(newAppStatus, "");
-				addStdCondition("Application Condition", "Review Lock",capId);
+				addStdCondition("Application Condition", "Application Hold",capId);
 				capId = holdId;
 			}
 		}
