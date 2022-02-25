@@ -365,12 +365,12 @@ try{
 //MJH: 180809 Story 5607 - Close Owner records when application Disqualified. 
 try {
 
-	if(wfStatus == "Disqualified") {
+	if(wfStatus == "Abandoned") {
 		holdId = capId;
 		childArray = getChildren("Licenses/Cultivator/Medical/Owner Application");
 		for (x in childArray) {
 			capId = childArray[x];
-			updateAppStatus("Disqualified", "set by script");
+			updateAppStatus("Abandoned", "set by script");
 			deactivateTask("Owner Application Review");
 		}
 		capId = holdId;

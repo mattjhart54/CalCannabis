@@ -17,7 +17,7 @@ try{
 						denyAttachment = true;
 					}
 				}else{
-					if (wfObj[i].getDisposition().equals("Disqualified")){
+					if (matches(wfObj[i].getDisposition(),"Disqualified","Abandoned")){
 						denyAttachment = true;
 						errorMessage = "This application has been placed on hold. Please contact Department of Cannabis Control by calling 1 (844) 61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.";
 						break;

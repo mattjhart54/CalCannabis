@@ -295,7 +295,7 @@ try {
 }
 //MJH: 180809 Story 5607 - Close Owner records when application Disqualified. 
 try{
-	if(wfStatus == "Disqualified"){
+	if(wfStatus == "Abandoned"){
 		showDebug=false;
 		var drpContact = getContactObj(capId,"Designated Responsible Party");
 		if(drpContact){

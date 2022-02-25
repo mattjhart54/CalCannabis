@@ -119,7 +119,7 @@ try{
 		capId = holdId;
 	}
 	else {
-		if(AInfo["Local Authority Response"] == "Non Compliance"  && !matches(capStatus,"Denied", "Disqualified", "Provisional License Issued", "License Issued")){
+		if(AInfo["Local Authority Response"] == "Non Compliance"  && !matches(capStatus,"Denied", "Disqualified", "Abandoned", "Provisional License Issued", "License Issued")){
 			activateTask("Administrative Manager Review");
 			updateTask("Administrative Manager Review","Locally Non-Compliant","Updated by script");
 			updateAppStatus("Ready for Review","Updated by script");
