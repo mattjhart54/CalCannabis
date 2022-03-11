@@ -308,14 +308,17 @@ try{
 								wfTask = fTask.getTaskDescription();
 								if(matches(wfTask,"Administrative Manager Review","Science Manager Review")){
 									if (fTask.getDisposition().equals("Deficiency Letter Sent")){
-										var dispDate = fTask.getDispositionDate();
-										var taskDate = convertDate(fTask.getAssignmentDate());
-										if(isNaN(dispDate)){
-											var taskDate = convertDate(fTask.getAssignmentDate());
+										if (wfTask == "Administrative Manager Review"){
+											var sentDate = getAppSpecific("Admin Deficiency Letter Sent");
+										}else{
+											var sentDate = getAppSpecific("Science Deficiency Letter Sent");
 										}
-										var eRegJSDate = new Date(eRegDate);
-										if (taskDate < eRegJSDate){
-											rptName = "Final Deficiency Disqualification Letter";
+										if (!matches(sentDate,null,undefined,"")){
+											var taskDate = new Date(sentDate);
+											var eRegJSDate = new Date(eRegDate);
+											if (taskDate < eRegJSDate){
+												rptName = "Final Deficiency Disqualification Letter";
+											}
 										}
 									}
 								}
