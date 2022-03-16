@@ -374,7 +374,7 @@ try {
 			deactivateTask("Owner Application Review");
 		}
 		capId = holdId;
-		runReportAttach(capId,"Final Deficiency Disqualification Letter", "altId", capId.getCustomID(), "addressType", "Mailing", "contactType", "Designated Responsible Party");
+		runReportAttach(capId,"Final Deficiency Abandoned Letter", "altId", capId.getCustomID(), "addressType", "Mailing", "contactType", "Designated Responsible Party");
 		emailRptContact("WTUA", "LCA_GENERAL_NOTIFICATION", "", false, capStatus, capId, "Designated Responsible Party", "altId", capId.getCustomID());
 	}
 }catch(err){
