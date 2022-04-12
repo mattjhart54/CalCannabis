@@ -288,9 +288,19 @@ try{
 		if(newExpStatus == "Expired") {
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
 			if (renewalCapProject != null) {
-				renewalCapProject.setStatus("Complete");
-				renewalCapProject.setRelationShip("R");  // move to related records
-				aa.cap.updateProject(renewalCapProject);
+				var renCapId = renewalCapProject.getCapID();
+				var renewalCap = aa.cap.getCap(renCapId).getOutput();
+				var capIdStatusClass = getCapIdStatusClass(renCapId);
+				if (capIdStatusClass == "INCOMPLETE EST"){
+					aa.cap.updateAccessByACA(renCapId,"N");
+					renewalCap.getCapModel().setAuditStatus("I");
+					aa.cap.editCapByPK(renewalCap.getCapModel());
+					logDebug("Set " + renCapId + " with a Status of: " + renewalCap.getCapModel().getAuditStatus());
+				}else{
+					renewalCapProject.setStatus("Complete");
+					renewalCapProject.setRelationShip("R");  // move to related records
+					aa.cap.updateProject(renewalCapProject);
+				}
 			}
 		}
 	// update CAP status
