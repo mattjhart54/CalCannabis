@@ -291,7 +291,7 @@ try{
 				var renCapId = renewalCapProject.getCapID();
 				var renewalCap = aa.cap.getCap(renCapId).getOutput();
 				var capIdStatusClass = getCapIdStatusClass(renCapId);
-				if (capIdStatusClass == "INCOMPLETE EST"){
+				if (matches(capIdStatusClass,"INCOMPLETE EST","INCOMPLETE CAP")){
 					aa.cap.updateAccessByACA(renCapId,"N");
 					renewalCap.getCapModel().setAuditStatus("I");
 					aa.cap.editCapByPK(renewalCap.getCapModel());
