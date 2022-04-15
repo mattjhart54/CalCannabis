@@ -1,5 +1,5 @@
 try {
-	if(matches(wfStatus,"Physical Modification Approved","Approved for Provisional Renewal","Transition Amendment Approved")) {
+	if(matches(wfStatus,"Physical Modification Approved","Approved for Provisional Renewal","Transition Amendment Approved","Approved")) {
 		// Copy custom fields from the license record to the parent record
 		pIds = getParents("Licenses/Cultivator/License/License");
 		if(!matches(pIds,null,'',undefined)) {
@@ -257,8 +257,7 @@ try {
 					envParameters.put("contType","Designated Responsible Party");
 					envParameters.put("fromEmail",sysFromEmail);
 					aa.runAsyncScript(scriptName, envParameters);
-				}
-				else {
+				}else{
 		//  Send  Approved for Provisional Renewal email notification to DRP
 					var eParams = aa.util.newHashtable(); 
 					addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
@@ -294,7 +293,37 @@ try {
 						}
 					}
 				}
-			}			
+			}	
+			if(wfStatus == "Approved") {
+				if(updateCat) {
+				//Run Official License Certificate and Approved for Provisional Renewal email the DRP
+					var appAltId = capId.getCustomID();
+					var licAltId = parentCapId.getCustomID();
+					var scriptName = "asyncRunOfficialLicenseRpt";
+					var envParameters = aa.util.newHashMap();
+					envParameters.put("approvalLetter", "");
+					envParameters.put("emailTemplate", "LCA_SA_APPROVED_FOR_RENEWAL");
+					envParameters.put("reason", reason);
+					envParameters.put("appCap",appAltId);
+					envParameters.put("licCap",licAltId); 
+					envParameters.put("reportName","Official License Certificate"); 
+					envParameters.put("currentUserID",currentUserID);
+					envParameters.put("contType","Designated Responsible Party");
+					envParameters.put("fromEmail",sysFromEmail);
+					aa.runAsyncScript(scriptName, envParameters);
+				}else{
+				//  Send  Approved Renewal email notification to DRP
+					var eParams = aa.util.newHashtable(); 				
+					addParameter(eParams, "$$altId$$", capId.getCustomID());
+					addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
+					addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
+					addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
+					var priEmail = ""+priContact.capContact.getEmail();
+					emailTemplate = "LCA_SA_APPROVED_FOR_RENEWAL";
+					var rFiles = [];
+					sendNotification(sysFromEmail,priEmail,"",emailTemplate,eParams, rFiles,capId);
+				}
+			}
 			if(wfStatus == "Transition Amendment Approved") {
 //				if(AInfo["Transition"] == "Yes") {
 					editAppSpecific("License Issued Type", "Annual",parentCapId);
