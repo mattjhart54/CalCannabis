@@ -262,8 +262,10 @@ try{
 	// Update the workflow on the Renewal record to approved
 			if (AInfo["License Issued Type"] == "Provisional") {
 				closeTask("Provisional Renewal Review","Approved","Renewal Fast Tracked","");
+				var emailTemplate = "LCA_RENEWAL_APPROVAL";
 			}else{
 				closeTask("Annual Renewal Review","Approved","Renewal Fast Tracked","");
+				var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
 			}
 	//		updateAppStatus("Approved","Renewal Fast Tracked");
 			editAppSpecific("Fast Track","CHECKED");
@@ -280,7 +282,7 @@ try{
 			envParameters.put("licCap",licAltId); 
 			envParameters.put("reportName","Official License Certificate");
 			envParameters.put("approvalLetter", approvalLetter);
-			envParameters.put("emailTemplate", "LCA_RENEWAL_APPROVAL");
+			envParameters.put("emailTemplate", emailTemplate);
 			envParameters.put("reason", "");
 			envParameters.put("currentUserID",currentUserID);
 			envParameters.put("contType","Designated Responsible Party");
