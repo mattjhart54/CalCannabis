@@ -36,9 +36,10 @@ try{
 		editAppSpecific("Case Renewal Type","Renewal Review");
 		editAppName("Renewal Review");
 	}
+	/*Removed wfTask Notice Non-Compliance Issued in story 7105
 	if (wfTask == "Licensing Case Assessment" && wfStatus == "Notice Non-Compliance Issued") {
 		updateAppStatus("Notice Non-Compliance Issued");
-	}
+	}*/
 	if (wfTask == "Licensing Case Assessment" && wfStatus == "Suspension Lift Requested") {
 		//Assign to user who set LAU Assessment task to LAU Exected - Suspension
 		var workflowResult = aa.workflow.getTasks(capId);
