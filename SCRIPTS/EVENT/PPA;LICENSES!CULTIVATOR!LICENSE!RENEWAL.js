@@ -84,10 +84,13 @@ try{
 						editAppSpecific("Fast Track","CHECKED");
 				
 		//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
-						if (AInfo["License Issued Type"] == "Provisional")
+						if (AInfo["License Issued Type"] == "Provisional"){
 							var approvalLetter = "Provisional Renewal Approval";
-						else
+							var emailTemplate = "LCA_RENEWAL_APPROVAL";
+						}else{
 							var approvalLetter = "Approval Letter Renewal";
+							var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
+						}
 						var scriptName = "asyncRunOfficialLicenseRpt";
 						var envParameters = aa.util.newHashMap();
 						envParameters.put("licType", "");

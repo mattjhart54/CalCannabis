@@ -262,19 +262,20 @@ try{
 	// Update the workflow on the Renewal record to approved
 			if (AInfo["License Issued Type"] == "Provisional") {
 				closeTask("Provisional Renewal Review","Approved","Renewal Fast Tracked","");
-				var emailTemplate = "LCA_RENEWAL_APPROVAL";
 			}else{
 				closeTask("Annual Renewal Review","Approved","Renewal Fast Tracked","");
-				var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
 			}
 	//		updateAppStatus("Approved","Renewal Fast Tracked");
 			editAppSpecific("Fast Track","CHECKED");
 			
 	//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
-			if (AInfo["License Issued Type"] == "Provisional")
+			if (AInfo["License Issued Type"] == "Provisional"){
 				var approvalLetter = "Provisional Renewal Approval";
-			else
+				var emailTemplate = "LCA_RENEWAL_APPROVAL";
+			}else{
 				var approvalLetter = "Approval Letter Renewal";
+				var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
+			}
 			var scriptName = "asyncRunOfficialLicenseRpt";
 			var envParameters = aa.util.newHashMap();
 			envParameters.put("licType", "");
