@@ -98,7 +98,7 @@ try{
 						envParameters.put("licCap",licAltId); 
 						envParameters.put("reportName","Official License Certificate");
 						envParameters.put("approvalLetter", approvalLetter);
-						envParameters.put("emailTemplate", "LCA_RENEWAL_APPROVAL");
+						envParameters.put("emailTemplate", emailTemplate);
 						envParameters.put("reason", "");
 						envParameters.put("currentUserID",currentUserID);
 						envParameters.put("contType","Designated Responsible Party");
