@@ -184,8 +184,8 @@ try{
 			editAppSpecific("Premises County",PInfo["Premise County"],licCaseId);
 			editAppSpecific("Local Authority Type",PInfo["Local Authority Type"],licCaseId);
 			editAppSpecific("Case Renewal Type","Renewal Allowed",licCaseId);
-			editAppSpecific("Case Description","Provisional Renewal Missing Science Amendment",licCaseId);
-			editAppSpecific("Case Opened By","Science - Provisional",licCaseId);
+			editAppSpecific("Case Description",AInfo["License Issued Type"] + " Renewal Missing Science Amendment",licCaseId);
+			editAppSpecific("Case Opened By","Science - " + AInfo["License Issued Type"],licCaseId);
 			editAppSpecific("Priority","Moderate",licCaseId);
 			editAppName("Renewal Allowed",licCaseId);
 			editCapConditionStatus("Application Condition","Provisional Renewal Missing Science Amendment","Condition Met","Not Applied");
