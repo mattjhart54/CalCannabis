@@ -85,10 +85,10 @@ try{
 				
 		//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
 						if (AInfo["License Issued Type"] == "Provisional"){
-							var approvalLetter = "Provisional Renewal Approval";
+							var approvalLetter = "";
 							var emailTemplate = "LCA_RENEWAL_APPROVAL";
 						}else{
-							var approvalLetter = "Approval Letter Renewal";
+							var approvalLetter = "";
 							var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
 						}
 						var scriptName = "asyncRunOfficialLicenseRpt";
