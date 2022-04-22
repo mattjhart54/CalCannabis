@@ -85,7 +85,7 @@ try{
 				
 		//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
 						if (AInfo["License Issued Type"] == "Provisional"){
-							var approvalLetter = "";
+							var approvalLetter = "Provisional Renewal Approval";
 							var emailTemplate = "LCA_RENEWAL_APPROVAL";
 						}else{
 							var approvalLetter = "";
