@@ -88,6 +88,8 @@ try {
 		ignoreTableArray = [];
 		removeASITable("APN SPATIAL INFORMATION",parentCapId);
 		removeASITable("LAKE AND STREAMBED ALTERATION",parentCapId);
+		removeASITable("ELECTRICITY USAGE",parentCapId);
+		removeASITable("AVERAGE WEIGHTED GGEI",parentCapId);
 		if (matches(getAppSpecific("Small Retail Water Supplier Review Status-NEW"),"Complete","N/A")){
 			removeASITable("SMALL RETAIL WATER SUPPLIERS",parentCapId);
 		}else{
