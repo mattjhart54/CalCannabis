@@ -85,7 +85,6 @@ var appStatus = getParam("appStatus");
 var newAppStatus = getParam("newAppStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
-var emailAddress = getParam("emailAddress");			// email to send report
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
 var sysFromEmail = getParam("sysFromEmail");
 var fromDate = dateAdd(null,parseInt(lookAheadDays));
