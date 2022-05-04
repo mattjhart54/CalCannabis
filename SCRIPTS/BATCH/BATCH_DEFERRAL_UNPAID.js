@@ -12,6 +12,7 @@
 |
 /------------------------------------------------------------------------------------------------------*/
 var emailText = "";
+var errLog = "";
 var debugText = "";
 var showDebug = false;	
 var showMessage = false;
@@ -127,16 +128,21 @@ if (!toDate.length) { // no "to" date, assume today + number of look ahead days 
 logDebug("Date Range -- fromDate: " + fromDate + ", toDate: " + toDate)
 
 
-mainProcess();
-
-logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
-
-if (emailAddress.length)
-	aa.sendMail(sysFromEmail, emailAddress, "", batchJobName + " Results", emailText);
-
-if (showDebug) {
-	aa.eventLog.createEventLog("DEBUG", "Batch Process", batchJobName, aa.date.getCurrentDate(), aa.date.getCurrentDate(),"", emailText ,batchJobID);
+try {
+	mainProcess();
+	logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
+	if (emailAddress.length) {
+		aa.sendMail(sysFromEmail, emailAddress, "", batchJobName + " Results", emailText);
+		if(errLog != "") {
+			aa.sendMail(sysFromEmail, emailAddress, "", batchJobName + " Errors", errLog);
+		}
+	}
+} catch (err) {
+	logDebug("ERROR: BATCH_DEFERRAL_UNPAID: " + err.message + " In " + batchJobName + " Line " + err.lineNumber);
+	logDebug("Stack: " + err.stack);
 }
+
+
 //aa.print(emailText);
 /*------------------------------------------------------------------------------------------------------/
 | <===========END=Main=Loop================>
