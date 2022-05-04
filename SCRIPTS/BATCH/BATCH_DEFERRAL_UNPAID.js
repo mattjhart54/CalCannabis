@@ -183,6 +183,8 @@ try{
 		var capStatus = cap.getCapStatus();
 		logDebug("app " + appStatus + " cap " + capStatus);
 		if (appStatus != capStatus) {
+			logDebug("----Ingnoring Record Due to Status" + altId + br);
+			capFilterStatus++
 			continue;
 		}
 		capCount++;
@@ -193,7 +195,6 @@ try{
 		}
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
- 	logDebug("Ignored due to application type: " + capFilterType);
  	logDebug("Ignored due to CAP Status: " + capFilterStatus);
  	logDebug("Total CAPS processed: " + capCount);
 
