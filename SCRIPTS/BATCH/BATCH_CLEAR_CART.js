@@ -112,10 +112,6 @@ function mainProcess() {
 
     var vError = '';
 
-    var sStmt1 = null;
-    var rret = null;
-	var retVal = null;
-	var resArr = [];
     try {
 	// Identify Records in Shopping Cart
     var conn = aa.db.getConnection();	
@@ -141,7 +137,7 @@ function mainProcess() {
     } catch (vError) {
         aa.print("Runtime error occurred: " + vError);
     }
-    closeDBQueryObject(rret, sStmt1, conn); 
+    closeDBQueryObject(rSet, sStmt, conn); 
 	
 	//CLEAR SHOPPING CART
 	try {
@@ -149,9 +145,9 @@ function mainProcess() {
 
         var usql =   "  DELETE FSHOPPING_CART_ITEM";
 
-        sStmt1 = conn.prepareStatement(usql);
-        rret = sStmt1.execute();  
-		logDebug("Cleared Shopping Cart");
+        var sStmt1 = conn.prepareStatement(usql);
+        var rret = sStmt1.execute();  
+		logDebug("Successfully Cleared Shopping Cart");
 		
 
     } catch (vError) {
