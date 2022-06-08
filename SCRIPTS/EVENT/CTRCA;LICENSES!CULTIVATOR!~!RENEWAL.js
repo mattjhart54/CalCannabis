@@ -104,7 +104,7 @@ try{
 	var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",vLicenseID);
 	var issueDate = getAppSpecific("Valid From Date",vLicenseID);
 	var approvedRen = false;
-	var licCaseExclusion = false;
+	var createLicCase = false;
 	if (scienceArr) {
 		if (scienceArr.length > 0) {
 			for (x in scienceArr){
@@ -124,8 +124,8 @@ try{
 								fTask = wfObj[i];
 								var status = fTask.getDisposition();
 								var taskDesc = fTask.getTaskDescription();
-								if((status != null && taskDesc != null) && status != "Physical Modification Approved"){
-									licCaseExclusion = true;
+								if((status != null && taskDesc != null) && (status == "Physical Modification Approved"){
+									createLicCase = true;
 								}
 							}
 						}else{
@@ -136,7 +136,7 @@ try{
 			}
 		}
 	}
-	if (!licCaseExclusion){
+	if (createLicCase){
 		var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
 		if (licCaseId){
 			// Set alt id for the case record based on the number of child case records linked to the license record
