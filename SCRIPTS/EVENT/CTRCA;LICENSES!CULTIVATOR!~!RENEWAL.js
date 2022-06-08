@@ -124,7 +124,7 @@ try{
 								fTask = wfObj[i];
 								var status = fTask.getDisposition();
 								var taskDesc = fTask.getTaskDescription();
-								if((status != null && taskDesc != null) && (status == "Physical Modification Approved"){
+								if((status != null && taskDesc != null) && status == "Physical Modification Approved"){
 									createLicCase = true;
 								}
 							}
