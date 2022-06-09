@@ -50,6 +50,8 @@ try {
 		editAppSpecific("Premise Zip",PInfo["Premise Zip"]);
 		editAppSpecific("Premise County",PInfo["Premise County"]);
 		editAppSpecific("APN",PInfo["APN"]);
+		editAppSpecific4ACA("Tribal Land",PInfo["Tribal Land"]);
+		editAppSpecific4ACA("Tribal Land Information",PInfo["Tribal Land Information"]);
 		editAppSpecific("Grid",PInfo["Grid"]);
 		editAppSpecific("Grid Update",PInfo["Grid"]);
 		editAppSpecific("Solar",PInfo["Solar"]);
