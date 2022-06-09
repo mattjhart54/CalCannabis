@@ -184,6 +184,8 @@ try{
 			editAppSpecific4ACA("Premise Zip",PInfo["Premise Zip"]);
 			editAppSpecific4ACA("Premise County",PInfo["Premise County"]);
 			editAppSpecific4ACA("APN",PInfo["APN"]);
+			editAppSpecific4ACA("Tribal Land",PInfo["Tribal Land"]);
+			editAppSpecific4ACA("Tribal Land Information",PInfo["Tribal Land Information"]);
 			editAppSpecific4ACA("Grid",PInfo["Grid"]);
 			editAppSpecific4ACA("Grid Update",PInfo["Grid"]);
 			editAppSpecific4ACA("Solar",PInfo["Solar"]);
