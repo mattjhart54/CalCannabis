@@ -30,6 +30,14 @@ try {
 			editAppSpecific("APN",AInfo["APN Update"],parentCapId);
 			updateCat = true;
 		}
+		if(!matches(AInfo["Tribal Land Update"],null,"",undefined)) {
+			editAppSpecific("Tribal Land",AInfo["Tribal Land Update"],parentCapId);
+			updateCat = true;
+		}
+		if(!matches(AInfo["Tribal Land Information Update"],null,"",undefined)) {
+			editAppSpecific("Tribal Land Information",AInfo["Tribal Land Information Update"],parentCapId);
+			updateCat = true;
+		}
 		editAppSpecific("Grid",AInfo["Grid Update"],parentCapId);
 		editAppSpecific("Solar",AInfo["Solar Update"],parentCapId);
 		editAppSpecific("Generator",AInfo["Generator Update"],parentCapId);
