@@ -360,7 +360,7 @@ try{
 			}
 		}
 	// Send Notification
-		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
+		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0 && getAppSpecific("Pause Renewal Notice",capId) != "Y") {
 			var conTypeArray = sendEmailToContactTypes.split(",");
 			var	conArray = getContactArray(capId);
 			var contactFound = false;
