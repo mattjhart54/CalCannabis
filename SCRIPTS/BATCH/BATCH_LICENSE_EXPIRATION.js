@@ -360,62 +360,64 @@ try{
 			}
 		}
 	// Send Notification
-		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0 && getAppSpecific("Pause Renewal Notice",capId) != "Y") {
-			var conTypeArray = sendEmailToContactTypes.split(",");
-			var	conArray = getContactArray(capId);
-			var contactFound = false;
-			for (thisCon in conArray) {
-				var conEmail = false;
-				thisContact = conArray[thisCon];
-				if (exists(thisContact["contactType"],conTypeArray)){
-					contactFound = true;
-					pContact = getContactObj(capId,thisContact["contactType"]);
-					var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
-					if((matches(priChannel,null,"",undefined) || priChannel.indexOf("Postal") >-1) && setPrefix != ""){
-						if(setCreated == false) {
-						   //Create NonEmail Set
-							var vNonEmailSet =  createExpirationSet(setPrefix);
-							if(vNonEmailSet){
-								var sNonEmailSet = vNonEmailSet.toUpperCase();
-								var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
-								setHeaderSetType.setRecordSetType("License Notifications");
-								setHeaderSetType.setSetStatus("New");
-								updResult = aa.set.updateSetHeader(setHeaderSetType);          
-								setCreated = true;
-							}else{
-								logDebug("Could not create set.  Stopping processing.");
-								break;
-							}
-						}
-						setAddResult=aa.set.add(sNonEmailSet,capId);
-					}
-					conEmail = thisContact["email"];
-					if (conEmail) {
-						if (expStatus == "Expired"){
-							var capReportVar = "RECORD_ID";
-						}else{
-							var capReportVar = "capId";
-						}
-						if (typeof(rptName) == "object"){
-							for (i = 0; i < rptName.length; i++) {
-								thisRptName = String(rptName[i]);
-								if (thisRptName == "Balance Due Report"){
-									runReportAttach(capId,thisRptName,"altId",renAltId);
-									runReportAttach(renCapId,thisRptName,"altId",renAltId);
+		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
+			if (getAppSpecific("Pause Renewal Notice",capId) != "Y"){
+				var conTypeArray = sendEmailToContactTypes.split(",");
+				var	conArray = getContactArray(capId);
+				var contactFound = false;
+				for (thisCon in conArray) {
+					var conEmail = false;
+					thisContact = conArray[thisCon];
+					if (exists(thisContact["contactType"],conTypeArray)){
+						contactFound = true;
+						pContact = getContactObj(capId,thisContact["contactType"]);
+						var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ pContact.capContact.getPreferredChannel());
+						if((matches(priChannel,null,"",undefined) || priChannel.indexOf("Postal") >-1) && setPrefix != ""){
+							if(setCreated == false) {
+							   //Create NonEmail Set
+								var vNonEmailSet =  createExpirationSet(setPrefix);
+								if(vNonEmailSet){
+									var sNonEmailSet = vNonEmailSet.toUpperCase();
+									var setHeaderSetType = aa.set.getSetByPK(sNonEmailSet).getOutput();
+									setHeaderSetType.setRecordSetType("License Notifications");
+									setHeaderSetType.setSetStatus("New");
+									updResult = aa.set.updateSetHeader(setHeaderSetType);          
+									setCreated = true;
 								}else{
-									runReportAttach(capId,thisRptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
+									logDebug("Could not create set.  Stopping processing.");
+									break;
 								}
 							}
-						}else{
-							runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",renAltId); 
+							setAddResult=aa.set.add(sNonEmailSet,capId);
 						}
-						emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",renAltId);
-						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+						conEmail = thisContact["email"];
+						if (conEmail) {
+							if (expStatus == "Expired"){
+								var capReportVar = "RECORD_ID";
+							}else{
+								var capReportVar = "capId";
+							}
+							if (typeof(rptName) == "object"){
+								for (i = 0; i < rptName.length; i++) {
+									thisRptName = String(rptName[i]);
+									if (thisRptName == "Balance Due Report"){
+										runReportAttach(capId,thisRptName,"altId",renAltId);
+										runReportAttach(renCapId,thisRptName,"altId",renAltId);
+									}else{
+										runReportAttach(capId,thisRptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays);
+									}
+								}
+							}else{
+								runReportAttach(capId,rptName, capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",renAltId); 
+							}
+							emailRptContact("BATCH", emailTemplate, rptName, true, expStatus, capId, thisContact["contactType"], capReportVar, altId, "contactType", thisContact["contactType"], "addrType", addrType, "numberDays", lookAheadDays,"altId",renAltId);
+							logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+						}
 					}
 				}
-			}
-			if(!contactFound){
-				logDebug("No contact found for notification: " + altId);
+				if(!contactFound){
+					logDebug("No contact found for notification: " + altId);
+				}
 			}
 		}
 		//Remove Balance Due Report from rptName Array and prepare for next record;
