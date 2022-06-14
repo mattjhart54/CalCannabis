@@ -327,7 +327,11 @@ try{
 							logMessage("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage());
 						}
 						//Story 7031 - End
-						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
+						if (rptName == "Final Deficiency Disqualification Letter"){
+							runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
+						}else{
+							runReportAttach(capId,rptName, "p1Value", capId.getCustomID(), "p2Value", thisContact["contactType"], "p3Value", addrType); 
+						}
 						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"], "p1value", capId.getCustomID());
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
