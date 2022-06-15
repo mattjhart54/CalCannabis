@@ -1,6 +1,7 @@
 try {
 	loadASITablesBefore();
-	if(LICENSES.length > 0) {
+	if (LICENSES != null && typeof(LICENSES).size != "undefined" && LICENSES.size() > 0) {
+//	if(LICENSES.length > 0) {
 		for(i in LICENSES) {
 			var licNum = LICENSES[i]["License Number"]
 			var licId = aa.cap.getCapID(licNum);
