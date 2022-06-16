@@ -26,29 +26,27 @@ try{
 	loadASITables();
 	var tblOwner = [];
 	var emailDuplicate = false;
-	if(typeof(OWNERS) == "object") {
-		for(row in OWNERS){
-			tblOwner.push(OWNERS[row]);
+	for(row in OWNERS){
+		tblOwner.push(OWNERS[row]);
+	}
+	for(x in tblOwner) {
+		var tblEmail = ""+ tblOwner[x]["Email Address"];
+		tblEmail = tblEmail.toUpperCase();
+		for(o in OWNERS) {
+			if( x == o) 
+				continue;
+			var ownEmail = ""+ OWNERS[o]["Email Address"];
+			ownEmail = ownEmail.toUpperCase();
+			logDebug("tblEmail " + tblEmail + " ownEmail " + ownEmail);
+			if (tblEmail == ownEmail) {
+				emailDuplicate = true;
+			}
 		}
-		for(x in tblOwner) {
-			var tblEmail = ""+ tblOwner[x]["Email Address"];
-			tblEmail = tblEmail.toUpperCase();
-			for(o in OWNERS) {
-				if( x == o) 
-					continue;
-				var ownEmail = ""+ OWNERS[o]["Email Address"];
-				ownEmail = ownEmail.toUpperCase();
-				logDebug("tblEmail " + tblEmail + " ownEmail " + ownEmail);
-				if (tblEmail == ownEmail) {
-					emailDuplicate = true;
-				}
-			}
-			if(emailDuplicate) {
-				cancel = true;
-				showMessage = true;
-				comment("Each Owner in the table must have a unique email address.");
-				break;
-			}
+		if(emailDuplicate) {
+			cancel = true;
+			showMessage = true;
+			comment("Each Owner in the table must have a unique email address.");
+			break;
 		}
 	}
 //MJH 190412 story 5979 - end
@@ -108,63 +106,6 @@ try {
 
 
 //lwacht: 180412: story 5428: end
-
-//jshear: 200117: story 6306: start - look for Smart Characters in data passing to METRIC
-try {
-
-	if (!publicUser){	
-		var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
-		var invalidChar = false;
-		var myObj = new Object();
-		
-		/*var contactList = aa.env.getValue("ContactList");
-		var contactArray = envContactList.toArray();
-		if (contactArray){
-			for (var xx in contactArray){
-				capContact = contactArray[xx].getPeople();
-				if(capContact.contactType == "Designated Responsible Party"){
-					myObj['DRP Phone Number'] = ""+ capContact.phone3;
-					myObj['DRP Email'] = "" + capContact.email;
-					myObj['DRP First Name'] = "" + capContact.firstName;
-					myObj['DRP Last Name'] = "" + capContact.lastName;
-				}
-				if(capContact.contactType == "Business"){
-					myObj['Facility Phone']  = ""+ capContact.phone3;
-				}
-			}
-		}*/
-		myObj['Premise Address'] = AInfo["Premise Address"];
-		myObj['Premise City'] = AInfo["Premise City"];
-		myObj['Premise County'] = "" + AInfo["Premise County"];
-		myObj['Premise State'] = "" + AInfo["Premise State"];
-		myObj['Premise Zip'] = "" + AInfo["Premise Zip"];
-		myObj['APN'] = "" + AInfo["APN"];
-		//myObj["Seller's Permit Number"] = "" + AInfo["BOE Seller's Permit Number"];
-
-
-		for (i in myObj){
-			if (myObj.hasOwnProperty(i)){	
-				var smartChar = isUnicode(String(myObj[i]));
-				if (smartChar){
-					invalidChar = true;
-					smartCharMessage += ", " + i;
-				}
-			}
-		}
-
-		if (invalidChar){
-			cancel = true;
-			showMessage = true;
-			comment(smartCharMessage);
-		}
-	}
-
-}
-catch (err) {
-	logDebug("An error has occurred in ASB;LICENSES!CULTIVATOR!~!APPLICATION.js: " + err.message);
-	logDebug(err.stack);
-	}
-//jshear: 200117: story 6306: end
 
 //lwacht 180104 Story 5105 start
 /*
