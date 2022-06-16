@@ -91,11 +91,12 @@ var asiGroup = getParam("asiGroup");
 var eRegDate = getParam("eRegsEffectiveDate");
 var sendEmailNotifications = getParam("sendEmailNotifications");
 var emailTemplate = getParam("emailTemplate");
+var ownerEmailTemplate = getParam("ownerEmailTemplate");
 var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var sysFromEmail = getParam("sysFromEmail");
 var setNonEmailPrefix = getParam("setNonEmailPrefix");
-var rptName = getParam("reportName");
-var ownerRptName = getParam("ownerReportName");
+//var rptName = getParam("reportName");
+//var ownerRptName = getParam("ownerReportName");
 var addrType = getParam("sendEmailAddressType");
 var skipAppStatus = getParam("skipAppStatus").split(","); //   Skip records with one of these application statuses
 var skipAppStatusCont = getParam("skipAppStatusCont").split(","); //   Skip records with one of these application statuses - Used for overflow
@@ -217,6 +218,7 @@ try{
 		//filter by eRegs Date
 		var eRegJSDate = new Date(eRegDate);
 		var defJSDate = new Date(defDate);
+		var appExpDate = getAppSpecific(asiField, capId);
 		if (defJSDate >= eRegJSDate){
 			logDebug(altId + " skipping, due to Task Date. Deficiency Sent Date: " + defJSDate + " eRegJSDate: " + eRegJSDate);
 			++capFilterTaskDate;
@@ -256,8 +258,8 @@ try{
 					}
 					conEmail = thisContact["email"];
 					if (conEmail) {
-						runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
-						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"]);
+						//runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
+						emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"],"$$expDays$", lookAheadDays, "$$sentDate$$", defDate, "$$appExpDate$$", appExpDate) ;
 						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 					}
 				}
@@ -298,12 +300,12 @@ try{
 							}
 							conEmail = thisContact["email"];
 							if (conEmail) {
-								runReportAttach(childCapId,ownerRptName, "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
+								//runReportAttach(childCapId,ownerRptName, "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
 								holdId = capId;
 								capId = childCapId;
-								emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"]);
+								emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$", lookAheadDays, "$$sentDate$$", defDate, "$$appExpDate$$", appExpDate);
 								capId = holdId;
-								logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+								logDebug(altId + ": Sent Email template " + ownerEmailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 							}
 						}
 					}	
