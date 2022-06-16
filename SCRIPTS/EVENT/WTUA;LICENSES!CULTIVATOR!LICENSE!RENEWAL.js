@@ -17,6 +17,7 @@ try {
 			vLicenseObj = new licenseObject(null, vLicenseID);
 			vExpDate = vLicenseObj.b1ExpDate;
 			vExpDate = new Date(vExpDate);
+			expYear = vExpDate.getFullYear();
 	// Extend license expiration by 1 year
 			vNewExpDate = new Date(vExpDate.getFullYear() + 1, vExpDate.getMonth(), vExpDate.getDate());
 	// Update license expiration date
@@ -99,9 +100,6 @@ try {
 						var scienceCap = scienceArr[x];
 						if (getAppSpecific("Associated Renewal",scienceCap) == "Yes"){
 							var correspondingYear = getAppSpecific("Renewal Year",scienceCap)
-							var thisLic = new licenseObject(null,vLicenseID);
-							var licExpDateObj = new Date(thisLic.b1ExpDate);
-							var	expYear = (Number(licExpDateObj.getFullYear()) - 1);
 							logDebug("expYear: " + expYear);
 							if (String(correspondingYear) == String(expYear)){
 								var saAppStatus = aa.cap.getCap(scienceCap).getOutput().getCapStatus();
