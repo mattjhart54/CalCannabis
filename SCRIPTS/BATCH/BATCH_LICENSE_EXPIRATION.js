@@ -361,7 +361,7 @@ try{
 		}
 	// Send Notification
 		if (sendEmailNotifications == "Y" && sendEmailToContactTypes.length > 0 && emailTemplate.length > 0) {
-			if (getAppSpecific("Pause Renewal Notice",capId) != "Y"){
+			if (getAppSpecific("Pause Renewal Notice",capId) != "CHECKED"){
 				var conTypeArray = sendEmailToContactTypes.split(",");
 				var	conArray = getContactArray(capId);
 				var contactFound = false;
