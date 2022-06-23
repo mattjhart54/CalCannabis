@@ -202,11 +202,13 @@ try{
 			for (i in wfObj) {
 				fTask = wfObj[i];
 				wfTask = fTask.getTaskDescription();
-				if (fTask.getDisposition().equals("Deficiency Letter Sent")){
-					if(wfTask == "Administrative Manager Review"){
-						var defDate = getAppSpecific("Admin Deficiency Letter Sent",capId);				
-					}else{
-						var defDate = getAppSpecific("Science Deficiency Letter Sent",capId);
+				if (fTask.getDisposition() != null){
+					if (fTask.getDisposition().equals("Deficiency Letter Sent")){
+						if(wfTask == "Administrative Manager Review"){
+							var defDate = getAppSpecific("Admin Deficiency Letter Sent",capId);				
+						}else{
+							var defDate = getAppSpecific("Science Deficiency Letter Sent",capId);
+						}
 					}
 				}
 			}
