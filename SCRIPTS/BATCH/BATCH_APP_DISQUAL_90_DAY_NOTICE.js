@@ -305,7 +305,7 @@ try{
 								//runReportAttach(childCapId,ownerRptName, "p1Value", childCapId.getCustomID(), "p2Value", "Owner", "p3Value", "Home"); 
 								holdId = capId;
 								capId = childCapId;
-								emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$", lookAheadDays, "$$sentDate$$", defDate, "$$appExpDate$$", appExpDate);
+								emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$$", lookAheadDays, "$$sentDate$$", defDate, "$$appExpDate$$", appExpDate);
 								capId = holdId;
 								logDebug(altId + ": Sent Email template " + ownerEmailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 							}
