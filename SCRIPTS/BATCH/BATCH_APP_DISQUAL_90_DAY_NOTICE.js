@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program: BATCH_APP_DISQUAL_NOTICE
+| Program: BATCH_APP_DISQUAL_90_DAY_NOTICE
 | Client:  CDFA_CalCannabis
 |
 | Version 1.0 - Base Version. 
