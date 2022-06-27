@@ -88,7 +88,6 @@ var daySpan = getParam("daySpan");
 var emailAddress = getParam("emailAddress");			// email to send report
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
-var eRegDate = getParam("eRegsEffectiveDate");
 var sendEmailNotifications = getParam("sendEmailNotifications");
 var emailTemplate = getParam("emailTemplate");
 var ownerEmailTemplate = getParam("ownerEmailTemplate");
@@ -217,15 +216,6 @@ try{
 			++capFilterTaskDate;
 			continue;
 		}
-		//filter by eRegs Date
-		var eRegJSDate = new Date(eRegDate);
-		var defJSDate = new Date(defDate);
-		var appExpDate = getAppSpecific(asiField, capId);
-		if (defJSDate >= eRegJSDate){
-			logDebug(altId + " skipping, due to Task Date. Deficiency Sent Date: " + defJSDate + " eRegJSDate: " + eRegJSDate);
-			++capFilterTaskDate;
-			continue;
-		}
 			
 		capCount++;
 		logDebug("----Processing record " + altId + br);
@@ -305,7 +295,7 @@ try{
 								//runReportAttach(childCapId,ownerRptName, "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
 								holdId = capId;
 								capId = childCapId;
-								emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$", lookAheadDays, "$$sentDate$$", defDate, "$$appExpDate$$", appExpDate);
+								emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$$", lookAheadDays, "$$sentDate$$", defDate, "$$appExpDate$$", appExpDate);
 								capId = holdId;
 								logDebug(altId + ": Sent Email template " + ownerEmailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 							}
