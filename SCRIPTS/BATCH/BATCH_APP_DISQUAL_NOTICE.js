@@ -254,9 +254,9 @@ try{
 						eParams = aa.util.newHashtable();
 						addParameter(eParams,"$$altID$$",altId);
 						addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
-						addParameter(eParams,"$$$$expDays$$",String(lookAheadDays));
-						addParameter(eParams,"$$$$sentDate$$",defDate);
-						addParameter(eParams,"$$$$appExpDate$$",getAppSpecific(asiField, capId));
+						addParameter(eParams,"$$expDays$$",String(lookAheadDays));
+						addParameter(eParams,"$$sentDate$$",defDate);
+						addParameter(eParams,"$$appExpDate$$",getAppSpecific(asiField, capId));
 						var rFiles = [];
 						sendNotification(sysFromEmail,conEmail,"",emailTemplate,eParams, rFiles,capId);
 						//emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"],"$$expDays$$", String(lookAheadDays), "$$sentDate$$", defDate, "$$appExpDate$$", getAppSpecific(asiField, capId));
@@ -306,9 +306,9 @@ try{
 								eParams = aa.util.newHashtable();
 								addParameter(eParams,"$$altID$$",capId.getCustomID());
 								addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
-								addParameter(eParams,"$$$$expDays$$",String(lookAheadDays));
-								addParameter(eParams,"$$$$sentDate$$",defDate);
-								addParameter(eParams,"$$$$appExpDate$$",getAppSpecific(asiField, capId));
+								addParameter(eParams,"$$expDays$$",String(lookAheadDays));
+								addParameter(eParams,"$$sentDate$$",defDate);
+								addParameter(eParams,"$$appExpDate$$",getAppSpecific(asiField, capId));
 								var rFiles = [];
 								sendNotification(sysFromEmail,conEmail,"",ownerEmailTemplate,eParams, rFiles,capId);
 								//emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$$", String(lookAheadDays), "$$sentDate$$", defDate, "$$appExpDate$$", getAppSpecific(asiField, capId));
