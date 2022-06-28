@@ -310,7 +310,7 @@ try{
 								addParameter(eParams,"$$$$sentDate$$",defDate);
 								addParameter(eParams,"$$$$appExpDate$$",getAppSpecific(asiField, capId));
 								var rFiles = [];
-								sendNotification(sysFromEmail,conEmail,"",emailTemplate,eParams, rFiles,capId);
+								sendNotification(sysFromEmail,conEmail,"",ownerEmailTemplate,eParams, rFiles,capId);
 								//emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$$", String(lookAheadDays), "$$sentDate$$", defDate, "$$appExpDate$$", getAppSpecific(asiField, capId));
 								capId = holdId;
 								logDebug(altId + ": Sent Email template " + ownerEmailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
