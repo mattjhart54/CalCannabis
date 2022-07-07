@@ -280,10 +280,14 @@ try{
 		capCount++;
 	// Actions start here:
 	// update expiration status
-		if (newExpStatus.length > 0) {
-			b1Exp.setExpStatus(newExpStatus);
-			aa.expiration.editB1Expiration(b1Exp.getB1Expiration());
-			logDebug("Update expiration status: " + newExpStatus);
+		if (newAppStatus.length > 0) {
+			if (newAppStatus == 'Expired') {
+				updateAppStatus(newAppStatus, "");
+			} else {
+				if(capStatus != 'Inactive') {
+					updateAppStatus(newAppStatus, "");
+				}
+			}
 		}
 		if(newExpStatus == "Expired") {
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
