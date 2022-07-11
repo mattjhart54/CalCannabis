@@ -279,15 +279,11 @@ try{
 		// done filtering, so increase the record count to include this record.
 		capCount++;
 	// Actions start here:
-	// update expiration status
-		if (newAppStatus.length > 0) {
-			if (newAppStatus == 'Expired') {
-				updateAppStatus(newAppStatus, "");
-			} else {
-				if(capStatus != 'Inactive') {
-					updateAppStatus(newAppStatus, "");
-				}
-			}
+	// update expiration status	
+		if (newExpStatus.length > 0) {
+			b1Exp.setExpStatus(newExpStatus);
+			aa.expiration.editB1Expiration(b1Exp.getB1Expiration());
+			logDebug("Update expiration status: " + newExpStatus);
 		}
 		if(newExpStatus == "Expired") {
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
@@ -309,7 +305,13 @@ try{
 		}
 	// update CAP status
 		if (newAppStatus.length > 0) {
-            updateAppStatus(newAppStatus, "");
+			if (newAppStatus == 'Expired') {
+				updateAppStatus(newAppStatus, "");
+			} else {
+				if(capStatus != 'Inactive') {
+					updateAppStatus(newAppStatus, "");
+				}
+			}
 		}
 		if(matches(newAppStatus, "Revoked", "Suspended", "Inactive","Expired","Surrendered","Cancelled")){
 			addToCat(capId);
