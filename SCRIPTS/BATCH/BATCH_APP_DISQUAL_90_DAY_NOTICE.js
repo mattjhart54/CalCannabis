@@ -303,8 +303,9 @@ try{
 								//runReportAttach(childCapId,ownerRptName, "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
 								holdId = capId;
 								capId = childCapId;
+								defArray = getChildren("Licenses/Cultivator/Medical/Amendment",capId);
 								eParams = aa.util.newHashtable();
-								addParameter(eParams,"$$altID$$",capId.getCustomID());
+								addParameter(eParams,"$$altID$$",defArray[0].getCustomID());
 								addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
 								addParameter(eParams,"$$expDays$$",String(lookAheadDays));
 								addParameter(eParams,"$$sentDate$$",defDate);
