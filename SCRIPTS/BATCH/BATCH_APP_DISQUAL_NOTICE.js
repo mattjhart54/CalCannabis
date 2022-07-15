@@ -145,6 +145,7 @@ try{
 	var capFilterType = 0;
 	var capFilterStatus = 0;
 	var capFilterTaskDate= 0;
+	var defFilterStatus = 0;
 	var capCount = 0;
 	var setCreated = false;
 	var capResult = aa.cap.getCapIDsByAppSpecificInfoDateRange(asiGroup, asiField, dFromDate, dToDate);
@@ -249,18 +250,26 @@ try{
 						setAddResult=aa.set.add(sNonEmailSet,capId);
 					}
 					conEmail = thisContact["email"];
-					if (conEmail) {
+					if (conEmail) {						
 						//runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
 						eParams = aa.util.newHashtable();
-						addParameter(eParams,"$$altID$$",altId);
-						addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
-						addParameter(eParams,"$$expDays$$",String(lookAheadDays));
-						addParameter(eParams,"$$sentDate$$",defDate);
-						addParameter(eParams,"$$appExpDate$$",getAppSpecific(asiField, capId));
-						var rFiles = [];
-						sendNotification(sysFromEmail,conEmail,"",emailTemplate,eParams, rFiles,capId);
-						//emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"],"$$expDays$$", String(lookAheadDays), "$$sentDate$$", defDate, "$$appExpDate$$", getAppSpecific(asiField, capId));
-						logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+						defArray = getChildren("Licenses/Cultivator/Medical/Amendment",capId);
+						for (ii in defArray){
+							defCap = aa.cap.getCap(defArray[ii]).getOutput();
+							var defStatus = defCap.getCapStatus();
+							logDebug("defStatus: " + defStatus + " Record: " + defArray[ii].getCustomID());
+							if (defStatus == "Pending"){
+								addParameter(eParams,"$$altID$$",altId);
+								addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
+								addParameter(eParams,"$$expDays$$",String(lookAheadDays));
+								addParameter(eParams,"$$sentDate$$",defDate);
+								addParameter(eParams,"$$appExpDate$$",getAppSpecific(asiField, capId));
+								var rFiles = [];
+								sendNotification(sysFromEmail,conEmail,"",emailTemplate,eParams, rFiles,capId);
+								//emailRptContact("BATCH", emailTemplate, "", false, "Deficiency Letter Sent", capId, thisContact["contactType"],"$$expDays$$", String(lookAheadDays), "$$sentDate$$", defDate, "$$appExpDate$$", getAppSpecific(asiField, capId)) ;
+								logDebug(altId + ": Sent Email template " + emailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+							}
+						}
 					}
 				}
 			}
@@ -303,18 +312,28 @@ try{
 								//runReportAttach(childCapId,ownerRptName, "altId", childCapId.getCustomID(), "contactType", "Owner", "addressType", "Home"); 
 								holdId = capId;
 								capId = childCapId;
-								defArray = getChildren("Licenses/Cultivator/Owner/Amendment",capId);
-								eParams = aa.util.newHashtable();
-								addParameter(eParams,"$$altID$$",defArray[0].getCustomID());
-								addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
-								addParameter(eParams,"$$expDays$$",String(lookAheadDays));
-								addParameter(eParams,"$$sentDate$$",defDate);
-								addParameter(eParams,"$$appExpDate$$",getAppSpecific(asiField, capId));
-								var rFiles = [];
-								sendNotification(sysFromEmail,conEmail,"",ownerEmailTemplate,eParams, rFiles,capId);
-								//emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$$", String(lookAheadDays), "$$sentDate$$", defDate, "$$appExpDate$$", getAppSpecific(asiField, capId));
+								ownDefArray = getChildren("Licenses/Cultivator/Owner/Amendment",childCapId);
+								for (xx in ownDefArray){
+									ownDefCap = aa.cap.getCap(ownDefArray[xx]).getOutput();
+									var ownDefStatus = ownDefCap.getCapStatus();
+									logDebug("ownDefStatus: " + ownDefStatus + " Record: " + ownDefArray[xx].getCustomID());
+									if (ownDefStatus == "Pending"){
+										eParams = aa.util.newHashtable();
+										addParameter(eParams,"$$altID$$",defArray[0].getCustomID());
+										addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
+										addParameter(eParams,"$$expDays$$",String(lookAheadDays));
+										addParameter(eParams,"$$sentDate$$",defDate);
+										addParameter(eParams,"$$appExpDate$$",getAppSpecific(asiField, capId));
+										var rFiles = [];
+										sendNotification(sysFromEmail,conEmail,"",ownerEmailTemplate,eParams, rFiles,capId);
+										//emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$$", String(lookAheadDays), "$$sentDate$$", defDate, "$$appExpDate$$", getAppSpecific(asiField, capId));
+										logDebug(altId + ": Sent Email template " + ownerEmailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
+									}else{
+										logDebug("Skipping Def Record: " + ownDefArray[xx].getCustomID() + " does not have a Status of Pending");
+										defFilterStatus++
+									}
+								}
 								capId = holdId;
-								logDebug(altId + ": Sent Email template " + ownerEmailTemplate + " to " + thisContact["contactType"] + " : " + conEmail);
 							}
 						}
 					}	
@@ -329,6 +348,7 @@ try{
 	logDebug("Total CAPS qualified : " + myCaps.length);
 	logDebug("Ignored due to application type: " + capFilterType);
 	logDebug("Ignored due to CAP Status: " + capFilterStatus);
+	logDebug("Ignored due to Deficiency Status: " + defFilterStatus);
 	logDebug("Ignored due to eRegs Date: " + capFilterTaskDate);
 	logDebug("Total CAPS processed: " + capCount);
 
@@ -395,5 +415,3 @@ function createExpirationSet( prefix ){
 		}
 	}
 }
-
-
