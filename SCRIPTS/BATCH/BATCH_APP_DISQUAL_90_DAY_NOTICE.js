@@ -259,7 +259,7 @@ try{
 							var defStatus = defCap.getCapStatus();
 							logDebug("defStatus: " + defStatus + " Record: " + defArray[ii].getCustomID());
 							if (defStatus == "Pending"){
-								addParameter(eParams,"$$altID$$",altId);
+								addParameter(eParams,"$$altID$$",defArray[ii].getCustomID());
 								addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
 								addParameter(eParams,"$$expDays$$",String(lookAheadDays));
 								addParameter(eParams,"$$sentDate$$",defDate);
