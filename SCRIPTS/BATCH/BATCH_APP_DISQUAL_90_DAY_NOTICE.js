@@ -319,7 +319,7 @@ try{
 									logDebug("ownDefStatus: " + ownDefStatus + " Record: " + ownDefArray[xx].getCustomID());
 									if (ownDefStatus == "Pending"){
 										eParams = aa.util.newHashtable();
-										addParameter(eParams,"$$altID$$",ownDefCap.getCustomID());
+										addParameter(eParams,"$$altID$$",ownDefArray[xx].getCustomID());
 										addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
 										addParameter(eParams,"$$expDays$$",String(lookAheadDays));
 										addParameter(eParams,"$$sentDate$$",defDate);
