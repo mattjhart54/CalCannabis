@@ -112,6 +112,8 @@ try {
 	var expWithinNbrDaysCount = 0; 
 	var invalidRecordArray = [];
 	var invalidRecordCount = 0;
+	var inactiveWithinNbrDays = [];
+	var inactiveWithinNbrDaysCount = 0;
 	
 	memberResult=aa.set.getSetByPK(SET_ID); 
 	if(!memberResult.getSuccess()) { 
@@ -146,6 +148,29 @@ try {
 					continue;
 				}
 			}
+			if(capStatus == "Inactive") {
+				var workflowResult = aa.workflow.getTasks(capId);
+				if (workflowResult.getSuccess()){
+					var wfObj = workflowResult.getOutput();
+					for (i in wfObj) {
+						fTask = wfObj[i];
+						wfStatus = String(fTask.getDisposition());
+						if(wfStatus=="Inactive"){
+							var statusDate = fTask.getStatusDate();
+							var statusDiff = getDateDiff(statusDate);
+							if(statusDiff < 30) {
+								logDebug(altId + ": Ignored, Inactive Status set within last 30 days");
+								inactiveWithinNbrDays.push(altId);
+								inactiveWithinNbrDaysCount++;
+								continue;
+							}
+						}
+					}
+				}else{ 
+					logDebug("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage()); 
+				}
+			}
+			
 			var AInfo = [];
 			var validationMessage = "";
 			loadAppSpecific(AInfo);
@@ -260,6 +285,8 @@ try {
 	logDebug("records to be corrected: " + correctionArray);
 	logDebug(expWithinNbrDaysCount + " records have been skipped, because they have expired within last 45 days.");
 	logDebug("records expired within last 45 days: " + expWithinNbrDays);
+	logDebug(inactiveWithinNbrDaysCount + " records have been skipped, because they have been set to Inactive within last 30 days.");
+	logDebug("records set to Inactive within last 30 days: " + inactiveWithinNbrDays);
 	logDebug(invalidRecordCount + " records have invalid Record Numbers.");
 	logDebug("records to be corrected: " + invalidRecordArray);
 	logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
