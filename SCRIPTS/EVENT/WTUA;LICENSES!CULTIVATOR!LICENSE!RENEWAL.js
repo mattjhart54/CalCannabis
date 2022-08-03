@@ -25,7 +25,9 @@ try {
 			vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 	// Set license record expiration and status to active
 			vLicenseObj.setStatus("Active");
-			updateAppStatus("Active","License Renewed",vLicenseID);
+			if (aa.cap.getCap(capId).getOutput().getCapStatus() != "Inactive"){
+				updateAppStatus("Active","License Renewed",vLicenseID);
+			}
 	// Update the Cultivation Type on the license record
 			if(AInfo["Designation Change"] == "Yes") {
 				editAppSpecific("Cultivator Type",AInfo["Designation Type"],vLicenseID);
