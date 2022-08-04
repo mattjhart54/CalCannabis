@@ -4,10 +4,10 @@ try{
 	if(balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")){
 		if(capStatus == "License Issued") {
 			var licType = "annual";
-			var approvalLetter = "Approval Letter"; 
+			var approvalEmail = "LCA_APPROVAL_ANNUAL_FEES_PAID"; 
 		}else {
 			var licType = "provisional"; 
-			var approvalLetter = "Approval Letter Provisional";
+			var approvalEmail = "LCA_APPROVAL_PROVISIONAL_FEES_PAID";
 		}
 		var parCapId = getParent();
 		if(parCapId){
@@ -19,8 +19,8 @@ try{
 			envParameters.put("appCap",appAltId);
 			envParameters.put("licCap",licAltId); 
 			envParameters.put("reportName","Official License Certificate"); 
-			envParameters.put("approvalLetter", approvalLetter);
-			envParameters.put("emailTemplate", "LCA_APP_APPROVAL_PAID");
+			//envParameters.put("approvalLetter", approvalLetter);
+			envParameters.put("emailTemplate", approvalEmail);
 			envParameters.put("reason", "");
 			envParameters.put("currentUserID",currentUserID);
 			envParameters.put("contType","Designated Responsible Party");
