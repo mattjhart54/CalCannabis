@@ -323,7 +323,7 @@ try{
 										addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
 										addParameter(eParams,"$$expDays$$",String(lookAheadDays));
 										addParameter(eParams,"$$sentDate$$",defDate);
-										addParameter(eParams,"$$appExpDate$$",getAppSpecific(asiField, capId));
+										addParameter(eParams,"$$appExpDate$$",getAppSpecific(asiField, holdId));
 										var rFiles = [];
 										sendNotification(sysFromEmail,conEmail,"",ownerEmailTemplate,eParams, rFiles,capId);
 										//emailRptContact("BATCH", ownerEmailTemplate, "", false, "Deficiency Letter Sent", childCapId, thisContact["contactType"],"$$expDays$$", String(lookAheadDays), "$$sentDate$$", defDate, "$$appExpDate$$", getAppSpecific(asiField, capId));
