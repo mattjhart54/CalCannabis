@@ -104,6 +104,9 @@ try{
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
 			addParameter(eParams, "$$status$$", curStatus);
+			if(recTypeArray[3]=="Application"){
+				addParameter(eParams, "$$appType$$", getAppSpecific("License Type",capId);
+			}
 // mhart 20180503 story - 5392 added code to get the parent record to display on notification
 // mhart 20181012 story - 5729 added code to display annual or provisional on notification
 			var parentId = getParentByCapId(capId);
