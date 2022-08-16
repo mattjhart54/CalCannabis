@@ -99,7 +99,8 @@ try {
 			}
 		if(!feeFound) {
 			contType = "Designated Responsible Party";
-			addrType = "Mailing";
+			//Removing per story 7216
+			/*addrType = "Mailing";
 			var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
 			if(!matches(liveScanNotActive,true, "true")){
 				//runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
@@ -121,7 +122,7 @@ try {
 				envParameters.put("addrType",addrType); 
 				envParameters.put("currentUserID",currentUserID);
 				aa.runAsyncScript(scriptName, envParameters);
-			}	
+			}*/	
 //mhart 181019 story 5756 Add record to set if preference is postal
 			var priContact = getContactObj(capId,"Designated Responsible Party");
 			if(priContact){
@@ -138,7 +139,7 @@ try {
 							}
 						}
 					}else {
-						emailRptContact("PPA", "LCA_APPLICATION _SUBMITTED", "", false, capStatus, capId, contType);
+						emailRptContact("PPA", "LCA_APPLICATION_SUBMISSION_CONFIRMATION", "", false, capStatus, capId, contType);
 					}
 				}	
 			}
