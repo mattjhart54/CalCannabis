@@ -104,13 +104,6 @@ try{
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
 			addParameter(eParams, "$$status$$", curStatus);
-			recCap = aa.cap.getCap(capId).getOutput();
-			recType = recCap.getCapType();
-			recTypeString = recType.toString();
-			recTypeArray = recTypeString.split("/");
-			if(recTypeArray[3]=="Application"){
-				addParameter(eParams, "$$appType$$", getAppSpecific("License Type",capId));
-			}
 // mhart 20180503 story - 5392 added code to get the parent record to display on notification
 // mhart 20181012 story - 5729 added code to display annual or provisional on notification
 			var parentId = getParentByCapId(capId);
@@ -127,6 +120,10 @@ try{
 // mhart 20181012 story - 5729 end
 			//jshear 20181219 story - 6311 Start
 			if(callingPgm=="BATCH"){
+				recCap = aa.cap.getCap(capId).getOutput();
+				recType = recCap.getCapType();
+				recTypeString = recType.toString();
+				recTypeArray = recTypeString.split("/");
 				if(recTypeArray[3]=="License"){
 					var b1ExpResult = aa.expiration.getLicensesByCapID(capId);
 					if(b1ExpResult.getSuccess()){
