@@ -100,30 +100,6 @@ try {
 			}
 		if(!feeFound) {
 			contType = "Designated Responsible Party";
-			//Removing per story 7216
-			/*addrType = "Mailing";
-			var liveScanNotActive = lookup("LIVESCAN_NOT_AVAILABLE","LIVESCAN_NOT_AVAILABLE");
-			if(!matches(liveScanNotActive,true, "true")){
-				//runReportAttach(capId,"Submitted Annual Application", "Record ID", capId.getCustomID(), "Contact Type", contType, "Address Type", addrType, "servProvCode", "CALCANNABIS");
-				var scriptName = "asyncRunSubmittedApplicRpt";
-				var envParameters = aa.util.newHashMap();
-				envParameters.put("sendCap",capIDString); 
-				envParameters.put("reportName","Submitted Annual Application"); 
-				envParameters.put("contType",contType); 
-				envParameters.put("addrType",addrType); 
-				envParameters.put("currentUserID",currentUserID);
-				aa.runAsyncScript(scriptName, envParameters);
-			}else{
-				//runReportAttach(capId,"Submitted Annual App No LiveScan", "altId", capIDString, "Contact Type", contType, "Address Type", addrType);
-				var scriptName = "asyncRunSubmittedApplicRpt";
-				var envParameters = aa.util.newHashMap();
-				envParameters.put("sendCap",capIDString); 
-				envParameters.put("reportName","Submitted Annual App No LiveScan"); 
-				envParameters.put("contType",contType); 
-				envParameters.put("addrType",addrType); 
-				envParameters.put("currentUserID",currentUserID);
-				aa.runAsyncScript(scriptName, envParameters);
-			}*/	
 			//jshear 8172022 story 7216 - start
 			var priContact = getContactObj(capId,"Designated Responsible Party");
 			if(priContact){
