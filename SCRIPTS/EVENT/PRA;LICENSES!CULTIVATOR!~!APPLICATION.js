@@ -124,27 +124,12 @@ try {
 				envParameters.put("currentUserID",currentUserID);
 				aa.runAsyncScript(scriptName, envParameters);
 			}*/	
-//mhart 181019 story 5756 Add record to set if preference is postal
+			//jshear 8172022 story 7216 - start
 			var priContact = getContactObj(capId,"Designated Responsible Party");
 			if(priContact){
-				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
-				if(!matches(priChannel, "",null,"undefined", false)){
-					if(priChannel.indexOf("Postal") > -1 ){
-						var sName = createSet("APPSUBMITTED","License Notifications", "New");
-						if(sName){
-							setAddResult=aa.set.add(sName,capId);
-							if(setAddResult.getSuccess()){
-								logDebug(capId.getCustomID() + " successfully added to set " +sName);
-							}else{
-								logDebug("Error adding record to set " + sName + ". Error: " + setAddResult.getErrorMessage());
-							}
-						}
-					}else {
-						emailRptContact("PRA", "LCA_APPLICATION_SUBMISSION_CONFIRMATION", "", false, capStatus, capId, contType);
-					}
-				}	
+				emailRptContact("PPA", "LCA_APPLICATION_SUBMISSION_CONFIRMATION", "", false, capStatus, capId, contType);
 			}
-//mhart 181019 story 5756 end
+			//jshear 8172022 story 7216 - start
 		}
 	}
 }catch(err){
