@@ -46,7 +46,7 @@ try{
 		loadAppSpecific4ACA(AInfo); 
 		loadASITables4ACA_corrected();
 	}
-	var need_premiseDiagram = false;
+	var need_detailPremises = false;
 	var need_wastePlan = false;
 	var need_pestPlan = false;
 	var need_lightDiagram = false;	
