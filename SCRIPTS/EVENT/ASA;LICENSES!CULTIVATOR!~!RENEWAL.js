@@ -55,7 +55,11 @@ try{
 			var feeDesc = pInfo["License Type"] + " - Renewal Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
-				updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+				if (matches(AInfo["License Type"],"Large Outdoor","Large Indoor","Large Mixed Light Tier 1","Large Mixed Light Tier 2")){
+					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", Number(AInfo["Canopy SF"]), "Y", "N");
+				}else{
+					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+				}
 			}else{
 				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
