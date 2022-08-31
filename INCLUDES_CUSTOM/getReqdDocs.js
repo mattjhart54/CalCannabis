@@ -50,6 +50,7 @@ try{
 	var need_wastePlan = false;
 	var need_pestPlan = false;
 	var need_lightDiagram = false;	
+	var need_propertyDiagram = false;
 	//application documents
 	var conditionType = "License Required Documents";
 	var businessHOO = {condition : "Business - Hours of Operation", document : "Business - Hours of Operation"};
