@@ -55,7 +55,7 @@ try{
 			var feeDesc = pInfo["License Type"] + " - Renewal Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
-				if (matches(AInfo["License Type"],"Large Outdoor","Large Indoor","Large Mixed Light Tier 1","Large Mixed Light Tier 2")){
+				if (matches(AInfo["License Type"],"Large Outdoor","Large Indoor","Large Mixed-Light Tier 1","Large Mixed-Light Tier 2")){
 					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", Number(pInfo["Canopy SF"]), "Y", "N");
 				}else{
 					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
