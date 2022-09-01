@@ -163,7 +163,7 @@ try{
 		//Cultivation Plan documents
 		if(matches(AInfo["License Type"],"Specialty Cottage Indoor","Specialty Cottage Mixed-Light Tier 1","Specialty Cottage Mixed-Light Tier 2",
 				"Specialty Indoor","Specialty Mixed-Light Tier 1","Specialty Mixed-Light Tier 2","Small Indoor","Small Mixed-Light Tier 1","Small Mixed-Light Tier 2",
-				"Medium Indoor","Medium Mixed-Light Tier 1","Medium Mixed-Light Tier 2")) {
+				"Medium Indoor","Medium Mixed-Light Tier 1","Medium Mixed-Light Tier 2","Large Indoor","Large Mixed-Light Tier 1","Large Mixed-Light Tier 2")) {
 //mhart 180411 user story 5353 new doc types				
 			need_propertyDiagram = true;
 			need_detailPremises = true;	
@@ -171,7 +171,7 @@ try{
 			need_wastePlan = true;
 			need_pestPlan = true;
 			need_lightDiagram = true;		}
-		if(matches(AInfo["License Type"],"Specialty Cottage Outdoor","Specialty Outdoor","Small Outdoor","Medium Outdoor","Nursery")) {
+		if(matches(AInfo["License Type"],"Specialty Cottage Outdoor","Specialty Outdoor","Small Outdoor","Medium Outdoor","Nursery","Large Outdoor")) {
 //mhart 180411 user story 5353 new doc types		
 			need_propertyDiagram = true;
 			need_detailPremises = true;
