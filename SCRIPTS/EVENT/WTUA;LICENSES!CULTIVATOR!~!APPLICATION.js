@@ -507,7 +507,7 @@ try{
 		var feeDesc = AInfo["License Type"] + " - License Fee";
 		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 		if(thisFee){
-			if (matches(AInfo["License Type"],"Large Outdoor","Large Indoor","Large Mixed Light Tier 1","Large Mixed Light Tier 2")){
+			if (matches(AInfo["License Type"],"Large Outdoor","Large Indoor","Large Mixed-Light Tier 1","Large Mixed-Light Tier 2")){
 				feeSeqNbr = updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", Number(AInfo["Canopy SF"]), "Y", "N");
 			}else{
 				feeSeqNbr = updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
