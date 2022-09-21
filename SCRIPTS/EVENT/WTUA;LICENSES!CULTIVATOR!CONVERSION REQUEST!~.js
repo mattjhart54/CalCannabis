@@ -85,6 +85,7 @@ try {
 		envParameters.put("invNbr", invNbr);
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("licType",licType);
+		envParameters.put("templateName", "LIC_CC_CCR_APPROVED");
 		aa.runAsyncScript(scriptName, envParameters);		
 }
 }catch(err){
