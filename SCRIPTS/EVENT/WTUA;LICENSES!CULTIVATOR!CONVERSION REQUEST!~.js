@@ -83,6 +83,7 @@ try {
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("licCap",capId.getCustomID()); 
 		envParameters.put("invNbr", invNbr);
+		envParameters.put("feeAmount",balanceDue);
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("licType",licType);
 		envParameters.put("templateName", "LIC_CC_CCR_APPROVED");
