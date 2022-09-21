@@ -42,50 +42,6 @@ function getMasterScriptText(vScriptName) {
 	return emseScript.getScriptText() + "";
 }
 try{
-//---------------------------------------/*-----------------------------------------------------------------
-	Generate the Invoice and email to the DRP
-------------------------------------------------------------------*/
-var maxSeconds = 4 * 60;				// number of seconds allowed for batch processing, usually < 5*60
-var useAppSpecificGroupName = false;	// Use Group name when populating App Specific Info Values
-var useTaskSpecificGroupName = true;	// Use Group name when populating Task Specific Info Values
-var currentUserID = "ADMIN";
-var publicUser = null;
-var systemUserObj = aa.person.getUser("ADMIN").getOutput();
-var showDebug = true;	
-
-var vScriptName = aa.env.getValue("ScriptCode");
-var vEventName = aa.env.getValue("EventName");
-
-var startDate = new Date();
-var startTime = startDate.getTime();
-var timeExpired = false;
-var message = "";						// Message String
-var debug = "";							// Debug String
-var br = "<BR>";						// Break Tag
-var emailText = "";
-var catAPIChunkSize = 10;
-
-eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
-eval(getScriptText("INCLUDES_BATCH"));
-eval(getMasterScriptText("INCLUDES_CUSTOM"));
-
-override = "function logDebug(dstr){ if(showDebug) { aa.print(dstr); emailText+= dstr + \"<br>\"; } }";
-eval(override);
-
-function getScriptText(vScriptName){
-	vScriptName = vScriptName.toUpperCase();
-	var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
-	var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(),vScriptName,"ADMIN");
-	return emseScript.getScriptText() + "";
-}
-
-function getMasterScriptText(vScriptName) {
-	vScriptName = vScriptName.toUpperCase();
-	var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
-	var emseScript = emseBiz.getMasterScript(aa.getServiceProviderCode(), vScriptName);
-	return emseScript.getScriptText() + "";
-}
-try{
 //---------------------------------------
 /*	aa.env.setValue("licCap", "LCR22-0000002");
 	aa.env.setValue("currentUserID", "MHART");
