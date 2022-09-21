@@ -46,12 +46,14 @@ try{
 /*	aa.env.setValue("licCap", "LCR22-0000002");
 	aa.env.setValue("currentUserID", "MHART");
 	aa.env.setValue("invNbr",1626);
+	aa.env.setValue("feeAmount",90227);
 	aa.env.setValue("licType","Large Indoor");
 	aa.env.setValue("templateName","LIC_CC_CCR_APPROVED");
 */
 	var licCap = "" + aa.env.getValue("licCap");
 	var licType = "" + aa.env.getValue("licType");	
-	var invNbr = "" + aa.env.getValue("invNbr");	
+	var invNbr = "" + aa.env.getValue("invNbr");
+	var feeAmount = "" + aa.env.getValue("feeAmount");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var templateName = "" + aa.env.getValue("templateName")
 	var reportName = "CDFA_INVOICE_PARAMS";
@@ -111,6 +113,7 @@ try{
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$licType$$", licType);
+		addParameter(eParams, "$$feeAmount$$, feeAmount);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"",templateName,eParams, rFiles,tmpID);
 	}else{
