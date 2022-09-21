@@ -31,7 +31,7 @@ try{
 	envParameters.put("licType",""; 
 	envParameters.put("invNbr", invNbr);
 	envParameters.put("currentUserID",currentUserID);
-	envParameters.put("templateName",templateName);
+	envParameters.put("templateName","LCA_GENERAL_NOTIFICATION");
 	aa.runAsyncScript(scriptName, envParameters);
 
 	
