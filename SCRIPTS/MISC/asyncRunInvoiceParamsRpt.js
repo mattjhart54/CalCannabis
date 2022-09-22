@@ -113,7 +113,7 @@ try{
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$licType$$", licType);
-		addParameter(eParams, "$$feeAmount$$, feeAmount);
+		addParameter(eParams, "$$feeAmount$$", feeAmount);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"",templateName,eParams, rFiles,tmpID);
 	}else{
