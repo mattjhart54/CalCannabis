@@ -76,6 +76,7 @@ try {
 		logDebug(" lic fee " + licFee);
 		if(tFeeAmt > 0 && tFeeAmt < licFee)
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", tFeeAmt.toFixed(2), "N");
+		licFee = licFee + feeAmount("LIC_CCR_CRD","NEW");
 		invNbr = invoiceAllFees();
     
 // Run invoice report and email approval email to DRP		
@@ -83,7 +84,7 @@ try {
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("licCap",capId.getCustomID()); 
 		envParameters.put("invNbr", invNbr);
-		envParameters.put("feeAmount",balanceDue);
+		envParameters.put("feeAmount", licFee);
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("licType",licType);
 		envParameters.put("templateName", "LIC_CC_CCR_APPROVED");
