@@ -78,6 +78,7 @@ try {
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", tFeeAmt.toFixed(2), "N");
 		licFee = licFee + feeAmount("LIC_CCR_CRD","NEW");
 		invNbr = invoiceAllFees();
+		updateAppStatus("License Fee Due","Conversion fees due");
     
 // Run invoice report and email approval email to DRP		
 		var scriptName = "asyncRunInvoiceParamsRpt";
