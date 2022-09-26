@@ -92,8 +92,8 @@ try {
 		var lightType = getAppSpecific("License Type", parentCapId).toUpperCase();
 		var priContact = getContactObj(parentCapId,"Designated Responsible Party");
 		if(priContact){
-			var licFirstName = priContact.capContact.firstname.toUpperCase();
-			var licLastName = priContact.capContact.lastname.toUpperCase();
+			var licFirstName = priContact.capContact.getFirstName().toUpperCase();
+			var licLastName = priContact.capContact.getLastName().toUpperCase();
 		}
 		//Compare Data from Licenses to COnvert Table to Primary License Info
 		if (typeof(LICENSERECORDSFORCONVERSION) == "object") {
