@@ -75,7 +75,7 @@ var AInfo = new Array();						// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 //loadTaskSpecific(AInfo);						// Add task specific info
 //loadParcelAttributes(AInfo);						// Add parcel attributes
-loadASITables4ACA();
+loadASITables4ACA_corrected();
 
 // page flow custom code begin
 
