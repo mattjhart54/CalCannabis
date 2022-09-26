@@ -88,31 +88,31 @@ try {
 		//Primary License Data
 		var icNum = gatAppSpecific("License Number");
 		parentCapId = getApplication(icNum);
-		var legalBusName = getAppSpecific("Legal Business Name", parentCapId).toUpperCase();
-		var lightType = getAppSpecific("License Type", parentCapId).toUpperCase();
+		var legalBusName = getAppSpecific("Legal Business Name", parentCapId);
+		var lightType = getAppSpecific("License Type", parentCapId);
 		var priContact = getContactObj(parentCapId,"Designated Responsible Party");
 		if(priContact){
-			var licFirstName = priContact.capContact.getFirstName().toUpperCase();
-			var licLastName = priContact.capContact.getLastName().toUpperCase();
+			var licFirstName = priContact.capContact.getFirstName();
+			var licLastName = priContact.capContact.getLastName();
 		}
 		//Compare Data from Licenses to COnvert Table to Primary License Info
 		if (typeof(LICENSERECORDSFORCONVERSION) == "object") {
 			for (var x in LICENSERECORDSFORCONVERSION) {
 				var theRow = LICENSERECORDSFORCONVERSION[x];
-				var convFirstName = theRow["DRP First Name"].fieldValue.toUpperCase();
-				var convLastName = theRow["DRP Last Name"].fieldValue.toUpperCase();
-				var convLegalBusName = theRow["Legal Business Name"].fieldValue.toUpperCase();
-				var convLightType = theRow["Lighting Type"].fieldValue.toUpperCase();
+				var convFirstName = theRow["DRP First Name"].fieldValue;
+				var convLastName = theRow["DRP Last Name"].fieldValue;
+				var convLegalBusName = theRow["Legal Business Name"].fieldValue;
+				var convLightType = theRow["Lighting Type"].fieldValue;
 				var convLicRec = theRow["License Record ID"].fieldValue;
 				convCapId = getApplication(convLicRec);
 				var convCap = aa.cap.getCap(convCapId).getOutput();
 				var convStatus = licCap.getCapStatus();
 				if (matches(convStatus,"Active", "About to Expire", "Expired - Pending Renewal")){
-					if ((convFirstName != licFirstName) || (convLastName != licLastName) || (convLegalBusName != legalBusName)){	
+					if ((convFirstName.toUpperCase() != licFirstName.toUpperCase()) || (convLastName.toUpperCase() != licLastName.toUpperCase()) || (convLegalBusName.toUpperCase() != legalBusName.toUpperCase())){	
 						errorMessage += convLicRec ": " + licTypeMessage;
 					}
 				}
-				if (lightType != convLightType){
+				if (lightType.toUpperCase() != convLightType.toUpperCase()){
 					errorMessage += convLicRec ": " + lightTypeMessage;
 				}
 			}
