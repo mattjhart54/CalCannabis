@@ -90,10 +90,14 @@ try {
 		parentCapId = getApplication(icNum);
 		var legalBusName = getAppSpecific("Legal Business Name", parentCapId);
 		var lightType = getAppSpecific("License Type", parentCapId);
-		var priContact = getContactObj(parentCapId,"Designated Responsible Party");
-		if(priContact){
-			var licFirstName = priContact.people.getFirstName();
-			var licLastName = priContact.people.getLastName();
+		var c = aa.people.getCapContactByCapID(parentCapId).getOutput();
+		for(i in c) {
+			var con = c[i];
+			var conType = con.getCapContactModel().getContactType();
+			if(conType == "Designated Responsible Party") {
+				var licFirstName = con.getCapContactModel().getFirstName();
+				var licLastName  = con.getCapContactModel().getLastName();
+			}
 		}
 		//Compare Data from Licenses to COnvert Table to Primary License Info
 		if (typeof(LICENSERECORDSFORCONVERSION) == "object") {
