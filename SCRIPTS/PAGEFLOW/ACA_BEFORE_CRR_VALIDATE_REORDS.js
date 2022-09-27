@@ -111,24 +111,26 @@ try {
 		}
 		//Compare Data from Licenses to COnvert Table to Primary License Info
 		if (typeof(LICENSERECORDSFORCONVERSION) == "object") {
-			for (var x in LICENSERECORDSFORCONVERSION) {
-				var theRow = LICENSERECORDSFORCONVERSION[x];
-				var convFirstName = theRow["DRP First Name"];
-				logDebug("convFirstName: " + convFirstName);
-				var convLastName = theRow["DRP Last Name"];
-				var convLegalBusName = theRow["Legal Business Name"];
-				var convLightType = theRow["Lighting Type"];
-				var convLicRec = theRow["License Record ID"];
-				convCapId = getApplication(convLicRec);
-				var convCap = aa.cap.getCap(convCapId).getOutput();
-				var convStatus = convCap.getCapStatus();
-				if (matches(convStatus,"Active", "About to Expire", "Expired - Pending Renewal")){
-					if ((convFirstName.toUpperCase() != licFirstName.toUpperCase()) || (convLastName.toUpperCase() != licLastName.toUpperCase()) || (convLegalBusName.toUpperCase() != legalBusName.toUpperCase())){	
-						errorMessage += convLicRec + ": " + licTypeMessage;
+			if(LICENSERECORDSFORCONVERSION.length > 0){
+				for (var x in LICENSERECORDSFORCONVERSION) {
+					var theRow = LICENSERECORDSFORCONVERSION[x];
+					var convFirstName = theRow["DRP First Name"];
+					logDebug("convFirstName: " + convFirstName);
+					var convLastName = theRow["DRP Last Name"];
+					var convLegalBusName = theRow["Legal Business Name"];
+					var convLightType = theRow["Lighting Type"];
+					var convLicRec = theRow["License Record ID"];
+					convCapId = getApplication(convLicRec);
+					var convCap = aa.cap.getCap(convCapId).getOutput();
+					var convStatus = convCap.getCapStatus();
+					if (matches(convStatus,"Active", "About to Expire", "Expired - Pending Renewal")){
+						if ((convFirstName.toUpperCase() != licFirstName.toUpperCase()) || (convLastName.toUpperCase() != licLastName.toUpperCase()) || (convLegalBusName.toUpperCase() != legalBusName.toUpperCase())){	
+							errorMessage += convLicRec + ": " + licTypeMessage;
+						}
 					}
-				}
-				if (lightType.toUpperCase() != convLightType.toUpperCase()){
-					errorMessage += convLicRec + ": " + lightTypeMessage;
+					if (lightType.toUpperCase() != convLightType.toUpperCase()){
+						errorMessage += convLicRec + ": " + lightTypeMessage + " " + lightType.toUpperCase() + " " +  convLightType.toUpperCase();
+					}
 				}
 			}
 		}						
