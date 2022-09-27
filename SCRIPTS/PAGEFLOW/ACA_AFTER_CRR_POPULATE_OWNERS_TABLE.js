@@ -43,15 +43,16 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS",null,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM",null,true));
+
+eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
 
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
@@ -84,7 +85,7 @@ try {
 	var licCapId = getApplication(AInfo['License Number']);
 	var multTable = new Array(); 
 
-	ownerInfo = loadASITable("OWNERS",licCapId);
+	ownerInfo = loadASITableByCapId("OWNERS",licCapId);
 	if (ownerInfo){
 		for (var i in OWNERS) {
 			row = new Array();
@@ -155,7 +156,7 @@ function getApplication(appNum)
 	}
 
 	
-function loadASITable(tname) {
+function loadASITableByCapId(tname) {
 
  	//
  	// Returns a single ASI Table array of arrays
