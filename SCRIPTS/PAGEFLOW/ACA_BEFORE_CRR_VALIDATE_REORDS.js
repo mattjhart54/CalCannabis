@@ -17,11 +17,11 @@
 |     will no longer be considered a "Master" script and will not be supported in future releases.  If
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = true; // Set to true to see results in popup window
-var showDebug = true; // Set to true to see debug messages in popup window
+var showMessage = false; // Set to true to see results in popup window
+var showDebug = false; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = true;
+var cancel = false;
 var SCRIPT_VERSION = 3;
 var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 
@@ -90,7 +90,6 @@ try {
 		var capId = cap.getCapID();
 		var licNum = AInfo['License Number'];
 		parentCapId = getApplication(licNum);
-		logDebug("licNum: " + licNum + " parentCapId: " + parentCapId);
 		var currCap = capId; 
 		capId = parentCapId;
 		PInfo = new Array;
@@ -99,7 +98,6 @@ try {
 		
 		var legalBusName = PInfo['Legal Business Name'];
 		var lightType = PInfo['License Type'];
-		logDebug("legalBusName: " + legalBusName + " lightType: " + lightType);
 		var c = aa.people.getCapContactByCapID(parentCapId).getOutput();
 		for(i in c) {
 			var con = c[i];
@@ -107,7 +105,6 @@ try {
 			if(conType == "Designated Responsible Party") {
 				var licFirstName = con.getCapContactModel().getFirstName();
 				var licLastName  = con.getCapContactModel().getLastName();
-				logDebug("licFirstName: " + licFirstName + " licLastName: " +licLastName);
 			}
 		}
 		//Compare Data from Licenses to COnvert Table to Primary License Info
@@ -122,7 +119,7 @@ try {
 				var convLicRec = theRow["License Record ID"].fieldValue;
 				convCapId = getApplication(convLicRec);
 				var convCap = aa.cap.getCap(convCapId).getOutput();
-				var convStatus = licCap.getCapStatus();
+				var convStatus = convCap.getCapStatus();
 				if (matches(convStatus,"Active", "About to Expire", "Expired - Pending Renewal")){
 					if ((convFirstName.toUpperCase() != licFirstName.toUpperCase()) || (convLastName.toUpperCase() != licLastName.toUpperCase()) || (convLegalBusName.toUpperCase() != legalBusName.toUpperCase())){	
 						errorMessage += convLicRec + ": " + licTypeMessage;
@@ -132,10 +129,7 @@ try {
 					errorMessage += convLicRec + ": " + lightTypeMessage;
 				}
 			}
-		}
-		logDebug("errorMessage: " + errorMessage);			
-				
-					
+		}						
 					
 		if(errorMessage != ""){
 			cancel = true;
