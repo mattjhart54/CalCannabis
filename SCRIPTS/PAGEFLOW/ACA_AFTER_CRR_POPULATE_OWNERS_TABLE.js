@@ -71,10 +71,9 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 		return "";
 	}
 }
-
+var cap = aa.env.getValue("CapModel");
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
-var cap = aa.env.getValue("CapModel");
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
