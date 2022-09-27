@@ -72,6 +72,7 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	}
 }
 var cap = aa.env.getValue("CapModel");
+var capId = cap.getCapID();
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 /*------------------------------------------------------------------------------------------------------/
@@ -90,11 +91,11 @@ try {
 	if (ownerInfo){
 		for (var ii in ownerInfo) {
 			row = new Array();
-				row["First Name"] = new asiTableValObj("First Name", "" + ownerInfo[ii]["First Name"], "Y");
-				row["Last Name"] = new asiTableValObj("Last Name", ownerInfo[ii]["Last Name"], "Y");
-				row["Email Address"] = new asiTableValObj("Email Address", ownerInfo[ii]["Email Address"], "Y");
-				row["Percent Ownership"] = new asiTableValObj("Percent Ownership", ownerInfo[ii]["Percent Ownership"], "Y");
-				multTable.push(row);
+			row["First Name"] = new asiTableValObj("First Name", "" + ownerInfo[ii]["First Name"], "Y");
+			row["Last Name"] = new asiTableValObj("Last Name", ownerInfo[ii]["Last Name"], "Y");
+			row["Email Address"] = new asiTableValObj("Email Address", ownerInfo[ii]["Email Address"], "Y");
+			row["Percent Ownership"] = new asiTableValObj("Percent Ownership", ownerInfo[ii]["Percent Ownership"], "Y");
+			multTable.push(row);
 		
 		}
 	}
