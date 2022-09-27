@@ -129,7 +129,7 @@ try {
 						}
 					}
 					if (lightType.toUpperCase() != convLightType.toUpperCase()){
-						errorMessage += convLicRec + ": " + lightTypeMessage + " " + lightType.toUpperCase() + " " +  convLightType.toUpperCase();
+						errorMessage += convLicRec + ": " + lightTypeMessage;
 					}
 				}
 			}
