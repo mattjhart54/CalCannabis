@@ -108,7 +108,7 @@ try {
 	asit = cap.getAppSpecificTableGroupModel();
 	
 	if (multTable.length > 0){
-		new_asit = copyASITable4PageFlow(asit,"OWNERS", multTable);
+		new_asit = copyASITable4PageFlow(asit,"OWNERS", multTable,capId);
 	}	
 	
 
