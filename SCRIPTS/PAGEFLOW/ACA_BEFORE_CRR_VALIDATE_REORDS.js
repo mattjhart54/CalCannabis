@@ -86,10 +86,17 @@ try {
 		errorMessage = "";
 		
 		//Primary License Data
-		var icNum = gatAppSpecific("License Number");
-		parentCapId = getApplication(icNum);
-		var legalBusName = getAppSpecific("Legal Business Name", parentCapId);
-		var lightType = getAppSpecific("License Type", parentCapId);
+		var capId = cap.getCapID();
+		var licNum = AInfo['License Number'];
+		parentCapId = getApplication(licNum);	
+		var currCap = capId; 
+		capId = parentCapId;
+		PInfo = new Array;
+		loadAppSpecific(PInfo);
+		capId = currCap;
+		
+		var legalBusName = PInfo['Legal Business Name'];
+		var lightType = PInfo['License Type'];
 		var c = aa.people.getCapContactByCapID(parentCapId).getOutput();
 		for(i in c) {
 			var con = c[i];
