@@ -1,13 +1,13 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_BEFORE_CRR_VALIDATE_REORDS.JS
-| Event   : ACA Page Flow before load of page
+| Program : ACA_BEFORE_APPLICANT_OWNER_TABLE.js
+| Event   : ACA Page Flow attachments before event
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
 |
 | Client  : N/A
 | Action# : N/A
 |
-| Notes   :
+| Notes   :  Checks the values of first/last name against reference contacts with corresponding email
 |
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
@@ -23,6 +23,8 @@ var useAppSpecificGroupName = false; // Use Group name when populating App Speci
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
 var SCRIPT_VERSION = 3;
+var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
+
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
@@ -44,15 +46,16 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM"));
+
+eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
@@ -73,16 +76,14 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 var cap = aa.env.getValue("CapModel");
 var AInfo = new Array();						// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
-//loadTaskSpecific(AInfo);						// Add task specific info
-//loadParcelAttributes(AInfo);						// Add parcel attributes
 loadASITables4ACA_corrected();
 
 // page flow custom code begin
 
 try {
 		//error messages
-		var licTypeMessage = "Neither the DRP or Legal Business Name match the Primary record’s DRP or Legal Business Name. If a change has occurred, you must first submit a " + <a target="_blank" rel="Notification and Request Form (DCC-LIC-027)" href="https://cannabis.ca.gov/wp-content/uploads/sites/2/2021/12/DCC-LIC-027-Notifications-and-Requests-to-Modify-a-License.pdf">Link</a> + " to request a modification to the license record before you can proceed with a conversion request." + <br>;
-		var lightTypeMessage = "The lighting type does not match the primary record lighting type of [insert value]. The lighting type refers to Indoor, Outdoor, Mixed-light Tier 1, or Mixed-light Tier 2." + <br>;
+		var licTypeMessage = "Neither the DRP or Legal Business Name match the Primary record’s DRP or Legal Business Name. If a change has occurred, you must first submit a " + br;
+		var lightTypeMessage = "The lighting type does not match the primary record lighting type of [insert value]. The lighting type refers to Indoor, Outdoor, Mixed-light Tier 1, or Mixed-light Tier 2." + br;
 		errorMessage = "";
 		
 		//Primary License Data
@@ -120,11 +121,11 @@ try {
 				var convStatus = licCap.getCapStatus();
 				if (matches(convStatus,"Active", "About to Expire", "Expired - Pending Renewal")){
 					if ((convFirstName.toUpperCase() != licFirstName.toUpperCase()) || (convLastName.toUpperCase() != licLastName.toUpperCase()) || (convLegalBusName.toUpperCase() != legalBusName.toUpperCase())){	
-						errorMessage += convLicRec ": " + licTypeMessage;
+						errorMessage += convLicRec + ": " + licTypeMessage;
 					}
 				}
 				if (lightType.toUpperCase() != convLightType.toUpperCase()){
-					errorMessage += convLicRec ": " + lightTypeMessage;
+					errorMessage += convLicRec + ": " + lightTypeMessage;
 				}
 			}
 		}
@@ -141,13 +142,22 @@ try {
 					
 					
 }catch (err){
-	logDebug("A JavaScript Error occurred:ACA_BEFORE_VALIDATE_CONTACT: " + err.message);
+	logDebug("A JavaScript Error occurred:ACA_BEFORE_CRR_VALIDATE_REORDS: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_CRR_VALIDATE_REORDS: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 // page flow custom code end
-
+function getCapIdStatusClass(inCapId){
+    var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
+    var retClass = null;
+    if(inCapScriptModel){
+        var tempCapModel = inCapScriptModel.getCapModel();
+        retClass = tempCapModel.getCapClass();
+    }
+   
+    return retClass;
+}
 
 if (debug.indexOf("**ERROR") > 0) {
 	aa.env.setValue("ErrorCode", "1");
