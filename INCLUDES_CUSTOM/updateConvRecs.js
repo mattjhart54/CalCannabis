@@ -183,7 +183,7 @@ try {
 				}
 			}
 		}
-		editAppSpecific("License Type",licType);
+		editAppSpecific("License Type",licType,plId);
 		ignoreTableArray = [];
 		removeASITable("APN SPATIAL INFORMATION",plId);
 		removeASITable("LAKE AND STREAMBED ALTERATION",plId);
