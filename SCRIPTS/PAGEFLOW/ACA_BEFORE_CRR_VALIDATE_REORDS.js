@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_BEFORE_APPLICANT_OWNER_TABLE.js
+| Program : ACA_BEFORE_CRR_VALIDATE_REORDS.js
 | Event   : ACA Page Flow attachments before event
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
@@ -7,7 +7,7 @@
 | Client  : N/A
 | Action# : N/A
 |
-| Notes   :  Checks the values of first/last name against reference contacts with corresponding email
+| Notes   :  Checks the values Records to Convert Table against Primary Record data
 |
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
