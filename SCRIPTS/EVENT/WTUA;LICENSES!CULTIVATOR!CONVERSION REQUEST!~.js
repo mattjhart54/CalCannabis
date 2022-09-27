@@ -14,15 +14,15 @@ try {
 			qty = AInfo["Canopy SF"];
 		else
 			qty = 1;
-		var feeDesc = licType + " - License Fee";
-		var licFee = getFeeDefByDesc("LIC_CC_Conversion", feeDesc);
-		if(licFee){
-			licFeeCode = licFee.feeCode; 
+		var licFeeDesc = licType + " - License Fee";
+		var thisFee = getFeeDefByDesc("LIC_CC_Conversion", licFeeDesc);
+		if(thisFee){
+			licFeeCode = thisFee.feeCode; 
 			logDebug("Lic Fee Code " + licFeeCode);
 			addFee(licFeeCode,"LIC_CC_CONVERSION", "FINAL", parseInt(qty), "N");
 		}else{
 			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Consion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-			logDebug("An error occurred retrieving fee item: " + feeDesc);
+			logDebug("An error occurred retrieving fee item: " + licFeeDesc);
 		}
     
 // pro rate the fee on the primary license 
@@ -44,29 +44,34 @@ try {
 			dFeeAmt = feeAmt / 365;
 			pFeeAmt = dFeeAmt * days;
 			tFeeAmt = tFeeAmt + pFeeAmt;
-							logDebug("pFeeAmt " + pFeeAmt);
+			logDebug("pFeeAmt " + pFeeAmt);
 		}
     
 // pro rate the fee on all the converted licenses
 		for(i in LICENSERECORDSFORCONVERSION) {
 			cId = LICENSERECORDSFORCONVERSION[i]["License Record ID"];
 			capId = aa.cap.getCapID(cId).getOutput();
-			PInfo = [];
-			loadAppSpecific(PInfo);
-			var vLicenseObj;
-			vLicenseObj = new licenseObject(null,capId);
-			vExpDate = vLicenseObj.b1ExpDate;
-			days = dateDiff(sysDate,vExpDate);
-			logDebug("days " + days);
-			if(days > 0) {
-				var feeDesc = PInfo["License Type"] + " - License Fee";
-				var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
-				feeAmt = thisFee.formula
-				logDebug("fee " + feeDesc + " amt " + feeAmt);
-				dFeeAmt = feeAmt / 365;
-				pFeeAmt = dFeeAmt * days;
-				tFeeAmt = tFeeAmt + pFeeAmt;
-				logDebug("pFeeAmt " + pFeeAmt);
+			cCap = aa.cap.getCap(capId).getOutput();
+			cStatus = cCap.getCapStatus();
+			logDebug("record " +cId + " status " + cStatus);
+			if(matches(cStatus,"Active","About to Expire","Suspended")) {
+				PInfo = [];
+				loadAppSpecific(PInfo);
+				var vLicenseObj;
+				vLicenseObj = new licenseObject(null,capId);
+				vExpDate = vLicenseObj.b1ExpDate;
+				days = dateDiff(sysDate,vExpDate);
+				logDebug("days " + days);
+				if(days > 0) {
+					var feeDesc = PInfo["License Type"] + " - License Fee";
+					var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
+					feeAmt = thisFee.formula
+					logDebug("fee " + feeDesc + " amt " + feeAmt);
+					dFeeAmt = feeAmt / 365;
+					pFeeAmt = dFeeAmt * days;
+					tFeeAmt = tFeeAmt + pFeeAmt;
+					logDebug("pFeeAmt " + pFeeAmt);
+				}
 			}
 		}
     
@@ -93,7 +98,8 @@ try {
 		}else {
 		
 // Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
-			voidRemoveFeesByDesc(licFee);
+
+			voidRemoveFeesByDesc(licFeeDesc);
 			plId = aa.cap.getCapID(pId).getOutput();
 			updateConvRecs(plId);
 			
