@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA CRR POPULATE OWNERS TABLE AFTER.js
+| Program : ACA_AFTER_CRR_POPULATE_OWNERS_TABLE.js
 | Event   : ACA_AfterButton Event
 |
 | Usage   : 
@@ -81,9 +81,8 @@ try {
 	var licCapId = getApplication(AInfo['License Number']);
 	var multTable = new Array(); 
 
-	loadASITables4ACA(licCapId);
-	var OWNERS= new Array();
-	if (typeof(OWNERS) == "object") {  // table of records to process
+	ownerInfo = loadASITable("OWNERS",licCapId);
+	if (ownerInfo){
 		for (var i in OWNERS) {
 			row = new Array();
 				row["First Name"] = new asiTableValObj("First Name", "" + OWNERS[i]["First Name"], "Y");
@@ -109,9 +108,9 @@ try {
 	
 
 }catch (err){
-	logDebug("A JavaScript Error occurred:ACA CRR POPULATE OWNERS TABLE AFTER: " + err.message);
+	logDebug("A JavaScript Error occurred:ACA_AFTER_CRR_POPULATE_OWNERS_TABLE: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA CRR POPULATE OWNERS TABLE AFTER: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_CRR_POPULATE_OWNERS_TABLE: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 
