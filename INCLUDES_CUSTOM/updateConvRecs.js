@@ -15,6 +15,7 @@ function updateConvRecs (plId) {
 try {
 	updateAppStatus("License Issued", "updated by script");
 	pId = AInfo["License Number"]; 
+	var licType = AInfo["Proposed License Type"];
 	plId = aa.cap.getCapID(pId).getOutput();
 	crId = capId;
 	capId = plId;
@@ -284,7 +285,6 @@ try {
 		
 // Set status to Cancelled on all converted records
 
-		var licType = AInfo["Proposed License Type"];
 		for(c in LICENSERECORDSFORCONVERSION) {
 			convNbr = LICENSERECORDSFORCONVERSION[c]["License Record ID"];
 			convId = aa.cap.getCapID(convNbr).getOutput();
