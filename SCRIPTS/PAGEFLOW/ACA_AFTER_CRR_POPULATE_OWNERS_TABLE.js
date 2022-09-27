@@ -73,6 +73,7 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
+var cap = aa.env.getValue("CapModel");
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
@@ -85,7 +86,7 @@ try {
 	var licCapId = getApplication(AInfo['License Number']);
 	var multTable = new Array(); 
 
-	ownerInfo = loadASITableByCapId("OWNERS",licCapId);
+	ownerInfo = loadASITable("OWNERS",licCapId);
 	if (ownerInfo){
 		for (var i in OWNERS) {
 			row = new Array();
@@ -156,63 +157,33 @@ function getApplication(appNum)
 	}
 
 	
-function loadASITableByCapId(tname) {
-
- 	//
- 	// Returns a single ASI Table array of arrays
-	// Optional parameter, cap ID to load from
-	//
-
-	var itemCap = capId;
-	if (arguments.length == 2) itemCap = arguments[1]; // use cap ID specified in args
-
-	var gm = aa.appSpecificTableScript.getAppSpecificTableGroupModel(itemCap).getOutput();
-	var ta = gm.getTablesArray()
-	var tai = ta.iterator();
-
-	while (tai.hasNext())
-	  {
-	  var tsm = tai.next();
-	  var tn = tsm.getTableName();
-
-      if (!tn.equals(tname)) continue;
-
-	  if (tsm.rowIndex.isEmpty())
-	  	{
-			logDebug("Couldn't load ASI Table " + tname + " it is empty");
-			return false;
-		}
-
-   	  var tempObject = new Array();
-	  var tempArray = new Array();
-
-  	  var tsmfldi = tsm.getTableField().iterator();
-	  var tsmcoli = tsm.getColumns().iterator();
-      var readOnlyi = tsm.getAppSpecificTableModel().getReadonlyField().iterator(); // get Readonly filed
-	  var numrows = 1;
-
-	  while (tsmfldi.hasNext())  // cycle through fields
-		{
-		if (!tsmcoli.hasNext())  // cycle through columns
-			{
-			var tsmcoli = tsm.getColumns().iterator();
-			tempArray.push(tempObject);  // end of record
-			var tempObject = new Array();  // clear the temp obj
-			numrows++;
-			}
-		var tcol = tsmcoli.next();
-		var tval = tsmfldi.next();
-		var readOnly = 'N';
-		if (readOnlyi.hasNext()) {
-			readOnly = readOnlyi.next();
-		}
-		var fieldInfo = new asiTableValObj(tcol.getColumnName(), tval, readOnly);
-		tempObject[tcol.getColumnName()] = fieldInfo;
-
-		}
-		tempArray.push(tempObject);  // end of record
-	  }
-	  return tempArray;
+function loadASITable(e) {
+    var t = capId;
+    2 == arguments.length && (t = arguments[1]);
+    for (var a = aa.appSpecificTableScript.getAppSpecificTableGroupModel(t).getOutput(), r = a.getTablesArray(), s = r.iterator(); s.hasNext(); ) {
+        var n = s.next(),
+        i = n.getTableName();
+        if (i.equals(e)) {
+            if (n.rowIndex.isEmpty())
+                return logDebug("Couldn't load ASI Table " + e + " it is empty"), !1;
+            for (var o = new Array, g = new Array, u = n.getTableField().iterator(), c = n.getColumns().iterator(), l = n.getAppSpecificTableModel().getReadonlyField().iterator(), p = 1; u.hasNext(); ) {
+                if (!c.hasNext()) {
+                    var c = n.getColumns().iterator();
+                    g.push(o);
+                    var o = new Array;
+                    p++
+                }
+                var d = c.next(),
+                f = u.next(),
+                m = "N";
+                l.hasNext() && (m = l.next());
+                var C = new asiTableValObj(d.getColumnName(), f, m);
+                o[d.getColumnName()] = C
+            }
+            g.push(o)
+        }
+    }
+    return g
 }
 	
 
