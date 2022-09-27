@@ -55,7 +55,8 @@ try {
 	}
 	
 // Update the Record Number	
-	var newAltId = capIDString + "-HIST";
+	altId = capId.getCustomID();
+	var newAltId = altId + "-HIST";
 	var updAltId = aa.cap.updateCapAltID(histCapId,newAltId);
 	if(!updAltId.getSuccess()){
 		logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
@@ -64,15 +65,29 @@ try {
 	}
 
 //Copy data to new historical record	
+
 	editAppName(pCapName);
 	var plShortNotes = getShortNotes(capId);
 	updateShortNotes(plShortNotes,histCapId);
 	updateWorkDesc(workDescGet(capId),histCapId);
 	copyContacts(capId,histCapId);
-	copyAppSpecific(histCapId);
+//	copyAppSpecific(histCapId);
+	var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
+	if (recordASIGroup.getSuccess()){
+		var recordASIGroupArray = recordASIGroup.getOutput();	
+		for (i in recordASIGroupArray) {
+			var group = recordASIGroupArray[i];
+			var recordField = String(group.getCheckboxDesc());
+			if (!matches(group.getChecklistComment(),null,undefined,"")){
+				var newFieldValue = group.getChecklistComment();
+				editAppSpecific(recordField,newFieldValue,histCapId);
+				logDebug(recordField + "edited to: " + newFieldValue);
+			}
+		}
+	}
 	copyASITables(capId,histCapId);
 	copyConditions(capId,histCapId);
-logDebug("Section I")	
+
 //update the expiration date and license status
 	vLicenseObj = new licenseObject(null,histCapId);
 	vLicenseObj.setExpiration(dateAdd(vCurrExpDate,0));
@@ -80,7 +95,7 @@ logDebug("Section I")
 	updateAppStatus("Inactive","License Converted",histCapId);
 	
 // update the primary license record from the Conversion Record.
-logDebug("Section II")
+
 	capId = crId;
 	var updateCat = false;
 	cDate = new Date();
