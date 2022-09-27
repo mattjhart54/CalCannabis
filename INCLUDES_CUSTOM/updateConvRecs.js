@@ -289,6 +289,7 @@ try {
 			convNbr = LICENSERECORDSFORCONVERSION[c]["License Record ID"];
 			convId = aa.cap.getCapID(convNbr).getOutput();
 			updateAppStatus("Cancelled", "Record converted to " + licType + " on license " + plId.getCustomID(),convId);
+			editAppSpecific("Conversion Date", jsDateToASIDate(cDate),convId);
 			addToCat(convId);
 		}
 		
