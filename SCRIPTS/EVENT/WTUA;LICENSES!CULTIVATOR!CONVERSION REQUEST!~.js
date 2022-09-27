@@ -15,13 +15,13 @@ try {
 		else
 			qty = 1;
 		var feeDesc = licType + " - License Fee";
-		var thisFee = getFeeDefByDesc("LIC_CC_Conversion", feeDesc);
-		if(thisFee){
-			licFeeCode = thisFee.feeCode; 
-//			logDebug("Lic Fee Code " + licFeeCode);
+		var licFee = getFeeDefByDesc("LIC_CC_Conversion", feeDesc);
+		if(licFee){
+			licFeeCode = licFee.feeCode; 
+			logDebug("Lic Fee Code " + licFeeCode);
 			addFee(licFeeCode,"LIC_CC_CONVERSION", "FINAL", parseInt(qty), "N");
 		}else{
-			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Conversion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Consion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 			logDebug("An error occurred retrieving fee item: " + feeDesc);
 		}
     
@@ -44,7 +44,7 @@ try {
 			dFeeAmt = feeAmt / 365;
 			pFeeAmt = dFeeAmt * days;
 			tFeeAmt = tFeeAmt + pFeeAmt;
-			logDebug("pFeeAmt " + pFeeAmt);
+							logDebug("pFeeAmt " + pFeeAmt);
 		}
     
 // pro rate the fee on all the converted licenses
@@ -72,11 +72,11 @@ try {
     
 // Assess the prorated license conversion credit and invoice fees
 		capId = crCapId;
-		licFee = feeAmount(licFeeCode,"NEW");
-		logDebug(" lic fee " + licFee);
-		if(tFeeAmt > 0 && tFeeAmt < licFee) {
+		licFeeAmt = feeAmount(licFeeCode,"NEW");
+		logDebug(" lic fee " + licFeeAmt + " tFee " + tFeeAmt);
+		if(tFeeAmt > 0 && tFeeAmt < licFeeAmt) {
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", tFeeAmt.toFixed(2), "N");
-			licFee = licFee + feeAmount("LIC_CCR_CRD","NEW");
+			licFeeAmt = licFeeAmt + feeAmount("LIC_CCR_CRD","NEW");
 			invNbr = invoiceAllFees();
 			updateAppStatus("License Fee Due","Conversion fees due");
     
@@ -85,7 +85,7 @@ try {
 			var envParameters = aa.util.newHashMap();
 			envParameters.put("licCap",capId.getCustomID()); 
 			envParameters.put("invNbr", invNbr);
-			envParameters.put("feeAmount", licFee);
+			envParameters.put("feeAmount", licFeeAmt);
 			envParameters.put("currentUserID",currentUserID);
 			envParameters.put("licType",licType);
 			envParameters.put("templateName", "LIC_CC_CCR_APPROVED");
@@ -93,6 +93,7 @@ try {
 		}else {
 		
 // Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
+			voidRemoveFeesByDesc(licFee);
 			plId = aa.cap.getCapID(pId).getOutput();
 			updateConvRecs(plId);
 			
@@ -121,7 +122,6 @@ try {
 		}
 	}	
 }catch(err){
-	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/Conversion Request/NA: " + err.message);
+	logDebug("An error has occurred in ASB:LICENSES/CULTIVATOR/Batch/Conversion: " + err.message);
 	logDebug(err.stack);
 }
-
