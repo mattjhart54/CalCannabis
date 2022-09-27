@@ -111,12 +111,12 @@ try {
 		if (typeof(LICENSERECORDSFORCONVERSION) == "object") {
 			for (var x in LICENSERECORDSFORCONVERSION) {
 				var theRow = LICENSERECORDSFORCONVERSION[x];
-				var convFirstName = theRow["DRP First Name"].fieldValue;
+				var convFirstName = theRow["DRP First Name"];
 				logDebug("convFirstName: " + convFirstName);
-				var convLastName = theRow["DRP Last Name"].fieldValue;
-				var convLegalBusName = theRow["Legal Business Name"].fieldValue;
-				var convLightType = theRow["Lighting Type"].fieldValue;
-				var convLicRec = theRow["License Record ID"].fieldValue;
+				var convLastName = theRow["DRP Last Name"];
+				var convLegalBusName = theRow["Legal Business Name"];
+				var convLightType = theRow["Lighting Type"];
+				var convLicRec = theRow["License Record ID"];
 				convCapId = getApplication(convLicRec);
 				var convCap = aa.cap.getCap(convCapId).getOutput();
 				var convStatus = convCap.getCapStatus();
