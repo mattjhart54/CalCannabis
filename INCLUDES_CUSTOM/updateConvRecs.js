@@ -183,6 +183,7 @@ try {
 				}
 			}
 		}
+		editAppSpecific("License Type",licType);
 		ignoreTableArray = [];
 		removeASITable("APN SPATIAL INFORMATION",plId);
 		removeASITable("LAKE AND STREAMBED ALTERATION",plId);
@@ -283,12 +284,11 @@ try {
 		
 // Set status to Cancelled on all converted records
 
-		crId = capId;
 		var licType = AInfo["Proposed License Type"];
 		for(c in LICENSERECORDSFORCONVERSION) {
 			convNbr = LICENSERECORDSFORCONVERSION[c]["License Record ID"];
 			convId = aa.cap.getCapID(convNbr).getOutput();
-			updateAppStatus("Cancelled", "Record converted to " + licType + " on license " + plId.getCustomID());
+			updateAppStatus("Cancelled", "Record converted to " + licType + " on license " + plId.getCustomID(),convId);
 			addToCat(convId);
 		}
 		
