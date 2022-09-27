@@ -69,6 +69,9 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 		return "";
 	}
 }
+
+var AInfo = new Array(); 					// Create array for tokenized variables
+loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
