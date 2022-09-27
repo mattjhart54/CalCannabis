@@ -88,12 +88,12 @@ try {
 
 	ownerInfo = loadASITable("OWNERS",licCapId);
 	if (ownerInfo){
-		for (var i in ownerInfo) {
+		for (var ii in ownerInfo) {
 			row = new Array();
-				row["First Name"] = new asiTableValObj("First Name", "" + ownerInfo[i]["First Name"], "Y");
-				row["Last Name"] = new asiTableValObj("Last Name", ownerInfo[i]["Last Name"], "Y");
-				row["Email Address"] = new asiTableValObj("Email Address", ownerInfo[i]["Email Address"], "Y");
-				row["Percent Ownership"] = new asiTableValObj("Percent Ownership", ownerInfo[i]["Percent Ownership"], "Y");
+				row["First Name"] = new asiTableValObj("First Name", "" + ownerInfo[ii]["First Name"], "Y");
+				row["Last Name"] = new asiTableValObj("Last Name", ownerInfo[ii]["Last Name"], "Y");
+				row["Email Address"] = new asiTableValObj("Email Address", ownerInfo[ii]["Email Address"], "Y");
+				row["Percent Ownership"] = new asiTableValObj("Percent Ownership", ownerInfo[ii]["Percent Ownership"], "Y");
 				multTable.push(row);
 		
 		}
