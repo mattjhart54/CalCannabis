@@ -120,7 +120,6 @@ try {
 			aa.runAsyncScript(scriptName, envParameters);
 		}
 	}	
-}
 }catch(err){
 	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/Conversion Request/NA: " + err.message);
 	logDebug(err.stack);
