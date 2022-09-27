@@ -25,8 +25,9 @@ function voidRemoveFeesByDesc(feeDesc) {
 							logDebug("**ERROR: Invoicing the fee items voided " + thisFee.getFeeCod() + " was not successful.  Reason: " +  invoiceResult_L.getErrorMessage());
 						}
 					}
-					if (targetFee.status == "NEW") {
-						var editResult = aa.finance.removeFeeItem(capId, targetFee.sequence);
+					if (targetFee.getFeeitemStatus() == "NEW") {
+						feeSeq = targetFee.getFeeSeqNbr();
+						var editResult = aa.finance.removeFeeItem(capId, feeSeq);
 						if (editResult.getSuccess())
 							logDebug("Removed existing Fee Item: " + targetFee.getFeeCod());
 						else
