@@ -100,7 +100,7 @@ try {
 	capId = crId;
 	var updateCat = false;
 	cDate = new Date();
-	editAppSpecific("Conversion Date", jsDateToASIDate(cDate,plId));
+	editAppSpecific("Conversion Date", jsDateToASIDate(cDate),plId);
 		if(!matches(AInfo["PA Update"],null,"",undefined)) {
 		editAppSpecific("Premise Address",AInfo["PA Update"],plId);
 		updateCat = true;
