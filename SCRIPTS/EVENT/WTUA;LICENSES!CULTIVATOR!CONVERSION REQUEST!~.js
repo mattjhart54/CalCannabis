@@ -18,10 +18,10 @@ try {
 		var thisFee = getFeeDefByDesc("LIC_CC_Conversion", feeDesc);
 		if(thisFee){
 			licFeeCode = thisFee.feeCode; 
-			logDebug("Lic Fee Code " + licFeeCode);
+//			logDebug("Lic Fee Code " + licFeeCode);
 			addFee(licFeeCode,"LIC_CC_CONVERSION", "FINAL", parseInt(qty), "N");
 		}else{
-			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Consion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Conversion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 			logDebug("An error occurred retrieving fee item: " + feeDesc);
 		}
     
@@ -44,7 +44,7 @@ try {
 			dFeeAmt = feeAmt / 365;
 			pFeeAmt = dFeeAmt * days;
 			tFeeAmt = tFeeAmt + pFeeAmt;
-							logDebug("pFeeAmt " + pFeeAmt);
+			logDebug("pFeeAmt " + pFeeAmt);
 		}
     
 // pro rate the fee on all the converted licenses
@@ -74,24 +74,55 @@ try {
 		capId = crCapId;
 		licFee = feeAmount(licFeeCode,"NEW");
 		logDebug(" lic fee " + licFee);
-		if(tFeeAmt > 0 && tFeeAmt < licFee)
+		if(tFeeAmt > 0 && tFeeAmt < licFee) {
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", tFeeAmt.toFixed(2), "N");
-		licFee = licFee + feeAmount("LIC_CCR_CRD","NEW");
-		invNbr = invoiceAllFees();
-		updateAppStatus("License Fee Due","Conversion fees due");
+			licFee = licFee + feeAmount("LIC_CCR_CRD","NEW");
+			invNbr = invoiceAllFees();
+			updateAppStatus("License Fee Due","Conversion fees due");
     
 // Run invoice report and email approval email to DRP		
-		var scriptName = "asyncRunInvoiceParamsRpt";
-		var envParameters = aa.util.newHashMap();
-		envParameters.put("licCap",capId.getCustomID()); 
-		envParameters.put("invNbr", invNbr);
-		envParameters.put("feeAmount", licFee);
-		envParameters.put("currentUserID",currentUserID);
-		envParameters.put("licType",licType);
-		envParameters.put("templateName", "LIC_CC_CCR_APPROVED");
-		aa.runAsyncScript(scriptName, envParameters);		
+			var scriptName = "asyncRunInvoiceParamsRpt";
+			var envParameters = aa.util.newHashMap();
+			envParameters.put("licCap",capId.getCustomID()); 
+			envParameters.put("invNbr", invNbr);
+			envParameters.put("feeAmount", licFee);
+			envParameters.put("currentUserID",currentUserID);
+			envParameters.put("licType",licType);
+			envParameters.put("templateName", "LIC_CC_CCR_APPROVED");
+			aa.runAsyncScript(scriptName, envParameters);	
+		}else {
+		
+// Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
+			plId = aa.cap.getCapID(pId).getOutput();
+			updateConvRecs(plId);
+			
+//run the License Report and send approval email
+			var appAltId = capId.getCustomID();
+			var licAltId = plId.getCustomID();
+			var scriptName = "asyncRunOfficialLicenseRpt";
+			var envParameters = aa.util.newHashMap();
+			envParameters.put("licType", licType);
+			envParameters.put("appCap",appAltId);
+			envParameters.put("licCap",licAltId); 
+			envParameters.put("reportName","Official License Certificate"); 
+			//envParameters.put("approvalLetter", "");
+			if(AInfo["No Transition"] == "CHECKED") {
+				var templateName = "LIC_CC_CCR_APPR_NO_FEE_PROV";
+				envParameter.put("reason", AInfo["Reason for Provisional Renewal"]);
+			}else {
+				envParameters.put("reason", "");
+				var templateName = "LIC_CC_CCR_APPR_NO_FEE";
+			}
+			envParameters.put("emailTemplate", templateName);
+			envParameters.put("currentUserID",currentUserID);
+			envParameters.put("contType","Designated Responsible Party");
+			envParameters.put("fromEmail",sysFromEmail);
+			aa.runAsyncScript(scriptName, envParameters);
+		}
+	}	
 }
 }catch(err){
-	logDebug("An error has occurred in ASB:LICENSES/CULTIVATOR/Batch/Conversion: " + err.message);
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/Conversion Request/NA: " + err.message);
 	logDebug(err.stack);
 }
+
