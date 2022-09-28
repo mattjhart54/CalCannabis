@@ -88,21 +88,19 @@ try {
 	licCapId = parentCapId;
 	if(licCapId){
 		var currCap = capId; 
-		var crrPriContact = getContactObj(capId,"Designated Responsible Party");
 		capId = licCapId;
 		logDebug("licCapId: " + licCapId);
 		PInfo = new Array;
 		loadAppSpecific(PInfo);
 		capId = currCap;
-		if (!crrPriContact){
-			var priContact = getContactObj(parentCapId,"Designated Responsible Party");
-			if(priContact){
-				//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
-				priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
-				priContact.people.setContactType("Designated Responsible Party");	
-				cap.setApplicantModel(priContact.capContact);
-				aa.env.setValue("CapModel",cap);
-			}
+
+		var priContact = getContactObj(parentCapId,"Designated Responsible Party");
+		if(priContact){
+			//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
+			priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
+			priContact.people.setContactType("Designated Responsible Party");	
+			cap.setApplicantModel(priContact.capContact);
+			aa.env.setValue("CapModel",cap);
 		}
 
 		editAppSpecific4ACA("License Issued Type", PInfo["License Issued Type"]);
