@@ -137,12 +137,25 @@ try {
 			var altId = capId.getCustomID();
 			cap = aa.cap.getCap(capId).getOutput();
 			capStatus = cap.getCapStatus();
+			AInfo = new Array();
+			loadAppSpecific(AInfo);
+			
 			if(capStatus == "Expired") {
 				var vLicenseObj = new licenseObject(altId);
 				var licExp = vLicenseObj.b1ExpDate;
 				var diff = getDateDiff(licExp);
 				if(diff < nbrDays) {
 					logDebug(altId + ": Ignored, Expired within last 45 days");
+					expWithinNbrDays.push(altId);
+					expWithinNbrDaysCount++;
+					continue;
+				}
+			}
+			if(capStatus == "Cancelled") {
+				var cDate = AInfo["Conversion Date"];
+				var diff = getDateDiff(cDate);
+				if(diff < 30) {
+					logDebug(altId + ": Ignored, Cancelled within last 30 days");
 					expWithinNbrDays.push(altId);
 					expWithinNbrDaysCount++;
 					continue;
