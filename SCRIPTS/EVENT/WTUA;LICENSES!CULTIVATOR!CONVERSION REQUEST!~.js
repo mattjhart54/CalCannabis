@@ -105,6 +105,12 @@ try {
 			plId = aa.cap.getCapID(pId).getOutput();
 			updateConvRecs(plId);
 			
+			var result = aa.cap.createAppHierarchy(plId, capId);
+			if (result.getSuccess())
+				logDebug("Child application successfully linked");
+			else
+				logDebug("Could not link applications");
+			
 //run the License Report and send approval email
 			var appAltId = capId.getCustomID();
 			var licAltId = plId.getCustomID();
