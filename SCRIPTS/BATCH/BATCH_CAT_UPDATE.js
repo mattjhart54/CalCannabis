@@ -148,7 +148,7 @@ try {
 					continue;
 				}
 			}
-			if(capStatus == "Inactive") {
+			if(capStatus == "Inactive" || capStatus == "Cancelled") {
 				var workflowResult = aa.workflow.getTasks(capId);
 				var statusDate = "";
 				if (workflowResult.getSuccess()){
