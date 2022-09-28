@@ -91,7 +91,6 @@ try {
 		var premTable = new Array();
 		var currCap = capId; 
 		capId = licCapId;
-		logDebug("licCapId: " + licCapId);
 		PInfo = new Array;
 		loadAppSpecific(PInfo);
 		capId = currCap;
@@ -128,16 +127,28 @@ try {
 		//Create Owner and ALL Premises Tables
 		var ownTable = new Array(); 
 		var premTable = new Array();
-		premRow = new Array();
-
-		premRow['License Record ID'] = AInfo['License Number'];
-		premRow['Premises Address']= PInfo["Premise Address"];
-		premRow['Premises City'] = PInfo["Premise City"];
-		premRow['Premises State'] = PInfo["Premise State"];
-		premRow['Premises Zip'] = PInfo["Premise Zip"];
-		premRow['Premises County'] = PInfo["Premise County"];
-		premRow['APN'] = PInfo["APN"];
-		premTable.push(premRow);
+		var recArray = new Array();
+		
+		recArray.push(AInfo['License Number']);
+		
+		if (typeof(LICENSERECORDSFORCONVERSION) == "object") {
+			if(LICENSERECORDSFORCONVERSION.length > 0){
+				var theRow = LICENSERECORDSFORCONVERSION[x];
+				recArray.push(theRow["License Record ID"]);
+			}
+		}
+		for (xx in recArray){
+			premRow = new Array();
+			recCapId = getApplication(recArry[xx]);
+			premRow['License Record ID'] = getAppspecifc("License Number",recCapId);
+			premRow['Premises Address']= getAppspecifc("Premise Address",recCapId);
+			premRow['Premises City'] = getAppspecifc("Premise City",recCapId);
+			premRow['Premises State'] = getAppspecifc("Premise State",recCapId);
+			premRow['Premises Zip'] = getAppspecifc("Premise Zip",recCapId);
+			premRow['Premises County'] = getAppspecifc("Premise County",recCapId);
+			premRow['APN'] = getAppspecifc("APN",recCapId);
+			premTable.push(premRow);
+		}
 		
 		ownerInfo = loadASITable("OWNERS",licCapId);
 		if (ownerInfo){
