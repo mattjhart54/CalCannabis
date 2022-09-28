@@ -78,10 +78,12 @@ try {
 // Assess the prorated license conversion credit and invoice fees
 		capId = crCapId;
 		licFeeAmt = feeAmount(licFeeCode,"NEW");
-		logDebug(" lic fee " + licFeeAmt + " tFee " + tFeeAmt);
 		if(tFeeAmt > 0 && tFeeAmt < licFeeAmt) {
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", tFeeAmt.toFixed(2), "N");
 			licFeeAmt = licFeeAmt + feeAmount("LIC_CCR_CRD","NEW");
+			licFeeAmt = "$" + Number(licFeeAmt);
+			licFeeAmt = maskTheMoneyNumber(licFeeAmt);
+			logDebug("Number LicFee " + licFeeAmt);
 			invNbr = invoiceAllFees();
 			updateAppStatus("License Fee Due","Conversion fees due");
     
