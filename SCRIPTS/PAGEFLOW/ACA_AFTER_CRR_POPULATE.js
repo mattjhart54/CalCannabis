@@ -96,18 +96,19 @@ try {
 		loadAppSpecific(PInfo);
 		capId = currCap;
 
+		//attach DRP Contact if not already associate with record
 		var crrPriContact = getContactObj(capId,"Designated Responsible Party");
 		if(!crrPriContact){
 			var priContact = getContactObj(licCapId,"Designated Responsible Party");
 			if(priContact){
-				//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
 				priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
 				priContact.people.setContactType("Designated Responsible Party");	
 				cap.setApplicantModel(priContact.capContact);
 				aa.env.setValue("CapModel",cap);
 			}
 		}
-
+		
+		//Add Lic custom field values to record
 		editAppSpecific4ACA("License Issued Type", PInfo["License Issued Type"]);
 		editAppSpecific4ACA("Premise Address", PInfo["Premise Address"]);
 		editAppSpecific4ACA("Premise City",PInfo["Premise City"]);
@@ -118,17 +119,13 @@ try {
 		editAppSpecific4ACA("Tribal Land",PInfo["Tribal Land"]);
 		editAppSpecific4ACA("Tribal Land Information",PInfo["Tribal Land Information"]);
 		editAppSpecific4ACA("Grid",PInfo["Grid"]);
-		editAppSpecific4ACA("Grid Update",PInfo["Grid"]);
 		editAppSpecific4ACA("Solar",PInfo["Solar"]);
-		editAppSpecific4ACA("Solar Update",PInfo["Solar"]);
 		editAppSpecific4ACA("Generator",PInfo["Generator"]);
-		editAppSpecific4ACA("Generator Update",PInfo["Generator"]);
 		editAppSpecific4ACA("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
-		editAppSpecific4ACA("G50 Update",PInfo["Generator Under 50 HP"]);
 		editAppSpecific4ACA("Other",PInfo["Other"]);
-		editAppSpecific4ACA("Other Update",PInfo["Other"]);
 		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
 		
+		//Create Owner and ALL Premises Tables
 		var ownTable = new Array(); 
 		var premTable = new Array();
 		premRow = new Array();
@@ -154,18 +151,9 @@ try {
 			
 			}
 		}
-		
-		if (typeof(OWNERS) == "object"){
-			if(OWNERS.length > 0){
-				removeASITable("OWNERS", capId);
-			}
-		}
-		
-		if (typeof(ALLPREMISESADDRESSES) == "object"){
-			if(ALLPREMISESADDRESSES.length > 0){
-				removeASITable("ALL PREMISES ADDRESSES", capId);
-			}
-		}
+		//Remove existing table data if user goes back to step 1
+		removeASITable("OWNERS", capId);
+		removeASITable("ALL PREMISES ADDRESSES", capId);
 		
 		asit = cap.getAppSpecificTableGroupModel();
 		
