@@ -75,6 +75,7 @@ var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
+loadASITables4ACA_corrected();
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
@@ -86,6 +87,8 @@ try {
 	
 	var licCapId = getApplication(AInfo['License Number']);
 	if(licCapId){
+		
+		var premTable = new Array();
 		var currCap = capId; 
 		capId = licCapId;
 		logDebug("licCapId: " + licCapId);
@@ -93,13 +96,16 @@ try {
 		loadAppSpecific(PInfo);
 		capId = currCap;
 
-		var priContact = getContactObj(licCapId,"Designated Responsible Party");
-		if(priContact){
-			//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
-			priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
-			priContact.people.setContactType("Designated Responsible Party");	
-			cap.setApplicantModel(priContact.capContact);
-			aa.env.setValue("CapModel",cap);
+		var crrPriContact = getContactObj(capId,"Designated Responsible Party");
+		if(!crrPriContact){
+			var priContact = getContactObj(licCapId,"Designated Responsible Party");
+			if(priContact){
+				//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
+				priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
+				priContact.people.setContactType("Designated Responsible Party");	
+				cap.setApplicantModel(priContact.capContact);
+				aa.env.setValue("CapModel",cap);
+			}
 		}
 
 		editAppSpecific4ACA("License Issued Type", PInfo["License Issued Type"]);
@@ -122,7 +128,53 @@ try {
 		editAppSpecific4ACA("Other",PInfo["Other"]);
 		editAppSpecific4ACA("Other Update",PInfo["Other"]);
 		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
-		copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","SOURCE OF WATER SUPPLY","CANNABIS FINANCIAL INTEREST");
+		
+		var ownTable = new Array(); 
+		var premTable = new Array();
+
+		premTable.push(licCapId);
+		premTable.push(PInfo["Premise Address"]);
+		premTable.push(PInfo["Premise City"]);
+		premTable.push(PInfo["Premise State"]);
+		premTable.push(PInfo["Premise Zip"]);
+		premTable.push(PInfo["Premise County"]);
+		premTable.push(PInfo["APN"]);
+		
+		ownerInfo = loadASITable("OWNERS",licCapId);
+		if (ownerInfo){
+			for (var ii in ownerInfo) {
+				ownRow = new Array();
+				ownRow["First Name"] = ownerInfo[ii]["First Name"];
+				ownRow["Last Name"] = ownerInfo[ii]["Last Name"];
+				ownRow["Email Address"] = ownerInfo[ii]["Email Address"];
+				ownRow["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
+				ownTable.push(ownRow);
+			
+			}
+		}
+		
+		if (typeof(OWNERS) == "object"){
+			if(OWNERS.length > 0){
+				removeASITable("OWNERS", capId);
+			}
+		}
+		
+		if (typeof(ALLPREMISESADDRESSES) == "object"){
+			if(ALLPREMISESADDRESSES.length > 0){
+				removeASITable("ALL PREMISES ADDRESSES", capId);
+			}
+		}
+		
+		asit = cap.getAppSpecificTableGroupModel();
+		
+		if (ownTable.length > 0){
+			new_asit = addASITable4ACAPageFlow(asit,"OWNERS", ownTable,capId);
+		}
+	
+		if (premTable.length > 0){
+			new_asit = addASITable4ACAPageFlow(asit,"ALL PREMISES ADDRESSES", premTable,capId);
+		}
+
 	}
 
 }catch (err){
@@ -177,7 +229,7 @@ function loadASITable(e) {
         var n = s.next(),
         i = n.getTableName();
         if (i.equals(e)) {
-            if (n.rowIndex.isEmpty())
+            if (n.ownRowIndex.isEmpty())
                 return logDebug("Couldn't load ASI Table " + e + " it is empty"), !1;
             for (var o = new Array, g = new Array, u = n.getTableField().iterator(), c = n.getColumns().iterator(), l = n.getAppSpecificTableModel().getReadonlyField().iterator(), p = 1; u.hasNext(); ) {
                 if (!c.hasNext()) {
@@ -213,7 +265,7 @@ var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos(tableName
 if (!tssmResult.getSuccess())
 	{ aa.print("**WARNING: error removing ASI table " + tableName + " " + tssmResult.getErrorMessage()) ; return false }
 	else
-logDebug("Successfully removed all rows from ASI Table: " + tableName);
+logDebug("Successfully removed all ownRows from ASI Table: " + tableName);
 
 }
 	
@@ -243,9 +295,9 @@ function copyASITable4PageFlow(destinationTableGroupModel,tableName,tableValueAr
   	
 	var fld = aa.util.newArrayList();  // had to do this since it was coming up null.
         var fld_readonly = aa.util.newArrayList(); // had to do this since it was coming up null.
-  	var i = -1; // row index counter
+  	var i = -1; // ownRow index counter
   
-         	for (thisrow in tableValueArray)
+         	for (thisownRow in tableValueArray)
   		{
   
  
@@ -256,23 +308,23 @@ function copyASITable4PageFlow(destinationTableGroupModel,tableName,tableValueAr
   			{
   			var colname = coli.next();
   			
-			if (typeof(tableValueArray[thisrow][colname.getColumnName()]) == "object")  // we are passed an asiTablVal Obj
+			if (typeof(tableValueArray[thisownRow][colname.getColumnName()]) == "object")  // we are passed an asiTablVal Obj
 				{
-				var args = new Array(tableValueArray[thisrow][colname.getColumnName()].fieldValue,colname);
+				var args = new Array(tableValueArray[thisownRow][colname.getColumnName()].fieldValue,colname);
 				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args).getOutput();
-				fldToAdd.setRowIndex(i);
+				fldToAdd.setownRowIndex(i);
 				fldToAdd.setFieldLabel(colname.getColumnName());
 				fldToAdd.setFieldGroup(tableName.replace(/ /g,"\+"));
-				fldToAdd.setReadOnly(tableValueArray[thisrow][colname.getColumnName()].readOnly.equals("Y"));
+				fldToAdd.setReadOnly(tableValueArray[thisownRow][colname.getColumnName()].readOnly.equals("Y"));
 				fld.add(fldToAdd);
-				fld_readonly.add(tableValueArray[thisrow][colname.getColumnName()].readOnly);
+				fld_readonly.add(tableValueArray[thisownRow][colname.getColumnName()].readOnly);
 				
 				}
 			else // we are passed a string
 				{
-				var args = new Array(tableValueArray[thisrow][colname.getColumnName()],colname);
+				var args = new Array(tableValueArray[thisownRow][colname.getColumnName()],colname);
 				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args).getOutput();
-				fldToAdd.setRowIndex(i);
+				fldToAdd.setownRowIndex(i);
 				fldToAdd.setFieldLabel(colname.getColumnName());
 				fldToAdd.setFieldGroup(tableName.replace(/ /g,"\+"));
 				fldToAdd.setReadOnly(false);
@@ -321,12 +373,12 @@ function addASITable4ACAPageFlow(destinationTableGroupModel, tableName, tableVal
 		return false;
 	}
 
-	var i = -1; // row index counter
+	var i = -1; // ownRow index counter
 	if (tsm.getTableFields() != null) {
 		i = 0 - tsm.getTableFields().size()
 	}
 
-	for (thisrow in tableValueArray) {
+	for (thisownRow in tableValueArray) {
 		var fld = aa.util.newArrayList(); // had to do this since it was coming up null.
 		var fld_readonly = aa.util.newArrayList(); // had to do this since it was coming up null.
 		var col = tsm.getColumns()
@@ -334,31 +386,31 @@ function addASITable4ACAPageFlow(destinationTableGroupModel, tableName, tableVal
 		while (coli.hasNext()) {
 			var colname = coli.next();
 			
-			if (!tableValueArray[thisrow][colname.getColumnName()]) {
+			if (!tableValueArray[thisownRow][colname.getColumnName()]) {
 				logDebug("addToASITable: null or undefined value supplied for column " + colname.getColumnName() + ", setting to empty string");
-				tableValueArray[thisrow][colname.getColumnName()] = "";
+				tableValueArray[thisownRow][colname.getColumnName()] = "";
 			}
 
-			if (typeof(tableValueArray[thisrow][colname.getColumnName()].fieldValue) != "undefined") // we are passed an asiTablVal Obj
+			if (typeof(tableValueArray[thisownRow][colname.getColumnName()].fieldValue) != "undefined") // we are passed an asiTablVal Obj
 			{
-				var args = new Array(tableValueArray[thisrow][colname.getColumnName()].fieldValue ? tableValueArray[thisrow][colname.getColumnName()].fieldValue : "", colname);
+				var args = new Array(tableValueArray[thisownRow][colname.getColumnName()].fieldValue ? tableValueArray[thisownRow][colname.getColumnName()].fieldValue : "", colname);
 				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField", args).getOutput();
 				logDebug("args: " + args);
-				logDebug("TESTING: " + tableValueArray[thisrow][colname.getColumnName()].fieldValue + " ITERATION: " + i);
+				logDebug("TESTING: " + tableValueArray[thisownRow][colname.getColumnName()].fieldValue + " ITERATION: " + i);
 				logDebug("TESTING2: " + aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args));
 				logDebug("TESTING3: " + aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args).getOutput());
-				fldToAdd.setRowIndex(i);
+				fldToAdd.setownRowIndex(i);
 				fldToAdd.setFieldLabel(colname.getColumnName());
 				fldToAdd.setFieldGroup(tableName.replace(/ /g, "\+"));
-				fldToAdd.setReadOnly(tableValueArray[thisrow][colname.getColumnName()].readOnly.equals("Y"));
+				fldToAdd.setReadOnly(tableValueArray[thisownRow][colname.getColumnName()].readOnly.equals("Y"));
 				fld.add(fldToAdd);
-				fld_readonly.add(tableValueArray[thisrow][colname.getColumnName()].readOnly);
+				fld_readonly.add(tableValueArray[thisownRow][colname.getColumnName()].readOnly);
 
 			} else // we are passed a string
 			{
-				var args = new Array(tableValueArray[thisrow][colname.getColumnName()] ? tableValueArray[thisrow][colname.getColumnName()] : "", colname);
+				var args = new Array(tableValueArray[thisownRow][colname.getColumnName()] ? tableValueArray[thisownRow][colname.getColumnName()] : "", colname);
 				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField", args).getOutput();
-				fldToAdd.setRowIndex(i);
+				fldToAdd.setownRowIndex(i);
 				fldToAdd.setFieldLabel(colname.getColumnName());
 				fldToAdd.setFieldGroup(tableName.replace(/ /g, "\+"));
 				fldToAdd.setReadOnly(false);
