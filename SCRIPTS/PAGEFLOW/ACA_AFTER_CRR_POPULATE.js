@@ -126,6 +126,7 @@ try {
 		editAppSpecific4ACA("Other Update",PInfo["Other"]);
 		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
 		copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","SOURCE OF WATER SUPPLY","CANNABIS FINANCIAL INTEREST");
+	}
 
 }catch (err){
 	logDebug("A JavaScript Error occurred:ACA_AFTER_CRR_POPULATE_OWNERS_TABLE: " + err.message);
