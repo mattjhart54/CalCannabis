@@ -85,7 +85,6 @@ loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 try {
 	
 	var licCapId = getApplication(AInfo['License Number']);
-	licCapId = parentCapId;
 	if(licCapId){
 		var currCap = capId; 
 		capId = licCapId;
@@ -94,7 +93,7 @@ try {
 		loadAppSpecific(PInfo);
 		capId = currCap;
 
-		var priContact = getContactObj(parentCapId,"Designated Responsible Party");
+		var priContact = getContactObj(licCapId,"Designated Responsible Party");
 		if(priContact){
 			//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
 			priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
