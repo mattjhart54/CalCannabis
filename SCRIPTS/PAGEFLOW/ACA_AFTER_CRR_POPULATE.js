@@ -108,7 +108,7 @@ try {
 			}
 		}
 
-		/*editAppSpecific4ACA("License Issued Type", PInfo["License Issued Type"]);
+		editAppSpecific4ACA("License Issued Type", PInfo["License Issued Type"]);
 		editAppSpecific4ACA("Premise Address", PInfo["Premise Address"]);
 		editAppSpecific4ACA("Premise City",PInfo["Premise City"]);
 		editAppSpecific4ACA("Premise State",PInfo["Premise State"]);
@@ -127,19 +127,20 @@ try {
 		editAppSpecific4ACA("G50 Update",PInfo["Generator Under 50 HP"]);
 		editAppSpecific4ACA("Other",PInfo["Other"]);
 		editAppSpecific4ACA("Other Update",PInfo["Other"]);
-		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);*/
-		copyAppSpecificInfo(licCapId, capId);
+		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
 		
 		var ownTable = new Array(); 
 		var premTable = new Array();
+		premRow = new Array();
 
-		premTable['License Record ID'] = AInfo['License Number'];
-		premTable['Premises Address']= PInfo["Premise Address"];
-		premTable['Premises City'] = PInfo["Premise City"];
-		premTable['Premises State'] = PInfo["Premise State"];
-		premTable['Premises Zip'] = PInfo["Premise Zip"];
-		premTable['Premises County'] = PInfo["Premise County"];
-		premTable['APN'] = PInfo["APN"];
+		premRow['License Record ID'] = AInfo['License Number'];
+		premRow['Premises Address']= PInfo["Premise Address"];
+		premRow['Premises City'] = PInfo["Premise City"];
+		premRow['Premises State'] = PInfo["Premise State"];
+		premRow['Premises Zip'] = PInfo["Premise Zip"];
+		premRow['Premises County'] = PInfo["Premise County"];
+		premRow['APN'] = PInfo["APN"];
+		premTable.push(premRow);
 		
 		ownerInfo = loadASITable("OWNERS",licCapId);
 		if (ownerInfo){
