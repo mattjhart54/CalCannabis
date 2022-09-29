@@ -133,8 +133,9 @@ try {
 		
 		if (typeof(LICENSERECORDSFORCONVERSION) == "object") {
 			if(LICENSERECORDSFORCONVERSION.length > 0){
-				var theRow = LICENSERECORDSFORCONVERSION[x];
-				recArray.push(theRow["License Record ID"]);
+				for (x in LICENSERECORDSFORCONVERSION){
+					recArray.push(LICENSERECORDSFORCONVERSION[x]["License Record ID"]);
+				}
 			}
 		}
 		for (xx in recArray){
