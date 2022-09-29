@@ -138,17 +138,20 @@ try {
 				}
 			}
 		}
-		for (xx in recArray){
-			premRow = new Array();
-			recCapId = getApplication(recArry[xx]);
-			premRow['License Record ID'] = getAppspecifc("License Number",recCapId);
-			premRow['Premises Address']= getAppspecifc("Premise Address",recCapId);
-			premRow['Premises City'] = getAppspecifc("Premise City",recCapId);
-			premRow['Premises State'] = getAppspecifc("Premise State",recCapId);
-			premRow['Premises Zip'] = getAppspecifc("Premise Zip",recCapId);
-			premRow['Premises County'] = getAppspecifc("Premise County",recCapId);
-			premRow['APN'] = getAppspecifc("APN",recCapId);
-			premTable.push(premRow);
+		
+		if(recArray.length > 0){
+			for (xx in recArray){
+				premRow = new Array();
+				recCapId = getApplication(recArray[xx]);
+				premRow['License Record ID'] = getAppspecifc("License Number",recCapId);
+				premRow['Premises Address']= getAppspecifc("Premise Address",recCapId);
+				premRow['Premises City'] = getAppspecifc("Premise City",recCapId);
+				premRow['Premises State'] = getAppspecifc("Premise State",recCapId);
+				premRow['Premises Zip'] = getAppspecifc("Premise Zip",recCapId);
+				premRow['Premises County'] = getAppspecifc("Premise County",recCapId);
+				premRow['APN'] = getAppspecifc("APN",recCapId);
+				premTable.push(premRow);
+			}
 		}
 		
 		ownerInfo = loadASITable("OWNERS",licCapId);
