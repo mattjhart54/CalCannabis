@@ -143,7 +143,7 @@ try {
 			for (xx in recArray){
 				premRow = new Array();
 				recCapId = getApplication(recArray[xx]);
-				premRow['License Record ID'] = getAppSpecific("License Number",recCapId);
+				premRow['License Record ID'] = getAppSpecific(recArray[xx],recCapId);
 				premRow['Premises Address']= getAppSpecific("Premise Address",recCapId);
 				premRow['Premises City'] = getAppSpecific("Premise City",recCapId);
 				premRow['Premises State'] = getAppSpecific("Premise State",recCapId);
