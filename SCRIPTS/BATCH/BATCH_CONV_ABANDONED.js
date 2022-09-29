@@ -178,8 +178,6 @@ try{
 		var capStatus = cap.getCapStatus();
 		AInfo = new Array();
 		loadAppSpecific(AInfo);
-		var apprDate = dateAdd(AInfo["License Fee Due"],-30);
-		logDebug("Approval Date " + apprDate);
 		var capDetailObjResult = aa.cap.getCapDetail(capId);		
 		if (!capDetailObjResult.getSuccess()){
 			logDebug("Could not get record detail: " + altId);
@@ -213,7 +211,7 @@ try{
 				addParameter(eParams, "$$altID$$", capId.getCustomID());
 				addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 				addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
-				addParameter(eParams, "$$apprDate$$", apprDate);
+				addParameter(eParams, "$$apprDate$$", AInfo["License Fee Due"]);
 				sendApprovalNotification(sysFromEmail,priEmail,"",emailTemplate,eParams,rFiles,capId);
 			}else{
 				logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
