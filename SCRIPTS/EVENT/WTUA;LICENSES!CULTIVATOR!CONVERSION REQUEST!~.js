@@ -9,7 +9,7 @@ try {
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$priEmail$$", priContact.capContact.email);
-			addParameter(eParams, "$$reason$$", AInfo["Reason for Provisional Renewal"]);
+			addParameter(eParams, "$$reason$$", AInfo["Rejection Reason"]);
 			sendApprovalNotification(sysFromEmail,priEmail,"","LIC_CC_CCR_CLOSED",eParams,rFiles,capId);
 		}else{
 			logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
