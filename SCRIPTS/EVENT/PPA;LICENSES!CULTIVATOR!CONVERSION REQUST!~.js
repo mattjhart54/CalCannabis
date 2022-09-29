@@ -23,7 +23,7 @@ try {
 		//envParameters.put("approvalLetter", "");
 		if(AInfo["No Transition"] == "CHECKED") {
 			var templateName = "LIC_CC_CCR_APPR_PROV_LIC_ISSUED";
-			envParameter.put("reason", AInfo["Reason for Provisional Renewal"]);
+			envParameter.put("reason", AInfo["Reason for Provisional Conversion"]);
 		}else {
 			envParameters.put("reason", "");
 			var templateName = "LIC_CC_CCR_APPR_LIC_ISSUED";
