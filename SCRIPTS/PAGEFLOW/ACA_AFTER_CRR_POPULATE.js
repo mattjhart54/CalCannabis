@@ -143,13 +143,13 @@ try {
 			for (xx in recArray){
 				premRow = new Array();
 				recCapId = getApplication(recArray[xx]);
-				premRow['License Record ID'] = getAppSpecifc("License Number",recCapId);
-				premRow['Premises Address']= getAppSpecifc("Premise Address",recCapId);
-				premRow['Premises City'] = getAppSpecifc("Premise City",recCapId);
-				premRow['Premises State'] = getAppSpecifc("Premise State",recCapId);
-				premRow['Premises Zip'] = getAppSpecifc("Premise Zip",recCapId);
-				premRow['Premises County'] = getAppSpecifc("Premise County",recCapId);
-				premRow['APN'] = getAppSpecifc("APN",recCapId);
+				premRow['License Record ID'] = getAppSpecific("License Number",recCapId);
+				premRow['Premises Address']= getAppSpecific("Premise Address",recCapId);
+				premRow['Premises City'] = getAppSpecific("Premise City",recCapId);
+				premRow['Premises State'] = getAppSpecific("Premise State",recCapId);
+				premRow['Premises Zip'] = getAppSpecific("Premise Zip",recCapId);
+				premRow['Premises County'] = getAppSpecific("Premise County",recCapId);
+				premRow['APN'] = getAppSpecific("APN",recCapId);
 				premTable.push(premRow);
 			}
 		}
