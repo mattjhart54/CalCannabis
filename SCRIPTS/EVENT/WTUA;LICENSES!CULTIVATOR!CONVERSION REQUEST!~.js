@@ -86,6 +86,7 @@ try {
 			logDebug("Number LicFee " + licFeeAmt);
 			invNbr = invoiceAllFees();
 			updateAppStatus("License Fee Due","Conversion fees due");
+			editAppSpecific("License Fee Due", dateAdd(jsDateToASIDate(new Date),30));
     
 // Run invoice report and email approval email to DRP		
 			var scriptName = "asyncRunInvoiceParamsRpt";
