@@ -127,6 +127,7 @@ try {
 		//Create Owner and ALL Premises Tables
 		var ownTable = new Array(); 
 		var premTable = new Array();
+		var addlPremTable = new Array();
 		var recArray = new Array();
 		
 		recArray.push(AInfo['License Number']);
@@ -154,6 +155,24 @@ try {
 			}
 		}
 		
+		addlPremInfo = loadASITable("PREMISES ADDRESSES",licCapId);
+		if (addlPremInfo){
+			for (var y in addlPremInfo) {
+				addPremRow = new Array();
+				addPremRow["APN"] = addlPremInfo[y]["APN"];
+				addPremRow["Premises Address"] = addlPremInfo[y]["Premises Address"];
+				addPremRow["Premises City"] = addlPremInfo[y]["Premises City"];
+				addPremRow["Premises State"] = addlPremInfo[y]["Premises State"];
+				addPremRow["Premises Zip"] = addlPremInfo[y]["Premises Zip"];
+				addPremRow["Premises County"] = addlPremInfo[y]["Premises County"];
+				addPremRow["Type of Possession"] = addlPremInfo[y]["Type of Possession"];
+				addPremRow["Owner Address"] = addlPremInfo[y]["Owner Address"];
+				addPremRow["Owner Phone"] = addlPremInfo[y]["Owner Phone"];
+				addlPremTable.push(addPremRow);
+			
+			}
+		}
+		
 		ownerInfo = loadASITable("OWNERS",licCapId);
 		if (ownerInfo){
 			for (var ii in ownerInfo) {
@@ -166,9 +185,12 @@ try {
 			
 			}
 		}
+		
+		
 		//Remove existing table data if user goes back to step 1
-		removeASITable("OWNERS", capId);
-		removeASITable("ALL PREMISES ADDRESSES", capId);
+		removeASITable("OWNERS");
+		removeASITable("ALL PREMISES ADDRESSES");
+		removeASITable("PREMISES ADDRESSES");
 		
 		asit = cap.getAppSpecificTableGroupModel();
 		
@@ -179,6 +201,12 @@ try {
 		if (premTable != undefined || premTable.length > 0){
 			new_asit = addASITable4ACAPageFlow(asit,"ALL PREMISES ADDRESSES", premTable,capId);
 		}
+		
+		if (addlPremTable.length > 0){
+			new_asit = addASITable4ACAPageFlow(asit,"PREMISES ADDRESSES", addlPremTable,capId);
+		}
+		
+		copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","CANNABIS FINANCIAL INTEREST","TARGET RECORDS");
 
 	}
 
