@@ -99,7 +99,7 @@ try {
 	var updateCat = false;
 	cDate = new Date();
 	
-	if(PInfo["License Issued Type"] == "Provisional" && AInfo["No Transition'} != "CHECKED") {
+	if(PInfo["License Issued Type"] == "Provisional" && AInfo["No Transition"] != "CHECKED") {
 		editAppSpecific("License Issued Type", "Annual",plId);
 		editAppSpecific("Transition Date", jsDateToASIDate(cDate),plId);
 	}		
