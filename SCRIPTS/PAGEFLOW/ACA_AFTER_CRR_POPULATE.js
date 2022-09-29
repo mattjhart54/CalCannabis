@@ -153,39 +153,7 @@ try {
 				premRow['APN'] = getAppSpecific("APN",recCapId);
 				premTable.push(premRow);
 			}
-		}
-		
-		addlPremInfo = loadASITable("PREMISES ADDRESSES",licCapId);
-		if (addlPremInfo){
-			for (var y in addlPremInfo) {
-				addPremRow = new Array();
-				addPremRow["APN"] = addlPremInfo[y]["APN"];
-				addPremRow["Premises Address"] = addlPremInfo[y]["Premises Address"];
-				addPremRow["Premises City"] = addlPremInfo[y]["Premises City"];
-				addPremRow["Premises State"] = addlPremInfo[y]["Premises State"];
-				addPremRow["Premises Zip"] = addlPremInfo[y]["Premises Zip"];
-				addPremRow["Premises County"] = addlPremInfo[y]["Premises County"];
-				addPremRow["Type of Possession"] = addlPremInfo[y]["Type of Possession"];
-				addPremRow["Owner Address"] = addlPremInfo[y]["Owner Address"];
-				addPremRow["Owner Phone"] = addlPremInfo[y]["Owner Phone"];
-				addlPremTable.push(addPremRow);
-			
-			}
-		}
-		
-		ownerInfo = loadASITable("OWNERS",licCapId);
-		if (ownerInfo){
-			for (var ii in ownerInfo) {
-				ownRow = new Array();
-				ownRow["First Name"] = ownerInfo[ii]["First Name"];
-				ownRow["Last Name"] = ownerInfo[ii]["Last Name"];
-				ownRow["Email Address"] = ownerInfo[ii]["Email Address"];
-				ownRow["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
-				ownTable.push(ownRow);
-			
-			}
-		}
-		
+		}		
 		
 		//Remove existing table data if user goes back to step 1
 		removeASITable("OWNERS");
@@ -193,17 +161,9 @@ try {
 		removeASITable("PREMISES ADDRESSES");
 		
 		asit = cap.getAppSpecificTableGroupModel();
-		
-		if (ownTable.length > 0){
-			new_asit = addASITable4ACAPageFlow(asit,"OWNERS", ownTable,capId);
-		}
 	
 		if (premTable != undefined || premTable.length > 0){
 			new_asit = addASITable4ACAPageFlow(asit,"ALL PREMISES ADDRESSES", premTable,capId);
-		}
-		
-		if (addlPremTable.length > 0){
-			new_asit = addASITable4ACAPageFlow(asit,"PREMISES ADDRESSES", addlPremTable,capId);
 		}
 		
 		copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","CANNABIS FINANCIAL INTEREST","TARGET RECORDS");
@@ -298,7 +258,7 @@ var tssmResult = aa.appSpecificTableScript.removeAppSpecificTableInfos(tableName
 if (!tssmResult.getSuccess())
 	{ aa.print("**WARNING: error removing ASI table " + tableName + " " + tssmResult.getErrorMessage()) ; return false }
 	else
-logDebug("Successfully removed all ownRows from ASI Table: " + tableName);
+logDebug("Successfully removed all rows from ASI Table: " + tableName);
 
 }
 	
