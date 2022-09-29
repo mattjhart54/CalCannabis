@@ -10,7 +10,7 @@ try {
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$priEmail$$", priContact.capContact.email);
 			addParameter(eParams, "$$reason$$", AInfo["Reason Not Converted"]);
-			sendApprovalNotification(sysFromEmail,priEmail,"","LIC_CC_CCR_CLOSED",eParams,rFiles,capId);
+			sendApprovalNotification(sysFromEmail,priEmail,"","LIC_CC_CCR_NOT_CONVERTED",eParams,rFiles,capId);
 		}else{
 			logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
 		}
