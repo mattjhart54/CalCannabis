@@ -102,8 +102,8 @@ try {
 			if(priContact){
 				priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
 				priContact.people.setContactType("Designated Responsible Party");	
-				cap.setApplicantModel(priContact.capContact);
 				aa.env.setValue("CapModel",cap);
+				cap.setApplicantModel(priContact.capContact);
 			}
 		}
 		
