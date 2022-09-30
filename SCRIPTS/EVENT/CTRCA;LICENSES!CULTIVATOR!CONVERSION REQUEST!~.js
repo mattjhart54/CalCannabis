@@ -21,7 +21,7 @@ try {
 		
 			
 	// Copy the Designated resposible Party contact from the License Record to the Amanedment record
-		copyContactsByType_rev(parentId,capId,"Designated Responsible Party");
+		copyContactsByType_rev(primaryRecId,capId,"Designated Responsible Party");
 
 		
 	// Copy custom fields from the license record to the parent record
@@ -154,7 +154,7 @@ try {
 		editAppSpecific("APN Matches Premises-LSA", PInfo["APN Matches Premises-LSA"]);
 		editAppSpecific("APN Matches Adjacent Parcel", PInfo["APN Matches Adjacent Parcel"]);
 		editAppSpecific("Notes", PInfo["Notes"]);
-		copyASITablesCDFA(parentId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST","PREMISES ADDRESSES","SOURCE OF WATER SUPPLY");
+		copyASITablesCDFA(primaryRecId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST","PREMISES ADDRESSES","SOURCE OF WATER SUPPLY");
 		for(x in SOURCEOFWATERSUPPLY) {
 			if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Groundwater Well" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
 				editAppSpecific("Groundwater Well Review Status", "Incomplete");
