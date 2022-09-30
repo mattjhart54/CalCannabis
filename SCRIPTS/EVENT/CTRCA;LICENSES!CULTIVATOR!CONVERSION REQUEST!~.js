@@ -185,7 +185,7 @@ try {
 			}else{
 				var fmtPhone = "";
 			}
-			addParameter(eParams, "$$altId$$", capId);
+			addParameter(eParams, "$$altId$$", capId.getCustomID());
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 			addParameter(eParams, "$$contactEmail$$", priContact.capContact.email);
