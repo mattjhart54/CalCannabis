@@ -21,7 +21,10 @@ try {
 		
 			
 	// Copy the Designated resposible Party contact from the License Record to the Amanedment record
-		copyContactsByType_rev(primaryRecId,capId,"Designated Responsible Party");
+		var crrPriContact = getContactObj(capId,"Designated Responsible Party");
+		if(!crrPriContact){
+			copyContactsByType_rev(primaryRecId,capId,"Designated Responsible Party");
+		}
 
 		
 	// Copy custom fields from the license record to the parent record
