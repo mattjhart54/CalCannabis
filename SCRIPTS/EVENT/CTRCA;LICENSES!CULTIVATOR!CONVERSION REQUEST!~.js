@@ -1,9 +1,6 @@
 try {
-// Link Requested License to Conversion Request Record as a child
-//	var parentAltId = AInfo["License Number"];
-//	addParent(parentAltId);
-	
-// Set alt id the amendment record based on the number of chlild amendments records linked to the license record
+// Link Requested License(s) to Conversion Request Record as a child
+
 	primaryRecId = getApplication(AInfo['License Number']);
 	if(primaryRecId){
 		
