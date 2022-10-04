@@ -101,11 +101,19 @@ try {
 	var updateCat = false;
 	cDate = new Date();
 	
-	if(PInfo["License Issued Type"] == "Provisional" && AInfo["No Transition"] != "CHECKED") {
-		editAppSpecific("License Issued Type", "Annual",plId);
-		editAppSpecific("Transition Date", jsDateToASIDate(cDate),plId);
-	}		
+	if(PInfo["License Issued Type"] == "Provisional") {
+		if(AInfo["No Transition"] != "CHECKED") {
+			editAppSpecific("License Issued Type", "Annual",plId);
+			editAppName("Annual " + AInfo["Cultivator Type"] + " - " + licType);
+			editAppSpecific("Transition Date", jsDateToASIDate(cDate),plId);
+		} else {
+			editAppName("Provisional " + AInfo["Cultivator Type"] + " - " + licType);
+		}
+	} else {
+		editAppName("Annual " + AInfo["Cultivator Type"] + " - " + licType);
+	}
 	editAppSpecific("Conversion Date", jsDateToASIDate(cDate),plId);
+	editAppSpecific("License Type",licType,plId);
 	
 	if(!matches(AInfo["PA Update"],null,"",undefined)) {
 		editAppSpecific("Premise Address",AInfo["PA Update"],plId);
@@ -189,7 +197,7 @@ try {
 			}
 		}
 	}
-	editAppSpecific("License Type",licType,plId);
+	
 	ignoreTableArray = [];
 	removeASITable("APN SPATIAL INFORMATION",plId);
 	removeASITable("LAKE AND STREAMBED ALTERATION",plId);
