@@ -17,7 +17,8 @@ try {
 		updateAppStatus("Submitted","");
 		
 			
-	// Copy the Designated resposible Party contact from the License Record to the Amanedment record
+	// Copy the Designated resposible Party and Business contact from the License Record to the Amanedment record
+		copyContactsByType_rev(primaryRecId,capId,"Business");
 		var crrPriContact = getContactObj(capId,"Designated Responsible Party");
 		if(!crrPriContact){
 			copyContactsByType_rev(primaryRecId,capId,"Designated Responsible Party");
