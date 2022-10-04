@@ -41,9 +41,12 @@ try {
 		var tFeeAmt = 0;
     
 // Access new license fee
-		var licType = AInfo["Proposed License Type"];
+		var licType = AInfo["Proposed License Type"];		
 		if(licType.substring(0,5) == "Large")
-			qty = AInfo["Canopy SF"];
+			if(matches(AInfo["Canopy SF-NEW"],null,"",undefined)) 
+				qty = AInfo[Canopy SF"];		   
+			else 
+				qty = AInfo["Canopy SF-NEW"];
 		else
 			qty = 1;
 		var licFeeDesc = licType + " - License Fee";
