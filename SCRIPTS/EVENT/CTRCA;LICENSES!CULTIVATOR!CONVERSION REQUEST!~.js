@@ -21,6 +21,25 @@ try {
 		var crrPriContact = getContactObj(capId,"Designated Responsible Party");
 		if(!crrPriContact){
 			copyContactsByType_rev(primaryRecId,capId,"Designated Responsible Party");
+			var priLicContact = getContactObj(primaryRecId,"Designated Responsible Party");
+			editAppSpecific("DRP First Name",priLicContact.capContact.firstName);
+			editAppSpecific("DRP Last Name",priLicContact.capContact.lastName);
+			editAppSpecific("DRP Email Address",priLicContact.capContact.email);
+		}else{
+			editAppSpecific("DRP First Name",crrPriContact.capContact.firstName);
+			editAppSpecific("DRP Last Name",crrPriContact.capContact.lastName);
+			editAppSpecific("DRP Email Address",priContact.capContact.email);
+		}
+		
+	// Expressions are not svaing values in ACA need to populate with CTRCA
+		var b1ExpResult = aa.expiration.getLicensesByCapID(primaryRecId);
+		if(b1ExpResult.getSuccess()){
+			b1ExpResult = b1ExpResult.getOutput();
+			var licExpDate = b1ExpResult.getExpDate();
+			if (licExpDate) {
+				var b1ExpDate = licExpDate.getMonth() + "/" + licExpDate.getDayOfMonth() + "/" + licExpDate.getYear();
+				editAppSpecific("License Expiration Date",b1ExpDate);
+			}
 		}
 
 		
@@ -31,6 +50,7 @@ try {
 		loadAppSpecific(PInfo);
 		capId = holdId;
 		editAppSpecific("License Issued Type", PInfo["License Issued Type"]);
+		editAppSpecific("Legal Business Name", PInfo["Legal Business Name"]);
 		editAppSpecific("Premise State",PInfo["Premise State"]);
 		editAppSpecific("Medium Validation",PInfo["Medium Validation"]);
 		editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
