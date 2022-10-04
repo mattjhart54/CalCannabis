@@ -44,7 +44,7 @@ try {
 		var licType = AInfo["Proposed License Type"];		
 		if(licType.substring(0,5) == "Large")
 			if(matches(AInfo["Canopy SF-NEW"],null,"",undefined)) 
-				qty = AInfo[Canopy SF"];		   
+				qty = AInfo["Canopy SF"];		   
 			else 
 				qty = AInfo["Canopy SF-NEW"];
 		else
