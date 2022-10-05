@@ -112,10 +112,10 @@ try {
     
 // Assess the prorated license conversion credit and invoice fees
 		capId = crCapId;
-		convFeeAmt = feeAmount(licFeeCode,"NEW");
-		if(tFeeAmt > 0 && tFeeAmt < convFeeAmt) {
+		licFeeAmt = feeAmount(licFeeCode,"NEW");
+		if(tFeeAmt > 0 && tFeeAmt < licFeeAmt) {
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", tFeeAmt.toFixed(2), "N");
-			licFeeAmt = convFeeAmt + feeAmount("LIC_CCR_CRD","NEW");
+			licFeeAmt = licFeeAmt + feeAmount("LIC_CCR_CRD","NEW");
 			licFeeAmt = "$" + Number(licFeeAmt);
 			licFeeAmt = maskTheMoneyNumber(licFeeAmt);
 			logDebug("Number LicFee " + licFeeAmt);
@@ -136,7 +136,7 @@ try {
 		}else {
 		
 // Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
-			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", convFeeAmt, "N");
+			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", licFeeAmt, "N");
 			invNbr = invoiceAllFees();
 			plId = aa.cap.getCapID(pId).getOutput();
 			updateConvRecs(plId);
