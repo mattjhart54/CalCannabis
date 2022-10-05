@@ -34,8 +34,8 @@ try {
 		vCurrExpDate = vLicenseObj.b1ExpDate;
 		capId = holdId;
 		
-		editAppSpecific("Primary License Expiration Date", vCurrExpDate);
-		editAppSpecific("Primary License Legal Business Name", PInfo["Legal Business Name"]);
+		editAppSpecific("License Expiration Date", vCurrExpDate);
+		editAppSpecific("Legal Business Name", PInfo["Legal Business Name"]);
 		editAppSpecific("License Issued Type", PInfo["License Issued Type"]);
 		editAppSpecific("Premise State",PInfo["Premise State"]);
 		editAppSpecific("Medium Validation",PInfo["Medium Validation"]);
