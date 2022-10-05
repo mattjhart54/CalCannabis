@@ -27,9 +27,10 @@ try {
 			capId = primaryRecId;
 			PInfo = new Array;
 			loadAppSpecific(PInfo);
-			capId = holdId;
 			vLicenseObj = new licenseObject(null,capId);
 			vCurrExpDate = vLicenseObj.b1ExpDate;
+			capId = holdId;
+			
 			editAppSpecific("Primary License Expiration Date", vCurrExpDate);
 			editAppSpecific("Primary License Legal Business Name", PInfo["Legal Business Name"]);
 			editAppSpecific("License Issued Type", PInfo["License Issued Type"]);
