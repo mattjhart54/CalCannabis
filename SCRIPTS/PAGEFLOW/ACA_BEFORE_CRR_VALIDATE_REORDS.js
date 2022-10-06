@@ -140,7 +140,33 @@ try {
 			showMessage = true;
 			logMessage(errorMessage);
 		}
-					
+		
+		
+		var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
+		if(resCurUser.getSuccess()){
+			var contactFnd = false;
+			var currUser = resCurUser.getOutput();
+			var currEmail = currUser.email;
+			var currUserID = currUser.fullName;
+			var licCapId = getApplication(AInfo['License Number']);
+			var priContact = getContactObj(licCapId,"Designated Responsible Party");
+			if(priContact){
+				var conEmail = priContact.capContact.email;
+				if(!matches(conEmail,"",null,"undefined")){
+					if(conEmail.toUpperCase() == currEmail.toUpperCase()){
+						contactFnd = true;
+					}
+				}
+			}
+			if(!contactFnd){
+				cancel = true;
+				showMessage = true;
+				logMessage("  Warning: Only the Designated Responsible party can submit a science amendment.");
+			}			
+		}else{
+			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
+			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
+		}
 					
 					
 }catch (err){
