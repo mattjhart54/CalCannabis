@@ -134,12 +134,6 @@ try {
 				}
 			}
 		}						
-					
-		if(errorMessage != ""){
-			cancel = true;
-			showMessage = true;
-			logMessage(errorMessage);
-		}
 		
 		
 		var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
@@ -162,7 +156,13 @@ try {
 				cancel = true;
 				showMessage = true;
 				logMessage("  Warning: Only the Designated Responsible party can submit a science amendment.");
-			}			
+			}else{
+				if(errorMessage != ""){
+					cancel = true;
+					showMessage = true;
+					logMessage(errorMessage);
+				}
+			}				
 		}else{
 			logDebug("An error occurred retrieving the current user: " + resCurUser.getErrorMessage());
 			aa.sendMail(sysFromEmail, debugEmail, "", "An error occurred retrieving the current user: ACA_ONLOAD_OWNER_APP_UPDATE: " + startDate, "capId: " + capId + br + resCurUser.getErrorMessage() + br + currEnv);
