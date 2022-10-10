@@ -94,6 +94,7 @@ try {
 		
 		var legalBusName = PInfo['Legal Business Name'];
 		var lightType = PInfo['License Type'];
+		var lightTypeArray = lightType.split(" ");
 		
 		//error messages
 		var licTypeMessage = "Neither the DRP or Legal Business Name match the Primary record’s DRP or Legal Business Name. If a change has occurred, you must first submit a <a href=" + '"https://cannabis.ca.gov/wp-content/uploads/sites/2/2021/12/DCC-LIC-027-Notifications-and-Requests-to-Modify-a-License.pdf"'+" target="+'"_blank"'+">Notification and Request Form (DCC-LIC-027)</a>" + " to request a modification to the license record before you can proceed with a conversion request." + br;
@@ -119,6 +120,7 @@ try {
 					var convLastName = theRow["DRP Last Name"];
 					var convLegalBusName = theRow["Legal Business Name"];
 					var convLightType = theRow["Lighting Type"];
+					var convLightTypeArray = convLightType.split(" ");
 					var convLicRec = theRow["License Record ID"];
 					convCapId = getApplication(convLicRec);
 					var convCap = aa.cap.getCap(convCapId).getOutput();
@@ -128,7 +130,7 @@ try {
 							errorMessage += convLicRec + ": " + licTypeMessage;
 						}
 					}
-					if (lightType.toUpperCase() != convLightType.toUpperCase()){
+					if (lightTypeArray[lightTypeArray.length - 1].toUpperCase() != convLightTypeArray[convLightTypeArray.length - 1].toUpperCase()){
 						errorMessage += convLicRec + ": " + lightTypeMessage;
 					}
 				}
