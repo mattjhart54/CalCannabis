@@ -75,6 +75,7 @@ var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
+loadASITables4ACA_corrected();
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
@@ -83,8 +84,7 @@ loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 
 
 try {
-	loadASITables4ACA_corrected();
-	removeASITable("OWNERS", capId);	
+	removeASITable("OWNERS");	
 	var licCapId = getApplication(AInfo['License Number']);
 	var multTable = new Array(); 
 
