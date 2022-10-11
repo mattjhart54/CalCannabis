@@ -92,7 +92,6 @@ var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(),sysDate.getDayOfMonth(),s
 
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
-loadASITables4ACA_corrected();
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
@@ -121,7 +120,7 @@ try {
 	if (multTable.length > 0){
 		removeASITable("OWNERS");
 		asit = cap.getAppSpecificTableGroupModel();
-		new_asit = copyASITable4PageFlowLocal(asit,"OWNERS", multTable,capId);
+		new_asit = copyASITable4PageFlowLocal(asit,"OWNERS", multTable);
 	}	
 	
 
