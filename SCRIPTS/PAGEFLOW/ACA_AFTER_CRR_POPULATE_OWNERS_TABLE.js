@@ -100,9 +100,9 @@ try {
 		}
 	}
 	
-	if (typeof(OWNERS) == "object"){
-		if(OWNERS.length > 0){
-			removeASITable("OWNERS", capId);
+	if (typeof(ownerInfo) == "object"){
+		if(ownerInfo.length > 0){
+			removeASITable(ownerInfo, capId);
 		}
 	}
 	
