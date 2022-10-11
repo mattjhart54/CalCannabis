@@ -75,6 +75,7 @@ var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
+loadASITables4ACA_corrected();
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
@@ -100,9 +101,9 @@ try {
 		}
 	}
 	
-	if (typeof(ownerInfo) == "object"){
-		if(ownerInfo.length > 0){
-			removeASITable(ownerInfo, capId);
+	if (typeof(OWNERS) == "object"){
+		if(OWNERS.length > 0){
+			removeASITable("OWNERS", capId);
 		}
 	}
 	
