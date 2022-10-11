@@ -21,6 +21,11 @@ var useTaskSpecificGroupName = false; // Use Group name when populating Task Spe
 var cancel = false;
 var SCRIPT_VERSION  = 3; 
 var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
+var publicUser = false;
+var currentUserID = aa.env.getValue("CurrentUserID");
+var publicUserModelResult = aa.publicUser.getPublicUserByPUser(currentUserID);
+var userSeqNum = publicUserModelResult.getOutput().getUserSeqNum();
+if (currentUserID.indexOf("PUBLICUSER") == 0) { currentUserID = "ADMIN"; publicUser = true }  // ignore public users
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
@@ -75,7 +80,7 @@ var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
-
+loadASITables4ACA_corrected();
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
@@ -84,7 +89,7 @@ loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 
 
 try {
-	removeASITable("OWNERS");	
+	
 	var licCapId = getApplication(AInfo['License Number']);
 	var multTable = new Array(); 
 
@@ -98,6 +103,12 @@ try {
 			row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
 			multTable.push(row);
 		
+		}
+	}
+	
+	if (typeof(OWNERS) == "object"){
+		if(OWNERS.length > 0){
+			removeASITable("OWNERS", capId);
 		}
 	}
 	
