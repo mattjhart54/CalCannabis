@@ -102,11 +102,7 @@ loadASITables4ACA_corrected();
 
 try {
 	loadASITables4ACA_corrected();
-	if (typeof(OWNERS) == "object"){
-		if(OWNERS.length > 0){
-			removeASITable("OWNERS", capId);
-		}
-	}
+	removeASITable("OWNERS", capId);
 	
 	var licCapId = getApplication(AInfo['License Number']);
 	var multTable = new Array(); 
