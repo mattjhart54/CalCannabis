@@ -19,7 +19,8 @@ var showDebug = false; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
-var useCustomScriptFile = true;  			// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
+var SCRIPT_VERSION  = 3; 
+var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
@@ -28,7 +29,6 @@ var startTime = startDate.getTime();
 var message = ""; // Message String
 var debug = ""; // Debug String
 var br = "<BR>"; // Break Tag
-var currentUserID = aa.env.getValue("CurrentUserID");
 
 var useSA = false;
 var SA = null;
@@ -44,16 +44,16 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM"));
 
+eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
 
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
@@ -71,9 +71,8 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 		return "";
 	}
 }
-
-
 var cap = aa.env.getValue("CapModel");
+var capId = cap.getCapID();
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 /*------------------------------------------------------------------------------------------------------/
@@ -84,12 +83,6 @@ loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 
 
 try {
-	
-	if (typeof(OWNERS) == "object"){
-		if(OWNERS.length > 0){
-			removeASITable("OWNERS", capId);
-		}
-	}
 	
 	var licCapId = getApplication(AInfo['License Number']);
 	var multTable = new Array(); 
@@ -104,6 +97,12 @@ try {
 			row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
 			multTable.push(row);
 		
+		}
+	}
+	
+	if (typeof(OWNERS) == "object"){
+		if(OWNERS.length > 0){
+			removeASITable("OWNERS", capId);
 		}
 	}
 	
