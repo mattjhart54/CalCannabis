@@ -120,10 +120,10 @@ try {
 		}
 	}
 	
-	asit = cap.getAppSpecificTableGroupModel();
-	
 	if (multTable.length > 0){
-		new_asit = addASITable4ACAPageFlow(asit,"OWNERS", multTable,capId);
+		removeASITable("OWNERS");
+		asit = cap.getAppSpecificTableGroupModel();
+		new_asit = copyASITable4PageFlowLocal(asit,"OWNERS", multTable,capId);
 	}	
 	
 
