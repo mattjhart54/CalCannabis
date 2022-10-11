@@ -85,6 +85,7 @@ loadASITables4ACA_corrected();
 
 try {
 	
+	removeASITable("OWNERS", capId);	
 	var licCapId = getApplication(AInfo['License Number']);
 	var multTable = new Array(); 
 
@@ -98,12 +99,6 @@ try {
 			row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
 			multTable.push(row);
 		
-		}
-	}
-	
-	if (typeof(OWNERS) == "object"){
-		if(OWNERS.length > 0){
-			removeASITable("OWNERS", capId);
 		}
 	}
 	
