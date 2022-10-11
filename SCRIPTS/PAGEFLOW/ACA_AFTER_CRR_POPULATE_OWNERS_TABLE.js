@@ -74,6 +74,23 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
+var servProvCode = capId.getServiceProviderCode()       		// Service Provider Code
+var publicUser = false;
+var currentUserID = aa.env.getValue("CurrentUserID");
+if (currentUserID.indexOf("PUBLICUSER") == 0) { currentUserID = "ADMIN"; publicUser = true }  // ignore public users
+var capIDString = capId.getCustomID(); 				// alternate cap id string
+var systemUserObj = aa.person.getUser(currentUserID).getOutput();  	// Current User Object
+var appTypeResult = cap.getCapType();
+var appTypeString = appTypeResult.toString(); 			// Convert application type to string ("Building/A/B/C")
+var appTypeArray = appTypeString.split("/"); 			// Array of application type string
+var currentUserGroup;
+var currentUserGroupObj = aa.userright.getUserRight(appTypeArray[0], currentUserID).getOutput()
+if (currentUserGroupObj) currentUserGroup = currentUserGroupObj.getGroupName();
+var capName = cap.getSpecialText();
+var capStatus = cap.getCapStatus();
+var sysDate = aa.date.getCurrentDate();
+var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(),sysDate.getDayOfMonth(),sysDate.getYear(),"");
+
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 loadASITables4ACA_corrected();
