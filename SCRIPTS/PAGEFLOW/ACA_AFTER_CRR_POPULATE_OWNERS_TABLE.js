@@ -101,8 +101,6 @@ loadASITables4ACA_corrected();
 
 
 try {
-	loadASITables4ACA_corrected();
-	removeASITable("OWNERS", capId);
 	
 	var licCapId = getApplication(AInfo['License Number']);
 	var multTable = new Array(); 
@@ -219,7 +217,7 @@ logDebug("Successfully removed all rows from ASI Table: " + tableName);
 
 }
 	
-function copyASITable4PageFlow(destinationTableGroupModel,tableName,tableValueArray) // optional capId
+function copyASITable4PageFlowLocal(destinationTableGroupModel,tableName,tableValueArray) // optional capId
     	{
   	//  tableName is the name of the ASI table
   	//  tableValueArray is an array of associative array values.  All elements MUST be either a string or asiTableVal object
