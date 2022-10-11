@@ -111,10 +111,10 @@ try {
 	if (ownerInfo){
 		for (var ii in ownerInfo) {
 			row = new Array();
-			row["First Name"] = ownerInfo[ii]["First Name"];
-			row["Last Name"] = ownerInfo[ii]["Last Name"];
-			row["Email Address"] = ownerInfo[ii]["Email Address"];
-			row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
+			row["First Name"] = new asiTableValObj("First Name",ownerInfo[ii]["First Name"],"Y");
+			row["Last Name"] = new asiTableValObj("Last Name",ownerInfo[ii]["Last Name"],"Y");
+			row["Email Address"] = new asiTableValObj("Email Address",ownerInfo[ii]["Email Address"],"Y");
+			row["Percent Ownership"] = new asiTableValObj("Percent Ownership",ownerInfo[ii]["Percent Ownership"],"Y");
 			multTable.push(row);
 		
 		}
