@@ -44,13 +44,16 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",true));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
+eval(getScriptText("INCLUDES_CUSTOM"));
+
 
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
@@ -81,7 +84,6 @@ loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 
 
 try {
-	capId = cap.getCapID();
 	
 	if (typeof(OWNERS) == "object"){
 		if(OWNERS.length > 0){
