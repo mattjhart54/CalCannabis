@@ -20,6 +20,7 @@ var useAppSpecificGroupName = false; // Use Group name when populating App Speci
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
 var SCRIPT_VERSION  = 3; 
+var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
@@ -43,15 +44,16 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS",null,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM",null,true));
+
+eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
 
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
@@ -69,10 +71,8 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 		return "";
 	}
 }
-
-
 var cap = aa.env.getValue("CapModel");
-
+var capId = cap.getCapID();
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 /*------------------------------------------------------------------------------------------------------/
@@ -85,25 +85,34 @@ loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 try {
 	
 	var licCapId = getApplication(AInfo['License Number']);
-	var multTable = []; 
+	var multTable = new Array(); 
 
 	ownerInfo = loadASITable("OWNERS",licCapId);
 	if (ownerInfo){
 		for (var ii in ownerInfo) {
-			row = [];
-			row["First Name"] = new asiTableValObj("First Name","" + String(ownerInfo[ii]["First Name"]),"Y");
-			row["Last Name"] = new asiTableValObj("Last Name","" + ownerInfo[ii]["Last Name"],"Y");
-			row["Email Address"] = new asiTableValObj("Email Address","test","Y");
-			row["Percent Ownership"] = new asiTableValObj("Percent Ownership",ownerInfo[ii]["Percent Ownership"],"Y");
+			row = new Array();
+			row["First Name"] = ownerInfo[ii]["First Name"];
+			row["Last Name"] = ownerInfo[ii]["Last Name"];
+			row["Email Address"] = ownerInfo[ii]["Email Address"];
+			row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
 			multTable.push(row);
 		
 		}
 	}
+	var deleteIDsArray = [];
+	if (typeof(OWNERS) == "object"){
+		for (let j = 0; j < OWNERS.length; j++) {
+			deleteIDsArray.push(j);
+		}
+	}
+	if (deleteIDsArray.length > 0){
+		deletedAppSpecificTableInfors("OWNERS", cap, deleteIDsArray);
+	}
+	
+	asit = cap.getAppSpecificTableGroupModel();
 	
 	if (multTable.length > 0){
-		removeASITable("OWNERS",capId);
-		asit = cap.getAppSpecificTableGroupModel();
-		new_asit = copyASITable4PageFlowLocal(asit,"OWNERS", multTable,capId);
+		new_asit = addASITable4ACAPageFlow(asit,"OWNERS", multTable,capId);
 	}	
 	
 
@@ -118,7 +127,22 @@ try {
 | <===========END=Main=Loop================>
 /-----------------------------------------------------------------------------------------------------*/
 
-
+if (debug.indexOf("**ERROR") > 0) {
+    aa.env.setValue("ErrorCode", "1");
+    aa.env.setValue("ErrorMessage", debug);
+}
+else {
+    if (cancel) {
+        aa.env.setValue("ErrorCode", "-2");
+        if (showMessage) aa.env.setValue("ErrorMessage", message);
+        if (showDebug) aa.env.setValue("ErrorMessage", debug);
+    }
+    else {
+        aa.env.setValue("ErrorCode", "0");
+        if (showMessage) aa.env.setValue("ErrorMessage", message);
+        if (showDebug) aa.env.setValue("ErrorMessage", debug);
+    }
+}
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========External Functions (used by Action entries)
@@ -184,7 +208,7 @@ logDebug("Successfully removed all rows from ASI Table: " + tableName);
 
 }
 	
-function copyASITable4PageFlowLocal(destinationTableGroupModel,tableName,tableValueArray) // optional capId
+function copyASITable4PageFlow(destinationTableGroupModel,tableName,tableValueArray) // optional capId
     	{
   	//  tableName is the name of the ASI table
   	//  tableValueArray is an array of associative array values.  All elements MUST be either a string or asiTableVal object
@@ -261,20 +285,95 @@ function copyASITable4PageFlowLocal(destinationTableGroupModel,tableName,tableVa
                 return destinationTableGroupModel;
                 
       }
-	  
-if (debug.indexOf("**ERROR") > 0) {
-    aa.env.setValue("ErrorCode", "1");
-    aa.env.setValue("ErrorMessage", debug);
-}
-else {
-    if (cancel) {
-        aa.env.setValue("ErrorCode", "-2");
-        if (showMessage) aa.env.setValue("ErrorMessage", message);
-        if (showDebug) aa.env.setValue("ErrorMessage", debug);
-    }
-    else {
-        aa.env.setValue("ErrorCode", "0");
-        if (showMessage) aa.env.setValue("ErrorMessage", message);
-        if (showDebug) aa.env.setValue("ErrorMessage", debug);
-    }
+function addASITable4ACAPageFlow(destinationTableGroupModel, tableName, tableValueArray) // optional capId
+{
+	//  tableName is the name of the ASI table
+	//  tableValueArray is an array of associative array values.  All elements MUST be either a string or asiTableVal object
+	//
+
+	var itemCap = capId
+		if (arguments.length > 3)
+			itemCap = arguments[3]; // use cap ID specified in args
+
+		var ta = destinationTableGroupModel.getTablesMap().values();
+	var tai = ta.iterator();
+
+	var found = false;
+	while (tai.hasNext()) {
+		var tsm = tai.next(); // com.accela.aa.aamain.appspectable.AppSpecificTableModel
+		if (tsm.getTableName().equals(tableName)) {
+			found = true;
+			break;
+		}
+	}
+
+	if (!found) {
+		logDebug("cannot update asit for ACA, no matching table name");
+		return false;
+	}
+
+	var i = -1; // row index counter
+	if (tsm.getTableFields() != null) {
+		i = 0 - tsm.getTableFields().size()
+	}
+
+	for (thisrow in tableValueArray) {
+		var fld = aa.util.newArrayList(); // had to do this since it was coming up null.
+		var fld_readonly = aa.util.newArrayList(); // had to do this since it was coming up null.
+		var col = tsm.getColumns()
+			var coli = col.iterator();
+		while (coli.hasNext()) {
+			var colname = coli.next();
+			
+			if (!tableValueArray[thisrow][colname.getColumnName()]) {
+				logDebug("addToASITable: null or undefined value supplied for column " + colname.getColumnName() + ", setting to empty string");
+				tableValueArray[thisrow][colname.getColumnName()] = "";
+			}
+
+			if (typeof(tableValueArray[thisrow][colname.getColumnName()].fieldValue) != "undefined") // we are passed an asiTablVal Obj
+			{
+				var args = new Array(tableValueArray[thisrow][colname.getColumnName()].fieldValue ? tableValueArray[thisrow][colname.getColumnName()].fieldValue : "", colname);
+				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField", args).getOutput();
+				logDebug("args: " + args);
+				logDebug("TESTING: " + tableValueArray[thisrow][colname.getColumnName()].fieldValue + " ITERATION: " + i);
+				logDebug("TESTING2: " + aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args));
+				logDebug("TESTING3: " + aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args).getOutput());
+				fldToAdd.setRowIndex(i);
+				fldToAdd.setFieldLabel(colname.getColumnName());
+				fldToAdd.setFieldGroup(tableName.replace(/ /g, "\+"));
+				fldToAdd.setReadOnly(tableValueArray[thisrow][colname.getColumnName()].readOnly.equals("Y"));
+				fld.add(fldToAdd);
+				fld_readonly.add(tableValueArray[thisrow][colname.getColumnName()].readOnly);
+
+			} else // we are passed a string
+			{
+				var args = new Array(tableValueArray[thisrow][colname.getColumnName()] ? tableValueArray[thisrow][colname.getColumnName()] : "", colname);
+				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField", args).getOutput();
+				fldToAdd.setRowIndex(i);
+				fldToAdd.setFieldLabel(colname.getColumnName());
+				fldToAdd.setFieldGroup(tableName.replace(/ /g, "\+"));
+				fldToAdd.setReadOnly(false);
+				fld.add(fldToAdd);
+				fld_readonly.add("N");
+
+			}
+		}
+
+		i--;
+
+		if (tsm.getTableFields() == null) {
+			tsm.setTableFields(fld);
+		} else {
+			tsm.getTableFields().addAll(fld);
+		}
+
+		if (tsm.getReadonlyField() == null) {
+			tsm.setReadonlyField(fld_readonly); // set readonly field
+		} else {
+			tsm.getReadonlyField().addAll(fld_readonly);
+		}
+	}
+
+	tssm = tsm;
+	return destinationTableGroupModel;
 }
