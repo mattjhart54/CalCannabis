@@ -101,7 +101,7 @@ try {
 	}
 	var deleteIDsArray = [];
 	if (typeof(OWNERS) == "object"){
-		for (let j = 0; j < OWNERS.length; j++) {
+		for (var j = 0; j < OWNERS.length; j++) {
 			deleteIDsArray.push(j);
 		}
 	}
