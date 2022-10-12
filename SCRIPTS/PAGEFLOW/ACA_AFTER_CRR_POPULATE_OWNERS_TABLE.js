@@ -94,9 +94,13 @@ try {
 		
 		}
 	}
+	if (typeof(OWNERS) == "object"){
+		if(OWNERS.length > 0){
+			removeASITable("OWNERS", capId);
+		}
+	}
 	
 	if (multTable.length > 0){
-		removeASITable("OWNERS",capId);
 		asit = cap.getAppSpecificTableGroupModel();
 		new_asit = addASITable4ACAPageFlow(asit,"OWNERS", multTable,capId);
 	}
