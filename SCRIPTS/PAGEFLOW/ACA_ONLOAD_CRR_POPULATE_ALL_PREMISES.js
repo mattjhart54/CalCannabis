@@ -88,7 +88,6 @@ try {
 	var licCapId = getApplication(AInfo['License Number']);
 	if(licCapId){
 		
-		var premTable = new Array();
 		var currCap = capId; 
 		capId = licCapId;
 		PInfo = new Array;
@@ -113,10 +112,9 @@ try {
 		editAppSpecific4ACA("Other",PInfo["Other"]);
 		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
 		
-		//Create Owner and ALL Premises Tables
+		//Create ALL Premises Tables
 		var ownTable = new Array(); 
 		var premTable = new Array();
-		var addlPremTable = new Array();
 		var recArray = new Array();
 		
 		recArray.push(AInfo['License Number']);
@@ -143,8 +141,6 @@ try {
 				premTable.push(premRow);
 			}
 		}		
-		
-		asit = cap.getAppSpecificTableGroupModel();
 	
 		if (premTable != undefined || premTable.length > 0){
 			removeASITable("ALL PREMISES ADDRESSES");
@@ -158,7 +154,7 @@ try {
 	}
 
 }catch (err){
-	logDebug("A JavaScript Error occurred:ACA_AFTER_CRR_POPULATE_ALL_PREMISES: " + err.message);
+	logDebug("A JavaScript Error occurred:ACA_AFTER_CRR_POPULATE_OWNERS_TABLE: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: AACA_AFTER_CRR_POPULATE_ALL_PREMISES: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
