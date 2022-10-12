@@ -102,12 +102,12 @@ loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 try {
 	
 	var licCapId = getApplication(AInfo['License Number']);
-	var multTable = new Array(); 
+	var multTable = []; 
 
 	ownerInfo = loadASITable("OWNERS",licCapId);
 	if (ownerInfo){
 		for (var ii in ownerInfo) {
-			row = new Array();
+			row = [];
 			row["First Name"] = new asiTableValObj("First Name",ownerInfo[ii]["First Name"],"Y");
 			row["Last Name"] = new asiTableValObj("Last Name",ownerInfo[ii]["Last Name"],"Y");
 			row["Email Address"] = new asiTableValObj("Email Address",ownerInfo[ii]["Email Address"],"Y");
