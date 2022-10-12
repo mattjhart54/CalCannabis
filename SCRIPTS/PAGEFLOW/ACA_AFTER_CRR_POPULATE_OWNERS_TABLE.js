@@ -103,7 +103,7 @@ try {
 	if (multTable.length > 0){
 		removeASITable("OWNERS",capId);
 		asit = cap.getAppSpecificTableGroupModel();
-		new_asit = copyASITable4PageFlowLocal(asit,"OWNERS", multTable,capId);
+		new_asit = copyASITable4PageFlow(asit,"OWNERS", multTable,capId);
 	}	
 	
 
