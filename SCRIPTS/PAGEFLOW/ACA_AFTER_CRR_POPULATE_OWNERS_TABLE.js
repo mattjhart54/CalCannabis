@@ -86,14 +86,15 @@ try {
 	if (ownerInfo){
 		for (var ii in ownerInfo) {
 			row = new Array();
-			row["First Name"] = new asiTableValObj("First Name","" + String(ownerInfo[ii]["First Name"]),"Y");
-			row["Last Name"] = new asiTableValObj("Last Name","" + ownerInfo[ii]["Last Name"],"Y");
-			row["Email Address"] = new asiTableValObj("Email Address","test","Y");
-			row["Percent Ownership"] = new asiTableValObj("Percent Ownership",ownerInfo[ii]["Percent Ownership"],"Y");
+			row["First Name"] = ownerInfo[ii]["First Name"];
+			row["Last Name"] = ownerInfo[ii]["Last Name"];
+			row["Email Address"] = ownerInfo[ii]["Email Address"];
+			row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
 			multTable.push(row);
 		
 		}
 	}
+	
 	if (typeof(OWNERS) == "object"){
 		if(OWNERS.length > 0){
 			removeASITable("OWNERS", capId);
@@ -103,7 +104,7 @@ try {
 	if (multTable.length > 0){
 		asit = cap.getAppSpecificTableGroupModel();
 		new_asit = addASITable4ACAPageFlow(asit,"OWNERS", multTable,capId);
-	}
+	}	
 	
 	//***********************************************************************		
 
