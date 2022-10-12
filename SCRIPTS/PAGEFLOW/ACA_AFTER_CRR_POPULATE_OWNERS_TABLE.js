@@ -73,6 +73,7 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
+var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 loadASITables4ACA_corrected();
@@ -108,7 +109,7 @@ try {
 		}
 	}
 	if (deleteIDsArray.length > 0){
-		deletedAppSpecificTableInfors("OWNERS", cap, deleteIDsArray);
+		deletedAppSpecificTableInfors("OWNERS", capIDModel, deleteIDsArray);
 	}
 	
 	asit = cap.getAppSpecificTableGroupModel();
@@ -118,11 +119,7 @@ try {
 	}	
 	
 
-}catch (err){
-	logDebug("A JavaScript Error occurred:ACA_AFTER_CRR_POPULATE_OWNERS_TABLE: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_CRR_POPULATE_OWNERS_TABLE: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
+}catch (err) { logDebug("**ERROR : " + err); }
 
 
 /*------------------------------------------------------------------------------------------------------/
