@@ -151,7 +151,16 @@ try{
 			var conditionTable = [];
 			dr = "";
 			capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
-			r = getReqdDocs("Application");
+			appTypeResult = cap.getCapType();
+			appTypeString = appTypeResult.toString();
+			appTypeArray = appTypeString.split("/");
+			
+			if(appTypeArray[3] == "Application")
+				r = getReqdDocs("Application");
+				
+			if(appTypeArray[2] == "Conversion Request")
+				r = getReqdDocs("Conversion Request");	
+				
 			submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
 			uploadedDocs = new Array();
 			for (var i in submittedDocList ){
