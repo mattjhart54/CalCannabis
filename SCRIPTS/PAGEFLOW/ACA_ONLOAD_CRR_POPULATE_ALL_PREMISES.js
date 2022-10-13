@@ -14,11 +14,11 @@
 | START User Configurable Parameters
 |
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showMessage = true; // Set to true to see results in popup window
+var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = false;
+var cancel = true;
 var SCRIPT_VERSION  = 3; 
 var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
@@ -131,7 +131,7 @@ try {
 			for (xx in recArray){
 				premRow = new Array();
 				recCapId = getApplication(recArray[xx]);
-				premRow['License Record ID'] = recArray[xx];
+				premRow['License Record ID'] = "" + String(recArray[xx]);
 				premRow['Premises Address']= "" + getAppSpecific("Premise Address",recCapId);
 				premRow['Premises City'] = "" + getAppSpecific("Premise City",recCapId);
 				premRow['Premises State'] = "" + getAppSpecific("Premise State",recCapId);
@@ -365,7 +365,7 @@ function addASITable4ACAPageFlowXX(destinationTableGroupModel, tableName, tableV
                 fldToAdd.setRowIndex(i);
                 fldToAdd.setFieldLabel(colname.getColumnName());
                 fldToAdd.setFieldGroup(tableName.replace(/ /g, "\+"));
-                fldToAdd.setReadOnly(tableValueArray[thisrow][colname.getColumnName()].readOnly.equals("Y"));
+                //fldToAdd.setReadOnly(tableValueArray[thisrow][colname.getColumnName()].readOnly.equals("Y"));
                 fld.add(fldToAdd);
                 fld_readonly.add(tableValueArray[thisrow][colname.getColumnName()].readOnly);
 
