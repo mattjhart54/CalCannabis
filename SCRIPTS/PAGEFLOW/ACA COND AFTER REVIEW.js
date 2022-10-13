@@ -175,7 +175,6 @@ try {
 
 var capModel = aa.env.getValue("CapModel");
 var fromReviewPage = aa.env.getValue("fromReviewPage");
-var zoning = AInfo['Zoning'];
 
 var componentNames = new Array("Contact 1","ASI Table","Parcel","Licensed Professional","Detail Information", 
 "Owner", "Address", "Contact List", "Contact 2", "Contact 3","Valuation Calculator", 
