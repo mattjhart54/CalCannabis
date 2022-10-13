@@ -132,12 +132,12 @@ try {
 				premRow = new Array();
 				recCapId = getApplication(recArray[xx]);
 				premRow['License Record ID'] = recArray[xx];
-				premRow['Premises Address']= getAppSpecific("Premise Address",recCapId);
-				premRow['Premises City'] = getAppSpecific("Premise City",recCapId);
-				premRow['Premises State'] = getAppSpecific("Premise State",recCapId);
-				premRow['Premises Zip'] = getAppSpecific("Premise Zip",recCapId);
-				premRow['Premises County'] = getAppSpecific("Premise County",recCapId);
-				premRow['APN'] = getAppSpecific("APN",recCapId);
+				premRow['Premises Address']= "" + getAppSpecific("Premise Address",recCapId);
+				premRow['Premises City'] = "" + getAppSpecific("Premise City",recCapId);
+				premRow['Premises State'] = "" + getAppSpecific("Premise State",recCapId);
+				premRow['Premises Zip'] = "" + getAppSpecific("Premise Zip",recCapId);
+				premRow['Premises County'] = "" + getAppSpecific("Premise County",recCapId);
+				premRow['APN'] = "" + getAppSpecific("APN",recCapId);
 				premTable.push(premRow);
 			}
 		}		
@@ -149,7 +149,7 @@ try {
 			aa.env.setValue("CapModel",cap);
 		}
 		
-		copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","CANNABIS FINANCIAL INTEREST","TARGET RECORDS");
+		copyASITables4ACA(licCapId,capId,"OWNERS","DEFICIENCIES","DENIAL REASONS","CANNABIS FINANCIAL INTEREST","TARGET RECORDS");
 
 	}
 
