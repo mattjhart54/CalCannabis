@@ -26,7 +26,7 @@ try{
 	}else{
 		callPgm = "";
 	}
-	if(!matches(recdType, "Application", "Owner")){
+	if(!matches(recdType, "Application", "Owner", "Conversion Request")){
 		logDebug("Function is currently only set up for Application and Owner documentation.");
 		return false;
 	}
@@ -81,6 +81,7 @@ try{
 	//mhart 180411 user story 5353
 	var wastePlan = {condition : "Cultivation Plan - Waste Management Plan", document : "Cultivation Plan - Waste Management Plan"};
 	var pestPlan = {condition : "Cultivation Plan - Pest Management Plan", document : "Cultivation Plan - Pest Management Plan"};
+	var pestAttestation = {condition : "Cultivation Plan - Pest Attestation", document : "Cultivation Plan - Attestation"};
 	var lightDiagram = {condition : "Cultivation Plan - Lighting Diagram", document : "Cultivation Plan - Lighting Diagram"};
 	var streambedAlter = {condition : "Water - Lake and Streambed Alteration Document", document : "Water - Lake and Streambed Alteration Document"};
 	var wellLog = {condition : "Water - Groundwater Well Log", document : "Water - Groundwater Well Log"};
@@ -462,6 +463,21 @@ try{
 
 		return arrReqdDocs_Own;
 	}
+	
+// Required Documents for Conversion Request Applications
+	if(recdType == "Conversion Request"){
+		arrReqdDocs_CR = new Array();	
+	
+		arrReqdDocs_CR.push(lightDiagram);
+		arrReqdDocs_CR.push(detailPremises);
+		arrReqdDocs_CR.push(pestAttestation);
+		arrReqdDocs_CR.push(pestPlan);
+		arrReqdDocs_CR.push(wastePlan);
+		arrReqdDocs_CR.push(CEQA);
+		
+		return arrReqdDocs_CR;
+	}
+	
 }catch (err){
 	logDebug("A JavaScript Error occurred:getReqdDocs: " + err.message);
 	logDebug(err.stack);
