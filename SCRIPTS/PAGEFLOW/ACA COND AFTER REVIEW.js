@@ -189,7 +189,6 @@ var componentAliasNames = new Array("Contact1","AppSpecTable","Parcel","License"
 
 	if(capModel != null)
 	{
-		if (fromReviewPage){
 			aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '2', 'PageNumber':'1'}}")
 		}
 
