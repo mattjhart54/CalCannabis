@@ -144,11 +144,15 @@ try {
 	
 		if (premTable != undefined || premTable.length > 0){
 			removeASITable("ALL PREMISES ADDRESSES");
-			removeASITable("PREMISES ADDRESSES");
-			removeASITable("SOURCE OF WATER SUPPLY");
 			addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(), "ALL PREMISES ADDRESSES", premTable);
 			aa.env.setValue("CapModel",cap);
 		}
+		if (typeof(PREMISESADDRESSES) == "object") {
+			if(PREMISESADDRESSES.length > 0){
+				removeASITable("PREMISES ADDRESSES",capId);
+			}
+		}
+		removeASITable("SOURCE OF WATER SUPPLY");
 		
 		copyASITables4ACA(licCapId,capId,"APN SPATIAL INFORMATION","LAKE AND STREAMBED ALTERATION","WATER RIGHTS","RETAIL WATER SUPPLIER","GROUNDWATER WELL","RAINWATER CATCHMENT","SMALL RETAIL WATER SUPPLIERS","ELECTRICITY USAGE","AVERAGE WEIGHTED GGEI","OWNERS","CANNABIS FINANCIAL INTEREST","TARGET RECORDS");
 
