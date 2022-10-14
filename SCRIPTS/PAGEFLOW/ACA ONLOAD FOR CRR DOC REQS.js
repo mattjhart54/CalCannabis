@@ -186,7 +186,7 @@ try {
 
 	if (r.length > 0) {
 		for (x in r) {
-			if(appMatch("Licenses/*/*/*")) conditionType = "License Required Documentation";
+			if(appMatch("Licenses/*/*/*")) conditionType = "License Required Documentats";
 
 			
 			dr = r[x];

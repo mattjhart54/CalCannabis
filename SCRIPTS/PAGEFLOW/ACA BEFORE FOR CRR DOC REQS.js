@@ -192,7 +192,7 @@ if (r.length > 0 && showList) {
 				comment("<div class='docList'><span class='fontbold font14px ACA_Title_Color'>Error Message: The following documents are required based on the information you have provided: </span><ol>"); 	
 				docsMissing = true; 
 			}	
-				if(appMatch("Licenses/*/*/*")) conditionType = "License Required Documentation";
+				if(appMatch("Licenses/*/*/*")) conditionType = "License Required Documentats";
 				dr = r[x];
 				publicDisplayCond = null;
 				if (dr) {
