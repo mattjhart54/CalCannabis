@@ -148,9 +148,8 @@ try {
 			aa.env.setValue("CapModel",cap);
 		}
 
-		removeASITable("PREMISES ADDRESSES",capId);
-		removeASITable("SOURCE OF WATER SUPPLY");
-		aa.env.setValue("CapModel",cap);
+		copySingleASITable("PREMISES ADDRESSES",licCapId,capId);
+		copySingleASITable("SOURCE OF WATER SUPPLY",licCapId,capId);
 
 		
 		copyASITables4ACA(licCapId,capId,"APN SPATIAL INFORMATION","LAKE AND STREAMBED ALTERATION","WATER RIGHTS","RETAIL WATER SUPPLIER","GROUNDWATER WELL","RAINWATER CATCHMENT","SMALL RETAIL WATER SUPPLIERS","ELECTRICITY USAGE","AVERAGE WEIGHTED GGEI","OWNERS","CANNABIS FINANCIAL INTEREST","TARGET RECORDS");
@@ -397,4 +396,15 @@ function addASITable4ACAPageFlowXX(destinationTableGroupModel, tableName, tableV
     tssm = tsm;
 
     return destinationTableGroupModel;
+}
+
+function copySingleASITable(tableName, sourceCapId, targetCapId) {
+	logDebug("Copying table " + tableName + " from " + sourceCapId + " to " + targetCapId);
+	var tblSource = loadASITable(tableName, sourceCapId);
+	if (tblSource) {
+		removeASITable(tableName, targetCapId);
+		copyASITable(sourceCapId, targetCapId, tableName);
+	} else {
+		logDebug("**WARNING: Table " + tableName + " not found on " + sourceCapId);
+	}
 }
