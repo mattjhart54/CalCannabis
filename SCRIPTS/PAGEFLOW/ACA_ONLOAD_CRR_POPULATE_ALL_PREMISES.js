@@ -117,6 +117,7 @@ try {
 		var premTable = new Array();
 		var premAddressTable = new Array();
 		var recArray = new Array();
+		var waterSupplyTable = new Array();
 		
 		recArray.push(AInfo['License Number']);
 		
@@ -170,6 +171,33 @@ try {
 		if (premAddressTable.length > 0){
 			removeASITable("PREMISES ADDRESSES");
 			addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(), "PREMISES ADDRESSES", premAddressTable);
+			aa.env.setValue("CapModel",cap);
+		}
+		
+		waterSupply = loadASITable("SOURCE OF WATER SUPPLY",licCapId);
+		if (waterSupply){
+			for (var yy in waterSupply) {
+				waterRow = new Array();
+				waterRow["Type of Water Supply"] = waterSupply[yy]["Type of Water Supply"];
+				waterRow["Name of Supplier"] = waterSupply[yy]["Name of Supplier"];
+				waterRow["Geographical Location Coordinates"] = waterSupply[yy]["Geographical Location Coordinates"];
+				waterRow["Groundwater Well Geographic Location Coordinates"] = waterSupply[yy]["Groundwater Well Geographic Location Coordinates"];
+				waterRow["Authorized Place of Use"] = waterSupply[yy]["Authorized Place of Use"];
+				waterRow["Maximum Amount of Water Delivered"] = waterSupply[yy]["Maximum Amount of Water Delivered"];
+				waterRow["Total Square Footage"] = waterSupply[yy]["Total Square Footage"];
+				waterRow["Total Storage Capacity"] = waterSupply[yy]["Total Storage Capacity"];
+				waterRow["Description"] = waterSupply[yy]["Description"];
+				waterRow["Diversion Number"] = waterSupply[yy]["Diversion Number"];
+				waterRow["Water Source"] = waterSupply[yy]["Water Source"];
+				waterRow["Maximum amount of water to be diverted for cannabis cultivation"] = waterSupply[yy]["Maximum amount of water to be diverted for cannabis cultivation"];
+				waterSupplyTable.push(waterRow);
+			
+			}
+		}
+		
+		if (waterSupplyTable.length > 0){
+			removeASITable("SOURCE OF WATER SUPPLY");
+			addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(), "SOURCE OF WATER SUPPLY", waterSupplyTable);
 			aa.env.setValue("CapModel",cap);
 		}
 	}
