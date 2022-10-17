@@ -115,6 +115,7 @@ try {
 		//Create ALL Premises Tables
 		var ownTable = new Array(); 
 		var premTable = new Array();
+		var premAddressTable = new Array();
 		var recArray = new Array();
 		
 		recArray.push(AInfo['License Number']);
@@ -148,9 +149,29 @@ try {
 			aa.env.setValue("CapModel",cap);
 		}
 
-		copySingleASITable("PREMISES ADDRESSES",licCapId,capId);
-		copySingleASITable("SOURCE OF WATER SUPPLY",licCapId,capId);
 
+
+		premAddress = loadASITable("PREMISES ADDRESSES",licCapId);
+		if (premAddress){
+			for (var ii in premAddress) {
+				row = new Array();
+				row["APN"] = premAddress[ii]["APN"];
+				row["Premises Address"] = premAddress[ii]["Premises Address"];
+				row["Premises City"] = premAddress[ii]["Premises City"];
+				row["Premises State"] = premAddress[ii]["Premises State"];
+				row["Premises Zip"] = premAddress[ii]["Premises Zip"];
+				row["Premises County"] = premAddress[ii]["Premises County"];
+				row["Type of Possession"] = premAddress[ii]["Type of Possession"];
+				premAddressTable.push(row);
+			
+			}
+		}
+		
+		if (premAddressTable.length > 0){
+			removeASITable("PREMISES ADDRESSES");
+			addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(), "PREMISES ADDRESSES", premAddressTable);
+			aa.env.setValue("CapModel",cap);
+		}
 	}
 
 }catch (err){
