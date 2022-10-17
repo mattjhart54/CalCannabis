@@ -398,6 +398,62 @@ function addASITable4ACAPageFlowXX(destinationTableGroupModel, tableName, tableV
     return destinationTableGroupModel;
 }
 
+function copyASITable(pFromCapId, pToCapId, tableName) {
+  var itemCap = pFromCapId;
+
+  var gm = aa.appSpecificTableScript.getAppSpecificTableGroupModel(itemCap).getOutput();
+  var ta = gm.getTablesArray()
+  var tai = ta.iterator();
+  var tableArr = new Array();
+  var ignoreArr = new Array();
+
+  while (tai.hasNext()) {
+    var tsm = tai.next();
+
+    var tempObject = new Array();
+    var tempArray = new Array();
+    var tn = tsm.getTableName() + "";
+    var numrows = 0;
+
+    if (tn != tableName)
+      continue;
+
+    if (!tsm.rowIndex.isEmpty()) {
+      var tsmfldi = tsm.getTableField().iterator();
+      var tsmcoli = tsm.getColumns().iterator();
+      var readOnlyi = tsm.getAppSpecificTableModel().getReadonlyField().iterator(); // get Readonly filed
+      var numrows = 1;
+
+      while (tsmfldi.hasNext()) // cycle through fields
+      {
+        if (!tsmcoli.hasNext()) // cycle through columns
+        {
+          var tsmcoli = tsm.getColumns().iterator();
+          tempArray.push(tempObject); // end of record
+          var tempObject = new Array(); // clear the temp obj
+          numrows++;
+        }
+        var tcol = tsmcoli.next();
+        var tval = tsmfldi.next();
+
+        var readOnly = 'N';
+        if (readOnlyi.hasNext()) {
+          readOnly = readOnlyi.next();
+        }
+
+        var fieldInfo = new asiTableValObj(tcol.getColumnName(), tval ? tval : "", readOnly);
+        tempObject[tcol.getColumnName()] = fieldInfo;
+        //tempObject[tcol.getColumnName()] = tval;
+      }
+
+      tempArray.push(tempObject); // end of record
+    }
+
+    addASITable(tn, tempArray, pToCapId);
+    logDebug("ASI Table Array : " + tn + " (" + numrows + " Rows)");
+  }
+}
+
 function copySingleASITable(tableName, sourceCapId, targetCapId) {
 	logDebug("Copying table " + tableName + " from " + sourceCapId + " to " + targetCapId);
 	var tblSource = loadASITable(tableName, sourceCapId);
