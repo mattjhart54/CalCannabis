@@ -197,7 +197,7 @@ try {
 		
 		if (waterSupplyTable.length > 0){
 			removeASITable("SOURCE OF WATER SUPPLY");
-			copyASITable4PageFlowLocal(cap.getAppSpecificTableGroupModel(), "SOURCE OF WATER SUPPLY", waterSupplyTable);
+			addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(), "SOURCE OF WATER SUPPLY", waterSupplyTable);
 			aa.env.setValue("CapModel",cap);
 		}
 	}
