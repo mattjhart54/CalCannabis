@@ -178,18 +178,18 @@ try {
 		if (waterSupply){
 			for (var yy in waterSupply) {
 				waterRow = new Array();
-				waterRow["Type of Water Supply"] = waterSupply[yy]["Type of Water Supply"];
-				waterRow["Name of Supplier"] = waterSupply[yy]["Name of Supplier"];
-				waterRow["Geographical Location Coordinates"] = waterSupply[yy]["Geographical Location Coordinates"];
-				waterRow["Groundwater Well Geographic Location Coordinates"] = waterSupply[yy]["Groundwater Well Geographic Location Coordinates"];
-				waterRow["Authorized Place of Use"] = waterSupply[yy]["Authorized Place of Use"];
-				waterRow["Maximum Amount of Water Delivered"] = waterSupply[yy]["Maximum Amount of Water Delivered"];
-				waterRow["Total Square Footage"] = waterSupply[yy]["Total Square Footage"];
-				waterRow["Total Storage Capacity"] = waterSupply[yy]["Total Storage Capacity"];
-				waterRow["Description"] = waterSupply[yy]["Description"];
-				waterRow["Diversion Number"] = waterSupply[yy]["Diversion Number"];
-				waterRow["Water Source"] = waterSupply[yy]["Water Source"];
-				waterRow["Maximum amount of water to be diverted for cannabis cultivation"] = waterSupply[yy]["Maximum amount of water to be diverted for cannabis cultivation"];
+				waterRow["Type of Water Supply"] = "" + waterSupply[yy]["Type of Water Supply"];
+				waterRow["Name of Supplier"] = "" + waterSupply[yy]["Name of Supplier"];
+				waterRow["Geographical Location Coordinates"] = "" + waterSupply[yy]["Geographical Location Coordinates"];
+				waterRow["Groundwater Well Geographic Location Coordinates"] = "" + waterSupply[yy]["Groundwater Well Geographic Location Coordinates"];
+				waterRow["Authorized Place of Use"] = "" + waterSupply[yy]["Authorized Place of Use"];
+				waterRow["Maximum Amount of Water Delivered"] = "" + waterSupply[yy]["Maximum Amount of Water Delivered"];
+				waterRow["Total Square Footage"] = "" + waterSupply[yy]["Total Square Footage"];
+				waterRow["Total Storage Capacity"] = "" + waterSupply[yy]["Total Storage Capacity"];
+				waterRow["Description"] = "" + waterSupply[yy]["Description"];
+				waterRow["Diversion Number"] = "" + waterSupply[yy]["Diversion Number"];
+				waterRow["Water Source"] = "" + waterSupply[yy]["Water Source"];
+				waterRow["Maximum amount of water to be diverted for cannabis cultivation"] = "" + waterSupply[yy]["Maximum amount of water to be diverted for cannabis cultivation"];
 				waterSupplyTable.push(waterRow);
 			
 			}
@@ -197,7 +197,7 @@ try {
 		
 		if (waterSupplyTable.length > 0){
 			removeASITable("SOURCE OF WATER SUPPLY");
-			addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(), "SOURCE OF WATER SUPPLY", waterSupplyTable);
+			copyASITable4PageFlowLocal(cap.getAppSpecificTableGroupModel(), "SOURCE OF WATER SUPPLY", waterSupplyTable);
 			aa.env.setValue("CapModel",cap);
 		}
 	}
@@ -294,7 +294,7 @@ logDebug("Successfully removed all rows from ASI Table: " + tableName);
 
 }
 	
-function copyASITable4PageFlow(destinationTableGroupModel,tableName,tableValueArray) // optional capId
+function copyASITable4PageFlowLocal(destinationTableGroupModel,tableName,tableValueArray) // optional capId
     	{
   	//  tableName is the name of the ASI table
   	//  tableValueArray is an array of associative array values.  All elements MUST be either a string or asiTableVal object
@@ -442,71 +442,4 @@ function addASITable4ACAPageFlowXX(destinationTableGroupModel, tableName, tableV
     tssm = tsm;
 
     return destinationTableGroupModel;
-}
-
-function copyASITable(pFromCapId, pToCapId, tableName) {
-  var itemCap = pFromCapId;
-
-  var gm = aa.appSpecificTableScript.getAppSpecificTableGroupModel(itemCap).getOutput();
-  var ta = gm.getTablesArray()
-  var tai = ta.iterator();
-  var tableArr = new Array();
-  var ignoreArr = new Array();
-
-  while (tai.hasNext()) {
-    var tsm = tai.next();
-
-    var tempObject = new Array();
-    var tempArray = new Array();
-    var tn = tsm.getTableName() + "";
-    var numrows = 0;
-
-    if (tn != tableName)
-      continue;
-
-    if (!tsm.rowIndex.isEmpty()) {
-      var tsmfldi = tsm.getTableField().iterator();
-      var tsmcoli = tsm.getColumns().iterator();
-      var readOnlyi = tsm.getAppSpecificTableModel().getReadonlyField().iterator(); // get Readonly filed
-      var numrows = 1;
-
-      while (tsmfldi.hasNext()) // cycle through fields
-      {
-        if (!tsmcoli.hasNext()) // cycle through columns
-        {
-          var tsmcoli = tsm.getColumns().iterator();
-          tempArray.push(tempObject); // end of record
-          var tempObject = new Array(); // clear the temp obj
-          numrows++;
-        }
-        var tcol = tsmcoli.next();
-        var tval = tsmfldi.next();
-
-        var readOnly = 'N';
-        if (readOnlyi.hasNext()) {
-          readOnly = readOnlyi.next();
-        }
-
-        var fieldInfo = new asiTableValObj(tcol.getColumnName(), tval ? tval : "", readOnly);
-        tempObject[tcol.getColumnName()] = fieldInfo;
-        //tempObject[tcol.getColumnName()] = tval;
-      }
-
-      tempArray.push(tempObject); // end of record
-    }
-
-    addASITable(tn, tempArray, pToCapId);
-    logDebug("ASI Table Array : " + tn + " (" + numrows + " Rows)");
-  }
-}
-
-function copySingleASITable(tableName, sourceCapId, targetCapId) {
-	logDebug("Copying table " + tableName + " from " + sourceCapId + " to " + targetCapId);
-	var tblSource = loadASITable(tableName, sourceCapId);
-	if (tblSource) {
-		removeASITable(tableName, targetCapId);
-		copyASITable(sourceCapId, targetCapId, tableName);
-	} else {
-		logDebug("**WARNING: Table " + tableName + " not found on " + sourceCapId);
-	}
 }
