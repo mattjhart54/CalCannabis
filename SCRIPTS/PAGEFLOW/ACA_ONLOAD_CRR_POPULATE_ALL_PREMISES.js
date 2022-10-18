@@ -156,13 +156,13 @@ try {
 		if (premAddress){
 			for (var ii in premAddress) {
 				row = new Array();
-				row["APN"] = premAddress[ii]["APN"];
-				row["Premises Address"] = premAddress[ii]["Premises Address"];
-				row["Premises City"] = premAddress[ii]["Premises City"];
-				row["Premises State"] = premAddress[ii]["Premises State"];
-				row["Premises Zip"] = premAddress[ii]["Premises Zip"];
-				row["Premises County"] = premAddress[ii]["Premises County"];
-				row["Type of Possession"] = premAddress[ii]["Type of Possession"];
+				row["APN"] = "" + premAddress[ii]["APN"];
+				row["Premises Address"] = "" + premAddress[ii]["Premises Address"];
+				row["Premises City"] = "" + premAddress[ii]["Premises City"];
+				row["Premises State"] = "" + premAddress[ii]["Premises State"];
+				row["Premises Zip"] = "" + premAddress[ii]["Premises Zip"];
+				row["Premises County"] = "" + premAddress[ii]["Premises County"];
+				row["Type of Possession"] = "" + premAddress[ii]["Type of Possession"];
 				premAddressTable.push(row);
 			
 			}
@@ -189,7 +189,9 @@ try {
 				waterRow["Description"] = "" + waterSupply[yy]["Description"];
 				waterRow["Diversion Number"] = "" + waterSupply[yy]["Diversion Number"];
 				waterRow["Water Source"] = "" + waterSupply[yy]["Water Source"];
-				waterRow["Maximum amount of water to be diverted for cannabis cultivation"] = "" + waterSupply[yy]["Maximum amount of water to be diverted for cannabis cultivation"];
+				waterRow["Maximum amount of water to be diverted for cannabis cultivation"] = "" + waterSupply[yy]["Maximum amount of water to diverted for cannabis cultivation"];
+				waterRow["Status"] = "";
+				waterRow["New Status"] = "";
 				waterSupplyTable.push(waterRow);
 			
 			}
@@ -197,7 +199,7 @@ try {
 		
 		if (waterSupplyTable.length > 0){
 			removeASITable("SOURCE OF WATER SUPPLY");
-			addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(), "SOURCE OF WATER SUPPLY", waterSupplyTable);
+			addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(),"SOURCE OF WATER SUPPLY", waterSupplyTable);
 			aa.env.setValue("CapModel",cap);
 		}
 	}
