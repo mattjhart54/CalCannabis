@@ -106,11 +106,17 @@ try {
 		editAppSpecific4ACA("Tribal Land",PInfo["Tribal Land"]);
 		editAppSpecific4ACA("Tribal Land Information",PInfo["Tribal Land Information"]);
 		editAppSpecific4ACA("Grid",PInfo["Grid"]);
+		editAppSpecific4ACA("Grid Update",PInfo["Grid"]);
 		editAppSpecific4ACA("Solar",PInfo["Solar"]);
+		editAppSpecific4ACA("Solar Update",PInfo["Solar"]);
 		editAppSpecific4ACA("Generator",PInfo["Generator"]);
+		editAppSpecific4ACA("Generator Update",PInfo["Generator"]);
 		editAppSpecific4ACA("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
+		editAppSpecific4ACA("G50 Update",PInfo["Generator Under 50 HP"]);
 		editAppSpecific4ACA("Other",PInfo["Other"]);
+		editAppSpecific4ACA("Other Update",PInfo["Other"]);
 		editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
+		editAppSpecific4ACA("OSD Update",PInfo["Other Source Description"]);
 		
 		//Create ALL Premises Tables
 		var ownTable = new Array(); 
