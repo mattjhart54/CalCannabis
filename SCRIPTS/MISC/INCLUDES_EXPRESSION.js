@@ -128,9 +128,46 @@ function getExpirationStatus(capId) {
         return false;
     }
 }
+function convertContactAddressModelArr(contactAddressScriptModelArr)
+{
+	var contactAddressModelArr = null;
+	if(contactAddressScriptModelArr != null && contactAddressScriptModelArr.length > 0)
+	{
+		contactAddressModelArr = aa.util.newArrayList();
+		for(loopk in contactAddressScriptModelArr)
+		{
+			contactAddressModelArr.add(contactAddressScriptModelArr[loopk].getContactAddressModel());
+		}
+	}	
+	return contactAddressModelArr;
+}
+ function getPeople(itemCap){
+	capPeopleArr = null;
+	var s_result = aa.people.getCapContactByCapID(itemCap);
+	if(s_result.getSuccess()){
+		capPeopleArr = s_result.getOutput();
+		if(capPeopleArr != null || capPeopleArr.length > 0){
+			for (loopk in capPeopleArr)	{
+				var capContactScriptModel = capPeopleArr[loopk];
+				var capContactModel = capContactScriptModel.getCapContactModel();
+				var peopleModel = capContactScriptModel.getPeople();
+				var contactAddressrs = aa.address.getContactAddressListByCapContact(capContactModel);
+				if (contactAddressrs.getSuccess()){
+					var contactAddressModelArr = convertContactAddressModelArr(contactAddressrs.getOutput());
+					peopleModel.setContactAddressList(contactAddressModelArr);    
+				}
+			}
+		}else{
+			capPeopleArr = null;
+		}
+	}else{
+		capPeopleArr = null;	
+	}
+	return capPeopleArr;
+}
 
-function getContactByType(conType, capId) {
-    var contactArray = getPeople(capId);
+function getContactByType(conType, itemCap) {
+    var contactArray = getPeople(itemCap);
 
     for (thisContact in contactArray) {
         if ((contactArray[thisContact].getPeople().contactType).toUpperCase() == conType.toUpperCase())
@@ -364,4 +401,126 @@ if (fName=="officers"){
 
 return fValue ;
             
+}
+
+function isUnicode(str) {
+	for (var i = 0, n = str.length; i < n; i++) {
+		if (str.charCodeAt( i ) > 127) { return true; }
+	}
+return false;
+}
+
+function loadASITable(tname) {
+
+ 	//
+ 	// Returns a single ASI Table array of arrays
+	// Optional parameter, cap ID to load from
+	//
+
+	var itemCap = capId;
+	if (arguments.length == 2) itemCap = arguments[1]; // use cap ID specified in args
+
+	var gm = aa.appSpecificTableScript.getAppSpecificTableGroupModel(itemCap).getOutput();
+	var ta = gm.getTablesArray()
+	var tai = ta.iterator();
+
+	while (tai.hasNext())
+	  {
+	  var tsm = tai.next();
+	  var tn = tsm.getTableName();
+
+      if (!tn.equals(tname)) continue;
+
+	  if (tsm.rowIndex.isEmpty())
+	  	{
+			logDebug("Couldn't load ASI Table " + tname + " it is empty");
+			return false;
+		}
+
+   	  var tempObject = new Array();
+	  var tempArray = new Array();
+
+  	  var tsmfldi = tsm.getTableField().iterator();
+	  var tsmcoli = tsm.getColumns().iterator();
+      var readOnlyi = tsm.getAppSpecificTableModel().getReadonlyField().iterator(); // get Readonly filed
+	  var numrows = 1;
+
+	  while (tsmfldi.hasNext())  // cycle through fields
+		{
+		if (!tsmcoli.hasNext())  // cycle through columns
+			{
+			var tsmcoli = tsm.getColumns().iterator();
+			tempArray.push(tempObject);  // end of record
+			var tempObject = new Array();  // clear the temp obj
+			numrows++;
+			}
+		var tcol = tsmcoli.next();
+		var tval = tsmfldi.next();
+		var readOnly = 'N';
+		if (readOnlyi.hasNext()) {
+			readOnly = readOnlyi.next();
+		}
+		var fieldInfo = new asiTableValObj(tcol.getColumnName(), tval, readOnly);
+		tempObject[tcol.getColumnName()] = fieldInfo;
+
+		}
+		tempArray.push(tempObject);  // end of record
+	  }
+	  return tempArray;
+}
+function activeEmailAddress(eMail){
+	var resArr = new Array();
+	var servProvCode=aa.getServiceProviderCode();
+	var conn = aa.db.getConnection();
+	var selectString = "select DISTINCT G1_EMAIL from G3CONTACT WHERE G1_EMAIL=?";
+	var sStmt = conn.prepareStatement(selectString);
+	sStmt.setString(1, eMail);
+	var rSet = sStmt.executeQuery();
+	while (rSet.next()) {
+		var emailResults= rSet.getString("G1_EMAIL");
+		resArr.push(emailResults);
+	}
+	sStmt.close();
+	//return resArr;
+	
+
+	return resArr;
+}
+function getParents4Cap(pAppType,itemCap) {
+	// returns the capId array of all parent caps
+	//Dependency: appMatch function
+	//
+
+	var i = 1;
+	while (true) {
+		if (!(aa.cap.getProjectParents(itemCap, i).getSuccess()))
+			break;
+
+		i += 1;
+	}
+	i -= 1;
+
+	getCapResult = aa.cap.getProjectParents(itemCap, i);
+	myArray = new Array();
+
+	if (getCapResult.getSuccess()) {
+		parentArray = getCapResult.getOutput();
+
+		if (parentArray.length) {
+			for (x in parentArray) {
+				if (pAppType != null) {
+					//If parent type matches apType pattern passed in, add to return array
+					if (appMatch(pAppType, parentArray[x].getCapID()))
+						myArray.push(parentArray[x].getCapID());
+				} else
+					myArray.push(parentArray[x].getCapID());
+			}
+
+			return myArray;
+		} else {
+			return null;
+		}
+	} else {
+		return null;
+	}
 }
