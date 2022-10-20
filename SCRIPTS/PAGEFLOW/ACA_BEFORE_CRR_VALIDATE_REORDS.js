@@ -157,7 +157,7 @@ try {
 			if(!contactFnd){
 				cancel = true;
 				showMessage = true;
-				logMessage("  Warning: Only the Designated Responsible party can submit a science amendment.");
+				logMessage("  Warning: Only the Designated Responsible party can submit a conversion request.");
 			}else{
 				if(errorMessage != ""){
 					cancel = true;
