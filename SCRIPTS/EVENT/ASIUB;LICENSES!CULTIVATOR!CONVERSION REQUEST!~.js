@@ -165,7 +165,7 @@ try{
 		}
 	}*/
 	//6893 DRP custom fields must match DRP contact on License
-	var drpContact = getContactByType("Designated Responsible Party",parentCapId);
+	/*var drpContact = getContactByType("Designated Responsible Party",parentCapId);
 	if(drpContact){
 		var drpFirst = drpContact.getFirstName();
 		var drpLast =  drpContact.getLastName();
@@ -175,7 +175,7 @@ try{
 			showMessage = true;
 			comment("DRP does not match License Record.")
 		}
-	}
+	}*/
 }catch(err){
 	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/CONVERSION REQUEST/NA: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
