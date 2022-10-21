@@ -4,7 +4,7 @@ try {
 
 		primaryRecId = getApplication(AInfo['License Number']);
 		if(primaryRecId){
-			
+			aa.cap.createAppHierarchy(capId,primaryRecId);
 			loadASITables();
 
 			if (typeof(LICENSERECORDSFORCONVERSION) == "object") {
