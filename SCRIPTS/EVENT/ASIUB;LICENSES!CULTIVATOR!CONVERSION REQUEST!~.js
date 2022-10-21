@@ -177,7 +177,7 @@ try{
 		}
 	}
 }catch(err){
-	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: " + err.message);
+	logDebug("An error has occurred in ASIUB:LICENSES/CULTIVATOR/CONVERSION REQUEST/NA: Water Source Reviews: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ASIUB:LICENSES/CULTIVATOR/*/APPLICATION: Water Source Reviews: "+ startDate, capId + br+ err.message+ br+ err.stack);
 }
