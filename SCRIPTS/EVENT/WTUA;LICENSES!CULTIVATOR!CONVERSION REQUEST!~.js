@@ -141,11 +141,17 @@ try {
 			plId = aa.cap.getCapID(pId).getOutput();
 			updateConvRecs(plId);
 			
+			var result1 = aa.cap.removeProjectChild(capId, plId);
+			if (result1.getSuccess())
+				logDebug("Child Primary License successfully removed");
+			else
+				logDebug("Could not remove child Primary License");
+			
 			var result = aa.cap.createAppHierarchy(plId, capId);
 			if (result.getSuccess())
-				logDebug("Child application successfully linked");
+				logDebug("Primary License successfully linked as parent");
 			else
-				logDebug("Could not link applications");
+				logDebug("Could not link Primary License as a parent");
 			
 //run the License Report and send approval email
 			var appAltId = capId.getCustomID();
