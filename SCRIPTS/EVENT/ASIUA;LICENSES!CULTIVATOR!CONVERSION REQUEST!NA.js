@@ -1,30 +1,27 @@
 try {
 	pId = AInfo["License Number"]; 
-	plId = aa.cap.getCapID(pId).getOutput(); 
+	plId = aa.cap.getCapID(pId).getOutput();
+	pAltId = plId.getCustomID();
 	cIds = getChildren("Licenses/Cultivator/License/License");
 	if(cIds.length > 0) {
 		for( c in cIds) {
 			found = false;
-			child = cIds[c];
-			logDebug("plid " + plId.getCustomID() + " child " + child.getCustomID());
-			if(plId.getCustomID() == child.getCustomID()) {
-				found = true;
+			child = cIds[c].getCustomID();
+			logDebug("plid " + pAltId + " child " + child);
+			if(pAltId == child) {
+				continue;
 			}
-			logDebug("found " + found + " plid " + plId + " child " + child);
 			if(LICENSERECORDSFORCONVERSION.length > 0) {
 				for (x in LICENSERECORDSFORCONVERSION){
 					licId = getApplication(LICENSERECORDSFORCONVERSION[x]["License Record ID"]);
-					logDebug("licid " + plId + " chi;d " +child);
-					if(licId == child)
+					licAltId = licId.getCustomID();
+					logDebug("licid " + licAltId + " chi;d " + child);
+					if(licAltId == child)
 						found = true;
 				}
+				logDebug("found " + found);
 				if(found == false) {
-					aa.cap.removeProjectChild(capId, child)
-					logDebug("removed child " + child);
-				}
-			}else {
-				if(found == false) {
-					aa.cap.removeProjectChild(capId, child)
+					aa.cap.removeProjectChild(capId, cIds[c])
 					logDebug("removed child " + child);
 				}
 			}	
@@ -36,7 +33,7 @@ try {
 				licId = getApplication(LICENSERECORDSFORCONVERSION[x]["License Record ID"]);
 				found = false;
 				for(c in cIds) {
-					if(licId == cIds[c])
+					if(licId.getCustomID() == cIds[c].getCustomID())
 						found = true;
 				}
 				if(!found) {
