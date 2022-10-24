@@ -32,7 +32,7 @@ try {
 				var convFirstName = "" + theRow["DRP First Name"];
 				logDebug("convFirstName: " + convFirstName);
 				var convLastName = "" + theRow["DRP Last Name"];
-				var convLegalBusName = theRow["Legal Business Name"];
+				var convLegalBusName = "" + theRow["Legal Business Name"];
 				var convLightType = "" + theRow["Lighting Type"];
 				var convLightTypeArray = convLightType.split(" ");
 				var convLicRec = "" + theRow["License Record ID"];
