@@ -1,5 +1,6 @@
 try{
 	var capIdStatusClass = getCapIdStatusClass(capId);
+	
 	if (capIdStatusClass == "COMPLETE") {
 		if(documentUploadedFrom == "ACA"){
 			cap = aa.cap.getCap(capId).getOutput();	
