@@ -8,6 +8,6 @@ try {
 		}
 	}
 }catch (err){
-	logDebug("A JavaScript Error occurred: ASIUB:Licenses/Cultivation/Conversion Request/*: Update conversion license table: " + err.message);
+	logDebug("A JavaScript Error occurred: WTUB:Licenses/Cultivation/Conversion Request/*: process conversion request: " + err.message);
 	logDebug(err.stack);
 }
