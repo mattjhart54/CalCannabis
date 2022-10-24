@@ -106,7 +106,7 @@ try{
 			if(getOccurrence(statusArray, "Diversion from Waterbody") != wrLines) {
 				cancel = true;
 				showMessage = true;
-				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
+				comment("The number of Diversion from Waterbody and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 			}
 		}else{
 			cancel = true;
@@ -145,7 +145,7 @@ try{
 			if(getOccurrence(statusArray, "Groundwater Well") != gwLines) {
 				cancel = true;
 				showMessage = true;
-				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
+				comment("The number of Groundwater Well and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 			}
 		}else{
 			cancel = true;
@@ -164,7 +164,7 @@ try{
 			if(getOccurrence(statusArray, "Retail Supplier") != rwsLines) {
 				cancel = true;
 				showMessage = true;
-				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
+				comment("The number Retail Supplier sources and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 			}
 		}else{
 			cancel = true;
@@ -183,7 +183,7 @@ try{
 			if((getOccurrence(statusArray, "Small Retail Supplier Diversion") + getOccurrence(statusArray, "Small Retail Supplier - Delivery or pickup of water from a groundwater well")) != srLines) {
 				cancel = true;
 				showMessage = true;
-				comment("The number of water sources in this table and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
+				comment("The number of Small Retail Supplier Diversion sources and the Source of Water Supply Data Table do not match. Please verify the number of line items on each table.");
 			}
 		}else{
 			cancel = true;
