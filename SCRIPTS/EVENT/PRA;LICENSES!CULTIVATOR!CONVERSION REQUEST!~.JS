@@ -33,6 +33,25 @@ try {
 		envParameters.put("contType","Designated Responsible Party");
 		envParameters.put("fromEmail",sysFromEmail);
 		aa.runAsyncScript(scriptName, envParameters);
+		
+//notify processor that converion request has been paid and new license issued		
+		wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
+		for(x in wf) {
+			fTask = wf[x]; 
+			taskName=fTask.getTaskDescription();
+			if (taskName == "Conversion Review"){
+				if(fTask.getActiveFlag()=="Y") {
+					var caseMgr = wf[x].getAssignedStaff().getFirstName()+ " " +wf[x].getAssignedStaff().getLastName();
+					var assignedUserID = aa.person.getUser(wf[x].getAssignedStaff().getFirstName(),wf[x].getAssignedStaff().getMiddleName(),wf[x].getAssignedStaff().getLastName()).getOutput();
+					if(assignedUserID!=null){
+						var staffEmail = assignedUserID.getEmail();
+						if(staffEmail){
+							email(staffEmail, sysFromEmail, "CLS - Converted License has been issued", "Conversion Request Record " + appAltId + " has been approved and payment is complete. The converted license has been issued for License Record " + licAltId + ".");
+						}
+					}
+				}
+			}
+		}
 	}	
 }catch(err){
 	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/CONVERSION REQUEST/*: " + err.message);
