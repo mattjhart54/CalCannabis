@@ -11,7 +11,7 @@ try{
 				if(assignedUserID!=null){
 					var staffEmail = assignedUserID.getEmail();
 					if(staffEmail){
-						email(staffEmail, sysFromEmail, "CLS - A new document has been uploaded.", "A new document has been uploaded for record " + capIDString + ". Please review this new document before taking any action on the record.");
+						email(staffEmail, sysFromEmail, "CLS - A new document has been uploaded", "A new document has been uploaded for record " + capIDString + ". Please review this new document before taking any action on the record.");
 					}
 				}
 			}
