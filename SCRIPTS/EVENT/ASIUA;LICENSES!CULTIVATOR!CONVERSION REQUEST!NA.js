@@ -19,13 +19,13 @@ try {
 						logDebug("licid " + licAltId + " chi;d " + child);
 						if(licAltId == child)
 							found = true;
-					}
-					logDebug("found " + found);
-					if(found == false) {
-						aa.cap.removeProjectChild(capId, cIds[c])
-						logDebug("removed child " + child);
-					}
-				}	
+					}	
+				}
+				logDebug("found " + found);
+				if(found == false) {
+					aa.cap.removeProjectChild(capId, cIds[c])
+					logDebug("removed child " + child);
+				}
 			}
 		}
 	}		
