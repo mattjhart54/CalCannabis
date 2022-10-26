@@ -110,7 +110,7 @@ try {
 			editAppName("Provisional " + AInfo["Cultivator Type"] + " - " + licType,plId);
 		}
 	} else {
-		editAppName("Annual " + AInfo["Cultivator Type"] + " - " + licType);
+		editAppName("Annual " + AInfo["Cultivator Type"] + " - " + licType,plId);
 	}
 	editAppSpecific("Conversion Date", jsDateToASIDate(cDate),plId);
 	editAppSpecific("License Type",licType,plId);
