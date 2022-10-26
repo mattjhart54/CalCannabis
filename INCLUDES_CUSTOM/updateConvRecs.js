@@ -17,10 +17,10 @@ try {
 	var licType = AInfo["Proposed License Type"];
 	pId = AInfo["License Number"]; 
 	plId = aa.cap.getCapID(pId).getOutput();
-	PInfo = [];
-	loadAppSpecific(PInfo);
 	crId = capId;
 	capId = plId;
+	PInfo = [];
+	loadAppSpecific(PInfo);
 	pCap = aa.cap.getCap(capId).getOutput();
 	pCapName = pCap.getSpecialText();
 	
