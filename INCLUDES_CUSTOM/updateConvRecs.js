@@ -104,13 +104,13 @@ try {
 	if(PInfo["License Issued Type"] == "Provisional") {
 		if(AInfo["No Transition"] != "CHECKED") {
 			editAppSpecific("License Issued Type", "Annual",plId);
-			editAppName("Annual " + AInfo["Cultivator Type"] + " - " + licType,plId);
+			editAppName("Annual " + PInfo["Cultivator Type"] + " - " + licType,plId);
 			editAppSpecific("Transition Date", jsDateToASIDate(cDate),plId);
 		} else {
-			editAppName("Provisional " + AInfo["Cultivator Type"] + " - " + licType,plId);
+			editAppName("Provisional " + PInfo["Cultivator Type"] + " - " + licType,plId);
 		}
 	} else {
-		editAppName("Annual " + AInfo["Cultivator Type"] + " - " + licType,plId);
+		editAppName("Annual " + PInfo["Cultivator Type"] + " - " + licType,plId);
 	}
 	editAppSpecific("Conversion Date", jsDateToASIDate(cDate),plId);
 	editAppSpecific("License Type",licType,plId);
