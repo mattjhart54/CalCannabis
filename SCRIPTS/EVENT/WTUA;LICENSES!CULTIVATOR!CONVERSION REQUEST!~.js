@@ -116,6 +116,7 @@ try {
 		if(tFeeAmt > 0 && tFeeAmt < licFeeAmt) {
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", tFeeAmt.toFixed(2), "N");
 			licFeeAmt = licFeeAmt + feeAmount("LIC_CCR_CRD","NEW");
+			licFeeAmt =licFeeAmt.toFixed(2);
 			licFeeAmt = "$" + Number(licFeeAmt);
 			licFeeAmt = maskTheMoneyNumber(licFeeAmt);
 			logDebug("Number LicFee " + licFeeAmt);
