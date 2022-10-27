@@ -95,7 +95,7 @@ try {
 				var vLicenseObj;
 				vLicenseObj = new licenseObject(null,capId);
 				vExpDate = vLicenseObj.b1ExpDate;
-				days = dateDiff(sysDate,vExpDate);
+				days = parseInt(dateDiff(sysDate,vExpDate));
 				logDebug("days " + days);
 				if(days > 0) {
 					var feeDesc = PInfo["License Type"] + " - License Fee";
