@@ -166,7 +166,7 @@ try {
 			//envParameters.put("approvalLetter", "");
 			if(AInfo["No Transition"] == "CHECKED") {
 				var templateName = "LIC_CC_CCR_APPR_NO_FEE_PROV";
-				envParameter.put("reason", AInfo["Reason for Provisional Conversion"]);
+				envParameters.put("reason", AInfo["Reason for Provisional Conversion"]);
 			}else {
 				envParameters.put("reason", "");
 				var templateName = "LIC_CC_CCR_APPR_NO_FEE";
@@ -178,13 +178,12 @@ try {
 			aa.runAsyncScript(scriptName, envParameters);
 			
 //notify processor that converion request has been paid and new license issued		
-		wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
-		for(x in wf) {
+			wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
+			for(x in wf) {
 			fTask = wf[x]; 
-			taskName=fTask.getTaskDescription();
-			if (taskName == "Conversion Review"){
-				if(fTask.getActiveFlag()=="Y") {
-					var caseMgr = wf[x].getAssignedStaff().getFirstName()+ " " +wf[x].getAssignedStaff().getLastName();
+				taskName=fTask.getTaskDescription();
+				if (taskName == "Conversion Review"){
+				var caseMgr = wf[x].getAssignedStaff().getFirstName()+ " " +wf[x].getAssignedStaff().getLastName();
 					var assignedUserID = aa.person.getUser(wf[x].getAssignedStaff().getFirstName(),wf[x].getAssignedStaff().getMiddleName(),wf[x].getAssignedStaff().getLastName()).getOutput();
 					if(assignedUserID!=null){
 						var staffEmail = assignedUserID.getEmail();
@@ -193,8 +192,7 @@ try {
 						}
 					}
 				}
-			}
-		}		
+			}		
 		}
 	}	
 }catch(err){
