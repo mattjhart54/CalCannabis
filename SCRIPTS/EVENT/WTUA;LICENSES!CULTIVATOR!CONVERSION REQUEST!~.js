@@ -125,14 +125,15 @@ try {
 			editAppSpecific("License Fee Due", dateAdd(jsDateToASIDate(new Date),30));
     
 // Run invoice report and email approval email to DRP		
-			var invRptParameters = aa.util.newHashMap();
-			invRptParameters.put("licCap",capId.getCustomID()); 
-			invRptParameters.put("invNbr", invNbr);
-			invRptParameters.put("feeAmount", licFeeAmt);
-			invRptParameters.put("currentUserID",currentUserID);
-			invRptParameters.put("licType",licType);
-			invRptParameters.put("templateName", "LIC_CC_CCR_APPROVED");
-			aa.runAsyncScript("asyncRunInvoiceParamsRpt", invRptParameters);	
+			var scriptName = "asyncRunInvoiceParamsRpt";
+			var envParameters = aa.util.newHashMap();
+			envParameters.put("licCap",capId.getCustomID()); 
+			envParameters.put("invNbr", invNbr);
+			envParameters.put("feeAmount", licFeeAmt);
+			envParameters.put("currentUserID",currentUserID);
+			envParameters.put("licType",licType);
+			envParameters.put("templateName", "LIC_CC_CCR_APPROVED");
+			aa.runAsyncScript(scriptName, envParameters);	
 		}else {
 		
 // Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
@@ -156,6 +157,7 @@ try {
 //run the License Report and send approval email
 			var appAltId = capId.getCustomID();
 			var licAltId = plId.getCustomID();
+			var scriptName = "asyncRunOfficialLicenseRpt";
 			var envParameters = aa.util.newHashMap();
 			envParameters.put("licType", licType);
 			envParameters.put("appCap",appAltId);
@@ -173,15 +175,16 @@ try {
 			envParameters.put("currentUserID",currentUserID);
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail",sysFromEmail);
-			aa.runAsyncScript("asyncRunOfficialLicenseRpt", envParameters);
+			aa.runAsyncScript(scriptName, envParameters);
 			
 //Run Scientific Checklist report
-			var chckLstParameters = aa.util.newHashMap();
-			chckLstParameters.put("saCap",appAltId);
-			chckLstParameters.put("licCap",licAltId); 
-			chckLstParameters.put("reportName","Scientific Review Checklist"); 
-			chckLstParameters.put("currentUserID",currentUserID);
-			aa.runAsyncScript("asyncRunScientificChecklist", chckLstParameters);	
+			var scriptName = "asyncRunScientificChecklist";
+			var envParameters = aa.util.newHashMap();
+			envParameters.put("saCap",appAltId);
+			envParameters.put("licCap",licAltId); 
+			envParameters.put("reportName","Scientific Review Checklist"); 
+			envParameters.put("currentUserID",currentUserID);
+			aa.runAsyncScript(scriptName, envParameters);	
 			
 //notify processor that converion request has been paid and new license issued		
 			wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
