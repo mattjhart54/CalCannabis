@@ -198,7 +198,7 @@ try {
 		}
 	}
 	
-	ignoreTableArray = [];
+	ignoreTableArray = ["OWNERS"];
 	removeASITable("APN SPATIAL INFORMATION",plId);
 	removeASITable("LAKE AND STREAMBED ALTERATION",plId);
 	removeASITable("ELECTRICITY USAGE",plId);
