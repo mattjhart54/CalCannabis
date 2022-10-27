@@ -29,7 +29,7 @@ try {
 		//envParameters.put("approvalLetter", "");
 		if(AInfo["No Transition"] == "CHECKED") {
 			var templateName = "LIC_CC_CCR_APPR_PROV_LIC_ISSUED";
-			envParameter.put("reason", AInfo["Reason for Provisional Conversion"]);
+			envParameters.put("reason", AInfo["Reason for Provisional Conversion"]);
 		}else {
 			envParameters.put("reason", "");
 			var templateName = "LIC_CC_CCR_APPR_LIC_ISSUED";
@@ -46,14 +46,12 @@ try {
 			fTask = wf[x]; 
 			taskName=fTask.getTaskDescription();
 			if (taskName == "Conversion Review"){
-				if(fTask.getActiveFlag()=="Y") {
-					var caseMgr = wf[x].getAssignedStaff().getFirstName()+ " " +wf[x].getAssignedStaff().getLastName();
-					var assignedUserID = aa.person.getUser(wf[x].getAssignedStaff().getFirstName(),wf[x].getAssignedStaff().getMiddleName(),wf[x].getAssignedStaff().getLastName()).getOutput();
-					if(assignedUserID!=null){
-						var staffEmail = assignedUserID.getEmail();
-						if(staffEmail){
-							email(staffEmail, sysFromEmail, "CLS - Converted License has been issued", "Conversion Request Record " + appAltId + " has been approved and payment is complete. The converted license has been issued for License Record " + licAltId + ".");
-						}
+				var caseMgr = wf[x].getAssignedStaff().getFirstName()+ " " +wf[x].getAssignedStaff().getLastName();
+				var assignedUserID = aa.person.getUser(wf[x].getAssignedStaff().getFirstName(),wf[x].getAssignedStaff().getMiddleName(),wf[x].getAssignedStaff().getLastName()).getOutput();
+				if(assignedUserID!=null){
+					var staffEmail = assignedUserID.getEmail();
+					if(staffEmail){
+						email(staffEmail, sysFromEmail, "CLS - Converted License has been issued", "Conversion Request Record " + appAltId + " has been approved and payment is complete. The converted license has been issued for License Record " + licAltId + ".");
 					}
 				}
 			}
