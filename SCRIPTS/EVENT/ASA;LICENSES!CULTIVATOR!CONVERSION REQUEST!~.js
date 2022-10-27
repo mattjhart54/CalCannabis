@@ -175,7 +175,7 @@ try {
 			editAppSpecific("APN Matches Premises-LSA", PInfo["APN Matches Premises-LSA"]);
 			editAppSpecific("APN Matches Adjacent Parcel", PInfo["APN Matches Adjacent Parcel"]);
 			editAppSpecific("Notes", PInfo["Notes"]);
-			copyASITablesCDFA(primaryRecId,capId,"DEFICIENCIES","DENIAL REASONS","CANNABIS FINANCIAL INTEREST","PREMISES ADDRESSES");
+			copyASITablesCDFA(primaryRecId,capId,"DEFICIENCIES","DENIAL REASONS","CANNABIS FINANCIAL INTEREST");
 			for(x in SOURCEOFWATERSUPPLY) {
 				if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Groundwater Well" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
 					editAppSpecific("Groundwater Well Review Status", "Incomplete");
