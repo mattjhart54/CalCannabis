@@ -176,14 +176,6 @@ try {
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail",sysFromEmail);
 			aa.runAsyncScript(scriptName, envParameters);
-//Run Scientific Checklist report
-			var scriptName = "asyncRunScientificChecklist";
-			var envParameters = aa.util.newHashMap();
-			envParameters.put("saCap",appAltId);
-			envParameters.put("licCap",licAltId); 
-			envParameters.put("reportName","Scientific Review Checklist"); 
-			envParameters.put("currentUserID",currentUserID);
-			aa.runAsyncScript(scriptName, envParameters);	
 			
 //Run Scientific Checklist report
 			var scriptName = "asyncRunScientificChecklist";
