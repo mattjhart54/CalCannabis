@@ -140,7 +140,7 @@ try {
 	editAppSpecific("Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility", PInfo["Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility-NEW", PInfo["Self-Haul to a Manned Fully Permitted Solid Waste Landfill/Transform Facility"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted Composting Facility/Operation", PInfo["Self-Haul to a Manned Fully Permitted Composting Facility/Operation"]);
-	editAppSpecific("Self-Haul to a Manned Fully Permitted Composting Facility/Operation-NEW", PInfo["Self-Haul to a Manned Fully Permitted Composting Facility/Operation-NEW"]);
+	editAppSpecific("Self-Haul to a Manned Fully Permitted Composting Facility/Operation-NEW", PInfo["Self-Haul to a Manned Fully Permitted Composting Facility/Operation"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation", PInfo["Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation-NEW", PInfo["Self-Haul to a Manned Fully Permitted In-Vessel Digestion Facility/Operation"]);
 	editAppSpecific("Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation", PInfo["Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation"]);
