@@ -178,6 +178,7 @@ try {
 			aa.runAsyncScript(scriptName, envParameters);
 			
 //Run Scientific Checklist report	
+			logDebug("Running Scientific Checklist");
 			runReportAttach(capId,"Scientific Review Checklist", "altID", appAltId);
 			
 //notify processor that converion request has been paid and new license issued		
