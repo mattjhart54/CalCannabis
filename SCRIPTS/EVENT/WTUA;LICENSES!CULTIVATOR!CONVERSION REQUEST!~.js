@@ -135,6 +135,9 @@ try {
 			envParameters.put("templateName", "LIC_CC_CCR_APPROVED");
 			aa.runAsyncScript(scriptName, envParameters);	
 		}else {
+			
+//Run Scientific Checklist report	
+			runReportAttach(capId,"Scientific Review Checklist", "altID", appAltId);
 		
 // Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", licFeeAmt, "N");
@@ -176,10 +179,6 @@ try {
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail",sysFromEmail);
 			aa.runAsyncScript(scriptName, envParameters);
-			
-//Run Scientific Checklist report	
-			logDebug("Running Scientific Checklist");
-			runReportAttach(capId,"Scientific Review Checklist", "altID", appAltId);
 			
 //notify processor that converion request has been paid and new license issued		
 			wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
