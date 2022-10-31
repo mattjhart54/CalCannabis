@@ -136,9 +136,6 @@ try {
 			aa.runAsyncScript(scriptName, envParameters);	
 		}else {
 			
-//Run Scientific Checklist report	
-			runReportAttach(capId,"Scientific Review Checklist", "altID", appAltId);
-		
 // Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", licFeeAmt, "N");
 			invNbr = invoiceAllFees();
