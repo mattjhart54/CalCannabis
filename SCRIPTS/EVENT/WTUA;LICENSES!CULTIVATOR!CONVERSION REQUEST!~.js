@@ -178,14 +178,15 @@ try {
 			aa.runAsyncScript(scriptName, envParameters);
 			
 //Run Scientific Checklist report
-		var scriptName = "asyncRunScientificChecklist";
+		runReportAttach(capId,"Scientific Review Checklist","altID",capId.getCustomID());
+	/*	var scriptName = "asyncRunScientificChecklist";
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("saCap",appAltId);
 		envParameters.put("licCap",licAltId); 
 		envParameters.put("reportName","Scientific Review Checklist"); 
 		envParameters.put("currentUserID",currentUserID);
 		aa.runAsyncScript(scriptName, envParameters);					
-			
+	*/		
 //notify processor that converion request has been paid and new license issued		
 			wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
 			for(x in wf) {
