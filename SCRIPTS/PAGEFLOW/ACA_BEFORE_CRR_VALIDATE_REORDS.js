@@ -126,7 +126,7 @@ try {
 					var convCap = aa.cap.getCap(convCapId).getOutput();
 					var convStatus = convCap.getCapStatus();
 					if (matches(convStatus,"Active", "About to Expire", "Expired - Pending Renewal")){
-						if ((convFirstName.toUpperCase() != licFirstName.toUpperCase()) || (convLastName.toUpperCase() != licLastName.toUpperCase()) || (convLegalBusName.toUpperCase() != legalBusName.toUpperCase())){	
+						if (((convFirstName.toUpperCase() != licFirstName.toUpperCase()) || (convLastName.toUpperCase() != licLastName.toUpperCase())) && (convLegalBusName.toUpperCase() != legalBusName.toUpperCase())){	
 							errorMessage += convLicRec + ": " + licTypeMessage;
 						}
 					}
