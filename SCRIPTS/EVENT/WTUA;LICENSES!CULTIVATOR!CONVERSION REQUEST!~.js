@@ -137,6 +137,7 @@ try {
 		}else {
 			
 // Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
+			runReportAttach(capId,"Scientific Review Checklist","altID",capId.getCustomID());
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", licFeeAmt, "N");
 			invNbr = invoiceAllFees();
 			plId = aa.cap.getCapID(pId).getOutput();
@@ -178,7 +179,6 @@ try {
 			aa.runAsyncScript(scriptName, envParameters);
 			
 //Run Scientific Checklist report
-		runReportAttach(capId,"Scientific Review Checklist","altID",capId.getCustomID());
 	/*	var scriptName = "asyncRunScientificChecklist";
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("saCap",appAltId);
