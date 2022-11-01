@@ -137,7 +137,7 @@ try {
 		}else {
 			
 // Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
-			runReportAttach(capId,"Scientific Review Checklist","altID",capId.getCustomID());
+			runReportAttach(capId,"Scientific Review Checklist","altId",capId.getCustomID());
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", licFeeAmt, "N");
 			invNbr = invoiceAllFees();
 			plId = aa.cap.getCapID(pId).getOutput();
