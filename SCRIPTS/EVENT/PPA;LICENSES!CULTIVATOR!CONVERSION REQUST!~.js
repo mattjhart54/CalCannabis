@@ -18,7 +18,7 @@ try {
 		else
 			logDebug("Could not link applications");
 
-// The Scientific Checklist Reort		
+// Run the Scientific Checklist Reort		
 		var appAltId = capId.getCustomID();
 		var licAltId = plId.getCustomID();
 //		runReportAttach(capId,"Scientific Review Checklist","altId",licAltId);
@@ -31,8 +31,6 @@ try {
 		aa.runAsyncScript(scriptName, envParameters);		
 		
 //run the License Report and send approval email
-		var appAltId = capId.getCustomID();
-		var licAltId = plId.getCustomID();
 		var scriptName = "asyncRunOfficialLicenseRpt";
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("licType", licType);
