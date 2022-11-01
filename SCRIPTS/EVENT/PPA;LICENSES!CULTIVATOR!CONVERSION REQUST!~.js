@@ -17,8 +17,9 @@ try {
 			logDebug("Child application successfully linked");
 		else
 			logDebug("Could not link applications");
-		
-var appAltId = capId.getCustomID();
+
+// The Scientific Checklist Reort		
+		var appAltId = capId.getCustomID();
 		var licAltId = plId.getCustomID();
 //		runReportAttach(capId,"Scientific Review Checklist","altId",licAltId);
 		var scriptName = "asyncRunScientificChecklist";
