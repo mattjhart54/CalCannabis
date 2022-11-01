@@ -27,7 +27,7 @@ try {
 		envParameters.put("reportName","Scientific Review Checklist"); 
 		envParameters.put("currentUserID",currentUserID);
 		aa.runAsyncScript(scriptName, envParameters);			
-		
+	logDebug("Science Checklist ran for " + licAltId);	
 //run the License Report and send approval email
 		var appAltId = capId.getCustomID();
 		var licAltId = plId.getCustomID();
