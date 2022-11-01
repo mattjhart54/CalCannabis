@@ -137,7 +137,6 @@ try {
 		}else {
 			
 // Fee balance zero.  Update Primary record, generate License Certificate and email with Approval Letter
-			runReportAttach(capId,"Scientific Review Checklist","altId",capId.getCustomID());
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", licFeeAmt, "N");
 			invNbr = invoiceAllFees();
 			plId = aa.cap.getCapID(pId).getOutput();
@@ -155,9 +154,19 @@ try {
 			else
 				logDebug("Could not link Primary License as a parent");
 			
-//run the License Report and send approval email
+// Run the Sceintific Checklist Report
 			var appAltId = capId.getCustomID();
 			var licAltId = plId.getCustomID();
+//			runReportAttach(capId,"Scientific Review Checklist","altId",licAltId);
+			var scriptName = "asyncRunScientificChecklist";
+			var envParameters = aa.util.newHashMap();
+			envParameters.put("saCap",licAltId);
+			envParameters.put("licCap",licAltId); 
+			envParameters.put("reportName","Scientific Review Checklist"); 
+			envParameters.put("currentUserID",currentUserID);
+			aa.runAsyncScript(scriptName, envParameters);								
+			
+//run the License Report and send approval email
 			var scriptName = "asyncRunOfficialLicenseRpt";
 			var envParameters = aa.util.newHashMap();
 			envParameters.put("licType", licType);
@@ -177,16 +186,7 @@ try {
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail",sysFromEmail);
 			aa.runAsyncScript(scriptName, envParameters);
-			
-//Run Scientific Checklist report
-	/*	var scriptName = "asyncRunScientificChecklist";
-		var envParameters = aa.util.newHashMap();
-		envParameters.put("saCap",appAltId);
-		envParameters.put("licCap",licAltId); 
-		envParameters.put("reportName","Scientific Review Checklist"); 
-		envParameters.put("currentUserID",currentUserID);
-		aa.runAsyncScript(scriptName, envParameters);					
-	*/		
+					
 //notify processor that converion request has been paid and new license issued		
 			wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
 			for(x in wf) {
