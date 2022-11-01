@@ -41,7 +41,7 @@ try {
 		aa.runAsyncScript(scriptName, envParameters);
 
 //Run Scientific Checklist report
-		runReportAttach(capId,"Scientific Review Checklist","altId",capId.getCustomID());
+		runReportAttach(capId,"Scientific Review Checklist","altId",licAltId);
 /*		var scriptName = "asyncRunScientificChecklist";
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("saCap",appAltId);
