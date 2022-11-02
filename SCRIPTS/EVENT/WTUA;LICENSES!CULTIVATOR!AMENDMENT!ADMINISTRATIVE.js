@@ -67,7 +67,7 @@ try {
 		if(!matches(AInfo["LAP Update"],null,"",undefined))
 			editAppSpecific("Local Authority Phone",AInfo["LAP Update"]);
 		if(!matches(AInfo["DBN Update"],null,"",undefined))
-			editAppSpecific("Doing Business As",AInfo["LAN Update"]);
+			editAppSpecific("Doing Business As",AInfo["DBN Update"]);
 		removeASITable("CANNABIS FINANCIAL INTEREST");
 		copyASITables(holdId,capId);
 		updateWorkDesc(workDescGet(holdId));
