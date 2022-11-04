@@ -63,6 +63,7 @@ try {
 	editAppSpecific("Local Authorizaton Zip",PInfo["Local Authorizaton Zip"]);
 	editAppSpecific("Local Authority County",PInfo["Local Authority County"]);
 	editAppSpecific("Local Authority Phone",PInfo["Local Authority Phone"]);
+	editAppSpecific("Doing Business As",PInfo["Doing Business As"]);
 	copyASITables(parentId,capId,"DEFICIENCIES","DENIAL REASONS","Premises Addresses","Owners","Source of Water Supply");
 	editAppName(PInfo["License Type"]);
 	updateShortNotes(getShortNotes(parentId));
