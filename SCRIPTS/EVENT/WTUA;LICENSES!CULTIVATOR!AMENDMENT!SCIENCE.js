@@ -43,7 +43,7 @@ try {
 		editAppSpecific("Generator",AInfo["Generator Update"],parentCapId);
 		editAppSpecific("Generator Under 50 HP",AInfo["G50 Update"],parentCapId);
 		useAppSpecificGroupName = true; 
-		editAppSpecific("POWER SOURCE","Other",AInfo["Other Update"],parentCapId);
+		editAppSpecific("POWER SOURCE.Other",AInfo["Other Update"],parentCapId);
 		useAppSpecificGroupName = false;
 		if(matches(AInfo["Other Update"],null,"",undefined)){
 			editAppSpecific("Other Source Description","",parentCapId);
@@ -63,7 +63,7 @@ try {
 		editAppSpecific("Self-Haul to a Recycling Center That Meets Regulations Requirements",AInfo["Self-Haul to a Recycling Center That Meets Regulations Requirements-NEW"],parentCapId);
 		editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations",AInfo["Reintroduction of cannabis waste back into Agricultural operations-NEW"],parentCapId);
 		useAppSpecificGroupName = true;
-		editAppSpecific("WASTE MANAGEMENT","Other",AInfo["Other-NEW"],parentCapId);
+		editAppSpecific("WASTE MANAGEMENT.Other",AInfo["Other-NEW"],parentCapId);
 		useAppSpecificGroupName = false;
 		if(matches(AInfo["Other-NEW"],null,"",undefined)){
 			editAppSpecific("Other Waste Management Method","",parentCapId);
