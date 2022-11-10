@@ -38,11 +38,14 @@ try {
 			editAppSpecific("Tribal Land Information",AInfo["Tribal Land Information Update"],parentCapId);
 			updateCat = true;
 		}
+		useAppSpecificGroupName = true; 
 		editAppSpecific("Grid",AInfo["Grid Update"],parentCapId);
 		editAppSpecific("Solar",AInfo["Solar Update"],parentCapId);
 		editAppSpecific("Generator",AInfo["Generator Update"],parentCapId);
 		editAppSpecific("Generator Under 50 HP",AInfo["G50 Update"],parentCapId);
-		editAppSpecific("Other",AInfo["Other Update"],parentCapId);
+		useAppSpecificGroupName = true; 
+		editAppSpecific("POWER SOURCE","Other",AInfo["Other Update"],parentCapId);
+		useAppSpecificGroupName = false;
 		if(matches(AInfo["Other Update"],null,"",undefined)){
 			editAppSpecific("Other Source Description","",parentCapId);
 		}
@@ -59,8 +62,10 @@ try {
 		editAppSpecific("Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation ",AInfo["Self-Haul to a Manned Fully Permitted Transfer/Processing Facility/Operation -NEW"],parentCapId);
 		editAppSpecific("OSelf-Haul to a Manned Fully Permitted Chip-and-Grind Operation or Facility",AInfo["Self-Haul to a Manned Fully Permitted Chip-and-Grind Operation or FacilityNEW"],parentCapId);
 		editAppSpecific("Self-Haul to a Recycling Center That Meets Regulations Requirements",AInfo["Self-Haul to a Recycling Center That Meets Regulations Requirements-NEW"],parentCapId);
-		editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations",AInfo["Reintroduction of cannabis waste back into Agricultural operations-NEW"],parentCapId);		
-		editAppSpecific("Other",AInfo["Other-NEW"],parentCapId);
+		editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations",AInfo["Reintroduction of cannabis waste back into Agricultural operations-NEW"],parentCapId);
+		useAppSpecificGroupName = true;
+		editAppSpecific("WASTE MANAGEMENT","Other",AInfo["Other-NEW"],parentCapId);
+		useAppSpecificGroupName = false;
 		if(matches(AInfo["Other-NEW"],null,"",undefined)){
 			editAppSpecific("Other Waste Management Method","",parentCapId);
 		}
