@@ -38,7 +38,6 @@ try {
 			editAppSpecific("Tribal Land Information",AInfo["Tribal Land Information Update"],parentCapId);
 			updateCat = true;
 		}
-		useAppSpecificGroupName = true; 
 		editAppSpecific("Grid",AInfo["Grid Update"],parentCapId);
 		editAppSpecific("Solar",AInfo["Solar Update"],parentCapId);
 		editAppSpecific("Generator",AInfo["Generator Update"],parentCapId);
