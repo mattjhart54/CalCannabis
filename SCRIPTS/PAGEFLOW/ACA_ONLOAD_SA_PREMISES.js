@@ -200,6 +200,7 @@ try{
 			editAppSpecific4ACA("Other",powerOther);
 			editAppSpecific4ACA("Other Update",powerOther);
 			editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
+			editAppSpecific("OSD Update",PInfo["Other Source Description"]);
 			copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
 		}
 	}
