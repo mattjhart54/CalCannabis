@@ -194,8 +194,11 @@ try{
 			editAppSpecific4ACA("Generator Update",PInfo["Generator"]);
 			editAppSpecific4ACA("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
 			editAppSpecific4ACA("G50 Update",PInfo["Generator Under 50 HP"]);
-			editAppSpecific4ACA("Other",PInfo["Other"]);
-			editAppSpecific4ACA("Other Update",PInfo["Other"]);
+			useAppSpecificGroupName = true; 
+			var powerOther = getAppSpecific("POWER SOURCE.Other",licCapId);
+			useAppSpecificGroupName = false;
+			editAppSpecific4ACA("Other",powerOther);
+			editAppSpecific4ACA("Other Update",powerOther);
 			editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
 			copyASITables4ACA(licCapId,capId,"DEFICIENCIES","DENIAL REASONS","OWNERS","CANNABIS FINANCIAL INTEREST");
 		}
