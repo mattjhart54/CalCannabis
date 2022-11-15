@@ -60,8 +60,12 @@ try {
 		editAppSpecific("Generator Update",PInfo["Generator"]);
 		editAppSpecific("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
 		editAppSpecific("G50 Update",PInfo["Generator Under 50 HP"]);
-		editAppSpecific("Other",PInfo["Other"]);
-		editAppSpecific("Other Update",PInfo["Other"]);
+		useAppSpecificGroupName = true; 
+		var powerOther = getAppSpecific("POWER SOURCE.Other",parentId);
+		var wasteOther = getAppSpecific("WASTE MANAGEMENT.Other",parentId);
+		useAppSpecificGroupName = false;
+		editAppSpecific("Other",powerOther);
+		editAppSpecific("Other Update",powerOther);
 		editAppSpecific("Other Source Description",PInfo["Other Source Description"]);
 	editAppSpecific("Medium Validation",PInfo["Medium Validation"]);
 	editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
@@ -151,8 +155,8 @@ try {
 	editAppSpecific("Self-Haul to a Recycling Center That Meets Regulations Requirements-NEW", PInfo["Self-Haul to a Recycling Center That Meets Regulations Requirements"]);
 	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
 	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations-NEW", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
-	editAppSpecific("Other", PInfo["Other"]);
-	editAppSpecific("Other-NEW", PInfo["Other"]);
+	editAppSpecific("Other", wasteOther);
+	editAppSpecific("Other-NEW", wasteOther);
 	editAppSpecific("Other Waste Management Method", PInfo["Other Waste Management Method"]);
 	editAppSpecific("Envirostor Review Status", PInfo["Envirostor Review Status"]);
 	editAppSpecific("Evidence of an Envirostor Search", PInfo["Evidence of an Envirostor Search"]);
