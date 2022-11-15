@@ -62,9 +62,8 @@ try {
 		editAppSpecific("G50 Update",PInfo["Generator Under 50 HP"]);
 		useAppSpecificGroupName = true; 
 		var powerOther = getAppSpecific("POWER SOURCE.Other",parentId);
-		var wasteOther = getAppSpecific("WASTE MANAGEMENT.Other",parentId);
-		useAppSpecificGroupName = false;
-		editAppSpecific("Other",powerOther);
+		editAppSpecific("POWER SOURCE.Other",powerOther);
+		useAppSpecificGroupName = false;	
 		editAppSpecific("Other Update",powerOther);
 		editAppSpecific("Other Source Description",PInfo["Other Source Description"]);
 	editAppSpecific("Medium Validation",PInfo["Medium Validation"]);
@@ -155,7 +154,10 @@ try {
 	editAppSpecific("Self-Haul to a Recycling Center That Meets Regulations Requirements-NEW", PInfo["Self-Haul to a Recycling Center That Meets Regulations Requirements"]);
 	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
 	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations-NEW", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
-	editAppSpecific("Other", wasteOther);
+	useAppSpecificGroupName = true; 
+	var wasteOther = getAppSpecific("WASTE MANAGEMENT.Other",parentId);
+	editAppSpecific("WASTE MANAGEMENT.Other", wasteOther);
+	useAppSpecificGroupName = false;
 	editAppSpecific("Other-NEW", wasteOther);
 	editAppSpecific("Other Waste Management Method", PInfo["Other Waste Management Method"]);
 	editAppSpecific("Other Waste Management Method-NEW", PInfo["Other Waste Management Method"]);
