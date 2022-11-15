@@ -140,8 +140,11 @@ try {
 	editAppSpecific("Self-Haul to a Recycling Center That Meets Regulations Requirements-NEW", PInfo["Self-Haul to a Recycling Center That Meets Regulations Requirements"]);
 	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
 	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations-NEW", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
-	editAppSpecific("Other", PInfo["Other"]);
-	editAppSpecific("Other-NEW", PInfo["Other"]);
+	useAppSpecificGroupName = true; 
+	var wasteOther = getAppSpecific("WASTE MANAGEMENT.Other",parentId);
+	useAppSpecificGroupName = false;
+	editAppSpecific("Other", wasteOther);
+	editAppSpecific("Other-NEW", wasteOther);
 	editAppSpecific("Other Waste Management Method", PInfo["Other Waste Management Method"]);
 	editAppSpecific("Envirostor Review Status", PInfo["Envirostor Review Status"]);
 	editAppSpecific("Evidence of an Envirostor Search", PInfo["Evidence of an Envirostor Search"]);
