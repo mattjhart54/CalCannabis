@@ -142,8 +142,8 @@ try {
 	editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations-NEW", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
 	useAppSpecificGroupName = true; 
 	var wasteOther = getAppSpecific("WASTE MANAGEMENT.Other",parentId);
+	editAppSpecific("WASTE MANAGEMENT.Other", wasteOther);
 	useAppSpecificGroupName = false;
-	editAppSpecific("Other", wasteOther);
 	editAppSpecific("Other-NEW", wasteOther);
 	editAppSpecific("Other Waste Management Method", PInfo["Other Waste Management Method"]);
 	editAppSpecific("Other Waste Management Method-NEW", PInfo["Other Waste Management Method"]);
