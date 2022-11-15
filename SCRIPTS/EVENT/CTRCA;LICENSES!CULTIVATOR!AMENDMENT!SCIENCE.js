@@ -146,6 +146,7 @@ try {
 	editAppSpecific("Other", wasteOther);
 	editAppSpecific("Other-NEW", wasteOther);
 	editAppSpecific("Other Waste Management Method", PInfo["Other Waste Management Method"]);
+	editAppSpecific("Other Waste Management Method-NEW", PInfo["Other Waste Management Method"]);
 	editAppSpecific("Envirostor Review Status", PInfo["Envirostor Review Status"]);
 	editAppSpecific("Evidence of an Envirostor Search", PInfo["Evidence of an Envirostor Search"]);
 	editAppSpecific("Search Criteria matches the cultivation property", PInfo["Search Criteria matches the cultivation property"]);
