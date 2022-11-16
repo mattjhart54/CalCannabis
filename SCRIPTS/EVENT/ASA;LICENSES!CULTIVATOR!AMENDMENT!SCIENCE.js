@@ -43,7 +43,8 @@ try {
 		PInfo = new Array;
 		loadAppSpecific(PInfo);
 		capId = holdId;
-		editAppSpecific("Submitted License Type" , AInfo["Proposed License Type"]);
+		var pLicType = getAppSpecific("Proposed License Type");
+		editAppSpecific("Submitted License Type", pLicType);
 		editAppSpecific("License Issued Type", PInfo["License Issued Type"]);
 		editAppSpecific("Premise Address",PInfo["Premise Address"]);
 		editAppSpecific("Premise City",PInfo["Premise City"]);
