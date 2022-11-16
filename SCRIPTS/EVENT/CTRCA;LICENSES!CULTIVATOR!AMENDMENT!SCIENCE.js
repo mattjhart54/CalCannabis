@@ -50,6 +50,7 @@ try {
 	PInfo = new Array;
 	loadAppSpecific(PInfo);
 	capId = holdId;
+	editAppSpecific("Submitted License Type" , AInfo["Prposed License Type");
 	editAppSpecific("License Issued Type", PInfo["License Issued Type"]);
 	editAppSpecific("Premise State",PInfo["Premise State"]);
 	editAppSpecific("Medium Validation",PInfo["Medium Validation"]);
