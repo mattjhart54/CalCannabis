@@ -30,6 +30,7 @@ try {
 			vLicenseObj = new licenseObject(null,capId);
 			vCurrExpDate = vLicenseObj.b1ExpDate;
 			capId = holdId;
+			editAppSpecific("Current License Type", PInfo["License Type"]);
 			editAppSpecific("Submitted License Type", AInfo["Proposed License Type"])
 			editAppSpecific("License Expiration Date", vCurrExpDate);
 			editAppSpecific("Legal Business Name", PInfo["Legal Business Name"]);
