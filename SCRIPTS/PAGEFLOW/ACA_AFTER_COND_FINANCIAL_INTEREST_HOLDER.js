@@ -58,15 +58,14 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
-	eval(getScriptText(SAScript, SA));
-} else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",SA));
+	eval(getScriptText(SAScript,SA));
+}
+else {
+    eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
+eval(getScriptText("INCLUDES_CUSTOM"));
 
 if (documentOnly) {
 	doStandardChoiceActions(controlString,false,0);
@@ -190,42 +189,12 @@ var componentAliasNames = new Array("Contact1","AppSpecTable","Parcel","License"
 
 	if(capModel != null)
 	{
-		var licCapId = getApplication(AInfo['License Number']);
-		financialInfo = loadASITable("FINANCIAL INTEREST HOLDER",licCapId); 
-		if (typeof(financialInfo) != "object"){
+		if (typeof(FINANCIALINTERESTHOLDER) != "object"){
 			clearPageSectionData("2","2");
 			aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '2', 'PageNumber':'3'}}");
-		}else{
-			var multTable = new Array();
-			for (var ii in financialInfo) {
-				row = new Array();
-				row["Type of Interest Holder"] = financialInfo[ii]["Type of Interest Holder"];
-				row["Legal First Name"] = financialInfo[ii]["Legal First Name"];
-				row["Legal Last Name"] = financialInfo[ii]["Legal Last Name"];
-				row["Email Address"] = financialInfo[ii]["Email Address"];
-				row["Contact Phone Number"] = financialInfo[ii]["Contact Phone Number"];
-				row["Type of Government ID"] = financialInfo[ii]["Type of Government ID"];
-				row["Government ID Number"] = financialInfo[ii]["Government ID Number"];
-				row["Legal Business Name"] = financialInfo[ii]["Legal Business Name"];
-				row["Primary Contact Name"] = financialInfo[ii]["Primary Contact Name"];
-				row["Primary Contact Phone Number"] = financialInfo[ii]["Primary Contact Phone Number"];
-				row["Primary Contact Email Address"] = financialInfo[ii]["Primary Contact Email Address"];
-				row["FEIN"] = financialInfo[ii]["FEIN"];
-				multTable.push(row);
-			}
-		
-			if (multTable.length > 0){
-				removeASITable("FINANCIAL INTEREST HOLDER");
-				addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(), "FINANCIAL INTEREST HOLDER", multTable);
-				aa.env.setValue("CapModel",cap);
-			}
 		}		
 	}
-} catch (err) { 
-	logDebug("A JavaScript Error occurred:ACA_AFTER_COND_FINANCIAL_INTEREST HOLDER: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_COND_FINANCIAL_INTEREST HOLDER: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
+} catch (err) { logDebug(err)	}
 
 
 /*------------------------------------------------------------------------------------------------------/
