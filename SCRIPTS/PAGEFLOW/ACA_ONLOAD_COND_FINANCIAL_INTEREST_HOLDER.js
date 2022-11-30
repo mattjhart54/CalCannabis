@@ -191,7 +191,7 @@ var componentAliasNames = new Array("Contact1","AppSpecTable","Parcel","License"
 	{
 		if (typeof(FINANCIALINTERESTHOLDER) != "object"){
 			clearPageSectionData("2","2");
-			aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '2', 'PageNumber':'3'}}");
+			aaa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
 		}		
 	}
 } catch (err) { logDebug(err)	}
