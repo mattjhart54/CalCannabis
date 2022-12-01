@@ -35,6 +35,11 @@ try {
 			}else{
 				editAppName(AInfo["License Issued Type"] + " " + AInfo["Cultivator Type"] + " - " + AInfo["License Type"],vLicenseID);
 			}
+	// Update Financial Interest Table
+			var newFinTable = loadASITable("FINANCIAL INTEREST HOLDER NEW");
+			if (newFinTable){
+				copyASITables(capId,vLicenseID,["FINANCIAL INTEREST HOLDER", "OWNERS", "DEFICIENCIES"]);
+			}
 	//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(vLicenseID);
 			if (renewalCapProject != null) {
