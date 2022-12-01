@@ -152,6 +152,31 @@ try{
 								editAppSpecific("Cultivator Type",getAppSpecific("Designation Type",renCapId),parentCapId);
 								editAppName(getAppSpecific("Designation Type",renCapId) + " - " + licType,parentCapId);
 							}
+							// Update Financial Interest Table
+							if (typeof(FINANCIALINTERESTHOLDERNEW) == "object"){
+								if(FINANCIALINTERESTHOLDERNEW.length > 0){
+									finTable = new Array();
+									for(xx in FINANCIALINTERESTHOLDERNEW){
+										var finNewRow = FINANCIALINTERESTHOLDERNEW[xx];
+										finRow = new Array();
+										finRow["Type of Interest Holder"] = finNewRow["Type of Interest Holder"];
+										finRow["Legal First Name"] = finNewRow["Legal First Name"];
+										finRow["Legal Last Name"] = finNewRow["Legal Last Name"];
+										finRow["Email Address"] = finNewRow["Email Address"];
+										finRow["Contact Phone Number"] = finNewRow["Contact Phone Number"];
+										finRow["Type of Government ID"] = finNewRow["Type of Government ID"];
+										finRow["Government ID Number"] = finNewRow["Government ID Number"];
+										finRow["Legal Business Name"] = finNewRow["Legal Business Name"];
+										finRow["Primary Contact Name"] = finNewRow["Primary Contact Name"];
+										finRow["Primary Contact Phone Number"] = finNewRow["Primary Contact Phone Number"];
+										finRow["Primary Contact Email Address"] = finNewRow["Primary Contact Email Address"];
+										finRow["FEIN"] = finNewRow["FEIN"];
+										finTable.push(finRow);
+									}
+									removeASITable("FINANCIAL INTEREST HOLDER",vLicenseID);
+									addASITable("FINANCIAL INTEREST HOLDER",finTable,vLicenseID);
+								}
+							}
 							//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 							renewalCapProject.setStatus("Complete");
 							renewalCapProject.setRelationShip("R");  // move to related records
