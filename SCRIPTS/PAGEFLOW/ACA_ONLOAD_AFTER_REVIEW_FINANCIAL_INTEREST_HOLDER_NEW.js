@@ -99,9 +99,9 @@ var componentAliasNames = new Array("Contact1","AppSpecTable","Parcel","License"
 
 	if(capModel != null)
 	{
-		if(fromReviewPage == "Y"){
-			aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
-		}
+		//if(fromReviewPage == "Y"){
+			aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '2', 'PageNumber':'2'}}");
+		//}
 
 	}
 } catch (err) {
