@@ -1,8 +1,8 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_Before_Sample_V1.6.js
-| Event   : ACA_Before
+| Program : ACA_AFTER_COND_INTEREST_HOLDER_NEW.js
+| Event   : ACA_AfterButton Event
 |
-| Usage   : Master Script by Accela.  See accompanying documentation and release notes.
+| Usage   : 
 |
 | Client  : N/A
 | Action# : N/A
@@ -13,157 +13,69 @@
 /*------------------------------------------------------------------------------------------------------/
 | START User Configurable Parameters
 |
-|     Only variables in the following section may be changed.  If any other section is modified, this
-|     will no longer be considered a "Master" script and will not be supported in future releases.  If
-|     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; 
-var showDebug = false;
-var preExecute = "PreExecuteForBeforeEvents"
-//var controlString = "";    
-var documentOnly = false;                                                               
-var disableTokens = false;                                                                                          
-var useAppSpecificGroupName = false;                                 
-var useTaskSpecificGroupName = false;                                            
-var enableVariableBranching = false; 
-var maxEntries = 99; // Maximum number of std choice entries.  Entries must be Left Zero Padded
+var showMessage = false; // Set to true to see results in popup window
+var showDebug = false; // Set to true to see debug messages in popup window
+var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
+var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
+var cancel = false;
+var SCRIPT_VERSION  = 3; 
+var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
-var cancel = false;
 var startDate = new Date();
 var startTime = startDate.getTime();
-var message =   ""; 
-var debug = "";
-var br = "<BR>"; 
-var feeSeqList = new Array(); 
-var paymentPeriodList = new Array();
-
-if (documentOnly) {
-	doStandardChoiceActions(controlString,false,0);
-	aa.env.setValue("ScriptReturnCode", "0");
-	aa.env.setValue("ScriptReturnMessage", "Documentation Successful.  No actions executed.");
-	aa.abortScript();
-}
+var message = ""; // Message String
+var debug = ""; // Debug String
+var br = "<BR>"; // Break Tag
 
 var useSA = false;
 var SA = null;
 var SAScript = null;
-var bzr = aa.bizDomain.getBizDomainByValue("MULTI_SERVICE_SETTINGS","SUPER_AGENCY_FOR_EMSE"); 
-if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") { 
-	useSA = true;     
+var bzr = aa.bizDomain.getBizDomainByValue("MULTI_SERVICE_SETTINGS", "SUPER_AGENCY_FOR_EMSE");
+if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
+	useSA = true;
 	SA = bzr.getOutput().getDescription();
-	bzr = aa.bizDomain.getBizDomainByValue("MULTI_SERVICE_SETTINGS","SUPER_AGENCY_INCLUDE_SCRIPT"); 
-	if (bzr.getSuccess()) { SAScript = bzr.getOutput().getDescription(); }
-}
-
-if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",SA));
-	eval(getScriptText(SAScript,SA));
-}
-else {
-    eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
-}
-
-eval(getScriptText("INCLUDES_CUSTOM"));
-
-if (documentOnly) {
-	doStandardChoiceActions(controlString,false,0);
-	aa.env.setValue("ScriptReturnCode", "0");
-	aa.env.setValue("ScriptReturnMessage", "Documentation Successful.  No actions executed.");
-	aa.abortScript();
-}
-
-function getScriptText(vScriptName){
-	var servProvCode = aa.getServiceProviderCode();
-	if (arguments.length > 1) servProvCode = arguments[1]; // use different serv prov code
-	vScriptName = vScriptName.toUpperCase();      
-	var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
-	try {
-		var emseScript = emseBiz.getScriptByPK(servProvCode,vScriptName,"ADMIN");
-		return emseScript.getScriptText() + "";  
-	} catch(err) {
-		return "";
+	bzr = aa.bizDomain.getBizDomainByValue("MULTI_SERVICE_SETTINGS", "SUPER_AGENCY_INCLUDE_SCRIPT");
+	if (bzr.getSuccess()) {
+		SAScript = bzr.getOutput().getDescription();
 	}
 }
 
+if (SA) {
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
+	eval(getScriptText(SAScript, SA));
+} else {
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
+}
+
+
+eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
+
+
+function getScriptText(vScriptName, servProvCode, useProductScripts) {
+	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
+	vScriptName = vScriptName.toUpperCase();
+	var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
+	try {
+		if (useProductScripts) {
+			var emseScript = emseBiz.getMasterScript(aa.getServiceProviderCode(), vScriptName);
+		} else {
+			var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(), vScriptName, "ADMIN");
+		}
+		return emseScript.getScriptText() + "";
+	} catch (err) {
+		return "";
+	}
+}
 var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
-var servProvCode = capId.getServiceProviderCode()                                     
-var publicUser = false ;
-var currentUserID = aa.env.getValue("CurrentUserID");
-var publicUserID = aa.env.getValue("CurrentUserID");
-if (currentUserID.indexOf("PUBLICUSER") == 0) { currentUserID = "ADMIN" ; publicUser = true }  
-var capIDString = capId.getCustomID();                                                                 
-var systemUserObj = aa.person.getUser(currentUserID).getOutput();  
-var appTypeResult = cap.getCapType();
-var appTypeString = appTypeResult.toString();                                                  
-var appTypeArray = appTypeString.split("/");                                                      
-var currentUserGroup;
-var currentUserGroupObj = aa.userright.getUserRight(appTypeArray[0],currentUserID).getOutput()
-if (currentUserGroupObj) currentUserGroup = currentUserGroupObj.getGroupName();
-var capName = cap.getSpecialText();
-var capStatus = cap.getCapStatus();
-var sysDate = aa.date.getCurrentDate();
-var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(),sysDate.getDayOfMonth(),sysDate.getYear(),"");
-var parcelArea = 0;
-
-var estValue = 0; var calcValue = 0; var feeFactor                                               
-var valobj = aa.finance.getContractorSuppliedValuation(capId,null).getOutput();              
-if (valobj.length) {
-	estValue = valobj[0].getEstimatedValue();
-	calcValue = valobj[0].getCalculatedValue();
-	feeFactor = valobj[0].getbValuatn().getFeeFactorFlag();
-}
-
-var balanceDue = 0 ; var houseCount = 0; feesInvoicedTotal = 0;                            
-var capDetail = "";
-var capDetailObjResult = aa.cap.getCapDetail(capId);                                   
-if (capDetailObjResult.getSuccess())
-{
-                capDetail = capDetailObjResult.getOutput();
-                var houseCount = capDetail.getHouseCount();
-                var feesInvoicedTotal = capDetail.getTotalFee();
-                var balanceDue = capDetail.getBalance();
-}
-
-var AInfo = new Array();
-loadAppSpecific4ACA(AInfo);                                                                              
-//loadTaskSpecific(AInfo);                                                                                          
-//loadParcelAttributes(AInfo);                                                                                 
-//loadASITables4ACA();
-
-logDebug("<B>EMSE Script Results for " + capIDString + "</B>");
-logDebug("capId = " + capId.getClass());
-logDebug("cap = " + cap.getClass());
-logDebug("currentUserID = " + currentUserID);
-logDebug("currentUserGroup = " + currentUserGroup);
-logDebug("systemUserObj = " + systemUserObj.getClass());
-logDebug("appTypeString = " + appTypeString);
-logDebug("capName = " + capName);
-logDebug("capStatus = " + capStatus);
-logDebug("sysDate = " + sysDate.getClass());
-logDebug("sysDateMMDDYYYY = " + sysDateMMDDYYYY);
-logDebug("parcelArea = " + parcelArea);
-logDebug("estValue = " + estValue);
-logDebug("calcValue = " + calcValue);
-logDebug("feeFactor = " + feeFactor);
-
-logDebug("houseCount = " + houseCount);
-logDebug("feesInvoicedTotal = " + feesInvoicedTotal);
-logDebug("balanceDue = " + balanceDue);
-
-/*------------------------------------------------------------------------------------------------------/
-| BEGIN Event Specific Variables
-/------------------------------------------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------------------------------------------/
-| END Event Specific Variables
-/------------------------------------------------------------------------------------------------------*/
-
-if (preExecute.length) doStandardChoiceActions(preExecute,true,0);    // run Pre-execution code
-
-logGlobals(AInfo); 
+var AInfo = new Array(); 					// Create array for tokenized variables
+loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
+//loadASITables4ACA_corrected();
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
@@ -193,7 +105,11 @@ var componentAliasNames = new Array("Contact1","AppSpecTable","Parcel","License"
 		//clearPageSectionData("2","3");
 		aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '3', 'PageNumber':'1'}}");
 	}
-} catch (err) { logDebug(err)	}
+} catch (err) {
+	logDebug("A JavaScript Error occurred:ACA_AFTER_COND_INTEREST_HOLDER_NEW: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_COND_INTEREST_HOLDER_NEW: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
 
 
 /*------------------------------------------------------------------------------------------------------/
