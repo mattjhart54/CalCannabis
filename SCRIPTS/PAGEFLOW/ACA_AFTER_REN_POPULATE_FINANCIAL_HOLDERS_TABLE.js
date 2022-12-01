@@ -93,18 +93,18 @@ try {
 	if (financialInfo){
 		for (var ii in financialInfo) {
 			row = new Array();
-			row["Type of Interest Holder"] = financialInfo[ii]["Type of Interest Holder"];
-			row["Legal First Name"] = financialInfo[ii]["Legal First Name"];
-			row["Legal Last Name"] = financialInfo[ii]["Legal Last Name"];
-			row["Email Address"] = financialInfo[ii]["Email Address"];
-			row["Contact Phone Number"] = financialInfo[ii]["Contact Phone Number"];
-			row["Type of Government ID"] = financialInfo[ii]["Type of Government ID"];
-			row["Government ID Number"] = financialInfo[ii]["Government ID Number"];
-			row["Legal Business Name"] = financialInfo[ii]["Legal Business Name"];
-			row["Primary Contact Name"] = financialInfo[ii]["Primary Contact Name"];
-			row["Primary Contact Phone Number"] = financialInfo[ii]["Primary Contact Phone Number"];
-			row["Primary Contact Email Address"] = financialInfo[ii]["Primary Contact Email Address"];
-			row["FEIN"] = financialInfo[ii]["FEIN"];
+			row["Type of Interest Holder"] = "" + financialInfo[ii]["Type of Interest Holder"];
+			row["Legal First Name"] = "" + financialInfo[ii]["Legal First Name"];
+			row["Legal Last Name"] = "" + financialInfo[ii]["Legal Last Name"];
+			row["Email Address"] = "" + financialInfo[ii]["Email Address"];
+			row["Contact Phone Number"] = "" + financialInfo[ii]["Contact Phone Number"];
+			row["Type of Government ID"] = "" + financialInfo[ii]["Type of Government ID"];
+			row["Government ID Number"] = "" + financialInfo[ii]["Government ID Number"];
+			row["Legal Business Name"] = "" + financialInfo[ii]["Legal Business Name"];
+			row["Primary Contact Name"] = "" + financialInfo[ii]["Primary Contact Name"];
+			row["Primary Contact Phone Number"] = "" + financialInfo[ii]["Primary Contact Phone Number"];
+			row["Primary Contact Email Address"] = "" + financialInfo[ii]["Primary Contact Email Address"];
+			row["FEIN"] = "" + financialInfo[ii]["FEIN"];
 			multTable.push(row);
 		
 		}
