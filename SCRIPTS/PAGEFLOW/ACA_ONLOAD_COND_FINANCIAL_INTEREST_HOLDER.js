@@ -17,8 +17,8 @@
 |     will no longer be considered a "Master" script and will not be supported in future releases.  If
 |     changes are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; 
-var showDebug = false;
+var showMessage = true; 
+var showDebug = true;
 var preExecute = "PreExecuteForBeforeEvents"
 //var controlString = "";    
 var documentOnly = false;                                                               
@@ -30,7 +30,7 @@ var maxEntries = 99; // Maximum number of std choice entries.  Entries must be L
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
-var cancel = false;
+var cancel = true;
 var startDate = new Date();
 var startTime = startDate.getTime();
 var message =   ""; 
