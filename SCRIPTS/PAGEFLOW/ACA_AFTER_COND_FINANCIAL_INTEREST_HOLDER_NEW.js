@@ -128,10 +128,10 @@ if (capDetailObjResult.getSuccess())
 }
 
 var AInfo = new Array();
-loadAppSpecific4ACA(AInfo);                                                                              
+//loadAppSpecific4ACA(AInfo);                                                                              
 //loadTaskSpecific(AInfo);                                                                                          
 //loadParcelAttributes(AInfo);                                                                                 
-loadASITables4ACA();
+//loadASITables4ACA();
 
 logDebug("<B>EMSE Script Results for " + capIDString + "</B>");
 logDebug("capId = " + capId.getClass());
