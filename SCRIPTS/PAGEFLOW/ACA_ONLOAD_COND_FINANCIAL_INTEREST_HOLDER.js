@@ -58,14 +58,15 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",SA));
-	eval(getScriptText(SAScript,SA));
-}
-else {
-    eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
+	eval(getScriptText(SAScript, SA));
+} else {
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM"));
+eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
 
 if (documentOnly) {
 	doStandardChoiceActions(controlString,false,0);
@@ -131,7 +132,7 @@ var AInfo = new Array();
 loadAppSpecific4ACA(AInfo);                                                                              
 //loadTaskSpecific(AInfo);                                                                                          
 //loadParcelAttributes(AInfo);                                                                                 
-loadASITables4ACA();
+loadASITables4ACA_corrected();
 
 logDebug("<B>EMSE Script Results for " + capIDString + "</B>");
 logDebug("capId = " + capId.getClass());
@@ -225,45 +226,72 @@ else {
 /*------------------------------------------------------------------------------------------------------/
 |  Custom Functions  (Start)
 /------------------------------------------------------------------------------------------------------*/
-function getApplication(appNum) 
-//
-// returns the capId object of an application
-//
-	{
-	var getCapResult = aa.cap.getCapID(appNum);
-	if (getCapResult.getSuccess())
-		return getCapResult.getOutput();
+function loadASITables4ACA_corrected() {
+
+ 	//
+ 	// Loads App Specific tables into their own array of arrays.  Creates global array objects
+	//
+	// Optional parameter, cap ID to load from.  If no CAP Id specified, use the capModel
+	//
+	//corrected issue introduced three years ago.
+
+	var itemCap = capId;
+	if (arguments.length == 1)
+		{
+		itemCap = arguments[0]; // use cap ID specified in args
+		var gm = aa.appSpecificTableScript.getAppSpecificTableGroupModel(itemCap).getOutput();
+		}
 	else
-		{ logDebug( "**ERROR: getting cap id (" + appNum + "): " + getCapResult.getErrorMessage()) }
+		{
+		var gm = cap.getAppSpecificTableGroupModel()
+		}
+
+	var ta = gm.getTablesMap();
+
+
+	var tai = ta.values().iterator();
+
+	while (tai.hasNext())
+	  {
+	  var tsm = tai.next();
+
+	  if (tsm.rowIndex.isEmpty()) continue;  // empty table
+
+	  var tempObject = new Array();
+	  var tempArray = new Array();
+	  var tn = tsm.getTableName();
+
+	  tn = String(tn).replace(/[^a-zA-Z0-9]+/g,'');
+
+	  if (!isNaN(tn.substring(0,1))) tn = "TBL" + tn  // prepend with TBL if it starts with a number
+
+  	  var tsmfldi = tsm.getTableField().iterator();
+	  var tsmcoli = tsm.getColumns().iterator();
+	  var numrows = 1;
+
+	  while (tsmfldi.hasNext())  // cycle through fields
+		{
+		if (!tsmcoli.hasNext())  // cycle through columns
+			{
+
+			var tsmcoli = tsm.getColumns().iterator();
+			tempArray.push(tempObject);  // end of record
+			var tempObject = new Array();  // clear the temp obj
+			numrows++;
+			}
+		var tcol = tsmcoli.next();
+		//var tval = tsmfldi.next().getInputValue();
+		var tval = tsmfldi.next();
+		tempObject[tcol.getColumnName()] = tval;
+		}
+	  tempArray.push(tempObject);  // end of record
+	  var copyStr = "" + tn + " = tempArray";
+	  logDebug("ASI Table Array : " + tn + " (" + numrows + " Rows)");
+	  eval(copyStr);  // move to table name
+	  }
+
 	}
-function loadASITable(e) {
-    var t = capId;
-    2 == arguments.length && (t = arguments[1]);
-    for (var a = aa.appSpecificTableScript.getAppSpecificTableGroupModel(t).getOutput(), r = a.getTablesArray(), s = r.iterator(); s.hasNext(); ) {
-        var n = s.next(),
-        i = n.getTableName();
-        if (i.equals(e)) {
-            if (n.ownRowIndex.isEmpty())
-                return logDebug("Couldn't load ASI Table " + e + " it is empty"), !1;
-            for (var o = new Array, g = new Array, u = n.getTableField().iterator(), c = n.getColumns().iterator(), l = n.getAppSpecificTableModel().getReadonlyField().iterator(), p = 1; u.hasNext(); ) {
-                if (!c.hasNext()) {
-                    var c = n.getColumns().iterator();
-                    g.push(o);
-                    var o = new Array;
-                    p++
-                }
-                var d = c.next(),
-                f = u.next(),
-                m = "N";
-                l.hasNext() && (m = l.next());
-                var C = new asiTableValObj(d.getColumnName(), f, m);
-                o[d.getColumnName()] = C
-            }
-            g.push(o)
-        }
-    }
-    return g
-}
+
 function clearPageSectionData(stepIndex, pageIndex)
 {
 	var capID = capModel.getCapID();
