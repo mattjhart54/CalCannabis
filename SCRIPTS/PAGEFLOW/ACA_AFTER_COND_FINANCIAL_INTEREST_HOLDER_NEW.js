@@ -128,7 +128,7 @@ if (capDetailObjResult.getSuccess())
 }
 
 var AInfo = new Array();
-//loadAppSpecific4ACA(AInfo);                                                                              
+loadAppSpecific4ACA(AInfo);                                                                              
 //loadTaskSpecific(AInfo);                                                                                          
 //loadParcelAttributes(AInfo);                                                                                 
 //loadASITables4ACA();
@@ -190,7 +190,7 @@ var componentAliasNames = new Array("Contact1","AppSpecTable","Parcel","License"
 
 	if(capModel != null)
 	{
-		clearPageSectionData("2","3");
+		//clearPageSectionData("2","3");
 		aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '3', 'PageNumber':'1'}}");
 	}
 } catch (err) { logDebug(err)	}

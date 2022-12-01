@@ -129,7 +129,7 @@ if (capDetailObjResult.getSuccess())
 }
 
 var AInfo = new Array();
-//loadAppSpecific4ACA(AInfo);                                                                              
+loadAppSpecific4ACA(AInfo);                                                                              
 //loadTaskSpecific(AInfo);                                                                                          
 //loadParcelAttributes(AInfo);                                                                                 
 loadASITables4ACA_corrected();
@@ -191,7 +191,7 @@ var componentAliasNames = new Array("Contact1","AppSpecTable","Parcel","License"
 	if(capModel != null)
 	{
 		if (typeof(FINANCIALINTERESTHOLDER) != "object"){
-			clearPageSectionData("2","2");
+			//clearPageSectionData("2","2");
 			aaa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
 		}		
 	}
