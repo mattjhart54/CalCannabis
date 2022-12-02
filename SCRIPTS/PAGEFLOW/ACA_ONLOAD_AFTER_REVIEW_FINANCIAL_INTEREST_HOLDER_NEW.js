@@ -85,7 +85,7 @@ try {
 
 
 
-			aaa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+			aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
 
 
 } catch (err) {
