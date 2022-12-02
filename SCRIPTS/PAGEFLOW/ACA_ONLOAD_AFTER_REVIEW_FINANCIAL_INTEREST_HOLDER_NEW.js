@@ -84,15 +84,9 @@ var capId = cap.getCapID();
 try {
 
 
-var fromReviewPage = aa.env.getValue("fromReviewPage");
 
-	if(cap != null)
-	{
-		if(fromReviewPage == "Y"){
 			aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '3', 'PageNumber':'1'}}");
-		}
 
-	}
 } catch (err) {
 	logDebug("A JavaScript Error occurred:ACA_AFTER_COND_INTEREST_HOLDER_NEW: " + err.message);
 	logDebug(err.stack);
