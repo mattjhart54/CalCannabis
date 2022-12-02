@@ -73,8 +73,8 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
-var AInfo = new Array(); 					// Create array for tokenized variables
-loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
+//var AInfo = new Array(); 					// Create array for tokenized variables
+//loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 //loadASITables4ACA_corrected();
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
@@ -88,9 +88,9 @@ var fromReviewPage = aa.env.getValue("fromReviewPage");
 
 	if(cap != null)
 	{
-		//if(fromReviewPage == "Y"){
-			aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '2', 'PageNumber':'2'}}");
-		//}
+		if(fromReviewPage == "Y"){
+			aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '3', 'PageNumber':'1'}}");
+		}
 
 	}
 } catch (err) {
