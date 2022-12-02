@@ -85,7 +85,7 @@ try {
 
 	var licCapId = getApplication(AInfo['License Number']);
 	financialInfo = loadASITable("FINANCIAL INTEREST HOLDER",licCapId);
-	if (financialInfo){
+	if (!financialInfo){
 		aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
 	}
 
