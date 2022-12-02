@@ -108,8 +108,6 @@ try {
 			multTable.push(row);
 		
 		}
-	}else{
-		aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '2', 'PageNumber':'3'}}");
 	}
 	
 	if (multTable.length > 0){
