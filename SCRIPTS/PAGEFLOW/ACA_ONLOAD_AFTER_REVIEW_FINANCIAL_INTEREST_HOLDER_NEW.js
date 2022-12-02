@@ -84,7 +84,9 @@ loadASITables4ACA_corrected();
 try {
 
 
-	if (typeof(FINANCIALINTERESTHOLDER) == "object"){
+	var licCapId = getApplication(AInfo['License Number']);
+	financialInfo = loadASITable("FINANCIAL INTEREST HOLDER",licCapId);
+	if (financialInfo){
 		aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
 	}
 
