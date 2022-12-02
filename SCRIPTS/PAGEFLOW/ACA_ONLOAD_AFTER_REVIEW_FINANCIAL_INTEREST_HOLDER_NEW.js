@@ -85,7 +85,8 @@ try {
 
 
 
-			aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '3', 'PageNumber':'1'}}");
+			aaa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+
 
 } catch (err) {
 	logDebug("A JavaScript Error occurred:ACA_AFTER_COND_INTEREST_HOLDER_NEW: " + err.message);
