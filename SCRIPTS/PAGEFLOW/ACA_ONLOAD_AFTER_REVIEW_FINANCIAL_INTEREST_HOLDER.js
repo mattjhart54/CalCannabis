@@ -74,7 +74,7 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
 //var AInfo = new Array(); 					// Create array for tokenized variables
-//loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
+loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 loadASITables4ACA_corrected();
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
@@ -83,11 +83,11 @@ loadASITables4ACA_corrected();
 
 try {
 
-
-	if (typeof(FINANCIALINTERESTHOLDER) != "object"){
+	var licCapId = getApplication(AInfo['License Number']);
+	financialInfo = loadASITable("FINANCIAL INTEREST HOLDER",licCapId);
+	if (financialInfo){
 		aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
 	}
-
 
 } catch (err) {
 	logDebug("A JavaScript Error occurred:ACA_AFTER_COND_INTEREST_HOLDER_NEW: " + err.message);
