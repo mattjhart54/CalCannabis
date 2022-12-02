@@ -84,8 +84,9 @@ var capId = cap.getCapID();
 try {
 
 
-
-			aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+	if (typeof(FINANCIALINTERESTHOLDER) == "object"){
+		aa.env.setValue("ReturnData", "{'PageFlow': {'HidePage' : 'Y'}}");
+	}
 
 
 } catch (err) {
