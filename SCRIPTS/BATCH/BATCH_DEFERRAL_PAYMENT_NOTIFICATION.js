@@ -203,9 +203,8 @@ try{
 					pContact = getContactObj(capId,thisContact["contactType"]);
 					conEmail = thisContact["email"];
 					if (conEmail) {						
-						//runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
 						eParams = aa.util.newHashtable();
-						addParameter(eParams,"$$altID$$",defArray[ii].getCustomID());
+						addParameter(eParams,"$$altID$$",altId);
 						addParameter(eParams,"$$businessName$$",thisContact["middleName"]);
 						addParameter(eParams,"$$expDays$$",String(lookAheadDays));
 						addParameter(eParams,"$$defExpDate$$",getAppSpecific(asiField, capId));
