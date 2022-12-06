@@ -86,6 +86,7 @@ var appStatus = getParam("appStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
 var sendEmailNotifications = getParam("sendEmailNotifications");
+var sendEmailToContactTypes = getParam("sendEmailToContactTypes");
 var emailTemplate = getParam("emailTemplate");
 var sysFromEmail = getParam("sysFromEmail");
 var fromDate = dateAdd(null,parseInt(lookAheadDays));
