@@ -230,7 +230,7 @@ try {
 			updateAppStatus("Deferral Approved", "Updated via WTUA:LICENSES/CULTIVATOR/*/Renewal.");
 			//If equity relief is selected, set expiration date
 			if (AInfo['Deferral Approved'] == "CHECKED" && AInfo['Relief Type'] == "Equity Relief"){
-				var nextDueDay = dateAdd(null,180);
+				var nextDueDay = dateAdd(null,179);
 				editAppSpecific("Deferral Expiration Date", nextWorkDay(nextDueDay));
 			}
 		}
