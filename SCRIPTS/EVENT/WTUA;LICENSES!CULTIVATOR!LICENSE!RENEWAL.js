@@ -231,9 +231,7 @@ try {
 			//If equity relief is selected, set expiration date
 			if (AInfo['Deferral Approved'] == "CHECKED" && AInfo['Relief Type'] == "Equity Relief"){
 				var nextDueDay = dateAdd(null,180);
-				if(matches(AInfo["Deferral Expiration Date"],null,"",undefined)) {
-					editAppSpecific("Deferral Expiration Date", nextWorkDay(nextDueDay));
-				}
+				editAppSpecific("Deferral Expiration Date", nextWorkDay(nextDueDay));
 			}
 		}
 	}
