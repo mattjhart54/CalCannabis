@@ -153,6 +153,7 @@ function mainProcess() {
 try{
 	var capFilterType = 0;
 	var capFilterStatus = 0;
+	var capFilterReliefType = 0;
 	var capCount = 0;
  	var capResult = aa.cap.getCapIDsByAppSpecificInfoDateRange(asiGroup, asiField, dFromDate, dToDate);
 	if (capResult.getSuccess()) {
@@ -188,6 +189,15 @@ try{
 			capFilterStatus++
 			continue;
 		}
+		// Check to see if Relief Type equals Equity Relief
+		var reliefType = getAppSpecific("Relief Type", capId);
+		if (reliefType != "Equity Relief"){
+			logDebug("----Ignoring Record Due to Relief Type, " + reliefType + ", " + altId + br);
+			capFilterReliefType++
+			continue;
+		}
+			
+		
 		capCount++;
 		logDebug("----Processing record " + altId + br);
 		
@@ -222,7 +232,8 @@ try{
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
  	logDebug("Ignored due to CAP Status: " + capFilterStatus);
- 	logDebug("Total CAPS processed: " + capCount);
+	logDebug("Ignored due to Relief Type: " + capFilterReliefType);
+	logDebug("Total CAPS processed: " + capCount);
 
 }catch (err){
 	logDebug("ERROR: " + err.message + " In " + batchJobName);
