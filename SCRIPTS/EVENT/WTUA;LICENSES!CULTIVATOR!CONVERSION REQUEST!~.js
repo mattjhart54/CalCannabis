@@ -39,25 +39,45 @@ try {
 		var dFeeAmt = 0
 		var pFeeAmt = 0;
 		var tFeeAmt = 0;
-    
+		var licFeeAmt = 0;
+
 // Access new license fee
-		var licType = AInfo["Proposed License Type"];		
-		if(licType.substring(0,5) == "Large")
-			if(matches(AInfo["Canopy SF-NEW"],null,"",undefined)) 
-				qty = AInfo["Canopy SF"];		   
-			else 
-				qty = AInfo["Canopy SF-NEW"];
-		else
-			qty = 1;
-		var licFeeDesc = licType + " - License Fee";
-		var thisFee = getFeeDefByDesc("LIC_CC_Conversion", licFeeDesc);
+		var licType = AInfo["Proposed License Type"];
+		var feeDesc = licType + " - License Fee";
+		var thisFee = getFeeDefByDesc("LIC_CC_CONVERSION", feeDesc);
 		if(thisFee){
-			licFeeCode = thisFee.feeCode; 
-			logDebug("Lic Fee Code " + licFeeCode);
-			addFee(licFeeCode,"LIC_CC_CONVERSION", "FINAL", parseInt(qty), "N");
+		licFeeCode = thisFee.feeCode;
+			feeSeqNbr = addFee(licFeeCode,"LIC_CC_CONVERSION", "FINAL", 1, "N");
+			licFeeAmt = feeAmount(licFeeCode,"NEW");
 		}else{
 			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Consion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-			logDebug("An error occurred retrieving fee item: " + licFeeDesc);
+			logDebug("An error occurred retrieving fee item: " + feeDesc);
+		}
+		if(licType.substring(0,5) == "Large") {
+			lType = lookup("LIC_CC_LICENSE_TYPE", licType);
+			if(!matches(lType,"", null, undefined)){
+				licTbl = lType.split(";");
+				var base = parseInt(licTbl[3]);
+				feeDesc = licType + " - Per 2,000 sq ft over " + base;
+				logDebug("feeDesc " + feeDesc);
+				thisFee = getFeeDefByDesc("LIC_CC_CONVERSION", feeDesc);
+				overFeeCode = thisFee.feeCode;
+				if(!matches(AInfo["Canopy SF-NEW"], "", null, undefined))
+					var sqft = AInfo["Canopy SF-NEW"];
+				else
+					var sqft = AInfo["Canopy SF"];
+				logDebug("SQ FT " + sqft + " Base " + base);
+				qty = (parseInt(sqft) - base) / 2000;
+				logDebug("qty " + parseInt(qty));
+				if(qty > 0){		
+					if(thisFee){	
+						feeSeqNbr = addFee(overFeeCode,"LIC_CC_CULTIVATOR", "FINAL", parseInt(qty),"N");
+					}else{
+						aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Conversion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+						logDebug("An error occurred retrieving fee item: " + feeDesc);
+					}
+				}
+			}
 		}
     
 // pro rate the fee on the primary license 
@@ -88,7 +108,6 @@ try {
 			capId = aa.cap.getCapID(cId).getOutput();
 			cCap = aa.cap.getCap(capId).getOutput();
 			cStatus = cCap.getCapStatus();
-			logDebug("record " +cId + " status " + cStatus);
 			if(matches(cStatus,"Active","About to Expire","Suspended")) {
 				PInfo = [];
 				loadAppSpecific(PInfo);
@@ -105,7 +124,7 @@ try {
 					dFeeAmt = feeAmt / 365;
 					pFeeAmt = dFeeAmt * days;
 					tFeeAmt = tFeeAmt + pFeeAmt;
-					logDebug("pFeeAmt " + pFeeAmt);
+
 				}
 			}
 		}
@@ -113,6 +132,10 @@ try {
 // Assess the prorated license conversion credit and invoice fees
 		capId = crCapId;
 		licFeeAmt = feeAmount(licFeeCode,"NEW");
+		if(licType.substring(0,5) == "Large") {
+			licFeeAmt = licFeeAmt + feeAmount(overFeeCode,"NEW");
+		}	
+		logDebug("pFeeAmt " + pFeeAmt + " licFeeAmt " + licFeeAmt);
 		if(tFeeAmt > 0 && tFeeAmt < licFeeAmt) {
 			addFee("LIC_CCR_CRD","LIC_CC_CONVERSION", "FINAL", tFeeAmt.toFixed(2), "N");
 			licFeeAmt = licFeeAmt + feeAmount("LIC_CCR_CRD","NEW");
@@ -123,7 +146,7 @@ try {
 			invNbr = invoiceAllFees();
 			updateAppStatus("License Fee Due","Conversion fees due");
 			editAppSpecific("License Fee Due", dateAdd(jsDateToASIDate(new Date),30));
-    
+			
 // Run invoice report and email approval email to DRP		
 			var scriptName = "asyncRunInvoiceParamsRpt";
 			var envParameters = aa.util.newHashMap();
@@ -190,7 +213,7 @@ try {
 //notify processor that converion request has been paid and new license issued		
 			wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
 			for(x in wf) {
-			fTask = wf[x]; 
+				fTask = wf[x]; 
 				taskName=fTask.getTaskDescription();
 				if (taskName == "Conversion Review"){
 				var caseMgr = wf[x].getAssignedStaff().getFirstName()+ " " +wf[x].getAssignedStaff().getLastName();
@@ -204,7 +227,7 @@ try {
 				}
 			}		
 		}
-	}	
+	}			
 }catch(err){
 	logDebug("An error has occurred in ASB:LICENSES/CULTIVATOR/Batch/Conversion: " + err.message);
 	logDebug(err.stack);
