@@ -52,16 +52,36 @@ try{
 			}
 		//4. Assess Renewal Fee
 			voidRemoveAllFees();
-			var feeDesc = pInfo["License Type"] + " - Renewal Fee";
+			licType = pInfo["License Type"];
+			var feeDesc = licType + " - Renewal Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
-				if (matches(AInfo["License Type"],"Large Outdoor","Large Indoor","Large Mixed-Light Tier 1","Large Mixed-Light Tier 2")){
-					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", Number(pInfo["Canopy SF"]), "Y", "N");
-				}else{
-					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+				feeSeqNbr = updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+
+				if(licType.substring(0,5) == "Large") {
+					lType = lookup("LIC_CC_LICENSE_TYPE", licType);
+				if(!matches(lType,"", null, undefined)){
+						licTbl = lType.split(";");
+						var base = parseInt(licTbl[3]);
+						feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
+						logDebug("feeDesc " + feeDesc);
+						thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+						var sqft = pInfo["Canopy SF"];
+						logDebug("SQ FT " + sqft + " Base " + base);
+						qty = (parseInt(sqft) - base) / 2000;
+						logDebug("qty " + parseInt(qty));
+						if(qty > 0){		
+							if(thisFee){	
+								updateFee_Rev(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+							}else{
+								aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+								logDebug("An error occurred retrieving fee item: " + feeDesc);
+							}
+						}	
+					}
 				}
 			}else{
-				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
 			}
 			if(tmpDate < curDate) {
