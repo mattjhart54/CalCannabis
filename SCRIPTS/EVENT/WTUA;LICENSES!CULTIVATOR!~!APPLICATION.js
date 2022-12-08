@@ -504,15 +504,35 @@ try {
 //lwacht: don't run for temporary app 
 try{
 	if(appTypeArray[2]!="Temporary" && wfTask == "Final Review" && matches(wfStatus,"Approved for Annual License","Approved for Provisional License")){
-		var feeDesc = AInfo["License Type"] + " - License Fee";
+		licType = AInfo["License Type"]
+		var feeDesc = licType + " - License Fee";
 		var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 		if(thisFee){
-			if (matches(AInfo["License Type"],"Large Outdoor","Large Indoor","Large Mixed-Light Tier 1","Large Mixed-Light Tier 2")){
-				feeSeqNbr = updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", Number(AInfo["Canopy SF"]), "Y", "N");
-			}else{
-				feeSeqNbr = updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
+			feeSeqNbr = updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
+
+			if(licType.substring(0,5) == "Large") {
+				lType = lookup("LIC_CC_LICENSE_TYPE", licType);
+				if(!matches(lType,"", null, undefined)){
+					licTbl = lType.split(";");
+					var base = parseInt(licTbl[3]);
+					feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
+					logDebug("feeDesc " + feeDesc);
+					thisFee = getFeeDefByDesc("LIC_CC_CONVERSION", feeDesc);
+					var sqft = AInfo["Canopy SF"];
+					logDebug("SQ FT " + sqft + " Base " + base);
+					qty = (parseInt(sqft) - base) / 2000;
+					logDebug("qty " + parseInt(qty));
+					if(qty > 0){		
+						if(thisFee){	
+							updateFee_Rev(thisFee.feeCode,"LIC_CC_CULTIVATOR", "FINAL", 1, "Y", "N");
+						}else{
+							aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Conversion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+							logDebug("An error occurred retrieving fee item: " + feeDesc);
+						}
+					}	
+				}
 			}
-//mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification
+		//mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification
 			var licAltId = capId.getCustomID();
 			var scriptName = "asyncApprovalLetterinvoiceRpt";
 			envParameters = aa.util.newHashMap();
@@ -523,12 +543,12 @@ try{
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail",sysFromEmail);
 			aa.runAsyncScript(scriptName, envParameters);
-//mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification 
+//mhart 031319 story 5914 end
 		}else{
-			aa.print("An error occurred retrieving fee item: " + feeDesc);
-			aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Conversion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+				logDebug("An error occurred retrieving fee item: " + feeDesc);
 		}
-	}
+	}			
 }catch(err){
 	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
 	aa.print(err.stack);
