@@ -72,7 +72,7 @@ try{
 						logDebug("qty " + parseInt(qty));
 						if(qty > 0){		
 							if(thisFee){	
-								updateFee_Rev(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+						l		updateFee_Rev(thisFee.feeCode,"LIC_CC_REN", "FINAL", parseInt(qty), "Y", "N");
 							}else{
 								aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 								logDebug("An error occurred retrieving fee item: " + feeDesc);
