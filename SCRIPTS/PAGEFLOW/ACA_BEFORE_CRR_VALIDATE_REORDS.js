@@ -119,7 +119,7 @@ try {
 					logDebug("convFirstName: " + convFirstName);
 					var convLastName = theRow["DRP Last Name"];
 					var convLegalBusName = theRow["Legal Business Name"];
-					var convLightType = theRow["Lighting Type"];
+					var convLightType = String(theRow["Lighting Type"]);
 					var convLightTypeArray = convLightType.split(" ");
 					var convLicRec = theRow["License Record ID"];
 					convCapId = getApplication(convLicRec);
