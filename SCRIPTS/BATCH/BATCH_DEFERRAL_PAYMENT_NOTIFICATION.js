@@ -215,6 +215,8 @@ try{
 					if (conEmail) {						
 						eParams = aa.util.newHashtable();
 						addParameter(eParams,"$$altID$$",altId);
+						addParameter(eParams,"$$firstName$$",thisContact["firstName"]);
+						addParameter(eParams,"$$lastName$$",thisContact["lastName"]);
 						addParameter(eParams,"$$businessName$$",thisContact["middleName"]);
 						addParameter(eParams,"$$expDays$$",String(lookAheadDays));
 						addParameter(eParams,"$$defExpDate$$",getAppSpecific(asiField, capId));
