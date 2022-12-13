@@ -51,7 +51,10 @@ try {
 			editAppSpecific("Generator Update",PInfo["Generator"]);
 			editAppSpecific("Generator Under 50 HP",PInfo["Generator Under 50 HP"]);
 			editAppSpecific("G50 Update",PInfo["Generator Under 50 HP"]);
-			editAppSpecific("Other",PInfo["Other"]);
+			useAppSpecificGroupName = true; 
+			var powerOther = getAppSpecific("POWER SOURCE.Other",primaryRecId);
+			editAppSpecific("POWER SOURCE.Other",powerOther);
+			useAppSpecificGroupName = false;
 			editAppSpecific("Other Update",PInfo["Other"]);
 			editAppSpecific("Other Source Description",PInfo["Other Source Description"]);
 			editAppSpecific("Medium Validation",PInfo["Medium Validation"]);
@@ -100,10 +103,12 @@ try {
 			editAppSpecific("Entrances and Exits to the Premises?", PInfo["Entrances and Exits to the Premises?"]);
 			editAppSpecific("Does diagram clearly define and label premises from property?", PInfo["Does diagram clearly define and label premises from property?"]);
 			editAppSpecific("All roads labeled?", PInfo["All roads labeled?"]);
+			editAppSpecific("Other Licenses and Land Uses Identified Clearly?", PInfo["Other Licenses and Land Uses Identified Clearly?"]);
 			editAppSpecific("All water crossings labeled?", PInfo["All water crossings labeled?"]);
 			editAppSpecific("All water sources identified and labeled for beneficial use?", PInfo["All water sources identified and labeled for beneficial use?"]);
 			editAppSpecific("Location and coordinates of all sources of water used?", PInfo["Location and coordinates of all sources of water used?"]);
 			editAppSpecific("Location, coordinates, type, and capacity of each storage unit?", PInfo["Location, coordinates, type, and capacity of each storage unit?"]);
+			editAppSpecific("Total volume of water storage on site", PInfo["Total volume of water storage on site"]);
 			editAppSpecific("Water Distribution Lines?", PInfo["Water Distribution Lines?"]);
 			editAppSpecific("Does the diagram contain highlighting?", PInfo["Does the diagram contain highlighting?"]);
 			editAppSpecific("Is the diagram to scale?", PInfo["Is the diagram to scale?"]);
@@ -142,7 +147,10 @@ try {
 			editAppSpecific("Self-Haul to a Recycling Center That Meets Regulations Requirements-NEW", PInfo["Self-Haul to a Recycling Center That Meets Regulations Requirements"]);
 			editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
 			editAppSpecific("Reintroduction of cannabis waste back into Agricultural operations-NEW", PInfo["Reintroduction of cannabis waste back into Agricultural operations"]);
-			editAppSpecific("Other", PInfo["Other"]);
+			useAppSpecificGroupName = true; 
+			var wasteOther = getAppSpecific("WASTE MANAGEMENT.Other",primaryRecId);
+			editAppSpecific("WASTE MANAGEMENT.Other", wasteOther);
+			useAppSpecificGroupName = false;
 			editAppSpecific("Other-NEW", PInfo["Other"]);
 			editAppSpecific("Other Waste Management Method", PInfo["Other Waste Management Method"]);
 			editAppSpecific("Envirostor Review Status", PInfo["Envirostor Review Status"]);
