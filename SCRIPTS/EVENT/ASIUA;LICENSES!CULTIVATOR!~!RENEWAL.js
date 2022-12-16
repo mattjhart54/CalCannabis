@@ -19,7 +19,8 @@ try{
 			updateAppStatus("Submitted", "Updated via ASIUA:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 	}
-    if(AInfo["Deferral Approved"] == "CHECKED") {
+    //Removing as per Story 7285
+	/*if(AInfo["Deferral Approved"] == "CHECKED") {
     	var pType = "Application Condition";
     	var pDesc = "Application Hold";
     	var pStatus = "Applied";
@@ -30,7 +31,7 @@ try{
     	else{
     		addStdConditionEffDate(pType,pDesc,pEffDate);
     	}
-    }
+    }*/
 	if (AInfo['Waive Late Fee'] == "CHECKED"){
 		var feeDesc = AInfo["License Type"] + " - Late Fee";
 		var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
