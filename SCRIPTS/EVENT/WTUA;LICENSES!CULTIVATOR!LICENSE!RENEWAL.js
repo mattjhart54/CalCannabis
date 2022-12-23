@@ -228,11 +228,11 @@ try {
 				}
 			}
 			updateAppStatus("Deferral Approved", "Updated via WTUA:LICENSES/CULTIVATOR/*/Renewal.");
-			//If equity relief is selected, set expiration date
-			if (AInfo['Deferral Approved'] == "CHECKED" && AInfo['Relief Type'] == "Equity Relief"){
-				var nextDueDay = dateAdd(null,179);
-				editAppSpecific("Deferral Expiration Date", nextWorkDay(nextDueDay));
-			}
+	//If equity relief is selected, set expiration date
+	//		if (AInfo['Deferral Approved'] == "CHECKED" && AInfo['Relief Type'] == "Equity Relief"){
+	//			var nextDueDay = dateAdd(null,179);
+	//			editAppSpecific("Deferral Expiration Date", nextWorkDay(nextDueDay));
+	//		}
 		}
 	}
 	//Removing as per 6355, 6313, 6314, 6315
