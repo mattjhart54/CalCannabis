@@ -57,7 +57,7 @@ try{
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var templateName = "" + aa.env.getValue("templateName")
 	var reportName = "CDFA_INVOICE_PARAMS";
-	var fromEmail = "calcannabislicensing@cdfa.ca.gov"
+	var fromEmail = "noreply@cannabis.ca.gov"
 	var br = "<BR>";
 	var eTxt = "";
 	var sDate = new Date();
