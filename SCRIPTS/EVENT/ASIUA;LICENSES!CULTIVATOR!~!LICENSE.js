@@ -1,5 +1,5 @@
 try {
-	var appNmae = cap.getSpecialText();
+	var appName = cap.getSpecialText();
 	var issuedType = AInfo['License Issued Type'];
 	var cultType = AInfo['Cultivator Type'];
 	var licType =  AInfo['License Type'];
