@@ -1,5 +1,6 @@
 try {
 	logDebug("appName: " + cap.getSpecialText() + " licType: " + AInfo['License Type']);
+	editAppName(getAppSpecific("License Type Issued",capId) + " " + getAppSpecific("Cultivator Type",capId) + " - " + getAppSpecific("License Type",capId),capId);
 	if(LAKEANDSTREAMBEDALTERATION.length>0) {
 		var tblLSA = loadASITable("LAKE AND STREAMBED ALTERATION");
 		var addRow = false;
