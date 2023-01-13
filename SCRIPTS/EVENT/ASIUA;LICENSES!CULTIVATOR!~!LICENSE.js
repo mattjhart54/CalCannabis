@@ -1,11 +1,11 @@
 try {
+	//7332 - Update appName with License Type Change
 	var appName = cap.getSpecialText();
 	var issuedType = AInfo['License Issued Type'];
 	var cultType = AInfo['Cultivator Type'];
 	var licType =  AInfo['License Type'];
 	var removeText = issuedType + " " + cultType;
 	var curLicType = String(appName).replace(removeText,"");
-	logDebug("currLicType: " + curLicType + " licType: " +licType + typeof(curLicType));
 	if (curLicType != licType){
 		editAppName(issuedType + " " + cultType + " - " + licType);
 		addToCat(capId);
