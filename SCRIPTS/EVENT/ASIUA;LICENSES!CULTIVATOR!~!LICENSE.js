@@ -1,6 +1,15 @@
 try {
-	logDebug("appName: " + cap.getSpecialText() + " licType: " + AInfo['License Type']);
-	editAppName(getAppSpecific("License Type Issued",capId) + " " + getAppSpecific("Cultivator Type",capId) + " - " + getAppSpecific("License Type",capId),capId);
+	var appNmae = cap.getSpecialText();
+	var issuedType = AInfo['License Issued Type'];
+	var cultType = AInfo['Cultivator Type'];
+	var licType =  AInfo['License Type'];
+	var removeText = issuedType + " " + cultType;
+	var curLicType = String(appName).replace(removeText,"");
+	logDebug("currLicType: " + curLicType + " licType: " +licType + typeof(curLicType));
+	if (curLicType != licType){
+		editAppName(issuedType + " " + cultType + " - " + licType);
+		addToCat(capId);
+	}
 	if(LAKEANDSTREAMBEDALTERATION.length>0) {
 		var tblLSA = loadASITable("LAKE AND STREAMBED ALTERATION");
 		var addRow = false;
