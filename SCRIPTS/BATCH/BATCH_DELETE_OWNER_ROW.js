@@ -132,5 +132,8 @@ function mainProcess() {
 			logDebug("Deleted " + firstName + " " + lastName + " from the Owners Table of Record " + altID + " ROW: " + numRows);
 		}
 	}
+	if (numRows = 0){
+		logDebug("Could not find a table value that fits the provided criteria");
+	}
 
 }
