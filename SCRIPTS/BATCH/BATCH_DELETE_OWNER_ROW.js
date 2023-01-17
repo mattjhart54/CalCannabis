@@ -61,10 +61,10 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 
-var altID = getParam("recordNumber");							// Hardcoded dates.   Use for testing only
-var eMail = getParam("emailAddress");								// ""
-var firstName = getParam("emailAddress");
-var lastName = getParam("emailAddress");
+var altID = getParam("recordNumber");							
+var firstName = getParam("firstName");
+var lastName = getParam("lastName");
+var eMail = getParam("emailAddress");
 
 
 /*----------------------------------------------------------------------------------------------------/
