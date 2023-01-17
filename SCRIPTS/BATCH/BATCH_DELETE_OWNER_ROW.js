@@ -117,7 +117,9 @@ if (emailAddress.length)
 /*------------------------------------------------------------------------------------------------------/
 | <===========END=Main=Loop================>
 /-----------------------------------------------------------------------------------------------------*/
-function mainProcess() {	
+function mainProcess() {
+
+var numRows = 0;	
 
 capId = getApplication(altID);
 var tblOwner = loadASITable("OWNERS",capId);
@@ -126,6 +128,8 @@ for (row in tblOwner){
 	if(tblODefic[row]["First Name"]==firstName && tblODefic[row]["Last Name"]==lastName && tblODefic[row]["Email Address"]==eMail){
 		var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
 		deletedAppSpecificTableInfors("OWNERS", capIDModel, row);
+		numRows++
+		logDebug("Deleted " + firstName + " " + lastName + " from the Owners Table of Record " + altID + " ROW: " + numRows);
 	}
 }
 
