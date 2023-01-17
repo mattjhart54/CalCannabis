@@ -19,11 +19,10 @@ br = "<br>";
 /------------------------------------------------------------------------------------------------------*/
 SCRIPT_VERSION = 2.0
 
-eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
-eval(getScriptText("INCLUDES_CUSTOM"));
-eval(getScriptText("INCLUDES_ACCELA_GLOBALS"));
+eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 eval(getScriptText("INCLUDES_BATCH"));
-
+eval(getMasterScriptText("INCLUDES_CUSTOM"));
+eval(getScriptText("INCLUDES_ACCELA_GLOBALS"));
 
 function getScriptText(vScriptName) {
 vScriptName = vScriptName.toUpperCase();
