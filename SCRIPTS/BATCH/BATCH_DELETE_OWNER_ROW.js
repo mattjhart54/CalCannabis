@@ -25,10 +25,17 @@ eval(getMasterScriptText("INCLUDES_CUSTOM"));
 eval(getScriptText("INCLUDES_ACCELA_GLOBALS"));
 
 function getScriptText(vScriptName) {
-vScriptName = vScriptName.toUpperCase();
-var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
-var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(), vScriptName, "ADMIN");
-return emseScript.getScriptText() + "";
+	vScriptName = vScriptName.toUpperCase();
+	var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
+	var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(), vScriptName, "ADMIN");
+	return emseScript.getScriptText() + "";
+}
+
+function getMasterScriptText(vScriptName) {
+    vScriptName = vScriptName.toUpperCase();
+    var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
+    var emseScript = emseBiz.getMasterScript(aa.getServiceProviderCode(), vScriptName);
+    return emseScript.getScriptText() + "";
 }
 
 /*------------------------------------------------------------------------------------------------------/
