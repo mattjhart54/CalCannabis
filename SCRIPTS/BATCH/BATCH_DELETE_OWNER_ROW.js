@@ -124,7 +124,7 @@ function mainProcess() {
 				var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
 				deletedAppSpecificTableInfors("OWNERS", capIDModel, row);
 				numRows++
-				logDebug("Deleted " + firstName + " " + lastName + " from the Owners Table of Record " + altID + " ROW: " + numRows);
+				logDebug("Deleted " + firstName + " " + lastName + " from the Owners Table of Record " + altID);
 			}
 		}
 		if (numRows = 0){
