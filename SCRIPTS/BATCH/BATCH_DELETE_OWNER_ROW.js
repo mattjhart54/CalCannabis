@@ -114,7 +114,7 @@ function mainProcess() {
 		var tblOwner = loadASITable("OWNERS",capId);
 
 		for (row in tblOwner){
-			if(tblODefic[row]["First Name"]==firstName && tblODefic[row]["Last Name"]==lastName && tblODefic[row]["Email Address"]==ownerEmail){
+			if(tblOwner[row]["First Name"]==firstName && tblOwner[row]["Last Name"]==lastName && tblOwner[row]["Email Address"]==ownerEmail){
 				var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
 				deletedAppSpecificTableInfors("OWNERS", capIDModel, row);
 				numRows++
