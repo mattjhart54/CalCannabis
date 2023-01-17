@@ -62,9 +62,10 @@ else
 /------------------------------------------------------------------------------------------------------*/
 
 var altID = getParam("recordNumber");							
-var firstName = getParam("firstName");
-var lastName = getParam("lastName");
-var eMail = getParam("emailAddress");
+var firstName = getParam("ownerFirstName");
+var lastName = getParam("ownerLastName");
+var ownerEmail = getParam("ownerEmail");
+var emailAddress = getParam("emailAddress");
 
 
 /*----------------------------------------------------------------------------------------------------/
@@ -118,22 +119,27 @@ if (emailAddress.length)
 | <===========END=Main=Loop================>
 /-----------------------------------------------------------------------------------------------------*/
 function mainProcess() {
+	
+	try{
+		var numRows = 0;	
 
-	var numRows = 0;	
+		capId = getApplication(altID);
+		var tblOwner = loadASITable("OWNERS",capId);
 
-	capId = getApplication(altID);
-	var tblOwner = loadASITable("OWNERS",capId);
-
-	for (row in tblOwner){
-		if(tblODefic[row]["First Name"]==firstName && tblODefic[row]["Last Name"]==lastName && tblODefic[row]["Email Address"]==eMail){
-			var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
-			deletedAppSpecificTableInfors("OWNERS", capIDModel, row);
-			numRows++
-			logDebug("Deleted " + firstName + " " + lastName + " from the Owners Table of Record " + altID + " ROW: " + numRows);
+		for (row in tblOwner){
+			if(tblODefic[row]["First Name"]==firstName && tblODefic[row]["Last Name"]==lastName && tblODefic[row]["Email Address"]==ownerEmail){
+				var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
+				deletedAppSpecificTableInfors("OWNERS", capIDModel, row);
+				numRows++
+				logDebug("Deleted " + firstName + " " + lastName + " from the Owners Table of Record " + altID + " ROW: " + numRows);
+			}
 		}
-	}
-	if (numRows = 0){
-		logDebug("Could not find a table value that fits the provided criteria");
+		if (numRows = 0){
+			logDebug("Could not find a table value that fits the provided criteria");
+		}
+	}catch (err){
+		logDebug("ERROR: " + err.message + " In " + batchJobName);
+		logDebug("Stack: " + err.stack);
 	}
 
 }
