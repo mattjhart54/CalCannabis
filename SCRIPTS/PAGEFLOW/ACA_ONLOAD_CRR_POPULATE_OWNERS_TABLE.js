@@ -92,13 +92,14 @@ try {
 	ownerInfo = loadASITable("OWNERS",licCapId);
 	if (ownerInfo){
 		for (var ii in ownerInfo) {
-			row = new Array();
-			row["First Name"] = ownerInfo[ii]["First Name"];
-			row["Last Name"] = ownerInfo[ii]["Last Name"];
-			row["Email Address"] = ownerInfo[ii]["Email Address"];
-			row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
-			multTable.push(row);
-		
+			if(ownerInfo[ii]["Status"] != "Deleted") {
+				row = new Array();
+				row["First Name"] = ownerInfo[ii]["First Name"];
+				row["Last Name"] = ownerInfo[ii]["Last Name"];
+				row["Email Address"] = ownerInfo[ii]["Email Address"];
+				row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
+				multTable.push(row);
+			}
 		}
 	}
 	
