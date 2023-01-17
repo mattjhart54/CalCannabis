@@ -184,7 +184,7 @@ try {
 			editAppSpecific("APN Matches Premises-LSA", PInfo["APN Matches Premises-LSA"]);
 			editAppSpecific("APN Matches Adjacent Parcel", PInfo["APN Matches Adjacent Parcel"]);
 			editAppSpecific("Notes", PInfo["Notes"]);
-			copyASITablesCDFA(primaryRecId,capId,"DEFICIENCIES","DENIAL REASONS","CANNABIS FINANCIAL INTEREST");
+			copyASITablesCDFA(primaryRecId,capId,"DEFICIENCIES","DENIAL REASONS","CANNABIS FINANCIAL INTEREST","OWNERS");
 			for(x in SOURCEOFWATERSUPPLY) {
 				if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Groundwater Well" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
 					editAppSpecific("Groundwater Well Review Status", "Incomplete");
@@ -202,6 +202,26 @@ try {
 				if(SOURCEOFWATERSUPPLY[x]["Type of Water Supply"] == "Diversion from Waterbody" && matches(SOURCEOFWATERSUPPLY[x]["Status"], "Delete","Modify", "New")) {
 					editAppSpecific("Water Rights Review Status", "Incomplete");
 				}
+			}
+		//  Load only active owners in the owner table			
+			var multTable = new Array(); 
+			ownerInfo = loadASITable("OWNERS",primaryRecId);
+			if (ownerInfo){
+				for (var ii in ownerInfo) {
+					if(ownerInfo[ii]["Status"] != "Deleted") {
+						row = new Array();
+						row["First Name"] = ownerInfo[ii]["First Name"];
+						row["Last Name"] = ownerInfo[ii]["Last Name"];
+						row["Email Address"] = ownerInfo[ii]["Email Address"];
+						row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
+						multTable.push(row);
+					}
+				}
+			}
+	
+			if (multTable.length > 0){
+				removeASITable("OWNERS");
+				addASITable("OWNERS", multTable);
 			}	
 			
 		//  Send email notification to DRP
