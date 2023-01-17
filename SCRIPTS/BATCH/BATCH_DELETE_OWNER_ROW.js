@@ -125,7 +125,7 @@ var tblOwner = loadASITable("OWNERS",capId);
 for (row in tblOwner){
 	if(tblODefic[row]["First Name"]==firstName && tblODefic[row]["Last Name"]==lastName && tblODefic[row]["Email Address"]==eMail){
 		var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
-		deletedAppSpecificTableInfors("PERMIT INFO", capIDModel, row);
+		deletedAppSpecificTableInfors("OWNERS", capIDModel, row);
 	}
 }
 
