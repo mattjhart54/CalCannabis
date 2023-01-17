@@ -83,19 +83,6 @@ acaSite = acaSite.substr(0,acaSite.toUpperCase().indexOf("/ADMIN"));
 
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 
-var AInfo = new Array();
-
-if (appGroup == "*")
-	appGroup = "";
-
-if (appTypeType == "*")
-	appTypeType = "";
-
-if (appSubtype == "*")
-	appSubtype = "";
-
-if (appCategory == "*")
-	appCategory = "";
 
 //logDebug("Historical Date Check: " + dateCheck);
 
