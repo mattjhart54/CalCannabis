@@ -122,7 +122,15 @@ function mainProcess() {
 		for (row in tblOwner){
 			if(tblOwner[row]["First Name"]==firstName && tblOwner[row]["Last Name"]==lastName && tblOwner[row]["Email Address"]==ownerEmail){
 				var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
-				deletedAppSpecificTableInfors("OWNERS", capIDModel, row);
+				var asitTableScriptModel = aa.appSpecificTableScript.createTableScriptModel();
+				var asitTableModel = asitTableScriptModel.getTabelModel();
+				var rowList = asitTableModel.getRows();
+				asitTableModel.setSubGroup("OWNERS");
+				var rowScriptModel = aa.appSpecificTableScript.createRowScriptModel();
+				var rowModel = rowScriptModel.getRow();
+				rowModel.setId(row);
+				rowList.add(rowModel);
+				return aa.appSpecificTableScript.deletedAppSpecificTableInfors(capIDModel, asitTableModel);
 				numRows++
 				logDebug("Deleted " + firstName + " " + lastName + " from the Owners Table of Record " + altID);
 			}
