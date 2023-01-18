@@ -68,16 +68,16 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters
-
-aa.env.setValue("lookAheadDays", "-1");
-aa.env.setValue("daySpan", "0");
+aa.env.setValue("lookAheadDays", "0");
+aa.env.setValue("daySpan", "10");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
-aa.env.setValue("asiField", "Appeal Expiry Date");
-aa.env.setValue("asiGroup", "INTERNAL");
-aa.env.setValue("appStatus", "Denied - Pending Appeal");
-aa.env.setValue("newAppStatus", "Denied");
+aa.env.setValue("asiField", "Deferral Expiration Date");
+aa.env.setValue("asiGroup", "RENEWAL INFORMATION");
+aa.env.setValue("appStatus", "Deferral Approved");
+aa.env.setValue("sendEmailNotifications", "Y");
 aa.env.setValue("sysFromEmail", "noreply_accela@cdfa.ca.gov");
-aa.env.setValue("setNonEmailPrefix", "Denials");
+aa.env.setValue("sendEmailToContactTypes", "Business");
+aa.env.setValue("emailTemplate", "LCA_RENEWAL_DEFERRAL_PAYMENT_NOTICE");
 */
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
@@ -214,6 +214,9 @@ try{
 					conEmail = thisContact["email"];
 					if (conEmail) {						
 						eParams = aa.util.newHashtable();
+						if(appTypeArray[3] == "Renewal") {
+							altId = getAppSpecific("License Number")
+						}
 						addParameter(eParams,"$$altID$$",altId);
 						addParameter(eParams,"$$firstName$$",thisContact["firstName"]);
 						addParameter(eParams,"$$lastName$$",thisContact["lastName"]);
