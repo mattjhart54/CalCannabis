@@ -128,11 +128,10 @@ function mainProcess() {
 					row["Email Address"] = ownerInfo[ii]["Email Address"];
 					row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
 					multTable.push(row);
+				}else{
+					logDebug("Could not find a table value that fits the provided criteria");
 				}
-			}else{
-				logDebug("Could not find a table value that fits the provided criteria");
-			}
-				
+			}				
 		}
 		
 		removeASITable("OWNERS");
