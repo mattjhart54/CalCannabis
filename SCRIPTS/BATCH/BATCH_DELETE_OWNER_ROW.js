@@ -114,30 +114,30 @@ if (emailAddress.length)
 function mainProcess() {
 	
 	try{
-		var numRows = 0;	
-
+	
 		capId = getApplication(altID);
-		var tblOwner = loadASITable("OWNERS",capId);
+		var multTable = new Array(); 
 
-		for (row in tblOwner){
-			if(tblOwner[row]["First Name"]==firstName && tblOwner[row]["Last Name"]==lastName && tblOwner[row]["Email Address"]==ownerEmail){
-				var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
-				var asitTableScriptModel = aa.appSpecificTableScript.createTableScriptModel();
-				var asitTableModel = asitTableScriptModel.getTabelModel();
-				var rowList = asitTableModel.getRows();
-				asitTableModel.setSubGroup("OWNERS");
-				var rowScriptModel = aa.appSpecificTableScript.createRowScriptModel();
-				var rowModel = rowScriptModel.getRow();
-				rowModel.setId(row);
-				rowList.add(rowModel);
-				return aa.appSpecificTableScript.deletedAppSpecificTableInfors(capIDModel, asitTableModel);
-				numRows++
-				logDebug("Deleted " + firstName + " " + lastName + " from the Owners Table of Record " + altID);
+		ownerInfo = loadASITable("OWNERS",capId);
+		if (ownerInfo){
+			for (var ii in ownerInfo) {
+				if(ownerInfo[ii]["First Name"] != firstName && ownerInfo[ii]["Last Name"] != lastName && ownerInfo[ii]["Email Address"] != ownerEmail) {
+					row = new Array();
+					row["First Name"] = ownerInfo[ii]["First Name"];
+					row["Last Name"] = ownerInfo[ii]["Last Name"];
+					row["Email Address"] = ownerInfo[ii]["Email Address"];
+					row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
+					multTable.push(row);
+				}
+			}else{
+				logDebug("Could not find a table value that fits the provided criteria");
 			}
+				
 		}
-		if (numRows = 0){
-			logDebug("Could not find a table value that fits the provided criteria");
-		}
+		
+		removeASITable("OWNERS");
+		addASITable("OWNERS", multTable,capId);
+
 	}catch (err){
 		logDebug("ERROR: " + err.message + " In " + batchJobName);
 		logDebug("Stack: " + err.stack);
