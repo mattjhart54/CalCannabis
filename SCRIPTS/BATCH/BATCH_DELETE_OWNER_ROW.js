@@ -121,21 +121,21 @@ function mainProcess() {
 		ownerInfo = loadASITable("OWNERS",capId);
 		if (ownerInfo){
 			for (var ii in ownerInfo) {
-				if(ownerInfo[ii]["First Name"] != firstName && ownerInfo[ii]["Last Name"] != lastName && ownerInfo[ii]["Email Address"] != ownerEmail) {
+				if(String(ownerInfo[ii]["First Name"] + ownerInfo[ii]["Last Name"] + ownerInfo[ii]["Email Address"]) != firstName + lastName + ownerEmail) {
 					row = new Array();
 					row["First Name"] = ownerInfo[ii]["First Name"];
 					row["Last Name"] = ownerInfo[ii]["Last Name"];
 					row["Email Address"] = ownerInfo[ii]["Email Address"];
 					row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
 					multTable.push(row);
-				}else{
-					logDebug("Could not find a table value that fits the provided criteria");
 				}
 			}				
 		}
 		
-		removeASITable("OWNERS");
-		addASITable("OWNERS", multTable,capId);
+		if (multTable.length > 0){
+			removeASITable("OWNERS");
+			addASITable("OWNERS", multTable,capId);
+		}
 
 	}catch (err){
 		logDebug("ERROR: " + err.message + " In " + batchJobName);
