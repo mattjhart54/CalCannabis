@@ -114,27 +114,37 @@ if (emailAddress.length)
 function mainProcess() {
 	
 	try{
-	
-		capId = getApplication(altID);
-		var multTable = new Array(); 
-
-		ownerInfo = loadASITable("OWNERS",capId);
-		if (ownerInfo){
-			for (var ii in ownerInfo) {
-				if(String(ownerInfo[ii]["First Name"] + ownerInfo[ii]["Last Name"] + ownerInfo[ii]["Email Address"]) != firstName + lastName + ownerEmail) {
-					row = new Array();
-					row["First Name"] = ownerInfo[ii]["First Name"];
-					row["Last Name"] = ownerInfo[ii]["Last Name"];
-					row["Email Address"] = ownerInfo[ii]["Email Address"];
-					row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
-					multTable.push(row);
-				}
-			}				
-		}
 		
-		if (multTable.length > 0){
-			removeASITable("OWNERS");
-			addASITable("OWNERS", multTable,capId);
+		if (String(altID.substr(0,3)) == "LCR"){
+			capId = getApplication(altID);
+			var multTable = new Array(); 
+			var lineFound = false;
+
+			ownerInfo = loadASITable("OWNERS",capId);
+			if (ownerInfo){
+				for (var ii in ownerInfo) {
+					if(String(ownerInfo[ii]["First Name"] + ownerInfo[ii]["Last Name"] + ownerInfo[ii]["Email Address"]) != firstName + lastName + ownerEmail) {
+						row = new Array();
+						row["First Name"] = ownerInfo[ii]["First Name"];
+						row["Last Name"] = ownerInfo[ii]["Last Name"];
+						row["Email Address"] = ownerInfo[ii]["Email Address"];
+						row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
+						multTable.push(row);
+					}else{
+						lineFound = true;
+					}
+				}				
+			}
+			if (lineFound){
+				if (multTable.length > 0){
+					removeASITable("OWNERS");
+					addASITable("OWNERS", multTable,capId);
+				}
+			}else{
+				logDebug("Defined Criteria not found in the indicated record");
+			}
+		}else{
+			logDebug("Batch must be run against a License Conversion Record");
 		}
 
 	}catch (err){
