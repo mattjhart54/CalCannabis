@@ -557,7 +557,7 @@ try{
 
 //jshear 01302023 story 7315
 try{
-	if(wfTask == "Application Disposition" && matches(wfStatus,"Provisional License Issued","License Issued") {
+	if(wfTask == "Application Disposition" && matches(wfStatus,"Provisional License Issued","License Issued")) {
 		if (AInfo['Deferral Approved'] == "CHECKED"){
 			editAppSpecific("Deferral Expiration Date",nextWorkDay(dateAdd(null,179)));
 		}
