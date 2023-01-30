@@ -50,7 +50,7 @@ try{
 	var need_wastePlan = false;
 	var need_pestPlan = false;
 	var need_lightDiagram = false;	
-	var need_propertyDiagram = false;
+	//var need_propertyDiagram = false;
 	//application documents
 	var conditionType = "License Required Documents";
 	var businessHOO = {condition : "Business - Hours of Operation", document : "Business - Hours of Operation"};
@@ -70,7 +70,7 @@ try{
 	var enviroStor = {condition : "Premises - EnviroStor Hazardous Materials Search", document : "Premises - EnviroStor Hazardous Materials Search"};
 	//mhart 180411 user story 5353 new doc types	
 	//var premiseDiagram = {condition : "Cultivation Plan - Property Diagram and Detailed Premises Diagram", document : "Cultivation Plan - Property Diagram and Detailed Premises Diagram"};
-	var propertyDiagram = {condition : "Cultivation Plan - Property Diagram", document : "Cultivation Plan - Property Diagram"};
+	//var propertyDiagram = {condition : "Cultivation Plan - Property Diagram", document : "Cultivation Plan - Property Diagram"};
 	//lwacht: 180502: story 5445: changing condition name
 	var detailPremises = {condition : "Cultivation Plan - Detailed Premises", document : "Cultivation Plan - Detailed Premises"};
 	//hwacht: 180529: story 5445: THIS STORY SUPERCEDES 5353
@@ -166,7 +166,7 @@ try{
 				"Specialty Indoor","Specialty Mixed-Light Tier 1","Specialty Mixed-Light Tier 2","Small Indoor","Small Mixed-Light Tier 1","Small Mixed-Light Tier 2",
 				"Medium Indoor","Medium Mixed-Light Tier 1","Medium Mixed-Light Tier 2","Large Indoor","Large Mixed-Light Tier 1","Large Mixed-Light Tier 2")) {
 //mhart 180411 user story 5353 new doc types				
-			need_propertyDiagram = true;
+			//need_propertyDiagram = true;
 			need_detailPremises = true;	
 //mhart 180411 user story 5353 end			
 			need_wastePlan = true;
@@ -174,7 +174,7 @@ try{
 			need_lightDiagram = true;		}
 		if(matches(AInfo["License Type"],"Specialty Cottage Outdoor","Specialty Outdoor","Small Outdoor","Medium Outdoor","Nursery","Large Outdoor")) {
 //mhart 180411 user story 5353 new doc types		
-			need_propertyDiagram = true;
+			//need_propertyDiagram = true;
 			need_detailPremises = true;
 //mhart 180411 user story 5353 end			
 			need_wastePlan = true;
@@ -182,7 +182,7 @@ try{
 		}
 		if(AInfo["License Type"] =="Processor") {
 //mhart 180411 user story 5353 new doc types		
-			need_propertyDiagram = true;
+			//need_propertyDiagram = true;
 			need_detailPremises = true;
 //mhart 180411 user story 5353 end			
 			need_wastePlan = true;
@@ -203,13 +203,14 @@ try{
 				removeCapCondition(conditionType, detailPremises.condition);
 			}
 		}
+		/* user story 7345 remove prop diagram
 		if(need_propertyDiagram){
 			arrReqdDocs_App.push(propertyDiagram);
 		}else{
 			if(appHasCondition(conditionType, null, propertyDiagram.condition, null)){
 				removeCapCondition(conditionType, propertyDiagram.condition);
 			}
-		}
+		}*/
 //mhart 180411 user story 5353 end		
 		if(need_pestPlan){
 			arrReqdDocs_App.push(pestPlan);
