@@ -550,7 +550,21 @@ try{
 		}
 	}			
 }catch(err){
-	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
 	aa.print(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
+
+//jshear 01302023 story 7315
+try{
+	if(wfTask == "Application Disposition" && matches(wfStatus,"Provisional License Issued","License Issued") {
+		if (AInfo['Deferral Approved'] == "CHECKED"){
+			editAppSpecific("Deferral Expiration Date",nextWorkDay(dateAdd(null,179)));
+		}
+	}	
+			
+	}catch(err){
+	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Application Set Deferral Expiration Date: " + err.message);
+	aa.print(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/*/Application: Application Set Deferral Expiration Date: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }

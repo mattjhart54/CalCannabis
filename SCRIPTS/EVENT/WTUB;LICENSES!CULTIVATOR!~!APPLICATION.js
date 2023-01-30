@@ -200,9 +200,12 @@ try{
 // ees 20190215 US 5885: add Provisional License Issued status to prevent issuance w/o payment
 try{
 	if("Application Disposition".equals(wfTask) && ("License Issued".equals(wfStatus) || "Provisional License Issued".equals(wfStatus))){
-		cancel=true;
-		showMessage=true;
-		comment("The license can only be issued upon payment of fees.");
+		//jshear 01302023 story 7315
+		if (AInfo['Deferral Approved'] != "CHECKED"){
+			cancel=true;
+			showMessage=true;
+			comment("The license can only be issued upon payment of fees.");
+		}
 	}
 }catch(err){
 	aa.print("An error has occurred in WTUB:LICENSES/CULTIVATOR/*/APPLICATION: Stop license issuance: " + err.message);
