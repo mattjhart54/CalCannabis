@@ -139,8 +139,15 @@ try{
 //		emailRptContact("WTUA", notName, "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
 		//mhart 031319 story 5914 end		
 		activateTask("Application Disposition");
-		updateTask("Application Disposition", "Pending Payment","Updated by Script","");
-		updateAppStatus("Pending Payment","Updated by Script");
+		//jshear 01302023 story 7315
+		if (AInfo['Deferral Approved'] == "CHECKED"){
+			editAppSpecific("Deferral Expiration Date",nextWorkDay(dateAdd(null,179)));
+			include("PRB:LICENSES/CULTIVATOR/*/APPLICATION");
+			include("PRA:LICENSES/CULTIVATOR/*/APPLICATION");
+		}else{
+			updateTask("Application Disposition", "Pending Payment","Updated by Script","");
+			updateAppStatus("Pending Payment","Updated by Script");
+		}
 //MJH 201902-8 US 5866 Update License Fee Due date
 		editAppSpecific("License Fee Due",nextWorkDay(dateAdd(null,59)));
 	}
@@ -553,18 +560,4 @@ try{
 	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Application Submitted: Add Fees: " + err.message);
 	aa.print(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUB:Licenses/Cultivation/*/Application: Add Fees: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
-
-//jshear 01302023 story 7315
-try{
-	if(wfTask == "Application Disposition" && matches(wfStatus,"Provisional License Issued","License Issued")) {
-		if (AInfo['Deferral Approved'] == "CHECKED"){
-			editAppSpecific("Deferral Expiration Date",nextWorkDay(dateAdd(null,179)));
-		}
-	}	
-			
-	}catch(err){
-	aa.print("An error has occurred in WTUA:LICENSES/CULTIVATOR/*/APPLICATION: Application Set Deferral Expiration Date: " + err.message);
-	aa.print(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/*/Application: Application Set Deferral Expiration Date: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }

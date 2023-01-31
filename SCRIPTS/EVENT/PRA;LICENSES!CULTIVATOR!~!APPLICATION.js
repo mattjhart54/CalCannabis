@@ -1,7 +1,7 @@
 
 // mhart 100918 Story 5738 and 5739 Changes to generate correct approval letter based on CAP status
 try{
-	if(balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")){
+	if((balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")) || AInfo['Deferral Approved'] == "CHECKED"){
 		if(capStatus == "License Issued") {
 			var licType = "annual";
 			var approvalEmail = "LCA_APPROVAL_ANNUAL_FEES_PAID"; 
@@ -89,7 +89,7 @@ try{
 //lwacht: 180419: story 5441: report only populates correctly in async mode
 //mhart 180409 user story 5391 - Send submitted application notice when the application fee is paid in full
 try {
-	if(balanceDue<=0){
+	if(balanceDue<=0 || AInfo['Deferral Approved'] == "CHECKED"){
 		feeFound = false
 		feeTbl = loadFees(capId);
 			for(x in feeTbl) {
