@@ -142,6 +142,7 @@ try{
 		//jshear 01302023 story 7315
 		if (AInfo['Deferral Approved'] == "CHECKED"){
 			editAppSpecific("Deferral Expiration Date",nextWorkDay(dateAdd(null,179)));
+			var PaymentTotalPaidAmount  = aa.env.getValue("PaymentTotalPaidAmount");
 			include("PRB:LICENSES/CULTIVATOR/*/APPLICATION");
 			include("PRA:LICENSES/CULTIVATOR/*/APPLICATION");
 		}else{
