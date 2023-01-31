@@ -1,7 +1,7 @@
 try {
 //MJH 082719 Story 6162,6163 - Updated script to create License record type License/Cultivator/License/License, set the record Id prefix to CCL, 
 //                             update new custom fields Cultivator Type and License Issued Type and to include Cultivator type in the application name.
-	if(balanceDue<=PaymentTotalPaidAmount  && isTaskActive("Application Disposition")){
+	if((balanceDue<=PaymentTotalPaidAmount  && isTaskActive("Application Disposition")) || AInfo['Deferral Approved'] == "CHECKED"){
 		var annualLic = false;
 		if(isTaskStatus("Final Review","Approved for Annual License")) {
 			annualLic = true;
