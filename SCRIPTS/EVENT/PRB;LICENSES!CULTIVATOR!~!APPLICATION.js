@@ -1,7 +1,9 @@
 try {
 //MJH 082719 Story 6162,6163 - Updated script to create License record type License/Cultivator/License/License, set the record Id prefix to CCL, 
 //                             update new custom fields Cultivator Type and License Issued Type and to include Cultivator type in the application name.
-	if((balanceDue<=PaymentTotalPaidAmount  && isTaskActive("Application Disposition")) || AInfo['Deferral Approved'] == "CHECKED"){
+	// JS 01312023 7315 - Need to get PaymentTotalPaidAmount for Deferral Approved Script Since Mater Script is not run
+	var PaymentTotalPaidAmount  = aa.env.getValue("PaymentTotalPaidAmount");
+	if((AInfo['Deferral Approved'] == "CHECKED" || balanceDue<=PaymentTotalPaidAmount  && isTaskActive("Application Disposition"))){
 		var annualLic = false;
 		if(isTaskStatus("Final Review","Approved for Annual License")) {
 			annualLic = true;
@@ -79,7 +81,7 @@ try {
 			
 		}else{
 			logDebug("Error creating License record: " + licCapId);
-		}
+		}	
 	}	
 }catch(err){
 	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
