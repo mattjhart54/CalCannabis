@@ -155,6 +155,7 @@ try{
 	var capFilterStatus = 0;
 	var capFilterReliefType = 0;
 	var capCount = 0;
+	var busName = "";
  	var capResult = aa.cap.getCapIDsByAppSpecificInfoDateRange(asiGroup, asiField, dFromDate, dToDate);
 	if (capResult.getSuccess()) {
 		myCaps = capResult.getOutput();
@@ -218,11 +219,14 @@ try{
 						eParams = aa.util.newHashtable();
 						if(appTypeArray[3] == "Renewal") {
 							altId = getAppSpecific("License Number")
+							busName = thisContact["middleName"];
+						}else{
+							busName = getAppSpecific("Legal Business Name");
 						}
 						addParameter(eParams,"$$altID$$",altId);
 						addParameter(eParams,"$$firstName$$",thisContact["firstName"]);
 						addParameter(eParams,"$$lastName$$",thisContact["lastName"]);
-						addParameter(eParams,"$$businessName$$",thisContact["middleName"]);
+						addParameter(eParams,"$$businessName$$",busName);
 						addParameter(eParams,"$$expDays$$",String(lookAheadDays));
 						addParameter(eParams,"$$defExpDate$$",getAppSpecific(asiField, capId));
 						addParameter(eParams,"$$licType$$",getAppSpecific("License Type", capId));
