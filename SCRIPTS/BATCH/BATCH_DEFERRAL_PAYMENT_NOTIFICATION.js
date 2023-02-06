@@ -184,10 +184,12 @@ try{
 		appTypeArray = appTypeString.split("/");
 		var capStatus = cap.getCapStatus();
 		logDebug("app " + appStatus + " cap " + capStatus);
-		if (appStatus != capStatus) {
-			logDebug("----Ignoring Record Due to Status " + altId + br);
-			capFilterStatus++
-			continue;
+		if (!matches(appStatus,null,undefined,"")){
+			if (appStatus != capStatus) {
+				logDebug("----Ignoring Record Due to Status " + altId + br);
+				capFilterStatus++
+				continue;
+			}
 		}
 		// Check to see if Relief Type equals Equity Relief
 		var reliefType = getAppSpecific("Relief Type", capId);
