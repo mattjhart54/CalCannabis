@@ -122,6 +122,7 @@ try {
 	editAppSpecific("Does the diagram contain highlighting?", PInfo["Does the diagram contain highlighting?"]);
 	editAppSpecific("Is the diagram to scale?", PInfo["Is the diagram to scale?"]);
 	editAppSpecific("Premises is Contiguous?", PInfo["Premises is Contiguous?"]);
+	editAppSpecific("Residence (if applicable)?", PInfo["Residence (if applicable)?"]);
 	editAppSpecific("Lighting Diagram Review Status", PInfo["Lighting Diagram Review Status"]);
 	editAppSpecific("Location of All Lights in Canopy", PInfo["Location of All Lights in Canopy"]);
 	editAppSpecific("Max Wattage of Each Light", PInfo["Max Wattage of Each Light"]);
