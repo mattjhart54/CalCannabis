@@ -73,6 +73,7 @@ try {
 			editAppSpecific("Does the square footage match the license type selected", PInfo["Does the square footage match the license type selected"]);
 			editAppSpecific("Harvest storage area", PInfo["Harvest storage area"]);
 			editAppSpecific("Immature Plant Area SF", PInfo["Immature Plant Area SF"]);
+			editAppSpecific("Trade sample(s)", PInfo["Trade sample(s)"]);
 			editAppSpecific("Immature plant area(s) (if applicable)", PInfo["Immature plant area(s) (if applicable)"]);
 			editAppSpecific("Packaging area", PInfo["Packaging area"]);
 			editAppSpecific("Pesticide and agricultural chemical storage area", PInfo["Pesticide and agricultural chemical storage area"]);
@@ -80,6 +81,7 @@ try {
 			editAppSpecific("Cannabis Waste Area-P", PInfo["Cannabis Waste Area-P"]);
 			editAppSpecific("Common Use Area(s)-P", PInfo["Common Use Area(s)-P"]);
 			editAppSpecific("Composting Area-P", PInfo["Composting Area-P"]);
+			editAppSpecific("Trade sample(s)-P", PInfo["Trade sample(s)-P"]);
 			editAppSpecific("Designated shared area(s)-P", PInfo["Designated shared area(s)-P"]);
 			editAppSpecific("Harvest Storage Area-P", PInfo["Harvest Storage Area-P"]);
 			editAppSpecific("Packaging Area-P", PInfo["Packaging Area-P"]);
@@ -87,6 +89,7 @@ try {
 			editAppSpecific("Immature canopy square footage-N", PInfo["Immature canopy square footage-N"]);
 			editAppSpecific("Immature Plant Area-N", PInfo["Immature Plant Area-N"]);
 			editAppSpecific("Seed Production Area-N", PInfo["Seed Production Area-N"]);
+			editAppSpecific("Trade sample(s)-N", PInfo["Trade sample(s)-N"]);
 			editAppSpecific("Research and Development Area-N", PInfo["Research and Development Area-N"]);
 			editAppSpecific("Pesticide and Agricultural Chemical Storage Area-N", PInfo["Pesticide and Agricultural Chemical Storage Area-N"]);
 			editAppSpecific("Composting Area-N", PInfo["Composting Area-N"]);
