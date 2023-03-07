@@ -60,6 +60,7 @@ try {
 			editAppSpecific("Medium Validation",PInfo["Medium Validation"]);
 			editAppSpecific("Premises Diagram Review Status",PInfo["Premises Diagram Review Status"]);
 			editAppSpecific("Administrative hold area", PInfo["Administrative hold area"]);
+			editAppSpecific("Administrative hold area-NEW", PInfo["Administrative hold area"]);
 			editAppSpecific("Aggregate square footage of noncontiguous canopy", PInfo["Aggregate square footage of noncontiguous canopy"]);
 			editAppSpecific("Cannabis Waste Area", PInfo["Cannabis Waste Area"]);
 			editAppSpecific("Canopy area included", PInfo["Canopy area included"]);
@@ -114,6 +115,7 @@ try {
 			editAppSpecific("Total volume of water storage on site", PInfo["Total volume of water storage on site"]);
 			editAppSpecific("Water Distribution Lines?", PInfo["Water Distribution Lines?"]);
 			editAppSpecific("Does the diagram contain highlighting?", PInfo["Does the diagram contain highlighting?"]);
+			editAppSpecific("Does the diagram contain highlighting?-NEW", PInfo["Does the diagram contain highlighting?"]);
 			editAppSpecific("Is the diagram to scale?", PInfo["Is the diagram to scale?"]);
 			editAppSpecific("Premises is Contiguous?", PInfo["Premises is Contiguous?"]);
 			editAppSpecific("Residence (if applicable)?", PInfo["Residence (if applicable)?"]);
