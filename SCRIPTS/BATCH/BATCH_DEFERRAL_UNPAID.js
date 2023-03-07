@@ -193,6 +193,9 @@ try{
 		if (newAppStatus && newAppStatus != ""){
 			updateAppStatus(newAppStatus, "set by " + batchJobName +  " batch");
 		}
+		if(!appHasCondition("Application Condition","Applied","Application Hold",null)){
+				addStdCondition("Application Condition","Application Hold");
+		}
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
  	logDebug("Ignored due to CAP Status: " + capFilterStatus);
