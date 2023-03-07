@@ -90,8 +90,8 @@ try{
 									finRow["FEIN"] = finNewRow["FEIN"];
 									finTable.push(finRow);
 								}
-								removeASITable("FINANCIAL INTEREST HOLDER",vLicenseID);
-								addASITable("FINANCIAL INTEREST HOLDER",finTable,vLicenseID);
+								removeASITable("FINANCIAL INTEREST HOLDER",licId);
+								addASITable("FINANCIAL INTEREST HOLDER",finTable,licId);
 							}
 						}
 		//Set renewal to complete, used to prevent more than one renewal record for the same cycle
