@@ -47,6 +47,16 @@ try {
 			}
 		}
 	}
+	if (typeof(DEFICIENCIES) == "object") {
+		for(x in DEFICIENCIES) {
+			if(matches(DEFICIENCIES[x]["Deficiency Details"], null, "", undefined)) {
+				defDesc = lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[x]["Deficiency Type"]);
+				DEFICIENCIES[x]["Deficiency Details"] = defDesc;
+			}
+		}
+		removeASITable("DEFICIENCIES"); 
+		addASITable("DEFICIENCIES", DEFICIENCIES);
+	}
 }catch (err){
 	logDebug("A JavaScript Error occurred: ASIUA:Licenses/Cultivation/Conversion Request/*: Update conversion license table: " + err.message);
 	logDebug(err.stack);
