@@ -183,7 +183,7 @@ try{
 		var capStatus = cap.getCapStatus();
 		logDebug("app " + appStatus + " cap " + capStatus);
 		
-		if (exists(capStatus,appStatus)){
+		if (!exists(capStatus,appStatus)){
 			logDebug("----Ignoring Record Due to Status " + altId + br);
 			capFilterStatus++
 			continue;
