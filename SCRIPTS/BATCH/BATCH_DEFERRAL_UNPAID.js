@@ -82,7 +82,7 @@ aa.env.setValue("setNonEmailPrefix", "Denials");
 var emailAddress = getParam("emailAddress");			// email to send report
 var lookAheadDays = getParam("lookAheadDays");
 var daySpan = getParam("daySpan");
-var appStatus = getParam("appStatus");
+var appStatus = getParam("appStatus").split(",");
 var newAppStatus = getParam("newAppStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
@@ -182,7 +182,8 @@ try{
 		appTypeArray = appTypeString.split("/");
 		var capStatus = cap.getCapStatus();
 		logDebug("app " + appStatus + " cap " + capStatus);
-		if (appStatus != capStatus) {
+		
+		if (exists(capStatus,appStatus)){
 			logDebug("----Ignoring Record Due to Status " + altId + br);
 			capFilterStatus++
 			continue;
