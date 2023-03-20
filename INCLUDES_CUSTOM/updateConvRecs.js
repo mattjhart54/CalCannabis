@@ -98,7 +98,6 @@ try {
 	
 // update the primary license record from the Conversion Record.
 	capId = crId;
-	var updateCat = false;
 	cDate = new Date();
 	
 	if(PInfo["License Issued Type"] == "Provisional") {
@@ -117,31 +116,24 @@ try {
 	
 	if(!matches(AInfo["PA Update"],null,"",undefined)) {
 		editAppSpecific("Premise Address",AInfo["PA Update"],plId);
-		updateCat = true;
 	}
 	if(!matches(AInfo["PC Update"],null,"",undefined)) {
 		editAppSpecific("Premise City",AInfo["PC Update"],plId);
-		updateCat = true;
 	}
 	if(!matches(AInfo["PZ Update"],null,"",undefined)) {
 		editAppSpecific("Premise Zip",AInfo["PZ Update"],plId);
-		updateCat = true;
 	}
 	if(!matches(AInfo["PCNTY Update"],null,"",undefined)) {
 		editAppSpecific("Premise County",AInfo["PCNTY Update"],plId);
-		updateCat = true;
 	}
 	if(!matches(AInfo["APN Update"],null,"",undefined)) {
 		editAppSpecific("APN",AInfo["APN Update"],plId);
-		updateCat = true;
 	}
 	if(!matches(AInfo["Tribal Land Update"],null,"",undefined)) {
 		editAppSpecific("Tribal Land",AInfo["Tribal Land Update"],plId);
-		updateCat = true;
 	}
 	if(!matches(AInfo["Tribal Land Information Update"],null,"",undefined)) {
 		editAppSpecific("Tribal Land Information",AInfo["Tribal Land Information Update"],plId);
-		updateCat = true;
 	}
 	editAppSpecific("Grid",AInfo["Grid Update"],plId);
 	editAppSpecific("Solar",AInfo["Solar Update"],plId);
@@ -282,10 +274,9 @@ try {
 	}
 	logDebug("Not copying the following Tables: " + ignoreTableArray);
 	copyASITables(capId,plId,ignoreTableArray);
-
-	if(updateCat) {
-		addToCat(plId);
-	}
+	
+	//send Primary to CAT Interface
+	addToCat(plId);
 	
 // Set status to Cancelled on all converted records
 	for(c in LICENSERECORDSFORCONVERSION) {
