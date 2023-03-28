@@ -102,7 +102,7 @@ try{
 	//var planningPermit = {condition : "Local - Certified Planning Permit", document : "Local - Certified Planning Permit"};
 	var goodStanding = {condition : "Local - Evidence of Good Standing", document : "Local - Evidence of Good Standing"};
 	var CEQA = {condition : "Local - Evidence of CEQA Compliance", document : "Local - Evidence of CEQA Compliance"};
-	var equity = {condition : "Local - Equity Fee Relief Application", document : "Local - Equity Fee Relief Application"};
+	var equity = {condition : "Local - Equity Fee Relief Request Form", document : "Local - Equity Fee Relief Request Form"};
 	//var localComply = {condition : "Local - Certification of Local Compliance", document : "Local - Certification of Local Compliance"};
 	var coopMembers = {condition : "Cannabis Cooperative Association Member List", document : "Cannabis Cooperative Association Member List"};
 	var useCompassionate = {condition : "Priority Review - Compassionate Use Act of 1996", document : "Priority Review - Compassionate Use Act"};
