@@ -43,13 +43,13 @@ function getMasterScriptText(vScriptName) {
 }
 try{
 /*---------------------------------------
-	aa.env.setValue("licCap", "CCL23-0000001");
-	aa.env.setValue("appCap", "LCA23-0000001");
+	aa.env.setValue("licCap", "CCL21-0000001");
+	aa.env.setValue("appCap", "LCA21-0000001");
 	aa.env.setValue("currentUserID", "ADMIN");
 	aa.env.setValue("reportName", "Official License Certificate");
 	aa.env.setValue("contType", "Designated Responsible Party");
 	aa.env.setValue("emailTemplate", "LCA_APPROVAL_ANNUAL_FEES_DEFERRED");
-	aa.env.setValue("feeSeqNbr", 22930926);
+	aa.env.setValue("feeSeqNbr", 22931211);
 	aa.env.setValue("deferralDue", "03/29/2023");
 	aa.env.setValue("fromEmail","noreply@cannabis.ca.gov");
 */
@@ -107,14 +107,15 @@ try{
 		eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
 	}
 	
-// Run the Invoice Report
+// Run the Invoice 
+
 	var tmpID = aa.cap.getCapID(appCap).getOutput(); 
 	cap = aa.cap.getCap(tmpID).getOutput();
 	appTypeResult = cap.getCapType();
 	appTypeString = appTypeResult.toString(); 
 	appTypeArray = appTypeString.split("/");
-	capStatus = cap.getCapStatus();
-	 
+	capStatus = cap.getCapStatus(); 
+	
 	iListResult = aa.finance.getInvoiceByCapID(tmpID,null);
 	if (iListResult.getSuccess()) {
 		iList = iListResult.getOutput();
@@ -133,9 +134,9 @@ logDebug("invNbr " + invNbr + " Fee Amount " + feeAmt);
 			}
 		}		
 	}
+	
 	var amtFee = 0;
 	var amtPaid = 0;
-
 	var feeResult = aa.fee.getFeeItems(tmpID);
 	if (feeResult.getSuccess()) {
 		var feeObjArr = feeResult.getOutput();
@@ -163,27 +164,19 @@ logDebug("invNbr " + invNbr + " Fee Amount " + feeAmt);
 	logDebug("feeAmt " + amtFee + " feePaid " +  amtPaid);
 
 	reportName = "CDFA_INVOICE_PARAMS";
-    reportResult = aa.reportManager.getReportInfoModelByName(reportName);
+        reportResult = aa.reportManager.getReportInfoModelByName(reportName);
 	if (!reportResult.getSuccess()){
 		logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
 		eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
 	}
-
 	var report = reportResult.getOutput(); 
-
-	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
-	cap = aa.cap.getCap(tmpID).getOutput();
-	appTypeResult = cap.getCapType();
-	appTypeString = appTypeResult.toString(); 
-	appTypeArray = appTypeString.split("/");
 	report.setModule(appTypeArray[0]); 
-	//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
 	report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
-	report.getEDMSEntityIdModel().setAltId(licCap);
+	report.getEDMSEntityIdModel().setAltId(appCap);
 	eTxt+="reportName: " + reportName + br;
 	eTxt+="reportName: " + typeof(reportName) + br;
 	var parameters = aa.util.newHashMap(); 
-	parameters.put("capID",licCap);
+	parameters.put("capID",appCap);
 	parameters.put("invoiceNbr", invNbr);
 	parameters.put("agencyId", "CALCANNABIS");
 	report.setReportParameters(parameters);
@@ -195,8 +188,8 @@ logDebug("invNbr " + invNbr + " Fee Amount " + feeAmt);
 			var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
 			rFile=reportFile.getOutput();
 			rFiles.push(rFile);
-			logDebug("Report '" + reportName + "' has been run for " + licCap);
-			eTxt+=("Report '" + reportName + "' has been run for " + licCap) +br;
+			logDebug("Report '" + reportName + "' has been run for " + appCap);
+			eTxt+=("Report '" + reportName + "' has been run for " + appCap) +br;
 		}else {
 			logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
 		}
@@ -218,7 +211,6 @@ logDebug("invNbr " + invNbr + " Fee Amount " + feeAmt);
 	}else{
 		logDebug("An error occurred retrieving the contactObj for " + contactType + ": " + priContact);
 	}
-	
 //----------------------- 
 	var thisDate = new Date();
 	var thisTime = thisDate.getTime();
@@ -226,7 +218,7 @@ logDebug("invNbr " + invNbr + " Fee Amount " + feeAmt);
 } catch(err){
 	logDebug("An error has occurred in asyncRunOfficialLicenseRpt: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN aasyncDeferralApprovedRpt: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + eTxt);
+	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncDeferralApprovedRpt: " +  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + eTxt);
 }
  function sendApprovalNotification(emailFrom,emailTo,emailCC,templateName,params,reportFile)
 {
