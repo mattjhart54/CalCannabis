@@ -218,7 +218,7 @@ logDebug("invNbr " + invNbr + " Fee Amount " + feeAmt);
 } catch(err){
 	logDebug("An error has occurred in asyncRunOfficialLicenseRpt: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncDeferralApprovedRpt: " +  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + eTxt);
+	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncDeferralApprovedRpt: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + eTxt);
 }
  function sendApprovalNotification(emailFrom,emailTo,emailCC,templateName,params,reportFile)
 {
