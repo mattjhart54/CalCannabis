@@ -543,13 +543,14 @@ try{
 			}
 		//mhart 031319 story 5914 Run report Approval Letter and License Fee Invoice and send DRP email notification
 		//mhart 033023 story 7354 If deferaal send approved deferral notification with Invoice and License Certficate
-			if (AInfo['Deferral Approved'] == "CHECKED"){
+			
+			if(AInfo['Deferral Approved'] == "CHECKED"){
 				var appCap = capId.getCustomID();
 				var licCap = "CCL" + appCap.substring(3);
 				var scriptName = "asyncDeferralApprovedRpt";
 				envParameters = aa.util.newHashMap();
 				envParameters.put("licCap",licAltId); 
-				if(wfStatus == "Approved for Annual License"), "Approved for Provisional License") 
+				if(wfStatus == "Approved for Annual License")
 					envParameters.put("emailTemplate","LCA_APP_ANNUAL_FEES_DEFERRED");
 				else
 					envParameters.put("emailTemplate","LCA_APP_PROV_FEES_DEFERRED");
