@@ -554,6 +554,7 @@ try{
 					envParameters.put("emailTemplate","LCA_APP_ANNUAL_FEES_DEFERRED");
 				else
 					envParameters.put("emailTemplate","LCA_APP_PROV_FEES_DEFERRED");
+				envParameters.put("reportName","Official License Certificate"); 
 				envParameters.put("feeSeqNbr",feeSeqNbr); 
 				envParameters.put("deferralDue", deferralDue);
 				envParameters.put("currentUserID",currentUserID);
