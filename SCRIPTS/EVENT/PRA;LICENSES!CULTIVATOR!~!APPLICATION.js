@@ -10,7 +10,7 @@ try{
 			var approvalEmail = "LCA_APPROVAL_PROVISIONAL_FEES_PAID";
 		}
 		var parCapId = getParent();
-		if(parCapId){
+		if(parCapId && AInfo["Deferral Approved"] != "CHECKED") {
 			var appAltId = capId.getCustomID();
 			var licAltId = parCapId.getCustomID();
 			var scriptName = "asyncRunOfficialLicenseRpt";
