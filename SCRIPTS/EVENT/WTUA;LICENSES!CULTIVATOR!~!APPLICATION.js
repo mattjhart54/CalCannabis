@@ -549,6 +549,7 @@ try{
 				var licCap = "CCL" + appCap.substring(3);
 				var scriptName = "asyncDeferralApprovedRpt";
 				envParameters = aa.util.newHashMap();
+				envParameters.put("appCap",appCap); 
 				envParameters.put("licCap",licCap); 
 				if(wfStatus == "Approved for Annual License")
 					envParameters.put("emailTemplate","LCA_APP_ANNUAL_FEES_DEFERRED");
