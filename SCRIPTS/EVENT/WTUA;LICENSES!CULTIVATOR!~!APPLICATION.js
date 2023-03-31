@@ -552,9 +552,9 @@ try{
 				envParameters.put("appCap",appCap); 
 				envParameters.put("licCap",licCap); 
 				if(wfStatus == "Approved for Annual License")
-					envParameters.put("emailTemplate","LCA_APP_ANNUAL_FEES_DEFERRED");
+					envParameters.put("emailTemplate","LCA_APPROVAL_ANNUAL_FEES_DEFERRED");
 				else
-					envParameters.put("emailTemplate","LCA_APP_PROV_FEES_DEFERRED");
+					envParameters.put("emailTemplate","LCA_APPROVAL_PROVISIONAL_FEES_DEFERRED");
 				envParameters.put("reportName","Official License Certificate"); 
 				envParameters.put("feeSeqNbr","" + feeSeqNbr); 
 				envParameters.put("deferralDue", deferralDue);
