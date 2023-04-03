@@ -118,7 +118,7 @@ try {
 	}
 	asit = cap.getAppSpecificTableGroupModel();
 	if (elecTable.length > 0){
-		new_asit = addASITable4ACAPageFlowXX(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
+		new_asit = addASITable4ACAPageFlow(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
 
 }catch (err){
