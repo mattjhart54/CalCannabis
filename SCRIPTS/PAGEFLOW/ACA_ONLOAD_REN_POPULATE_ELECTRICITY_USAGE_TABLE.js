@@ -88,7 +88,7 @@ try {
 	
 	var licCapId = getApplication(AInfo['License Number']);
 	var elecTable = [];
-
+	logDebug("licCapId: " + licCapId);
 
 
 	
@@ -106,7 +106,6 @@ try {
 			elecRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = new asiTableValObj("Total Electricity Supplied by Zero Net Energy Renewable (kWh)", "" + String(licElecInfo[ii]["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"]), "Y");
 			elecRow["GGEI (lbs CO2e/kWh)"] = new asiTableValObj("GGEI (lbs CO2e/kWh)", "" + String(licElecInfo[ii]["GGEI (lbs CO2e/kWh)"]), "Y");
 			elecTable.push(elecRow);
-			recCount++
 		}
 	}
 	
