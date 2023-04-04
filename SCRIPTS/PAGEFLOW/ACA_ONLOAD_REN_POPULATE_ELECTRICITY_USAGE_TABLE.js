@@ -14,11 +14,11 @@
 | START User Configurable Parameters
 |
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showMessage = true; // Set to true to see results in popup window
+var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = false;
+var cancel = true;
 var SCRIPT_VERSION  = 3; 
 var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
@@ -87,7 +87,7 @@ try {
 	
 	
 	var licCapId = getApplication(AInfo['License Number']);
-	var elecTable = new Array();
+	var elecTable = [];
 
 
 
@@ -95,7 +95,7 @@ try {
 	licElecInfo = loadASITable("ELECTRICITY USAGE",licCapId);
 	if (licElecInfo) {  // table of records to process
 		for (ii in licElecInfo) {
-			elecRow = new Array();
+			elecRow = [];
 			elecRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + licElecInfo[ii]["Reporting Year"], "Y");
 			elecRow["Usage Type"] = new asiTableValObj("Usage Type", "" + licElecInfo[ii]["Usage Type"], "Y");
 			elecRow["Type of Off Grid Renewable Source"] = new asiTableValObj("Type of Off Grid Renewable Source", "" + licElecInfo[ii]["Type of Off Grid Renewable Source"], "Y");
