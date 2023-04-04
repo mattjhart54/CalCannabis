@@ -14,11 +14,11 @@
 | START User Configurable Parameters
 |
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = true; // Set to true to see results in popup window
-var showDebug = true; // Set to true to see debug messages in popup window
+var showMessage = false; // Set to true to see results in popup window
+var showDebug = false; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = true;
+var cancel = false;
 var SCRIPT_VERSION  = 3; 
 var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
@@ -118,7 +118,7 @@ try {
 	}
 	asit = cap.getAppSpecificTableGroupModel();
 	if (elecTable.length > 0){
-		new_asit = addASITable4ACAPageFlow(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
+		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
 
 }catch (err){
@@ -212,6 +212,84 @@ if (!tssmResult.getSuccess())
 logDebug("Successfully removed all rows from ASI Table: " + tableName);
 
 }
+
+function copyASITable4PageFlowLocal(destinationTableGroupModel,tableName,tableValueArray) // optional capId
+    	{
+  	//  tableName is the name of the ASI table
+  	//  tableValueArray is an array of associative array values.  All elements MUST be either a string or asiTableVal object
+  	// 
+  	
+    	var itemCap = capId
+  	if (arguments.length > 3)
+  		itemCap = arguments[3]; // use cap ID specified in args
+  
+  	var ta = destinationTableGroupModel.getTablesMap().values();
+  	var tai = ta.iterator();
+  	
+  	var found = false;
+  	
+  	while (tai.hasNext())
+  		  {
+  		  var tsm = tai.next();  // com.accela.aa.aamain.appspectable.AppSpecificTableModel
+  		  if (tsm.getTableName().equals(tableName)) { found = true; break; }
+  	        }
+
+
+  	if (!found) { logDebug("cannot update asit for ACA, no matching table name"); return false; }
+  	
+	var fld = aa.util.newArrayList();  // had to do this since it was coming up null.
+        var fld_readonly = aa.util.newArrayList(); // had to do this since it was coming up null.
+  	var i = -1; // row index counter
+  
+         	for (thisrow in tableValueArray)
+  		{
+  
+ 
+  		var col = tsm.getColumns()
+  		var coli = col.iterator();
+  
+  		while (coli.hasNext())
+  			{
+  			var colname = coli.next();
+  			
+			if (typeof(tableValueArray[thisrow][colname.getColumnName()]) == "object")  // we are passed an asiTablVal Obj
+				{
+				var args = new Array(tableValueArray[thisrow][colname.getColumnName()].fieldValue,colname);
+				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args).getOutput();
+				fldToAdd.setRowIndex(i);
+				fldToAdd.setFieldLabel(colname.getColumnName());
+				fldToAdd.setFieldGroup(tableName.replace(/ /g,"\+"));
+				fldToAdd.setReadOnly(tableValueArray[thisrow][colname.getColumnName()].readOnly.equals("Y"));
+				fld.add(fldToAdd);
+				fld_readonly.add(tableValueArray[thisrow][colname.getColumnName()].readOnly);
+				
+				}
+			else // we are passed a string
+				{
+				var args = new Array(tableValueArray[thisrow][colname.getColumnName()],colname);
+				var fldToAdd = aa.proxyInvoker.newInstance("com.accela.aa.aamain.appspectable.AppSpecificTableField",args).getOutput();
+				fldToAdd.setRowIndex(i);
+				fldToAdd.setFieldLabel(colname.getColumnName());
+				fldToAdd.setFieldGroup(tableName.replace(/ /g,"\+"));
+				fldToAdd.setReadOnly(false);
+				fld.add(fldToAdd);
+				fld_readonly.add("N");
+
+				}
+  			}
+  
+  		i--;
+  		
+  		tsm.setTableFields(fld);
+  		tsm.setReadonlyField(fld_readonly); // set readonly field
+  		}
+  
+  
+                tssm = tsm;
+                
+                return destinationTableGroupModel;
+                
+      }
 function addASITable4ACAPageFlowXX(destinationTableGroupModel, tableName, tableValueArray) // optional capId
 {
     //  tableName is the name of the ASI table
