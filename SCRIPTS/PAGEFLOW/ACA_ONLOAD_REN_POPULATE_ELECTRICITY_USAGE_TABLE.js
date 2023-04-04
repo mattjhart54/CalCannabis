@@ -44,12 +44,12 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, true));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS",null,true));
 }
 
 
@@ -111,11 +111,7 @@ try {
 	}
 	
 	
-	if (typeof(ELECTRICITYUSAGEHISTORICAL) == "object"){
-		if(ELECTRICITYUSAGEHISTORICAL.length > 0){
-			removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
-		}
-	}
+	removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
 	asit = cap.getAppSpecificTableGroupModel();
 	if (elecTable.length > 0){
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
