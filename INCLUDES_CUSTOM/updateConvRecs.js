@@ -59,7 +59,19 @@ try {
 	
 // Update the Record Number	
 	altId = capId.getCustomID();
-	var newAltId = altId + "-HIST";
+	cIds = getChildren("Licenses/Cultivator/License/License",capId);
+	if(matches(cIds, null, "", undefined)) 
+		hisNbr = hisNbr = "0" + 1;
+	else {
+		cIdLen = cIds.length 
+		if(cIds.length <= 9) {
+			hisNbr = cIdLen + 1;
+			hisNbr = "0" +  hisNbr;
+		}else {
+			hisNbr = cIdLen + 1;
+		}
+	}	
+	var newAltId = altId + "-HIST" = hisNbr;
 	var updAltId = aa.cap.updateCapAltID(histCapId,newAltId);
 	if(!updAltId.getSuccess()){
 		logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
