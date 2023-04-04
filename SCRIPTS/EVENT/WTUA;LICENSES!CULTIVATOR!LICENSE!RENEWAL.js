@@ -68,27 +68,49 @@ try {
 				aa.cap.updateProject(renewalCapProject);
 			}
 			
-	//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
-			if (AInfo["License Issued Type"] == "Provisional"){
-				var approvalLetter = "Provisional Renewal Approval";
-				var emailTemplate = "LCA_RENEWAL_APPROVAL";
-			}else{
-				var approvalLetter = "";
-				var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
+		//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP
+		//MJH: 04032023 Story 7355:  Add code to send a defferal approval notification with Invoice(s) and License Certificate
+			if(AInfo["Deferral Approved"] == "CHECKED"){
+				var appCap = capId.getCustomID();
+				var licCap = "CCL" + appCap.substring(3);
+				var scriptName = "asyncDeferralApprovedRenewal";
+				envParameters = aa.util.newHashMap();
+				envParameters.put("appCap",appCap); 
+				envParameters.put("licCap",licCap); 
+				if(wfStatus == "Approved for Annual License")
+					envParameters.put("emailTemplate","LCA_ANNUAL_RENEWAL_DEFERRED");
+				else
+					envParameters.put("emailTemplate","LCA_PROV_RENEWAL_DEFERRED");
+				envParameters.put("reportName","Official License Certificate"); 
+				envParameters.put("balanceDue","" + balanceDue); 
+				envParameters.put("deferralDue", AInfo["Deferral Expiration Date"]);
+				envParameters.put("currentUserID",currentUserID);
+				envParameters.put("contType","Designated Responsible Party");
+				envParameters.put("fromEmail",sysFromEmail);
+				aa.runAsyncScript(scriptName, envParameters);
 			}
-			var scriptName = "asyncRunOfficialLicenseRpt";
-			var envParameters = aa.util.newHashMap();
-			envParameters.put("licType", "");
-			envParameters.put("appCap",altId);
-			envParameters.put("licCap",licAltId); 
-			envParameters.put("reportName","Official License Certificate");
-			envParameters.put("approvalLetter", approvalLetter);
-			envParameters.put("emailTemplate", emailTemplate);
-			envParameters.put("reason", "");
-			envParameters.put("currentUserID",currentUserID);
-			envParameters.put("contType","Designated Responsible Party");
-			envParameters.put("fromEmail",sysFromEmail);
-			aa.runAsyncScript(scriptName, envParameters);
+			else {			
+				if (AInfo["License Issued Type"] == "Provisional"){
+					var approvalLetter = "Provisional Renewal Approval";
+					var emailTemplate = "LCA_RENEWAL_APPROVAL";
+				}else{
+					var approvalLetter = "";
+					var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
+				}
+				var scriptName = "asyncRunOfficialLicenseRpt";
+					var envParameters = aa.util.newHashMap();
+				envParameters.put("licType", "");
+				envParameters.put("appCap",altId);
+				envParameters.put("licCap",licAltId); 
+				envParameters.put("reportName","Official License Certificate");
+				envParameters.put("approvalLetter", approvalLetter);
+				envParameters.put("emailTemplate", emailTemplate);
+				envParameters.put("reason", "");
+				envParameters.put("currentUserID",currentUserID);
+				envParameters.put("contType","Designated Responsible Party");
+				envParameters.put("fromEmail",sysFromEmail);
+					aa.runAsyncScript(scriptName, envParameters);
+			}
 			
 			var priContact = getContactObj(capId,"Designated Responsible Party");
 		// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
