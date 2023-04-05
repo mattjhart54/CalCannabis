@@ -71,19 +71,17 @@ try {
 		//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP
 		//MJH: 04032023 Story 7355:  Add code to send a defferal approval notification with Invoice(s) and License Certificate
 			if(AInfo["Deferral Approved"] == "CHECKED"){
-				var appCap = capId.getCustomID();
-				var licCap = "CCL" + appCap.substring(3);
 				var scriptName = "asyncDeferralApprovedRenewal";
 				envParameters = aa.util.newHashMap();
-				envParameters.put("appCap",appCap); 
-				envParameters.put("licCap",licCap); 
+				envParameters.put("appCap",altId); 
+				envParameters.put("licCap",licAltId); 
 				if(wfStatus == "Approved for Annual License")
 					envParameters.put("issueType","an Annual");
 				else
 					envParameters.put("issueType","a Provisional");
 				envParameters.put("emailTemplate","LCA_ANNUAL_RENEWAL_DEFERRED");
 				envParameters.put("reportName","Official License Certificate"); 
-				envParameters.put("balanceDue","" + balanceDue); 
+				envParameters.put("balanceDue","" balanceDue); 
 				envParameters.put("deferralDue", AInfo["Deferral Expiration Date"]);
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("contType","Designated Responsible Party");
