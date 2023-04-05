@@ -171,7 +171,8 @@ try{
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$parentId$$", licCap);
-		addParameter(eParams, "$$feesDue$$", balanceDue);
+		feesDue = "$" + maskTheMoneyNumber(balanceDue);
+		addParameter(eParams, "$$feesDue$$", feesDue);
 		addParameter(eParams, "$$deferralDue$$", deferralDue);
 		addParameter(eParams, "$$issueType$$", issueType);
 		var priEmail = ""+priContact.capContact.getEmail();
