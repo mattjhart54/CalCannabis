@@ -80,7 +80,7 @@ try {
 				if(wfStatus == "Approved for Annual License")
 					envParameters.put("issueType","an Annual");
 				else
-					envParameters.put(issueType","a Provisional");
+					envParameters.put("issueType","a Provisional");
 				envParameters.put("emailTemplate","LCA_ANNUAL_RENEWAL_DEFERRED");
 				envParameters.put("reportName","Official License Certificate"); 
 				envParameters.put("balanceDue","" + balanceDue); 
