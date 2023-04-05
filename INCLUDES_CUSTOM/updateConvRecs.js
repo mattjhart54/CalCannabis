@@ -71,7 +71,7 @@ try {
 			hisNbr = cIdLen + 1;
 		}
 	}	
-	var newAltId = altId + "-HIST" = hisNbr;
+	var newAltId = altId + "-HIST" + hisNbr;
 	var updAltId = aa.cap.updateCapAltID(histCapId,newAltId);
 	if(!updAltId.getSuccess()){
 		logDebug("Error updating Alt Id: " + newAltId + ":: " +updAltId.getErrorMessage());
