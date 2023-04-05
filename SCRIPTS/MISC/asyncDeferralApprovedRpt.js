@@ -160,8 +160,9 @@ logDebug("invNbr " + invNbr + " Fee Amount " + feeAmt);
 			
 		}
 	}
-	var feeAmt = amtFee - amtPaid;
-	logDebug("feeAmt " + amtFee + " feePaid " +  amtPaid);
+	var fAmt = amtFee - amtPaid;
+	feeAmt = fAmt.toFixed(2);
+	logDebug("feeAmt " + amtFee + " feePaid " +  amtPaid + " = " + feeAmt);
 
 	reportName = "CDFA_INVOICE_PARAMS";
         reportResult = aa.reportManager.getReportInfoModelByName(reportName);
@@ -204,7 +205,7 @@ logDebug("invNbr " + invNbr + " Fee Amount " + feeAmt);
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$parentId$$", licCap);
-		addParameter(eParams, "$$feesDue$$", feeAmt);
+		addParameter(eParams, "$$feesDue$$", "$" + maskTheMoneyNumber(feeAmt));
 		addParameter(eParams, "$$deferralDue$$", deferralDue);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"",emailTemplate,eParams, rFiles,tmpID);
