@@ -49,6 +49,7 @@ try{
 	aa.env.setValue("reportName", "Official License Certificate");
 	aa.env.setValue("contType", "Designated Responsible Party");
 	aa.env.setValue("emailTemplate", "LCA_APPROVAL_ANNUAL_FEES_DEFERRED");
+	aa.env.setValue("issueType", "an Annual");
 	aa.env.setValue("balanceDue", "20,625.00");
 	aa.env.setValue("deferralDue", "04/30/2023");
 	aa.env.setValue("fromEmail","noreply@cannabis.ca.gov");
@@ -58,6 +59,7 @@ try{
 	var licCap = "" + aa.env.getValue("licCap");
 	var balanceDue = "" +aa.env.getValue("balanceDue");
 	var deferralDue = "" + aa.env.getValue("deferralDue");
+	var issueType = "" + aa.env.getValue("issueType");
 	var emailTemplate = "" + aa.env.getValue("emailTemplate");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var contType = "" + aa.env.getValue("contType");
@@ -171,6 +173,7 @@ try{
 		addParameter(eParams, "$$parentId$$", licCap);
 		addParameter(eParams, "$$feesDue$$", balanceDue);
 		addParameter(eParams, "$$deferralDue$$", deferralDue);
+		addParameter(eParams, "$$issueType$$", issueType);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"",emailTemplate,eParams, rFiles,tmpID);
 	}else{
