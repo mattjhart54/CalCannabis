@@ -19,7 +19,7 @@ try{
 	var feeAllocationArray = new Array();
 	var itemCap = capId;
 	if (arguments.length > 1)
-	itemCap = arguments[1];
+	itemCap = arguments[0];
 	var targetFees = loadFees(itemCap);
 	for (tFeeNum in targetFees) {
 		targetFee = targetFees[tFeeNum];
