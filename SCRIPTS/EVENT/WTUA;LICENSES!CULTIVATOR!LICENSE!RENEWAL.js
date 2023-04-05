@@ -81,7 +81,7 @@ try {
 					envParameters.put("issueType","a Provisional");
 				envParameters.put("emailTemplate","LCA_ANNUAL_RENEWAL_DEFERRED");
 				envParameters.put("reportName","Official License Certificate"); 
-				envParameters.put("balanceDue","" balanceDue); 
+				envParameters.put("balanceDue",balanceDue); 
 				envParameters.put("deferralDue", AInfo["Deferral Expiration Date"]);
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("contType","Designated Responsible Party");
