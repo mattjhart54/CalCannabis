@@ -78,9 +78,10 @@ try {
 				envParameters.put("appCap",appCap); 
 				envParameters.put("licCap",licCap); 
 				if(wfStatus == "Approved for Annual License")
-					envParameters.put("emailTemplate","LCA_ANNUAL_RENEWAL_DEFERRED");
+					envParameters.put("issueType","an Annual");
 				else
-					envParameters.put("emailTemplate","LCA_PROV_RENEWAL_DEFERRED");
+					envParameters.put(issueType","a Provisional");
+				envParameters.put("emailTemplate","LCA_ANNUAL_RENEWAL_DEFERRED");
 				envParameters.put("reportName","Official License Certificate"); 
 				envParameters.put("balanceDue","" + balanceDue); 
 				envParameters.put("deferralDue", AInfo["Deferral Expiration Date"]);
