@@ -6,7 +6,9 @@ try {
 		editAppName(newAppName);
 		addToCat(capId);
 	}
-
+	if(AInfo['Change Cultivator Type'] == 'CHECKED')
+		editAppSpecific('Change Cultivator Type', 'UNCHECKED');
+	
 	if(LAKEANDSTREAMBEDALTERATION.length>0) {
 		var tblLSA = loadASITable("LAKE AND STREAMBED ALTERATION");
 		var addRow = false;
