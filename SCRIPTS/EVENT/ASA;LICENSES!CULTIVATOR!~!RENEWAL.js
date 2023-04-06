@@ -65,7 +65,7 @@ try{
 				updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
 				if(licType.substring(0,5) == "Large") {
 					lType = lookup("LIC_CC_LICENSE_TYPE", licType);
-				if(!matches(lType,"", null, undefined)){
+					if(!matches(lType,"", null, undefined)){
 						licTbl = lType.split(";");
 						var base = parseInt(licTbl[3]);
 						feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
