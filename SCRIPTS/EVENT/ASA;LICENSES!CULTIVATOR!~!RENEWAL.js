@@ -50,6 +50,12 @@ try{
 			if(expDate) {
 				editAppSpecific("Expiration Date", tmpExpDate);
 			}
+			//5. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
+	//		aa.cap.updateAccessByACA(partialCapId, "N");
+		}else{
+			aa.print("ERROR: Associate partial cap with parent CAP. " + result.getErrorMessage());
+		}
+	}
 		//4. Assess Renewal Fee
 			voidRemoveAllFees();
 			licType = pInfo["License Type"];
@@ -94,37 +100,6 @@ try{
 					logDebug("An error occurred retrieving fee item: " + feeDesc);
 				}
 			}
-		//5. Set B1PERMIT.B1_ACCESS_BY_ACA to "N" for partial CAP to not allow that it is searched by ACA user.
-	//		aa.cap.updateAccessByACA(partialCapId, "N");
-		}else{
-			aa.print("ERROR: Associate partial cap with parent CAP. " + result.getErrorMessage());
-		}
-	}else{
-		//Reasses Fees if Removed
-			var feeDesc = getAppSpecific("License Type",parentCapId) + " - Renewal Fee";
-			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
-			if(thisFee){
-				if (!feeExists(thisFee.feeCode)){
-					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
-				}
-			}else{
-				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-				logDebug("An error occurred retrieving fee item: " + feeDesc);
-			}
-		//Check to see if late fee is needed after ACA review.  Used for records saved before expiration and submitted after expiration.
-		if(tmpDate < curDate) {
-			var feeDesc = getAppSpecific("License Type",parentCapId) + " - Late Fee";
-			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
-			if(thisFee){
-				if (!feeExists(thisFee.feeCode)){
-					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
-				}
-			}else{
-				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-				logDebug("An error occurred retrieving fee item: " + feeDesc);
-			}
-		}
-	}
 } catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/* /RENEWAL: Update AltId: " + err.message);
 	logDebug(err.stack);
