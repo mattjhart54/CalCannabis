@@ -56,7 +56,7 @@ try{
 			var feeDesc = licType + " - Renewal Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
-				feeSeqNbr = updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+				updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
 
 				if(licType.substring(0,5) == "Large") {
 					lType = lookup("LIC_CC_LICENSE_TYPE", licType);
@@ -100,6 +100,17 @@ try{
 			aa.print("ERROR: Associate partial cap with parent CAP. " + result.getErrorMessage());
 		}
 	}else{
+		//Reasses Fees if Removed
+			var feeDesc = getAppSpecific("License Type",parentCapId) + " - Renewal Fee";
+			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+			if(thisFee){
+				if (!feeExists(thisFee.feeCode)){
+					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+				}
+			}else{
+				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+				logDebug("An error occurred retrieving fee item: " + feeDesc);
+			}
 		//Check to see if late fee is needed after ACA review.  Used for records saved before expiration and submitted after expiration.
 		if(tmpDate < curDate) {
 			var feeDesc = getAppSpecific("License Type",parentCapId) + " - Late Fee";
@@ -108,7 +119,7 @@ try{
 				if (!feeExists(thisFee.feeCode)){
 					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
 				}
-				}else{
+			}else{
 				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
 			}
