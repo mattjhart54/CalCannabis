@@ -55,7 +55,7 @@ try{
 		}else{
 			aa.print("ERROR: Associate partial cap with parent CAP. " + result.getErrorMessage());
 		}
-	}else{
+	}
 		//4. Assess Renewal Fee
 			voidRemoveAllFees();
 			licType = pInfo["License Type"];
@@ -100,7 +100,6 @@ try{
 					logDebug("An error occurred retrieving fee item: " + feeDesc);
 				}
 			}
-	}
 } catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/* /RENEWAL: Update AltId: " + err.message);
 	logDebug(err.stack);
