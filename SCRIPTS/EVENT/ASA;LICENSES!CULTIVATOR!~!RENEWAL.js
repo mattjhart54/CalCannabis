@@ -55,7 +55,7 @@ try{
 		}else{
 			aa.print("ERROR: Associate partial cap with parent CAP. " + result.getErrorMessage());
 		}
-	}
+	}else{
 		//4. Assess Renewal Fee
 			voidRemoveAllFees();
 			licType = pInfo["License Type"];
@@ -63,7 +63,6 @@ try{
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
 				updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
-
 				if(licType.substring(0,5) == "Large") {
 					lType = lookup("LIC_CC_LICENSE_TYPE", licType);
 				if(!matches(lType,"", null, undefined)){
@@ -86,6 +85,7 @@ try{
 						}	
 					}
 				}
+				
 			}else{
 				aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
@@ -95,11 +95,12 @@ try{
 				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 				if(thisFee){
 					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
-					}else{
+				}else{
 					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 					logDebug("An error occurred retrieving fee item: " + feeDesc);
 				}
 			}
+	}
 } catch(err){
 	logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/* /RENEWAL: Update AltId: " + err.message);
 	logDebug(err.stack);
