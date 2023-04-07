@@ -10,6 +10,8 @@ try{
 	}
     pLicArray = String(parentLic).split("-");
     var parentCapId = aa.cap.getCapID(pLicArray[0],pLicArray[1],pLicArray[2]).getOutput();
+	pInfo = new Array;
+	loadAppSpecific(pInfo,parentCapId)
 	var parentAltId = parentCapId.getCustomID();
 	pCap = aa.cap.getCap(parentCapId).getOutput();
 	var pStatus = pCap.getCapStatus();
@@ -31,9 +33,7 @@ try{
 	//2. Associate partial cap with parent CAP.
 		var result = aa.cap.createRenewalCap(parentCapId, partialCapId, true);
 		if (result.getSuccess()){
-	//3. Copy key information from parent license to partial cap
-			pInfo = new Array;
-			loadAppSpecific(pInfo,parentCapId); 
+	//3. Copy key information from parent license to partial cap; 
 			editAppSpecific("License Number",parentAltId);
 			editAppSpecific("License Type", pInfo["License Type"]);
 			editAppSpecific("License Issued Type", pInfo["License Issued Type"]);
