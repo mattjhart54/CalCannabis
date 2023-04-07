@@ -58,7 +58,7 @@ try{
 	}
 		//4. Assess Renewal Fee
 			voidRemoveAllFees();
-			licType = pInfo["License Type"];
+			licType = getAppSpecific("License Type",parentCapId)
 			var feeDesc = licType + " - Renewal Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 			if(thisFee){
@@ -91,7 +91,7 @@ try{
 				logDebug("An error occurred retrieving fee item: " + feeDesc);
 			}
 			if(tmpDate < curDate) {
-				var feeDesc = pInfo["License Type"] + " - Late Fee";
+				var feeDesc = licType + " - Late Fee";
 				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 				if(thisFee){
 					updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
