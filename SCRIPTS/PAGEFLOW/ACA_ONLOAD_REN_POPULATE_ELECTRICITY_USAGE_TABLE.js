@@ -144,6 +144,7 @@ try {
 	
 	removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
 	removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
+	removeASITable("ELECTRICITY USAGE", capId);
 	asit = cap.getAppSpecificTableGroupModel();
 	
 	if (elecTable.length > 0){
@@ -152,12 +153,14 @@ try {
 	if (ggeiTable.length > 0){
 		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
-	copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
+	if (elecCapTable.length > 0 ){
+		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
+	}
 
 }catch (err){
-	logDebug("A JavaScript Error occurred:ACA_AFTER_REN_POPULATE_OWNERS_TABLE: " + err.message);
+	logDebug("A JavaScript Error occurred:ACA_ONLOAD_REN_POPULATE_ELECTRICITY_USAGE_TABLE: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_REN_POPULATE_OWNERS_TABLE: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_ONLOAD_REN_POPULATE_ELECTRICITY_USAGE_TABLE: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
 
