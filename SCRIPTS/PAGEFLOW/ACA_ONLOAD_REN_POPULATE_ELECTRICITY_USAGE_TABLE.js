@@ -151,8 +151,9 @@ try {
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
 	if (ggeiTable.length > 0){
-		copyASITable4PageFlowLocalasit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
+	asit = cap.getAppSpecificTableGroupModel();
 	if (elecCapTable.length > 0 ){
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
 	}
