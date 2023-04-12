@@ -92,7 +92,7 @@ try {
 		b1ExpResult=b1ExpResultRec.getOutput();
 		var expDate = b1ExpResult.getExpDate();
 		if(expDate){
-			var expYear = expDate.getYear()-1;
+			var expYear = expDate.getYear();
 		}
 	}
 	
@@ -144,7 +144,7 @@ try {
 	if (ggeiTable.length > 0){
 		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
-	addASITable(asit,"ELECTRICITY USAGE", elecCapTable);
+	addASITable4ACAPageFlow(asit,"ELECTRICITY USAGE", elecCapTable);
 
 }catch (err){
 	logDebug("A JavaScript Error occurred:ACA_AFTER_REN_POPULATE_OWNERS_TABLE: " + err.message);
