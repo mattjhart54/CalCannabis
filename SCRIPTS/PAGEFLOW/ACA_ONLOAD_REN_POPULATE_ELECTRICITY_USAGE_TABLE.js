@@ -97,7 +97,7 @@ try {
 	}
 	
 	var elecTable = [];
-	var elecHistTable = [];
+	var elecCapTable = [];
 	var ggeiTable = [];
 	licElecInfo = loadASITable("ELECTRICITY USAGE",licCapId);
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
