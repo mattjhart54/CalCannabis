@@ -92,7 +92,7 @@ try {
 		b1ExpResult=b1ExpResultRec.getOutput();
 		var expDate = b1ExpResult.getExpDate();
 		if(expDate){
-			var expYear = expDate.getYear();
+			var expYear = String(expDate.getYear());
 		}
 	}
 	
