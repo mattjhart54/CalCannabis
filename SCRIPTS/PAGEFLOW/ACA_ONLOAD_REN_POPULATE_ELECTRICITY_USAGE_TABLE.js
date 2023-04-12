@@ -18,7 +18,7 @@ var showMessage = true; // Set to true to see results in popup window
 var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = true;
+var cancel = false;
 var SCRIPT_VERSION  = 3; 
 var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
@@ -129,7 +129,16 @@ try {
 	
 
 	elecCapRow = [];
-	elecCapRow["Other Source description"] = new asiTableValObj("Other Source description", "" + expYear, "Y");
+	elecCapRow["Other Source description"] = new asiTableValObj("Other Source description", "" + expYear, "Y");	
+	elecCapRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + expYear, "N");
+	elecCapRow["Usage Type"] = new asiTableValObj("Usage Type", "" , "N");
+	elecCapRow["Type of Off Grid Renewable Source"] = new asiTableValObj("Type of Off Grid Renewable Source", "" , "N");
+	elecCapRow["Type of Other Source"] = new asiTableValObj("Type of Other Source", "", "N");
+	elecCapRow["Other Source description"] = new asiTableValObj("Other Source description", "", "N");
+	elecCapRow["Name of Utility Provider"] = new asiTableValObj("Name of Utility Provider", "" , "N");
+	elecCapRow["Total Electricity Supplied (kWh)"] = new asiTableValObj("Total Electricity Supplied (kWh)", "" , "N");
+	elecCapRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = new asiTableValObj("Total Electricity Supplied by Zero Net Energy Renewable (kWh)", "" , "N");
+	elecCapRow["GGEI (lbs CO2e/kWh)"] = new asiTableValObj("GGEI (lbs CO2e/kWh)", "" , "N");
 	elecCapTable.push(elecCapRow);
 
 	
