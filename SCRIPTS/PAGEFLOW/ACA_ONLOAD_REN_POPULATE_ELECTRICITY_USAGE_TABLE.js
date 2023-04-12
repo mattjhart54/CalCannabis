@@ -122,7 +122,7 @@ try {
 		for (xx in licGGEIInfo) {
 			ggeiRow = [];
 			ggeiRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + licGGEIInfo[xx]["Reporting Year"], "Y");
-			ggeiRow["Usage Type"] = new asiTableValObj("Average Weighted GGEI", "" + licGGEIInfo[xx]["Average Weighted GGEI"], "Y");
+			ggeiRow["Usage Type"] = new asiTableValObj("Average Weighted GGEI", "" + String(licGGEIInfo[xx]["Average Weighted GGEI"]), "Y");
 			ggeiTable.push(ggeiRow);
 		}
 	}
@@ -143,7 +143,7 @@ try {
 	if (ggeiTable.length > 0){
 		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
-	addASITable4ACAPageFlow(asit,"ELECTRICITY USAGE", elecCapTable,capId);
+	copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
 
 }catch (err){
 	logDebug("A JavaScript Error occurred:ACA_AFTER_REN_POPULATE_OWNERS_TABLE: " + err.message);
