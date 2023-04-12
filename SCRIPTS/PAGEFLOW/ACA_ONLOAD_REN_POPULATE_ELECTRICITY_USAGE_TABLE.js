@@ -143,7 +143,7 @@ try {
 	if (ggeiTable.length > 0){
 		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
-	addASITable4ACAPageFlow(asit,"ELECTRICITY USAGE", elecCapTable,capId);
+	//addASITable4ACAPageFlow(asit,"ELECTRICITY USAGE", elecCapTable,capId);
 
 }catch (err){
 	logDebug("A JavaScript Error occurred:ACA_AFTER_REN_POPULATE_OWNERS_TABLE: " + err.message);
