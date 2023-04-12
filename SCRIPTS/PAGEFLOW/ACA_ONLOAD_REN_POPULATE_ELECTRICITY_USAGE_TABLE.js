@@ -14,11 +14,11 @@
 | START User Configurable Parameters
 |
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = false; // Set to true to see results in popup window
-var showDebug = false; // Set to true to see debug messages in popup window
+var showMessage = true; // Set to true to see results in popup window
+var showDebug = true; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = false;
+var cancel = true;
 var SCRIPT_VERSION  = 3; 
 var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
@@ -119,10 +119,10 @@ try {
 	}	
 	
 	if (licGGEIInfo) {  // table of records to process
-		for (xx in licGGEIInfo) {
+		for (o in licGGEIInfo) {
 			ggeiRow = [];
-			ggeiRow["Reporting year"] = "" + licGGEIInfo[xx]["Reporting year"];
-			ggeiRow["Average Weighted GGEI"] = "" + String(licGGEIInfo[xx]["Average Weighted GGEI"]);
+			ggeiRow["Reporting year"] = new asiTableValObj("Reporting year", "" + licGGEIInfo[o]["Reporting year"], "Y");
+			ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "" + String(licGGEIInfo[o]["Average Weighted GGEI"]), "Y");
 			ggeiTable.push(ggeiRow);
 		}
 	}
