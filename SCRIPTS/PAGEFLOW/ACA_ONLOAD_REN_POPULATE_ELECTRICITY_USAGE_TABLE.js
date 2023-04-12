@@ -87,9 +87,20 @@ try {
 	
 	
 	var licCapId = getApplication(AInfo['License Number']);
+	var b1ExpResultRec=aa.expiration.getLicensesByCapID(licCapId);
+	if(b1ExpResultRec.getSuccess()){
+		b1ExpResult=b1ExpResultRec.getOutput();
+		var expDate = b1ExpResult.getExpDate();
+		if(expDate){
+			var expYear = expDate.getYear()-1;
+		}
+	}
+	
 	var elecTable = [];
+	var elecHistTable = [];
 	var ggeiTable = [];
 	licElecInfo = loadASITable("ELECTRICITY USAGE",licCapId);
+	licElecCapInfo = loadASITable("ELECTRICITY USAGE",capId);
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	
 	if (licElecInfo) {  // table of records to process
@@ -117,6 +128,12 @@ try {
 		}
 	}
 	
+
+		elecCapRow = [];
+		elecCapRow["Other Source description"] = new asiTableValObj("Other Source description", "" + expYear + " " + typeof(expYear), "Y");
+		elecCapTable.push(elecCapRow);
+
+	
 	removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
 	removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
 	asit = cap.getAppSpecificTableGroupModel();
@@ -126,6 +143,9 @@ try {
 	}
 	if (ggeiTable.length > 0){
 		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+	}
+	if (elecCapTable.length > 0){
+		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
 	}
 
 }catch (err){
