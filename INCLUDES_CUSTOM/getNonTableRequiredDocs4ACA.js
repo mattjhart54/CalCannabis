@@ -8,6 +8,7 @@ function getNonTableRequiredDocs4ACA() {
 
     //Global requirements cross discipline
     var isConversionRequest                    = appMatch("Licenses/Cultivator/Conversion Request/NA");
+	var isRenewal			                   = appMatch("Licenses/*/License/Renewal");
  
 
     /*------------------------------------------------------------------------------------------------------/
@@ -20,6 +21,7 @@ function getNonTableRequiredDocs4ACA() {
 	var pestManagementPlan							= "Cultivation Plan - Pest Management Plan";
 	var wasteManagementPlan							= "Cultivation Plan - Waste Management Plan"; 
 	var ceqaCompliance								= "Local - Evidence of CEQA Compliance";
+	var electricityUsgae							= "Electricity Usage";
 
 
 	//Remove all conditions first
@@ -33,6 +35,10 @@ function getNonTableRequiredDocs4ACA() {
 		requirementArray.push(pestManagementPlan);
 		requirementArray.push(wasteManagementPlan);
 		requirementArray.push(ceqaCompliance);
+    }
+	
+	if (isRenewal) {
+		requirementArray.push(electricityUsgae);
     }
 
     return requirementArray;
