@@ -151,7 +151,9 @@ try {
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
 	if (ggeiTable.length > 0){
-		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+		new_asit = addASITable4ACAPageFlow(asit,"RR REGISTRATION", ggeiTable,capId);
+		//var test = copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+		logDebug(new_asit);
 	}
 	if (elecCapTable.length > 0 ){
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
