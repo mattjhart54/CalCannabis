@@ -121,8 +121,8 @@ try {
 	if (licGGEIInfo) {  // table of records to process
 		for (xx in licGGEIInfo) {
 			ggeiRow = [];
-			ggeiRow["Reporting year"] = new asiTableValObj("Reporting year", "" + licGGEIInfo[xx]["Reporting year"], "Y");
-			ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "" + String(licGGEIInfo[xx]["Average Weighted GGEI"]), "Y");
+			ggeiRow["Reporting year"] = "" + licGGEIInfo[xx]["Reporting year"], "Y");
+			ggeiRow["Average Weighted GGEI"] = "" + String(licGGEIInfo[xx]["Average Weighted GGEI"]), "Y");
 			ggeiTable.push(ggeiRow);
 		}
 	}
