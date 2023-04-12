@@ -92,7 +92,7 @@ try {
 		b1ExpResult=b1ExpResultRec.getOutput();
 		var expDate = b1ExpResult.getExpDate();
 		if(expDate){
-			var expYear = String(expDate.getYear());
+			var expYear = String(expDate.getYear()-1);
 		}
 	}
 	
@@ -100,7 +100,6 @@ try {
 	var elecHistTable = [];
 	var ggeiTable = [];
 	licElecInfo = loadASITable("ELECTRICITY USAGE",licCapId);
-	licElecCapInfo = loadASITable("ELECTRICITY USAGE",capId);
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	
 	if (licElecInfo) {  // table of records to process
@@ -130,7 +129,7 @@ try {
 	
 
 	elecCapRow = [];
-	elecCapRow["Other Source description"] = new asiTableValObj("Other Source description", "" + expYear + " " + typeof(expYear), "Y");
+	elecCapRow["Other Source description"] = new asiTableValObj("Other Source description", "" + expYear, "Y");
 	elecCapTable.push(elecCapRow);
 
 	
@@ -144,7 +143,7 @@ try {
 	if (ggeiTable.length > 0){
 		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
-	addASITable4ACAPageFlow(asit,"ELECTRICITY USAGE", elecCapTable);
+	addASITable4ACAPageFlow(asit,"ELECTRICITY USAGE", elecCapTable,capId);
 
 }catch (err){
 	logDebug("A JavaScript Error occurred:ACA_AFTER_REN_POPULATE_OWNERS_TABLE: " + err.message);
