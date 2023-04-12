@@ -61,14 +61,14 @@ try {
 	altId = capId.getCustomID();
 	cIds = getChildren("Licenses/Cultivator/License/License",capId);
 	if(matches(cIds, null, "", undefined)) 
-		hisNbr = hisNbr = "0" + 1;
+		hisNbr = hisNbr = "00" + 1;
 	else {
 		cIdLen = cIds.length 
 		if(cIds.length <= 9) {
 			hisNbr = cIdLen + 1;
-			hisNbr = "0" +  hisNbr;
+			hisNbr = "00" +  hisNbr;
 		}else {
-			hisNbr = cIdLen + 1;
+			hisNbr = "0" + (cIdLen + 1);
 		}
 	}	
 	var newAltId = altId + "-HIST" + hisNbr;
