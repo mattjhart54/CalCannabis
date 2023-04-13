@@ -121,8 +121,8 @@ try {
 	if (licGGEIInfo) {  // table of records to process
 		for (o in licGGEIInfo) {
 			ggeiRow = [];
-			ggeiRow["Reporting year"] = new asiTableValObj("Reporting year", "2022", "Y");
-			ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", 99, "Y");
+			ggeiRow["Reporting year"] = "" + licGGEIInfo[o]["Reporting year"];
+			ggeiRow["Average Weighted GGEI"] =  "" + String(licGGEIInfo[o]["Average Weighted GGEI"]);
 			ggeiTable.push(ggeiRow);
 		}
 	}
@@ -150,10 +150,12 @@ try {
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
 	if (ggeiTable.length > 0){
-		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+		addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(),"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+		aa.env.setValue("CapModel",cap);
 	}
 	if (elecCapTable.length > 0 ){
-		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
+		copyASITable4PageFlowLocal(cap.getAppSpecificTableGroupModel(),"ELECTRICITY USAGE", elecCapTable,capId);
+		aa.env.setValue("CapModel",cap);
 	}
 
 }catch (err){
