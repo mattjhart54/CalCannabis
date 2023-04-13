@@ -141,19 +141,22 @@ try {
 	elecCapTable.push(elecCapRow);
 
 	
-	removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
-	removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
-	removeASITable("ELECTRICITY USAGE", capId);
-	asit = cap.getAppSpecificTableGroupModel();
+	
+	
+	
 	
 	if (elecTable.length > 0){
-		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
+		removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
+		copyASITable4PageFlowLocal(cap.getAppSpecificTableGroupModel(),"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
+		aa.env.setValue("CapModel",cap);
 	}
 	if (ggeiTable.length > 0){
-		addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(),"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
+		copyASITable4PageFlowLocal(cap.getAppSpecificTableGroupModel(),"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 		aa.env.setValue("CapModel",cap);
 	}
 	if (elecCapTable.length > 0 ){
+		removeASITable("ELECTRICITY USAGE", capId);
 		copyASITable4PageFlowLocal(cap.getAppSpecificTableGroupModel(),"ELECTRICITY USAGE", elecCapTable,capId);
 		aa.env.setValue("CapModel",cap);
 	}
