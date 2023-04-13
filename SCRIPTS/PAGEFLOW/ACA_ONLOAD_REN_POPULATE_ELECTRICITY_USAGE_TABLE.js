@@ -43,14 +43,12 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 	}
 }
 
-if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
-	eval(getScriptText(SAScript, SA));
-} else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS",null,true));
-}
+eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
+eval(getScriptText("INCLUDES_BATCH"));
+eval(getMasterScriptText("INCLUDES_CUSTOM"));
+
+override = "function logDebug(dstr){ if(showDebug) { aa.print(dstr); emailText+= dstr + \"<br>\"; } }";
+eval(override);
 
 
 eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
@@ -143,24 +141,27 @@ try {
 	elecCapTable.push(elecCapRow);
 
 	
-	removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
-	removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
-	removeASITable("ELECTRICITY USAGE", capId);
 	asit = cap.getAppSpecificTableGroupModel();
 	
 	logDebug("elecTable New Table values: " + elecTable);
 	logDebug("ggeiTable New Table Values: " + ggeiTable);
 	logDebug("elecCapTable New Table Values: " + elecCapTable);
+	logDebug("Elec Table Length: " + elecTable.length);
+	logDebug("GGEI Table Length: " + ggeiTable.length);
+	logDebug("Ren Elect Table Length: " + elecCapTable.length);
 	if (elecTable.length > 0){
 		logDebug("within1");
+		removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
 	if (ggeiTable.length > 0){
 		logDebug("within2");
+		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
 		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
 	if (elecCapTable.length > 0 ){
 		logDebug("within3");
+		removeASITable("ELECTRICITY USAGE", capId);
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
 	}
 
