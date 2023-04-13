@@ -142,7 +142,7 @@ try {
 
 	
 	removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
-	removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
+	removeASITable("PREVIOUS AVERAGE WEIGHTED GGEI", capId);
 	removeASITable("ELECTRICITY USAGE", capId);
 	asit = cap.getAppSpecificTableGroupModel();
 	
@@ -150,7 +150,7 @@ try {
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
 	if (ggeiTable.length > 0){
-		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+		copyASITable4PageFlowLocal(asit,"PREVIOUS AVERAGE WEIGHTED GGEI", ggeiTable,capId);
 	}
 	if (elecCapTable.length > 0 ){
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
