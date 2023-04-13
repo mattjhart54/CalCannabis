@@ -122,7 +122,7 @@ try {
 		for (o in licGGEIInfo) {
 			ggeiRow = [];
 			ggeiRow["Reporting year"] = new asiTableValObj("Reporting year", "2022", "Y");
-			ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "99"), "Y");
+			ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "99", "Y");
 			ggeiTable.push(ggeiRow);
 		}
 	}
