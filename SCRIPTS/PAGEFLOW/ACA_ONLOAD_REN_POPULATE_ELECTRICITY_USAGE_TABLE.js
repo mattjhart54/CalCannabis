@@ -121,8 +121,8 @@ try {
 	if (licGGEIInfo) {  // table of records to process
 		for (o in licGGEIInfo) {
 			ggeiRow = [];
-			ggeiRow["Reporting year"] = new asiTableValObj("Reporting year", "" + licGGEIInfo[o]["Reporting year"], "Y");
-			ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "" + String(licGGEIInfo[o]["Average Weighted GGEI"]), "Y");
+			ggeiRow["Reporting year"] = new asiTableValObj("Reporting year", "2022", "Y");
+			ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "99"), "Y");
 			ggeiTable.push(ggeiRow);
 		}
 	}
@@ -142,7 +142,7 @@ try {
 
 	
 	removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
-	removeASITable("PREVIOUS AVERAGE WEIGHTED GGEI", capId);
+	removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
 	removeASITable("ELECTRICITY USAGE", capId);
 	asit = cap.getAppSpecificTableGroupModel();
 	
@@ -150,7 +150,7 @@ try {
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
 	if (ggeiTable.length > 0){
-		copyASITable4PageFlowLocal(asit,"PREVIOUS AVERAGE WEIGHTED GGEI", ggeiTable,capId);
+		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
 	if (elecCapTable.length > 0 ){
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
