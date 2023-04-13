@@ -150,11 +150,7 @@ try {
 	logDebug("Elec Table Length: " + elecTable.length);
 	logDebug("GGEI Table Length: " + ggeiTable.length);
 	logDebug("Ren Elect Table Length: " + elecCapTable.length);
-	if (elecTable.length > 0){
-		logDebug("within1");
-		removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
-		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
-	}
+
 	if (ggeiTable.length > 0){
 		logDebug("within2");
 		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
@@ -164,7 +160,13 @@ try {
 		logDebug("within3");
 		removeASITable("ELECTRICITY USAGE", capId);
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
+	}	
+	if (elecTable.length > 0){
+		aa.print("within1");
+		removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
+		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
+	
 
 }catch (err){
 	logDebug("A JavaScript Error occurred:ACA_ONLOAD_REN_POPULATE_ELECTRICITY_USAGE_TABLE: " + err.message);
