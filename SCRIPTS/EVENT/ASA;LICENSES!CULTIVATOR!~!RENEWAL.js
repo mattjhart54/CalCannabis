@@ -71,7 +71,7 @@ try{
 					feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 					logDebug("feeDesc " + feeDesc);
 					thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
-					var sqft = pInfo["Canopy SF"];
+					var sqft = getAppSpecific("Canopy SF",parentCapId);
 					logDebug("SQ FT " + sqft + " Base " + base);
 					qty = (parseInt(sqft) - base) / 2000;
 					logDebug("qty " + parseInt(qty));
