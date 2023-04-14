@@ -1,3 +1,4 @@
+/*Adding Attachments with 7417
 try{
 	if(documentUploadedFrom == "ACA"){
 		cancel = true;		
@@ -9,3 +10,4 @@ try{
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in DUB:LICENSES/CULTIVATOR/LICENSE/RENEWAL: No Documents: "+ startDate, capId + br+ err.message+ br+ err.stack + br + "DOCUMENT ARRAY: " + documentModel);
 }
+*/
