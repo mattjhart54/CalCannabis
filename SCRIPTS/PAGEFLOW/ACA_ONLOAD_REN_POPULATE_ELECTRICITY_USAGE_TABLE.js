@@ -14,8 +14,8 @@
 | START User Configurable Parameters
 |
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = true; // Set to true to see results in popup window
-var showDebug = true; // Set to true to see debug messages in popup window
+var showMessage = false; // Set to true to see results in popup window
+var showDebug = false; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
@@ -98,10 +98,9 @@ try {
 	var elecTable = [];
 	var elecCapTable = [];
 	var ggeiTable = [];
+	var ggeiCapTable = [];
 	licElecInfo = loadASITable("ELECTRICITY USAGE",licCapId);
-	logDebug("licElecInfo Table: " + licElecInfo);
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
-	logDebug("licGGEIInfo Table: " + licGGEIInfo);
 	
 	if (licElecInfo) {  // table of records to process
 		for (ii in licElecInfo) {
@@ -140,31 +139,29 @@ try {
 	elecCapRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = new asiTableValObj("Total Electricity Supplied by Zero Net Energy Renewable (kWh)", "" , "N");
 	elecCapRow["GGEI (lbs CO2e/kWh)"] = new asiTableValObj("GGEI (lbs CO2e/kWh)", "" , "N");
 	elecCapTable.push(elecCapRow);
-
 	
+	ggeiCapRow = [];
+	ggeiCapRow["Reporting year"] = new asiTableValObj("Reporting year", "" + expYear, "Y");
+	ggeiCapTable.push(ggeiCapRow);
+
 	asit = cap.getAppSpecificTableGroupModel();
 	
-	logDebug("elecTable New Table values: " + elecTable);
-	logDebug("ggeiTable New Table Values: " + ggeiTable);
-	logDebug("elecCapTable New Table Values: " + elecCapTable);
-	logDebug("Elec Table Length: " + elecTable.length);
-	logDebug("GGEI Table Length: " + ggeiTable.length);
-	logDebug("Ren Elect Table Length: " + elecCapTable.length);
 
 	if (ggeiTable.length > 0){
-		logDebug("within2");
 		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
 		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
 	if (elecCapTable.length > 0 ){
-		logDebug("within3");
 		removeASITable("ELECTRICITY USAGE", capId);
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
 	}	
 	if (elecTable.length > 0){
-		aa.print("within1");
 		removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
 		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
+	}
+	if (ggeiCapTable.length > 0){
+		removeASITable("AVERAGE WEIGHTED GGEI", capId);
+		copyASITable4PageFlowLocal(asit,"AVERAGE WEIGHTED GGEI", ggeiCapTable,capId);
 	}
 	
 
