@@ -25,6 +25,7 @@ var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else us
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
 var startDate = new Date();
+var startDate = new Date();
 var startTime = startDate.getTime();
 var message = ""; // Message String
 var debug = ""; // Debug String
@@ -93,16 +94,13 @@ try {
 		}
 	}
 	
-	var elecTable = [];
-	var elecCapTable = [];
-	var ggeiTable = [];
-	var ggeiCapTable = [];
-	licElecInfo = loadASITable("ELECTRICITY USAGE",licCapId);
-	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	
+	licElecInfo = loadASITable("ELECTRICITY USAGE",licCapId);	
 	if (licElecInfo) {  // table of records to process
+		var cap = aa.env.getValue("CapModel");
+		var elecTable = new Array();
 		for (ii in licElecInfo) {
-			elecRow = [];
+			elecRow = new Array();
 			elecRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + licElecInfo[ii]["Reporting Year"], "Y");
 			elecRow["Usage Type"] = new asiTableValObj("Usage Type", "" + licElecInfo[ii]["Usage Type"], "Y");
 			elecRow["Type of Off Grid Renewable Source"] = new asiTableValObj("Type of Off Grid Renewable Source", "" + licElecInfo[ii]["Type of Off Grid Renewable Source"], "Y");
@@ -116,17 +114,32 @@ try {
 		}
 	}	
 	
+	if (elecTable.length > 0){
+		removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
+		asit = cap.getAppSpecificTableGroupModel();
+		new_asit = copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
+	}
+	
+	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	if (licGGEIInfo) {  // table of records to process
+		var cap = aa.env.getValue("CapModel");
+		var ggeiTable = new Array();
 		for (o in licGGEIInfo) {
-			ggeiRow = [];
+			ggeiRow = new Array();
 			ggeiRow["Reporting year"] = new asiTableValObj("Reporting year", "" + licGGEIInfo[o]["Reporting year"], "Y");
 			ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "" + String(licGGEIInfo[o]["Average Weighted GGEI"]), "Y");
 			ggeiTable.push(ggeiRow);
 		}
 	}
+	if (ggeiTable.length > 0){
+		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
+		asit = cap.getAppSpecificTableGroupModel();
+		new_asit = copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+	}
 	
-
-	elecCapRow = [];
+	var cap = aa.env.getValue("CapModel");
+	var elecCapTable = new Array;
+	elecCapRow = new Array();
 	elecCapRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + expYear, "Y");
 	elecCapRow["Usage Type"] = new asiTableValObj("Usage Type", "" , "N");
 	elecCapRow["Type of Off Grid Renewable Source"] = new asiTableValObj("Type of Off Grid Renewable Source", "" , "N");
@@ -138,29 +151,23 @@ try {
 	elecCapRow["GGEI (lbs CO2e/kWh)"] = new asiTableValObj("GGEI (lbs CO2e/kWh)", "" , "N");
 	elecCapTable.push(elecCapRow);
 	
-	ggeiCapRow = [];
+	if (elecCapTable.length > 0 ){
+		removeASITable("ELECTRICITY USAGE", capId);
+		asit = cap.getAppSpecificTableGroupModel();
+		new_asit = copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
+	}
+	
+	var cap = aa.env.getValue("CapModel");
+	var ggeiCapTable = new Array();
+	ggeiCapRow = new Array();
 	ggeiCapRow["Reporting year"] = new asiTableValObj("Reporting year", "" + expYear, "Y");
 	ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "", "N");
 	ggeiCapTable.push(ggeiCapRow);
-
-	asit = cap.getAppSpecificTableGroupModel();
-	
-
-	if (ggeiTable.length > 0){
-		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
-		copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
-	}
-	if (elecCapTable.length > 0 ){
-		removeASITable("ELECTRICITY USAGE", capId);
-		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
-	}	
-	if (elecTable.length > 0){
-		removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
-		copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
-	}
+		
 	if (ggeiCapTable.length > 0){
 		removeASITable("AVERAGE WEIGHTED GGEI", capId);
-		copyASITable4PageFlowLocal(asit,"AVERAGE WEIGHTED GGEI", ggeiCapTable,capId);
+		asit = cap.getAppSpecificTableGroupModel();
+		new_asit = copyASITable4PageFlowLocal(asit,"AVERAGE WEIGHTED GGEI", ggeiCapTable,capId);
 	}
 	
 
