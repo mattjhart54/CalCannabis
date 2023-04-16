@@ -117,7 +117,7 @@ try {
 	if (elecTable.length > 0){
 		removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
 		asit = cap.getAppSpecificTableGroupModel();
-		new_asit = copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
+		new_asit = addASITable4ACAPageFlowXX(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 	}
 	
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
@@ -134,7 +134,7 @@ try {
 	if (ggeiTable.length > 0){
 		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
 		asit = cap.getAppSpecificTableGroupModel();
-		new_asit = copyASITable4PageFlowLocal(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+		new_asit = addASITable4ACAPageFlowXX(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 	}
 	
 	var cap = aa.env.getValue("CapModel");
@@ -154,7 +154,7 @@ try {
 	if (elecCapTable.length > 0 ){
 		removeASITable("ELECTRICITY USAGE", capId);
 		asit = cap.getAppSpecificTableGroupModel();
-		new_asit = copyASITable4PageFlowLocal(asit,"ELECTRICITY USAGE", elecCapTable,capId);
+		new_asit = addASITable4ACAPageFlowXX(asit,"ELECTRICITY USAGE", elecCapTable,capId);
 	}
 	
 	var cap = aa.env.getValue("CapModel");
@@ -167,7 +167,7 @@ try {
 	if (ggeiCapTable.length > 0){
 		removeASITable("AVERAGE WEIGHTED GGEI", capId);
 		asit = cap.getAppSpecificTableGroupModel();
-		new_asit = copyASITable4PageFlowLocal(asit,"AVERAGE WEIGHTED GGEI", ggeiCapTable,capId);
+		new_asit = addASITable4ACAPageFlowXX(asit,"AVERAGE WEIGHTED GGEI", ggeiCapTable,capId);
 	}
 	
 
@@ -458,7 +458,7 @@ function addASITable4ACAPageFlowXX(destinationTableGroupModel, tableName, tableV
                 fldToAdd.setRowIndex(i);
                 fldToAdd.setFieldLabel(colname.getColumnName());
                 fldToAdd.setFieldGroup(tableName.replace(/ /g, "\+"));
-                fldToAdd.setReadOnly(tableValueArray[thisrow][colname.getColumnName()].readOnly.equals("Y"));
+                //fldToAdd.setReadOnly(tableValueArray[thisrow][colname.getColumnName()].readOnly.equals("Y"));
                 fld.add(fldToAdd);
                 fld_readonly.add(tableValueArray[thisrow][colname.getColumnName()].readOnly);
 
@@ -486,7 +486,7 @@ function addASITable4ACAPageFlowXX(destinationTableGroupModel, tableName, tableV
     tssm = tsm;
 
     return destinationTableGroupModel;
-}	
+}
 function copyASITable4PageFlow(destinationTableGroupModel,tableName,tableValueArray) // optional capId
     	{
   	//  tableName is the name of the ASI table
