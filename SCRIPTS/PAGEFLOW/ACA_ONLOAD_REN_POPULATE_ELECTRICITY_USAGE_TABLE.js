@@ -109,7 +109,7 @@ try {
 			elecRow["Name of Utility Provider"] = "" + String(licElecInfo[ii]["Name of Utility Provider"]);
 			elecRow["Total Electricity Supplied (kWh)"] =  "" + String(licElecInfo[ii]["Total Electricity Supplied (kWh)"]);
 			elecRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = "" + String(licElecInfo[ii]["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"]);
-			elecRow["GGEI (lbs CO2e/kWh)"] = "" + String(licElecInfo[ii]["GGEI (lbs CO2e/kWh)"]), "Y");
+			elecRow["GGEI (lbs CO2e/kWh)"] = "" + String(licElecInfo[ii]["GGEI (lbs CO2e/kWh)"]);
 			elecTable.push(elecRow);
 		}
 	}	
