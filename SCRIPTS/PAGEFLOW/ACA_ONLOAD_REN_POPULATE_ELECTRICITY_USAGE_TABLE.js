@@ -118,11 +118,11 @@ try {
 		removeASITable("ELECTRICITY USAGE HISTORICAL", capId);
 		asit = cap.getAppSpecificTableGroupModel();
 		new_asit = addASITable4ACAPageFlowXX(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
+		var cap = aa.env.getValue("CapModel");
 	}
 	
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	if (licGGEIInfo) {  // table of records to process
-		var cap = aa.env.getValue("CapModel");
 		var ggeiTable = new Array();
 		for (o in licGGEIInfo) {
 			ggeiRow = new Array();
@@ -135,9 +135,9 @@ try {
 		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
 		asit = cap.getAppSpecificTableGroupModel();
 		new_asit = addASITable4ACAPageFlowXX(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
+		var cap = aa.env.getValue("CapModel");
 	}
 	
-	var cap = aa.env.getValue("CapModel");
 	var elecCapTable = new Array;
 	elecCapRow = new Array();
 	elecCapRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + expYear, "Y");
@@ -155,9 +155,9 @@ try {
 		removeASITable("ELECTRICITY USAGE", capId);
 		asit = cap.getAppSpecificTableGroupModel();
 		new_asit = addASITable4ACAPageFlowXX(asit,"ELECTRICITY USAGE", elecCapTable,capId);
+		var cap = aa.env.getValue("CapModel");
 	}
 	
-	var cap = aa.env.getValue("CapModel");
 	var ggeiCapTable = new Array();
 	ggeiCapRow = new Array();
 	ggeiCapRow["Reporting year"] = new asiTableValObj("Reporting year", "" + expYear, "Y");
@@ -168,6 +168,7 @@ try {
 		removeASITable("AVERAGE WEIGHTED GGEI", capId);
 		asit = cap.getAppSpecificTableGroupModel();
 		new_asit = addASITable4ACAPageFlowXX(asit,"AVERAGE WEIGHTED GGEI", ggeiCapTable,capId);
+		var cap = aa.env.getValue("CapModel");
 	}
 	
 
