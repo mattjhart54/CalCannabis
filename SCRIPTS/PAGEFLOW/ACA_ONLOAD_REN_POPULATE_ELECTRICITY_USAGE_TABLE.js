@@ -101,15 +101,15 @@ try {
 		var elecTable = new Array();
 		for (ii in licElecInfo) {
 			elecRow = new Array();
-			elecRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + licElecInfo[ii]["Reporting Year"], "Y");
-			elecRow["Usage Type"] = new asiTableValObj("Usage Type", "" + licElecInfo[ii]["Usage Type"], "Y");
-			elecRow["Type of Off Grid Renewable Source"] = new asiTableValObj("Type of Off Grid Renewable Source", "" + licElecInfo[ii]["Type of Off Grid Renewable Source"], "Y");
-			elecRow["Type of Other Source"] = new asiTableValObj("Type of Other Source", String(licElecInfo[ii]["Type of Other Source"]), "Y");
-			elecRow["Other Source description"] = new asiTableValObj("Other Source description", String(licElecInfo[ii]["Other Source description"]), "Y");
-			elecRow["Name of Utility Provider"] = new asiTableValObj("Name of Utility Provider", "" + String(licElecInfo[ii]["Name of Utility Provider"]), "Y");
-			elecRow["Total Electricity Supplied (kWh)"] = new asiTableValObj("Total Electricity Supplied (kWh)", "" + String(licElecInfo[ii]["Total Electricity Supplied (kWh)"]), "Y");
-			elecRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = new asiTableValObj("Total Electricity Supplied by Zero Net Energy Renewable (kWh)", "" + String(licElecInfo[ii]["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"]), "Y");
-			elecRow["GGEI (lbs CO2e/kWh)"] = new asiTableValObj("GGEI (lbs CO2e/kWh)", "" + String(licElecInfo[ii]["GGEI (lbs CO2e/kWh)"]), "Y");
+			elecRow["Reporting Year"] =  "" + licElecInfo[ii]["Reporting Year"], "Y");
+			elecRow["Usage Type"] =  "" + licElecInfo[ii]["Usage Type"], "Y");
+			elecRow["Type of Off Grid Renewable Source"] =  "" + licElecInfo[ii]["Type of Off Grid Renewable Source"], "Y");
+			elecRow["Type of Other Source"] = "" + String(licElecInfo[ii]["Type of Other Source"]), "Y");
+			elecRow["Other Source description"] = "" +  String(licElecInfo[ii]["Other Source description"]), "Y");
+			elecRow["Name of Utility Provider"] = "" + String(licElecInfo[ii]["Name of Utility Provider"]), "Y");
+			elecRow["Total Electricity Supplied (kWh)"] =  "" + String(licElecInfo[ii]["Total Electricity Supplied (kWh)"]), "Y");
+			elecRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = "" + String(licElecInfo[ii]["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"]), "Y");
+			elecRow["GGEI (lbs CO2e/kWh)"] = "" + String(licElecInfo[ii]["GGEI (lbs CO2e/kWh)"]), "Y");
 			elecTable.push(elecRow);
 		}
 	}	
@@ -126,8 +126,8 @@ try {
 		var ggeiTable = new Array();
 		for (o in licGGEIInfo) {
 			ggeiRow = new Array();
-			ggeiRow["Reporting year"] = new asiTableValObj("Reporting year", "" + licGGEIInfo[o]["Reporting year"], "Y");
-			ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "" + String(licGGEIInfo[o]["Average Weighted GGEI"]), "Y");
+			ggeiRow["Reporting year"] = "" + licGGEIInfo[o]["Reporting year"], "Y");
+			ggeiRow["Average Weighted GGEI"] = "" + String(licGGEIInfo[o]["Average Weighted GGEI"]), "Y");
 			ggeiTable.push(ggeiRow);
 		}
 	}
@@ -138,7 +138,7 @@ try {
 		var cap = aa.env.getValue("CapModel");
 	}
 	
-	var elecCapTable = new Array;
+/*	var elecCapTable = new Array;
 	elecCapRow = new Array();
 	elecCapRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + expYear, "Y");
 	elecCapRow["Usage Type"] = new asiTableValObj("Usage Type", "" , "N");
@@ -169,7 +169,7 @@ try {
 		asit = cap.getAppSpecificTableGroupModel();
 		new_asit = addASITable4ACAPageFlowXX(asit,"AVERAGE WEIGHTED GGEI", ggeiCapTable,capId);
 		var cap = aa.env.getValue("CapModel");
-	}
+	}*/
 	
 
 }catch (err){
