@@ -140,7 +140,7 @@ try {
 		var cap = aa.env.getValue("CapModel");
 	}
 	
-/*	var elecCapTable = new Array;
+	var elecCapTable = new Array;
 	elecCapRow = new Array();
 	elecCapRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + expYear, "Y");
 	elecCapRow["Usage Type"] = new asiTableValObj("Usage Type", "" , "N");
@@ -171,7 +171,7 @@ try {
 		asit = cap.getAppSpecificTableGroupModel();
 		new_asit = addASITable4ACAPageFlowXX(asit,"AVERAGE WEIGHTED GGEI", ggeiCapTable,capId);
 		var cap = aa.env.getValue("CapModel");
-	}*/
+	}
 	
 
 }catch (err){
