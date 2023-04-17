@@ -101,14 +101,14 @@ try {
 		var elecTable = new Array();
 		for (ii in licElecInfo) {
 			elecRow = new Array();
-			elecRow["Reporting Year"] =  "" + licElecInfo[ii]["Reporting Year"], "Y");
-			elecRow["Usage Type"] =  "" + licElecInfo[ii]["Usage Type"], "Y");
-			elecRow["Type of Off Grid Renewable Source"] =  "" + licElecInfo[ii]["Type of Off Grid Renewable Source"], "Y");
-			elecRow["Type of Other Source"] = "" + String(licElecInfo[ii]["Type of Other Source"]), "Y");
-			elecRow["Other Source description"] = "" +  String(licElecInfo[ii]["Other Source description"]), "Y");
-			elecRow["Name of Utility Provider"] = "" + String(licElecInfo[ii]["Name of Utility Provider"]), "Y");
-			elecRow["Total Electricity Supplied (kWh)"] =  "" + String(licElecInfo[ii]["Total Electricity Supplied (kWh)"]), "Y");
-			elecRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = "" + String(licElecInfo[ii]["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"]), "Y");
+			elecRow["Reporting Year"] =  "" + licElecInfo[ii]["Reporting Year"];
+			elecRow["Usage Type"] =  "" + licElecInfo[ii]["Usage Type"];
+			elecRow["Type of Off Grid Renewable Source"] =  "" + licElecInfo[ii]["Type of Off Grid Renewable Source"];
+			elecRow["Type of Other Source"] = "" + String(licElecInfo[ii]["Type of Other Source"]);
+			elecRow["Other Source description"] = "" +  String(licElecInfo[ii]["Other Source description"]);
+			elecRow["Name of Utility Provider"] = "" + String(licElecInfo[ii]["Name of Utility Provider"]);
+			elecRow["Total Electricity Supplied (kWh)"] =  "" + String(licElecInfo[ii]["Total Electricity Supplied (kWh)"]);
+			elecRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = "" + String(licElecInfo[ii]["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"]);
 			elecRow["GGEI (lbs CO2e/kWh)"] = "" + String(licElecInfo[ii]["GGEI (lbs CO2e/kWh)"]), "Y");
 			elecTable.push(elecRow);
 		}
@@ -126,8 +126,8 @@ try {
 		var ggeiTable = new Array();
 		for (o in licGGEIInfo) {
 			ggeiRow = new Array();
-			ggeiRow["Reporting year"] = "" + licGGEIInfo[o]["Reporting year"], "Y");
-			ggeiRow["Average Weighted GGEI"] = "" + String(licGGEIInfo[o]["Average Weighted GGEI"]), "Y");
+			ggeiRow["Reporting year"] = "" + licGGEIInfo[o]["Reporting year"];
+			ggeiRow["Average Weighted GGEI"] = "" + String(licGGEIInfo[o]["Average Weighted GGEI"]);
 			ggeiTable.push(ggeiRow);
 		}
 	}
