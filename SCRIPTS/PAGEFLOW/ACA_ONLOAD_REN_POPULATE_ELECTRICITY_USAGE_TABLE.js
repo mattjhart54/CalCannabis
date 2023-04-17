@@ -25,7 +25,6 @@ var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else us
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
 var startDate = new Date();
-var startDate = new Date();
 var startTime = startDate.getTime();
 var message = ""; // Message String
 var debug = ""; // Debug String
@@ -45,12 +44,12 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA, useCustomScriptFile));
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,useCustomScriptFile));
+	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
 }
 
 eval(getMasterScriptText("INCLUDES_CUSTOM"))
