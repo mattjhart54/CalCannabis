@@ -29,6 +29,7 @@ try {
 	vCurrExpDate = vLicenseObj.b1ExpDate;
 	vLicenseObj.setExpiration(dateAddMonths(null,12));
 	vLicenseObj.setStatus("Active");
+	updateAppStatus("Active", "Updated on completion of conversion record " + crId.getCustomID());
 	
 //create child histroical record from the primary license record
 //before updating the primary license record from the conversion record	
