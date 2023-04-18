@@ -85,14 +85,14 @@ loadASITables4ACA_corrected();
 
 try {
 	
-	
+	var expYear = "2023";
 	var licCapId = getApplication(AInfo['License Number']);
 	var b1ExpResultRec=aa.expiration.getLicensesByCapID(licCapId);
 	if(b1ExpResultRec.getSuccess()){
 		b1ExpResult=b1ExpResultRec.getOutput();
 		var expDate = b1ExpResult.getExpDate();
 		if(expDate){
-			var expYear = String(expDate.getYear()-1);
+			expYear = String(expDate.getYear()-1);
 		}
 	}
 	
