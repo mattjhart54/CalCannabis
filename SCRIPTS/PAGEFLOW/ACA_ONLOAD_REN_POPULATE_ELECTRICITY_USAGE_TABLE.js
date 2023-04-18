@@ -129,7 +129,7 @@ try {
 		for (o in licGGEIInfo) {
 			ggeiRow = new Array();
 			ggeiRow["Reporting year"] = "" + licGGEIInfo[o]["Reporting year"];
-			ggeiRow["Average Weighted GGEI"] = "" + String(licGGEIInfo[o]["Average Weighted GGEI"]);
+			ggeiRow["Average Weighted GGEI"] = "" + licGGEIInfo[o]["Average Weighted GGEI"];
 			ggeiTable.push(ggeiRow);
 		}
 	}
