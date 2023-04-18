@@ -86,6 +86,8 @@ loadASITables4ACA_corrected();
 try {
 	
 	var expYear = "2023";
+	var elecTable = new Array();
+	var ggeiTable = new Array();
 	var licCapId = getApplication(AInfo['License Number']);
 	var b1ExpResultRec=aa.expiration.getLicensesByCapID(licCapId);
 	if(b1ExpResultRec.getSuccess()){
@@ -100,7 +102,6 @@ try {
 	licElecInfo = loadASITable("ELECTRICITY USAGE",licCapId);	
 	if (licElecInfo) {  // table of records to process
 		var cap = aa.env.getValue("CapModel");
-		var elecTable = new Array();
 		for (ii in licElecInfo) {
 			elecRow = new Array();
 			elecRow["Reporting Year"] =  "" + licElecInfo[ii]["Reporting Year"];
@@ -125,7 +126,6 @@ try {
 	
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	if (licGGEIInfo) {  // table of records to process
-		var ggeiTable = new Array();
 		for (o in licGGEIInfo) {
 			ggeiRow = new Array();
 			ggeiRow["Reporting year"] = "" + licGGEIInfo[o]["Reporting year"];
