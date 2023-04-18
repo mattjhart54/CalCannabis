@@ -142,15 +142,15 @@ try {
 	
 	var elecCapTable = new Array;
 	elecCapRow = new Array();
-	elecCapRow["Reporting Year"] = new asiTableValObj("Reporting Year", "" + expYear, "Y");
-	elecCapRow["Usage Type"] = new asiTableValObj("Usage Type", "" , "N");
-	elecCapRow["Type of Off Grid Renewable Source"] = new asiTableValObj("Type of Off Grid Renewable Source", "" , "N");
-	elecCapRow["Type of Other Source"] = new asiTableValObj("Type of Other Source", "", "N");
-	elecCapRow["Other Source description"] = new asiTableValObj("Other Source description", "", "N");
-	elecCapRow["Name of Utility Provider"] = new asiTableValObj("Name of Utility Provider", "" , "N");
-	elecCapRow["Total Electricity Supplied (kWh)"] = new asiTableValObj("Total Electricity Supplied (kWh)", "" , "N");
-	elecCapRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = new asiTableValObj("Total Electricity Supplied by Zero Net Energy Renewable (kWh)", "" , "N");
-	elecCapRow["GGEI (lbs CO2e/kWh)"] = new asiTableValObj("GGEI (lbs CO2e/kWh)", "" , "N");
+	elecCapRow["Reporting Year"] =  "" + expYear;
+	elecCapRow["Usage Type"] = "";
+	elecCapRow["Type of Off Grid Renewable Source"] = "";
+	elecCapRow["Type of Other Source"] = "";
+	elecCapRow["Other Source description"] = "";
+	elecCapRow["Name of Utility Provider"] = "";
+	elecCapRow["Total Electricity Supplied (kWh)"] = "";
+	elecCapRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = "";
+	elecCapRow["GGEI (lbs CO2e/kWh)"] = "";
 	elecCapTable.push(elecCapRow);
 	
 	if (elecCapTable.length > 0 ){
@@ -162,8 +162,8 @@ try {
 	
 	var ggeiCapTable = new Array();
 	ggeiCapRow = new Array();
-	ggeiCapRow["Reporting year"] = new asiTableValObj("Reporting year", "" + expYear, "Y");
-	ggeiRow["Average Weighted GGEI"] = new asiTableValObj("Average Weighted GGEI", "", "N");
+	ggeiCapRow["Reporting year"] = "" + expYear;
+	ggeiRow["Average Weighted GGEI"] = "";
 	ggeiCapTable.push(ggeiCapRow);
 		
 	if (ggeiCapTable.length > 0){
