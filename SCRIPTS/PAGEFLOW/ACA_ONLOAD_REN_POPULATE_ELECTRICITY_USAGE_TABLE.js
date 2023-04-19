@@ -88,6 +88,8 @@ try {
 	var expYear = "2023";
 	var elecTable = new Array();
 	var ggeiTable = new Array();
+	var elecCapTable = new Array;
+	var ggeiCapTable = new Array();
 	var licCapId = getApplication(AInfo['License Number']);
 	var b1ExpResultRec=aa.expiration.getLicensesByCapID(licCapId);
 	if(b1ExpResultRec.getSuccess()){
@@ -128,8 +130,8 @@ try {
 	if (licGGEIInfo) {  // table of records to process
 		for (o in licGGEIInfo) {
 			ggeiRow = new Array();
-			ggeiRow["Reporting year"] = "" + licGGEIInfo[o]["Reporting year"];
-			ggeiRow["Average Weighted GGEI"] = "" + licGGEIInfo[o]["Average Weighted GGEI"];
+			ggeiRow["Reporting year"] = licGGEIInfo[o]["Reporting year"];
+			ggeiRow["Average Weighted GGEI"] = licGGEIInfo[o]["Average Weighted GGEI"];
 			ggeiTable.push(ggeiRow);
 		}
 	}
@@ -140,7 +142,6 @@ try {
 		var cap = aa.env.getValue("CapModel");
 	}
 	
-	var elecCapTable = new Array;
 	elecCapRow = new Array();
 	elecCapRow["Reporting Year"] =  "" + expYear;
 	elecCapRow["Usage Type"] = "";
@@ -160,7 +161,6 @@ try {
 		var cap = aa.env.getValue("CapModel");
 	}
 	
-	var ggeiCapTable = new Array();
 	ggeiCapRow = new Array();
 	ggeiCapRow["Reporting year"] = "" + expYear;
 	ggeiRow["Average Weighted GGEI"] = "";
