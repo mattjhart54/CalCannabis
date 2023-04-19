@@ -128,15 +128,16 @@ try {
 
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	if (licGGEIInfo) {  // table of records to process	
-	for (o in licGGEIInfo) {
-		ggeiRow=new Array();
-		ggeiRow["Reporting year"] = licGGEIInfo[o]["Reporting year"];
-		const avgWeightedGGEI = parseFloat(licGGEIInfo[o]["Average Weighted GGEI"]);
-		if (!isNaN(avgWeightedGGEI)) {
-			ggeiRow["Average Weighted GGEI"] = avgWeightedGGEI;
+		for (o in licGGEIInfo) {
+			ggeiRow=new Array();
+			ggeiRow["Reporting year"] = licGGEIInfo[o]["Reporting year"];
+			const avgWeightedGGEI = parseFloat(licGGEIInfo[o]["Average Weighted GGEI"]);
+			if (!isNaN(avgWeightedGGEI)) {
+				ggeiRow["Average Weighted GGEI"] = avgWeightedGGEI;
+			}
+			ggeiTable.push(ggeiRow);
 		}
-		ggeiTable.push(ggeiRow);
-	}	
+	}		
 
 	
 	
