@@ -88,7 +88,7 @@ try {
 	var expYear = "2023";
 	var elecTable = new Array();
 	var ggeiTable = new Array();
-	var elecCapTable = new Array;
+	var elecCapTable = new Array();
 	var ggeiCapTable = new Array();
 	var licCapId = getApplication(AInfo['License Number']);
 	var b1ExpResultRec=aa.expiration.getLicensesByCapID(licCapId);
@@ -125,16 +125,21 @@ try {
 		new_asit = addASITable4ACAPageFlowXX(asit,"ELECTRICITY USAGE HISTORICAL", elecTable,capId);
 		var cap = aa.env.getValue("CapModel");
 	}
-	
+
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
-	if (licGGEIInfo) {  // table of records to process
-		for (o in licGGEIInfo) {
-			ggeiRow = new Array();
-			ggeiRow["Reporting year"] = licGGEIInfo[o]["Reporting year"];
-			ggeiRow["Average Weighted GGEI"] = licGGEIInfo[o]["Average Weighted GGEI"];
-			ggeiTable.push(ggeiRow);
+	if (licGGEIInfo) {  // table of records to process	
+	for (o in licGGEIInfo) {
+		ggeiRow=new Array();
+		ggeiRow["Reporting year"] = licGGEIInfo[o]["Reporting year"];
+		const avgWeightedGGEI = parseFloat(licGGEIInfo[o]["Average Weighted GGEI"]);
+		if (!isNaN(avgWeightedGGEI)) {
+			ggeiRow["Average Weighted GGEI"] = avgWeightedGGEI;
 		}
-	}
+		ggeiTable.push(ggeiRow);
+	}	
+
+	
+	
 	if (ggeiTable.length > 0){
 		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
 		asit = cap.getAppSpecificTableGroupModel();
