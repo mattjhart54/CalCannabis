@@ -86,10 +86,10 @@ loadASITables4ACA_corrected();
 try {
 	
 	var expYear = "2023";
-	var elecTable = new Array();
-	var ggeiTable = new Array();
-	var elecCapTable = new Array();
-	var ggeiCapTable = new Array();
+	var elecTable = [];
+	var ggeiTable = [];
+	var elecCapTable = [];
+	var ggeiCapTable = [];
 	var licCapId = getApplication(AInfo['License Number']);
 	var b1ExpResultRec=aa.expiration.getLicensesByCapID(licCapId);
 	if(b1ExpResultRec.getSuccess()){
@@ -129,7 +129,7 @@ try {
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	if (licGGEIInfo) {  // table of records to process	
 		for (o in licGGEIInfo) {
-			ggeiRow=new Array();
+			ggeiRow={};
 			const reportYear = parseFloat(licGGEIInfo[o]["Reporting year"]);
 			if (!isNaN(reportYear)) {
 				ggeiRow["Reporting year"] = reportYear;
