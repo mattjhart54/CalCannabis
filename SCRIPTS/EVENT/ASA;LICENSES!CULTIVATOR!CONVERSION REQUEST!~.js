@@ -34,6 +34,8 @@ try {
 			editAppSpecific("Submitted License Type", AInfo["Proposed License Type"])
 			editAppSpecific("License Expiration Date", vCurrExpDate);
 			editAppSpecific("Legal Business Name", PInfo["Legal Business Name"]);
+			updateWorkDesc(PInfo["Legal Business Name"]);
+			updateShortNotes(PInfo["Premise County"]);
 			editAppSpecific("License Issued Type", PInfo["License Issued Type"]);
 			editAppSpecific("Premise Address",PInfo["Premise Address"]);
 			editAppSpecific("Premise City",PInfo["Premise City"]);
