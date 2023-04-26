@@ -172,7 +172,7 @@ try {
 	
 	ggeiCapRow = new Array();
 	ggeiCapRow["Reporting year"] = "" + expYear;
-	ggeiRow["Average Weighted GGEI"] = "";
+	ggeiCapRow["Average Weighted GGEI"] = "";
 	ggeiCapTable.push(ggeiCapRow);
 		
 	if (ggeiCapTable.length > 0){
