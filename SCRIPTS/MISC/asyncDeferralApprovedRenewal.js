@@ -171,7 +171,7 @@ try{
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$parentId$$", licCap);
-		feesDue = "$" + maskTheMoneyNumber(balanceDue.toFixed(2));
+		feesDue = "$" + maskTheMoneyNumber(balanceDue);
 		addParameter(eParams, "$$feesDue$$", feesDue);
 		addParameter(eParams, "$$deferralDue$$", deferralDue);
 		addParameter(eParams, "$$issueType$$", issueType);
