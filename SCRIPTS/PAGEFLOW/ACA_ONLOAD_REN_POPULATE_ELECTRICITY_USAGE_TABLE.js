@@ -129,21 +129,13 @@ try {
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	if (licGGEIInfo) {  // table of records to process	
 		for (o in licGGEIInfo) {
-			ggeiRow={};
-			const reportYear = parseFloat(licGGEIInfo[o]["Reporting year"]);
-			if (!isNaN(reportYear)) {
-				ggeiRow["Reporting year"] = reportYear;
-			}
-			const avgWeightedGGEI = parseFloat(licGGEIInfo[o]["Average Weighted GGEI"]);
-			if (!isNaN(avgWeightedGGEI)) {
-				ggeiRow["Average Weighted GGEI"] = avgWeightedGGEI;
-			}
+			ggeiRow = new  Array();;
+			ggeiRow["Reporting year"] = "" + licGGEIInfo[o]["Reporting year"];
+			ggeiRow["Average Weighted GGEI"] = "" + licGGEIInfo[o]["Average Weighted GGEI"]
 			ggeiTable.push(ggeiRow);
 		}
 	}		
 
-	
-	
 	if (ggeiTable.length > 0){
 		removeASITable("AVG WEIGHTED GGEI HISTORICAL", capId);
 		asit = cap.getAppSpecificTableGroupModel();
