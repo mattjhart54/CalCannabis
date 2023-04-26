@@ -43,14 +43,14 @@ function getMasterScriptText(vScriptName) {
 }
 try{
 /*---------------------------------------
-	aa.env.setValue("licCap", "CCL20-0000006");
-	aa.env.setValue("appCap", "CCL20-0000006-R18");
+	aa.env.setValue("licCap", "CCL21-0000005");
+	aa.env.setValue("appCap", "CCL21-0000005-R02");
 	aa.env.setValue("currentUserID", "ADMIN");
 	aa.env.setValue("reportName", "Official License Certificate");
 	aa.env.setValue("contType", "Designated Responsible Party");
 	aa.env.setValue("emailTemplate", "LCA_APPROVAL_ANNUAL_FEES_DEFERRED");
 	aa.env.setValue("issueType", "an Annual");
-	aa.env.setValue("balanceDue", "20,625.00");
+	aa.env.setValue("balanceDue", "4685");
 	aa.env.setValue("deferralDue", "04/30/2023");
 	aa.env.setValue("fromEmail","noreply@cannabis.ca.gov");
 */
@@ -171,7 +171,8 @@ try{
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$parentId$$", licCap);
-		feesDue = "$" + maskTheMoneyNumber(balanceDue);
+		balAmt = parseFloat(balanceDue)
+		feesDue = "$" + maskTheMoneyNumber(balAmt.toFixed(2));
 		addParameter(eParams, "$$feesDue$$", feesDue);
 		addParameter(eParams, "$$deferralDue$$", deferralDue);
 		addParameter(eParams, "$$issueType$$", issueType);
