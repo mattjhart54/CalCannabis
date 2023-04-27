@@ -129,9 +129,9 @@ try {
 	licGGEIInfo = loadASITable("AVERAGE WEIGHTED GGEI",licCapId);
 	if (licGGEIInfo) {  // table of records to process	
 		for (o in licGGEIInfo) {
-			ggeiRow = new  Array();;
+			ggeiRow = new Array();
 			ggeiRow["Reporting year"] = "" + licGGEIInfo[o]["Reporting year"];
-			ggeiRow["Average Weighted GGEI"] = "" + licGGEIInfo[o]["Average Weighted GGEI"]
+			ggeiRow["Average Weighted GGEI"] = "" + licGGEIInfo[o]["Average Weighted GGEI"];
 			ggeiTable.push(ggeiRow);
 		}
 	}		
