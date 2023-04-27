@@ -75,7 +75,7 @@ try {
 				envParameters = aa.util.newHashMap();
 				envParameters.put("appCap",altId); 
 				envParameters.put("licCap",licAltId); 
-				if (AInfo["License Issued Type"] == "Annual"){
+				if (AInfo["License Issued Type"] == "Annual")
 					envParameters.put("issueType","an Annual");
 				else
 					envParameters.put("issueType","a Provisional");
