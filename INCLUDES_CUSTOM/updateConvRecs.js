@@ -62,16 +62,18 @@ try {
 	histId = String(altId) + "-HIST";
 	convIds = getChildren("Licenses/Cultivator/Conversion Request/NA",capId);
 	cIdLen = 0;
-	if (convIds){
-		if (convIds.length > 0){
+	if(convIds){
+		if(!matches(convIds,null,undefined,"")){
 			for (jj in convIds){
 				thisRecord = convIds[jj];
 				cIds = getChildren("Licenses/Cultivator/License/License",thisRecord);
-				if(cIds && cIds.length >0){
-					var count = cIds.filter(function(value) {
-						return value.getCustomID().slice(0,18) === histId;
-					}).length;
-					cIdLen += count;
+				if(cIds){
+					if(!matches(cIds,null,undefined,"")){
+						var count = cIds.filter(function(value) {
+							return value.getCustomID().slice(0,18) === histId;
+						}).length;
+						cIdLen += count;
+					}
 				}
 			}
 		}
