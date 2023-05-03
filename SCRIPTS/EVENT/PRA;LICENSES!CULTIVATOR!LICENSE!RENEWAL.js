@@ -113,7 +113,7 @@ try{
 									elecRow["GGEI (lbs CO2e/kWh)"] = "" + elecNewRow["GGEI (lbs CO2e/kWh)"];
 									elecTable.push(elecRow);
 								}
-								addASITable("ELECTRICITY USAGE",elecTable,vLicenseID);	
+								addASITable("ELECTRICITY USAGE",elecTable,licId);	
 							}
 						}
 		// Update AVERAGE WEIGHTED GGEI Table
@@ -127,7 +127,7 @@ try{
 									weigtedRow["Average Weighted GGEI"] = "" + weightedNewRow["Average Weighted GGEI"];
 									weigtedTable.push(weigtedRow);
 								}
-								addASITable("AVERAGE WEIGHTED GGEI",weigtedTable,vLicenseID);
+								addASITable("AVERAGE WEIGHTED GGEI",weigtedTable,licId);
 							}
 						}				
 		//Set renewal to complete, used to prevent more than one renewal record for the same cycle
