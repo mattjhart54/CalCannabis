@@ -177,6 +177,41 @@ try{
 									addASITable("FINANCIAL INTEREST HOLDER",finTable,vLicenseID);
 								}
 							}
+							// Update Electricity Usage Table
+							if (typeof(ELECTRICITYUSAGE) == "object"){
+								if(ELECTRICITYUSAGE.length > 0){
+									elecTable = new Array();
+									for(jj in ELECTRICITYUSAGE){
+										var elecNewRow = ELECTRICITYUSAGE[jj];
+										elecRow = new Array();
+										elecRow["Reporting Year"] = "" + elecNewRow["Reporting Year"];
+										elecRow["Usage Type"] = "" + elecNewRow["Usage Type"];
+										elecRow["Type of Off Grid Renewable Source"] = "" + elecNewRow["Type of Off Grid Renewable Source"];
+										elecRow["Type of Other Source"] = "" + elecNewRow["Type of Other Source"];
+										elecRow["Other Source description"] = "" + elecNewRow["Other Source description"];
+										elecRow["Name of Utility Provider"] = "" + elecNewRow["Name of Utility Provider"];
+										elecRow["Total Electricity Supplied (kWh)"] = "" + elecNewRow["Total Electricity Supplied (kWh)"];
+										elecRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = "" + elecNewRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"];
+										elecRow["GGEI (lbs CO2e/kWh)"] = "" + elecNewRow["GGEI (lbs CO2e/kWh)"];
+										elecTable.push(elecRow);
+									}
+									addASITable("ELECTRICITY USAGE",elecTable,vLicenseID);	
+								}
+							}
+							// Update AVERAGE WEIGHTED GGEI Table
+							if (typeof(AVERAGEWEIGHTEDGGEI) == "object"){
+								if(AVERAGEWEIGHTEDGGEI.length > 0){
+									weigtedTable = new Array();
+									for(pp in AVERAGEWEIGHTEDGGEI){
+										var weightedNewRow = AVERAGEWEIGHTEDGGEI[pp];
+										weigtedRow = new Array();
+										weigtedRow["Reporting year"] = "" + weightedNewRow["Reporting year"];
+										weigtedRow["Average Weighted GGEI"] = "" + weightedNewRow["Average Weighted GGEI"];
+										weigtedTable.push(weigtedRow);
+									}
+									addASITable("AVERAGE WEIGHTED GGEI",weigtedTable,vLicenseID);
+								}
+							}				
 							//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 							renewalCapProject.setStatus("Complete");
 							renewalCapProject.setRelationShip("R");  // move to related records

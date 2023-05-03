@@ -122,7 +122,7 @@ try{
 								for(pp in AVERAGEWEIGHTEDGGEI){
 									var weightedNewRow = AVERAGEWEIGHTEDGGEI[pp];
 									weigtedRow = new Array();
-									weigtedRow["Reporting Year"] = "" + weightedNewRow["Reporting Year"];
+									weigtedRow["Reporting year"] = "" + weightedNewRow["Reporting year"];
 									weigtedRow["Average Weighted GGEI"] = "" + weightedNewRow["Average Weighted GGEI"];
 									weigtedTable.push(weigtedRow);
 								}
