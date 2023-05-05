@@ -177,7 +177,7 @@ try{
 					if(!correctLastName){
 						cancel = true;
 						showMessage = true;
-						comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
+						comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing Test caching issue.");
 					}else{
 						//if last name is correct, check for capitalization
 						if(!capitalLastName){
