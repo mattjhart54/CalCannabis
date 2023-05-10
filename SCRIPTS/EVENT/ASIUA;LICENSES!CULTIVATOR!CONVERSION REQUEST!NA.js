@@ -48,10 +48,10 @@ try {
 		}
 	}
 	if (typeof(DEFICIENCIES) == "object") {
-		for(x in DEFICIENCIES) {
-			if(matches(DEFICIENCIES[x]["Deficiency Details"], null, "", undefined)) {
-				defDesc = lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[x]["Deficiency Type"]);
-				DEFICIENCIES[x]["Deficiency Details"] = defDesc;
+		for(y in DEFICIENCIES) {
+			if(matches(DEFICIENCIES[y]["Deficiency Details"], null, "", undefined)) {
+				defDesc = lookup("LIC_CC_DEFICIENCY_TYPE",DEFICIENCIES[y]["Deficiency Type"]);
+				DEFICIENCIES[y]["Deficiency Details"] = defDesc;
 			}
 		}
 		removeASITable("DEFICIENCIES"); 
