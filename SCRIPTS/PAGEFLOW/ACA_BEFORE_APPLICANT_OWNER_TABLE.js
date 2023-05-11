@@ -177,13 +177,13 @@ try{
 					if(!correctLastName){
 						cancel = true;
 						showMessage = true;
-						comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing.");
+						comment("The name '" + ownFName + " " + ownLName + "' does not match the name on file for the email address '" + ownEmail + "'.  Please correct before continuing. Test 123");
 					}else{
 						//if last name is correct, check for capitalization
 						if(!capitalLastName){
 							cancel = true;
 							showMessage = true;
-							comment("The capitalization of the last name '" + ownLName + "' does not match the name on file  '" + matchLastName + "'.  Please correct before continuing.");
+							comment("The capitalization of the last name '" + ownLName + "' does not match the name on file  '" + matchLastName + "'.  Please correct before continuing. Test1234");
 						}
 						//if last name is correct but first name is wrong, just correct the first name and go on.
 						if(!correctFirstName){
