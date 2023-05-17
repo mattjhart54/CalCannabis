@@ -304,6 +304,8 @@ try{
 			}
 		}
 	// update CAP status
+		if(newExpStatus == "About to Expire") {
+			editAppSpecific("Saved License Status", capStatus);
 		if (newAppStatus.length > 0) {
 			if (newAppStatus == 'Expired') {
 				updateAppStatus(newAppStatus, "");
