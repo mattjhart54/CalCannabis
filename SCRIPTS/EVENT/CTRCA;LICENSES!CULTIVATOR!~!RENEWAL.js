@@ -148,7 +148,7 @@ try{
 			vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 	// Set license record expiration and status to active
 			vLicenseObj.setStatus("Active");
-			vCapStatus = aa.cap.getCap(licId).getOutput().getCapStatus()	
+			vCapStatus = aa.cap.getCap(licId).getOutput().getCapStatus();	
 			savedCapStatus = getAppSpecific("Saved License Status",licId);
 			if (vCapStatus != "Inactive" && savedCapStatus != "Suspended"){
 				updateAppStatus("Active","License Renewed",licId);
