@@ -174,37 +174,41 @@ try {
 	// Add record to the CAT set
 			addToCat(vLicenseID);
 	//	7088: Create License Case Record for all Renewals when a Science Amendment associated to the License Parent Record has not been submitted prior to submission of a Provisional Renewal for that corresponding renewal year
-			var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",vLicenseID);
-			var issueDate = getAppSpecific("Valid From Date",vLicenseID);
-			var approvedRen = false;
-			var licCaseExclusion = false;
-			if (scienceArr) {
-				if (scienceArr.length > 0) {
-					for (x in scienceArr){
-						var scienceCap = scienceArr[x];
-						if (getAppSpecific("Associated Renewal",scienceCap) == "Yes"){
-							var correspondingYear = getAppSpecific("Renewal Year",scienceCap)
-							logDebug("expYear: " + expYear);
-							if (String(correspondingYear) == String(expYear)){
-								var saAppStatus = aa.cap.getCap(scienceCap).getOutput().getCapStatus();
-								var workflowResult = aa.workflow.getTasks(scienceCap);
-								if (workflowResult.getSuccess()){
-									wfObj = workflowResult.getOutput();		
-									for (i in wfObj) {
-										fTask = wfObj[i];
-										var status = fTask.getDisposition();
-										var taskDesc = fTask.getTaskDescription();
-										if((status != null && taskDesc != null) && (taskDesc == "Science Amendment Review" && status != "Physical Modification Approved")){
-											licCaseExclusion = true;
+			if (getAppSpecific("License Issued Type", licId) == "Provisional"){
+				var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",vLicenseID);
+				var issueDate = getAppSpecific("Valid From Date",vLicenseID);
+				var approvedRen = false;
+				var licCaseExclusion = false;
+				if (scienceArr) {
+					if (scienceArr.length > 0) {
+						for (x in scienceArr){
+							var scienceCap = scienceArr[x];
+							if (getAppSpecific("Associated Renewal",scienceCap) == "Yes"){
+								var correspondingYear = getAppSpecific("Renewal Year",scienceCap)
+								logDebug("expYear: " + expYear);
+								if (String(correspondingYear) == String(expYear)){
+									var saAppStatus = aa.cap.getCap(scienceCap).getOutput().getCapStatus();
+									var workflowResult = aa.workflow.getTasks(scienceCap);
+									if (workflowResult.getSuccess()){
+										wfObj = workflowResult.getOutput();		
+										for (i in wfObj) {
+											fTask = wfObj[i];
+											var status = fTask.getDisposition();
+											var taskDesc = fTask.getTaskDescription();
+											if((status != null && taskDesc != null) && (taskDesc == "Science Amendment Review" && status != "Physical Modification Approved")){
+												licCaseExclusion = true;
+											}
 										}
+									}else{
+										logDebug("**ERROR: Failed to get workflow object: "+wfObj );
 									}
-								}else{
-									logDebug("**ERROR: Failed to get workflow object: "+wfObj );
 								}
 							}
 						}
 					}
 				}
+			}else{
+				licCaseExclusion = true;
 			}
 			if (!licCaseExclusion){
 				var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
