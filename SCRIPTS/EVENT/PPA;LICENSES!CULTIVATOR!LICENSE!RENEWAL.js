@@ -63,8 +63,11 @@ try{
 						vLicenseObj.setStatus("Active");
 						vCapStatus = aa.cap.getCap(licId).getOutput().getCapStatus();	
 						savedCapStatus = getAppSpecific("Saved License Status",licId);
-						if (vCapStatus != "Inactive" && savedCapStatus != "Suspended"){
-							updateAppStatus("Active","License Renewed",licId);
+						if (savedCapStatus == "Suspended"){
+							updateAppStatus("Suspended","License Renewed",licId);
+						}else {
+							if (vCapStatus != "Inactive"){
+								updateAppStatus("Active","License Renewed",licId);
 						}
 		// Update the Cultivation Type on the license record
 						if(AInfo["Designation Change"] == "Yes") {
