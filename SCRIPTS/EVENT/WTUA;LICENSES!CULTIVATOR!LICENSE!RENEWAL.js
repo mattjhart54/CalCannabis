@@ -32,6 +32,7 @@ try {
 			}else {
 				if (vCapStatus != "Inactive"){
 					updateAppStatus("Active","License Renewed",licId);
+				}
 			}
 	// Update the Cultivation Type on the license record
 			if(AInfo["Designation Change"] == "Yes") {
