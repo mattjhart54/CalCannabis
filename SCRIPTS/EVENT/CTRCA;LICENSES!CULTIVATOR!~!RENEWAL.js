@@ -152,7 +152,6 @@ try{
 			savedCapStatus = getAppSpecific("Saved License Status",licId);
 			if (savedCapStatus == "Suspended"){
 				updateAppStatus("Suspended","License Renewed",licId);
-				logDebug("Status updated to suspended");
 			}else {
 				if (vCapStatus != "Inactive"){
 					updateAppStatus("Active","License Renewed",licId);
