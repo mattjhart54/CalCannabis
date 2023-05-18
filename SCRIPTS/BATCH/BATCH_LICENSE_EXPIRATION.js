@@ -69,21 +69,21 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 /* test parameters  
-aa.env.setValue("lookAheadDays", "-30");
+aa.env.setValue("lookAheadDays", "60");
 aa.env.setValue("daySpan", "0");
 aa.env.setValue("gracePeriodDays", "0");
 aa.env.setValue("recordGroup", "Licenses");
 aa.env.setValue("recordType", "Cultivator");
 aa.env.setValue("recordSubType", "License");
 aa.env.setValue("recordCategory", "License");
-aa.env.setValue("expirationStatus", "About to Expire,Inactive");
-aa.env.setValue("newExpirationStatus", "Expired");
-aa.env.setValue("newApplicationStatus", "Expired");
-aa.env.setValue("workflowTask", "Renewal Review");
-aa.env.setValue("newWorkflowStatus", "Closed");
+aa.env.setValue("expirationStatus", "Active");
+aa.env.setValue("newExpirationStatus", "About to Expire");
+aa.env.setValue("newApplicationStatus", "About to Expire");
+aa.env.setValue("workflowTask", "");
+aa.env.setValue("newWorkflowStatus", "");
 aa.env.setValue("createNotifySets", "Y");
 aa.env.setValue("setNonEmailPrefix", "LICENSE_ABOUT_TO_EXPIRE");
-aa.env.setValue("skipAppStatusArray", "Active,Cancelled,Expired,Inactive,Retired,Revoked,Surrendered,Suspended");
+aa.env.setValue("skipAppStatusArray", "Active,Cancelled,Expired,Inactive,Retired,Revoked,Surrendered");
 aa.env.setValue("emailAddress", "mhart@trustvip.com");
 aa.env.setValue("sendEmailToContactTypes", "Desiganted Responsible Party");
 aa.env.setValue("emailTemplate","LCA_ABOUT_TO_EXPIRE_NOTIFICATION");
@@ -284,29 +284,30 @@ try{
 			b1Exp.setExpStatus(newExpStatus);
 			aa.expiration.editB1Expiration(b1Exp.getB1Expiration());
 			logDebug("Update expiration status: " + newExpStatus);
-		}
-		if(newExpStatus == "Expired") {
-			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
-			if (renewalCapProject != null) {
-				var renCapId = renewalCapProject.getCapID();
-				var renewalCap = aa.cap.getCap(renCapId).getOutput();
-				var capIdStatusClass = getCapIdStatusClass(renCapId);
-				if (matches(capIdStatusClass,"INCOMPLETE EST","INCOMPLETE CAP")){
-					aa.cap.updateAccessByACA(renCapId,"N");
-					renewalCap.getCapModel().setAuditStatus("I");
-					aa.cap.editCapByPK(renewalCap.getCapModel());
-					logDebug("Set " + renCapId + " with a Status of: " + renewalCap.getCapModel().getAuditStatus());
-				}else{
-					renewalCapProject.setStatus("Complete");
-					renewalCapProject.setRelationShip("R");  // move to related records
-					aa.cap.updateProject(renewalCapProject);
+			if(newExpStatus == "Expired") {
+				renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
+				if (renewalCapProject != null) {
+					var renCapId = renewalCapProject.getCapID();
+					var renewalCap = aa.cap.getCap(renCapId).getOutput();
+					var capIdStatusClass = getCapIdStatusClass(renCapId);
+					if (matches(capIdStatusClass,"INCOMPLETE EST","INCOMPLETE CAP")){
+						aa.cap.updateAccessByACA(renCapId,"N");
+						renewalCap.getCapModel().setAuditStatus("I");
+						aa.cap.editCapByPK(renewalCap.getCapModel());
+						logDebug("Set " + renCapId + " with a Status of: " + renewalCap.getCapModel().getAuditStatus());
+					}else{
+						renewalCapProject.setStatus("Complete");
+						renewalCapProject.setRelationShip("R");  // move to related records
+						aa.cap.updateProject(renewalCapProject);
+					}
 				}
 			}
 		}
 	// update CAP status
 		if (newAppStatus.length > 0) {
-			if(newAppStatus == "About to Expire") 
+			if(newAppStatus == "About to Expire") {
 				editAppSpecific("Saved License Status", capStatus);
+			}
 			if (newAppStatus == 'Expired') {
 				updateAppStatus(newAppStatus, "");
 			} else {
@@ -314,10 +315,10 @@ try{
 					updateAppStatus(newAppStatus, "");
 				}
 			}
-		}
-		if(matches(newAppStatus, "Revoked", "Suspended", "Inactive","Expired","Surrendered","Cancelled")){
-			addToCat(capId);
-			logDebug("Record added to CAT set");
+			if(matches(newAppStatus, "Revoked", "Suspended", "Inactive","Expired","Surrendered","Cancelled")){
+				addToCat(capId);
+				logDebug("Record added to CAT set");
+			}
 		}
 	// workflow task status
 		if (newWfStatus.length > 0 && updWfTask.length > 0) {		
@@ -445,8 +446,8 @@ try{
 }catch (err){
 	logDebug("ERROR: BATCH_TMP_EXPIRATION: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
-}}
-
+}
+}
 
 function getJobParam(pParamName){ //gets parameter value and logs message showing param value
 try{
