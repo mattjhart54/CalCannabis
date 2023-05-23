@@ -77,35 +77,29 @@ var cap = aa.env.getValue("CapModel");
 
 // page flow custom code begin
 try{
-		var deleteValue = false;
-		loadASITables4ACA_corrected();
-		
-		if(ELECTRICITYUSAGE.length<1){
-			for(row in ELECTRICITYUSAGE){
-				if (ELECTRICITYUSAGE[row]["Status"] == "Delete"){
-					cancel = true;
-					showMessage = true;
-					comment("Delete is an Invalid Status.");
-					break;
-				}
+	
+	var deleteValue = false;
+	loadASITables4ACA_corrected();
+	
+	if(ELECTRICITYUSAGE.length<1){
+		for(row in ELECTRICITYUSAGE){
+			if (ELECTRICITYUSAGE[row]["Status"] == "Delete"){
+				deleteValue = true;
+
 			}
 		}
+	}
+	
+	if (deleteValue){
+		cancel = true;
+		showMessage = true;
+		comment("Delete is an Invalid Status.");
+	}			
 
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_ELECTRICITY_USAGE_TABLE: " + err.message);
 	logDebug(err.stack);
 	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_ELECTRICITY_USAGE_TABLE:: Main Loop: "+ startDate, publicUserID + br + capId + br + err.message+ br + err.stack);
-}
-
-function getCapIdStatusClass(inCapId){
-    var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
-    var retClass = null;
-    if(inCapScriptModel){
-        var tempCapModel = inCapScriptModel.getCapModel();
-        retClass = tempCapModel.getCapClass();
-    }
-   
-    return retClass;
 }
 
 /*------------------------------------------------------------------------------------------------------/
