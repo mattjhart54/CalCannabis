@@ -135,7 +135,12 @@ try {
 						errorMessage += convLicRec + ": " + lightTypeMessage;
 					}
 				}
+			}else{
+				cancel = true;
+				showMessage = true;
+				logMessage("Conversion record can not be submitted without a secondary license record");
 			}
+				
 		}						
 		
 		
