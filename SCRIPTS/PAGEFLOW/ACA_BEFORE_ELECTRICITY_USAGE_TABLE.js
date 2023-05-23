@@ -85,7 +85,7 @@ try{
 				if (ELECTRICITYUSAGE[row]["Status"] == "Delete"){
 					cancel = true;
 					showMessage = true;
-					comment("Each Owner in the table must have a unique email address.");
+					comment("Delete is an Invalid Status.");
 					break;
 				}
 			}
