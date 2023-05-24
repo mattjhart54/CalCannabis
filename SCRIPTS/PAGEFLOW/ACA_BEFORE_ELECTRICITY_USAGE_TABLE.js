@@ -80,12 +80,24 @@ try{
 	
 	var deleteValue = false;
 	loadASITables4ACA_corrected();
-	
-	if(ELECTRICITYUSAGE.length > 0){
-		for(row in ELECTRICITYUSAGE){
-			if (ELECTRICITYUSAGE[row]["Status"] == "Delete"){
-				deleteValue = true;
+	if (typeof(ELECTRICITYUSAGE) == "object") {
+		if(ELECTRICITYUSAGE.length > 0){
+			for(row in ELECTRICITYUSAGE){
+				if (ELECTRICITYUSAGE[row]["Status"] == "Delete"){
+					deleteValue = true;
 
+				}
+			}
+		}
+	}
+	
+	if (typeof(AVERAGEWEIGHTEDGGEI) == "object") {
+		if(AVERAGEWEIGHTEDGGEI.length > 0){
+			for(avgRow in AVERAGEWEIGHTEDGGEI){
+				if (AVERAGEWEIGHTEDGGEI[avgRow]["Status"] == "Delete"){
+					deleteValue = true;
+
+				}
 			}
 		}
 	}
