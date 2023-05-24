@@ -81,7 +81,7 @@ try{
 	var deleteValue = false;
 	loadASITables4ACA_corrected();
 	
-	if(ELECTRICITYUSAGE.length<1){
+	if(ELECTRICITYUSAGE.length > 0){
 		for(row in ELECTRICITYUSAGE){
 			if (ELECTRICITYUSAGE[row]["Status"] == "Delete"){
 				deleteValue = true;
