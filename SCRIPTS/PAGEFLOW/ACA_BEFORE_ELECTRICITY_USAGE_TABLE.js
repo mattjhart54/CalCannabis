@@ -74,15 +74,16 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 
 var cap = aa.env.getValue("CapModel");
+loadASITables4ACA_corrected();
 
 // page flow custom code begin
 try{
 	
 	var deleteValue = false;
-	loadASITables4ACA_corrected();
 	if (typeof(ELECTRICITYUSAGE) == "object") {
 		if(ELECTRICITYUSAGE.length > 0){
 			for(row in ELECTRICITYUSAGE){
+				var test = ELECTRICITYUSAGE[row]["Status"];
 				if (ELECTRICITYUSAGE[row]["Status"] == "Delete"){
 					deleteValue = true;
 
@@ -106,7 +107,11 @@ try{
 		cancel = true;
 		showMessage = true;
 		comment("Delete is an Invalid Status.");
-	}			
+	}
+
+		cancel = true;
+		showMessage = true;
+		comment("Delete is an Invalid Status. " + test + " " + deleteValue);	
 
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_ELECTRICITY_USAGE_TABLE: " + err.message);
