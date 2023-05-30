@@ -178,6 +178,47 @@ try {
 				addASITable("SOURCE OF WATER SUPPLY",multTable,parentCapId);
 			}
 		}
+		if (typeof(ELECTRICITYUSAGE) == "object"){
+			if(ELECTRICITYUSAGE.length > 0){
+				ignoreTableArray.push("ELECTRICITY USAGE");
+				var elecTable = new Array(); 
+				for(yy in ELECTRICITYUSAGE){
+					var elecRow = ELECTRICITYUSAGE[yy];
+					row = new Array();
+					if(elecRow["Status"] != "Delete"){
+						row["Reporting Year"] = elecRow["Reporting Year"];
+						row["Usage Type"] = elecRow["Usage Type"];
+						row["Type of Off Grid Renewable Source"] = elecRow["Type of Off Grid Renewable Source"];
+						row["Type of Other Source"] = elecRow["Type of Other Source"];
+						row["Other Source description"] = elecRow["Other Source description"];
+						row["Name of Utility Provider"] = elecRow["Name of Utility Provider"];
+						row["Total Electricity Supplied (kWh)"] = elecRow["Total Electricity Supplied (kWh)"];
+						row["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = elecRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"];
+						row["GGEI (lbs CO2e/kWh)"] = elecRow["GGEI (lbs CO2e/kWh)"];
+						elecTable.push(row);
+					}
+				}
+				removeASITable("ELECTRICITY USAGE",parentCapId);
+				addASITable("ELECTRICITY USAGE",elecTable,parentCapId);
+			}
+		}
+		if (typeof(AVERAGEWEIGHTEDGGEI) == "object"){
+			if(AVERAGEWEIGHTEDGGEI.length > 0){
+				ignoreTableArray.push("AVERAGE WEIGHTED GGEI");
+				var weightedTable = new Array(); 
+				for(ii in AVERAGEWEIGHTEDGGEI){
+					var weightedRow = AVERAGEWEIGHTEDGGEI[ii];
+					row = new Array();
+					if(weightedRow["Status"] != "Delete"){
+						row["Reporting year"] = weightedRow["Reporting year"];
+						row["Average Weighted GGEI"] = weightedRow["Average Weighted GGEI"];
+						weightedTable.push(row);
+					}
+				}
+				removeASITable("AVERAGE WEIGHTED GGEI",parentCapId);
+				addASITable("AVERAGE WEIGHTED GGEI",weightedTable,parentCapId);
+			}
+		}
 		logDebug("Not copying the following Tables: " + ignoreTableArray);
 		copyASITables(capId,parentCapId,ignoreTableArray);
 //		runReportAttach(capId,"Scientific Review Checklist","altID",capId.getCustomID());
