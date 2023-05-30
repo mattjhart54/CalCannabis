@@ -79,11 +79,11 @@ loadASITables4ACA_corrected();
 // page flow custom code begin
 try{
 	
+	var capId = cap.getCapID();
 	var deleteValue = false;
 	if (typeof(ELECTRICITYUSAGE) == "object") {
 		if(ELECTRICITYUSAGE.length > 0){
 			for(row in ELECTRICITYUSAGE){
-				var test = ELECTRICITYUSAGE[row]["Status"];
 				if (ELECTRICITYUSAGE[row]["Status"] == "Delete"){
 					deleteValue = true;
 
@@ -109,14 +109,22 @@ try{
 		comment("Delete is an Invalid Status.");
 	}
 
-		cancel = true;
-		showMessage = true;
-		comment("Delete is an Invalid Status. " + test + " " + deleteValue);	
-
 }catch (err) {
     logDebug("A JavaScript Error occurred: ACA_BEFORE_ELECTRICITY_USAGE_TABLE: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_ELECTRICITY_USAGE_TABLE:: Main Loop: "+ startDate, publicUserID + br + capId + br + err.message+ br + err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in  ACA_BEFORE_ELECTRICITY_USAGE_TABLE:: Main Loop: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
+
+// page flow custom code end
+function getCapIdStatusClass(inCapId){
+    var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
+    var retClass = null;
+    if(inCapScriptModel){
+        var tempCapModel = inCapScriptModel.getCapModel();
+        retClass = tempCapModel.getCapClass();
+    }
+   
+    return retClass;
 }
 
 /*------------------------------------------------------------------------------------------------------/
