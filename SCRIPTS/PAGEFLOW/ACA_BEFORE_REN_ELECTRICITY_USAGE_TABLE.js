@@ -81,21 +81,17 @@ try{
 	
 	var capId = cap.getCapID();
 	var elecUsageValue = false;
-	var avgWeightTable = false;
+	var missingTableValue = false;
 	
-	if (typeof(ELECTRICITYUSAGE) == "object") {
-		if(ELECTRICITYUSAGE.length > 0){
-			elecUsageValue = true;
-		}
+	if(ELECTRICITYUSAGE.length < 1){
+		missingTableValue = true;
+	}
+
+	if(AVERAGEWEIGHTEDGGEI.length < 1){
+		missingTableValue = true;
 	}
 	
-	if (typeof(AVERAGEWEIGHTEDGGEI) == "object") {
-		if(AVERAGEWEIGHTEDGGEI.length > 0){
-			avgWeightTable = true;
-		}
-	}
-	
-	if (!elecUsageValue || !avgWeightTable){
+	if (missingTableValue){
 		cancel = true;
 		showMessage = true;
 		comment("The 'Electricity Usage' and 'Average Weighted GGEI' Tables must contain Values");
