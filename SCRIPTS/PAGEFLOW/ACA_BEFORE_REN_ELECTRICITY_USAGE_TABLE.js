@@ -74,12 +74,12 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 
 var cap = aa.env.getValue("CapModel");
+capId = cap.getCapID();
 loadASITables4ACA_corrected();
 
 // page flow custom code begin
 try{
 	
-	var capId = cap.getCapID();
 	var elecUsageValue = false;
 	var missingTableValue = false;
 	
