@@ -81,30 +81,42 @@ try{
 	var capIdStatusClass = getCapIdStatusClass(capId);
 	if(!matches(capIdStatusClass, "COMPLETE")){
 
-		var noRows = false;
+		var noElecRows = false;
+		var noGGEIRows = false;
 
 		var asiTables = loadASITables4ACAasArray();
 		if(asiTables["ELECTRICITY USAGE"]){
 			if(asiTables["ELECTRICITY USAGE"].length<1){
-				noRows = true;
-			}
-			else {
-				var rowFound = false;
-				for(x in asiTables["ELECTRICITY USAGE"]){
-					rowFound = true;
-				}
+				noElecRows = true;
 			}
 			if(matches(asiTables["ELECTRICITY USAGE"][0]["Usage Type"], null, "", undefined)) {
-				noRows = true;
+				noElecRows = true;
 			}
 		}else{
-			noRows = true;
+			noElecRows = true;
+		}
+		
+		if(asiTables["AVERAGE WEIGHTED GGEI"]){
+			if(asiTables["AVERAGE WEIGHTED GGEI"].length<1){
+				noGGEIRows = true;
+			}
+			if(matches(asiTables["AVERAGE WEIGHTED GGEI"][0]["Average Weighted GGEI"], null, "", undefined)) {
+				noGGEIRows = true;
+			}
+		}else{
+			noGGEIRows = true;
 		}
 
-		if(noRows) {
+		if(noElecRows) {
 			cancel = true;
 			showMessage = true;
 			comment("The ELECTRICITY USAGE table requires at least one row.");
+		}
+		
+		if(noGGEIRows) {
+			cancel = true;
+			showMessage = true;
+			comment("The AVERAGE WEIGHTED GGEI table requires at least one row.");
 		}
 	}
 }catch (err) {
