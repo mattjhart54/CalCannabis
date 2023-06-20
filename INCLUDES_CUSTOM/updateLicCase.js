@@ -70,5 +70,4 @@ function updateLicCase(licNbr, capId) {
 			}
 		}
 	}
-}
 }	
