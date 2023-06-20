@@ -52,4 +52,23 @@ function updateLicCase(licNbr, capId) {
 			addStdCondition("Notice","Provisional Science Licensing Action in Process",parentId);
 		}
 	}
+	
+// Check to see if a renewal record has been created but not submitted and remove the fees
+	if (AInfo['Case Renewal Type'] =="Renewal Hold"){
+		var licNum = getApplication(licNbr);
+		var renewalCapProject = getRenewalCapByParentCapIDForIncomplete(licNum);
+		if (renewalCapProject != null) {
+			var renCapId = renewalCapProject.getCapID();
+			if (renCapId.toString().contains("EST")){
+				var renewalCap = aa.cap.getCap(renCapId).getOutput();
+				var renewalCapId = renewalCap.getCapID();
+				var altId = renewalCapId.getCustomID();
+				var removeFeesResult = voidRemoveAllFees(renewalCapId);
+				if (removeFeesResult){
+					logDebug("Removed fees from Record, " + altId);
+				}
+			}
+		}
+	}
+}
 }	
