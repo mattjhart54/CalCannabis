@@ -18,7 +18,7 @@ try {
 		if(!addedRow){
 			cancel=true; 
 			showMessage=true; 
-			comment("Conversion record can not be submitted without a primary and secondary license record");
+			comment("Conversion record can not be approved without a primary and secondary license record");
 		} 
 	}
 }catch (err){
