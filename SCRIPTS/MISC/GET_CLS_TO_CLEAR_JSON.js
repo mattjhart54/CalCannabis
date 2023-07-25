@@ -36,17 +36,16 @@ try {
 
 function ClsRecToClearJson(recParmVal) {
 	try {
-		recParmVal = "CCL23-0000003"
+//		recParmVal = "CCL23-0000003"
 		var validRec = "Y";
 		var licType = "";
-		var appTYpeString = "";
+		var appTypeString = "";
 		var licNbr = "";
-		var lappNbr = "";
+		var appNbr = "";
 		var county = "";
 		var legalBusinessName = "";
 		var contDrp = "";
 		var address = "";
-		var licType = "";
 		var licIssType = "";
 		var licStatus = "";
 		var APN = "";
@@ -143,8 +142,8 @@ function ClsRecToClearJson(recParmVal) {
 
 		return jsonResult;
 	} catch (err) {
-		logDebug("A JavaScript Error occurred: licenseNumberToCatJson: " + err.message);
-		logDebug(err.stack);
-		aa.sendMail(sysFromEmail, emailAddress, "", "A JavaScript Error occurred: licenseNumberToCatJson: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
+		aa.print("A JavaScript Error occurred: GET_CLS_TO_CLEAR_JSON: " + err.message);
+		aa.print(err.stack);
+		aa.sendMail("noreply@accela.com", "evontrapp@etechconsultingllc.com", "", "A JavaScript Error occurred: GET_CLS_TO_CLEAR_JSON: " + new Date(), "capId: " + capId + "<br>" + err.message + "<br>" + err.stack);
 	}
 }
