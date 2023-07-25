@@ -36,18 +36,19 @@ try {
 
 function ClsRecToClearJson(recParmVal) {
 	try {
-		//recParmVal = "LCA23-0000046"
+		recParmVal = "CCL23-0000003"
 		var validRec = "Y";
 		var licType = "";
-		var appTypeString = "";
+		var appTYpeString = "";
 		var licNbr = "";
-		var appNbr = "";
+		var lappNbr = "";
 		var county = "";
 		var legalBusinessName = "";
 		var contDrp = "";
 		var address = "";
+		var licType = "";
 		var licIssType = "";
-		var capStatus = "";
+		var licStatus = "";
 		var APN = "";
 		var recId = aa.cap.getCapID(recParmVal);
 
@@ -60,6 +61,7 @@ function ClsRecToClearJson(recParmVal) {
 			appTypeResult = cap.getCapType();
 			appTypeString = appTypeResult.toString();
 			appTypeArray = appTypeString.split("/");
+			capStatus = cap.getCapStatus();
 			var AInfo = [];
 			loadAppSpecific(AInfo);
 		
@@ -70,11 +72,22 @@ function ClsRecToClearJson(recParmVal) {
 			var lastTen =  String(recParmVal.substr(3,10));
 			if (firstThree == "CCL") {
 				licNbr = recParmVal;
+				licStatus = capStatus;
 				appNbr = "LCA" + lastTen;
 			} else {
 				if (firstThree == "LCA") {
 					appNbr = recParmVal;
-					licNbr = "";
+					if(capStatus == 'License Issued' || capStatus == 'Provisional License Issued') {
+						licNbr = "CCL" + lastTen;
+						var licId = aa.cap.getCapID(licNbr);
+						licCapId = licId.getOutput();
+						var licCapScriptObj = aa.cap.getCap(licCapId);
+						licCap = licCapScriptObj.getOutput();
+						licStatus = licCap.getCapStatus();
+					} else {
+						licNbr = "";
+						licStatus = "";
+					}
 				} else {
 					validRec = "N"
 				}
@@ -90,8 +103,6 @@ function ClsRecToClearJson(recParmVal) {
 		
 			if (!matches(AInfo["License Issued Type"], null, undefined,""))
 				licIssType = AInfo["License Issued Type"];
-		
-			capStatus = cap.getCapStatus();
 		
 			if (!matches(AInfo["APN"], null, undefined, ""))
 				APN = AInfo["APN"];
@@ -111,7 +122,7 @@ function ClsRecToClearJson(recParmVal) {
 		logDebug("License Name: " + DRPName);
 		logDebug("Premises Address Information: " + address);
 		logDebug("Annual or Provisional: " + licIssType);
-		logDebug("License Status: " + capStatus);
+		logDebug("License Status: " + licStatus);
 		logDebug("Assessor Parcel Number(APN): " + APN);
 	
 		///	FORMAT DATA TO JSON  ///
@@ -126,14 +137,14 @@ function ClsRecToClearJson(recParmVal) {
 			"Premises Address Information": address,
 			"License Type": licType,
 			"Annual or Provisional": licIssType,
-			"License Status": capStatus,
+			"License Status": licStatus,
 			"Assessor Parcel Number(APN)": APN,
 		}
 
 		return jsonResult;
 	} catch (err) {
-		aa.print("A JavaScript Error occurred: GET_CLS_TO_CLEAR_JSON: " + err.message);
-		aa.print(err.stack);
-		aa.sendMail("noreply@accela.com", "evontrapp@etechconsultingllc.com", "", "A JavaScript Error occurred: GET_CLS_TO_CLEAR_JSON: " + new Date(), "capId: " + capId + "<br>" + err.message + "<br>" + err.stack);
+		logDebug("A JavaScript Error occurred: licenseNumberToCatJson: " + err.message);
+		logDebug(err.stack);
+		aa.sendMail(sysFromEmail, emailAddress, "", "A JavaScript Error occurred: licenseNumberToCatJson: " + startDate, "capId: " + capId + br + err.message + br + err.stack);
 	}
 }
