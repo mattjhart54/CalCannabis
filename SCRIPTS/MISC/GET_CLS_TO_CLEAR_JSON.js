@@ -110,19 +110,19 @@ function ClsRecToClearJson(recParmVal) {
 			var DRPName = contDRP.firstName + " " + contDRP.lastName;
 		}
 
-		logDebug("------------------------------------------------");
-		logDebug("Valid Record: " + validRec);
-		logDebug("LicenseType: " + licType);
-		logDebug("Record Type: " + appTypeString);
-		logDebug("License Number: " + licNbr);
-		logDebug("Application Number: " + appNbr);
-		logDebug("County: " + county); 
-		logDebug("Business Name: " + legalBusinessName);
-		logDebug("License Name: " + DRPName);
-		logDebug("Premises Address Information: " + address);
-		logDebug("Annual or Provisional: " + licIssType);
-		logDebug("License Status: " + licStatus);
-		logDebug("Assessor Parcel Number(APN): " + APN);
+		aa.print("------------------------------------------------");
+		aa.print("Valid Record: " + validRec);
+		aa.print("LicenseType: " + licType);
+		aa.print("Record Type: " + appTypeString);
+		aa.print("License Number: " + licNbr);
+		aa.print("Application Number: " + appNbr);
+		aa.print("County: " + county); 
+		aa.print("Business Name: " + legalBusinessName);
+		aa.print("License Name: " + DRPName);
+		aa.print("Premises Address Information: " + address);
+		aa.print("Annual or Provisional: " + licIssType);
+		aa.print("License Status: " + licStatus);
+		aa.print("Assessor Parcel Number(APN): " + APN);
 	
 		///	FORMAT DATA TO JSON  ///
 		var jsonResult = {
@@ -147,3 +147,85 @@ function ClsRecToClearJson(recParmVal) {
 		aa.sendMail("noreply@accela.com", "evontrapp@etechconsultingllc.com", "", "A JavaScript Error occurred: GET_CLS_TO_CLEAR_JSON: " + new Date(), "capId: " + capId + "<br>" + err.message + "<br>" + err.stack);
 	}
 }
+
+function loadAppSpecific(thisArr) {
+    // Returns an associative array of App Specific Info
+    // Optional second parameter, cap ID to load from
+
+    var itemCap = capId;
+	var useAppSpecificGroupName = false;
+    if (arguments.length == 2)
+        itemCap = arguments[1]; // use cap ID specified in args
+
+    var appSpecInfoResult = aa.appSpecificInfo.getByCapID(itemCap);
+    if (appSpecInfoResult.getSuccess()) {
+        var fAppSpecInfoObj = appSpecInfoResult.getOutput();
+
+        for (loopk in fAppSpecInfoObj) {
+            if (useAppSpecificGroupName)
+                thisArr[fAppSpecInfoObj[loopk].getCheckboxType() + "." + fAppSpecInfoObj[loopk].checkboxDesc] = fAppSpecInfoObj[loopk].checklistComment;
+            else
+                thisArr[fAppSpecInfoObj[loopk].checkboxDesc] = fAppSpecInfoObj[loopk].checklistComment;
+        }
+    }
+}
+
+function getContactByType(conType, capId) {
+    var contactArray = getPeople(capId);
+    for (thisContact in contactArray) {
+        if ((contactArray[thisContact].getPeople().contactType).toUpperCase() == conType.toUpperCase())
+            return contactArray[thisContact].getPeople();
+    }
+
+    return false;
+}
+
+function getPeople(capId) {
+    capPeopleArr = null;
+    var s_result = aa.people.getCapContactByCapID(capId);
+
+    if (s_result.getSuccess()) {
+        capPeopleArr = s_result.getOutput();
+        if (capPeopleArr != null || capPeopleArr.length > 0) {
+            for (loopk in capPeopleArr) {
+                var capContactScriptModel = capPeopleArr[loopk];
+                var capContactModel = capContactScriptModel.getCapContactModel();
+                var peopleModel = capContactScriptModel.getPeople();
+                var contactAddressrs = aa.address.getContactAddressListByCapContact(capContactModel);
+                if (contactAddressrs.getSuccess()) {
+                    var contactAddressModelArr = convertContactAddressModelArr(contactAddressrs.getOutput());
+                    peopleModel.setContactAddressList(contactAddressModelArr);
+                }
+            }
+        } else {
+            aa.print("WARNING: no People on this CAP:" + capId);
+            capPeopleArr = null;
+        }
+    } else {
+        aa.print("ERROR: Failed to People: " + s_result.getErrorMessage());
+        capPeopleArr = null;
+    }
+
+    return capPeopleArr;
+}
+
+function convertContactAddressModelArr(contactAddressScriptModelArr) {
+    var contactAddressModelArr = null;
+    if (contactAddressScriptModelArr != null && contactAddressScriptModelArr.length > 0) {
+        contactAddressModelArr = aa.util.newArrayList();
+        for (loopk in contactAddressScriptModelArr) {
+            contactAddressModelArr.add(contactAddressScriptModelArr[loopk].getContactAddressModel());
+        }
+    }
+
+    return contactAddressModelArr;
+}
+
+function matches(eVal, argList) {
+	for (var i = 1; i < arguments.length; i++) {
+		if (arguments[i] == eVal) {
+			return true;
+		}
+	}
+	return false;
+} 
