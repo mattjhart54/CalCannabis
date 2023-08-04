@@ -100,6 +100,11 @@ try{
 			editAppName("Renewal Review");
 		}
 	}
+	if (matches(wfTask,"LAU Assessment","Licensing Case Assessment") && wfStatus == 'Resolved") {
+		editAppSpecific(Licensing Case Type, "Renwal Allowed");
+		editAppName("Renewal Allowed");
+}
+	
 	if (matches(wfTask,"LAU Assessment","Licensing Case Assessment") && matches(wfStatus,"Resolved","Closed")) {
 		var parentCapId = getParent();
 		var licAltId = parentCapId.getCustomID();
