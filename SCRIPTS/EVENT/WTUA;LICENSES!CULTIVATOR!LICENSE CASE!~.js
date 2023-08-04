@@ -101,8 +101,8 @@ try{
 		}
 	}
 	if (matches(wfTask,"LAU Assessment","Licensing Case Assessment") && wfStatus == 'Resolved") {
-		editAppSpecific(Licensing Case Type, "Renwal Allowed");
-		editAppName("Renewal Allowed");
+		editAppSpecific("Case Renewal Type","Renewal Hold");
+		editAppName("Renewal Hold");
 }
 	
 	if (matches(wfTask,"LAU Assessment","Licensing Case Assessment") && matches(wfStatus,"Resolved","Closed")) {
