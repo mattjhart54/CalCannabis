@@ -165,6 +165,8 @@ try {
 		editAppSpecific("Order Number", PInfo["Order Number"]);
 		editAppSpecific("Enrollment Level", PInfo["Enrollment Level"]);
 		editAppSpecific("Other Description", PInfo["Other Description"]);
+		editAppSpecific("WB Fee Status", PInfo["WB Fee Status"]);
+		editAppSpecific("WB Fee Notes", PInfo["WB Fee Notes"]);
 		editAppSpecific("Water Source Review Status", PInfo["Water Source Review Status"]);
 		editAppSpecific("Rainwater Catchment Review Status", PInfo["Rainwater Catchment Review Status"]);
 		editAppSpecific("Groundwater Well Review Status", PInfo["Groundwater Well Review Status"]);
