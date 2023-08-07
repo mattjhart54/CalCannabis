@@ -25,13 +25,13 @@ try {
 			vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 	// Set license record expiration and status to active
 			vLicenseObj.setStatus("Active");
-			vCapStatus = aa.cap.getCap(licId).getOutput().getCapStatus()	
-			savedCapStatus = getAppSpecific("Saved License Status",licId);
+			vCapStatus = aa.cap.getCap(vLicenseID).getOutput().getCapStatus()	
+			savedCapStatus = getAppSpecific("Saved License Status",vLicenseID);
 			if (savedCapStatus == "Suspended"){
-				updateAppStatus("Suspended","License Renewed",licId);
+				updateAppStatus("Suspended","License Renewed",vLicenseID);
 			}else {
 				if (vCapStatus != "Inactive"){
-					updateAppStatus("Active","License Renewed",licId);
+					updateAppStatus("Active","License Renewed",vLicenseID);
 				}
 			}
 	// Update the Cultivation Type on the license record
@@ -179,7 +179,7 @@ try {
 	// Add record to the CAT set
 			addToCat(vLicenseID);
 	//	7088: Create License Case Record for all Renewals when a Science Amendment associated to the License Parent Record has not been submitted prior to submission of a Provisional Renewal for that corresponding renewal year
-			if (getAppSpecific("License Issued Type", licId) == "Provisional"){
+			if (getAppSpecific("License Issued Type", vLicenseID) == "Provisional"){
 				var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",vLicenseID);
 				var issueDate = getAppSpecific("Valid From Date",vLicenseID);
 				var approvedRen = false;
