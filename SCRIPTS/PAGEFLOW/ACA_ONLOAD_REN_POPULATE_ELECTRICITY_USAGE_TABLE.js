@@ -85,20 +85,9 @@ loadASITables4ACA_corrected();
 
 try {
 	
-	var expYear = "2023";
 	var elecTable = [];
 	var ggeiTable = [];
-	var elecCapTable = [];
-	var ggeiCapTable = [];
 	var licCapId = getApplication(AInfo['License Number']);
-	var b1ExpResultRec=aa.expiration.getLicensesByCapID(licCapId);
-	if(b1ExpResultRec.getSuccess()){
-		b1ExpResult=b1ExpResultRec.getOutput();
-		var expDate = b1ExpResult.getExpDate();
-		if(expDate){
-			expYear = String(expDate.getYear()-1);
-		}
-	}
 	
 	
 	licElecInfo = loadASITable("ELECTRICITY USAGE",licCapId);	
@@ -141,40 +130,6 @@ try {
 		asit = cap.getAppSpecificTableGroupModel();
 		new_asit = addASITable4ACAPageFlowXX(asit,"AVG WEIGHTED GGEI HISTORICAL", ggeiTable,capId);
 		var cap = aa.env.getValue("CapModel");
-	}
-	if(ELECTRICITYUSAGE.length == 0){
-		elecCapRow = new Array();
-		elecCapRow["Reporting Year"] =  "" + expYear;
-		elecCapRow["Usage Type"] = "";
-		elecCapRow["Type of Off Grid Renewable Source"] = "";
-		elecCapRow["Type of Other Source"] = "";
-		elecCapRow["Other Source description"] = "";
-		elecCapRow["Name of Utility Provider"] = "";
-		elecCapRow["Total Electricity Supplied (kWh)"] = "";
-		elecCapRow["Total Electricity Supplied by Zero Net Energy Renewable (kWh)"] = "";
-		elecCapRow["GGEI (lbs CO2e/kWh)"] = "";
-		elecCapTable.push(elecCapRow);
-		
-		if (elecCapTable.length > 0 ){
-			removeASITable("ELECTRICITY USAGE", capId);
-			asit = cap.getAppSpecificTableGroupModel();
-			new_asit = addASITable4ACAPageFlowXX(asit,"ELECTRICITY USAGE", elecCapTable,capId);
-			var cap = aa.env.getValue("CapModel");
-		}
-	}
-	
-	if(AVERAGEWEIGHTEDGGEI.length == 0){
-		ggeiCapRow = new Array();
-		ggeiCapRow["Reporting year"] = "" + expYear;
-		ggeiCapRow["Average Weighted GGEI"] = "";
-		ggeiCapTable.push(ggeiCapRow);
-			
-		if (ggeiCapTable.length > 0){
-			removeASITable("AVERAGE WEIGHTED GGEI", capId);
-			asit = cap.getAppSpecificTableGroupModel();
-			new_asit = addASITable4ACAPageFlowXX(asit,"AVERAGE WEIGHTED GGEI", ggeiCapTable,capId);
-			var cap = aa.env.getValue("CapModel");
-		}
 	}
 	
 
