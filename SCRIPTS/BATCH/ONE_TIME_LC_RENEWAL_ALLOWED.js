@@ -156,6 +156,7 @@ function mainProcess(){
 			var caseType = getAppSpecific("Case Renewal Type", capId);
 			if (matches(openedBy,"Science - Annual","Science - Provisional") && matches(caseType,"Renewal Review","Renewal Hold")){
 				editAppSpecific("Case Renewal Type","Renewal Allowed",capId);
+				editAppName("Renewal Allowed");
 				editArray.push(capId.getCustomID());
 			}
 		}
