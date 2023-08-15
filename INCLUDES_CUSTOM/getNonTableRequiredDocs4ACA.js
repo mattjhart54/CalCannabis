@@ -22,6 +22,8 @@ function getNonTableRequiredDocs4ACA() {
 	var wasteManagementPlan							= "Cultivation Plan - Waste Management Plan"; 
 	var ceqaCompliance								= "Local - Evidence of CEQA Compliance";
 	var electricityUsgae							= "Electricity Usage";
+	var waterLakeStream								= "Water - Lake and Streambed Alteration Document";
+	var waterQuality								= "Water - Water Quality Protection Permit";
 
 
 	//Remove all conditions first
@@ -35,6 +37,8 @@ function getNonTableRequiredDocs4ACA() {
 		requirementArray.push(pestManagementPlan);
 		requirementArray.push(wasteManagementPlan);
 		requirementArray.push(ceqaCompliance);
+		requirementArray.push(waterLakeStream);
+		requirementArray.push(waterQuality);
     }
 	
 	if (isRenewal) {
