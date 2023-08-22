@@ -47,6 +47,7 @@ function verifyFeePayment(fCode) { //To Be used in Payment Events, or edit Payme
 							return true;
 						}else{
 							return false;
+						}
 					}
 				}
 			} else {
