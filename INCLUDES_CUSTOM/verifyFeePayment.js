@@ -5,10 +5,8 @@ function verifyFeePayment(fCode) { //To Be used in Payment Events, or edit Payme
 		var origSeq = null;
 		for (var ff = 0; ff < feeObjArr.length; ff++) {
 			fee = feeObjArr[ff];
-			logDebug("FeeCode: " + fee.getFeeCod());
 			if (fee.getFeeCod() == fCode && fee.getFeeitemStatus() != "CREDITED") {
 				origSeq = fee.getFeeSeqNbr();
-				logDebug("origSeq: " + origSeq);
 			}
 		}
 		if (origSeq != null) {
@@ -17,22 +15,12 @@ function verifyFeePayment(fCode) { //To Be used in Payment Events, or edit Payme
 				feeObjArr = paidfees.getOutput();
 				for (var ff = 0; ff < feeObjArr.length; ff++) {
 					fee = feeObjArr[ff].getPaymentFeeItem();
-					logDebug("fee: " + fee);
 					feeSeqNbr = fee.getFeeSeqNbr();
-					logDebug("feeSeqNbr: " + feeSeqNbr);
 					if (origSeq == feeSeqNbr) {
-						paySeqNbr = feeObjArr[ff].getPaymentSeqNbr();
-						logDebug("paySeqNbr: " + paySeqNbr);
-						invoiceNbr = feeObjArr[ff].getInvoiceNbr();
-						logDebug("invoiceNbr: " + invoiceNbr);
 						var auditDateScript = feeObjArr[ff].getAuditDate();
 						var auditDate = new Date(auditDateScript.getMonth() + 1 + "/" + auditDateScript.getDayOfMonth() + "/" + auditDateScript.getYear());
-						logDebug(feeObjArr[ff].getAuditDate());
-						logDebug(auditDate);
 						var yyyy = auditDate.getFullYear();
-						logDebug(yyyy);
 						var mm = String(auditDate.getMonth());
-						logDebug(mm)
 						var dd = String(auditDate.getDate());
 						if (mm.length == 1) {
 							mm = '0' + mm;
@@ -41,8 +29,6 @@ function verifyFeePayment(fCode) { //To Be used in Payment Events, or edit Payme
 							dd = '0' + dd;
 						}
 						var formattedAuditDate =  yyyy + '-' + mm + '-' + dd;
-						logDebug("auditDate: " + formattedAuditDate + " " +  typeof(formattedAuditDate));
-						logDebug("PaymentDate: " + PaymentDate + " " + typeof(PaymentDate)); 
 						if (formattedAuditDate == PaymentDate) {
 							return true;
 						}else{
