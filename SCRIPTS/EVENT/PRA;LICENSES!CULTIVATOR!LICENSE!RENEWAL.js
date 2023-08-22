@@ -303,7 +303,7 @@ try{
 			updateAppStatus("Deferral Paid", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
 		}
 	}
-//jshear user story 7604 - start
+//Send email Notification for NSF Payments
 	var dishonoredPayment = verifyFeePayment("LIC_NSF", PaymentDate);
 	if (dishonoredPayment){
 		email("Payments@cannabis.ca.gov", "noreply@cannabis.ca.gov", "Dishonored Payment Fee paid on " + capId.getCustomID(), "This serves as notice that a payment has been made on record " + capId.getCustomID() + " that includes a dishonored payment fee.") 
