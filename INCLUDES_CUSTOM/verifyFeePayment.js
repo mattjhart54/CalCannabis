@@ -1,4 +1,4 @@
-function verifyFeePayment(fCode) { //To Be used in Payment Events, or edit PaymentDate var
+function verifyFeePayment(fCode, PaymentDate) { //payment Date formatted or payment event var YYYY-MM-DD
 	var assessedFees = aa.fee.getFeeItems(capId);
 	if (assessedFees.getSuccess()) {
 		var feeObjArr = assessedFees.getOutput();
