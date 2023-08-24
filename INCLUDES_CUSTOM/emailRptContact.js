@@ -72,6 +72,22 @@ try{
 		}
 		if(emailPriReport){
 			var eParams = aa.util.newHashtable(); 
+			var currCapId = capId;			// moved up from below
+			capId = acaCapId;
+			// ***************  US7520 US7521 US7522  ******************************************
+			for (var i = 7; i < arguments.length; i = i + 2) {
+				if (arguments[i] == "altId")   // added below they may not pass as a parameter from calling routine.
+					continue;
+				var keyPair = "$$" + arguments[i] + "$$";
+				var valuePair = arguments[i + 1];
+				addParameter(eParams, keyPair, valuePair);
+			}
+			var licType = getAppSpecific("License Type",capId);
+			var legalBusinessName = getAppSpecific("Legal Business Name",capId);
+			addParameter(eParams, "$$LicenseType$$", licType);
+			addParameter(eParams, "$$BusinessName$$", legalBusinessName);
+			// *********************************************************************************
+
 			//logDebug("callingPgm: " + callingPgm);
 			if(callingPgm=="WTUA"){
 				var staffUser = new userObj(wfStaffUserID);
@@ -79,8 +95,6 @@ try{
 				getWorkflowParams4Notification(eParams);
 			}
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
-			var currCapId = capId;
-			capId = acaCapId;
 			//getACARecordParam4Notification(eParams,acaUrl);
 // mhart 20180215 added if statement for notifications to use ACA deep links.
 			if(matches(notName,"LCA_XXXXX")) 
