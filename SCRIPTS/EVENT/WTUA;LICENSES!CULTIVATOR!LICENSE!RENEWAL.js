@@ -131,7 +131,7 @@ try {
 			}
 			else {			
 				if (AInfo["License Issued Type"] == "Provisional"){
-					var approvalLetter = "Provisional Renewal Approval";
+					var approvalLetter = "";
 					var emailTemplate = "LCA_RENEWAL_APPROVAL";
 				}else{
 					var approvalLetter = "";
