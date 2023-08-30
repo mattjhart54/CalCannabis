@@ -245,8 +245,9 @@ try{
 				var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
 			}
 			var scriptName = "asyncRunOfficialLicenseRpt";
+			var licType = getAppSpecific("License Type",capId);
 			var envParameters = aa.util.newHashMap();
-			envParameters.put("licType", AInfo["License Type"]);
+			envParameters.put("licType", licType);
 			envParameters.put("appCap",altId);
 			envParameters.put("licCap",licAltId); 
 			envParameters.put("reportName","Official License Certificate");
