@@ -475,6 +475,8 @@ try{
 		arrReqdDocs_CR.push(pestPlan);
 		arrReqdDocs_CR.push(wastePlan);
 		arrReqdDocs_CR.push(CEQA);
+		arrReqdDocs_CR.push(streambedAlter);
+		arrReqdDocs_CR.push(waterQuality);
 		
 		return arrReqdDocs_CR;
 	}
