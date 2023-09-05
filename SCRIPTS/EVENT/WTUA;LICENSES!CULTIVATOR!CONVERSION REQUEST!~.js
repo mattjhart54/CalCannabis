@@ -36,7 +36,8 @@ try {
 		var days = 0;
 		var credit = 0;
 		var feeAmt = 0;
-		var dFeeAmt = 0
+		var overAmt = 0;
+		var dFeeAmt = 0;
 		var pFeeAmt = 0;
 		var tFeeAmt = 0;
 		var licFeeAmt = 0;
@@ -82,6 +83,7 @@ try {
     
 // pro rate the fee on the primary license 
 		crCapId = capId;
+		var overTotal = 0;
 		pId = AInfo["License Number"]; 
 		capId = aa.cap.getCapID(pId).getOutput();
 		PInfo = [];
@@ -96,10 +98,33 @@ try {
 			var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 			feeAmt = thisFee.formula
 			logDebug("fee " + feeDesc + " amt " + feeAmt);
-			dFeeAmt = feeAmt / 365;
+			if(licType.substring(0,5) == "Large") {
+				lType = lookup("LIC_CC_LICENSE_TYPE", licType);
+				if(!matches(lType,"", null, undefined)){
+					licTbl = lType.split(";");
+					var base = parseInt(licTbl[3]);
+					feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
+					logDebug("feeDesc " + feeDesc);
+					var overFee = getFeeDefByDesc("LIC_CC_CONVERSION", feeDesc);
+					overAmt = overFee.formula
+					var sqft = PInfo["Canopy SF"];
+					logDebug("SQ FT " + sqft + " Base " + base);
+					qty = (parseInt(sqft) - base) / 2000;
+					logDebug("qty " + parseInt(qty) + " overAMt " + overAmt);
+					if(qty > 0){		
+						if(overFee){	
+							overTotal = overAmt * parseInt(qty);
+						}else{
+							aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Conversion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+							logDebug("An error occurred retrieving fee item: " + feeDesc);
+						}
+					}	
+				}
+			}
+			dFeeAmt = (parseInt(feeAmt) + parseInt(overTotal)) / 365;
 			pFeeAmt = dFeeAmt * days;
+			logDebug( " dFeeAmt " + dFeeAmt);
 			tFeeAmt = tFeeAmt + pFeeAmt;
-			logDebug("pFeeAmt " + pFeeAmt);
 		}
     
 // pro rate the fee on all the converted licenses
@@ -109,20 +134,46 @@ try {
 			cCap = aa.cap.getCap(capId).getOutput();
 			cStatus = cCap.getCapStatus();
 			if(matches(cStatus,"Active","About to Expire","Suspended")) {
+				var overTotal = 0;
 				PInfo = [];
 				loadAppSpecific(PInfo);
 				var vLicenseObj;
 				vLicenseObj = new licenseObject(null,capId);
 				vExpDate = vLicenseObj.b1ExpDate;
 				days = parseInt(dateDiff(sysDate,vExpDate));
-				logDebug("days " + days);
+				logDebug("Record " + cId + " days " + days);
 				if(days > 0) {
-					var feeDesc = PInfo["License Type"] + " - License Fee";
+					var licType = PInfo["License Type"];
+					var feeDesc = licType + " - License Fee";
 					var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 					feeAmt = thisFee.formula
 					logDebug("fee " + feeDesc + " amt " + feeAmt);
-					dFeeAmt = feeAmt / 365;
+					if(licType.substring(0,5) == "Large") {
+						lType = lookup("LIC_CC_LICENSE_TYPE", licType);
+						if(!matches(lType,"", null, undefined)){
+							licTbl = lType.split(";");
+							var base = parseInt(licTbl[3]);
+							feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
+							logDebug("feeDesc " + feeDesc);
+							var overFee = getFeeDefByDesc("LIC_CC_CONVERSION", feeDesc);
+							overAmt = overFee.formula
+							var sqft = PInfo["Canopy SF"];
+							logDebug("SQ FT " + sqft + " Base " + base);
+							qty = (parseInt(sqft) - base) / 2000;
+							logDebug("qty " + parseInt(qty) + " overAMt " + overAmt);
+							if(qty > 0){		
+								if(overFee){	
+									overTotal = overAmt * parseInt(qty);
+								}else{
+									aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/Conversion Request/NA: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+									logDebug("An error occurred retrieving fee item: " + feeDesc);
+								}
+							}	
+						}
+					}
+					dFeeAmt = (parseInt(feeAmt) + parseInt(overTotal)) / 365;
 					pFeeAmt = dFeeAmt * days;
+					logDebug( " dFeeAmt " + dFeeAmt);
 					tFeeAmt = tFeeAmt + pFeeAmt;
 
 				}
@@ -229,8 +280,8 @@ try {
 				}
 			}		
 		}
-	}			
+	}
 }catch(err){
-	logDebug("An error has occurred in ASB:LICENSES/CULTIVATOR/Batch/Conversion: " + err.message);
+	logDebug("An error has occurred in WTUA:LICENSES/CULTIVATOR/CONVERSION REQUEST/*: " + err.message);
 	logDebug(err.stack);
 }
