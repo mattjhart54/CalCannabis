@@ -98,38 +98,24 @@ try {
 		//error messages
 		var premCountyMessage = "";
 		var premCityMessage = "";
-		
-		if (matches(premCounty, null, undefined, "")){
-			premCountyMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
-		}
-		
-		if (matches(premCity, null, undefined, "")){
-			premCityMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
-		}
 
 		
 		//Compare Data from Table to Custom Field Values
-		if (premCountyMessage == "" || premCityMessage == ""){
-			if (typeof(PREMISESADDRESSES) == "object") {
-				if(PREMISESADDRESSES.length > 0){
-					for (var x in PREMISESADDRESSES) {
-						var theRow = PREMISESADDRESSES[x];
-						var premCityTable = theRow["Premises City"];
-						var premCountyTable = theRow["Premises County"];
-						
-						if (!matches(premCityTable, null, undefined, "")){
-							if (premCity.toLowerCase() != premCityTable.toLowerCase()) {
-								premCityMessage = "Premises City must match the Premises City entered in the Premises Information" + br;
-							}
-						}
-						if (!matches(premCountyTable, null, undefined, "")){
-							if (premCounty.toLowerCase() != premCountyTable.toLowerCase()) {
-								premCountyMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
-							}
-						}
+		if (typeof(PREMISESADDRESSES) == "object") {
+			if(PREMISESADDRESSES.length > 0){
+				for (var x in PREMISESADDRESSES) {
+					var theRow = PREMISESADDRESSES[x];
+					var premCityTable = theRow["Premises City"];
+					var premCountyTable = theRow["Premises County"];
+					
+					if (String(premCity).toLowerCase() != String(premCityTable).toLowerCase()) {
+						premCityMessage = "Premises City must match the Premises City entered in the Premises Information" + br;
 					}
-				}				
-			}
+					if (String(premCounty).toLowerCase() != String(premCountyTable).toLowerCase()) {
+						premCountyMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
+					}
+				}
+			}				
 		}
 		
 		if (premCountyMessage != "" || premCityMessage != ""){
