@@ -107,11 +107,15 @@ try {
 					var premCityTable = theRow["Premises City"];
 					var premCountyTable = theRow["Premises County"];
 					
-					if (premCity.toLowerCase() != premCityTable.toLowerCase()) {
-						premCityMessage = "Premises City must match the Premises City entered in the Premises Information" + br;
+					if (!matches(premCity, null, undefined, "") && !matches(premCityTable, null, undefined, "")){
+						if (premCity.toLowerCase() != premCityTable.toLowerCase()) {
+							premCityMessage = "Premises City must match the Premises City entered in the Premises Information" + br;
+						}
 					}
-					if (premCounty.toLowerCase() != premCountyTable.toLowerCase()) {
-						premCountyMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
+					if (!matches(premCounty, null, undefined, "") && !matches(premCountyTable, null, undefined, "")){
+						if (premCounty.toLowerCase() != premCountyTable.toLowerCase()) {
+							premCountyMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
+						}
 					}
 				}
 			}				
