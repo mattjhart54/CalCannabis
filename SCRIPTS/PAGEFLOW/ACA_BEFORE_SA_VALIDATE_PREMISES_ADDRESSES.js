@@ -99,11 +99,11 @@ try {
 		var premCountyMessage = "";
 		var premCityMessage = "";
 		
-		if (!matches(premCounty, null, undefined, "")){
+		if (matches(premCounty, null, undefined, "")){
 			premCountyMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
 		}
 		
-		if (!matches(premCity, null, undefined, "")){
+		if (matches(premCity, null, undefined, "")){
 			premCityMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
 		}
 
