@@ -73,7 +73,6 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 var cap = aa.env.getValue("CapModel");
 var AInfo = [];
 loadAppSpecific4ACA(AInfo);
-loadASITables4ACA_corrected();
 //var parentId = cap.getParentCapID();
 
 // page flow custom code begin
@@ -230,48 +229,6 @@ try {
 	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 
-//jshear: story 7600: Compare Premises Address Custom Field and Custom List Info
-try{
-		//Primary License Data
-		var capId = cap.getCapID();
-		var premCity = AInfo['Premises City'];
-		var premCounty = AInfo['Premise County'];
-		
-		//error messages
-		var premCountyMessage = "";
-		var premCityMessage = "";
-
-		
-		//Compare Data from Table to Custom Field Values
-		if (typeof(PREMISESADDRESSES) == "object") {
-			if(PREMISESADDRESSES.length > 0){
-				for (var jj in PREMISESADDRESSES) {
-					var theRow = PREMISESADDRESSES[jj];
-					var premCityTable = theRow["Premises City"];
-					var premCountyTable = theRow["Premises County"];
-					
-					if (String(premCity).toLowerCase() != String(premCityTable).toLowerCase()) {
-						premCityMessage = "Premises City must match the Premises City entered in the Premises Information" + br;
-					}
-					if (String(premCounty).toLowerCase() != String(premCountyTable).toLowerCase()) {
-						premCountyMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
-					}
-				}
-			}				
-		}
-		
-		if (premCountyMessage != "" || premCityMessage != ""){
-				cancel = true;
-				showMessage = true;
-				logMessage(premCityMessage + premCountyMessage);
-		}
-		
-}catch (err){
-	logDebug("A JavaScript Error occurred:ACA_BEFORE_VALIDATE_CONTACT: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
-
 function getCapIdStatusClass(inCapId){
     var inCapScriptModel = aa.cap.getCap(inCapId).getOutput();
     var retClass = null;
@@ -289,72 +246,6 @@ function isUnicode(str) {
 	}
 	return false;
 }
-
-function loadASITables4ACA_corrected() {
-
- 	//
- 	// Loads App Specific tables into their own array of arrays.  Creates global array objects
-	//
-	// Optional parameter, cap ID to load from.  If no CAP Id specified, use the capModel
-	//
-	//corrected issue introduced three years ago.
-
-	var itemCap = capId;
-	if (arguments.length == 1)
-		{
-		itemCap = arguments[0]; // use cap ID specified in args
-		var gm = aa.appSpecificTableScript.getAppSpecificTableGroupModel(itemCap).getOutput();
-		}
-	else
-		{
-		var gm = cap.getAppSpecificTableGroupModel()
-		}
-
-	var ta = gm.getTablesMap();
-
-
-	var tai = ta.values().iterator();
-
-	while (tai.hasNext())
-	  {
-	  var tsm = tai.next();
-
-	  if (tsm.rowIndex.isEmpty()) continue;  // empty table
-
-	  var tempObject = new Array();
-	  var tempArray = new Array();
-	  var tn = tsm.getTableName();
-
-	  tn = String(tn).replace(/[^a-zA-Z0-9]+/g,'');
-
-	  if (!isNaN(tn.substring(0,1))) tn = "TBL" + tn  // prepend with TBL if it starts with a number
-
-  	  var tsmfldi = tsm.getTableField().iterator();
-	  var tsmcoli = tsm.getColumns().iterator();
-	  var numrows = 1;
-
-	  while (tsmfldi.hasNext())  // cycle through fields
-		{
-		if (!tsmcoli.hasNext())  // cycle through columns
-			{
-
-			var tsmcoli = tsm.getColumns().iterator();
-			tempArray.push(tempObject);  // end of record
-			var tempObject = new Array();  // clear the temp obj
-			numrows++;
-			}
-		var tcol = tsmcoli.next();
-		//var tval = tsmfldi.next().getInputValue();
-		var tval = tsmfldi.next();
-		tempObject[tcol.getColumnName()] = tval;
-		}
-	  tempArray.push(tempObject);  // end of record
-	  var copyStr = "" + tn + " = tempArray";
-	  logDebug("ASI Table Array : " + tn + " (" + numrows + " Rows)");
-	  eval(copyStr);  // move to table name
-	  }
-
-	}
 // page flow custom code end
 
 
@@ -376,5 +267,6 @@ if (debug.indexOf("**ERROR") > 0) {
 			aa.env.setValue("ErrorMessage", debug);
 	}
 }
+
 
 
