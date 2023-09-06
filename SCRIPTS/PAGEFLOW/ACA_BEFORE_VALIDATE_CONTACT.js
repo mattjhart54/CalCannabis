@@ -73,7 +73,6 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 var cap = aa.env.getValue("CapModel");
 var AInfo = [];
 loadAppSpecific4ACA(AInfo);
-loadASITables4ACA_corrected();
 //var parentId = cap.getParentCapID();
 
 // page flow custom code begin
@@ -224,48 +223,6 @@ try {
 	}
 	//jshear: 200123: story 6306: Check for Smart Chars end
 	
-}catch (err){
-	logDebug("A JavaScript Error occurred:ACA_BEFORE_VALIDATE_CONTACT: " + err.message);
-	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
-}
-
-//jshear: story 7600: Compare Presmise Address Cutom Field data with Custom List data
-try {	
-		//Primary License Data
-		var capId = cap.getCapID();
-		var premCity = AInfo['Premises City'];
-		var premCounty = AInfo['Premise County'];
-		
-		//error messages
-		var premCountyMessage = "";
-		var premCityMessage = "";
-
-		
-		//Compare Data from Table to Custom Field Values
-		if (typeof(PREMISESADDRESSES) == "object") {
-			if(PREMISESADDRESSES.length > 0){
-				for (var x in PREMISESADDRESSES) {
-					var theRow = PREMISESADDRESSES[x];
-					var premCityTable = theRow["Premises City"];
-					var premCountyTable = theRow["Premises County"];
-					
-					if (String(premCity).toLowerCase() != String(premCityTable).toLowerCase()) {
-						premCityMessage = "Premises City must match the Premises City entered in the Premises Information" + br;
-					}
-					if (String(premCounty).toLowerCase() != String(premCountyTable).toLowerCase()) {
-						premCountyMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
-					}
-				}
-			}				
-		}
-		
-		if (premCountyMessage != "" || premCityMessage != ""){
-				cancel = true;
-				showMessage = true;
-				logMessage(premCityMessage + premCountyMessage);
-		}		
-					
 }catch (err){
 	logDebug("A JavaScript Error occurred:ACA_BEFORE_VALIDATE_CONTACT: " + err.message);
 	logDebug(err.stack);
