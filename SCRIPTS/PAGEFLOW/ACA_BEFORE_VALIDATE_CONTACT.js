@@ -245,8 +245,8 @@ try{
 		//Compare Data from Table to Custom Field Values
 		if (typeof(PREMISESADDRESSES) == "object") {
 			if(PREMISESADDRESSES.length > 0){
-				for (var x in PREMISESADDRESSES) {
-					var theRow = PREMISESADDRESSES[x];
+				for (var jj in PREMISESADDRESSES) {
+					var theRow = PREMISESADDRESSES[jj];
 					var premCityTable = theRow["Premises City"];
 					var premCountyTable = theRow["Premises County"];
 					
