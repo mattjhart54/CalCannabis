@@ -80,11 +80,46 @@ loadASITables4ACA_corrected();
 
 // page flow custom code begin
 
+
+//jshear: 200123: story 6306: Check for Smart Chars
+try {
+	var smartCharMessage = "An illegal character has been found.  These characters are sometimes invisible and can come from copying and pasting the script from a word processing program.  Please remove the invalid character from ";
+	var invalidChar = false;
+	var myObj = new Object();
+	myObj['Premise Address'] = AInfo["Premise Address"];
+	myObj['Premise City'] = AInfo["Premise City"];
+	myObj['Premise County'] = "" + AInfo["Premise County"];
+	myObj['Premise State'] = "" + AInfo["Premise State"];
+	myObj['Premise Zip'] = "" + AInfo["Premise Zip"];
+	myObj['APN'] = "" + AInfo["APN"];
+	for (x in myObj){
+		if (myObj.hasOwnProperty(x)){			
+			var smartChar = isUnicode(String(myObj[x]));
+			if (smartChar){
+				invalidChar = true;
+				smartCharMessage += ", " + x;
+			}
+		}
+	}
+
+	if (invalidChar){
+		cancel = true;
+		showMessage = true;
+		logMessage(smartCharMessage);
+	}
+	//jshear: 200123: story 6306: Check for Smart Chars end
+	
+}catch (err){
+	logDebug("A JavaScript Error occurred:ACA_BEFORE_VALIDATE_CONTACT: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_VALIDATE_CONTACT: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
+
 try {
 		
 		//Primary License Data
 		var capId = cap.getCapID();
-		var premCity = AInfo['Premises City'];
+		var premCity = AInfo['Premise City'];
 		var premCounty = AInfo['Premise County'];
 		
 		//error messages
