@@ -94,7 +94,8 @@ try {
 		days = parseInt(dateDiff(sysDate,vExpDate));
 		logDebug("days " + days);
 		if(days > 0) {
-			var feeDesc = PInfo["License Type"] + " - License Fee";
+			var licType = AInfo["Proposed License Type"];
+			var feeDesc = licType + " - License Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 			feeAmt = thisFee.formula
 			logDebug("fee " + feeDesc + " amt " + feeAmt);
@@ -182,6 +183,7 @@ try {
     
 // Assess the prorated license conversion credit and invoice fees
 		capId = crCapId;
+		var licType = AInfo["Proposed License Type"];
 		licFeeAmt = feeAmount(licFeeCode,"NEW");
 		if(licType.substring(0,5) == "Large") {
 			licFeeAmt = licFeeAmt + feeAmount(overFeeCode,"NEW");
