@@ -94,7 +94,7 @@ try {
 		days = parseInt(dateDiff(sysDate,vExpDate));
 		logDebug("days " + days);
 		if(days > 0) {
-			var licType = PInfo["Proposed License Type"];
+			var licType = PInfo["License Type"];
 			var feeDesc = licType + " - License Fee";
 			var thisFee = getFeeDefByDesc("LIC_CC_CULTIVATOR", feeDesc);
 			feeAmt = thisFee.formula
