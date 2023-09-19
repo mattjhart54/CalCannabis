@@ -54,6 +54,7 @@ try{
 	var recNum = "" + aa.env.getValue("recNum");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var contType = "" + aa.env.getValue("contType");
+	var fromEmail = "" + aa.env.getValue("fromEmail");
 	var br = "<BR>";
 	var eTxt = "";
 	var sDate = new Date();
@@ -121,7 +122,7 @@ try{
 		}
 		addParameter(eParams, "$$date$$", noticeDate);
 		var priEmail = ""+priContact.capContact.getEmail();
-		sendApprovalNotification(sysFromEmail,priEmail,"",notification,eParams, rFiles,licCapId);
+		sendApprovalNotification(fromEmail,priEmail,"",notification,eParams, rFiles,licCapId);
 		var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 		if(!matches(priChannel, "",null,"undefined", false)){
 			if(priChannel.indexOf("Postal") > -1 ){
