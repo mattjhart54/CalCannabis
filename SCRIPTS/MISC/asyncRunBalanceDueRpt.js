@@ -144,7 +144,7 @@ try{
 } catch(err){
 	logDebug("An error has occurred in asyncRunBalanceDueRpt: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunBalanceDueRpt: ",  licCapId + br + "altId: " + recNum + br + eTxt);
+	aa.sendMail("noreply@cannabis.ca.gov", debugEmail, "", "AN ERROR HAS OCCURRED IN asyncRunBalanceDueRpt: ",  licCapId + br + "altId: " + recNum + br + eTxt);
 }
  function sendApprovalNotification(emailFrom,emailTo,emailCC,templateName,params,reportFile)
 {
