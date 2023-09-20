@@ -100,6 +100,7 @@ try {
 					row["Last Name"] = new asiTableValObj("Last Name", "" + String(ownerInfo[ii]["Last Name"]));
 					row["Email Address"] = new asiTableValObj("Email Address", "" + String(ownerInfo[ii]["Email Address"]));
 					row["Percent Ownership"] = new asiTableValObj("Percent Ownership", "" + String(ownerInfo[ii]["Percent Ownership"]));
+					row["Status"] = new asiTableValObj("Status", "");
 					multTable.push(row);
 				}
 			}
