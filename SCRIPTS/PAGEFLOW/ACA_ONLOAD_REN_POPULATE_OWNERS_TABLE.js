@@ -115,7 +115,7 @@ try {
 		
 		if (multTable.length > 0){
 			var asit = cap.getAppSpecificTableGroupModel();
-			new_asit = addASITable4ACAPageFlow(asit,"OWNERS", multTable,capId);
+			new_asit = addASITable4ACAPageFlowUpdated(asit,"OWNERS", multTable,capId);
 			aa.env.setValue("CapModel",cap);
 		}
 	}	
@@ -196,7 +196,7 @@ function loadASITable(e) {
 }
 	
 
-function addASITable4ACAPageFlow(destinationTableGroupModel, tableName, tableValueArray) // optional capId
+function addASITable4ACAPageFlowUpdated(destinationTableGroupModel, tableName, tableValueArray) // optional capId
 {
 	//  tableName is the name of the ASI table
 	//  tableValueArray is an array of associative array values.  All elements MUST be either a string or asiTableVal object
