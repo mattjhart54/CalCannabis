@@ -292,7 +292,7 @@ function renewalProcess(rAltId) {
 				}
 			}						
 		}
-	}else
+	}else {
 		fastTrack = 'No'
 	}
 	return fastTrack
