@@ -1,11 +1,11 @@
-function renewalProcess(rAltId, event){		
+function renewalProcess(rAltId, event){	
+	var fastTrack = 'Yes';
 	if(event == 'WTUA') {
 		var licenseId = AInfo["License Number"];
 		var licId = aa.cap.getCapID(licenseId);
 		licId = licId.getOutput();
 	}else {
 // Check License Cases to see if renewal can be fast tracked
-		var fastTrack = 'Yes';
 		var licenseId = AInfo["License Number"];
 		var licId = aa.cap.getCapID(licenseId);
 		licId = licId.getOutput();
@@ -40,7 +40,7 @@ function renewalProcess(rAltId, event){
 		var vNewExpDate;
 		var vLicenseObj;
 		licAltId = licId.getCustomID();
-		altId = rAltId();
+		altId = rAltId;
 		if (licId != null) {
 	// Get current expiration date.
 			vLicenseObj = new licenseObject(null, licId);
@@ -68,7 +68,7 @@ function renewalProcess(rAltId, event){
 				editAppSpecific("Cultivator Type",AInfo["Designation Type"],licId);
 				editAppName(AInfo["License Issued Type"] + " " + AInfo["Designation Type"] + " - " + AInfo["License Type"],licId);
 			}else{
-				editAppName(AInfo["License Issued Type"] + " " + AInfo["Cultivator Type"] + " - " + AInfo["License Type"],vLicenseID);
+				editAppName(AInfo["License Issued Type"] + " " + AInfo["Cultivator Type"] + " - " + AInfo["License Type"],licId);
 			}
 	// Update Financial Interest Table
 			if (typeof(FINANCIALINTERESTHOLDERNEW) == "object"){
