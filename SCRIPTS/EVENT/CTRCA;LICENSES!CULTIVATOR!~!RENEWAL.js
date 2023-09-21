@@ -83,7 +83,8 @@ try{
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
 // Check License Cases to see if renewal can be fast tracked
-	fastTrack = renewalProcess(newAltId);
+	var event = "CTRCA";
+	fastTrack = renewalProcess(newAltId, event);
 
 //  No fast track. Send renewal submitted email notification to DRP
 	if(fastTrack =='No'){
