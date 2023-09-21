@@ -1,34 +1,36 @@
-function renewalProcess(rAltId) {
+function renewalProcess(rAltId, event){		
+	if(event != 'WTUA') {
 // Check License Cases to see if renewal can be fast tracked
-	var fastTrack = 'Yes';
-	var licenseId = AInfo["License Number"];
-	var licId = aa.cap.getCapID(licenseId);
-	licId = licId.getOutput();
-	childIds  = getChildren("Licenses/Cultivator/License Case/*",licId);
-	holdId = capId;
-	capId = licId;
-	var caseReview = false;
-	if(appHasCondition("Owner History","Applied","DOJ LiveScan Match",null))
-		caseReview = true;
-	if(appHasCondition("Notice","Applied","Local Non-Compliance",null))
-		caseReview = true;
-	for(c in childIds) {
-		capId = childIds[c];
-		cCap = aa.cap.getCap(capId).getOutput();
-		cStatus = cCap.getCapStatus();
-		cInfo = new Array;
-		loadAppSpecific(cInfo);
-		logDebug(cInfo["Case Renewal Type"] + " - " + cStatus);
-		if(matches(cInfo["Case Renewal Type"], "Renewal Review", "Renewal Hold")) {
-			if(!matches(cStatus, "Resolved", "Closed")) {
-				caseReview = true;
-				break;
+		var fastTrack = 'Yes';
+		var licenseId = AInfo["License Number"];
+		var licId = aa.cap.getCapID(licenseId);
+		licId = licId.getOutput();
+		childIds  = getChildren("Licenses/Cultivator/License Case/*",licId);
+		holdId = capId;
+		capId = licId;
+		var caseReview = false;
+		if(appHasCondition("Owner History","Applied","DOJ LiveScan Match",null))
+			caseReview = true;
+		if(appHasCondition("Notice","Applied","Local Non-Compliance",null))
+			caseReview = true;
+		for(c in childIds) {
+			capId = childIds[c];
+			cCap = aa.cap.getCap(capId).getOutput();
+			cStatus = cCap.getCapStatus();
+			cInfo = new Array;
+			loadAppSpecific(cInfo);
+			logDebug(cInfo["Case Renewal Type"] + " - " + cStatus);
+			if(matches(cInfo["Case Renewal Type"], "Renewal Review", "Renewal Hold")) {
+				if(!matches(cStatus, "Resolved", "Closed")) {
+					caseReview = true;
+					break;
+				}	
 			}
-		}
-	}	
-	capId = holdId;
-// Fast track license if qualified and fees paid
-	if(!caseReview && balanceDue <= 0) {	
+		}	
+		capId = holdId;
+	}
+// Process renewal
+	if((matches(event "CTRCA","PPA","PRA") && !caseReview && balanceDue <= 0) || event == "WTUA") {	
 		var renewalCapProject;
 		var vExpDate;
 		var vNewExpDate;
@@ -140,29 +142,47 @@ function renewalProcess(rAltId) {
 			}
 			editAppSpecific("Fast Track","CHECKED");	
 	//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
-			if (AInfo["License Issued Type"] == "Provisional"){
-				var approvalLetter = "";
-				var emailTemplate = "LCA_RENEWAL_APPROVAL";
-			}else{
-				var approvalLetter = "";
-				var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
-			}
-			var scriptName = "asyncRunOfficialLicenseRpt";
-			var licType = getAppSpecific("License Type",capId);
-			var envParameters = aa.util.newHashMap();
-			envParameters.put("licType",licType);
-			envParameters.put("appCap",altId);
-			envParameters.put("licCap",licAltId); 
-			envParameters.put("reportName","Official License Certificate");
-			envParameters.put("approvalLetter", approvalLetter);
-			envParameters.put("emailTemplate", emailTemplate);
-			envParameters.put("reason", "");
-			envParameters.put("currentUserID",currentUserID);
-			envParameters.put("contType","Designated Responsible Party");
-			envParameters.put("fromEmail",sysFromEmail);
+			if(AInfo["Deferral Approved"] == "CHECKED"){
+				var scriptName = "asyncDeferralApprovedRenewal";
+				envParameters = aa.util.newHashMap();
+				envParameters.put("appCap",altId); 
+				envParameters.put("licCap",licAltId); 
+				if (AInfo["License Issued Type"] == "Annual")
+					envParameters.put("issueType","an Annual");
+				else
+					envParameters.put("issueType","a Provisional");
+				envParameters.put("emailTemplate","LCA_ANNUAL_RENEWAL_DEFERRED");
+				envParameters.put("reportName","Official License Certificate"); 
+				envParameters.put("balanceDue",balanceDue); 
+				envParameters.put("deferralDue", AInfo["Deferral Expiration Date"]);
+				envParameters.put("currentUserID",currentUserID);
+				envParameters.put("contType","Designated Responsible Party");
+				envParameters.put("fromEmail",sysFromEmail);
+				aa.runAsyncScript(scriptName, envParameters);
+			}else {		
+				if (AInfo["License Issued Type"] == "Provisional"){
+					var approvalLetter = "";
+					var emailTemplate = "LCA_RENEWAL_APPROVAL";
+				}else{
+					var approvalLetter = "";
+					var emailTemplate = "LCA_ANNUAL_RENEWAL_APPROVAL";
+				}
+				var scriptName = "asyncRunOfficialLicenseRpt";
+				var licType = getAppSpecific("License Type",capId);
+				var envParameters = aa.util.newHashMap();
+				envParameters.put("licType",licType);
+				envParameters.put("appCap",altId);
+				envParameters.put("licCap",licAltId); 
+				envParameters.put("reportName","Official License Certificate");
+				envParameters.put("approvalLetter", approvalLetter);
+				envParameters.put("emailTemplate", emailTemplate);
+				envParameters.put("reason", "");
+				envParameters.put("currentUserID",currentUserID);
+				envParameters.put("contType","Designated Responsible Party");
+				envParameters.put("fromEmail",sysFromEmail);
 				
-			aa.runAsyncScript(scriptName, envParameters);
-							
+				aa.runAsyncScript(scriptName, envParameters);
+			}				
 			var priContact = getContactObj(capId,"Designated Responsible Party");
 	// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
 			if(priContact){
