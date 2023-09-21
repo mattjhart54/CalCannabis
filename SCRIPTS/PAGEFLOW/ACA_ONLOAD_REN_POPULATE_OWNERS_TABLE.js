@@ -96,11 +96,11 @@ try {
 			for (var ii in ownerInfo) {
 				if(ownerInfo[ii]["Status"] != "Deleted") {
 					row = new Array();
-					row["First Name"] = new asiTableValObj("First Name", "" + String(ownerInfo[ii]["First Name"]));
-					row["Last Name"] = new asiTableValObj("Last Name", "" + String(ownerInfo[ii]["Last Name"]));
-					row["Email Address"] = new asiTableValObj("Email Address", "" + String(ownerInfo[ii]["Email Address"]));
-					row["Percent Ownership"] = new asiTableValObj("Percent Ownership", "" + String(ownerInfo[ii]["Percent Ownership"]));
-					row["Status"] = new asiTableValObj("Status", "");
+					row["First Name"] = new asiTableValObj("First Name", "" + String(ownerInfo[ii]["First Name"]),"Y");
+					row["Last Name"] = new asiTableValObj("Last Name", "" + String(ownerInfo[ii]["Last Name"]),"Y");
+					row["Email Address"] = new asiTableValObj("Email Address", "" + String(ownerInfo[ii]["Email Address"]),"Y");
+					row["Percent Ownership"] = new asiTableValObj("Percent Ownership", "" + String(ownerInfo[ii]["Percent Ownership"]),"Y");
+					row["Status"] = new asiTableValObj("Status", "","N");
 					multTable.push(row);
 				}
 			}
@@ -309,4 +309,3 @@ logDebug("Successfully removed all rows from ASI Table: " + tableName);
 /*------------------------------------------------------------------------------------------------------/
 | Custom Functions (End)
 /------------------------------------------------------------------------------------------------------*/
-
