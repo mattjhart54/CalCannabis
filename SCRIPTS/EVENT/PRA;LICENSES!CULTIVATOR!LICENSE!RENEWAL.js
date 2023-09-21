@@ -14,7 +14,8 @@ try{
 			}
 			if(getAppStatus() == "Renewal Fee Due") {
 				rAltId = capId.getCustomID();
-				fastTrack = renewalProcess(rAltId); 
+				var event = "PRA";
+				fastTrack = renewalProcess(rAltId, event); 
 			}
 			if (fastTrack == "No" && getAppStatus != 'Submitted'){
 				updateAppStatus("Submitted", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
