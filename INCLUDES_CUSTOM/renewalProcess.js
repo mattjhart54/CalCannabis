@@ -1,4 +1,4 @@
-function renewalProcessing(rAltId) {
+function renewalProcess(rAltId) {
 // Check License Cases to see if renewal can be fast tracked
 	var licenseId = AInfo["License Number"];
 	var licId = aa.cap.getCapID(licenseId);
