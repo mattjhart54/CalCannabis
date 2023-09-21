@@ -1,5 +1,6 @@
 function renewalProcess(rAltId) {
 // Check License Cases to see if renewal can be fast tracked
+	var fastTrack = 'Yes';
 	var licenseId = AInfo["License Number"];
 	var licId = aa.cap.getCapID(licenseId);
 	licId = licId.getOutput();
@@ -291,5 +292,8 @@ function renewalProcess(rAltId) {
 				}
 			}						
 		}
+	}else
+		fastTrack = 'No'
 	}
+	return fastTrack
 }
