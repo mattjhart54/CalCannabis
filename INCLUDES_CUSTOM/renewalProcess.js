@@ -1,5 +1,5 @@
 function renewalProcess(rAltId, event){		
-	if(event != 'WTUA') {
+	if(event == 'WTUA') {
 		var licenseId = AInfo["License Number"];
 		var licId = aa.cap.getCapID(licenseId);
 		licId = licId.getOutput();
