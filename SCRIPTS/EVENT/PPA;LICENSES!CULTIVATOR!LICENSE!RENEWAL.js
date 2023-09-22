@@ -15,13 +15,14 @@ try{
 			if(getAppStatus() == "Renewal Fee Due") {
 				rAltId = capId.getCustomID();
 				var event = "PPA";
+				var fastTrack = "No";
 				fastTrack = renewalProcess(rAltId,event); 
 			}
 			if (fastTrack == "No" && getAppStatus != 'Submitted'){
-				updateAppStatus("Submitted", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
+				updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
 			}
 		}else{
-				updateAppStatus("Deferral Paid", "Updated via PPB:LICENSES/CULTIVATOR/*/Renewal.");
+				updateAppStatus("Deferral Paid", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
 			}		
 	}
 //Send email Notification for NSF Payments
