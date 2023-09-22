@@ -1,5 +1,5 @@
 function renewalProcess(rAltId, event){	
-	var fastTrack = 'Yes';
+	var fastTrack = true;
 	if(event == 'WTUA') {
 		var licenseId = AInfo["License Number"];
 		var licId = aa.cap.getCapID(licenseId);
@@ -317,7 +317,7 @@ function renewalProcess(rAltId, event){
 			}						
 		}
 	}else {
-		fastTrack = 'No'
+		fastTrack = false;
 	}
 	return fastTrack
 }
