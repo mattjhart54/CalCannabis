@@ -84,7 +84,7 @@ try{
 	}
 // Check License Cases to see if renewal can be fast tracked
 	var event = "CTRCA";
-	fastTrack = renewalProcess(newAltId, event);
+	fastTrack = renewalProcess(newAltId, event, hasFee);
 
 //  No fast track. Send renewal submitted email notification to DRP
 	if(fastTrack =='No'){
