@@ -34,7 +34,7 @@ function renewalProcess(rAltId, event){
 		capId = holdId;
 	}
 // Process renewal
-	if((matches(event, "CTRCA","PPA","PRA") && !caseReview && balanceDue <= 0) || event == "WTUA") {	
+	if((matches(event, "CTRCA","PPA","PRA") && !caseReview && !hasFee) || event == "WTUA") {	
 		var renewalCapProject;
 		var vExpDate;
 		var vNewExpDate;
