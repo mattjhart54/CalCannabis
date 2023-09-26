@@ -16,7 +16,8 @@ try{
 				rAltId = capId.getCustomID();
 				var event = "PRA";
 				var fastTrack = "No";
-				fastTrack = renewalProcess(rAltId, event); 
+				hasFee = false;
+				fastTrack = renewalProcess(rAltId, event, hasFee); 
 			}
 			if (fastTrack == "No" && getAppStatus != 'Submitted'){
 				updateAppStatus("Submitted", "Updated via PRA:LICENSES/CULTIVATOR/*/Renewal.");
