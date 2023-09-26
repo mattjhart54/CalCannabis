@@ -1,4 +1,4 @@
-function renewalProcess(rAltId, event){	
+function renewalProcess(rAltId, event, hasFee){	
 	var fastTrack = 'Yes';
 	if(event == 'WTUA') {
 		var licenseId = AInfo["License Number"];
