@@ -2,7 +2,8 @@ try {
 	if (matches(wfTask,"Renewal Review","Annual Renewal Review","Provisional Renewal Review") && wfStatus == "Approved") {
 		var event = "WTUA";
 		rAltId = capId.getCustomID();
-		fastTrack = renewalProcess(rAltId, event);
+		hasFee = false;
+		fastTrack = renewalProcess(rAltId, event, hasFee);
 		if(balanceDue>0){
 			// Remove Late Fees
 			if (AInfo['Waive Late Fee'] == "CHECKED"){
