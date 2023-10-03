@@ -75,6 +75,7 @@ try {
 			editAppSpecific("Premise State", "CA", licCapId);
 			editAppSpecific("Cultivator Type", cultivatorType, licCapId);
 			editAppSpecific("License Issued Type", issueType, licCapId);
+			editAppSpecific("Original License Type", AInfo["License Type"], licCapId);
 			if (appTypeArray[2] != "Temporary") {
 				addToCat(licCapId); //send active license to CAT
 			}
