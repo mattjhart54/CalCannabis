@@ -36,6 +36,8 @@ try{
 			loadAppSpecific(pInfo,parentCapId); 
 			editAppSpecific("License Number",parentAltId);
 			editAppSpecific("License Type", pInfo["License Type"]);
+			editAppSpecific("Limited Operations", pInfo["Limited Operations"]);
+			editAppSpecific("Original License Type", pInfo["Original License Type"]);
 			editAppSpecific("License Issued Type", pInfo["License Issued Type"]);
 			editAppSpecific("Business Name", pInfo["Legal Business Name"]);
 			editAppSpecific("Premises Address", pInfo["Premise Address"]);
