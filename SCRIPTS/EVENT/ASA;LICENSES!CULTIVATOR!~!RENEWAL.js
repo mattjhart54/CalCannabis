@@ -60,7 +60,10 @@ try{
 	}
 	//5. Assess Fees during creation and Review, if they were removed.
 		voidRemoveAllFees();
-		licType = getAppSpecific("License Type",parentCapId)
+		if(AInfo["License Type Change"] == "Yes") 
+			licType = AInfo["New License Type"];
+		else
+			licType = getAppSpecific("License Type",parentCapId);
 		var feeDesc = licType + " - Renewal Fee";
 		var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 		if(thisFee){
