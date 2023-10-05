@@ -68,7 +68,11 @@ try{
 		deactivateActiveTasks();
 	}
 // Invoice all fees if cash payment selected at submission in ACA
-	var feeDesc = AInfo["License Type"] + " - Renewal Fee";
+	if(AInfo["License Type Change"] == "Yes") 
+		licType = AInfo["New License Type"];
+	else
+		licType = getAppSpecific("License Type",parentCapId);
+	var feeDesc = licType + " - Renewal Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 	if(thisFee){
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
