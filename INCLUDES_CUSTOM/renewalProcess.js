@@ -59,7 +59,8 @@ function renewalProcess(rAltId, event, hasFee){
 				vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 			}
 	// Set license record expiration and status
-			vLicenseObj.setStatus("Active");	
+			vLicenseObj.setStatus("Active");
+			vCapStatus = aa.cap.getCap(licId).getOutput().getCapStatus();	
 			savedCapStatus = getAppSpecific("Saved License Status",licId);
 			limitedOp = AInfo['Limited Operation'] == "Yes";
 			if(limitedOp){
