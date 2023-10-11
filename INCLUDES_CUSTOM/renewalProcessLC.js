@@ -31,6 +31,7 @@ function renewalProcessLC() {
 						if (balanceDue == 0){
 							// Get current expiration date.
 							vLicenseObj = new licenseObject(null, parentCapId);
+							vExpDate = vLicenseObj.b1ExpDate;
 							vExpDate = new Date(vExpDate);
 							// Extend license expiration by 1 year
 							vNewExpDate = new Date(vExpDate.getFullYear() + 1, vExpDate.getMonth(), vExpDate.getDate());
