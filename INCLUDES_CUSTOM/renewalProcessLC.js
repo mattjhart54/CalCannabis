@@ -83,7 +83,7 @@ function renewalProcessLC() {
 							}else{
 								var cultType = getAppSpecific("Cultivator Type",renCapId);
 							}
-							editAppName(licIssueType + " " + cultType + " - " + appLicType,parentCapId);
+							editAppName(licIssueType + " " + cultType + " - " + licType,parentCapId);
 							// Update Financial Interest Table
 							if (typeof(FINANCIALINTERESTHOLDERNEW) == "object"){
 								if(FINANCIALINTERESTHOLDERNEW.length > 0){
