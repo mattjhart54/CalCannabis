@@ -86,7 +86,6 @@ function renewalProcess(rAltId, event, hasFee){
 				editAppSpecific("License Type",AInfo["New License Type"],licId);
 				editAppSpecific("Aggregate square footage of noncontiguous canopy",AInfo["Aggragate Canopy Square Footage"],licId);
 				editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],licId);
-				editAppSpecific("Canopy square footage limit",AInfo["License Canopy Size Range"],licId);
 			}
 	// Update the Cultivation Type on the license record
 			if(AInfo["Designation Change"] == "Yes") {
