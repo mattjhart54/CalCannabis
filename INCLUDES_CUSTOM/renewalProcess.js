@@ -86,14 +86,20 @@ function renewalProcess(rAltId, event, hasFee){
 				editAppSpecific("License Type",AInfo["New License Type"],licId);
 				editAppSpecific("Aggregate square footage of noncontiguous canopy",AInfo["Aggragate Canopy Square Footage"],licId);
 				editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],licId);
+				var appLicType = AInfo["New License Type"];
+			}else{
+				var appLicType = AInfo["License Type"];
 			}
 	// Update the Cultivation Type on the license record
 			if(AInfo["Designation Change"] == "Yes") {
 				editAppSpecific("Cultivator Type",AInfo["Designation Type"],licId);
 				editAppName(AInfo["License Issued Type"] + " " + AInfo["Designation Type"] + " - " + AInfo["License Type"],licId);
+				var cultType = AInfo["Designation Type"];
 			}else{
-				editAppName(AInfo["License Issued Type"] + " " + AInfo["Cultivator Type"] + " - " + AInfo["License Type"],licId);
+				var cultType = AInfo["Cultivator Type"];
 			}
+			editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + appLicType,licId);
+			
 	// Update Financial Interest Table
 			if (typeof(FINANCIALINTERESTHOLDERNEW) == "object"){
 				if(FINANCIALINTERESTHOLDERNEW.length > 0){
