@@ -84,7 +84,7 @@ try {
 		
 		//Primary License Data
 		var capId = cap.getCapID();
-		var premCity = AInfo['Premises City'];
+		var premCity = AInfo['Premise City'];
 		var premCityUpdate = AInfo['PC Update'];
 		var premCounty = AInfo['Premise County'];
 		var premCountyUpdate = AInfo['PCNTY Update'];
@@ -107,9 +107,11 @@ try {
 					var theRow = PREMISESADDRESSES[x];
 					var premCityTable = theRow["Premises City"];
 					var premCountyTable = theRow["Premises County"];
-					
-					if (String(premCity).toLowerCase() != String(premCityTable).toLowerCase()) {
-						premCityMessage = "Premises City must match the Premises City entered in the Premises Information" + br;
+
+					if (!matches(premCityTable,null,undefined,"")){
+						if (String(premCity).toLowerCase() != String(premCityTable).toLowerCase()) {
+							premCityMessage = "Premises City must match the Premises City entered in the Premises Information" + br;
+						}
 					}
 					if (String(premCounty).toLowerCase() != String(premCountyTable).toLowerCase()) {
 						premCountyMessage = "Premises County must match the Premises County entered in the Premises Information" + br;
