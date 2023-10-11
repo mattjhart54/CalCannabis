@@ -31,7 +31,6 @@ function renewalProcessLC() {
 						if (balanceDue == 0){
 							// Get current expiration date.
 							vLicenseObj = new licenseObject(null, parentCapId);
-							vExpDate = vLicenseObj.b1ExpDate;
 							vExpDate = new Date(vExpDate);
 							// Extend license expiration by 1 year
 							vNewExpDate = new Date(vExpDate.getFullYear() + 1, vExpDate.getMonth(), vExpDate.getDate());
@@ -76,9 +75,10 @@ function renewalProcessLC() {
 							}
 							// Update the Cultivation Type on the license record
 							var licIssueType = getAppSpecific("License Issued Type",renCapId);
+							var desChange = getAppSpecific("Designation Change",renCapId);
 							if(desChange == "Yes") {
-								var cultType = getAppSpecific("Designation Change",renCapId);
-								editAppSpecific("Cultivator Type",getAppSpecific("Designation Type",renCapId),parentCapId);
+								var cultType = getAppSpecific("Designation Type",renCapId);
+								editAppSpecific("Cultivator Type",cultType ,parentCapId);
 							}else{
 								var cultType = getAppSpecific("Cultivator Type",renCapId);
 							}
