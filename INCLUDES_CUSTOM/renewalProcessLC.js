@@ -41,6 +41,7 @@ function renewalProcessLC() {
 									logDebug("Updating Expiration Date to: " + newExpDate);
 									vLicenseObj.setExpiration(dateAdd(newExpDate,0));
 									editAppSpecific("Expiration Date Changed","CHECKED",parentCapId);
+									editAppSpecific("Date Expiration Date Changed",fileDate,parentCapId);
 							}else{
 								logDebug("Updating Expiration Date to: " + vNewExpDate);
 								vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
