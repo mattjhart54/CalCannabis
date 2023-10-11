@@ -50,18 +50,41 @@ function renewalProcess(rAltId, event, hasFee){
 	// Extend license expiration by 1 year
 			vNewExpDate = new Date(vExpDate.getFullYear() + 1, vExpDate.getMonth(), vExpDate.getDate());
 	// Update license expiration date
-			logDebug("Updating Expiration Date to: " + vNewExpDate);
-			vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
-	// Set license record expiration and status to active
-			vLicenseObj.setStatus("Active");
-			vCapStatus = aa.cap.getCap(licId).getOutput().getCapStatus();	
+			if (AInfo['License Expiration Date Change'] == "Yes" && !matches(AInfo['New Expiration Date'],null,undefined,"")){
+					newExpDate = new Date(AInfo['New Expiration Date']);
+					logDebug("Updating Expiration Date to: " + newExpDate);
+					vLicenseObj.setExpiration(dateAdd(newExpDate,0));
+			}else{
+				logDebug("Updating Expiration Date to: " + vNewExpDate);
+				vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
+			}
+	// Set license record expiration and status
+			vLicenseObj.setStatus("Active");	
 			savedCapStatus = getAppSpecific("Saved License Status",licId);
+			limitedOp = AInfo['Limited Operation'] == "Yes";
+			if(limitedOp){
+				if(appHasCondition("Application Condition",null,"Suspension Lift Notice",null)){
+					editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied");
+				}
+			}
 			if (savedCapStatus == "Suspended"){
 				updateAppStatus("Suspended","License Renewed",licId);
+				if(limitedOp){
+					if(!appHasCondition("Application Condition",null,"Suspension Lift Notice",null)){
+ 		 				addStdCondition("Application Condition","Suspension Lift Notice");
+ 		 			}
+ 		 		}
 			}else {
 				if (vCapStatus != "Inactive"){
 					updateAppStatus("Active","License Renewed",licId);
 				}
+			}
+	// Update Canopy Size on the license record
+			if(AInfo['License Change'] == "Yes"){
+				editAppSpecific("License Type",AInfo["New License Type"],licId);
+				editAppSpecific("Aggregate square footage of noncontiguous canopy",AInfo["Aggragate Canopy Square Footage"],licId);
+				editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],licId);
+				editAppSpecific("Canopy square footage limit",AInfo["License Canopy Size Range"],licId);
 			}
 	// Update the Cultivation Type on the license record
 			if(AInfo["Designation Change"] == "Yes") {
