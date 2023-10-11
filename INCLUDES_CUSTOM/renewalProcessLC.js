@@ -36,21 +36,53 @@ function renewalProcessLC() {
 							// Extend license expiration by 1 year
 							vNewExpDate = new Date(vExpDate.getFullYear() + 1, vExpDate.getMonth(), vExpDate.getDate());
 							// Update license expiration date
-							logDebug("Updating Expiration Date to: " + vNewExpDate);
-							vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
+							if (AInfo['License Expiration Date Change'] == "Yes" && !matches(AInfo['New Expiration Date'],null,undefined,"")){
+									newExpDate = new Date(AInfo['New Expiration Date']);
+									logDebug("Updating Expiration Date to: " + newExpDate);
+									vLicenseObj.setExpiration(dateAdd(newExpDate,0));
+									editAppSpecific("Expiration Date Changed","CHECKED",parentCapId);
+							}else{
+								logDebug("Updating Expiration Date to: " + vNewExpDate);
+								vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
+							}
 							// Set license record expiration and status to active
 							vLicenseObj.setStatus("Active");
 							if (aa.cap.getCap(parentCapId).getOutput().getCapStatus() != "Inactive"){
 								updateAppStatus("Active","License Renewed",parentCapId);
 							}
+							limitedOp = AInfo['Limited Operation'] == "Yes";
+							if(limitedOp){
+								if(appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice","Notice",parentCapId)){
+									editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",parentCapId);
+								}
+							}
+							savedCapStatus = getAppSpecific("Saved License Status",parentCapId);
+							if (savedCapStatus == "Suspended"){
+								updateAppStatus("Suspended","License Renewed",parentCapId);
+								if(limitedOp){
+									if(!appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice","Notice",parentCapId)){
+				 		 				addStdCondition("Application Condition","Suspension Lift Notice".parentCapId);
+				 		 			}
+				 		 		}
+							}
+							// Update Canopy Size on the license record
+							if(getAppSpecific("License Change",renCapId) == "Yes"){
+								editAppSpecific("License Type",getAppSpecific("New License Type",renCapId),parentCapId);
+								editAppSpecific("Aggregate square footage of noncontiguous canopy",getAppSpecific("Aggragate Canopy Square Footage",renCapId),parentCapId);
+								editAppSpecific("Canopy Plant Count",getAppSpecific("Canopy Plant Count",renCapId),parentCapId);
+								var licType = getAppSpecific("New License Type",renCapId);
+							}else{
+								var licType = getAppSpecific("License Type",renCapId);
+							}
 							// Update the Cultivation Type on the license record
-							var desChange = getAppSpecific("Designation Change",renCapId);
-							var licType = getAppSpecific("License Type",renCapId);
 							var licIssueType = getAppSpecific("License Issued Type",renCapId);
 							if(desChange == "Yes") {
+								var cultType = getAppSpecific("Designation Change",renCapId);
 								editAppSpecific("Cultivator Type",getAppSpecific("Designation Type",renCapId),parentCapId);
-								editAppName(getAppSpecific("Designation Type",renCapId) + " - " + licType,parentCapId);
+							}else{
+								var cultType = getAppSpecific("Cultivator Type",renCapId);
 							}
+							editAppName(licIssueType + " " + cultType + " - " + appLicType,parentCapId);
 							// Update Financial Interest Table
 							if (typeof(FINANCIALINTERESTHOLDERNEW) == "object"){
 								if(FINANCIALINTERESTHOLDERNEW.length > 0){
