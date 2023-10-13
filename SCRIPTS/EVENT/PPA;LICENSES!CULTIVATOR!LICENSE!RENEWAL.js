@@ -17,7 +17,7 @@ try{
 				var event = "PPA";
 				var fastTrack = "No";
 				hasFee = false;
-				fastTrack = renewalProcess(rAltId,event, !hasFee); 
+				fastTrack = renewalProcess(rAltId,event, hasFee); 
 			}
 			if (fastTrack == "No" && getAppStatus != 'Submitted'){
 				updateAppStatus("Submitted", "Updated via PPA:LICENSES/CULTIVATOR/*/Renewal.");
