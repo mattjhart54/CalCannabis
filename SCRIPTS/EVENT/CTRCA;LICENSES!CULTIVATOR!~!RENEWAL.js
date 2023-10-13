@@ -71,7 +71,7 @@ try{
 	if(AInfo["License Type Change"] == "Yes") 
 		licType = AInfo["New License Type"];
 	else
-		licType = getAppSpecific("License Type",parentCapId);
+		licType = AInfo["License Type"];
 	var feeDesc = licType + " - Renewal Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 	if(thisFee){
