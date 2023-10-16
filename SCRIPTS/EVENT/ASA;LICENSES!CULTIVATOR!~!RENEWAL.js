@@ -67,8 +67,8 @@ try{
         }
     //Check for Expiration Date Change and Calculate Diff
         var expDateChange = AInfo["License Expiration Date Change"] == "Yes";
+        var newExpDateStr = AInfo["New Expiration Date"];
         if (expDateChange){
-            var newExpDateStr = AInfo["New Expiration Date"];
             if (newExpDateStr) {
                 // Convert the custom field value to a Date object
                 var newExpDate = new Date(newExpDateStr);
