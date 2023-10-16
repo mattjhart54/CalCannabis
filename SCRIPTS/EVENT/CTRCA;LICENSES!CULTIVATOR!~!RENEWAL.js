@@ -72,7 +72,7 @@ try{
 				var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 				if(thisFee){
 					if (!feeExists(thisFee.feeCode,"NEW")){
-						updateFee(thisFee.feeCode,feeSchedule, "FINAL", feeQty, "Y", "N");
+						updateFee(thisFee.feeCode,feeSchedule, "FINAL", 1, "Y", "N");
 					}
 				}else{
 					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
