@@ -45,13 +45,34 @@ try{
 			curDateFormat = curDate.getMonth() + 1 + "/" + curDate.getDate() + "/" + curDate.getFullYear();
 			var tmpDate = new Date(tmpExpDate);
 			curDate = new Date(curDateFormat);
-	
+			var expDateChange = AInfo["License Expiration Date Change"] == "Yes";
+			if (expDateChange){
+				var newExpDateStr = AInfo["New Expiration Date"];
+		        if (newExpDateStr) {
+		            // Convert the custom field value to a Date object
+		            var newExpDate = new Date(newExpDateStr);
+
+		            // Calculate the time difference in milliseconds
+		            var timeDiff = newExpDate.getTime() - tmpDate.getTime();
+
+		            // Calculate the number of days
+		            var daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+				}
+			}
 			if(tmpDate < curDate) {
-				var feeDesc = AInfo["License Type"] + " - Late Fee";
-				var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+				if (newExpDateStr){
+                		var feeDesc = AInfo["License Type"] + " - Late Fee with Date Change";
+                		var feeSchedule = "LIC_CC_REN_EXP";
+                		var feeQty = daysDiff;
+		            }else{
+		                var feeDesc = AInfo["License Type"] + " - Late Fee";
+		                var feeSchedule = "LIC_CC_REN";
+		                var feeQty = 1;
+		            }
+				var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 				if(thisFee){
 					if (!feeExists(thisFee.feeCode,"NEW")){
-						updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+						updateFee(thisFee.feeCode,feeSchedule, "FINAL", feeQty, "Y", "N");
 					}
 				}else{
 					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
