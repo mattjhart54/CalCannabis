@@ -46,8 +46,8 @@ try{
 			var tmpDate = new Date(tmpExpDate);
 			curDate = new Date(curDateFormat);
 			var expDateChange = AInfo["License Expiration Date Change"] == "Yes";
+			var newExpDateStr = AInfo["New Expiration Date"];
 			if (expDateChange){
-				var newExpDateStr = AInfo["New Expiration Date"];
 		        if (newExpDateStr) {
 		            // Convert the custom field value to a Date object
 		            var newExpDate = new Date(newExpDateStr);
@@ -89,10 +89,20 @@ try{
 		deactivateActiveTasks();
 	}
 // Invoice all fees if cash payment selected at submission in ACA
-	if(AInfo["License Type Change"] == "Yes") 
+	if(AInfo["License Type Change"] == "Yes"){
 		licType = AInfo["New License Type"];
-	else
+	}else{
 		licType = AInfo["License Type"];
+	}
+	if (newExpDateStr){
+        var feeDesc = licType + " - Renewal Fee with Date Change";
+        var feeSchedule = "LIC_CC_REN_EXP";
+        var feeQty = daysDiff;
+    }else{
+        var feeDesc = licType + " - Renewal Fee";
+        var feeSchedule = "LIC_CC_REN";
+        var feeQty = 1;
+    }
 	var feeDesc = licType + " - Renewal Fee";
 	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 	if(thisFee){
