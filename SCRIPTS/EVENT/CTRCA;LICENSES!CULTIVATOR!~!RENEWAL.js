@@ -103,7 +103,6 @@ try{
         var feeSchedule = "LIC_CC_REN";
         var feeQty = 1;
     }
-	var feeDesc = licType + " - Renewal Fee";
 	var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 	if(thisFee){
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
