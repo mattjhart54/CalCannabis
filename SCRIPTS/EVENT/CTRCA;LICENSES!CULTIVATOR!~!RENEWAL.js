@@ -104,7 +104,7 @@ try{
         var feeQty = 1;
     }
 	var feeDesc = licType + " - Renewal Fee";
-	var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+	var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 	if(thisFee){
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
 		if(hasFee) {
