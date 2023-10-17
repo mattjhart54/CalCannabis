@@ -60,9 +60,8 @@ try{
 		            var daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 				}
 			}
-
 			if(!publicUser){
-			   voidRemoveAllFees();
+			    voidRemoveAllFees();
 			    if(AInfo["License Type Change"] == "Yes"){
 			        licType = AInfo["New License Type"];
 			    }else{
@@ -71,14 +70,14 @@ try{
 			    var expDateChange = AInfo["License Expiration Date Change"] == "Yes";
 		        var newExpDateStr = AInfo["New Expiration Date"];
 			    if (expDateChange && newExpDateStr){
-			        var feeDesc = licType + " - Renewal Fee with Date Change";
-			        var feeSchedule = "LIC_CC_REN_EXP";
-			        var feeQty = daysDiff;
-			    }else{
-			        var feeDesc = licType + " - Renewal Fee";
-			        var feeSchedule = "LIC_CC_REN";
-			        var feeQty = 1;
-			    }
+			       	var feeDesc = licType + " - Renewal Fee with Date Change";
+			       	var feeSchedule = "LIC_CC_REN_EXP";
+					var feeQty = daysDiff;
+				}else{
+					var feeDesc = licType + " - Renewal Fee";
+					var feeSchedule = "LIC_CC_REN";
+					var feeQty = 1;
+				}
 			    var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 			    if(thisFee){
 			        updateFee(thisFee.feeCode,feeSchedule, "FINAL", feeQty, "Y", "N");
@@ -123,7 +122,7 @@ try{
 				if (newExpDateStr){
                 		var feeDesc = AInfo["License Type"] + " - Late Fee with Date Change";
                 		var feeSchedule = "LIC_CC_REN_EXP";
-                		var feeQty = daysDiff;
+                		var feeQty = 1;
 		            }else{
 		                var feeDesc = AInfo["License Type"] + " - Late Fee";
 		                var feeSchedule = "LIC_CC_REN";
@@ -155,14 +154,15 @@ try{
 		licType = AInfo["License Type"];
 	}
 	if (newExpDateStr){
-        var feeDesc = licType + " - Renewal Fee with Date Change";
-        var feeSchedule = "LIC_CC_REN_EXP";
-        var feeQty = daysDiff;
-    }else{
-        var feeDesc = licType + " - Renewal Fee";
-        var feeSchedule = "LIC_CC_REN";
-        var feeQty = 1;
-    }
+       		var feeDesc = licType + " - Renewal Fee with Date Change";
+        	var feeSchedule = "LIC_CC_REN_EXP";
+      		var feeQty = daysDiff;
+	}else{
+        	var feeDesc = licType + " - Renewal Fee";
+        	var feeSchedule = "LIC_CC_REN";
+        	var feeQty = 1;
+   	}
+	var hasFee = false;
 	var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 	if(thisFee){
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
@@ -178,7 +178,7 @@ try{
 	}
 // Check License Cases to see if renewal can be fast tracked
 	var event = "CTRCA";
-	fastTrack = renewalProcess(newAltId, event, !hasFee);
+	fastTrack = renewalProcess(newAltId, event, hasFee);
 
 //  No fast track. Send renewal submitted email notification to DRP
 	if(fastTrack =='No'){
