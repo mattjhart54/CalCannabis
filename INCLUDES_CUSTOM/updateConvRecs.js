@@ -142,6 +142,7 @@ try {
 	}
 	editAppSpecific("Conversion Date", jsDateToASIDate(cDate),plId);
 	editAppSpecific("License Type",licType,plId);
+	editAppSpecific("Original License Type",licType,plId);
 	
 	if(!matches(AInfo["PA Update"],null,"",undefined)) {
 		editAppSpecific("Premise Address",AInfo["PA Update"],plId);
