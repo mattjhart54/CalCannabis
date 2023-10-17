@@ -59,6 +59,7 @@ try{
         }
     }
     //5. Assess Fees during creation and Review, if they were removed.
+    if(publicUser){
         voidRemoveAllFees();
         if(AInfo["License Type Change"] == "Yes"){
             licType = AInfo["New License Type"];
@@ -141,6 +142,7 @@ try{
                 logDebug("An error occurred retrieving fee item: " + feeDesc);
             }
         }
+    }
 } catch(err){
     logDebug("An error has occurred in ASA:LICENSES/CULTIVATOR/* /RENEWAL: Update AltId: " + err.message);
     logDebug(err.stack);
