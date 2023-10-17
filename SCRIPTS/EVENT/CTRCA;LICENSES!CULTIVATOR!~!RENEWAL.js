@@ -42,7 +42,9 @@ try{
 	    }else{
 	        licType = getAppSpecific("License Type",vLicenseID);
 	    }
-	    if (newExpDateStr){
+	    var expDateChange = AInfo["License Expiration Date Change"] == "Yes";
+        var newExpDateStr = AInfo["New Expiration Date"];
+	    if (expDateChange && newExpDateStr){
 	        var feeDesc = licType + " - Renewal Fee with Date Change";
 	        var feeSchedule = "LIC_CC_REN_EXP";
 	        var feeQty = daysDiff;
