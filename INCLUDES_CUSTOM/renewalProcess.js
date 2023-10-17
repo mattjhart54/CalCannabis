@@ -1,5 +1,6 @@
 function renewalProcess(rAltId, event, hasFee){	
 	var fastTrack = 'Yes';
+	var caseReview = false;
 	if(event == 'WTUA') {
 		var licenseId = AInfo["License Number"];
 		var licId = aa.cap.getCapID(licenseId);
@@ -12,7 +13,6 @@ function renewalProcess(rAltId, event, hasFee){
 		childIds  = getChildren("Licenses/Cultivator/License Case/*",licId);
 		holdId = capId;
 		capId = licId;
-		var caseReview = false;
 		if(appHasCondition("Owner History","Applied","DOJ LiveScan Match",null))
 			caseReview = true;
 		if(appHasCondition("Notice","Applied","Local Non-Compliance",null))
