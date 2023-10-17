@@ -42,21 +42,6 @@ try{
 	    }else{
 	        licType = getAppSpecific("License Type",vLicenseID);
 	    }
-	//Check for Expiration Date Change and Calculate Diff
-	    var expDateChange = AInfo["License Expiration Date Change"] == "Yes";
-	    var newExpDateStr = AInfo["New Expiration Date"];
-	    if (expDateChange){
-	        if (newExpDateStr) {
-	            // Convert the custom field value to a Date object
-	            var newExpDate = new Date(newExpDateStr);
-
-	            // Calculate the time difference in milliseconds
-	            var timeDiff = newExpDate.getTime() - tmpDate.getTime();
-
-	            // Calculate the number of days
-	            var daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-	        }
-	    }
 	    if (newExpDateStr){
 	        var feeDesc = licType + " - Renewal Fee with Date Change";
 	        var feeSchedule = "LIC_CC_REN_EXP";
