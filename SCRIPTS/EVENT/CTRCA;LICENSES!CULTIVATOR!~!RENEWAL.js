@@ -91,27 +91,27 @@ try{
 			                feeDescE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
 			                feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 			                logDebug("feeDesc " + feeDescR + " " + feeDescE);
-			                var sqft = getAppSpecific("Canopy SF",parentCapId);
+			                var sqft = getAppSpecific("Canopy SF",vLicenseID);
 			                logDebug("SQ FT " + sqft + " Base " + base);
-							qty = (parseInt(sqft) - base) / 2000;
+
 			                if (newExpDateStr){
-								thisFee = getFeeDefByDesc("LIC_CC_REN", feeDescR);
-								addFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", parseInt(qty), "Y");
-								feeAmt = feeAmount(this.feeCode, "NEW");
-								logDebug("FeeAmt " + feeAmt);
-								removeFee(this.feeCode, "FINAL");
-								qty = (feeAmt/365)*feeQty;
-								thisFee = getFeeDefByDesc(feeSchedule, feeDescE);
-								if(qty > 0){        
-			                   		updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
-								}
+						thisFee = getFeeDefByDesc("LIC_CC_REN", feeDescR);
+						addFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", parseInt(qty), "Y");
+						feeAmt = feeAmount(this.feeCode, "NEW");
+						logDebug("FeeAmt " + feeAmt);
+						removeFee(this.feeCode, "FINAL");
+						qty = (feeAmt/365)*feeQty;
+						thisFee = getFeeDefByDesc(feeSchedule, feeDescE);
+						if(qty > 0){        
+			                  		updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
+						}
 			                }else{
-								thisFee = getFeeDefByDesc(feeSchedule, feeDescR);
-			                    qty = (parseInt(sqft) - base) / 2
-								logDebug("qty " + parseInt(qty));
-								if(qty > 0){           
-			                        updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
-								}
+						thisFee = getFeeDefByDesc(feeSchedule, feeDescR);
+			                	qty = (parseInt(sqft) - base) / 2
+						logDebug("qty " + parseInt(qty));
+						if(qty > 0){           
+			                        	updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
+						}
 			                }   
 			            }
 			        }
