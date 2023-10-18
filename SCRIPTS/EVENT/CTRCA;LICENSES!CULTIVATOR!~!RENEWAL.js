@@ -88,28 +88,30 @@ try{
 			            if(!matches(lType,"", null, undefined)){
 			                licTbl = lType.split(";");
 			                var base = parseInt(licTbl[3]);
+			                feeDescE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
+			                feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
+			                logDebug("feeDesc " + feeDescR + " " + feeDescE);
+			                var sqft = getAppSpecific("Canopy SF",parentCapId);
+			                logDebug("SQ FT " + sqft + " Base " + base);
+							qty = (parseInt(sqft) - base) / 2000;
 			                if (newExpDateStr){
-			                    feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
+								thisFee = getFeeDefByDesc("LIC_CC_REN", feeDescR);
+								addFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", parseInt(qty), "Y");
+								feeAmt = feeAmount(this.feeCode, "NEW");
+								logDebug("FeeAmt " + feeAmt);
+								removeFee(this.feeCode, "FINAL");
+								qty = (feeAmt/365)*feeQty;
+								thisFee = getFeeDefByDesc(feeSchedule, feeDescE);
+								if(qty > 0){        
+			                   		updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
+								}
 			                }else{
-			                    feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
-			                }
-			                logDebug("feeDesc " + feeDesc);
-			                thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
-			                var sqft = getAppSpecific("Canopy SF",vLicenseID);
-			                logDebug("SQ FT " + sqft + " Base " + base)
-			                if (newExpDateStr){
-			                    qty = (((parseInt(sqft) - base) / 2000)/365)*daysDiff;
-			                }else{
-			                    qty = (parseInt(sqft) - base) / 2000;
-			                }
-			                logDebug("qty " + parseInt(qty));
-			                if(qty > 0){        
-			                    if(thisFee){    
+								thisFee = getFeeDefByDesc(feeSchedule, feeDescR);
+			                    qty = (parseInt(sqft) - base) / 2
+								logDebug("qty " + parseInt(qty));
+								if(qty > 0){           
 			                        updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
-			                    }else{
-			                        aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-			                        logDebug("An error occurred retrieving fee item: " + feeDesc);
-			                    }
+								}
 			                }   
 			            }
 			        }
@@ -119,7 +121,6 @@ try{
 			        logDebug("An error occurred retrieving fee item: " + feeDesc);
 			    }
 			}
-
 			if(tmpDate < curDate) {
 				if (newExpDateStr){
                 		var feeDesc = AInfo["License Type"] + " - Late Fee with Date Change";
