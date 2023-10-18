@@ -81,6 +81,7 @@ try{
 			    var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 			    if(thisFee){
 			        updateFee(thisFee.feeCode,feeSchedule, "FINAL", feeQty, "Y", "N");
+				hasFee = true;
 			        if(licType.substring(0,5) == "Large") {
 			            lType = lookup("LIC_CC_LICENSE_TYPE", licType);
 			            if(!matches(lType,"", null, undefined)){
@@ -132,6 +133,7 @@ try{
 				if(thisFee){
 					if (!feeExists(thisFee.feeCode,"NEW")){
 						updateFee(thisFee.feeCode,feeSchedule, "FINAL", 1, "Y", "N");
+						hasFee = true;
 					}
 				}else{
 					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
