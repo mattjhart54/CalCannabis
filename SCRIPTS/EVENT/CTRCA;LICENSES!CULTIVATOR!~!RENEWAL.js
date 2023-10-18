@@ -36,7 +36,7 @@ try{
 	updateWorkDesc(pInfo["Legal Business Name"]);
 
 //Apply Fees
-	var fees = fasle;
+	var fees = false;
 	b1ExpResult = aa.expiration.getLicensesByCapID(vLicenseID);
 	var curDate = new Date();
 	if (b1ExpResult.getSuccess()) {
