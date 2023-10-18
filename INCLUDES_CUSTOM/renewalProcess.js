@@ -1,4 +1,4 @@
-function renewalProcess(rAltId, event, hasFee){	
+function renewalProcess(rAltId, event, fees){	
 	var fastTrack = 'Yes';
 	var caseReview = false;
 	if(event == 'WTUA') {
@@ -34,7 +34,7 @@ function renewalProcess(rAltId, event, hasFee){
 		capId = holdId;
 	}
 // Process renewal
-	if((matches(event, "CTRCA","PPA","PRA") && !caseReview && !hasFee) || event == "WTUA") {	
+	if((matches(event, "CTRCA","PPA","PRA") && !caseReview && !fees) || event == "WTUA") {	
 		var renewalCapProject;
 		var vExpDate;
 		var vNewExpDate;
