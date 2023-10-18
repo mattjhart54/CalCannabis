@@ -68,7 +68,7 @@ try{
 			        licType = getAppSpecific("License Type",vLicenseID);
 			    }
 			    var expDateChange = AInfo["License Expiration Date Change"] == "Yes";
-		        var newExpDateStr = AInfo["New Expiration Date"];
+		            var newExpDateStr = AInfo["New Expiration Date"];
 			    if (expDateChange && newExpDateStr){
 			       	var feeDesc = licType + " - Renewal Fee with Date Change";
 			       	var feeSchedule = "LIC_CC_REN_EXP";
@@ -146,6 +146,7 @@ try{
 	if(balanceDue > 0) {
 		updateAppStatus("Renewal Fee Due"," ");
 		deactivateActiveTasks();
+		var thisFee = true;
 	}
 // Invoice all fees if cash payment selected at submission in ACA
 	if(AInfo["License Type Change"] == "Yes"){
@@ -162,7 +163,6 @@ try{
         	var feeSchedule = "LIC_CC_REN";
         	var feeQty = 1;
    	}
-	var hasFee = false;
 	var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 	if(thisFee){
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
