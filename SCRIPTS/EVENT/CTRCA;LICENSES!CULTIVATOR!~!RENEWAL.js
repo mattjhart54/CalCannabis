@@ -101,10 +101,10 @@ try{
 						feeAmt = feeAmount(this.feeCode, "NEW");
 						logDebug("FeeAmt " + feeAmt);
 						removeFee(this.feeCode, "FINAL");
-						qty = (feeAmt/365)*feeQty;
+						qty = ((feeAmt/365)*feeQty);
 						thisFee = getFeeDefByDesc(feeSchedule, feeDescE);
 						if(qty > 0){        
-			                  		updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
+			                  		updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", qty, "Y", "N");
 						}
 			                }else{
 						thisFee = getFeeDefByDesc(feeSchedule, feeDescR);
