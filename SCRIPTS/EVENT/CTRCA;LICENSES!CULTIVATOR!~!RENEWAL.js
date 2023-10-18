@@ -95,8 +95,8 @@ try{
 			                }
 			                logDebug("feeDesc " + feeDesc);
 			                thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
-			                var sqft = getAppSpecific("Canopy SF",parentCapId);
-			                logDebug("SQ FT " + sqft + " Base " + base);
+			                var sqft = getAppSpecific("Canopy SF",vLicenseID);
+			                logDebug("SQ FT " + sqft + " Base " + base)
 			                if (newExpDateStr){
 			                    qty = (((parseInt(sqft) - base) / 2000)/365)*daysDiff;
 			                }else{
