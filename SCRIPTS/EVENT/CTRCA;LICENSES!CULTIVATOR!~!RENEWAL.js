@@ -146,7 +146,7 @@ try{
 	
 // Set status and deactivate workflow if fees are due
 	
-	if(balanceDue > 0) {
+	if(balanceDue > 0 || fees) {
 		updateAppStatus("Renewal Fee Due"," ");
 		deactivateActiveTasks();
 		fees = true;
