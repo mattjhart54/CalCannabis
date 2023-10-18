@@ -94,26 +94,24 @@ try{
 			                var sqft = getAppSpecific("Canopy SF",vLicenseID);
 			                logDebug("SQ FT " + sqft + " Base " + base);
 
-			                if (newExpDateStr){
+			               if (newExpDateStr){
 						qty = (parseInt(sqft) - base) / 2000;
 						thisFee = getFeeDefByDesc("LIC_CC_REN", feeDescR);
-						addFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", parseInt(qty), "Y");
-						feeAmt = feeAmount(this.feeCode, "NEW");
+						logDebug("Fee Calc" +thisFee.formula);
+						feeAmt = ((thisFee.formula*parseInt(qty))/365)*feeQty;
 						logDebug("FeeAmt " + feeAmt);
-						removeFee(this.feeCode, "FINAL");
-						qty = ((feeAmt/365)*feeQty);
 						thisFee = getFeeDefByDesc(feeSchedule, feeDescE);
-						if(qty > 0){        
-			                  		updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", qty, "Y", "N");
+						if(feeAmt > 0){        
+			                   		updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", feeAmt, "Y", "N");
 						}
 			                }else{
 						thisFee = getFeeDefByDesc(feeSchedule, feeDescR);
-			                	qty = (parseInt(sqft) - base) / 2000;
+			                        qty = (parseInt(sqft) - base) / 2000;
 						logDebug("qty " + parseInt(qty));
 						if(qty > 0){           
 			                        	updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
 						}
-			                }   
+			                } 
 			            }
 			        }
 			        
