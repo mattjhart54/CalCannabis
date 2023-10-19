@@ -26,7 +26,7 @@ var SCRIPT_VERSION = 3;
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
-debugEmail = mhart@trustvip.com;
+debugEmail = "mhart@trustvip.com";
 var startDate = new Date();
 var startTime = startDate.getTime();
 var debug = ""; // Debug String
