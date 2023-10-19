@@ -95,11 +95,11 @@ try {
 		}
 		if(docMissing = false) {
 			showMessage = true;
-			comment(AInfo["License Change"] + " A cultivation license size change has been requested and a revised premises diagram is required. Please upload the premises diagram.");
+			comment("A cultivation license size change has been requested and a revised premises diagram is required. Please upload the premises diagram.");
 		}
 		if(docAttached = true) {
 			showMessage = true;
-			comment("License Change  " + AInfo["License Change"] + " A cultivation license size change was not selected and a premises diagram is not required. For further questions, please contact the Department of Cannabis Control by calling 1-844-61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.");
+			comment("A cultivation license size change was not selected and a premises diagram is not required. For further questions, please contact the Department of Cannabis Control by calling 1-844-61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.");
 		}
 			
 }catch (err){
