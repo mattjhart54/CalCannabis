@@ -73,8 +73,10 @@ try {
 	//evontrapp: user story 7717: check Effective Date standard choice against license expiration date
 	
 	//get expiration date of license
-	var parentCapId = aa.env.getValue("ParentCapID");
-	parentCapId = aa.cap.getCapID(parentCapId).getOutput();
+	var AInfo = [];
+	loadAppSpecific4ACA(AInfo);
+	var licenseASI = AInfo["License Number"];
+	var parentCapId = aa.cap.getCapID(licenseASI).getOutput();
 	var expObj = aa.expiration.getLicensesByCapID(parentCapId).getOutput();
 	var expDate = expObj.getExpDate();
 	var expDateJS = convertDate(expDate);
