@@ -83,9 +83,9 @@ try {
 	var effectiveDate = lookup("EFFECTIVE_DATE_RENEWALS", "effectiveDate");
 	var effectiveDateJS = new Date(effectiveDate);
 	
-	logDebug("expDateJS: " + expDateJS);
-	logDebug("effectiveDateJS: " + effectiveDateJS);
-	aa.sendMail("noreply@accela.com", "evontrapp@etechconsultingllc.com", "", "Debug", debug);
+	//logDebug("expDateJS: " + expDateJS);
+	//logDebug("effectiveDateJS: " + effectiveDateJS);
+	//aa.sendMail("noreply@accela.com", "evontrapp@etechconsultingllc.com", "", "Debug", debug);
 	
 	//compare dates, skip next page if exp date < effective date
 	if (expDateJS < effectiveDateJS) {
