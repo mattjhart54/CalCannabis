@@ -62,7 +62,7 @@ try{
     if(publicUser){
         var fees = false;
         voidRemoveAllFees();
-        if(AInfo["License Type Change"] == "Yes"){
+        if(AInfo["License Change"] == "Yes"){
             licType = AInfo["New License Type"];
         }else{
             licType = getAppSpecific("License Type",parentCapId);
