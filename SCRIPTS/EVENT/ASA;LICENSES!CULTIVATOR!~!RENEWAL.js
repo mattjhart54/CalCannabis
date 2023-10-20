@@ -103,7 +103,7 @@ try{
 					feeDescE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
 					feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 					logDebug("feeDesc " + feeDescR + " " + feeDescE);
-					var sqft = getAppSpecific("Canopy SF",vLicenseID);
+					var sqft = getAppSpecific("Canopy SF",parentCapId);
 					logDebug("SQ FT " + sqft + " Base " + base);
 
 					if (newExpDateStr){
