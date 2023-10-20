@@ -42,7 +42,11 @@ function getNonTableRequiredDocs4ACA() {
     }
 	
 	if (isRenewal) {
-		requirementArray.push(electricityUsgae);
+		AInfo = [];
+		loadAppSpedific4ACA(AInfo);
+		if(AInfo["License Change"] == "Yes") {
+			requirementArray.push(premisesDiagram);
+		}
     }
 
     return requirementArray;
