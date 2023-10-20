@@ -74,6 +74,7 @@ try {
 	
 	//get expiration date of license
 	var parentCapId = aa.env.getValue("ParentCapID");
+	parentCapId = aa.cap.getCapID(parentCapId).getOutput();
 	var expObj = aa.expiration.getLicensesByCapID(parentCapId).getOutput();
 	var expDate = expObj.getExpDate();
 	var expDateJS = convertDate(expDate);
@@ -91,9 +92,9 @@ try {
 		aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '2', 'PageNumber':'1'}}");
 	}
 } catch (err) {
-	logDebug("A JavaScript Error occurred:ACA_BEFORE_APP_POWER_SUPPLY: " + err.message);
+	logDebug("A JavaScript Error occurred:ACA_AFTER_REN_INFO_CHECK_EFFECTIVE_DATE: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_APP_POWER_SUPPLY: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_REN_INFO_CHECK_EFFECTIVE_DATE: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
 }
 // page flow custom code end
 
