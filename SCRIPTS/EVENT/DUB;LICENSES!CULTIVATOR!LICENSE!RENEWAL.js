@@ -2,7 +2,6 @@ try{
 	if(documentUploadedFrom == "ACA"){
 		AInfo= [];
 		loadAppSpecific(AInfo);
-		docMissing = true;
 		docAttached = false;
 		capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
 		submittedDocList = aa.document.getDocumentListByEntity(capIdString,"TMP_CAP").getOutput().toArray();
@@ -10,20 +9,11 @@ try{
 		if(submittedDocList.length > 0) {
 			for (var i in submittedDocList ){
 				logDebug("Document " + submittedDocList[i].getDocCategory());
-				licChange = getAppSpecific("License Change")   
-				if(AInfo["License Change"] == "Yes") {
-					if(submittedDocList[i].getDocCategory() == "Cultivation Plan - Detailed Premises Diagram")
-						docsMissing = false;
-				}else {
+				if(AInfo["License Change"] != "Yes") {
 					if(submittedDocList[i].getDocCategory() == "Cultivation Plan - Detailed Premises Diagram")
 						docAttached = true;
 				}
 			}
-		}
-				
-		if(docMissing == true) {
-			showMessage = true;
-			comment("A cultivation license size change has been requested and a revised premises diagram is required. Please upload the premises diagram.");
 		}
 		if(docAttached == true) {
 			showMessage = true;
