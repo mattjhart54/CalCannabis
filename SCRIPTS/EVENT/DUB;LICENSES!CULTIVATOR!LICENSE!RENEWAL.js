@@ -1,7 +1,7 @@
 try{
 	if(documentUploadedFrom == "ACA"){
 		AInfo= [];
-		loadAppSpecific4ACA(AInfo);
+		loadAppSpecific(AInfo);
 		docMissing = true;
 		docAttached = false;
 		capIdString = capId.getID1() + "-" + capId.getID2() + "-" + capId.getID3();
