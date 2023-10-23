@@ -251,27 +251,25 @@ function renewalProcess(rAltId, event, fees){
 		// Add record to the CAT set
 			addToCat(licId);
 		// 7088: Create License Case Record for all Renewals when a Science Amendment associated to the License Parent Record has not been submitted prior to submission of a Provisional Renewal for that corresponding renewal year
-			if (getAppSpecific("License Issued Type", licId) == "Provisional" || AInfo['License Change'] == "Yes" || AInfo["Designation Change"] == "Yes"){
+			if (AInfo['License Change'] == "Yes" || AInfo["Designation Change"] == "Yes" || getAppSpecific("License Issued Type", licId) == "Provisional"){
 				var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",licId);
-				var issueDate = getAppSpecific("Valid From Date",licId);
-				var approvedRen = false;
-				var licCaseExclusion = false;
 				if (scienceArr) {
 					if (scienceArr.length > 0) {
 						for (x in scienceArr){
 							var scienceCap = scienceArr[x];
-							if (getAppSpecific("Associated Renewal",scienceCap) == "Yes"){
-								var correspondingYear = getAppSpecific("Renewal Year",scienceCap)
-								logDebug("expYear: " + expYear);
-								if (String(correspondingYear) == String(expYear)){
-									if(AInfo['License Change'] == "Yes" || AInfo["Designation Change"] == "Yes"){
-										var saAppStatus = aa.cap.getCap(scienceCap).getOutput().getCapStatus();
-										if (!matches(saAppStatus,"Transition Amendment Approved", "Amendment Rejected", "Amendment Approved")){
-											editAppSpecific("License Type",licType,scienceCap);
-											editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,scienceCap);
-										}
-									}
-									if (getAppSpecific("License Issued Type", licId) == "Provisional"){
+							var saAppStatus = aa.cap.getCap(scienceCap).getOutput().getCapStatus();
+							if (!matches(saAppStatus,"Transition Amendment Approved", "Amendment Rejected", "Amendment Approved")){
+								if(AInfo['License Change'] == "Yes" || AInfo["Designation Change"] == "Yes"){
+									editAppSpecific("License Type",licType,scienceCap);
+									editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,scienceCap);
+								}
+							}
+							if (getAppSpecific("License Issued Type", licId) == "Provisional"){
+								if (getAppSpecific("Associated Renewal",scienceCap) == "Yes"){
+									var correspondingYear = getAppSpecific("Renewal Year",scienceCap)
+									logDebug("expYear: " + expYear);
+									if (String(correspondingYear) == String(expYear)){
+										var licCaseExclusion = false;
 										var workflowResult = aa.workflow.getTasks(scienceCap);
 										if (workflowResult.getSuccess()){
 											wfObj = workflowResult.getOutput();		
@@ -288,12 +286,17 @@ function renewalProcess(rAltId, event, fees){
 										}
 									}
 								}
+							}else{
+								licCaseExclusion = true;
 							}
 						}
 					}
 				}
 			}else{
-				licCaseExclusion = true;
+				if (getAppSpecific("License Issued Type", licId) != "Provisional"){
+					licCaseExclusion = true;
+				}
+
 			}
 			if (!licCaseExclusion){
 				var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",licId);
