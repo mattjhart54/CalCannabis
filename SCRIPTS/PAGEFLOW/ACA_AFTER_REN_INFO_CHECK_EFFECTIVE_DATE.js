@@ -73,6 +73,7 @@ try {
 	//evontrapp: user story 7717: check Effective Date standard choice against license expiration date
 	
 	//get expiration date of license
+	var cap = aa.env.getValue("CapModel");
 	var AInfo = [];
 	loadAppSpecific4ACA(AInfo);
 	var licenseASI = AInfo["License Number"];
