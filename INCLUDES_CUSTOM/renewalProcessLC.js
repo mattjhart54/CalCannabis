@@ -220,13 +220,29 @@ function renewalProcessLC() {
 									}
 								}
 							}
+							// 7694: On Renewal record when License Change Size, update open SA
+							if (AInfo['License Change'] == "Yes" || AInfo["Designation Change"] == "Yes"){
+								var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",licId);
+								if (scienceArr) {
+									if (scienceArr.length > 0) {
+										for (x in scienceArr){
+											var scienceCap = scienceArr[x];
+											var saAppStatus = aa.cap.getCap(scienceCap).getOutput().getCapStatus();
+											if (!matches(saAppStatus,"Transition Amendment Approved", "Amendment Rejected", "Amendment Approved")){
+												editAppSpecific("License Type",licType,scienceCap);
+												editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,scienceCap);
+											}
+										}
+									}
+								}
+							}
 							// Add record to the CAT set
 							addToCat(parentCapId);
 						}
 					}
 				}
 			}
-		}else {
+		} else {
 			fastTrack = false;
 		}
 }
