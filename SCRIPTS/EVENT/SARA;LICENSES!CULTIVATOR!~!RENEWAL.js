@@ -10,9 +10,6 @@ try{
 	var effectiveDate = lookup("EFFECTIVE_DATE_RENEWALS", "effectiveDate");
 	var effectiveDateJS = new Date(effectiveDate);
 	
-	logDebug("expDateJS: " +  expDateJS);
-	logDebug("effectiveDateJS: " + effectiveDateJS);
-	
 	if (expDateJS > effectiveDateJS) {
 		//check ASI values for new ASI fields
 		var licExpDateChange = AInfo["License Expiration Date Change"];
@@ -27,10 +24,8 @@ try{
 			var id3 = capId.getID3();
 			var sql = "DELETE FROM PERMIT_TEMPORARY_DATA WHERE SERV_PROV_CODE = 'CALCANNABIS' and B1_PER_ID1 = '" + id1 + "' and B1_PER_ID2 = '" + id2 + "' and B1_PER_ID3 = '" + id3 + "' and ENTITY_TYPE = 'ResumePageState'";
 			doSQL(sql);
-			aa.sendMail("noreply@cannabis.ca.gov", "evontrapp@etechconsultingllc.com", "", "Event Output 1", debug);
 		}
 	}
-	aa.sendMail("noreply@cannabis.ca.gov", "evontrapp@etechconsultingllc.com", "", "Event Output 2", debug);
 } catch(err) {
     logDebug("An error has occurred in SARA:LICENSES/CULTIVATOR/* /RENEWAL: Update AltId: " + err.message);
     logDebug(err.stack);
