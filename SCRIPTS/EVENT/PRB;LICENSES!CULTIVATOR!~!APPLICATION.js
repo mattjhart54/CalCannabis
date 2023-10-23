@@ -82,7 +82,25 @@ try {
 			
 		}else{
 			logDebug("Error creating License record: " + licCapId);
-		}	
+		}
+// Story 7700: Update License Renewal History table upon license
+		var LICENSERENEWALHISTORY = new Array();
+		var toRow = new Array();
+	
+		var expDateObj = new Date(expDate);
+		var renYear = expDateObj.getFullYear();
+	
+		var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", licCapId, "N");
+		toRow["Renewal Year"] = String(renYear);
+		toRow["License Expiration"] = String(expDate);
+		toRow["License Status"] = "Active";
+		toRow["Limited Operation"] = "";
+		toRow["Canopy Square Feet"] = AInfo['Canopy SF'];
+		toRow["Canopy Plant Count"] = AInfo['Canopy Plant Count'];
+		toRow["Canopy Square Footage Limit "] = AInfo['Canopy SF Limit'];
+		
+		LICENSERENEWALHISTORY.push(toRow);
+		addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, licCapId);
 	}	
 }catch(err){
 	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
