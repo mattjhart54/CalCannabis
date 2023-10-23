@@ -25,7 +25,7 @@ try{
 			var id1 = capId.getID1();
 			var id2 = capId.getID2();
 			var id3 = capId.getID3();
-			var sql = "DELETE FROM PERMIT_TEMPORARY_DATA WHERE SERV_PROV_CODE = 'CALCANNABIS and 'B1_PER_ID1 = '" + id1 + "' and B1_PER_ID2 = '" + id2 + "' and B1_PER_ID3 = '" + id3 + "' and ENTITY_TYPE = 'ResumePageState'";
+			var sql = "DELETE FROM PERMIT_TEMPORARY_DATA WHERE SERV_PROV_CODE = 'CALCANNABIS' and B1_PER_ID1 = '" + id1 + "' and B1_PER_ID2 = '" + id2 + "' and B1_PER_ID3 = '" + id3 + "' and ENTITY_TYPE = 'ResumePageState'";
 			doSQL(sql);
 			aa.sendMail("noreply@cannabis.ca.gov", "evontrapp@etechconsultingllc.com", "", "Event Output 1", debug);
 		}
