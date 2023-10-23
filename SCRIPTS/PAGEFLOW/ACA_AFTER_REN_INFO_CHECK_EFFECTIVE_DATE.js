@@ -70,7 +70,7 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 
 // page flow custom code begin
 try {
-	//evontrapp: user story 7717: check Effective Date standard choice against license expiration date
+	//evontrapp US 7717: check Effective Date standard choice against license expiration date
 	
 	//get expiration date of license
 	var cap = aa.env.getValue("CapModel");
@@ -85,10 +85,6 @@ try {
 	//get effective date from standard choice
 	var effectiveDate = lookup("EFFECTIVE_DATE_RENEWALS", "effectiveDate");
 	var effectiveDateJS = new Date(effectiveDate);
-	
-	//logDebug("expDateJS: " + expDateJS);
-	//logDebug("effectiveDateJS: " + effectiveDateJS);
-	//aa.sendMail("noreply@accela.com", "evontrapp@etechconsultingllc.com", "", "Debug", debug);
 	
 	//compare dates, skip next page if exp date < effective date
 	if (expDateJS < effectiveDateJS) {
