@@ -70,6 +70,7 @@ function renewalProcessLC() {
 							if(getAppSpecific("License Change",renCapId) == "Yes"){
 								editAppSpecific("License Type",getAppSpecific("New License Type",renCapId),parentCapId);
 								editAppSpecific("Aggregate square footage of noncontiguous canopy",getAppSpecific("Aggragate Canopy Square Footage",renCapId),parentCapId);
+								editAppSpecific("Canopy SF",getAppSpecific("Aggragate Canopy Square Footage",renCapId),parentCapId);
 								editAppSpecific("Canopy Plant Count",getAppSpecific("Canopy Plant Count",renCapId),parentCapId);
 								var licType = getAppSpecific("New License Type",renCapId);
 							}else{
