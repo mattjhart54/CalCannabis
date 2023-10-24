@@ -1,5 +1,5 @@
 try{
-	if(documentUploadedFrom == "ACA"){
+//	if(documentUploadedFrom == "ACA"){
 		AInfo= [];
 		loadAppSpecific(AInfo);
 		docAttached = false;
@@ -16,7 +16,7 @@ try{
 			comment("A cultivation license size change was not selected and a premises diagram is not required. For further questions, please contact the Department of Cannabis Control by calling 1-844-61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.");
 		}
 		
-	}
+//	}
 	cancel = true;
 	showMessage = true;
 	comment("License Change " + AInfo["License Change"] + " Number of Docs " + documentModelArray.size());
