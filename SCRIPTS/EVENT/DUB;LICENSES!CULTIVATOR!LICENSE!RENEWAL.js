@@ -1,5 +1,5 @@
 try{
-	if(documentUploadedFrom == "ACA"){
+//	if(documentUploadedFrom == "ACA"){
 		AInfo= [];
 		loadAppSpecific(AInfo);
 		docAttached = false;
@@ -23,7 +23,7 @@ try{
 	cancel = true;
 	showMessage = true;
 	comment("License Change " + AInfo["License Change"] + " Number of Docs " + submittedDocList.length);
-	}
+//	}
 }catch(err){
 	logDebug("An error has occurred in DUB:LICENSES/CULTIVATOR/LICENSE/RENEWAL: No Documents: " + err.message);
 	logDebug(err.stack);
