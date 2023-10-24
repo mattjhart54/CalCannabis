@@ -174,9 +174,9 @@ function renewalProcess(rAltId, event, fees){
 			histRow["License Status"] = "" + vCapStatus;
 			histRow["Limited Operation"] = "" + AInfo['Limited Operation'];
 			histRow["License Type"] = "" + String(licType); 
-			histRow["Canopy Square Feet"] = "" + getAppSpecific("Canopy SF",licId);
-			histRow["Canopy Plant Count"] = "" + getAppSpecific("Canopy Plant Count",licId);
-			histRow["Canopy Square Footage Limit"] = "" + getAppSpecific("Canopy SF Limit",licId);
+			histRow["Canopy Square Feet"] = "" + (getAppSpecific("Canopy SF",licId) || "");
+			histRow["Canopy Plant Count"] = "" + (getAppSpecific("Canopy Plant Count",licId) || "");
+			histRow["Canopy Square Footage Limit"] = "" + (getAppSpecific("Canopy SF Limit",licId) || "");
 			
 			LICENSERENEWALHISTORY.push(histRow);
 			addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, licId);	
