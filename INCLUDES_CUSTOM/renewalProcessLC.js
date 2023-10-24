@@ -106,8 +106,8 @@ function renewalProcessLC() {
 										finRow["FEIN"] = finNewRow["FEIN"];
 										finTable.push(finRow);
 									}
-									removeASITable("FINANCIAL INTEREST HOLDER",vLicenseID);
-									addASITable("FINANCIAL INTEREST HOLDER",finTable,vLicenseID);
+									removeASITable("FINANCIAL INTEREST HOLDER",parentCapId);
+									addASITable("FINANCIAL INTEREST HOLDER",finTable,parentCapId);
 								}
 							}
 							// Update Electricity Usage Table
@@ -128,7 +128,7 @@ function renewalProcessLC() {
 										elecRow["GGEI (lbs CO2e/kWh)"] = "" + elecNewRow["GGEI (lbs CO2e/kWh)"];
 										elecTable.push(elecRow);
 									}
-									addASITable("ELECTRICITY USAGE",elecTable,vLicenseID);	
+									addASITable("ELECTRICITY USAGE",elecTable,parentCapId);	
 								}
 							}
 							// Update AVERAGE WEIGHTED GGEI Table
@@ -142,9 +142,28 @@ function renewalProcessLC() {
 										weigtedRow["Average Weighted GGEI"] = "" + weightedNewRow["Average Weighted GGEI"];
 										weigtedTable.push(weigtedRow);
 									}
-									addASITable("AVERAGE WEIGHTED GGEI",weigtedTable,vLicenseID);
+									addASITable("AVERAGE WEIGHTED GGEI",weigtedTable,parentCapId);
 								}
-							}				
+							}
+							// Story 7700: Update License Renewal History table upon license
+							var LICENSERENEWALHISTORY = new Array();
+							var histRow = new Array();
+				
+							var renYear = vNewExpDate.getFullYear();
+				
+							var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", parentCapId, "N");
+							histRow["Renewal Year"] = "" + String(renYear);
+							histRow["License Expiration"] = "" + String(expDate);
+							histRow["License Status"] = "" + vCapStatus;
+							histRow["Limited Operation"] = "" + AInfo['Limited Operation'];
+							histRow["License Type"] = "" + String(licType); 
+							histRow["Canopy Square Feet"] = "" + getAppSpecific("Canopy SF",parentCapId);
+							histRow["Canopy Plant Count"] = "" + getAppSpecific("Canopy Plant Count",parentCapId);
+							histRow["Canopy Square Footage Limit"] = "" + getAppSpecific("Canopy SF Limit",parentCapId);
+							
+							LICENSERENEWALHISTORY.push(histRow);
+							addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, parentCapId);	
+							
 							//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 							renewalCapProject.setStatus("Complete");
 							renewalCapProject.setRelationShip("R");  // move to related records
@@ -222,7 +241,7 @@ function renewalProcessLC() {
 							}
 							// 7694: On Renewal record when License Change Size, update open SA
 							if (AInfo['License Change'] == "Yes" || AInfo["Designation Change"] == "Yes"){
-								var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",licId);
+								var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",parentCapId);
 								if (scienceArr) {
 									if (scienceArr.length > 0) {
 										for (x in scienceArr){
