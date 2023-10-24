@@ -159,7 +159,25 @@ function renewalProcess(rAltId, event, fees){
 					}
 					addASITable("AVERAGE WEIGHTED GGEI",weigtedTable,licId);
 				}
-			}	
+			}
+	// Story 7700: Update License Renewal History table upon license
+			var LICENSERENEWALHISTORY = new Array();
+			var histRow = new Array();
+
+			var renYear = vNewExpDate.getFullYear();
+
+			var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", licId, "N");
+			histRow["Renewal Year"] = "" + String(renYear);
+			histRow["License Expiration"] = "" + String(expDate);
+			histRow["License Status"] = "" + vCapStatus;
+			histRow["Limited Operation"] = "" + AInfo['Limited Operation'];
+			histRow["License Type"] = "" + String(licType); 
+			histRow["Canopy Square Feet"] = "" + getAppSpecific("Canopy SF",licId);
+			histRow["Canopy Plant Count"] = "" + getAppSpecific("Canopy Plant Count",licId);
+			histRow["Canopy Square Footage Limit"] = "" + getAppSpecific("Canopy SF Limit",licId);
+			
+			LICENSERENEWALHISTORY.push(histRow);
+			addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, licId);	
 				
 	//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(licId);
