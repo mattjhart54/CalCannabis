@@ -91,14 +91,14 @@ try {
 		var renYear = expDateObj.getFullYear();
 	
 		var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", licCapId, "N");
-		toRow["Renewal Year"] = String(renYear);
-		toRow["License Expiration"] = String(expDate);
+		toRow["Renewal Year"] = "" + String(renYear);
+		toRow["License Expiration"] = "" + String(expDate);
 		toRow["License Status"] = "Active";
 		toRow["Limited Operation"] = "";
-		toRow["License Type"] = AInfo['License Type']; 
-		toRow["Canopy Square Feet"] = AInfo['Canopy SF'];
-		toRow["Canopy Plant Count"] = AInfo['Canopy Plant Count'];
-		toRow["Canopy Square Footage Limit"] = AInfo['Canopy SF Limit'];
+		toRow["License Type"] = "" + AInfo['License Type']; 
+		toRow["Canopy Square Feet"] = "" + AInfo['Canopy SF'];
+		toRow["Canopy Plant Count"] = "" + AInfo['Canopy Plant Count'];
+		toRow["Canopy Square Footage Limit"] = "" + AInfo['Canopy SF Limit'];
 		
 		LICENSERENEWALHISTORY.push(toRow);
 		addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, licCapId);
