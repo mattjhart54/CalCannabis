@@ -150,10 +150,11 @@ function renewalProcessLC() {
 							var histRow = new Array();
 				
 							var renYear = vNewExpDate.getFullYear();
+							var expDateForamatted = dateFormatted(expDate.getMonth(), expDate.getDayOfMonth(), expDate.getFullYear(), "MM/DD/YYYY");
 				
 							var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", parentCapId, "N");
 							histRow["Renewal Year"] = "" + String(renYear);
-							histRow["License Expiration"] = "" + String(expDate);
+							histRow["License Expiration"] = "" + String(expDateForamatted);
 							histRow["License Status"] = "" + vCapStatus;
 							histRow["Limited Operation"] = "" + AInfo['Limited Operation'];
 							histRow["License Type"] = "" + String(licType); 
