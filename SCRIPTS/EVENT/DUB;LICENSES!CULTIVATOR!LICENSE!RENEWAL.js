@@ -22,7 +22,7 @@ try{
 		}
 	cancel = true;
 	showMessage = true;
-	comment(""License Change " + AInfo["License Change"] + " Number of Docs " + submittedDocList.length);
+	comment("License Change " + AInfo["License Change"] + " Number of Docs " + submittedDocList.length);
 	}
 }catch(err){
 	logDebug("An error has occurred in DUB:LICENSES/CULTIVATOR/LICENSE/RENEWAL: No Documents: " + err.message);
