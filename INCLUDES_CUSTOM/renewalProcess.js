@@ -86,6 +86,7 @@ function renewalProcess(rAltId, event, fees){
 			if(AInfo['License Change'] == "Yes"){
 				editAppSpecific("License Type",AInfo["New License Type"],licId);
 				editAppSpecific("Aggregate square footage of noncontiguous canopy",AInfo["Aggragate Canopy Square Footage"],licId);
+				editAppSpecific("Canopy SF",AInfo["Aggragate Canopy Square Footage"],licId);
 				editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],licId);
 				var licType = AInfo["New License Type"];
 			}else{
