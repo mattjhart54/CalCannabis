@@ -351,7 +351,7 @@ try{
 						var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee";
 						var feeSchedule = "LIC_CC_REN";
 					}
-					var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
+					var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 					if(thisFee){
 						holdId = capId;
 						capId = renCapId;
