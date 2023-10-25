@@ -87,7 +87,7 @@ try {
 	var effectiveDateJS = new Date(effectiveDate);
 	
 	//compare dates, skip next page if exp date < effective date
-	if (expDateJS =< effectiveDateJS) {
+	if (expDateJS < effectiveDateJS) {
 		aa.env.setValue("ReturnData", "{'PageFlow': {'StepNumber': '2', 'PageNumber':'1'}}");
 	}
 } catch (err) {
