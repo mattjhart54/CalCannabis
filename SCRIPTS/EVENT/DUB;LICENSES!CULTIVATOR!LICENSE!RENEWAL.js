@@ -1,7 +1,7 @@
 try{
 	if(documentUploadedFrom == "ACA"){
 		AInfo= [];
-		loadAppSpecific(AInfo);
+		loadAppSpecific4ACA(AInfo);
 		docAttached = false;
 		for(var index = 0; index < documentModelArray.size(); index++) {
 			if(AInfo["License Change"] != "Yes") {
