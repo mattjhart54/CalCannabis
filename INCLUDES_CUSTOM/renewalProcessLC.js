@@ -53,6 +53,7 @@ function renewalProcessLC() {
 							}
 							limitedOp = AInfo['Limited Operation'] == "Yes";
 							if(limitedOp){
+								editAppSpecific("Limited Operation","Yes",parentCapId);
 								if(appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice","Notice",parentCapId)){
 									editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",parentCapId);
 								}
