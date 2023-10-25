@@ -10,7 +10,7 @@ try{
 	var effectiveDate = lookup("EFFECTIVE_DATE_RENEWALS", "effectiveDate");
 	var effectiveDateJS = new Date(effectiveDate);
 	
-	if (expDateJS > effectiveDateJS) {
+	if (expDateJS >= effectiveDateJS) {
 		//check ASI values for new ASI fields
 		var licExpDateChange = AInfo["License Expiration Date Change"];
 		var licChange = AInfo["License Change"];
