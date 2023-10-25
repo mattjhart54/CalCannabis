@@ -343,12 +343,17 @@ try{
 				var renAltId = String(renewalCap.getCapID().getCustomID());;
 				logDebug("renCapId: " + renCapId + " renAltId: " + renAltId);
 				if (!renCapId.toString().contains("EST")){
+					if(getAppSpecific("License Change",renCapId) == "Yes"){
+					    licType = getAppSpecific("New License Type",renCapId);
+					}else{
+					    licType = getAppSpecific("License Type",renCapId);
+					}
 					var newExpDateStr = getAppSpecific("New Expiration Date",renCapId);
 					if (newExpDateStr){
-						var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee with Date Change";
+						var feeDesc = licType + " - Late Fee with Date Change";
 						var feeSchedule = "LIC_CC_REN_EXP";
 					}else{
-						var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee";
+						var feeDesc = licType + " - Late Fee";
 						var feeSchedule = "LIC_CC_REN";
 					}
 					var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
