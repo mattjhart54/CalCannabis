@@ -370,7 +370,6 @@ try{
 						}
 						capId = holdId;
 					}else{
-						aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/Licnese/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 						logDebug("An error occurred retrieving fee item: " + feeDesc);
 					}
 				}
