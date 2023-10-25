@@ -342,7 +342,14 @@ try{
 				var renAltId = String(renewalCap.getCapID().getCustomID());;
 				logDebug("renCapId: " + renCapId + " renAltId: " + renAltId);
 				if (!renCapId.toString().contains("EST")){
-					var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee";
+					var newExpDateStr = getAppSpecific("New Expiration Date",renCapId);
+					if (newExpDateStr){
+						var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee with Date Change";
+						var feeSchedule = "LIC_CC_REN_EXP";
+					}else{
+						var feeDesc = getAppSpecific("License Type",renCapId) + " - Late Fee";
+						var feeSchedule = "LIC_CC_REN";
+					}
 					var thisFee = getFeeDefByDesc("LIC_CC_REN", feeDesc);
 					if(thisFee){
 						holdId = capId;
@@ -351,7 +358,7 @@ try{
 						loadAppSpecific(AInfo);	
 						if (!feeExists(thisFee.feeCode)){
 	//						updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
-							addFeeT(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y",capId);
+							addFeeT(thisFee.feeCode,feeSchedule, "FINAL", 1, "Y",capId);
 							invoiceFee(thisFee.feeCode,"FINAL");
 							if(AInfo["Waive Late Fee"] == "CHECKED") {
 								voidRemoveFeesByDesc(feeDesc);
