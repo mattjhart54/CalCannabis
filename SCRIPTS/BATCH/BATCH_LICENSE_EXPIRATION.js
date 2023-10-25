@@ -30,6 +30,7 @@ sysDate = aa.date.getCurrentDate();
 batchJobResult = aa.batchJob.getJobID()
 batchJobName = "" + aa.env.getValue("BatchJobName");
 wfObjArray = null;
+var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 
 eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 eval(getScriptText("INCLUDES_BATCH"));
