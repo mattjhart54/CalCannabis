@@ -358,7 +358,7 @@ try{
 						AInfo = new Array();
 						loadAppSpecific(AInfo);	
 						if (!feeExists(thisFee.feeCode)){
-	//						updateFee(thisFee.feeCode,"LIC_CC_REN", "FINAL", 1, "Y", "N");
+	//						updateFee(thisFee.feeCode,feeSchedule, "FINAL", 1, "Y", "N");
 							addFeeT(thisFee.feeCode,feeSchedule, "FINAL", 1, "Y",capId);
 							invoiceFee(thisFee.feeCode,"FINAL");
 							if(AInfo["Waive Late Fee"] == "CHECKED") {
