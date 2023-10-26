@@ -1,7 +1,7 @@
 try{
 	if(documentUploadedFrom == "ACA"){
 		var useAppSpecificGroupName = false;
-		var cap = aa.env.getValue("CapModel");
+		cap = aa.cap.getCap(capId).getOutput();
 		AInfo= [];
 		loadAppSpecific4ACA(AInfo);
 		docAttached = false;
