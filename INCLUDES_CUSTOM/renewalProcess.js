@@ -64,6 +64,7 @@ function renewalProcess(rAltId, event, fees){
 			vLicenseObj.setStatus("Active");
 			vCapStatus = aa.cap.getCap(licId).getOutput().getCapStatus();	
 			savedCapStatus = getAppSpecific("Saved License Status",licId);
+			logDebug("savedCapStatus: " + savedCapStatus + "vCapStatus: " + vCapStatus);
 			limitedOp = AInfo['Limited Operation'] == "Yes";
 			if(limitedOp){
 				editAppSpecific("Limited Operation","Yes",licId);
