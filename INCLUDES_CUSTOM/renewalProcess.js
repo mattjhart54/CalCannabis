@@ -66,7 +66,7 @@ function renewalProcess(rAltId, event, fees){
 			savedCapStatus = getAppSpecific("Saved License Status",licId);
 			limitedOp = AInfo['Limited Operation'] == "Yes";
 			if(limitedOp){
-				editAppSpecific("Limited Operation","Yes",licId);
+				editAppSpecific("Limited Operations","Yes",licId);
 				if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice","Notice",licId)){
 					addStdCondition("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",licId);
 				}
