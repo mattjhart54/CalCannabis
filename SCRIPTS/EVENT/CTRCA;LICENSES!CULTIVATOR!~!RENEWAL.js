@@ -100,7 +100,7 @@ try{
 						logDebug("Fee Calc" +thisFee.formula);
 						feeAmt = ((thisFee.formula*parseInt(qty))/365)*feeQty;
 						logDebug("FeeAmt " + feeAmt);
-						thisFee = getFeeDefByDesc(feeSchedule, feeDescE);
+						thisFee = getFeeDefByDesc("LIC_CC_REN_EXP", feeDescE);
 						if(feeAmt > 0){        
 			                   		updateFee_Rev(thisFee.feeCode,"LIC_CC_REN_EXP", "FINAL", feeAmt, "Y", "N");
 						}
