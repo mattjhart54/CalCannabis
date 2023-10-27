@@ -81,7 +81,7 @@ function renewalProcess(rAltId, event, fees){
 			if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
 				updateAppStatus("Suspended","License Renewed",licId);
 			}else {
-				if (!matches(vCapStatus,"Inactive" && !limitedOp){
+				if (vCapStatus != "Inactive" && !limitedOp){
 					updateAppStatus("Active","License Renewed",licId);
 				}
 			}
