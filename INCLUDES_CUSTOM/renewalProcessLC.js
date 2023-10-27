@@ -48,24 +48,27 @@ function renewalProcessLC() {
 							}
 							// Set license record expiration and status to active
 							vLicenseObj.setStatus("Active");
-							if (aa.cap.getCap(parentCapId).getOutput().getCapStatus() != "Inactive"){
-								updateAppStatus("Active","License Renewed",parentCapId);
-							}
+							vCapStatus = aa.cap.getCap(parentCapId).getOutput().getCapStatus();	
+							savedCapStatus = getAppSpecific("Saved License Status",parentCapId);
 							limitedOp = AInfo['Limited Operation'] == "Yes";
 							if(limitedOp){
-								editAppSpecific("Limited Operation","Yes",parentCapId);
-								if(appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice","Notice",parentCapId)){
-									editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",parentCapId);
+								editAppSpecific("Limited Operations","Yes",parentCapId);
+								if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
+									if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice","Notice",parentCapId)){
+				 		 				addStdCondition("Application Condition","Suspension Lift Notice",parentCapId);
+				 		 			}
+				 		 		}else{
+									if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice","Notice",parentCapId)){
+										editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",parentCapId);
+									}
 								}
 							}
-							savedCapStatus = getAppSpecific("Saved License Status",parentCapId);
-							if (savedCapStatus == "Suspended"){
+							if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
 								updateAppStatus("Suspended","License Renewed",parentCapId);
-								if(limitedOp){
-									if(!appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice","Notice",parentCapId)){
-				 		 				addStdCondition("Application Condition","Suspension Lift Notice".parentCapId);
-				 		 			}
-				 		 		}
+							}else {
+								if (vCapStatus != "Inactive"){
+									updateAppStatus("Active","License Renewed",parentCapId);
+								}
 							}
 							// Update Canopy Size on the license record
 							if(getAppSpecific("License Change",renCapId) == "Yes"){
