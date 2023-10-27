@@ -72,6 +72,7 @@ function renewalProcess(rAltId, event, fees){
  		 				addStdCondition("Application Condition","Suspension Lift Notice",licId);
  		 			}
  		 		}else{
+ 		 			updateAppStatus("Limited Operations","License Renewed",licId);
 					if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice","Notice",licId)){
 						editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",licId);
 					}
@@ -80,7 +81,7 @@ function renewalProcess(rAltId, event, fees){
 			if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
 				updateAppStatus("Suspended","License Renewed",licId);
 			}else {
-				if (vCapStatus != "Inactive"){
+				if (!matches(vCapStatus,"Inactive","Limited Operations")){
 					updateAppStatus("Active","License Renewed",licId);
 				}
 			}
