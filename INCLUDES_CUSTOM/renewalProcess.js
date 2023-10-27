@@ -64,19 +64,17 @@ function renewalProcess(rAltId, event, fees){
 			vLicenseObj.setStatus("Active");
 			vCapStatus = aa.cap.getCap(licId).getOutput().getCapStatus();	
 			savedCapStatus = getAppSpecific("Saved License Status",licId);
-			logDebug("savedCapStatus: " + savedCapStatus + "vCapStatus: " + vCapStatus);
 			limitedOp = AInfo['Limited Operation'] == "Yes";
 			if(limitedOp){
 				editAppSpecific("Limited Operation","Yes",licId);
-				if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice",null,licId)){
-					editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",licId);
+				if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice","Notice",licId)){
+					addStdCondition("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",licId);
 				}
 			}
-			if (vCapStatus == "Suspended"){
+			if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
 				updateAppStatus("Suspended","License Renewed",licId);
 				if(limitedOp){
-					if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice",null,licId)){
-						logDebug("within cond");
+					if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice","Notice",licId)){
  		 				addStdCondition("Application Condition","Suspension Lift Notice".licId);
  		 			}
  		 		}
