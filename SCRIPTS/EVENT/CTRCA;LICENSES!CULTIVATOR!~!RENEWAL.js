@@ -102,7 +102,7 @@ try{
 						logDebug("FeeAmt " + feeAmt);
 						thisFee = getFeeDefByDesc(feeSchedule, feeDescE);
 						if(feeAmt > 0){        
-			                   		updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", feeAmt, "Y", "N");
+			                   		updateFee_Rev(thisFee.feeCode,"LIC_CC_REN_EXP", "FINAL", feeAmt, "Y", "N");
 						}
 			                }else{
 						thisFee = getFeeDefByDesc(feeSchedule, feeDescR);
