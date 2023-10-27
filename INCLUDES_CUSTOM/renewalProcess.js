@@ -68,14 +68,15 @@ function renewalProcess(rAltId, event, fees){
 			limitedOp = AInfo['Limited Operation'] == "Yes";
 			if(limitedOp){
 				editAppSpecific("Limited Operation","Yes",licId);
-				if(appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice","Notice",licId)){
+				if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice",null,licId)){
 					editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",licId);
 				}
 			}
 			if (vCapStatus == "Suspended"){
 				updateAppStatus("Suspended","License Renewed",licId);
 				if(limitedOp){
-					if(!appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice","Notice",licId)){
+					if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice",null,licId)){
+						logDebug("within cond");
  		 				addStdCondition("Application Condition","Suspension Lift Notice".licId);
  		 			}
  		 		}
