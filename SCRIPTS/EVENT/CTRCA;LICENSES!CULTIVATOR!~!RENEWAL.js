@@ -96,7 +96,7 @@ try{
 
 			               if (newExpDateStr){
 						qty = (parseInt(sqft) - base) / 2000;
-						thisFee = getFeeDefByDesc("LIC_CC_REN", feeDescR);
+						thisFee = getFeeDefByDesc("LIC_CC_REN_EXP", feeDescE);
 						logDebug("Fee Calc" +thisFee.formula);
 						feeAmt = ((thisFee.formula*parseInt(qty))/365)*feeQty;
 						logDebug("FeeAmt " + feeAmt);
