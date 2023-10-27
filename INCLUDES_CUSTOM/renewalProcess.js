@@ -71,7 +71,7 @@ function renewalProcess(rAltId, event, fees){
 					editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",licId);
 				}
 			}
-			if (savedCapStatus == "Suspended"){
+			if (vCapStatus == "Suspended"){
 				updateAppStatus("Suspended","License Renewed",licId);
 				if(limitedOp){
 					if(!appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice","Notice",licId)){
