@@ -74,7 +74,7 @@ function renewalProcess(rAltId, event, fees){
  		 		}else{
  		 			updateAppStatus("Limited Operations","License Renewed",licId);
 					if(appHasCondition("Application Condition","Applied","Suspension Lift Notice","Notice",licId)){
-						editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",licId);
+						editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied","",licId);
 					}
 				}
 			}
