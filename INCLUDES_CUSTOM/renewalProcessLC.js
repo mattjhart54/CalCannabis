@@ -54,19 +54,20 @@ function renewalProcessLC() {
 							if(limitedOp){
 								editAppSpecific("Limited Operations","Yes",parentCapId);
 								if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
-									if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice","Notice",parentCapId)){
-				 		 				addStdCondition("Application Condition","Suspension Lift Notice",parentCapId);
+									if(!appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice",null,licId)){
+				 		 				addStdCondition("Application Condition","Suspension Lift Notice",licId);
 				 		 			}
 				 		 		}else{
-									if(!appHasCondition("Application Condition","Applied","Suspension Lift Notice","Notice",parentCapId)){
-										editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied",parentCapId);
+				 		 			updateAppStatus("Limited Operations","License Renewed",licId);
+									if(appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice",null,licId)){
+										editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied","",licId);
 									}
 								}
 							}
 							if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
 								updateAppStatus("Suspended","License Renewed",parentCapId);
 							}else {
-								if (vCapStatus != "Inactive"){
+								if (vCapStatus != "Inactive" && !limitedOp){
 									updateAppStatus("Active","License Renewed",parentCapId);
 								}
 							}
