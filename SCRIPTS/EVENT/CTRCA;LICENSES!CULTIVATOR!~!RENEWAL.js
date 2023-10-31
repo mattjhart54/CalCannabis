@@ -152,7 +152,7 @@ try{
 		fees = true;
 	}
 // Invoice all fees if cash payment selected at submission in ACA
-	if(AInfo["License Type Change"] == "Yes"){
+	if(AInfo["License Change"] == "Yes"){
 		licType = AInfo["New License Type"];
 	}else{
 		licType = AInfo["License Type"];
