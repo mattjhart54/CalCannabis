@@ -63,6 +63,10 @@ function renewalProcessLC() {
 										editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied","",parentCapId);
 									}
 								}
+							}else{
+								if(appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice",null,parentCapId)){
+									editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied","",parentCapId);
+								}
 							}
 							if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
 								updateAppStatus("Suspended","License Renewed",parentCapId);
