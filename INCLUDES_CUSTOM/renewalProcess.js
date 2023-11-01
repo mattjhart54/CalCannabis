@@ -201,7 +201,7 @@ function renewalProcess(rAltId, event, fees){
 			}else{
 				closeTask("Annual Renewal Review","Approved","Renewal Fast Tracked","");
 			}
-			editAppSpecific("Fast Track","CHECKED");	
+			editAppSpecific("Fast Track","CHECKED",capId);	
 	//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
 			if(AInfo["Deferral Approved"] == "CHECKED"){
 				var scriptName = "asyncDeferralApprovedRenewal";
