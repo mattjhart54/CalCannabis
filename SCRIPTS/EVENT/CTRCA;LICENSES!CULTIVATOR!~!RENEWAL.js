@@ -65,8 +65,10 @@ try{
 			    voidRemoveAllFees();
 			    if(AInfo["License Change"] == "Yes"){
 			        licType = AInfo["New License Type"];
+			        var sqft = getAppSpecific("Aggragate Canopy Square Footage");
 			    }else{
 			        licType = getAppSpecific("License Type",vLicenseID);
+			        var sqft = getAppSpecific("Canopy SF",vLicenseID);
 			    }
 			    var expDateChange = AInfo["License Expiration Date Change"] == "Yes";
 		            var newExpDateStr = AInfo["New Expiration Date"];
@@ -91,7 +93,6 @@ try{
 			                feeDescE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
 			                feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 			                logDebug("feeDesc " + feeDescR + " " + feeDescE);
-			                var sqft = getAppSpecific("Canopy SF",vLicenseID);
 			                logDebug("SQ FT " + sqft + " Base " + base);
 
 			               if (newExpDateStr){
