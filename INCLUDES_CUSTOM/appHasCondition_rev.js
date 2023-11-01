@@ -4,11 +4,11 @@ function appHasCondition_rev(pType,pStatus,pDesc,pImpact)
 	// Added parameter for record to check for condition
 	//
 	if (arguments.length > 4)
-			capId = arguments[4]; // use cap ID specified in args
+			itemId = arguments[4]; // use cap ID specified in args
 	if (pType==null)
-		var condResult = aa.capCondition.getCapConditions(capId);
+		var condResult = aa.capCondition.getCapConditions(itemId);
 	else
-		var condResult = aa.capCondition.getCapConditions(capId,pType);
+		var condResult = aa.capCondition.getCapConditions(itemId,pType);
 		
 	if (condResult.getSuccess())
 		var capConds = condResult.getOutput();
