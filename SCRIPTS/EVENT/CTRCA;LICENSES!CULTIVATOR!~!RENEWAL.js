@@ -61,7 +61,7 @@ try{
 		            var daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 				}
 			}
-	//		if(!publicUser){
+			if(!publicUser){
 			    voidRemoveAllFees();
 			    if(AInfo["License Change"] == "Yes"){
 			        licType = AInfo["New License Type"];
