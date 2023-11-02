@@ -156,7 +156,7 @@ try{
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
-        if(tmpDate < curDate) {
+        if(tmpDate < curDate && AInfo["Limited Operation"] != "Yes") {
             if (newExpDateStr){
                 var feeDesc = licType + " - Late Fee with Date Change";
             }else{
