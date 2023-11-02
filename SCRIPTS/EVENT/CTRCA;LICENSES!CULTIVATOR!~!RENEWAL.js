@@ -182,15 +182,18 @@ try{
 	}else{
 		licType = AInfo["License Type"];
 	}
-	if (newExpDateStr){
-       		var feeDesc = licType + " - Renewal Fee with Date Change";
-        	var feeSchedule = "LIC_CC_REN_EXP";
-      		var feeQty = daysDiff;
-	}else{
-        	var feeDesc = licType + " - Renewal Fee";
-        	var feeSchedule = "LIC_CC_REN";
-        	var feeQty = 1;
-   	}
+	if(AInfo["Limited Operation"] == "Yes") {
+		var feeDesc = licType + " - Renewal Fee - Limited";
+       		var feeSchedule = "LIC_CC_REN_LO";
+	}else {
+		if (newExpDateStr){
+			var feeDesc = licType + " - Renewal Fee with Date Change";
+			var feeSchedule = "LIC_CC_REN_EXP";
+		}else{
+			var feeDesc = licType + " - Renewal Fee";
+			var feeSchedule = "LIC_CC_REN";
+		}
+	}
 	var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 	if(thisFee){
 		var hasFee = feeExists(thisFee.feeCode,"NEW");
