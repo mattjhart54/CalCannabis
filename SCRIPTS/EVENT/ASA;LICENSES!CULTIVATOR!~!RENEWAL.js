@@ -95,6 +95,7 @@ try{
         }
         var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
         if(thisFee){
+		fees = true;
 		if(AInfo["Limited Operation"] != "Yes") {
 			updateFee(thisFee.feeCode,feeSchedule, "FINAL", feeQty, "Y", "N");
 		}else {
