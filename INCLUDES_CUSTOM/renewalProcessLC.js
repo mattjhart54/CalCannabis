@@ -54,18 +54,18 @@ function renewalProcessLC() {
 							if(limitedOp){
 								editAppSpecific("Limited Operations","Yes",parentCapId);
 								if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
-									if(!appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice",null,parentCapId)){
-				 		 				addStdCondition("Application Condition","Suspension Lift Notice",parentCapId);
+									if(!appHasCondition_rev("License Notice","Applied","Suspension Lift Notice",null,parentCapId)){
+				 		 				addStdCondition("License Notice","Suspension Lift Notice",parentCapId);
 				 		 			}
 				 		 		}else{
 				 		 			updateAppStatus("Limited Operations","License Renewed",licId);
-									if(appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice",null,parentCapId)){
-										editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied","",parentCapId);
+									if(appHasCondition_rev("License Notice","Applied","Suspension Lift Notice",null,parentCapId)){
+										editCapConditionStatus("License Notice","Suspension Lift Notice","Condition Met","Not Applied","",parentCapId);
 									}
 								}
 							}else{
-								if(appHasCondition_rev("Application Condition","Applied","Suspension Lift Notice",null,parentCapId)){
-									editCapConditionStatus("Application Condition","Suspension Lift Notice","Condition Met","Not Applied","",parentCapId);
+								if(appHasCondition_rev("License Notice","Applied","Suspension Lift Notice",null,parentCapId)){
+									editCapConditionStatus("License Notice","Suspension Lift Notice","Condition Met","Not Applied","",parentCapId);
 								}
 							}
 							if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
