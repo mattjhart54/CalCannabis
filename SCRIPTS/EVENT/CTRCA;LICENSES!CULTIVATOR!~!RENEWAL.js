@@ -3,6 +3,7 @@ try{
 	aa.cap.updateAccessByACA(capId,"Y");
 // Update alt id on renewal record
 	vLicenseID = getParentLicenseCapID(capId);
+	logDebug("VlicID " + vLicenseID);
 	vIDArray = String(vLicenseID).split("-");
 	vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
 	if (vLicenseID != null) {
@@ -83,69 +84,72 @@ try{
 				}
 			    var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 			    if(thisFee){
-				fees = true;
+					fees = true;
 			        if(AInfo["Limited Operation"] != "Yes") {
-					updateFee(thisFee.feeCode,feeSchedule, "FINAL", feeQty, "Y", "N");
-				}else {
-				var feeDesc = licType + " - Renewal Fee - Limited";
-				if(newExpDateStr)
-					feeAmt = ((thisFee.formula)*feeQty)*.2;
-				else 
-					feeAmt = (thisFee.formula*.2);
-				var loFee = getFeeDefByDesc("LIC_CC_REN_LO", feeDesc);
-				if(loFee) {
-					updateFee(loFee.feeCode,"LIC_CC_REN_LO", "FINAL", feeAmt, "Y", "N");
-				}else {
-					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+						updateFee(thisFee.feeCode,feeSchedule, "FINAL", feeQty, "Y", "N");
+					}else {
+						if(newExpDateStr){
+							var feeDesc = licType + " - Limited Operations Renewal Fee with Date Change";
+							feeAmt = ((thisFee.formula)*feeQty)*.2;
+						}else{ 
+							var feeDesc = licType + " - Renewal Fee - Limited Operations";
+							feeAmt = (thisFee.formula*.2);
+						}
+						var loFee = getFeeDefByDesc("LIC_CC_REN_LO", feeDesc);
+						if(loFee) {
+							updateFee(loFee.feeCode,"LIC_CC_REN_LO", "FINAL", feeAmt, "Y", "N");
+						}else {
+							aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ASA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
+							logDebug("An error occurred retrieving fee item: " + feeDesc);
+						}
+					}
+					if(licType.substring(0,5) == "Large") {
+						lType = lookup("LIC_CC_LICENSE_TYPE", licType);
+						if(!matches(lType,"", null, undefined)){
+							licTbl = lType.split(";");
+							var base = parseInt(licTbl[3]);
+							feeDescE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
+							feeDescL = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " - Limited Operations";
+							feeDescLE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " Limited Operations Renewal Fees with Date Change";
+							feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
+							if (newExpDateStr){
+								qty = (parseInt(sqft) - base) / 2000;
+								thisFee = getFeeDefByDesc("LIC_CC_REN", feeDescR);
+								if(AInfo["Limited Operation"] != "Yes") {
+									feeAmt = ((thisFee.formula*parseInt(qty))/365)*feeQty;
+									thisFee = getFeeDefByDesc("LIC_CC_REN_EXP", feeDescE);
+									if(feeAmt > 0){        
+										updateFee_Rev(thisFee.feeCode,"LIC_CC_REN_EXP", "FINAL", feeAmt, "Y", "N");
+									}
+								}else{
+									feeAmt = (((thisFee.formula*parseInt(qty))/365)*feeQty)*.2;
+									thisFee = getFeeDefByDesc("LIC_CC_REN_LO", feeDescLE);
+									if(feeAmt > 0){        
+										updateFee_Rev(thisFee.feeCode,"LIC_CC_REN_LO", "FINAL", feeAmt, "Y", "N");
+									}
+								}			
+							}else{
+								thisFee = getFeeDefByDesc(feeSchedule, feeDescR);
+								qty = (parseInt(sqft) - base) / 2000;
+								if(qty > 0){  
+									if(AInfo["Limited Operation"] != "Yes") {
+										updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
+									}else {
+										feeAmt = (thisFee.formula*parseInt(qty))*.2;
+										thisFee = getFeeDefByDesc("LIC_CC_REN_LO", feeDescL);
+										if(feeAmt > 0){        
+											updateFee_Rev(thisFee.feeCode,"LIC_CC_REN_LO", "FINAL", feeAmt, "Y", "N");
+										}
+									}
+								}
+							} 
+						}
+					}
+				}else{
+					aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 					logDebug("An error occurred retrieving fee item: " + feeDesc);
 				}
 			}
-		if(licType.substring(0,5) == "Large") {
-			lType = lookup("LIC_CC_LICENSE_TYPE", licType);
-			if(!matches(lType,"", null, undefined)){
-				licTbl = lType.split(";");
-				var base = parseInt(licTbl[3]);
-				feeDescE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
-				feeDescL = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " - Limited";
-				feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
-				if (newExpDateStr){
-					qty = (parseInt(sqft) - base) / 2000;
-					thisFee = getFeeDefByDesc("LIC_CC_REN", feeDescR);
-					if(AInfo["Limited Operation"] != "Yes") {
-						feeAmt = ((thisFee.formula*parseInt(qty))/365)*feeQty;
-						thisFee = getFeeDefByDesc("LIC_CC_REN_EXP", feeDescE);
-						if(feeAmt > 0){        
-							updateFee_Rev(thisFee.feeCode,"LIC_CC_REN_EXP", "FINAL", feeAmt, "Y", "N");
-						}
-					}else {
-						feeAmt = (((thisFee.formula*parseInt(qty))/365)*feeQty)*.2;
-						thisFee = getFeeDefByDesc("LIC_CC_REN_LO", feeDescL);
-						if(feeAmt > 0){        
-							updateFee_Rev(thisFee.feeCode,"LIC_CC_REN_LO", "FINAL", feeAmt, "Y", "N");
-						}
-					}			
-				}else{
-					thisFee = getFeeDefByDesc(feeSchedule, feeDescR);
-					qty = (parseInt(sqft) - base) / 2000;
-					if(qty > 0){  
-						if(AInfo["Limited Operation"] != "Yes") {
-							updateFee_Rev(thisFee.feeCode,feeSchedule, "FINAL", parseInt(qty), "Y", "N");
-						}else {
-							feeAmt = (thisFee.formula*parseInt(qty))*.2;
-							thisFee = getFeeDefByDesc("LIC_CC_REN_LO", feeDescL);
-							if(feeAmt > 0){        
-								updateFee_Rev(thisFee.feeCode,"LIC_CC_REN_LO", "FINAL", feeAmt, "Y", "N");
-							}
-						}
-					}
-				} 
-			}
-		}
-	}else{
-		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: WTUA:Licenses/Cultivation/License/Renewal: Add Fees: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
-		logDebug("An error occurred retrieving fee item: " + feeDesc);
-	}
-}
 			if(tmpDate < curDate && AInfo["Limited Operation"] != "Yes") {
 				if (newExpDateStr){
                 		var feeDesc = AInfo["License Type"] + " - Late Fee with Date Change";
@@ -184,8 +188,13 @@ try{
 		licType = AInfo["License Type"];
 	}
 	if(AInfo["Limited Operation"] == "Yes") {
-		var feeDesc = licType + " - Renewal Fee - Limited";
+		if (newExpDateStr){
+			var feeDesc = licType + " - Limited Operations Renewal Fee with Date Change";
        		var feeSchedule = "LIC_CC_REN_LO";
+		}else {
+			var feeDesc = licType + " - Renewal Fee - Limited Operations";
+			var feeSchedule = "LIC_CC_REN_LO";
+		}
 	}else {
 		if (newExpDateStr){
 			var feeDesc = licType + " - Renewal Fee with Date Change";
@@ -209,6 +218,7 @@ try{
 		aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: CTRCA:Licenses/Cultivation/License/Renewal: Get Fee: " + startDate, "fee description: " + feeDesc + br + "capId: " + capId + br + currEnv);
 		logDebug("An error occurred retrieving fee item: " + feeDesc);
 	}
+
 // Check License Cases to see if renewal can be fast tracked
 	var event = "CTRCA";
 	logDebug("has Fee " + fees + "event " + event);
