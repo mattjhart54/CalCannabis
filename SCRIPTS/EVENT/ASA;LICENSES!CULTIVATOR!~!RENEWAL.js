@@ -99,11 +99,13 @@ try{
 		if(AInfo["Limited Operation"] != "Yes") {
 			updateFee(thisFee.feeCode,feeSchedule, "FINAL", feeQty, "Y", "N");
 		}else {
-			var feeDesc = licType + " - Renewal Fee - Limited";
-			if(newExpDateStr)
+			if(newExpDateStr) {
+				var feeDesc = licType + " - Limited Operations Renewal Fee with Date Change";
 				feeAmt = ((thisFee.formula)*feeQty)*.2;
-			else 
+			}else {
+				var feeDesc = licType + " - Renewal Fee - Limited Operations";
 				feeAmt = (thisFee.formula*.2);
+			}
 			var loFee = getFeeDefByDesc("LIC_CC_REN_LO", feeDesc);
 			if(loFee) {
 				updateFee(loFee.feeCode,"LIC_CC_REN_LO", "FINAL", feeAmt, "Y", "N");
@@ -118,7 +120,8 @@ try{
 				licTbl = lType.split(";");
 				var base = parseInt(licTbl[3]);
 				feeDescE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
-				feeDescL = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " - Limited";
+				feeDescL = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " - Limited Operations";
+				feeDescLE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " Limited Operations Renewal Fee with Date Change";
 				feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 				if (newExpDateStr){
 					qty = (parseInt(sqft) - base) / 2000;
@@ -131,7 +134,7 @@ try{
 						}
 					}else {
 						feeAmt = (((thisFee.formula*parseInt(qty))/365)*feeQty)*.2;
-						thisFee = getFeeDefByDesc("LIC_CC_REN_LO", feeDescL);
+						thisFee = getFeeDefByDesc("LIC_CC_REN_LO", feeDescLE);
 						if(feeAmt > 0){        
 							updateFee_Rev(thisFee.feeCode,"LIC_CC_REN_LO", "FINAL", feeAmt, "Y", "N");
 						}
