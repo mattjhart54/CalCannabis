@@ -335,7 +335,7 @@ try{
 			}
 		}
 	// Add Late Fee
-		if (newAppStatus == "Expired - Pending Renewal"){
+		if (newAppStatus == "Expired - Pending Renewal" && getAppSpecific("Limited Operation",renCapId) != "Yes"){
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
 			if (renewalCapProject != null) {
 				var renCapId = renewalCapProject.getCapID();
