@@ -173,7 +173,7 @@ function renewalProcess(rAltId, event, fees){
 			var histRow = new Array();
 
 			var renYear = vNewExpDate.getFullYear();
-			var expDateForamatted = dateFormatted(vNewExpDate.getMonth(), vNewExpDate.getDate(), vNewExpDate.getFullYear(), "MM/DD/YYYY");
+			var expDateForamatted = dateFormatted(vNewExpDate.getMonth()+1, vNewExpDate.getDate(), vNewExpDate.getFullYear(), "MM/DD/YYYY");
 
 			var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", licId, "N");
 			histRow["Renewal Year"] = "" + String(renYear);
