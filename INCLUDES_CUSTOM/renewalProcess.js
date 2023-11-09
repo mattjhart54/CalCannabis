@@ -47,16 +47,15 @@ function renewalProcess(rAltId, event, fees){
 			vExpDate = vLicenseObj.b1ExpDate;
 			vExpDate = new Date(vExpDate);
 			expYear = vExpDate.getFullYear();
-	// Extend license expiration by 1 year
-			vNewExpDate = new Date(vExpDate.getFullYear() + 1, vExpDate.getMonth(), vExpDate.getDate());
-	// Update license expiration date
+	// Extend license expiration by 1 year and change expiration date if necessary
 			if (AInfo['License Expiration Date Change'] == "Yes" && !matches(AInfo['New Expiration Date'],null,undefined,"")){
-					newExpDate = new Date(AInfo['New Expiration Date']);
-					logDebug("Updating Expiration Date to: " + newExpDate);
-					vLicenseObj.setExpiration(dateAdd(newExpDate,0));
+					vNewExpDate = new Date(AInfo['New Expiration Date']);
+					logDebug("Updating Expiration Date to: " + vNewExpDate);
+					vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 					editAppSpecific("Expiration Date Changed","CHECKED",licId);
 					editAppSpecific("Date Expiration Date Changed",fileDate,licId);
 			}else{
+				vNewExpDate = new Date(vExpDate.getFullYear() + 1, vExpDate.getMonth(), vExpDate.getDate());
 				logDebug("Updating Expiration Date to: " + vNewExpDate);
 				vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 			}
