@@ -121,7 +121,7 @@ try{
 				var base = parseInt(licTbl[3]);
 				feeDescE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
 				feeDescL = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " - Limited Operations";
-				feeDescLE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " Limited Operations Renewal Fee with Date Change";
+				feeDescLE = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " Limited Operations with Date Change";
 				feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 				if (newExpDateStr){
 					qty = (parseInt(sqft) - base) / 2000;
