@@ -172,12 +172,13 @@ function renewalProcess(rAltId, event, fees){
 			var histRow = new Array();
 
 			var renYear = vNewExpDate.getFullYear();
+			var newExpStatus = aa.cap.getCap(licId).getOutput().getCapStatus();
 			var expDateForamatted = dateFormatted(vNewExpDate.getMonth()+1, vNewExpDate.getDate(), vNewExpDate.getFullYear(), "MM/DD/YYYY");
 
 			var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", licId, "N");
 			histRow["Renewal Year"] = "" + String(renYear);
 			histRow["License Expiration"] = "" + String(expDateForamatted);
-			histRow["License Status"] = "" + vCapStatus;
+			histRow["License Status"] = "" + newExpStatus;
 			histRow["Limited Operation"] = "" + AInfo['Limited Operation'];
 			histRow["License Type"] = "" + String(licType); 
 			histRow["Canopy Square Feet"] = "" + (getAppSpecific("Canopy SF",licId) || "");
