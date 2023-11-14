@@ -1,4 +1,6 @@
 
+var AInfo = new Array()     
+loadAppSpecific4ACA(AInfo,capId);
 if (publicUser) {
 	cultPlan = false;
     for (idx = 0; idx < documentModelArray.size(); idx++) {
@@ -14,4 +16,3 @@ if (publicUser) {
     }
 
 }
-
