@@ -11,7 +11,7 @@ function renewalProcessLC() {
 				cCap = aa.cap.getCap(childCapId).getOutput();
 				cStatus = cCap.getCapStatus();
 				if (!matches(cStatus,"Resolved","Closed")){
-					if(matches(getAppSpecific("Case Renewal Type",childCapId),"Renewal Review","Renewal Hold")) {
+					if(matches(getAppSpecific("Case Renewal Type",childCapId),"Renewal Hold")) {
 						caseReview = true;
 					}
 				}
@@ -29,13 +29,20 @@ function renewalProcessLC() {
 						capDetail = capDetailObjResult.getOutput();
 						var balanceDue = capDetail.getBalance();
 						if (balanceDue == 0){
+							
+							holdId = capId;
+							capId = renCapId;
+							AInfo = [];
+							loadAppSpecific(AInfo);
+							loadASITables;	
+							
 							// Get current expiration date.
 							vLicenseObj = new licenseObject(null, parentCapId);
 							vExpDate = vLicenseObj.b1ExpDate;
 							vExpDate = new Date(vExpDate);
 							// Update license expiration date and Extend license expiration by 1 year
-							if (getAppSpecific("License Expiration Date Change",renCapId) == "Yes" && !matches(getAppSpecific("New Expiration Date",renCapId),null,undefined,"")){
-								vNewExpDate = new Date(getAppSpecific("New Expiration Date",renCapId));
+							if (AInfo["License Expiration Date Change"] == "Yes" && !matches(AInfo["New Expiration Date"],null,undefined,"")){
+								vNewExpDate = new Date(AInfo["New Expiration Date"]);
 								logDebug("Updating Expiration Date to: " + vNewExpDate);
 								vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 								editAppSpecific("Expiration Date Changed","CHECKED",parentCapId);
@@ -49,6 +56,13 @@ function renewalProcessLC() {
 							vLicenseObj.setStatus("Active");
 							vCapStatus = aa.cap.getCap(parentCapId).getOutput().getCapStatus();	
 							savedCapStatus = getAppSpecific("Saved License Status",parentCapId);
+							
+							holdId = capId;
+							capId = renCapId;
+							AInfo = [];
+							loadAppSpecific(AInfo);
+							loadASITables;
+							
 							limitedOp = AInfo['Limited Operation'] == "Yes";
 							if(limitedOp){
 								editAppSpecific("Limited Operations","Yes",parentCapId);
@@ -76,22 +90,22 @@ function renewalProcessLC() {
 							}
 							// Update Canopy Size on the license record
 							if(getAppSpecific("License Change",renCapId) == "Yes"){
-								editAppSpecific("License Type",getAppSpecific("New License Type",renCapId),parentCapId);
-								editAppSpecific("Aggregate square footage of noncontiguous canopy",getAppSpecific("Aggragate Canopy Square Footage",renCapId),parentCapId);
-								editAppSpecific("Canopy SF",getAppSpecific("Aggragate Canopy Square Footage",renCapId),parentCapId);
-								editAppSpecific("Canopy Plant Count",getAppSpecific("Canopy Plant Count",renCapId),parentCapId);
-								var licType = getAppSpecific("New License Type",renCapId);
+								editAppSpecific("License Type",AInfo["New License Type"],parentCapId);
+								editAppSpecific("Aggregate square footage of noncontiguous canopy",AInfo["Aggragate Canopy Square Footage"],parentCapId);
+								editAppSpecific("Canopy SF",AInfo["Aggragate Canopy Square Footage"],parentCapId);
+								editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],parentCapId);
+								var licType = AInfo["New License Type"];
 							}else{
-								var licType = getAppSpecific("License Type",renCapId);
+								var licType = AInfo["icense Type"];
 							}
 							// Update the Cultivation Type on the license record
-							var licIssueType = getAppSpecific("License Issued Type",renCapId);
-							var desChange = getAppSpecific("Designation Change",renCapId);
+							var licIssueType = AInfo["License Issued Type"];
+							var desChange = AInfo["Designation Change"];
 							if(desChange == "Yes") {
-								var cultType = getAppSpecific("Designation Type",renCapId);
+								var cultType = AInfo["Designation Type"];
 								editAppSpecific("Cultivator Type",cultType ,parentCapId);
 							}else{
-								var cultType = getAppSpecific("Cultivator Type",renCapId);
+								var cultType = AInfo["Cultivator Type"];
 							}
 							editAppName(licIssueType + " " + cultType + " - " + licType,parentCapId);
 							// Update Financial Interest Table
@@ -159,7 +173,7 @@ function renewalProcessLC() {
 							var histRow = new Array();
 				
 							var renYear = vNewExpDate.getFullYear();
-							var newExpStatus = aa.cap.getCap(licId).getOutput().getCapStatus();
+							var newExpStatus = aa.cap.getCap(parentCapId).getOutput().getCapStatus();
 							var expDateForamatted = dateFormatted(vNewExpDate.getMonth()+1, vNewExpDate.getDate(), vNewExpDate.getFullYear(), "MM/DD/YYYY");
 				
 							var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", parentCapId, "N");
@@ -169,8 +183,8 @@ function renewalProcessLC() {
 							histRow["Limited Operation"] = "" + AInfo['Limited Operation'];
 							histRow["License Type"] = "" + String(licType); 
 							histRow["Canopy Square Feet"] = "" + (getAppSpecific("Canopy SF",parentCapId) || "");
-							histRow["Canopy Plant Count"] = "" + (getAppSpecific("Canopy Plant Count",parentCapId) || "");
-							histRow["Canopy Square Footage Limit"] = "" + (getAppSpecific("Canopy SF Limit",parentCapId) || "");
+							histRow["Canopy Plant Count"] = "" + (getAppSpecific("Canopy Plant Count",parentCapId)  || "");
+							histRow["Canopy Square Footage Limit"] = "" + (getAppSpecific("Canopy SF Limit",parentCapId)  || "");
 							
 							LICENSERENEWALHISTORY.push(histRow);
 							addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, parentCapId);	
@@ -205,7 +219,7 @@ function renewalProcessLC() {
 									}
 								}
 							}
-							updateAppStatus("Approved","",renCapId);				
+							updateAppStatus("Approved","");				
 							//Run Official License Certificate and Annual/Provisional Renewal Approval Email and Set the DRP		
 							if (licIssueType == "Provisional"){
 								var approvalLetter = "Provisional Renewal Approval";
@@ -251,7 +265,7 @@ function renewalProcessLC() {
 								}
 							}
 							// 7694: On Renewal record when License Change Size, update open SA
-							if (getAppSpecific("License Change",renCapId) == "Yes" || desChange == "Yes"){
+							if (AInfo["License Change"] == "Yes" || desChange == "Yes"){
 								var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",parentCapId);
 								if (scienceArr) {
 									if (scienceArr.length > 0) {
@@ -262,18 +276,19 @@ function renewalProcessLC() {
 												editAppSpecific("License Type",licType,scienceCap);
 												editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,scienceCap);
 												if(AInfo['License Change'] == "Yes") {
-													editAppSpecific("Aggregate square footage of noncontiguous canopy-NEW",getAppSpecific("Aggragate Canopy Square Footage",renCapId),scienceCap);
-													editAppSpecific("Canopy SF-NEW",getAppSpecific("Aggragate Canopy Square Footage",renCapId),scienceCap);
-													editAppSpecific("Canopy Plant Count-NEW",getAppSpecific("Canopy Plant Count",renCapId),scienceCap);
+													editAppSpecific("Aggregate square footage of noncontiguous canopy-NEW",AInfo["Aggragate Canopy Square Footage"],scienceCap);
+													editAppSpecific("Canopy SF-NEW",AInfo["Aggragate Canopy Square Footage"],scienceCap);
+													editAppSpecific("Canopy Plant Count-NEW",AInfo["Canopy Plant Count"],scienceCap);
 												}
 											}
 										}
 									}
 								}
 							}
-							// Add record to the CAT set
-							addToCat(parentCapId);
 						}
+					// Add record to the CAT set
+						addToCat(parentCapId);
+						capId = holdId;
 					}
 				}
 			}
