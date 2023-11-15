@@ -251,7 +251,7 @@ function renewalProcessLC() {
 								}
 							}
 							// 7694: On Renewal record when License Change Size, update open SA
-							if (AInfo['License Change'] == "Yes" || AInfo["Designation Change"] == "Yes"){
+							if (getAppSpecific("License Change",renCapId) == "Yes" || desChange == "Yes"){
 								var scienceArr = getChildren("Licenses/Cultivator/Amendment/Science",parentCapId);
 								if (scienceArr) {
 									if (scienceArr.length > 0) {
