@@ -261,6 +261,11 @@ function renewalProcessLC() {
 											if (!matches(saAppStatus,"Transition Amendment Approved", "Amendment Rejected", "Amendment Approved")){
 												editAppSpecific("License Type",licType,scienceCap);
 												editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,scienceCap);
+												if(AInfo['License Change'] == "Yes") {
+													editAppSpecific("Aggregate square footage of noncontiguous canopy-NEW",getAppSpecific("Aggragate Canopy Square Footage",renCapId),scienceCap);
+													editAppSpecific("Canopy SF-NEW",getAppSpecific("Aggragate Canopy Square Footage",renCapId),scienceCap);
+													editAppSpecific("Canopy Plant Count-NEW",getAppSpecific("Canopy Plant Count",renCapId),scienceCap);
+												}
 											}
 										}
 									}
