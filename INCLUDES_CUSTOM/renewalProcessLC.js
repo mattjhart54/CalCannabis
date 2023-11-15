@@ -295,4 +295,5 @@ function renewalProcessLC() {
 		} else {
 			fastTrack = false;
 		}
+	return fastTrack;
 }
