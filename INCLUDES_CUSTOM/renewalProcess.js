@@ -294,6 +294,7 @@ function renewalProcess(rAltId, event, fees){
 									editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,scienceCap);
 								}
 								if(AInfo['License Change'] == "Yes") {
+									editAppSpecific("Aggregate square footage of noncontiguous canopy",AInfo["Aggragate Canopy Square Footage"],scienceCap);
 									editAppSpecific("Canopy SF-NEW",AInfo["Aggragate Canopy Square Footage"],scienceCap);
 									editAppSpecific("Canopy Plant Count-NEW",AInfo["Canopy Plant Count"],scienceCap);
 								}
