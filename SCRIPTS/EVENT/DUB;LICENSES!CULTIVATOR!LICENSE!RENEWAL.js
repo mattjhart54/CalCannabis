@@ -1,4 +1,4 @@
-
+/* Unable to get AppSpecific Data in DUB
 var AInfo = new Array()     
 loadAppSpecific4ACA(AInfo,capId);
 if (publicUser) {
@@ -16,3 +16,4 @@ if (publicUser) {
     }
 
 }
+*/
