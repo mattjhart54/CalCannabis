@@ -175,7 +175,6 @@ function renewalProcess(rAltId, event, fees){
 			var newExpStatus = aa.cap.getCap(licId).getOutput().getCapStatus();
 			var expDateForamatted = dateFormatted(vNewExpDate.getMonth()+1, vNewExpDate.getDate(), vNewExpDate.getFullYear(), "MM/DD/YYYY");
 
-			var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", licId, "N");
 			histRow["Renewal Year"] = "" + String(renYear);
 			histRow["License Expiration"] = "" + String(expDateForamatted);
 			histRow["License Status"] = "" + newExpStatus;
@@ -187,6 +186,31 @@ function renewalProcess(rAltId, event, fees){
 			
 			LICENSERENEWALHISTORY.push(histRow);
 			addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, licId);	
+			
+	// Story 7750: Update Equity Fee Relief Tables
+			var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
+			if (recordASIGroup.getSuccess()){
+				var recordASIGroupArray = recordASIGroup.getOutput();
+				var equityTable = new Array();
+				var equityRow = new Array(); 
+	
+				for (i in recordASIGroupArray) {
+					var group = recordASIGroupArray[i];
+					if (String(group.getCheckboxType()) == "EQUITY FEE RELIEF"){
+						recordField = String(group.getCheckboxDesc());
+						fieldValue = group.getChecklistComment();
+						if (!matches(fieldValue,null,undefined,"")){
+							equityRow[recordField] = "" + String(fieldValue);
+						}
+										
+					}
+				}
+				if (Object.keys(equityRow).length > 0){
+					equityRow["Relief Record Number"] = "" + capId.getCustomID();
+					equityTable.push(equityRow);
+					addASITable("EQUITY FEE RELIEF", equityTable, licId);
+				}
+			}
 				
 	//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(licId);
