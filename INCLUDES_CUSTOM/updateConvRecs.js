@@ -304,6 +304,32 @@ try {
 	}
 	logDebug("Not copying the following Tables: " + ignoreTableArray);
 	copyASITables(capId,plId,ignoreTableArray);
+
+	//Story 7750: Create Equity Relief Table entry
+	var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
+	if (recordASIGroup.getSuccess()){
+		var recordASIGroupArray = recordASIGroup.getOutput();
+		var equityTable = new Array();
+		var equityRow = new Array(); 
+
+		for (i in recordASIGroupArray) {
+			var group = recordASIGroupArray[i];
+			if (String(group.getCheckboxType()) == "EQUITY FEE RELIEF"){
+				recordField = String(group.getCheckboxDesc());
+				fieldValue = group.getChecklistComment();
+				if (!matches(fieldValue,null,undefined,"")){
+					equityRow[recordField] = "" + String(fieldValue);
+				}
+								
+			}
+		}
+		if (Object.keys(equityRow).length > 0){
+			equityRow["Relief Record Number"] = "" + capId.getCustomID();
+			equityTable.push(equityRow);
+			addASITable("EQUITY FEE RELIEF", equityTable, plId);
+		}
+	}
+	//end Story 7750
 	
 	//send Primary to CAT Interface
 	addToCat(plId);
