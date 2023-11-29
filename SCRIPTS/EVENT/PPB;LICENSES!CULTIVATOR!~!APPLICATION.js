@@ -88,7 +88,6 @@ try {
 		var expDateObj = new Date(expDate);
 		var renYear = expDateObj.getFullYear();
 	
-		var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", licCapId, "N");
 		toRow["Renewal Year"] = "" + String(renYear);
 		toRow["License Expiration"] = "" + String(expDate);
 		toRow["License Status"] = "Active";
