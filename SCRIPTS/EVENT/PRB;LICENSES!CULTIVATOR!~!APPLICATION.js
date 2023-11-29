@@ -90,7 +90,6 @@ try {
 		var expDateObj = new Date(expDate);
 		var renYear = expDateObj.getFullYear();
 	
-		var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", licCapId, "N");
 		toRow["Renewal Year"] = "" + String(renYear);
 		toRow["License Expiration"] = "" + String(expDate);
 		toRow["License Status"] = "Active";
@@ -102,6 +101,30 @@ try {
 		
 		LICENSERENEWALHISTORY.push(toRow);
 		addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, licCapId);
+// Story 7750: Create Equity Fee Relief Table Entry
+		var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
+		if (recordASIGroup.getSuccess()){
+			var recordASIGroupArray = recordASIGroup.getOutput();
+			var equityTable = new Array();
+			var equityRow = new Array(); 
+
+			for (i in recordASIGroupArray) {
+				var group = recordASIGroupArray[i];
+				if (String(group.getCheckboxType()) == "EQUITY FEE RELIEF"){
+					recordField = String(group.getCheckboxDesc());
+					fieldValue = group.getChecklistComment();
+					if (!matches(fieldValue,null,undefined,"")){
+						equityRow[recordField] = "" + String(fieldValue);
+					}
+									
+				}
+			}
+			if (Object.keys(equityRow).length > 0){
+				equityRow["Relief Record Number"] = "" + capId.getCustomID();
+				equityTable.push(equityRow);
+				addASITable("EQUITY FEE RELIEF", equityTable, licCapId);
+			}
+		}
 	}	
 }catch(err){
 	logDebug("An error has occurred in PRB:LICENSES/CULTIVATOR/*/APPLICATION: License Issuance: " + err.message);
