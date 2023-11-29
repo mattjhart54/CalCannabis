@@ -57,12 +57,6 @@ function renewalProcessLC() {
 							vCapStatus = aa.cap.getCap(parentCapId).getOutput().getCapStatus();	
 							savedCapStatus = getAppSpecific("Saved License Status",parentCapId);
 							
-							holdId = capId;
-							capId = renCapId;
-							AInfo = [];
-							loadAppSpecific(AInfo);
-							loadASITables;
-							
 							limitedOp = AInfo['Limited Operation'] == "Yes";
 							if(limitedOp){
 								editAppSpecific("Limited Operations","Yes",parentCapId);
@@ -176,7 +170,6 @@ function renewalProcessLC() {
 							var newExpStatus = aa.cap.getCap(parentCapId).getOutput().getCapStatus();
 							var expDateForamatted = dateFormatted(vNewExpDate.getMonth()+1, vNewExpDate.getDate(), vNewExpDate.getFullYear(), "MM/DD/YYYY");
 				
-							var transferPermitID = new asiTableValObj("LICENSE RENEWAL HISTORY", parentCapId, "N");
 							histRow["Renewal Year"] = "" + String(renYear);
 							histRow["License Expiration"] = "" + String(expDateForamatted);
 							histRow["License Status"] = "" + newExpStatus;
@@ -187,7 +180,32 @@ function renewalProcessLC() {
 							histRow["Canopy Square Footage Limit"] = "" + (getAppSpecific("Canopy SF Limit",parentCapId)  || "");
 							
 							LICENSERENEWALHISTORY.push(histRow);
-							addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, parentCapId);	
+							addASITable("LICENSE RENEWAL HISTORY", LICENSERENEWALHISTORY, parentCapId);
+
+							// Story 7750: Update Equity Fee Relief Tables
+							var recordASIGroup = aa.appSpecificInfo.getByCapID(renCapId);
+							if (recordASIGroup.getSuccess()){
+								var recordASIGroupArray = recordASIGroup.getOutput();
+								var equityTable = new Array();
+								var equityRow = new Array(); 
+					
+								for (i in recordASIGroupArray) {
+									var group = recordASIGroupArray[i];
+									if (String(group.getCheckboxType()) == "EQUITY FEE RELIEF"){
+										recordField = String(group.getCheckboxDesc());
+										fieldValue = group.getChecklistComment();
+										if (!matches(fieldValue,null,undefined,"")){
+											equityRow[recordField] = "" + String(fieldValue);
+										}
+														
+									}
+								}
+								if (Object.keys(equityRow).length > 0){
+									equityRow["Relief Record Number"] = "" + renCapId.getCustomID();
+									equityTable.push(equityRow);
+									addASITable("EQUITY FEE RELIEF", equityTable, parentCapId);
+								}
+							}
 							
 							//Set renewal to complete, used to prevent more than one renewal record for the same cycle
 							renewalCapProject.setStatus("Complete");
