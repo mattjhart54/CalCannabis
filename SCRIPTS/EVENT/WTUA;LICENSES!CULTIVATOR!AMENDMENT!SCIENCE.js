@@ -388,7 +388,7 @@ try {
 					editAppSpecific("Transition Date",jsDateToASIDate(new Date()),parentCapId);
 					updateCat = true;
 					//Check for Renewal and set Lic Issue Type
-					renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
+					renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parentCapId);
 					if (renewalCapProject != null) {
 						var renCapId = renewalCapProject.getCapID();
 						editAppSpecific("License Issued Type", "Annual",renCapId);
