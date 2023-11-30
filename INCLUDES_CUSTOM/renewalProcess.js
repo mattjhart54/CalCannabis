@@ -91,7 +91,7 @@ function renewalProcess(rAltId, event, fees){
 	// Update Canopy Size on the license record
 			if(AInfo['License Change'] == "Yes"){
 				editAppSpecific("License Type",AInfo["New License Type"],licId);
-				editAppSpecific("Aggregate square footage of noncontiguous canopy",AInfo["Aggragate Canopy Square Footage"],licId);
+	//			editAppSpecific("Aggregate square footage of noncontiguous canopy",AInfo["Aggragate Canopy Square Footage"],licId);
 				editAppSpecific("Canopy SF",AInfo["Aggragate Canopy Square Footage"],licId);
 				editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],licId);
 				var licType = AInfo["New License Type"];
@@ -318,9 +318,9 @@ function renewalProcess(rAltId, event, fees){
 									editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,scienceCap);
 								}
 								if(AInfo['License Change'] == "Yes") {
-									editAppSpecific("Aggregate square footage of noncontiguous canopy-NEW",AInfo["Aggragate Canopy Square Footage"],scienceCap);
-									editAppSpecific("Canopy SF-NEW",AInfo["Aggragate Canopy Square Footage"],scienceCap);
-									editAppSpecific("Canopy Plant Count-NEW",AInfo["Canopy Plant Count"],scienceCap);
+					//				editAppSpecific("Aggregate square footage of noncontiguous canopy-NEW",AInfo["Aggragate Canopy Square Footage"],scienceCap);
+									editAppSpecific("Canopy SF",AInfo["Aggragate Canopy Square Footage"],scienceCap);
+									editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],scienceCap);
 								}
 							}
 							if (getAppSpecific("License Issued Type", licId) == "Provisional"){
