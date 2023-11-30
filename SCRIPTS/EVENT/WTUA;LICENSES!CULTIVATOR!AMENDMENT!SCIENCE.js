@@ -392,7 +392,8 @@ try {
 					if (renewalCapProject != null) {
 						var renCapId = renewalCapProject.getCapID();
 						editAppSpecific("License Issued Type", "Annual",renCapId);
-	//				}
+					}
+//				}
 			//Run Official License Certificate and Transistion Approval Letter and email the DRP	
 				var scriptName = "asyncRunOfficialLicenseRpt";
 				var envParameters = aa.util.newHashMap();
