@@ -387,7 +387,12 @@ try {
 					editAppName("Annual " + cType + " - " + licType,parentCapId);
 					editAppSpecific("Transition Date",jsDateToASIDate(new Date()),parentCapId);
 					updateCat = true;
-//				}
+					//Check for Renewal and set Lic Issue Type
+					renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
+					if (renewalCapProject != null) {
+						var renCapId = renewalCapProject.getCapID();
+						editAppSpecific("License Issued Type", "Annual",renCapId);
+	//				}
 			//Run Official License Certificate and Transistion Approval Letter and email the DRP	
 				var scriptName = "asyncRunOfficialLicenseRpt";
 				var envParameters = aa.util.newHashMap();
