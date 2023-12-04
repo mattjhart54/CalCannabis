@@ -39,7 +39,6 @@ function renewalProcessLC() {
 							// Get current expiration date.
 							vLicenseObj = new licenseObject(null, parentCapId);
 							vExpDate = vLicenseObj.b1ExpDate;
-							//User Story 7740, fixing date objects due to issues in SaaS multi-tenant environments
 							vExpDate = new Date(vExpDate);
 							// Update license expiration date and Extend license expiration by 1 year
 							if (AInfo["License Expiration Date Change"] == "Yes" && !matches(AInfo["New Expiration Date"],null,undefined,"")){

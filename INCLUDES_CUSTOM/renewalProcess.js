@@ -45,7 +45,6 @@ function renewalProcess(rAltId, event, fees){
 	// Get current expiration date.
 			vLicenseObj = new licenseObject(null, licId);
 			vExpDate = vLicenseObj.b1ExpDate;
-			//User Story 7740, fixing date objects due to issues in SaaS multi-tenant environments
 			vExpDate = new Date(vExpDate);
 			expYear = vExpDate.getFullYear();
 	// Extend license expiration by 1 year and change expiration date if necessary

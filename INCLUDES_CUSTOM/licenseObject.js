@@ -33,9 +33,11 @@ function licenseObject(licnumber) // optional renewal Cap ID -- uses the expirat
         if (b1ExpResult.getSuccess()) {
             this.b1Exp = b1ExpResult.getOutput();
             tmpDate = this.b1Exp.getExpDate();
+			// Begin User Story 7740, fixing date objects due to issues in SaaS multi-tenant environments
 			tmpDate = fixDate(tmpDate);
             if (tmpDate)
                 this.b1ExpDate = (tmpDate.getMonth() + 1) + "/" + tmpDate.getDate() + "/" + tmpDate.getFullYear();
+			// End User Story 7740, fixing date objects due to issues in SaaS multi-tenant environments
             this.b1Status = this.b1Exp.getExpStatus();
             logDebug("Found renewal record of status : " + this.b1Status + ", Expires on " + this.b1ExpDate);
         } else {
