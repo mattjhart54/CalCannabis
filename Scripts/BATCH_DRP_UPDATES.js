@@ -73,12 +73,8 @@ else
 
 var appGroup = "Licenses"							//   app Group to process {Licenses}
 var appTypeType = "Cultivator"						//   app type to process {Rental License}
-var appSubtype = "License"						//   app subtype to process {NA}
-var appCategory = "Renewal"						//   app category to process {NA}
-var caseTypeFieldValue = "Renewal Allowed"
-var caseDescFieldValue = "Provisional Renewal Missing Science Amendment"
-var caseOpenByFieldValue = "Science Provisional"
-var priorityFieldValue = "Moderate"
+var appSubtype = "Amendment"						//   app subtype to process {NA}
+var appCategory = "DRP Declaration"						//   app category to process {NA}
 var emailAddress = ""					// email to send report
 var sendEmailToContactTypes = "";// send out emails?
 var emailTemplate = "";				// email Template
@@ -124,6 +120,7 @@ function mainProcess(){
 try{	
 	var capFilterStatus = 0;
 	var capCount  =0;
+	var processedArray = [];
 	
 	var capModel = aa.cap.getCapModel().getOutput();
 	//Get the Permits from the system 
@@ -148,89 +145,63 @@ try{
 
 	for (x in vCapList) {
 		capCount++;
+		var editCount = false;
 		capId = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
-		var capValue = aa.cap.getCap(capId).getOutput();
-		if (capValue.isCompleteCap() && getAppSpecific("License Issued Type",capId) == "Provisional"){
-			if(appHasCondition("Application Condition","Applied","Provisional Renewal Missing Science Amendment",null)){
-				logDebug("Provisional Renewal Missing Science Amendment Condition Applied to " + capId);
-				vLicenseID = getParentLicenseCapID(capId);
-				vIDArray = String(vLicenseID).split("-");
-				vLicenseID = aa.cap.getCapID(vIDArray[0],vIDArray[1],vIDArray[2]).getOutput();
-				renewalCapProject = getRenewalCapByParentCapIDForIncomplete(vLicenseID);
-				if (matches(renewalCapProject,undefined,null,"")) {
-					vLicenseID = getParent();
+		if (String(capId.getCustomID()).substr(0,3) == "CCL"){
+			var parentAltId = getAppSpecific("License Number",capId);
+			if (matches(parentAltId,null,undefined,"")){logDebug(capId.getCustomID() + " Missing Parent ID"); continue;}
+			parentId = aa.cap.getCapID(parentAltId).getOutput();
+			appIds = getChildren("Licenses/Cultivator/*/Application",parentId);
+			for(a in appIds) {
+				decIds = getChildren("Licenses/Cultivator/Medical/Declaration",appIds[a]);
+				for(d in decIds) {
+					decId = decIds[d];
 				}
-				if(!vLicenseID){
-					logDebug("Floater: " + capId.getCustomID());
-				}
-				if (vLicenseID){
-					if (String(vLicenseID.getCustomID()).substr(0,3) == "CCL"){
-						logDebug("altID: " + vLicenseID.getCustomID());
-						capFilterStatus++;
-						var licCaseId = createChild("Licenses","Cultivator","License Case","NA","",vLicenseID);
-						if (licCaseId){
-							// Set alt id for the case record based on the number of child case records linked to the license record
-							cIds = getChildren("Licenses/Cultivator/License Case/*",vLicenseID);
-							if(matches(cIds, null, "", undefined)){
-								amendNbr = "000" + 1;
-							}else{
-								var cIdLen = cIds.length
-								if(cIds.length <= 9){
-									amendNbr = "000" +  cIdLen;
-								}else{
-									if(cIds.length <= 99){
-										amendNbr = "00" +  cIdLen;
-									}else{
-										if(cIds.length <= 999){
-											amendNbr = "00" +  cIdLen;
-										}else{
-											amendNbr = cIdLen
-										}
-									}
+			}
+			var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
+			if (recordASIGroup.getSuccess()){
+				var recordASIGroupArray = recordASIGroup.getOutput();
+				for (i in recordASIGroupArray) {
+					var group = recordASIGroupArray[i];
+					var groupName = String(group.getGroupCode());
+					var recordField = String(group.getCheckboxDesc());
+					var subGroup = String(group.getCheckboxType());
+					var fieldValue = String(group.getChecklistComment());
+					var decValue = String(getAppSpecific(recordField,decId));
+					if (matches(subGroup,"DISCLOSURES","DECLARATION")){
+						if (!matches(recordField,"hide_da_disc","hide_da_dcl")){
+							if(fieldValue != decValue){
+								logDebug("Record: " + capId.getCustomID() + " Editing: " + recordField + ": " + fieldValue + " To: " + decValue);
+								editAppSpecific(recordField,decValue,capId);
+								if (processedArray.indexOf(String(capId.getCustomID())) < 0){
+									processedArray.push(String(capId.getCustomID()));
 								}
+								editCount = true;
 							}
-							licCaseAltId = licCaseId.getCustomID();
-							yy = licCaseAltId.substring(0,2);
-							newAltId = vLicenseID.getCustomID() + "-LC"+ yy + "-" + amendNbr;
-							var updateResult = aa.cap.updateCapAltID(licCaseId, newAltId);
-							if (updateResult.getSuccess()){
-								logDebug("Created License Case: " + newAltId + ".");
-							}else{ 
-								logDebug("Error renaming amendment record " + licCaseId);
-							}
-							// Copy the Designated resposible Party contact from the License Record to the Case record
-							//copyContactsByType_rev(vLicenseID,licCaseId,"Designated Responsible Party");
-							
-							// Copy custom fields from the license record to the Case record
-							holdId = capId;
-							capId = vLicenseID;
-							PInfo = new Array;
-							loadAppSpecific(PInfo);
-							capId = holdId;
-							editAppSpecific("License Number",vLicenseID.getCustomID(),licCaseId);
-							editAppSpecific("License Type",PInfo["License Type"],licCaseId);
-							editAppSpecific("Legal Business Name",PInfo["Legal Business Name"],licCaseId);
-							editAppSpecific("Premises City",PInfo["Premise City"],licCaseId);
-							editAppSpecific("Premises County",PInfo["Premise County"],licCaseId);
-							editAppSpecific("Local Authority Type",PInfo["Local Authority Type"],licCaseId);
-							editAppSpecific("Case Renewal Type",caseTypeFieldValue,licCaseId);
-							editAppSpecific("Case Description",caseDescFieldValue,licCaseId);
-							editAppSpecific("Case Opened By",caseOpenByFieldValue,licCaseId);
-							editAppSpecific("Priority",priorityFieldValue,licCaseId);
-							editAppName(caseTypeFieldValue,licCaseId);
-							editCapConditionStatus("Application Condition","Provisional Renewal Missing Science Amendment","Condition Met","Not Applied");
-						}else{
-							logDebug("Failed to create License Case Record for " + vLicenseID.getCustomID());
 						}
 					}
 				}
 			}
+			var appName = String(aa.cap.getCap(capId).getOutput().getSpecialText());
+			var parentAppName = String(aa.cap.getCap(parentId).getOutput().getSpecialText());
+			if (appName != parentAppName){
+				editAppName(parentAppName);
+				logDebug("Record: " + capId.getCustomID() + " appName: " + appName + " Edited to: " + parentAppName);
+				editCount = true;
+				if (processedArray.indexOf(String(capId.getCustomID())) < 0){
+					processedArray.push(String(capId.getCustomID()));
+				}
+			}
+			if (editCount){
+				capFilterStatus++;
+			}
 		}
 	}
 	
-	logDebug("Total Renewal Caps: " + capCount);
-	logDebug("Total CAPS processed: " + capFilterStatus);
+	logDebug("Total Caps: " + capCount);
+	logDebug("Number Caps Processed: " + capFilterStatus);
+	logDebug("List of Caps Processed: " + processedArray);
 }catch (err){
-	logDebug("BATCH_PROVISIONAL_RENEWAL_MISSING_SA: " + err.message + " In " + batchJobName);
+	logDebug("BATCH_DRP_Updates: " + err.message + " In " + batchJobName);
 	logDebug("Stack: " + err.stack);
 }}

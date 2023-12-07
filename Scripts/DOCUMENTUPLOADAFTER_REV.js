@@ -130,20 +130,21 @@ if (capId) {  // coming from ACA
 	if (doScripts) doScriptActions();
 } else {
     capIdArray = aa.env.getValue("CapIDList").toArray();
-	logDebug("capIdArray: " + capIdArray[0] + " " + capIdArray.length);
-    if (capIdArray[0] != null) {
-        for (var thisCapId in capIdArray) {
-	        aa.env.setValue("PermitId1",capIdArray[thisCapId].getID1());
-	        aa.env.setValue("PermitId2",capIdArray[thisCapId].getID2());
-	        aa.env.setValue("PermitId3",capIdArray[thisCapId].getID3());
-	        eval(getScriptText("INCLUDES_ACCELA_GLOBALS"));
+    if (capIdArray) {
+		if (capIdArray[0] != null){
+			for (var thisCapId in capIdArray) {
+				aa.env.setValue("PermitId1",capIdArray[thisCapId].getID1());
+				aa.env.setValue("PermitId2",capIdArray[thisCapId].getID2());
+				aa.env.setValue("PermitId3",capIdArray[thisCapId].getID3());
+				eval(getScriptText("INCLUDES_ACCELA_GLOBALS"));
 
-	        if (capId) {
-            	if (doStdChoices) doStandardChoiceActions(controlString,true,0);
-				//  Next, execute and scripts that are associated to the record type
-				if (doScripts) doScriptActions();
-	        }
-	    }    	
+				if (capId) {
+					if (doStdChoices) doStandardChoiceActions(controlString,true,0);
+					//  Next, execute and scripts that are associated to the record type
+					if (doScripts) doScriptActions();
+				}
+			} 
+		}			
     }
 }
 

@@ -309,12 +309,8 @@ catch (err) {
 function getTempRecordsAll() {
 	return [
   {
-    "Record": "LCA18-0000163",
-    "FileDate": "01/09/2019"
-  },
-   {
-    "Record": "LCA18-0000163-001O",
-    "FileDate": "01/09/2019"
+    "Record": "LCA17-0000059-001O",
+    "FileDate": "09/14/2017"
   }
  ]
 }

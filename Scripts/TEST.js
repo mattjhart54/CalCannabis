@@ -1,8 +1,8 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program: PERMIT_ONEYEAR_INSPECTION.js  Trigger: Batch
+| Program: Batch Expiration.js  Trigger: Batch
 | Client:
 |
-| Version 1.0 - Base Version. 03/05/2013 - Jaime Shear
+| Version 1.0 - Base Version. 11/01/08 JHS
 |
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
@@ -11,7 +11,7 @@
 |
 /------------------------------------------------------------------------------------------------------*/
 emailText = "";
-maxSeconds = 4.5 * 60;		// number of seconds allowed for batch processing, usually < 5*60
+maxSeconds = 15 * 60;		// number of seconds allowed for batch processing, usually < 5*60
 message = "";
 br = "<br>";
 /*------------------------------------------------------------------------------------------------------/
@@ -19,24 +19,26 @@ br = "<br>";
 /------------------------------------------------------------------------------------------------------*/
 SCRIPT_VERSION = 2.0
 
-eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
-eval(getMasterScriptText("INCLUDES_CUSTOM"));
-eval(getScriptText("INCLUDES_ACCELA_GLOBALS"));
+
+eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 eval(getScriptText("INCLUDES_BATCH"));
+eval(getMasterScriptText("INCLUDES_CUSTOM"));
+
+ 
 
 
-function getScriptText(vScriptName) {
-vScriptName = vScriptName.toUpperCase();
-var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
-var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(), vScriptName, "ADMIN");
-return emseScript.getScriptText() + "";
+function getScriptText(vScriptName){
+	vScriptName = vScriptName.toUpperCase();
+	var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
+	var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(),vScriptName,"ADMIN");
+	return emseScript.getScriptText() + "";
 }
 
-function getMasterScriptText(vScriptName) {
-    vScriptName = vScriptName.toUpperCase();
-    var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
-    var emseScript = emseBiz.getMasterScript(aa.getServiceProviderCode(), vScriptName);
-    return emseScript.getScriptText() + "";
+function getMasterScriptText(vScriptName){
+	vScriptName = vScriptName.toUpperCase();
+	var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
+	var emseScript = emseBiz.getMasterScript(aa.getServiceProviderCode(),vScriptName);
+	return emseScript.getScriptText() + "";
 }
 
 /*------------------------------------------------------------------------------------------------------/
@@ -44,7 +46,7 @@ function getMasterScriptText(vScriptName) {
 | END: USER CONFIGURABLE PARAMETERS
 |
 /------------------------------------------------------------------------------------------------------*/
-showDebug = aa.env.getValue("showDebug").substring(0,1).toUpperCase().equals("Y");
+showDebug = "Y";
 
 sysDate = aa.date.getCurrentDate();
 batchJobResult = aa.batchJob.getJobID()
@@ -68,7 +70,9 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 
-
+var currentUserID = "ADMIN";
+var useAppSpecificGroupName = false;
+var servProvCode = aa.getServiceProviderCode();
 /*----------------------------------------------------------------------------------------------------/
 |
 | End: BATCH PARAMETERS
@@ -78,22 +82,9 @@ var startDate = new Date();
 var timeExpired = false;
 
 
-var mailFrom = lookup("ACA_EMAIL_TO_AND_FROM_SETTING","RENEW_LICENSE_AUTO_ISSUANCE_MAILFROM");
-var acaSite = lookup("ACA_CONFIGS","ACA_SITE");
-acaSite = acaSite.substr(0,acaSite.toUpperCase().indexOf("/ADMIN"));
-
+var startTime = startDate.getTime();			// Start timer
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
 
-var AInfo = new Array();
-
-var appGroup = "Licenses";
-var appTypeType = "Cultivator";
-var appSubtype = "License";
-var appCategory = "Renewal";
-var appType = appGroup + "/" + appTypeType + "/" + appSubtype + "/" + appCategory;
-arrProcessAppList = "Renewal";
-
-//logDebug("Historical Date Check: " + dateCheck);
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
@@ -101,108 +92,128 @@ arrProcessAppList = "Renewal";
 /-----------------------------------------------------------------------------------------------------*/
 
 logDebug("Start of Job");
-logDebug("********************************");
 
 if (!timeExpired) mainProcess();
 
 logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
 
 
-
 /*------------------------------------------------------------------------------------------------------/
 | <===========END=Main=Loop================>
 /-----------------------------------------------------------------------------------------------------*/
 
-function mainProcess(){
+
+function mainProcess()
+	{
+	var capModel = aa.cap.getCapModel().getOutput();
+	var count =0;
+	var waterMatch =0;
+	var waterMismatch =0;
+	var premMatch =0;
+	var premMisMatch =0;
+	var recordArray = [];
+	var premRecordArray = [];
+	//Get the Permits from the system 
+	var emptyGISArray=new Array();
+	capTypeModel = capModel.getCapType();
+	capTypeModel.setGroup("Licenses");
+	capTypeModel.setType("Cultivator");
+	capTypeModel.setSubType("Amendment");
+	capTypeModel.setCategory("Science");
+	capModel.setCapType(capTypeModel);
+
 	
-	var tmpArray = [];
-	var tmpCount = 0;
-	
-	var getCapResult = aa.cap.getByAppType(appGroup,appTypeType);
-		
-	if (getCapResult.getSuccess()){
-		var apsArray = getCapResult.getOutput();
-		for (aps in apsArray){
-			var myCap = aa.cap.getCap(apsArray[aps].getCapID()).getOutput();
-			b1CapId = apsArray[aps].getCapID();
-			var capIDString = b1CapId.getCustomID(); 
-			
-			appTypeResult = myCap.getCapType();   // Get CapTypeModel from CapScriptModel
-			appTypeString = appTypeResult.toString();
-			appTypeArray = appTypeString.split("/");	
-			
-			if (appTypeArray[3] != "Renewal") {
-				continue;
-			}else{	
-				if (capIDString.indexOf("TMP") > 0){
-					var renCap = aa.cap.getCap(b1CapId).getOutput();
-					if (renCap.getCapModel().getAuditStatus() == "A"){
-						var capResults = aa.cap.getCapID(capIDString);
-						if (capResults.getSuccess()){
-							var capIdModel=capResults.getOutput();	
-							logDebug(capIDString + " " + capResults + " " + capIdModel);
-							var licNum = getAppSpecific("License Number",b1CapId);
-							if (!matches(licNum,null,undefined,"")){
-								var parCapId = getApplication(licNum);
-								logDebug("parCapId: " + parCapId);
-								var b1ExpResultRec=aa.expiration.getLicensesByCapID(parCapId);
-								
-								if(b1ExpResultRec.getSuccess()){
-									b1ExpResult=b1ExpResultRec.getOutput();
-									var b1Status = b1ExpResult.getExpStatus();
-									logDebug("Record Number: : " + parCapId.getCustomID() + " Exp Status" + b1Status);
-									if (b1Status == "About to Expire"){
-										renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parCapId);
-										if (renewalCapProject != null) {
-											var renCapId = renewalCapProject.getCapID();
-											var renCapIDString = String(renCapId);
-											var b1CapIdString = String(b1CapId);
-											var renewalCap = aa.cap.getCap(renCapId).getOutput();
-											var capIdStatusClass = getCapIdStatusClass(renCapId);
-											if (capIdStatusClass == "INCOMPLETE EST"){
-												logDebug("renCapIDString: " + renCapIDString + " " + typeof(renCapIDString) + " capIDString: " + b1CapIdString + " " + typeof(b1CapIdString));
-												if (renCapIDString != b1CapIdString){
-													if (capIDString.indexOf("-R") == -1){
-														tmpArray.push(capIDString);
-														tmpCount++;
-														aa.cap.updateAccessByACA(b1CapId,"N");
-														renCap.getCapModel().setAuditStatus("I");
-														aa.cap.editCapByPK(renCap.getCapModel());
-														logDebug("Removed TMP Record from " + parCapId.getCustomID());
-													}
-												}
-											}
-										}else{
-											if (capIDString.indexOf("-R") == -1){
-												tmpArray.push(capIDString);
-												tmpCount++;
-												aa.cap.updateAccessByACA(b1CapId,"N");
-												renCap.getCapModel().setAuditStatus("I");
-												aa.cap.editCapByPK(renCap.getCapModel());
-												logDebug("Removed TMP Record from " + parCapId.getCustomID());
-											}
-										}
-											
-									}else{
-										if (capIDString.indexOf("-R") == -1){
-											tmpArray.push(capIDString);
-											tmpCount++;
-											aa.cap.updateAccessByACA(b1CapId,"N");
-											renCap.getCapModel().setAuditStatus("I");
-											aa.cap.editCapByPK(renCap.getCapModel());
-											logDebug("Removed TMP Record from " + parCapId.getCustomID());
-										}
-									}	
+	var typeResult = aa.cap.getCapListByCollection(capModel, null, null, null, null, null, emptyGISArray);
+	if (typeResult.getSuccess())
+	{
+		vCapList = typeResult.getOutput();
+	}
+	else
+	{
+		logMessage("ERROR", "ERROR: Getting Records, reason is: " + typeResult.getErrorType() + ":" + typeResult.getErrorMessage());
+	}
+
+
+	for (x in vCapList) {
+		//var capId = vCapList[x].getCapID();
+		capId = aa.cap.getCapID(vCapList[x].getCapID().getID1(),vCapList[x].getCapID().getID2(),vCapList[x].getCapID().getID3()).getOutput();
+		var altID = capId.getCustomID();
+		cap = aa.cap.getCap(capId).getOutput();	
+		appTypeResult = cap.getCapType();	
+		appTypeString = appTypeResult.toString();	
+		appTypeArray = appTypeString.split("/");
+		var capStatus = cap.getCapStatus();
+		pIds = getParents("Licenses/Cultivator/License/License");
+		if(!matches(pIds,null,'',undefined)) {
+			parentCapId = pIds[0];
+			parentAltId = parentCapId.getCustomID();
+			if (!matches(capStatus,"Amendment Rejected","Amendment Approved","Transition Amendment Approved")){
+				loadASITables();
+				count++
+				var parTblDef = loadASITable("SOURCE OF WATER SUPPLY", parentCapId);
+				if(typeof(SOURCEOFWATERSUPPLY) == "object" && typeof(parTblDef) == "object"){
+					if(parTblDef.length != SOURCEOFWATERSUPPLY.length){
+						logDebug(parentAltId + " License Water Source Table " + parTblDef.length);
+						logDebug(altID + " Amendment Water Source table " + SOURCEOFWATERSUPPLY.length);
+						continue;
+					}else{
+						for(i=0; i < parTblDef.length; i++){
+
+								if (String(parTblDef[i]["Type of Water Supply"]).equals(String(SOURCEOFWATERSUPPLY[i]["Type of Water Supply"])) &&
+									String(parTblDef[i]["Name of Supplier"]).equals(String(SOURCEOFWATERSUPPLY[i]["Name of Supplier"])) &&
+									String(parTblDef[i]["Geographical Location Coordinates"]).equals(String(SOURCEOFWATERSUPPLY[i]["Geographical Location Coordinates"])) &&
+									String(parTblDef[i]["Authorized Place of Use"]).equals(String(SOURCEOFWATERSUPPLY[i]["Authorized Place of Use"])) &&
+									String(parTblDef[i]["Maximum Amount of Water Delivered"]).equals(String(SOURCEOFWATERSUPPLY[i]["Maximum Amount of Water Delivered"]))&&
+									String(parTblDef[i]["Total Square Footage"]).equals(String(SOURCEOFWATERSUPPLY[i]["Total Square Footage"]))&&
+									String(parTblDef[i]["Total Storage Capacity"]).equals(String(SOURCEOFWATERSUPPLY[i]["Total Storage Capacity"])) &&
+									String(parTblDef[i]["Description"]).equals(String(SOURCEOFWATERSUPPLY[i]["Description"])) &&
+									String(parTblDef[i]["Diversion Number"]).equals(String(SOURCEOFWATERSUPPLY[i]["Diversion Number"])) &&
+									String(parTblDef[i]["Water Source"]).equals(String(SOURCEOFWATERSUPPLY[i]["Water Source"]))){
+										waterMatch++;
+								}else{
+									logDebug(altID + ": " + [i] + ": " + String(SOURCEOFWATERSUPPLY[i]["Type of Water Supply"]) + ": " + String(SOURCEOFWATERSUPPLY[i]["Name of Supplier"]) + ": " + String(SOURCEOFWATERSUPPLY[i]["Geographical Location Coordinates"]) + ": " + String(SOURCEOFWATERSUPPLY[i]["Authorized Place of Use"]) + ": " + String(SOURCEOFWATERSUPPLY[i]["Maximum Amount of Water Delivered"]) + ": " + String(SOURCEOFWATERSUPPLY[i]["Total Square Footage"]) + ": " + String(SOURCEOFWATERSUPPLY[i]["Total Storage Capacity"]) + ": " + String(SOURCEOFWATERSUPPLY[i]["Description"]) + ": " + String(SOURCEOFWATERSUPPLY[i]["Diversion Number"]) + ": " + String(SOURCEOFWATERSUPPLY[i]["Water Source"]) + ": " + parentAltId + ": " + String(parTblDef[i]["Type of Water Supply"]) + ": " + String(parTblDef[i]["Name of Supplier"]) + ": " + String(parTblDef[i]["Geographical Location Coordinates"]) + ": " + String(parTblDef[i]["Authorized Place of Use"]) + ": " + String(parTblDef[i]["Maximum Amount of Water Delivered"]) + ": " + String(parTblDef[i]["Total Square Footage"]) + ": " + String(parTblDef[i]["Total Storage Capacity"]) + ": " + String(parTblDef[i]["Description"]) + ": " + String(parTblDef[i]["Diversion Number"]) + ": " + String(parTblDef[i]["Water Source"]) + "; ");
+									waterMismatch++;
+									recordArray.push(altID);
 								}
 							}
 						}
+					}			
+					
+					var premAddrDef = loadASITable("PREMISES ADDRESSES", parentCapId);
+					if(typeof(PREMISESADDRESSES) == "object" && typeof(premAddrDef) == "object"){
+						if(premAddrDef.length != PREMISESADDRESSES.length){
+							logDebug(parentAltId + " License Premise Address Table " + premAddrDef.length);
+							logDebug(altID + " Amendment Premise Address table " + PREMISESADDRESSES.length);
+							continue;
+						}else{
+							for(xx=0; xx < premAddrDef.length; xx++){
+									if (String(premAddrDef[xx]["APN"]).equals(String(PREMISESADDRESSES[xx]["APN"])) &&
+									String(premAddrDef[xx]["Premises Address"]).equals(String(PREMISESADDRESSES[xx]["Premises Address"])) &&
+									String(premAddrDef[xx]["Premises City"]).equals(String(PREMISESADDRESSES[xx]["Premises City"])) &&
+									String(premAddrDef[xx]["Premises State"]).equals(String(PREMISESADDRESSES[xx]["Premises State"])) &&
+									String(premAddrDef[xx]["Premises Zip"]).equals(String(PREMISESADDRESSES[xx]["Premises Zip"])) &&
+									String(premAddrDef[xx]["Premises County"]).equals(String(PREMISESADDRESSES[xx]["Premises County"])) &&
+									String(premAddrDef[xx]["Type of Possession"]).equals(String(PREMISESADDRESSES[xx]["Type of Possession"])) &&
+									String(premAddrDef[xx]["Owner Address"]).equals(String(PREMISESADDRESSES[xx]["Owner Address"])) &&
+									String(premAddrDef[xx]["Owner Phone"]).equals(String(PREMISESADDRESSES[xx]["Owner Phone"]))){
+										premMatch++;
+								}else{
+									premMisMatch++;
+									logDebug(altID + ": " + [xx] + ": " + String(PREMISESADDRESSES[xx]["Premises Address"])+ ": " + String(PREMISESADDRESSES[xx]["Premises City"]) + ": " + String(PREMISESADDRESSES[xx]["Premises State"]) + ": " + String(PREMISESADDRESSES[xx]["Premises Zip"]) + ": " + String(PREMISESADDRESSES[xx]["Premises County"]) + ": " + String(PREMISESADDRESSES[xx]["Type of Possession"]) + ": " + String(PREMISESADDRESSES[xx]["Type of Possession"]) + ": " + String(PREMISESADDRESSES[xx]["Owner Address"]) + ": " + String(PREMISESADDRESSES[xx]["Owner Phone"]) + ": " + parentAltId + ": " + String(premAddrDef[xx]["Premises Address"])+ ": " + String(premAddrDef[xx]["Premises City"]) + ": " +
+									String(premAddrDef[xx]["Premises State"]) + ": " + String(premAddrDef[xx]["Premises Zip"]) + ": " + String(premAddrDef[xx]["Premises County"]) +": " + String(premAddrDef[xx]["Type of Possession"]) + ": " + String(premAddrDef[xx]["Type of Possession"]) + ": " + String(premAddrDef[xx]["Owner Address"]) + ": " + String(premAddrDef[xx]["Owner Phone"]) + "; ");
+									premRecordArray.push(altID);
+								}
+							}					
+						}			
 					}
 				}
 			}
 		}
+		logDebug("Number of Qualified Records: " + count);
+		logDebug("Number of Water Source Mismatches: " + waterMismatch);
+		logDebug("Number of Water Source Matches: " + waterMatch);
+		logDebug("Number of Prem Address Matches: " + premMatch);
+		logDebug("Number of Prem Address Mismatches: " + premMisMatch);
+		logDebug("Water Source Records: " + recordArray);
+		logDebug("Premises Records: " + premRecordArray);
 	}
-	logDebug("Qualifying Records: " + tmpCount);
-	logDebug("TMPS Deleted: " + tmpArray);
-}
-
-

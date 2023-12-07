@@ -137,6 +137,9 @@ try {
 			var altId = capId.getCustomID();
 			cap = aa.cap.getCap(capId).getOutput();
 			capStatus = cap.getCapStatus();
+			AInfo = new Array();
+			loadAppSpecific(AInfo);
+			
 			if(capStatus == "Expired") {
 				var vLicenseObj = new licenseObject(altId);
 				var licExp = vLicenseObj.b1ExpDate;
@@ -148,26 +151,39 @@ try {
 					continue;
 				}
 			}
-			if(capStatus == "Inactive") {
+			if(capStatus == "Cancelled") {
+				var cDate = AInfo["Conversion Date"];
+				var diff = getDateDiff(cDate);
+				if(diff < 30) {
+					logDebug(altId + ": Ignored, Cancelled within last 30 days");
+					expWithinNbrDays.push(altId);
+					expWithinNbrDaysCount++;
+					continue;
+				}
+			}
+			if(capStatus == "Inactive" || capStatus == "Cancelled") {
 				var workflowResult = aa.workflow.getTasks(capId);
+				var statusDate = "";
 				if (workflowResult.getSuccess()){
 					var wfObj = workflowResult.getOutput();
 					for (i in wfObj) {
 						fTask = wfObj[i];
 						wfStatus = String(fTask.getDisposition());
 						if(wfStatus=="Inactive"){
-							var statusDate = fTask.getStatusDate();
-							var statusDiff = getDateDiff(statusDate);
-							if(statusDiff < 30) {
-								logDebug(altId + ": Ignored, Inactive Status set within last 30 days");
-								inactiveWithinNbrDays.push(altId);
-								inactiveWithinNbrDaysCount++;
-								continue;
-							}
+							statusDate = fTask.getStatusDate();
 						}
 					}
 				}else{ 
 					logDebug("**ERROR: Failed to get workflow object: " + workflowResult.getErrorMessage()); 
+				}
+				if (!matches(statusDate,null,undefined,"")){
+					var statusDiff = getDateDiff(statusDate);
+					if(statusDiff < 30) {
+						logDebug(altId + ": Ignored, Inactive Status set within last 30 days");
+						inactiveWithinNbrDays.push(altId);
+						inactiveWithinNbrDaysCount++;
+						continue;
+					}
 				}
 			}
 			

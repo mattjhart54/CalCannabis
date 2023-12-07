@@ -128,46 +128,9 @@ function getExpirationStatus(capId) {
         return false;
     }
 }
-function convertContactAddressModelArr(contactAddressScriptModelArr)
-{
-	var contactAddressModelArr = null;
-	if(contactAddressScriptModelArr != null && contactAddressScriptModelArr.length > 0)
-	{
-		contactAddressModelArr = aa.util.newArrayList();
-		for(loopk in contactAddressScriptModelArr)
-		{
-			contactAddressModelArr.add(contactAddressScriptModelArr[loopk].getContactAddressModel());
-		}
-	}	
-	return contactAddressModelArr;
-}
- function getPeople(itemCap){
-	capPeopleArr = null;
-	var s_result = aa.people.getCapContactByCapID(itemCap);
-	if(s_result.getSuccess()){
-		capPeopleArr = s_result.getOutput();
-		if(capPeopleArr != null || capPeopleArr.length > 0){
-			for (loopk in capPeopleArr)	{
-				var capContactScriptModel = capPeopleArr[loopk];
-				var capContactModel = capContactScriptModel.getCapContactModel();
-				var peopleModel = capContactScriptModel.getPeople();
-				var contactAddressrs = aa.address.getContactAddressListByCapContact(capContactModel);
-				if (contactAddressrs.getSuccess()){
-					var contactAddressModelArr = convertContactAddressModelArr(contactAddressrs.getOutput());
-					peopleModel.setContactAddressList(contactAddressModelArr);    
-				}
-			}
-		}else{
-			capPeopleArr = null;
-		}
-	}else{
-		capPeopleArr = null;	
-	}
-	return capPeopleArr;
-}
 
-function getContactByType(conType, itemCap) {
-    var contactArray = getPeople(itemCap);
+function getContactByType(conType, capId) {
+    var contactArray = getPeople(capId);
 
     for (thisContact in contactArray) {
         if ((contactArray[thisContact].getPeople().contactType).toUpperCase() == conType.toUpperCase())
@@ -402,14 +365,6 @@ if (fName=="officers"){
 return fValue ;
             
 }
-
-function isUnicode(str) {
-	for (var i = 0, n = str.length; i < n; i++) {
-		if (str.charCodeAt( i ) > 127) { return true; }
-	}
-return false;
-}
-
 function loadASITable(tname) {
 
  	//
@@ -468,59 +423,15 @@ function loadASITable(tname) {
 	  }
 	  return tempArray;
 }
-function activeEmailAddress(eMail){
-	var resArr = new Array();
-	var servProvCode=aa.getServiceProviderCode();
-	var conn = aa.db.getConnection();
-	var selectString = "select DISTINCT G1_EMAIL from G3CONTACT WHERE G1_EMAIL=?";
-	var sStmt = conn.prepareStatement(selectString);
-	sStmt.setString(1, eMail);
-	var rSet = sStmt.executeQuery();
-	while (rSet.next()) {
-		var emailResults= rSet.getString("G1_EMAIL");
-		resArr.push(emailResults);
+
+function getApplication(appNum) 
+//
+// returns the capId object of an application
+//
+	{
+	var getCapResult = aa.cap.getCapID(appNum);
+	if (getCapResult.getSuccess())
+		return getCapResult.getOutput();
+	else
+		{ logDebug( "**ERROR: getting cap id (" + appNum + "): " + getCapResult.getErrorMessage()) }
 	}
-	sStmt.close();
-	//return resArr;
-	
-
-	return resArr;
-}
-function getParents4Cap(pAppType,itemCap) {
-	// returns the capId array of all parent caps
-	//Dependency: appMatch function
-	//
-
-	var i = 1;
-	while (true) {
-		if (!(aa.cap.getProjectParents(itemCap, i).getSuccess()))
-			break;
-
-		i += 1;
-	}
-	i -= 1;
-
-	getCapResult = aa.cap.getProjectParents(itemCap, i);
-	myArray = new Array();
-
-	if (getCapResult.getSuccess()) {
-		parentArray = getCapResult.getOutput();
-
-		if (parentArray.length) {
-			for (x in parentArray) {
-				if (pAppType != null) {
-					//If parent type matches apType pattern passed in, add to return array
-					if (appMatch(pAppType, parentArray[x].getCapID()))
-						myArray.push(parentArray[x].getCapID());
-				} else
-					myArray.push(parentArray[x].getCapID());
-			}
-
-			return myArray;
-		} else {
-			return null;
-		}
-	} else {
-		return null;
-	}
-}

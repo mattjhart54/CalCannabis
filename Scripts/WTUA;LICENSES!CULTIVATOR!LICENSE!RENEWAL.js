@@ -1,4 +1,3 @@
-showDebug = true;
 try {
 	if (matches(wfTask,"Renewal Review","Annual Renewal Review","Provisional Renewal Review") && wfStatus == "Approved") {
 		var event = "WTUA";

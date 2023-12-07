@@ -14,11 +14,11 @@
 | START User Configurable Parameters
 |
 /------------------------------------------------------------------------------------------------------*/
-var showMessage = true; // Set to true to see results in popup window
-var showDebug = true; // Set to true to see debug messages in popup window
+var showMessage = false; // Set to true to see results in popup window
+var showDebug = false; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
-var cancel = true;
+var cancel = false;
 var SCRIPT_VERSION  = 3; 
 var useCustomScriptFile = true;  	// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
@@ -73,10 +73,8 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 }
 var cap = aa.env.getValue("CapModel");
 var capId = cap.getCapID();
-var capIDModel = aa.cap.getCapIDModel(capId.getID1(), capId.getID2(), capId.getID3()).getOutput();
 var AInfo = new Array(); 					// Create array for tokenized variables
 loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
-loadASITables4ACA_corrected();
 /*------------------------------------------------------------------------------------------------------/
 | <===========Main=Loop================>
 |
@@ -101,15 +99,11 @@ try {
 		
 		}
 	}
-	var deleteIDsArray = [];
+	
 	if (typeof(OWNERS) == "object"){
-		logDebug("within");
-		for (var j = 0; j < OWNERS.length; j++) {
-			deleteIDsArray.push(j);
+		if(OWNERS.length > 0){
+			removeASITable("OWNERS", capId);
 		}
-	}
-	if (deleteIDsArray.length > 0){
-		deletedAppSpecificTableInfors("OWNERS", capIDModel, deleteIDsArray);
 	}
 	
 	asit = cap.getAppSpecificTableGroupModel();
@@ -119,7 +113,11 @@ try {
 	}	
 	
 
-}catch (err) { logDebug("**ERROR : " + err); }
+}catch (err){
+	logDebug("A JavaScript Error occurred:ACA_AFTER_CRR_POPULATE_OWNERS_TABLE: " + err.message);
+	logDebug(err.stack);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_AFTER_CRR_POPULATE_OWNERS_TABLE: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+}
 
 
 /*------------------------------------------------------------------------------------------------------/

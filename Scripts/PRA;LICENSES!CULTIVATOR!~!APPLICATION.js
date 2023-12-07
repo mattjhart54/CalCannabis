@@ -1,4 +1,3 @@
-
 // mhart 100918 Story 5738 and 5739 Changes to generate correct approval letter based on CAP status
 try{
 	if((balanceDue<=0 && matches(capStatus, "License Issued", "Provisional License Issued")) || AInfo['Deferral Approved'] == "CHECKED"){
@@ -119,7 +118,7 @@ try {
 try{
 	var dishonoredPayment = verifyFeePayment("LIC_NSF", PaymentDate);
 	if (dishonoredPayment){
-		email("Payments@cannabis.ca.gov", "noreply@cannabis.ca.gov", "Dishonored Payment Fee paid on " + capId.getCustomID(), "This serves as notice that a payment has been made on record " + capId.getCustomID() + " that includes a dishonored payment fee.") 
+		email("michael@reed-consults.com", "noreply@cannabis.ca.gov", "Dishonored Payment Fee paid on " + capId.getCustomID(), "This serves as notice that a payment has been made on record " + capId.getCustomID() + " that includes a dishonored payment fee.") 
 	}
 }catch(err){
 	logDebug("An error has occurred in PRA:LICENSES/CULTIVATOR/* /APPLICATION: NSF Paid: " + err.message);

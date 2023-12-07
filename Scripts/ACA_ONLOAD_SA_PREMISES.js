@@ -196,8 +196,8 @@ try{
 			editAppSpecific4ACA("G50 Update",PInfo["Generator Under 50 HP"]);
 			useAppSpecificGroupName = true; 
 			var powerOther = getAppSpecific("POWER SOURCE.Other",licCapId);
+			editAppSpecific4ACA("POWER SOURCE.Other",powerOther);			
 			useAppSpecificGroupName = false;
-			editAppSpecific4ACA("Other",powerOther);
 			editAppSpecific4ACA("Other Update",powerOther);
 			editAppSpecific4ACA("Other Source Description",PInfo["Other Source Description"]);
 			editAppSpecific("OSD Update",PInfo["Other Source Description"]);

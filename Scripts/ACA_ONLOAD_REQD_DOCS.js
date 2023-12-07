@@ -1,13 +1,30 @@
+
+
+
+/*------------------------
+	THIS PAGE FLOW IS NOT BEING USED AND SHOULD BE REMOVED
+------------------------*/
+
+
+
+
+
+
+
+
+
+
+
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_BEFORE_Renewal_SUBMITTAL.JS
-| Event   : ACA Page Flow onload attachments component
+| Program : ACA_ONLOAD_REQD_DOCS.js
+| Event   : ACA Page Flow On-Load
 |
 | Usage   : Master Script by Accela.  See accompanying documentation and release notes.
 |
-| Client  : N/A
+| Client  : CalCannabis Licensing
 | Action# : N/A
 |
-| Notes   :
+| Notes   :  This script populates the custom list "tblAttach" with the required tblAttach
 |
 /------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------/
@@ -22,14 +39,17 @@ var showDebug = false; // Set to true to see debug messages in popup window
 var useAppSpecificGroupName = false; // Use Group name when populating App Specific Info Values
 var useTaskSpecificGroupName = false; // Use Group name when populating Task Specific Info Values
 var cancel = false;
-var SCRIPT_VERSION = 3;
+var useCustomScriptFile = true;  			// if true, use Events->Custom Script, else use Events->Scripts->INCLUDES_CUSTOM
 /*------------------------------------------------------------------------------------------------------/
 | END User Configurable Parameters
 /------------------------------------------------------------------------------------------------------*/
 var startDate = new Date();
 var startTime = startDate.getTime();
+var message = ""; // Message String
 var debug = ""; // Debug String
 var br = "<BR>"; // Break Tag
+var currentUserID = aa.env.getValue("CurrentUserID");
+
 var useSA = false;
 var SA = null;
 var SAScript = null;
@@ -44,15 +64,14 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 }
 
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA));
 	eval(getScriptText(SAScript, SA));
 } else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS","CALCANNABIS",true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM"));
+eval(getScriptText("INCLUDES_CUSTOM",null,useCustomScriptFile));
+
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
@@ -70,46 +89,38 @@ function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	}
 }
 
+
 var cap = aa.env.getValue("CapModel");
-var parentId = cap.getParentCapID();
+//var parentId = cap.getParentCapID();
 
 // page flow custom code begin
 
 try {
-	//mhart: 012320: story 6378: check License cases before submittal
-	var AInfo = [];
-	loadAppSpecific4ACA(AInfo);
-	var licenseId = AInfo["License Number"];
-	var licId = aa.cap.getCapID(licenseId);
-	licId = licId.getOutput();
-	childIds  = getChildren("Licenses/Cultivator/License Case/*",licId);
-	holdId = capId;
-	var caseHold = false
-	for(c in childIds) {
-		capId = childIds[c];
-		cCap = aa.cap.getCap(capId).getOutput();
-		cStatus = cCap.getCapStatus();
-		cInfo = new Array;
-		loadAppSpecific(cInfo);
-		logDebug(cInfo["Case Renewal Type"] + " - " + cStatus);
-		if(cInfo["Case Renewal Type"] == "Renewal Hold") 
-			if(!matches(cStatus, "Resolved", "Closed")) {
-				caseHold = true;
-				break;
-			}
+    var capModel = aa.env.getValue("CapModel");     
+    capId = capModel.getCapID();
+	reqDocs = getReqdDocs("Application");
+	var tblRow = [];
+	var tblNewAttach = [];
+	if(reqDocs.length>0){
+		for (x in reqDocs){
+			var docName = reqDocs[x];
+			var tblRow = [];
+			tblRow["Document Type"] = new asiTableValObj("Document Type",""+docName, "Y"); 
+			tblRow["Document Description"]= new asiTableValObj("Document Description",""+lookup("LIC_CC_ATTACHMENTS", docName), "Y"); 
+			tblRow["Uploaded"] = new asiTableValObj("Uploaded","UNCHECKED", "Y"); 
+			tblRow["Status"] = new asiTableValObj("Status","Not Submitted", "Y"); ; 
+			tblNewAttach.push(tblRow);
+		}
+		removeASITable("ATTACHMENTS"); 
+		asit = cap.getAppSpecificTableGroupModel();
+		addASITable4ACAPageFlow(asit,"ATTACHMENTS",tblNewAttach);
 	}
-	capid = holdId;
-	if(caseHold) {
-		cancel = true;
-		showMessage = true;
-		logMessage("The renewal of this license has been placed on hold. Please contact the Department of Cannabis Control by calling 1 (844) 61-CA-DCC (1-844-612-2322) or by sending an email to licensing@cannabis.ca.gov.");
-	}	
-			
-}catch (err){
-	logDebug("A JavaScript Error occurred:ACA_BEFORE_APP_POWER_SUPPLY: " + err.message);
+} catch (err) {
+	logDebug("An error has occurred in ACA_ONLOAD_REQD_DOCS: Main function: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_APP_POWER_SUPPLY: " + startDate, "capId: " + capId + br + err.message + br + err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "A JavaScript Error occurred: ACA_BEFORE_REQD_DOCS: " + startDate, "capId: " + capId + ": " + err.message + ": " + err.stack);
 }
+
 // page flow custom code end
 
 

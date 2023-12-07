@@ -1,8 +1,10 @@
 try {
 	//Copy App Specific
 	var sourceRec = getAppSpecific("Record Number",capId);
+	sourceCapId = getApplication(sourceRec);
 	var recordASIGroup = aa.appSpecificInfo.getByCapID(capId);
 	if (recordASIGroup.getSuccess()){
+		useAppSpecificGroupName = true;
 		var recordASIGroupArray = recordASIGroup.getOutput();
 		for (i in recordASIGroupArray) {
 			var group = recordASIGroupArray[i];
@@ -10,23 +12,28 @@ try {
 			var recordField = String(group.getCheckboxDesc());
 			var subGroup = String(group.getCheckboxType());
 			var fieldValue = String(group.getChecklistComment());
-
 			if (recordField.substring(0, 5) == "Copy_"){
-				sourceCapId = getApplication(sourceRec);
-				var editField = recordField.substring(5);
-				var sourceValue = getAppSpecific(editField,sourceCapId);
-				editAppSpecific(editField,sourceValue,capId);
+				if (recordField == "Copy_Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on"){
+					var sourceValue = getAppSpecific(subGroup + "." + "Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceCapId);
+					editAppSpecific(subGroup + "." + "Is a mitigation(s)/Employee Protection Plan supplied, if hazardous materials were identified on site",sourceValue,capId);
+				}else{
+					var editField = subGroup + "." + recordField.substring(5);
+					var sourceValue = getAppSpecific(editField,sourceCapId);
+					if (!matches(sourceValue,null,undefined,"")){
+						editAppSpecific(editField,sourceValue,capId);
+					}
+				}
 			}
 		}
 	}
-	
+	useAppSpecificGroupName = false;
 	if(matches(appTypeArray[3],"License","Application","Science Amendment")) {
 		if(appTypeArray[3] == "Science Amendment")
 			assignTask("SA Copy Review",currentUserID);
 		if(appTypeArray[3] == "License")
 			assignTask("Sci Lic Copy Review",currentUserID);
 		if(appTypeArray[3] == "Application")
-			assignTask("Sci App  Copy Review",currentUserID);
+			assignTask("Sci App Copy Review",currentUserID);
 // Science Amendment records do not have the Legal Business Name as a custom field so use the License record to select records
 		if(appTypeArray[3] == "Science Amendment") {
 			srcRec = AInfo["Record Number"];

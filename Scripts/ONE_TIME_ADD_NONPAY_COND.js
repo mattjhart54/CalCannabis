@@ -22,13 +22,13 @@ SCRIPT_VERSION = 2.0
 eval(getMasterScriptText("INCLUDES_ACCELA_FUNCTIONS"));
 eval(getScriptText("INCLUDES_BATCH"));
 eval(getMasterScriptText("INCLUDES_CUSTOM"));
-eval(getScriptText("INCLUDES_ACCELA_GLOBALS"));
+
 
 function getScriptText(vScriptName) {
-	vScriptName = vScriptName.toUpperCase();
-	var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
-	var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(), vScriptName, "ADMIN");
-	return emseScript.getScriptText() + "";
+vScriptName = vScriptName.toUpperCase();
+var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
+var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(), vScriptName, "ADMIN");
+return emseScript.getScriptText() + "";
 }
 
 function getMasterScriptText(vScriptName) {
@@ -45,6 +45,13 @@ function getMasterScriptText(vScriptName) {
 /------------------------------------------------------------------------------------------------------*/
 showDebug = "Y";
 
+var startDate = new Date();
+var startJSDate = new Date();
+startJSDate.setHours(0,0,0,0);
+var timeExpired = false;
+var useAppSpecificGroupName = false;
+
+var startTime = startDate.getTime();			// Start timer
 sysDate = aa.date.getCurrentDate();
 batchJobResult = aa.batchJob.getJobID()
 batchJobName = "" + aa.env.getValue("BatchJobName");
@@ -67,12 +74,6 @@ else
 |
 /------------------------------------------------------------------------------------------------------*/
 
-var altID = getParam("recordNumber");							
-var firstName = getParam("ownerFirstName");
-var lastName = getParam("ownerLastName");
-var ownerEmail = getParam("ownerEmail");
-var emailAddress = getParam("emailAddress");
-
 
 /*----------------------------------------------------------------------------------------------------/
 |
@@ -88,6 +89,9 @@ var acaSite = lookup("ACA_CONFIGS","ACA_SITE");
 acaSite = acaSite.substr(0,acaSite.toUpperCase().indexOf("/ADMIN"));
 
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
+var sysDate = aa.date.getCurrentDate();
+var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(),sysDate.getDayOfMonth(),sysDate.getYear(),"");
+var currentUserID = "ADMIN";
 
 
 //logDebug("Historical Date Check: " + dateCheck);
@@ -104,52 +108,27 @@ if (!timeExpired) mainProcess();
 
 logDebug("End of Job: Elapsed Time : " + elapsed() + " Seconds");
 
-if (emailAddress.length)
-	aa.sendMail("noreply@accela.com", emailAddress, "", batchJobName + " Results", emailText);
 
 
 /*------------------------------------------------------------------------------------------------------/
 | <===========END=Main=Loop================>
 /-----------------------------------------------------------------------------------------------------*/
-function mainProcess() {
+
+function mainProcess(){
 	
-	try{
-		
-		if (String(altID.substr(0,3)) == "LCR"){
-			capId = getApplication(altID);
-			var multTable = new Array(); 
-			var lineFound = false;
-
-			ownerInfo = loadASITable("OWNERS",capId);
-			if (ownerInfo){
-				for (var ii in ownerInfo) {
-					if(String(ownerInfo[ii]["First Name"] + ownerInfo[ii]["Last Name"] + ownerInfo[ii]["Email Address"]) != firstName + lastName + ownerEmail) {
-						row = new Array();
-						row["First Name"] = ownerInfo[ii]["First Name"];
-						row["Last Name"] = ownerInfo[ii]["Last Name"];
-						row["Email Address"] = ownerInfo[ii]["Email Address"];
-						row["Percent Ownership"] = ownerInfo[ii]["Percent Ownership"];
-						multTable.push(row);
-					}else{
-						lineFound = true;
-					}
-				}				
-			}
-			if (lineFound){
-				if (multTable.length > 0){
-					removeASITable("OWNERS");
-					addASITable("OWNERS", multTable,capId);
-				}
-			}else{
-				logDebug("Defined Criteria not found in the indicated record");
-			}
-		}else{
-			logDebug("Batch must be run against a License Conversion Record");
+	conArray = ['LCA18-0000146','LCA19-0000039','LCA19-0000378','LCA19-0000430','LCA20-0000004','LCA20-0000021'];
+	
+	
+	
+	for (x in conArray){
+		capId = getApplication(conArray[x]);
+		altId = capId.getCustomID();
+		logDebug("altId: " + altId);
+		if(!appHasCondition("Application Condition","Applied","Non-Payment - Provisional Deadline",null)){
+			effDate = dateAdd(sysDateMMDDYYYY,3);
+			addStdConditionEffDate("Application Condition","Non-Payment - Provisional Deadline",effDate);
 		}
-
-	}catch (err){
-		logDebug("ERROR: " + err.message + " In " + batchJobName);
-		logDebug("Stack: " + err.stack);
 	}
-
 }
+	
+	

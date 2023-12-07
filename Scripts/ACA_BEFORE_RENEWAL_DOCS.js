@@ -77,7 +77,7 @@ var parentId = cap.getParentCapID();
 // page flow custom code begin
 
 try {
-				AInfo= [];
+		AInfo= [];
 		loadAppSpecific4ACA(AInfo);
 		docMissing = true;
 		docAttached = false;

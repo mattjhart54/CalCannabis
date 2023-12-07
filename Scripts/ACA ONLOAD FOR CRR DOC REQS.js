@@ -58,35 +58,31 @@ if (bzr.getSuccess() && bzr.getOutput().getAuditStatus() != "I") {
 	}
 	
 if (SA) {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS", SA,true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", SA, true));
-	eval(getScriptText(SAScript, SA));
-} else {
-	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",null,true));
-	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", null,true));
-}
-
-eval(getScriptText("INCLUDES_CUSTOM", null,true));
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS",SA));
+	eval(getScriptText(SAScript,SA));
+	}
+else {
+	eval(getScriptText("INCLUDES_ACCELA_FUNCTIONS"));
+	}
+	
+eval(getScriptText("INCLUDES_CUSTOM"));
 
 if (documentOnly) {
 	doStandardChoiceActions(controlString,false,0);
 	aa.env.setValue("ScriptReturnCode", "0");
 	aa.env.setValue("ScriptReturnMessage", "Documentation Successful.  No actions executed.");
 	aa.abortScript();
-}
+	}
 
-function getScriptText(vScriptName, servProvCode, useProductScripts) {
-	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
-	vScriptName = vScriptName.toUpperCase();
+function getScriptText(vScriptName){
+	var servProvCode = aa.getServiceProviderCode();
+	if (arguments.length > 1) servProvCode = arguments[1]; // use different serv prov code
+	vScriptName = vScriptName.toUpperCase();	
 	var emseBiz = aa.proxyInvoker.newInstance("com.accela.aa.emse.emse.EMSEBusiness").getOutput();
 	try {
-		if (useProductScripts) {
-			var emseScript = emseBiz.getMasterScript(aa.getServiceProviderCode(), vScriptName);
-		} else {
-			var emseScript = emseBiz.getScriptByPK(aa.getServiceProviderCode(), vScriptName, "ADMIN");
-		}
-		return emseScript.getScriptText() + "";
-	} catch (err) {
+		var emseScript = emseBiz.getScriptByPK(servProvCode,vScriptName,"ADMIN");
+		return emseScript.getScriptText() + "";	
+		} catch(err) {
 		return "";
 	}
 }
@@ -190,7 +186,7 @@ try {
 
 	if (r.length > 0) {
 		for (x in r) {
-			if(appMatch("Licenses/*/*/*")) conditionType = "License Required Documentats";
+			if(appMatch("Licenses/*/*/*")) conditionType = "License Required Documentation";
 
 			
 			dr = r[x];

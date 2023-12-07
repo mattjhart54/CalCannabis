@@ -335,47 +335,49 @@ try{
 			}
 		}
 	// Add Late Fee
-		if (newAppStatus == "Expired - Pending Renewal" && getAppSpecific("Limited Operation",renCapId) != "Yes"){
+		if (newAppStatus == "Expired - Pending Renewal"){
 			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(capId);
 			if (renewalCapProject != null) {
 				var renCapId = renewalCapProject.getCapID();
 				var renewalCap = aa.cap.getCap(renCapId).getOutput();
 				var renAltId = String(renewalCap.getCapID().getCustomID());;
 				logDebug("renCapId: " + renCapId + " renAltId: " + renAltId);
-				if (!renCapId.toString().contains("EST")){
-					if(getAppSpecific("License Change",renCapId) == "Yes"){
-					    licType = getAppSpecific("New License Type",renCapId);
-					}else{
-					    licType = getAppSpecific("License Type",renCapId);
-					}
-					var newExpDateStr = getAppSpecific("New Expiration Date",renCapId);
-					if (newExpDateStr){
-						var feeDesc = licType + " - Late Fee with Date Change";
-						var feeSchedule = "LIC_CC_REN_EXP";
-					}else{
-						var feeDesc = licType + " - Late Fee";
-						var feeSchedule = "LIC_CC_REN";
-					}
-					var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
-					if(thisFee){
-						holdId = capId;
-						capId = renCapId;
-						AInfo = new Array();
-						loadAppSpecific(AInfo);	
-						if (!feeExists(thisFee.feeCode)){
-	//						updateFee(thisFee.feeCode,feeSchedule, "FINAL", 1, "Y", "N");
-							addFeeT(thisFee.feeCode,feeSchedule, "FINAL", 1, "Y",capId);
-							invoiceFee(thisFee.feeCode,"FINAL");
-							if(AInfo["Waive Late Fee"] == "CHECKED") {
-								voidRemoveFeesByDesc(feeDesc);
-							}
-							if (!matches(rptName,null,undefined,"")){
-								rptName.push("Balance Due Report");
-							}
+				if(getAppSpecific("Limited Operation",renCapId) != "Yes") {
+					if (!renCapId.toString().contains("EST")){
+						if(getAppSpecific("License Change",renCapId) == "Yes"){
+						    licType = getAppSpecific("New License Type",renCapId);
+						}else{
+						    licType = getAppSpecific("License Type",renCapId);
 						}
-						capId = holdId;
-					}else{
-						logDebug("An error occurred retrieving fee item: " + feeDesc);
+						var newExpDateStr = getAppSpecific("New Expiration Date",renCapId);
+						if (newExpDateStr){
+							var feeDesc = licType + " - Late Fee with Date Change";
+							var feeSchedule = "LIC_CC_REN_EXP";
+						}else{
+							var feeDesc = licType + " - Late Fee";
+							var feeSchedule = "LIC_CC_REN";
+						}
+						var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
+						if(thisFee){
+							holdId = capId;
+							capId = renCapId;
+							AInfo = new Array();
+							loadAppSpecific(AInfo);	
+							if (!feeExists(thisFee.feeCode)){
+	//							updateFee(thisFee.feeCode,feeSchedule, "FINAL", 1, "Y", "N");
+								addFeeT(thisFee.feeCode,feeSchedule, "FINAL", 1, "Y",capId);
+								invoiceFee(thisFee.feeCode,"FINAL");
+								if(AInfo["Waive Late Fee"] == "CHECKED") {
+									voidRemoveFeesByDesc(feeDesc);
+								}
+								if (!matches(rptName,null,undefined,"")){
+									rptName.push("Balance Due Report");
+								}
+							}
+							capId = holdId;
+						}else{
+							logDebug("An error occurred retrieving fee item: " + feeDesc);
+						}
 					}
 				}
 			}

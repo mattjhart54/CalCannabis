@@ -11,7 +11,7 @@
 | Custom Parameters
 |	Ifchanges are made, please add notes above.
 /------------------------------------------------------------------------------------------------------*/
-if(matches(currentUserID,"VIP_ADMINMGR","MHART", "MATTH", "ACCELASUPP6","ACCELACRC","JSHEAR")){
+if(matches(currentUserID,"MHART","MATTH","JIMS","JSHEAR")){
 	showDebug=3;
 	showMessage=true;
 }else{
@@ -19,16 +19,17 @@ if(matches(currentUserID,"VIP_ADMINMGR","MHART", "MATTH", "ACCELASUPP6","ACCELAC
 	showMessage=false;
 }
 
-debugEmail = "mhart@trustvip.com; jshear@trustvip.com, CLStechsupport@cannabis.ca.gov";
+debugEmail = "mhart@trustvip.com; jshear@trustvip.com; CLStechsupport@cannabis.ca.gov";
 sysFromEmail = "noreply@cannabis.ca.gov";
 sysEmail = "noreply@cannabis.ca.gov";
-paymentEmail = "mhart@trustvip.com"
-acaUrl = "https://acasupp6.accela.com/CALCANNABIS"
-currEnv = "av.supp6";
+paymentEmail = "CLSTechSupport@cannabis.ca.gov";
+acaUrl = "https://acatest6.accela.com/CALCANNABIS";
 
 feeEstimate=false;
 if(vEventName.equals("FeeEstimateAfter4ACA")) 
 	feeEstimate=true;
+
+currEnv = "av.test";
 /*------------------------------------------------------------------------------------------------------/
 | END Custom Parameters
 /------------------------------------------------------------------------------------------------------*/
