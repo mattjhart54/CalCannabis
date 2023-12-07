@@ -18,9 +18,9 @@ function verifyFeePayment(fCode, PaymentDate) { //payment Date formatted or paym
 					feeSeqNbr = fee.getFeeSeqNbr();
 					if (origSeq == feeSeqNbr) {
 						var auditDateScript = feeObjArr[ff].getAuditDate();
-						var auditDate = new Date(auditDateScript.getMonth() + 1 + "/" + auditDateScript.getDayOfMonth() + "/" + auditDateScript.getYear());
+						var auditDate = new Date(auditDateScript.getMonth() + "/" + auditDateScript.getDayOfMonth() + "/" + auditDateScript.getYear());
 						var yyyy = auditDate.getFullYear();
-						var mm = String(auditDate.getMonth());
+						var mm = String(auditDate.getMonth() + 1);
 						var dd = String(auditDate.getDate());
 						if (mm.length == 1) {
 							mm = '0' + mm;
