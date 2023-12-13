@@ -58,7 +58,7 @@ try {
 			lType = lookup("LIC_CC_LICENSE_TYPE", licType);
 			if(!matches(lType,"", null, undefined)){
 				licTbl = lType.split(";");
-				var base = parseInt(licTbl[3]);
+				var base = parseInt(licTbl[3] - 1);
 				feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 				logDebug("feeDesc " + feeDesc);
 				thisFee = getFeeDefByDesc("LIC_CC_CONVERSION", feeDesc);
@@ -103,7 +103,7 @@ try {
 				lType = lookup("LIC_CC_LICENSE_TYPE", licType);
 				if(!matches(lType,"", null, undefined)){
 					licTbl = lType.split(";");
-					var base = parseInt(licTbl[3]);
+					var base = parseInt(licTbl[3] - 1);
 					feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 					logDebug("feeDesc " + feeDesc);
 					var overFee = getFeeDefByDesc("LIC_CC_CONVERSION", feeDesc);
@@ -153,7 +153,7 @@ try {
 						lType = lookup("LIC_CC_LICENSE_TYPE", licType);
 						if(!matches(lType,"", null, undefined)){
 							licTbl = lType.split(";");
-							var base = parseInt(licTbl[3]);
+							var base = parseInt(licTbl[3] -1);
 							feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 							logDebug("feeDesc " + feeDesc);
 							var overFee = getFeeDefByDesc("LIC_CC_CONVERSION", feeDesc);
