@@ -152,6 +152,7 @@ function mainProcess() {
 try{
 	var capFilterType = 0;
 	var capFilterStatus = 0;
+	var capFilterBalance = 0;
 	var capCount = 0;
  	var capResult = aa.cap.getCapIDsByAppSpecificInfoDateRange(asiGroup, asiField, dFromDate, dToDate);
 	if (capResult.getSuccess()) {
@@ -175,6 +176,19 @@ try{
 		if (!capId) {
 			logDebug("Could not get Cap ID");
 			continue;
+		}
+		var capDetailObjResult = aa.cap.getCapDetail(capId);
+		if (!capDetailObjResult.getSuccess()){
+			logDebug("Could not get record detail: " + altId);
+			continue;
+		}else{
+			capDetail = capDetailObjResult.getOutput();
+			var balanceDue = capDetail.getBalance();
+			if(balanceDue>0){
+				logDebug("Skipping record " + altId + " due to balance due: " + balanceDue);
+				capFilterBalance++;
+				continue;
+			}
 		}
 		cap = aa.cap.getCap(capId).getOutput();		
 		appTypeResult = cap.getCapType();	
@@ -200,6 +214,7 @@ try{
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
  	logDebug("Ignored due to CAP Status: " + capFilterStatus);
+	 logDebug("Ignored due to CAP Balance: " + capFilterBalance);
  	logDebug("Total CAPS processed: " + capCount);
 
 }catch (err){
