@@ -79,14 +79,15 @@ aa.env.setValue("newAppStatus", "Denied");
 aa.env.setValue("sysFromEmail", "noreply_accela@cdfa.ca.gov");
 aa.env.setValue("setNonEmailPrefix", "Denials");
 */
-var emailAddress = 'jshear@trustvip.com';			// email to send report
-var lookAheadDays = "-1";
-var daySpan = "0";
-var appStatus = 'License Issued';
-var newAppStatus = "Deferral Unpaid";
-var asiField = "Deferral Expiration Date";
-var asiGroup = "INTERNAL";
-var sysFromEmail = "noreply@cannabis.ca.gov";
+var emailAddress = getParam("emailAddress");			// email to send report
+var lookAheadDays = getParam("lookAheadDays");
+var daySpan = getParam("daySpan");
+var appStatus = getParam("appStatus").split(",");
+var newAppStatus = getParam("newAppStatus");
+var asiField = getParam("asiField");
+var asiGroup = getParam("asiGroup");
+var setNonEmailPrefix = getParam("setNonEmailPrefix");
+var sysFromEmail = getParam("sysFromEmail");
 var fromDate = dateAdd(null,parseInt(lookAheadDays));
 var toDate = dateAdd(null,parseInt(lookAheadDays)+parseInt(daySpan));
 var dFromDate = aa.date.parseDate(fromDate);
