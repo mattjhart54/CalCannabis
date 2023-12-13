@@ -170,31 +170,13 @@ try{
 			timeExpired = true ;
 			break; 
 		}
-    	capId = myCaps[myCapsXX].getCapID();
+    		capId = myCaps[myCapsXX].getCapID();
    		//capId = getCapIdByIDs(thisCapId.getID1(), thisCapId.getID2(), thisCapId.getID3()); 
 		altId = capId.getCustomID();
 		if (!capId) {
 			logDebug("Could not get Cap ID");
 			continue;
 		}
-
-	    var capDetailObjResult = aa.cap.getCapDetail(capId);        
-      if (!capDetailObjResult.getSuccess()){
-          logDebug("Could not get record detail: " + altId);
-          continue;
-      }else{
-          capDetail = capDetailObjResult.getOutput();
-          var balanceDue = capDetail.getBalance();
-          if(balanceDue<=0){
-              logDebug("Skipping record " + altId + " due to balance due: " + balanceDue);
-              capFilterBalance++;
-              //continue;
-          }
-      }
-
-
-
-
 
 		cap = aa.cap.getCap(capId).getOutput();		
 		appTypeResult = cap.getCapType();	
@@ -208,6 +190,19 @@ try{
 			capFilterStatus++
 			continue;
 		}
+		var capDetailObjResult = aa.cap.getCapDetail(capId);        
+		if (!capDetailObjResult.getSuccess()){
+			logDebug("Could not get record detail: " + altId);
+		 	 continue;
+		}else{
+		 	 capDetail = capDetailObjResult.getOutput();
+		  	var balanceDue = capDetail.getBalance();
+		  	if(balanceDue<=0){
+		      		logDebug("Skipping record " + altId + " due to balance due: " + balanceDue);
+		      		capFilterBalance++;
+		      		continue;
+		  	}
+		}
 		capCount++;
 		logDebug("----Processing record " + altId + br);
 		
@@ -215,7 +210,7 @@ try{
 			updateAppStatus(newAppStatus, "set by " + batchJobName +  " batch");
 		}
 		if(!appHasCondition("Application Condition","Applied","Application Hold",null)){
-				addStdCondition("Application Condition","Application Hold");
+			addStdCondition("Application Condition","Application Hold");
 		}
 	}
  	logDebug("Total CAPS qualified : " + myCaps.length);
