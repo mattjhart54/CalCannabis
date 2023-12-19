@@ -1,3 +1,0 @@
-/*
-	interface files go here
-*/
