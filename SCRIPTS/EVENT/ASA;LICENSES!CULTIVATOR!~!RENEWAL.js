@@ -20,8 +20,9 @@ try{
     if (b1ExpResult.getSuccess()) {
         this.b1Exp = b1ExpResult.getOutput();
         expDate = this.b1Exp.getExpDate();
+	expDate = fixDate(expDate);
         if(expDate) {
-            tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+            tmpExpDate = (expDate.getMonth() +1) + "/" + expDate.getDate() + "/" + expDate.getFullYear();    
             var tmpDate = new Date(tmpExpDate);
         }
     }       
