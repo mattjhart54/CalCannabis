@@ -190,7 +190,7 @@ try {
 			var AInfo = [];
 			var validationMessage = "";
 			loadAppSpecific(AInfo);
-			if (String(altId.substr(0,3)) != "CCL"|| altId.endsWith("HIST")){
+			if (String(altId.substr(0,3)) != "CCL"){
 				logDebug("Record " + altId + " is not a valid record number");	
 				invalidRecordArray.push(altId);
 				invalidRecordCount++;
