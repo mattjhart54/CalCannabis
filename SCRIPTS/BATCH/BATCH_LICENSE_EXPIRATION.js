@@ -277,6 +277,12 @@ try{
 			logDebug("     " +"skipping, due to application status of " + capStatus)
 			continue;
 		}
+		// Filter Historical Records
+		if (altId.indexOf("-HIST") > -1){
+			capFilterType++;
+			logDebug("     " +"skipping, Historical Record Types");
+			continue;
+		}
 		// done filtering, so increase the record count to include this record.
 		capCount++;
 	// Actions start here:
