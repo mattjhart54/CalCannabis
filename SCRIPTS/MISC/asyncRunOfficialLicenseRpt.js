@@ -90,6 +90,7 @@ try{
 	eTxt+="reportName: " + typeof(reportName) + br;
 	var parameters = aa.util.newHashMap(); 
 	parameters.put("altId",licCap);
+	parameters.put("appId",appCap);
 	report.setReportParameters(parameters);
 	var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
 	if(permit.getOutput().booleanValue()) { 
