@@ -161,9 +161,8 @@ try {
 	var userMap = [
 		{"EXISTING":"MATTH","NEW":"Matt.Hart@cannabis.ca.gov"},
 		{"EXISTING":"MHART","NEW":"Matt.Hart@cannabis.ca.gov"},
-		{"EXISTING":"JSHEAR","NEW",:"JAIME.SHEAR@cannabis.ca.gov"},
-		{"EXISTING":"MREED","NEW",:"Michael.Reed@cannabis.ca.gov"}
-		
+		{"EXISTING":"JSHEAR","NEW":"JAIME.SHEAR@cannabis.ca.gov"},
+		{"EXISTING":"MREED","NEW":"Michael.Reed@cannabis.ca.gov"}
 		]
 	var ignoreRecordStatuses = ['License Issued', 'Provisional License Issued', 'Pending Owner Application', 'Pending Final Affidavit',
 		'Completed', 'Completed-Missing Information','Disqualified','Abandoned','Closed','Withdrawn',
