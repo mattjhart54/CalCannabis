@@ -194,7 +194,7 @@ try {
 		capDetail = aa.cap.getCapDetail(capId).getOutput();	
 // Ignore records
 		var altId = capId.getCustomID();
-		if(altId.substring(2,5) == 'TMP') { cnt = cnt + 1; continue};
+		if(altId.substring(2,3) == 'TMP') { cnt = cnt + 1; continue};
 		if(altId.substring(0,3) == 'TCA')  { cnt = cnt + 1; continue};
 		if(altId.substring(0,3) == 'DUB')  { cnt = cnt + 1; continue};
 		if(altId.substring(0,4) == 'LCA-')  { cnt = cnt + 1; continue};
