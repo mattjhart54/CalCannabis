@@ -122,8 +122,8 @@ var batchJobName = "" + aa.env.getValue("batchJobName");
 /*
 aa.env.setValue("Group", "Licenses");
 aa.env.setValue("Type", "Cultivator");
-aa.env.setValue("Subtype", "Amendment");
-aa.env.setValue("Category", "*");
+aa.env.setValue("Subtype", "*");
+aa.env.setValue("Category", "Application");
 */
 
 var appGroup = getParam("Group");
@@ -159,10 +159,9 @@ var vCntN = 0;
 
 try {
 	var userMap = [
-		{"EXISTING":"MATTH","NEW":"Matt.Hart@cannabis.ca.gov"},
-		{"EXISTING":"MHART","NEW":"Matt.Hart@cannabis.ca.gov"},
-		{"EXISTING":"JSHEAR","NEW":"JAIME.SHEAR@cannabis.ca.gov"},
-		{"EXISTING":"MREED","NEW":"Michael.Reed@cannabis.ca.gov"}
+		{"EXISTING":"MATT HART","NEW":"Matt.Hart@cannabis.ca.gov"},
+		{"EXISTING":"JAIME SHEAR","NEW":"JAIME.SHEAR@cannabis.ca.gov"},
+		{"EXISTING":"MICHAEL REED","NEW":"Michael.Reed@cannabis.ca.gov"}	
 		]
 	var ignoreRecordStatuses = ['License Issued', 'Provisional License Issued', 'Pending Owner Application', 'Pending Final Affidavit',
 		'Completed', 'Completed-Missing Information','Disqualified','Abandoned','Closed','Withdrawn',
@@ -233,38 +232,29 @@ try {
 						continue;
 					}			
 //get assigned FMLName
-					fmlNameStr = taskUserObj.getDispFirstName() + '/' + taskUserObj.getDispMiddleName() + '/' + taskUserObj.getDispLastName();		
-					var sysUserFMLNameArr = fmlNameStr.split('/');
-					var newUserObj = aa.person.getUser(sysUserFMLNameArr[0], null, sysUserFMLNameArr[2]).getOutput();
-					if (newUserObj != null) {
-						vTaskAsgnStaff = newUserObj.getUserID();
-						vTaskReassigned = false;
-//						logDebug("Workflow Task " + fTask.getTaskDescription() + " is currently assigned to " + vTaskAsgnStaff);		
-						for (e in userMap) {
-							if (userMap[e].EXISTING.toUpperCase() == vTaskAsgnStaff.toUpperCase()) {
-								if (userMap[e].NEW != "n/a") {
+					fmlNameStr = taskUserObj.getDispFirstName() + " " + taskUserObj.getDispLastName();		
+					vTaskReassigned = false;
+					logDebug("Workflow Task " + fTask.getTaskDescription() + " is currently assigned to " + fmlNameStr);		
+					for (e in userMap) {
+						if (userMap[e].EXISTING.toUpperCase() == fmlNameStr.toUpperCase()) {
+							if (userMap[e].NEW != "n/a") {
 //update workflow task assignment to new user ID
-									reAssignTask(fTask.getTaskDescription(), userMap[e].NEW.toUpperCase());
-									vTaskReassigned = true;
-									logDebug("For record " + capId.getCustomID() + " task " + fTask.getTaskDescription() + " was assigned to " + userMap[e].NEW.toUpperCase());
-									vCnt = vCnt + 1;				 			
-									break;
-								}
+								reAssignTask(fTask.getTaskDescription(), userMap[e].NEW.toUpperCase());
+								vTaskReassigned = true;
+								logDebug("For record " + capId.getCustomID() + " task " + fTask.getTaskDescription() + " was assigned to " + userMap[e].NEW.toUpperCase());
+								vCnt = vCnt + 1;				 			
+								break;
 							}
 						}
-					
-						if (!vTaskReassigned) {
-//							logDebug("**Workflow task was assigned to a user that did not exist in the User Map; Task not reassigned");
-							vCntA = vCntA + 1;
-						}
-					} else {
-						logDebug(capId.getCustomID() + "**Could not locate User ID of assigned user " + fmlNameStr + "; skipping");
+					}
+					if (!vTaskReassigned) {
+//						logDebug("**Workflow task was assigned to a user that did not exist in the User Map; Task not reassigned");
+						vCntA = vCntA + 1;
 					}
 				} else {
 //					logDebug("**Workflow task not currently assigned to a user; skipping");
 					vCntU = vCntU + 1;
 				}	
-				
 			} else { 
 //				logDebug("**Workflow task not active; skipping");
 				vCntN = vCntN + 1;
