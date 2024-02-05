@@ -105,18 +105,10 @@ try {
 				}
 			}
 		}
-
-		if (typeof(ownerInfo) == "object"){
-			if(ownerInfo.length > 0){
-				removeASITable("OWNERS");
-			}
-		}
-
-
 		
 		if (multTable.length > 0){
-			var asit = cap.getAppSpecificTableGroupModel();
-			new_asit = addASITable4ACAPageFlowUpdated(asit,"OWNERS", multTable,capId);
+			removeASITable("OWNERS");
+			new_asit = addASITable4ACAPageFlowUpdated(cap.getAppSpecificTableGroupModel(),"OWNERS", multTable,capId);
 			aa.env.setValue("CapModel",cap);
 		}
 	}	
