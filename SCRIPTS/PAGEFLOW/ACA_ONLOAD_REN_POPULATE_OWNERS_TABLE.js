@@ -87,10 +87,9 @@ try {
 	
 	
 	var licNum = AInfo['License Number'];
+	var multTable = new Array(); 
 	if (licNum && licNum != ""){
 		var licCapId = getApplication(AInfo['License Number']);
-		var multTable = new Array(); 
-
 		ownerInfo = loadASITable("OWNERS",licCapId);
 		if (ownerInfo){
 			for (var ii in ownerInfo) {
@@ -98,22 +97,21 @@ try {
 					row = new Array();
 					row["First Name"] = new asiTableValObj("First Name", "" + String(ownerInfo[ii]["First Name"]),"Y");
 					row["Last Name"] = new asiTableValObj("Last Name", "" + String(ownerInfo[ii]["Last Name"]),"Y");
-					//Testing System Cache
-					//row["Email Address"] = new asiTableValObj("Email Address", "" + String(ownerInfo[ii]["Email Address"]),"Y");
-					row["Email Address"] = new asiTableValObj("Email Address", "test@testing.com","Y");
+					row["Email Address"] = new asiTableValObj("Email Address", "" + String(ownerInfo[ii]["Email Address"]),"Y");
 					row["Percent Ownership"] = new asiTableValObj("Percent Ownership", "" + String(ownerInfo[ii]["Percent Ownership"]),"Y");
 					row["Status"] = new asiTableValObj("Status", "","N");
 					multTable.push(row);
 				}
 			}
 		}
+	}
 		
-		if (multTable.length > 0){
-			removeASITable("OWNERS");
-			addASITable4ACAPageFlowUpdated(cap.getAppSpecificTableGroupModel(),"OWNERS", multTable,capId);
-			aa.env.setValue("CapModel",cap);
-		}
-	}	
+	if (multTable.length > 0){
+		removeASITable("OWNERS");
+		addASITable4ACAPageFlowUpdated(cap.getAppSpecificTableGroupModel(),"OWNERS", multTable,capId);
+		aa.env.setValue("CapModel",cap);
+	}
+		
 	
 
 }catch (err){
