@@ -107,7 +107,7 @@ try {
 	}
 		
 	if (multTable.length > 0){
-		removeASITable("OWNERS"capId);
+		removeASITable("OWNERS",capId);
 		addASITable4ACAPageFlowUpdated(cap.getAppSpecificTableGroupModel(),"OWNERS", multTable,capId);
 		aa.env.setValue("CapModel",cap);
 	}
