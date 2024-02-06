@@ -88,7 +88,6 @@ try {
 	
 	var licNum = AInfo['License Number'];
 	var multTable = new Array();
-	removeASITable("OWNERS",capId);
 	if (licNum && licNum != ""){
 		var licCapId = getApplication(AInfo['License Number']);
 		ownerInfo = loadASITable("OWNERS",licCapId);
@@ -108,6 +107,7 @@ try {
 	}
 		
 	if (multTable.length > 0){
+		removeASITable("OWNERS",capId);
 		addASITable4ACAPageFlowXX(cap.getAppSpecificTableGroupModel(),"OWNERS", multTable,capId);
 		aa.env.setValue("CapModel",cap);
 	}
