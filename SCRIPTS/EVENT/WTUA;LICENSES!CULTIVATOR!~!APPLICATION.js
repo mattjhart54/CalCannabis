@@ -238,7 +238,7 @@ logDebug("got Here 2");
 
 //mhart: send local auth notice
 try{
-	if(matches(wfStatus,"10 day Auth","60 day Auth")){
+	if(matches(wfStatus,"10 day Auth","60 day Auth") && AInfo["Manually Send Local Authority Notification"] != "CHECKED"){
 		sendLocalAuthNotification();
 	}
 }catch(err){
