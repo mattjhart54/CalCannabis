@@ -183,8 +183,8 @@ try {
 			newFee = feeAmt  + overFeeAmt;
 			newBalance = newFee - lastFeeCredit;
 			logDebug("new fee " + newFee + " fee credit " + lastFeeCredit + " balance " + newBalance);
-			editAppSpecific4ACA(Current Base", lastFeeCredit);
-			editAppSpecific4ACA(New Base Fee", newFee);
+			editAppSpecific4ACA("Current Base", lastFeeCredit);
+			editAppSpecific4ACA("New Base Fee", newFee);
 			editAppSpecific4ACA("Net/Refund Due",newBalance);
 			if(newBalance > 0) {
 				var feeDesc = licType + " - License Fee with Date Change";
