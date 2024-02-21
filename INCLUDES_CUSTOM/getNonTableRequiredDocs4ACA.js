@@ -42,14 +42,6 @@ function getNonTableRequiredDocs4ACA() {
 		requirementArray.push(waterLakeStream);
 		requirementArray.push(waterQuality);
     }
-	
-	if (isRenewal) {
-		AInfo = [];
-		loadAppSpecific4ACA(AInfo);
-		if(AInfo["License Change"] == "Yes") {
-			requirementArray.push(premisesDiagram);
-		}
-    }
 
     if (isRenewal) {
 		if(AInfo["License Change"] == "Yes") {
