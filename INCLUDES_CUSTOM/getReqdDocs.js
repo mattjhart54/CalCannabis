@@ -44,9 +44,7 @@ try{
 		logDebug("loadASITablesBefore");
 	}else{
 		loadAppSpecific4ACA(AInfo); 
-		if (getReqdDocs != "License Change"){
-			loadASITables4ACA_corrected();
-		}
+		loadASITables4ACA_corrected();
 	}
 	var need_detailPremises = false;
 	var need_wastePlan = false;
