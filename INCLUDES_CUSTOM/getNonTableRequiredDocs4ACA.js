@@ -9,7 +9,7 @@ function getNonTableRequiredDocs4ACA() {
     //Global requirements cross discipline
     var isConversionRequest                    = appMatch("Licenses/Cultivator/Conversion Request/NA");
 	var isRenewal			                   = appMatch("Licenses/*/License/Renewal");
- 
+ 	var isLicenseChange			               = appMatch("Licenses/Cultivator/Amendment/License Change");
 
     /*------------------------------------------------------------------------------------------------------/
     | Load up Standard Requirements : NEEDS REVIEW, map variable to standard condition
@@ -28,6 +28,8 @@ function getNonTableRequiredDocs4ACA() {
 
 	//Remove all conditions first
 	removeAllCapConditions();
+	AInfo = [];
+	loadAppSpecific4ACA(AInfo);
 	
 	//Global documentation requirements
 
@@ -48,6 +50,18 @@ function getNonTableRequiredDocs4ACA() {
 			requirementArray.push(premisesDiagram);
 		}
     }
+
+    if (isRenewal) {
+		if(AInfo["License Change"] == "Yes") {
+			requirementArray.push(premisesDiagram);
+		}
+    }
+
+    if(isLicenseChange){
+		if (AInfo['License Change'] == "Yes"){
+			requirementArray.push(premisesDiagram);
+		}
+	}
 
     return requirementArray;
 
