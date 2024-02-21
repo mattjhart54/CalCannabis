@@ -26,8 +26,8 @@ try{
 	}else{
 		callPgm = "";
 	}
-	if(!matches(recdType, "Application", "Owner", "Conversion Request")){
-		logDebug("Function is currently only set up for Application and Owner documentation.");
+	if(!matches(recdType, "Application", "Owner", "Conversion Request", "License Change")){
+		logDebug("Function is currently only set up for Application, Conversion, License Change, and Owner documentation.");
 		return false;
 	}
 	//optional capId
@@ -479,6 +479,20 @@ try{
 		arrReqdDocs_CR.push(waterQuality);
 		
 		return arrReqdDocs_CR;
+	}
+
+	if(recdType == "License Change"){
+		if (AInfo['License Change'] == "Yes"){
+			arrReqdDocs_CR = new Array();	
+
+			arrReqdDocs_CR.push(detailPremises);
+			
+			return arrReqdDocs_CR;
+		}else{
+			if(appHasCondition(conditionType, null, detailPremises.condition, null)){
+				removeCapCondition(conditionType, detailPremises.condition);
+			}
+		}
 	}
 	
 }catch (err){
