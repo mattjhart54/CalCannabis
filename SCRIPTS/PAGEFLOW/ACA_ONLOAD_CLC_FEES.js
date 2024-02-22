@@ -76,7 +76,7 @@ var parentCapId = cap.getParentCapID();
 // page flow custom code begin
 
 try {
-parentCapID = "DUB23-00000-0000X"
+//parentCapID = "DUB23-00000-0000X"
 		var parentAltId = parentCapId.getCustomID();
 		pCap = aa.cap.getCap(parentCapId).getOutput();
 		var pStatus = pCap.getCapStatus();
