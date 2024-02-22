@@ -52,7 +52,7 @@ if (SA) {
 	eval(getScriptText("INCLUDES_ACCELA_GLOBALS", "CALCANNABIS",true));
 }
 
-eval(getScriptText("INCLUDES_CUSTOM"));
+eval(getScriptText("INCLUDES_CUSTOM", null,true));
 
 function getScriptText(vScriptName, servProvCode, useProductScripts) {
 	if (!servProvCode)  servProvCode = aa.getServiceProviderCode();
@@ -183,9 +183,9 @@ try {
 			newFee = feeAmt  + overFeeAmt;
 			newBalance = newFee - lastFeeCredit;
 			logDebug("new fee " + newFee + " fee credit " + lastFeeCredit + " balance " + newBalance);
-			editAppSpecific("Current Base fee", lastFeeCredit);
-			editAppSpecific("New Base Fee", newFee);
-			editAppSpecific("Net Due/Refund",newBalance);
+			editAppSpecific4ACA("Current Base fee", lastFeeCredit);
+			editAppSpecific4ACA("New Base Fee", newFee);
+			editAppSpecific4ACA("Net Due/Refund",newBalance);
 			if(newBalance > 0) {
 				var feeDesc = licType + " - License Fee with Date Change";
 				var feeSchedule = "LIC_CC_EXP";
