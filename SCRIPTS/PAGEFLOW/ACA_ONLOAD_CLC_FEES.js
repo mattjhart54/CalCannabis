@@ -153,7 +153,7 @@ try {
 			lastFee = lastBaseFee + lastOverFee;
 			
 		lastDailyRate = lastFee/365;
-		logDebug("last Fee " + lastFee + " days " + daysFromDiff + " rate " + lastDailyRate);
+//		logDebug("last Fee " + lastFee + " days " + daysFromDiff + " rate " + lastDailyRate);
 		lastFeeCredit = lastDailyRate * daysFromDiff;
 		
 		//Get new fee 
@@ -180,11 +180,12 @@ try {
 					}			
 				} 
 			}
-			lastFeeCredit = lastFeeCredit.toFixed(2);
 			newFee = feeAmt  + overFeeAmt;
-			newFee = newFee.toFixed(2);
 			newBalance = newFee - lastFeeCredit;
-			logDebug("new fee " + newFee + " fee credit " + lastFeeCredit + " balance " + newBalance);
+			lastFeeCredit = lastFeeCredit.toFixed(2);
+			newFee = newFee.toFixed(2);
+			newBalance = newBalance.toFixed(2);
+//			logDebug("new fee " + newFee + " fee credit " + lastFeeCredit + " balance " + newBalance);
 			editAppSpecific4ACA("Current Base Fee", lastFeeCredit);
 			editAppSpecific4ACA("New Base Fee", newFee);
 			editAppSpecific4ACA("Net Due/Refund",newBalance);
