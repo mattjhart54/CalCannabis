@@ -75,6 +75,7 @@ var cap = aa.env.getValue("CapModel");
 // page flow custom code begin
 try {
 //	Only allow DRP to process an CLC record
+	var expDateProcessed = getAppSpecific("Expiration Date Changed", parentCapId);
 	var pAltId = parentCapId.getCustomID();
 	var thisCap = aa.cap.getCap(parentCapId).getOutput();		
 	var thisCapStatus = thisCap.getCapStatus();
@@ -99,10 +100,21 @@ try {
 			showMessage = true;
 			logMessage("  Warning: Only the Designated Responsible party can submit a Cultivation License Change.");
 		}else{
-		 	if (!matches(thisCapStatus,"Active", "Inactive", "Suspended", "Limited Operations",)){
+			if (expDateProcessed == "CHECKED"){
+				cancel = true;
+				showMessage = true;
+				logMessage(" Your license status is not eligible for this request, please contact DCC Licensing at <a href='mailto:licensing@cannabis.ca.gov'>licensing@cannabis.ca.gov</a>");
+			}
+		 	if (!matches(thisCapStatus,"Active", "Inactive", "Suspended", "Limited Operations")){
 				cancel = true;
 				showMessage = true;
 				logMessage(" Your license is not eligible for this license change request as you have a conversion request in progress. If you have questions, please contact DCC Licensing at <a href='mailto:licensing@cannabis.ca.gov'>licensing@cannabis.ca.gov</a>");
+			}
+			renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parentCapId);
+			if (renewalCapProject != null) {
+				cancel = true;
+				showMessage = true;
+				logMessage(" Your license is not eligible for this license change request as you have a pending renewal in progress. At this time, you must request these changes via the renewal process. If you have questions, please contact DCC Licensing at <a href='mailto:licensing@cannabis.ca.gov'>licensing@cannabis.ca.gov</a>");
 			}
 			var getCapResult = aa.cap.getCapIDsByAppSpecificInfoField("License Number", pAltId);
 			if (getCapResult.getSuccess()){
@@ -115,10 +127,10 @@ try {
 				    	var thisCapType = capBasicInfo.getCapType();
 				    	if (String(thisCapType) == "Licenses/Cultivator/Conversion Request/NA"){
 				      		var capStatus = capBasicInfo.getCapStatus();
-					      	if (matches(capStatus,"Scientific Review Complete", "Not Converted", "Closed", "Submitted")){
+					      	if (!matches(capStatus,"Abandoned", "License Issued")){
 					      		cancel = true;
 								showMessage = true;
-								logMessage("Your license is not eligible for this license change request as you have a conversion request in progress. If you have questions, please contact DCC Licensing at <a href='mailto:licensing@cannabis.ca.gov'>licensing@cannabis.ca.gov</a>");
+								logMessage(" Your license is not eligible for this license change request as you have a conversion request in progress. If you have questions, please contact DCC Licensing at <a href='mailto:licensing@cannabis.ca.gov'>licensing@cannabis.ca.gov</a>");
 							}
 				      	}
 					}	
@@ -154,9 +166,6 @@ try{
 			editAppSpecific4ACA("License Number", parentCapId.getCustomID());
 			var priContact = getContactObj(parentCapId,"Designated Responsible Party");
 			if(priContact){
-				editAppSpecific4ACA("DRP First Name",priContact.capContact.firstName);
-				editAppSpecific4ACA("DRP Last Name",priContact.capContact.lastName);
-				editAppSpecific4ACA("DRP Email Address",priContact.capContact.email);
 				//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
 				priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
 				priContact.people.setContactType("Designated Responsible Party");	
@@ -181,12 +190,12 @@ try{
 			editAppSpecific4ACA("APN",PInfo["APN"]);
 			editAppSpecific4ACA("Cultivator Type", PInfo["Cultivator Type"]);
 			editAppSpecific4ACA("Business Name", PInfo["Legal Business Name"]);
-      updateWorkDesc(PInfo["Business Name"]);
-      editAppSpecific4ACA("License Type", PInfo["License Type"]);
-      editAppSpecific4ACA("Original License Type", PInfo["Original License Type"]);
-      useAppSpecificGroupName = true; 
-  		editAppSpecific4ACA("LICENSE INFORMATION.Limited Operations",PInfo["Limited Operations"]);
-  		useAppSpecificGroupName = false;
+      		updateWorkDesc(PInfo["Business Name"]);
+      		editAppSpecific4ACA("License Type", PInfo["License Type"]);
+      		editAppSpecific4ACA("Original License Type", PInfo["Original License Type"]);
+      		useAppSpecificGroupName = true; 
+  			editAppSpecific4ACA("LICENSE INFORMATION.Limited Operations",PInfo["Limited Operations"]);
+  			useAppSpecificGroupName = false;
 		}
 	}
 } catch (err) {
