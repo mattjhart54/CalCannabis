@@ -76,7 +76,7 @@ var parentCapId = cap.getParentCapID();
 // page flow custom code begin
 
 try {
-//parentCapID = "DUB23-00000-0004V"
+parentCapID = "DUB23-00000-0000X"
 		var parentAltId = parentCapId.getCustomID();
 		pCap = aa.cap.getCap(parentCapId).getOutput();
 		var pStatus = pCap.getCapStatus();
@@ -183,9 +183,9 @@ try {
 			newFee = feeAmt  + overFeeAmt;
 			newBalance = newFee - lastFeeCredit;
 			logDebug("new fee " + newFee + " fee credit " + lastFeeCredit + " balance " + newBalance);
-			editAppSpecific4ACA("Current Base", lastFeeCredit);
-			editAppSpecific4ACA("New Base Fee", newFee);
-			editAppSpecific4ACA("Net/Refund Due",newBalance);
+			editAppSpecific("Current Base fee", lastFeeCredit);
+			editAppSpecific("New Base Fee", newFee);
+			editAppSpecific("Net Due/Refund",newBalance);
 			if(newBalance > 0) {
 				var feeDesc = licType + " - License Fee with Date Change";
 				var feeSchedule = "LIC_CC_EXP";
@@ -196,7 +196,7 @@ try {
 } catch(err){
     logDebug("An error has occurred in ACA_Onload CLC Fees: " + err.message);
     logDebug(err.stack);
-    aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ACA_Onload CLC Fees: Submission: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
+    aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ACA_Onload CLC Fees:  "+ parentCapId, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
 function fixDate(dateObj) {
 	// date object with getClass assumes that this is an Accela Date object
