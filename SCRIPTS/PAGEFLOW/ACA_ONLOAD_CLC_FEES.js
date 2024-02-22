@@ -198,4 +198,14 @@ try {
     logDebug(err.stack);
     aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in ACA_Onload CLC Fees: Submission: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
+function fixDate(dateObj) {
+	// date object with getClass assumes that this is an Accela Date object
+	if (dateObj.getClass) {
+		return new Date(dateObj.getEpochMilliseconds());
+	} else {
+		logDebug("Date is not an Accela Date object");
+		return dateObj;
+	}
+}
+
 
