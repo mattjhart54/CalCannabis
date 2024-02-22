@@ -166,12 +166,12 @@ try {
 			else 
 				feeAmt = (thisFee.formula*feeQty);
 			if(licType.substring(0,5) == "Large") {
-				lType = lookup("LIC_CC_LICENSE_TYPE", licType);
+				lType = lookup("LIC_CC_LICENSE_TYPE", newLicType);
 				if(!matches(lType,"", null, undefined)){
 					licTbl = lType.split(";");
 					var base = parseInt(licTbl[3] -1);
 					feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
-					qty = (parseInt(sqft) - base) / 2000;
+					qty = (parseInt(newSqft) - base) / 2000;
 					thisFee = getFeeDefByDesc("LIC_CC_REN_EXP", feeDesc);
 					if(AInfo["Limited Operation"] != "Yes") {
 						overFeeAmt = ((thisFee.formula*parseInt(qty))/365)*feeQty;
@@ -185,7 +185,7 @@ try {
 			newFee = newFee.toFixed(2);
 			newBalance = newFee - lastFeeCredit;
 			logDebug("new fee " + newFee + " fee credit " + lastFeeCredit + " balance " + newBalance);
-			editAppSpecific4ACA("Current Base fee", lastFeeCredit);
+			editAppSpecific4ACA("Current Base Fee", lastFeeCredit);
 			editAppSpecific4ACA("New Base Fee", newFee);
 			editAppSpecific4ACA("Net Due/Refund",newBalance);
 			if(newBalance > 0) {
