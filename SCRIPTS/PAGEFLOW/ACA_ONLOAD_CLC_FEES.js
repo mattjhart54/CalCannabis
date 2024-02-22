@@ -180,7 +180,9 @@ try {
 					}			
 				} 
 			}
+			lastFeeCredit = lastFeeCredit.toFixed(2);
 			newFee = feeAmt  + overFeeAmt;
+			newFee = newFee.toFixed(2);
 			newBalance = newFee - lastFeeCredit;
 			logDebug("new fee " + newFee + " fee credit " + lastFeeCredit + " balance " + newBalance);
 			editAppSpecific4ACA("Current Base fee", lastFeeCredit);
