@@ -176,7 +176,7 @@ function renewalProcess(rAltId, event, fees){
 			var expDateForamatted = dateFormatted(vNewExpDate.getMonth()+1, vNewExpDate.getDate(), vNewExpDate.getFullYear(), "MM/DD/YYYY");
 
 			histRow["Renewal Year"] = "" + String(renYear);
-			histRow["Record number of source"] = "" + newAltId;
+			histRow["Record number of source"] = "" + altId;
 			histRow["License Expiration"] = "" + String(expDateForamatted);
 			histRow["License Status"] = "" + newExpStatus;
 			histRow["Limited Operation"] = "" + AInfo['Limited Operation'];
