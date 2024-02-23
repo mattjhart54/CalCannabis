@@ -157,6 +157,9 @@ try{
 			
 			if(appTypeArray[3] == "Application")
 				r = getReqdDocs("Application");
+
+			if(appTypeArray[3] == "License Change")
+				r = getReqdDocs("License Change");
 				
 			if(appTypeArray[2] == "Conversion Request")
 				r = getReqdDocs("Conversion Request");	
