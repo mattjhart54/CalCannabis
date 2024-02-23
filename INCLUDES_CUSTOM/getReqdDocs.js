@@ -40,11 +40,15 @@ try{
 	AInfo = [];
 	if(callPgm=="AV"){
 		loadAppSpecificBefore(AInfo); 
-		loadASITablesBefore();
-		logDebug("loadASITablesBefore");
+		if(recdType != "License Change"){
+			loadASITablesBefore();
+			logDebug("loadASITablesBefore");
+		}
 	}else{
-		loadAppSpecific4ACA(AInfo); 
-		//loadASITables4ACA_corrected();
+		loadAppSpecific4ACA(AInfo);
+		if(recdType != "License Change"){ 
+			loadASITables4ACA_corrected();
+		}
 	}
 	var need_detailPremises = false;
 	var need_wastePlan = false;
