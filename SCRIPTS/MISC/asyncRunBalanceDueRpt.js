@@ -50,6 +50,7 @@ try{
 	aa.env.setValue("contType", "Designated Responsible Party");
 	aa.env.setValue("fromEmail","noreply@cannabis.ca.gov");
 */
+	var notification = 'LCA_BALANCE_DUE';
 	var reportName = "" + aa.env.getValue("reportName");
 	var recNum = "" + aa.env.getValue("recNum");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
@@ -90,7 +91,9 @@ try{
 		}
 
 // Send notification and add record to set for manual notification if preferred channel is Postal
-	var notification = 'LCA_BALANCE_DUE';
+	if (String() == "Licenses/Cultivator/Amendment/License Change"){
+		notification = 'LCA_CLC_FEE_DUE';
+	}
 	var priContact = getContactObj(licCapId,contType);
 	if(priContact){
 		var eParams = aa.util.newHashtable(); 
