@@ -140,6 +140,7 @@ try{
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("fromEmail","noreply@cannabis.ca.gov");
 		aa.runAsyncScript(scriptName, envParameters);
+		updateAppStatus("License Change Fee Due"," ");
 	}
 
 } catch(err){
