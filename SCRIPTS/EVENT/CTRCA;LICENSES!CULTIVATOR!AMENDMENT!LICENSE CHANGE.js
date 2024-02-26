@@ -129,7 +129,18 @@ try{
 				}
 			}
 		}
-	}	
+	}
+//Send Balance Due Notification
+	if (balanceDue){
+		var scriptName = "asyncRunBalanceDueRpt";
+		var envParameters = aa.util.newHashMap();
+		envParameters.put("altId",newAltId); 
+		envParameters.put("reportName","Balance Due Report"); 
+		envParameters.put("contType","Designated Responsible Party"); 
+		envParameters.put("currentUserID",currentUserID);
+		envParameters.put("fromEmail","noreply@cannabis.ca.gov");
+		aa.runAsyncScript(scriptName, envParameters);
+	}
 
 } catch(err){
 	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
