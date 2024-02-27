@@ -158,7 +158,7 @@ try {
 		lastFeeCredit = lastDailyRate * daysFromDiff;
 		
 		//Get new fee 
-			var feeDesc = licType + " - Renewal Fee with Date Change";
+			var feeDesc = newLicType + " - Renewal Fee with Date Change";
 			var feeSchedule = "LIC_CC_REN_EXP";
 			var feeQty = daysDiff;
 			var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
@@ -166,12 +166,12 @@ try {
 				feeAmt = (thisFee.formula*.2);
 			else 
 				feeAmt = (thisFee.formula*feeQty);
-			if(licType.substring(0,5) == "Large") {
+			if(newLicType.substring(0,5) == "Large") {
 				lType = lookup("LIC_CC_LICENSE_TYPE", newLicType);
 				if(!matches(lType,"", null, undefined)){
 					licTbl = lType.split(";");
 					var base = parseInt(licTbl[3] -1);
-					feeDesc = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
+					feeDesc = newLicType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
 					qty = (parseInt(newSqft) - base) / 2000;
 					thisFee = getFeeDefByDesc("LIC_CC_REN_EXP", feeDesc);
 					if(AInfo["Limited Operation"] != "Yes") {
