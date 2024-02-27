@@ -98,7 +98,7 @@ try {
 		if(!contactFnd){
 			cancel = true;
 			showMessage = true;
-			logMessage("  Warning: Only the Designated Responsible party can submit a Cultivation License Change.");
+			logMessage("  Warning: Only the Designated Responsible Party will be allowed to complete a License Change request.");
 		}else{
 			if (expDateProcessed == "CHECKED"){
 				cancel = true;
