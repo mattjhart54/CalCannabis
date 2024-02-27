@@ -486,17 +486,15 @@ try{
 	}
 
 	if(recdType == "License Change"){
+		arrReqdDocs_LC = new Array();
 		if (AInfo['License Change'] == "Yes"){
-			arrReqdDocs_CR = new Array();	
-
-			arrReqdDocs_CR.push(detailPremises);
-			
-			return arrReqdDocs_CR;
+			arrReqdDocs_LC.push(detailPremises);
 		}else{
 			if(appHasCondition(conditionType, null, detailPremises.condition, null)){
 				removeCapCondition(conditionType, detailPremises.condition);
 			}
 		}
+		return arrReqdDocs_LC;
 	}
 	
 }catch (err){
