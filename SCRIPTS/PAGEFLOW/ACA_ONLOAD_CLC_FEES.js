@@ -123,7 +123,7 @@ try {
 		if (newExpDateStr) {
 		// Calculate the number of days to new expiration date
 			var newExpDate = new Date(newExpDateStr);
-			var timeDiff = newExpDate.getTime() - expDate.getTime();
+			var timeDiff = newExpDate.getTime() - curDate.getTime();
 			daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 			
 		// Calculate the number of days from current date to expiration date				
