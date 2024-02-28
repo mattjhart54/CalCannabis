@@ -95,12 +95,16 @@ try{
 	//Run Official License Certificate 
 		var scriptName = "asyncRunOfficialLicenseRpt";
 		var envParameters = aa.util.newHashMap();
+		var feeNotification = LCA_CLC_FEE_PAID;
+		if (balanceDue < 0){
+			feeNotification = LCA_CLC_NO_FEE;
+		}
 		envParameters.put("licType",licType);
 		envParameters.put("appCap",capId.getCustomID());
 		envParameters.put("licCap",pAltId);
 		envParameters.put("reportName","Official License Certificate");
 		envParameters.put("approvalLetter", "");
-		envParameters.put("emailTemplate", "LCA_CLC_FEE_PAID");
+		envParameters.put("emailTemplate", feeNotification);
 		envParameters.put("reason", "");
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("contType","Designated Responsible Party");
