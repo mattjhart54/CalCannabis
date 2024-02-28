@@ -1,6 +1,7 @@
 try{
 	if (balanceDue <= 0){
 	// Update License Expiration Date
+		var parentCapId = getParent();
 		var vNewExpDate = new Date(AInfo['New Expiration Date']);
 		logDebug("Updating Expiration Date to: " + vNewExpDate);
 		vLicenseObj = new licenseObject(null, parentCapId);
