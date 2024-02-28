@@ -128,7 +128,7 @@ try {
 			
 		// Calculate the number of days from current date to expiration date				
 		//	curDate = new Date();
-			var validFromDiff = curDate.getTime() - fromDate.getTime();
+			var validFromDiff = exp.getTime() - curDate.getTime();
 			daysFromDiff = Math.floor(validFromDiff / (1000 * 60 * 60 * 24));
 
 	// Get last renewal fee
