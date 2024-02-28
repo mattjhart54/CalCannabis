@@ -95,9 +95,9 @@ try{
 	//Run Official License Certificate 
 		var scriptName = "asyncRunOfficialLicenseRpt";
 		var envParameters = aa.util.newHashMap();
-		var feeNotification = LCA_CLC_FEE_PAID;
+		var feeNotification = "LCA_CLC_FEE_PAID";
 		if (balanceDue < 0){
-			feeNotification = LCA_CLC_NO_FEE;
+			feeNotification = "LCA_CLC_NO_FEE";
 		}
 		envParameters.put("licType",licType);
 		envParameters.put("appCap",capId.getCustomID());
