@@ -1,7 +1,7 @@
 try{
 	if (balanceDue <= 0){
 	// Update License Expiration Date
-		var parentCapId = getParent();
+		altId = capId.getCustomID();
 		var vNewExpDate = new Date(AInfo['New Expiration Date']);
 		logDebug("Updating Expiration Date to: " + vNewExpDate);
 		vLicenseObj = new licenseObject(null, parentCapId);
@@ -52,7 +52,7 @@ try{
 		var expDateForamatted = dateFormatted(vNewExpDate.getMonth()+1, vNewExpDate.getDate(), vNewExpDate.getFullYear(), "MM/DD/YYYY");
 	
 		histRow["Renewal Year"] = "" + String(renYear);
-		histRow["Record number of source"] = "" + String(newAltId);
+		histRow["Record number of source"] = "" + String(altId);
 		histRow["License Expiration"] = "" + String(expDateForamatted);
 		histRow["License Status"] = "" + newExpStatus;
 		histRow["Limited Operation"] = "" + AInfo['Limited Operation'];
@@ -70,7 +70,7 @@ try{
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("licType",licType);
 		envParameters.put("appCap",capId.getCustomID());
-		envParameters.put("licCap",pAltId);
+		envParameters.put("licCap",parentCapId);
 		envParameters.put("reportName","Official License Certificate");
 		envParameters.put("approvalLetter", "");
 		envParameters.put("emailTemplate", "LCA_RENEWAL_APPROVAL");
