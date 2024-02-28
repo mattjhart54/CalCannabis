@@ -143,6 +143,9 @@ try{
 		envParameters.put("fromEmail","noreply@cannabis.ca.gov");
 		aa.runAsyncScript(scriptName, envParameters);
 		updateAppStatus("License Change Fee Due"," ");
+		if(!appHasCondition("License Notice",null,"SB 833 Refund",null)){
+			addStdCondition("License Notice","SB 833 Refund");
+		}
 	}
 
 } catch(err){
