@@ -83,8 +83,6 @@ try {
 		var pStatus = pCap.getCapStatus();
 		b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
 		var curDate = new Date();
-		var curDateFormat = curDate.getMonth() + 1 + "/" + curDate.getDate() + "/" + curDate.getFullYear();
-		curDate = new Date(curDateFormat);
 		if (b1ExpResult.getSuccess()) {
 			this.b1Exp = b1ExpResult.getOutput();
 			expDate = this.b1Exp.getExpDate();
