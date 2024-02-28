@@ -161,7 +161,7 @@ try {
 			var feeQty = daysDiff;
 			var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
 			if(AInfo["Limited Operation"] == "Yes")
-				feeAmt = (thisFee.formula*.2);
+				feeAmt = ((thisFee.formula*feeQty)*.2);
 			else 
 				feeAmt = (thisFee.formula*feeQty);
 			if(newLicType.substring(0,5) == "Large") {
