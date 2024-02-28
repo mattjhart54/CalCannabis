@@ -70,7 +70,7 @@ try{
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("licType",licType);
 		envParameters.put("appCap",capId.getCustomID());
-		envParameters.put("licCap",parentCapId);
+		envParameters.put("licCap",parentCapId.getCustomID());
 		envParameters.put("reportName","Official License Certificate");
 		envParameters.put("approvalLetter", "");
 		envParameters.put("emailTemplate", "LCA_RENEWAL_APPROVAL");
