@@ -102,6 +102,18 @@ try{
 		var envParameters = aa.util.newHashMap();
 		var feeNotification = "LCA_CLC_FEE_PAID";
 		if (balanceDue < 0){
+			renArray = getChildren("Licenses/Cultivator/*/Renewal",capId);
+			if (renArray && renArray.length > 0) {
+				renArray.reverse();
+			 	if(!appHasCondition_rev("License Notice","Applied","SB 833 Refund",null,renArray[0])){
+					addStdCondition("License Notice","SB 833 Refund",renArray[0]);
+				}
+			 }else{
+			 	appArray = getChildren("Licenses/Cultivator/*/Application",capId);
+			 	if(!appHasCondition_rev("License Notice","Applied","SB 833 Refund",null,appArray[0])){
+					addStdCondition("License Notice","SB 833 Refund",appArray[0]);
+				}
+			 }
 			feeNotification = "LCA_CLC_NO_FEE";
 		}
 		envParameters.put("licType",licType);
@@ -152,18 +164,6 @@ try{
 		envParameters.put("fromEmail","noreply@cannabis.ca.gov");
 		aa.runAsyncScript(scriptName, envParameters);
 		updateAppStatus("License Change Fee Due"," ");
-		renArray = getChildren("Licenses/Cultivator/*/Renewal",capId);
-		if (renArray && renArray.length > 0) {
-			renArray.reverse();
-		 	if(!appHasCondition("License Notice",null,"SB 833 Refund",null)){
-				addStdCondition("License Notice","SB 833 Refund",renArray[0]);
-			}
-		 }else{
-		 	appArray = getChildren("Licenses/Cultivator/*/Application",capId);
-		 	if(!appHasCondition("License Notice",null,"SB 833 Refund",null)){
-				addStdCondition("License Notice","SB 833 Refund",appArray[0]);
-			}
-		 }
 		editAppSpecific("Payment Due Date",nextWorkDay(dateAdd(null,29)));
 	}
 
