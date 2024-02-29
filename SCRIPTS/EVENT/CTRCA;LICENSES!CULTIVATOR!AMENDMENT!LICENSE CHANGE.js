@@ -5,8 +5,8 @@ try{
 	logDebug("parentCapId " + parentCapId);
 	if (matches(parentCapId,null,undefined,"")){
 		var parentASINum = AInfo["License Number"];
-		parentCapId = aa.cap.getCapID(parentASINum).getOutput();
-		addParent(parentCapId, capId);
+		//parentCapId = aa.cap.getCapID(parentASINum).getOutput();
+		addParent(parentASINum, capId);
 	}
 	logDebug("parentCapId " + parentCapId);
 	if (parentCapId != null) {
@@ -36,35 +36,36 @@ try{
 // Invoice fees if fees are only assessed
 	var invNbr = 0;
 	var feeAmount = 0;
+	var feeSeq = 0;
 	var newFeeFound = false;
 	var targetFees = loadFees(capId);
 	for (tFeeNum in targetFees) {
 		targetFee = targetFees[tFeeNum];
 		if (targetFee.status == "NEW") {
+			feeSeq = targetFee.sequence;
 			newFeeFound = true;
 		}
 	}
 	if(newFeeFound){
-		invNbr = invoiceAllFees();
-		feeAmount = targetFee.amount;
-	} else {
-	//get fee details
-	//retrieve a list of invoices by capID
-		logDebug("Fees already invoiced")
-		var iListResult = aa.finance.getInvoiceByCapID(capId,null);
-		if (iListResult.getSuccess()) {
-			var iList = iListResult.getOutput();			
-			for (var iNum in iList) {
-				var fList = aa.invoice.getFeeItemInvoiceByInvoiceNbr(iList[iNum].getInvNbr()).getOutput();
-				for (var fNum in fList) {	
-					invNbr = iList[iNum].getInvNbr();
-					feeAmount = fList[fNum].getFee();
-				}
+		updateFeeItemInvoiceFlag(feeSeq, "Y");
+	} 
+//get fee details
+//retrieve a list of invoices by capID
+	logDebug("Fees already invoiced")
+	var iListResult = aa.finance.getInvoiceByCapID(capId,null);
+	if (iListResult.getSuccess()) {
+		var iList = iListResult.getOutput();			
+		for (var iNum in iList) {
+			var fList = aa.invoice.getFeeItemInvoiceByInvoiceNbr(iList[iNum].getInvNbr()).getOutput();
+			for (var fNum in fList) {	
+				invNbr = iList[iNum].getInvNbr();
+				feeAmount = fList[fNum].getFee();
 			}
-		} else {
-			logDebug("Error: could not retrieve invoice list: " + iListResult.getErrorMessage());
 		}
+	} else {
+		logDebug("Error: could not retrieve invoice list: " + iListResult.getErrorMessage());
 	}
+	
 	logDebug("Invoice Number Found: " + invNbr);
 	logDebug("Fee Amount: " + feeAmount);
 
