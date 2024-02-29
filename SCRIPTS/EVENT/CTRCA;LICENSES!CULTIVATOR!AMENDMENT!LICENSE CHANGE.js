@@ -31,6 +31,42 @@ try{
 			logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
 		}
 	}
+
+// Invoice fees if fees are only assessed
+	var invNbr = 0;
+	var feeAmount = 0;
+	var newFeeFound = false;
+	var targetFees = loadFees(capId);
+	for (tFeeNum in targetFees) {
+		targetFee = targetFees[tFeeNum];
+		if (targetFee.status == "NEW") {
+			newFeeFound = true;
+		}
+	}
+	if(newFeeFound){
+		invNbr = invoiceAllFees();
+		feeAmount = targetFee.amount;
+	} else {
+	//get fee details
+	//retrieve a list of invoices by capID
+		logDebug("Fees already invoiced")
+		var iListResult = aa.finance.getInvoiceByCapID(capId,null);
+		if (iListResult.getSuccess()) {
+			var iList = iListResult.getOutput();			
+			for (var iNum in iList) {
+				var fList = aa.invoice.getFeeItemInvoiceByInvoiceNbr(iList[iNum].getInvNbr()).getOutput();
+				for (var fNum in fList) {	
+					invNbr = iList[iNum].getInvNbr();
+					feeAmount = fList[fNum].getFee();
+				}
+			}
+		} else {
+			logDebug("Error: could not retrieve invoice list: " + iListResult.getErrorMessage());
+		}
+	}
+	logDebug("Invoice Number Found: " + invNbr);
+	logDebug("Fee Amount: " + feeAmount);
+
 //If no balance Due Update License Record
 	if (balanceDue <= 0){
 	// Update License Expiration Date
@@ -153,15 +189,26 @@ try{
 			}
 		}
 	}
-//Send Balance Due Notification
-	if (balanceDue){
-		//SEND NOTIFICATIONS HERE
+//Send Invoice Params Rpt Notification
+	if (balanceDue > 0){
+		var scriptName = "asyncRunInvoiceParamsRpt";
+		var envParameters = aa.util.newHashMap();
+		var feeNotification = "LCA_CLC_FEE_DUE";
+		
+		envParameters.put("licCap",newAltId);
+		envParameters.put("licType",licType);
+		envParameters.put("invNbr",invNbr);
+		envParameters.put("feeAmount", feeAmount);
+		envParameters.put("currentUserID",currentUserID);
+		envParameters.put("templateName", feeNotification);
+		
+		aa.runAsyncScript(scriptName, envParameters);
+	
 		updateAppStatus("License Change Fee Due"," ");
 		editAppSpecific("Payment Due Date",nextWorkDay(dateAdd(null,29)));
 	}
-
 } catch(err){
-	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/*/RENEWAL: Submission: " + err.message);
+	logDebug("An error has occurred in CTRCA:LICENSES/CULTIVATOR/AMENDMENT/LICENSE CHANGE: Submission: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/LICENSE/RENEWAL: Submission: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
+	aa.sendMail(sysFromEmail, debugEmail, "", "An error has occurred in CTRCA:LICENSES/CULTIVATOR/AMENDMENT/LICENSE CHANGE: Submission: "+ startDate, capId + br + err.message+ br+ err.stack + br + currEnv);
 }
