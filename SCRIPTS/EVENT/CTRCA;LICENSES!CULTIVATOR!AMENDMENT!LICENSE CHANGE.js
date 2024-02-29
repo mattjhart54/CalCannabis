@@ -152,9 +152,18 @@ try{
 		envParameters.put("fromEmail","noreply@cannabis.ca.gov");
 		aa.runAsyncScript(scriptName, envParameters);
 		updateAppStatus("License Change Fee Due"," ");
-		if(!appHasCondition("License Notice",null,"SB 833 Refund",null)){
-			addStdCondition("License Notice","SB 833 Refund");
-		}
+		renArray = getChildren("Licenses/Cultivator/*/Renewal",capId);
+		if (renArray && renArray.length > 0) {
+			renArray.reverse();
+		 	if(!appHasCondition("License Notice",null,"SB 833 Refund",null)){
+				addStdCondition("License Notice","SB 833 Refund",renArray[0]);
+			}
+		 }else{
+		 	appArray = getChildren("Licenses/Cultivator/*/Application",capId);
+		 	if(!appHasCondition("License Notice",null,"SB 833 Refund",null)){
+				addStdCondition("License Notice","SB 833 Refund",appArray[0]);
+			}
+		 }
 		editAppSpecific("Payment Due Date",nextWorkDay(dateAdd(null,29)));
 	}
 
