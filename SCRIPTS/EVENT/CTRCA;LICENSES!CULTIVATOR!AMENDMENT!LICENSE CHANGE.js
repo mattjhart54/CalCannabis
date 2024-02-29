@@ -156,6 +156,8 @@ try{
 //Send Balance Due Notification
 	if (balanceDue){
 		//SEND NOTIFICATIONS HERE
+		updateAppStatus("License Change Fee Due"," ");
+		editAppSpecific("Payment Due Date",nextWorkDay(dateAdd(null,29)));
 	}
 
 } catch(err){
