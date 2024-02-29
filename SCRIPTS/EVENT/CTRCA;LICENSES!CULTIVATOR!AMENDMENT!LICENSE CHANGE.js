@@ -155,16 +155,7 @@ try{
 	}
 //Send Balance Due Notification
 	if (balanceDue){
-		var scriptName = "asyncRunInvoiceParamsRpt";
-		var envParameters = aa.util.newHashMap();
-		envParameters.put("altId",newAltId); 
-		envParameters.put("reportName","Balance Due Report"); 
-		envParameters.put("contType","Designated Responsible Party"); 
-		envParameters.put("currentUserID",currentUserID);
-		envParameters.put("fromEmail","noreply@cannabis.ca.gov");
-		aa.runAsyncScript(scriptName, envParameters);
-		updateAppStatus("License Change Fee Due"," ");
-		editAppSpecific("Payment Due Date",nextWorkDay(dateAdd(null,29)));
+		//SEND NOTIFICATIONS HERE
 	}
 
 } catch(err){
