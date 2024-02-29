@@ -101,7 +101,7 @@ try{
 		var scriptName = "asyncRunOfficialLicenseRpt";
 		var envParameters = aa.util.newHashMap();
 		var feeNotification = "LCA_CLC_FEE_PAID";
-		if (balanceDue < 0){
+		if (AInfo["Net Due/Refund"] < 0){
 			renArray = getChildren("Licenses/Cultivator/*/Renewal",parentCapId);
 			if (renArray && renArray.length > 0) {
 				renArray.reverse();
