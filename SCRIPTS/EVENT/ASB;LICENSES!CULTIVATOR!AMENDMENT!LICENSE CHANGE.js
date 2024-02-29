@@ -15,7 +15,7 @@ try{
  	if (!matches(thisCapStatus,"Active", "Inactive", "Suspended", "Limited Operations")){
 		cancel = true;
 		showMessage = true;
-		logMessage(" Your license is not eligible for this license change request as you have a conversion request in progress. If you have questions, please contact DCC Licensing at <a href='mailto:licensing@cannabis.ca.gov'>licensing@cannabis.ca.gov</a>");
+		logMessage(" Your license status is not eligible for this request, please contact DCC Licensing at<a href='mailto:licensing@cannabis.ca.gov'>licensing@cannabis.ca.gov</a>");
 	}
 	renewalCapProject = getRenewalCapByParentCapIDForIncomplete(parentCapId);
 	if (renewalCapProject != null) {
