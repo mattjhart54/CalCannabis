@@ -102,14 +102,14 @@ try{
 		var envParameters = aa.util.newHashMap();
 		var feeNotification = "LCA_CLC_FEE_PAID";
 		if (balanceDue < 0){
-			renArray = getChildren("Licenses/Cultivator/*/Renewal",capId);
+			renArray = getChildren("Licenses/Cultivator/*/Renewal",parentCapId);
 			if (renArray && renArray.length > 0) {
 				renArray.reverse();
 			 	if(!appHasCondition_rev("License Notice","Applied","SB 833 Refund",null,renArray[0])){
 					addStdCondition("License Notice","SB 833 Refund",renArray[0]);
 				}
 			 }else{
-			 	appArray = getChildren("Licenses/Cultivator/*/Application",capId);
+			 	appArray = getChildren("Licenses/Cultivator/*/Application",parentCapId);
 			 	if(!appHasCondition_rev("License Notice","Applied","SB 833 Refund",null,appArray[0])){
 					addStdCondition("License Notice","SB 833 Refund",appArray[0]);
 				}
