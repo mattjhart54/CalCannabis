@@ -6,6 +6,7 @@ try{
 	if (matches(parentCapId,null,undefined,"")){
 		var parentASINum = AInfo["License Number"];
 		parentCapId = aa.cap.getCapID(parentASINum).getOutput();
+		addParent(parentCapId, capId);
 	}
 	logDebug("parentCapId " + parentCapId);
 	if (parentCapId != null) {
