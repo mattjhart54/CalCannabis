@@ -155,7 +155,7 @@ try{
 	}
 //Send Balance Due Notification
 	if (balanceDue){
-		var scriptName = "asyncRunBalanceDueRpt";
+		var scriptName = "asyncRunInvoiceParamsRpt";
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("altId",newAltId); 
 		envParameters.put("reportName","Balance Due Report"); 
