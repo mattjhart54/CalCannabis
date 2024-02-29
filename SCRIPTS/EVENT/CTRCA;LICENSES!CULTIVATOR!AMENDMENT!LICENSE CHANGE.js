@@ -3,6 +3,11 @@ try{
 	aa.cap.updateAccessByACA(capId,"Y");
 // Update alt id on amendment record
 	logDebug("parentCapId " + parentCapId);
+	if (matches(parentCapId,null,undefined,"")){
+		var parentASINum = AInfo["License Number"];
+		parentCapId = aa.cap.getCapID(parentASINum).getOutput();
+	}
+	logDebug("parentCapId " + parentCapId);
 	if (parentCapId != null) {
 		pAltId = parentCapId.getCustomID();
 		cIds = getChildren("Licenses/Cultivator/Amendment/License Change",parentCapId);
