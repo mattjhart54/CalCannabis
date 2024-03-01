@@ -35,7 +35,7 @@ try{
 			logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
 		}
 	}
-
+/*
 // Invoice fees if fees are only assessed
 	var invNbr = 0;
 	var feeAmount = 0;
@@ -61,6 +61,7 @@ try{
 				logDebug("**ERROR: Invoicing the fee items was not successful. Reason: " + invoiceResult_L.getErrorMessage());
 		}
 	}
+*/
 //get fee details
 //retrieve a list of invoices by capID
 	logDebug("Checking invoices")
@@ -169,10 +170,10 @@ try{
 			 }
 			feeNotification = "LCA_CLC_NO_FEE";
 		}
-		envParameters.put("licType",licType);
+		envParameters.put("reportName","Official License Certificate");
 		envParameters.put("appCap",capId.getCustomID());
 		envParameters.put("licCap",pAltId);
-		envParameters.put("reportName","Official License Certificate");
+		envParameters.put("licType",licType);
 		envParameters.put("approvalLetter", "");
 		envParameters.put("emailTemplate", feeNotification);
 		envParameters.put("reason", "");
