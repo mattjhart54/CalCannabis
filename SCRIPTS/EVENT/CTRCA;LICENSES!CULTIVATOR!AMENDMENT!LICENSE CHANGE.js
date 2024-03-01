@@ -37,21 +37,30 @@ try{
 	var invNbr = 0;
 	var feeAmount = 0;
 	var feeSeq = 0;
+	var feeCode = "";
+	var feePeriod = "";
+	var vFeeSeqArray = new Array();
+	var vPaymentPeriodArray = new Array();
 	var newFeeFound = false;
 	var targetFees = loadFees(capId);
 	for (tFeeNum in targetFees) {
 		targetFee = targetFees[tFeeNum];
+		logDebug("fee status is " + targetFee.status);
 		if (targetFee.status == "NEW") {
 			feeSeq = targetFee.sequence;
-			newFeeFound = true;
+			feePeriod = targetFee.period;
+
+			vFeeSeqArray.push(thisFee.sequence);
+			vPaymentPeriodArray.push(thisFee.period);
+
+			var invoiceResult_L = aa.finance.createInvoice(capId, vFeeSeqArray, vPaymentPeriodArray);
+			if (!invoiceResult_L.getSuccess())
+				logDebug("**ERROR: Invoicing the fee items was not successful. Reason: " + invoiceResult_L.getErrorMessage());
 		}
 	}
-	if(newFeeFound){
-		updateFeeItemInvoiceFlag(feeSeq, "Y");
-	} 
 //get fee details
 //retrieve a list of invoices by capID
-	logDebug("Fees already invoiced")
+	logDebug("Checking invoices")
 	var iListResult = aa.finance.getInvoiceByCapID(capId,null);
 	if (iListResult.getSuccess()) {
 		var iList = iListResult.getOutput();			
