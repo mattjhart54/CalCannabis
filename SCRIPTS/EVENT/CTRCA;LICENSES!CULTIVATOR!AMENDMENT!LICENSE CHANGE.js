@@ -105,10 +105,13 @@ try{
 				}
 			}
 		}else{
+			editAppSpecific("Limited Operations","No",parentCapId);
+			if (vCapStatus == "Limited Operations"){
+				updateAppStatus("Active","License Change",parentCapId);
+			}
 			if(appHasCondition_rev("License Notice","Applied","Suspension Lift Notice",null,parentCapId)){
 				editCapConditionStatus("License Notice","Suspension Lift Notice","Condition Met","Not Applied","",parentCapId);
 			}
-			vLicenseObj.setStatus("Active");
 		}
 		if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
 			updateAppStatus("Suspended","License Change",parentCapId);
