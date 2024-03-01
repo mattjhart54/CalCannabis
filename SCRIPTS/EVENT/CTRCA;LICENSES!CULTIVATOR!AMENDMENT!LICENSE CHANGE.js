@@ -6,8 +6,8 @@ try{
 	if (matches(parentCapId,null,undefined,"")){
 		var licNum = AInfo["License Number"];
 		parentCapId = getApplication(licNum);
-		var pLic = getParents("Licenses/*/*/License");
-		if (pLic == null || String(pLic).equals("")) {
+		var pLic = getParent();
+		if (!pLic) {
 			addParent(licNum);
 		}
 	}
