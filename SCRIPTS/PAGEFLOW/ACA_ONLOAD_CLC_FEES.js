@@ -78,56 +78,56 @@ loadAppSpecific4ACA(AInfo);
 
 try {
 //parentCapID = "DUB23-00000-0000X"
-		var parentAltId = parentCapId.getCustomID();
-		pCap = aa.cap.getCap(parentCapId).getOutput();
-		var pStatus = pCap.getCapStatus();
-		b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
-		var curDate = new Date();
-		if (b1ExpResult.getSuccess()) {
-			this.b1Exp = b1ExpResult.getOutput();
-			expDate = this.b1Exp.getExpDate();
-			expDate = fixDate(expDate);
-			if(expDate) {
-				tmpExpDate = (expDate.getMonth() +1) + "/" + expDate.getDate() + "/" + expDate.getFullYear();
-				tmpFromDate = (expDate.getMonth() +1) + "/" + expDate.getDate() + "/" + (expDate.getFullYear() -1); 				
-				var expDate = new Date(tmpExpDate);
-				var fromDate = new Date(tmpFromDate);
-			}
-		}       
-		var fees = false;
-		var feeAmt = 0;
-		var overFeeAmt = 0;
-		voidRemoveAllFees();
-		var daysDiff = 0;
-		var daysFromDiff = 0;
-		var lastBaseFee = 0;
-		var lastOverFee = 0;
-		var lastFee = 0;
-		var newExpDateStr = AInfo["New Expiration Date"];
-		var submitDate = fileDate;
-		var licType = getAppSpecific("License Type",parentCapId);
-		var sqft = getAppSpecific("Canopy SF",parentCapId);
-		
-		if(AInfo["License Change"] == "Yes"){
-			var newLicType = AInfo["New License Type"];
-			var newSqft = getAppSpecific("Aggragate Canopy Square Footage");
-		} 
-		else {
-			var newLicType = getAppSpecific("License Type",parentCapId);
-			var newSqft = getAppSpecific("Canopy SF",parentCapId);
+	var parentAltId = parentCapId.getCustomID();
+	pCap = aa.cap.getCap(parentCapId).getOutput();
+	var pStatus = pCap.getCapStatus();
+	b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
+	var curDate = new Date();
+	if (b1ExpResult.getSuccess()) {
+		this.b1Exp = b1ExpResult.getOutput();
+		expDate = this.b1Exp.getExpDate();
+		expDate = fixDate(expDate);
+		if(expDate) {
+			tmpExpDate = (expDate.getMonth() +1) + "/" + expDate.getDate() + "/" + expDate.getFullYear();
+			tmpFromDate = (expDate.getMonth() +1) + "/" + expDate.getDate() + "/" + (expDate.getFullYear() -1); 				
+			var expDate = new Date(tmpExpDate);
+			var fromDate = new Date(tmpFromDate);
 		}
-			
-    //Check for Expiration Date Change and Calculate Days
-		if (newExpDateStr) {
-		// Calculate the number of days to new expiration date
-			var newExpDate = new Date(newExpDateStr);
-			var timeDiff = newExpDate.getTime() - curDate.getTime();
-			daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-			
-		// Calculate the number of days from current date to expiration date				
-		//	curDate = new Date();
-			var validFromDiff = expDate.getTime() - curDate.getTime();
-			daysFromDiff = Math.floor(validFromDiff / (1000 * 60 * 60 * 24));
+	}       
+	var fees = false;
+	var feeAmt = 0;
+	var overFeeAmt = 0;
+	voidRemoveAllFees();
+	var daysDiff = 0;
+	var daysFromDiff = 0;
+	var lastBaseFee = 0;
+	var lastOverFee = 0;
+	var lastFee = 0;
+	var newExpDateStr = AInfo["New Expiration Date"];
+	var submitDate = fileDate;
+	var licType = getAppSpecific("License Type",parentCapId);
+	var sqft = getAppSpecific("Canopy SF",parentCapId);
+	
+	if(AInfo["License Change"] == "Yes"){
+		var newLicType = AInfo["New License Type"];
+		var newSqft = getAppSpecific("Aggragate Canopy Square Footage");
+	} 
+	else {
+		var newLicType = getAppSpecific("License Type",parentCapId);
+		var newSqft = getAppSpecific("Canopy SF",parentCapId);
+	}
+		
+//Check for Expiration Date Change and Calculate Days
+	if (newExpDateStr) {
+	// Calculate the number of days to new expiration date
+		var newExpDate = new Date(newExpDateStr);
+		var timeDiff = newExpDate.getTime() - curDate.getTime();
+		daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+		
+	// Calculate the number of days from current date to expiration date				
+	//	curDate = new Date();
+		var validFromDiff = expDate.getTime() - curDate.getTime();
+		daysFromDiff = Math.floor(validFromDiff / (1000 * 60 * 60 * 24));
 
 	// Get last renewal fee
 		var feeDesc = licType + " - Renewal Fee";
@@ -143,7 +143,7 @@ try {
 				feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 				qty = (parseInt(sqft) - base) / 2000;
 				thisFee = getFeeDefByDesc("LIC_CC_REN", feeDescR);
-				lastOverFeeFee = thisFee.formula * qty;
+				lastOverFee = thisFee.formula * qty;
 			}
 		}
 		if(AInfo["Limited Operations"] == "Yes") 
@@ -155,46 +155,46 @@ try {
 //		logDebug("last Fee " + lastFee + " days " + daysFromDiff + " rate " + lastDailyRate);
 		lastFeeCredit = lastDailyRate * daysFromDiff;
 		
-		//Get new fee 
-			var feeDesc = newLicType + " - Renewal Fee with Date Change";
-			var feeSchedule = "LIC_CC_REN_EXP";
-			var feeQty = daysDiff;
-			var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
-			if(AInfo["Limited Operation"] == "Yes")
-				feeAmt = ((thisFee.formula*feeQty)*.2);
-			else 
-				feeAmt = (thisFee.formula*feeQty);
-			if(newLicType.substring(0,5) == "Large") {
-				lType = lookup("LIC_CC_LICENSE_TYPE", newLicType);
-				if(!matches(lType,"", null, undefined)){
-					licTbl = lType.split(";");
-					var base = parseInt(licTbl[3] -1);
-					feeDesc = newLicType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
-					qty = (parseInt(newSqft) - base) / 2000;
-					thisFee = getFeeDefByDesc("LIC_CC_REN_EXP", feeDesc);
-					if(AInfo["Limited Operation"] != "Yes") {
-						overFeeAmt = ((thisFee.formula*parseInt(qty))/365)*feeQty;
-					}else {
-						overFeeAmt = (((thisFee.formula*parseInt(qty))/365)*feeQty)*.2;
-					}			
-				} 
-			}
-			newFee = feeAmt  + overFeeAmt;
-			newBalance = newFee - lastFeeCredit;
-			lastFeeCredit = lastFeeCredit.toFixed(2);
-			newFee = newFee.toFixed(2);
-			newBalance = newBalance.toFixed(2);
-//			logDebug("new fee " + newFee + " fee credit " + lastFeeCredit + " balance " + newBalance);
-			editAppSpecific4ACA("Current Base Fee", lastFeeCredit);
-			editAppSpecific4ACA("New Base Fee", newFee);
-			editAppSpecific4ACA("Net Due/Refund",newBalance);
-			if(newBalance > 0) {
-				var feeDesc = newLicType + " - License Fee with Date Change";
-				var feeSchedule = "LIC_CC_EXP";
-				var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
-				updateFee(thisFee.feeCode,feeSchedule, "FINAL", newBalance, "Y", "N");
-			}	
+	//Get new fee 
+		var feeDesc = newLicType + " - Renewal Fee with Date Change";
+		var feeSchedule = "LIC_CC_REN_EXP";
+		var feeQty = daysDiff;
+		var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
+		if(AInfo["Limited Operation"] == "Yes")
+			feeAmt = ((thisFee.formula*feeQty)*.2);
+		else 
+			feeAmt = (thisFee.formula*feeQty);
+		if(newLicType.substring(0,5) == "Large") {
+			lType = lookup("LIC_CC_LICENSE_TYPE", newLicType);
+			if(!matches(lType,"", null, undefined)){
+				licTbl = lType.split(";");
+				var base = parseInt(licTbl[3] -1);
+				feeDesc = newLicType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base) + " with Date Change";
+				qty = (parseInt(newSqft) - base) / 2000;
+				thisFee = getFeeDefByDesc("LIC_CC_REN_EXP", feeDesc);
+				if(AInfo["Limited Operation"] != "Yes") {
+					overFeeAmt = ((thisFee.formula*parseInt(qty))/365)*feeQty;
+				}else {
+					overFeeAmt = (((thisFee.formula*parseInt(qty))/365)*feeQty)*.2;
+				}			
+			} 
 		}
+		newFee = feeAmt  + overFeeAmt;
+		newBalance = newFee - lastFeeCredit;
+		lastFeeCredit = lastFeeCredit.toFixed(2);
+		newFee = newFee.toFixed(2);
+		newBalance = newBalance.toFixed(2);
+//		logDebug("new fee " + newFee + " fee credit " + lastFeeCredit + " balance " + newBalance);
+		editAppSpecific4ACA("Current Base Fee", lastFeeCredit);
+		editAppSpecific4ACA("New Base Fee", newFee);
+		editAppSpecific4ACA("Net Due/Refund",newBalance);
+		//if (newBalance > 0) {
+		//	var feeDesc = newLicType + " - License Fee with Date Change";
+		//	var feeSchedule = "LIC_CC_EXP";
+		//	var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
+		//	updateFee(thisFee.feeCode, feeSchedule, "FINAL", newBalance, "Y", "N");
+		//}	
+	}
 } catch(err){
     logDebug("An error has occurred in ACA_Onload CLC Fees: " + err.message);
     logDebug(err.stack);
