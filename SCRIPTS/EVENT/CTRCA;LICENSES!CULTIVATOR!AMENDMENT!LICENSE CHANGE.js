@@ -173,7 +173,7 @@ try{
 			feeNotification = "LCA_CLC_NO_FEE";
 		}
 		envParameters.put("reportName","Official License Certificate");
-		envParameters.put("appCap",capId.getCustomID());
+		envParameters.put("appCap",newAltId);
 		envParameters.put("licCap",pAltId);
 		envParameters.put("licType",licType);
 		envParameters.put("approvalLetter", "");
