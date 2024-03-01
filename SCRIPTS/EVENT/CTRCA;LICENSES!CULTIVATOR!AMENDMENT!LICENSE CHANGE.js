@@ -50,8 +50,8 @@ try{
 			feeSeq = targetFee.sequence;
 			feePeriod = targetFee.period;
 
-			vFeeSeqArray.push(thisFee.sequence);
-			vPaymentPeriodArray.push(thisFee.period);
+			vFeeSeqArray.push(feeSeq);
+			vPaymentPeriodArray.push(feePeriod);
 
 			var invoiceResult_L = aa.finance.createInvoice(capId, vFeeSeqArray, vPaymentPeriodArray);
 			if (!invoiceResult_L.getSuccess())
