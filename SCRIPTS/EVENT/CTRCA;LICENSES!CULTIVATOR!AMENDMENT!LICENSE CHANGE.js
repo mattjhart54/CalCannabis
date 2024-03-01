@@ -4,10 +4,11 @@ try{
 // Update alt id on amendment record
 	logDebug("parentCapId " + parentCapId);
 	if (matches(parentCapId,null,undefined,"")){
-		parentCapId = getApplication(AInfo["License Number"]);
+		var licNum = AInfo["License Number"]
+		parentCapId = getApplication(licNum;
 		var pLic = getParents("Licenses/*/*/License");
 		if (pLic != null && !String(pLic).equals("")) {
-			addParent(parentCapId);
+			addParent(licNum);
 		}
 	}
 	logDebug("parentCapId " + parentCapId);
