@@ -65,6 +65,8 @@ try{
 //get fee details
 //retrieve a list of invoices by capID
 	logDebug("Checking invoices")
+	var invNbr = 0;
+	var feeAmount = 0;
 	var iListResult = aa.finance.getInvoiceByCapID(capId,null);
 	if (iListResult.getSuccess()) {
 		var iList = iListResult.getOutput();			
