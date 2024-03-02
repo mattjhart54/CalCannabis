@@ -1,10 +1,13 @@
 
 try {
-    
-    var newLicType = AInfo["New License Type"];
+    if(AInfo['License Change'] == "Yes"){
+	var licType = AInfo["New License Type"];
+    }else {
+	var licType = AInfo["License Type"];
+    } 
     var newBalance = AInfo["Net Due/Refund"];
     if (newBalance > 0) {
-    	var feeDesc = newLicType + " - License Fee with Date Change";
+    	var feeDesc = licType + " - License Fee with Date Change";
     	var feeSchedule = "LIC_CC_EXP";
     	var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
     	updateFee(thisFee.feeCode, feeSchedule, "FINAL", newBalance, "Y");
