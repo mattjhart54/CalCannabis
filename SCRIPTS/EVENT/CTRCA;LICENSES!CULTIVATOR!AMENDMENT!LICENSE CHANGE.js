@@ -35,7 +35,6 @@ try{
 			logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
 		}
 	}
-/*
 // Invoice fees if fees are only assessed
 	var invNbr = 0;
 	var feeAmount = 0;
@@ -61,12 +60,9 @@ try{
 				logDebug("**ERROR: Invoicing the fee items was not successful. Reason: " + invoiceResult_L.getErrorMessage());
 		}
 	}
-*/
 //get fee details
 //retrieve a list of invoices by capID
 	logDebug("Checking invoices")
-	var invNbr = 0;
-	var feeAmount = 0;
 	var iListResult = aa.finance.getInvoiceByCapID(capId,null);
 	if (iListResult.getSuccess()) {
 		var iList = iListResult.getOutput();			
@@ -83,9 +79,12 @@ try{
 	
 	logDebug("Invoice Number Found: " + invNbr);
 	logDebug("Fee Amount: " + feeAmount);
-
+	if(AInfo['License Change'] == "Yes")
+		licType = AInfo["New License Type"];
+	else
+		licType = AInfo["License Type"];
 //If no balance Due Update License Record
-	if (balanceDue <= 0){
+	if (AInfo["Net Due/Refund"] <= 0){
 	// Update License Expiration Date
 		var vNewExpDate = new Date(AInfo['New Expiration Date']);
 		logDebug("Updating Expiration Date to: " + vNewExpDate);
@@ -127,7 +126,6 @@ try{
 			editAppSpecific("License Type",AInfo["New License Type"],parentCapId);
 			editAppSpecific("Canopy SF",AInfo["Aggragate Canopy Square Footage"],parentCapId);
 			editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],parentCapId);
-			var licType = AInfo["New License Type"];
 			var cultType = AInfo["Cultivator Type"];
 			editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,parentCapId);	
 		}
@@ -210,7 +208,7 @@ try{
 		}
 	}
 //Send Invoice Params Rpt Notification
-	if (balanceDue > 0){
+	if (AInfo["Net Due/Refund"] > 0){
 		var scriptName = "asyncRunInvoiceParamsRpt";
 		var envParameters = aa.util.newHashMap();
 		var feeNotification = "LCA_CLC_FEE_DUE";
