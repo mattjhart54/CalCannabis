@@ -37,12 +37,18 @@ try{
 		if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
 			updateAppStatus("Suspended","License Change",parentCapId);
 		}
+		
+		if(AInfo['License Change'] == "Yes")
+			var licType = AInfo["New License Type"];
+		else
+			var licType = AInfo["License Type"];
+		
 	// Update Canopy Size on the license record
 		if(AInfo['License Change'] == "Yes"){
 			editAppSpecific("License Type",AInfo["New License Type"],parentCapId);
 			editAppSpecific("Canopy SF",AInfo["Aggragate Canopy Square Footage"],parentCapId);
 			editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],parentCapId);
-			var licType = AInfo["New License Type"];
+			
 			var cultType = AInfo["Cultivator Type"];
 			editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,parentCapId);	
 		}
