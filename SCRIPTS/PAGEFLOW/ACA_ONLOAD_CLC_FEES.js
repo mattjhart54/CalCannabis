@@ -188,12 +188,12 @@ try {
 		editAppSpecific4ACA("Current Base Fee", lastFeeCredit);
 		editAppSpecific4ACA("New Base Fee", newFee);
 		editAppSpecific4ACA("Net Due/Refund",newBalance);
-		//if (newBalance > 0) {
-		//	var feeDesc = newLicType + " - License Fee with Date Change";
-		//	var feeSchedule = "LIC_CC_EXP";
-		//	var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
-		//	updateFee(thisFee.feeCode, feeSchedule, "FINAL", newBalance, "Y", "N");
-		//}	
+		if (newBalance > 0) {
+			var feeDesc = newLicType + " - License Fee with Date Change";
+			var feeSchedule = "LIC_CC_EXP";
+			var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
+			updateFee(thisFee.feeCode, feeSchedule, "FINAL", newBalance, "Y", "N");
+		}	
 	}
 } catch(err){
     logDebug("An error has occurred in ACA_Onload CLC Fees: " + err.message);
