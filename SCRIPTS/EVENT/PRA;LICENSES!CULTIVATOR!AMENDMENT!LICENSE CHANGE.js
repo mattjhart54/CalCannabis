@@ -82,7 +82,7 @@ try{
 		envParameters.put("licCap",parentCapId.getCustomID());
 		envParameters.put("reportName","Official License Certificate");
 		envParameters.put("approvalLetter", "");
-		envParameters.put("emailTemplate", "LCA_CCL_FEE_PAID");
+		envParameters.put("emailTemplate", "LCA_CLC_FEE_PAID");
 		envParameters.put("reason", "");
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("contType","Designated Responsible Party");
