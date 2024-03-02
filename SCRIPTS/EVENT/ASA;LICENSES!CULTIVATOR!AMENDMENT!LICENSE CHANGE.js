@@ -1,5 +1,7 @@
 
 try {
+	copyContactsByType(parentCapId,capId,"Designated Responsible Party");
+	 copyContactsByType(parentCapId,capId,"Business");
     if(AInfo['License Change'] == "Yes"){
 	var licType = AInfo["New License Type"];
     }else {
