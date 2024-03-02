@@ -49,18 +49,16 @@ try{
 	aa.env.setValue("currentUserID", "ADMIN");
 	aa.env.setValue("reportName", "Official License Certificate");
 	aa.env.setValue("contType", "Designated Responsible Party");
-	aa.env.setValue("approvalLetter", "");
 	aa.env.setValue("emailTemplate", "LCA_APPROVED_FOR_PROVISIONAL_RENEWAL");
-	aa.env.setValue("reason", "becasue");
+	aa.env.setValue("refundAmount", "");
 	aa.env.setValue("fromEmail","noreply@cannabis.ca.gov");
 */
 	var reportName = "" + aa.env.getValue("reportName");
 	var appCap = "" + aa.env.getValue("appCap");
 	var licCap = "" + aa.env.getValue("licCap");
 	var licType = "" + aa.env.getValue("licType");	
-	var approvalLetter = "" + aa.env.getValue("approvalLetter");
 	var emailTemplate = "" + aa.env.getValue("emailTemplate");
-	var reason = "" + aa.env.getValue("reason");
+	var refundAmount = "" + aa.env.getValue("refundAmount");
 	var currentUserID = "" + aa.env.getValue("currentUserID");
 	var contType = "" + aa.env.getValue("contType");
 	var fromEmail = "" + aa.env.getValue("fromEmail");
@@ -76,6 +74,7 @@ try{
 		logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
 		eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
 	}
+
 	var report = reportResult.getOutput(); 
 	var tmpID = aa.cap.getCapID(licCap).getOutput(); 
 	cap = aa.cap.getCap(tmpID).getOutput();
@@ -109,55 +108,7 @@ try{
 		logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
 		eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
 	}
-// Run the Approval Letter
-	
-	if(!matches(approvalLetter,"",null,undefined)) {
-		var tmpID = aa.cap.getCapID(appCap).getOutput(); 
-		cap = aa.cap.getCap(tmpID).getOutput();
-		appTypeResult = cap.getCapType();
-		appTypeString = appTypeResult.toString(); 
-		appTypeArray = appTypeString.split("/");
-		capStatus = cap.getCapStatus();
-		reportName = approvalLetter;
-		
-		reportResult = aa.reportManager.getReportInfoModelByName(reportName);
-		if (!reportResult.getSuccess()){
-			logDebug("**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage()); 
-			eTxt+="**WARNING** couldn't load report " + reportName + " " + reportResult.getErrorMessage() +br; 
-		}
-		var report = reportResult.getOutput(); 
-		report.setModule(appTypeArray[0]); 
-		//report.setCapId(itemCap.getID1() + "-" + itemCap.getID2() + "-" + itemCap.getID3()); 
-		report.setCapId(tmpID.getID1() + "-" + tmpID.getID2() + "-" + tmpID.getID3()); 
-		report.getEDMSEntityIdModel().setAltId(appCap);
-		eTxt+="reportName: " + reportName + br;
-		eTxt+="reportName: " + typeof(reportName) + br;
-		var parameters = aa.util.newHashMap(); 
-		parameters.put("altId",appCap);
-//		parameters.put("p2value","Designated Responsible Party");
-//		parameters.put("p3value","Mailing");
-		report.setReportParameters(parameters);
-		var permit = aa.reportManager.hasPermission(reportName,currentUserID); 
-		eTxt+="Has Permission: " + permit.getOutput().booleanValue() + br;
-		if(permit.getOutput().booleanValue()) { 
-			var reportResult = aa.reportManager.getReportResult(report); 
-			eTxt+="Get Report: " + reportResult.getOutput() + br;
-			if(reportResult) {
-				reportOutput = reportResult.getOutput();
-				var reportFile=aa.reportManager.storeReportToDisk(reportOutput);
-				eTxt+="Store Report to Disk: " + reportFile + br;
-				rFile=reportFile.getOutput();
-				rFiles.push(rFile);
-				logDebug("Report '" + reportName + "' has been run for " + appCap);
-				eTxt+=("Report '" + reportName + "' has been run for " + appCap) +br;
-			}else {
-				logDebug("System failed get report: " + reportResult.getErrorType() + ":" +reportResult.getErrorMessage());
-			}
-		}else{
-			logDebug("No permission to report: "+ reportName + " for user: " + currentUserID);
-			eTxt+="No permission to report: "+ reportName + " for user: " + currentUserID;
-		}
-	}
+
 	var priContact = getContactObj(tmpID,contType);
 	if(priContact){
 		var eParams = aa.util.newHashtable(); 
@@ -166,7 +117,7 @@ try{
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
 		addParameter(eParams, "$$parentId$$", licCap);
 		addParameter(eParams, "$$licType$$", licType);
-		addParameter(eParams, "$$reason$$", reason);
+		addParameter(eParams, "$$refundAmount$$", refundAmount);
 		var priEmail = ""+priContact.capContact.getEmail();
 		sendApprovalNotification(fromEmail,priEmail,"",emailTemplate,eParams, rFiles,tmpID);
 	}else{
@@ -178,9 +129,9 @@ try{
 	var thisTime = thisDate.getTime();
 	var eTime = (thisTime - sTime) / 1000
 } catch(err){
-	logDebug("An error has occurred in asyncRunOfficialLicenseRpt: " + err.message);
+	logDebug("An error has occurred in asyncRunOfficialLicenseRptForAmendment: " + err.message);
 	logDebug(err.stack);
-	aa.sendMail("noreply@cannabis.ca.gov", "mhart@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunOfficialLicenseRpt: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + eTxt);
+	aa.sendMail("noreply@cannabis.ca.gov", "sumpatel@trustvip.com", "", "AN ERROR HAS OCCURRED IN asyncRunOfficialLicenseRptForAmendment: ",  tmpID + br +"elapsed time: " + eTime + " seconds. " + br + "altId: " + licCap + br + eTxt);
 }
  function sendApprovalNotification(emailFrom,emailTo,emailCC,templateName,params,reportFile)
 {
