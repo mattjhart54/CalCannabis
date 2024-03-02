@@ -35,6 +35,9 @@ try{
 			logDebug("Error updating Alt ID: " +resAltId.getErrorMessage());
 		}
 	}
+// Add Contacts
+	copyContactsByType_rev(parentCapId,capId,"Designated Responsible Party");
+	copyContactsByType_rev(parentCapId,capId,"Business");
 // Invoice fees if fees are only assessed
 	var invNbr = 0;
 	var feeAmount = 0;
