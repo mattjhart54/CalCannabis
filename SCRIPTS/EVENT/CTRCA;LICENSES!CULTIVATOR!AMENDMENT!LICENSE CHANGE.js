@@ -155,9 +155,10 @@ try{
 	
 	
 	//Run Official License Certificate 
-		var scriptName = "asyncRunOfficialLicenseRpt";
+		var scriptName = "asyncRunOfficialLicenseRptForAmendment";
 		var envParameters = aa.util.newHashMap();
 		var feeNotification = "LCA_CLC_FEE_PAID";
+		var refundAmount = 0;
 		if (AInfo["Net Due/Refund"] < 0){
 			renArray = getChildren("Licenses/Cultivator/*/Renewal",parentCapId);
 			if (renArray && renArray.length > 0) {
@@ -172,14 +173,14 @@ try{
 				}
 			 }
 			feeNotification = "LCA_CLC_NO_FEE";
+			refundAmount = AInfo["Net Due/Refund"];
 		}
 		envParameters.put("reportName","Official License Certificate");
 		envParameters.put("appCap",newAltId);
 		envParameters.put("licCap",pAltId);
 		envParameters.put("licType",licType);
-		envParameters.put("approvalLetter", "");
 		envParameters.put("emailTemplate", feeNotification);
-		envParameters.put("reason", "");
+		envParameters.put("refundAmount", refundAmount);
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("contType","Designated Responsible Party");
 		envParameters.put("fromEmail",sysFromEmail);
