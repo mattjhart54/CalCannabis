@@ -1,8 +1,8 @@
 
 try {
 	copyContactsByType(parentCapId,capId,"Designated Responsible Party");
-	 copyContactsByType(parentCapId,capId,"Business");
-    if(AInfo['License Change'] == "Yes"){
+	copyContactsByType(parentCapId,capId,"Business");
+/*    if(AInfo['License Change'] == "Yes"){
 	var licType = AInfo["New License Type"];
     }else {
 	var licType = AInfo["License Type"];
@@ -14,7 +14,7 @@ try {
     	var thisFee = getFeeDefByDesc(feeSchedule, feeDesc);
     	updateFee(thisFee.feeCode, feeSchedule, "FINAL", newBalance, "Y");
     }
-
+*/
 /*
 // Invoice fees if fees are only assessed
     var invNbr = 0;
