@@ -169,9 +169,17 @@ try{
 			if(priContact){
 				//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
 				priContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
-				priContact.people.setContactType("Designated Responsible Party");	
-				cap.setApplicantModel(priContact.capContact);
+				priContact.people.setContactType("Designated Responsible Party");
 				aa.env.setValue("CapModel",cap);
+				cap.setApplicantModel(priContact.capContact);
+			}
+			var bContact = getContactObj(parentCapId,"Business");
+			if(bContact){
+				//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
+				bContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
+				bContact.people.setContactType("Business");
+				aa.env.setValue("CapModel",cap);
+				cap.setApplicantModel(bContact.capContact);
 			}
 			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
 			if (b1ExpResult.getSuccess()) {
