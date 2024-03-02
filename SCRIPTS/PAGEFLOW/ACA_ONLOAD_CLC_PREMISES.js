@@ -173,7 +173,7 @@ try{
 				aa.env.setValue("CapModel",cap);
 				cap.setApplicantModel(priContact.capContact);
 			}
-			var bContact = getContactObj(parentCapId,"Business");
+/*			var bContact = getContactObj(parentCapId,"Business");
 			if(bContact){
 				//Story 6577 SA - Resolve ACA Save and Resume Later contact issue - Adding DRP
 				bContact.people.setContactSeqNumber(null); // reset in order to avoid capContactNotFoundException on submittal
@@ -181,6 +181,7 @@ try{
 				aa.env.setValue("CapModel",cap);
 				cap.setApplicantModel(bContact.capContact);
 			}
+   */
 			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
 			if (b1ExpResult.getSuccess()) {
 				this.b1Exp = b1ExpResult.getOutput();
