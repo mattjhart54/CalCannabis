@@ -39,6 +39,7 @@ try{
 	copyContactsByType_rev(parentCapId,capId,"Designated Responsible Party");
 	copyContactsByType_rev(parentCapId,capId,"Business");
 // Invoice fees if fees are only assessed
+	var feeDue = false;
 	var invNbr = 0;
 	var feeAmount = 0;
 	var feeSeq = 0;
@@ -61,6 +62,8 @@ try{
 			var invoiceResult_L = aa.finance.createInvoice(capId, vFeeSeqArray, vPaymentPeriodArray);
 			if (!invoiceResult_L.getSuccess())
 				logDebug("**ERROR: Invoicing the fee items was not successful. Reason: " + invoiceResult_L.getErrorMessage());
+			else
+				feeDue = true;
 		}
 	}
 //get fee details
@@ -87,7 +90,7 @@ try{
 	else
 		licType = AInfo["License Type"];
 //If no balance Due Update License Record
-	if (AInfo["Net Due/Refund"] <= 0){
+	if (!feeDue){
 	// Update License Expiration Date
 		var vNewExpDate = new Date(AInfo['New Expiration Date']);
 		logDebug("Updating Expiration Date to: " + vNewExpDate);
