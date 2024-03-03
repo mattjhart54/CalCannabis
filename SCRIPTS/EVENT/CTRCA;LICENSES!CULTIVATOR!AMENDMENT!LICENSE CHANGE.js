@@ -215,7 +215,7 @@ try{
 		}
 	}
 //Send Invoice Params Rpt Notification
-	if (AInfo["Net Due/Refund"] > 0){
+	if (feeDue){
 		var scriptName = "asyncRunInvoiceParamsRpt";
 		var envParameters = aa.util.newHashMap();
 		var feeNotification = "LCA_CLC_FEE_DUE";
