@@ -8,6 +8,8 @@ try{
 		vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 		editAppSpecific("Expiration Date Changed","CHECKED",parentCapId);
 		editAppSpecific("Date Expiration Date Changed",fileDate,parentCapId);
+		editAppSpecific("Payment Due Date","");
+		updateAppStatus("Fee Paid - Approved", "Updated via PRA Script after payment.");
 	
 	//Set license status Apply Suspension Lift Notice - Verify Needed	
 		savedCapStatus = getAppSpecific("Saved License Status",parentCapId);
@@ -75,15 +77,14 @@ try{
 	
 	
 	//Run Official License Certificate 
-		var scriptName = "asyncRunOfficialLicenseRpt";
+		var scriptName = "asyncRunOfficialLicenseRptForAmendment";
 		var envParameters = aa.util.newHashMap();
-		envParameters.put("licType",licType);
+		envParameters.put("reportName","Official License Certificate");
 		envParameters.put("appCap",capId.getCustomID());
 		envParameters.put("licCap",parentCapId.getCustomID());
-		envParameters.put("reportName","Official License Certificate");
-		envParameters.put("approvalLetter", "");
+		envParameters.put("licType",licType);
 		envParameters.put("emailTemplate", "LCA_CLC_FEE_PAID");
-		envParameters.put("reason", "");
+		envParameters.put("refundAmount", "");
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("contType","Designated Responsible Party");
 		envParameters.put("fromEmail",sysFromEmail);
