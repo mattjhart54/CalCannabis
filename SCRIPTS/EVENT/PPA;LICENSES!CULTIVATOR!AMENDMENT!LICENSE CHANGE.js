@@ -8,6 +8,8 @@ try{
 		vLicenseObj.setExpiration(dateAdd(vNewExpDate,0));
 		editAppSpecific("Expiration Date Changed","CHECKED",parentCapId);
 		editAppSpecific("Date Expiration Date Changed",fileDate,parentCapId);
+		editAppSpecific("Payment Due Date","");
+		updateAppStatus("Fee Paid - Approved", "Updated via PRA Script after payment.");
 	
 	//Set license status Apply Suspension Lift Notice - Verify Needed	
 		savedCapStatus = getAppSpecific("Saved License Status",parentCapId);
@@ -37,12 +39,18 @@ try{
 		if (vCapStatus == "Suspended" || savedCapStatus == "Suspended"){
 			updateAppStatus("Suspended","License Change",parentCapId);
 		}
+		
+		if(AInfo['License Change'] == "Yes")
+			var licType = AInfo["New License Type"];
+		else
+			var licType = AInfo["License Type"];
+		
 	// Update Canopy Size on the license record
 		if(AInfo['License Change'] == "Yes"){
 			editAppSpecific("License Type",AInfo["New License Type"],parentCapId);
 			editAppSpecific("Canopy SF",AInfo["Aggragate Canopy Square Footage"],parentCapId);
 			editAppSpecific("Canopy Plant Count",AInfo["Canopy Plant Count"],parentCapId);
-			var licType = AInfo["New License Type"];
+			
 			var cultType = AInfo["Cultivator Type"];
 			editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,parentCapId);	
 		}
@@ -69,18 +77,17 @@ try{
 	
 	
 	//Run Official License Certificate 
-		var scriptName = "asyncRunOfficialLicenseRpt";
-		var envParameters = aa.util.newHashMap();
-		envParameters.put("licType",licType);
-		envParameters.put("appCap",capId.getCustomID());
-		envParameters.put("licCap",parentCapId.getCustomID());
-		envParameters.put("reportName","Official License Certificate");
-		envParameters.put("approvalLetter", "");
-		envParameters.put("emailTemplate", "LCA_CCL_FEE_PAID");
-		envParameters.put("reason", "");
-		envParameters.put("currentUserID",currentUserID);
-		envParameters.put("contType","Designated Responsible Party");
-		envParameters.put("fromEmail",sysFromEmail);
+	var scriptName = "asyncRunOfficialLicenseRptForAmendment";
+	var envParameters = aa.util.newHashMap();
+	envParameters.put("reportName","Official License Certificate");
+	envParameters.put("appCap",capId.getCustomID());
+	envParameters.put("licCap",parentCapId.getCustomID());
+	envParameters.put("licType",licType);
+	envParameters.put("emailTemplate", "LCA_CLC_FEE_PAID");
+	envParameters.put("refundAmount", "");
+	envParameters.put("currentUserID",currentUserID);
+	envParameters.put("contType","Designated Responsible Party");
+	envParameters.put("fromEmail",sysFromEmail);
 		
 		aa.runAsyncScript(scriptName, envParameters);
 	
