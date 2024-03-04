@@ -187,6 +187,7 @@ try{
 				this.b1Exp = b1ExpResult.getOutput();
 				expDate = this.b1Exp.getExpDate();	
 				if(expDate) {
+					expDate = fixDate(expDate);
 					tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
 					editAppSpecific4ACA("Expiration Date", tmpExpDate);
 				}
