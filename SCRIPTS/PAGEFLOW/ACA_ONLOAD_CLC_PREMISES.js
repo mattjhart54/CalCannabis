@@ -177,10 +177,10 @@ try{
 			b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
 			if (b1ExpResult.getSuccess()) {
 				this.b1Exp = b1ExpResult.getOutput();
-				expDate = this.b1Exp.getExpDate();	
+				expDate = this.b1Exp.getExpDate();
+				expDate = fixDate(expDate);
 				if(expDate) {
-					//expDate = fixDate(expDate);
-					tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
+					tmpExpDate = (expDate.getMonth() + 1) + "/" + expDate.getDate() + "/" + expDate.getFullYear();
 					editAppSpecific4ACA("Expiration Date", tmpExpDate);
 				}
 			}
