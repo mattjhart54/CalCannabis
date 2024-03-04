@@ -176,14 +176,14 @@ try{
 				}
 			 }
 			feeNotification = "LCA_CLC_NO_FEE";
-			refundAmount = AInfo["Net Due/Refund"];
+			refundAmount = "$" + AInfo["Net Due/Refund"];
 		}
 		envParameters.put("reportName","Official License Certificate");
 		envParameters.put("appCap",newAltId);
 		envParameters.put("licCap",pAltId);
 		envParameters.put("licType",licType);
 		envParameters.put("emailTemplate", feeNotification);
-		envParameters.put("refundAmount", refundAmount);
+		envParameters.put("refundAmount", Math.abs(refundAmount));
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("contType","Designated Responsible Party");
 		envParameters.put("fromEmail",sysFromEmail);
