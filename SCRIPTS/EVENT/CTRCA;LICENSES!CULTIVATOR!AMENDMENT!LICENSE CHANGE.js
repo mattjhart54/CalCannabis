@@ -176,7 +176,7 @@ try{
 				}
 			 }
 			feeNotification = "LCA_CLC_NO_FEE";
-			refundAmount = "$" + AInfo["Net Due/Refund"];
+			refundAmount = AInfo["Net Due/Refund"];
 		}
 		envParameters.put("reportName","Official License Certificate");
 		envParameters.put("appCap",newAltId);
