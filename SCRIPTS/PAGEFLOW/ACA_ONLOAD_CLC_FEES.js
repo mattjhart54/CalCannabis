@@ -121,13 +121,13 @@ try {
 	if (newExpDateStr) {
 	// Calculate the number of days to new expiration date
 		var newExpDate = new Date(newExpDateStr);
-		var timeDiff = newExpDate.getTime() - curDate.getTime();
-		daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+		var timeDiff = Math.abs(newExpDate.getTime() - curDate.getTime());
+		daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 		
 	// Calculate the number of days from current date to expiration date				
 	//	curDate = new Date();
-		var validFromDiff = expDate.getTime() - curDate.getTime();
-		daysFromDiff = Math.floor(validFromDiff / (1000 * 60 * 60 * 24));
+		var validFromDiff = Math.abs(expDate.getTime() - curDate.getTime());
+		daysFromDiff = Math.ceil(validFromDiff / (1000 * 60 * 60 * 24));
 
 	// Get last renewal fee
 		var feeDesc = licType + " - Renewal Fee";
