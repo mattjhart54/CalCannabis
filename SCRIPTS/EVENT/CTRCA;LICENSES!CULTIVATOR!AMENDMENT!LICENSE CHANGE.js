@@ -89,6 +89,9 @@ try{
 		licType = AInfo["New License Type"];
 	else
 		licType = AInfo["License Type"];
+
+	updateWorkDesc(getAppSpecific("Legal Business Name",parentCapId));
+	editAppName(licType);
 //If no balance Due Update License Record
 	if (!feeDue){
 	// Update License Expiration Date
