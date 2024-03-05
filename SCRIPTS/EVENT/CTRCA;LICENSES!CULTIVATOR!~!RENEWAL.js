@@ -46,8 +46,10 @@ try{
 		if(expDate) {
 			tmpExpDate = expDate.getMonth() + "/" + expDate.getDayOfMonth() + "/" + expDate.getYear();
 			curDateFormat = curDate.getMonth() + 1 + "/" + curDate.getDate() + "/" + curDate.getFullYear();
+			tmpLateDate = dateAdd(tmpExpDate,+1);
 			var tmpDate = new Date(tmpExpDate);
 			curDate = new Date(curDateFormat);
+			lateDate = new Date(tmpLateDate);
 			var expDateChange = AInfo["License Expiration Date Change"] == "Yes";
 			var newExpDateStr = AInfo["New Expiration Date"];
 			if (expDateChange){
@@ -150,7 +152,7 @@ try{
 					logDebug("An error occurred retrieving fee item: " + feeDesc);
 				}
 			}
-			if(tmpDate < curDate && AInfo["Limited Operation"] != "Yes") {
+			if(lateDate < curDate && AInfo["Limited Operation"] != "Yes") {
 				if (newExpDateStr){
                 		var feeDesc = AInfo["License Type"] + " - Late Fee with Date Change";
                 		var feeSchedule = "LIC_CC_REN_EXP";
