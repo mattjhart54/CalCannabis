@@ -40,11 +40,11 @@ try{
 			updateAppStatus("Suspended","License Change",parentCapId);
 		}
 		
-		if(AInfo['License Change'] == "Yes")
+		if(AInfo['License Change'] == "Yes"){
 			var licType = AInfo["New License Type"];
-		else
+		}else{
 			var licType = AInfo["License Type"];
-		
+		}
 	// Update Canopy Size on the license record
 		if(AInfo['License Change'] == "Yes"){
 			editAppSpecific("License Type",AInfo["New License Type"],parentCapId);
