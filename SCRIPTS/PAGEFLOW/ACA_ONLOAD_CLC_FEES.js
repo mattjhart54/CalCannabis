@@ -143,7 +143,7 @@ try {
 				feeDescR = licType + " - Per 2,000 sq ft over " + maskTheMoneyNumber(base);
 				qty = (parseInt(sqft) - base) / 2000;
 				thisFee = getFeeDefByDesc("LIC_CC_REN", feeDescR);
-				lastOverFee = thisFee.formula * qty;
+				lastOverFee = thisFee.formula * parseInt(qty);
 			}
 		}
 		if(AInfo["Limited Operations"] == "Yes") 
@@ -173,9 +173,9 @@ try {
 				qty = (parseInt(newSqft) - base) / 2000;
 				thisFee = getFeeDefByDesc("LIC_CC_EXP", feeDesc);
 				if(AInfo["Limited Operation"] != "Yes") {
-					overFeeAmt = ((thisFee.formula*qty)/365)*feeQty;
+					overFeeAmt = ((thisFee.formula*parseInt(qty))/365)*feeQty;
 				}else {
-					overFeeAmt = (((thisFee.formula*qty)/365)*feeQty)*.2;
+					overFeeAmt = (((thisFee.formula*parseInt(qty))/365)*feeQty)*.2;
 				}			
 			} 
 		}
