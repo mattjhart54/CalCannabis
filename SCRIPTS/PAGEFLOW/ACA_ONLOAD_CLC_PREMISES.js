@@ -79,6 +79,27 @@ try {
 	var pAltId = parentCapId.getCustomID();
 	var thisCap = aa.cap.getCap(parentCapId).getOutput();		
 	var thisCapStatus = thisCap.getCapStatus();
+//	Get expiration info from parent license
+	var curDate = new Date();
+	var expDate = new Date();
+	var expStatus = "";
+	var b1ExpResult = aa.expiration.getLicensesByCapID(parentCapId);
+	if (b1ExpResult.getSuccess()) {
+		this.b1Exp = b1ExpResult.getOutput();
+		expDate = this.b1Exp.getExpDate();
+		expStatus = this.b1Exp.getExpStatus();
+		expDate = fixDate(expDate);
+		if(expDate) {
+			tmpExpDate = (expDate.getMonth() +1) + "/" + expDate.getDate() + "/" + expDate.getFullYear();
+			tmpFromDate = (expDate.getMonth() +1) + "/" + expDate.getDate() + "/" + (expDate.getFullYear() -1); 				
+			var expDate = new Date(tmpExpDate);
+			var fromDate = new Date(tmpFromDate);
+		}
+	}
+//	Compare expiration date from license to today's date
+	var daysDiff = 0;
+	var fromDiff = Math.abs(expDate.getTime() - curDate.getTime());
+	daysDiff = Math.ceil(fromDiff / (1000 * 60 * 60 * 24));
 	
 	var resCurUser = aa.people.getPublicUserByUserName(publicUserID);
 	if(resCurUser.getSuccess()){
@@ -100,7 +121,7 @@ try {
 			showMessage = true;
 			logMessage("  Warning: Only the Designated Responsible Party will be allowed to complete a License Change request.");
 		}else{
-			if (expDateProcessed == "CHECKED"){
+			if (expDateProcessed == "CHECKED" || daysDiff > 365){
 				cancel = true;
 				showMessage = true;
 				logMessage(" Your license status is not eligible for this request, please contact DCC Licensing at <a href='mailto:licensing@cannabis.ca.gov'>licensing@cannabis.ca.gov</a>");
