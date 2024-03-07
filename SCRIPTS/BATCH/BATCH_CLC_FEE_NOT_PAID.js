@@ -72,12 +72,13 @@ if (batchJobResult.getSuccess()) {
 /------------------------------------------------------------------------------------------------------*/
 // test parameters
 /* 
-aa.env.setValue("lookAheadDays", "0");
-aa.env.setValue("daySpan", "0");
 //aa.env.setValue("recordGroup", "Licenses");
 //aa.env.setValue("recordType", "Cultivator");
 //aa.env.setValue("recordSubType", "Amendment");
 //aa.env.setValue("recordCategory", "License Change");
+
+aa.env.setValue("lookAheadDays", "0");
+aa.env.setValue("daySpan", "0");
 aa.env.setValue("appStatus", "License Change Fee Due");
 aa.env.setValue("asiField", "Payment Due Date");
 aa.env.setValue("asiGroup", "FEES");
@@ -87,12 +88,13 @@ aa.env.setValue("sysFromEmail", "noreply@cannabis.ca.gov");
 aa.env.setValue("emailAddress", "sumpatel@trustvip.com");
 */
 
-var lookAheadDays = getParam("lookAheadDays");
-var daySpan = getParam("daySpan");
 //var appGroup = getParam("recordGroup");
 //var appTypeType = getParam("recordType");
 //var appSubtype = getParam("recordSubType");
 //var appCategory = getParam("recordCategory");
+
+var lookAheadDays = getParam("lookAheadDays");
+var daySpan = getParam("daySpan");
 var appStatus = getParam("appStatus");
 var asiField = getParam("asiField");
 var asiGroup = getParam("asiGroup");
