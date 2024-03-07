@@ -15,11 +15,17 @@ try{
 	if (parentCapId != null) {
 		pAltId = parentCapId.getCustomID();
 		cIds = getChildren("Licenses/Cultivator/Amendment/License Change",parentCapId);
+		var cIdLen = 0;
+		for (x in cIds) {
+			cId = cIds[x];
+			altId = cId.getCustomID();
+			if(altId.indexOf("TMP") == -1)
+				cIdLen = cIdLen + 1;
+		}
 		if(matches(cIds, null, "", undefined)) 
 			amendNbr = "0" + 1;
 		else {
-			cIdLen = cIds.length 
-			if(cIds.length <= 9) {
+			if(cIdLen <= 9) {
 				amendNbr = cIdLen + 1;
 				amendNbr = "0" +  amendNbr;
 			}else {
