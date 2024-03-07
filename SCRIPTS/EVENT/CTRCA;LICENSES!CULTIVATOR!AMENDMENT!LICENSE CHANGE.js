@@ -233,7 +233,7 @@ try{
 		envParameters.put("licCap",newAltId);
 		envParameters.put("licType",licType);
 		envParameters.put("invNbr",invNbr);
-		envParameters.put("feeAmount", feeAmount);
+		envParameters.put("feeAmount", maskTheMoneyNumber(feeAmount));
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("templateName", feeNotification);
 		
