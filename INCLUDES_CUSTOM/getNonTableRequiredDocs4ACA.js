@@ -24,7 +24,10 @@ function getNonTableRequiredDocs4ACA() {
 	var electricityUsgae							= "Electricity Usage";
 	var waterLakeStream								= "Water - Lake and Streambed Alteration Document";
 	var waterQuality								= "Water - Water Quality Protection Permit";
-
+	//spatel CLS 7710 for LPA Updates:
+	var LPA_signaturePage							= "Business - Labor Peace Agreement Signature Page";
+	var LPA_notarizedStatement						= "Business - Labor Peace Agreement Notarized Statement"
+	
 
 	//Remove all conditions first
 	removeAllCapConditions();
@@ -46,6 +49,13 @@ function getNonTableRequiredDocs4ACA() {
     if (isRenewal) {
 		if(AInfo["License Change"] == "Yes") {
 			requirementArray.push(premisesDiagram);
+		}
+		if(!matches( AInfo["Number of Employees"], null, undefined, "")) {
+			if (AInfo["Number of Employees"] == "10+ employees and has entered into a labor peace agreement") {
+				requirementArray.push(LPA_signaturePage);
+			} else {
+				requirementArray.push(LPA_notarizedStatement);
+			}
 		}
     }
 
