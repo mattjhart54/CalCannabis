@@ -26,7 +26,7 @@ function getNonTableRequiredDocs4ACA() {
 	var waterQuality								= "Water - Water Quality Protection Permit";
 	//spatel CLS 7710 for LPA Updates:
 	var LPA_signaturePage							= "Business - Labor Peace Agreement Signature Page";
-	var LPA_notarizedStatement						= "Business - Labor Peace Agreement Notarized Statement"
+	var LPA_notarizedStatement						= "Business - Labor Peace Agreement Notarized Statement";
 	
 
 	//Remove all conditions first
@@ -50,12 +50,11 @@ function getNonTableRequiredDocs4ACA() {
 		if(AInfo["License Change"] == "Yes") {
 			requirementArray.push(premisesDiagram);
 		}
-		if(!matches( AInfo["Number of Employees"], null, undefined, "")) {
-			if (AInfo["Number of Employees"] == "10+ employees and has entered into a labor peace agreement") {
-				requirementArray.push(LPA_signaturePage);
-			} else {
-				requirementArray.push(LPA_notarizedStatement);
-			}
+		if (AInfo["Number of Employees"] == "10+ employees and has entered into a labor peace agreement") {
+			requirementArray.push(LPA_signaturePage);
+		}
+		if (AInfo["Number of Employees"] == "10+ employees and has not yet entered into a labor peace agreement" || AInfo["Number of Employees"] == "0-9 employees - not yet required to enter into a labor peace agreement") {
+			requirementArray.push(LPA_notarizedStatement);
 		}
     }
 

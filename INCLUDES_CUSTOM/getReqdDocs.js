@@ -114,8 +114,8 @@ try{
 	var pwrGenerator = {condition : "Power Source - Generator 50HP or Greater", document : "Power Source – Generator 50 HP or greater"};
 	
 	//spatel CLS 7710 for LPA Updates:
-	var LPA_signaturePage = {condition : "Business - Labor Peace Agreement Signature Page", document : "Labor Peace Agreement - Signature Page"};
-	var LPA_notarizedStatement = {condition : "Business - Labor Peace Agreement Notarized Statement", document : "Labor Peace Agreement - Notarized Statement"};
+	var LPA_signaturePage = {condition : "Business - Labor Peace Agreement Signature Page", document : "Business - Labor Peace Agreement Signature Page"};
+	var LPA_notarizedStatement = {condition : "Business - Labor Peace Agreement Notarized Statement", document : "Business - Labor Peace Agreement Notarized Statement"};
 	
 	
 	//owner documents
@@ -447,22 +447,21 @@ try{
 */
 
 	// spatel new reqd docs for LPA updates: Story 7710
-		if(!matches( AInfo["Number of Employees"], null, undefined, "")) {
-			if (AInfo["Number of Employees"] == "10+ employees and has entered into a labor peace agreement") {
+		if (AInfo["Number of Employees"] == "10+ employees and has entered into a labor peace agreement") {
 				arrReqdDocs_App.push(LPA_signaturePage);
-			} else {
-				arrReqdDocs_App.push(LPA_notarizedStatement);
-			}
 		} else {
 			if(appHasCondition(conditionType, null, LPA_signaturePage.condition, null)){
 				removeCapCondition(conditionType, LPA_signaturePage.condition);
 			}
+		}
+		if (AInfo["Number of Employees"] == "10+ employees and has not yet entered into a labor peace agreement" || AInfo["Number of Employees"] == "0-9 employees - not yet required to enter into a labor peace agreement") {
+			arrReqdDocs_App.push(LPA_notarizedStatement);
+		} else {
 			if(appHasCondition(conditionType, null, LPA_notarizedStatement.condition, null)){
 				removeCapCondition(conditionType, LPA_notarizedStatement.condition);
 			}
 		}
 	
-
 		return arrReqdDocs_App;
 	}
 	
