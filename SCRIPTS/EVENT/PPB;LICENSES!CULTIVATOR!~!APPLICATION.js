@@ -77,6 +77,19 @@ try {
 			if (appTypeArray[2] != "Temporary") {
 				addToCat(licCapId); //send active license to CAT
 			}
+
+// Story 7776: Update LPA data from Application to License
+			useAppSpecificGroupName = true;
+			tmpInfo = new Array();
+			loadAppSpecific(tmpInfo);
+			if(!matches(AInfo["Number of Employees"], null, undefined, "")) {
+				editAppSpecific("LABOR PEACE AGREEMENT.How many employees",tmpInfo["LABOR PEACE AGREEMENT.How many employees"],licCapId);
+				editAppSpecific("LABOR PEACE AGREEMENT.Number of Employees",tmpInfo["LABOR PEACE AGREEMENT.Number of Employees"],licCapId);
+				editAppSpecific("LABOR PEACE AGREEMENT.Description",tmpInfo["LABOR PEACE AGREEMENT.Description"],licCapId);
+				editAppSpecific("LABOR PEACE AGREEMENT.Labor Organization",tmpInfo["LABOR PEACE AGREEMENT.Labor Organization"],licCapId);
+				editAppSpecific("LABOR PEACE AGREEMENT.Expiration Date",tmpInfo["LABOR PEACE AGREEMENT.Expiration Date"],licCapId);
+			}
+			useAppSpecificGroupName = false;
 			
 		}else{
 			logDebug("Error creating License record: " + licCapId);

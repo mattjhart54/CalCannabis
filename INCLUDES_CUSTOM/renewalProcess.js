@@ -106,6 +106,19 @@ function renewalProcess(rAltId, event, fees){
 				var cultType = AInfo["Cultivator Type"];
 			}
 			editAppName(AInfo["License Issued Type"] + " " + cultType + " - " + licType,licId);
+
+	// Story 7777: Update LPA data from Renewal to License
+			useAppSpecificGroupName = true;
+			tmpInfo = new Array();
+			loadAppSpecific(tmpInfo);
+			if(!matches(AInfo["Number of Employees"], null, undefined, "")) {
+				editAppSpecific("LABOR PEACE AGREEMENT.How many employees",tmpInfo["LABOR PEACE AGREEMENT.How many employees"],licId);
+				editAppSpecific("LABOR PEACE AGREEMENT.Number of Employees",tmpInfo["LABOR PEACE AGREEMENT.Number of Employees"],licId);
+				editAppSpecific("LABOR PEACE AGREEMENT.Description",tmpInfo["LABOR PEACE AGREEMENT.Description"],licId);
+				editAppSpecific("LABOR PEACE AGREEMENT.Labor Organization",tmpInfo["LABOR PEACE AGREEMENT.Labor Organization"],licId);
+				editAppSpecific("LABOR PEACE AGREEMENT.Expiration Date",tmpInfo["LABOR PEACE AGREEMENT.Expiration Date"],licId);
+			}
+			useAppSpecificGroupName = false;
 			
 	// Update Financial Interest Table
 			if (typeof(FINANCIALINTERESTHOLDERNEW) == "object"){
