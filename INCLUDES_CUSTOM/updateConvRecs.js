@@ -123,7 +123,7 @@ try {
 	vLicenseObj = new licenseObject(null,histCapId);
 	vLicenseObj.setExpiration(dateAdd(vCurrExpDate,0));
 	vLicenseObj.setStatus("Inactive");
-	updateAppStatus("Inactive","License Converted",histCapId);
+	updateAppStatus("Historical","License Converted",histCapId);
 	
 // update the primary license record from the Conversion Record.
 	capId = crId;
