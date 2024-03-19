@@ -119,11 +119,12 @@ try {
 	copyASITables(capId,histCapId);
 	copyConditions(capId,histCapId);
 
-//update the expiration date and license status
+//update the expiration date and license status and Remove from ACA
 	vLicenseObj = new licenseObject(null,histCapId);
 	vLicenseObj.setExpiration(dateAdd(vCurrExpDate,0));
 	vLicenseObj.setStatus("Inactive");
 	updateAppStatus("Historical","License Converted",histCapId);
+	aa.cap.updateAccessByACA(histCapId, "N");
 	
 // update the primary license record from the Conversion Record.
 	capId = crId;
