@@ -150,7 +150,24 @@ try{
 			}
 		}
 		
-		arrReqdDocs_App.push(businessHOO);		
+		arrReqdDocs_App.push(businessHOO);	
+
+// spatel new reqd docs for LPA updates: Story 7710
+		if (AInfo["Number of Employees"] == "10+ employees and has entered into a labor peace agreement") {
+			arrReqdDocs_App.push(LPA_signaturePage);
+		} else {
+			if(appHasCondition(conditionType, null, LPA_signaturePage.condition, null)){
+				removeCapCondition(conditionType, LPA_signaturePage.condition);
+			}
+		}
+		if (AInfo["Number of Employees"] == "10+ employees and has not yet entered into a labor peace agreement" || AInfo["Number of Employees"] == "0-9 employees - not yet required to enter into a labor peace agreement") {
+			arrReqdDocs_App.push(LPA_notarizedStatement);
+		} else {
+			if(appHasCondition(conditionType, null, LPA_notarizedStatement.condition, null)){
+				removeCapCondition(conditionType, LPA_notarizedStatement.condition);
+			}
+		}
+		
 		arrReqdDocs_App.push(businessFI);
 		
 		if (AInfo["Business Entity Structure"] == "Sovereign Entity"){
@@ -445,22 +462,6 @@ try{
 			}
 		}
 */
-
-	// spatel new reqd docs for LPA updates: Story 7710
-		if (AInfo["Number of Employees"] == "10+ employees and has entered into a labor peace agreement") {
-				arrReqdDocs_App.push(LPA_signaturePage);
-		} else {
-			if(appHasCondition(conditionType, null, LPA_signaturePage.condition, null)){
-				removeCapCondition(conditionType, LPA_signaturePage.condition);
-			}
-		}
-		if (AInfo["Number of Employees"] == "10+ employees and has not yet entered into a labor peace agreement" || AInfo["Number of Employees"] == "0-9 employees - not yet required to enter into a labor peace agreement") {
-			arrReqdDocs_App.push(LPA_notarizedStatement);
-		} else {
-			if(appHasCondition(conditionType, null, LPA_notarizedStatement.condition, null)){
-				removeCapCondition(conditionType, LPA_notarizedStatement.condition);
-			}
-		}
 	
 		return arrReqdDocs_App;
 	}
