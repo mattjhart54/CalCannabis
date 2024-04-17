@@ -80,6 +80,9 @@ try {
 		}else{
 			var fmtPhone = "";
 		}
+		var acaSite = getACABaseUrl();   
+		addParameter(eParams, "$$acaURL$$", acaSite);
+
 		addParameter(eParams, "$$altId$$", newAltId);
 		addParameter(eParams, "$$contactPhone1$$", fmtPhone);
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
