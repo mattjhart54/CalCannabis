@@ -49,6 +49,9 @@ try{
 			logDebug("SI Full Name " + siFN + " SI Email " + siEmail);
 		}
 		var eParams = aa.util.newHashtable();
+		var acaSite = getACABaseUrl();   
+		addParameter(eParams, "$$acaURL$$", acaSite);
+		
 		addParameter(eParams,"$$SI$$", siFN);
 		addParameter(eParams,"$$SIEMAIL$$", siEmail);
 		var locEmail =  TInfo["E-mail Address"];
