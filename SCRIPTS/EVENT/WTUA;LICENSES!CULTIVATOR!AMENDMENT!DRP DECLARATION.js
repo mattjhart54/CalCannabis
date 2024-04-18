@@ -109,6 +109,8 @@ try {
 			}
 			if(licFnd) {
 				var eParams = aa.util.newHashtable(); 
+				var acaSite = getACABaseUrl();   
+				addParameter(eParams, "$$acaURL$$", acaSite);
 				addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 				addParameter(eParams, "$$altId$$", capId.getCustomID());
 				addParameter(eParams, "$$contactFirstName$$", drpFirst);
@@ -140,6 +142,8 @@ try {
 		var priContact = getContactObj(parentCapId,"Designated Responsible Party");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			var contPhone = priContact.capContact.phone1;
 			if(contPhone){

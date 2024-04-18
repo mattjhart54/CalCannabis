@@ -78,6 +78,8 @@ try {
 		var priContact = getContactObj(capId,"Owner");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			var contPhone = priContact.capContact.phone1;
 			if(contPhone){
@@ -117,6 +119,8 @@ try {
 		var priContact = getContactObj(capId,"Owner");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			var contPhone = priContact.capContact.phone1;
 			if(contPhone){

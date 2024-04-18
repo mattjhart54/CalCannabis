@@ -186,6 +186,9 @@ try {
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
+
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			var contPhone = priContact.capContact.phone1;
 			if(contPhone){
@@ -223,7 +226,9 @@ try {
 //  Send email notification to DRP
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
-			var eParams = aa.util.newHashtable(); 
+			var eParams = aa.util.newHashtable(); 			
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			var contPhone = priContact.capContact.phone1;
 			if(contPhone){

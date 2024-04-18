@@ -259,6 +259,8 @@ try {
 				else {
 		//  Send Physical Modification Approval email notification to DRP
 					var eParams = aa.util.newHashtable(); 
+					var acaSite = getACABaseUrl();   
+					addParameter(eParams, "$$acaURL$$", acaSite);
 					addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 					var contPhone = priContact.capContact.phone1;
 					if(contPhone){
@@ -315,6 +317,8 @@ try {
 				}else{
 		//  Send  Approved for Provisional Renewal email notification to DRP
 					var eParams = aa.util.newHashtable(); 
+					var acaSite = getACABaseUrl();   
+					addParameter(eParams, "$$acaURL$$", acaSite);
 					addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 					var contPhone = priContact.capContact.phone1;
 					if(contPhone){
@@ -368,7 +372,9 @@ try {
 					aa.runAsyncScript(scriptName, envParameters);
 				}else{
 				//  Send  Approved Renewal email notification to DRP
-					var eParams = aa.util.newHashtable(); 				
+					var eParams = aa.util.newHashtable(); 
+					var acaSite = getACABaseUrl();   
+					addParameter(eParams, "$$acaURL$$", acaSite);				
 					addParameter(eParams, "$$altId$$", capId.getCustomID());
 					addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 					addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
@@ -430,6 +436,8 @@ try {
 		var priContact = getContactObj(capId,"Designated Responsible Party");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			var contPhone = priContact.capContact.phone1;
 			if(contPhone){
