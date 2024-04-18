@@ -52,6 +52,8 @@ try {
 						}
 						if(licFnd) {
 							var eParams = aa.util.newHashtable(); 
+							var acaSite = getACABaseUrl();   
+							addParameter(eParams, "$$acaURL$$", acaSite);
 							addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 							addParameter(eParams, "$$altId$$", capId.getCustomID());
 							addParameter(eParams, "$$contactFirstName$$", licCont.firstName);

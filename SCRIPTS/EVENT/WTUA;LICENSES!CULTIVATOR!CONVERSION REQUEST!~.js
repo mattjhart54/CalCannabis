@@ -5,6 +5,8 @@ try {
 			rFiles = [];
 			priEmail = priContact.capContact.email;
 			var eParams = aa.util.newHashtable(); 
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
 			addParameter(eParams, "$$altId$$", capId.getCustomID());
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
@@ -21,6 +23,8 @@ try {
 			rFiles = [];
 			priEmail = priContact.capContact.email;
 			var eParams = aa.util.newHashtable(); 
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
 			addParameter(eParams, "$$altId$$", capId.getCustomID());
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 			addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
