@@ -148,6 +148,9 @@ try {
 		var priContact = getContactObj(capId,"Owner");
 		if(priContact){
 			var eParams = aa.util.newHashtable(); 
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
+			
 			addParameter(eParams, "$$fileDateYYYYMMDD$$", fileDateYYYYMMDD);
 			addParameter(eParams, "$$altId$$", newAltId);
 			addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
