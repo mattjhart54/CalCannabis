@@ -219,6 +219,9 @@ try {
                 var priContact = getContactObj(capId,"Designated Responsible Party");
                 if(priContact) {
                     var eParams = aa.util.newHashtable(); 
+                    var acaSite = getACABaseUrl();   
+                    addParameter(eParams, "$$acaURL$$", acaSite);
+                    
                     addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
                     addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
                     addParameter(eParams, "$$fileDate$$", fileDateYYYYMMDD);

@@ -186,6 +186,9 @@ try {
 							var rFiles = [];
 							if (conEmail) {
 								var eParams = aa.util.newHashtable(); 
+								var acaSite = getACABaseUrl();   
+								addParameter(eParams, "$$acaURL$$", acaSite);
+								
 								addParameter(eParams, "$$ALTID$$", capId.getCustomID());
 								addParameter(eParams, "$$DEFICIENCYID$$", defAltIdT);
 								addParameter(eParams, "$$firstName$$", conFirst);

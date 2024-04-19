@@ -207,6 +207,9 @@ function mainProcess() {
 					tmpRecd++;
 					logDebug("Process record " + altId);
 					var eParams = aa.util.newHashtable(); 
+					var acaSite = getACABaseUrl();   
+					addParameter(eParams, "$$acaURL$$", acaSite);
+					
 					addParameter(eParams, "$$ALTID$$", capId.getCustomID());
 					addParameter(eParams, "$$DAYS$$", noticeDays);
 					addParameter(eParams, "$$firstName$$", conFirst);

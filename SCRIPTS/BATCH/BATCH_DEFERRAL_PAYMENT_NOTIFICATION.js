@@ -223,6 +223,9 @@ try{
 						}else{
 							busName = getAppSpecific("Legal Business Name");
 						}
+						var acaSite = getACABaseUrl();   
+						addParameter(eParams, "$$acaURL$$", acaSite);
+						
 						addParameter(eParams,"$$altID$$",altId);
 						addParameter(eParams,"$$firstName$$",thisContact["firstName"]);
 						addParameter(eParams,"$$lastName$$",thisContact["lastName"]);
