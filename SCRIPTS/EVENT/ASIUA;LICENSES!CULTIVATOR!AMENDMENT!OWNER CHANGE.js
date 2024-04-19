@@ -11,6 +11,9 @@ try{
 			emailParameters = aa.util.newHashtable();
 			var sysDate = aa.date.getCurrentDate();
 			var sysDateMMDDYYYY = dateFormatted(sysDate.getMonth(), sysDate.getDayOfMonth(), sysDate.getYear(), "MM/DD/YYYY");
+			var acaSite = getACABaseUrl();   
+			addParameter(eParams, "$$acaURL$$", acaSite);
+			
 			addParameter(emailParameters, "$$AltID$$", capId.getCustomID());
 			addParameter(emailParameters, "$$ParentAltID$$", capId.getCustomID());
 			addParameter(emailParameters, "$$fName$$",""+nFirst);
