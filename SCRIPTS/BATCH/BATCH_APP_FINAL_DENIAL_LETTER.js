@@ -222,6 +222,9 @@ try{
 						conEmail = thisContact["email"];
 						if (conEmail) {
 							eParams = aa.util.newHashtable();
+							var acaSite = getACABaseUrl();   
+							addParameter(eParams, "$$acaURL$$", acaSite);
+							
 							addParameter(eParams,"$$AltId$$",altId);
 							addParameter(eParams,"$$firstName$$",thisContact["firstName"]);
 							addParameter(eParams,"$$lastName$$",thisContact["lastName"]);

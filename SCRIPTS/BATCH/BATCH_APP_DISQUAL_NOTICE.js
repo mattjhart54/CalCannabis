@@ -259,6 +259,9 @@ try{
 							var defStatus = defCap.getCapStatus();
 							logDebug("defStatus: " + defStatus + " Record: " + defArray[ii].getCustomID());
 							if (defStatus == "Pending"){
+								var acaSite = getACABaseUrl();   
+								addParameter(eParams, "$$acaURL$$", acaSite);
+								
 								addParameter(eParams,"$$altID$$",defArray[ii].getCustomID());
 								addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
 								addParameter(eParams,"$$expDays$$",String(lookAheadDays));
@@ -319,6 +322,8 @@ try{
 									logDebug("ownDefStatus: " + ownDefStatus + " Record: " + ownDefArray[xx].getCustomID());
 									if (ownDefStatus == "Pending"){
 										eParams = aa.util.newHashtable();
+										var acaSite = getACABaseUrl();   
+										addParameter(eParams, "$$acaURL$$", acaSite);
 										addParameter(eParams,"$$altID$$",ownDefArray[xx].getCustomID());
 										addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);
 										addParameter(eParams,"$$expDays$$",String(lookAheadDays));
