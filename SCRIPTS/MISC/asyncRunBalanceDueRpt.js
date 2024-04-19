@@ -97,6 +97,9 @@ try{
 	var priContact = getContactObj(licCapId,contType);
 	if(priContact){
 		var eParams = aa.util.newHashtable(); 
+		var acaSite = getACABaseUrl();   
+		addParameter(eParams, "$$acaURL$$", acaSite);
+		
 		addParameter(eParams, "$$altID$$", recNum);
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 		addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);

@@ -105,6 +105,9 @@ try{
 	var priContact = getContactObj(licCapId,"Designated Responsible Party");
 	if(priContact){
 		var eParams = aa.util.newHashtable(); 
+		var acaSite = getACABaseUrl();   
+		addParameter(eParams, "$$acaURL$$", acaSite);
+		
 		addParameter(eParams, "$$oldAltID$$", oldLicNum);
 		addParameter(eParams, "$$newAltID$$", newLicNum);
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
