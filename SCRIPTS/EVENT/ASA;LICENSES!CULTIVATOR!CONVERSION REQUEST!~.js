@@ -245,6 +245,9 @@ try {
 				}else{
 					var fmtPhone = "";
 				}
+				var acaSite = getACABaseUrl();   
+				addParameter(eParams, "$$acaURL$$", acaSite);
+				
 				addParameter(eParams, "$$altId$$", capId.getCustomID());
 				addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
 				addParameter(eParams, "$$contactLastName$$", priContact.capContact.lastName);
