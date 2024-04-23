@@ -72,7 +72,6 @@ var useAppSpecificGroupName = false;
 var startTime = startDate.getTime();			// Start timer
 var currentUserID = "ADMIN";
 var systemUserObj = aa.person.getUser("ADMIN").getOutput();
-var acaUrl = "https://aca.test6.accela.com/CALCANNABIS";
 var sysFromEmail = "calcannabislicensing@cdfa.ca.gov";
 
 /*------------------------------------------------------------------------------------------------------/
@@ -187,13 +186,12 @@ try {
 							if (conEmail) {
 								var eParams = aa.util.newHashtable(); 
 								var acaSite = getACABaseUrl();   
-								addParameter(eParams, "$$acaURL$$", acaSite);
+								addParameter(eParams, "$$acaRecordUrl$$", acaSite);
 								
 								addParameter(eParams, "$$ALTID$$", capId.getCustomID());
 								addParameter(eParams, "$$DEFICIENCYID$$", defAltIdT);
 								addParameter(eParams, "$$firstName$$", conFirst);
 								addParameter(eParams, "$$lastName$$", conLast);
-								addParameter(eParams, "$$acaRecordUrl$$", acaUrl);
 								runReportAttach(capId,"One-Time Deficiency Replacement Letter", "p1value",capIdString,"p2value",defAltIdT,"p3value","Designated Responsible Party","p4value","Mailing");
 								sendNotification(sysFromEmail,conEmail,"","LCA_DEF_REPLACEMENT",eParams, rFiles,capId);
 							}
@@ -284,7 +282,8 @@ try {
 								addParameter(eParams, "$$DEFICIENCYID$$", defAltIdT);
 								addParameter(eParams, "$$firstName$$", conFirst);
 								addParameter(eParams, "$$lastName$$", conLast);
-								addParameter(eParams, "$$acaRecordUrl$$", acaUrl);
+								var acaSite = getACABaseUrl();   
+								addParameter(eParams, "$$acaRecordUrl$$", acaSite);
 								runReportAttach(thisOwnCapId,"One-Time Deficiency Replacement Letter - Owner", "p1value",capIdString,"p2value",defAltIdT,"p3value","Owner","p4value","Home");
 								sendNotification(sysFromEmail,conEmail,"","LCA_DEF_REPLACEMENT_OWNER",eParams, rFiles,thisOwnCapId);
 							}
