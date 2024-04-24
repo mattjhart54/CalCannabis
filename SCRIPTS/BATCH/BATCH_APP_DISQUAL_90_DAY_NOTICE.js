@@ -320,7 +320,7 @@ try{
 									if (ownDefStatus == "Pending"){
 										eParams = aa.util.newHashtable();
 										var acaSite = getACABaseUrl();   
-										addParameter(eParams, "$$acaURL$$", acaSite);
+										addParameter(eParams, "$$acaRecordURL$$", acaSite);
 										
 										addParameter(eParams,"$$altID$$",ownDefArray[xx].getCustomID());
 										addParameter(eParams,"$$contactLastName$$",thisContact["lastName"]);

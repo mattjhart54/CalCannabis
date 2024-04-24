@@ -124,7 +124,7 @@ logDebug("invNbr " + invNbr);
 	if(priContact){
 		var eParams = aa.util.newHashtable(); 
 		var acaSite = getACABaseUrl();   
-		addParameter(eParams, "$$acaURL$$", acaSite);
+		addParameter(eParams, "$$acaRecordURL$$", acaSite);
 		
 		addParameter(eParams, "$$altID$$", tmpID.getCustomID());
 		addParameter(eParams, "$$contactFirstName$$", priContact.capContact.firstName);
