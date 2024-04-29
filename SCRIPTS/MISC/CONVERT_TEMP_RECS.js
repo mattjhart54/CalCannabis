@@ -306,7 +306,7 @@ function convert2RealCAP2(capModel, transactions)
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("sendCap",altId); 
 		envParameters.put("currentUserID",currentUserID);
-		aa.runAsyncScript(scriptName, envParameters);
+		aa.runAsyncScript(scriptName, envParameters, 5000);
 		capId = holdId;
 	}
 	return capModel;

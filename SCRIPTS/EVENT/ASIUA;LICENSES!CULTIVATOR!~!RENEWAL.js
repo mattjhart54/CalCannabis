@@ -46,7 +46,7 @@ try{
 				envParameters.put("contType","Designated Responsible Party"); 
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("fromEmail","noreply@cannabis.ca.gov");
-				aa.runAsyncScript(scriptName, envParameters);
+				aa.runAsyncScript(scriptName, envParameters, 5000);
 			}
 		}
 	}

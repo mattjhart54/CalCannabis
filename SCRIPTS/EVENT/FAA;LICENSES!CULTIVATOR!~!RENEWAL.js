@@ -18,7 +18,7 @@ try{
 				envParameters.put("contType","Designated Responsible Party"); 
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("fromEmail",sysFromEmail);
-				aa.runAsyncScript(scriptName, envParameters);
+				aa.runAsyncScript(scriptName, envParameters, 5000);
 				logDebug("Sent email with Balance Due Report");
 				break;
 			}

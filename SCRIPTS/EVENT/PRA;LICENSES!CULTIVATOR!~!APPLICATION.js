@@ -24,7 +24,7 @@ try{
 			envParameters.put("currentUserID",currentUserID);
 			envParameters.put("contType","Designated Responsible Party");
 			envParameters.put("fromEmail",sysFromEmail);
-			aa.runAsyncScript(scriptName, envParameters);
+			aa.runAsyncScript(scriptName, envParameters, 5000);
 		}			
 //		if(capStatus=="License Issued") 
 //			runReportAttach(capId,"Approval Letter", "p1value", capId.getCustomID());

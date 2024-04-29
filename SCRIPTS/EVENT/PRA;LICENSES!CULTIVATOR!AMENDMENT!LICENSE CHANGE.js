@@ -89,7 +89,7 @@ try{
 		envParameters.put("contType","Designated Responsible Party");
 		envParameters.put("fromEmail",sysFromEmail);
 		
-		aa.runAsyncScript(scriptName, envParameters);
+		aa.runAsyncScript(scriptName, envParameters, 5000);
 	
 	// Add record to the CAT set
 		addToCat(parentCapId);

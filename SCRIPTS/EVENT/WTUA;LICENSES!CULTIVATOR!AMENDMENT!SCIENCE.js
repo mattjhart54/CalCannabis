@@ -230,7 +230,7 @@ try {
 		envParameters.put("licCap",licAltId); 
 		envParameters.put("reportName","Scientific Review Checklist"); 
 		envParameters.put("currentUserID",currentUserID);
-		aa.runAsyncScript(scriptName, envParameters);
+		aa.runAsyncScript(scriptName, envParameters, 5000);
 //End Story 6622 
 		var rFiles = [];
 		if(updateCat) {
@@ -254,7 +254,7 @@ try {
 					envParameters.put("currentUserID",currentUserID);
 					envParameters.put("contType","Designated Responsible Party");
 					envParameters.put("fromEmail",sysFromEmail);
-					aa.runAsyncScript(scriptName, envParameters);
+					aa.runAsyncScript(scriptName, envParameters, 5000);
 				}
 				else {
 		//  Send Physical Modification Approval email notification to DRP

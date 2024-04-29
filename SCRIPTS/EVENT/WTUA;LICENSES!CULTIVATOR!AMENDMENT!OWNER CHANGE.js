@@ -86,7 +86,7 @@ try {
 										envParameters.put("currentUserID",currentUserID);
 										envParameters.put("email",priEmail);
 										envParameters.put("fromEmail",sysFromEmail);
-										aa.runAsyncScript(scriptName, envParameters);
+										aa.runAsyncScript(scriptName, envParameters, 5000);
 									}
 									else {
 										var amendAltId = capId.getCustomID();
@@ -99,7 +99,7 @@ try {
 										envParameters.put("currentUserID",currentUserID);
 										envParameters.put("email",priEmail);
 										envParameters.put("fromEmail",sysFromEmail);
-										aa.runAsyncScript(scriptName, envParameters);
+										aa.runAsyncScript(scriptName, envParameters, 5000);
 										var sName = createSet("Amendment Owner Modified","Amendment Notifications", "New");
 									}	
 									if(sName){
@@ -152,7 +152,7 @@ try {
 									envParameters.put("currentUserID",currentUserID);
 									envParameters.put("email",priEmail);
 									envParameters.put("fromEmail",sysFromEmail);
-									aa.runAsyncScript(scriptName, envParameters);
+									aa.runAsyncScript(scriptName, envParameters, 5000);
 									var sName = createSet("Amendment New Owner","Amendment Notifications", "New");
 									if(sName){
 										setAddResult=aa.set.add(sName,capId);

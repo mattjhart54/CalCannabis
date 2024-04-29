@@ -25,7 +25,7 @@ try{
 			envParameters.put("reportName","Deficiency Letter"); 
 			envParameters.put("currentUserID",currentUserID);
 			logDebug("altId " + capIDString + " newAltId " + newAltId + " curentUser " + currentUserID)
-			aa.runAsyncScript(scriptName, envParameters);
+			aa.runAsyncScript(scriptName, envParameters, 5000);
 //			runReportAttach(capId,"Deficiency Report", "p1value", capId.getCustomID(), "p2value",newAltId);
 // MJH 190222 User Story 5881 - end
 			emailRptContact("WTUA", "LCA_DEFICIENCY", "", false, capStatus, capId, "Designated Responsible Party", "p1value", capId.getCustomID());
@@ -110,7 +110,7 @@ try{
 						envParameters.put("reportName","Deficiency Report - Owner"); 
 						envParameters.put("currentUserID",currentUserID);
 						logDebug("altId " + capIDString + " newAltId " + newAltId + " curentUser " + currentUserID)
-						aa.runAsyncScript(scriptName, envParameters);
+						aa.runAsyncScript(scriptName, envParameters, 5000);
 //						runReportAttach(thisOwnCapId,"Deficiency Report - Owner", "p1value", thisOwnCapId.getCustomID(), "p2value",defAltIdT);
 // MJH 190222 User Story 5881 - end
 						holdCapId = capId;
@@ -561,7 +561,7 @@ try{
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("contType","Designated Responsible Party");
 				envParameters.put("fromEmail",sysFromEmail);
-				aa.runAsyncScript(scriptName, envParameters);
+				aa.runAsyncScript(scriptName, envParameters, 5000);
 			}
 			else {
 				var licAltId = capId.getCustomID();
@@ -573,7 +573,7 @@ try{
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("contType","Designated Responsible Party");
 				envParameters.put("fromEmail",sysFromEmail);
-				aa.runAsyncScript(scriptName, envParameters);
+				aa.runAsyncScript(scriptName, envParameters, 5000);
 			}
 //mhart 031319 story 5914 end
 		}else{

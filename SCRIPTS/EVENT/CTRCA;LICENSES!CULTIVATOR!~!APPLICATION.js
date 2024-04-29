@@ -83,7 +83,7 @@ try{
 		var envParameters = aa.util.newHashMap();
 		envParameters.put("sendCap",capIDString); 
 		envParameters.put("currentUserID",currentUserID);
-		aa.runAsyncScript(scriptName, envParameters);
+		aa.runAsyncScript(scriptName, envParameters, 5000);
 		var thisDate = new Date();
 		var thisTime = thisDate.getTime();
 		var eTime = (thisTime - sTime) / 1000;

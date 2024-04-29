@@ -198,7 +198,7 @@ try{
 		envParameters.put("contType","Designated Responsible Party");
 		envParameters.put("fromEmail",sysFromEmail);
 		
-		aa.runAsyncScript(scriptName, envParameters);
+		aa.runAsyncScript(scriptName, envParameters, 5000);
 	
 	// Add record to the CAT set
 		addToCat(parentCapId);
@@ -237,7 +237,7 @@ try{
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("templateName", feeNotification);
 		
-		aa.runAsyncScript(scriptName, envParameters);
+		aa.runAsyncScript(scriptName, envParameters, 5000);
 	
 		updateAppStatus("License Change Fee Due"," ");
 		editAppSpecific("Payment Due Date",nextWorkDay(dateAdd(null,29)));

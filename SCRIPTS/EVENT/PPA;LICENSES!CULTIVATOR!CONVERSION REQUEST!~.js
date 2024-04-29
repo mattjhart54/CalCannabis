@@ -28,7 +28,7 @@ try {
 		envParameters.put("licCap",licAltId); 
 		envParameters.put("reportName","Scientific Review Checklist"); 
 		envParameters.put("currentUserID",currentUserID);
-		aa.runAsyncScript(scriptName, envParameters);		
+		aa.runAsyncScript(scriptName, envParameters, 5000);		
 		
 //run the License Report and send approval email
 		var scriptName = "asyncRunOfficialLicenseRpt";
@@ -49,7 +49,7 @@ try {
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("contType","Designated Responsible Party");
 		envParameters.put("fromEmail",sysFromEmail);
-		aa.runAsyncScript(scriptName, envParameters);
+		aa.runAsyncScript(scriptName, envParameters, 5000);
 
 //notify processor that converion request has been paid and new license issued		
 		wf = aa.workflow.getTaskItemByCapID(capId,null).getOutput();
