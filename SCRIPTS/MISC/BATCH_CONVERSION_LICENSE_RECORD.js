@@ -296,7 +296,7 @@ try{
 		envParameters.put("currentUserID",currentUserID);
 		envParameters.put("contType","Designated Responsible Party");
 		envParameters.put("fromEmail","calcannabislicensing@cdfa.ca.gov");
-		aa.runAsyncScript(scriptName, envParameters);
+		aa.runAsyncScript(scriptName, envParameters,5000);
 		
 /*		
 		var rFiles = [];
