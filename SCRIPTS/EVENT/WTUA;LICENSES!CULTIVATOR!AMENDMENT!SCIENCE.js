@@ -313,7 +313,7 @@ try {
 					envParameters.put("currentUserID",currentUserID);
 					envParameters.put("contType","Designated Responsible Party");
 					envParameters.put("fromEmail",sysFromEmail);
-					aa.runAsyncScript(scriptName, envParameters);
+					aa.runAsyncScript(scriptName, envParameters,5000);
 				}else{
 		//  Send  Approved for Provisional Renewal email notification to DRP
 					var eParams = aa.util.newHashtable(); 
@@ -369,7 +369,7 @@ try {
 					envParameters.put("currentUserID",currentUserID);
 					envParameters.put("contType","Designated Responsible Party");
 					envParameters.put("fromEmail",sysFromEmail);
-					aa.runAsyncScript(scriptName, envParameters);
+					aa.runAsyncScript(scriptName, envParameters,5000);
 				}else{
 				//  Send  Approved Renewal email notification to DRP
 					var eParams = aa.util.newHashtable(); 
@@ -412,7 +412,7 @@ try {
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("contType","Designated Responsible Party");
 				envParameters.put("fromEmail",sysFromEmail);
-				aa.runAsyncScript(scriptName, envParameters);
+				aa.runAsyncScript(scriptName, envParameters,5000);
 				
 				var priChannel =  lookup("CONTACT_PREFERRED_CHANNEL",""+ priContact.capContact.getPreferredChannel());
 				if(!matches(priChannel, "",null,"undefined", false)){

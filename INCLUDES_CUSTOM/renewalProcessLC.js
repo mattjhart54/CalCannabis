@@ -257,7 +257,7 @@ function renewalProcessLC() {
 							envParameters.put("currentUserID",currentUserID);
 							envParameters.put("contType","Designated Responsible Party");
 							envParameters.put("fromEmail",sysFromEmail);
-							aa.runAsyncScript(scriptName, envParameters);
+							aa.runAsyncScript(scriptName, envParameters,5000);
 							
 							var priContact = getContactObj(parentCapId,"Designated Responsible Party");
 							// If DRP preference is Postal add license record to Annual/Provisional Renewal A set

@@ -257,7 +257,7 @@ function renewalProcess(rAltId, event, fees){
 				envParameters.put("currentUserID",currentUserID);
 				envParameters.put("contType","Designated Responsible Party");
 				envParameters.put("fromEmail",sysFromEmail);
-				aa.runAsyncScript(scriptName, envParameters);
+				aa.runAsyncScript(scriptName, envParameters,5000);
 			}else {	
 				if (AInfo['Limited Operation'] == "Yes"){
 					var approvalLetter = "";
@@ -282,7 +282,7 @@ function renewalProcess(rAltId, event, fees){
 				envParameters.put("contType","Designated Responsible Party");
 				envParameters.put("fromEmail",sysFromEmail);
 				
-				aa.runAsyncScript(scriptName, envParameters);
+				aa.runAsyncScript(scriptName, envParameters,5000);
 			}				
 			var priContact = getContactObj(capId,"Designated Responsible Party");
 	// If DRP preference is Postal add license record to Annual/Provisional Renewal A set
