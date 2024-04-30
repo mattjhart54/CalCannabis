@@ -19,6 +19,13 @@ var message = "";
 var maxSeconds = 4.5 * 60;
 var br = "<br>";
 
+(select SUBSTRING(aca.VALUE_DESC, 0, CHARINDEX('/ADMIN', aca.VALUE_DESC))
+    from RBIZDOMAIN_VALUE aca
+    where aca.BIZDOMAIN like 'ACA_CONFIGS'
+        and aca.BIZDOMAIN_VALUE = 'ACA_SITE'
+        and aca.SERV_PROV_CODE = [change me].serv_prov_code
+    ) as ACAURL
+ 
 /*------------------------------------------------------------------------------------------------------/
 |
 | END: USER CONFIGURABLE PARAMETERS

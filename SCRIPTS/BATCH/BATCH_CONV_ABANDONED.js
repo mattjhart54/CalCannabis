@@ -207,7 +207,8 @@ try{
 			if(priContact){
 				rFiles = [];
 				priEmail = priContact.capContact.email;
-				var eParams = aa.util.newHashtable(); 
+				var eParam
+				s = aa.util.newHashtable(); 
 				var acaSite = getACABaseUrl();   
 				addParameter(eParams, "$$acaURL$$", acaSite);
 				
