@@ -253,6 +253,8 @@ try{
 					if (conEmail) {						
 						//runReportAttach(capId,rptName, "altId", capId.getCustomID(), "contactType", thisContact["contactType"], "addressType", addrType); 
 						eParams = aa.util.newHashtable();
+						var acaSite = getACABaseUrl();   
+							addParameter(eParams, "$$acaRecordURL$$", acaSite);
 						defArray = getChildren("Licenses/Cultivator/Medical/Amendment",capId);
 						for (ii in defArray){
 							defCap = aa.cap.getCap(defArray[ii]).getOutput();
