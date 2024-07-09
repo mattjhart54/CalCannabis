@@ -278,13 +278,14 @@ try{
 			continue;
 		}
 		// 7869 Filter Limited Operations Records
-		// check newAppStatus parameter since other batch jobs use same script
+		// Check newAppStatus parameter since other batch jobs use same script
 		if ((capStatus == "Limited Operations" && b1Status == "About to Expire") ||
 			(capStatus == "Limited Operations" && newAppStatus == "About to Expire")) {
 			capFilterStatus++;
 			logDebug("     " +"skipping, due to application status of " + capStatus)
 			continue;
 		}
+	
 		// Filter Historical Records
 		if (altId.indexOf("-HIST") > -1){
 			capFilterType++;
